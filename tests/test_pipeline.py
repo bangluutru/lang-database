@@ -1,16 +1,20 @@
 """
 tests/test_pipeline.py
-Integration tests validating the data pipeline, SQLite export, and source registry consistency.
+Integration tests validating the data pipeline, SQLite export, staging review queues,
+and source registry consistency for Phase 1.1.
 """
 
 import sqlite3
 import yaml
+import json
 from pathlib import Path
 import pytest
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_FILE = BASE_DIR / "data" / "production" / "jp_professional.db"
 REGISTRY_FILE = BASE_DIR / "data" / "sources" / "source_registry.yaml"
+NEEDS_REVIEW_FILE = BASE_DIR / "staging" / "review_queue" / "needs_review.jsonl"
+REJECTED_FILE = BASE_DIR / "staging" / "review_queue" / "rejected.jsonl"
 
 @pytest.fixture(scope="module")
 def db_conn():
@@ -20,13 +24,14 @@ def db_conn():
     conn.close()
 
 def test_sqlite_counts(db_conn):
+    """Production database contains only released entries."""
     cursor = db_conn.cursor()
     cursor.execute("SELECT COUNT(*) FROM vocabulary")
-    assert cursor.fetchone()[0] == 800
+    assert cursor.fetchone()[0] == 789
     cursor.execute("SELECT COUNT(*) FROM expressions")
     assert cursor.fetchone()[0] == 50
     cursor.execute("SELECT COUNT(*) FROM relationships")
-    assert cursor.fetchone()[0] == 2078
+    assert cursor.fetchone()[0] == 2049
 
 def test_downstream_lesson_query(db_conn):
     cursor = db_conn.cursor()
@@ -52,11 +57,24 @@ def test_fts5_search(db_conn):
     SELECT v.id, v.surface, v.vi_short
     FROM vocabulary_fts f
     JOIN vocabulary v ON f.id = v.id
-    WHERE vocabulary_fts MATCH 'hóa đơn'
+    WHERE vocabulary_fts MATCH 'bảng cân đối'
     LIMIT 5;
     """)
     results = cursor.fetchall()
     assert len(results) > 0
+
+def test_review_queues_populated():
+    """Verify that unverified/corrupted entries are quarantined in staging queues."""
+    assert NEEDS_REVIEW_FILE.exists()
+    assert REJECTED_FILE.exists()
+
+    with open(NEEDS_REVIEW_FILE, "r", encoding="utf-8") as f:
+        needs_review = [json.loads(line) for line in f if line.strip()]
+    assert len(needs_review) == 2
+
+    with open(REJECTED_FILE, "r", encoding="utf-8") as f:
+        rejected = [json.loads(line) for line in f if line.strip()]
+    assert len(rejected) == 9
 
 def test_source_registry_integrity():
     assert REGISTRY_FILE.exists()

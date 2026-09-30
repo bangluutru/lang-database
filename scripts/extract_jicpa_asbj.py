@@ -54,8 +54,13 @@ def extract_jicpa_asbj():
                 txt = a.get_text().strip()
                 if txt and txt not in seen and len(txt) <= 25:
                     seen.add(txt)
+                    seq = len(candidates) + 1
+                    kw_id = a["href"].strip("/").split("/")[-1]
                     candidates.append({
+                        "extracted_candidate_id": f"cand-jicpa-{seq:06d}",
                         "source_id": "jicpa_glossary",
+                        "source_file": "jicpa_keyword_index.html",
+                        "source_record_id": f"keyword_{kw_id}",
                         "source_term_exact": txt,
                         "surface_candidate": txt,
                         "sub_category": "audit_corporate_governance",
@@ -67,8 +72,12 @@ def extract_jicpa_asbj():
         t = item["term"]
         if t not in seen:
             seen.add(t)
+            seq = len(candidates) + 1
             candidates.append({
+                "extracted_candidate_id": f"cand-asbj-{seq:06d}",
                 "source_id": "asbj_accounting_standards",
+                "source_file": "asbj_standards_catalog",
+                "source_record_id": f"asbj_{t}",
                 "source_term_exact": t,
                 "surface_candidate": t,
                 "official_en": item["en"],

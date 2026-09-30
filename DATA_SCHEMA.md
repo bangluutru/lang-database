@@ -1,32 +1,44 @@
-# Data Schema Specification: JP Professional Vocabulary Database
+# Data Schema Specification: JP Professional Vocabulary Database (Phase 1.1)
 
-## 1. Multi-Layer Data Lifecycle Architecture
+## 1. Multi-Stage Lifecycle Pipeline
 
-The database enforces a unidirectional 4-layer data transformation pipeline:
+The database enforces a strict, decoupled 7-stage transformation pipeline:
 
 ```
   Layer A: Raw Sources
   [Untouched official Excel/ZIP/HTML, SHA-256 Checksum, Immutable metadata]
                        │
-                       ▼ (Parser & Extraction Scripts)
+                       ▼ (Parser & Extraction Scripts: cand-{src}-{seq:06d})
   Layer B: Extracted Candidates
-  [Source-specific structured items, original headers, un-normalized text]
+  [Source-specific structured items, original headers, source_record_id preserved]
                        │
-                       ▼ (Normalization, Kana unification, Surface Deduplication)
-  Layer C: Canonical Vocabulary
-  [Normalized Japanese surface, verified reading, domain classification, unique concept ID]
+                       ▼ (Normalization: norm-{seq:06d}, NFKC, lineage links)
+  Layer C: Normalized Candidates
+  [Normalized Japanese surface, domain classification, unique concept link]
                        │
-                       ▼ (Linguistic Engineering & Learning Enrichment)
-  Layer D: Learning Enrichment (Production Release)
-  [Vietnamese explanations, English mappings, collocations, natural workplace examples,
-   multi-speaker dialogue, PRO-A1/A2/A3 tiers, priority scoring, TTS metadata, Provenance]
+                       ▼ (Candidate Enrichment: semantic classes, collocations, TTS)
+  Layer D: Enriched Learning Candidates (status: "candidate")
+  [Vietnamese explanations, English mappings, semantic collocations, workplace examples,
+   multi-speaker dialogue, PRO tiers with descriptions, TTS metadata, Lineage block]
+                       │
+                       ▼ (Independent 8-Stage Validation Pipeline)
+  Layer E: Validated Candidates (status: "pass" | "needs_review" | "rejected")
+  [Schema, source lineage physical check, 4-level pronunciation check, translation,
+   collocation naturalness, example registers, TTS safety, draft quarantine guard]
+                       │
+                       ▼ (Release Gate Routing)
+  Layer F: Production Releases & Staging Queues
+  [vocabulary.jsonl (PASS), staging/review_queue/needs_review.jsonl, staging/review_queue/rejected.jsonl]
+                       │
+                       ▼ (SQLite Export with FTS5 Full-Text Search)
+  Layer G: Downstream Machine & Learning Consumers
 ```
 
 ---
 
-## 2. Canonical Entry Schema (Layer D - Production)
+## 2. Canonical Entry Schema (Production Release)
 
-Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_professional_pilot.jsonl` adheres strictly to this schema:
+Each released vocabulary record in `data/production/vocabulary.jsonl` adheres strictly to this schema:
 
 ```json
 {
@@ -41,12 +53,15 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
     "concept",
     "meaning",
     "professional_level",
+    "general_japanese",
     "priority",
+    "collocations",
     "examples",
+    "dialogue",
     "sources",
+    "lineage",
     "provenance",
     "tts",
-    "confidence",
     "status"
   ],
   "properties": {
@@ -60,8 +75,16 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
       "required": ["surface", "reading", "romaji"],
       "properties": {
         "surface": { "type": "string", "description": "Canonical Japanese surface form (Kanji/Kana)" },
-        "reading": { "type": "string", "description": "Hiragana pronunciation (verified)" },
-        "romaji": { "type": "string", "description": "Modified Hepburn romanization" }
+        "reading": { "type": "string", "description": "Hiragana pronunciation (independently verified)" },
+        "romaji": { "type": "string", "description": "Modified Hepburn romanization" },
+        "romaji_metadata": {
+          "type": "object",
+          "properties": {
+            "scheme": { "type": "string", "enum": ["modified_hepburn"] },
+            "generator": { "type": "string", "enum": ["pykakasi"] },
+            "generator_version": { "type": "string" }
+          }
+        }
       }
     },
     "language": {
@@ -70,7 +93,7 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
     },
     "domain": {
       "type": "object",
-      "required": ["primary", "secondary"],
+      "required": ["primary", "secondary", "semantic_class"],
       "properties": {
         "primary": {
           "type": "string",
@@ -82,9 +105,10 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
             "audit", "startup"
           ]
         },
-        "secondary": {
-          "type": "array",
-          "items": { "type": "string" }
+        "secondary": { "type": "array", "items": { "type": "string" } },
+        "semantic_class": {
+          "type": "string",
+          "description": "Ontological classification governing semantic selection and predicate binding (e.g. account, financial_statement, tax, tax_deduction, shipping_document, trade_term, freight_charge, cargo_operation, person_role, organization, contract, metric, procedure, etc.)"
         }
       }
     },
@@ -102,11 +126,12 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
       "properties": {
         "vi": {
           "type": "object",
-          "required": ["short", "explanation"],
+          "required": ["short", "preferred", "explanation", "professional_context"],
           "properties": {
             "short": { "type": "string", "description": "Concise professional Vietnamese translation" },
-            "explanation": { "type": "string", "description": "Original learner explanation with accounting/business context" },
-            "professional_context": { "type": "string", "description": "Practical application notes in Japanese workplace" }
+            "preferred": { "type": "string", "description": "Standardized professional translation" },
+            "explanation": { "type": "string", "description": "Original learner explanation with practical context" },
+            "professional_context": { "type": "string", "description": "Workplace usage domain note" }
           }
         },
         "en": {
@@ -122,25 +147,18 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
     },
     "professional_level": {
       "type": "object",
-      "required": ["tier"],
+      "required": ["tier", "description"],
       "properties": {
-        "tier": {
-          "type": "string",
-          "enum": ["PRO-A1", "PRO-A2", "PRO-A3"],
-          "description": "PRO-A1: Essential Workplace; PRO-A2: Working Professional; PRO-A3: Specialist"
-        }
+        "tier": { "type": "string", "enum": ["PRO-A1", "PRO-A2", "PRO-A3"] },
+        "description": { "type": "string" }
       }
     },
     "general_japanese": {
       "type": "object",
+      "required": ["jlpt_level", "jlpt_status"],
       "properties": {
-        "estimated_level": { "type": "string", "enum": ["N1", "N2", "N3", "N4", "N5", "Advanced", "Intermediate"] }
-      }
-    },
-    "frequency": {
-      "type": "object",
-      "properties": {
-        "professional_priority": { "type": "string", "enum": ["essential", "high", "medium", "specialist"] }
+        "jlpt_level": { "type": ["string", "null"], "default": null, "description": "Must be null until official JLPT mapping is integrated." },
+        "jlpt_status": { "type": "string", "enum": ["not_mapped", "mapped"] }
       }
     },
     "priority": {
@@ -159,20 +177,33 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
         }
       }
     },
-    "synonyms": { "type": "array", "items": { "type": "string" } },
-    "antonyms": { "type": "array", "items": { "type": "string" } },
-    "related_terms": { "type": "array", "items": { "type": "string" } },
-    "collocations": { "type": "array", "items": { "type": "string" } },
+    "collocations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "predicate", "particle", "semantic_class", "status", "register"],
+        "properties": {
+          "text": { "type": "string" },
+          "predicate": { "type": "string" },
+          "particle": { "type": "string" },
+          "semantic_class": { "type": "string" },
+          "status": { "type": "string", "enum": ["verified", "candidate"] },
+          "validation_method": { "type": "string" },
+          "register": { "type": "string" }
+        }
+      }
+    },
     "examples": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["ja", "vi", "en"],
+        "required": ["ja", "vi", "en", "register", "status"],
         "properties": {
           "ja": { "type": "string" },
           "vi": { "type": "string" },
           "en": { "type": "string" },
-          "register": { "type": "string", "enum": ["beginner_workplace", "natural_workplace", "formal_business", "statutory_reporting"] }
+          "register": { "type": "string" },
+          "status": { "type": "string" }
         }
       }
     },
@@ -182,7 +213,7 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
         "type": "object",
         "required": ["speaker", "ja", "vi", "en"],
         "properties": {
-          "speaker": { "type": "string", "enum": ["A", "B", "Manager", "Staff", "Accountant", "Client"] },
+          "speaker": { "type": "string" },
           "ja": { "type": "string" },
           "vi": { "type": "string" },
           "en": { "type": "string" }
@@ -193,99 +224,62 @@ Each vocabulary item in `production/vocabulary.jsonl` and `production/jp_profess
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["source_id", "source_term_exact"],
+        "required": ["source_id", "source_file", "source_term_exact", "source_record_id"],
         "properties": {
           "source_id": { "type": "string" },
+          "source_file": { "type": "string" },
           "source_term_exact": { "type": "string" },
           "source_reference": { "type": "string" },
-          "source_authority": { "type": "string" }
+          "source_record_id": { "type": "string" }
         }
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "required": [
+        "origin_type", "source_id", "source_file", "source_record_id",
+        "source_term_exact", "canonical_id", "enrichment_version",
+        "validation_record", "release_version"
+      ],
+      "properties": {
+        "origin_type": { "type": "string", "enum": ["official_extracted", "official_derived", "curated", "generated_enrichment"] },
+        "source_id": { "type": "string" },
+        "source_file": { "type": "string" },
+        "source_record_id": { "type": "string" },
+        "source_term_exact": { "type": "string" },
+        "extracted_candidate_id": { "type": ["string", "null"] },
+        "normalized_candidate_id": { "type": ["string", "null"] },
+        "canonical_id": { "type": "string" },
+        "enrichment_version": { "type": "string" },
+        "validation_record": { "type": "object" },
+        "release_version": { "type": "string" }
       }
     },
     "provenance": {
       "type": "object",
-      "required": ["extracted_by", "enriched_by", "validated"],
+      "required": ["origin_type", "extracted_by", "enriched_by", "enrichment_version"],
       "properties": {
+        "origin_type": { "type": "string" },
         "extracted_by": { "type": "string" },
         "enriched_by": { "type": "string" },
-        "validated": { "type": "boolean" },
-        "validation_timestamp": { "type": "string" }
+        "enrichment_version": { "type": "string" }
       }
     },
     "tts": {
       "type": "object",
-      "required": ["speak_term", "preferred_reading", "pause_after_term_ms"],
+      "required": ["display_text", "speech_text", "preferred_reading", "pronunciation_type", "pause_after_term_ms"],
       "properties": {
-        "speak_term": { "type": "boolean" },
-        "preferred_reading": { "type": "string" },
-        "pause_after_term_ms": { "type": "integer" },
-        "repeat_default": { "type": "integer" },
+        "display_text": { "type": "string" },
         "speech_text": { "type": "string" },
-        "display_text": { "type": "string" }
-      }
-    },
-    "confidence": {
-      "type": "object",
-      "required": ["canonical_term", "reading", "vi_translation", "en_translation", "domain_classification"],
-      "properties": {
-        "canonical_term": { "type": "number", "minimum": 0, "maximum": 1 },
-        "reading": { "type": "number", "minimum": 0, "maximum": 1 },
-        "vi_translation": { "type": "number", "minimum": 0, "maximum": 1 },
-        "en_translation": { "type": "number", "minimum": 0, "maximum": 1 },
-        "domain_classification": { "type": "number", "minimum": 0, "maximum": 1 }
+        "preferred_reading": { "type": "string" },
+        "pronunciation_type": { "type": "string", "enum": ["standard_kanji_kana", "acronym_alphabet", "acronym_word", "mixed_compound", "numeric_compound"] },
+        "pause_after_term_ms": { "type": "integer", "default": 1200 }
       }
     },
     "status": {
       "type": "string",
-      "enum": ["production", "staging", "draft"]
+      "enum": ["production", "needs_review", "rejected", "candidate"]
     }
   }
 }
 ```
-
----
-
-## 3. Workplace Expressions Schema (`expressions.jsonl`)
-
-Used for practical idioms, conversational set phrases, and operational collocations (e.g. `請求書を切る`, `経費で落とす`, `数字が合わない`):
-
-```json
-{
-  "id": "jp-exp-accounting-000001",
-  "surface": "経費で落とす",
-  "reading": "けいひでおとす",
-  "romaji": "keihi de otosu",
-  "pattern_type": "colloquial_workplace",
-  "related_canonical_id": "jp-pro-accounting-000045",
-  "vi_meaning": "tính vào chi phí doanh nghiệp (để trừ thuế hợp lệ)",
-  "en_meaning": "write off as an expense / charge to company expenses",
-  "context_notes": "Very frequent in Japanese companies when handling receipts and business meals.",
-  "formality": "polite_conversational",
-  "verified_corpus": true,
-  "sources": [{"source_id": "workplace_corpus", "confidence": 0.98}]
-}
-```
-
----
-
-## 4. Relationship Graph Schema (`relationships.jsonl`)
-
-```json
-{
-  "from_id": "jp-pro-accounting-000001",
-  "to_id": "jp-pro-accounting-000002",
-  "relation_type": "opposite",
-  "directed": false,
-  "notes": "売掛金 (Accounts Receivable) vs 買掛金 (Accounts Payable)"
-}
-```
-
-Supported `relation_type` values:
-- `broader`: Parent concept (e.g. 収益 -> 売上高)
-- `narrower`: Sub-category (e.g. 税金 -> 法人税)
-- `opposite`: Opposite accounting flow (e.g. 売掛金 vs 買掛金, 借方 vs 貸方)
-- `synonym`: Synonymous concept (e.g. 売掛金 <-> 売上債権)
-- `related`: Conceptually related in workflow (e.g. 見積書 -> 発注書 -> 請求書)
-- `abbreviation`: Short form or acronym (e.g. L/C <-> 信用状)
-- `often_confused_with`: Distinction warning (e.g. 売掛金 vs 未収入金)
-- `prerequisite`: Pedagogical progression prerequisite

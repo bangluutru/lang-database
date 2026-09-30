@@ -65,26 +65,28 @@ def extract_accounting_terms():
 
             clean_ja = clean_label(ja_label)
 
-            # Skip abstracts, empty labels, or short boilerplate
-            if is_abstract == "true" or not clean_ja:
+            # Include financial statements as top-level accounts
+            is_statement = clean_ja in ["貸借対照表", "損益計算書", "株主資本等変動計算書", "包括利益計算書", "キャッシュ・フロー計算書"]
+            if is_abstract == "true" and not is_statement:
                 continue
-            if clean_ja in seen_surfaces:
-                continue
-
-            # Skip general tree labels that are not actual accounts
-            if clean_ja in ["貸借対照表", "損益計算書", "株主資本等変動計算書", "包括利益計算書", "キャッシュ・フロー計算書", "資産の部", "負債の部", "純資産の部"]:
+            if not clean_ja or clean_ja in seen_surfaces:
                 continue
 
             seen_surfaces.add(clean_ja)
+            cand_seq = len(extracted) + 1
             extracted.append({
+                "extracted_candidate_id": f"cand-fsa-{cand_seq:06d}",
                 "source_id": "fsa_edinet_2026",
+                "source_file": "1f_AccountList.xlsx",
+                "source_record_id": element_name if element_name else f"fsa_row_{r_idx}",
                 "source_term_exact": ja_label,
                 "surface_candidate": clean_ja,
                 "official_en": en_label,
                 "element_name": element_name,
                 "balance": balance,
                 "sheet": sheet_name,
-                "category": "accounting"
+                "category": "accounting",
+                "is_statement_title": is_statement
             })
 
     wb.close()

@@ -1,44 +1,26 @@
-# Quality Assurance (QA) Summary Report
+# QA Summary — Phase 1.1 Data Integrity & Linguistic Validation
 
-- **Execution Timestamp:** 2026-10-01T08:20:00Z
-- **Total Production Pilot Entries:** 800
-- **Validation Status:** PASSED (100%)
-- **Passed Items:** 800 / 800
-- **Failed Items:** 0
+## Validation Metrics (800 Pilot Candidates)
 
-## 1. Domain Distribution
+| Metric | Count | Percentage |
+| :--- | :--- | :--- |
+| **Total Candidates** | 800 | 100.0% |
+| **Schema Valid** | 800 | 100.0% |
+| **Official Source Verified** | 637 | 79.6% |
+| **Curated Documented** | 163 | 20.4% |
+| **Reading Verified** | 789 | 98.6% |
+| **Reading Needs Review** | 2 | 0.2% |
+| **Reading Rejected** | 9 | 1.1% |
+| **VI Translation Verified** | 800 | 100.0% |
+| **Collocations Verified** | 800 | 100.0% |
+| **Examples Verified** | 800 | 100.0% |
+| **TTS Ready** | 800 | 100.0% |
+| **Draft Contamination Free** | 800 | 100.0% |
+| **Production Ready (PASS)** | **789** | **98.6%** |
+| **Review Queue (NEEDS REVIEW)**| **2** | **0.2%** |
+| **Rejected (FAIL)** | **9** | **1.1%** |
 
-| Domain | Canonical Entries | Status |
-|---|---|---|
-| `accounting` | 200 | Authoritative & Validated |
-| `tax` | 200 | Authoritative & Validated |
-| `business` | 200 | Authoritative & Validated |
-| `trade` | 200 | Authoritative & Validated |
-| **Total** | **800** | **Phase 1 Pilot Target Met** |
-
-## 2. Professional Tier Breakdown
-
-| Tier | Level Description | Count | Percentage |
-|---|---|---|---|
-| **PRO-A1** | Essential Workplace | 436 | 54.5% |
-| **PRO-A2** | Working Professional | 318 | 39.8% |
-| **PRO-A3** | Specialist | 46 | 5.8% |
-
-## 3. Supplementary Layers Verification
-
-- **Workplace Idiomatic Expressions (`expressions.jsonl`):** 50 verified entries.
-- **Knowledge Graph Relationships (`relationships.jsonl`):** 2078 semantic edges (synonym, antonym, related).
-
-## 4. Priority Score Distribution
-
-- **Essential (>=95):** 448 entries (56.0%)
-- **High (90-94):** 306 entries (38.2%)
-- **Medium (<90):** 46 entries (5.8%)
-
-## 5. Audit Compliance Checklist
-
-- [x] **Zero-Inference Provenance:** Official sources (FSA/NTA/JICPA/JETRO) separated from learning explanations.
-- [x] **2027 EDINET Isolation:** Draft terms strictly held in staging; production contains only verified 2026 final taxonomy.
-- [x] **Pronunciation Integrity:** 100% Hiragana readings validated with Modified Hepburn romaji.
-- [x] **TTS Engine Decoupling:** Full TTS metadata (pronunciation, pauses, speech text) without vendor lock-in.
-- [x] **Multi-modal Learning Content:** Every entry contains collocations, multi-register examples, and multi-speaker dialogue.
+## Independent Decision Breakdown
+- **PASS**: Meets all 8 linguistic and provenance criteria. Routed to production.
+- **NEEDS REVIEW**: Phonetic variance or curated origin requires specialist review. Quarantined to staging review queue.
+- **REJECTED**: Corrupted phonetics, draft contamination, or schema failure. Excluded from production.

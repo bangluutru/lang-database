@@ -70,11 +70,16 @@ def main():
                     continue
                 seen.add(key)
 
+                seq = len(normalized_list) + 1
                 normalized_item = {
+                    "normalized_candidate_id": f"norm-{seq:06d}",
+                    "extracted_candidate_id": item.get("extracted_candidate_id", f"cand-gen-{seq:06d}"),
                     "surface": norm_surface,
                     "domain": domain,
                     "sub_category": item.get("sub_category", ""),
                     "source_id": item.get("source_id", "unknown"),
+                    "source_file": item.get("source_file", ""),
+                    "source_record_id": item.get("source_record_id", ""),
                     "source_term_exact": item.get("source_term_exact", norm_surface),
                     "official_en": item.get("official_en", ""),
                     "metadata": {

@@ -123,7 +123,7 @@ def export():
                 e["meaning"]["en"]["preferred"],
                 e["professional_level"]["tier"],
                 e["priority"]["score"],
-                e.get("general_japanese", {}).get("estimated_level", "N2"),
+                e.get("general_japanese", {}).get("jlpt_level"),
                 json.dumps(e["sources"], ensure_ascii=False),
                 json.dumps(e["collocations"], ensure_ascii=False),
                 json.dumps(e["examples"], ensure_ascii=False),

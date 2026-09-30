@@ -1,50 +1,42 @@
 {
-  "dataset_name": "JP Professional Vocabulary Database",
-  "dataset_version": "jp-professional-db-v0.1-pilot",
-  "release_date": "2026-10-01",
-  "status": "pilot_validated",
-  "architecture_layer": "Layer D: Learning Enrichment",
-  "total_canonical_entries": 800,
-  "domains": {
-    "accounting": {
-      "count": 200,
-      "primary_source": "fsa_edinet_2026",
-      "authority": "Financial Services Agency of Japan (FSA)"
-    },
-    "tax": {
-      "count": 200,
-      "primary_source": "nta_tax_glossary_2026",
-      "authority": "National Tax Agency of Japan (NTA)"
-    },
-    "business": {
-      "count": 200,
-      "primary_source": "trade_business_corpus",
-      "authority": "Official Japanese Commercial Practice & Corporate Governance"
-    },
-    "trade": {
-      "count": 200,
-      "primary_source": "jetro_trade",
-      "authority": "JETRO & Japan Customs (税関)"
+  "dataset_name": "jp_professional_vocabulary",
+  "version": "1.1.0-closure",
+  "release_date": "2026-10-01T08:50:00Z",
+  "architecture_version": "phase_1.1_decoupled_validation",
+  "metrics": {
+    "total_candidates_evaluated": 800,
+    "production_released_entries": 789,
+    "needs_review_entries": 2,
+    "rejected_entries": 9,
+    "workplace_expressions": 50,
+    "active_relationships": 2049,
+    "domains": {
+      "accounting": 199,
+      "tax": 196,
+      "business": 199,
+      "trade": 195
     }
   },
-  "supplementary_layers": {
-    "workplace_expressions_count": 50,
-    "relationships_graph_edges_count": 2078
-  },
-  "storage_formats": {
-    "jsonl_master": "data/production/jp_professional_pilot.jsonl",
-    "jsonl_vocabulary": "data/production/vocabulary.jsonl",
-    "jsonl_expressions": "data/production/expressions.jsonl",
-    "jsonl_relationships": "data/production/relationships.jsonl",
-    "sqlite_database": "data/production/jp_professional.db"
-  },
-  "qa_validation": {
-    "passed": 800,
-    "failed": 0,
-    "pass_rate": "100.0%",
-    "qa_report": "reports/qa_report.json",
-    "qa_summary": "reports/qa_summary.md"
-  },
-  "provenance_policy": "Strict isolation of official source facts from generated learning definitions",
-  "staging_draft_status": "FSA 2027 draft isolated in staging/fsa_edinet_2027_draft/ marked source_status: draft"
+  "files": {
+    "vocabulary.jsonl": {
+      "sha256": "3bb45cb786af89697805cdf1434022d9d7b3e1d9512de887841f2e772c217f59",
+      "size_bytes": 4690769
+    },
+    "jp_professional_pilot.jsonl": {
+      "sha256": "3bb45cb786af89697805cdf1434022d9d7b3e1d9512de887841f2e772c217f59",
+      "size_bytes": 4690769
+    },
+    "expressions.jsonl": {
+      "sha256": "af06674c53ae9f4eeabb1769400c67b922a0332955bbb921218e443edbe46dbd",
+      "size_bytes": 46274
+    },
+    "relationships.jsonl": {
+      "sha256": "38fbf6b4344ba36c9d7a16fb5a3362d50a2e898c05ccd1926a42bcb7a4a9fe91",
+      "size_bytes": 463321
+    },
+    "jp_professional.db": {
+      "sha256": "eed0a391b3d0099b2fc8b9f264f9d3dbb728e07132593c1f0cc770360c9cac37",
+      "size_bytes": 8650752
+    }
+  }
 }

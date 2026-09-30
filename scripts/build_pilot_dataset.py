@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """
 scripts/build_pilot_dataset.py
-Master compiler for JP Professional Vocabulary Database (Phase 1 Pilot).
-Assembles 800 canonical entries across 4 domains (Accounting 200, Tax 200, Business 200, Trade 200),
-generates 50 workplace expressions, constructs the relationship graph, and outputs:
-  - data/production/jp_professional_pilot.jsonl (800 items)
-  - data/production/vocabulary.jsonl (800 items)
-  - data/production/expressions.jsonl (50 items)
-  - data/production/relationships.jsonl (graph edges)
+Phase 1.1 Master Builder for JP Professional Vocabulary Database.
+Enriches 800 normalized candidates across 4 domains (Accounting, Tax, Business, Trade),
+generates 50 workplace expressions, and constructs the term relationship graph.
+
+ARCHITECTURAL PRINCIPLE:
+The builder strictly outputs CANDIDATES (data/enriched/learning_candidates.jsonl).
+It NEVER self-certifies records ("validated": true is forbidden).
+It NEVER assigns arbitrary confidence scores (0.99, 0.98, etc.).
+Validation and release to production are strictly delegated to independent validation and release gates.
 """
 
 import os
 import sys
 import json
-import time
 from pathlib import Path
 from datetime import datetime, timezone
 import pykakasi
 
-# Add pilot_builder to sys.path
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR / "scripts" / "pilot_builder"))
 
@@ -27,9 +27,13 @@ import tax
 import business
 import trade
 import expressions
+import semantic_classes
+import example_generator
+import tts_modeler
 
-PROD_DIR = BASE_DIR / "data" / "production"
-PROD_DIR.mkdir(parents=True, exist_ok=True)
+ENRICHED_DIR = BASE_DIR / "data" / "enriched"
+ENRICHED_DIR.mkdir(parents=True, exist_ok=True)
+NORMALIZED_FILE = BASE_DIR / "data" / "normalized" / "normalized_candidates.jsonl"
 
 kks = pykakasi.kakasi()
 
@@ -37,15 +41,7 @@ def to_romaji(text: str) -> str:
     conv = kks.convert(text)
     return "".join(c["hepburn"] for c in conv).lower()
 
-def determine_jlpt_level(tier: str, priority: int) -> str:
-    if tier == "PRO-A1":
-        return "N2" if priority >= 98 else "N3"
-    elif tier == "PRO-A2":
-        return "N2"
-    else:
-        return "N1"
-
-def determine_concept_type(surface: str, synonyms: list) -> str:
+def determine_concept_type(surface: str) -> str:
     if any(c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ/" for c in surface):
         return "acronym"
     if surface.endswith("する"):
@@ -53,173 +49,6 @@ def determine_concept_type(surface: str, synonyms: list) -> str:
     if len(surface) > 4:
         return "compound_noun"
     return "noun"
-
-def generate_collocations(surface: str, domain: str) -> list:
-    if domain == "accounting":
-        return [
-            f"{surface}を計上する",
-            f"{surface}を確認する",
-            f"{surface}の残高",
-            f"{surface}を精算する"
-        ]
-    elif domain == "tax":
-        return [
-            f"{surface}を申告する",
-            f"{surface}を計算する",
-            f"{surface}の適用を受ける",
-            f"{surface}を控除する"
-        ]
-    elif domain == "business":
-        return [
-            f"{surface}を提出する",
-            f"{surface}を締結する",
-            f"{surface}を承認する",
-            f"{surface}に対応する"
-        ]
-    elif domain == "trade":
-        return [
-            f"{surface}を発行する",
-            f"{surface}を確認する",
-            f"{surface}を申請する",
-            f"{surface}の手続きを行う"
-        ]
-    return [f"{surface}を確認する", f"{surface}を管理する"]
-
-def generate_examples(surface: str, vi_short: str, en_pref: str, domain: str) -> list:
-    if domain == "accounting":
-        return [
-            {
-                "ja": f"月末に{surface}の残高を確認します。",
-                "vi": f"Cuối tháng chúng tôi kiểm tra số dư {vi_short}.",
-                "en": f"We verify the balance of {en_pref.lower()} at the end of the month.",
-                "register": "natural_workplace"
-            },
-            {
-                "ja": f"今期の決算において{surface}を適正に計上しました。",
-                "vi": f"Trong kỳ quyết toán này, chúng tôi đã hạch toán {vi_short} một cách thỏa đáng.",
-                "en": f"We properly recorded {en_pref.lower()} in this fiscal period.",
-                "register": "statutory_reporting"
-            }
-        ]
-    elif domain == "tax":
-        return [
-            {
-                "ja": f"確定申告で{surface}に関する書類を税務署へ提出します。",
-                "vi": f"Khi quyết toán thuế, chúng tôi nộp tài liệu liên quan đến {vi_short} lên chi cục thuế.",
-                "en": f"We submit documents related to {en_pref.lower()} to the tax office during the final tax return.",
-                "register": "natural_workplace"
-            },
-            {
-                "ja": f"税理士と相談の上、{surface}の特例を適用しました。",
-                "vi": f"Sau khi trao đổi với chuyên viên thuế, chúng tôi đã áp dụng ưu đãi {vi_short}.",
-                "en": f"After consulting with the tax accountant, we applied the special rule for {en_pref.lower()}.",
-                "register": "formal_business"
-            }
-        ]
-    elif domain == "business":
-        return [
-            {
-                "ja": f"取引先と協議し、{surface}について合意しました。",
-                "vi": f"Chúng tôi đã thảo luận với đối tác và đạt được thỏa thuận về {vi_short}.",
-                "en": f"We discussed with the client and reached an agreement regarding {en_pref.lower()}.",
-                "register": "natural_workplace"
-            },
-            {
-                "ja": f"明日の社内会議で{surface}の進捗状況を報告してください。",
-                "vi": f"Hãy báo cáo tiến độ {vi_short} trong cuộc họp nội bộ ngày mai.",
-                "en": f"Please report the progress of {en_pref.lower()} at tomorrow's internal meeting.",
-                "register": "beginner_workplace"
-            }
-        ]
-    elif domain == "trade":
-        return [
-            {
-                "ja": f"通関手続きのため、{surface}を速やかに手配してください。",
-                "vi": f"Hãy nhanh chóng thu xếp {vi_short} để làm thủ tục thông quan hải quan.",
-                "en": f"Please arrange {en_pref.lower()} promptly for customs clearance.",
-                "register": "natural_workplace"
-            },
-            {
-                "ja": f"今回の輸出取引は{surface}の条件に基づいて契約を締結しました。",
-                "vi": f"Giao dịch xuất khẩu lần này đã ký kết hợp đồng dựa trên điều kiện {vi_short}.",
-                "en": f"The contract for this export transaction was executed based on {en_pref.lower()} terms.",
-                "register": "formal_business"
-            }
-        ]
-    return [
-        {
-            "ja": f"{surface}について確認をお願いします。",
-            "vi": f"Xin vui lòng xác nhận về {vi_short}.",
-            "en": f"Please check regarding {en_pref.lower()}.",
-            "register": "natural_workplace"
-        }
-    ]
-
-def generate_dialogue(surface: str, vi_short: str, en_pref: str, domain: str) -> list:
-    if domain == "accounting":
-        return [
-            {
-                "speaker": "A",
-                "ja": f"今月の{surface}の処理は完了しましたか。",
-                "vi": f"Việc xử lý {vi_short} tháng này đã hoàn tất chưa?",
-                "en": f"Has the processing for {en_pref.lower()} been completed for this month?"
-            },
-            {
-                "speaker": "B",
-                "ja": f"はい、先ほど帳簿への記帳と照合を終えました。",
-                "vi": f"Vâng, tôi vừa hoàn thành việc ghi sổ và đối chiếu xong.",
-                "en": f"Yes, I have just finished bookkeeping and reconciliation."
-            }
-        ]
-    elif domain == "tax":
-        return [
-            {
-                "speaker": "A",
-                "ja": f"この費用は{surface}として認められますか。",
-                "vi": f"Khoản chi phí này có được chấp nhận là {vi_short} không?",
-                "en": f"Is this expense recognized as {en_pref.lower()}?"
-            },
-            {
-                "speaker": "B",
-                "ja": f"領収書と業務関連の証明があれば問題なく認められます。",
-                "vi": f"Nếu có biên lai và chứng minh liên quan đến công việc thì hoàn toàn được chấp nhận.",
-                "en": f"As long as there is a receipt and proof of business relevance, it will be recognized without issue."
-            }
-        ]
-    elif domain == "business":
-        return [
-            {
-                "speaker": "A",
-                "ja": f"先方に{surface}の件で連絡していただけますか。",
-                "vi": f"Anh/chị có thể liên hệ với đối tác về việc {vi_short} được không?",
-                "en": f"Could you contact the client regarding {en_pref.lower()}?"
-            },
-            {
-                "speaker": "B",
-                "ja": f"かしこまりました。午前のうちにメールでご連絡します。",
-                "vi": f"Tôi hiểu rồi. Tôi sẽ liên hệ qua email ngay trong buổi sáng.",
-                "en": f"Understood. I will contact them via email during the morning."
-            }
-        ]
-    elif domain == "trade":
-        return [
-            {
-                "speaker": "A",
-                "ja": f"船積みに必要な{surface}は揃いましたか。",
-                "vi": f"Tài liệu {vi_short} cần thiết cho việc bốc hàng lên tàu đã gom đủ chưa?",
-                "en": f"Have all documents for {en_pref.lower()} required for shipment been collected?"
-            },
-            {
-                "speaker": "B",
-                "ja": f"はい、フォワーダーから原本を受領いたしました。",
-                "vi": f"Vâng, tôi đã nhận được bản gốc từ công ty giao nhận rồi.",
-                "en": f"Yes, I have received the original from the freight forwarder."
-            }
-        ]
-    return [
-        {"speaker": "A", "ja": f"{surface}はどうなっていますか。", "vi": f"Tình hình {vi_short} sao rồi?", "en": f"How is the status of {en_pref.lower()}?"},
-        {"speaker": "B", "ja": "現在順調に進んでおります。", "vi": "Hiện tại đang tiến hành thuận lợi.", "en": "It is progressing smoothly now."}
-    ]
 
 def get_secondary_domains(domain: str) -> list:
     mapping = {
@@ -230,18 +59,27 @@ def get_secondary_domains(domain: str) -> list:
     }
     return mapping.get(domain, ["general_business"])
 
-def get_source_authority(source_id: str) -> str:
-    if "fsa" in source_id or "AccountList" in source_id:
-        return "FSA (Financial Services Agency)"
-    elif "nta" in source_id:
-        return "NTA (National Tax Agency)"
-    elif "jicpa" in source_id:
-        return "JICPA (Japanese Institute of CPAs)"
-    elif "jetro" in source_id:
-        return "JETRO (Japan External Trade Organization)"
-    return "Official Business Standards"
+def load_normalized_index() -> dict:
+    """
+    Loads normalized candidates to establish physical lineage.
+    Index key: (surface, domain) and fallback surface.
+    """
+    index = {}
+    if not NORMALIZED_FILE.exists():
+        print(f"[!] Warning: {NORMALIZED_FILE} not found. Proceeding without normalized mapping.")
+        return index
 
-def build_entry(item: dict, domain: str, seq_idx: int) -> dict:
+    with open(NORMALIZED_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            item = json.loads(line)
+            key = (item["surface"], item["domain"])
+            if key not in index:
+                index[key] = item
+            if item["surface"] not in index:
+                index[item["surface"]] = item
+    return index
+
+def build_entry(item: dict, domain: str, seq_idx: int, norm_index: dict) -> dict:
     surface = item["surface"]
     reading = item["reading"]
     romaji = to_romaji(reading)
@@ -255,38 +93,85 @@ def build_entry(item: dict, domain: str, seq_idx: int) -> dict:
     ants = item.get("antonyms", [])
     rels = item.get("related_terms", [])
     
-    # ID pattern: jp-pro-{domain}-{000001}
     entry_id = f"jp-pro-{domain}-{seq_idx:06d}"
-    concept_type = determine_concept_type(surface, syns)
-    jlpt_level = determine_jlpt_level(tier, priority)
+    concept_type = determine_concept_type(surface)
     
-    collocations = generate_collocations(surface, domain)
-    examples = generate_examples(surface, vi_short, en_pref, domain)
-    dialogue = generate_dialogue(surface, vi_short, en_pref, domain)
+    # 1. Semantic Classification & Natural Collocations
+    sem_class = semantic_classes.classify_semantic_type(surface, domain)
+    collocations = semantic_classes.build_semantic_collocations(surface, domain)
     
-    # Factor breakdown
+    # 2. Semantic Examples and Dialogue
+    examples = example_generator.generate_semantic_examples(
+        surface, reading, vi_short, en_pref, domain, sem_class
+    )
+    dialogue = example_generator.generate_semantic_dialogue(
+        surface, reading, vi_short, en_pref, domain, sem_class
+    )
+    
+    # 3. TTS Modeling
+    tts_metadata = tts_modeler.model_tts(surface, reading)
+    
+    # 4. Lineage Mapping
+    norm_candidate = norm_index.get((surface, domain), norm_index.get(surface))
+    if norm_candidate:
+        origin_type = "official_extracted"
+        source_id = norm_candidate["source_id"]
+        source_file = norm_candidate["source_file"]
+        source_record_id = norm_candidate["source_record_id"]
+        source_term_exact = norm_candidate["source_term_exact"]
+        ext_cand_id = norm_candidate["extracted_candidate_id"]
+        norm_cand_id = norm_candidate["normalized_candidate_id"]
+    else:
+        origin_type = "curated"
+        source_id = (
+            "fsa_edinet_2026" if domain == "accounting" else
+            "nta_tax_glossary_2026" if domain == "tax" else
+            "trade_business_corpus" if domain == "business" else
+            "jetro_trade"
+        )
+        source_file = "pilot_builder_curated"
+        source_record_id = f"curated-{domain}-{surface}"
+        source_term_exact = surface
+        ext_cand_id = None
+        norm_cand_id = None
+
+    lineage = {
+        "origin_type": origin_type,
+        "source_id": source_id,
+        "source_file": source_file,
+        "source_record_id": source_record_id,
+        "source_term_exact": source_term_exact,
+        "extracted_candidate_id": ext_cand_id,
+        "normalized_candidate_id": norm_cand_id,
+        "canonical_id": entry_id,
+        "enrichment_version": "v1.1.0-linguistic",
+        "validation_record": None,
+        "release_version": None
+    }
+
+    # Factor breakdown for priority score
     wf_factor = int(priority * 0.35)
     lu_factor = int(priority * 0.35)
     sa_factor = int(priority * 0.20)
     cd_factor = priority - (wf_factor + lu_factor + sa_factor)
-    
-    # Source mapping
-    source_id = "fsa_edinet_2026" if domain == "accounting" else \
-                "nta_tax_glossary_2026" if domain == "tax" else \
-                "trade_business_corpus" if domain == "business" else \
-                "jetro_trade"
-    
+
     entry = {
         "id": entry_id,
         "term": {
             "surface": surface,
             "reading": reading,
-            "romaji": romaji
+            "romaji": romaji,
+            "romaji_metadata": {
+                "scheme": "modified_hepburn",
+                "generator": "pykakasi",
+                "generator_version": "2.3.0"
+            }
         },
         "language": "ja",
         "domain": {
             "primary": domain,
-            "secondary": get_secondary_domains(domain)
+            "secondary": get_secondary_domains(domain),
+            "semantic_class": sem_class
         },
         "concept": {
             "type": concept_type,
@@ -295,6 +180,7 @@ def build_entry(item: dict, domain: str, seq_idx: int) -> dict:
         "meaning": {
             "vi": {
                 "short": vi_short,
+                "preferred": vi_short,
                 "explanation": vi_exp,
                 "professional_context": f"Được sử dụng phổ biến trong môi trường làm việc thực tế tại Nhật Bản thuộc lĩnh vực {domain}."
             },
@@ -305,10 +191,16 @@ def build_entry(item: dict, domain: str, seq_idx: int) -> dict:
             }
         },
         "professional_level": {
-            "tier": tier
+            "tier": tier,
+            "description": (
+                "Essential workplace vocabulary" if tier == "PRO-A1" else
+                "Working professional vocabulary" if tier == "PRO-A2" else
+                "Specialist / technical vocabulary"
+            )
         },
         "general_japanese": {
-            "estimated_level": jlpt_level
+            "jlpt_level": None,
+            "jlpt_status": "not_mapped"
         },
         "frequency": {
             "professional_priority": "essential" if priority >= 95 else "high" if priority >= 90 else "medium"
@@ -331,33 +223,21 @@ def build_entry(item: dict, domain: str, seq_idx: int) -> dict:
         "sources": [
             {
                 "source_id": source_id,
-                "source_term_exact": surface,
+                "source_file": source_file,
+                "source_term_exact": source_term_exact,
                 "source_reference": src_ref,
-                "source_authority": get_source_authority(src_ref)
+                "source_record_id": source_record_id
             }
         ],
+        "lineage": lineage,
         "provenance": {
-            "extracted_by": f"{domain}_extractor_pipeline",
-            "enriched_by": "gemini_linguistic_pipeline",
-            "validated": True,
-            "validation_timestamp": "2026-10-01T08:00:00Z"
+            "origin_type": origin_type,
+            "extracted_by": f"{domain}_extractor_pipeline" if ext_cand_id else "curated_knowledge_bank",
+            "enriched_by": "pilot_builder_v1.1_semantic",
+            "enrichment_version": "v1.1.0-linguistic"
         },
-        "tts": {
-            "speak_term": True,
-            "preferred_reading": reading,
-            "pause_after_term_ms": 1200,
-            "repeat_default": 2,
-            "speech_text": reading if concept_type == "acronym" and not surface.endswith("B/L") else surface,
-            "display_text": surface
-        },
-        "confidence": {
-            "canonical_term": 1.0,
-            "reading": 0.99,
-            "vi_translation": 0.96,
-            "en_translation": 0.98,
-            "domain_classification": 0.98
-        },
-        "status": "production"
+        "tts": tts_metadata,
+        "status": "candidate"
     }
     return entry
 
@@ -392,20 +272,27 @@ def build_expression_entry(item: dict, seq_idx: int) -> dict:
             }
         },
         "professional_level": {
-            "tier": tier
+            "tier": tier,
+            "description": (
+                "Essential workplace vocabulary" if tier == "PRO-A1" else
+                "Working professional vocabulary" if tier == "PRO-A2" else
+                "Specialist / technical vocabulary"
+            )
         },
         "priority_score": priority,
         "related_term": rel_term,
         "example": {
             "ja": ex_ja,
-            "vi": f"Ví dụ: {ex_ja}",
-            "en": f"Example sentence in Japanese workplace."
+            "vi": f"Ví dụ thực tế: {ex_ja}",
+            "en": f"Workplace usage: {ex_ja}"
         },
-        "status": "production"
+        "status": "candidate"
     }
 
 def main():
-    print("[*] Starting Master Pilot Assembly...")
+    print("[*] Starting Phase 1.1 Candidate Enrichment Builder...")
+    norm_index = load_normalized_index()
+    print(f"[*] Loaded {len(norm_index)} normalized candidate references.")
     
     all_entries = []
     domain_sets = [
@@ -416,47 +303,42 @@ def main():
     ]
     
     surface_to_id = {}
-    
-    # 1. Compile 800 Canonical Entries
+    origin_counts = {"official_extracted": 0, "curated": 0}
+
+    # 1. Compile 800 Candidate Entries
     for domain, items in domain_sets:
         print(f"[*] Processing {len(items)} items for domain '{domain}'...")
         for i, item in enumerate(items, start=1):
-            entry = build_entry(item, domain, i)
+            entry = build_entry(item, domain, i, norm_index)
             all_entries.append(entry)
             surface_to_id[entry["term"]["surface"]] = entry["id"]
+            origin_counts[entry["lineage"]["origin_type"]] += 1
             
     assert len(all_entries) == 800, f"Expected 800 entries, got {len(all_entries)}"
-    print(f"[+] Successfully compiled {len(all_entries)} canonical entries.")
+    print(f"[+] Compiled 800 candidate entries (official_extracted: {origin_counts['official_extracted']}, curated: {origin_counts['curated']}).")
     
-    # 2. Write jp_professional_pilot.jsonl and vocabulary.jsonl
-    pilot_file = PROD_DIR / "jp_professional_pilot.jsonl"
-    vocab_file = PROD_DIR / "vocabulary.jsonl"
-    
-    with open(pilot_file, "w", encoding="utf-8") as f:
+    # 2. Write candidates to data/enriched/learning_candidates.jsonl
+    candidates_file = ENRICHED_DIR / "learning_candidates.jsonl"
+    with open(candidates_file, "w", encoding="utf-8") as f:
         for entry in all_entries:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    print(f"[+] Wrote 800 entries to {pilot_file}")
+    print(f"[+] Wrote 800 enriched candidates to {candidates_file}")
     
-    with open(vocab_file, "w", encoding="utf-8") as f:
-        for entry in all_entries:
-            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    print(f"[+] Wrote 800 entries to {vocab_file}")
-    
-    # 3. Compile Expressions
-    print("[*] Processing workplace expressions...")
+    # 3. Compile Expressions candidates
+    print("[*] Processing workplace expressions candidates...")
     all_expressions = []
     for i, item in enumerate(expressions.EXPRESSION_ITEMS, start=1):
         expr_entry = build_expression_entry(item, i)
         all_expressions.append(expr_entry)
         
-    expr_file = PROD_DIR / "expressions.jsonl"
+    expr_file = ENRICHED_DIR / "learning_expressions_candidates.jsonl"
     with open(expr_file, "w", encoding="utf-8") as f:
         for expr in all_expressions:
             f.write(json.dumps(expr, ensure_ascii=False) + "\n")
-    print(f"[+] Wrote {len(all_expressions)} workplace expressions to {expr_file}")
+    print(f"[+] Wrote {len(all_expressions)} expression candidates to {expr_file}")
     
     # 4. Compile Relationships Graph
-    print("[*] Constructing Term Relationship Graph...")
+    print("[*] Constructing Term Relationship Graph candidates...")
     relationships = []
     rel_id_seq = 1
     
@@ -506,13 +388,13 @@ def main():
             })
             rel_id_seq += 1
             
-    rel_file = PROD_DIR / "relationships.jsonl"
+    rel_file = ENRICHED_DIR / "learning_relationships_candidates.jsonl"
     with open(rel_file, "w", encoding="utf-8") as f:
         for rel in relationships:
             f.write(json.dumps(rel, ensure_ascii=False) + "\n")
-    print(f"[+] Wrote {len(relationships)} graph edges to {rel_file}")
+    print(f"[+] Wrote {len(relationships)} graph edge candidates to {rel_file}")
     
-    print("\n[SUCCESS] Master Pilot Dataset Compilation Completed.")
+    print("\n[SUCCESS] Candidate Enrichment Phase Completed.")
 
 if __name__ == "__main__":
     main()
