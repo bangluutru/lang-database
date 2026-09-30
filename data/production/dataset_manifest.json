@@ -1,0 +1,50 @@
+{
+  "dataset_name": "JP Professional Vocabulary Database",
+  "dataset_version": "jp-professional-db-v0.1-pilot",
+  "release_date": "2026-10-01",
+  "status": "pilot_validated",
+  "architecture_layer": "Layer D: Learning Enrichment",
+  "total_canonical_entries": 800,
+  "domains": {
+    "accounting": {
+      "count": 200,
+      "primary_source": "fsa_edinet_2026",
+      "authority": "Financial Services Agency of Japan (FSA)"
+    },
+    "tax": {
+      "count": 200,
+      "primary_source": "nta_tax_glossary_2026",
+      "authority": "National Tax Agency of Japan (NTA)"
+    },
+    "business": {
+      "count": 200,
+      "primary_source": "trade_business_corpus",
+      "authority": "Official Japanese Commercial Practice & Corporate Governance"
+    },
+    "trade": {
+      "count": 200,
+      "primary_source": "jetro_trade",
+      "authority": "JETRO & Japan Customs (税関)"
+    }
+  },
+  "supplementary_layers": {
+    "workplace_expressions_count": 50,
+    "relationships_graph_edges_count": 2078
+  },
+  "storage_formats": {
+    "jsonl_master": "data/production/jp_professional_pilot.jsonl",
+    "jsonl_vocabulary": "data/production/vocabulary.jsonl",
+    "jsonl_expressions": "data/production/expressions.jsonl",
+    "jsonl_relationships": "data/production/relationships.jsonl",
+    "sqlite_database": "data/production/jp_professional.db"
+  },
+  "qa_validation": {
+    "passed": 800,
+    "failed": 0,
+    "pass_rate": "100.0%",
+    "qa_report": "reports/qa_report.json",
+    "qa_summary": "reports/qa_summary.md"
+  },
+  "provenance_policy": "Strict isolation of official source facts from generated learning definitions",
+  "staging_draft_status": "FSA 2027 draft isolated in staging/fsa_edinet_2027_draft/ marked source_status: draft"
+}

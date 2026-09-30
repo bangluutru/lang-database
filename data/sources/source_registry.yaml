@@ -1,0 +1,153 @@
+# JP Professional Vocabulary Database - Source Registry
+# Strict provenance tracking, licensing status, and ingestion boundaries.
+
+version: "1.0.0"
+last_updated: "2026-10-01"
+
+sources:
+  - source_id: fsa_edinet_2026
+    organization: 金融庁 (Financial Services Agency)
+    authority_level: government
+    jurisdiction: JP
+    license_tier: GREEN
+    status: final
+    production_baseline: true
+    data_type:
+      - xlsx
+      - zip
+      - pdf
+      - html
+    reuse_policy: PDL-1.0
+    legal_basis: "EDINET Taxonomy Legal Statement (© Copyright Financial Services Agency, The Japanese Government)"
+    attribution_required: true
+    attribution_text: "Derived from EDINET Taxonomy published by Financial Services Agency of Japan, transformed for educational/language-learning purposes."
+    raw_content_allowed: true
+    transformed_content_allowed: true
+    commercial_educational_allowed: true
+    reuse_mode: primary_taxonomy_ingestion
+    source_url: "https://www.fsa.go.jp/search/20251111.html"
+    checked_at: "2026-10-01"
+    files:
+      - filename: "1f_AccountList.xlsx"
+        role: "勘定科目リスト (Account List)"
+        url: "https://www.fsa.go.jp/search/20251111/1f_AccountList.xlsx"
+      - filename: "1e_ElementList.xlsx"
+        role: "タクソノミ要素リスト (Taxonomy Element List)"
+        url: "https://www.fsa.go.jp/search/20251111/1e_ElementList.xlsx"
+      - filename: "1g_IFRS_ElementList.xlsx"
+        role: "国際会計基準タクソノミ要素リスト (IFRS Element List)"
+        url: "https://www.fsa.go.jp/search/20251111/1g_IFRS_ElementList.xlsx"
+      - filename: "1c_Taxonomy.zip"
+        role: "EDINETタクソノミ本体 (Taxonomy Schema Core)"
+        url: "https://www.fsa.go.jp/search/20251111/1c_Taxonomy.zip"
+      - filename: "1b-3_Yougo.pdf"
+        role: "EDINETタクソノミ用語集 (Taxonomy Glossary)"
+        url: "https://www.fsa.go.jp/search/20251111/1b-3_Yougo.pdf"
+
+  - source_id: fsa_edinet_2027_draft
+    organization: 金融庁 (Financial Services Agency)
+    authority_level: government
+    jurisdiction: JP
+    license_tier: YELLOW
+    status: draft
+    production_baseline: false
+    staging_directory: "staging/fsa_edinet_2027_draft/"
+    data_type:
+      - xlsx
+      - pdf
+    reuse_policy: PDL-1.0
+    legal_basis: "Draft under public comment, not approved for unflagged production release"
+    attribution_required: true
+    raw_content_allowed: true
+    transformed_content_allowed: false
+    reuse_mode: research_and_staging_only
+    source_url: "https://www.fsa.go.jp/search/20260911.html"
+    checked_at: "2026-10-01"
+    notes: "May only be ingested into staging with source_status: draft tag. Under no circumstances merged into final production without explicit marking."
+
+  - source_id: nta_tax_glossary_2026
+    organization: 国税庁 (National Tax Agency)
+    authority_level: government
+    jurisdiction: JP
+    license_tier: GREEN
+    status: current
+    production_baseline: true
+    data_type:
+      - html
+    reuse_policy: PDL-1.0
+    legal_basis: "Standard Japanese Government Website Terms of Use (PDL-1.0 Compatible)"
+    attribution_required: true
+    attribution_text: "Derived from National Tax Agency (国税庁) Tax Answer and statutory terminology indexes."
+    raw_content_allowed: true
+    transformed_content_allowed: true
+    reuse_mode: terminology_and_statutory_reference
+    source_url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm"
+    checked_at: "2026-10-01"
+    sub_sources:
+      - id: "nta_senmon_yogo"
+        url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/yogo/senmon.htm"
+        role: "専門用語集"
+      - id: "nta_taxanswer_codes"
+        url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/code/index.htm"
+        role: "タックスアンサーコード一覧"
+      - id: "nta_ryaku_yogo"
+        url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/yogo/ryaku.htm"
+        role: "省略用語例"
+
+  - source_id: jicpa_glossary
+    organization: 日本公認会計士協会 (JICPA)
+    authority_level: professional_association
+    jurisdiction: JP
+    license_tier: YELLOW
+    status: active
+    production_baseline: false
+    data_type:
+      - html
+    reuse_policy: review_required
+    reuse_mode: terminology_reference
+    legal_basis: "Copyright JICPA. Terminology extraction permitted; bulk copying of explanatory prose strictly prohibited."
+    attribution_required: true
+    attribution_text: "Professional audit and accounting concept alignment informed by JICPA terminology indexes."
+    raw_content_allowed: false
+    transformed_content_allowed: true
+    source_url: "https://jicpa.or.jp/cpainfo/introduction/keyword/"
+    checked_at: "2026-10-01"
+    notes: "Exclusively used as terminology reference to discover authoritative professional accounting & audit terms. All definitions and learning examples are created completely independently."
+
+  - source_id: asbj_accounting_standards
+    organization: 企業会計基準委員会 (ASBJ)
+    authority_level: professional_standards_board
+    jurisdiction: JP
+    license_tier: YELLOW
+    status: active
+    production_baseline: false
+    data_type:
+      - pdf
+      - html
+    reuse_policy: review_required
+    reuse_mode: terminology_and_conceptual_relationship
+    legal_basis: "Accounting standards titles and formal terminology definitions for taxonomy cross-referencing."
+    attribution_required: true
+    attribution_text: "Accounting standards structure informed by ASBJ releases."
+    source_url: "https://www.asb.or.jp/"
+    checked_at: "2026-10-01"
+
+  - source_id: jetro_trade
+    organization: 日本貿易振興機構 (JETRO)
+    authority_level: government_related
+    jurisdiction: JP
+    license_tier: YELLOW
+    status: active
+    production_baseline: false
+    data_type:
+      - html
+    reuse_policy: restricted_review
+    reuse_mode: terminology_discovery
+    legal_basis: "Copyright JETRO. Reference source only for terminology discovery. Bulk scraping strictly forbidden."
+    attribution_required: true
+    attribution_text: "Trade, customs, and international logistics concept identification informed by JETRO references."
+    raw_content_allowed: false
+    transformed_content_allowed: true
+    source_url: "https://www.jetro.go.jp/"
+    checked_at: "2026-10-01"
+    notes: "Only extracted as trade concept seeds (Incoterms, B/L, L/C, customs clearance). Definitions, Vietnamese mappings, collocations, and dialogue generated through independent linguistic engineering."
