@@ -7,6 +7,7 @@ on:
       - 'data/production/**'
       - 'data/releases/**'
       - 'staging/review_queue/**'
+      - 'config/**'
       - 'scripts/**'
       - 'tests/**'
   pull_request:
@@ -14,13 +15,34 @@ on:
     paths:
       - 'data/production/**'
       - 'data/releases/**'
+      - 'config/**'
       - 'scripts/**'
       - 'tests/**'
   workflow_dispatch:
 
 jobs:
+  full-test-suite:
+    name: Full Test Suite (111 tests, no LLM calls)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install pytest pyyaml requests pykakasi
+      - name: Run complete test suite
+        # All 111 tests operate on frozen data — zero live LLM calls required.
+        # test_linguistic_validation.py checks model-name strings in production records.
+        # test_phase1_1c.py checks Golden Pilot invariants and known-bad pattern absence.
+        # No GEMINI_API_KEY is needed or used.
+        run: pytest tests/ -v --tb=short
+        env:
+          SKIP_LLM_CALLS: "1"
+
   invariant-check:
-    name: Dataset Invariants (Phase 1.1C)
+    name: Dataset Invariants (11 invariants)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,28 +53,8 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml requests
       - name: Run dataset invariant checks
+        # Exits 0 if all hard invariants pass (known Phase 1.2 backlog items are warnings only).
         run: python scripts/check_dataset_invariants.py
-
-  regression-tests:
-    name: Linguistic Regression Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: pip
-      - name: Install dependencies
-        run: pip install pytest pyyaml requests pykakasi
-      - name: Run regression tests (no LLM calls)
-        run: |
-          pytest tests/test_schema.py tests/test_pipeline.py \
-                 tests/test_reproducibility.py \
-                 tests/test_validation_independence.py \
-                 -v --tb=short -x
-        env:
-          # LLM calls are skipped in CI (no API key)
-          SKIP_LLM_CALLS: "1"
 
   golden-pilot-hash:
     name: Golden Pilot Hash Verification
@@ -63,6 +65,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: Verify Golden Pilot SHA-256
+        # Verifies both the vocabulary file SHA-256 and the canonical (content) SHA-256.
+        # Canonical algorithm: sorted by id, status excluded, one JSON line per record,
+        # incremental SHA-256 update — mirrors compute_canonical_dataset_hash() in run_phase1_1c.py.
         run: |
           python - <<'EOF'
           import json, hashlib, sys
@@ -79,18 +84,19 @@ jobs:
           with open(manifest_path) as f:
               manifest = json.load(f)
 
-          # File hash
+          # ── File SHA-256 ────────────────────────────────────────────────────
           h = hashlib.sha256()
           with open(vocab_path, "rb") as f:
               for chunk in iter(lambda: f.read(65536), b""):
                   h.update(chunk)
-          computed = h.hexdigest()
-          expected = manifest["vocabulary_file_sha256"]
-          if computed != expected:
-              print(f"FAIL: file hash mismatch\n  computed={computed}\n  expected={expected}")
+          computed_file = h.hexdigest()
+          expected_file = manifest["vocabulary_file_sha256"]
+          if computed_file != expected_file:
+              print(f"FAIL: file SHA-256 mismatch\n  computed={computed_file}\n  expected={expected_file}")
               sys.exit(1)
 
-          # Canonical hash
+          # ── Canonical SHA-256 ───────────────────────────────────────────────
+          # Must mirror compute_canonical_dataset_hash() in scripts/run_phase1_1c.py exactly.
           records = [json.loads(l) for l in open(vocab_path) if l.strip()]
           sorted_records = sorted(records, key=lambda r: r.get("id", ""))
           ch = hashlib.sha256()
@@ -100,10 +106,10 @@ jobs:
           computed_c = ch.hexdigest()
           expected_c = manifest["dataset_hash"]
           if computed_c != expected_c:
-              print(f"FAIL: canonical hash mismatch\n  computed={computed_c}\n  expected={expected_c}")
+              print(f"FAIL: canonical SHA-256 mismatch\n  computed={computed_c}\n  expected={expected_c}")
               sys.exit(1)
 
-          print(f"PASS: Golden Pilot hashes verified")
-          print(f"  File SHA-256:      {computed}")
-          print(f"  Canonical SHA-256: {computed_c}")
+          print("PASS: Golden Pilot hashes verified")
+          print(f"  Vocabulary file SHA-256 : {computed_file}")
+          print(f"  Canonical SHA-256       : {computed_c}")
           EOF

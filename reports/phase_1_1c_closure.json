@@ -1,7 +1,9 @@
 {
   "phase": "1.1C",
   "timestamp": "2026-10-01T02:52:34.988675+00:00",
+  "final_verification_timestamp": "2026-10-01T03:10:00.000000+00:00",
   "starting_commit": "be6cfffefda5886ee00b9d03b3b5b2eb1bd99ea8",
+  "closing_commit": "2910f98",
   "original_pilot": 800,
   "production_before_remediation": 772,
   "initial_quarantine": 28,
@@ -21,12 +23,45 @@
   "adversarial_audit_coverage": 28,
   "dataset_hash": "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c",
   "vocabulary_sha256": "1da7f6b958d3a1c4ccb12c4850b05ea5828b2d6ab8872077fea2e250d0e435c6",
-  "golden_pilot_release_path": "/Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/data/releases/golden-pilot-v1",
+  "golden_pilot_release_path": "data/releases/golden-pilot-v1",
   "tests": {
-    "total": 0,
-    "passed": 0,
+    "command": "pytest tests/ -v --tb=short",
+    "total": 111,
+    "passed": 111,
     "failed": 0,
-    "note": "run separately via pytest"
+    "skipped": 0,
+    "exit_code": 0,
+    "result": "PASS"
+  },
+  "invariants": {
+    "command": "python scripts/check_dataset_invariants.py",
+    "exit_code": 0,
+    "result": "PASS",
+    "hard_failures": 0,
+    "backlog_warnings": 2,
+    "details": {
+      "INV-1": "PASS — prod=800 review=0 perm_q=0 total=800",
+      "INV-2": "PASS — zero generated status violations=0",
+      "INV-3": "PASS — model provenance violations=0",
+      "INV-4": "PASS — no duplicate IDs duplicates=0",
+      "INV-5": "PASS — release versions violations=0",
+      "INV-6": "PASS — JLPT decoupled violations=0",
+      "INV-7": "PASS — permanent quarantine metadata violations=0",
+      "INV-8": "PASS — Golden Pilot hash file_match=True canonical_match=True",
+      "INV-9": "PASS (0 new) — backlog=91 pre-existing records (Phase 1.2)",
+      "INV-10": "PASS (0 new) — backlog=3 pre-existing records (Phase 1.2)",
+      "INV-11": "PASS — governance predicate injection violations=0"
+    }
+  },
+  "hash_verification": {
+    "method": "independent — exact algorithm from compute_canonical_dataset_hash() in scripts/run_phase1_1c.py",
+    "canonical_sha256_computed": "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c",
+    "canonical_sha256_expected": "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c",
+    "canonical_match": true,
+    "file_sha256_computed": "1da7f6b958d3a1c4ccb12c4850b05ea5828b2d6ab8872077fea2e250d0e435c6",
+    "file_sha256_expected": "1da7f6b958d3a1c4ccb12c4850b05ea5828b2d6ab8872077fea2e250d0e435c6",
+    "file_match": true,
+    "result": "PASS"
   },
   "failure_category_distribution": {
     "TECHNICAL_VALIDATION_FAILURE": 28,
@@ -36,5 +71,10 @@
     "DIALOGUE_ERROR": 10,
     "EXAMPLE_NATURALNESS_ERROR": 7,
     "DOMAIN_FACTUAL_ERROR": 7
+  },
+  "phase_1_2_backlog": {
+    "inv9_template_injection": 91,
+    "inv10_term_not_referenced": 3,
+    "suppression_file": "config/known_invariant_suppressions.json"
   }
 }
