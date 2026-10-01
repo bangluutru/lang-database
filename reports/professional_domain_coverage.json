@@ -1,0 +1,684 @@
+{
+  "generated_at": "2026-10-01T04:42:59Z",
+  "phase": "1.2B",
+  "production_total": 800,
+  "candidate_pool_total": 1729,
+  "extracted_raw_total": 2064,
+  "dedup_statistics": {
+    "total_raw_candidates": 2064,
+    "new_canonical": 1729,
+    "new_canonical_pct": 83.76937984496125,
+    "exact_duplicate": 291,
+    "exact_duplicate_pct": 14.098837209302326,
+    "variant_of": 0,
+    "variant_of_pct": 0.0,
+    "abbreviation_of": 0,
+    "abbreviation_of_pct": 0.0,
+    "different_sense": 0,
+    "different_sense_pct": 0.0,
+    "needs_review": 44,
+    "needs_review_pct": 2.131782945736434,
+    "multi_source_evidence_merges": 2
+  },
+  "domains": {
+    "accounting": {
+      "title": "会計・経理 (Accounting & Bookkeeping)",
+      "authorities": [
+        "fsa-edinet-taxonomy",
+        "asbj-accounting-standards",
+        "jicpa-glossary"
+      ],
+      "authority_classes": [
+        "A",
+        "B"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        1000,
+        1500
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 1581,
+      "potential_new_canonical": 1386,
+      "coverage_gap": "low",
+      "priority": "normal",
+      "subdomains": {
+        "financial_accounting": {
+          "title": "財務会計 (Financial Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 1331,
+          "total_available": 1331
+        },
+        "management_accounting": {
+          "title": "管理会計 (Management Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "bookkeeping": {
+          "title": "簿記・伝票実務 (Bookkeeping & Journal Entries)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "financial_statements": {
+          "title": "財務諸表・決算書 (Financial Statements)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "closing": {
+          "title": "決算手続 (Closing Procedures)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "receivables": {
+          "title": "債権管理 (Receivables & Credit Control)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "payables": {
+          "title": "債務管理 (Payables & Obligations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "fixed_assets": {
+          "title": "固定資産・減価償却 (Fixed Assets & Depreciation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "inventory": {
+          "title": "棚卸資産 (Inventory Valuation & Control)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "cost_accounting": {
+          "title": "原価計算 (Cost Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "audit": {
+          "title": "監査・内部統制 (Audit & Internal Control)",
+          "current_production": 0,
+          "candidate_pool_count": 54,
+          "total_available": 54
+        }
+      }
+    },
+    "tax": {
+      "title": "税務・申告 (Tax & Statutory Filing)",
+      "authorities": [
+        "nta-tax-glossary"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        800,
+        1200
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 130,
+      "potential_new_canonical": 88,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "corporate_tax": {
+          "title": "法人税 (Corporate Income Tax)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "consumption_tax": {
+          "title": "消費税・インボイス (Consumption Tax & Qualified Invoice)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "income_tax": {
+          "title": "所得税 (Individual Income Tax)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "withholding_tax": {
+          "title": "源泉所得税・年末調整 (Withholding Tax & Year-end Adjustment)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "local_tax": {
+          "title": "地方税・住民税・事業税 (Local Taxes)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "tax_filing": {
+          "title": "確定申告・修正申告 (Tax Filing & Returns)",
+          "current_production": 0,
+          "candidate_pool_count": 85,
+          "total_available": 85
+        },
+        "tax_payment": {
+          "title": "納税・納付手続 (Tax Payment & Settlement)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "deductions": {
+          "title": "所得控除・税額控除 (Deductions & Tax Credits)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "tax_audit": {
+          "title": "税務調査・更正処分 (Tax Audits & Penalties)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "trade": {
+      "title": "貿易・通関・国際物流 (Trade, Customs & Global Logistics)",
+      "authorities": [
+        "japan-customs-trade",
+        "jetro-trade"
+      ],
+      "authority_classes": [
+        "A",
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 50,
+      "potential_new_canonical": 13,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "import": {
+          "title": "輸入実務 (Import Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "export": {
+          "title": "輸出実務 (Export Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "customs_clearance": {
+          "title": "通関手続・NACCS (Customs Clearance & Systems)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "shipping": {
+          "title": "海上運送・航空輸送 (Shipping & Air Cargo)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "incoterms": {
+          "title": "インコタームズ・取引条件 (Incoterms & Trade Terms)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "freight": {
+          "title": "運賃・諸掛り (Freight & Ancillary Charges)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "trade_documents": {
+          "title": "貿易書類・船積書類 (Trade Documentation)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "trade_finance": {
+          "title": "貿易金融・決済 (Trade Finance & Settlements)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "tariff": {
+          "title": "関税・HSコード (Tariffs & HS Classification)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "origin": {
+          "title": "原産地規則・原産地証明書 (Rules of Origin)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "business": {
+      "title": "ビジネス・企業運営 (Business Operations & General Practice)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        1000,
+        1500
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 9,
+      "potential_new_canonical": 7,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "general_business": {
+          "title": "日常業務・実務慣習 (General Business Practice)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "operations": {
+          "title": "業務運営・工程管理 (Operations & Process Control)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "procurement": {
+          "title": "調達・購買業務 (Procurement & Purchasing)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "corporate_strategy": {
+          "title": "経営戦略・事業企画 (Corporate Strategy & Planning)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "compliance": {
+          "title": "コンプライアンス・企業倫理 (Compliance & Ethics)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        }
+      }
+    },
+    "management": {
+      "title": "経営管理・コーポレートガバナンス (Management & Corporate Governance)",
+      "authorities": [
+        "egov-corporate-law",
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 23,
+      "potential_new_canonical": 6,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "corporate_governance": {
+          "title": "企業統治・役員会 (Corporate Governance)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "board_management": {
+          "title": "取締役会運営 (Board Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "internal_control": {
+          "title": "内部統制システム (Internal Control Systems)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "risk_management": {
+          "title": "リスク管理・危機管理 (Risk Management & Crisis Response)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "sales": {
+      "title": "営業・取引実務 (Sales & Commercial Transactions)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 8,
+      "potential_new_canonical": 1,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "lead_generation": {
+          "title": "顧客開拓・リード獲得 (Lead Generation)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "proposal": {
+          "title": "提案・プレゼンテーション (Proposals & Pitches)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "quotation": {
+          "title": "見積・価格提示 (Quotations & Estimates)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "negotiation": {
+          "title": "商談・取引交渉 (Commercial Negotiation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "closing": {
+          "title": "成約・受注 (Closing & Deal Confirmation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "account_management": {
+          "title": "既存顧客管理・カスタマーサクセス (Account Management)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "purchasing": {
+      "title": "購買・資材調達 (Purchasing & Supply Chain)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        300,
+        500
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 10,
+      "potential_new_canonical": 4,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "sourcing": {
+          "title": "サプライヤー選定 (Supplier Sourcing)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "purchase_order": {
+          "title": "発注・注文請書 (Purchase Orders & Confirmation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "supplier_management": {
+          "title": "取引先管理・下請法 (Vendor Management & Subcontracting)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "delivery": {
+          "title": "納期管理・納品 (Delivery & Schedule Tracking)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "inspection": {
+          "title": "検収・受入検査 (Goods Inspection & Acceptance)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "hr": {
+      "title": "人事・労務 (Human Resources & Labor Relations)",
+      "authorities": [
+        "mhlw-labor"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        400,
+        600
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 29,
+      "potential_new_canonical": 17,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "recruitment": {
+          "title": "採用・雇用契約 (Recruitment & Hiring)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "employment": {
+          "title": "就業規則・労働条件 (Employment Regulations & Conditions)",
+          "current_production": 0,
+          "candidate_pool_count": 6,
+          "total_available": 6
+        },
+        "payroll": {
+          "title": "給与計算・賞与 (Payroll & Bonus Administration)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "social_insurance": {
+          "title": "社会保険・労働保険 (Social & Labor Insurance)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "working_hours": {
+          "title": "労働時間・36協定 (Working Hours & Overtime Agreements)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "leave": {
+          "title": "有給休暇・休業制度 (Paid Leave & Absences)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "evaluation": {
+          "title": "人事評価・考課 (Performance Evaluation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "labor_management": {
+          "title": "労使関係・安全衛生 (Labor Relations & Workplace Safety)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "finance": {
+      "title": "財務・金融 (Finance & Banking)",
+      "authorities": [
+        "fsa-edinet-taxonomy"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        400,
+        600
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 196,
+      "potential_new_canonical": 184,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "banking": {
+          "title": "銀行取引・融資 (Commercial Banking & Lending)",
+          "current_production": 0,
+          "candidate_pool_count": 184,
+          "total_available": 184
+        },
+        "corporate_finance": {
+          "title": "資金調達・資本政策 (Corporate Finance & Funding)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "capital_markets": {
+          "title": "資本市場・株式実務 (Capital Markets & Shareholder Relations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "treasury": {
+          "title": "資金繰り・為替管理 (Treasury & Cash Management)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "settlement": {
+          "title": "決済・手形小切手 (Settlement & Commercial Bills)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "legal": {
+      "title": "法務・契約 (Corporate Law & Contracts)",
+      "authorities": [
+        "egov-corporate-law"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        300,
+        500
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 16,
+      "potential_new_canonical": 12,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "corporate_law": {
+          "title": "会社法・商業登記 (Companies Act & Commercial Registration)",
+          "current_production": 0,
+          "candidate_pool_count": 11,
+          "total_available": 11
+        },
+        "contracts": {
+          "title": "契約実務・約款 (Contractual Practice & Terms)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "intellectual_property": {
+          "title": "知的財産・商標 (Intellectual Property & Trademarks)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "dispute_resolution": {
+          "title": "紛争解決・損害賠償 (Dispute Resolution & Damages)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "office_communication": {
+      "title": "社内連絡・文書実務 (Office Communication & Formal Reporting)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        700,
+        1000
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 12,
+      "potential_new_canonical": 11,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "internal_reporting": {
+          "title": "報告・連絡・相談 (Ho-Ren-So & Operational Reporting)",
+          "current_production": 0,
+          "candidate_pool_count": 6,
+          "total_available": 6
+        },
+        "formal_correspondence": {
+          "title": "社外文書・ビジネスメール (Business Correspondence)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "meeting_management": {
+          "title": "会議運営・議事録 (Meetings & Minutes)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    }
+  }
+}

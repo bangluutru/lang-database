@@ -1,0 +1,283 @@
+# JP Professional Vocabulary Database - Domain & Subdomain Taxonomy
+# Phase 1.2B - Practical Professional Japanese Taxonomy
+# Strictly separates domain/subdomain classification from lexical semantic class.
+
+version: "1.2.0"
+last_updated: "2026-10-01"
+
+domains:
+  accounting:
+    title: "会計・経理 (Accounting & Bookkeeping)"
+    authority_primary: ["fsa-edinet-taxonomy", "asbj-accounting-standards", "jicpa-glossary"]
+    target_planning_range: [1000, 1500]
+    subdomains:
+      financial_accounting:
+        title: "財務会計 (Financial Accounting)"
+        description: "External financial reporting under Japanese GAAP and IFRS"
+      management_accounting:
+        title: "管理会計 (Management Accounting)"
+        description: "Internal cost accounting, budgeting, and performance evaluation"
+      bookkeeping:
+        title: "簿記・伝票実務 (Bookkeeping & Journal Entries)"
+        description: "Day-to-day debit/credit journal entries, ledger reconciliation, vouchers"
+      financial_statements:
+        title: "財務諸表・決算書 (Financial Statements)"
+        description: "Balance sheet, income statement, cash flow statement, equity changes"
+      closing:
+        title: "決算手続 (Closing Procedures)"
+        description: "Monthly, quarterly, and annual accounts closing, adjustments, accruals"
+      receivables:
+        title: "債権管理 (Receivables & Credit Control)"
+        description: "Accounts receivable, notes receivable, allowance for doubtful accounts"
+      payables:
+        title: "債務管理 (Payables & Obligations)"
+        description: "Accounts payable, accrued liabilities, notes payable"
+      fixed_assets:
+        title: "固定資産・減価償却 (Fixed Assets & Depreciation)"
+        description: "Tangible/intangible fixed assets, depreciation methods, impairment"
+      inventory:
+        title: "棚卸資産 (Inventory Valuation & Control)"
+        description: "Cost of goods sold, FIFO, weighted average, inventory write-downs"
+      cost_accounting:
+        title: "原価計算 (Cost Accounting)"
+        description: "Manufacturing costs, overhead allocation, standard vs actual costs"
+      audit:
+        title: "監査・内部統制 (Audit & Internal Control)"
+        description: "Statutory audits, internal audits, audit opinions, J-SOX internal control"
+
+  tax:
+    title: "税務・申告 (Tax & Statutory Filing)"
+    authority_primary: ["nta-tax-glossary"]
+    target_planning_range: [800, 1200]
+    subdomains:
+      corporate_tax:
+        title: "法人税 (Corporate Income Tax)"
+        description: "Corporate tax returns, taxable income adjustments, tax loss carryforwards"
+      consumption_tax:
+        title: "消費税・インボイス (Consumption Tax & Qualified Invoice)"
+        description: "JCT rules, input tax credit, qualified invoices, simplified taxation"
+      income_tax:
+        title: "所得税 (Individual Income Tax)"
+        description: "Individual earnings categories, progressive rates, final tax returns"
+      withholding_tax:
+        title: "源泉所得税・年末調整 (Withholding Tax & Year-end Adjustment)"
+        description: "Salary withholding, year-end tax adjustments, statutory payment records"
+      local_tax:
+        title: "地方税・住民税・事業税 (Local Taxes)"
+        description: "Municipal inhabitant tax, enterprise tax, fixed asset property tax"
+      tax_filing:
+        title: "確定申告・修正申告 (Tax Filing & Returns)"
+        description: "Blue returns, white returns, amended returns, request for corrections"
+      tax_payment:
+        title: "納税・納付手続 (Tax Payment & Settlement)"
+        description: "Interim payments, tax prepayments, electronic tax filing (e-Tax)"
+      deductions:
+        title: "所得控除・税額控除 (Deductions & Tax Credits)"
+        description: "Basic deduction, spouse deduction, medical expense deduction, R&D credits"
+      tax_audit:
+        title: "税務調査・更正処分 (Tax Audits & Penalties)"
+        description: "Tax office inspections, reassessments, delinquent tax, non-filing penalties"
+
+  trade:
+    title: "貿易・通関・国際物流 (Trade, Customs & Global Logistics)"
+    authority_primary: ["japan-customs-trade", "jetro-trade"]
+    target_planning_range: [500, 700]
+    subdomains:
+      import:
+        title: "輸入実務 (Import Operations)"
+        description: "Import declaration, customs inspection, tariff payment, release of goods"
+      export:
+        title: "輸出実務 (Export Operations)"
+        description: "Export declaration, export licensing, foreign exchange regulations"
+      customs_clearance:
+        title: "通関手続・NACCS (Customs Clearance & Systems)"
+        description: "Customs broker operations, electronic declarations, bonded warehouse"
+      shipping:
+        title: "海上運送・航空輸送 (Shipping & Air Cargo)"
+        description: "Ocean freight, container shipping, air waybill, charter parties"
+      incoterms:
+        title: "インコタームズ・取引条件 (Incoterms & Trade Terms)"
+        description: "FOB, CIF, CFR, DDP, EXW, FCA, risk transfer and freight cost allocation"
+      freight:
+        title: "運賃・諸掛り (Freight & Ancillary Charges)"
+        description: "Freight rates, demurrage, detention, fuel surcharge (BAF), terminal charges"
+      trade_documents:
+        title: "貿易書類・船積書類 (Trade Documentation)"
+        description: "Bill of Lading (B/L), commercial invoice, packing list, insurance certificate"
+      trade_finance:
+        title: "貿易金融・決済 (Trade Finance & Settlements)"
+        description: "Letter of Credit (L/C), remittance (T/T), documentary collection (D/P, D/A)"
+      tariff:
+        title: "関税・HSコード (Tariffs & HS Classification)"
+        description: "Harmonized System codes, general vs preferential rates, EPA/FTA rates"
+      origin:
+        title: "原産地規則・原産地証明書 (Rules of Origin)"
+        description: "Certificate of origin, value-added criteria, change in tariff classification"
+
+  business:
+    title: "ビジネス・企業運営 (Business Operations & General Practice)"
+    authority_primary: ["smrj-business-guidance"]
+    target_planning_range: [1000, 1500]
+    subdomains:
+      general_business:
+        title: "日常業務・実務慣習 (General Business Practice)"
+        description: "Business communication, workplace etiquette, daily operational routine"
+      operations:
+        title: "業務運営・工程管理 (Operations & Process Control)"
+        description: "Standard operating procedures, quality assurance, PDCA cycles, efficiency"
+      procurement:
+        title: "調達・購買業務 (Procurement & Purchasing)"
+        description: "Supplier selection, quotation comparison, purchase orders, inspection"
+      corporate_strategy:
+        title: "経営戦略・事業企画 (Corporate Strategy & Planning)"
+        description: "Business planning, market research, business models, competitive analysis"
+      compliance:
+        title: "コンプライアンス・企業倫理 (Compliance & Ethics)"
+        description: "Legal compliance, corporate social responsibility, codes of conduct"
+
+  management:
+    title: "経営管理・コーポレートガバナンス (Management & Corporate Governance)"
+    authority_primary: ["egov-corporate-law", "smrj-business-guidance"]
+    target_planning_range: [500, 700]
+    subdomains:
+      corporate_governance:
+        title: "企業統治・役員会 (Corporate Governance)"
+        description: "Board of directors, executive officers, outside directors, advisory panels"
+      board_management:
+        title: "取締役会運営 (Board Operations)"
+        description: "Board meetings, resolutions, meeting minutes, governance reporting"
+      internal_control:
+        title: "内部統制システム (Internal Control Systems)"
+        description: "Risk assessment, control activities, monitoring, whistleblowing frameworks"
+      risk_management:
+        title: "リスク管理・危機管理 (Risk Management & Crisis Response)"
+        description: "Business continuity planning (BCP), compliance risk, operational risk"
+
+  sales:
+    title: "営業・取引実務 (Sales & Commercial Transactions)"
+    authority_primary: ["smrj-business-guidance"]
+    target_planning_range: [500, 700]
+    subdomains:
+      lead_generation:
+        title: "顧客開拓・リード獲得 (Lead Generation)"
+        description: "Prospecting, sales pipelines, inbound inquiries, initial outreach"
+      proposal:
+        title: "提案・プレゼンテーション (Proposals & Pitches)"
+        description: "Proposal documentation, RFP responses, client presentations"
+      quotation:
+        title: "見積・価格提示 (Quotations & Estimates)"
+        description: "Standard quotations, discount schemes, payment term negotiation"
+      negotiation:
+        title: "商談・取引交渉 (Commercial Negotiation)"
+        description: "Terms and conditions negotiation, SLA agreements, competitive bidding"
+      closing:
+        title: "成約・受注 (Closing & Deal Confirmation)"
+        description: "Contract signing, order receipt, deal finalization"
+      account_management:
+        title: "既存顧客管理・カスタマーサクセス (Account Management)"
+        description: "Relationship management, recurring sales, renewal negotiation"
+
+  purchasing:
+    title: "購買・資材調達 (Purchasing & Supply Chain)"
+    authority_primary: ["smrj-business-guidance"]
+    target_planning_range: [300, 500]
+    subdomains:
+      sourcing:
+        title: "サプライヤー選定 (Supplier Sourcing)"
+        description: "Vendor evaluation, supplier audit, credit checks"
+      purchase_order:
+        title: "発注・注文請書 (Purchase Orders & Confirmation)"
+        description: "Issuing purchase orders, order acknowledgments, schedule confirmation"
+      supplier_management:
+        title: "取引先管理・下請法 (Vendor Management & Subcontracting)"
+        description: "Subcontract Act compliance, performance tracking, supplier relations"
+      delivery:
+        title: "納期管理・納品 (Delivery & Schedule Tracking)"
+        description: "Delivery slips, lead-time management, expedited delivery"
+      inspection:
+        title: "検収・受入検査 (Goods Inspection & Acceptance)"
+        description: "Incoming quality control, acceptance certificates, rejection of defectives"
+
+  hr:
+    title: "人事・労務 (Human Resources & Labor Relations)"
+    authority_primary: ["mhlw-labor"]
+    target_planning_range: [400, 600]
+    subdomains:
+      recruitment:
+        title: "採用・雇用契約 (Recruitment & Hiring)"
+        description: "Job offers, employment contracts, probationary periods, hiring notices"
+      employment:
+        title: "就業規則・労働条件 (Employment Regulations & Conditions)"
+        description: "Rules of employment, employment status (regular, contract, part-time)"
+      payroll:
+        title: "給与計算・賞与 (Payroll & Bonus Administration)"
+        description: "Base salary, allowances, overtime pay, statutory deductions, pay slips"
+      social_insurance:
+        title: "社会保険・労働保険 (Social & Labor Insurance)"
+        description: "Health insurance, welfare pension, employment insurance, workers' comp"
+      working_hours:
+        title: "労働時間・36協定 (Working Hours & Overtime Agreements)"
+        description: "Statutory hours, overtime caps, Article 36 agreements, discretionary work"
+      leave:
+        title: "有給休暇・休業制度 (Paid Leave & Absences)"
+        description: "Annual paid leave, childcare leave, family nursing care leave, sick leave"
+      evaluation:
+        title: "人事評価・考課 (Performance Evaluation)"
+        description: "Competency appraisals, KPI reviews, promotion reviews, feedback"
+      labor_management:
+        title: "労使関係・安全衛生 (Labor Relations & Workplace Safety)"
+        description: "Labor union negotiations, workplace safety committees, industrial health"
+
+  finance:
+    title: "財務・金融 (Finance & Banking)"
+    authority_primary: ["fsa-edinet-taxonomy"]
+    target_planning_range: [400, 600]
+    subdomains:
+      banking:
+        title: "銀行取引・融資 (Commercial Banking & Lending)"
+        description: "Checking accounts, bank transfers, credit lines, loan agreements, collateral"
+      corporate_finance:
+        title: "資金調達・資本政策 (Corporate Finance & Funding)"
+        description: "Debt vs equity financing, bond issuance, rights offerings, venture funding"
+      capital_markets:
+        title: "資本市場・株式実務 (Capital Markets & Shareholder Relations)"
+        description: "Stock issuance, IPO procedures, investor relations (IR), dividend policy"
+      treasury:
+        title: "資金繰り・為替管理 (Treasury & Cash Management)"
+        description: "Cash flow budgeting, foreign exchange forward contracts, liquidity control"
+      settlement:
+        title: "決済・手形小切手 (Settlement & Commercial Bills)"
+        description: "Promissory notes, electronically recorded monetary claims, bank clearance"
+
+  legal:
+    title: "法務・契約 (Corporate Law & Contracts)"
+    authority_primary: ["egov-corporate-law"]
+    target_planning_range: [300, 500]
+    subdomains:
+      corporate_law:
+        title: "会社法・商業登記 (Companies Act & Commercial Registration)"
+        description: "Articles of incorporation, commercial registration, corporate resolutions"
+      contracts:
+        title: "契約実務・約款 (Contractual Practice & Terms)"
+        description: "Master agreements, confidentiality (NDA), basic sales agreements, breaches"
+      intellectual_property:
+        title: "知的財産・商標 (Intellectual Property & Trademarks)"
+        description: "Patents, trademarks, copyrights, trade secrets, licensing agreements"
+      dispute_resolution:
+        title: "紛争解決・損害賠償 (Dispute Resolution & Damages)"
+        description: "Statutory demand letters, litigation, arbitration, breach of contract claims"
+
+  office_communication:
+    title: "社内連絡・文書実務 (Office Communication & Formal Reporting)"
+    authority_primary: ["smrj-business-guidance"]
+    target_planning_range: [700, 1000]
+    subdomains:
+      internal_reporting:
+        title: "報告・連絡・相談 (Ho-Ren-So & Operational Reporting)"
+        description: "Status reporting, circular memos, incident reports, shift handovers"
+      formal_correspondence:
+        title: "社外文書・ビジネスメール (Business Correspondence)"
+        description: "Formal letter protocol, courteous salutations, inquiry emails, reminders"
+      meeting_management:
+        title: "会議運営・議事録 (Meetings & Minutes)"
+        description: "Meeting agendas, facilitation, attendance coordination, formal minutes"
