@@ -1,0 +1,70 @@
+{
+  "entry_id": "jp-pro-trade-000108",
+  "term": "確認信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation and one example sentence require minor rewrites for naturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "確認信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "確認信用状を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「決済する」の目的語は通常、取引や代金であり、信用状そのものではない。信用状は決済の手段。",
+      "suggested_text": "確認信用状で決済する"
+    },
+    {
+      "index": 2,
+      "text": "確認信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "確認信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「確認信用状での決済を銀行に依頼する手配を進めてください」は、やや冗長で不自然。より簡潔な表現が望ましい。",
+      "suggested_ja": "今回の新規顧客との取引では、念のため確認信用状による決済を銀行に手配してください。",
+      "suggested_vi": "Đối với giao dịch với khách hàng mới lần này, vui lòng sắp xếp với ngân hàng để thanh toán bằng thư tín dụng được bảo lãnh xác nhận, để đề phòng.",
+      "suggested_en": "For this new client transaction, please arrange with the bank for payment via Confirmed Letter of Credit, just to be safe."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e0b11dfde25021e6595f77197068b9d831f80332088cbb025a3dab85eea4f55b",
+    "validated_at": "2026-10-01T03:28:47.880963+00:00"
+  }
+}

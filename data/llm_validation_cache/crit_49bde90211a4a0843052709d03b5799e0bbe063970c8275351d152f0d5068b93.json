@@ -1,0 +1,72 @@
+{
+  "entry_id": "jp-pro-trade-000083",
+  "term": "従価税",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationsとExample Sentenceに不自然な表現が見られたため、修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "従価税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "従価税を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や内容に対して使う動詞であり、「従価税」という税そのものに直接適用するのは不自然。税率や適用条件などを照会する。",
+      "suggested_text": "従価税率を照会する"
+    },
+    {
+      "index": 2,
+      "text": "従価税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "従価税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「従価税」は税の種類であり、それ自体に「分類」という概念は通常適用されない。HSコードや品目分類を確認して、その結果として従価税が適用されるかを確認する。",
+      "suggested_text": "従価税の適用区分を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「計上する」は会計処理で帳簿に記載する意味合いが強く、税額を申告書に記載する文脈では「記載する」や「申告する」がより自然。",
+      "suggested_ja": "輸入申告書には、商品のCIF価格に基づき正確な従価税額を記載する必要があります。",
+      "suggested_vi": "Trên tờ khai nhập khẩu, cần phải ghi rõ số thuế theo tỷ lệ phần trăm trị giá hàng chính xác dựa trên giá CIF của hàng hóa.",
+      "suggested_en": "The import declaration must accurately state the ad valorem duty amount based on the CIF price of the goods."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eb2bd2125711d24c96eba7a1a8d23aef71c4b13ee1524663ce4318360692ac98",
+    "validated_at": "2026-10-01T03:28:06.631730+00:00"
+  }
+}

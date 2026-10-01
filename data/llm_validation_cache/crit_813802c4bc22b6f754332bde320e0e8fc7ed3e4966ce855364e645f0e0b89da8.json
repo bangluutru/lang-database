@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000081",
+  "term": "課税価格",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に自然で、専門用語の使い方も適切。一部コロケーションの修正は必要だが、学習教材として十分に活用できる。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税価格を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用する」は規則や法律に対して使うのが自然で、価格に対しては不自然。価格は「決定する」「算出する」などが適切。",
+      "suggested_text": "課税価格を決定する"
+    },
+    {
+      "index": 1,
+      "text": "課税価格を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税関などに課税価格について問い合わせる際に自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "関税の支払い行為として一般的な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "品目の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "HSコードなどの品目分類を確認する際に自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然で、内容も正確。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "メールや報告書で使われるような自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Aの発言に対するBの応答が論理的で、会話の流れが自然。専門用語も適切に使用されている。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dbf7c62642083df82608bdba0c05ac5836ee9eabdf850e43749656aa343154c8",
+    "validated_at": "2026-10-01T03:28:02.073814+00:00"
+  }
+}

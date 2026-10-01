@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000125",
+  "term": "D/P",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationsとDialogueに不自然な表現が見られたため、修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "D/P条件で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "D/Pを決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "D/Pは決済条件であり、決済の対象ではない。代金を決済する、またはD/P条件で決済する、が自然。",
+      "suggested_text": "D/P条件で決済する"
+    },
+    {
+      "index": 2,
+      "text": "D/Pを提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "D/Pは決済条件であり、提示する対象ではない。D/P条件を提示する、またはD/P条件を提案する、が自然。",
+      "suggested_text": "D/P条件を提示する"
+    },
+    {
+      "index": 3,
+      "text": "D/Pの不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "D/P自体に不一致が生じることは稀で、通常はD/P条件に基づく書類の不一致を指す。より具体的に「書類の不一致」とすべき。",
+      "suggested_text": "D/P条件における書類の不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Bの「書類は本日中に発送予定です」が、D/Pでの手配を進めることと直接的な応答になっておらず、やや唐突。D/Pの手配には書類の発送が含まれるため、重複感がある。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日合意した新規案件ですが、決済条件はD/Pで進めて問題ありませんか？",
+        "vi": "Về dự án mới đã thống nhất hôm trước, điều khoản thanh toán D/P có ổn không?",
+        "en": "Regarding the new project we agreed on the other day, is it okay to proceed with D/P as the payment term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先方銀行との確認も取れておりますので、D/P条件で手配を進めてください。書類は本日中に発送できるよう準備を進めます。",
+        "vi": "Vâng, chúng tôi đã xác nhận với ngân hàng đối tác, vì vậy hãy tiến hành sắp xếp theo điều khoản D/P. Chúng tôi sẽ chuẩn bị để gửi chứng từ trong ngày hôm nay.",
+        "en": "Yes, we have confirmed with the counterparty bank, so please proceed with the arrangements under D/P terms. We will prepare to dispatch the documents today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0d2650ad567ff9cfec15d47670ba77a9fe23e7020e35543d0abcb740b60e2955",
+    "validated_at": "2026-10-01T03:29:21.807224+00:00"
+  }
+}

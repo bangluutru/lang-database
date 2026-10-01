@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000122",
+  "term": "電信送金",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に自然で、ビジネスシーンでの使用に適している。一部のコロケーションに修正が必要だが、学習教材として許容範囲。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電信送金を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "電信送金で決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "電信送金の控えを提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "電信送金の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「不一致を解消する」は一般的だが、「電信送金の不一致」という表現は不自然。送金内容の不一致であれば「送金内容の不一致を解消する」などとすべき。",
+      "suggested_text": "電信送金の内容の不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "15449fb6ed906c900cccbdc9a6e3011cdcabd1b108a890ade98ee84a7d7a4191",
+    "validated_at": "2026-10-01T03:29:09.908288+00:00"
+  }
+}

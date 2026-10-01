@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000108",
+  "term": "確認信用状",
+  "overall_decision": "pass",
+  "summary_reason": "The overall quality is high, with only one minor collocation adjustment needed for optimal naturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "確認信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for opening an L/C."
+    },
+    {
+      "index": 1,
+      "text": "確認信用状を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While technically understandable, '決済する' is usually applied to the payment itself or the transaction, not directly to the L/C document. More natural would be '確認信用状に基づいて決済する' or '確認信用状で決済する'.",
+      "suggested_text": "確認信用状で決済する"
+    },
+    {
+      "index": 2,
+      "text": "確認信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for presenting documents under an L/C."
+    },
+    {
+      "index": 3,
+      "text": "確認信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for resolving discrepancies in L/C documents."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a natural business recommendation."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a natural business instruction."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally and the responses are logical and appropriate for a business setting."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "93c6c63c1e84669bae82ce8b8761fccaa16b2402a27f0da41e6119ff57e30016",
+    "validated_at": "2026-10-01T03:28:56.982724+00:00"
+  }
+}

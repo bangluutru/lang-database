@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000124",
+  "term": "後日送金",
+  "overall_decision": "pass",
+  "summary_reason": "The core term, examples, and dialogue are generally natural and appropriate for professional learning. Some collocations required minor adjustments for naturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "後日送金条件を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation in trade finance."
+    },
+    {
+      "index": 1,
+      "text": "後日送金を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「決済する」is typically used for the payment itself, not the 'deferred payment' concept. It's more natural to say '後日送金で決済する' or '後日送金による支払いを実行する'.",
+      "suggested_text": "後日送金で決済する"
+    },
+    {
+      "index": 2,
+      "text": "後日送金条件を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation in trade finance."
+    },
+    {
+      "index": 3,
+      "text": "後日送金の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「後日送金の不一致」is an awkward phrasing. While '不一致' can refer to discrepancies, it's not typically paired directly with '後日送金' in this manner. More natural would be '後日送金に関する条件の不一致' or '後日送金条件の相違を解消する'.",
+      "suggested_text": "後日送金条件の相違を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document, grammatically correct and contextually appropriate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business email or internal communication, grammatically correct and contextually appropriate."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally, Speaker B's response is logical and introduces the term appropriately within a business context."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "92b783ab3149ede27a6c14f60ca1fdf644226f9401679f0294d4e53818159fa3",
+    "validated_at": "2026-10-01T03:29:18.156277+00:00"
+  }
+}

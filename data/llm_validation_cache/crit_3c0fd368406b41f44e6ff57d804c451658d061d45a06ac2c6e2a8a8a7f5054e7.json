@@ -1,0 +1,69 @@
+{
+  "entry_id": "jp-pro-trade-000021",
+  "term": "輸出者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations need significant revision to directly relate to the term '輸出者' rather than '輸出業務'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出業務担当者を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The term is '輸出者' (exporter), not '輸出業務担当者' (person in charge of export operations). The collocation should be directly related to '輸出者'.",
+      "suggested_text": "輸出者を選任する"
+    },
+    {
+      "index": 1,
+      "text": "輸出業務を担当する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The term is '輸出者' (exporter), which is a role or entity, not '輸出業務' (export operations). An exporter performs export operations, but the collocation should be about the exporter itself.",
+      "suggested_text": "輸出者が業務を担当する"
+    },
+    {
+      "index": 2,
+      "text": "輸出者に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "輸出業務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to index 1, the term is '輸出者' (exporter), not '輸出業務' (export operations). An exporter performs export operations, but the collocation should be about the exporter itself.",
+      "suggested_text": "輸出者が業務を遂行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document. Factual correctness is maintained."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business communication."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally, and the response is logical. The term is introduced appropriately."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6f048be6b54c55ef967731f3fa89426136d5167278586b558fd4fa44b3ecb1ab",
+    "validated_at": "2026-10-01T03:27:39.425486+00:00"
+  }
+}

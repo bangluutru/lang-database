@@ -457,6 +457,25 @@ def generate_semantic_examples(surface: str, reading: str, vi_short: str, en_pre
         ]
 
     elif sem_class == "person_role":
+        if domain == "trade":
+            return [
+                {
+                    "ja": f"輸出入通関申告において、インボイスおよび契約書上の{surface}の表記と登録情報を確認しました。",
+                    "vi": f"Trong khai báo thông quan xuất nhập khẩu, chúng tôi đã kiểm tra thông tin đăng ký và cách ghi {vi_short} trên hóa đơn thương mại cũng như hợp đồng.",
+                    "en": f"In the customs declaration, we verified the registration information and description of the {en_clean} on the invoice and contract.",
+                    "register": "trade_compliance",
+                    "status": "generated",
+                    "generation_method": "semantic_frame"
+                },
+                {
+                    "ja": f"貿易管理令および関係法規に基づき、適格な{surface}として所定の届出と安全管理を実施しています。",
+                    "vi": f"Căn cứ Nghị định quản lý ngoại thương và các quy định pháp luật liên quan, với tư cách là {vi_short} hợp lệ, chúng tôi tiến hành khai báo quy định và quản lý an ninh.",
+                    "en": f"Pursuant to the Foreign Trade Control Order and related laws, we carry out prescribed notifications and security management as a qualified {en_clean}.",
+                    "register": "formal_business",
+                    "status": "generated",
+                    "generation_method": "semantic_frame"
+                }
+            ]
         return [
             {
                 "ja": f"定時株主総会の決議を経て、当社の新任{surface}が正式に選任されました。",
@@ -696,7 +715,67 @@ def generate_semantic_examples(surface: str, reading: str, vi_short: str, en_pre
             }
         ]
 
-    # Default / General Financial Account & Procedures
+    if domain == "business":
+        return [
+            {
+                "ja": f"業務効率化および内部統制の観点から、社内規程に沿って{surface}の手順を標準化しました。",
+                "vi": f"Dưới góc độ nâng cao hiệu quả công việc và kiểm soát nội bộ, chúng tôi đã chuẩn hóa quy trình {vi_short} theo quy chế công ty.",
+                "en": f"From the perspectives of operational efficiency and internal control, we standardized procedures for {en_clean} in accordance with company rules.",
+                "register": "corporate_management",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "ja": f"取引先との円滑な連携を図るため、担当部署と密接に連絡を取りながら{surface}を速やかに進めています。",
+                "vi": f"Nhằm phối hợp suôn sẻ với đối tác kinh doanh, chúng tôi đang liên hệ chặt chẽ với bộ phận phụ trách để khẩn trương xúc tiến {vi_short}.",
+                "en": f"To facilitate smooth collaboration with business partners, we are promptly proceeding with {en_clean} while closely coordinating with the department in charge.",
+                "register": "workplace_operations",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    elif domain == "trade":
+        return [
+            {
+                "ja": f"国際貿易取引におけるリスク管理を徹底するため、契約条件や法規に基づいて{surface}の要件を慎重に確認しました。",
+                "vi": f"Nhằm triệt để quản lý rủi ro trong giao dịch thương mại quốc tế, chúng tôi đã kiểm tra kỹ lưỡng các yêu cầu về {vi_short} dựa trên điều khoản hợp đồng và quy định pháp luật.",
+                "en": f"To thoroughly manage risks in international trade transactions, we carefully confirmed the requirements for {en_clean} based on contract terms and regulations.",
+                "register": "trade_compliance",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "ja": f"海外取引先との輸出入手続きを円滑に進めるため、乙仲や通関業者と連携して{surface}に関する手配を進めています。",
+                "vi": f"Để tiến hành suôn sẻ các thủ tục xuất nhập khẩu với đối tác nước ngoài, chúng tôi đang phối hợp với công ty giao nhận và đại lý hải quan để thu xếp {vi_short}.",
+                "en": f"To facilitate smooth import and export procedures with overseas partners, we are coordinating with forwarders and customs brokers to arrange {en_clean}.",
+                "register": "logistics_operations",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    elif domain == "tax":
+        return [
+            {
+                "ja": f"税務コンプライアンスの観点から、法令および通達に則り{surface}の要件を慎重に確認しました。",
+                "vi": f"Dưới góc độ tuân thủ thuế, chúng tôi đã kiểm tra cẩn trọng các điều kiện của {vi_short} theo đúng luật và thông tư hướng dẫn.",
+                "en": f"From a tax compliance perspective, we carefully verified the requirements for {en_clean} in accordance with statutory regulations and circulars.",
+                "register": "tax_compliance",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "ja": f"所轄税務署への申告にあたり、顧問税理士と事前相談を行って{surface}に関する添付書類を整備しました。",
+                "vi": f"Khi chuẩn bị khai báo với cơ quan thuế trực thuộc, chúng tôi đã thảo luận trước với chuyên viên thuế tư vấn để hoàn thiện hồ sơ đính kèm liên quan đến {vi_short}.",
+                "en": f"In preparing our filing with the competent tax office, we held preliminary consultations with our tax advisor and prepared the supporting documents for {en_clean}.",
+                "register": "statutory_reporting",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    # Default / General Financial Account & Procedures (accounting domain)
     return [
         {
             "ja": f"月末の帳簿照合において、{surface}の計上内容や残高に差異がないか精査します。",
@@ -783,7 +862,46 @@ def generate_semantic_dialogue(surface: str, reading: str, vi_short: str, en_pre
             }
         ]
 
-    elif sem_class in ["document", "organization", "person_role"]:
+    elif sem_class == "person_role":
+        if domain == "trade":
+            return [
+                {
+                    "speaker": "A",
+                    "ja": f"今回の輸出案件において、契約相手である{surface}側との連絡状況はいかがですか。",
+                    "vi": f"Trong thương vụ xuất khẩu lần này, tình hình liên lạc với phía {vi_short} là đối tác hợp đồng thế nào rồi?",
+                    "en": f"Regarding this export deal, what is the communication status with the {en_clean} as the contracting party?",
+                    "status": "generated",
+                    "generation_method": "semantic_frame"
+                },
+                {
+                    "speaker": "B",
+                    "ja": f"はい、必要書類の送付と信用状の確認を終えており、{surface}との調整は滞りなく進んでおります。",
+                    "vi": f"Vâng, chúng tôi đã gửi xong các chứng từ cần thiết và xác nhận thư tín dụng, việc điều phối với {vi_short} đang tiến triển thuận lợi.",
+                    "en": f"Yes, sending of required documents and L/C confirmation are finished; coordination with the {en_clean} is proceeding smoothly.",
+                    "status": "generated",
+                    "generation_method": "semantic_frame"
+                }
+            ]
+        return [
+            {
+                "speaker": "A",
+                "ja": f"今期の重要課題について、{surface}との連絡協議の日程は確定しましたか。",
+                "vi": f"Về vấn đề trọng yếu kỳ này, lịch thảo luận trao đổi với {vi_short} đã được chốt chưa?",
+                "en": f"Regarding key issues this term, has the schedule for consultations with the {en_clean} been finalized?",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "speaker": "B",
+                "ja": f"はい、論点整理を終え、来週初めに{surface}とのミーティングを実施予定です。",
+                "vi": f"Vâng, chúng tôi đã tổng hợp xong các nội dung cần bàn và dự kiến sẽ họp với {vi_short} vào đầu tuần tới.",
+                "en": f"Yes, we finished organizing the discussion points and plan to hold a meeting with the {en_clean} early next week.",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    elif sem_class in ["document", "organization"]:
         return [
             {
                 "speaker": "A",
@@ -1038,6 +1156,66 @@ def generate_semantic_dialogue(surface: str, reading: str, vi_short: str, en_pre
                 "ja": f"重要な指摘事項や未解消の論点はなく、予定通り{surface}を受領できる見通しです。",
                 "vi": f"Không có điểm lưu ý trọng yếu hay vấn đề nào chưa được giải quyết, dự kiến sẽ nhận được {vi_short} theo đúng kế hoạch.",
                 "en": f"There are no material findings or unresolved issues, so we anticipate receiving the {en_clean} as scheduled.",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    if domain == "business":
+        return [
+            {
+                "speaker": "A",
+                "ja": f"先週発生した案件について、{surface}の進捗状況はいかがでしょうか。",
+                "vi": f"Về vụ việc phát sinh tuần trước, tình hình tiến độ của {vi_short} thế nào rồi?",
+                "en": f"Regarding the matter that arose last week, what is the progress status of {en_clean}?",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "speaker": "B",
+                "ja": f"関係各所への確認を完了し、マニュアルに沿って滞りなく{surface}を進めております。",
+                "vi": f"Chúng tôi đã hoàn tất việc xác nhận với các bên liên quan và đang tiến hành {vi_short} thuận lợi theo đúng hướng dẫn.",
+                "en": f"We have completed confirmations with all relevant departments and are proceeding smoothly with {en_clean} according to the manual.",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    elif domain == "trade":
+        return [
+            {
+                "speaker": "A",
+                "ja": f"今回の船積み案件について、{surface}の確認や関連書類の準備状況はいかがでしょうか。",
+                "vi": f"Đối với lô hàng xuất chuyến này, việc xác nhận {vi_short} và chuẩn bị chứng từ liên quan đã đến đâu rồi?",
+                "en": f"Regarding this shipment, what is the status of verifying {en_clean} and preparing the related documents?",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "speaker": "B",
+                "ja": f"通関業者および取引先との協議を終えており、{surface}の手続きは予定通り完了できる見込みです。",
+                "vi": f"Chúng tôi đã thảo luận xong với đại lý hải quan và đối tác, dự kiến các thủ tục {vi_short} sẽ hoàn tất đúng lịch trình.",
+                "en": f"We have finished consultations with the customs broker and partner, and expect procedures for {en_clean} to be completed on schedule.",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            }
+        ]
+
+    elif domain == "tax":
+        return [
+            {
+                "speaker": "A",
+                "ja": f"今回の確定申告における{surface}の適用要件や計算根拠は整理できましたか。",
+                "vi": f"Điều kiện áp dụng và căn cứ tính toán cho {vi_short} trong đợt quyết toán thuế lần này đã được tổng hợp xong chưa?",
+                "en": f"Have we organized the eligibility requirements and calculation basis for {en_clean} in this tax filing?",
+                "status": "generated",
+                "generation_method": "semantic_frame"
+            },
+            {
+                "speaker": "B",
+                "ja": f"はい、顧問税理士の助言のもとで関連証憑を確認済みですので、申告手続きを進められます。",
+                "vi": f"Vâng, dưới sự tư vấn của chuyên viên thuế, chúng tôi đã kiểm tra xong các chứng từ liên quan và có thể tiến hành thủ tục kê khai.",
+                "en": f"Yes, we verified the relevant evidence under our tax advisor's guidance, so we can proceed with the filing procedures.",
                 "status": "generated",
                 "generation_method": "semantic_frame"
             }

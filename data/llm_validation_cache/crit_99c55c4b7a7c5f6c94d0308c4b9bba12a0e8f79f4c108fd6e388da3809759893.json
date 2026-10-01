@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000090",
+  "term": "緊急関税",
+  "overall_decision": "pass",
+  "summary_reason": "Collocations had minor issues, but examples and dialogue were natural and appropriate for a professional setting. Translations were accurate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "緊急関税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "緊急関税を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や内容について問い合わせる際に使う動詞であり、関税そのものに適用するのは不自然。関税率や適用条件などを照会する、であれば自然。",
+      "suggested_text": "緊急関税の適用条件を照会する"
+    },
+    {
+      "index": 2,
+      "text": "緊急関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "緊急関税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「緊急関税」は関税の一種であり、それ自体に「分類」という概念は通常適用されない。品目に対する関税率の分類であれば自然。",
+      "suggested_text": "緊急関税が適用される品目の分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1c2570d1d169230e3d76f341d99b1089eebb93ddf76110a2440af69bef910411",
+    "validated_at": "2026-10-01T03:28:33.538554+00:00"
+  }
+}

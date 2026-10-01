@@ -1,0 +1,36 @@
+{
+  "phase": "1.2A",
+  "title": "EXISTING BACKLOG REMEDIATION",
+  "starting_commit": "8b7522f62098dc6e24f9e674b5843cffedbaa127",
+  "golden_pilot_v1_records": 800,
+  "inv9_initial_backlog": 91,
+  "inv10_initial_backlog": 3,
+  "records_requiring_actual_modification": 92,
+  "records_passing_after_inspection_without_modification": 0,
+  "systemic_generator_defects": [
+    "Fallback accounting ledger template ('月末の帳簿照合', '補助元帳', '計上内容や残高', '今月の月次決算で') unconditionally applied to non-accounting domains (business, trade) in example_generator.py",
+    "Person role generator used corporate governance appointment / shareholder meeting templates for trade entities (exporter 輸出者)",
+    "Surface term substitution / omission in synthetic examples/dialogues for 備品管理, 輸出者, and 外国為替"
+  ],
+  "inv9_remaining": 0,
+  "inv10_remaining": 0,
+  "true_linguistic_judge_coverage": "92/92 (100%)",
+  "blind_rejudge_coverage": "92/92 (100%)",
+  "adversarial_audit_coverage": "92/92 (100%)",
+  "golden_pilot_v1_status": "UNCHANGED",
+  "golden_pilot_v1_canonical_sha256": "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c",
+  "golden_pilot_v1_vocabulary_sha256": "1da7f6b958d3a1c4ccb12c4850b05ea5828b2d6ab8872077fea2e250d0e435c6",
+  "golden_pilot_v1_1_records": 800,
+  "golden_pilot_v1_1_canonical_sha256": "5ae36d8ace6884a50a0e1fa8c8fd4399660575a133ea2dcbdcf8e16b1f51be15",
+  "golden_pilot_v1_1_vocabulary_sha256": "1e18d574e1c1b0f54451456e33648518f6e49a7e0dfc37eb1fec3dd35e55325d",
+  "tests": {
+    "total": 123,
+    "passed": 123,
+    "failed": 0,
+    "skipped": 0
+  },
+  "dataset_invariants": "PASS",
+  "new_suppressions_introduced": 0,
+  "known_limitations": "None. All 92 backlog records were verified through True Linguistic Judge, Blind Rejudge, and Adversarial Audit.",
+  "final_status": "READY FOR INDEPENDENT REVIEW"
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000127",
+  "term": "手形引受",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations contain redundant phrasing ('手形引受手形') which makes them unnatural. The examples and dialogue are good, but the collocations need refinement for naturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形引受を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "手形引受手形を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The term '手形引受' already implies a bill. '手形引受手形' is redundant and unnatural. One would '決済する' a '手形' or '手形引受済みの手形'.",
+      "suggested_text": "手形引受済みの手形を決済する"
+    },
+    {
+      "index": 2,
+      "text": "手形引受手形を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Similar to the previous point, '手形引受手形' is redundant. One would '提示する' a '手形' for acceptance or payment.",
+      "suggested_text": "手形を提示する"
+    },
+    {
+      "index": 3,
+      "text": "手形引受の記録の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a plausible and natural phrase in a professional context, referring to reconciling discrepancies in acceptance records.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The sentence accurately describes the role of bank acceptance in L/C transactions and sounds like a professional explanation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This sentence sounds like a natural internal communication in a business setting, informing about the readiness of acceptance for an import shipment.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally, Speaker B's response logically follows Speaker A's question, and the term is used appropriately in context.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3a903e0a89031a18ef8cf5a6a6a0a31f92e8d53d7edce4d4aa83730c79f0b1a2",
+    "validated_at": "2026-10-01T03:29:40.109090+00:00"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "entry_id": "jp-pro-trade-000120",
+  "term": "手形買取",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations were unnatural or semantically incorrect, and one example sentence contained a factual error regarding the application of bill discounting to import bills. These issues require revision to ensure accuracy and naturalness for professional learners.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形買取を依頼する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "手形買取で資金を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "手形買取 is a method of financing, not a direct means to 'settle funds'. Funds are settled by the underlying transaction, and 手形買取 provides liquidity. A more natural expression would be '手形買取で資金を調達する' (procure funds) or '手形買取を利用して資金繰りを改善する' (improve cash flow).",
+      "suggested_text": "手形買取で資金を調達する"
+    },
+    {
+      "index": 2,
+      "text": "手形買取を申し出る",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "申し出る (to offer, to propose) is typically used when one party offers something to another. In the context of 手形買取, the customer requests it from the bank, so '依頼する' (request) or '申請する' (apply) is more appropriate. The bank might '申し出る' to offer the service, but not the customer.",
+      "suggested_text": "手形買取を申請する"
+    },
+    {
+      "index": 3,
+      "text": "手形買取に関する不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically possible, '不一致を解消する' is a bit broad and less specific in a financial context. What kind of '不一致' (discrepancy/disagreement)? If it's about terms, '条件の相違を調整する' (adjust differences in terms) or '契約条件の不一致を解決する' (resolve discrepancies in contract terms) would be more precise. '不一致' itself is not directly 'resolved' by 手形買取, but rather issues related to it.",
+      "suggested_text": "手形買取の条件に関する相違を調整する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible internal business communication."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "手形買取 (bill discounting/negotiation) is typically for export bills (輸出手形) or domestic bills. For import bills (輸入手形), the importer usually makes payment, not discounts the bill. The bank would handle the collection of the import bill from the importer, or the importer would arrange financing like import usance. Discounting an import bill by the importer themselves is not standard practice. It should be an export bill from Company A that 'our company' is discounting.",
+      "suggested_ja": "来週の決済日に間に合わせるため、〇〇銀行にA社宛の輸出手形の手形買取を依頼してください。",
+      "suggested_vi": "Để kịp thời hạn thanh toán vào tuần tới, vui lòng yêu cầu Ngân hàng XX chiết khấu hối phiếu xuất khẩu gửi Công ty A.",
+      "suggested_en": "Please request Bank XX to discount the export bill addressed to Company A to meet next week's settlement date."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally and the responses are appropriate for a business setting."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ab332f78faa809fe9e8543ce1ac91a8f7b57e29c87d92d64aea94f5d5a0d08e7",
+    "validated_at": "2026-10-01T03:29:11.340399+00:00"
+  }
+}

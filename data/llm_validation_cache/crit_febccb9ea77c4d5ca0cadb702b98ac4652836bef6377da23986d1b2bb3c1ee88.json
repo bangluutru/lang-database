@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000127",
+  "term": "手形引受",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural and redundant, indicating a mechanical construction rather than native usage. The examples and dialogue are good, but the issues in collocations warrant a rewrite of those specific items.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形引受を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "手形引受手形を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Redundant and unnatural. '手形引受' is the act of acceptance, not the bill itself. One would '決済する' a '手形' (bill) or '手形債務' (bill liability), not '手形引受手形'.",
+      "suggested_text": "手形を決済する"
+    },
+    {
+      "index": 2,
+      "text": "手形引受手形を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Redundant and unnatural. Similar to the above, one '提示する' a '手形' (bill), not '手形引受手形'. The act of acceptance ('手形引受') is not something that is 'presented'.",
+      "suggested_text": "手形を提示する"
+    },
+    {
+      "index": 3,
+      "text": "手形引受の記録の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible phrase in an accounting or audit context.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible sentence in a financial report context. The Japanese is natural and the translations are accurate.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a natural request in a business email or internal communication. The Japanese is natural and the translations are accurate.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally, and Speaker B's response is logical and directly addresses Speaker A's query. The term is introduced organically.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b27ef3003265ba0814b9410ff797a4a1c2b9e73478cbcf40fc6a49ea77a26dad",
+    "validated_at": "2026-10-01T03:29:30.794021+00:00"
+  }
+}

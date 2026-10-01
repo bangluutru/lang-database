@@ -1,0 +1,54 @@
+{
+  "entry_id": "jp-pro-trade-000111",
+  "term": "スタンドバイL/C",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に自然で、専門用語の使い方も適切です。コロケーションの一部に修正が必要ですが、学習教材として十分に機能します。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "スタンドバイL/Cを開設する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "スタンドバイL/Cを実行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「実行する」はL/Cに対して不自然。L/Cは「開設する」「発行する」「利用する」などが適切。",
+      "suggested_text": "スタンドバイL/Cを利用する"
+    },
+    {
+      "index": 2,
+      "text": "スタンドバイL/Cを提示する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "スタンドバイL/Cの不一致を解消する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4dc908643785a2429acb377c583739d3cec8d3ab5a762c689ef1abbf062a16fa",
+    "validated_at": "2026-10-01T03:29:05.686218+00:00"
+  }
+}

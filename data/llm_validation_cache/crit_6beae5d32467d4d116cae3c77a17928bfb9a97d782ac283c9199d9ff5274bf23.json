@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000109",
+  "term": "譲渡可能信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "One collocation was unnatural and required a rewrite. The rest of the content was acceptable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "譲渡可能信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "譲渡可能信用状を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "信用状自体を決済するのではなく、信用状に基づいて代金を決済するのが自然。信用状は決済手段であり、決済の対象ではない。",
+      "suggested_text": "譲渡可能信用状で決済する"
+    },
+    {
+      "index": 2,
+      "text": "譲渡可能信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "譲渡可能信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "59d258f0c40b9c41c9fb609bd94fb259b9027e46eee44f7a701a83332e6f7610",
+    "validated_at": "2026-10-01T03:28:46.659258+00:00"
+  }
+}

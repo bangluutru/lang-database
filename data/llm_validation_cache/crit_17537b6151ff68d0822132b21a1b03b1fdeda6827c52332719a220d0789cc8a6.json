@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000083",
+  "term": "従価税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations need refinement for naturalness and semantic accuracy.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "従価税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "従価税を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や詳細を問い合わせる際に使う動詞であり、税金そのものに対して直接使うのは不自然。税率や計算方法などを照会するなら自然。",
+      "suggested_text": "従価税率を照会する"
+    },
+    {
+      "index": 2,
+      "text": "従価税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "従価税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「従価税」は税の種類であり、それ自体に「分類」という概念は通常適用されない。関税分類や品目分類を確認し、その結果として従価税率が適用されるかを確認する、という文脈なら自然。",
+      "suggested_text": "品目分類と従価税率を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ce4706f71aaa8f18d3b29e5db8bdc2ad2790ab090992c0c9cc41f7638319f8d7",
+    "validated_at": "2026-10-01T03:28:15.379083+00:00"
+  }
+}

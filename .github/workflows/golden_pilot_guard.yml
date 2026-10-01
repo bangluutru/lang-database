@@ -22,7 +22,7 @@ on:
 
 jobs:
   full-test-suite:
-    name: Full Test Suite (111 tests, no LLM calls)
+    name: Full Test Suite (123 tests, no LLM calls)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
           python-version: '3.11'
           cache: pip
       - name: Install dependencies
-        run: pip install pytest pyyaml requests pykakasi
+        run: pip install pytest pyyaml requests pykakasi janome
       - name: Run complete test suite
         # All 111 tests operate on frozen data — zero live LLM calls required.
         # test_linguistic_validation.py checks model-name strings in production records.
@@ -112,4 +112,32 @@ jobs:
           print("PASS: Golden Pilot hashes verified")
           print(f"  Vocabulary file SHA-256 : {computed_file}")
           print(f"  Canonical SHA-256       : {computed_c}")
+
+          # ── Golden Pilot v1.1 Check ─────────────────────────────────────────
+          manifest_path_1_1 = base / "data/releases/golden-pilot-v1.1/dataset_manifest.json"
+          vocab_path_1_1    = base / "data/releases/golden-pilot-v1.1/vocabulary.jsonl"
+          if manifest_path_1_1.exists() and vocab_path_1_1.exists():
+              with open(manifest_path_1_1) as f:
+                  m11 = json.load(f)
+              h11 = hashlib.sha256()
+              with open(vocab_path_1_1, "rb") as f:
+                  for chunk in iter(lambda: f.read(65536), b""):
+                      h11.update(chunk)
+              f11 = h11.hexdigest()
+              if f11 != m11["vocabulary_file_sha256"]:
+                  print(f"FAIL: v1.1 file SHA-256 mismatch\n  computed={f11}\n  expected={m11['vocabulary_file_sha256']}")
+                  sys.exit(1)
+              recs11 = [json.loads(l) for l in open(vocab_path_1_1) if l.strip()]
+              s_recs11 = sorted(recs11, key=lambda r: r.get("id", ""))
+              c11 = hashlib.sha256()
+              for r in s_recs11:
+                  can = {k: v for k, v in r.items() if k not in ("status",)}
+                  c11.update((json.dumps(can, sort_keys=True, ensure_ascii=False) + "\n").encode())
+              can11 = c11.hexdigest()
+              if can11 != m11["dataset_hash"]:
+                  print(f"FAIL: v1.1 canonical SHA-256 mismatch\n  computed={can11}\n  expected={m11['dataset_hash']}")
+                  sys.exit(1)
+              print("PASS: Golden Pilot v1.1 hashes verified")
+              print(f"  Vocabulary file SHA-256 : {f11}")
+              print(f"  Canonical SHA-256       : {can11}")
           EOF

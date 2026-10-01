@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000182",
+  "term": "完全生産品",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションの一部に不自然な表現や誤解を招く可能性のある表現が見られたため、修正が必要です。例文と対話は適切です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完全生産品として適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用する」の主語が「完全生産品」だと不自然。完全生産品は適用される対象。",
+      "suggested_text": "完全生産品として取り扱う"
+    },
+    {
+      "index": 1,
+      "text": "完全生産品であるか照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。"
+    },
+    {
+      "index": 2,
+      "text": "完全生産品に係る関税を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "完全生産品そのものに関税を納付するわけではなく、完全生産品である貨物に対して関税を納付する、または完全生産品であることで関税が免除・軽減される、という文脈が一般的。この表現だと誤解を招く可能性がある。",
+      "suggested_text": "完全生産品である貨物に係る関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "完全生産品の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然で、内容も正確です。"
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然で、内容も正確です。"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "会話の流れが自然で、専門用語の使い方も適切です。"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "aaa8e4efb77a73e844d41d400ac426d9d491e29395fac6cc654afedac8f53dc2",
+    "validated_at": "2026-10-01T03:30:20.454360+00:00"
+  }
+}

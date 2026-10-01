@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000120",
+  "term": "手形買取",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural and require revision to be suitable for professional teaching materials.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形買取を依頼する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural expression."
+    },
+    {
+      "index": 1,
+      "text": "手形買取で資金を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "手形買取 is a financing method, not a direct means to 'settle funds'. Funds are settled through the underlying transaction, and 手形買取 provides liquidity. It's more natural to say '手形買取によって資金を調達する' (procure funds) or '手形買取で資金繰りを円滑にする' (smooth cash flow).",
+      "suggested_text": "手形買取で資金を調達する"
+    },
+    {
+      "index": 2,
+      "text": "手形買取を申し出る",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural expression."
+    },
+    {
+      "index": 3,
+      "text": "手形買取に関する不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically possible, '不一致を解消する' is a bit formal and less common in direct relation to '手形買取'. More natural would be '手形買取の条件について合意する' (agree on terms) or '手形買取に関する問題点を解決する' (resolve issues). '不一致' often implies a disagreement on facts or understanding, not just terms.",
+      "suggested_text": "手形買取に関する問題点を解決する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a typical corporate message from a bank."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a natural instruction within a company."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally and the responses are logical within a business context."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both translations are accurate and professionally rendered."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1f603e11f184aefb5587d98ccee7723cdb7bbd52b36e9ea8209bd4633830457c",
+    "validated_at": "2026-10-01T03:29:20.772420+00:00"
+  }
+}

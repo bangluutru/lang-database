@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000197",
+  "term": "偽造品対策",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation #1 is unnatural. The term '対策' (measures/countermeasures) implies an ongoing effort or a set of actions, making '完了する' (to complete) an awkward fit. While specific 'measures' can be completed, the overarching '対策' itself is rarely 'completed' in a business context; rather, it is implemented, reviewed, or strengthened. This needs to be rephrased to reflect a more natural Japanese expression for managing ongoing initiatives.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "偽造品対策を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "偽造品対策を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「対策」は継続的な取り組みを指すため、「完了する」という表現は不自然。特定の対策の「実施」や「導入」であれば完了はあり得るが、「対策」全体を完了するとは言わない。",
+      "suggested_text": "偽造品対策を実施する"
+    },
+    {
+      "index": 2,
+      "text": "偽造品対策の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "偽造品対策を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "011fcd59e2f793af7941cfbcd58806f0241352ef931236ea4f309978a803453a",
+    "validated_at": "2026-10-01T03:30:32.092291+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000182",
+  "term": "完全生産品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations contain several unnatural or semantically incompatible expressions that require revision for professional use. Examples and dialogue are acceptable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完全生産品として適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用する」の目的語は「協定」「規則」「制度」などであり、「完全生産品」という物品そのものに適用するのは不自然。物品が「完全生産品として扱われる」「完全生産品と認定される」が自然。",
+      "suggested_text": "完全生産品として扱う"
+    },
+    {
+      "index": 1,
+      "text": "完全生産品であるか照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "完全生産品に係る関税を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「完全生産品に係る関税」という表現は不自然。関税は物品そのものにかかるものであり、完全生産品であるか否かは関税率の適用条件に関わる。直接「完全生産品に係る関税」とは言わない。",
+      "suggested_text": "完全生産品に適用される関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "完全生産品の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「完全生産品」は物品の原産性に関する概念であり、「分類」という言葉はHSコードなどの品目分類に使うのが一般的。原産性の確認は「完全生産品であるか否かの確認」が自然。",
+      "suggested_text": "完全生産品であるか否かを確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネスメールや報告書で使われるような自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "ビジネスシーンでの会話として自然で、応答も論理的。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f17ad80609c6b0513d6250d3409fe05aa6aa0df736e6219768a3e315e20136f7",
+    "validated_at": "2026-10-01T03:30:10.891686+00:00"
+  }
+}

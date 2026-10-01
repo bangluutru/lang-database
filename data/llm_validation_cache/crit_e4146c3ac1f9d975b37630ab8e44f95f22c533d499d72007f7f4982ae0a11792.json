@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-business-000022",
+  "term": "返品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some example sentences and dialogue turns feel slightly unnatural or templated, requiring minor rewrites for improved authenticity and naturalness in a professional Japanese context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "返品処理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "返品処理を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "返品の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "返品条件を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '売上返品の計上内容や関連する伝票に差異がないか精査します' is grammatically correct but sounds somewhat stiff and templated. A more natural phrasing would be '売上返品の計上内容と関連伝票に差異がないか精査します' or '売上返品の計上内容と関連伝票の照合を行い、差異がないことを確認します'. The current phrasing feels like a direct translation of a checklist item.",
+      "suggested_ja": "月末の帳簿照合において、売上返品の計上内容と関連伝票に差異がないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi rà soát kỹ lưỡng xem nội dung hạch toán hàng bán bị trả lại và các chứng từ liên quan có phát sinh chênh lệch hay không.",
+      "suggested_en": "During the month-end ledger reconciliation, we carefully examine whether there are discrepancies between sales return entries and related vouchers."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '返品の計上内容に差異や計上漏れは発生していませんか' is a bit clunky. A more natural way to ask this would be '返品の計上内容に差異や計上漏れはありませんか' or '返品の計上内容に差異や計上漏れがないか確認しましたか'. The use of '発生していませんか' sounds overly formal and slightly unnatural for a direct question in this context. Speaker B's response is fine.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、返品の計上内容に差異や計上漏れはありませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt hay thiếu sót nào trong việc hạch toán hàng trả lại không?",
+        "en": "For this month's monthly closing, are there any discrepancies or omissions in the sales return entries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is consistent."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8311f1d336cdd73491ab99c40c9d43a92d00340316b474fb14da209244339717",
+    "validated_at": "2026-10-01T03:22:12.216081+00:00"
+  }
+}

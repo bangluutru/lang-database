@@ -1,0 +1,41 @@
+{
+  "release": "golden-pilot-v1.1",
+  "source_pilot_size": 800,
+  "production_verified": 800,
+  "permanent_quarantine": 0,
+  "domains": {
+    "accounting": 200,
+    "business": 200,
+    "tax": 200,
+    "trade": 200
+  },
+  "validation_architecture": "true_linguistic_judge",
+  "schema_version": "v1.1b",
+  "lineage": {
+    "predecessor": "golden-pilot-v1",
+    "phase": "1.2A",
+    "action": "backlog_remediation",
+    "remediated_records_count": 92,
+    "inv9_remediated": 91,
+    "inv10_remediated": 3
+  },
+  "prompt_versions": {
+    "semantic_audit": "semantic_audit_v1",
+    "critic": "linguistic_judge_v1",
+    "resolver": "linguistic_resolver_v1",
+    "rejudge": "linguistic_rejudge_v1",
+    "adversarial_audit": "adversarial_audit_v1"
+  },
+  "model_policy": {
+    "semantic_audit": "gemini-2.5-flash",
+    "critic": "gemini-2.5-flash",
+    "resolver": "gemini-2.5-flash",
+    "rejudge": "gemini-2.5-flash",
+    "adversarial_audit": "gemini-2.5-flash"
+  },
+  "created_at": "2026-10-01T03:33:20.278275+00:00",
+  "dataset_hash": "5ae36d8ace6884a50a0e1fa8c8fd4399660575a133ea2dcbdcf8e16b1f51be15",
+  "vocabulary_file_sha256": "1e18d574e1c1b0f54451456e33648518f6e49a7e0dfc37eb1fec3dd35e55325d",
+  "immutable": true,
+  "immutability_policy": "golden-pilot-v1.1 is an immutable release baseline following Phase 1.2A backlog remediation."
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000184",
+  "term": "関税分類変更基準",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2と3に意味的な誤りがあり、学習者に誤解を与える可能性があるため、修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関税分類変更基準を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "関税分類変更基準を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や事実を問い合わせる際に使う動詞であり、基準そのものを照会するというのは不自然。基準の内容や適用方法を照会する、であれば自然。",
+      "suggested_text": "関税分類変更基準の適用について照会する"
+    },
+    {
+      "index": 2,
+      "text": "関税分類変更基準に基づいて関税を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "関税分類変更基準は原産地規則の一つであり、関税額の算定基準ではない。関税額は品目分類（HSコード）と税率に基づいて決定されるため、この表現は不適切。",
+      "suggested_text": "関税分類変更基準を満たした製品に関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "関税分類変更基準に沿った分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「分類」はHSコードの品目分類を指すことが多いが、関税分類変更基準は「原産地」の基準であり、「分類」そのものではない。基準に沿って「原産品であるか」を確認する、が適切。",
+      "suggested_text": "関税分類変更基準に沿って原産品であることを確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "32f7b3942f024f558a4bfac3d5d4aa402e685d44493d993192d89a692a32a7dd",
+    "validated_at": "2026-10-01T03:30:42.875198+00:00"
+  }
+}

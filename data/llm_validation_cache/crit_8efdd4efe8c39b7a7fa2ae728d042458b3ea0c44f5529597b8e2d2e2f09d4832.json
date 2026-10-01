@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000184",
+  "term": "関税分類変更基準",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural or semantically incompatible and require revision to accurately reflect the concept of Change in Tariff Classification in a professional context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関税分類変更基準を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "関税分類変更基準を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "関税分類変更基準に基づいて関税を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "関税分類変更基準は、関税の納付額を直接決定するものではなく、原産地規則の適用可否を判断する基準であるため、「関税を納付する」という動詞とは直接結びつかない。関税額は品目分類と税率によって決まる。",
+      "suggested_text": "関税分類変更基準を満たしてFTA税率を適用する"
+    },
+    {
+      "index": 3,
+      "text": "関税分類変更基準に沿った分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「分類を確認する」は不自然。「関税分類変更基準に沿って分類されているか確認する」のように、基準が分類の根拠であることを明確にする必要がある。",
+      "suggested_text": "関税分類変更基準に沿った分類がされているか確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "88cd12c6fb88a2b0a91bb171eb2d9bddd9725bcd73a67b074063d2f833d900bb",
+    "validated_at": "2026-10-01T03:30:25.349477+00:00"
+  }
+}

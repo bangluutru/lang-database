@@ -1,0 +1,70 @@
+{
+  "entry_id": "jp-pro-trade-000109",
+  "term": "譲渡可能信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 1 and Example 0 contain unnatural expressions that require revision for professional use.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "譲渡可能信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "譲渡可能信用状を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "信用状そのものを決済するという表現は不自然。信用状に基づく代金を決済する、または信用状が決済される、という受動的な表現がより自然。",
+      "suggested_text": "譲渡可能信用状に基づく代金を決済する"
+    },
+    {
+      "index": 2,
+      "text": "譲渡可能信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "譲渡可能信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "サプライチェーンの透明性確保のために譲渡可能信用状を推奨するという論理が不自然。譲渡可能信用状はサプライヤーへの支払い円滑化が主目的であり、透明性とは直接結びつかない。",
+      "suggested_ja": "サプライヤーへの支払いを円滑にするため、当社は譲渡可能信用状の利用を推奨しています。",
+      "suggested_vi": "Để tạo điều kiện thanh toán cho các nhà cung cấp, công ty chúng tôi khuyến nghị sử dụng thư tín dụng có thể chuyển nhượng.",
+      "suggested_en": "To facilitate payments to suppliers, our company recommends the use of transferable letters of credit."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "38b75f2722ce0bf5f138957840e36eabe14f80f8d90e8974e7239ac1251c82f7",
+    "validated_at": "2026-10-01T03:28:55.015505+00:00"
+  }
+}

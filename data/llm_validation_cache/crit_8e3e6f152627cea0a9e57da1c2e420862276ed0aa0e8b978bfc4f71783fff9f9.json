@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000148",
+  "term": "FCL貨物",
+  "overall_decision": "rewrite",
+  "summary_reason": "One collocation was semantically awkward, and one example sentence had a domain factual/register error regarding financial reporting. The rest were acceptable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "FCL貨物を手配する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for arranging FCL cargo.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "FCL貨物に仕分ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You sort 'items' into FCL cargo, not sort 'FCL cargo' itself. FCL cargo is already a classification. The predicate '仕分ける' (to sort/classify) does not naturally apply to 'FCL貨物' as the direct object in this context. It implies FCL cargo is being sorted into something else, or that items are being sorted into FCL cargo, but the phrasing is awkward.",
+      "suggested_text": "貨物をFCLで仕立てる (to consolidate cargo into FCL)"
+    },
+    {
+      "index": 2,
+      "text": "FCL貨物として輸送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common way to express transporting something as FCL cargo.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "FCL貨物の運賃を比較する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for comparing freight charges for FCL cargo.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "While FCL can reduce costs, stating '輸送コスト削減効果を明確に記載する必要がある' in a financial report specifically tied to 'FCL貨物による' is overly granular and not typical for a general financial report (決算報告書). Cost reduction effects are usually reported at a higher level, not broken down by specific cargo types like FCL vs LCL in a formal financial statement. It sounds like an internal operational report, not a public financial report.",
+      "suggested_ja": "今期の輸送コスト削減策として、FCL貨物の活用を推進し、その効果を社内報告書にまとめる必要があります。",
+      "suggested_vi": "Là một biện pháp cắt giảm chi phí vận chuyển trong kỳ này, chúng ta cần thúc đẩy việc sử dụng hàng FCL và tổng hợp hiệu quả của nó vào báo cáo nội bộ.",
+      "suggested_en": "As a measure to reduce transportation costs this period, we need to promote the use of FCL cargo and summarize its effects in an internal report."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This sentence is natural and typical for a business communication regarding shipping logistics.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue is natural, logical, and introduces the term smoothly within a common business scenario.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ffadd4421892e496bc7f751241cc27664d5a5b04887f8f780580f4f769964366",
+    "validated_at": "2026-10-01T03:29:46.856766+00:00"
+  }
+}

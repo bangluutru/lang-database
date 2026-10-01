@@ -1,0 +1,60 @@
+{
+  "entry_id": "jp-pro-trade-000090",
+  "term": "緊急関税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations contain unnatural expressions that require revision for professional use.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "緊急関税を適用する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "緊急関税を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や詳細を問い合わせる際に使う動詞であり、関税そのものに直接適用するのは不自然。関税率や適用条件などを照会する、という文脈ならあり得るが、この形では不自然。",
+      "suggested_text": "緊急関税について照会する"
+    },
+    {
+      "index": 2,
+      "text": "緊急関税を納付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「関税を納付する」は一般的だが、「緊急関税を納付する」と特定すると、緊急関税そのものを納付するような印象を与え、やや不自然。緊急関税が課された物品に対する関税を納付する、というニュアンスが適切。",
+      "suggested_text": "緊急関税が課された物品の関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "緊急関税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「緊急関税」は関税の一種であり、それ自体に「分類」という概念は通常適用されない。関税率表の分類や、緊急関税の対象となる品目の分類を確認する、といった文脈ならあり得るが、この表現は不自然。",
+      "suggested_text": "緊急関税の対象品目分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6b9bf02c9907786f993e47aaf17577a39e7c12e99900e5bf6654f265bf912816",
+    "validated_at": "2026-10-01T03:28:24.835864+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000089",
+  "term": "相殺関税",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に自然で、ビジネスシーンでの使用に適している。一部コロケーションに修正が必要だが、本質的な問題ではない。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "相殺関税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "相殺関税を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や詳細を問い合わせる際に使う動詞であり、関税そのものに直接適用するのは不自然。関税に関する情報を照会する、という意味合いなら「相殺関税について照会する」が適切。",
+      "suggested_text": "相殺関税について照会する"
+    },
+    {
+      "index": 2,
+      "text": "相殺関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "相殺関税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "相殺関税は特定の製品に課されるものであり、関税自体に「分類」という概念は通常適用されない。製品の分類を確認し、その結果として相殺関税の対象となるかを確認する、という文脈なら理解できるが、直接「相殺関税の分類」とは言わない。",
+      "suggested_text": "相殺関税の対象品目を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "da41f025354708b71230e59b11c55a8c8ead7e51b044bd8ef0cc8d6f2987bb4c",
+    "validated_at": "2026-10-01T03:28:16.901082+00:00"
+  }
+}

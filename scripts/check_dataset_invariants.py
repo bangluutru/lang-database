@@ -25,6 +25,8 @@ PROD_FILE       = BASE_DIR / "data" / "production" / "vocabulary.jsonl"
 GOLDEN_VOCAB    = BASE_DIR / "data" / "releases" / "golden-pilot-v1" / "vocabulary.jsonl"
 GOLDEN_MANIFEST = BASE_DIR / "data" / "releases" / "golden-pilot-v1" / "dataset_manifest.json"
 GOLDEN_CHECKSUMS= BASE_DIR / "data" / "releases" / "golden-pilot-v1" / "checksums.sha256"
+GOLDEN_V1_1_VOCAB    = BASE_DIR / "data" / "releases" / "golden-pilot-v1.1" / "vocabulary.jsonl"
+GOLDEN_V1_1_MANIFEST = BASE_DIR / "data" / "releases" / "golden-pilot-v1.1" / "dataset_manifest.json"
 CANDIDATES_FILE = BASE_DIR / "data" / "enriched" / "learning_candidates.jsonl"
 REJECTED_FILE   = BASE_DIR / "staging" / "review_queue" / "rejected.jsonl"
 NEEDS_REVIEW_FILE = BASE_DIR / "staging" / "review_queue" / "needs_review.jsonl"
@@ -232,6 +234,36 @@ def invariants_golden_pilot_hash() -> None:
     print(f"  INV-8: Golden Pilot hash — file_match={computed_file_hash==expected_file_hash} canonical_match={computed_canonical==expected_canonical}")
 
 
+def invariants_golden_pilot_v1_1_hash() -> None:
+    """INV-8c: Golden Pilot v1.1 SHA-256 must match manifest if present."""
+    if not GOLDEN_V1_1_VOCAB.exists() or not GOLDEN_V1_1_MANIFEST.exists():
+        return
+
+    with open(GOLDEN_V1_1_MANIFEST, encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    expected_file_hash = manifest.get("vocabulary_file_sha256", "")
+    computed_file_hash = compute_sha256_file(GOLDEN_V1_1_VOCAB)
+    check(
+        computed_file_hash == expected_file_hash,
+        f"INV-8c FAIL: Golden Pilot v1.1 file SHA-256 mismatch:\n"
+        f"  computed: {computed_file_hash}\n"
+        f"  expected: {expected_file_hash}"
+    )
+
+    entries = load_jsonl(GOLDEN_V1_1_VOCAB)
+    expected_canonical = manifest.get("dataset_hash", "")
+    computed_canonical = compute_canonical_dataset_hash(entries)
+    check(
+        computed_canonical == expected_canonical,
+        f"INV-8d FAIL: Golden Pilot v1.1 canonical dataset hash mismatch:\n"
+        f"  computed: {computed_canonical}\n"
+        f"  expected: {expected_canonical}"
+    )
+    print(f"  INV-8 (v1.1): Golden Pilot v1.1 hash — file_match={computed_file_hash==expected_file_hash} canonical_match={computed_canonical==expected_canonical}")
+
+
+
 def invariants_no_accounting_templates_on_business() -> None:
     """INV-9: No accounting ledger template examples in business/trade records.
     
@@ -385,6 +417,7 @@ def main():
     if not args.prod_only:
         print("\n[Golden Pilot Invariants]")
         invariants_golden_pilot_hash()
+        invariants_golden_pilot_v1_1_hash()
 
     print("\n" + "=" * 60)
     if warnings:
