@@ -207,3 +207,51 @@ Professional difficulty and general Japanese language proficiency (JLPT) are dis
 - **JSONL (`.jsonl`):** Line-by-line master records under `data/production/` and staging queues under `staging/review_queue/`.
 - **SQLite (`.db`):** Local relational database with FTS5 search index (`data/production/jp_professional.db`).
 - **Deterministic Pipeline:** All candidate enrichment, validation, and release gate scripts are reproducible and deterministic.
+
+---
+
+## 7. Phase 1.3B Architecture: Tri-Language Learning Lexical Graph
+
+Phase 1.3B evolves the vocabulary pipeline into a unified, open, machine-readable **English–Japanese–Vietnamese Learning Lexical Graph**.
+
+```
+CONCEPT (language-independent semantic identity)
+   │
+   ├── SENSE (distinct meaning, POS, register, glosses)
+   │     │
+   │     ├── EN EXPRESSION(S) (lemma, pronunciation, display_form)
+   │     ├── JA EXPRESSION(S) (lemma, reading, romaji, kanji)
+   │     └── VI EXPRESSION(S) (lemma, pronunciation, Hán-Việt cognates)
+   │
+   ├── CLASSIFICATIONS (many-to-many: CEFR, NGSL, JLPT, Joyo, TOEIC, IELTS, TOEFL, VI Core)
+   ├── EXAMPLES (pedagogical sentences with multi-language links)
+   ├── RELATIONSHIPS (synonyms, antonyms, SINO_COGNATE_OF)
+   └── SOURCE EVIDENCE & PROVENANCE (value-level traceability, license metadata, AI origin tags)
+```
+
+### 7.1 Concept vs. Sense vs. Expression
+1. **Concept**: Universal language-independent semantic anchor (e.g. `concept-000101` or `concept-poly-right-correct`). Permanent IDs never use English strings directly.
+2. **Sense**: Represents a specific semantic definition under a Concept. Multiple senses exist when justified by distinct meanings. Polysemous words are **never collapsed**:
+   - `right` (correct) → `concept-poly-right-correct` / `sense-poly-right-correct-01`
+   - `right` (direction) → `concept-poly-right-direction` / `sense-poly-right-direction-01`
+   - `right` (entitlement) → `concept-poly-right-entitlement` / `sense-poly-right-entitlement-01`
+3. **Expression**: Language-specific lexical realization (`en`, `ja`, `vi`). Language-specific attributes (reading, kanji, kana for JA; Hán-Việt for VI; IPA for EN) live exclusively within the relevant Expression.
+
+### 7.2 Many-to-Many Learning Classification
+Learning classifications attach directly to Concepts, Senses, or Expressions without duplicating lexical records:
+- **Japanese**: `JOYO_KANJI`, `SCHOOL_GRADE`, `JLPT`, `JP_FREQUENCY`, `JP_CORE`
+- **English**: `CEFR`, `NGSL`, `NGSL_SPOKEN`, `NAWL`, `BUSINESS_SERVICE_LIST`, `TOEIC`, `EIKEN`, `IELTS`, `TOEFL`, `EN_FREQUENCY`
+- **Vietnamese**: `VI_CORE_500`, `VI_CORE_1000`, `VI_CORE_2000`, `VI_CORE_5000`, `VI_FREQUENCY`, `VI_SPOKEN`
+- **Provenance Taxonomy**: Every classification carries `official`, `source_derived`, `corpus_derived`, `community_consensus`, `inferred`, or `ai_proposed`. JLPT classifications are labeled `community_consensus` rather than `official` to prevent false authority claims.
+
+### 7.3 Hán-Việt First-Class Cognate Modeling
+Sino-Japanese and Sino-Vietnamese cognates are linked explicitly as `SINO_COGNATE_OF` relationships with verified morphological and semantic evidence (e.g., `経済` ↔ `KINH TẾ` ↔ `kinh tế` ↔ `economy`), while preventing false cognate conflations.
+
+### 7.4 Open Ingestion Foundation & License Gate
+- **Adapter Contract (`BaseSourceAdapter`)**: Idempotent extraction requiring `source_id`, `version`, `source_locator`, `license_code`, `raw_sha256`, and value-level `SourceEvidence`.
+- **License Gate (`config/license_policy.yaml`)**: Automatically approves `CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `PDL-1.0`, `MIT`. Quarantines `CC-BY-NC-4.0`, `CC-BY-ND-4.0`, `PROPRIETARY`, and `UNKNOWN`.
+- **AI Provenance Separation**: Machine-assisted fields carry `origin = ai_generated`, `model`, `generation_version`, and `review_status = pending`. AI proposals never masquerade as source evidence.
+
+### 7.5 Backward Compatibility & Legacy Bridge
+`LegacyBridge` maps all 800 existing `jp-pro-*` records into canonical `Concept`, `Sense`, `Expression`, and `Classification` records while preserving legacy IDs in `data/canonical/legacy_mapping.json`. All legacy production datasets, Golden Pilot releases (v1 & v1.1), and Canaries remain byte-for-byte frozen.
+

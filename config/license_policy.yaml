@@ -1,0 +1,161 @@
+# Open Language Database - Machine-Readable License Compatibility Policy
+# Phase 1.3B License Gate Configuration
+
+version: "1.3.1"
+last_updated: "2026-10-01"
+
+# Production Redistributability Requirements:
+# Any record targeting canonical production MUST have licenses permitting:
+# 1. Commercial use
+# 2. Redistribution
+# 3. Creation and distribution of derivative works
+
+production_requirements:
+  allow_commercial: true
+  allow_redistribution: true
+  allow_derivatives: true
+
+licenses:
+  # Fully Permissive / Public Domain
+  CC0-1.0:
+    name: "Creative Commons Zero 1.0 Universal"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: false
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_1_PERMISSIVE"
+
+  PDL-1.0:
+    name: "Government Website Terms of Use (Japan Public Data License 1.0)"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_1_PERMISSIVE"
+
+  MIT:
+    name: "MIT License"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_1_PERMISSIVE"
+
+  Apache-2.0:
+    name: "Apache License 2.0"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_1_PERMISSIVE"
+
+  # Attribution Required
+  CC-BY-4.0:
+    name: "Creative Commons Attribution 4.0 International"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_2_ATTRIBUTION"
+
+  CC-BY-3.0:
+    name: "Creative Commons Attribution 3.0 Unported"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "APPROVED"
+    tier: "TIER_2_ATTRIBUTION"
+
+  # Share-Alike / Copyleft (Permitted with explicit share-alike tracking)
+  CC-BY-SA-4.0:
+    name: "Creative Commons Attribution-ShareAlike 4.0 International"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: true
+    status: "APPROVED_WITH_SHARE_ALIKE"
+    tier: "TIER_3_SHARE_ALIKE"
+
+  CC-BY-SA-3.0:
+    name: "Creative Commons Attribution-ShareAlike 3.0 Unported"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: true
+    status: "APPROVED_WITH_SHARE_ALIKE"
+    tier: "TIER_3_SHARE_ALIKE"
+
+  ODbL-1.0:
+    name: "Open Database License (ODbL) 1.0"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: true
+    status: "APPROVED_WITH_SHARE_ALIKE"
+    tier: "TIER_3_SHARE_ALIKE"
+
+  # STRICTLY QUARANTINED / PROHIBITED FROM PRODUCTION
+  CC-BY-NC-4.0:
+    name: "Creative Commons Attribution-NonCommercial 4.0"
+    commercial_use: false
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: false
+    status: "QUARANTINED"
+    quarantine_reason: "Non-commercial clause prohibits general open developer reuse"
+
+  CC-BY-NC-SA-4.0:
+    name: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0"
+    commercial_use: false
+    redistribution_allowed: true
+    derivatives_allowed: true
+    attribution_required: true
+    share_alike: true
+    status: "QUARANTINED"
+    quarantine_reason: "Non-commercial clause violates open redistribution mission"
+
+  CC-BY-ND-4.0:
+    name: "Creative Commons Attribution-NoDerivatives 4.0"
+    commercial_use: true
+    redistribution_allowed: true
+    derivatives_allowed: false
+    attribution_required: true
+    share_alike: false
+    status: "QUARANTINED"
+    quarantine_reason: "No-derivatives clause prevents database transformation and enhancement"
+
+  PROPRIETARY:
+    name: "Proprietary / All Rights Reserved"
+    commercial_use: false
+    redistribution_allowed: false
+    derivatives_allowed: false
+    attribution_required: false
+    share_alike: false
+    status: "PROHIBITED"
+    quarantine_reason: "Closed copyright"
+
+  UNKNOWN:
+    name: "Unknown / Unspecified License"
+    commercial_use: false
+    redistribution_allowed: false
+    derivatives_allowed: false
+    attribution_required: false
+    share_alike: false
+    status: "QUARANTINED"
+    quarantine_reason: "Unverifiable legal permissions"

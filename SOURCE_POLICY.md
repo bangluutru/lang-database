@@ -62,3 +62,66 @@ In compliance with copyright safety (Section 21 of Directive):
 2. **Structured-First:** Direct downloadable structured formats (Excel `.xlsx`, ZIP archives, XML) are prioritized over web page scraping.
 3. **Respectful Requests:** All web fetch operations must include explicit headers, rate limiting (minimum 1.0s delay between requests), and standard browser User-Agents.
 4. **Reproducibility:** All downloads are mediated by scripted tools in `scripts/download_sources.py` which compute and log cryptographic checksums (SHA-256).
+
+---
+
+## 7. Phase 1.3B Open Source Ingestion Foundation
+
+### 7.1 Source Acquisition Priority Hierarchy
+Ingestion must never rely on uncontrolled scraping. Upstream datasets are acquired in strict priority order:
+1. Official downloadable open dataset (e.g. Agency for Cultural Affairs Jōyō tables, NGSL releases)
+2. Official API with explicit redistribution rights
+3. Official project repository (e.g. EDRDG JMdict / KANJIDIC2)
+4. Structured open-data dump with verified license
+5. Stable machine-readable endpoint
+6. HTML extraction only when legally and technically appropriate
+
+### 7.2 Source Discovery vs. Ingestion Lifecycle
+To prevent copyright contamination, sources transition through explicit lifecycle states:
+- `DISCOVERED`: Identified as potential vocabulary resource.
+- `UNDER_REVIEW`: License, provenance, and structure undergoing verification.
+- `APPROVED`: Verified compatible with commercial redistribution and derivative creation.
+- `REFERENCE_ONLY`: Used solely for coverage validation, frequency benchmarks, or candidate discovery (e.g. Anki Shared Decks). **Never ingested into canonical production.**
+- `REJECTED`: Fails license, provenance, or quality requirements.
+- `INGESTED`: Successfully parsed via dedicated `BaseSourceAdapter` into canonical graph.
+
+---
+
+## 8. Machine-Readable License Compatibility Gate (`config/license_policy.yaml`)
+
+Canonical production releases must be freely redistributable for downstream applications. The `LicenseGate` machine-evaluates every ingested source:
+
+| License Category | Examples | Status | Permitted in Canonical Production |
+| :--- | :--- | :--- | :--- |
+| **Public Domain / CC0** | `CC0-1.0`, `PDL-1.0`, `Unlicense` | `APPROVED` | **YES** |
+| **Permissive Attribution** | `CC-BY-4.0`, `MIT`, `BSD-3-Clause` | `APPROVED` | **YES** (with attribution in `ATTRIBUTION.md`) |
+| **Share-Alike** | `CC-BY-SA-4.0` | `APPROVED_WITH_SHARE_ALIKE` | **YES** (requires Share-Alike notice) |
+| **Non-Commercial Restrictions** | `CC-BY-NC-4.0`, `CC-BY-NC-SA-4.0` | `QUARANTINED` | **NO** (quarantined from redistributable production) |
+| **No-Derivatives Restrictions** | `CC-BY-ND-4.0` | `QUARANTINED` | **NO** (prohibits downstream derivatives) |
+| **Proprietary / Unknown** | `PROPRIETARY`, `UNKNOWN` | `PROHIBITED` / `QUARANTINED` | **NO** |
+
+---
+
+## 9. Value-Level Provenance & AI Governance Policy
+
+1. **Value-Level Traceability**: Each expression, classification, and example maintains value-level `SourceEvidence` recording:
+   - `source_id`, `source_version`, `source_locator`, `license`, `retrieved_at`.
+   - Never claim one source supplied fields it did not actually provide.
+2. **AI Provenance Separation**:
+   - AI is permitted for translation drafting, candidate alignment, and classification proposals.
+   - **AI output is NEVER source evidence.**
+   - All AI-created elements initially carry: `origin = ai_generated`, `model`, `generation_version`, `input_hash`, `generated_at`, `review_status = pending`.
+   - Source-derived values remain permanently distinguishable from AI proposals.
+
+---
+
+## 10. Pedagogical Selection Policy (Compact High-Value Target)
+
+The database will **NOT** become a general dictionary of hundreds of thousands of low-value entries. Concepts enter the primary database only if they meet at least one explicit pedagogical dimension:
+- Official Jōyō Kanji or JLPT N5–N1 relevance
+- Core English frequency (NGSL, NGSL-Spoken, NAWL, Business Service List)
+- Standard examination relevance (CEFR A1–C2, TOEIC, EIKEN, IELTS, TOEFL)
+- Core Vietnamese frequency (VI Core 500/1000/2000/5000) or practical spoken utility
+- Validated professional workplace domain utility (accounting, finance, tax, legal, trade)
+- Target: 10,000–20,000 high-yield pedagogical concepts with complete tri-language alignment.
+

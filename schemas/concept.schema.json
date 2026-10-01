@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Concept",
+  "type": "object",
+  "required": ["concept_id", "canonical_name", "status"],
+  "properties": {
+    "concept_id": {
+      "type": "string",
+      "pattern": "^concept-[a-zA-Z0-9_-]+$"
+    },
+    "canonical_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domains": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "primary_domain": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["canonical", "candidate", "quarantine"]
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

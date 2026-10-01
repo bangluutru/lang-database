@@ -44,3 +44,47 @@ The **JP Professional Vocabulary Database** utilizes public government taxonomie
 - **Official Source:** Trade navigation indexes and international logistics reference listings.
 - **Application in Database:**
   Employed solely as a concept-discovery reference for international trade, Incoterms, customs clearance, and trade finance (FOB, CIF, L/C, B/L, 輸入申告, 通関). All corresponding translations, sentences, and educational dialogues are independently created.
+
+---
+
+## 6. Electronic Dictionary Research and Development Group (EDRDG) — JMdict / KANJIDIC2
+
+- **Official Source:** JMdict (Japanese-Multilingual Dictionary) and KANJIDIC2 dictionaries.
+- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+- **Notice:**
+  > "This publication includes information from the JMdict and KANJIDIC dictionary files in accordance with the licence granted by the Electronic Dictionary Research and Development Group."
+  > See: https://www.edrdg.org/edrdg/licence.html
+- **Application in Database:**
+  Used as reference foundation for Japanese lemmas, kana readings, and baseline English glosses in canonical expressions.
+
+---
+
+## 7. 文化庁 (Agency for Cultural Affairs, Government of Japan) — 常用漢字表
+
+- **Official Source:** 常用漢字表 (平成22年内閣告示第2号 - Cabinet Notification No. 2 of 2010).
+- **License:** Government of Japan Terms of Use / Public Data License (PDL-1.0)
+- **Application in Database:**
+  Official grade designations (Grades 1–6, Secondary), on/kun readings, and canonical kanji forms.
+
+---
+
+## 8. New General Service List (NGSL Project)
+
+- **Official Source:** New General Service List (NGSL v1.2), NGSL-Spoken, and NAWL.
+- **Authors:** Dr. Charles Browne, Dr. Brent Culligan, and Joseph Phillips.
+- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+- **Notice:**
+  > "Data from the New General Service List (NGSL) project is used under the CC-BY-SA 4.0 license."
+  > See: http://www.newgeneralservicelist.org/terms-of-use
+- **Application in Database:**
+  Core English frequency rankings, CEFR level anchors, and lemma selections.
+
+---
+
+## 9. Open Vietnamese Lexical Foundation & Wiktionary Contributors
+
+- **Official Source:** Vietnamese Wiktionary structured data extracts and open frequency projects.
+- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0 / CC-BY-SA-4.0)
+- **Application in Database:**
+  Vietnamese lemma realizations, IPA phonetics, and verified Hán-Việt cognate pairings.
+

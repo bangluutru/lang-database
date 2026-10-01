@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sense",
+  "type": "object",
+  "required": ["sense_id", "concept_id", "part_of_speech", "gloss_en", "gloss_ja", "gloss_vi", "status"],
+  "properties": {
+    "sense_id": {
+      "type": "string",
+      "pattern": "^sense-[a-zA-Z0-9_-]+$"
+    },
+    "concept_id": {
+      "type": "string",
+      "pattern": "^concept-[a-zA-Z0-9_-]+$"
+    },
+    "part_of_speech": {
+      "type": "string"
+    },
+    "gloss_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gloss_ja": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gloss_vi": {
+      "type": "string",
+      "minLength": 1
+    },
+    "definition_en": {
+      "type": ["string", "null"]
+    },
+    "definition_ja": {
+      "type": ["string", "null"]
+    },
+    "definition_vi": {
+      "type": ["string", "null"]
+    },
+    "register": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["verified", "candidate", "ambiguous", "quarantine"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

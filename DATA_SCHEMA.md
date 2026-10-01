@@ -283,3 +283,103 @@ Each released vocabulary record in `data/production/vocabulary.jsonl` adheres st
   }
 }
 ```
+
+---
+
+## 3. Canonical Tri-Language Graph Schemas (Phase 1.3B)
+
+The canonical graph stored under `data/canonical/` adheres to JSON Schema Draft 2020-12 specifications stored in `schemas/`.
+
+### 3.1 Concept (`schemas/concept.schema.json`)
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Concept",
+  "type": "object",
+  "required": ["concept_id", "canonical_name", "primary_domain", "status"],
+  "properties": {
+    "concept_id": { "type": "string", "pattern": "^concept-[a-z0-9_-]+$" },
+    "canonical_name": { "type": "string" },
+    "domains": { "type": "array", "items": { "type": "string" } },
+    "primary_domain": { "type": "string" },
+    "status": { "type": "string", "enum": ["canonical", "candidate", "quarantine"] },
+    "metadata": { "type": "object" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}
+```
+
+### 3.2 Sense (`schemas/sense.schema.json`)
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sense",
+  "type": "object",
+  "required": ["sense_id", "concept_id", "part_of_speech", "gloss_en", "gloss_ja", "gloss_vi", "status"],
+  "properties": {
+    "sense_id": { "type": "string", "pattern": "^sense-[a-z0-9_-]+$" },
+    "concept_id": { "type": "string" },
+    "part_of_speech": { "type": "string" },
+    "gloss_en": { "type": "string" },
+    "gloss_ja": { "type": "string" },
+    "gloss_vi": { "type": "string" },
+    "definition_en": { "type": ["string", "null"] },
+    "definition_ja": { "type": ["string", "null"] },
+    "definition_vi": { "type": ["string", "null"] },
+    "register": { "type": "string" },
+    "status": { "type": "string", "enum": ["verified", "candidate", "ambiguous"] }
+  }
+}
+```
+
+### 3.3 Expression (`schemas/expression.schema.json`)
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Expression",
+  "type": "object",
+  "required": ["expression_id", "concept_id", "sense_id", "language", "lemma", "display_form", "provenance_type", "license", "status"],
+  "properties": {
+    "expression_id": { "type": "string", "pattern": "^expr-[a-z]{2}-[a-z0-9_-]+$" },
+    "concept_id": { "type": "string" },
+    "sense_id": { "type": "string" },
+    "language": { "type": "string", "enum": ["en", "ja", "vi"] },
+    "lemma": { "type": "string" },
+    "display_form": { "type": "string" },
+    "reading": { "type": ["string", "null"] },
+    "pronunciation": { "type": ["string", "null"] },
+    "romanization": { "type": ["string", "null"] },
+    "part_of_speech": { "type": "string" },
+    "register": { "type": "string" },
+    "language_metadata": { "type": "object" },
+    "provenance_type": { "type": "string" },
+    "source_evidence": { "type": "array" },
+    "license": { "type": "string" },
+    "status": { "type": "string", "enum": ["verified", "candidate", "quarantine"] }
+  }
+}
+```
+
+### 3.4 Classification (`schemas/classification.schema.json`)
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Classification",
+  "type": "object",
+  "required": ["classification_id", "target_type", "target_id", "classification_system", "classification_value", "classification_status", "source_id"],
+  "properties": {
+    "classification_id": { "type": "string" },
+    "target_type": { "type": "string", "enum": ["concept", "sense", "expression"] },
+    "target_id": { "type": "string" },
+    "classification_system": { "type": "string" },
+    "classification_value": { "type": "string" },
+    "classification_status": { "type": "string", "enum": ["official", "source_derived", "corpus_derived", "community_consensus", "inferred", "ai_proposed"] },
+    "source_id": { "type": "string" },
+    "evidence": { "type": ["string", "null"] },
+    "confidence": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "exam_metadata": { "type": "object" }
+  }
+}
+```
+

@@ -1,10 +1,57 @@
 # Changelog
 
-All notable changes to the **JP Professional Vocabulary Database** are documented here in accordance with [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and Semantic Versioning.
+All notable changes to the **English–Japanese–Vietnamese Learning Lexical Graph** are documented here in accordance with [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and Semantic Versioning.
+
+---
+
+## [v1.3b-foundation] - 2026-10-01
+
+### Phase 1.3B — Tri-Language Learning Graph & Open Source Ingestion Foundation
+
+#### Added
+- **Tri-Language Canonical Graph Schemas (`schemas/` & `scripts/phase1_3b/models.py`)**:
+  - `Concept`: Language-independent semantic anchor.
+  - `Sense`: Distinct meaning level with individual POS, register, glosses, and definition.
+  - `Expression`: Language-specific lexical realization for English, Japanese, and Vietnamese.
+  - `Classification`: Many-to-many learning classifications attached to Concepts/Senses/Expressions.
+  - `Relationship`: Directed semantic and morphological edges including `SINO_COGNATE_OF`.
+  - `Example`: Pedagogical sentence examples with multi-language translation linkages.
+  - `SourceEvidence`: Value-level provenance tracking upstream source, locator, and license.
+  - `TriLanguageCoverage`: Deterministic coverage tracking at concept/sense level.
+- **Machine-Readable License Gate (`config/license_policy.yaml` & `scripts/phase1_3b/license_gate.py`)**:
+  - Automatic approval for permissive/share-alike open licenses (`CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `PDL-1.0`, `MIT`).
+  - Automatic quarantine for non-redistributable or proprietary licenses (`CC-BY-NC-4.0`, `CC-BY-ND-4.0`, `PROPRIETARY`, `UNKNOWN`).
+- **Foundation Source Adapters (`scripts/phase1_3b/adapters/`)**:
+  - `BaseSourceAdapter`: Common abstract adapter contract enforcing SHA-256 checks, license gating, and idempotent extraction.
+  - `JMdictSeedAdapter`: Japanese core lexical foundation under CC-BY-SA-4.0.
+  - `JoyoKanjiAdapter`: Official Agency for Cultural Affairs Jōyō Kanji grades under PDL-1.0.
+  - `NGSLSeedAdapter`: New General Service List (NGSL v1.2) English core lemmas under CC-BY-SA-4.0.
+  - `VietnameseCoreAdapter`: Vietnamese core vocabulary & verified Hán-Việt cognates under CC-BY-4.0.
+- **Sense-Level Tri-Language Alignment Engine (`scripts/phase1_3b/alignment_engine.py`)**:
+  - Evaluates cross-language equivalence across EN ↔ JA ↔ VI at sense level.
+  - Enforces polysemy separation (e.g. `right` cleanly divided across `right_correct`, `right_direction`, `right_entitlement`).
+  - Audits POS agreement, domain consistency, and Hán-Việt cognate linkages.
+- **Legacy Backward Compatibility Bridge (`scripts/phase1_3b/legacy_bridge.py`)**:
+  - Projects all 800 legacy `jp-pro-*` records into canonical `Concept`, `Sense`, `Expression`, and `Classification` records.
+  - Generates machine-readable `data/canonical/legacy_mapping.json` maintaining 100% bi-directional mapping.
+  - Strictly preserves frozen Golden Pilot releases (v1 & v1.1), Canary 1.2c, and production vocabulary.
+- **Projected Learning Views (`data/exports/` & `scripts/phase1_3b/view_exporter.py`)**:
+  - Generated dynamically without duplicating canonical lexical records:
+    - `cross_language/en_ja_vi_core.jsonl` (812 records)
+    - `cross_language/business_en_ja_vi.jsonl` (408 records)
+    - `japanese/jlpt_n5.jsonl` (3 records)
+    - `japanese/joyo_kanji.jsonl` (4 records)
+    - `english/ngsl_core.jsonl` (9 records)
+    - `english/cefr_b1.jsonl` (5 records)
+    - `english/toeic_essential.jsonl` (6 records)
+    - `vietnamese/vi_core_500.jsonl` (6 records)
+- **Phase 1.3B Automated Test Suite (`tests/test_phase1_3b.py`)**:
+  - 13 comprehensive unit and regression tests covering all 15 core invariants from Section 25.
 
 ---
 
 ## [v1.1c-closure] - 2026-10-01
+
 
 ### Phase 1.1C — Quarantine Remediation & Pilot Freeze
 

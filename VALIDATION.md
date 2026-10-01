@@ -210,3 +210,31 @@ After remediation, the production dataset is frozen as **Golden Pilot v1**:
 - Contains: `vocabulary.jsonl`, `dataset_manifest.json`, `validation_manifest.json`, `checksums.sha256`
 - Hash: canonical SHA-256 (sorted by ID, excluding mutable `status` field)
 - Policy: **immutable** — corrections produce v1.1 or v2, never overwrite in place
+
+---
+
+## 10. Generalized Validation Dimensions (Phase 1.3B)
+
+Phase 1.3B generalizes validation from single-model linguistic checks to **10 independent verification dimensions**:
+
+| Dimension | Scope | Verification Mechanism |
+| :--- | :--- | :--- |
+| `SOURCE_VERIFIED` | Raw source presence & checksum | Verifies upstream SHA-256 checksum and exact locator match. |
+| `LICENSE_VERIFIED` | Redistribution & derivative safety | Machine-evaluated by `LicenseGate` against `config/license_policy.yaml`. |
+| `STRUCTURE_VERIFIED` | Schema conformity | JSON Schema Draft 2020-12 automated validator in `schemas/`. |
+| `LEXICAL_VERIFIED` | Lemma, surface & reading validity | Dictionary cross-check against authoritative dictionaries (Janome, JMdict). |
+| `SEMANTIC_ALIGNMENT_VERIFIED` | Cross-language equivalence at sense level | Evaluated by `TriLanguageAlignmentEngine`; POS & register consistency. |
+| `TRANSLATION_VERIFIED` | Sense gloss and explanation validity | Multi-pass independent translation QA (human curated or certified model). |
+| `PRONUNCIATION_VERIFIED` | Phonetic accuracy across languages | Japanese reading/TTS modeling, English IPA, Vietnamese tone/regional. |
+| `CLASSIFICATION_VERIFIED` | Educational metadata provenance | Provenance verified (`official`, `source_derived`, `community_consensus`). |
+| `EXAMPLE_VERIFIED` | Pedagogical contextual naturalness | Checked for term occurrence, register fidelity, and natural translations. |
+| `AI_ENRICHMENT_VERIFIED` | Quality of machine-assisted proposals | AI proposals verified before promotion; cannot masquerade as source fact. |
+
+### 10.1 Tri-Language Alignment & Stop Conditions
+Semantic alignment is audited at sense level. Ingestion is immediately halted if any of the following occur:
+- License uncertainty or NC/ND contamination
+- Provenance loss or AI output masquerading as source data
+- Systemic sense-alignment collisions or POS divergence
+- Mutation or regression of frozen Golden Pilot v1 / v1.1
+- Uncontrolled vocabulary explosion violating pedagogical focus
+
