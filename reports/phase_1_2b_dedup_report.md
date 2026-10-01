@@ -1,14 +1,14 @@
 # Phase 1.2B — Multi-Stage Deduplication & Sense Analysis Report
 
-**Generated:** 2026-10-01T04:42:59Z  
-**Total Raw Candidates Processed:** 2064  
+**Generated:** 2026-10-01T05:44:25Z  
+**Total Raw Candidates Processed:** 2091  
 
 ## Deduplication Decision Breakdown
 
 | Decision | Count | Percentage | Description |
 |---|:---:|:---:|---|
-| `NEW_CANONICAL` | **1729** | 83.8% | Genuinely new professional concept with verified provenance |
-| `EXACT_DUPLICATE` | 291 | 14.1% | Exact surface match against Golden Pilot v1.1 or existing pool (evidence merged) |
+| `NEW_CANONICAL` | **1755** | 83.9% | Genuinely new professional concept with verified provenance |
+| `EXACT_DUPLICATE` | 292 | 14.0% | Exact surface match against Golden Pilot v1.1 or existing pool (evidence merged) |
 | `VARIANT_OF` | 0 | 0.0% | Orthographic / notation variant of existing canonical term |
 | `ABBREVIATION_OF` | 0 | 0.0% | Known acronym / short form mapped to full canonical term |
 | `POSSIBLE_DIFFERENT_SENSE` | 0 | 0.0% | Polysemous term with distinct domain/semantic sense |

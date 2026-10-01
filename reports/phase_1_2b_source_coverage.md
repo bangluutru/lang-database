@@ -23,7 +23,7 @@
 | Domain | Readiness | Extracted Candidates | New Canonical | Gaps & Bottlenecks |
 |---|:---:|:---:|:---:|---|
 | **会計・経理 (Accounting & Bookkeeping)** | `READY` | 1581 | 1386 | None - Authoritative sources ready |
-| **税務・申告 (Tax & Statutory Filing)** | `READY` | 130 | 88 | Planning gap: high (priority high) |
+| **税務・申告 (Tax & Statutory Filing)** | `READY` | 157 | 114 | Planning gap: high (priority high) |
 | **貿易・通関・国際物流 (Trade, Customs & Global Logistics)** | `READY` | 50 | 13 | Planning gap: high (priority high) |
 | **ビジネス・企業運営 (Business Operations & General Practice)** | `READY` | 9 | 7 | Planning gap: high (priority high) |
 | **経営管理・コーポレートガバナンス (Management & Corporate Governance)** | `READY` | 23 | 6 | Planning gap: critical (priority high) |

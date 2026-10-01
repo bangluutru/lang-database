@@ -120,10 +120,14 @@ class NtaTaxExtractor(BaseExtractor):
                     reuse_status=self.reuse_status
                 ))
 
-        # 3. Extract from nta_ryaku_yogo.html
         ryaku_file = self.raw_snapshot_path / "nta_ryaku_yogo.html"
         if ryaku_file.exists():
-            soup = BeautifulSoup(ryaku_file.read_text(encoding="utf-8", errors="ignore"), "html.parser")
+            raw_bytes = ryaku_file.read_bytes()
+            try:
+                html_text = raw_bytes.decode("cp932")
+            except Exception:
+                html_text = raw_bytes.decode("utf-8", errors="ignore")
+            soup = BeautifulSoup(html_text, "html.parser")
             for td in soup.find_all("td"):
                 text = td.get_text().strip()
                 for line in text.split("\n"):

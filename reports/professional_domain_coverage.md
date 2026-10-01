@@ -1,16 +1,16 @@
 # Professional Domain Coverage Matrix
 
-**Generated:** 2026-10-01T04:42:59Z  
+**Generated:** 2026-10-01T05:44:25Z  
 **Phase:** 1.2B — Source & Coverage Engine  
 **Current Production Baseline:** 800 verified records  
-**Candidate Pool Size:** 1729 new canonical candidates  
+**Candidate Pool Size:** 1755 new canonical candidates  
 
 ## Domain Coverage Summary
 
 | Domain | Current Prod | New Candidates | Planning Target | Readiness | Coverage Gap | Priority |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **会計・経理 (Accounting & Bookkeeping)** | 200 | 1386 | 1000–1500 | `READY` | `low` | **normal** |
-| **税務・申告 (Tax & Statutory Filing)** | 200 | 88 | 800–1200 | `READY` | `high` | **high** |
+| **税務・申告 (Tax & Statutory Filing)** | 200 | 114 | 800–1200 | `READY` | `high` | **high** |
 | **貿易・通関・国際物流 (Trade, Customs & Global Logistics)** | 200 | 13 | 500–700 | `READY` | `high` | **high** |
 | **ビジネス・企業運営 (Business Operations & General Practice)** | 200 | 7 | 1000–1500 | `READY` | `high` | **high** |
 | **経営管理・コーポレートガバナンス (Management & Corporate Governance)** | 0 | 6 | 500–700 | `READY` | `critical` | **high** |
@@ -54,7 +54,7 @@
 | 所得税 (Individual Income Tax) (`income_tax`) | 0 | 1 | 1 |
 | 源泉所得税・年末調整 (Withholding Tax & Year-end Adjustment) (`withholding_tax`) | 0 | 0 | 0 |
 | 地方税・住民税・事業税 (Local Taxes) (`local_tax`) | 0 | 1 | 1 |
-| 確定申告・修正申告 (Tax Filing & Returns) (`tax_filing`) | 0 | 85 | 85 |
+| 確定申告・修正申告 (Tax Filing & Returns) (`tax_filing`) | 0 | 111 | 111 |
 | 納税・納付手続 (Tax Payment & Settlement) (`tax_payment`) | 0 | 0 | 0 |
 | 所得控除・税額控除 (Deductions & Tax Credits) (`deductions`) | 0 | 0 | 0 |
 | 税務調査・更正処分 (Tax Audits & Penalties) (`tax_audit`) | 0 | 0 | 0 |
@@ -90,7 +90,7 @@
 
 ### 経営管理・コーポレートガバナンス (Management & Corporate Governance)
 - **Authorities:** egov-corporate-law, smrj-business-guidance
-- **Authority Classes:** A, B, C
+- **Authority Classes:** A, C, B
 
 | Subdomain | Production | Candidates | Total Available |
 |---|:---:|:---:|:---:|

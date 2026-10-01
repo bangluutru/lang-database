@@ -1,6 +1,6 @@
 # Phase 1.2B — Canary Expansion Readiness Assessment
 
-**Evaluation Timestamp:** 2026-10-01T04:42:59Z  
+**Evaluation Timestamp:** 2026-10-01T05:44:25Z  
 **Phase:** 1.2B — Source & Coverage Engine  
 **CANARY READINESS STATUS:** **READY**  
 
@@ -8,9 +8,9 @@
 
 | Criterion | Required Threshold | Observed Value | Gate Status |
 |---|:---:|:---:|:---:|
-| Candidate Pool Size | >= 250 | **1729** | PASS |
-| Authoritative Provenance (Class A/B) | >= 200 | **1700** | PASS |
-| Safe Licensing (GREEN/YELLOW) | 100% | **1729/1729** | PASS |
+| Candidate Pool Size | >= 250 | **1755** | PASS |
+| Authoritative Provenance (Class A/B) | >= 200 | **1726** | PASS |
+| Safe Licensing (GREEN/YELLOW) | 100% | **1755/1755** | PASS |
 | Domain Diversity | >= 6 domains | **11 domains** | PASS |
 | Multi-Stage Dedup Completed | Complete | **Complete (0 collisions)** | PASS |
 | Source Locators Verified | 100% | **100%** | PASS |
@@ -22,13 +22,13 @@
 |---|:---:|---|:---:|
 | **accounting** | 1386 | fsa-edinet-taxonomy, asbj-accounting-standards, jicpa-glossary | `A, B` |
 | **finance** | 184 | fsa-edinet-taxonomy | `A` |
-| **tax** | 88 | nta-tax-glossary | `A` |
+| **tax** | 114 | nta-tax-glossary | `A` |
 | **hr** | 17 | mhlw-labor | `A` |
 | **trade** | 13 | japan-customs-trade, jetro-trade | `A, C` |
 | **legal** | 12 | egov-corporate-law | `A` |
 | **office_communication** | 11 | smrj-business-guidance | `C` |
 | **business** | 7 | smrj-business-guidance | `C` |
-| **management** | 6 | egov-corporate-law, smrj-business-guidance | `A, B, C` |
+| **management** | 6 | egov-corporate-law, smrj-business-guidance | `A, C, B` |
 | **purchasing** | 4 | smrj-business-guidance | `C` |
 | **sales** | 1 | smrj-business-guidance | `C` |
 

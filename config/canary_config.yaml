@@ -1,0 +1,82 @@
+# JP Professional Vocabulary Database - Canary Selection & Promotion Config
+# Phase 1.2C: Controlled Canary Expansion & Promotion Pipeline
+
+version: "1.2.0"
+target_canary_size: 120
+
+# Domain Stratification Quotas
+# Ensures all 11 professional domains are represented without accounting dominance.
+# In the raw candidate pool, accounting represents ~80% of candidates.
+# In the Canary, accounting is restricted to 15% (18/120) to validate the pipeline
+# across diverse workplace and legal contexts.
+domain_quotas:
+  accounting:
+    target: 18
+    rationale: "Core corporate reporting and balance sheet terminology from FSA EDINET, ASBJ, and JICPA."
+  finance:
+    target: 18
+    rationale: "Banking, lending, treasury, and capital markets concepts from FSA EDINET banking taxonomies."
+  tax:
+    target: 17
+    rationale: "Statutory tax filing, consumption tax, corporate tax, and withholding tax from NTA."
+  hr:
+    target: 16
+    rationale: "Labor standards, working hours (Article 36), employment regulations, and social insurance from MHLW."
+  trade:
+    target: 13
+    rationale: "Import/export procedures, customs tariffs, NACCS, and Incoterms 2020 from Japan Customs and JETRO."
+  legal:
+    target: 12
+    rationale: "Statutory corporate law, commercial registration, and governance rules from e-Gov Companies Act."
+  office_communication:
+    target: 11
+    rationale: "Workplace reporting (Ho-Ren-So), circulars, formal correspondence, and meeting minutes from SMRJ."
+  business:
+    target: 6
+    rationale: "General SME business management, operations, and compliance practices from SMRJ."
+  management:
+    target: 4
+    rationale: "Executive governance, internal controls, and BCP guidelines from e-Gov and SMRJ."
+  purchasing:
+    target: 4
+    rationale: "Procurement, purchase orders, vendor management, and Subcontract Act compliance from SMRJ."
+  sales:
+    target: 1
+    rationale: "Commercial lead generation, quotation, and contract closing practices from SMRJ."
+
+# Authority Class Preferences
+# Class A (Statutory/Regulatory) and Class B (Professional Institutions) are strongly prioritized.
+# Class C (SME/Trade Support) is used for operational workplace domains where statutory sources do not exist.
+# Class D (Secondary References) is blocked.
+authority_preferences:
+  priority_order: ["A", "B", "C"]
+  prohibited: ["D"]
+
+# Licensing & Reuse Guardrails
+# RED: Strictly blocked from promotion.
+# YELLOW: Promotion allowed only with independent learner prose (no bulk copying of explanatory text).
+# GREEN: Full canonical terminology and statutory text ingestion permitted.
+licensing_rules:
+  allowed_reuse: ["GREEN", "YELLOW"]
+  prohibited_reuse: ["RED"]
+
+# Staging & Draft Source Guards
+# Draft or consultation taxonomies cannot be promoted into canary or production.
+blocked_sources:
+  - "fsa-edinet-2027-draft"
+
+# Promotion Lifecycle States
+lifecycle_states:
+  - "candidate"
+  - "selected_for_canary"
+  - "validation_passed"
+  - "human_review_passed"
+  - "promotion_eligible"
+  - "canary"
+  - "rejected"
+  - "needs_review"
+  - "variant_detected"
+  - "duplicate_detected"
+  - "sense_ambiguous"
+  - "insufficient_evidence"
+  - "licensing_blocked"

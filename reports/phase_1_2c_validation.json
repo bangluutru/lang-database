@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-01T05:52:28Z",
+  "total_validated": 120,
+  "validation_passed": 119,
+  "needs_review": 1,
+  "rejected": 0,
+  "state_distribution": {
+    "validation_passed": 119,
+    "needs_review": 1
+  },
+  "gates_summary": {
+    "Gate_A_Schema_Integrity": {
+      "pass": 120,
+      "fail": 0
+    },
+    "Gate_B_Production_Dedup": {
+      "pass": 119,
+      "flagged": 1
+    },
+    "Gate_C_Linguistic_Quality": {
+      "pass": 120,
+      "fail": 0
+    }
+  },
+  "flagged_candidates": [
+    {
+      "candidate_id": "pool-cand-001689",
+      "surface": "NACCS",
+      "domain": "trade",
+      "state": "needs_review",
+      "reasons": [
+        "Abbreviation detected: 'NACCS' is abbreviation of '輸出入・港湾関連情報処理システム'."
+      ]
+    }
+  ]
+}

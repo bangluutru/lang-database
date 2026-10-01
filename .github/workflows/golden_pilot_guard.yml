@@ -22,7 +22,7 @@ on:
 
 jobs:
   full-test-suite:
-    name: Full Test Suite (151 tests, no LLM calls)
+    name: Full Test Suite (173 tests, no LLM calls)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,10 +33,11 @@ jobs:
       - name: Install dependencies
         run: pip install pytest pyyaml requests pykakasi janome openpyxl
       - name: Run complete test suite
-        # All 151 tests operate on frozen data — zero live LLM calls required.
+        # All 173 tests operate on frozen data — zero live LLM calls required.
         # test_linguistic_validation.py checks model-name strings in production records.
         # test_phase1_1c.py checks Golden Pilot invariants and known-bad pattern absence.
         # test_phase1_2b.py checks source registry, extraction, dedup, and candidate pool.
+        # test_phase1_2c.py checks canary selection, validation gates, dedup, and human review boundaries.
         # No GEMINI_API_KEY is needed or used.
         run: pytest tests/ -v --tb=short
         env:
