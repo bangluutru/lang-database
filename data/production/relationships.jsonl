@@ -286,6 +286,8 @@
 {"relation_id": "rel-000286", "source_id": "jp-pro-accounting-000118", "source_term": "自己株式", "target_id": "external:金庫株", "target_term": "金庫株", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-000287", "source_id": "jp-pro-accounting-000118", "source_term": "自己株式", "target_id": "external:自社株買い", "target_term": "自社株買い", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000288", "source_id": "jp-pro-accounting-000118", "source_term": "自己株式", "target_id": "external:株主還元", "target_term": "株主還元", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000289", "source_id": "jp-pro-accounting-000119", "source_term": "その他有価証券評価差額金", "target_id": "external:その他有価証券", "target_term": "その他有価証券", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000290", "source_id": "jp-pro-accounting-000119", "source_term": "その他有価証券評価差額金", "target_id": "external:税効果会計", "target_term": "税効果会計", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000291", "source_id": "jp-pro-accounting-000120", "source_term": "繰延ヘッジ損益", "target_id": "external:デリバティブ", "target_term": "デリバティブ", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000292", "source_id": "jp-pro-accounting-000120", "source_term": "繰延ヘッジ損益", "target_id": "external:ヘッジ会計", "target_term": "ヘッジ会計", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000293", "source_id": "jp-pro-accounting-000121", "source_term": "新株予約権", "target_id": "jp-pro-business-000171", "target_term": "ストックオプション", "relationship_type": "synonym", "bidirectional": true}
@@ -590,6 +592,9 @@
 {"relation_id": "rel-000592", "source_id": "jp-pro-tax-000041", "source_term": "青色申告", "target_id": "jp-pro-tax-000042", "target_term": "白色申告", "relationship_type": "opposite", "bidirectional": true}
 {"relation_id": "rel-000593", "source_id": "jp-pro-tax-000041", "source_term": "青色申告", "target_id": "jp-pro-tax-000043", "target_term": "青色申告特別控除", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000594", "source_id": "jp-pro-tax-000041", "source_term": "青色申告", "target_id": "jp-pro-accounting-000183", "target_term": "複式簿記", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000595", "source_id": "jp-pro-tax-000042", "source_term": "白色申告", "target_id": "jp-pro-tax-000041", "target_term": "青色申告", "relationship_type": "opposite", "bidirectional": true}
+{"relation_id": "rel-000596", "source_id": "jp-pro-tax-000042", "source_term": "白色申告", "target_id": "external:単式簿記", "target_term": "単式簿記", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000597", "source_id": "jp-pro-tax-000042", "source_term": "白色申告", "target_id": "external:簡易記帳", "target_term": "簡易記帳", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000598", "source_id": "jp-pro-tax-000043", "source_term": "青色申告特別控除", "target_id": "jp-pro-tax-000041", "target_term": "青色申告", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000599", "source_id": "jp-pro-tax-000043", "source_term": "青色申告特別控除", "target_id": "jp-pro-tax-000184", "target_term": "e-Tax", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000600", "source_id": "jp-pro-tax-000044", "source_term": "必要経費", "target_id": "jp-pro-tax-000026", "target_term": "事業所得", "relationship_type": "related", "bidirectional": false}
@@ -637,6 +642,11 @@
 {"relation_id": "rel-000642", "source_id": "jp-pro-tax-000063", "source_term": "地震保険料控除", "target_id": "external:控除証明書", "target_term": "控除証明書", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000643", "source_id": "jp-pro-tax-000064", "source_term": "寄附金控除", "target_id": "jp-pro-tax-000065", "target_term": "ふるさと納税", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000644", "source_id": "jp-pro-tax-000064", "source_term": "寄附金控除", "target_id": "external:認定NPO", "target_term": "認定NPO", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000645", "source_id": "jp-pro-tax-000065", "source_term": "ふるさと納税", "target_id": "external:ワンストップ特例", "target_term": "ワンストップ特例", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000646", "source_id": "jp-pro-tax-000065", "source_term": "ふるさと納税", "target_id": "external:返礼品", "target_term": "返礼品", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000647", "source_id": "jp-pro-tax-000065", "source_term": "ふるさと納税", "target_id": "jp-pro-tax-000064", "target_term": "寄附金控除", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000648", "source_id": "jp-pro-tax-000066", "source_term": "雑損控除", "target_id": "external:自然災害", "target_term": "自然災害", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000649", "source_id": "jp-pro-tax-000066", "source_term": "雑損控除", "target_id": "external:罹災証明書", "target_term": "罹災証明書", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000650", "source_id": "jp-pro-tax-000067", "source_term": "給与所得控除", "target_id": "jp-pro-tax-000027", "target_term": "給与所得", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000651", "source_id": "jp-pro-tax-000067", "source_term": "給与所得控除", "target_id": "jp-pro-tax-000149", "target_term": "年末調整", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000652", "source_id": "jp-pro-tax-000068", "source_term": "公的年金等控除", "target_id": "jp-pro-tax-000032", "target_term": "雑所得", "relationship_type": "related", "bidirectional": false}
@@ -710,6 +720,8 @@
 {"relation_id": "rel-000720", "source_id": "jp-pro-tax-000099", "source_term": "役員給与", "target_id": "jp-pro-tax-000101", "target_term": "事前確定届出給与", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000721", "source_id": "jp-pro-tax-000100", "source_term": "定期同額給与", "target_id": "jp-pro-tax-000099", "target_term": "役員給与", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000722", "source_id": "jp-pro-tax-000100", "source_term": "定期同額給与", "target_id": "jp-pro-tax-000094", "target_term": "損金算入", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000723", "source_id": "jp-pro-tax-000101", "source_term": "事前確定届出給与", "target_id": "external:役員賞与", "target_term": "役員賞与", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-000724", "source_id": "jp-pro-tax-000101", "source_term": "事前確定届出給与", "target_id": "external:税務署届出", "target_term": "税務署届出", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000725", "source_id": "jp-pro-tax-000102", "source_term": "交際費等の損金不算入", "target_id": "jp-pro-tax-000103", "target_term": "接待飲食費", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000726", "source_id": "jp-pro-tax-000102", "source_term": "交際費等の損金不算入", "target_id": "jp-pro-tax-000095", "target_term": "損金不算入", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-000727", "source_id": "jp-pro-tax-000103", "source_term": "接待飲食費", "target_id": "external:1人あたり1万円", "target_term": "1人あたり1万円", "relationship_type": "related", "bidirectional": false}
@@ -1065,6 +1077,8 @@
 {"relation_id": "rel-001077", "source_id": "jp-pro-business-000041", "source_term": "臨時株主総会", "target_id": "jp-pro-business-000040", "target_term": "定時株主総会", "relationship_type": "opposite", "bidirectional": true}
 {"relation_id": "rel-001078", "source_id": "jp-pro-business-000041", "source_term": "臨時株主総会", "target_id": "jp-pro-business-000043", "target_term": "議決権", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001079", "source_id": "jp-pro-business-000041", "source_term": "臨時株主総会", "target_id": "external:特別決議", "target_term": "特別決議", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001080", "source_id": "jp-pro-business-000042", "source_term": "招集通知", "target_id": "external:株主総会", "target_term": "株主総会", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001081", "source_id": "jp-pro-business-000042", "source_term": "招集通知", "target_id": "external:議決権行使書", "target_term": "議決権行使書", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001082", "source_id": "jp-pro-business-000043", "source_term": "議決権", "target_id": "external:株式数", "target_term": "株式数", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001083", "source_id": "jp-pro-business-000043", "source_term": "議決権", "target_id": "jp-pro-business-000045", "target_term": "委任状", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001084", "source_id": "jp-pro-business-000043", "source_term": "議決権", "target_id": "external:議決権行使", "target_term": "議決権行使", "relationship_type": "related", "bidirectional": false}
@@ -1573,6 +1587,9 @@
 {"relation_id": "rel-001587", "source_id": "jp-pro-trade-000027", "source_term": "海上運送状", "target_id": "external:Waybill", "target_term": "Waybill", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-001588", "source_id": "jp-pro-trade-000027", "source_term": "海上運送状", "target_id": "jp-pro-trade-000026", "target_term": "船荷証券", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001589", "source_id": "jp-pro-trade-000027", "source_term": "海上運送状", "target_id": "jp-pro-trade-000043", "target_term": "サレンダーB/L", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001590", "source_id": "jp-pro-trade-000028", "source_term": "航空貨物運送状", "target_id": "external:AWB", "target_term": "AWB", "relationship_type": "synonym", "bidirectional": true}
+{"relation_id": "rel-001591", "source_id": "jp-pro-trade-000028", "source_term": "航空貨物運送状", "target_id": "jp-pro-trade-000027", "target_term": "海上運送状", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001592", "source_id": "jp-pro-trade-000028", "source_term": "航空貨物運送状", "target_id": "external:航空貨物", "target_term": "航空貨物", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001593", "source_id": "jp-pro-trade-000029", "source_term": "商業送り状", "target_id": "external:インボイス", "target_term": "インボイス", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-001594", "source_id": "jp-pro-trade-000029", "source_term": "商業送り状", "target_id": "jp-pro-trade-000030", "target_term": "プロフォーマインボイス", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001595", "source_id": "jp-pro-trade-000029", "source_term": "商業送り状", "target_id": "jp-pro-trade-000031", "target_term": "パッキングリスト", "relationship_type": "related", "bidirectional": false}
@@ -1610,6 +1627,10 @@
 {"relation_id": "rel-001627", "source_id": "jp-pro-trade-000040", "source_term": "メイツレシート", "target_id": "external:M/R", "target_term": "M/R", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-001628", "source_id": "jp-pro-trade-000040", "source_term": "メイツレシート", "target_id": "jp-pro-trade-000041", "target_term": "クリーンB/L", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001629", "source_id": "jp-pro-trade-000040", "source_term": "メイツレシート", "target_id": "jp-pro-trade-000042", "target_term": "故障付B/L", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001630", "source_id": "jp-pro-trade-000041", "source_term": "クリーンB/L", "target_id": "external:無故障B/L", "target_term": "無故障B/L", "relationship_type": "synonym", "bidirectional": true}
+{"relation_id": "rel-001631", "source_id": "jp-pro-trade-000041", "source_term": "クリーンB/L", "target_id": "jp-pro-trade-000042", "target_term": "故障付B/L", "relationship_type": "opposite", "bidirectional": true}
+{"relation_id": "rel-001632", "source_id": "jp-pro-trade-000041", "source_term": "クリーンB/L", "target_id": "jp-pro-trade-000040", "target_term": "メイツレシート", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001633", "source_id": "jp-pro-trade-000041", "source_term": "クリーンB/L", "target_id": "jp-pro-trade-000106", "target_term": "信用状", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001634", "source_id": "jp-pro-trade-000042", "source_term": "故障付B/L", "target_id": "external:有故障B/L", "target_term": "有故障B/L", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-001635", "source_id": "jp-pro-trade-000042", "source_term": "故障付B/L", "target_id": "jp-pro-trade-000041", "target_term": "クリーンB/L", "relationship_type": "opposite", "bidirectional": true}
 {"relation_id": "rel-001636", "source_id": "jp-pro-trade-000042", "source_term": "故障付B/L", "target_id": "jp-pro-trade-000116", "target_term": "ディスクレ", "relationship_type": "related", "bidirectional": false}
@@ -1647,6 +1668,8 @@
 {"relation_id": "rel-001668", "source_id": "jp-pro-trade-000055", "source_term": "荷為替手形", "target_id": "jp-pro-trade-000106", "target_term": "信用状", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001669", "source_id": "jp-pro-trade-000055", "source_term": "荷為替手形", "target_id": "jp-pro-trade-000125", "target_term": "D/P", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001670", "source_id": "jp-pro-trade-000055", "source_term": "荷為替手形", "target_id": "jp-pro-trade-000126", "target_term": "D/A", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001671", "source_id": "jp-pro-trade-000056", "source_term": "貨物受領証", "target_id": "jp-pro-business-000006", "target_term": "受領書", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001672", "source_id": "jp-pro-trade-000056", "source_term": "貨物受領証", "target_id": "external:荷渡し", "target_term": "荷渡し", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001673", "source_id": "jp-pro-trade-000057", "source_term": "送り状価格", "target_id": "jp-pro-trade-000029", "target_term": "商業送り状", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001674", "source_id": "jp-pro-trade-000057", "source_term": "送り状価格", "target_id": "jp-pro-trade-000081", "target_term": "課税価格", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001675", "source_id": "jp-pro-trade-000058", "source_term": "コンテナ明細書", "target_id": "external:CLP", "target_term": "CLP", "relationship_type": "synonym", "bidirectional": true}
@@ -1763,6 +1786,9 @@
 {"relation_id": "rel-001786", "source_id": "jp-pro-trade-000101", "source_term": "蔵出し", "target_id": "jp-pro-trade-000100", "target_term": "蔵入れ", "relationship_type": "opposite", "bidirectional": true}
 {"relation_id": "rel-001787", "source_id": "jp-pro-trade-000101", "source_term": "蔵出し", "target_id": "jp-pro-trade-000065", "target_term": "輸入申告", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001788", "source_id": "jp-pro-trade-000101", "source_term": "蔵出し", "target_id": "jp-pro-trade-000099", "target_term": "内国貨物", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001789", "source_id": "jp-pro-trade-000102", "source_term": "他法令確認", "target_id": "jp-pro-trade-000103", "target_term": "食品衛生法", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001790", "source_id": "jp-pro-trade-000102", "source_term": "他法令確認", "target_id": "external:薬機法", "target_term": "薬機法", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-001791", "source_id": "jp-pro-trade-000102", "source_term": "他法令確認", "target_id": "jp-pro-trade-000104", "target_term": "植物防疫法", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001792", "source_id": "jp-pro-trade-000103", "source_term": "食品衛生法", "target_id": "external:食品等輸入届出書", "target_term": "食品等輸入届出書", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001793", "source_id": "jp-pro-trade-000103", "source_term": "食品衛生法", "target_id": "external:検疫所", "target_term": "検疫所", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-001794", "source_id": "jp-pro-trade-000104", "source_term": "植物防疫法", "target_id": "jp-pro-trade-000051", "target_term": "植物検疫証明書", "relationship_type": "related", "bidirectional": false}
@@ -1973,6 +1999,9 @@
 {"relation_id": "rel-001999", "source_id": "jp-pro-trade-000172", "source_term": "分損不担保", "target_id": "external:全損", "target_term": "全損", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-002000", "source_id": "jp-pro-trade-000173", "source_term": "荷崩れ", "target_id": "jp-pro-trade-000174", "target_term": "ラッシング", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-002001", "source_id": "jp-pro-trade-000173", "source_term": "荷崩れ", "target_id": "external:事故報告書", "target_term": "事故報告書", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-002002", "source_id": "jp-pro-trade-000174", "source_term": "ラッシング", "target_id": "external:固縛", "target_term": "固縛", "relationship_type": "synonym", "bidirectional": true}
+{"relation_id": "rel-002003", "source_id": "jp-pro-trade-000174", "source_term": "ラッシング", "target_id": "jp-pro-trade-000150", "target_term": "バンニング", "relationship_type": "related", "bidirectional": false}
+{"relation_id": "rel-002004", "source_id": "jp-pro-trade-000174", "source_term": "ラッシング", "target_id": "external:荷崩れ防止", "target_term": "荷崩れ防止", "relationship_type": "related", "bidirectional": false}
 {"relation_id": "rel-002005", "source_id": "jp-pro-trade-000175", "source_term": "容積重量", "target_id": "external:ボリュームウェイト", "target_term": "ボリュームウェイト", "relationship_type": "synonym", "bidirectional": true}
 {"relation_id": "rel-002006", "source_id": "jp-pro-trade-000175", "source_term": "容積重量", "target_id": "external:実重量", "target_term": "実重量", "relationship_type": "opposite", "bidirectional": true}
 {"relation_id": "rel-002007", "source_id": "jp-pro-trade-000175", "source_term": "容積重量", "target_id": "jp-pro-trade-000160", "target_term": "航空運賃", "relationship_type": "related", "bidirectional": false}

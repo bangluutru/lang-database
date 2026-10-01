@@ -46,7 +46,7 @@ def test_candidate_total_count(candidate_entries):
 
 def test_production_release_count(prod_entries):
     """Production contains only entries that passed the Release Gate."""
-    assert len(prod_entries) == 789, f"Expected 789 released entries, got {len(prod_entries)}"
+    assert len(prod_entries) == 800, f"Expected 800 released entries, got {len(prod_entries)}"
 
 def test_id_format_and_uniqueness(prod_entries):
     ids = set()
@@ -125,6 +125,35 @@ def test_full_traceable_lineage(prod_entries):
         assert lineage["source_file"]
         assert lineage["source_record_id"]
         assert lineage["canonical_id"] == e["id"]
-        assert lineage["release_version"] == "v1.1.0-prod"
+        assert lineage["release_version"] == "v1.1.0a-prod"
         assert lineage["validation_record"] is not None
         assert lineage["validation_record"]["release_decision"] == "pass"
+
+def test_production_no_generated_learning_objects(prod_entries):
+    """Rule 21: Production vocabulary MUST contain ZERO learning objects with status 'generated'.
+    All learning objects must be 'production_verified'.
+    """
+    for e in prod_entries:
+        entry_id = e["id"]
+        # Check collocations
+        for col in e.get("collocations", []):
+            assert col.get("status") == "production_verified", (
+                f"Unverified collocation in {entry_id}: {col.get('collocation_ja')} has status {col.get('status')}"
+            )
+            assert col.get("status") != "generated", f"Collocation still in 'generated' state in {entry_id}"
+            assert col.get("generation_method") == "semantic_frame", f"Missing generation_method in {entry_id}"
+
+        # Check examples
+        for ex in e.get("examples", []):
+            assert ex.get("status") == "production_verified", (
+                f"Unverified example in {entry_id}: {ex.get('sentence_ja')} has status {ex.get('status')}"
+            )
+            assert ex.get("status") != "generated", f"Example still in 'generated' state in {entry_id}"
+
+        # Check dialogue
+        for d in e.get("dialogue", []):
+            assert d.get("status") == "production_verified", (
+                f"Unverified dialogue turn in {entry_id}: {d.get('speaker')}: {d.get('text_ja')} has status {d.get('status')}"
+            )
+            assert d.get("status") != "generated", f"Dialogue turn still in 'generated' state in {entry_id}"
+

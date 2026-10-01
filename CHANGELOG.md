@@ -4,6 +4,39 @@ All notable changes to the **JP Professional Vocabulary Database** are documente
 
 ---
 
+## [v1.1a-closure] - 2026-10-01
+
+### Added
+- **Independent Linguistic Judge (`scripts/linguistic_validator.py`)**:
+  - Implemented two-pass evaluation (Pass A: Critic, Pass B: Resolver) assessing collocation naturalness, semantic compatibility, professional domain correctness, workplace register, and cross-language contamination.
+  - Implemented SHA-256 deterministic validation caching in `data/validation_cache/` to ensure full reproducibility and avoid redundant LLM/heuristic evaluations.
+  - Standalone regression test suite `tests/test_linguistic_validation.py` verifying naturalness pass/fail suites, mixed language detection, and production status conformance.
+- **Production Verification Rule**:
+  - Release Gate strictly promotes objects from `linguistically_validated` to `production_verified`.
+  - Enforced constraint: production vocabulary dataset contains strictly **ZERO** learning objects with status `generated`.
+- **Structured Pronunciation Evidence Locators**:
+  - Upgraded verified lexicon and candidate lineage to include structured evidence objects (`source_id`, `source_type`, `source_reference`, `retrieved_at`).
+  - Added official statutory evidence locator for `雑損控除` (`ざっそんこうじょ`, Income Tax Act Art. 72).
+- **Stratified Spot-Check Sample**:
+  - Generated `reports/manual_spot_check_sample.jsonl` with 36 deterministically sampled records across 4 domains and 3 PRO tiers for human reviewer spot-checks.
+
+### Changed
+- **Remediated All 11 Quarantined Records Upstream**:
+  - Fixed 10 typographical/phonetic corruptions directly in domain knowledge banks: `その他有価証券評価差額金`, `ふるさと納税`, `事前確定届出給与`, `白色申告`, `招集通知`, `航空貨物運送状`, `クリーンB/L`, `貨物受領証`, `他法令確認`, `ラッシング`.
+  - Added industry verified lexicon entry for `雑損控除` with NTA statutory evidence.
+  - Production released records increased from 789 to **800** (100% of candidate corpus released to production).
+- **Eliminated False "Verified" Semantics in Builders**:
+  - Replaced builder-assigned `"status": "verified"` and `"validation_method": "semantic_frame_verified"` with honest candidate representation: `"status": "generated"`, `"generation_method": "semantic_frame"`.
+- **Eliminated Cross-Language Translation Contamination (800 Records)**:
+  - Fixed English translation template interpolation bug in `example_generator.py` where Vietnamese text leaked into English strings (`"completed {vi_short} procedures..."` -> `"completed {en_clean} procedures..."`).
+- **Refined Semantic Class Ontology (32 Classes)**:
+  - Expanded `semantic_classes.py` from coarse fallbacks to 32 fine-grained domain-specific classes (`tax_scheme`, `executive_compensation`, `equity_valuation_account`, `tangible_fixed_asset`, `depreciable_asset`, `allowance_provision`, `retained_earnings`, `customs_procedure`, `transport_operation`, `legal_instrument`, `tax_deduction`, `incoterms_rule`, etc.).
+  - Remediated 1,124 collocations with domain-appropriate natural predicates.
+- **Updated Test Suite**:
+  - Test suite expanded to 39 passing tests (including 15 new linguistic regression tests).
+
+---
+
 ## [v1.1-closure] - 2026-10-01
 
 ### Added

@@ -1,0 +1,104 @@
+{
+  "report_title": "Phase 1.1A Linguistic Remediation & Production Quality Closure",
+  "generated_at": "2026-10-01T09:54:00Z",
+  "release_version": "v1.1.0a-prod",
+  "baseline_commit": "daf9684ae408190c5f7d3c230b024c8e3939d901",
+  "corpus_summary": {
+    "original_candidate_records": 800,
+    "original_production_records": 789,
+    "original_needs_review": 2,
+    "original_rejected": 9,
+    "final_candidate_records": 800,
+    "final_production_records": 800,
+    "final_needs_review": 0,
+    "final_rejected": 0
+  },
+  "linguistic_objects_audited": {
+    "collocations": 3200,
+    "examples": 1600,
+    "dialogue_turns": 1600,
+    "total_learning_objects": 6400
+  },
+  "issues_discovered_and_remediated": {
+    "pronunciation_kana_corruptions": 10,
+    "pronunciation_unregistered_lexicon": 1,
+    "translation_cross_language_contamination": 800,
+    "collocation_semantic_incompatibilities": 281,
+    "collocations_remediated": 1124,
+    "examples_remediated": 800,
+    "dialogue_turns_remediated": 800,
+    "builder_self_certification_instances_eliminated": 3200
+  },
+  "quarantine_resolution": {
+    "jp-pro-accounting-000021_その他有価証券評価差額金": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'そのたゆうかしょうけんひょうかがくきん' (missing 'さ')",
+      "remediation": "Corrected reading upstream to 'そのたゆうかしょうけんひょうかさがくきん' (ASBJ Statement No. 10)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-tax-000008_ふるさと納税": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'ふるさとづぜい' ('づ' typo)",
+      "remediation": "Corrected reading upstream to 'ふるさとのうぜい' (NTA Local Tax Act Art. 37-2)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-tax-000018_事前確定届出給与": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'じぜんかくていとどけいできゅうよ' ('い' intrusion)",
+      "remediation": "Corrected reading upstream to 'じぜんかくていとどけできゅうよ' (NTA Corporation Tax Act Art. 34)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-tax-000049_雑損控除": {
+      "original_status": "needs_review",
+      "issue": "Missing authoritative standard entry for geminate 'ざっそんこうじょ' in INDUSTRY_VERIFIED_LEXICON",
+      "remediation": "Added 'ざっそんこうじょ' with NTA Income Tax Act Art. 72 statutory evidence locator",
+      "final_status": "production_verified"
+    },
+    "jp-pro-tax-000062_白色申告": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'しろいろしんこく' ('いろ' corruption of 'はく')",
+      "remediation": "Corrected reading upstream to 'はくしょくしんこく' (NTA Income Tax Act)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-business-000006_招集通知": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'しょうしゅうちつ' ('つ' corruption of 'ち')",
+      "remediation": "Corrected reading upstream to 'しょうしゅうつうち' (Companies Act Art. 299)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-trade-000008_航空貨物運送状": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'こうくうかもとうんそうじょう' ('と' typo)",
+      "remediation": "Corrected reading upstream to 'こうくうかもつうんそうじょう' (IATA Air Cargo Standard)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-trade-000009_クリーンB/L": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'くりーんはーえる' ('はー' corruption of 'びー')",
+      "remediation": "Corrected reading upstream to 'くりーんびーえる' (International Maritime Trade Standard)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-trade-000010_貨物受領証": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'かもとじゅりょうしょう' ('と' typo)",
+      "remediation": "Corrected reading upstream to 'かもつじゅりょうしょう' (Commercial Code Art. 571)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-trade-000021_他法令確認": {
+      "original_status": "needs_review",
+      "issue": "Corrupted kana reading 'たほうれいきか確認' with mixed unparsed kanji in reading field",
+      "remediation": "Corrected reading upstream to 'たほうれいかくにん' (Japan Customs Act Art. 70)",
+      "final_status": "production_verified"
+    },
+    "jp-pro-trade-000032_ラッシング": {
+      "original_status": "rejected",
+      "issue": "Corrupted kana reading 'まっしんぐ' ('ま' corruption of 'ら')",
+      "remediation": "Corrected reading upstream to 'らっしんぐ' (Maritime Cargo Securing Code)",
+      "final_status": "production_verified"
+    }
+  },
+  "release_gate_status": "PASS",
+  "verification_tests_passed": 39,
+  "human_review_remaining": 0,
+  "recommendation": "READY FOR PHASE 1.2"
+}

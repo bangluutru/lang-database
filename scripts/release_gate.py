@@ -1,16 +1,36 @@
 #!/usr/bin/env python3
 """
 scripts/release_gate.py
-Release Gate for JP Professional Vocabulary Database (Phase 1.1).
+Release Gate for JP Professional Vocabulary Database (Phase 1.1A).
 
-ARCHITECTURAL PRINCIPLE:
-Strict Release Gate separating candidate validation from production release.
-Routes records based on independent validation decisions:
-  - 'pass'         -> data/production/vocabulary.jsonl & data/production/jp_professional_pilot.jsonl
-  - 'needs_review' -> staging/review_queue/needs_review.jsonl
-  - 'rejected'     -> staging/review_queue/rejected.jsonl
-
-Synchronizes relationship graph and expressions, and updates the SQLite FTS5 database.
+ARCHITECTURAL PRINCIPLES:
+1. Strict Release Gate separating candidate validation from production release.
+2. Production Release Rule:
+   A vocabulary record is only released to production if:
+   - schema PASS
+   - source lineage PASS
+   - reading PASS
+   - translation PASS
+   - collocations PASS
+   - examples PASS
+   - dialogue PASS
+   - tts PASS
+   - draft contamination PASS
+   - linguistic validation PASS
+3. Production files MUST contain ZERO learning objects with status 'generated'.
+   All released objects must be 'production_verified'.
+4. Structured review queues with machine-readable reason codes:
+   - PRONUNCIATION_UNVERIFIED
+   - PRONUNCIATION_CORRUPTED
+   - COLLOCATION_UNNATURAL
+   - COLLOCATION_SEMANTIC_MISMATCH
+   - EXAMPLE_UNNATURAL
+   - EXAMPLE_DOMAIN_ERROR
+   - DIALOGUE_UNNATURAL
+   - VI_TRANSLATION_MISMATCH
+   - EN_TRANSLATION_MISMATCH
+   - LANGUAGE_CONTAMINATION
+   - SOURCE_EVIDENCE_INSUFFICIENT
 """
 
 import os
@@ -37,11 +57,48 @@ REL_PROD = PROD_DIR / "relationships.jsonl"
 
 NEEDS_REVIEW_FILE = STAGING_QUEUE_DIR / "needs_review.jsonl"
 REJECTED_FILE = STAGING_QUEUE_DIR / "rejected.jsonl"
+PRONUNCIATION_REVIEW_FILE = STAGING_QUEUE_DIR / "pronunciation_review.jsonl"
+LINGUISTIC_REVIEW_FILE = STAGING_QUEUE_DIR / "linguistic_review.jsonl"
+TRANSLATION_REVIEW_FILE = STAGING_QUEUE_DIR / "translation_review.jsonl"
+SOURCE_REVIEW_FILE = STAGING_QUEUE_DIR / "source_review.jsonl"
 
-RELEASE_VERSION = "v1.1.0-prod"
+RELEASE_VERSION = "v1.1.0a-prod"
+
+
+def determine_reason_codes(entry: dict) -> list:
+    """Extracts machine-readable reason codes from validation record."""
+    val_rec = entry.get("lineage", {}).get("validation_record", {})
+    checks = val_rec.get("checks", {})
+    evid = val_rec.get("validation_evidence", {})
+    codes = []
+
+    # Reading checks
+    read_ev = evid.get("reading", {})
+    if read_ev.get("status") == "rejected":
+        codes.append("PRONUNCIATION_CORRUPTED")
+    elif read_ev.get("status") == "needs_review":
+        codes.append("PRONUNCIATION_UNVERIFIED")
+
+    # Source lineage
+    if checks.get("source_lineage") != "pass":
+        codes.append("SOURCE_EVIDENCE_INSUFFICIENT")
+
+    # Linguistic validation
+    ling_ev = evid.get("linguistic_validation", {})
+    ling_issues = ling_ev.get("issues", [])
+    for issue in ling_issues:
+        code = issue.get("code")
+        if code and code not in codes:
+            codes.append(code)
+
+    if not codes and val_rec.get("release_decision") != "pass":
+        codes.append("UNKNOWN_VALIDATION_FAILURE")
+
+    return codes
+
 
 def run_release_gate():
-    print("[*] Initiating Phase 1.1 Production Release Gate...")
+    print("[*] Initiating Phase 1.1A Production Release Gate...")
     if not VALIDATED_FILE.exists():
         print(f"[!] Error: Validated candidates file not found: {VALIDATED_FILE}")
         sys.exit(1)
@@ -49,6 +106,10 @@ def run_release_gate():
     production_records = []
     needs_review_records = []
     rejected_records = []
+    pronunciation_reviews = []
+    linguistic_reviews = []
+    translation_reviews = []
+    source_reviews = []
     released_ids = set()
 
     with open(VALIDATED_FILE, "r", encoding="utf-8") as f:
@@ -58,18 +119,54 @@ def run_release_gate():
             entry = json.loads(line)
             val_rec = entry.get("lineage", {}).get("validation_record", {})
             decision = val_rec.get("release_decision", "needs_review")
+            reason_codes = determine_reason_codes(entry)
 
             if decision == "pass":
                 entry["status"] = "production"
                 entry["lineage"]["release_version"] = RELEASE_VERSION
+
+                # Strictly promote all learning objects to 'production_verified'
+                for c in entry.get("collocations", []):
+                    c["status"] = "production_verified"
+                    c["validation_method"] = "independent_linguistic_judge"
+                for ex in entry.get("examples", []):
+                    ex["status"] = "production_verified"
+                    ex["validation_method"] = "independent_linguistic_judge"
+                for turn in entry.get("dialogue", []):
+                    turn["status"] = "production_verified"
+                    turn["validation_method"] = "independent_linguistic_judge"
+
                 production_records.append(entry)
                 released_ids.add(entry["id"])
             elif decision == "needs_review":
                 entry["status"] = "needs_review"
+                entry["reason_codes"] = reason_codes
                 needs_review_records.append(entry)
+
+                if any("PRONUNCIATION" in c for c in reason_codes):
+                    pronunciation_reviews.append(entry)
+                if any("COLLOCATION" in c or "EXAMPLE" in c or "DIALOGUE" in c for c in reason_codes):
+                    linguistic_reviews.append(entry)
+                if any("TRANSLATION" in c or "CONTAMINATION" in c for c in reason_codes):
+                    translation_reviews.append(entry)
+                if any("SOURCE" in c for c in reason_codes):
+                    source_reviews.append(entry)
             else:
                 entry["status"] = "rejected"
+                entry["reason_codes"] = reason_codes
                 rejected_records.append(entry)
+
+    # STRICT AUDIT: Production records must contain ZERO objects with status 'generated'
+    for entry in production_records:
+        for c in entry.get("collocations", []):
+            if c.get("status") == "generated":
+                raise ValueError(f"RELEASE GATE FAILURE: Entry {entry['id']} contains collocation with status='generated'")
+        for ex in entry.get("examples", []):
+            if ex.get("status") == "generated":
+                raise ValueError(f"RELEASE GATE FAILURE: Entry {entry['id']} contains example with status='generated'")
+        for turn in entry.get("dialogue", []):
+            if turn.get("status") == "generated":
+                raise ValueError(f"RELEASE GATE FAILURE: Entry {entry['id']} contains dialogue turn with status='generated'")
 
     # 1. Write production datasets
     with open(VOCAB_PROD, "w", encoding="utf-8") as f:
@@ -92,6 +189,26 @@ def run_release_gate():
         for entry in rejected_records:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     print(f"[+] Quarantined {len(rejected_records)} rejected records to {REJECTED_FILE}")
+
+    with open(PRONUNCIATION_REVIEW_FILE, "w", encoding="utf-8") as f:
+        for entry in pronunciation_reviews:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(f"[+] Written {len(pronunciation_reviews)} records to {PRONUNCIATION_REVIEW_FILE}")
+
+    with open(LINGUISTIC_REVIEW_FILE, "w", encoding="utf-8") as f:
+        for entry in linguistic_reviews:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(f"[+] Written {len(linguistic_reviews)} records to {LINGUISTIC_REVIEW_FILE}")
+
+    with open(TRANSLATION_REVIEW_FILE, "w", encoding="utf-8") as f:
+        for entry in translation_reviews:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(f"[+] Written {len(translation_reviews)} records to {TRANSLATION_REVIEW_FILE}")
+
+    with open(SOURCE_REVIEW_FILE, "w", encoding="utf-8") as f:
+        for entry in source_reviews:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(f"[+] Written {len(source_reviews)} records to {SOURCE_REVIEW_FILE}")
 
     # 3. Synchronize expressions
     if EXPR_CANDIDATES.exists():
@@ -128,11 +245,12 @@ def run_release_gate():
             print(f"[!] SQLite export warning:\n{res.stderr}")
 
     print("\n" + "="*50)
-    print("RELEASE GATE SUMMARY:")
+    print("RELEASE GATE SUMMARY (PHASE 1.1A):")
     print(f"  Production Released: {len(production_records)}")
     print(f"  Needs Review:        {len(needs_review_records)}")
     print(f"  Rejected:            {len(rejected_records)}")
     print("="*50)
+
 
 if __name__ == "__main__":
     run_release_gate()

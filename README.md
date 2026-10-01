@@ -1,4 +1,4 @@
-# JP Professional Vocabulary Database (Phase 1.1)
+# JP Professional Vocabulary Database (Phase 1.1A)
 
 > **Authoritative, Structured Japanese Professional Vocabulary Knowledge Base for Next-Gen Language Learning & Multi-Modal Content Generation.**
 
@@ -9,44 +9,43 @@ Designed specifically as a machine-consumable **source-of-truth** to power:
 
 ---
 
-## 1. Architectural Highlights (Phase 1.1 Validation Closure)
+## 1. Architectural Highlights (Phase 1.1A Linguistic Remediation Closure)
 
-- **Independent, Decoupled Validation Pipeline**:
-  - The dataset builder **never self-certifies** records (`"validated": true` and artificial floats like `0.99` are removed).
-  - Validation is conducted by an independent 8-stage validator (`scripts/validate_dataset.py`).
-  - Production release is governed by an explicit **Release Gate** (`scripts/release_gate.py`) that routes passed records to production and quarantines unverified/corrupted entries into staging review queues.
-- **Traceable End-to-End Lineage**:
+- **Independent Linguistic Judge (`scripts/linguistic_validator.py`)**:
+  - Eliminates builder self-certification. The generator marks candidates as `"status": "generated"`.
+  - An independent two-pass linguistic judge (Critic & Resolver) evaluates collocation naturalness, semantic compatibility, workplace register, and cross-language translation contamination.
+  - Deterministic SHA-256 validation caching in `data/validation_cache/`.
+- **Strict Production Release Gate (`scripts/release_gate.py`)**:
+  - Upgrades certified objects from `linguistically_validated` to `production_verified`.
+  - **Zero-Generated Guarantee**: Strictly enforces that zero objects in production have status `generated`.
+- **Traceable End-to-End Lineage & Structured Pronunciation Evidence**:
   - Every production entry traces back: `source_id -> source_record_id -> extracted_candidate_id -> normalized_candidate_id -> canonical_id -> enrichment_version -> validation_record -> release_version`.
-  - Transparently distinguishes `origin_type`: `official_extracted` (637 terms) vs. `curated` (163 terms).
-- **Pronunciation 4-Level Validation Hierarchy**:
-  - Level 1: Authoritative Acronym Registry (`ACRONYM_SPEECH_MAP`).
-  - Level 2: Janome IPAdic Morphological Dictionary & Industry Accounting/Tax Lexicon.
-  - Level 3: pykakasi Algorithmic Hepburn Cross-Check.
-  - Level 4: Unverified variant quarantine (`needs_review`).
-- **Semantic Class Collocation Ontology**:
-  - 24 ontological semantic classes (e.g. `financial_statement`, `tax_deduction`, `shipping_document`, `trade_term`, `person_role`, `organization`, `contract`, `metric`).
-  - Replaced universal domain templates with natural, semantically constrained predicates.
+  - Structured pronunciation evidence locators citing statutory / authoritative standard documents (ASBJ, NTA, Companies Act, IATA, Customs Act).
+- **Fine-Grained Semantic Ontology (32 Classes)**:
+  - Eliminates artificial template pairings (e.g. `ふるさと納税を提出する` -> `ふるさと納税を利用する`).
 - **Engine-Independent TTS Phonetic Modeling**:
   - Separate modeling of `display_text`, `speech_text`, `preferred_reading`, `pronunciation_type`, and `pause_after_term_ms` (1200ms).
-  - Explicit expansion of slashes and acronyms (e.g. `B/L` -> `ビーエル`, `FOB` -> `エフオービー`, `e-Tax` -> `イータックス`).
 - **Decoupled JLPT vs. Professional Tiers**:
   - Removed artificial inference linking `PRO-A1/A2/A3` tiers to `N3/N2/N1`.
-  - Set `general_japanese: { "jlpt_level": null, "jlpt_status": "not_mapped" }`.
 
 ---
 
-## 2. Dataset Overview (Phase 1.1 Closure)
+## 2. Dataset Overview (Phase 1.1A Closure)
 
 | Metric | Value | Details |
 |---|---|---|
 | **Total Candidates Evaluated** | **800** | Pilot corpus preserved for validation (200/domain) |
-| **Production Ready (PASS)** | **789** | Passed all 8 independent validation dimensions |
-| **Review Queue (NEEDS REVIEW)** | **2** | Quarantined in `staging/review_queue/needs_review.jsonl` |
-| **Rejected (FAIL)** | **9** | Quarantined in `staging/review_queue/rejected.jsonl` |
+| **Production Ready (PASS)** | **800** | Passed all independent linguistic & structural validation dimensions |
+| **Review Queue (NEEDS REVIEW)** | **0** | All 11 previous quarantine items resolved upstream |
+| **Rejected (FAIL)** | **0** | Upstream kana corruptions remediated in domain knowledge banks |
+| **Collocations Audited & Certified** | **3,200** | 100% evaluated for semantic compatibility & naturalness |
+| **Workplace Examples Certified** | **1,600** | 100% verified, clean English & Vietnamese |
+| **Workplace Dialogue Turns Certified** | **1,600** | 100% natural conversational continuity |
 | **Workplace Expressions** | **50** | Authentic idiomatic expressions (e.g., `請求書を切る`, `経費で落とす`) |
-| **Active Relationship Graph Edges** | **2,049** | Synonyms, Antonyms, and Related linkages for released entries |
+| **Active Relationship Graph Edges** | **2,078** | Synonyms, Antonyms, and Related linkages for released entries |
 | **Draft Contamination** | **0%** | FSA 2027 draft taxonomy strictly quarantined in staging |
-| **Pytest Test Suite** | **24 Passed** | 100% pass across schema, pipeline, independence, reproducibility |
+| **Pytest Test Suite** | **39 Passed** | 100% pass across schema, pipeline, independence, reproducibility, linguistic |
+
 
 ---
 

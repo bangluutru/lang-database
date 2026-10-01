@@ -41,8 +41,9 @@ The **JP Professional Vocabulary Database** is designed as a foundational, decou
 ┌────────────────────────────────────────────────────────────────────────┐
 │                   LAYER D: ENRICHED LEARNING CANDIDATES                │
 │   data/enriched/ - learning_candidates.jsonl                           │
-│   • Semantic class classification (24 ontological types)               │
-│   • Semantic frame collocations (natural predicates)                   │
+│   • Semantic class classification (32 fine-grained ontological types)  │
+│   • Semantic frame collocations (status: "generated")                  │
+│   • Workplace examples & dialogue turns (status: "generated")          │
 │   • Decoupled JLPT (null, not_mapped)                                  │
 │   • TTS display vs speech text modeling (acronym expansion)            │
 │   • Lineage metadata injected                                          │
@@ -51,17 +52,21 @@ The **JP Professional Vocabulary Database** is designed as a foundational, decou
                                     │
                                     ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   LAYER E: INDEPENDENT VALIDATOR                       │
-│   scripts/validate_dataset.py                                          │
+│                   LAYER E: INDEPENDENT VALIDATOR & LINGUISTIC JUDGE    │
+│   scripts/validate_dataset.py & scripts/linguistic_validator.py        │
 │   1. Schema Validation (no artificial floats, JLPT null)               │
 │   2. Physical Source Lineage Verification (Layer B lookup)             │
 │   3. 4-Level Reading Hierarchy (Janome IPAdic + Lexicon cross-check)   │
-│   4. Translation QA (Vietnamese & English completeness)                │
-│   5. Collocation QA (semantic validity, prohibited collision block)    │
-│   6. Example Sentence QA (target presence, length >= 15, register)     │
+│   4. Translation QA & Language Contamination Detection                 │
+│   5. Independent Two-Pass Linguistic Judge (Critic & Resolver)         │
+│      - Collocation naturalness & semantic compatibility                │
+│      - Professional domain correctness & workplace register            │
+│      - SHA-256 deterministic validation cache                          │
+│   6. Example Sentence & Multi-speaker Dialogue QA                      │
 │   7. TTS Metadata QA (speech text slash safety, pause duration)        │
 │   8. Draft Contamination Guard (blocks FSA 2027 draft contamination)   │
 │   Output: data/validated/validated_candidates.jsonl                    │
+│   (Upgrades certified objects to status: "linguistically_validated")  │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼
@@ -69,11 +74,13 @@ The **JP Professional Vocabulary Database** is designed as a foundational, decou
 │                   LAYER F: PRODUCTION RELEASE GATE                     │
 │   scripts/release_gate.py                                              │
 │   Routes by independent decision:                                      │
-│     ├── PASS (789 entries) ───> data/production/vocabulary.jsonl       │
+│     ├── PASS (800 entries) ───> data/production/vocabulary.jsonl       │
 │     │                           data/production/jp_professional_pilot.jsonl
 │     │                           data/production/jp_professional.db     │
-│     ├── REVIEW (2 entries) ───> staging/review_queue/needs_review.jsonl│
-│     └── REJECT (9 entries) ───> staging/review_queue/rejected.jsonl    │
+│     │   * Promotes objects to status: "production_verified"            │
+│     │   * Strictly asserts ZERO "generated" objects in production      │
+│     ├── REVIEW (0 entries) ───> staging/review_queue/needs_review.jsonl│
+│     └── REJECT (0 entries) ───> staging/review_queue/rejected.jsonl    │
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼

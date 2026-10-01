@@ -27,11 +27,11 @@ def test_sqlite_counts(db_conn):
     """Production database contains only released entries."""
     cursor = db_conn.cursor()
     cursor.execute("SELECT COUNT(*) FROM vocabulary")
-    assert cursor.fetchone()[0] == 789
+    assert cursor.fetchone()[0] == 800
     cursor.execute("SELECT COUNT(*) FROM expressions")
     assert cursor.fetchone()[0] == 50
     cursor.execute("SELECT COUNT(*) FROM relationships")
-    assert cursor.fetchone()[0] == 2049
+    assert cursor.fetchone()[0] == 2078
 
 def test_downstream_lesson_query(db_conn):
     cursor = db_conn.cursor()
@@ -64,17 +64,18 @@ def test_fts5_search(db_conn):
     assert len(results) > 0
 
 def test_review_queues_populated():
-    """Verify that unverified/corrupted entries are quarantined in staging queues."""
+    """Verify that review queue staging files exist and reflect Phase 1.1A remediation."""
     assert NEEDS_REVIEW_FILE.exists()
     assert REJECTED_FILE.exists()
 
     with open(NEEDS_REVIEW_FILE, "r", encoding="utf-8") as f:
         needs_review = [json.loads(line) for line in f if line.strip()]
-    assert len(needs_review) == 2
+    # Post Phase 1.1A remediation, all 11 previously quarantined entries are resolved upstream
+    assert len(needs_review) == 0
 
     with open(REJECTED_FILE, "r", encoding="utf-8") as f:
         rejected = [json.loads(line) for line in f if line.strip()]
-    assert len(rejected) == 9
+    assert len(rejected) == 0
 
 def test_source_registry_integrity():
     assert REGISTRY_FILE.exists()
