@@ -1,7 +1,7 @@
 {
   "summary": {
     "pack_title": "Phase 1.2C Human Review Pack",
-    "generated_at": "2026-10-01T06:14:56Z",
+    "generated_at": "2026-10-01T07:32:13Z",
     "total_candidates": 120,
     "human_decisions": {
       "APPROVED": 0,
@@ -11,8 +11,8 @@
     },
     "by_complexity": {
       "REVIEW-C": 27,
-      "REVIEW-B": 34,
-      "REVIEW-A": 59
+      "REVIEW-B": 36,
+      "REVIEW-A": 57
     },
     "by_domain": {
       "accounting": 18,
@@ -28,9 +28,9 @@
       "sales": 1
     },
     "quality_flag_distribution": {
-      "CANONICAL_VALUE_REVIEW_REQUIRED": 11,
+      "CANONICAL_VALUE_REVIEW_REQUIRED": 9,
       "READING_REVIEW_REQUIRED": 9,
-      "GLOSS_REVIEW_REQUIRED": 20,
+      "GLOSS_REVIEW_REQUIRED": 26,
       "EXTRACTION_ARTIFACT_FLAG": 1,
       "ABBREVIATION_FLAG": 8
     },
@@ -134,7 +134,6 @@
       "reuse_status": "GREEN",
       "review_complexity": "REVIEW-C",
       "quality_flags": [
-        "CANONICAL_VALUE_REVIEW_REQUIRED",
         "CANONICAL_VALUE_REVIEW_REQUIRED"
       ],
       "source_evidence": {
@@ -205,7 +204,6 @@
       "reuse_status": "GREEN",
       "review_complexity": "REVIEW-C",
       "quality_flags": [
-        "CANONICAL_VALUE_REVIEW_REQUIRED",
         "CANONICAL_VALUE_REVIEW_REQUIRED"
       ],
       "source_evidence": {
@@ -1891,6 +1889,41 @@
       "reviewed_at": null
     },
     {
+      "candidate_id": "pool-cand-001700",
+      "proposed_id": "jp-canary-hr-0002",
+      "surface": "36協定",
+      "normalized_surface": "36協定",
+      "reading": "さぶろくきょうてい",
+      "suggested_reading": null,
+      "domain": "hr",
+      "subdomain": "working_hours",
+      "meaning_gloss": "Article 36 Agreement (Overtime work agreement",
+      "suggested_gloss": "Article 36 Agreement (overtime work agreement)",
+      "authority_class": "A",
+      "reuse_status": "GREEN",
+      "review_complexity": "REVIEW-B",
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
+      "source_evidence": {
+        "source_id": "mhlw-labor",
+        "source_version": "2026",
+        "source_locator": "statute:労働基準法第36条, term:36協定",
+        "source_count": 1
+      },
+      "automated_validation": {
+        "dedup_gate_status": "PASS",
+        "linguistic_gate_status": "PASS",
+        "confidence_evidence": "high"
+      },
+      "suggested_action": "REVISE_GLOSS",
+      "suggested_relationship": null,
+      "human_decision": "PENDING",
+      "human_comment": null,
+      "reviewer": null,
+      "reviewed_at": null
+    },
+    {
       "candidate_id": "pool-cand-001698",
       "proposed_id": "jp-canary-hr-0004",
       "surface": "労働基準法",
@@ -1942,39 +1975,6 @@
         "source_id": "mhlw-labor",
         "source_version": "2026",
         "source_locator": "statute:労働契約法第6条, term:労働契約",
-        "source_count": 1
-      },
-      "automated_validation": {
-        "dedup_gate_status": "PASS",
-        "linguistic_gate_status": "PASS",
-        "confidence_evidence": "high"
-      },
-      "suggested_action": "APPROVE_AS_IS",
-      "suggested_relationship": null,
-      "human_decision": "PENDING",
-      "human_comment": null,
-      "reviewer": null,
-      "reviewed_at": null
-    },
-    {
-      "candidate_id": "pool-cand-001700",
-      "proposed_id": "jp-canary-hr-0002",
-      "surface": "36協定",
-      "normalized_surface": "36協定",
-      "reading": "さぶろくきょうてい",
-      "suggested_reading": null,
-      "domain": "hr",
-      "subdomain": "working_hours",
-      "meaning_gloss": "Article 36 Agreement (Overtime work agreement",
-      "suggested_gloss": null,
-      "authority_class": "A",
-      "reuse_status": "GREEN",
-      "review_complexity": "REVIEW-A",
-      "quality_flags": [],
-      "source_evidence": {
-        "source_id": "mhlw-labor",
-        "source_version": "2026",
-        "source_locator": "statute:労働基準法第36条, term:36協定",
         "source_count": 1
       },
       "automated_validation": {
@@ -2528,6 +2528,41 @@
       "reviewed_at": null
     },
     {
+      "candidate_id": "pool-cand-001690",
+      "proposed_id": "jp-canary-trade-0006",
+      "surface": "特恵関税",
+      "normalized_surface": "特恵関税",
+      "reading": "とっけいかんぜい",
+      "suggested_reading": null,
+      "domain": "trade",
+      "subdomain": "tariff",
+      "meaning_gloss": "Generalized System of Preferences (GSP",
+      "suggested_gloss": "Preferential tariff",
+      "authority_class": "A",
+      "reuse_status": "GREEN",
+      "review_complexity": "REVIEW-B",
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
+      "source_evidence": {
+        "source_id": "japan-customs-trade",
+        "source_version": "2026",
+        "source_locator": "statute:関税暫定措置法第8条の2, code:JC-019",
+        "source_count": 1
+      },
+      "automated_validation": {
+        "dedup_gate_status": "PASS",
+        "linguistic_gate_status": "PASS",
+        "confidence_evidence": "high"
+      },
+      "suggested_action": "REVISE_GLOSS",
+      "suggested_relationship": null,
+      "human_decision": "PENDING",
+      "human_comment": null,
+      "reviewer": null,
+      "reviewed_at": null
+    },
+    {
       "candidate_id": "pool-cand-001694",
       "proposed_id": "jp-canary-trade-0010",
       "surface": "梱包明細書",
@@ -2603,11 +2638,13 @@
       "domain": "trade",
       "subdomain": "trade_finance",
       "meaning_gloss": "Documents against Payment (D/P",
-      "suggested_gloss": null,
+      "suggested_gloss": "Documents against Payment (D/P)",
       "authority_class": "C",
       "reuse_status": "YELLOW",
       "review_complexity": "REVIEW-B",
-      "quality_flags": [],
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
       "source_evidence": {
         "source_id": "jetro-trade",
         "source_version": "2026",
@@ -2619,7 +2656,7 @@
         "linguistic_gate_status": "PASS",
         "confidence_evidence": "medium"
       },
-      "suggested_action": "APPROVE_AS_IS",
+      "suggested_action": "REVISE_GLOSS",
       "suggested_relationship": null,
       "human_decision": "PENDING",
       "human_comment": null,
@@ -2636,11 +2673,13 @@
       "domain": "trade",
       "subdomain": "trade_finance",
       "meaning_gloss": "Documents against Acceptance (D/A",
-      "suggested_gloss": null,
+      "suggested_gloss": "Documents against Acceptance (D/A)",
       "authority_class": "C",
       "reuse_status": "YELLOW",
       "review_complexity": "REVIEW-B",
-      "quality_flags": [],
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
       "source_evidence": {
         "source_id": "jetro-trade",
         "source_version": "2026",
@@ -2652,7 +2691,7 @@
         "linguistic_gate_status": "PASS",
         "confidence_evidence": "medium"
       },
-      "suggested_action": "APPROVE_AS_IS",
+      "suggested_action": "REVISE_GLOSS",
       "suggested_relationship": null,
       "human_decision": "PENDING",
       "human_comment": null,
@@ -2744,39 +2783,6 @@
         "source_id": "japan-customs-trade",
         "source_version": "2026",
         "source_locator": "statute:関税定率法第19条, code:JC-013",
-        "source_count": 1
-      },
-      "automated_validation": {
-        "dedup_gate_status": "PASS",
-        "linguistic_gate_status": "PASS",
-        "confidence_evidence": "high"
-      },
-      "suggested_action": "APPROVE_AS_IS",
-      "suggested_relationship": null,
-      "human_decision": "PENDING",
-      "human_comment": null,
-      "reviewer": null,
-      "reviewed_at": null
-    },
-    {
-      "candidate_id": "pool-cand-001690",
-      "proposed_id": "jp-canary-trade-0006",
-      "surface": "特恵関税",
-      "normalized_surface": "特恵関税",
-      "reading": "とっけいかんぜい",
-      "suggested_reading": null,
-      "domain": "trade",
-      "subdomain": "tariff",
-      "meaning_gloss": "Generalized System of Preferences (GSP",
-      "suggested_gloss": null,
-      "authority_class": "A",
-      "reuse_status": "GREEN",
-      "review_complexity": "REVIEW-A",
-      "quality_flags": [],
-      "source_evidence": {
-        "source_id": "japan-customs-trade",
-        "source_version": "2026",
-        "source_locator": "statute:関税暫定措置法第8条の2, code:JC-019",
         "source_count": 1
       },
       "automated_validation": {
@@ -3566,11 +3572,13 @@
       "domain": "office_communication",
       "subdomain": "formal_correspondence",
       "meaning_gloss": "Dear Sir/Madam (formal opening",
-      "suggested_gloss": null,
+      "suggested_gloss": "Dear Sir/Madam (formal opening)",
       "authority_class": "C",
       "reuse_status": "YELLOW",
       "review_complexity": "REVIEW-B",
-      "quality_flags": [],
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
       "source_evidence": {
         "source_id": "smrj-business-guidance",
         "source_version": "2026",
@@ -3582,7 +3590,7 @@
         "linguistic_gate_status": "PASS",
         "confidence_evidence": "medium"
       },
-      "suggested_action": "APPROVE_AS_IS",
+      "suggested_action": "REVISE_GLOSS",
       "suggested_relationship": null,
       "human_decision": "PENDING",
       "human_comment": null,
@@ -3599,11 +3607,13 @@
       "domain": "office_communication",
       "subdomain": "formal_correspondence",
       "meaning_gloss": "Sincerely yours (formal closing",
-      "suggested_gloss": null,
+      "suggested_gloss": "Sincerely yours (formal closing)",
       "authority_class": "C",
       "reuse_status": "YELLOW",
       "review_complexity": "REVIEW-B",
-      "quality_flags": [],
+      "quality_flags": [
+        "GLOSS_REVIEW_REQUIRED"
+      ],
       "source_evidence": {
         "source_id": "smrj-business-guidance",
         "source_version": "2026",
@@ -3615,7 +3625,7 @@
         "linguistic_gate_status": "PASS",
         "confidence_evidence": "medium"
       },
-      "suggested_action": "APPROVE_AS_IS",
+      "suggested_action": "REVISE_GLOSS",
       "suggested_relationship": null,
       "human_decision": "PENDING",
       "human_comment": null,

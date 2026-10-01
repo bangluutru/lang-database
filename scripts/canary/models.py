@@ -21,6 +21,7 @@ class CanaryState(str, Enum):
     NEEDS_REVIEW = "needs_review"
     VARIANT_DETECTED = "variant_detected"
     DUPLICATE_DETECTED = "duplicate_detected"
+    ABBREVIATION_DETECTED = "abbreviation_detected"
     SENSE_AMBIGUOUS = "sense_ambiguous"
     INSUFFICIENT_EVIDENCE = "insufficient_evidence"
     LICENSING_BLOCKED = "licensing_blocked"
@@ -28,8 +29,10 @@ class CanaryState(str, Enum):
 
 class HumanReviewDecision(str, Enum):
     APPROVE = "APPROVE"
+    APPROVE_WITH_REVISION = "APPROVE_WITH_REVISION"
     REJECT = "REJECT"
     NEEDS_REVISION = "NEEDS_REVISION"
+    ABBREVIATION_OF = "ABBREVIATION_OF"
     VARIANT_OF = "VARIANT_OF"
     DUPLICATE_OF = "DUPLICATE_OF"
     DIFFERENT_SENSE = "DIFFERENT_SENSE"

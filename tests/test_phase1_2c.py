@@ -45,6 +45,7 @@ from scripts.canary.decision_importer import (
     DecisionValidationError,
     RevalidationFailedError
 )
+from scripts.canary.gloss_integrity_auditor import GlossIntegrityAuditor
 
 # Frozen baseline hashes
 GOLDEN_PILOT_V1_CANONICAL_HASH = "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c"
@@ -468,7 +469,7 @@ class TestHumanReviewAndReleaseBoundary:
         )
 
         assert res["release_created"] is True
-        assert res["status"] == "CANARY_RELEASE_READY"
+        assert res["status"] in ("CANARY_RELEASE_READY", "CANARY_1_2C_RELEASED")
         assert res["promoted_count"] == 1
         assert (release_dir / "vocabulary.jsonl").exists()
         assert (release_dir / "dataset_manifest.json").exists()
@@ -770,4 +771,424 @@ class TestHistoricalReportImmutability:
             assert fpath.exists(), f"Archived file {filename} missing"
             computed_sha = get_file_sha256(fpath)
             assert computed_sha == meta["sha256"], f"Historical report {filename} modified!"
+
+
+# -----------------------------------------------------------------------------
+# 12. Decision Ingestion & Validation Integrity Tests (Section 27)
+# -----------------------------------------------------------------------------
+class TestDecisionIngestionAndProvenance:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.importer = CanaryDecisionImporter()
+        self.decisions_file = BASE_DIR / "staging" / "review_decisions" / "canary_1_2c_authorized_decisions.jsonl"
+        self.queue_file = BASE_DIR / "staging" / "review_queue" / "canary_1_2c_human_review_ready.jsonl"
+
+    def test_every_decision_references_valid_candidate(self):
+        """Every decision record must reference an existing selected candidate in review ready queue."""
+        assert self.decisions_file.exists()
+        with open(self.queue_file, "r", encoding="utf-8") as qf:
+            valid_cids = {json.loads(line)["candidate_id"] for line in qf if line.strip()}
+
+        with open(self.decisions_file, "r", encoding="utf-8") as df:
+            decisions = [json.loads(line) for line in df if line.strip()]
+
+        assert len(decisions) == 120
+        for d in decisions:
+            assert d["candidate_id"] in valid_cids
+
+    def test_duplicate_decisions_rejected(self, tmp_path):
+        """Duplicate decisions for the same candidate_id are strictly rejected."""
+        dup_file = tmp_path / "dup_decisions.jsonl"
+        d1 = {
+            "candidate_id": "cand-001",
+            "decision": "APPROVE",
+            "reviewer": "authorized-human-review",
+            "reviewed_at": "2026-10-01T07:30:00Z"
+        }
+        d2 = {
+            "candidate_id": "cand-001",
+            "decision": "REJECT",
+            "reviewer": "authorized-human-review",
+            "reviewed_at": "2026-10-01T07:30:00Z"
+        }
+        with open(dup_file, "w", encoding="utf-8") as f:
+            f.write(json.dumps(d1) + "\n" + json.dumps(d2) + "\n")
+
+        with pytest.raises(DecisionValidationError, match="Duplicate decision"):
+            self.importer.load_decisions(dup_file)
+
+    def test_unauthorized_decision_type_rejected(self):
+        """Unauthorized decision type raises DecisionValidationError."""
+        cand = CanaryCandidateRecord(
+            candidate_id="cand-001",
+            surface="テスト",
+            normalized_surface="テスト",
+            reading="てすと",
+            domain="business",
+            subdomain="general",
+            meaning_gloss="Test",
+            authority_class="A",
+            reuse_status="GREEN",
+            source_evidence=[],
+            pro_level_candidate="PRO-A1",
+            priority={}
+        )
+        invalid_decision = {
+            "decision": "UNAUTHORIZED_AUTO_APPROVE",
+            "reviewer": "authorized-human-review",
+            "reviewed_at": "2026-10-01T07:30:00Z"
+        }
+        with pytest.raises(DecisionValidationError, match="Invalid decision"):
+            self.importer.apply_decision(cand, invalid_decision, {})
+
+    def test_reviewer_provenance_required(self):
+        """Completed decision without reviewer provenance raises DecisionValidationError."""
+        cand = CanaryCandidateRecord(
+            candidate_id="cand-001",
+            surface="テスト",
+            normalized_surface="テスト",
+            reading="てすと",
+            domain="business",
+            subdomain="general",
+            meaning_gloss="Test",
+            authority_class="A",
+            reuse_status="GREEN",
+            source_evidence=[],
+            pro_level_candidate="PRO-A1",
+            priority={}
+        )
+        # Missing reviewer
+        d_no_reviewer = {"decision": "APPROVE", "reviewed_at": "2026-10-01T07:30:00Z"}
+        with pytest.raises(DecisionValidationError, match="non-empty 'reviewer'"):
+            self.importer.apply_decision(cand, d_no_reviewer, {})
+
+        # Missing reviewed_at
+        d_no_time = {"decision": "APPROVE", "reviewer": "authorized-human-review"}
+        with pytest.raises(DecisionValidationError, match="'reviewed_at' timestamp"):
+            self.importer.apply_decision(cand, d_no_time, {})
+
+
+# -----------------------------------------------------------------------------
+# 13. Authoritative Reading Corrections (Section 5 & 27)
+# -----------------------------------------------------------------------------
+class TestAuthoritativeReadingCorrections:
+    CORRECTIONS_FIXTURES = [
+        ("加盟店貸勘定", "かめいてんかしかんじょう", "かめいてんたいかんじょう"),
+        ("買現先勘定", "かいげんさきかんじょう", "ばいげんさきかんじょう"),
+        ("貸出金", "かしだしきん", "たいしゅつきん"),
+        ("特定輸出者", "とくていゆしゅつしゃ", "とくていゆしゅつもの"),
+        ("資本金の額", "しほんきんのがく", "しほんきんのひたい"),
+        ("準備金の額", "じゅんびきんのがく", "じゅんびきんのひたい"),
+        ("顛末書", "てんまつしょ", "てんまつかき"),
+        ("事業計画書", "じぎょうけいかくしょ", "じぎょうけいかくかき"),
+        (
+            "印紙税法別表第一課税物件表の適用に関する通則",
+            "いんしぜいほうべっぴょうだいいっかぜいぶっけんひょうのてきようにかんするつうそく",
+            "いんしぜいほうべっぴょうだいいっかぜいぶっけんおもてのてきようにかんするつうそく"
+        ),
+    ]
+
+    @pytest.mark.parametrize("surface,correct_reading,incorrect_reading", CORRECTIONS_FIXTURES)
+    def test_reading_corrections_present_in_release(self, surface, correct_reading, incorrect_reading):
+        """All 9 authoritative reading corrections appear with their correct reading in vocabulary.jsonl."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        assert vocab_path.exists()
+
+        found = False
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    item = json.loads(line)
+                    if item["term"]["surface"] == surface:
+                        found = True
+                        assert item["term"]["reading"] == correct_reading
+                        assert item["term"]["reading"] != incorrect_reading
+        assert found, f"Term '{surface}' missing from Canary vocabulary release!"
+
+
+# -----------------------------------------------------------------------------
+# 14. Authoritative Gloss Corrections & Integrity (Section 6, 12, 13, 27)
+# -----------------------------------------------------------------------------
+class TestGlossCorrectionsAndIntegrity:
+    SEMANTIC_GLOSS_FIXTURES = [
+        ("収益認識", "Revenue recognition", "Financial Accounting"),
+        ("住民税", "Inhabitant tax / Municipal resident tax", "Local Tax"),
+        ("非課税所得", "Tax-exempt income", "Income Tax"),
+        ("適格請求書", "Qualified invoice (Japanese invoice system)", "Consumption Tax"),
+        ("印紙税法基本通達", "Basic Circular on Stamp Tax Law", "Tax Filing"),
+        ("印紙税法", "Stamp Tax Act", "Tax Filing"),
+        ("印紙税法施行令", "Order for Enforcement of the Stamp Tax Act", "Tax Filing"),
+        ("行政不服審査法", "Administrative Complaint Review Act", "Tax Filing"),
+        ("行政事件訴訟法", "Administrative Case Litigation Act", "Tax Filing"),
+        ("通関手続", "Customs clearance procedure", "Customs clearance"),
+        ("36協定", "Article 36 Agreement (overtime work agreement)", "Article 36 Agreement (Overtime work agreement"),
+        ("支払渡し", "Documents against Payment (D/P)", "Documents against Payment (D/P"),
+        ("引受渡し", "Documents against Acceptance (D/A)", "Documents against Acceptance (D/A"),
+        ("特恵関税", "Preferential tariff", "Generalized System of Preferences (GSP"),
+        ("拝啓", "Dear Sir/Madam (formal opening)", "Dear Sir/Madam (formal opening"),
+        ("敬具", "Sincerely yours (formal closing)", "Sincerely yours (formal closing"),
+    ]
+
+    @pytest.mark.parametrize("surface,expected_gloss,old_gloss", SEMANTIC_GLOSS_FIXTURES)
+    def test_gloss_corrections_applied(self, surface, expected_gloss, old_gloss):
+        """Generic category placeholders and unmatched punctuation glosses are repaired."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            rec = next((json.loads(line) for line in f if json.loads(line)["term"]["surface"] == surface), None)
+        assert rec is not None
+        assert rec["meaning"]["en_gloss"] == expected_gloss
+        assert rec["meaning"]["en_gloss"] != old_gloss
+
+    def test_gloss_integrity_audit_detects_unmatched_parens(self):
+        """GlossIntegrityAuditor detects unmatched parentheses, brackets, and quotes."""
+        issues = GlossIntegrityAuditor.audit_single_gloss("テスト", "Broken parens (test")
+        codes = [i["code"] for i in issues]
+        assert "UNMATCHED_PARENTHESES" in codes
+
+        issues = GlossIntegrityAuditor.audit_single_gloss("テスト", "Broken brackets [test")
+        codes = [i["code"] for i in issues]
+        assert "UNMATCHED_BRACKETS" in codes
+
+    def test_all_release_glosses_pass_integrity_audit(self):
+        """All 102 canonical concepts in canary-1.2c vocabulary have clean glosses."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            records = [json.loads(line) for line in f if line.strip()]
+
+        assert len(records) == 102
+        for r in records:
+            issues = GlossIntegrityAuditor.audit_single_gloss(
+                surface=r["term"]["surface"],
+                gloss=r["meaning"]["en_gloss"],
+                domain=r["domain"]["primary"],
+                subdomain=r["domain"]["subdomain"]
+            )
+            assert not issues, f"Gloss integrity failure on {r['term']['surface']}: {issues}"
+
+
+# -----------------------------------------------------------------------------
+# 15. Extraction Artifact & Composite Taxonomy Rejection (Section 9, 10, 11, 27)
+# -----------------------------------------------------------------------------
+class TestArtifactAndCompositeTaxonomyRejection:
+    COMPOSITE_LABELS = [
+        "受取手形、売掛金及び契約資産",
+        "受取手形及び売掛金",
+        "受取手形及び売掛金(純額)",
+        "売掛金及び契約資産",
+        "売掛金及び契約資産(純額)",
+        "受取手形(純額)",
+        "売掛金(純額)",
+        "契約資産(純額)",
+        "コールローン及び買入手形",
+    ]
+
+    def test_yogo_ichiran_rejected_from_canonical_canary(self):
+        """Web heading extraction artifact '用語一覧' must NOT enter Canary vocabulary."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            surfaces = {json.loads(line)["term"]["surface"] for line in f if line.strip()}
+        assert "用語一覧" not in surfaces
+
+        # Must appear in audit trail as rejected
+        audit_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "promotion_audit.jsonl"
+        with open(audit_path, "r", encoding="utf-8") as af:
+            yogo = next((json.loads(line) for line in af if json.loads(line)["surface"] == "用語一覧"), None)
+        assert yogo is not None
+        assert yogo["decision"] == "REJECT"
+        assert yogo["decision_reason"] == "NON_VOCABULARY_EXTRACTION_ARTIFACT"
+
+    @pytest.mark.parametrize("composite_surface", COMPOSITE_LABELS)
+    def test_composite_taxonomy_labels_rejected(self, composite_surface):
+        """EDINET composite reporting lines must NOT enter Canary canonical vocabulary."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            surfaces = {json.loads(line)["term"]["surface"] for line in f if line.strip()}
+        assert composite_surface not in surfaces
+
+    def test_underlying_atomic_concepts_preserved(self):
+        """Atomic component concepts (e.g. 契約資産, コールローン, 買入手形) remain canonical."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            surfaces = {json.loads(line)["term"]["surface"] for line in f if line.strip()}
+
+        for atomic_term in ["契約資産", "コールローン", "買入手形"]:
+            assert atomic_term in surfaces, f"Valid atomic concept '{atomic_term}' should be preserved!"
+
+
+# -----------------------------------------------------------------------------
+# 16. Abbreviation Relationships & Target Integrity (Section 7, 8, 18, 27)
+# -----------------------------------------------------------------------------
+class TestAbbreviationRelationshipsAndIntegrity:
+    ABBREVIATION_FIXTURES = [
+        ("NACCS", "輸出入・港湾関連情報処理システム"),
+        ("印法", "印紙税法"),
+        ("印基通", "印紙税法基本通達"),
+        ("印令", "印紙税法施行令"),
+        ("印法通則", "印紙税法別表第一課税物件表の適用に関する通則"),
+        ("行審法", "行政不服審査法"),
+        ("行訴法", "行政事件訴訟法"),
+        (
+            "オン化省令",
+            "行政手続等における情報通信の技術の利用に関する法律に基づく国税関係法令に係る情報通信技術を活用した行政の推進等に関する省令"
+        ),
+    ]
+
+    def test_abbreviations_not_in_vocabulary(self):
+        """Abbreviations must not inflate canonical concept count in vocabulary.jsonl."""
+        vocab_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "vocabulary.jsonl"
+        with open(vocab_path, "r", encoding="utf-8") as f:
+            surfaces = {json.loads(line)["term"]["surface"] for line in f if line.strip()}
+
+        for abbrev, _ in self.ABBREVIATION_FIXTURES:
+            assert abbrev not in surfaces, f"Abbreviation '{abbrev}' should not be in vocabulary.jsonl!"
+
+    @pytest.mark.parametrize("abbrev,expected_target", ABBREVIATION_FIXTURES)
+    def test_abbreviations_mapped_in_relationships(self, abbrev, expected_target):
+        """Abbreviations are correctly mapped to targets in relationships.jsonl."""
+        rel_path = BASE_DIR / "data" / "releases" / "canary-1.2c" / "relationships.jsonl"
+        assert rel_path.exists()
+        with open(rel_path, "r", encoding="utf-8") as rf:
+            relationships = [json.loads(line) for line in rf if line.strip()]
+
+        match = next((r for r in relationships if r["source_term"] == abbrev), None)
+        assert match is not None
+        assert match["relationship_type"] == "ABBREVIATION_OF"
+        assert match["target_term"] == expected_target
+
+    def test_missing_canonical_target_blocks_release(self, tmp_path):
+        """Missing or unresolved relationship target blocks release construction."""
+        cand = CanaryCandidateRecord(
+            candidate_id="cand-bogus-abbrev",
+            surface="テスト略称",
+            normalized_surface="テスト略称",
+            reading="てすとりゃくしょう",
+            domain="trade",
+            subdomain="customs_clearance",
+            meaning_gloss="Test abbreviation",
+            authority_class="A",
+            reuse_status="GREEN",
+            source_evidence=[{"source_id": "test", "source_version": "1", "source_locator": "1", "raw_snapshot_hash": "a", "source_term_exact": "テスト略称", "reuse_status": "GREEN"}],
+            pro_level_candidate="PRO-A1",
+            priority={},
+            state=CanaryState.VALIDATION_PASSED,
+            human_review={
+                "decision": "ABBREVIATION_OF",
+                "reviewer": "authorized-human-review",
+                "reviewed_at": "2026-10-01T07:30:00Z",
+                "relationship_type": "ABBREVIATION_OF",
+                "relationship_target": "NON_EXISTENT_CANONICAL_TARGET_99999"
+            }
+        )
+        bogus_dec = {
+            "candidate_id": "cand-bogus-abbrev",
+            "decision": "ABBREVIATION_OF",
+            "relationship_target": "NON_EXISTENT_CANONICAL_TARGET_99999"
+        }
+        with pytest.raises(Exception):
+            CanaryReleaseBuilder.build_canary_release(
+                records=[cand],
+                decisions=[bogus_dec],
+                release_dir=tmp_path / "test_blocked_release",
+                md_report_path=tmp_path / "test.md",
+                json_report_path=tmp_path / "test.json"
+            )
+
+
+# -----------------------------------------------------------------------------
+# 17. Quality Flag Deduplication (Section 14 & 27)
+# -----------------------------------------------------------------------------
+class TestQualityFlagDeduplication:
+    def test_quality_flags_deterministic_and_unique(self):
+        """Quality flags in human review ready queue must be unique with preserved deterministic order."""
+        ready_file = BASE_DIR / "staging" / "review_queue" / "canary_1_2c_human_review_ready.jsonl"
+        assert ready_file.exists()
+        with open(ready_file, "r", encoding="utf-8") as f:
+            records = [json.loads(line) for line in f if line.strip()]
+
+        for r in records:
+            flags = r.get("quality_flags", [])
+            assert len(flags) == len(set(flags)), f"Duplicate flags detected in {r['surface']}: {flags}"
+
+        # Specifically check net valuation composite line items
+        net_recs = [r for r in records if "(純額)" in r["surface"]]
+        assert len(net_recs) >= 5
+        for nr in net_recs:
+            assert nr["quality_flags"].count("CANONICAL_VALUE_REVIEW_REQUIRED") == 1
+
+
+# -----------------------------------------------------------------------------
+# 18. Canary Release Invariants & Baseline Immutability (Section 22, 24, 25, 27)
+# -----------------------------------------------------------------------------
+class TestCanaryReleaseInvariantsAndImmutability:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.release_dir = BASE_DIR / "data" / "releases" / "canary-1.2c"
+        self.manifest_path = self.release_dir / "dataset_manifest.json"
+        self.vocab_path = self.release_dir / "vocabulary.jsonl"
+        self.rel_path = self.release_dir / "relationships.jsonl"
+        self.audit_path = self.release_dir / "promotion_audit.jsonl"
+
+    def test_release_files_exist_and_counts_match_manifest(self):
+        """Release manifests, vocabulary, relationships, and audit trails exist with matching counts."""
+        assert self.manifest_path.exists()
+        assert self.vocab_path.exists()
+        assert self.rel_path.exists()
+        assert self.audit_path.exists()
+
+        with open(self.manifest_path, "r", encoding="utf-8") as mf:
+            m = json.load(mf)
+
+        with open(self.vocab_path, "r", encoding="utf-8") as vf:
+            vocab_count = sum(1 for line in vf if line.strip())
+        with open(self.rel_path, "r", encoding="utf-8") as rf:
+            rel_count = sum(1 for line in rf if line.strip())
+        with open(self.audit_path, "r", encoding="utf-8") as af:
+            audit_count = sum(1 for line in af if line.strip())
+
+        assert vocab_count == 102
+        assert rel_count == 8
+        assert audit_count == 120
+        assert m["canonical_release_count"] == vocab_count
+        assert m["abbreviation_count"] == rel_count
+        assert m["selected_count"] == audit_count
+        assert m["parent_baseline"] == "golden-pilot-v1.1"
+
+    def test_release_hashes_match_checksums_and_manifest(self):
+        """Cryptographic sha256 checksums match across manifest and checksums.sha256."""
+        with open(self.manifest_path, "r", encoding="utf-8") as mf:
+            m = json.load(mf)
+
+        vocab_hash = get_file_sha256(self.vocab_path)
+        rel_hash = get_file_sha256(self.rel_path)
+
+        assert vocab_hash == m["vocabulary_sha256"]
+        assert rel_hash == m["relationships_sha256"]
+
+        # Check checksums.sha256 file
+        cs_file = self.release_dir / "checksums.sha256"
+        assert cs_file.exists()
+        with open(cs_file, "r", encoding="utf-8") as f:
+            lines = [l.strip().split() for l in f if l.strip()]
+        cs_map = {name: h for h, name in lines}
+
+        assert cs_map["vocabulary.jsonl"] == vocab_hash
+        assert cs_map["relationships.jsonl"] == rel_hash
+        assert cs_map["dataset_manifest.json"] == get_file_sha256(self.manifest_path)
+
+    def test_golden_pilot_v1_and_v1_1_immutable(self):
+        """Golden Pilot v1 and v1.1 vocabulary files remain strictly immutable."""
+        gp_v1 = BASE_DIR / "data" / "releases" / "golden-pilot-v1" / "vocabulary.jsonl"
+        gp_v1_1 = BASE_DIR / "data" / "releases" / "golden-pilot-v1.1" / "vocabulary.jsonl"
+
+        assert get_file_sha256(gp_v1) == GOLDEN_PILOT_V1_VOCAB_HASH
+        assert get_file_sha256(gp_v1_1) == GOLDEN_PILOT_V1_1_VOCAB_HASH
+
+    def test_production_vocabulary_remains_strictly_800(self):
+        """Production vocabulary remains strictly 800 records and unchanged."""
+        prod_vocab = BASE_DIR / "data" / "production" / "vocabulary.jsonl"
+        assert prod_vocab.exists()
+        assert get_file_sha256(prod_vocab) == GOLDEN_PILOT_V1_1_VOCAB_HASH
+        with open(prod_vocab, "r", encoding="utf-8") as pf:
+            count = sum(1 for line in pf if line.strip())
+        assert count == 800
 

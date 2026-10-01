@@ -1,9 +1,9 @@
 # Phase 1.2C — Human Review Package
 
-- **Generated At**: `2026-10-01T06:14:56Z`
+- **Generated At**: `2026-10-01T07:32:13Z`
 - **Total Candidates for Review**: `120`
 - **Status**: **`PENDING_HUMAN_REVIEW`** (0 Approved / 120 Pending)
-- **Review Complexity**: `REVIEW-C (High Attention)`: **27** | `REVIEW-B (Normal)`: **34** | `REVIEW-A (Low Risk)`: **59**
+- **Review Complexity**: `REVIEW-C (High Attention)`: **27** | `REVIEW-B (Normal)`: **36** | `REVIEW-A (Low Risk)`: **57**
 
 > [!IMPORTANT]
 > **Strict Human Review Rule**: AI recommendations are provided strictly as non-binding evidence analysis. All 120 candidates remain in state `PENDING`. No candidate may be promoted without explicit human authorization.
@@ -20,8 +20,8 @@
 
 | Quality Flag | Count | Description & Recommended Remediation |
 |:---|:---:|:---|
-| `GLOSS_REVIEW_REQUIRED` | **20** | English gloss was a generic subdomain name; improved professional English gloss recommended. |
-| `CANONICAL_VALUE_REVIEW_REQUIRED` | **11** | Composite reporting line item (with 及び, 並びに) or net parens (純額); review if suitable as canonical headword. |
+| `GLOSS_REVIEW_REQUIRED` | **26** | English gloss was a generic subdomain name; improved professional English gloss recommended. |
+| `CANONICAL_VALUE_REVIEW_REQUIRED` | **9** | Composite reporting line item (with 及び, 並びに) or net parens (純額); review if suitable as canonical headword. |
 | `READING_REVIEW_REQUIRED` | **9** | Automatic kanji-to-kana mis-reading identified (e.g. 額->ひたい, 書->かき, 貸出金->たいしゅつきん); corrected reading proposed. |
 | `ABBREVIATION_FLAG` | **8** | Acronym or statutory short title (NACCS, 印基通, 印法); recommended to link to full canonical form via ABBREVIATION_OF. |
 | `EXTRACTION_ARTIFACT_FLAG` | **1** | Website navigation / index heading (用語一覧); recommended for REJECT. |
@@ -34,9 +34,9 @@
 |:---|:---|:---|:---|:---|:---|:---:|
 | `pool-cand-000001` | `jp-canary-accounting-0004` | **受取手形、売掛金及び契約資産**<br><code>うけとりてがたうりかけきんおよびけいやくしさん</code> | Notes and accounts receivable - trade, and contract assets | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_COMPOSITE_TAXONOMY_LABEL | `[ PENDING ]` |
 | `pool-cand-000002` | `jp-canary-accounting-0005` | **受取手形及び売掛金**<br><code>うけとりてがたおよびうりかけきん</code> | Notes and accounts receivable - trade | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_COMPOSITE_TAXONOMY_LABEL | `[ PENDING ]` |
-| `pool-cand-000003` | `jp-canary-accounting-0006` | **受取手形及び売掛金(純額)**<br><code>うけとりてがたおよびうりかけきんじゅんがく</code> | Notes and accounts receivable - trade, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED`<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
+| `pool-cand-000003` | `jp-canary-accounting-0006` | **受取手形及び売掛金(純額)**<br><code>うけとりてがたおよびうりかけきんじゅんがく</code> | Notes and accounts receivable - trade, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
 | `pool-cand-000004` | `jp-canary-accounting-0007` | **売掛金及び契約資産**<br><code>うりかけきんおよびけいやくしさん</code> | Accounts receivable - trade, and contract assets | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_COMPOSITE_TAXONOMY_LABEL | `[ PENDING ]` |
-| `pool-cand-000005` | `jp-canary-accounting-0008` | **売掛金及び契約資産(純額)**<br><code>うりかけきんおよびけいやくしさんじゅんがく</code> | Accounts receivable - trade, and contract assets, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED`<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
+| `pool-cand-000005` | `jp-canary-accounting-0008` | **売掛金及び契約資産(純額)**<br><code>うりかけきんおよびけいやくしさんじゅんがく</code> | Accounts receivable - trade, and contract assets, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
 | `pool-cand-000006` | `jp-canary-accounting-0009` | **受取手形(純額)**<br><code>うけとりてがたじゅんがく</code> | Notes receivable - trade, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
 | `pool-cand-000007` | `jp-canary-accounting-0010` | **売掛金(純額)**<br><code>うりかけきんじゅんがく</code> | Accounts receivable - trade, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
 | `pool-cand-000009` | `jp-canary-accounting-0012` | **契約資産(純額)**<br><code>けいやくしさんじゅんがく</code> | Contract assets, net | **REVIEW-C**<br>`CANONICAL_VALUE_REVIEW_REQUIRED` | REVIEW_NET_VALUATION_VARIANT | `[ PENDING ]` |
@@ -100,9 +100,9 @@
 
 | ID | Proposed Canonical ID | Surface / Reading | English Meaning & Suggestion | Complexity & Flags | AI Suggestion | Human Decision |
 |:---|:---|:---|:---|:---|:---|:---:|
+| `pool-cand-001700` | `jp-canary-hr-0002` | **36協定**<br><code>さぶろくきょうてい</code> | Article 36 Agreement (Overtime work agreement<br>*(Sug: Article 36 Agreement (overtime work agreement))* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
 | `pool-cand-001698` | `jp-canary-hr-0004` | **労働基準法**<br><code>ろうどうきじゅんほう</code> | Labor Standards Act | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001699` | `jp-canary-hr-0001` | **労働契約**<br><code>ろうどうけいやく</code> | Labor contract / Employment agreement | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001700` | `jp-canary-hr-0002` | **36協定**<br><code>さぶろくきょうてい</code> | Article 36 Agreement (Overtime work agreement | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001701` | `jp-canary-hr-0005` | **時間外労働**<br><code>じかんがいろうどう</code> | Overtime work | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001702` | `jp-canary-hr-0003` | **割増賃金**<br><code>わりましちんぎん</code> | Premium wages / Overtime pay | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001703` | `jp-canary-hr-0006` | **年次有給休暇**<br><code>ねんじゆうきゅうきゅうか</code> | Annual paid leave | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
@@ -124,14 +124,14 @@
 | `pool-cand-001689` | `jp-canary-trade-0005` | **NACCS**<br><code>なっくす</code> | Nippon Automated Cargo and Port Consolidated System<br>*(Sug: Nippon Automated Cargo and Port Consolidated System (Electronic customs clearance system))* | **REVIEW-C**<br>`ABBREVIATION_FLAG`<br>`GLOSS_REVIEW_REQUIRED` | MAP_TO_CANONICAL_FULL_FORM<br>Rel: `ABBREVIATION_OF -> 輸出入・港湾関連情報処理システム` | `[ PENDING ]` |
 | `pool-cand-001692` | `jp-canary-trade-0008` | **特定輸出者**<br><code>とくていゆしゅつもの</code><br>*(Corr: <code>とくていゆしゅつしゃ</code>)* | AEO Authorized exporter | **REVIEW-C**<br>`READING_REVIEW_REQUIRED` | REVISE_READING | `[ PENDING ]` |
 | `pool-cand-001685` | `jp-canary-trade-0001` | **通関手続**<br><code>つうかんてつづき</code> | Customs clearance<br>*(Sug: Customs clearance procedure)* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
+| `pool-cand-001690` | `jp-canary-trade-0006` | **特恵関税**<br><code>とっけいかんぜい</code> | Generalized System of Preferences (GSP<br>*(Sug: Preferential tariff)* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
 | `pool-cand-001694` | `jp-canary-trade-0010` | **梱包明細書**<br><code>こんぽうめいさいしょ</code> | Packing list | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001695` | `jp-canary-trade-0011` | **海上保険証券**<br><code>かいじょうほけんしょうけん</code> | Marine insurance policy | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001696` | `jp-canary-trade-0012` | **支払渡し**<br><code>しはらいわたし</code> | Documents against Payment (D/P | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001697` | `jp-canary-trade-0013` | **引受渡し**<br><code>ひきうけわたし</code> | Documents against Acceptance (D/A | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
+| `pool-cand-001696` | `jp-canary-trade-0012` | **支払渡し**<br><code>しはらいわたし</code> | Documents against Payment (D/P<br>*(Sug: Documents against Payment (D/P))* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
+| `pool-cand-001697` | `jp-canary-trade-0013` | **引受渡し**<br><code>ひきうけわたし</code> | Documents against Acceptance (D/A<br>*(Sug: Documents against Acceptance (D/A))* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
 | `pool-cand-001686` | `jp-canary-trade-0002` | **関税割当**<br><code>かんぜいわりあて</code> | Tariff quota | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001687` | `jp-canary-trade-0003` | **関税減免**<br><code>かんぜいげんめん</code> | Tariff exemption and reduction | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001688` | `jp-canary-trade-0004` | **戻し税**<br><code>もどしぜい</code> | Duty drawback | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001690` | `jp-canary-trade-0006` | **特恵関税**<br><code>とっけいかんぜい</code> | Generalized System of Preferences (GSP | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001691` | `jp-canary-trade-0007` | **認定通関業者**<br><code>にんていつうかんぎょうしゃ</code> | AEO Customs broker | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001693` | `jp-canary-trade-0009` | **特例輸入者**<br><code>とくれいゆにゅうしゃ</code> | AEO Authorized importer | **REVIEW-A** | APPROVE_AS_IS | `[ PENDING ]` |
 
@@ -165,8 +165,8 @@
 | `pool-cand-001751` | `jp-canary-office_communication-0007` | **伝言メモ**<br><code>でんごんめも</code> | Telephone message memo | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001752` | `jp-canary-office_communication-0008` | **日報**<br><code>にっぽう</code> | Daily work report | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
 | `pool-cand-001753` | `jp-canary-office_communication-0009` | **週報**<br><code>しゅうほう</code> | Weekly work report | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001754` | `jp-canary-office_communication-0010` | **拝啓**<br><code>はいけい</code> | Dear Sir/Madam (formal opening | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
-| `pool-cand-001755` | `jp-canary-office_communication-0011` | **敬具**<br><code>けいぐ</code> | Sincerely yours (formal closing | **REVIEW-B** | APPROVE_AS_IS | `[ PENDING ]` |
+| `pool-cand-001754` | `jp-canary-office_communication-0010` | **拝啓**<br><code>はいけい</code> | Dear Sir/Madam (formal opening<br>*(Sug: Dear Sir/Madam (formal opening))* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
+| `pool-cand-001755` | `jp-canary-office_communication-0011` | **敬具**<br><code>けいぐ</code> | Sincerely yours (formal closing<br>*(Sug: Sincerely yours (formal closing))* | **REVIEW-B**<br>`GLOSS_REVIEW_REQUIRED` | REVISE_GLOSS | `[ PENDING ]` |
 
 ### Section 8: Domain `business` (6 Candidates)
 

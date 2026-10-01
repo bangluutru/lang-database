@@ -48,7 +48,10 @@ class PromotionStateMachine:
         CanaryState.VALIDATION_PASSED: {
             CanaryState.HUMAN_REVIEW_PASSED,
             CanaryState.REJECTED,
-            CanaryState.NEEDS_REVIEW
+            CanaryState.NEEDS_REVIEW,
+            CanaryState.VARIANT_DETECTED,
+            CanaryState.DUPLICATE_DETECTED,
+            CanaryState.ABBREVIATION_DETECTED
         },
         CanaryState.HUMAN_REVIEW_PASSED: {
             CanaryState.PROMOTION_ELIGIBLE,
@@ -63,9 +66,10 @@ class PromotionStateMachine:
         CanaryState.CANARY: set(),  # Terminal state for Canary release
         # Terminal / Review states
         CanaryState.REJECTED: set(),
-        CanaryState.NEEDS_REVIEW: {CanaryState.SELECTED_FOR_CANARY, CanaryState.REJECTED},
+        CanaryState.NEEDS_REVIEW: {CanaryState.SELECTED_FOR_CANARY, CanaryState.REJECTED, CanaryState.HUMAN_REVIEW_PASSED},
         CanaryState.VARIANT_DETECTED: set(),
         CanaryState.DUPLICATE_DETECTED: set(),
+        CanaryState.ABBREVIATION_DETECTED: set(),
         CanaryState.SENSE_AMBIGUOUS: set(),
         CanaryState.INSUFFICIENT_EVIDENCE: set(),
         CanaryState.LICENSING_BLOCKED: set(),
@@ -96,7 +100,10 @@ class PromotionStateMachine:
                 raise UnapprovedPromotionError(
                     f"Candidate {record.candidate_id} must be in '{CanaryState.PROMOTION_ELIGIBLE.value}' before promotion to Canary, currently '{current.value}'"
                 )
-            if not record.human_review or record.human_review.get("decision") != HumanReviewDecision.APPROVE.value:
+            if not record.human_review or record.human_review.get("decision") not in (
+                HumanReviewDecision.APPROVE.value,
+                HumanReviewDecision.APPROVE_WITH_REVISION.value
+            ):
                 raise UnapprovedPromotionError(
                     f"Candidate {record.candidate_id} has not been approved by Human Review. Promotion blocked."
                 )
@@ -113,4 +120,7 @@ class PromotionStateMachine:
             return False
         if not record.human_review:
             return False
-        return record.human_review.get("decision") == HumanReviewDecision.APPROVE.value
+        return record.human_review.get("decision") in (
+            HumanReviewDecision.APPROVE.value,
+            HumanReviewDecision.APPROVE_WITH_REVISION.value
+        )

@@ -67,7 +67,7 @@ READING_CORRECTIONS = {
     "印紙税法別表第一課税物件表の適用に関する通則": "いんしぜいほうべっぴょうだいいっかぜいぶっけんひょうのてきようにかんするつうそく"  # 'おもて' -> 'ひょう'
 }
 
-# Audited gloss improvements for generic fallback terms
+# Audited gloss improvements for generic fallback terms & punctuation repairs
 GLOSS_RECOMMENDATIONS = {
     "収益認識": "Revenue recognition",
     "住民税": "Inhabitant tax / Municipal resident tax",
@@ -88,7 +88,13 @@ GLOSS_RECOMMENDATIONS = {
     "行訴法": "Administrative Case Litigation Act (Statutory abbreviation)",
     "行政事件訴訟法": "Administrative Case Litigation Act",
     "通関手続": "Customs clearance procedure",
-    "NACCS": "Nippon Automated Cargo and Port Consolidated System (Electronic customs clearance system)"
+    "NACCS": "Nippon Automated Cargo and Port Consolidated System (Electronic customs clearance system)",
+    "36協定": "Article 36 Agreement (overtime work agreement)",
+    "支払渡し": "Documents against Payment (D/P)",
+    "引受渡し": "Documents against Acceptance (D/A)",
+    "特恵関税": "Preferential tariff",
+    "拝啓": "Dear Sir/Madam (formal opening)",
+    "敬具": "Sincerely yours (formal closing)"
 }
 
 # Statutory and industry abbreviation relationships
@@ -166,6 +172,9 @@ class CanaryQualityAuditor:
                 quality_flags.append("GLOSS_REVIEW_REQUIRED")
                 if suggested_action == "APPROVE_AS_IS":
                     suggested_action = "REVISE_GLOSS"
+
+            # Normalize and deduplicate quality flags preserving deterministic order
+            quality_flags = list(dict.fromkeys(quality_flags))
 
             # 7. Determine Review Complexity (REVIEW-A, REVIEW-B, REVIEW-C)
             if (
