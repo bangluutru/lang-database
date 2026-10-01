@@ -39,6 +39,12 @@ from scripts.canary.selector import CanarySelector
 from scripts.canary.validator import CanaryValidator
 from scripts.canary.review_manager import CanaryReviewManager
 from scripts.canary.release_builder import CanaryReleaseBuilder, compute_canonical_dataset_hash
+from scripts.canary.quality_auditor import CanaryQualityAuditor
+from scripts.canary.decision_importer import (
+    CanaryDecisionImporter,
+    DecisionValidationError,
+    RevalidationFailedError
+)
 
 # Frozen baseline hashes
 GOLDEN_PILOT_V1_CANONICAL_HASH = "27830fa0d861012f7878f9d95d1da5fe281a14076b38bb03c41f446d56a0c45c"
@@ -510,3 +516,258 @@ class TestBaselineImmutability:
         with open(prod_path, "r", encoding="utf-8") as f:
             prod_records = [json.loads(line) for line in f if line.strip()]
         assert len(prod_records) == 800
+
+
+# -----------------------------------------------------------------------------
+# 8. Human Review Package & Quality Audit Tests
+# -----------------------------------------------------------------------------
+class TestHumanReviewPackageIntegrity:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.pack_jsonl = BASE_DIR / "staging" / "review_queue" / "canary_1_2c_human_review_ready.jsonl"
+        self.pack_json = BASE_DIR / "reports" / "phase_1_2c_human_review_pack.json"
+        self.pack_md = BASE_DIR / "reports" / "phase_1_2c_human_review_pack.md"
+        assert self.pack_jsonl.exists()
+        assert self.pack_json.exists()
+        assert self.pack_md.exists()
+
+        with open(self.pack_jsonl, "r", encoding="utf-8") as f:
+            self.records = [json.loads(l) for l in f if l.strip()]
+
+    def test_review_pack_counts_and_uniqueness(self):
+        """Exactly 120 unique candidates with unique candidate IDs and proposed IDs."""
+        assert len(self.records) == 120
+        cids = [r["candidate_id"] for r in self.records]
+        assert len(set(cids)) == 120
+        pids = [r["proposed_id"] for r in self.records]
+        assert len(set(pids)) == 120
+
+    def test_all_11_domains_present(self):
+        """All 11 professional domains are represented in the review pack."""
+        domains = {r["domain"] for r in self.records}
+        assert len(domains) == 11
+        expected = {
+            "accounting", "finance", "tax", "hr", "trade", "legal",
+            "office_communication", "business", "management", "purchasing", "sales"
+        }
+        assert domains == expected
+
+    def test_review_complexity_classification_valid(self):
+        """Every record is classified into REVIEW-A, REVIEW-B, or REVIEW-C."""
+        valid_complexities = {"REVIEW-A", "REVIEW-B", "REVIEW-C"}
+        for r in self.records:
+            assert r.get("review_complexity") in valid_complexities
+            assert isinstance(r.get("quality_flags"), list)
+
+    def test_naccs_is_review_c_abbreviation(self):
+        """NACCS must be classified as REVIEW-C and flagged as an abbreviation."""
+        naccs_rec = next((r for r in self.records if r["surface"] == "NACCS"), None)
+        assert naccs_rec is not None
+        assert naccs_rec["review_complexity"] == "REVIEW-C"
+        assert "ABBREVIATION_FLAG" in naccs_rec["quality_flags"]
+        assert naccs_rec["suggested_relationship"]["type"] == "ABBREVIATION_OF"
+        assert naccs_rec["suggested_relationship"]["target_surface"] == "輸出入・港湾関連情報処理システム"
+
+    def test_reading_corrections_flagged(self):
+        """Linguistic phonetic bugs (e.g. 貸出金 -> たいしゅつきん) are flagged with READING_REVIEW_REQUIRED."""
+        kashidashi = next((r for r in self.records if r["surface"] == "貸出金"), None)
+        assert kashidashi is not None
+        assert "READING_REVIEW_REQUIRED" in kashidashi["quality_flags"]
+        assert kashidashi["suggested_reading"] == "かしだしきん"
+        assert kashidashi["review_complexity"] == "REVIEW-C"
+
+    def test_human_decisions_strictly_pending(self):
+        """No automated approvals: all 120 records must have human_decision PENDING."""
+        for r in self.records:
+            assert r["human_decision"] == HumanReviewDecision.PENDING.value
+            assert r["reviewer"] is None
+            assert r["reviewed_at"] is None
+
+
+# -----------------------------------------------------------------------------
+# 9. Decision Importer & Revalidation Loop Tests
+# -----------------------------------------------------------------------------
+class TestDecisionImporterAndRevalidationLoop:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.importer = CanaryDecisionImporter()
+
+    def _create_candidate(self, cid="cand-test", surface="貸出金", reading="たいしゅつきん"):
+        return CanaryCandidateRecord(
+            candidate_id=cid,
+            surface=surface,
+            normalized_surface=surface,
+            reading=reading,
+            domain="finance",
+            subdomain="banking",
+            meaning_gloss="Loans and bills discounted",
+            authority_class="A",
+            reuse_status="GREEN",
+            source_evidence=[{
+                "source_id": "fsa-edinet-taxonomy",
+                "source_version": "2026-final",
+                "source_locator": "sheet:banking,row:1",
+                "raw_snapshot_hash": "2fb26e82471d7570e51588996f89c80dc2db8aa74b0bcb0203ead36c588d5c86",
+                "source_term_exact": surface,
+                "reuse_status": "GREEN"
+            }],
+            pro_level_candidate="PRO-A1",
+            priority={"workplace_frequency": "high", "professional_importance": "high"},
+            state=CanaryState.VALIDATION_PASSED
+        )
+
+    def test_pending_decision_blocks_promotion(self):
+        """Candidate with PENDING decision cannot promote."""
+        cand = self._create_candidate()
+        decision = {"decision": "PENDING"}
+        res = self.importer.apply_decision(cand, decision, {})
+        assert res.state == CanaryState.VALIDATION_PASSED
+        assert not PromotionStateMachine.can_promote(res)
+
+    def test_approve_decision_transitions_to_eligible(self):
+        """Valid APPROVE decision transitions candidate to PROMOTION_ELIGIBLE."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "APPROVE",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z",
+            "notes": "Approved"
+        }
+        res = self.importer.apply_decision(cand, decision, {})
+        assert res.state == CanaryState.PROMOTION_ELIGIBLE
+        assert PromotionStateMachine.can_promote(res)
+
+    def test_reject_decision_transitions_to_rejected(self):
+        """REJECT decision transitions candidate to REJECTED and blocks promotion."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "REJECT",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z",
+            "notes": "Non-vocabulary artifact"
+        }
+        res = self.importer.apply_decision(cand, decision, {})
+        assert res.state == CanaryState.REJECTED
+        assert not PromotionStateMachine.can_promote(res)
+
+    def test_needs_revision_blocks_promotion(self):
+        """NEEDS_REVISION transitions to NEEDS_REVIEW and blocks promotion."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "NEEDS_REVISION",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z",
+            "notes": "Needs reading correction"
+        }
+        res = self.importer.apply_decision(cand, decision, {})
+        assert res.state == CanaryState.NEEDS_REVIEW
+        assert not PromotionStateMachine.can_promote(res)
+
+    def test_variant_requires_target_id(self):
+        """VARIANT_OF decision without target_id raises DecisionValidationError."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "VARIANT_OF",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z"
+            # Missing target_id
+        }
+        with pytest.raises(DecisionValidationError):
+            self.importer.apply_decision(cand, decision, {})
+
+    def test_empty_reviewer_rejected(self):
+        """Completed decision with empty reviewer raises DecisionValidationError."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "APPROVE",
+            "reviewer": "",
+            "reviewed_at": "2026-10-01T06:00:00Z"
+        }
+        with pytest.raises(DecisionValidationError):
+            self.importer.apply_decision(cand, decision, {})
+
+    def test_missing_timestamp_rejected(self):
+        """Completed decision without timestamp raises DecisionValidationError."""
+        cand = self._create_candidate()
+        decision = {
+            "decision": "APPROVE",
+            "reviewer": "lead_terminologist"
+            # Missing reviewed_at
+        }
+        with pytest.raises(DecisionValidationError):
+            self.importer.apply_decision(cand, decision, {})
+
+    def test_revision_revalidation_loop_success(self):
+        """Revision with valid reading (貸出金 -> かしだしきん) revalidates and becomes eligible."""
+        cand = self._create_candidate(surface="貸出金", reading="たいしゅつきん")
+        decision = {
+            "decision": "APPROVE",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z",
+            "revised_reading": "かしだしきん",
+            "notes": "Corrected reading to standard banking reading"
+        }
+        res = self.importer.apply_decision(cand, decision, {})
+        assert res.reading == "かしだしきん"
+        assert res.state == CanaryState.PROMOTION_ELIGIBLE
+
+    def test_revision_revalidation_loop_failure(self):
+        """Revision with invalid reading (non-kana characters) fails revalidation."""
+        cand = self._create_candidate(surface="貸出金", reading="たいしゅつきん")
+        decision = {
+            "decision": "APPROVE",
+            "reviewer": "lead_terminologist",
+            "reviewed_at": "2026-10-01T06:00:00Z",
+            "revised_reading": "かしだしきん123"  # Contains invalid ASCII digits in reading
+        }
+        with pytest.raises(RevalidationFailedError):
+            self.importer.apply_decision(cand, decision, {})
+
+
+# -----------------------------------------------------------------------------
+# 10. Candidate Pool Versioning Tests
+# -----------------------------------------------------------------------------
+class TestCandidatePoolVersioning:
+    def test_candidate_pool_manifest_exists_and_matches(self):
+        """Candidate pool manifest exists, candidate count is 1755, and sha256 matches."""
+        manifest_path = BASE_DIR / "staging" / "candidate_pool_manifest.json"
+        assert manifest_path.exists()
+
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+
+        assert manifest["candidate_count"] == 1755
+        pool_file = BASE_DIR / "staging" / "canary_candidate_pool.jsonl"
+        assert pool_file.exists()
+
+        with open(pool_file, "r", encoding="utf-8") as f:
+            actual_count = sum(1 for line in f if line.strip())
+        assert actual_count == manifest["candidate_count"]
+
+        actual_sha = get_file_sha256(pool_file)
+        assert actual_sha == manifest["sha256"]
+
+
+# -----------------------------------------------------------------------------
+# 11. Historical Report Immutability Tests
+# -----------------------------------------------------------------------------
+class TestHistoricalReportImmutability:
+    def test_historical_phase_1_2b_reports_archived_and_immutable(self):
+        """Archived Phase 1.2B closure reports exist and their SHA-256 hashes match manifest."""
+        archive_dir = BASE_DIR / "reports" / "archive" / "phase_1_2b"
+        manifest_path = archive_dir / "manifest.json"
+        assert archive_dir.exists()
+        assert manifest_path.exists()
+
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+
+        assert manifest["policy"] == "IMMUTABLE_HISTORICAL_RECORD"
+        assert len(manifest["files"]) >= 7
+
+        for filename, meta in manifest["files"].items():
+            fpath = archive_dir / filename
+            assert fpath.exists(), f"Archived file {filename} missing"
+            computed_sha = get_file_sha256(fpath)
+            assert computed_sha == meta["sha256"], f"Historical report {filename} modified!"
+

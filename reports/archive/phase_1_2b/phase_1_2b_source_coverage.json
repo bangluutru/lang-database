@@ -1,0 +1,993 @@
+{
+  "phase": "1.2B",
+  "registered_sources_count": 10,
+  "sources": [
+    {
+      "source_id": "fsa-edinet-taxonomy",
+      "legacy_id": "fsa_edinet_2026",
+      "authority": "金融庁 (Financial Services Agency)",
+      "authority_class": "A",
+      "title": "EDINETタクソノミ 勘定科目リスト・要素リスト (EDINET Taxonomy Core)",
+      "official_url": "https://www.fsa.go.jp/search/20251111.html",
+      "source_type": "taxonomy",
+      "domains": [
+        "accounting",
+        "finance"
+      ],
+      "subdomains": [
+        "financial_accounting",
+        "bookkeeping",
+        "financial_statements",
+        "closing",
+        "receivables",
+        "payables",
+        "fixed_assets",
+        "inventory",
+        "corporate_finance"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026-final",
+      "published_at": "2025-11-11",
+      "retrieved_at": "2026-09-30T23:03:34Z",
+      "license": "PDL-1.0 (Government Website Terms of Use)",
+      "reuse_status": "GREEN",
+      "reuse_notes": "Permitted for commercial and educational transformation with statutory attribution. Unrestricted canonical taxonomy ingestion.",
+      "raw_snapshot_path": "data/raw/fsa/edinet/2026",
+      "raw_sha256": "2fb26e82471d7570e51588996f89c80dc2db8aa74b0bcb0203ead36c588d5c86",
+      "extractor": "FsaEdinetExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "fsa-edinet-2027-draft",
+      "legacy_id": "fsa_edinet_2027_draft",
+      "authority": "金融庁 (Financial Services Agency)",
+      "authority_class": "A",
+      "title": "2027年版EDINETタクソノミ（案）(Draft for Public Consultation)",
+      "official_url": "https://www.fsa.go.jp/search/20260911.html",
+      "source_type": "taxonomy",
+      "domains": [
+        "accounting"
+      ],
+      "subdomains": [
+        "financial_accounting"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2027-draft",
+      "published_at": "2026-09-11",
+      "retrieved_at": "2026-09-30T23:03:39Z",
+      "license": "PDL-1.0 (Draft Consultation)",
+      "reuse_status": "YELLOW",
+      "reuse_notes": "Draft release strictly staged in staging/fsa_edinet_2027_draft/. BLOCKED from unflagged production release.",
+      "raw_snapshot_path": "staging/fsa_edinet_2027_draft",
+      "raw_sha256": "84086e07d1e37e9742bbdc165a0459152a7d8cb9a5147bb33bc3cfcd7161fd88",
+      "extractor": "FsaEdinetExtractor",
+      "status": "staging_only"
+    },
+    {
+      "source_id": "nta-tax-glossary",
+      "legacy_id": "nta_tax_glossary_2026",
+      "authority": "国税庁 (National Tax Agency)",
+      "authority_class": "A",
+      "title": "国税庁 タックスアンサー 専門用語集・コード一覧・省略用語集",
+      "official_url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm",
+      "source_type": "statutory_glossary",
+      "domains": [
+        "tax"
+      ],
+      "subdomains": [
+        "corporate_tax",
+        "consumption_tax",
+        "income_tax",
+        "withholding_tax",
+        "local_tax",
+        "tax_filing",
+        "tax_payment",
+        "deductions",
+        "tax_audit"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-09-30T23:03:41Z",
+      "license": "PDL-1.0 (Government Website Terms of Use)",
+      "reuse_status": "GREEN",
+      "reuse_notes": "Permitted for commercial and educational transformation. Direct statutory tax terminology extraction.",
+      "raw_snapshot_path": "data/raw/nta/taxanswer",
+      "raw_sha256": "615b074a44965f1221d7db1e928b0f2551e29f15dd63eb4849aacee82eab5fc4",
+      "extractor": "NtaTaxExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "asbj-accounting-standards",
+      "legacy_id": "asbj_accounting_standards",
+      "authority": "企業会計基準委員会 (ASBJ)",
+      "authority_class": "B",
+      "title": "企業会計基準・適用指針一覧 (Corporate Accounting Standards Catalog)",
+      "official_url": "https://www.asb.or.jp/jp/accounting_standards/",
+      "source_type": "accounting_standards",
+      "domains": [
+        "accounting"
+      ],
+      "subdomains": [
+        "financial_accounting",
+        "financial_statements",
+        "closing",
+        "fixed_assets",
+        "inventory",
+        "audit"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-15",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "Professional Association Policy (Review Required)",
+      "reuse_status": "YELLOW",
+      "reuse_notes": "Terminology and standard titles extraction permitted; bulk copying of explanatory text prohibited. Independent explanations created.",
+      "raw_snapshot_path": "data/raw/asbj/standards/2026",
+      "raw_sha256": "504d0191ee02791e4335788c9444b2585aad3479bca978c06034b1e146fc85ac",
+      "extractor": "JicpaAsbjExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "jicpa-glossary",
+      "legacy_id": "jicpa_glossary",
+      "authority": "日本公認会計士協会 (JICPA)",
+      "authority_class": "B",
+      "title": "日本公認会計士協会 会計・監査用語かんたん解説集",
+      "official_url": "https://jicpa.or.jp/cpainfo/introduction/keyword/",
+      "source_type": "professional_glossary",
+      "domains": [
+        "accounting",
+        "management"
+      ],
+      "subdomains": [
+        "audit",
+        "financial_accounting",
+        "corporate_governance",
+        "internal_control"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-09-30T23:03:44Z",
+      "license": "Copyright JICPA (Reference Only)",
+      "reuse_status": "YELLOW",
+      "reuse_notes": "Exclusively used as terminology discovery index. Bulk reproduction of explanatory prose prohibited. Explanations generated independently.",
+      "raw_snapshot_path": "data/raw/jicpa/glossary",
+      "raw_sha256": "cc0b128e65c34cfb95b8e041d7ae561913a998d534dfd03abf883ea96e08ea85",
+      "extractor": "JicpaAsbjExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "japan-customs-trade",
+      "legacy_id": "japan_customs_2026",
+      "authority": "財務省関税局 (Japan Customs, Ministry of Finance)",
+      "authority_class": "A",
+      "title": "税関 通関手続・関税制度・NACCS業務ガイドライン",
+      "official_url": "https://www.customs.go.jp/procedure/index.htm",
+      "source_type": "statutory_guidance",
+      "domains": [
+        "trade"
+      ],
+      "subdomains": [
+        "import",
+        "export",
+        "customs_clearance",
+        "tariff",
+        "origin"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "PDL-1.0 (Government Website Terms of Use)",
+      "reuse_status": "GREEN",
+      "reuse_notes": "Permitted for commercial and educational transformation under government terms of use. Authoritative customs and tariff terminology.",
+      "raw_snapshot_path": "data/raw/japan-customs/trade/2026",
+      "raw_sha256": "378fae6843a1a7559e2659dada7484e1a0ba0973f87cbc30779cae13cac3a7c0",
+      "extractor": "CustomsTradeExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "jetro-trade",
+      "legacy_id": "jetro_trade",
+      "authority": "日本貿易振興機構 (JETRO)",
+      "authority_class": "C",
+      "title": "JETRO 貿易実務用語・インコタームズ2020解説",
+      "official_url": "https://www.jetro.go.jp/theme/export/",
+      "source_type": "trade_guidance",
+      "domains": [
+        "trade"
+      ],
+      "subdomains": [
+        "incoterms",
+        "shipping",
+        "freight",
+        "trade_documents",
+        "trade_finance"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "Copyright JETRO (Restricted Reference)",
+      "reuse_status": "YELLOW",
+      "reuse_notes": "Used for international trade terminology discovery and seed concepts. Explanatory prose and examples written independently.",
+      "raw_snapshot_path": "data/raw/jetro/trade/2026",
+      "raw_sha256": "11536ec545eeabd71d7ea2c34b6ae1fbf48c65c8fa7c6ae91d812b574efe6b77",
+      "extractor": "JetroTradeExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "mhlw-labor",
+      "legacy_id": "mhlw_labor_2026",
+      "authority": "厚生労働省 (Ministry of Health, Labour and Welfare)",
+      "authority_class": "A",
+      "title": "厚生労働省 労働基準法・就業規則・社会保険実務用語一覧",
+      "official_url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/index.html",
+      "source_type": "statutory_guidance",
+      "domains": [
+        "hr"
+      ],
+      "subdomains": [
+        "recruitment",
+        "employment",
+        "payroll",
+        "social_insurance",
+        "working_hours",
+        "leave",
+        "labor_management"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "PDL-1.0 (Government Website Terms of Use)",
+      "reuse_status": "GREEN",
+      "reuse_notes": "Permitted for educational reuse. Primary statutory labor standards and social insurance concepts.",
+      "raw_snapshot_path": "data/raw/mhlw/labor/2026",
+      "raw_sha256": "1e0567886690c1dbd29fa5171843f67f103cf3e6f51328e9fc8a219d8ccf1a06",
+      "extractor": "MhlwLaborExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "egov-corporate-law",
+      "legacy_id": "egov_corporate_2026",
+      "authority": "デジタル庁・法務省 (e-Gov / Ministry of Justice)",
+      "authority_class": "A",
+      "title": "e-Gov 法令検索 会社法・商業登記法 (Companies Act & Commercial Registration)",
+      "official_url": "https://laws.e-gov.go.jp/law/417AC0000000086",
+      "source_type": "statutory_legislation",
+      "domains": [
+        "legal",
+        "management"
+      ],
+      "subdomains": [
+        "corporate_law",
+        "corporate_governance",
+        "dispute_resolution",
+        "board_management"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "PDL-1.0 (Government Website Terms of Use)",
+      "reuse_status": "GREEN",
+      "reuse_notes": "Official statutory legislation published by the Japanese Government. High-authority legal terminology.",
+      "raw_snapshot_path": "data/raw/egov/corporate-legal/2026",
+      "raw_sha256": "fd4745bb7353449b32ee889f025b53191d7549ffc53df08f5161b76b11c197e5",
+      "extractor": "EgovLegalExtractor",
+      "status": "production_eligible"
+    },
+    {
+      "source_id": "smrj-business-guidance",
+      "legacy_id": "smrj_business_2026",
+      "authority": "中小企業基盤整備機構 (SMRJ / J-Net21)",
+      "authority_class": "C",
+      "title": "中小機構・J-Net21 中小企業実務・調達・経営管理手引き",
+      "official_url": "https://j-net21.smrj.go.jp/",
+      "source_type": "business_guidance",
+      "domains": [
+        "business",
+        "management",
+        "sales",
+        "purchasing",
+        "office_communication"
+      ],
+      "subdomains": [
+        "general_business",
+        "operations",
+        "procurement",
+        "corporate_strategy",
+        "compliance",
+        "sourcing",
+        "supplier_management",
+        "contracts",
+        "internal_reporting"
+      ],
+      "jurisdiction": "JP",
+      "language": "ja",
+      "version": "2026",
+      "published_at": "2026-01-01",
+      "retrieved_at": "2026-10-01T04:30:00Z",
+      "license": "Institutional Terms of Use (Review Required)",
+      "reuse_status": "YELLOW",
+      "reuse_notes": "Terminology reference for Japanese SME workplace practices and commercial subcontracting rules. Learner content written independently.",
+      "raw_snapshot_path": "data/raw/smrj/business/2026",
+      "raw_sha256": "bc4ee17baced3f469ee4ac67b2db1fc2235a71cc68fb6ee2f8bb13f8a3e8320b",
+      "extractor": "SmrjBusinessExtractor",
+      "status": "production_eligible"
+    }
+  ],
+  "coverage_summary": {
+    "accounting": {
+      "title": "会計・経理 (Accounting & Bookkeeping)",
+      "authorities": [
+        "fsa-edinet-taxonomy",
+        "asbj-accounting-standards",
+        "jicpa-glossary"
+      ],
+      "authority_classes": [
+        "A",
+        "B"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        1000,
+        1500
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 1581,
+      "potential_new_canonical": 1386,
+      "coverage_gap": "low",
+      "priority": "normal",
+      "subdomains": {
+        "financial_accounting": {
+          "title": "財務会計 (Financial Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 1331,
+          "total_available": 1331
+        },
+        "management_accounting": {
+          "title": "管理会計 (Management Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "bookkeeping": {
+          "title": "簿記・伝票実務 (Bookkeeping & Journal Entries)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "financial_statements": {
+          "title": "財務諸表・決算書 (Financial Statements)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "closing": {
+          "title": "決算手続 (Closing Procedures)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "receivables": {
+          "title": "債権管理 (Receivables & Credit Control)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "payables": {
+          "title": "債務管理 (Payables & Obligations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "fixed_assets": {
+          "title": "固定資産・減価償却 (Fixed Assets & Depreciation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "inventory": {
+          "title": "棚卸資産 (Inventory Valuation & Control)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "cost_accounting": {
+          "title": "原価計算 (Cost Accounting)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "audit": {
+          "title": "監査・内部統制 (Audit & Internal Control)",
+          "current_production": 0,
+          "candidate_pool_count": 54,
+          "total_available": 54
+        }
+      }
+    },
+    "tax": {
+      "title": "税務・申告 (Tax & Statutory Filing)",
+      "authorities": [
+        "nta-tax-glossary"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        800,
+        1200
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 157,
+      "potential_new_canonical": 114,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "corporate_tax": {
+          "title": "法人税 (Corporate Income Tax)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "consumption_tax": {
+          "title": "消費税・インボイス (Consumption Tax & Qualified Invoice)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "income_tax": {
+          "title": "所得税 (Individual Income Tax)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "withholding_tax": {
+          "title": "源泉所得税・年末調整 (Withholding Tax & Year-end Adjustment)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "local_tax": {
+          "title": "地方税・住民税・事業税 (Local Taxes)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "tax_filing": {
+          "title": "確定申告・修正申告 (Tax Filing & Returns)",
+          "current_production": 0,
+          "candidate_pool_count": 111,
+          "total_available": 111
+        },
+        "tax_payment": {
+          "title": "納税・納付手続 (Tax Payment & Settlement)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "deductions": {
+          "title": "所得控除・税額控除 (Deductions & Tax Credits)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "tax_audit": {
+          "title": "税務調査・更正処分 (Tax Audits & Penalties)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "trade": {
+      "title": "貿易・通関・国際物流 (Trade, Customs & Global Logistics)",
+      "authorities": [
+        "japan-customs-trade",
+        "jetro-trade"
+      ],
+      "authority_classes": [
+        "A",
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 50,
+      "potential_new_canonical": 13,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "import": {
+          "title": "輸入実務 (Import Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "export": {
+          "title": "輸出実務 (Export Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "customs_clearance": {
+          "title": "通関手続・NACCS (Customs Clearance & Systems)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "shipping": {
+          "title": "海上運送・航空輸送 (Shipping & Air Cargo)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "incoterms": {
+          "title": "インコタームズ・取引条件 (Incoterms & Trade Terms)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "freight": {
+          "title": "運賃・諸掛り (Freight & Ancillary Charges)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "trade_documents": {
+          "title": "貿易書類・船積書類 (Trade Documentation)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "trade_finance": {
+          "title": "貿易金融・決済 (Trade Finance & Settlements)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "tariff": {
+          "title": "関税・HSコード (Tariffs & HS Classification)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "origin": {
+          "title": "原産地規則・原産地証明書 (Rules of Origin)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "business": {
+      "title": "ビジネス・企業運営 (Business Operations & General Practice)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        1000,
+        1500
+      ],
+      "current_production": 200,
+      "extracted_raw_candidates": 9,
+      "potential_new_canonical": 7,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "general_business": {
+          "title": "日常業務・実務慣習 (General Business Practice)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "operations": {
+          "title": "業務運営・工程管理 (Operations & Process Control)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "procurement": {
+          "title": "調達・購買業務 (Procurement & Purchasing)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "corporate_strategy": {
+          "title": "経営戦略・事業企画 (Corporate Strategy & Planning)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "compliance": {
+          "title": "コンプライアンス・企業倫理 (Compliance & Ethics)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        }
+      }
+    },
+    "management": {
+      "title": "経営管理・コーポレートガバナンス (Management & Corporate Governance)",
+      "authorities": [
+        "egov-corporate-law",
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "A",
+        "C",
+        "B"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 23,
+      "potential_new_canonical": 6,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "corporate_governance": {
+          "title": "企業統治・役員会 (Corporate Governance)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "board_management": {
+          "title": "取締役会運営 (Board Operations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "internal_control": {
+          "title": "内部統制システム (Internal Control Systems)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "risk_management": {
+          "title": "リスク管理・危機管理 (Risk Management & Crisis Response)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "sales": {
+      "title": "営業・取引実務 (Sales & Commercial Transactions)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        500,
+        700
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 8,
+      "potential_new_canonical": 1,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "lead_generation": {
+          "title": "顧客開拓・リード獲得 (Lead Generation)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "proposal": {
+          "title": "提案・プレゼンテーション (Proposals & Pitches)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "quotation": {
+          "title": "見積・価格提示 (Quotations & Estimates)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "negotiation": {
+          "title": "商談・取引交渉 (Commercial Negotiation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "closing": {
+          "title": "成約・受注 (Closing & Deal Confirmation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "account_management": {
+          "title": "既存顧客管理・カスタマーサクセス (Account Management)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "purchasing": {
+      "title": "購買・資材調達 (Purchasing & Supply Chain)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        300,
+        500
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 10,
+      "potential_new_canonical": 4,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "sourcing": {
+          "title": "サプライヤー選定 (Supplier Sourcing)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "purchase_order": {
+          "title": "発注・注文請書 (Purchase Orders & Confirmation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "supplier_management": {
+          "title": "取引先管理・下請法 (Vendor Management & Subcontracting)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "delivery": {
+          "title": "納期管理・納品 (Delivery & Schedule Tracking)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "inspection": {
+          "title": "検収・受入検査 (Goods Inspection & Acceptance)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "hr": {
+      "title": "人事・労務 (Human Resources & Labor Relations)",
+      "authorities": [
+        "mhlw-labor"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        400,
+        600
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 29,
+      "potential_new_canonical": 17,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "recruitment": {
+          "title": "採用・雇用契約 (Recruitment & Hiring)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "employment": {
+          "title": "就業規則・労働条件 (Employment Regulations & Conditions)",
+          "current_production": 0,
+          "candidate_pool_count": 6,
+          "total_available": 6
+        },
+        "payroll": {
+          "title": "給与計算・賞与 (Payroll & Bonus Administration)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "social_insurance": {
+          "title": "社会保険・労働保険 (Social & Labor Insurance)",
+          "current_production": 0,
+          "candidate_pool_count": 2,
+          "total_available": 2
+        },
+        "working_hours": {
+          "title": "労働時間・36協定 (Working Hours & Overtime Agreements)",
+          "current_production": 0,
+          "candidate_pool_count": 3,
+          "total_available": 3
+        },
+        "leave": {
+          "title": "有給休暇・休業制度 (Paid Leave & Absences)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        },
+        "evaluation": {
+          "title": "人事評価・考課 (Performance Evaluation)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "labor_management": {
+          "title": "労使関係・安全衛生 (Labor Relations & Workplace Safety)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "finance": {
+      "title": "財務・金融 (Finance & Banking)",
+      "authorities": [
+        "fsa-edinet-taxonomy"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        400,
+        600
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 196,
+      "potential_new_canonical": 184,
+      "coverage_gap": "high",
+      "priority": "high",
+      "subdomains": {
+        "banking": {
+          "title": "銀行取引・融資 (Commercial Banking & Lending)",
+          "current_production": 0,
+          "candidate_pool_count": 184,
+          "total_available": 184
+        },
+        "corporate_finance": {
+          "title": "資金調達・資本政策 (Corporate Finance & Funding)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "capital_markets": {
+          "title": "資本市場・株式実務 (Capital Markets & Shareholder Relations)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "treasury": {
+          "title": "資金繰り・為替管理 (Treasury & Cash Management)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "settlement": {
+          "title": "決済・手形小切手 (Settlement & Commercial Bills)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        }
+      }
+    },
+    "legal": {
+      "title": "法務・契約 (Corporate Law & Contracts)",
+      "authorities": [
+        "egov-corporate-law"
+      ],
+      "authority_classes": [
+        "A"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        300,
+        500
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 16,
+      "potential_new_canonical": 12,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "corporate_law": {
+          "title": "会社法・商業登記 (Companies Act & Commercial Registration)",
+          "current_production": 0,
+          "candidate_pool_count": 11,
+          "total_available": 11
+        },
+        "contracts": {
+          "title": "契約実務・約款 (Contractual Practice & Terms)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "intellectual_property": {
+          "title": "知的財産・商標 (Intellectual Property & Trademarks)",
+          "current_production": 0,
+          "candidate_pool_count": 0,
+          "total_available": 0
+        },
+        "dispute_resolution": {
+          "title": "紛争解決・損害賠償 (Dispute Resolution & Damages)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    },
+    "office_communication": {
+      "title": "社内連絡・文書実務 (Office Communication & Formal Reporting)",
+      "authorities": [
+        "smrj-business-guidance"
+      ],
+      "authority_classes": [
+        "C"
+      ],
+      "source_readiness": "READY",
+      "target_planning_range": [
+        700,
+        1000
+      ],
+      "current_production": 0,
+      "extracted_raw_candidates": 12,
+      "potential_new_canonical": 11,
+      "coverage_gap": "critical",
+      "priority": "high",
+      "subdomains": {
+        "internal_reporting": {
+          "title": "報告・連絡・相談 (Ho-Ren-So & Operational Reporting)",
+          "current_production": 0,
+          "candidate_pool_count": 6,
+          "total_available": 6
+        },
+        "formal_correspondence": {
+          "title": "社外文書・ビジネスメール (Business Correspondence)",
+          "current_production": 0,
+          "candidate_pool_count": 4,
+          "total_available": 4
+        },
+        "meeting_management": {
+          "title": "会議運営・議事録 (Meetings & Minutes)",
+          "current_production": 0,
+          "candidate_pool_count": 1,
+          "total_available": 1
+        }
+      }
+    }
+  }
+}

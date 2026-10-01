@@ -32,6 +32,7 @@ from scripts.canary.selector import CanarySelector
 from scripts.canary.validator import CanaryValidator
 from scripts.canary.review_manager import CanaryReviewManager
 from scripts.canary.release_builder import CanaryReleaseBuilder
+from scripts.canary.quality_auditor import CanaryQualityAuditor
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -281,6 +282,19 @@ class CanaryPipeline:
         )
         print(f"      Exported {review_summary['total_candidates_in_queue']} candidates to review queue.")
         print(f"      Pending: {review_summary['pending_review']}, Approved: {review_summary['approved']}")
+
+        # 3.5 Quality Audit & Human Review Package Generation
+        print("[3.5/4] Executing second-pass quality audit and generating human review package...")
+        auditor = CanaryQualityAuditor(self.review_queue_path)
+        human_pack_summary = auditor.export_review_pack(
+            output_jsonl_path=BASE_DIR / "staging" / "review_queue" / "canary_1_2c_human_review_ready.jsonl",
+            output_json_path=self.reports_dir / "phase_1_2c_human_review_pack.json",
+            output_md_path=self.reports_dir / "phase_1_2c_human_review_pack.md"
+        )
+        print(f"      Review pack generated: {human_pack_summary['total_candidates']} records.")
+        print(f"      REVIEW-C: {human_pack_summary['by_complexity']['REVIEW-C']}, "
+              f"REVIEW-B: {human_pack_summary['by_complexity']['REVIEW-B']}, "
+              f"REVIEW-A: {human_pack_summary['by_complexity']['REVIEW-A']}")
 
         # 4. Release Evaluation
         print("[4/4] Evaluating release eligibility...")

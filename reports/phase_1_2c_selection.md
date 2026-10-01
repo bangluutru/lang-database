@@ -1,6 +1,6 @@
 # Phase 1.2C — Controlled Canary Selection Report
 
-- **Generated At**: `2026-10-01T05:52:28Z`
+- **Generated At**: `2026-10-01T06:14:56Z`
 - **Candidate Pool Size**: `1755`
 - **Selected for Canary**: `120`
 - **Stratification Strategy**: Multi-dimensional deterministic ranking with professional domain quotas
