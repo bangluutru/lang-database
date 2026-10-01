@@ -70,6 +70,13 @@ KNOWN_CORRECT = {
         "license": "MIT",
         "forbidden_licenses": [],
     },
+    "joyo": {
+        "version": "2010-official",
+        "artifact_filename": "joyo_kanji_official.json",
+        "sha256": "f5f0cf7d03f3a7beddab973d6b1d31eb3cb30a2b0285639ba8f4042fd94e01f1",
+        "license": "CC-BY-SA-3.0",
+        "forbidden_licenses": ["PDL-1.0", "Government-PD", "CC0-1.0", "Public Domain"],
+    },
 }
 
 
@@ -524,3 +531,67 @@ class TestJLPTSpecificRemediation:
         actual = audit[self.SOURCE_ID].get("license", "")
         assert forbidden not in actual, \
             f"redistribution_audit contains FORBIDDEN license {forbidden!r}"
+
+
+class TestJoyoSpecificRemediation:
+    """
+    Phase 1.3C.1 Block 1: Jōyō Provenance Remediation.
+    Verifies that KANJIDIC2-derived Jōyō data:
+    1. Cannot claim direct 文化庁 extraction (origin != OFFICIAL_EXTRACTED)
+    2. Has CC-BY-SA-3.0 license across all metadata, reports, audits
+    3. Has EDRDG as organization and source_derived as authority_level
+    4. Cites 文化庁 2010 Cabinet Notification as authority_reference annotation only
+    """
+
+    SOURCE_ID = "joyo"
+    CORRECT_LICENSE = "CC-BY-SA-3.0"
+    CORRECT_SHA = "f5f0cf7d03f3a7beddab973d6b1d31eb3cb30a2b0285639ba8f4042fd94e01f1"
+    FORBIDDEN = ["PDL-1.0", "Government-PD", "CC0-1.0", "Public Domain"]
+
+    def test_metadata_license_is_cc_by_sa_3(self):
+        d, _ = load_all_metadata()[self.SOURCE_ID]
+        assert d["license"] == self.CORRECT_LICENSE, f"metadata.json license wrong: {d['license']!r}"
+
+    def test_metadata_organization_is_edrdg(self):
+        d, _ = load_all_metadata()[self.SOURCE_ID]
+        assert "Electronic Dictionary Research and Development Group" in d["organization"] or "EDRDG" in d["organization"]
+
+    def test_metadata_authority_level_not_government(self):
+        d, _ = load_all_metadata()[self.SOURCE_ID]
+        assert d["authority_level"] != "government_statutory", "Cannot claim government_statutory authority"
+        assert d["authority_level"] == "source_derived"
+
+    def test_metadata_authority_reference_cites_bunka(self):
+        d, _ = load_all_metadata()[self.SOURCE_ID]
+        assert "authority_reference" in d
+        assert "文化庁" in d["authority_reference"]
+
+    def test_acquisition_report_license_is_cc_by_sa_3(self):
+        acq = load_acquisition_report()
+        assert self.SOURCE_ID in acq
+        assert acq[self.SOURCE_ID]["license_code"] == self.CORRECT_LICENSE
+
+    def test_redistribution_audit_license_is_cc_by_sa_3(self):
+        audit = load_redistribution_audit()
+        assert self.SOURCE_ID in audit
+        assert audit[self.SOURCE_ID]["license"] == self.CORRECT_LICENSE
+        assert audit[self.SOURCE_ID].get("share_alike") is True
+
+    @pytest.mark.parametrize("forbidden", FORBIDDEN)
+    def test_no_forbidden_license_in_metadata(self, forbidden):
+        d, _ = load_all_metadata()[self.SOURCE_ID]
+        assert forbidden not in d.get("license", "")
+
+    @pytest.mark.parametrize("forbidden", FORBIDDEN)
+    def test_no_forbidden_license_in_acquisition_report(self, forbidden):
+        acq = load_acquisition_report()
+        if self.SOURCE_ID not in acq:
+            return
+        assert forbidden not in acq[self.SOURCE_ID].get("license_code", "")
+
+    @pytest.mark.parametrize("forbidden", FORBIDDEN)
+    def test_no_forbidden_license_in_redistribution_audit(self, forbidden):
+        audit = load_redistribution_audit()
+        if self.SOURCE_ID not in audit:
+            return
+        assert forbidden not in audit[self.SOURCE_ID].get("license", "")

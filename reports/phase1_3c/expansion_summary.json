@@ -1,27 +1,67 @@
 {
-  "phase": "1.3C",
-  "phase_title": "Authoritative Source Acquisition & Curated Corpus Expansion",
+  "phase": "1.3C.1",
+  "phase_title": "Remediation of Jōyō Provenance & Tri-Language Completeness",
   "status": "COMPLETED",
-  "timestamp": "2026-10-01T22:00:00Z",
-  "baseline_commit": "691b3fd7cb352f244bb8584c1abcc6a061b9a13a",
+  "timestamp": "2026-10-01T23:20:00Z",
+  "baseline_commit": "87536eb",
   "total_canonical_concepts": 2106,
   "total_canonical_senses": 2106,
-  "total_canonical_expressions": 6318,
+  "total_canonical_expressions": 5284,
   "expressions_by_language": {
     "en": 2106,
     "ja": 2106,
-    "vi": 2106
+    "vi": 1072
   },
   "tri_language_completeness": {
-    "complete_concepts": 2106,
-    "partial_concepts": 0,
-    "ambiguous_alignments": 0,
+    "complete_concepts": 1072,
+    "partial_concepts": 1034,
+    "partial_breakdown": {
+      "en_ja": 1034,
+      "en_vi": 0,
+      "ja_vi": 0,
+      "single_language": 0
+    },
+    "ambiguous_alignments": 1034,
+    "review_queue_count": 1034,
+    "unresolved_concepts": 0,
     "quarantined_concepts": 0
   },
   "professional_records": {
     "count": 800,
     "status": "FROZEN_PRESERVED",
     "legacy_mapping_entries": 800
+  },
+  "provenance_breakdown": {
+    "expressions": {
+      "SOURCE_DERIVED": 2570,
+      "OFFICIAL_EXTRACTED": 800,
+      "OFFICIAL_CURATED": 1600,
+      "CURATED": 251,
+      "BENCHMARK_CURATED": 63,
+      "INFERRED": 0,
+      "AI_GENERATED": 0,
+      "UNRESOLVED": 0
+    },
+    "classifications": {
+      "SOURCE_DERIVED": 3814,
+      "OFFICIAL_EXTRACTED": 867,
+      "OFFICIAL_CURATED": 0,
+      "CURATED": 0,
+      "BENCHMARK_CURATED": 18,
+      "INFERRED": 2629,
+      "AI_GENERATED": 0,
+      "UNRESOLVED": 0
+    },
+    "total_fields": {
+      "SOURCE_DERIVED": 6384,
+      "OFFICIAL_EXTRACTED": 1667,
+      "OFFICIAL_CURATED": 1600,
+      "INFERRED": 2629,
+      "CURATED": 251,
+      "BENCHMARK_CURATED": 81,
+      "AI_GENERATED": 0,
+      "UNRESOLVED": 0
+    }
   },
   "source_acquisition_inventory": {
     "total_raw_snapshots": 11,
@@ -36,9 +76,11 @@
       {
         "source_id": "joyo",
         "version": "2010-official",
-        "license": "PDL-1.0",
+        "license": "CC-BY-SA-3.0",
         "raw_sha256": "f5f0cf7d03f3a7beddab973d6b1d31eb3cb30a2b0285639ba8f4042fd94e01f1",
-        "status": "VERIFIED_IMMUTABLE"
+        "status": "VERIFIED_IMMUTABLE",
+        "provenance_model": "KANJIDIC2 / EDRDG (source_derived), CC-BY-SA-3.0, authority_reference: 文化庁 / 2010 Jōyō Kanji Cabinet Notification",
+        "provenance_note": "Derived from EDRDG KANJIDIC2 (CC-BY-SA-3.0), referencing Agency for Cultural Affairs 2010 Jōyō Kanji statutory list."
       },
       {
         "source_id": "jmdict",
@@ -102,32 +144,31 @@
         "license": "CC-BY-3.0",
         "raw_sha256": "810c776c7a72fe9a6860d8629e7f4d3903545808e6cbcff8dde3b52b01800f24",
         "status": "VERIFIED_IMMUTABLE",
-        "provenance_note": "CC-BY-3.0 (Jonathan Waller / tanos.co.uk). Data published under Creative Commons Attribution ('BY') at https://www.tanos.co.uk/jlpt/. Repository wrapper (Bluskyo/JLPT_Vocabulary) is MIT. Determined from: (1) upstream README explicit license statement, (2) GitHub LICENSE file (MIT, code only), (3) tanos.co.uk attribution notice."
+        "provenance_note": "CC-BY-3.0 (Jonathan Waller / tanos.co.uk)."
       }
     ]
   },
   "learning_coverage": {
-    "joyo_kanji_concepts": 1235,
-    "jlpt_vocabulary_concepts": 1028,
-    "ngsl_vocabulary_concepts": 1331,
-    "cefr_classified_concepts": 1332,
+    "joyo_kanji_concepts": 1231,
+    "jlpt_vocabulary_concepts": 1016,
+    "ngsl_vocabulary_concepts": 1322,
+    "cefr_classified_concepts": 1322,
     "eiken_classified_concepts": 1307,
-    "toeic_concepts": 13,
-    "ielts_concepts": 6,
-    "toefl_concepts": 1,
-    "vi_core_500": 171,
-    "vi_core_1000": 175,
-    "vi_core_2000": 178,
-    "vi_core_5000": 290,
-    "vi_general": 487
+    "toeic_concepts": 7,
+    "ielts_concepts": 1,
+    "vi_core_500": 117,
+    "vi_core_1000": 60,
+    "vi_core_2000": 32,
+    "vi_core_5000": 26,
+    "vi_general": 20
   },
   "provenance_and_integrity": {
-    "source_derived_evidence_count": 3926,
     "ai_generated_fields": 0,
     "unresolved_fields": 0,
     "golden_pilot_verification": "PASS",
+    "golden_pilot_v1_1_verification": "PASS",
     "dataset_invariants_verification": "PASS",
-    "test_suite_passed": 314,
+    "test_suite_passed": 394,
     "test_suite_failed": 0
   }
 }

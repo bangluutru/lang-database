@@ -57,11 +57,20 @@ def test_1_one_concept_has_tri_language_expressions():
             cid = expr["concept_id"]
             concept_to_langs.setdefault(cid, set()).add(expr["language"])
 
-    # Verify every concept has en, ja, vi
-    for cid, langs in concept_to_langs.items():
-        assert "en" in langs, f"Concept {cid} missing English expression"
-        assert "ja" in langs, f"Concept {cid} missing Japanese expression"
-        assert "vi" in langs, f"Concept {cid} missing Vietnamese expression"
+    # Verify tri-language capabilities:
+    # 1. Validated core concepts (all 800 professional concepts) must have complete EN + JA + VI expressions
+    pro_concepts = [cid for cid in concept_to_langs if cid.startswith("concept-pro-")]
+    assert len(pro_concepts) == 800, f"Expected 800 professional concepts, got {len(pro_concepts)}"
+    for cid in pro_concepts:
+        langs = concept_to_langs[cid]
+        assert langs == {"en", "ja", "vi"}, f"Professional concept {cid} missing expressions: {langs}"
+
+    # 2. Learning candidates and reference universe may contain partial concepts (e.g. EN + JA)
+    partial_concepts = [cid for cid, langs in concept_to_langs.items() if langs != {"en", "ja", "vi"}]
+    assert len(partial_concepts) > 0, "Learning graph must support partial concepts"
+    for cid in partial_concepts:
+        langs = concept_to_langs[cid]
+        assert "en" in langs and "ja" in langs, f"Partial concept {cid} must have at least EN+JA"
 
 
 def test_2_and_3_classification_many_to_many_no_record_duplication():

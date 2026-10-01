@@ -119,7 +119,7 @@ class Sense:
     part_of_speech: str                          # "noun", "verb", "adjective", etc.
     gloss_en: str
     gloss_ja: str
-    gloss_vi: str
+    gloss_vi: Optional[str] = None
     definition_en: Optional[str] = None
     definition_ja: Optional[str] = None
     definition_vi: Optional[str] = None
@@ -239,6 +239,10 @@ class OriginType(str, Enum):
     HUMAN_CURATED = "human_curated"
     SEED_CURATED = "seed_curated"
     AI_GENERATED = "ai_generated"
+    BENCHMARK_CURATED = "benchmark_curated"
+    CURATED = "curated"
+    INFERRED = "inferred"
+    UNRESOLVED = "unresolved"
 
 
 LanguageEnum = LanguageCode

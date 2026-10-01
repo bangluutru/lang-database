@@ -249,17 +249,17 @@ class KANJIDIC2Adapter(BaseProductionAdapter):
 
 class JoyoOfficialAdapter(BaseProductionAdapter):
     """
-    Ingests official 2,136 Jōyō Kanji from data/raw/joyo/2010-official/joyo_kanji_official.json.
-    Verifies statutory count against Cabinet Notification No. 2 of 2010.
+    Ingests 2,136 Jōyō Kanji from data/raw/joyo/2010-official/joyo_kanji_official.json
+    (derived from EDRDG KANJIDIC2, referencing Agency for Cultural Affairs 2010 Cabinet Notification).
     """
 
     def __init__(self, version: str = "2010-official"):
         super().__init__("joyo", version, "joyo_kanji_official.json")
 
     def extract_kanji(self) -> List[Dict[str, Any]]:
-        """Reads official Jōyō kanji list."""
+        """Reads Jōyō kanji list derived from KANJIDIC2."""
         if not self.verify_integrity():
-            raise ValueError("Jōyō official artifact integrity check failed.")
+            raise ValueError("Jōyō artifact integrity check failed.")
 
         with open(self.artifact_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -271,7 +271,12 @@ class JoyoOfficialAdapter(BaseProductionAdapter):
             kanji = item["kanji"]
             grade = item["grade"]
             locator = f"kanji:{kanji}, grade:{grade}"
-            ev = self.build_evidence(locator, field_name="kanji", extracted_value=kanji)
+            ev = self.build_evidence(
+                locator,
+                field_name="kanji",
+                extracted_value=kanji,
+                origin=OriginType.SOURCE_DERIVED.value
+            )
             record = dict(item)
             record["locator"] = locator
             record["source_evidence"] = ev.to_dict()

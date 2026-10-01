@@ -64,13 +64,14 @@ SOURCE_MANIFEST: Dict[str, Dict[str, Any]] = {
         "source_id": "joyo",
         "source_version": "2010-official",
         "upstream_url": "http://ftp.edrdg.org/pub/Nihongo/kanjidic2.xml.gz",
-        "license": "PDL-1.0",
-        "license_url": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/index.html",
+        "license": "CC-BY-SA-3.0",
+        "license_url": "https://www.edrdg.org/edrdg/licence.html",
         "artifact_filename": "joyo_kanji_official.json",
         "parser_version": "1.0.0",
-        "organization": "文化庁 (Agency for Cultural Affairs, Japan)",
-        "authority_level": "government_statutory",
-        "description": "Official 2,136 Jōyō Kanji statutory list derived from Agency for Cultural Affairs 2010 Cabinet Notification"
+        "organization": "Electronic Dictionary Research and Development Group (EDRDG)",
+        "authority_level": "source_derived",
+        "authority_reference": "文化庁 (Agency for Cultural Affairs, Japan) / 2010 Jōyō Kanji",
+        "description": "2,136 Jōyō Kanji statutory list derived from EDRDG KANJIDIC2 (referencing Agency for Cultural Affairs 2010 Cabinet Notification)"
     },
     "ngsl": {
         "source_id": "ngsl",

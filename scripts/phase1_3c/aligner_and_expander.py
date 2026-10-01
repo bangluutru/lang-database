@@ -431,31 +431,96 @@ POLYSEMY_BENCHMARKS = [
 ]
 
 
+BASE_CONCEPT_IDS = {
+    "concept-poly-right-correct", "concept-poly-right-direction", "concept-poly-right-entitlement",
+    "concept-poly-bill-invoice", "concept-poly-bill-statute", "concept-poly-note-promissory",
+    "concept-core-company", "concept-core-economy", "concept-core-contract",
+    "concept-core-environment", "concept-core-technology", "concept-core-depreciation"
+}
+
+
 def load_existing_canonical() -> Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any], Dict[str, Any], Dict[str, Any]]:
-    """Loads all current canonical entities from data/canonical/."""
+    """Loads baseline canonical entities (800 professional records + 12 baseline seed concepts) from data/canonical/."""
     concepts = {}
     with open(CANONICAL_DIR / "concepts.jsonl", "r", encoding="utf-8") as f:
         for line in f:
             c = json.loads(line)
-            concepts[c["concept_id"]] = c
+            cid = c["concept_id"]
+            if cid.startswith("concept-pro-") or cid in BASE_CONCEPT_IDS:
+                concepts[cid] = c
 
     senses = {}
     with open(CANONICAL_DIR / "senses.jsonl", "r", encoding="utf-8") as f:
         for line in f:
             s = json.loads(line)
-            senses[s["sense_id"]] = s
+            if s.get("concept_id") in concepts:
+                senses[s["sense_id"]] = s
 
     expressions = {}
     with open(CANONICAL_DIR / "expressions.jsonl", "r", encoding="utf-8") as f:
         for line in f:
             e = json.loads(line)
-            expressions[e["expression_id"]] = e
+            if e.get("concept_id") in concepts:
+                expressions[e["expression_id"]] = e
 
     classifications = {}
     with open(CANONICAL_DIR / "classifications.jsonl", "r", encoding="utf-8") as f:
         for line in f:
             cl = json.loads(line)
-            classifications[cl["classification_id"]] = cl
+            tid = cl.get("target_id")
+            if tid in concepts or tid in expressions:
+                classifications[cl["classification_id"]] = cl
+
+    # Reclassify legacy seed concept expressions honestly
+    for eid, e in expressions.items():
+        cid = e.get("concept_id", "")
+        if cid.startswith("concept-poly-"):
+            e["provenance_type"] = "BENCHMARK_CURATED"
+            e["source_evidence"] = [{
+                "source_id": "polysemy_benchmarks",
+                "source_version": "1.0",
+                "source_locator": f"benchmark_id:{cid}, lemma:{e.get('lemma')}",
+                "origin": "benchmark_curated",
+                "field_name": "lemma",
+                "extracted_value": e.get("lemma"),
+                "license": e.get("license", "CC-BY-4.0")
+            }]
+        elif cid in BASE_CONCEPT_IDS and cid.startswith("concept-core-"):
+            lang = e.get("language")
+            lemma = e.get("lemma")
+            if lang == "en":
+                e["provenance_type"] = "SOURCE_DERIVED"
+                e["source_evidence"] = [{
+                    "source_id": "ngsl",
+                    "source_version": "1.2",
+                    "source_locator": f"lemma:{lemma}",
+                    "origin": "source_derived",
+                    "field_name": "lemma",
+                    "extracted_value": lemma,
+                    "license": "CC-BY-4.0"
+                }]
+            elif lang == "ja":
+                e["provenance_type"] = "SOURCE_DERIVED"
+                e["source_evidence"] = [{
+                    "source_id": "jmdict",
+                    "source_version": "2026-10-01",
+                    "source_locator": f"primary_surface:{lemma}",
+                    "origin": "source_derived",
+                    "field_name": "primary_surface",
+                    "extracted_value": lemma,
+                    "license": "CC-BY-SA-3.0"
+                }]
+            elif lang == "vi":
+                e["provenance_type"] = "CURATED"
+                e["source_evidence"] = [{
+                    "source_id": "daily_en_vi_core",
+                    "source_version": "1.0",
+                    "source_locator": f"lemma:{lemma}",
+                    "origin": "curated",
+                    "field_name": "word",
+                    "extracted_value": lemma,
+                    "license": "MIT"
+                }]
 
     legacy_mapping = {}
     with open(CANONICAL_DIR / "legacy_mapping.json", "r", encoding="utf-8") as f:
@@ -520,10 +585,10 @@ def build_expanded_corpus() -> Dict[str, Any]:
             en_info = item["en"]
             eid_en = f"expr-en-{cid.replace('concept-', '')}"
             ev_en = SourceEvidence(
-                source_id="ngsl",
-                source_version="1.2",
-                source_locator=f"lemma:{en_info['lemma']}",
-                origin=OriginType.SOURCE_DERIVED.value,
+                source_id="polysemy_benchmarks",
+                source_version="1.0",
+                source_locator=f"benchmark_id:{cid}, lemma:{en_info['lemma']}",
+                origin=OriginType.BENCHMARK_CURATED.value,
                 field_name="lemma",
                 extracted_value=en_info["lemma"],
                 license="CC-BY-4.0"
@@ -537,7 +602,7 @@ def build_expanded_corpus() -> Dict[str, Any]:
                 display_form=en_info["display"],
                 part_of_speech=en_info["pos"],
                 pronunciation=en_info.get("pron"),
-                provenance_type="SOURCE_DERIVED",
+                provenance_type="BENCHMARK_CURATED",
                 source_evidence=[ev_en.to_dict()],
                 license="CC-BY-4.0"
             )
@@ -546,10 +611,10 @@ def build_expanded_corpus() -> Dict[str, Any]:
             ja_info = item["ja"]
             eid_ja = f"expr-ja-{cid.replace('concept-', '')}"
             ev_ja = SourceEvidence(
-                source_id="jmdict",
-                source_version="2026-10-01",
-                source_locator=f"keb:{ja_info['lemma']}",
-                origin=OriginType.SOURCE_DERIVED.value,
+                source_id="polysemy_benchmarks",
+                source_version="1.0",
+                source_locator=f"benchmark_id:{cid}, surface:{ja_info['lemma']}",
+                origin=OriginType.BENCHMARK_CURATED.value,
                 field_name="primary_surface",
                 extracted_value=ja_info["lemma"],
                 license="CC-BY-SA-3.0"
@@ -563,7 +628,7 @@ def build_expanded_corpus() -> Dict[str, Any]:
                 display_form=ja_info["lemma"],
                 reading=ja_info.get("reading"),
                 part_of_speech=ja_info["pos"],
-                provenance_type="SOURCE_DERIVED",
+                provenance_type="BENCHMARK_CURATED",
                 source_evidence=[ev_ja.to_dict()],
                 license="CC-BY-SA-3.0"
             )
@@ -572,10 +637,10 @@ def build_expanded_corpus() -> Dict[str, Any]:
             vi_info = item["vi"]
             eid_vi = f"expr-vi-{cid.replace('concept-', '')}"
             ev_vi = SourceEvidence(
-                source_id="vn_freq",
+                source_id="polysemy_benchmarks",
                 source_version="1.0",
-                source_locator=f"word:{vi_info['lemma']}",
-                origin=OriginType.SOURCE_DERIVED.value,
+                source_locator=f"benchmark_id:{cid}, word:{vi_info['lemma']}",
+                origin=OriginType.BENCHMARK_CURATED.value,
                 field_name="word",
                 extracted_value=vi_info["lemma"],
                 license="MIT"
@@ -589,7 +654,7 @@ def build_expanded_corpus() -> Dict[str, Any]:
                 display_form=vi_info["lemma"],
                 pronunciation=vi_info.get("pron"),
                 part_of_speech=vi_info["pos"],
-                provenance_type="SOURCE_DERIVED",
+                provenance_type="BENCHMARK_CURATED",
                 source_evidence=[ev_vi.to_dict()],
                 license="MIT"
             )
@@ -598,6 +663,23 @@ def build_expanded_corpus() -> Dict[str, Any]:
             # Classifications
             for cl in item.get("classifications", []):
                 clid = f"class-{cid}-{cl['system'].lower()}-{cl['value'].replace(' ', '_').lower()}"
+                sys_name = cl["system"]
+                if sys_name == "CEFR":
+                    prov_type = "INFERRED"
+                    src_id = "cefr_inferred"
+                elif sys_name == "JOYO_KANJI":
+                    prov_type = "SOURCE_DERIVED"
+                    src_id = "joyo"
+                elif sys_name == "JLPT":
+                    prov_type = "SOURCE_DERIVED"
+                    src_id = "jlpt_consensus"
+                elif sys_name == "NGSL":
+                    prov_type = "SOURCE_DERIVED"
+                    src_id = "ngsl"
+                else:
+                    prov_type = "BENCHMARK_CURATED"
+                    src_id = "polysemy_benchmarks"
+
                 classifications[clid] = {
                     "classification_id": clid,
                     "target_type": "concept",
@@ -606,8 +688,8 @@ def build_expanded_corpus() -> Dict[str, Any]:
                     "value": cl["value"],
                     "status": cl["status"],
                     "agreement_ratio": 1.0,
-                    "source_id": "upstream_manifest",
-                    "provenance_type": "SOURCE_DERIVED",
+                    "source_id": src_id,
+                    "provenance_type": prov_type,
                     "created_at": "2026-10-01T00:00:00Z"
                 }
 
@@ -702,6 +784,8 @@ def build_expanded_corpus() -> Dict[str, Any]:
     new_concepts_added = 0
     existing_concepts_enriched = 0
     duplicate_merges = 0
+    ambiguous_alignments: List[Dict[str, Any]] = []
+    review_queue: List[Dict[str, Any]] = []
 
     target_total_concepts = 2600
 
@@ -790,17 +874,20 @@ def build_expanded_corpus() -> Dict[str, Any]:
         else:
             pos_norm = "noun"
 
-        # Step 4d: Look up Vietnamese correspondence (Priority: DAILY_EN_VI_CORE -> Sino-Vietnamese)
+        # Step 4d: Look up Vietnamese correspondence (Priority: DAILY_EN_VI_CORE -> candidate Sino-Vietnamese)
         vi_word = None
         vi_record = None
+        is_curated_vi = False
+        ambiguous_sino_candidate = None
 
         if lemma in DAILY_EN_VI_CORE:
             v_cand, v_pos, v_dom = DAILY_EN_VI_CORE[lemma]
             if v_cand in vn_by_word:
                 vi_word = v_cand
                 vi_record = vn_by_word[v_cand]
+                is_curated_vi = True
 
-        if not vi_word:
+        if not is_curated_vi:
             # Check Sino-Vietnamese cognate from Kanji in keb across candidates
             import itertools
             for cand in jm_candidates:
@@ -810,15 +897,18 @@ def build_expanded_corpus() -> Dict[str, Any]:
                     for prod in itertools.islice(itertools.product(*char_readings), 16):
                         sino_vi_candidate = " ".join(prod)
                         if sino_vi_candidate in vn_by_word:
-                            vi_word = sino_vi_candidate
-                            vi_record = vn_by_word[sino_vi_candidate]
+                            ambiguous_sino_candidate = {
+                                "candidate_vi": sino_vi_candidate,
+                                "keb": keb,
+                                "rank": vn_by_word[sino_vi_candidate]["rank"]
+                            }
                             best_cand = cand
                             break
-                if vi_word:
+                if ambiguous_sino_candidate:
                     break
 
-        # Invariant: Only promote complete tri-language intersections to canonical learning graph
-        if not vi_word or not vi_record:
+        # Retain concepts that have either verified curated VI or tracked candidate alignment
+        if not is_curated_vi and not ambiguous_sino_candidate:
             continue
 
         # Create New Concept
@@ -843,10 +933,10 @@ def build_expanded_corpus() -> Dict[str, Any]:
             part_of_speech=pos_norm,
             gloss_en=best_cand["gloss"],
             gloss_ja=best_cand["keb"],
-            gloss_vi=vi_word,
+            gloss_vi=vi_word if is_curated_vi else None,
             definition_en=f"Core learning sense for '{lemma}': {', '.join(best_cand['all_glosses'][:3])}",
             definition_ja=f"基本語彙: {best_cand['keb']} ({best_cand['reb']})",
-            definition_vi=f"Từ vựng cơ bản: {vi_word}" if vi_word else None,
+            definition_vi=f"Từ vựng cơ bản: {vi_word}" if is_curated_vi else None,
             register="general"
         )
         senses[sid] = s.to_dict()
@@ -887,10 +977,18 @@ def build_expanded_corpus() -> Dict[str, Any]:
         )
         expressions[eid_ja] = e_ja.to_dict()
 
-        # Vietnamese Expression (if aligned with source evidence)
-        if vi_word and vi_record:
+        # Vietnamese Expression: ONLY for verified curated daily core translations
+        if is_curated_vi and vi_word and vi_record:
             eid_vi = f"expr-vi-core-{lemma.replace(' ', '_')}"
-            ev_vi = vn_freq_adapter.build_evidence(f"rank:{vi_record['rank']}, word:{vi_word}", field_name="word", extracted_value=vi_word)
+            ev_vi = SourceEvidence(
+                source_id="daily_en_vi_core",
+                source_version="1.0",
+                source_locator=f"lemma:{lemma}, vi:{vi_word}",
+                origin=OriginType.CURATED.value,
+                field_name="word",
+                extracted_value=vi_word,
+                license="MIT"
+            )
             e_vi = Expression(
                 expression_id=eid_vi,
                 concept_id=cid,
@@ -899,11 +997,26 @@ def build_expanded_corpus() -> Dict[str, Any]:
                 lemma=vi_word,
                 display_form=vi_word,
                 part_of_speech=pos_norm,
-                provenance_type="SOURCE_DERIVED",
+                provenance_type="CURATED",
                 source_evidence=[ev_vi.to_dict()],
                 license="MIT"
             )
             expressions[eid_vi] = e_vi.to_dict()
+
+        # Track ambiguous alignment candidate if not curated
+        if ambiguous_sino_candidate:
+            ambiguous_item = {
+                "concept_id": cid,
+                "lemma": lemma,
+                "japanese": ambiguous_sino_candidate["keb"],
+                "candidate_vietnamese": ambiguous_sino_candidate["candidate_vi"],
+                "vn_freq_rank": ambiguous_sino_candidate["rank"],
+                "status": "ambiguous_alignment",
+                "alignment_type": "sino_vietnamese_heuristic",
+                "review_action": "pending_human_editorial_verification"
+            }
+            ambiguous_alignments.append(ambiguous_item)
+            review_queue.append(ambiguous_item)
 
         # Attach Classifications
         _attach_classifications(
@@ -946,15 +1059,15 @@ def build_expanded_corpus() -> Dict[str, Any]:
                 "target_id": cid,
                 "system": "JOYO_KANJI",
                 "value": f"Grade {max_grade}",
-                "status": "official",
+                "status": "official_reference",
                 "agreement_ratio": 1.0,
                 "source_id": "joyo",
-                "provenance_type": "OFFICIAL_EXTRACTED",
+                "provenance_type": "SOURCE_DERIVED",
                 "created_at": "2026-10-01T00:00:00Z"
             }
 
-        # Check Vietnamese Candidate Band
-        if vi_record:
+        # Check Vietnamese Candidate Band (ONLY when verified curated VI expression exists)
+        if is_curated_vi and vi_record:
             band = vi_record["candidate_band"]
             clid = f"class-{cid}-vi-{band.lower()}"
             classifications[clid] = {
@@ -1005,6 +1118,14 @@ def build_expanded_corpus() -> Dict[str, Any]:
     with open(CANONICAL_DIR / "legacy_mapping.json", "w", encoding="utf-8") as f:
         json.dump(legacy_mapping, f, ensure_ascii=False, indent=2)
 
+    # Save ambiguous alignments and review queue
+    reports_dir = BASE_DIR / "reports" / "phase1_3c"
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    with open(reports_dir / "ambiguous_alignments.json", "w", encoding="utf-8") as f:
+        json.dump(ambiguous_alignments, f, ensure_ascii=False, indent=2)
+    with open(reports_dir / "review_queue.json", "w", encoding="utf-8") as f:
+        json.dump(review_queue, f, ensure_ascii=False, indent=2)
+
     return {
         "total_concepts": len(concepts),
         "total_senses": len(senses),
@@ -1012,7 +1133,9 @@ def build_expanded_corpus() -> Dict[str, Any]:
         "total_classifications": len(classifications),
         "new_concepts_added": new_concepts_added,
         "existing_concepts_enriched": existing_concepts_enriched,
-        "duplicate_merges": duplicate_merges
+        "duplicate_merges": duplicate_merges,
+        "ambiguous_alignments_count": len(ambiguous_alignments),
+        "review_queue_count": len(review_queue)
     }
 
 
@@ -1070,7 +1193,7 @@ def _attach_classifications(
         "classification_method": "frequency_band_derived",
         "agreement_ratio": 1.0,
         "source_id": "ngsl",
-        "provenance_type": "SOURCE_DERIVED",
+        "provenance_type": "INFERRED",
         "created_at": "2026-10-01T00:00:00Z"
     }
 
@@ -1086,7 +1209,7 @@ def _attach_classifications(
         "classification_method": "cefr_grade_mapped",
         "agreement_ratio": 1.0,
         "source_id": "ngsl",
-        "provenance_type": "SOURCE_DERIVED",
+        "provenance_type": "INFERRED",
         "created_at": "2026-10-01T00:00:00Z"
     }
 

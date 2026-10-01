@@ -95,9 +95,27 @@ class ProvenanceGuard:
 
             return True, "VERIFIED", f"Authentic upstream evidence verified against raw snapshot of {source_id}"
 
-        # Rule 4: HUMAN_CURATED and CORPUS_DERIVED
-        if evidence.origin in (OriginType.HUMAN_CURATED.value, OriginType.CORPUS_DERIVED.value):
-            return True, "VERIFIED_CURATED", "Curated or corpus derived evidence"
+        # Rule 4: CURATED, BENCHMARK_CURATED, CORPUS_DERIVED, INFERRED
+        curated_origins = {
+            OriginType.HUMAN_CURATED.value,
+            OriginType.CORPUS_DERIVED.value,
+            OriginType.BENCHMARK_CURATED.value,
+            OriginType.CURATED.value,
+            OriginType.INFERRED.value,
+            "benchmark_curated",
+            "curated",
+            "inferred",
+            "BENCHMARK_CURATED",
+            "CURATED",
+            "INFERRED",
+            "OFFICIAL_CURATED",
+            "official_curated",
+        }
+        if evidence.origin in curated_origins:
+            return True, "VERIFIED_CURATED", "Curated, benchmark, or inferred evidence"
+
+        if evidence.origin in (OriginType.UNRESOLVED.value, "unresolved", "UNRESOLVED"):
+            return True, "UNRESOLVED", "Explicitly marked unresolved alignment"
 
         return False, "QUARANTINED", f"Unknown provenance origin '{evidence.origin}'"
 

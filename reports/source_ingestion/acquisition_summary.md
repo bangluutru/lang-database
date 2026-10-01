@@ -5,7 +5,7 @@
 | Source | Version | License | Status | Artifact Size | SHA-256 | Description |
 |---|---|---|---|---|---|---|
 | `kanjidic2` | `2026-10-01` | `CC-BY-SA-3.0` | **VERIFIED_EXISTING** | 1453.7 KB | `1c60c9453e1c...` | Authoritative kanji dictionary with codepoints, readings, meanings, and official grade markers |
-| `joyo` | `2010-official` | `PDL-1.0` | **VERIFIED_EXISTING** | 951.4 KB | `f5f0cf7d03f3...` | Official 2,136 Jōyō Kanji statutory list derived from Agency for Cultural Affairs 2010 Cabinet Notification |
+| `joyo` | `2010-official` | `CC-BY-SA-3.0` | **VERIFIED_EXISTING** | 951.4 KB | `f5f0cf7d03f3...` | 2,136 Jōyō Kanji statutory list derived from EDRDG KANJIDIC2 (referencing Agency for Cultural Affairs 2010 Cabinet Notification) |
 | `jmdict` | `2026-10-01` | `CC-BY-SA-3.0` | **VERIFIED_EXISTING** | 10332.2 KB | `89777236dbf0...` | Comprehensive Japanese-English dictionary reference universe |
 | `ngsl` | `1.2` | `CC-BY-4.0` | **VERIFIED_EXISTING** | 61.1 KB | `2098bab8955a...` | New General Service List 1.2 with empirical frequency rankings (2,809 words) |
 | `ngsl_spoken` | `1.2` | `CC-BY-4.0` | **VERIFIED_EXISTING** | 17.0 KB | `07708940c50a...` | New General Service List Spoken 1.2 (721 high-frequency spoken words) |

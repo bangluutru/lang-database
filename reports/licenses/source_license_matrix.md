@@ -13,7 +13,7 @@ Every record in the canonical database maintains explicit field-level source evi
 | Source ID | Upstream Entity / Project | License Identifier | License Category | Share-Alike Obligation | Commercial Use | Derivatives Allowed | Attribution Required |
 |:---|:---|:---|:---|:---:|:---:|:---:|:---:|
 | `kanjidic2` | Electronic Dictionary R&D Group (EDRDG) | `CC-BY-SA-3.0` | Tier 2 Attribution + ShareAlike | **YES** | YES | YES | YES |
-| `joyo` | Agency for Cultural Affairs (Cabinet Notification No. 2 of 2010) | `Government-PD` | Tier 1 Permissive (Public Domain) | NO | YES | YES | NO (Best Practice) |
+| `joyo` | Electronic Dictionary R&D Group (EDRDG) (derived from KANJIDIC2, referencing 文化庁 2010 Cabinet Notification) | `CC-BY-SA-3.0` | Tier 2 Attribution + ShareAlike | **YES** | YES | YES | YES |
 | `jmdict` | Electronic Dictionary R&D Group (EDRDG) | `CC-BY-SA-3.0` | Tier 2 Attribution + ShareAlike | **YES** | YES | YES | YES |
 | `ngsl` | Dr. Charles Browne, Dr. Brent Culligan, Joseph Phillips | `CC-BY-4.0` | Tier 2 Attribution | NO | YES | YES | YES |
 | `ngsl_spoken` | Dr. Charles Browne, Dr. Brent Culligan, Joseph Phillips | `CC-BY-4.0` | Tier 2 Attribution | NO | YES | YES | YES |
