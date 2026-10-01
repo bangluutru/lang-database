@@ -1,0 +1,109 @@
+name: Golden Pilot Regression Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/production/**'
+      - 'data/releases/**'
+      - 'staging/review_queue/**'
+      - 'scripts/**'
+      - 'tests/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'data/production/**'
+      - 'data/releases/**'
+      - 'scripts/**'
+      - 'tests/**'
+  workflow_dispatch:
+
+jobs:
+  invariant-check:
+    name: Dataset Invariants (Phase 1.1C)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install pyyaml requests
+      - name: Run dataset invariant checks
+        run: python scripts/check_dataset_invariants.py
+
+  regression-tests:
+    name: Linguistic Regression Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install pytest pyyaml requests pykakasi
+      - name: Run regression tests (no LLM calls)
+        run: |
+          pytest tests/test_schema.py tests/test_pipeline.py \
+                 tests/test_reproducibility.py \
+                 tests/test_validation_independence.py \
+                 -v --tb=short -x
+        env:
+          # LLM calls are skipped in CI (no API key)
+          SKIP_LLM_CALLS: "1"
+
+  golden-pilot-hash:
+    name: Golden Pilot Hash Verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify Golden Pilot SHA-256
+        run: |
+          python - <<'EOF'
+          import json, hashlib, sys
+          from pathlib import Path
+
+          base = Path(".")
+          manifest_path = base / "data/releases/golden-pilot-v1/dataset_manifest.json"
+          vocab_path    = base / "data/releases/golden-pilot-v1/vocabulary.jsonl"
+
+          if not manifest_path.exists() or not vocab_path.exists():
+              print("Golden Pilot not yet frozen — SKIP")
+              sys.exit(0)
+
+          with open(manifest_path) as f:
+              manifest = json.load(f)
+
+          # File hash
+          h = hashlib.sha256()
+          with open(vocab_path, "rb") as f:
+              for chunk in iter(lambda: f.read(65536), b""):
+                  h.update(chunk)
+          computed = h.hexdigest()
+          expected = manifest["vocabulary_file_sha256"]
+          if computed != expected:
+              print(f"FAIL: file hash mismatch\n  computed={computed}\n  expected={expected}")
+              sys.exit(1)
+
+          # Canonical hash
+          records = [json.loads(l) for l in open(vocab_path) if l.strip()]
+          sorted_records = sorted(records, key=lambda r: r.get("id", ""))
+          ch = hashlib.sha256()
+          for r in sorted_records:
+              canonical = {k: v for k, v in r.items() if k not in ("status",)}
+              ch.update((json.dumps(canonical, sort_keys=True, ensure_ascii=False) + "\n").encode())
+          computed_c = ch.hexdigest()
+          expected_c = manifest["dataset_hash"]
+          if computed_c != expected_c:
+              print(f"FAIL: canonical hash mismatch\n  computed={computed_c}\n  expected={expected_c}")
+              sys.exit(1)
+
+          print(f"PASS: Golden Pilot hashes verified")
+          print(f"  File SHA-256:      {computed}")
+          print(f"  Canonical SHA-256: {computed_c}")
+          EOF

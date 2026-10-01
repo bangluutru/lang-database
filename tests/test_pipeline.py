@@ -64,18 +64,32 @@ def test_fts5_search(db_conn):
     assert len(results) > 0
 
 def test_review_queues_populated():
-    """Verify that review queue staging files exist and reflect Phase 1.1B Release Gate."""
+    """Verify that review queue staging files exist and reflect Phase 1.1C Release Gate.
+    After Phase 1.1C:
+    - needs_review.jsonl is empty (no pending review records)
+    - rejected.jsonl contains only permanently quarantined records (may be < 28)
+    - permanent_quarantine.jsonl mirrors rejected.jsonl (both are definitive quarantine)
+    """
+    perm_q_file = Path(str(REJECTED_FILE).replace("rejected.jsonl", "permanent_quarantine.jsonl"))
     assert NEEDS_REVIEW_FILE.exists()
     assert REJECTED_FILE.exists()
 
     with open(NEEDS_REVIEW_FILE, "r", encoding="utf-8") as f:
         needs_review = [json.loads(line) for line in f if line.strip()]
-    assert len(needs_review) == 0
+    assert len(needs_review) == 0, (
+        f"needs_review.jsonl should be empty after Phase 1.1C, got {len(needs_review)}"
+    )
 
     with open(REJECTED_FILE, "r", encoding="utf-8") as f:
         rejected = [json.loads(line) for line in f if line.strip()]
-    # In Phase 1.1B, questionable items are quarantined in rejected queue rather than forced into production
-    assert len(rejected) >= 0
+    # After Phase 1.1C remediation, rejected contains only permanent quarantine (< 28)
+    assert 0 <= len(rejected) <= 28, f"Unexpected rejected count: {len(rejected)}"
+
+    # All records in rejected must have permanent_quarantine status
+    for r in rejected:
+        assert r.get("status") == "permanent_quarantine", (
+            f"Record {r.get('id')} in rejected.jsonl has non-quarantine status: {r.get('status')}"
+        )
 
 def test_source_registry_integrity():
     assert REGISTRY_FILE.exists()

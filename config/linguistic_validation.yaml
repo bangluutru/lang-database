@@ -1,0 +1,76 @@
+# config/linguistic_validation.yaml
+# Linguistic Validation Model Policy (Phase 1.1C)
+#
+# This file defines the runtime model policy for all linguistic validation stages.
+# - Historical evidence MUST NOT be falsified; old metadata retains its actual model.
+# - Every NEW judgment executed under this policy MUST record the configured model.
+# - Changing model/prompt_version/schema_version invalidates the deterministic cache.
+
+schema_version: "v1.1c"
+
+linguistic_validation_policy:
+  semantic_audit:
+    provider: google
+    model: gemini-2.5-flash
+    prompt_version: semantic_audit_v1
+    endpoint: vertex_ai
+    project: gen-lang-client-0626407458
+    location: us-central1
+
+  critic:
+    provider: google
+    model: gemini-2.5-flash
+    prompt_version: linguistic_judge_v1
+    endpoint: vertex_ai
+    project: gen-lang-client-0626407458
+    location: us-central1
+
+  resolver:
+    provider: google
+    model: gemini-2.5-flash
+    prompt_version: linguistic_resolver_v1
+    endpoint: vertex_ai
+    project: gen-lang-client-0626407458
+    location: us-central1
+
+  rejudge:
+    provider: google
+    model: gemini-2.5-flash
+    prompt_version: linguistic_rejudge_v1
+    endpoint: vertex_ai
+    project: gen-lang-client-0626407458
+    location: us-central1
+
+  adversarial_audit:
+    provider: google
+    model: gemini-2.5-flash
+    prompt_version: adversarial_audit_v1
+    endpoint: vertex_ai
+    project: gen-lang-client-0626407458
+    location: us-central1
+
+# Cache identity rule:
+# cache_key = SHA-256(canonical_input + "::" + prompt_version + "::" + model + "::" + schema_version)
+# Any change to model, prompt_version, or schema_version MUST invalidate the relevant cache entry.
+# A cached judgment from model X must NEVER be returned as a judgment from model Y.
+
+cache_policy:
+  key_components:
+    - canonical_input_hash
+    - prompt_version
+    - model
+    - schema_version
+  directory: data/llm_validation_cache
+
+# Release gate thresholds (must not be weakened without explicit version bump)
+release_gate:
+  require_semantic_audit: true
+  require_linguistic_judge: true
+  require_rejudge_if_rewritten: true
+  require_adversarial_audit_for_recovered_quarantine: true
+  forbidden_model_identifiers:
+    - independent-linguistic-judge-2.0
+  require_input_hash: true
+  require_model_identifier: true
+  require_timestamp: true
+  allow_generated_status_in_production: false

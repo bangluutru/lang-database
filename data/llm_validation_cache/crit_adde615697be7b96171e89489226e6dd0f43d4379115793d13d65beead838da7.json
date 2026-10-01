@@ -1,0 +1,59 @@
+{
+  "entry_id": "jp-pro-business-000070",
+  "term": "甲乙関係",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 and Example 1 contain unnatural Japanese expressions. The term '甲乙関係' refers specifically to contractual roles (Party A/B) and is not generally used for broader 'relationships' or 'power dynamics' in a general business context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "甲乙関係を明確にする",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "甲乙関係を定める",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "甲乙関係に基づく",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "甲乙関係を構築する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「甲乙関係」は契約上の立場を示す言葉であり、積極的に「構築する」という動詞とは結びつきにくい。関係性を「築く」のは人間関係など。",
+      "suggested_text": "甲乙関係を規定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「甲乙関係を考慮し」という表現は不自然。この文脈では「協力会社との力関係」や「立場」を指すため、「甲乙関係」という契約上の言葉を使うのは適切ではない。",
+      "suggested_ja": "今回のプロジェクトでは、協力会社との力関係も考慮し、進捗報告の頻度を調整する必要があります。",
+      "suggested_vi": "Trong dự án này, chúng ta cần điều chỉnh tần suất báo cáo tiến độ, có tính đến tương quan lực lượng với công ty đối tác.",
+      "suggested_en": "For this project, we need to adjust the frequency of progress reports, also taking into account the power dynamics with our partner company."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9e48006b08a32962d277f0883d205f81a712c11db785e8353b86ac516093ebb2",
+    "validated_at": "2026-10-01T02:46:41.444259+00:00"
+  }
+}

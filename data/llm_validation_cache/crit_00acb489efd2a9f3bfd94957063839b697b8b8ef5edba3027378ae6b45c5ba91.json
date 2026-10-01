@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000136",
+  "term": "完成工事総利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationとExample Sentenceの一部に不自然な表現が見られたため、修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完成工事総利益を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「計上する」は会計処理として帳簿に記載する行為を指すため、利益そのものを計上するという表現は不自然。利益は結果として計上されるものであり、直接計上する対象ではない。",
+      "suggested_text": "完成工事総利益を算出する"
+    },
+    {
+      "index": 1,
+      "text": "完成工事総利益が増加する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "完成工事総利益を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "完成工事総利益率",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「完成工事総利益が前年比15%増と計上されており」の「計上されており」が不自然。利益は計上されるものではなく、結果として報告書に記載されるもの。また、「収益性の向上が示されています」はやや硬すぎる。",
+      "suggested_ja": "当期の決算報告書によると、完成工事総利益は前年比15%増となり、収益性が向上したことが示されています。",
+      "suggested_vi": "Theo báo cáo tài chính kỳ này, lợi nhuận gộp công trình xây dựng đã tăng 15% so với năm trước, cho thấy khả năng sinh lời đã được cải thiện.",
+      "suggested_en": "According to the financial report for the current period, gross profit on completed construction contracts increased by 15% year-on-year, indicating improved profitability."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネスシーンで自然な表現です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "自然な会話の流れで、ビジネスシーンに適しています。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dc2df8ce3bb87d1108ed4a6083f0d0230b21b1040975d3684b5ab02b5012307d",
+    "validated_at": "2026-10-01T02:44:59.864514+00:00"
+  }
+}

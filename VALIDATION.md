@@ -145,7 +145,68 @@ To reproduce the entire validation and release workflow:
 # 3. Enforce the release gate (routes pass to production, others to staging)
 .venv/bin/python3 scripts/release_gate.py
 
-# 4. Run test suite
+# 4. Run Phase 1.1C quarantine remediation (if rejected.jsonl is non-empty)
+.venv/bin/python3 scripts/run_phase1_1c.py
+
+# 5. Verify all dataset invariants
+.venv/bin/python3 scripts/check_dataset_invariants.py
+
+# 6. Run complete test suite (including Phase 1.1C tests)
 .venv/bin/pytest tests/ -v
 ```
 
+---
+
+## 9. Phase 1.1C: Quarantine Remediation Protocol
+
+When the Release Gate produces a non-empty `rejected.jsonl`, Phase 1.1C applies a
+structured remediation workflow before freezing the Golden Pilot.
+
+### 9.1 Root-Cause Classification
+
+Each quarantined record is diagnosed into one or more failure categories:
+
+| Code | Description |
+|------|-------------|
+| `EXAMPLE_DOES_NOT_CONTAIN_TERM` | Example sentences don't use the target term (wrong template) |
+| `DOMAIN_FACTUAL_ERROR` | Accounting phrases injected into business/trade records |
+| `COLLOCATION_ERROR` | Corporate governance predicates on non-governance terms |
+| `TECHNICAL_VALIDATION_FAILURE` | Missing validation record (incomplete pipeline run) |
+| `SEMANTIC_CLASS_ERROR` | Wrong semantic class triggering inappropriate templates |
+| `DIALOGUE_ERROR` | Dialogue doesn't reference the target term |
+
+### 9.2 Systemic vs Record-Level
+
+A failure is **systemic** if the same root cause affects multiple records through a
+shared code path (e.g., fallback accounting template applied to business terms).
+Systemic failures are documented for future pipeline prevention.
+
+### 9.3 Remediation Gates (All Three Must Pass)
+
+A quarantined record is recovered to production only after passing **all three**:
+
+1. **Critic** — Independent linguistic judge passes the corrected content
+2. **Blind Re-judge** — Separate judge verifies the corrected candidate
+3. **Adversarial Audit** — Strict pedagogical audit (adversarial scrutiny)
+
+If any gate fails, a second-pass resolver is attempted. If the second pass fails
+all gates, the record is permanently quarantined with explicit `_quarantine_reason`.
+
+### 9.4 Invariants After Phase 1.1C
+
+The pilot freeze equation must hold after remediation:
+
+```
+800 = production_verified + needs_review + permanent_quarantine
+```
+
+This is enforced by `scripts/check_dataset_invariants.py` (11 invariants total).
+
+### 9.5 Golden Pilot v1
+
+After remediation, the production dataset is frozen as **Golden Pilot v1**:
+
+- Location: `data/releases/golden-pilot-v1/`
+- Contains: `vocabulary.jsonl`, `dataset_manifest.json`, `validation_manifest.json`, `checksums.sha256`
+- Hash: canonical SHA-256 (sorted by ID, excluding mutable `status` field)
+- Policy: **immutable** — corrections produce v1.1 or v2, never overwrite in place

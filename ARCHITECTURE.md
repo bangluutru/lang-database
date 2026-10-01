@@ -74,13 +74,40 @@ The **JP Professional Vocabulary Database** is designed as a foundational, decou
 │                   LAYER F: PRODUCTION RELEASE GATE                     │
 │   scripts/release_gate.py                                              │
 │   Routes by independent decision:                                      │
-│     ├── PASS (800 entries) ───> data/production/vocabulary.jsonl       │
+│     ├── PASS (≥772 entries) ──> data/production/vocabulary.jsonl       │
 │     │                           data/production/jp_professional_pilot.jsonl
 │     │                           data/production/jp_professional.db     │
 │     │   * Promotes objects to status: "production_verified"            │
 │     │   * Strictly asserts ZERO "generated" objects in production      │
-│     ├── REVIEW (0 entries) ───> staging/review_queue/needs_review.jsonl│
-│     └── REJECT (0 entries) ───> staging/review_queue/rejected.jsonl    │
+│     ├── REVIEW (0 entries) ──> staging/review_queue/needs_review.jsonl │
+│     └── REJECT → QUARANTINE ──> staging/review_queue/rejected.jsonl    │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│             LAYER F2: PHASE 1.1C QUARANTINE REMEDIATION                │
+│   scripts/run_phase1_1c.py                                             │
+│   Applies to quarantined records only:                                 │
+│     1. Root-cause diagnosis (systemic vs record-level)                 │
+│     2. Critic → Resolver (corrects template injection, wrong preds)    │
+│     3. Blind Re-judge (independent pass with corrected content)        │
+│     4. Adversarial Audit (adversarial scrutiny before promotion)       │
+│     ├── RECOVERED ──> merged into data/production/vocabulary.jsonl     │
+│     │                  (release_version: v1.1.0c-prod, remediated: true)
+│     └── PERMANENT QUARANTINE → staging/review_queue/permanent_quarantine.jsonl
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│             LAYER F3: GOLDEN PILOT FREEZE                              │
+│   data/releases/golden-pilot-v1/                                       │
+│   Immutable regression baseline frozen at Phase 1.1C:                 │
+│   • vocabulary.jsonl  — all production records, sorted by ID          │
+│   • dataset_manifest.json — canonical SHA-256, file SHA-256,          │
+│                              domain counts, model policy, commit hash  │
+│   • validation_manifest.json — validation architecture metadata        │
+│   • checksums.sha256  — file integrity                                 │
+│   • Invariant: corrections produce v1.1 or v2, NEVER overwrite in place│
 └───────────────────────────────────┬────────────────────────────────────┘
                                     │
                                     ▼

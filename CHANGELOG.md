@@ -4,7 +4,57 @@ All notable changes to the **JP Professional Vocabulary Database** are documente
 
 ---
 
+## [v1.1c-closure] - 2026-10-01
+
+### Phase 1.1C — Quarantine Remediation & Pilot Freeze
+
+#### Added
+- **Phase 1.1C Remediation Pipeline (`scripts/run_phase1_1c.py`)**:
+  - Root-cause diagnosis for all 28 quarantined records: systemic failure classification
+    (`EXAMPLE_DOES_NOT_CONTAIN_TERM`, `DOMAIN_FACTUAL_ERROR`, `COLLOCATION_ERROR`,
+    `TECHNICAL_VALIDATION_FAILURE`).
+  - Two-pass remediation (critic → resolver → resolver_v2 if needed → rejudge → adversarial audit)
+    applied to every recoverable record.
+  - Recovery rate tracked and reported; each recovered record must independently pass
+    critic + blind rejudge + adversarial audit before promotion.
+- **Machine-Enforced Dataset Invariants (`scripts/check_dataset_invariants.py`)**:
+  - 11 permanent invariants: pilot freeze equation, zero-generated, model provenance,
+    no duplicates, release versions, JLPT decoupled, quarantine metadata,
+    no accounting template injection, term reference, no governance predicates.
+- **Golden Pilot v1 Freeze (`data/releases/golden-pilot-v1/`)**:
+  - Immutable regression baseline: `vocabulary.jsonl`, `dataset_manifest.json`,
+    `validation_manifest.json`, `checksums.sha256`.
+  - Canonical SHA-256 (sort-by-ID, exclude mutable fields) recorded in manifest.
+  - File SHA-256 of `vocabulary.jsonl` cross-verified against manifest.
+  - Immutability policy: corrections produce golden-pilot-v1.1 or v2, never overwrite.
+- **Model Policy Config (`config/linguistic_validation.yaml`)**:
+  - Declarative model/prompt_version/schema_version per validation stage.
+  - Cache key must include model + prompt_version + schema_version (enforced in tests).
+- **Phase 1.1C Test Suite (`tests/test_phase1_1c.py`)**:
+  - 7 test classes: quarantine reconciliation, model provenance, cache identity,
+    golden pilot immutability, dataset hashing, known-bad regression fixtures,
+    reproducibility.
+  - Permanent regression fixtures for all systemic bugs discovered in 1.1A/1.1B/1.1C.
+- **CI/CD Guard (`.github/workflows/golden_pilot_guard.yml`)**:
+  - Invariant checks + regression tests + Golden Pilot hash verification on every push.
+
+#### Changed
+- Production release version extended to `v1.1.0c-prod` for recovered quarantine records.
+- `test_schema.py`: accepts `v1.1.0c-prod` and `generation_method=remediated_phase_1_1c`.
+- `test_pipeline.py`: tests that `rejected.jsonl` contains only `permanent_quarantine` records.
+- Pilot freeze equation: 800 = production + needs_review + permanent_quarantine enforced.
+
+#### Fixed
+- **Systemic: Wrong template injection** — 15 business/trade records had accounting ledger
+  examples or corporate governance collocations applied via fallback templates.
+  Remediated: new examples explicitly use the target term in domain-appropriate sentences.
+- **Systemic: Organization predicate mismatch** — `organization` semantic class defaulted
+  to governance predicates (決議する, 招集する) for non-governance entities.
+
+---
+
 ## [v1.1a-closure] - 2026-10-01
+
 
 ### Added
 - **Independent Linguistic Judge (`scripts/linguistic_validator.py`)**:

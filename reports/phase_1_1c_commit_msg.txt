@@ -1,0 +1,47 @@
+Phase 1.1C: Quarantine remediation & Golden Pilot freeze
+
+Closes the remaining quality gap in the 800-record pilot corpus.
+
+## What changed
+
+### Quarantine Remediation (28 records)
+- Diagnosed all 28 quarantined records: systemic pipeline bug where
+  fallback accounting/governance templates were applied to business/trade
+  terms, producing examples that never mentioned the target term.
+- Applied critic → resolver → rejudge → adversarial audit to each record.
+- All recoverable records promoted to production with v1.1.0c-prod.
+
+### Golden Pilot v1 Freeze
+- Immutable regression baseline: data/releases/golden-pilot-v1/
+- Canonical SHA-256 (sort-by-ID, status excluded) in dataset_manifest.json
+- File SHA-256 of vocabulary.jsonl verified in checksums.sha256
+- Policy: never overwrite; corrections produce v1.1 or v2.
+
+### New files
+- scripts/run_phase1_1c.py       — remediation pipeline
+- scripts/check_dataset_invariants.py — 11 machine-enforced invariants
+- tests/test_phase1_1c.py        — 50+ Phase 1.1C tests (7 test classes)
+- config/linguistic_validation.yaml — model policy config
+- .github/workflows/golden_pilot_guard.yml — CI guard
+- reports/phase_1_1c_quarantine_diagnosis.{json,md}
+- reports/phase_1_1c_closure.{json,md}
+
+### Updated files
+- tests/test_schema.py  — accepts v1.1.0c-prod + remediated_phase_1_1c
+- tests/test_pipeline.py — verifies permanent_quarantine status
+- CHANGELOG.md          — v1.1c-closure entry
+- ARCHITECTURE.md       — Layers F2 (remediation) + F3 (golden pilot)
+- VALIDATION.md         — Section 9: Phase 1.1C protocol
+
+## Invariants enforced (11)
+INV-1: 800 = prod + review + perm_quarantine
+INV-2: Zero generated status in production
+INV-3: Truthful Gemini model provenance
+INV-4: No duplicate IDs
+INV-5: Known release versions only
+INV-6: JLPT decoupled (null)
+INV-7: Permanent quarantine metadata
+INV-8: Golden Pilot SHA-256 integrity
+INV-9: No accounting template injection in business/trade
+INV-10: Term referenced in examples or dialogue
+INV-11: No governance predicates in sales/trade collocations

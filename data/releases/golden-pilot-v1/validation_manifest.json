@@ -1,0 +1,27 @@
+{
+  "release": "golden-pilot-v1",
+  "validation_architecture": "true_linguistic_judge_phase_1_1b_1_1c",
+  "stages": [
+    "semantic_audit",
+    "critic",
+    "resolver",
+    "rejudge",
+    "adversarial_audit"
+  ],
+  "model_policy": {
+    "semantic_audit": "gemini-2.5-flash",
+    "critic": "gemini-2.5-flash",
+    "resolver": "gemini-2.5-flash",
+    "rejudge": "gemini-2.5-flash",
+    "adversarial_audit": "gemini-2.5-flash"
+  },
+  "prompt_versions": {
+    "semantic_audit": "semantic_audit_v1",
+    "critic": "linguistic_judge_v1",
+    "resolver": "linguistic_resolver_v1",
+    "rejudge": "linguistic_rejudge_v1",
+    "adversarial_audit": "adversarial_audit_v1"
+  },
+  "schema_version": "v1.1c",
+  "created_at": "2026-10-01T02:52:34.859127+00:00"
+}
