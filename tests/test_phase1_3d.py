@@ -460,3 +460,83 @@ def test_21_programmatic_synonym_count_validation():
     assert ai_generated_vi_synonyms == 273, f"Expected 273 AI-generated VI synonyms, got {ai_generated_vi_synonyms}"
     assert total_primary_vi + total_vi_synonyms == len(vi_exprs) == 1990
 
+
+# Test 22 (Portability Test A): No absolute local export paths in summary.json
+def test_22_no_absolute_local_export_path():
+    summary_path = OKI_EXPORT_DIR / "summary.json"
+    assert summary_path.exists(), "summary.json missing"
+    content = summary_path.read_text(encoding="utf-8")
+    for forbidden in ["/Users/", "/home/", "file:///", "C:\\Users\\"]:
+        assert forbidden not in content, f"Found machine-specific path '{forbidden}' in summary.json"
+    data = json.loads(content)
+    assert data.get("export_destination") == "data/exports/oki_language/deck_data.json"
+
+
+# Test 23 (Portability Test B): No local absolute links in closure report
+def test_23_no_local_links_in_closure_report():
+    report_path = REPORTS_DIR / "final_closure_report.md"
+    assert report_path.exists(), "final_closure_report.md missing"
+    content = report_path.read_text(encoding="utf-8")
+    for forbidden in ["file:///", ".gemini/antigravity-ide/scratch", "/Users/tranhaibang"]:
+        assert forbidden not in content, f"Found local machine path '{forbidden}' in final_closure_report.md"
+
+
+# Test 24 (Portability Test C): All relative Phase 1.3D report links resolve to existing files
+def test_24_closure_report_relative_links_resolve():
+    import re
+    report_path = REPORTS_DIR / "final_closure_report.md"
+    assert report_path.exists(), "final_closure_report.md missing"
+    content = report_path.read_text(encoding="utf-8")
+
+    link_matches = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
+    assert len(link_matches) > 0, "No markdown links found in final_closure_report.md"
+
+    checked_links = 0
+    for text, target in link_matches:
+        if target.startswith("http://") or target.startswith("https://") or target.startswith("#"):
+            continue
+        # Strip query or fragment if any
+        target_path = target.split("#")[0].split("?")[0]
+        # Resolve either relative to REPORTS_DIR or BASE_DIR
+        resolved_sibling = (REPORTS_DIR / target_path).resolve()
+        resolved_root = (BASE_DIR / target_path).resolve()
+        assert resolved_sibling.exists() or resolved_root.exists(), (
+            f"Link target '{target}' from final_closure_report.md does not resolve to an existing file"
+        )
+        checked_links += 1
+
+    assert checked_links >= 8, f"Expected at least 8 relative report links, verified {checked_links}"
+
+
+# Test 25 (Portability Test D): Canonical freeze verification
+def test_25_canonical_freeze_checksums():
+    """Verify that canonical files match the exact pre-housekeeping SHA-256 checksums."""
+    expected_checksums = {
+        CANONICAL_DIR / "concepts.jsonl": "ad9f0c6ccd104c2f5cc1fe4c305933450189a7b5e4839fd4b5e46647636431e5",
+        CANONICAL_DIR / "senses.jsonl": "8c2295a928518231f815c3a1cbcdf5a9a03f57f2f38fd606b4b92560bb8dde11",
+        CANONICAL_DIR / "expressions.jsonl": "8e5ea20225746a82edbc640697de9702c84eea523c4b5064582b052c30011618",
+    }
+
+    for path, expected_hash in expected_checksums.items():
+        assert path.exists(), f"Canonical file {path} missing"
+        actual_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+        assert actual_hash == expected_hash, (
+            f"CANONICAL FREEZE BREACH: {path.name} hash {actual_hash} != expected {expected_hash}"
+        )
+
+    # Verify counts and tier distributions from closure manifest
+    manifest_path = REPORTS_DIR / "closure_manifest.json"
+    assert manifest_path.exists(), "closure_manifest.json missing"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert manifest["canonical_concepts"] == 2106
+    assert manifest["validated_complete"] == 1717
+    assert manifest["partial"] == 389
+    assert manifest["tier_a"] == 1072
+    assert manifest["tier_b"] == 358
+    assert manifest["tier_c"] == 287
+    assert manifest["tier_d"] == 389
+    assert manifest["ai_calls_during_housekeeping"] == 0
+    assert manifest["judge_calls_during_housekeeping"] == 0
+    assert manifest["network_calls_during_housekeeping"] == 0
+
+

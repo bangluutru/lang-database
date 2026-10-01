@@ -577,7 +577,7 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
         "tier_b_count": sum(1 for c in deck_cards if c["provenance_quality"] == "Tier B"),
         "tier_c_count": sum(1 for c in deck_cards if c["provenance_quality"] == "Tier C"),
         "tier_d_count": sum(1 for c in deck_cards if c["provenance_quality"] == "Tier D"),
-        "export_destination": str(deck_output_file),
+        "export_destination": str(deck_output_file.relative_to(BASE_DIR)),
         "status": "ready_for_oki_language_import"
     }
 

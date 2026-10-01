@@ -1,8 +1,10 @@
 # Phase 1.3D Final Closure Report: Tri-Language Gap Resolution & Linguistic Validation
 
 **Execution Date:** 2026-10-02  
-**Baseline Commit:** `b05a3f9`  
-**Final Commit SHA:** `8342335f915fb322ea5867c65c61646168db87bf`  
+**Phase 1.3D Baseline:** `b05a3f9`  
+**Validation-Closure Implementation Commit:** `8342335f915fb322ea5867c65c61646168db87bf`  
+**Independent-Review Remediation HEAD:** `3cbe967920c19b5e5612808b6435cc64a0a992b7`  
+**Housekeeping Closure Commit:** Recorded by Git after this report was generated (see git history/tag for authoritative final closure SHA)  
 **Target Repository:** `bangluutru/lang-database`  
 **Pipeline Orchestrator:** `scripts/phase1_3d/batch_processor.py` (Concurrency: 8, Cache: SHA-256 disk cache)  
 **Applicator:** `scripts/phase1_3d/apply_phase1_3d.py`  
@@ -16,13 +18,13 @@ Phase 1.3D successfully closed the tri-language gap across all 1,034 `EN–JA` p
 
 Following independent validation review, all closure findings have been audited and remediated:
 1. **Honest Canary Reassessment**: Qualified the heuristic alignment evaluation—acknowledging that only **55 / 100** initial canary mappings were EXACT/GOOD, demonstrating that Phase 1.3C heuristic alignment had substantial semantic error that Phase 1.3D successfully detected and remediated via JMdict replacements.
-2. **Full Concept Audit (645 Records)**: Created [`reports/phase1_3d/accepted_concept_audit.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/accepted_concept_audit.json) verifying the complete unbroken provenance and semantic validation chain for all 645 accepted concepts.
+2. **Full Concept Audit (645 Records)**: Created [`accepted_concept_audit.json`](accepted_concept_audit.json) verifying the complete unbroken provenance and semantic validation chain for all 645 accepted concepts.
 3. **Separated Source Dimensions & Recalculated Tiers**: Separated `lexeme_source` (`vn_freq`), `hanviet_relation` (`Unihan`), and `translation_semantics_validated` (`AI_JUDGE_VALIDATED`). Recalculated **Tier A** to strictly denote direct bilingual/curated sources (1,072 concepts), moving Hán-Việt cognates to **Tier B** (358 concepts).
 4. **Judge Independence Audit**: Verified that Generator and Judge both use `gemini-2.5-flash`, documenting strictly **blind prompt-level independence** (zero leaks of generator confidence, rationale, desired answer, or acceptance target), backed by automated pytest assertions.
 5. **Zero Silent Skips**: Replaced all silent `pytest.skip` calls on mandatory closure artifacts with hard assertions. Test suite achieves 21/21 passed, 0 failed, 0 skipped.
 6. **Programmatic Synonym Verification**: Programmatically verified exactly 273 validated Vietnamese synonym expressions (`expr-vi-core-*-syn-1`).
 7. **Metric Reconciliation & Discrepancy Resolution**: Reconciled the 1,034 starting partial concepts into an explicit mathematical equation, and resolved the 404 vs 505 JA replacement discrepancy.
-8. **Stratified Linguistic Sample Audit**: Audited a deterministic stratified sample of 60 accepted concepts ([`reports/phase1_3d/independent_sample_audit.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/independent_sample_audit.json)).
+8. **Stratified Linguistic Sample Audit**: Audited a deterministic stratified sample of 60 accepted concepts ([`independent_sample_audit.json`](independent_sample_audit.json)).
 
 ---
 
@@ -137,14 +139,14 @@ All mandatory reports are generated directly from verified cached artifacts and 
 
 | Report File | Scope & Content | Records |
 | :--- | :--- | :--- |
-| [`reports/phase1_3d/accepted_concept_audit.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/accepted_concept_audit.json) | Complete unbroken provenance and validation chain for every accepted concept | 645 |
-| [`reports/phase1_3d/en_ja_alignment_report.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/en_ja_alignment_report.json) | Gate 1 evaluation and replacement decisions for all partial concepts | 1,034 |
-| [`reports/phase1_3d/ai_generation_report.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/ai_generation_report.json) | Complete log of AI fallback generation invocations, prompts, and outputs | 355 |
-| [`reports/phase1_3d/judge_report.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/judge_report.json) | Full evaluation records, scores, decisions, and blind input payloads | 1,000 |
-| [`reports/phase1_3d/independent_sample_audit.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/independent_sample_audit.json) | Stratified sample audit across Tier B (20), Tier C (20), and Difficult Cases (20) | 60 |
-| [`reports/phase1_3d/review_queue.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/review_queue.json) | Structured backlog for human lexicographer review | 147 |
-| [`reports/phase1_3d/rejected_candidates.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/rejected_candidates.json) | Suboptimal candidates rejected by Gate 4 Judge | 242 |
-| [`reports/phase1_3d/final_metrics.json`](file:///Users/tranhaibang/.gemini/antigravity-ide/scratch/xtools/lang-database/reports/phase1_3d/final_metrics.json) | Machine-readable metrics with explicit reconciliation equations | 1 summary |
+| [`accepted_concept_audit.json`](accepted_concept_audit.json) | Complete unbroken provenance and validation chain for every accepted concept | 645 |
+| [`en_ja_alignment_report.json`](en_ja_alignment_report.json) | Gate 1 evaluation and replacement decisions for all partial concepts | 1,034 |
+| [`ai_generation_report.json`](ai_generation_report.json) | Complete log of AI fallback generation invocations, prompts, and outputs | 355 |
+| [`judge_report.json`](judge_report.json) | Full evaluation records, scores, decisions, and blind input payloads | 1,000 |
+| [`independent_sample_audit.json`](independent_sample_audit.json) | Stratified sample audit across Tier B (20), Tier C (20), and Difficult Cases (20) | 60 |
+| [`review_queue.json`](review_queue.json) | Structured backlog for human lexicographer review | 147 |
+| [`rejected_candidates.json`](rejected_candidates.json) | Suboptimal candidates rejected by Gate 4 Judge | 242 |
+| [`final_metrics.json`](final_metrics.json) | Machine-readable metrics with explicit reconciliation equations | 1 summary |
 
 ---
 
