@@ -15,7 +15,7 @@
       "review_status": "verified"
     },
     "joyo": {
-      "license": "Government-PD",
+      "license": "PDL-1.0",
       "category": "TIER_1_PERMISSIVE",
       "share_alike": false,
       "commercial_allowed": true,
@@ -96,20 +96,23 @@
       "review_status": "verified"
     },
     "jlpt_consensus": {
-      "license": "CC0-1.0",
-      "category": "TIER_1_PERMISSIVE",
+      "license": "CC-BY-3.0",
+      "category": "TIER_2_ATTRIBUTION",
       "share_alike": false,
       "commercial_allowed": true,
       "derivatives_allowed": true,
-      "attribution_required": false,
-      "review_status": "verified"
+      "attribution_required": true,
+      "review_status": "verified",
+      "provenance_note": "CC-BY-3.0 (Jonathan Waller / tanos.co.uk). Data published under Creative Commons Attribution (BY) at https://www.tanos.co.uk/jlpt/. Repository wrapper (Bluskyo/JLPT_Vocabulary) is MIT. Determined from: (1) upstream README explicit license statement, (2) GitHub LICENSE file (MIT, code only), (3) tanos.co.uk attribution notice."
     }
   },
   "distribution_compliance": {
     "canonical_db": {
       "model": "modular_multi_license",
       "status": "COMPLIANT",
-      "isolated_layers": ["japanese_lexical_layer_cc_by_sa_3.0"]
+      "isolated_layers": [
+        "japanese_lexical_layer_cc_by_sa_3.0"
+      ]
     },
     "exports_cross_language": {
       "license": "CC-BY-SA-3.0",

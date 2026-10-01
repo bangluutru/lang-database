@@ -38,17 +38,17 @@ In Phase 1.3C, the seed-only ingestion mechanism from Phase 1.3B was replaced wi
 
 | Source ID | Version | License | Artifact Filename | Artifact SHA-256 | Records Extracted |
 |:---|:---|:---|:---|:---|:---:|
-| `kanjidic2` | 2026-10-01 | CC-BY-SA-3.0 | `kanjidic2.xml.gz` | `3e9b744d564fa7eef449f85c4bfd2105151b752495da5b1db3ff4aee334316a9` | 13,108 kanji |
-| `joyo` | 2010-official | Government-PD | `joyo_kanji_official.json` | `f5f0cf7d03f3a7beddab973d6b1d31eb3cb30a2b0285639ba8f4042fd94e01f1` | 2,136 kanji |
+| `kanjidic2` | 2026-10-01 | CC-BY-SA-3.0 | `kanjidic2.xml.gz` | `1c60c9453e1c7a318f3492fd8e13ea792d20130402bcbce9ed84e6165dfa1d60` | 13,108 kanji |
+| `joyo` | 2010-official | PDL-1.0 | `joyo_kanji_official.json` | `f5f0cf7d03f3a7beddab973d6b1d31eb3cb30a2b0285639ba8f4042fd94e01f1` | 2,136 kanji |
 | `jmdict` | 2026-10-01 | CC-BY-SA-3.0 | `JMdict_e.gz` | `89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3` | 210,000+ entries |
 | `ngsl` | 1.2 | CC-BY-4.0 | `NGSL_12_stats.csv` | `2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44` | 2,809 words |
-| `ngsl_spoken` | 1.2 | CC-BY-4.0 | `NGSL-Spoken_12_stats.csv` | `63fcf02cfd3bfb70c3ec778e3ec8650a32e18d6e3c5457ef466e3eb740f930e4` | 721 words |
-| `nawl` | 1.2 | CC-BY-4.0 | `NAWL_12_lemmatized_for_teaching.csv` | `01b228965f3752e503ae8d2c943806fcf225022ebae98c393bc3f167e411b43d` | 959 words |
-| `bsl` | 1.2 | CC-BY-4.0 | `BSL_120_stats.csv` | `dfb0559eb4f39556a3108ce8a49c95d9a9cb2744747ebc7d6c5da29f6356784d` | 1,745 words |
-| `tsl` | 1.2 | CC-BY-4.0 | `TSL_12_stats.csv` | `d4a52efc157f49e4fa87cfa7a57a0fb871ff2f507b973b4290374e2a39a778e1` | 1,250 words |
-| `vn_freq` | 1.0 | MIT | `vn_word_frequencies.tsv` | `5bbcf140cb4e92a8b9487c6e61f22aa52a16d507b7ddf54d4ff7db097cb11ce1` | 19,047 words |
-| `unihan` | 16.0.0 | Unicode-DFS-2016 | `Unihan.zip` | `c4d3fc0baae90435df178ebf25db544f8002cf7c1bc1ba47db378c2eec4e1f7d` | 67,996 readings |
-| `jlpt_consensus` | 2026-v1 | CC0-1.0 | `JLPT_vocab_ALL.csv` | `a34ff749ff35b91b9f67a2167fa940e4f29a008c2a41d99665bc7f4dbda87504` | 8,506 words |
+| `ngsl_spoken` | 1.2 | CC-BY-4.0 | `NGSL-Spoken_12_stats.csv` | `07708940c50a07cac4f507fd1e87bdd50081d7b87713a66a99beb3c8c4d11ac8` | 721 words |
+| `nawl` | 1.2 | CC-BY-4.0 | `NAWL_12_lemmatized_for_teaching.csv` | `1790b0fa22c5815ebf5a9a15c9363c03a6e906c77bf217f99033734f1459137b` | 959 words |
+| `bsl` | 1.2 | CC-BY-4.0 | `BSL_120_stats.csv` | `45055265eb4e74c65f5d26edabbc1a0da38c45bbb924cd9bd01fd391b74ff157` | 1,745 words |
+| `tsl` | 1.2 | CC-BY-4.0 | `TSL_12_stats.csv` | `2259df25a1077b04067ef0c0e9e4c98b46c91e4d539741dfaceba88651ff486d` | 1,250 words |
+| `vn_freq` | 1.0 | MIT | `vn_word_frequencies.tsv` | `8f644d06173600f8acb0d2b1a9dd0111c53ef304b9974b76e2cb24bad81fe04d` | 19,047 words |
+| `unihan` | 16.0.0 | Unicode-DFS-2016 | `Unihan.zip` | `4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e` | 67,996 readings |
+| `jlpt_consensus` | 2026-v1 | CC-BY-3.0 | `JLPT_vocab_ALL.csv` | `810c776c7a72fe9a6860d8629e7f4d3903545808e6cbcff8dde3b52b01800f24` | 8,506 words |
 
 ---
 

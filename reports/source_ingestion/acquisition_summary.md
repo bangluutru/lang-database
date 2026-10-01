@@ -14,7 +14,7 @@
 | `tsl` | `1.2` | `CC-BY-4.0` | **VERIFIED_EXISTING** | 31.3 KB | `2259df25a107...` | TOEIC Service List 1.2 for TOEIC test preparation vocabulary |
 | `vn_freq` | `1.0` | `MIT` | **VERIFIED_EXISTING** | 506.5 KB | `8f644d061736...` | Vietnamese word frequencies (19,047 words) with POS tags and empirical corpus counts |
 | `unihan` | `16.0.0` | `Unicode-DFS-2016` | **VERIFIED_EXISTING** | 8145.2 KB | `4c93ea9c1f63...` | Unicode Character Database Unihan archive containing Unihan_Readings.txt for Hán-Việt cognates |
-| `jlpt_consensus` | `2026-v1` | `CC-BY-SA-3.0` | **VERIFIED_EXISTING** | 191.6 KB | `810c776c7a72...` | Open JLPT vocabulary collation (N5 through N1) based on community consensus |
+| `jlpt_consensus` | `2026-v1` | `CC-BY-3.0` | **VERIFIED_EXISTING** | 191.6 KB | `810c776c7a72...` | Open JLPT vocabulary collation (N5 through N1) based on community consensus |
 
 ## Provenance & License Verification
 - All sources are stored in immutable snapshots under `data/raw/<source_id>/<version>/`.

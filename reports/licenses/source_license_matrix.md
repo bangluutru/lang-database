@@ -22,7 +22,7 @@ Every record in the canonical database maintains explicit field-level source evi
 | `tsl` | Dr. Charles Browne, Dr. Brent Culligan, Joseph Phillips | `CC-BY-4.0` | Tier 2 Attribution | NO | YES | YES | YES |
 | `vn_freq` | tabidots / Vietnamese Word Frequencies Project | `MIT` | Tier 1 Permissive | NO | YES | YES | YES (Notice) |
 | `unihan` | Unicode Consortium (Unicode 16.0.0) | `Unicode-DFS-2016` | Tier 2 Permissive Attribution | NO | YES | YES | YES (Notice) |
-| `jlpt_consensus` | Community Collation (Tanos / JLPT Vocab Project) | `CC0-1.0` / Open Data | Tier 1 Permissive | NO | YES | YES | NO |
+| `jlpt_consensus` | Jonathan Waller / tanos.co.uk (Bluskyo/JLPT_Vocabulary collation) | `CC-BY-3.0` | Tier 2 Attribution | NO | YES | YES | YES |
 
 ---
 
@@ -63,3 +63,7 @@ Downstream consumers must display the following attribution notices (e.g., in `A
   > Vietnamese frequency data is derived from tabidots/vn-freqs under the MIT License.
 - **Han-Viet Character Data**:
   > Han-Viet and Kanji readings are derived from the Unicode Character Database (Unihan 16.0.0) under the Unicode Terms of Use (Unicode-DFS-2016).
+
+- **JLPT Vocabulary Data**:
+  > JLPT vocabulary lists are based on data from Jonathan Waller's tanos.co.uk project, licensed under Creative Commons Attribution (CC-BY-3.0). Reformatted by Bluskyo/JLPT_Vocabulary (MIT). Attribution: Jonathan Waller, https://www.tanos.co.uk/jlpt/
+
