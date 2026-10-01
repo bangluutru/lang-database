@@ -113,6 +113,27 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
 
             if lang == "vi":
                 existing_vi_cids.add(cid)
+                if cid in res_by_cid:
+                    res = res_by_cid[cid]
+                    if res.get("status") == "VALIDATED_COMPLETE":
+                        raw_prov = res.get("vi_final_provenance") or res.get("vi_candidate", {}).get("provenance_type") or res.get("vi_candidate", {}).get("source_type")
+                        is_ai = (raw_prov in ("ai_fallback", "AI_GENERATED") or expr.get("provenance_type") == "AI_GENERATED")
+                        is_syn = expr.get("language_metadata", {}).get("is_synonym", False)
+                        if is_ai:
+                            lm = {
+                                "lexeme_source": {"status": "AI_GENERATED", "source": "gemini-2.5-flash"},
+                                "hanviet_relation": {"status": "NONE", "source": None},
+                                "translation_semantics_validated": {"status": "AI_JUDGE_VALIDATED", "judge_model": "gemini-2.5-flash"}
+                            }
+                        else:
+                            lm = {
+                                "lexeme_source": {"status": "SOURCE_DERIVED", "source": "vn_freq"},
+                                "hanviet_relation": {"status": "SOURCE_DERIVED", "source": "Unihan"},
+                                "translation_semantics_validated": {"status": "AI_JUDGE_VALIDATED", "judge_model": "gemini-2.5-flash"}
+                            }
+                        if is_syn:
+                            lm["is_synonym"] = True
+                        expr["language_metadata"] = lm
 
             # If this is a JA expression for a concept with ja_replacement_applied:
             if lang == "ja" and cid in res_by_cid:
@@ -249,6 +270,19 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
                         "review_status": "verified"
                     }]
 
+            if provenance_type == "AI_GENERATED":
+                lang_metadata = {
+                    "lexeme_source": {"status": "AI_GENERATED", "source": "gemini-2.5-flash"},
+                    "hanviet_relation": {"status": "NONE", "source": None},
+                    "translation_semantics_validated": {"status": "AI_JUDGE_VALIDATED", "judge_model": "gemini-2.5-flash"}
+                }
+            else:
+                lang_metadata = {
+                    "lexeme_source": {"status": "SOURCE_DERIVED", "source": "vn_freq"},
+                    "hanviet_relation": {"status": "SOURCE_DERIVED", "source": "Unihan"},
+                    "translation_semantics_validated": {"status": "AI_JUDGE_VALIDATED", "judge_model": "gemini-2.5-flash"}
+                }
+
             expr_id = f"expr-vi-core-{slug}"
 
             primary_vi_expr = {
@@ -264,7 +298,7 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
                 "part_of_speech": pos,
                 "register": "general",
                 "usage_notes": None,
-                "language_metadata": {},
+                "language_metadata": lang_metadata,
                 "provenance_type": provenance_type,
                 "source_evidence": evidence,
                 "license": "CC-BY-4.0",
@@ -278,6 +312,8 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
             syns = res.get("synonyms", [])
             for syn_idx, syn in enumerate(syns[:1], 1):
                 if syn and syn != vi_lemma:
+                    syn_meta = dict(lang_metadata)
+                    syn_meta["is_synonym"] = True
                     syn_expr = {
                         "expression_id": f"{expr_id}-syn-{syn_idx}",
                         "concept_id": cid,
@@ -291,7 +327,7 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
                         "part_of_speech": pos,
                         "register": "general",
                         "usage_notes": None,
-                        "language_metadata": {"is_synonym": True},
+                        "language_metadata": syn_meta,
                         "provenance_type": provenance_type,
                         "source_evidence": evidence,
                         "license": "CC-BY-4.0",
@@ -347,16 +383,16 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
         ja_e = ja_list[0] if ja_list else {}
         vi_e = vi_list[0] if vi_list else {}
 
-        # Determine Tier:
-        # Tier A: EN + JA + VI all source-derived
-        # Tier B: EN + JA source-backed, VI curated/source-supported
-        # Tier C: EN + JA source-backed, VI AI-generated + independently validated
-        # Tier D: mixed / partial / review
-        if en_e and ja_e and vi_e:
+        # Determine Tier (Section 5 Redefined Quality Tiers):
+        # Tier A: cross-language equivalence directly supported by reliable lexical/bilingual source(s)
+        # Tier B: individual lexemes source-backed + semantic alignment independently validated
+        # Tier C: one or more expressions AI-generated + independently validated
+        # Tier D: partial / review / quarantine
+        if en_e and ja_e and vi_e and (cid not in res_by_cid or res_by_cid[cid].get("status") == "VALIDATED_COMPLETE"):
             vi_prov = vi_e.get("provenance_type")
-            if vi_prov == "SOURCE_DERIVED":
+            if vi_prov in ("OFFICIAL_CURATED", "BENCHMARK_CURATED", "CURATED"):
                 tier = "Tier A"
-            elif vi_prov == "CURATED":
+            elif vi_prov == "SOURCE_DERIVED":
                 tier = "Tier B"
             elif vi_prov == "AI_GENERATED":
                 tier = "Tier C"
@@ -495,11 +531,11 @@ def apply_phase1_3d(dry_run: bool = False) -> Dict[str, Any]:
             # For concepts that were already complete in Phase 1.3C baseline
             validation_status = "validated"
 
-        if translation_status == "complete":
+        if translation_status == "complete" and (cid not in res_by_cid or res_by_cid[cid].get("status") == "VALIDATED_COMPLETE"):
             vi_p = vi_e.get("provenance_type") if vi_e else None
-            if vi_p == "SOURCE_DERIVED":
+            if vi_p in ("OFFICIAL_CURATED", "BENCHMARK_CURATED", "CURATED"):
                 prov_quality = "Tier A"
-            elif vi_p == "CURATED":
+            elif vi_p == "SOURCE_DERIVED":
                 prov_quality = "Tier B"
             elif vi_p == "AI_GENERATED":
                 prov_quality = "Tier C"

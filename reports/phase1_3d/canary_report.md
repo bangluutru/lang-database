@@ -6,13 +6,24 @@
 
 ---
 
-## 1. Executive Summary
+## 1. Executive Summary & Alignment Reassessment
 
 The Canary batch of 100 concepts was evaluated under the strict multi-stage verification pipeline required by Phase 1.3D:
 1. **First Gate (EN↔JA Alignment & POS Verification)**: Full sense-level verification against JMdict entry context.
 2. **Vietnamese Source-First Resolution**: Priority check on `DAILY_EN_VI_CORE`, curated lexical seeds, and audited Sino-Vietnamese cognates (`vn_freq` + `Unihan`).
 3. **AI Fallback & Immutable Provenance**: Fallback generation for source gaps tagged permanently as `AI_GENERATED`.
 4. **Independent Blind Linguistic Judge**: Rigorous evaluation of semantic equivalence, naturalness, register, and learner suitability without confirmation bias.
+
+### Critical Reassessment of Initial Alignment
+The canary evaluation provided direct quantitative evidence that the previous Phase 1.3C heuristic alignment contained substantial semantic flaws:
+- Only **55 out of 100** initial mappings were semantically sound (`EXACT`: 47, `GOOD`: 8).
+- **45 out of 100** mappings exhibited significant semantic divergence (`NARROW`: 23, `BROAD`: 4, `WRONG`: 18).
+- Heuristic polysemy matching in Phase 1.3C frequently paired words with archaic, royal, or completely erroneous senses (e.g. `you` ↔ `真人`, `i` ↔ `寡人`, `ad` ↔ `西暦`).
+
+**The vital positive result of Phase 1.3D is that Gate 1 actively detected and remediated this legacy alignment weakness** rather than allowing it to corrupt the downstream Vietnamese resolution:
+- **50 verified JMdict headword replacements** were proposed and validated to repair distorted Japanese senses.
+- **6 irreconcilable pairs** were placed in quarantine.
+- Only semantically validated concepts were permitted to advance to Vietnamese candidate generation and judging.
 
 ---
 
@@ -110,7 +121,7 @@ The review queue contains items that did not meet the auto-accept bar, preservin
 - [x] **Pipeline operates correctly:** Complete deterministic end-to-end execution.
 - [x] **Provenance is preserved:** Zero mutation of `AI_GENERATED` into `CURATED` or `SOURCE_DERIVED`.
 - [x] **AI origin is immutable:** Historical origin recorded in separate metadata block.
-- [x] **No systemic semantic-alignment flaw exists:** Wrong EN-JA pairs are trapped and remediated; false friends are quarantined.
+- [x] **Legacy Semantic Weakness Detected & Remediated:** Only 55/100 initial Phase 1.3C heuristic pairings were EXACT/GOOD; Gate 1 successfully trapped flawed pairings (18 WRONG, 23 NARROW, 4 BROAD), applied 50 JMdict replacements, quarantined 6 pairs, and prevented flawed alignments from propagating.
 - [x] **Review queue works correctly:** Non-trivial cases enter structured review queues.
 - [x] **Offline rebuild succeeds:** All evaluations and replacements are cached with SHA-256 keys.
 

@@ -1,16 +1,35 @@
 {
-  "total_concepts": 1034,
-  "total_batch": 1034,
-  "en_ja_exact": 472,
-  "vi_hanviet_supported": 592,
-  "judge_rejected": 242,
-  "en_ja_narrow": 305,
-  "judge_review": 117,
-  "judge_auto_accepted": 645,
-  "en_ja_wrong": 131,
-  "ja_expression_replacements": 505,
-  "en_ja_good": 77,
-  "vi_ai_fallback": 354,
+  "starting_partial_concepts": 1034,
+  "validated_complete": 645,
+  "review_queue": 147,
+  "rejected_candidates": 242,
   "quarantined_concepts": 30,
-  "en_ja_broad": 49
+  "remaining_partial_concepts": 389,
+  "reconciliation_equation": "1034 starting = 645 validated_complete + 389 remaining_partial (147 review_queue + 242 rejected_candidates)",
+  "en_ja_alignment_breakdown": {
+    "exact": 473,
+    "good": 77,
+    "narrow": 305,
+    "broad": 49,
+    "wrong": 130
+  },
+  "ja_replacements": {
+    "proposals_evaluated": 448,
+    "unique_concepts_applied": 404,
+    "applied_in_canonical_complete": 313,
+    "applied_in_review_queue": 91
+  },
+  "quality_tiers": {
+    "tier_a": 1072,
+    "tier_b": 358,
+    "tier_c": 287,
+    "tier_d": 389
+  },
+  "synonym_metrics": {
+    "concepts_with_multiple_vi": 273,
+    "total_primary_vi": 1717,
+    "total_vi_synonyms": 273,
+    "source_derived_vi_synonyms": 0,
+    "ai_generated_vi_synonyms": 273
+  }
 }

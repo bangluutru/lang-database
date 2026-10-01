@@ -110,8 +110,7 @@ def test_5_new_vi_expressions_valid_provenance():
 # Test 6: provenance_type = AI_GENERATED is never altered into CURATED or SOURCE_DERIVED
 def test_6_ai_generated_provenance_immutability():
     report_file = REPORTS_DIR / "vi_gap_resolution_report.json"
-    if not report_file.exists():
-        pytest.skip("vi_gap_resolution_report.json not yet available")
+    assert report_file.exists(), "Mandatory closure report vi_gap_resolution_report.json missing"
 
     with open(report_file, "r", encoding="utf-8") as f:
         resolutions = json.load(f)
@@ -149,8 +148,7 @@ def test_7_ai_candidate_evidence_structure():
 # Test 8: Judge evaluation does NOT overwrite origin metadata
 def test_8_judge_evaluation_does_not_overwrite_origin():
     report_file = REPORTS_DIR / "vi_gap_resolution_report.json"
-    if not report_file.exists():
-        pytest.skip("vi_gap_resolution_report.json not yet available")
+    assert report_file.exists(), "Mandatory closure report vi_gap_resolution_report.json missing"
 
     with open(report_file, "r", encoding="utf-8") as f:
         resolutions = json.load(f)
@@ -184,8 +182,7 @@ def test_9_partial_concepts_preserved():
 # Test 10: Review queue contains expected structured records with actionable categorization
 def test_10_review_queue_structure():
     review_path = REPORTS_DIR / "review_queue.json"
-    if not review_path.exists():
-        pytest.skip("review_queue.json not yet available")
+    assert review_path.exists(), "Mandatory closure report review_queue.json missing"
 
     with open(review_path, "r", encoding="utf-8") as f:
         rq = json.load(f)
@@ -221,20 +218,37 @@ def test_11_synonymous_vi_expressions():
 # Test 12: Multiple VI expressions per concept are supported
 def test_12_multiple_vi_expressions_supported():
     expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
-    cid_vi_count = {}
+    cid_vi_exprs = {}
     for e in expressions:
         if e.get("language") == "vi":
-            cid_vi_count[e["concept_id"]] = cid_vi_count.get(e["concept_id"], 0) + 1
+            cid_vi_exprs.setdefault(e["concept_id"], []).append(e)
 
-    # At least some concepts can have > 1 VI expression
-    assert any(count >= 1 for count in cid_vi_count.values())
+    # Prove support for multiple VI expressions: any count > 1
+    assert any(len(expr_list) > 1 for expr_list in cid_vi_exprs.values()), "No concepts with multiple VI expressions found"
+
+    multi_vi_concepts = {cid: expr_list for cid, expr_list in cid_vi_exprs.items() if len(expr_list) > 1}
+    assert len(multi_vi_concepts) == 273, f"Expected exactly 273 concepts with multiple VI, got {len(multi_vi_concepts)}"
+
+    valid_provenances = {"SOURCE_DERIVED", "AI_GENERATED", "CURATED", "BENCHMARK_CURATED", "OFFICIAL_CURATED"}
+
+    for cid, expr_list in multi_vi_concepts.items():
+        # Share concept_id
+        assert all(e["concept_id"] == cid for e in expr_list)
+        # Share compatible sense_id
+        sense_ids = {e.get("sense_id") for e in expr_list}
+        assert len(sense_ids) == 1 and None not in sense_ids, f"Expressions for {cid} have conflicting sense_ids: {sense_ids}"
+        # Have distinct expression_id
+        expr_ids = [e["expression_id"] for e in expr_list]
+        assert len(expr_ids) == len(set(expr_ids)), f"Duplicate expression_ids in {cid}: {expr_ids}"
+        # Have valid provenance
+        for e in expr_list:
+            assert e.get("provenance_type") in valid_provenances, f"Invalid provenance {e.get('provenance_type')} in {cid}"
 
 
 # Test 13: Open source match precedence is respected
 def test_13_open_source_precedence():
     report_file = REPORTS_DIR / "vi_gap_resolution_report.json"
-    if not report_file.exists():
-        pytest.skip("vi_gap_resolution_report.json not yet available")
+    assert report_file.exists(), "Mandatory closure report vi_gap_resolution_report.json missing"
 
     with open(report_file, "r", encoding="utf-8") as f:
         resolutions = json.load(f)
@@ -249,8 +263,7 @@ def test_13_open_source_precedence():
 # Test 14: Quarantine prevents invalid EN–JA pairs from receiving auto-accepted VI
 def test_14_quarantine_prevents_wrong_en_ja_vi():
     report_file = REPORTS_DIR / "vi_gap_resolution_report.json"
-    if not report_file.exists():
-        pytest.skip("vi_gap_resolution_report.json not yet available")
+    assert report_file.exists(), "Mandatory closure report vi_gap_resolution_report.json missing"
 
     with open(report_file, "r", encoding="utf-8") as f:
         resolutions = json.load(f)
@@ -269,13 +282,13 @@ def test_14_quarantine_prevents_wrong_en_ja_vi():
 # Test 15: Oki export contains correct metadata fields and handles partial cards gracefully
 def test_15_oki_export_semantics():
     deck_path = OKI_EXPORT_DIR / "deck_data.json"
-    if not deck_path.exists():
-        pytest.skip("deck_data.json not yet available")
+    assert deck_path.exists(), "Mandatory closure artifact deck_data.json missing"
 
     with open(deck_path, "r", encoding="utf-8") as f:
         cards = json.load(f)
 
     assert len(cards) == 2106
+    tier_counts = {}
     for card in cards:
         assert "translation_status" in card
         assert card["translation_status"] in {"complete", "partial"}
@@ -283,11 +296,22 @@ def test_15_oki_export_semantics():
         assert card["validation_status"] in {"validated", "needs_review", "quarantined", "unvalidated"}
         assert "provenance_quality" in card
         assert card["provenance_quality"] in {"Tier A", "Tier B", "Tier C", "Tier D"}
+        tier_counts[card["provenance_quality"]] = tier_counts.get(card["provenance_quality"], 0) + 1
         assert "production_ready" in card
         assert isinstance(card["production_ready"], bool)
         # If card is partial, vietnamese can be None, but MUST NOT be equal to English lemma (unless EN lemma is Vietnamese)
         if card["translation_status"] == "partial":
             assert card["production_ready"] is False
+
+    # Verify redefined tier counts:
+    # Tier A: 1072 (direct bilingual / curated sources)
+    # Tier B: 358 (source-backed lexeme + independent judge validation)
+    # Tier C: 287 (AI fallback + independent judge validation)
+    # Tier D: 389 (partial / review / quarantine)
+    assert tier_counts.get("Tier A") == 1072, f"Expected 1072 Tier A, got {tier_counts.get('Tier A')}"
+    assert tier_counts.get("Tier B") == 358, f"Expected 358 Tier B, got {tier_counts.get('Tier B')}"
+    assert tier_counts.get("Tier C") == 287, f"Expected 287 Tier C, got {tier_counts.get('Tier C')}"
+    assert tier_counts.get("Tier D") == 389, f"Expected 389 Tier D, got {tier_counts.get('Tier D')}"
 
 
 # Test 16: Offline rebuild is 100% deterministic from cached artifacts
@@ -328,3 +352,111 @@ def test_18_negative_test_contradiction_not_auto_accepted():
     result = validator.validate_item(item)
     assert result["semantic_alignment"] in ("WRONG", "NARROW", "BROAD", "AMBIGUOUS")
     assert result["suggested_action"] != "accept"
+
+
+# Test 19: Judge independence audit (blind prompt-level independence verification)
+def test_19_judge_blind_prompt_independence():
+    """Verify that Judge receives no generator rationale, confidence, or target acceptance decision."""
+    judge_dir = CACHE_DIR / "judge"
+    assert judge_dir.exists(), "Judge cache directory missing"
+    judge_files = list(judge_dir.glob("*.json"))
+    assert len(judge_files) == 1000, f"Expected 1,000 judge cache files, found {len(judge_files)}"
+
+    forbidden_patterns = [
+        "generator_confidence", "generator_rationale", "desired_answer",
+        "acceptance_target", "confidence_score", "reasoning"
+    ]
+
+    for jpath in judge_files:
+        payload = json.loads(jpath.read_text(encoding="utf-8"))
+        assert payload.get("model") == "gemini-2.5-flash"
+        inp = payload.get("input", {})
+        inp_str = json.dumps(inp).lower()
+        for forbidden in forbidden_patterns:
+            assert forbidden not in inp_str, (
+                f"Judge input in {jpath.name} leaks generator/target metadata: '{forbidden}'"
+            )
+
+
+# Test 20: Mandatory audit reports exist and are structurally valid
+def test_20_mandatory_audit_reports_exist_and_valid():
+    """Verify presence and schema of all 5 mandatory closure and audit reports."""
+    # 1. en_ja_alignment_report.json
+    en_ja_rep = REPORTS_DIR / "en_ja_alignment_report.json"
+    assert en_ja_rep.exists(), "reports/phase1_3d/en_ja_alignment_report.json missing"
+    en_ja_data = json.loads(en_ja_rep.read_text(encoding="utf-8"))
+    assert len(en_ja_data) == 1034, f"Expected 1,034 concepts in en_ja_alignment_report.json, got {len(en_ja_data)}"
+
+    # 2. ai_generation_report.json
+    ai_gen_rep = REPORTS_DIR / "ai_generation_report.json"
+    assert ai_gen_rep.exists(), "reports/phase1_3d/ai_generation_report.json missing"
+    ai_gen_data = json.loads(ai_gen_rep.read_text(encoding="utf-8"))
+    assert len(ai_gen_data) == 355, f"Expected 355 invocations in ai_generation_report.json, got {len(ai_gen_data)}"
+
+    # 3. judge_report.json
+    judge_rep = REPORTS_DIR / "judge_report.json"
+    assert judge_rep.exists(), "reports/phase1_3d/judge_report.json missing"
+    judge_data = json.loads(judge_rep.read_text(encoding="utf-8"))
+    assert len(judge_data) == 1000, f"Expected 1,000 evaluations in judge_report.json, got {len(judge_data)}"
+
+    # 4. accepted_concept_audit.json
+    audit_rep = REPORTS_DIR / "accepted_concept_audit.json"
+    assert audit_rep.exists(), "reports/phase1_3d/accepted_concept_audit.json missing"
+    audit_data = json.loads(audit_rep.read_text(encoding="utf-8"))
+    assert len(audit_data) == 645, f"Expected 645 accepted concepts in audit report, got {len(audit_data)}"
+    required_audit_keys = {
+        "concept_id", "sense_id", "en_lemma", "ja_lemma", "vi_lemma",
+        "en_ja_alignment_before", "en_ja_alignment_after", "ja_replacement_if_any",
+        "jmdict_ent_seq", "jmdict_sense_index", "vi_resolution_method",
+        "vi_source_locator", "generator_artifact", "judge_artifact",
+        "judge_decision", "semantic_alignment", "naturalness", "confidence",
+        "final_provenance", "canonical_expression_id"
+    }
+    for rec in audit_data:
+        missing = required_audit_keys - set(rec.keys())
+        assert not missing, f"Record {rec.get('concept_id')} missing audit keys: {missing}"
+        assert rec["canonical_expression_id"] is not None
+
+    # 5. independent_sample_audit.json
+    sample_rep = REPORTS_DIR / "independent_sample_audit.json"
+    assert sample_rep.exists(), "reports/phase1_3d/independent_sample_audit.json missing"
+    sample_data = json.loads(sample_rep.read_text(encoding="utf-8"))
+    assert len(sample_data) == 60, f"Expected 60 sample records, got {len(sample_data)}"
+    strata = {rec["stratum"]: 0 for rec in sample_data}
+    for rec in sample_data:
+        strata[rec["stratum"]] = strata.get(rec["stratum"], 0) + 1
+    assert strata.get("Tier_B_Source_Backed") == 20
+    assert strata.get("Tier_C_AI_Generated") == 20
+    assert strata.get("Difficult_Semantic_Cases") == 20
+
+
+# Test 21: Validate reported synonym count programmatically
+def test_21_programmatic_synonym_count_validation():
+    """Verify programmatic synonym metrics match closure report exactly."""
+    expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
+    vi_exprs = [e for e in expressions if e.get("language") == "vi"]
+
+    cid_groups = {}
+    for e in vi_exprs:
+        cid_groups.setdefault(e["concept_id"], []).append(e)
+
+    concepts_with_multiple_vi = sum(1 for elist in cid_groups.values() if len(elist) > 1)
+    total_vi_synonyms = sum(1 for e in vi_exprs if e.get("language_metadata", {}).get("is_synonym") is True)
+    total_primary_vi = len(vi_exprs) - total_vi_synonyms
+
+    source_derived_vi_synonyms = sum(
+        1 for e in vi_exprs
+        if e.get("language_metadata", {}).get("is_synonym") is True and e.get("provenance_type") == "SOURCE_DERIVED"
+    )
+    ai_generated_vi_synonyms = sum(
+        1 for e in vi_exprs
+        if e.get("language_metadata", {}).get("is_synonym") is True and e.get("provenance_type") == "AI_GENERATED"
+    )
+
+    assert concepts_with_multiple_vi == 273, f"Expected 273 concepts with multiple VI, got {concepts_with_multiple_vi}"
+    assert total_primary_vi == 1717, f"Expected 1,717 primary VI expressions, got {total_primary_vi}"
+    assert total_vi_synonyms == 273, f"Expected 273 total VI synonyms, got {total_vi_synonyms}"
+    assert source_derived_vi_synonyms == 0, f"Expected 0 source-derived VI synonyms, got {source_derived_vi_synonyms}"
+    assert ai_generated_vi_synonyms == 273, f"Expected 273 AI-generated VI synonyms, got {ai_generated_vi_synonyms}"
+    assert total_primary_vi + total_vi_synonyms == len(vi_exprs) == 1990
+

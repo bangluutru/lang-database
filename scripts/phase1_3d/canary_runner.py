@@ -117,8 +117,8 @@ class CanaryRunner:
             }
             return record, metric_deltas, review_entry, rejected_entry
 
-        # If replace_ja_expression was recommended for NARROW/BROAD
-        if resolved_repl:
+        # If replace_ja_expression was recommended for NARROW/BROAD and not already applied
+        if resolved_repl and not effective_repl:
             effective_repl = resolved_repl
             metric_deltas["ja_expression_replacements"] += 1
             record["ja_replacement_applied"] = resolved_repl
