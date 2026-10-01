@@ -1,0 +1,27 @@
+{
+  "input_hash": "f2caa993539831d3af8cfdc02308f74d909614c187877f235bc1e7f17b680526",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:07Z",
+  "input": {
+    "concept_id": "concept-core-resolution",
+    "sense_id": "sense-core-resolution-01",
+    "en_lemma": "resolution",
+    "ja_lemma": "解決",
+    "vi_lemma": "giải quyết",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'resolution' (noun, sense: settlement/solution) and Japanese '解決' (noun) both refer to the outcome or state of being resolved. However, the Vietnamese 'giải quyết' is primarily a verb meaning 'to solve' or 'to resolve'. While it can be used nominally in certain contexts (e.g., 'cách giải quyết' - 'the way to solve'), it is not a direct noun equivalent for 'a resolution' or 'a solution' in the same way the English and Japanese terms are. The correct noun forms would typically be 'sự giải quyết' (the act of resolving) or 'giải pháp' (solution). The POS assignment for 'giải quyết' as a noun in this context is incorrect and leads to an unnatural and semantically misaligned representation."
+  }
+}

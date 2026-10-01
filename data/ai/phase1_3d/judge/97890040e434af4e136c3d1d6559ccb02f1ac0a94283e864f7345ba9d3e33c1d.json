@@ -1,0 +1,27 @@
+{
+  "input_hash": "97890040e434af4e136c3d1d6559ccb02f1ac0a94283e864f7345ba9d3e33c1d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:46:27Z",
+  "input": {
+    "concept_id": "concept-core-kind",
+    "sense_id": "sense-core-kind-01",
+    "en_lemma": "kind",
+    "ja_lemma": "種類",
+    "vi_lemma": "loại",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'kind (POS: noun)' is correctly aligned with the Japanese '種類' and Vietnamese 'loại', all meaning 'type' or 'sort'. However, the provided 'English Definition / Sense Context: Core learning sense for 'kind': kind, gentle, considerate' describes the *adjective* sense of 'kind', not the noun. Assuming the intended concept is the noun 'kind' (meaning 'type/sort'), the tri-language alignment of the expressions is semantically exact and natural. The English definition needs to be corrected to reflect the noun sense (e.g., 'a group of things or people that are similar in some way')."
+  }
+}

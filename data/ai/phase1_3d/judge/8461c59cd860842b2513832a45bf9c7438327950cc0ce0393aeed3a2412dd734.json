@@ -1,0 +1,27 @@
+{
+  "input_hash": "8461c59cd860842b2513832a45bf9c7438327950cc0ce0393aeed3a2412dd734",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:01:59Z",
+  "input": {
+    "concept_id": "concept-core-payment",
+    "sense_id": "sense-core-payment-01",
+    "en_lemma": "payment",
+    "ja_lemma": "代金",
+    "vi_lemma": "đại kim",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'đại kim' is a direct Hán-Việt transliteration (大金) meaning 'big money' or 'great gold'. It is not used in modern Vietnamese to convey the meaning of 'payment', 'price', or 'cost'. The term is semantically incorrect and completely unnatural for this concept in contemporary usage, making it misleading for learners."
+  }
+}

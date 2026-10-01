@@ -1,0 +1,26 @@
+{
+  "input_hash": "792baf6f0bb7cce424d0e177431122d6cbe632948124e45e480350eb6bdff48f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:37Z",
+  "input": {
+    "concept_id": "concept-core-coach",
+    "sense_id": "sense-core-coach-01",
+    "en_lemma": "coach",
+    "ja_lemma": "監督",
+    "vi_lemma": "giám đốc",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English concept is 'coach' (noun) with the specific sense of 'director, superintendent, supervisor'. The Japanese '監督' aligns well, as it can mean both 'director/supervisor' and 'coach' (e.g., sports coach, though also applicable to a guiding role). However, the Vietnamese 'giám đốc' primarily means 'director' or 'CEO'. It does not carry the meaning of 'coach' in any sense, even when 'coach' is defined as 'director/supervisor'. While 'giám đốc' aligns with parts of the *definition* (director, supervisor), it does not align with the *source word* 'coach'. This creates a false equivalence for learners, as 'giám đốc' is not used to mean 'coach' in Vietnamese. A more appropriate Vietnamese term for 'coach' (in a non-sports, guiding/supervising role) would typically be 'huấn luyện viên' or 'người cố vấn', neither of which directly translates to 'director' in the same way 'giám đốc' does. Therefore, the semantic alignment for the concept 'coach' is wrong for Vietnamese."
+  }
+}

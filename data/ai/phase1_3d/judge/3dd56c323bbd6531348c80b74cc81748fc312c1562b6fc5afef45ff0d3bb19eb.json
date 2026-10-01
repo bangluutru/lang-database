@@ -1,0 +1,28 @@
+{
+  "input_hash": "3dd56c323bbd6531348c80b74cc81748fc312c1562b6fc5afef45ff0d3bb19eb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:08:55Z",
+  "input": {
+    "concept_id": "concept-core-baby",
+    "sense_id": "sense-core-baby-01",
+    "en_lemma": "baby",
+    "ja_lemma": "嬰児",
+    "vi_lemma": "bé",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese term 嬰児 (eiji) is semantically correct for 'infant' but is more formal and narrower than the general English 'baby' (which includes young children beyond just infants) or Vietnamese 'bé'. For a core learning sense of 'baby', 赤ちゃん (akachan) would be a more natural and common equivalent in Japanese, covering a broader range of 'baby' and having a general register. The current choice creates a register and semantic breadth mismatch."
+  }
+}

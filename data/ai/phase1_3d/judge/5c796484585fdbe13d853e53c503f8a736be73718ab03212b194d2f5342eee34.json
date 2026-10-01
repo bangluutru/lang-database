@@ -1,0 +1,27 @@
+{
+  "input_hash": "5c796484585fdbe13d853e53c503f8a736be73718ab03212b194d2f5342eee34",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:10:06Z",
+  "input": {
+    "concept_id": "concept-core-throughout",
+    "sense_id": "sense-core-throughout-01",
+    "en_lemma": "throughout",
+    "ja_lemma": "終始",
+    "vi_lemma": "chung thuỷ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The English expression 'throughout' is incorrectly identified as a verb; it is primarily a preposition or adverb. More critically, the Vietnamese candidate 'chung thuỷ' means 'faithful' or 'loyal,' which is semantically entirely different from the intended concept of 'from beginning to end' or 'the whole time.' This is a fundamental semantic mismatch and a false friend. The POS for Vietnamese is also incorrect for the intended meaning."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input_hash": "466bcd63ff3411d098a991e973b2a3f08520870a79e9b825c1ed0fe938ab969b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:05:04Z",
+  "input": {
+    "concept_id": "concept-core-qualification",
+    "sense_id": "sense-core-qualification-01",
+    "en_lemma": "qualification",
+    "ja_lemma": "資格",
+    "vi_lemma": "điều kiện",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English sense context for 'qualification' is explicitly defined as 'condition, term, requirement'. The Vietnamese expression 'điều kiện' aligns perfectly with this sense. However, the Japanese expression '資格 (shikaku)' is explicitly glossed as referring to 'skill, certificate, or license', and is contrasted with '条件 (jouken)' which means 'condition' or 'requirement'. Therefore, '資格' does not align with the specified English sense or the Vietnamese expression, leading to a significant semantic mismatch for this pedagogical concept. A more appropriate Japanese equivalent for the specified English sense would be '条件'."
+  }
+}

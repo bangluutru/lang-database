@@ -1,0 +1,26 @@
+{
+  "input_hash": "6e7a7b0ea5ff127a4ed9e74c89a243dee872f2731177ba33c90ea38abfa5d24c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:01:23Z",
+  "input": {
+    "concept_id": "concept-core-offense",
+    "sense_id": "sense-core-offense-01",
+    "en_lemma": "offense",
+    "ja_lemma": "犯罪",
+    "vi_lemma": "phạm tội",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English 'offense' and Japanese '犯罪' are nouns referring to 'a crime' or 'an unlawful act'. The Vietnamese candidate 'phạm tội' is primarily a verb phrase meaning 'to commit a crime' or 'to offend'. While it can sometimes be used in nominalized contexts (e.g., 'hành vi phạm tội' - criminal act), it is not a direct or natural noun equivalent for 'an offense' in the same way 'tội ác' (crime, evil deed) or 'tội phạm' (crime, criminal) would be. The stated POS as 'noun' for 'phạm tội' is incorrect for this core sense, leading to a semantic and grammatical misalignment."
+  }
+}

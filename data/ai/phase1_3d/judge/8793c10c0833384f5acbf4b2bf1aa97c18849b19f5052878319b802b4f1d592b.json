@@ -1,0 +1,27 @@
+{
+  "input_hash": "8793c10c0833384f5acbf4b2bf1aa97c18849b19f5052878319b802b4f1d592b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:10:14Z",
+  "input": {
+    "concept_id": "concept-core-thus",
+    "sense_id": "sense-core-thus-01",
+    "en_lemma": "thus",
+    "ja_lemma": "従って",
+    "vi_lemma": "do đó",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The core semantic alignment between 'thus', 'したがって', and 'do đó' is excellent, representing the meaning of 'consequently' or 'therefore'. All expressions are natural and share a similar formal/semi-formal register. However, the provided Part-of-Speech (POS) for the English expression 'thus' and the Japanese expression '従って' is incorrectly listed as 'verb'. Both 'thus' and 'したがって' function as adverbs (or conjunctions in some contexts for Japanese), not verbs. This fundamental grammatical error in the input metadata needs correction for pedagogical accuracy."
+  }
+}

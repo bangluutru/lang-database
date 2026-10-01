@@ -1,0 +1,27 @@
+{
+  "input_hash": "487c485a39297e464dc271cf42c1ac5cc718c84fcf6690f6fec3fc66291ee4ac",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:40:38Z",
+  "input": {
+    "concept_id": "concept-core-essay",
+    "sense_id": "sense-core-essay-01",
+    "en_lemma": "essay",
+    "ja_lemma": "論文",
+    "vi_lemma": "luận văn",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English 'essay' (in its common pedagogical sense of a short analytical/argumentative piece of writing) does not align with Japanese '論文' (ronbun) or Vietnamese 'luận văn'. Both '論文' and 'luận văn' primarily refer to a 'thesis' or 'dissertation' – a much more substantial and formal academic work. For a general 'essay', more appropriate translations would be Japanese '小論文' (shōronbun) or '作文' (sakubun), and Vietnamese 'bài luận'. The provided English definition is also overly broad for a 'core learning sense'."
+  }
+}

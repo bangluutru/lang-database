@@ -1,0 +1,27 @@
+{
+  "input_hash": "c8df9eb865abeb0438bd7858bb9a259fc70a842cd13ad2c125ffd4a29992e1c7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:02:26Z",
+  "input": {
+    "concept_id": "concept-core-photo",
+    "sense_id": "sense-core-photo-01",
+    "en_lemma": "photo",
+    "ja_lemma": "写真",
+    "vi_lemma": "tả chân",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese expression 'tả chân' means 'to describe realistically' or 'realistic portrayal/depiction' (often in art/literature). It is not the common or correct word for a physical 'photo' or 'photograph'. The correct Vietnamese terms are 'ảnh' or 'bức ảnh'. The proposed term is semantically incorrect and highly unnatural in this context."
+  }
+}

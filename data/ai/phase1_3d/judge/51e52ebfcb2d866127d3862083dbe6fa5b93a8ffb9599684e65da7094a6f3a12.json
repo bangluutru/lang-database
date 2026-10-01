@@ -1,0 +1,25 @@
+{
+  "input_hash": "51e52ebfcb2d866127d3862083dbe6fa5b93a8ffb9599684e65da7094a6f3a12",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:16:02Z",
+  "input": {
+    "concept_id": "concept-core-birth",
+    "sense_id": "sense-core-birth-01",
+    "en_lemma": "birth",
+    "ja_lemma": "誕生",
+    "vi_lemma": "dòng dõi",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English concept specifies 'birth' in the sense of 'lineage, pedigree, family line'. The Vietnamese 'dòng dõi' perfectly matches this sense. However, the Japanese '誕生 (tanjou)' primarily means 'the act of being born' or 'coming into existence', as explicitly stated in its gloss. It does not convey the meaning of 'lineage' or 'pedigree'. Therefore, the Japanese expression is semantically misaligned with the English and Vietnamese, representing a different core concept."
+  }
+}

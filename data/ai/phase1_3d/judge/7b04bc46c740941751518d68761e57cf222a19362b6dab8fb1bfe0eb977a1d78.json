@@ -1,0 +1,27 @@
+{
+  "input_hash": "7b04bc46c740941751518d68761e57cf222a19362b6dab8fb1bfe0eb977a1d78",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:37Z",
+  "input": {
+    "concept_id": "concept-core-previously",
+    "sense_id": "sense-core-previously-01",
+    "en_lemma": "previously",
+    "ja_lemma": "以前",
+    "vi_lemma": "trước đây",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The core concept of 'previously' as an adverb is perfectly aligned across all three languages. 'trước đây' is the most natural and common Vietnamese equivalent. However, the provided English POS tag ('verb') for 'previously' is incorrect; it is an adverb. Similarly, the Japanese POS tag ('verb') is incorrect; '以前' functions as an adverb or adverbial noun, as correctly stated in the Japanese sense gloss. These POS tags should be corrected in the database for the English and Japanese entries in the database."
+  }
+}

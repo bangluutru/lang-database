@@ -1,0 +1,27 @@
+{
+  "input_hash": "774725315e7be60ab8ecce94deb41b8ed9ac1cd4e95e85a6770ea52d1510e268",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:06:06Z",
+  "input": {
+    "concept_id": "concept-core-ban",
+    "sense_id": "sense-core-ban-01",
+    "en_lemma": "ban",
+    "ja_lemma": "禁止",
+    "vi_lemma": "cấm chỉ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "REGISTER_CLASH",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "While 'cấm chỉ' semantically aligns with 'ban' and '禁止', it is a more formal or official term in Vietnamese. For a 'core learning sense' in 'general, daily_life', the simpler and more common verb 'cấm' would be a more natural and pedagogically sound choice. The current candidate 'cấm chỉ' creates a minor register mismatch with the general usage of 'ban' and '禁止する'."
+  }
+}

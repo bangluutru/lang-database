@@ -1,0 +1,27 @@
+{
+  "input_hash": "e3281d00846c443ca63581c19b8bdab9a140aec631e9657278bc99bea4c896bf",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:44:49Z",
+  "input": {
+    "concept_id": "concept-core-immediate",
+    "sense_id": "sense-core-immediate-01",
+    "en_lemma": "immediate",
+    "ja_lemma": "即時",
+    "vi_lemma": "tức thì",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The core concept of 'prompt, without delay, in real time' is semantically well-aligned across all three languages. However, there is a critical Part of Speech (POS) mismatch for the English and Vietnamese expressions relative to this specific sense. For the given sense ('prompt, immediate, in real time'), English 'immediate' is an adjective, not a noun. Similarly, Vietnamese 'tức thì' is primarily an adverb or an adjective in this context, not typically a noun. Japanese '即時' is correctly identified as a noun (meaning 'immediacy' or 'promptness'), but it is also frequently used adjectivally (即時の) or adverbially (即時に) to convey the 'immediate' sense. For pedagogical accuracy, the POS for English and Vietnamese should be corrected to reflect their actual grammatical function for this meaning."
+  }
+}

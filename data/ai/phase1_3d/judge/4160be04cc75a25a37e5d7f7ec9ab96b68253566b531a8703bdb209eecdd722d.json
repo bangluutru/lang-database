@@ -1,0 +1,26 @@
+{
+  "input_hash": "4160be04cc75a25a37e5d7f7ec9ab96b68253566b531a8703bdb209eecdd722d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:15:16Z",
+  "input": {
+    "concept_id": "concept-core-arrival",
+    "sense_id": "sense-core-arrival-01",
+    "en_lemma": "arrival",
+    "ja_lemma": "到着",
+    "vi_lemma": "sự đến",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition 'appearance, emergence, advent' covers a broad range of 'arrival' senses, including abstract ones. The Vietnamese 'sự đến' aligns well with this broad definition. However, the Japanese '到着' is primarily used for physical arrival at a destination (e.g., person, train, package) and does not naturally cover the abstract senses of 'appearance, emergence, advent' (for which terms like '到来' or '出現' would be more appropriate). This makes the Japanese expression too narrow for the given English definition, creating a semantic mismatch across the three languages."
+  }
+}

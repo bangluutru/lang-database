@@ -1,0 +1,26 @@
+{
+  "input_hash": "983b5bba0b96c18351185f0d0e7f3115b3ee6760686ea3789dd3bbfbaaf027db",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:59:19Z",
+  "input": {
+    "concept_id": "concept-core-mathematics",
+    "sense_id": "sense-core-mathematics-01",
+    "en_lemma": "mathematics",
+    "ja_lemma": "数学",
+    "vi_lemma": "số học",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'số học' translates to 'arithmetic' or 'number theory,' which is a specific branch of mathematics. It is not the general term for the entire discipline of 'mathematics.' The correct general term in Vietnamese is 'toán học.' This represents a significant semantic narrowing and is incorrect for the intended core concept."
+  }
+}

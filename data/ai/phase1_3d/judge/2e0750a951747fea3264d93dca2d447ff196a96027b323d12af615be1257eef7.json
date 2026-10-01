@@ -1,0 +1,27 @@
+{
+  "input_hash": "2e0750a951747fea3264d93dca2d447ff196a96027b323d12af615be1257eef7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:58Z",
+  "input": {
+    "concept_id": "concept-core-diet",
+    "sense_id": "sense-core-diet-01",
+    "en_lemma": "diet",
+    "ja_lemma": "食生活",
+    "vi_lemma": "chế độ ăn uống",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'Definition / Sense Context' explicitly states the core learning sense for 'diet' in this entry is 'parliament, congress, diet' (referring to a legislative body). However, the Japanese expression '食生活' (shokuseikatsu) and the Vietnamese expression 'chế độ ăn uống' both refer to 'eating habits' or 'dietary life'. These senses are completely unrelated. Therefore, the tri-language concept representation is semantically misaligned and pedagogically unsound. While the individual Japanese and Vietnamese expressions are natural for 'eating habits', they are incorrect translations for 'diet' in the sense of a legislative body. The concept ID and domain suggest the 'eating habits' sense, but the explicit English sense context must be followed for evaluation."
+  }
+}

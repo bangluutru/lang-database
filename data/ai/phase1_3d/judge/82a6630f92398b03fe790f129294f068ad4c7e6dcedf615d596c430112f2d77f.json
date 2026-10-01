@@ -1,0 +1,25 @@
+{
+  "input_hash": "82a6630f92398b03fe790f129294f068ad4c7e6dcedf615d596c430112f2d77f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:07:26Z",
+  "input": {
+    "concept_id": "concept-core-ordinary",
+    "sense_id": "sense-core-ordinary-01",
+    "en_lemma": "ordinary",
+    "ja_lemma": "普通",
+    "vi_lemma": "phổ thông",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English concept 'ordinary' as a noun refers to 'the usual, normal, or common state or condition.' The Japanese '普通' (ふつう) perfectly aligns with this meaning. However, the candidate Vietnamese expression 'phổ thông' (noun) primarily means 'general,' 'popular,' or 'widespread' (e.g., 'general education,' 'common knowledge'). It does not convey the sense of 'the ordinary' or 'the usual state' as a noun. Using 'phổ thông' in this context would be semantically incorrect and unnatural for a Vietnamese speaker."
+  }
+}

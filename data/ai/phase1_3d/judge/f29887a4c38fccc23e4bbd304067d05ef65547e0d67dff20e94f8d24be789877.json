@@ -1,0 +1,25 @@
+{
+  "input_hash": "f29887a4c38fccc23e4bbd304067d05ef65547e0d67dff20e94f8d24be789877",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:23:59Z",
+  "input": {
+    "concept_id": "concept-core-drug",
+    "sense_id": "sense-core-drug-01",
+    "en_lemma": "drug",
+    "ja_lemma": "薬物",
+    "vi_lemma": "thuốc",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English 'drug' and Japanese '薬物' are presented as broad terms encompassing medicinal drugs, illicit drugs, and chemical substances. However, the Vietnamese 'thuốc' primarily refers to 'medicine' or 'medication'. While the provided definition includes 'tác động sinh học lên cơ thể' (biological effect on the body), the preceding 'chữa bệnh, phòng bệnh' (treating/preventing illness) strongly biases it towards the medicinal sense. 'Thuốc' alone does not naturally convey the sense of illicit drugs (for which 'ma túy' or specific terms are used) or general chemical substances in the same way 'drug' or '薬物' do. Therefore, 'thuốc' is too narrow for the intended broad concept."
+  }
+}

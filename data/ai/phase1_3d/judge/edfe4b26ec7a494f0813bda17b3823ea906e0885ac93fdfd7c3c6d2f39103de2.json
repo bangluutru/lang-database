@@ -1,0 +1,26 @@
+{
+  "input_hash": "edfe4b26ec7a494f0813bda17b3823ea906e0885ac93fdfd7c3c6d2f39103de2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:07Z",
+  "input": {
+    "concept_id": "concept-core-potential",
+    "sense_id": "sense-core-potential-01",
+    "en_lemma": "potential",
+    "ja_lemma": "可能",
+    "vi_lemma": "khả năng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English 'potential' (adjective) and Japanese '可能' (adjective) both convey the sense of 'possible' or 'latent.' However, the Vietnamese 'khả năng' is primarily a noun meaning 'ability,' 'capability,' 'potential' (as a noun), or 'possibility.' It is not typically used as an adjective in the same way. The correct adjective for 'potential' (e.g., 'potential problem') would be 'tiềm năng' or a phrase like 'có thể.' The POS assigned to 'khả năng' as an adjective is incorrect, leading to a fundamental semantic and grammatical mismatch."
+  }
+}

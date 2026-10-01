@@ -1,0 +1,27 @@
+{
+  "input_hash": "f5d7077faefd54193292d0bc17cad36acec66acbf8e49ef09aabbaecd4732644",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:55Z",
+  "input": {
+    "concept_id": "concept-core-healthy",
+    "sense_id": "sense-core-healthy-01",
+    "en_lemma": "healthy",
+    "ja_lemma": "健全",
+    "vi_lemma": "kiện toàn",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese expression 'kiện toàn' primarily means 'to consolidate, perfect, strengthen, or make complete' (often referring to an organization, system, or apparatus), not 'healthy' in the sense of physical, mental, or general well-being. It is a significant semantic mismatch with English 'healthy' and Japanese '健全'. Appropriate Vietnamese equivalents for 'healthy' would be 'khỏe mạnh' (for people/body) or 'lành mạnh' (for lifestyle, environment, mind)."
+  }
+}

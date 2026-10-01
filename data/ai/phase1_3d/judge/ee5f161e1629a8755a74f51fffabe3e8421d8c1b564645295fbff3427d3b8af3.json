@@ -1,0 +1,27 @@
+{
+  "input_hash": "ee5f161e1629a8755a74f51fffabe3e8421d8c1b564645295fbff3427d3b8af3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:11:29Z",
+  "input": {
+    "concept_id": "concept-core-beautiful",
+    "sense_id": "sense-core-beautiful-01",
+    "en_lemma": "beautiful",
+    "ja_lemma": "佳",
+    "vi_lemma": "đẹp",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "ARCHAIC_OR_OBSOLETE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The English expression 'beautiful' and Vietnamese 'đẹp' align well for the core aesthetic sense. However, the Japanese expression '佳' (か) is a poor choice for a 'core learning sense' of 'beautiful'. While it can mean beautiful, its primary meaning leans towards 'good', 'excellent', or 'fine', and it is significantly more formal, literary, or even somewhat archaic for general usage compared to the common word '美しい' (utsukushii). This creates a major semantic divergence, naturalness issue, and register mismatch, making it pedagogically unsound for a foundational concept."
+  }
+}

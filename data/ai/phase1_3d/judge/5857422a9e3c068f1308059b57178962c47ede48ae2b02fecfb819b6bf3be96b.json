@@ -1,0 +1,26 @@
+{
+  "input_hash": "5857422a9e3c068f1308059b57178962c47ede48ae2b02fecfb819b6bf3be96b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:45:53Z",
+  "input": {
+    "concept_id": "concept-core-interior",
+    "sense_id": "sense-core-interior-01",
+    "en_lemma": "interior",
+    "ja_lemma": "内部",
+    "vi_lemma": "nội bộ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese candidate 'nội bộ' primarily refers to 'internal affairs' or 'matters within an organization/group', not the general physical 'interior' of an object, building, or space, nor 'inland'. This creates a significant semantic mismatch with the English 'interior' (in the sense of 'inland, interior') and Japanese '内部', which both refer to the physical or spatial inside. Using 'nội bộ' for the intended core concept would be unnatural and misleading for learners."
+  }
+}

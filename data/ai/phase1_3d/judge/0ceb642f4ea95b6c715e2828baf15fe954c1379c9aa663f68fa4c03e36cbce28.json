@@ -1,0 +1,27 @@
+{
+  "input_hash": "0ceb642f4ea95b6c715e2828baf15fe954c1379c9aa663f68fa4c03e36cbce28",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:11:31Z",
+  "input": {
+    "concept_id": "concept-core-urban",
+    "sense_id": "sense-core-urban-01",
+    "en_lemma": "urban",
+    "ja_lemma": "都市",
+    "vi_lemma": "đô thị",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "MEDIUM",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English entry is internally inconsistent. The expression 'urban' is listed as a noun, but its provided definition/sense context ('town, city, municipal') clearly describes the adjectival sense of 'urban'. If the concept is 'urban area' (noun), then 'urban' as a standalone noun is less common than 'urban area', and the definition needs to be adjusted. The Japanese '都市' and Vietnamese 'đô thị' are excellent and natural noun equivalents for 'city' or 'urban area'. The English entry requires clarification or correction before this concept can be accepted."
+  }
+}

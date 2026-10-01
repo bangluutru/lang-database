@@ -1,0 +1,27 @@
+{
+  "input_hash": "82fc836072008359b7b5bd5ea7a8fd0ef0787c874c0ea6f28905134ce478c80c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:11:21Z",
+  "input": {
+    "concept_id": "concept-core-unknown",
+    "sense_id": "sense-core-unknown-01",
+    "en_lemma": "unknown",
+    "ja_lemma": "不明",
+    "vi_lemma": "bất minh",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese candidate 'bất minh' (unclear, not obvious, unexplained) is semantically narrower than the general English 'unknown' (not known or familiar; not identified) and Japanese '不明'. 'Bất minh' often carries a nuance of 'unexplained' or even 'suspiciously unclear', especially in common collocations (e.g., 'tài sản bất minh' - unexplained/illicit assets). It is also more formal in register. For a general core learning sense of 'unknown', 'bất minh' would be awkward and potentially misleading for learners. More appropriate general equivalents in Vietnamese would be phrases like 'không rõ' (not clear/known) or 'chưa biết' (not yet known), or more specific terms like 'vô danh' (nameless) depending on context."
+  }
+}

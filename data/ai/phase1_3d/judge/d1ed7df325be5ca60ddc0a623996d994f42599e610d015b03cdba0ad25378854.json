@@ -1,0 +1,26 @@
+{
+  "input_hash": "d1ed7df325be5ca60ddc0a623996d994f42599e610d015b03cdba0ad25378854",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:59:33Z",
+  "input": {
+    "concept_id": "concept-core-mayor",
+    "sense_id": "sense-core-mayor-01",
+    "en_lemma": "mayor",
+    "ja_lemma": "市長",
+    "vi_lemma": "thị trường",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'thị trường' means 'market' or 'marketplace', not 'mayor'. The correct Vietnamese term for 'mayor' is 'thị trưởng'. This is a clear semantic mismatch and a false friend situation."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "e832b32d8ffffda4525fcba919bf2db613689f2d37bb9592a24128fcd1b7f2b6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:09:06Z",
+  "input": {
+    "concept_id": "concept-core-bad",
+    "sense_id": "sense-core-bad-01",
+    "en_lemma": "bad",
+    "ja_lemma": "行けない",
+    "vi_lemma": "xấu",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The primary issue is the incorrect Part of Speech (POS) assigned to all three expressions. 'Bad' (English), 'いけない' (Japanese), and 'xấu' (Vietnamese) are overwhelmingly adjectives in their core sense, not nouns. Representing them as nouns for a 'core learning sense' is grammatically incorrect and pedagogically unsound, leading to significant learner confusion. If the intent was the *concept* of 'badness' or 'evil' as a noun, different expressions would be required."
+  }
+}

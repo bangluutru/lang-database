@@ -1,0 +1,26 @@
+{
+  "input_hash": "64f5d958a5e274da60aea218620ed3d5edee18bf93de3d30ade36318570d7c4d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:29Z",
+  "input": {
+    "concept_id": "concept-core-secure",
+    "sense_id": "sense-core-secure-01",
+    "en_lemma": "secure",
+    "ja_lemma": "確実",
+    "vi_lemma": "xác thực",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'secure' (adjective) in the sense of 'certain, sure, definite' and Japanese '確実' (kakujitsu) which covers 'certain, sure, definite, reliable' align well. However, the candidate Vietnamese expression 'xác thực' primarily means 'verified', 'authenticated', or 'authentic'. While related to certainty, its core meaning is about proof or authenticity, not the inherent quality of being certain, sure, or definite in a general sense. Using 'xác thực' for the intended English/Japanese sense would be unnatural and semantically incorrect in Vietnamese. A more appropriate Vietnamese equivalent would be 'chắc chắn' (certain, sure, definite) or 'đáng tin cậy' (reliable)."
+  }
+}

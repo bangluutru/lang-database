@@ -1,0 +1,26 @@
+{
+  "input_hash": "6c709220f3c5ed4648db69842b98ea9bd779847bdf0141c3af5737168a4da44f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:20Z",
+  "input": {
+    "concept_id": "concept-core-request",
+    "sense_id": "sense-core-request-01",
+    "en_lemma": "request",
+    "ja_lemma": "依頼",
+    "vi_lemma": "yêu cầu",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'Core learning sense' is specified as 'claim, demand, charge', which implies a stronger, more assertive nuance of 'request'. The Vietnamese 'yêu cầu' aligns very well with this stronger sense, encompassing 'demand' and 'requirement'. However, the Japanese '依頼 (いらい)' is generally used for a more polite 'request' or 'favor', or 'entrusting a task'. It does not strongly convey 'claim' or 'demand'. For those stronger senses in Japanese, words like '要求 (youkyuu)' or '請求 (seikyuu)' would be more appropriate. The Japanese gloss stating 'aligns well with the broad meaning of the English lemma 'request'' contradicts the specific 'Core learning sense' provided for English. Therefore, the Japanese expression is semantically narrower than the intended English pedagogical sense, leading to a sense divergence in the tri-language alignment. This requires review to either broaden the English sense or select a more fitting Japanese equivalent."
+  }
+}

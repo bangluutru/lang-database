@@ -1,0 +1,26 @@
+{
+  "input_hash": "6648c0581840f863be16fb0f3e9ccc715d0fb5275cf59f3bc1dc94d5397ca7f2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:47:23Z",
+  "input": {
+    "concept_id": "concept-core-luck",
+    "sense_id": "sense-core-luck-01",
+    "en_lemma": "luck",
+    "ja_lemma": "運",
+    "vi_lemma": "may mắn",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'may mắn' primarily refers to 'good luck', aligning with the provided English pedagogical definition ('good fortune, luck, happiness'). However, the English lemma 'luck' and the Japanese equivalent '運' (as per its gloss) encompass both good and bad fortune. This creates a semantic breadth divergence, where 'may mắn' is narrower than the general concept of 'luck' represented by the English lemma and Japanese '運'. This entry requires review to clarify the intended scope of the 'core-luck' concept (general vs. good fortune only) and ensure consistent representation across all languages."
+  }
+}

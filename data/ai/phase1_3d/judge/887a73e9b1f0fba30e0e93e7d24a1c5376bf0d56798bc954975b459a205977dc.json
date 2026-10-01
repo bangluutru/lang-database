@@ -1,0 +1,25 @@
+{
+  "input_hash": "887a73e9b1f0fba30e0e93e7d24a1c5376bf0d56798bc954975b459a205977dc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:17Z",
+  "input": {
+    "concept_id": "concept-core-confidence",
+    "sense_id": "sense-core-confidence-01",
+    "en_lemma": "confidence",
+    "ja_lemma": "自信",
+    "vi_lemma": "sự yên tâm",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English definition provided for 'confidence' is 'peace of mind, relief, (sense of) security'. The Vietnamese expression 'sự yên tâm' and its definition perfectly align with this English sense. However, the Japanese expression '自信' primarily translates to 'self-confidence' or 'confidence in one's own abilities', which represents a different core sense of 'confidence' and does not align with the specified English definition. Using '自信' for 'peace of mind/security' would be semantically incorrect and unnatural in Japanese. Therefore, there is a fundamental semantic mismatch within this tri-language concept."
+  }
+}

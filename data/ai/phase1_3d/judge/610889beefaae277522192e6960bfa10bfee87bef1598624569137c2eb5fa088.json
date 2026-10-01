@@ -1,0 +1,27 @@
+{
+  "input_hash": "610889beefaae277522192e6960bfa10bfee87bef1598624569137c2eb5fa088",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:17Z",
+  "input": {
+    "concept_id": "concept-core-exchange",
+    "sense_id": "sense-core-exchange-01",
+    "en_lemma": "exchange",
+    "ja_lemma": "交換",
+    "vi_lemma": "thị trường",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "SEMANTIC_WRONG"
+    ],
+    "evaluation_note": "The English definition ('market (financial, stock, domestic, etc.), marketplace, exchange') and the Vietnamese candidate 'thị trường' (market/marketplace) are semantically aligned, referring to a place or system where goods/assets are exchanged. However, the Japanese expression '交換 (kōkan)' refers to the 'act of exchanging', 'interchange', or 'replacement', which is a distinct semantic concept. '交換' is not used to mean a 'market' or 'marketplace' in Japanese. Therefore, the Japanese expression is semantically misaligned with the English definition and Vietnamese candidate, making the tri-language concept representation incorrect."
+  }
+}

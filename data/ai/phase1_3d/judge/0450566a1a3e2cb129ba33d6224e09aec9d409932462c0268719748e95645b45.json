@@ -1,0 +1,26 @@
+{
+  "input_hash": "0450566a1a3e2cb129ba33d6224e09aec9d409932462c0268719748e95645b45",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:16Z",
+  "input": {
+    "concept_id": "concept-core-altogether",
+    "sense_id": "sense-core-altogether-01",
+    "en_lemma": "altogether",
+    "ja_lemma": "全部",
+    "vi_lemma": "toàn bộ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Part-of-Speech (POS) is fundamentally incorrect for all three expressions. 'Altogether' is an adverb, not a verb. Similarly, Japanese '全部' (zenbu) and Vietnamese 'toàn bộ' are typically nouns or adverbs, not verbs. This grammatical miscategorization makes the concept representation pedagogically unsound and misleading for learners."
+  }
+}

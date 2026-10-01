@@ -1,0 +1,27 @@
+{
+  "input_hash": "21c5dbebe83a8b138ae8bbd565053126bec10a641b3229b8a5957ee782a1a484",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:20Z",
+  "input": {
+    "concept_id": "concept-core-alarm",
+    "sense_id": "sense-core-alarm-01",
+    "en_lemma": "alarm",
+    "ja_lemma": "警報",
+    "vi_lemma": "báo động",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English 'Sense Context' ('panic, scare, alarm') is ambiguous and could be misinterpreted as referring to the *feeling* of alarm. However, the Japanese gloss and Vietnamese definition clearly establish the intended core pedagogical sense as 'a warning signal or device'. The English word 'alarm' (noun) naturally covers this sense, and '警報' (Japanese) and 'báo động' (Vietnamese) are excellent, natural, and semantically aligned translations for this specific meaning. The concept is sound, but the English definition should be rephrased to explicitly state 'A warning sound or signal, or a device that makes such a sound' to avoid confusion."
+  }
+}

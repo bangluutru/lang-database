@@ -1,0 +1,26 @@
+{
+  "input_hash": "275153b46bd6d7890e0f349af44f7588a7cd14fffe705f05c058d6e42f426a33",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:22Z",
+  "input": {
+    "concept_id": "concept-core-gold",
+    "sense_id": "sense-core-gold-01",
+    "en_lemma": "gold",
+    "ja_lemma": "金",
+    "vi_lemma": "vàng",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese reading 'かね' for '金' primarily means 'money' or 'metal' in a general sense. For the specific metal 'gold', the correct and natural reading is 'きん'. The provided Japanese gloss correctly identifies 'きん' as the appropriate term for the metal, but the entry's reading is 'かね', creating a direct contradiction and a fundamental semantic mismatch with the English and Vietnamese expressions which clearly refer to the metal 'gold'. This error would lead to significant learner confusion."
+  }
+}

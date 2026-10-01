@@ -1,0 +1,27 @@
+{
+  "input_hash": "281e3d4fd0f2ad601e89b778e732401782809c00cec7443dcc423059cdf19a4b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:15:13Z",
+  "input": {
+    "concept_id": "concept-core-assistance",
+    "sense_id": "sense-core-assistance-01",
+    "en_lemma": "assistance",
+    "ja_lemma": "援助",
+    "vi_lemma": "viện trợ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese term 'viện trợ' primarily refers to 'aid' or 'relief', often implying large-scale, official, or material/financial assistance (e.g., humanitarian aid, foreign aid). While it falls under the umbrella of 'assistance', it is significantly narrower and more formal than the general English 'assistance' or Japanese '援助', which can encompass everyday, smaller-scale help. For a broader, more general 'assistance' or 'support' in Vietnamese, 'hỗ trợ' or 'giúp đỡ' would be more appropriate and natural. This candidate is too specific for the intended core learning sense."
+  }
+}

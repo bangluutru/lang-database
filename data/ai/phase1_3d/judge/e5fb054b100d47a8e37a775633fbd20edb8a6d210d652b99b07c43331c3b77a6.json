@@ -1,0 +1,25 @@
+{
+  "input_hash": "e5fb054b100d47a8e37a775633fbd20edb8a6d210d652b99b07c43331c3b77a6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:44:22Z",
+  "input": {
+    "concept_id": "concept-core-honest",
+    "sense_id": "sense-core-honest-01",
+    "en_lemma": "honest",
+    "ja_lemma": "正直",
+    "vi_lemma": "trung thành",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English sense context provided ('faithful, devoted, loyal') is not the primary meaning of the English word 'honest'. The primary meaning of 'honest' (and the Japanese '正直') is 'truthful' or 'sincere'. The Vietnamese 'trung thành' means 'loyal' or 'faithful', which aligns with the *provided English sense context* but fundamentally misaligns with the primary meaning of 'honest' and the Japanese '正直'. The correct Vietnamese expression for 'honest' (truthful/sincere) would be 'thật thà' or 'trung thực'."
+  }
+}

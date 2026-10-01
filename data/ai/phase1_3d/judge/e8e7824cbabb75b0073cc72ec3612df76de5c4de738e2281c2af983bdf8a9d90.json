@@ -1,0 +1,26 @@
+{
+  "input_hash": "e8e7824cbabb75b0073cc72ec3612df76de5c4de738e2281c2af983bdf8a9d90",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:00Z",
+  "input": {
+    "concept_id": "concept-core-aim",
+    "sense_id": "sense-core-aim-01",
+    "en_lemma": "aim",
+    "ja_lemma": "意図",
+    "vi_lemma": "ý đồ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "Vietnamese 'ý đồ' often carries a connotation of a hidden or ulterior motive/scheme, making it narrower and less neutral than the general 'aim' or 'intention' in English and Japanese. While it can mean 'intention', its common usage implies a potentially negative or secretive plan. More neutral alternatives like 'mục đích' (purpose, aim) or 'ý định' (intention, plan) should be considered for better semantic alignment with the core learning sense."
+  }
+}

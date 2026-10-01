@@ -1,0 +1,27 @@
+{
+  "input_hash": "f40bcc350fca1db7aa3f451102242ef4bc0307cacc760be95f68a2783f61e85c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:15:04Z",
+  "input": {
+    "concept_id": "concept-core-assessment",
+    "sense_id": "sense-core-assessment-01",
+    "en_lemma": "assessment",
+    "ja_lemma": "評定",
+    "vi_lemma": "bình định",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'bình định' (平定) means 'to pacify,' 'to quell,' or 'to stabilize,' typically used in historical, political, or military contexts. It does not convey the meaning of 'assessment,' 'rating,' or 'grade' in an educational or general sense. This is a fundamental semantic mismatch and a false friend. Appropriate Vietnamese terms for 'assessment' would be 'đánh giá' or 'xếp loại'."
+  }
+}

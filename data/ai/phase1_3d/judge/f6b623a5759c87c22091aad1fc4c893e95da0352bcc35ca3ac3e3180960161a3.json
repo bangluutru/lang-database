@@ -1,0 +1,26 @@
+{
+  "input_hash": "f6b623a5759c87c22091aad1fc4c893e95da0352bcc35ca3ac3e3180960161a3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:04:44Z",
+  "input": {
+    "concept_id": "concept-core-affair",
+    "sense_id": "sense-core-affair-01",
+    "en_lemma": "affair",
+    "ja_lemma": "沙汰",
+    "vi_lemma": "sa thải",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese expression 'sa thải' means 'to dismiss' or 'to fire (from a job)', which is semantically completely different from English 'affair' (meaning 'matter, incident') and Japanese '沙汰' (meaning 'affair, state, incident'). This is a clear false friend and a fundamental semantic mismatch."
+  }
+}

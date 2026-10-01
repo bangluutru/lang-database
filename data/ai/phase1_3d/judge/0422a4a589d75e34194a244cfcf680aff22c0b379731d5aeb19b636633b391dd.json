@@ -1,0 +1,26 @@
+{
+  "input_hash": "0422a4a589d75e34194a244cfcf680aff22c0b379731d5aeb19b636633b391dd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:30Z",
+  "input": {
+    "concept_id": "concept-core-frighten",
+    "sense_id": "sense-core-frighten-01",
+    "en_lemma": "frighten",
+    "ja_lemma": "圧倒",
+    "vi_lemma": "áp đảo",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English headword 'frighten' primarily means 'to cause fear'. However, the Japanese expression '圧倒 (attou)' and Vietnamese 'áp đảo' primarily mean 'to overwhelm', 'to overpower', or 'to dominate'. While overwhelming power can lead to intimidation or fear, these expressions do not directly translate to the core sense of 'frighten'. For instance, one would not typically use '圧倒' or 'áp đảo' to describe a ghost frightening someone. The provided English definition ('to intimidate, to frighten, to threaten') and Japanese glosses attempt to bridge this gap by including 'intimidate' and 'threaten', which are closer to the meaning of '圧倒'/'áp đảo'. However, this creates a significant semantic divergence from the core meaning of the English headword 'frighten', leading to potential misuse by learners. If the concept is intended to be 'to intimidate/overwhelm', the English headword should be changed. If the concept is 'frighten', the Japanese and Vietnamese expressions are incorrect."
+  }
+}

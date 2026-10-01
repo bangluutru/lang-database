@@ -1,0 +1,153 @@
+{
+  "input_hash": "858a07f4ae4402171c9c2225a82e31c8277ba35e3ecbc6531881169e9f8febf5",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:32:55Z",
+  "input": {
+    "concept_id": "concept-core-produce",
+    "canonical_name": "core_produce",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-produce-01",
+    "part_of_speech": "verb",
+    "sense_gloss_en": "produce",
+    "sense_gloss_ja": "産物",
+    "definition_en": "Core learning sense for 'produce': product, produce",
+    "definition_ja": "基本語彙: 産物 (さんぶつ)",
+    "en": {
+      "expression_id": "expr-en-core-produce",
+      "lemma": "produce",
+      "display_form": "produce",
+      "part_of_speech": "verb",
+      "ngsl_rank": 417,
+      "source_locator": "lemma:produce, rank:417",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:produce, rank:417",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "produce",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-produce",
+      "lemma": "産物",
+      "reading": "さんぶつ",
+      "part_of_speech": "verb",
+      "ent_seq": 1303870,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1303870, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1303870, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "産物",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "産物"
+      ],
+      "entry_reb": [
+        "さんぶつ"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "product",
+            "produce"
+          ],
+          "misc": [],
+          "field": []
+        },
+        {
+          "sense_index": 1,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "result",
+            "fruit"
+          ],
+          "misc": [],
+          "field": []
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "noun (common) (futsuumeishi)"
+        ],
+        "glosses": [
+          "product",
+          "produce"
+        ],
+        "misc": [],
+        "field": []
+      }
+    },
+    "classifications": {
+      "JLPT": "N1",
+      "CEFR": "A1",
+      "JOYO_KANJI": "Grade 4",
+      "EIKEN": "Grade 5/4",
+      "NGSL": "Rank 417"
+    }
+  },
+  "output": {
+    "pos_alignment": "mismatch",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'produce' is a verb. However, the Japanese expression '産物' (さんぶつ) is a noun meaning 'product' or 'produce' (as in agricultural goods), not a verb. The assigned POS for '産物' as a verb is incorrect. This results in a fundamental grammatical and semantic mismatch, as '産物' refers to the *result* of producing, not the *act* of producing.",
+    "suggested_ja_replacement": {
+      "surface": "生産する",
+      "reading": "せいさんする",
+      "reason": "'生産する' is a standard and natural Japanese verb meaning 'to produce' or 'to manufacture', which directly aligns with the English verb 'produce' both grammatically and semantically."
+    }
+  }
+}

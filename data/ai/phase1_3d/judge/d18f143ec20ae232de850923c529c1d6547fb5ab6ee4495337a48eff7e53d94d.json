@@ -1,0 +1,27 @@
+{
+  "input_hash": "d18f143ec20ae232de850923c529c1d6547fb5ab6ee4495337a48eff7e53d94d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:15:42Z",
+  "input": {
+    "concept_id": "concept-core-behind",
+    "sense_id": "sense-core-behind-01",
+    "en_lemma": "behind",
+    "ja_lemma": "後方",
+    "vi_lemma": "hậu phương",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AWKWARD_OR_UNNATURAL",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The English 'behind' (noun) and Japanese '後方' refer to the general rear part or direction. However, the Vietnamese 'hậu phương' is much narrower, primarily referring to the 'home front' or 'rear base' in a military or strategic context. It is not a natural or general term for 'the back of something' in daily life, making it semantically divergent and awkward for the intended general sense."
+  }
+}

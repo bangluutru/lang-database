@@ -1,0 +1,25 @@
+{
+  "input_hash": "0d665734eb8fc9e52fcb8eca73d9dcbb6806cc14d4ccb75cc8d3d353a8dd965b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:02:10Z",
+  "input": {
+    "concept_id": "concept-core-organic",
+    "sense_id": "sense-core-organic-01",
+    "en_lemma": "organic",
+    "ja_lemma": "有機",
+    "vi_lemma": "hữu cơ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The Part of Speech (POS) is incorrectly listed as 'verb' for all three languages. 'Organic' (English), '有機' (Japanese), and 'hữu cơ' (Vietnamese) are adjectives or nouns/noun adjuncts, not verbs. This fundamental grammatical error makes the entry pedagogically unsound and misleading, as it misrepresents the core function and usage of the word in each language."
+  }
+}

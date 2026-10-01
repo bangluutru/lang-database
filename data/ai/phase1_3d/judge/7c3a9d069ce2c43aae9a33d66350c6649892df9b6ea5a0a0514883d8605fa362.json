@@ -1,0 +1,27 @@
+{
+  "input_hash": "7c3a9d069ce2c43aae9a33d66350c6649892df9b6ea5a0a0514883d8605fa362",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:20Z",
+  "input": {
+    "concept_id": "concept-core-mostly",
+    "sense_id": "sense-core-mostly-01",
+    "en_lemma": "mostly",
+    "ja_lemma": "大体",
+    "vi_lemma": "nói chung",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The semantic alignment between 'mostly', '大体', and 'nói chung' is good, conveying the core sense of 'generally' or 'for the most part'. '大体' is slightly broader, also covering 'approximately'. However, the Part of Speech (POS) for English 'mostly' is incorrectly listed as 'verb' (it is an adverb), and for Japanese '大体' is incorrectly listed as 'verb' (it is an adverb/noun). The Vietnamese POS is correct. These POS errors are critical for a pedagogical database and require correction before acceptance."
+  }
+}

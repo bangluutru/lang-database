@@ -1,0 +1,26 @@
+{
+  "input_hash": "c48714c3ff55fc96935c5d4ba1663a5d8ca74a292e399b9aa72e5ca528183683",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:23Z",
+  "input": {
+    "concept_id": "concept-core-movement",
+    "sense_id": "sense-core-movement-01",
+    "en_lemma": "movement",
+    "ja_lemma": "動き",
+    "vi_lemma": "phong trào",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition specifies 'movement' in the sense of 'appeal, campaign, drive' (i.e., a social or political movement). The Vietnamese 'phong trào' and its definition correctly align with this specific sense. However, the Japanese '動き' (ugoki) and its provided gloss explicitly refer to general physical 'movement' or 'motion', which is a distinct and different core sense of the English word 'movement'. For the intended sense of a social/political movement, a term like '運動' (undō) would be the appropriate and natural Japanese equivalent, not '動き'."
+  }
+}

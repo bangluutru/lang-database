@@ -1,0 +1,26 @@
+{
+  "input_hash": "511e8cade733aa5347651407b05dded5cdf653d121b672d3c033a0debe420af7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:09:10Z",
+  "input": {
+    "concept_id": "concept-core-struggle",
+    "sense_id": "sense-core-struggle-01",
+    "en_lemma": "struggle",
+    "ja_lemma": "争闘",
+    "vi_lemma": "tranh đấu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Japanese expression '争闘 (そうとう)' is primarily a noun meaning 'strife, struggle, conflict'. To function as a verb, it requires the auxiliary verb 'する' (suru), forming '争闘する'. Presenting '争闘' alone as a verb is grammatically incorrect and unnatural in Japanese. While the core concept of 'strife/conflict' aligns across the languages, the grammatical inaccuracy of the Japanese entry makes this representation unsuitable for pedagogical use. The POS for Japanese is fundamentally incorrect."
+  }
+}

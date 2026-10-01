@@ -1,0 +1,26 @@
+{
+  "input_hash": "ae0af805a653f7ab3be9e755b5788b216b96447cd8fdbddc49f28701d67cfc1b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:09Z",
+  "input": {
+    "concept_id": "concept-core-center",
+    "sense_id": "sense-core-center-01",
+    "en_lemma": "center",
+    "ja_lemma": "中央",
+    "vi_lemma": "trung ương",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The English 'center' (core sense: middle, central point) and Japanese '中央' align well for a general concept of 'center'. However, the Vietnamese 'trung ương' (中央) is primarily used in the context of 'central government' or 'central authority' (e.g., 'chính phủ trung ương' - central government). For the general, physical 'center' or 'middle' (e.g., center of a room, center of a circle), the more appropriate Vietnamese terms would be 'trung tâm' (中心) or 'giữa'. Using 'trung ương' for the general sense would be unnatural and semantically too narrow, leading to significant pedagogical confusion due to its strong political/administrative connotation and formal register."
+  }
+}

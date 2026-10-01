@@ -1,0 +1,26 @@
+{
+  "input_hash": "7edf1e0cfaceb6e55bd034dd425c1e48e3e30435ffa58acb6ea6c9c14e1fc6c3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:29Z",
+  "input": {
+    "concept_id": "concept-core-reward",
+    "sense_id": "sense-core-reward-01",
+    "en_lemma": "reward",
+    "ja_lemma": "報酬",
+    "vi_lemma": "báo thù",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'báo thù' means 'revenge' or 'to avenge', which is semantically opposite to 'reward' (remuneration, recompense). This is a fundamental error in semantic alignment. The correct Vietnamese term for 'reward' would be 'phần thưởng', 'thưởng', or 'tiền thưởng'. For remuneration/recompense, 'thù lao' would be appropriate."
+  }
+}

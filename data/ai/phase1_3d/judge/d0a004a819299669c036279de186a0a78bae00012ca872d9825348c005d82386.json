@@ -1,0 +1,26 @@
+{
+  "input_hash": "d0a004a819299669c036279de186a0a78bae00012ca872d9825348c005d82386",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:32Z",
+  "input": {
+    "concept_id": "concept-core-factory",
+    "sense_id": "sense-core-factory-01",
+    "en_lemma": "factory",
+    "ja_lemma": "工場",
+    "vi_lemma": "công trường",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'công trường' primarily means 'construction site' or 'worksite', not 'factory' or 'manufacturing plant'. This is a significant semantic mismatch. The correct Vietnamese term for 'factory' is 'nhà máy' or 'xưởng'."
+  }
+}

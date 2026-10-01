@@ -1,0 +1,27 @@
+{
+  "input_hash": "c05458f29f286cd140cba0f274f902cc04e600b99b4d7de0d46e531764e18248",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:10:11Z",
+  "input": {
+    "concept_id": "concept-core-always",
+    "sense_id": "sense-core-always-01",
+    "en_lemma": "always",
+    "ja_lemma": "しょっちゅう",
+    "vi_lemma": "luôn luôn",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "SEMANTIC_ACCEPTABLE"
+    ],
+    "evaluation_note": "The primary issue is that the Part-of-Speech (POS) tag for all three expressions (English 'always', Japanese 'しょっちゅう', Vietnamese 'luôn luôn') is incorrectly listed as 'verb'. All three are adverbs. This makes the representation grammatically unsound. Semantically, Vietnamese 'luôn luôn' is an excellent match for 'always'. Japanese 'しょっちゅう' means 'frequently' or 'constantly', which aligns with 'constantly' in the English definition, but it is generally less absolute than 'always' (meaning 'at all times'). For the absolute sense of 'always', いつも (itsumo) or 常に (tsune ni) would be more precise in Japanese. Therefore, while acceptable for 'constantly', it represents a slight sense divergence from the absolute 'always' for a core learning concept. A review is needed to correct the POS tags and potentially reconsider the Japanese expression for the core 'always' sense."
+  }
+}

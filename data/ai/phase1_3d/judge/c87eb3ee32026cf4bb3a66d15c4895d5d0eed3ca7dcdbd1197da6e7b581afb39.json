@@ -1,0 +1,26 @@
+{
+  "input_hash": "c87eb3ee32026cf4bb3a66d15c4895d5d0eed3ca7dcdbd1197da6e7b581afb39",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:05:13Z",
+  "input": {
+    "concept_id": "concept-core-really",
+    "sense_id": "sense-core-really-01",
+    "en_lemma": "really",
+    "ja_lemma": "本当に",
+    "vi_lemma": "thật sự",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English expression 'really' and the Japanese expression '本当に' are incorrectly tagged as 'verb'. In the intended sense of 'truly' or 'very', both are adverbs. This fundamental Part-of-Speech error leads to a semantic misalignment with the Vietnamese 'thật sự' (adverb) and makes the entire concept representation pedagogically unsound."
+  }
+}

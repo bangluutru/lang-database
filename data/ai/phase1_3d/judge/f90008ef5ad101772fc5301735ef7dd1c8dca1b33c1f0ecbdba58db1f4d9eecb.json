@@ -1,0 +1,27 @@
+{
+  "input_hash": "f90008ef5ad101772fc5301735ef7dd1c8dca1b33c1f0ecbdba58db1f4d9eecb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:05:31Z",
+  "input": {
+    "concept_id": "concept-core-regret",
+    "sense_id": "sense-core-regret-01",
+    "en_lemma": "regret",
+    "ja_lemma": "悔恨",
+    "vi_lemma": "hối hận",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The core semantic alignment for 'regret, remorse, repentance' is exact across all three languages. The Vietnamese 'hối hận' is a natural and common equivalent. The Japanese '悔恨 (かいこん)' is also semantically accurate for this concept, but it is a more formal and literary term compared to the general usage of English 'regret' and Vietnamese 'hối hận', leading to a minor register mismatch. The POS for Japanese '悔恨' is typically a noun, forming a verb with 'する' (悔恨する), which is implied by the provided 'verb' POS."
+  }
+}

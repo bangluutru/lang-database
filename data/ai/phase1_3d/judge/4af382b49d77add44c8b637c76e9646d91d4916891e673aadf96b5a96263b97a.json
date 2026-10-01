@@ -1,0 +1,27 @@
+{
+  "input_hash": "4af382b49d77add44c8b637c76e9646d91d4916891e673aadf96b5a96263b97a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:52Z",
+  "input": {
+    "concept_id": "concept-core-rough",
+    "sense_id": "sense-core-rough-01",
+    "en_lemma": "rough",
+    "ja_lemma": "大体",
+    "vi_lemma": "đại khái",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The semantic alignment across all three languages for the concept of 'general/approximate/not precise' is excellent. All expressions are natural and match in register. However, the Japanese expression `大体` is primarily classified as a noun or adverb, not an adjective. While it conveys the intended adjectival sense (e.g., 'a rough estimate'), it typically functions adjectivally by modifying a noun with `の` (e.g., `大体の計画` - a rough plan). This grammatical nuance for Japanese should be noted for pedagogical clarity."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "input_hash": "d3df1ab54b36081c8a888e593eb8e850ebd059bf4f46a7c487f2ad6a63111a38",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:55Z",
+  "input": {
+    "concept_id": "concept-core-direction",
+    "sense_id": "sense-core-direction-01",
+    "en_lemma": "direction",
+    "ja_lemma": "方向",
+    "vi_lemma": "phương hướng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English definition provided ('supervision, control, superintendence') represents a secondary sense of 'direction' that is fundamentally different from the primary spatial/general course sense covered by the Japanese '方向' and Vietnamese 'phương hướng'. This creates a severe semantic mismatch, making the tri-language concept pedagogically unsound. The Japanese and Vietnamese terms correctly align with the spatial/general course sense of 'direction', but the English definition anchors the concept to a different meaning."
+  }
+}

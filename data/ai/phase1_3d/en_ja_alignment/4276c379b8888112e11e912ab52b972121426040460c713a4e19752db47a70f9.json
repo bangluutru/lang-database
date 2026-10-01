@@ -1,0 +1,143 @@
+{
+  "input_hash": "4276c379b8888112e11e912ab52b972121426040460c713a4e19752db47a70f9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:18:15Z",
+  "input": {
+    "concept_id": "concept-core-danger",
+    "canonical_name": "core_danger",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-danger-01",
+    "part_of_speech": "noun",
+    "sense_gloss_en": "danger",
+    "sense_gloss_ja": "危害",
+    "definition_en": "Core learning sense for 'danger': injury, harm, danger",
+    "definition_ja": "基本語彙: 危害 (きがい)",
+    "en": {
+      "expression_id": "expr-en-core-danger",
+      "lemma": "danger",
+      "display_form": "danger",
+      "part_of_speech": "noun",
+      "ngsl_rank": 1416,
+      "source_locator": "lemma:danger, rank:1416",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:danger, rank:1416",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "danger",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-danger",
+      "lemma": "危害",
+      "reading": "きがい",
+      "part_of_speech": "noun",
+      "ent_seq": 1218440,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1218440, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1218440, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "危害",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "危害"
+      ],
+      "entry_reb": [
+        "きがい"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "injury",
+            "harm",
+            "danger"
+          ],
+          "misc": [],
+          "field": []
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "noun (common) (futsuumeishi)"
+        ],
+        "glosses": [
+          "injury",
+          "harm",
+          "danger"
+        ],
+        "misc": [],
+        "field": []
+      }
+    },
+    "classifications": {
+      "JLPT": "N1",
+      "CEFR": "B1",
+      "JOYO_KANJI": "Grade 6",
+      "EIKEN": "Grade Pre-2",
+      "NGSL": "Rank 1416"
+    }
+  },
+  "output": {
+    "pos_alignment": "exact",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'danger' refers to the state or possibility of suffering harm or injury. The Japanese expression '危害 (kigai)' primarily means 'harm' or 'injury' (as indicated by its JMdict entry senses), which is the *result* or *effect* of danger, not the state of danger itself. The most natural and semantically accurate Japanese equivalent for 'danger' is '危険 (kiken)'. Therefore, the current alignment is semantically incorrect and unnatural for learners.",
+    "suggested_ja_replacement": {
+      "surface": "危険",
+      "reading": "きけん",
+      "reason": "危険 (kiken) is the standard and most direct translation for 'danger' (noun) in Japanese, referring to the state or possibility of peril or harm. It aligns perfectly with the English lemma's meaning."
+    }
+  }
+}

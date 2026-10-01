@@ -1,0 +1,26 @@
+{
+  "input_hash": "c2784e412f935138ac655edc5a441e7eb080eb877028f2916bd231bef3cc0e9c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:55Z",
+  "input": {
+    "concept_id": "concept-core-ruin",
+    "sense_id": "sense-core-ruin-01",
+    "en_lemma": "ruin",
+    "ja_lemma": "台無しにする",
+    "vi_lemma": "làm hỏng",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition provided ('framework (of a building, etc.), skeleton, remains') describes the *noun* sense of 'ruin' (or 'ruins'), not the *verb* sense. However, the English expression is explicitly given as 'ruin (POS: verb)', and the Japanese ('台無しにする') and Vietnamese ('làm hỏng') expressions and their definitions clearly align with the *verb* sense of 'to destroy or spoil completely'. Assuming the intent is the verb 'ruin', the semantic alignment between the three *expressions* is exact, and they are all natural and register-matched. The English definition should be corrected to reflect the verb sense (e.g., 'to destroy or spoil something completely; to cause something to fail')."
+  }
+}

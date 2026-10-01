@@ -1,0 +1,27 @@
+{
+  "input_hash": "881b9a8a02808cf28b9ce8412051a2f0061d51d0216418c70eb0b11eb36db819",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:42:24Z",
+  "input": {
+    "concept_id": "concept-core-formal",
+    "sense_id": "sense-core-formal-01",
+    "en_lemma": "formal",
+    "ja_lemma": "公式",
+    "vi_lemma": "công thức",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese candidate 'công thức' (noun) means 'formula' or 'recipe', not 'formal' (adjective). It is semantically and grammatically incorrect for the intended concept. The POS is also incorrectly listed as adjective; 'công thức' is a noun. While sharing a Hán-Việt root with Japanese '公式', the meaning in Vietnamese has diverged significantly, making it a false friend in this context."
+  }
+}

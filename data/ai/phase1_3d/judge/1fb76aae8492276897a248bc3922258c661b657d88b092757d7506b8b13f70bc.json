@@ -1,0 +1,25 @@
+{
+  "input_hash": "1fb76aae8492276897a248bc3922258c661b657d88b092757d7506b8b13f70bc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:23:22Z",
+  "input": {
+    "concept_id": "concept-core-double",
+    "sense_id": "sense-core-double-01",
+    "en_lemma": "double",
+    "ja_lemma": "代役",
+    "vi_lemma": "đại dịch",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Vietnamese expression 'đại dịch' means 'epidemic' or 'pandemic', which is semantically completely unrelated to the English 'double' (substitute actor, stand-in) or Japanese '代役'. This is a fundamental semantic mismatch."
+  }
+}

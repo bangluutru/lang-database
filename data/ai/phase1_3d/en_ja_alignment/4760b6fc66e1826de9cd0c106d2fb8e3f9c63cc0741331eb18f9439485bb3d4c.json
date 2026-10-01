@@ -1,0 +1,32 @@
+{
+  "input_hash": "4760b6fc66e1826de9cd0c106d2fb8e3f9c63cc0741331eb18f9439485bb3d4c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:49:20Z",
+  "input": {
+    "concept_id": "concept-test-contradiction",
+    "en": {
+      "lemma": "advertisement",
+      "part_of_speech": "noun"
+    },
+    "ja": {
+      "lemma": "西暦",
+      "display_form": "西暦",
+      "reading": "せいれき",
+      "part_of_speech": "noun",
+      "gloss": "Western calendar, Common Era"
+    }
+  },
+  "output": {
+    "pos_alignment": "exact",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'advertisement' refers to a promotional notice or commercial. The Japanese expression '西暦' (seireki) means 'Anno Domini' or 'Western calendar'. These two concepts are entirely unrelated. This appears to be a classic case of abbreviation confusion, mistaking 'ad' (for advertisement) with 'AD' (Anno Domini).",
+    "suggested_ja_replacement": {
+      "surface": "広告",
+      "reading": "こうこく",
+      "reason": "広告 (kōkoku) is the standard and most common Japanese term for 'advertisement' or 'ad'."
+    }
+  }
+}

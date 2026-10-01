@@ -1,0 +1,27 @@
+{
+  "input_hash": "8cebdb72988873d13153d37f0d1f449372b5959f216440114d0dea9860805fa4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:40:36Z",
+  "input": {
+    "concept_id": "concept-core-entirely",
+    "sense_id": "sense-core-entirely-01",
+    "en_lemma": "entirely",
+    "ja_lemma": "全く",
+    "vi_lemma": "hoàn toàn",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The semantic alignment between 'entirely' (English), '全く' (Japanese), and 'hoàn toàn' (Vietnamese) for the meaning 'completely' or 'wholly' is exact and natural. However, the provided Part-of-Speech (POS) tags for both English ('entirely' as verb) and Japanese ('全く' as verb) are incorrect; both are adverbs. These POS tags must be corrected for accurate representation in the database."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input_hash": "468a88c86980548c0b165ec03b0864b12c8f838c55efab6a8cb6bfe0e9028502",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:05Z",
+  "input": {
+    "concept_id": "concept-core-build",
+    "sense_id": "sense-core-build-01",
+    "en_lemma": "build",
+    "ja_lemma": "骨格",
+    "vi_lemma": "cốt cách",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition for 'build' (noun) explicitly includes 'skeleton' and 'skeletal structure,' which are fully covered by the Japanese '骨格'. However, the Vietnamese 'cốt cách' primarily refers to a person's physique/build or their character/essence. It does not directly translate to 'skeleton' or 'skeletal structure' (for which 'bộ xương' or 'khung xương' would be used). Therefore, 'cốt cách' is too narrow for the full scope of the concept as defined, missing a crucial aspect. It also introduces an additional meaning ('character') not present in the English or Japanese in this context, leading to sense divergence."
+  }
+}

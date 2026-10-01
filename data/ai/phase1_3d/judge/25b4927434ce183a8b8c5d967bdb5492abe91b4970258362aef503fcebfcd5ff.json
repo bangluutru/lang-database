@@ -1,0 +1,25 @@
+{
+  "input_hash": "25b4927434ce183a8b8c5d967bdb5492abe91b4970258362aef503fcebfcd5ff",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:07Z",
+  "input": {
+    "concept_id": "concept-core-curious",
+    "sense_id": "sense-core-curious-01",
+    "en_lemma": "curious",
+    "ja_lemma": "好奇心旺盛",
+    "vi_lemma": "kỳ lạ",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English definition provided for 'curious' is 'strange, odd, peculiar'. The Vietnamese expression 'kỳ lạ' perfectly aligns with this sense. However, the Japanese expression '好奇心旺盛' (koukishin ousei) explicitly means 'full of curiosity' or 'very curious' in the sense of 'eager to know', which is a different core sense of 'curious' than the one specified in the English definition. This creates a fundamental semantic mismatch within the tri-language concept."
+  }
+}

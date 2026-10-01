@@ -1,0 +1,26 @@
+{
+  "input_hash": "6f126dda95b443daa3aff5ca14e9c0bfc0d16c5bc1ec81f5e5216cd376dfd9df",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:10:19Z",
+  "input": {
+    "concept_id": "concept-core-top",
+    "sense_id": "sense-core-top-01",
+    "en_lemma": "top",
+    "ja_lemma": "最上",
+    "vi_lemma": "tối thượng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese expression 'tối thượng' means 'supreme' or 'ultimate' and is primarily used for abstract concepts (e.g., supreme power, ultimate truth). It does not align with the English and Japanese sense of 'highest' in a physical context (e.g., top floor), which is a core part of the provided definition. Using 'tối thượng' for a physical 'top' would be unnatural and semantically incorrect. More appropriate Vietnamese translations for 'highest (e.g. floor), top' would be 'cao nhất', 'trên cùng', or 'đỉnh' depending on the specific context."
+  }
+}

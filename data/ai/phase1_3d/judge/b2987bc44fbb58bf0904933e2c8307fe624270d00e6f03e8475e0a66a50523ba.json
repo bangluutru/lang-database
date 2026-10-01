@@ -1,0 +1,27 @@
+{
+  "input_hash": "b2987bc44fbb58bf0904933e2c8307fe624270d00e6f03e8475e0a66a50523ba",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:08:37Z",
+  "input": {
+    "concept_id": "concept-core-animal",
+    "sense_id": "sense-core-animal-01",
+    "en_lemma": "animal",
+    "ja_lemma": "獣",
+    "vi_lemma": "động vật",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The English 'animal' and Vietnamese 'động vật' refer to the general biological category. However, the Japanese term '獣 (けもの)' primarily means 'beast' or 'wild animal', which is a narrower and less neutral sense. The standard, general Japanese term for 'animal' is '動物 (どうぶつ)'. This semantic and register mismatch makes the current representation unsuitable for a core learning sense of 'animal'."
+  }
+}

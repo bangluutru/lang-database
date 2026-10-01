@@ -1,0 +1,26 @@
+{
+  "input_hash": "8fbcbbdafdf52b8c17c802aaa407e351fe990fede3b35343ccc30d8a19898b29",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:06Z",
+  "input": {
+    "concept_id": "concept-core-gentle",
+    "sense_id": "sense-core-gentle-01",
+    "en_lemma": "gentle",
+    "ja_lemma": "親切",
+    "vi_lemma": "thân thiết",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English 'gentle' (in the sense of kind, considerate) and Japanese '親切' (kind, considerate, friendly) are well-aligned. However, the Vietnamese 'thân thiết' means 'intimate' or 'close' (describing a relationship), not 'kind,' 'gentle' (in disposition), or 'considerate.' This is a significant semantic mismatch and a false friend for learners. Appropriate Vietnamese translations for the intended sense would be 'tử tế,' 'tốt bụng' (kind), or 'chu đáo' (considerate)."
+  }
+}

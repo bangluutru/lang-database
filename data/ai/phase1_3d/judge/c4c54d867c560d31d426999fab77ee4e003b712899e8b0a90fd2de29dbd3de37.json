@@ -1,0 +1,27 @@
+{
+  "input_hash": "c4c54d867c560d31d426999fab77ee4e003b712899e8b0a90fd2de29dbd3de37",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:04:35Z",
+  "input": {
+    "concept_id": "concept-core-administration",
+    "sense_id": "sense-core-administration-01",
+    "en_lemma": "administration",
+    "ja_lemma": "事務",
+    "vi_lemma": "sự vụ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English and Japanese expressions clearly refer to 'office work' or 'clerical work' as a general function or type of labor. The Vietnamese term 'sự vụ' (事 vụ) primarily means 'affairs,' 'matters,' or 'incidents' (e.g., diplomatic affairs, resolving an incident). It does not convey the sense of 'office work' or 'clerical work' directly. Using 'sự vụ' for this concept would be semantically incorrect and unnatural in Vietnamese. More appropriate Vietnamese terms would be 'hành chính' (for administration/administrative work) or 'công việc văn phòng' (for office work)."
+  }
+}

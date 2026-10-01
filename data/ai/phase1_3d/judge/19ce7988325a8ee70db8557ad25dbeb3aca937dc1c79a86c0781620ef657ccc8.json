@@ -1,0 +1,27 @@
+{
+  "input_hash": "19ce7988325a8ee70db8557ad25dbeb3aca937dc1c79a86c0781620ef657ccc8",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:09:28Z",
+  "input": {
+    "concept_id": "concept-core-supply",
+    "sense_id": "sense-core-supply-01",
+    "en_lemma": "supply",
+    "ja_lemma": "供給",
+    "vi_lemma": "cung cấp",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'cung cấp' is primarily a verb ('to supply, to provide'). Using it directly as a standalone noun for 'supply' (referring to the amount available or the general concept) is unnatural and not idiomatic. This creates a significant Part-of-Speech and semantic mismatch with the English and Japanese nouns. More appropriate Vietnamese noun forms for 'supply' would be 'nguồn cung' (source of supply), 'vật tư' (materials/supplies), or 'sự cung cấp' (the act of supplying)."
+  }
+}

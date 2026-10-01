@@ -1,0 +1,28 @@
+{
+  "input_hash": "5fe668542387645f982aec49d66593019965e4de7a437dce71bddde8136c2df4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:53Z",
+  "input": {
+    "concept_id": "concept-core-necessary",
+    "sense_id": "sense-core-necessary-01",
+    "en_lemma": "necessary",
+    "ja_lemma": "必要",
+    "vi_lemma": "tất yếu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "ARCHAIC_OR_OBSOLETE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'necessary (POS: noun)' is an uncommon and often archaic noun form (e.g., 'the necessaries of life'). More critically, the provided English definition 'inevitable, necessary, certain' describes the *adjective* 'necessary', not the noun. This creates a fundamental semantic and grammatical mismatch within the English entry itself, making it unsuitable for pedagogical use and misaligned with the clear noun senses ('necessity, requirement, inevitability') in Japanese (必要) and Vietnamese (tất yếu). The English lemma should likely be 'necessity (POS: noun)' with a corresponding definition."
+  }
+}

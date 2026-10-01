@@ -1,0 +1,26 @@
+{
+  "input_hash": "0cd86131aa9246eb0f23969e59894139f7bac9ebb20c3fa9340bc9bd4fba67f4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:27Z",
+  "input": {
+    "concept_id": "concept-core-rock",
+    "sense_id": "sense-core-rock-01",
+    "en_lemma": "rock",
+    "ja_lemma": "岩石",
+    "vi_lemma": "nham thạch",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese term 'nham thạch' (Hán-Việt: 巖石) primarily refers to molten rock (magma or lava), not solid rock in general. The common and appropriate general term for 'rock' (a solid mass of stone) in Vietnamese is 'đá' or 'tảng đá' for a large rock. This is a significant semantic mismatch and a false friend."
+  }
+}

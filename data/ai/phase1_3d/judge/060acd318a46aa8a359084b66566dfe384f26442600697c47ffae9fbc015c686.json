@@ -1,0 +1,26 @@
+{
+  "input_hash": "060acd318a46aa8a359084b66566dfe384f26442600697c47ffae9fbc015c686",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:06:35Z",
+  "input": {
+    "concept_id": "concept-core-before",
+    "sense_id": "sense-core-before-01",
+    "en_lemma": "before",
+    "ja_lemma": "前方",
+    "vi_lemma": "trước đây",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English expression 'before' is incorrectly labeled as a verb for the sense 'previously'; it should be an adverb. The Japanese expression '前方' (まえかた) is semantically incorrect for 'before/previously' (it means 'front/forward') and is also incorrectly labeled as a verb. The Vietnamese 'trước đây' is correct, but the fundamental errors in English POS and Japanese expression/POS make this concept representation unusable."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "e9a535a842f4ca0cfe75e397c7a2a732f8fd388995a7f4ee3af6cce905aa937d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:45:12Z",
+  "input": {
+    "concept_id": "concept-core-incident",
+    "sense_id": "sense-core-incident-01",
+    "en_lemma": "incident",
+    "ja_lemma": "事件",
+    "vi_lemma": "sự kiện",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'incident' and Japanese '事件' (jiken) are presented with a core sense emphasizing a noteworthy, problematic, or criminal event. The Vietnamese 'sự kiện' (sự kiện) means 'event' or 'occurrence' in a very general sense and does not inherently carry the same connotation of being problematic or noteworthy. While an 'incident' is a type of 'sự kiện', 'sự kiện' is too broad and lacks the specific nuance intended by the Japanese gloss and common usage of 'incident' in this context. Better Vietnamese equivalents for the specified sense would be 'vụ việc' (for affairs, cases, often problematic) or 'sự cố' (for technical incidents, accidents)."
+  }
+}

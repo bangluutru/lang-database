@@ -1,0 +1,167 @@
+{
+  "input_hash": "3ccaa46f01c3f1f86b3270a847b7095e86f64bdaf97659964fa033a38bea5279",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:37:13Z",
+  "input": {
+    "concept_id": "concept-core-strike",
+    "canonical_name": "core_strike",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-strike-01",
+    "part_of_speech": "verb",
+    "sense_gloss_en": "strike",
+    "sense_gloss_ja": "闘争",
+    "definition_en": "Core learning sense for 'strike': struggle (for rights, higher wages, etc.), strife, (labor) dispute",
+    "definition_ja": "基本語彙: 闘争 (とうそう)",
+    "en": {
+      "expression_id": "expr-en-core-strike",
+      "lemma": "strike",
+      "display_form": "strike",
+      "part_of_speech": "verb",
+      "ngsl_rank": 776,
+      "source_locator": "lemma:strike, rank:776",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:strike, rank:776",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "strike",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-strike",
+      "lemma": "闘争",
+      "reading": "とうそう",
+      "part_of_speech": "verb",
+      "ent_seq": 1451020,
+      "sense_idx": 1,
+      "source_locator": "ent_seq:1451020, sense_idx:1",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1451020, sense_idx:1",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "闘争",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "闘争",
+        "斗争",
+        "鬪爭"
+      ],
+      "entry_reb": [
+        "とうそう"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)",
+            "noun or participle which takes the aux. verb suru",
+            "intransitive verb"
+          ],
+          "glosses": [
+            "fight",
+            "battle",
+            "combat",
+            "conflict"
+          ],
+          "misc": [],
+          "field": []
+        },
+        {
+          "sense_index": 1,
+          "pos": [
+            "noun (common) (futsuumeishi)",
+            "noun or participle which takes the aux. verb suru",
+            "intransitive verb"
+          ],
+          "glosses": [
+            "struggle (for rights, higher wages, etc.)",
+            "strife",
+            "(labor) dispute",
+            "strike"
+          ],
+          "misc": [],
+          "field": []
+        }
+      ],
+      "target_sense": {
+        "sense_index": 1,
+        "pos": [
+          "noun (common) (futsuumeishi)",
+          "noun or participle which takes the aux. verb suru",
+          "intransitive verb"
+        ],
+        "glosses": [
+          "struggle (for rights, higher wages, etc.)",
+          "strife",
+          "(labor) dispute",
+          "strike"
+        ],
+        "misc": [],
+        "field": []
+      }
+    },
+    "classifications": {
+      "JLPT": "N1",
+      "CEFR": "A2",
+      "JOYO_KANJI": "Grade 8",
+      "EIKEN": "Grade 3",
+      "NGSL": "Rank 776"
+    }
+  },
+  "output": {
+    "pos_alignment": "mismatch",
+    "semantic_alignment": "EXACT",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'strike' is a verb. The Japanese expression 闘争 (tousou) is primarily a noun meaning 'struggle' or 'dispute'. While it can form a verb phrase with する (闘争する, 'to struggle/fight'), the provided form '闘争' alone is a noun, leading to a POS mismatch. Semantically, 闘争 can refer to a labor dispute or struggle, which aligns well with the 'labor strike' sense of English 'strike' as indicated by the JMdict glosses. However, for a general learner, ストライキをする (sutoraiki o suru) is a more direct and natural verb phrase for 'to strike' (in the labor sense).",
+    "suggested_ja_replacement": {
+      "surface": "ストライキをする",
+      "reading": "ストライキをする",
+      "reason": "This is the most common and natural verb phrase for 'to strike' (in the labor sense) for a general learner, and it correctly aligns with the verb POS."
+    }
+  }
+}

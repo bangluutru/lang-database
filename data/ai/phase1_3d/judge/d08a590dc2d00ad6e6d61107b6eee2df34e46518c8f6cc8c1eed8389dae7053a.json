@@ -1,0 +1,26 @@
+{
+  "input_hash": "d08a590dc2d00ad6e6d61107b6eee2df34e46518c8f6cc8c1eed8389dae7053a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:11:25Z",
+  "input": {
+    "concept_id": "concept-core-cool",
+    "sense_id": "sense-core-cool-01",
+    "en_lemma": "cool",
+    "ja_lemma": "平気",
+    "vi_lemma": "mát mẻ",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English concept 'cool' (calm, composed) and Japanese '平気' (calm, unconcerned) align well. However, the Vietnamese candidate 'mát mẻ' refers exclusively to a pleasant, cool temperature, not an emotional state of being calm or composed. This is a false friend based on the polysemy of the English word 'cool'."
+  }
+}

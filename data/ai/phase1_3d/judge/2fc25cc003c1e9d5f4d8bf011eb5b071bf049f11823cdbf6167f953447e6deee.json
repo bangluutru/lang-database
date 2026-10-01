@@ -1,0 +1,27 @@
+{
+  "input_hash": "2fc25cc003c1e9d5f4d8bf011eb5b071bf049f11823cdbf6167f953447e6deee",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:01:45Z",
+  "input": {
+    "concept_id": "concept-core-abroad",
+    "sense_id": "sense-core-abroad-01",
+    "en_lemma": "abroad",
+    "ja_lemma": "海外",
+    "vi_lemma": "hải ngoại",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "EXACT",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The core concept of 'overseas' or 'foreign lands' is semantically aligned across all three languages (English 'abroad', Japanese '海外', Vietnamese 'hải ngoại'). However, the English expression 'abroad' is primarily an adverb, not a noun. Classifying 'abroad' as a noun is grammatically incorrect and pedagogically misleading. While 'abroad' can appear in nominal phrases (e.g., 'life abroad', 'from abroad'), it does not function as a standalone noun. The Japanese '海外' and Vietnamese 'hải ngoại' are correctly identified as nouns. This fundamental POS mismatch for the English term makes the entry unsuitable for a pedagogical database."
+  }
+}

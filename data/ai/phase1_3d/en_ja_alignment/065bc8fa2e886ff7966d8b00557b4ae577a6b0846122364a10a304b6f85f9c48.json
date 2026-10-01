@@ -1,0 +1,155 @@
+{
+  "input_hash": "065bc8fa2e886ff7966d8b00557b4ae577a6b0846122364a10a304b6f85f9c48",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T14:59:16Z",
+  "input": {
+    "concept_id": "concept-core-attack",
+    "canonical_name": "core_attack",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-attack-01",
+    "part_of_speech": "verb",
+    "sense_gloss_en": "attack",
+    "sense_gloss_ja": "発作",
+    "definition_en": "Core learning sense for 'attack': fit, attack, spasm",
+    "definition_ja": "基本語彙: 発作 (ほっさ)",
+    "en": {
+      "expression_id": "expr-en-core-attack",
+      "lemma": "attack",
+      "display_form": "attack",
+      "part_of_speech": "verb",
+      "ngsl_rank": 632,
+      "source_locator": "lemma:attack, rank:632",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:attack, rank:632",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "attack",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-attack",
+      "lemma": "発作",
+      "reading": "ほっさ",
+      "part_of_speech": "verb",
+      "ent_seq": 1477470,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1477470, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1477470, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "発作",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "発作"
+      ],
+      "entry_reb": [
+        "ほっさ"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "fit",
+            "attack",
+            "spasm",
+            "ictus",
+            "paroxysm",
+            "seizure",
+            "stroke"
+          ],
+          "misc": [],
+          "field": [
+            "medicine"
+          ]
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "noun (common) (futsuumeishi)"
+        ],
+        "glosses": [
+          "fit",
+          "attack",
+          "spasm",
+          "ictus",
+          "paroxysm",
+          "seizure",
+          "stroke"
+        ],
+        "misc": [],
+        "field": [
+          "medicine"
+        ]
+      }
+    },
+    "classifications": {
+      "JLPT": "N1",
+      "CEFR": "A2",
+      "JOYO_KANJI": "Grade 3",
+      "EIKEN": "Grade 3",
+      "NGSL": "Rank 632"
+    }
+  },
+  "output": {
+    "pos_alignment": "mismatch",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'attack' is a verb. The Japanese expression '発作' (ほっさ) is a noun meaning 'fit' or 'seizure' (medical context), not a verb. There is a clear POS mismatch. Semantically, '発作' is only relevant to the very specific medical sense of 'attack' (as a noun), not the general verb 'attack' (e.g., military, verbal criticism, or tackling a problem) implied by 'concept-core-attack'. For the general verb 'attack', a more appropriate translation is needed.",
+    "suggested_ja_replacement": {
+      "surface": "攻撃する",
+      "reading": "こうげきする",
+      "reason": "This is the most common and general verb for 'attack' (e.g., military, physical, or even verbal in some contexts) and directly matches the verb POS."
+    }
+  }
+}

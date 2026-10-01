@@ -1,0 +1,27 @@
+{
+  "input_hash": "99888ba271c22c2259508404e6e2368ea911cf6e790872134ffe600012f9ffc1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:01:25Z",
+  "input": {
+    "concept_id": "concept-core-about",
+    "sense_id": "sense-core-about-01",
+    "en_lemma": "about",
+    "ja_lemma": "大体",
+    "vi_lemma": "đại thể",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'about (POS: noun)' is fundamentally problematic with the given definition 'generally, on the whole, mostly'. 'About' as a noun is extremely rare and typically means 'the gist' or 'the main point' (e.g., 'That's the about of it'), not 'generally' or 'mostly'. These are adverbial senses. While the Japanese '大体' (noun) and Vietnamese 'đại thể' (noun) are excellent, natural matches for the concept of 'the general idea/gist/overview', the English representation is semantically and grammatically incorrect for the stated POS and definition, making the tri-language alignment invalid."
+  }
+}

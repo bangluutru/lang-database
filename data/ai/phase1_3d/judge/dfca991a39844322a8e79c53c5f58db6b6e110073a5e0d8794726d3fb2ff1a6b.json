@@ -1,0 +1,26 @@
+{
+  "input_hash": "dfca991a39844322a8e79c53c5f58db6b6e110073a5e0d8794726d3fb2ff1a6b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:44:20Z",
+  "input": {
+    "concept_id": "concept-core-hospital",
+    "sense_id": "sense-core-hospital-01",
+    "en_lemma": "hospital",
+    "ja_lemma": "病院",
+    "vi_lemma": "bệnh viện",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'bệnh viện' is the exact and natural equivalent for 'hospital'. However, the English 'Core learning sense' and Japanese 'Sense Glosses' for this concept explicitly broaden its pedagogical scope to include 'clinic' and 'doctor's office'. In Vietnamese, 'bệnh viện' strictly refers to a hospital and does not typically encompass smaller medical facilities like 'phòng khám' (clinic) or 'phòng mạch' (doctor's office). This makes the Vietnamese expression semantically narrower than the intended pedagogical breadth of the concept as presented in English and Japanese."
+  }
+}

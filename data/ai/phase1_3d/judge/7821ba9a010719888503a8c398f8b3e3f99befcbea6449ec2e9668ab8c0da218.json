@@ -1,0 +1,27 @@
+{
+  "input_hash": "7821ba9a010719888503a8c398f8b3e3f99befcbea6449ec2e9668ab8c0da218",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:02:13Z",
+  "input": {
+    "concept_id": "concept-core-perfectly",
+    "sense_id": "sense-core-perfectly-01",
+    "en_lemma": "perfectly",
+    "ja_lemma": "十分",
+    "vi_lemma": "thập phân",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'thập phân' means 'decimal' or 'ten parts' and is semantically completely unrelated to 'perfectly' or 'sufficiently/fully'. It is also incorrectly labeled as a verb. Furthermore, the English expression 'perfectly' is an adverb, not a verb, and the Japanese '十分' (じゅうぶん) is typically an adverb or adjectival noun, not a verb. The entire concept representation is fundamentally flawed due to these errors."
+  }
+}

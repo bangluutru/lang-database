@@ -1,0 +1,26 @@
+{
+  "input_hash": "cc846f9b6143accdb36bc2cd5beca78e02b41a1302ba46225560169eb0697c65",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:47:43Z",
+  "input": {
+    "concept_id": "concept-core-matter",
+    "sense_id": "sense-core-matter-01",
+    "en_lemma": "matter",
+    "ja_lemma": "沙汰",
+    "vi_lemma": "sa thải",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'sa thải' means 'to dismiss' or 'to fire (from a job)', which is semantically completely different from the English 'matter' (affair, incident) and Japanese '沙汰' (affair, incident, news). Despite a potential shared Hán-Việt origin, the modern meanings have diverged, making this a false friend and an incorrect translation for the intended concept."
+  }
+}

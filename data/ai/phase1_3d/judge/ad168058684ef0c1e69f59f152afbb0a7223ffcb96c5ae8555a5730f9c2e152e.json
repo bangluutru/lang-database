@@ -1,0 +1,26 @@
+{
+  "input_hash": "ad168058684ef0c1e69f59f152afbb0a7223ffcb96c5ae8555a5730f9c2e152e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:44:10Z",
+  "input": {
+    "concept_id": "concept-core-hence",
+    "sense_id": "sense-core-hence-01",
+    "en_lemma": "hence",
+    "ja_lemma": "結果",
+    "vi_lemma": "kết quả",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English expression 'hence' is overwhelmingly an adverb, meaning 'consequently' or 'from this time.' It is not typically classified or used as a noun with the meaning 'consequence' or 'result,' which is implied by the definition and the Japanese/Vietnamese equivalents. The provided definition ('consequently, as a result, hence') further describes its adverbial function. This creates a fundamental POS and semantic mismatch with the Japanese noun '結果' and Vietnamese noun 'kết quả', both of which correctly mean 'result' or 'consequence.' The English expression needs to be corrected to a noun (e.g., 'result,' 'consequence') or the concept re-evaluated as an adverb."
+  }
+}

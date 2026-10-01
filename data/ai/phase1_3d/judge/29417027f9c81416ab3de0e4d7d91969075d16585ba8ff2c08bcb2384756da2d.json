@@ -1,0 +1,27 @@
+{
+  "input_hash": "29417027f9c81416ab3de0e4d7d91969075d16585ba8ff2c08bcb2384756da2d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:17Z",
+  "input": {
+    "concept_id": "concept-core-constantly",
+    "sense_id": "sense-core-constantly-01",
+    "en_lemma": "constantly",
+    "ja_lemma": "絶えず",
+    "vi_lemma": "liên tục",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The semantic alignment of 'constantly', '絶えず', and 'liên tục' is exact, and all are natural and register-matched adverbs. However, the provided input data incorrectly lists the POS for 'English Expression: constantly' and 'Japanese Expression: 絶えず' as 'verb'. The Japanese gloss correctly identifies '絶えず' as an adverb and states it aligns with the actual POS of 'constantly' (which is also an adverb). This internal inconsistency in the input data regarding POS needs to be corrected before acceptance. The Vietnamese expression and definition are accurate."
+  }
+}

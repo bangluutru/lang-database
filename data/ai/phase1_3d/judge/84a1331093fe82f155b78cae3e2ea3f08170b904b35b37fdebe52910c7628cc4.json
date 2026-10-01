@@ -1,0 +1,25 @@
+{
+  "input_hash": "84a1331093fe82f155b78cae3e2ea3f08170b904b35b37fdebe52910c7628cc4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:15Z",
+  "input": {
+    "concept_id": "concept-core-ahead",
+    "sense_id": "sense-core-ahead-01",
+    "en_lemma": "ahead",
+    "ja_lemma": "前方",
+    "vi_lemma": "phía trước",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The core semantic concept of 'ahead' / 'forward' / 'in front' is well-aligned across all three languages. However, there are significant and critical Part-of-Speech (POS) mismatches that make this representation pedagogically unsound as is. English 'ahead' is primarily an adverb or adjective, not a verb. Japanese '前方 (zenpou)' is a noun meaning 'front' or 'forward direction', often used adverbially (e.g., 前方へ), but it is not a verb itself. The Vietnamese 'phía trước' is correctly identified as an adverb (or adverbial phrase). These POS discrepancies require correction for the entry to be grammatically and pedagogically sound. The concept should likely be represented as an adverb or a noun/adverbial phrase across all languages."
+  }
+}

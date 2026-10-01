@@ -1,0 +1,25 @@
+{
+  "input_hash": "d9cb1306675d6d2f02cafa47e94261fb4500484096328a33c475309c1ee3ebc0",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:22Z",
+  "input": {
+    "concept_id": "concept-core-move",
+    "sense_id": "sense-core-move-01",
+    "en_lemma": "move",
+    "ja_lemma": "動く",
+    "vi_lemma": "làm xúc động",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English definition clearly specifies the emotional sense of 'move' ('to overwhelm (someone with emotion), to move, to impress'). The Vietnamese expression 'làm xúc động' perfectly aligns with this emotional sense. However, the Japanese expression '動く' (ugoku) primarily refers to physical, intransitive movement, as explicitly stated in its own gloss. The gloss correctly identifies that '感動させる' or '心を動かす' would be appropriate for the emotional sense. Therefore, '動く' is a semantic mismatch for the defined concept."
+  }
+}

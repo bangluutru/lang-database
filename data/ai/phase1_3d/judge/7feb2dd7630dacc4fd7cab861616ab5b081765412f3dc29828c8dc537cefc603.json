@@ -1,0 +1,26 @@
+{
+  "input_hash": "7feb2dd7630dacc4fd7cab861616ab5b081765412f3dc29828c8dc537cefc603",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:37Z",
+  "input": {
+    "concept_id": "concept-core-murder",
+    "sense_id": "sense-core-murder-01",
+    "en_lemma": "murder",
+    "ja_lemma": "殺害",
+    "vi_lemma": "sát hại",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English expression 'murder' is given as a verb, and the Vietnamese 'sát hại' is also a verb. However, the Japanese expression '殺害' (satsugai) is a noun meaning 'murder' or 'killing'. The verb form in Japanese is '殺害する' (satsugai suru). Therefore, the Part of Speech (POS) for the Japanese expression is incorrectly labeled as 'verb' and is incompatible with the English and Vietnamese verb forms. This leads to a semantic misalignment for the intended verb concept."
+  }
+}

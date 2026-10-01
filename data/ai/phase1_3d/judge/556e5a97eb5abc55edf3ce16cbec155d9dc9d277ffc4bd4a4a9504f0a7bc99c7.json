@@ -1,0 +1,28 @@
+{
+  "input_hash": "556e5a97eb5abc55edf3ce16cbec155d9dc9d277ffc4bd4a4a9504f0a7bc99c7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:10:37Z",
+  "input": {
+    "concept_id": "concept-core-traditional",
+    "sense_id": "sense-core-traditional-01",
+    "en_lemma": "traditional",
+    "ja_lemma": "伝統",
+    "vi_lemma": "truyền thống",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'traditional (POS: noun)' is fundamentally incorrect and unnatural for the concept intended. 'Traditional' is primarily an adjective. The direct noun for the concept of 'tradition' (as represented by Japanese '伝統' and Vietnamese 'truyền thống') is 'tradition'. Using 'traditional' as a noun in this context is highly awkward and would confuse learners. The Japanese gloss attempts to explain its use as a noun (e.g., 'the traditional'), but this refers to an adjective used nominally, not 'traditional' as a standalone noun meaning 'tradition'. This is a critical pedagogical flaw."
+  }
+}

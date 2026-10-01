@@ -1,0 +1,27 @@
+{
+  "input_hash": "e37bb6e63fd4bd35cb4c9f1dabd9c003f2b8e5fc8a5b2726d92977be9f4ad61a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:23:30Z",
+  "input": {
+    "concept_id": "concept-core-doctor",
+    "sense_id": "sense-core-doctor-01",
+    "en_lemma": "doctor",
+    "ja_lemma": "医者",
+    "vi_lemma": "bác sĩ",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The core concept of 'medical doctor' is perfectly aligned across all three languages. While the English term 'doctor' can also refer to someone with a PhD, the Japanese gloss explicitly clarifies this distinction (医者 for medical doctor, 博士 for PhD), making the pedagogical representation robust. The Vietnamese 'bác sĩ' and its definition also strictly refer to a medical professional. The alignment is excellent for the intended core learning sense."
+  }
+}

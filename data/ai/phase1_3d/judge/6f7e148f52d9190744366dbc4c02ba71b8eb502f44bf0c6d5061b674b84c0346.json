@@ -1,0 +1,26 @@
+{
+  "input_hash": "6f7e148f52d9190744366dbc4c02ba71b8eb502f44bf0c6d5061b674b84c0346",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:01Z",
+  "input": {
+    "concept_id": "concept-core-point",
+    "sense_id": "sense-core-point-01",
+    "en_lemma": "point",
+    "ja_lemma": "点",
+    "vi_lemma": "điểm",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese reading 'ちょぼ' (chobo) for '点' is incorrect for the sense of 'credit/score' (as in school/university). The correct reading for this sense is 'てん' (ten). 'ちょぼ' refers to a small dot or mark, which is a different sense of '点' and does not align with the English and Vietnamese expressions for 'score' or 'credit'. This makes the Japanese expression fundamentally misaligned with the intended concept."
+  }
+}

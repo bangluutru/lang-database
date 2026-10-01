@@ -1,0 +1,27 @@
+{
+  "input_hash": "e962edc2f7a27e14b8888415f9ac77ed38d5ab18bd8decc76897bdd41ee77f53",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:02Z",
+  "input": {
+    "concept_id": "concept-core-scare",
+    "sense_id": "sense-core-scare-01",
+    "en_lemma": "scare",
+    "ja_lemma": "恐怖",
+    "vi_lemma": "khủng bố",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'khủng bố' primarily means 'terrorism' or 'terrorist' (noun/verb), referring to acts of violence or the perpetrator. This is a significant semantic and register mismatch with the English 'scare' (noun) and Japanese '恐怖', which refer to the general feeling of fright or a sudden alarm. 'khủng bố' does not convey the core sense of 'panic, scare, alarm' as a personal feeling or event. A more appropriate Vietnamese equivalent for 'scare' (noun) in this context would be 'sự sợ hãi' (the fear) or 'sự giật mình' (a startle/fright)."
+  }
+}

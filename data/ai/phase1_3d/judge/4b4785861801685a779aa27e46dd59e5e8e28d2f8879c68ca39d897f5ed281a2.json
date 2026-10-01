@@ -1,0 +1,26 @@
+{
+  "input_hash": "4b4785861801685a779aa27e46dd59e5e8e28d2f8879c68ca39d897f5ed281a2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:08:56Z",
+  "input": {
+    "concept_id": "concept-core-strange",
+    "sense_id": "sense-core-strange-01",
+    "en_lemma": "strange",
+    "ja_lemma": "奇妙",
+    "vi_lemma": "kỳ diệu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese expression 'kỳ diệu' (奇妙) means 'wonderful', 'marvelous', or 'miraculous'. It does not convey the meaning of 'strange', 'odd', or 'peculiar' as intended by the English 'strange' and Japanese '奇妙'. This is a false friend situation where the Hán-Việt characters align but the semantic meaning has diverged significantly in Vietnamese. The correct Vietnamese for 'strange' (odd/peculiar) would be 'kỳ lạ', 'lạ lùng', or 'khác thường'."
+  }
+}

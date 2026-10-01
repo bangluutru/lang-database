@@ -1,0 +1,27 @@
+{
+  "input_hash": "935ecb88afaa21887508624c44d8859e93cb9be06c8f0e97df1db2a9db55f5b9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:46:56Z",
+  "input": {
+    "concept_id": "concept-core-legal",
+    "sense_id": "sense-core-legal-01",
+    "en_lemma": "legal",
+    "ja_lemma": "合法",
+    "vi_lemma": "hợp pháp",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'legal (POS: noun)' is inconsistent with its definition 'legal, lawful, legitimate,' which describes the adjective sense. 'Legal' as a noun typically refers to a legal professional or legal matters, not the state of being lawful. Similarly, the Vietnamese 'hợp pháp' is primarily an adjective meaning 'legal/lawful,' not a noun. While Japanese '合法' can be a noun meaning 'legality,' its glosses ('legal', 'lawful', 'legitimate') point to its adjectival use. This fundamental Part-of-Speech (POS) mismatch and semantic inconsistency across the entries make the representation pedagogically unsound and confusing for learners."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "e093af630ea41abd0dfde62c841bbc05da7a8e49cc7a2879cd39715ed1bb9e83",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:12:08Z",
+  "input": {
+    "concept_id": "concept-core-way",
+    "sense_id": "sense-core-way-01",
+    "en_lemma": "way",
+    "ja_lemma": "手段",
+    "vi_lemma": "thủ đoạn",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'thủ đoạn' (means, measure) carries a strong negative connotation, implying a trick, scheme, or underhanded method. This is a significant semantic divergence and a false friend compared to the neutral English 'way' (means, measure) and Japanese '手段'. It would mislead learners."
+  }
+}

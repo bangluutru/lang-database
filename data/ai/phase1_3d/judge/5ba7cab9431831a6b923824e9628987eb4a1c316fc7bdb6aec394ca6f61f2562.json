@@ -1,0 +1,26 @@
+{
+  "input_hash": "5ba7cab9431831a6b923824e9628987eb4a1c316fc7bdb6aec394ca6f61f2562",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:45Z",
+  "input": {
+    "concept_id": "concept-core-naturally",
+    "sense_id": "sense-core-naturally-01",
+    "en_lemma": "naturally",
+    "ja_lemma": "自然",
+    "vi_lemma": "tự nhiên",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Part of Speech (POS) is fundamentally incorrect for all three expressions. 'Naturally' is an adverb, not a verb. Similarly, '自然' (shizen) in Japanese and 'tự nhiên' in Vietnamese are not verbs; they function as nouns, adjectival nouns, adjectives, or adverbs. The concept's definition ('naturally, spontaneously, automatically') clearly points to an adverbial sense. As presented with the POS 'verb', the expressions are grammatically incorrect and semantically misaligned with the intended concept."
+  }
+}

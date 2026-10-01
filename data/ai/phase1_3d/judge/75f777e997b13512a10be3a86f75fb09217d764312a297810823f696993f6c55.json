@@ -1,0 +1,27 @@
+{
+  "input_hash": "75f777e997b13512a10be3a86f75fb09217d764312a297810823f696993f6c55",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:07:36Z",
+  "input": {
+    "concept_id": "concept-core-i",
+    "sense_id": "sense-core-i-01",
+    "en_lemma": "i",
+    "ja_lemma": "私",
+    "vi_lemma": "tôi",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The semantic alignment, naturalness, and register are excellent for the core concept of 'I/me'. However, the Part of Speech (POS) for all three expressions (English 'i', Japanese '私', Vietnamese 'tôi') is incorrectly listed as 'noun'. These are pronouns. This fundamental grammatical error must be corrected for pedagogical accuracy."
+  }
+}

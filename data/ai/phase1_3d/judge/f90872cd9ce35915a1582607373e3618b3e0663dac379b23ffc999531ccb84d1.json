@@ -1,0 +1,27 @@
+{
+  "input_hash": "f90872cd9ce35915a1582607373e3618b3e0663dac379b23ffc999531ccb84d1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:38Z",
+  "input": {
+    "concept_id": "concept-core-reputation",
+    "sense_id": "sense-core-reputation-01",
+    "en_lemma": "reputation",
+    "ja_lemma": "評判",
+    "vi_lemma": "uy tín",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'reputation' is specified with a core learning sense focusing on positive aspects ('confidence, trust, faith'). The Vietnamese 'uy tín' aligns perfectly with this positive sense, meaning credibility or good reputation. However, the Japanese '評判' is a broader term that encompasses both positive and negative public estimation. While '評判' can certainly refer to a good reputation (e.g., 良い評判), its general usage is not restricted to the positive as 'uy tín' is. This makes the Japanese term broader than the specified English sense and the Vietnamese equivalent, warranting a note for learners."
+  }
+}

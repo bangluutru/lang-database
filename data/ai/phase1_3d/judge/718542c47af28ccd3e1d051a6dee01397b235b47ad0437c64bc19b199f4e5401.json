@@ -1,0 +1,27 @@
+{
+  "input_hash": "718542c47af28ccd3e1d051a6dee01397b235b47ad0437c64bc19b199f4e5401",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:11:09Z",
+  "input": {
+    "concept_id": "concept-core-buy",
+    "sense_id": "sense-core-buy-01",
+    "en_lemma": "buy",
+    "ja_lemma": "求める",
+    "vi_lemma": "mua",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese expression 求める (motomeru) is not the primary or most natural translation for the core sense of 'buy' (to purchase). The standard, everyday Japanese word for 'buy' is 買う (kau). 求める primarily means 'to seek,' 'to request,' or 'to demand,' and while it can mean 'to purchase' in some contexts, it often carries a nuance of seeking out and acquiring, and is generally more formal or literary. This choice would be misleading and confusing for learners trying to grasp the core concept of 'buy'."
+  }
+}

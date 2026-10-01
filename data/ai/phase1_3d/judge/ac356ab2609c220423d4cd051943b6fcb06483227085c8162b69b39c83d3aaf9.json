@@ -1,0 +1,26 @@
+{
+  "input_hash": "ac356ab2609c220423d4cd051943b6fcb06483227085c8162b69b39c83d3aaf9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:09:35Z",
+  "input": {
+    "concept_id": "concept-core-surgery",
+    "sense_id": "sense-core-surgery-01",
+    "en_lemma": "surgery",
+    "ja_lemma": "手術",
+    "vi_lemma": "thủ thuật",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese term 'thủ thuật' is too narrow for the general concept of 'surgery'. 'Thủ thuật' typically refers to a minor medical procedure or a technique, not a general 'surgery' which can include major operations. The more appropriate and semantically aligned Vietnamese term for 'surgery' in its general sense is 'phẫu thuật'."
+  }
+}

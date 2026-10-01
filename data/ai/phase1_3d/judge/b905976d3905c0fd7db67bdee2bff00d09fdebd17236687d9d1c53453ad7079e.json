@@ -1,0 +1,26 @@
+{
+  "input_hash": "b905976d3905c0fd7db67bdee2bff00d09fdebd17236687d9d1c53453ad7079e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:59Z",
+  "input": {
+    "concept_id": "concept-core-cooperation",
+    "sense_id": "sense-core-cooperation-01",
+    "en_lemma": "cooperation",
+    "ja_lemma": "互助",
+    "vi_lemma": "hỗ trợ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English concept 'cooperation' (defined with 'mutual aid') and the Japanese '互助' (mutual aid) align well. However, the candidate Vietnamese expression 'hỗ trợ' means 'support' or 'assistance', not 'cooperation' or 'mutual aid'. The correct Vietnamese term for 'cooperation' is 'hợp tác', and for 'mutual aid' is 'tương trợ'. Therefore, 'hỗ trợ' is a semantic mismatch for this concept."
+  }
+}

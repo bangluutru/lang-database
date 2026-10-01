@@ -1,0 +1,28 @@
+{
+  "input_hash": "f4a4bd8960a680e677e0e531e79ccf7f389e50e1e705182ada03c555c670901e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:05:18Z",
+  "input": {
+    "concept_id": "concept-core-reasonable",
+    "sense_id": "sense-core-reasonable-01",
+    "en_lemma": "reasonable",
+    "ja_lemma": "相応",
+    "vi_lemma": "tương ứng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'reasonable' is overwhelmingly an adjective, not a noun. As a noun, it is not standard English in the sense of 'suitability' or 'appropriateness'. The provided definition ('suitable, appropriate, befitting') consists of adjectives, which fundamentally mismatches 'reasonable (POS: noun)'. The correct noun form for this concept in English would be 'reasonableness'. Similarly, while 'tương ứng' can sometimes function nominally in Vietnamese, its primary role is adjectival, and 'sự tương ứng' would be the more natural noun for 'suitability'. This fundamental POS and semantic mismatch in English (and to a lesser extent, Vietnamese) makes the representation unsound and confusing for learners."
+  }
+}

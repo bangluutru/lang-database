@@ -1,0 +1,27 @@
+{
+  "input_hash": "0bdf081bbadb60194cacc0d082cce926895247cf49155662c84e1d4718510b89",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:47Z",
+  "input": {
+    "concept_id": "concept-core-fall",
+    "sense_id": "sense-core-fall-01",
+    "en_lemma": "fall",
+    "ja_lemma": "降下",
+    "vi_lemma": "giáng hạ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'fall' (noun) and Japanese '降下' (kōka) both refer to a general 'descent' or 'drop' and are suitable for a 'general, daily_life' domain, though Japanese '降下' can be slightly more formal/technical. However, the Vietnamese 'giáng hạ' (noun) is significantly more formal, literary, or even religious in connotation, often referring to a divine descent or a significant, often metaphorical, fall. It is not a natural or common term for a general 'fall' or 'descent' in everyday Vietnamese. More appropriate general terms would be 'sự rơi', 'cú ngã', or 'sự sụt giảm'. The candidate Vietnamese expression is too narrow in scope and has a mismatched register for the intended core concept and domain."
+  }
+}

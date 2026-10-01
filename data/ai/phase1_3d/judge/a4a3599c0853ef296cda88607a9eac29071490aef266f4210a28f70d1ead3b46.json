@@ -1,0 +1,26 @@
+{
+  "input_hash": "a4a3599c0853ef296cda88607a9eac29071490aef266f4210a28f70d1ead3b46",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:20Z",
+  "input": {
+    "concept_id": "concept-core-chief",
+    "sense_id": "sense-core-chief-01",
+    "en_lemma": "chief",
+    "ja_lemma": "大将",
+    "vi_lemma": "đại tướng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'đại tướng' specifically refers to a high-ranking military general, which is too narrow and formal for the general sense of 'chief' (head, leader, boss) intended by the English and Japanese expressions. It does not cover the broader, more common uses of 'chief' in daily life or general organizational contexts."
+  }
+}

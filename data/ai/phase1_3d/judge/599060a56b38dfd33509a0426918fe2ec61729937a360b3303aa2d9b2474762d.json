@@ -1,0 +1,27 @@
+{
+  "input_hash": "599060a56b38dfd33509a0426918fe2ec61729937a360b3303aa2d9b2474762d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:35Z",
+  "input": {
+    "concept_id": "concept-core-service",
+    "sense_id": "sense-core-service-01",
+    "en_lemma": "service",
+    "ja_lemma": "サービス",
+    "vi_lemma": "nghi lễ",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The English 'service' has multiple meanings. The 'Core learning sense' provided is 'ceremony, rite, ritual'. The Vietnamese 'nghi lễ' perfectly aligns with this specific sense. However, the Japanese 'サービス' (saabisu) is a loanword that refers to the general concept of 'service' (e.g., customer service, public service, maintenance service), as explicitly stated in its gloss. It does not mean 'ceremony, rite, ritual'. For the sense of 'ceremony, rite, ritual', Japanese would typically use terms like 儀式 (gishiki) or 儀礼 (girei). Therefore, the Japanese expression is a false friend and creates a fundamental semantic and register mismatch within this tri-language concept."
+  }
+}

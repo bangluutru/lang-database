@@ -1,0 +1,27 @@
+{
+  "input_hash": "c7f78ce79031f7ec57bd33f894af1f409b9c7d158bab364a15da18e1d97afa8f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:26Z",
+  "input": {
+    "concept_id": "concept-core-possession",
+    "sense_id": "sense-core-possession-01",
+    "en_lemma": "possession",
+    "ja_lemma": "持ち物",
+    "vi_lemma": "tài sản",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition for 'possession' is explicitly 'territory, domain, dominion', indicating a formal/political sense. However, the Japanese expression '持ち物' (mochimono) is glossed as 'personal belongings' or 'things one possesses in general, daily-life contexts', which is a distinct and much more common sense of 'possession'. The Vietnamese 'tài sản' (asset, property) is also a different sense, encompassing a broader range of items (material and non-material) than just 'territory' or 'personal belongings'. This results in a fundamental semantic and register mismatch across the three languages. The concept needs to be re-anchored to a single, consistent sense of 'possession' before finding appropriate equivalents."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "d01b5b7f004ed6030208fd16909b89170a04e6981dd94982d6d6387f1b4cbbd5",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:04Z",
+  "input": {
+    "concept_id": "concept-core-possible",
+    "sense_id": "sense-core-possible-01",
+    "en_lemma": "possible",
+    "ja_lemma": "可能",
+    "vi_lemma": "khả năng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'khả năng' is primarily a noun meaning 'ability' or 'possibility'. It is incorrectly labeled as an adjective in this context. While related, it does not directly function as an adjective meaning 'possible' in the same way English 'possible' or Japanese '可能' do. This creates a fundamental Part of Speech and semantic mismatch. A more appropriate Vietnamese equivalent for the adjective 'possible' would be 'có thể' or 'khả thi' (for feasible)."
+  }
+}

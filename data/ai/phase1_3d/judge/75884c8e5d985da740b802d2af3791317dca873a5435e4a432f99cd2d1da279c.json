@@ -1,0 +1,27 @@
+{
+  "input_hash": "75884c8e5d985da740b802d2af3791317dca873a5435e4a432f99cd2d1da279c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:06:19Z",
+  "input": {
+    "concept_id": "concept-core-approximately",
+    "sense_id": "sense-core-approximately-01",
+    "en_lemma": "approximately",
+    "ja_lemma": "大体",
+    "vi_lemma": "đại khái",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'approximately' is an adverb, not a verb. Similarly, the Japanese expression '大体' (daitai) in this sense is an adverb, not a verb. The provided POS tags for English and Japanese are incorrect. Semantically, the core concept of 'approximately' (adverb) is perfectly aligned and natural across all three languages, and the definitions/glosses are accurate for the adverbial sense. However, the grammatical inaccuracy (POS) in the representation for English and Japanese makes it unsuitable for direct inclusion without correction."
+  }
+}

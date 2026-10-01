@@ -1,0 +1,26 @@
+{
+  "input_hash": "e515fabbeeb85f65b644aebaf2b043447496efd97ce9181f03372bf97fda798c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:46:51Z",
+  "input": {
+    "concept_id": "concept-core-link",
+    "sense_id": "sense-core-link-01",
+    "en_lemma": "link",
+    "ja_lemma": "接続",
+    "vi_lemma": "tiếp tục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese candidate 'tiếp tục' (noun) means 'continuation' or 'resumption', which is semantically incorrect for the English concept of 'link' (connection, attachment, union) and the Japanese '接続'. There is a fundamental semantic mismatch. Appropriate Vietnamese terms would be 'liên kết', 'kết nối', or 'mối nối'."
+  }
+}

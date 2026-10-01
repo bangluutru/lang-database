@@ -1,0 +1,26 @@
+{
+  "input_hash": "801bda8c7ccf6834c683f6ce33886167cabc55d6e82ee906ac33c25c570809a8",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:09:55Z",
+  "input": {
+    "concept_id": "concept-core-test",
+    "sense_id": "sense-core-test-01",
+    "en_lemma": "test",
+    "ja_lemma": "試験",
+    "vi_lemma": "thí nghiệm",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English and Japanese expressions refer to 'test' as an examination or assessment (e.g., a school test). However, the Vietnamese candidate 'thí nghiệm' primarily means 'experiment' or 'trial' (e.g., a scientific experiment). It does not convey the sense of an academic or formal examination. The correct Vietnamese terms for 'test' (examination) would be 'bài kiểm tra', 'kỳ thi', or 'cuộc thi'."
+  }
+}

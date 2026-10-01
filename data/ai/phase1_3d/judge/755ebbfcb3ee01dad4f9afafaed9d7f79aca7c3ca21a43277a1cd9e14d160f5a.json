@@ -1,0 +1,26 @@
+{
+  "input_hash": "755ebbfcb3ee01dad4f9afafaed9d7f79aca7c3ca21a43277a1cd9e14d160f5a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:04:40Z",
+  "input": {
+    "concept_id": "concept-core-proud",
+    "sense_id": "sense-core-proud-01",
+    "en_lemma": "proud",
+    "ja_lemma": "誇らしい",
+    "vi_lemma": "kiêu ngạo",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English 'Core learning sense for 'proud': haughty, arrogant, insolent' clearly defines the target concept as the negative sense of 'proud'. The Vietnamese 'kiêu ngạo' correctly aligns with this negative sense. However, the Japanese '誇らしい' (hokorashii) exclusively conveys the positive sense of 'proud' (e.g., feeling satisfaction, honorable), as explicitly stated in its gloss. Therefore, the Japanese expression is a semantic mismatch and a false friend for the intended concept, leading to a 'WRONG' semantic alignment."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "d9c4ddf43b7b7923dcbaabab4440f66cb1031fbbd53ce7b0ff4ce6ddcc0e9675",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:01:11Z",
+  "input": {
+    "concept_id": "concept-core-nowadays",
+    "sense_id": "sense-core-nowadays-01",
+    "en_lemma": "nowadays",
+    "ja_lemma": "最近",
+    "vi_lemma": "ngày nay",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The English and Japanese POS tags in the provided metadata are incorrect; 'nowadays' and '最近' are adverbs, not verbs. The expressions themselves are excellent semantic, natural, and register matches for the concept of 'nowadays'. The Japanese gloss correctly identifies '最近' as an adverb, indicating the intended meaning is adverbial despite the incorrect POS tag in the metadata."
+  }
+}

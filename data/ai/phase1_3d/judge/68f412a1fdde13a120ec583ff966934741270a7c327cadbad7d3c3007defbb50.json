@@ -1,0 +1,26 @@
+{
+  "input_hash": "68f412a1fdde13a120ec583ff966934741270a7c327cadbad7d3c3007defbb50",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:10:58Z",
+  "input": {
+    "concept_id": "concept-core-ultimately",
+    "sense_id": "sense-core-ultimately-01",
+    "en_lemma": "ultimately",
+    "ja_lemma": "結局",
+    "vi_lemma": "kết cục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English expression 'ultimately' is an adverb, not a verb. Similarly, the Japanese '結局' is primarily an adverb or noun, not a verb. The candidate Vietnamese expression 'kết cục' is a noun meaning 'outcome' or 'result', not an adverb equivalent to 'ultimately'. There is a fundamental POS and semantic mismatch across all three, making this representation incorrect for pedagogical use. Correct Vietnamese equivalents for 'ultimately' would be adverbs like 'cuối cùng', 'rốt cuộc', or 'sau cùng'."
+  }
+}

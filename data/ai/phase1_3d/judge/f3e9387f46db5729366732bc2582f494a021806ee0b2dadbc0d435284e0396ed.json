@@ -1,0 +1,26 @@
+{
+  "input_hash": "f3e9387f46db5729366732bc2582f494a021806ee0b2dadbc0d435284e0396ed",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:44:35Z",
+  "input": {
+    "concept_id": "concept-core-ideal",
+    "sense_id": "sense-core-ideal-01",
+    "en_lemma": "ideal",
+    "ja_lemma": "理想",
+    "vi_lemma": "lý tưởng",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression is correctly identified as a noun, and the Japanese and Vietnamese expressions and their definitions perfectly align with the noun sense of 'ideal' (a standard of perfection, a goal). However, the provided 'English Definition / Sense Context' ('excellent, superb, handy') describes the *adjective* form of 'ideal'. Assuming the intent is the noun 'ideal' as indicated by the POS, the tri-lingual alignment is excellent. The English definition in the source data should be corrected to reflect the noun sense (e.g., 'a standard of perfection; a goal or principle to be aimed at')."
+  }
+}

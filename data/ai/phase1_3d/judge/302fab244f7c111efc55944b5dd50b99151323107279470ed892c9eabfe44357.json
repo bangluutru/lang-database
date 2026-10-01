@@ -1,0 +1,26 @@
+{
+  "input_hash": "302fab244f7c111efc55944b5dd50b99151323107279470ed892c9eabfe44357",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:11:03Z",
+  "input": {
+    "concept_id": "concept-core-troop",
+    "sense_id": "sense-core-troop-01",
+    "en_lemma": "troop",
+    "ja_lemma": "群れ",
+    "vi_lemma": "nhóm",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "GOOD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese gloss clarifies that the intended sense of English 'troop' is the non-military one (a group of people or animals), which perfectly aligns with Japanese '群れ' and Vietnamese 'nhóm'. The Vietnamese definition for 'nhóm' is excellent. However, the English 'Sense Context' provided in the prompt ('company, battery, troop') is misleading as 'company' and 'battery' are military units, which contradicts the stated 'non-military senses' intent. A note should be added to clarify the English sense of 'troop' as 'a group of people or animals' (e.g., 'a troop of dancers', 'a troop of monkeys') to avoid confusion for learners."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "input_hash": "9282b7aaf5ee52d0cb2377644e1ada754c471f59a4cd9c137b3b7d5df8e45955",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:37Z",
+  "input": {
+    "concept_id": "concept-core-group",
+    "sense_id": "sense-core-group-01",
+    "en_lemma": "group",
+    "ja_lemma": "集団",
+    "vi_lemma": "tập đoàn",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese 'tập đoàn' primarily refers to a 'corporation' or 'conglomerate', or a large, organized, often powerful group (e.g., a criminal syndicate). It is too specific and formal for the general core sense of 'group' or 'mass' intended by the English 'group' and Japanese '集団'. More appropriate Vietnamese equivalents for the general sense would be 'nhóm' (group, team) or 'đám' (crowd, mass)."
+  }
+}

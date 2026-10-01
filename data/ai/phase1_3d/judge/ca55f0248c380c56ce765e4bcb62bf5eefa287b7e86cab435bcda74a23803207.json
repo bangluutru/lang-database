@@ -1,0 +1,27 @@
+{
+  "input_hash": "ca55f0248c380c56ce765e4bcb62bf5eefa287b7e86cab435bcda74a23803207",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:28Z",
+  "input": {
+    "concept_id": "concept-core-alone",
+    "sense_id": "sense-core-alone-01",
+    "en_lemma": "alone",
+    "ja_lemma": "単身",
+    "vi_lemma": "đơn thân",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'alone' is primarily an adjective or adverb, not a noun in standard, daily usage. Representing it as a noun is grammatically incorrect and unnatural for a core learning sense, making the English component fundamentally flawed. While the Japanese '単身' and Vietnamese 'đơn thân' are appropriate nouns meaning 'single person' or 'living alone,' they often carry the specific nuance of being 'without one's family' or 'a single parent,' which is a narrower semantic scope compared to the general English 'alone' (as an adjective/adverb)."
+  }
+}

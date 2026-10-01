@@ -1,0 +1,27 @@
+{
+  "input_hash": "7b6793298048120ac3c95b1e906b101ad297f63123f949126471d7cbfbef6958",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:11:43Z",
+  "input": {
+    "concept_id": "concept-core-vast",
+    "sense_id": "sense-core-vast-01",
+    "en_lemma": "vast",
+    "ja_lemma": "溶溶",
+    "vi_lemma": "ròng ròng",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'ròng ròng' means 'flowing continuously/profusely' (e.g., tears, blood) and has no semantic overlap with 'vast' or 'spacious'. The Japanese expression '溶溶 (ようよう)' primarily describes melting or gentle flowing, and its use to describe 'vast' or 'spacious' is highly poetic and specific to shimmering water surfaces, not a general sense of vastness. This makes the alignment semantically incorrect and pedagogically misleading across all three languages."
+  }
+}

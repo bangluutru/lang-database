@@ -1,0 +1,26 @@
+{
+  "input_hash": "683297b5754cd4dec00e605b7d127bc3ab205dee5bedaac9d616838ab8a352b8",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:12:34Z",
+  "input": {
+    "concept_id": "concept-core-venture",
+    "sense_id": "sense-core-venture-01",
+    "en_lemma": "venture",
+    "ja_lemma": "事業",
+    "vi_lemma": "doanh nghiệp",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese term 'doanh nghiệp' primarily refers to a business *entity* (an organization or company), as explicitly stated in its definition. However, the English 'venture' (and its Japanese equivalent '事業') in the specified core learning sense can refer to both the business *entity* and the *undertaking* or *activity* itself, especially one involving risk. This makes 'doanh nghiệp' semantically narrower, as it misses the 'undertaking/activity' aspect of 'venture'. For pedagogical purposes, this narrowing could lead to an incomplete understanding of the English term."
+  }
+}

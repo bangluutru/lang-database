@@ -1,0 +1,27 @@
+{
+  "input_hash": "59dee41704010852b662223aa96117a464bef21a680182e613496fb743bb3f04",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:04:11Z",
+  "input": {
+    "concept_id": "concept-core-production",
+    "sense_id": "sense-core-production-01",
+    "en_lemma": "production",
+    "ja_lemma": "生産",
+    "vi_lemma": "sinh sản",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition provided ('direction (of a play, film, etc.), production') refers to a specific sense of 'production'. However, the Japanese expression '生産' (seisan) primarily means manufacturing or output, and the Vietnamese expression 'sinh sản' means biological reproduction. These three senses are semantically distinct and do not align. The concept ID ('concept-core-production') and the Japanese gloss suggest a general 'manufacturing/output' sense, which conflicts with the explicit English definition provided. This entry requires a complete re-evaluation of the core concept and corresponding expressions to ensure semantic consistency across all languages."
+  }
+}

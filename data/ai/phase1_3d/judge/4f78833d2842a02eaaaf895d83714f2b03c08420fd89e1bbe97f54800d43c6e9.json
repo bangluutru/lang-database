@@ -1,0 +1,27 @@
+{
+  "input_hash": "4f78833d2842a02eaaaf895d83714f2b03c08420fd89e1bbe97f54800d43c6e9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:01:46Z",
+  "input": {
+    "concept_id": "concept-core-outside",
+    "sense_id": "sense-core-outside-01",
+    "en_lemma": "outside",
+    "ja_lemma": "野外",
+    "vi_lemma": "dã ngoại",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English POS for 'outside' is incorrect for the given definition ('outdoors, open air'), which typically refers to an adverb or noun. The Japanese POS for '野外' is also incorrect; it is a noun, not a verb. Furthermore, the Vietnamese expression 'dã ngoại' means 'to go on an outing/excursion' (verb) or 'outing/excursion' (noun), which represents a specific activity performed outdoors, rather than the general concept of 'outdoors' or 'outside' as a location or state. This leads to a significant semantic and grammatical mismatch across all three languages."
+  }
+}

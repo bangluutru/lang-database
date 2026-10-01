@@ -1,0 +1,26 @@
+{
+  "input_hash": "b793ac8dc63e3bf5234a1919b64fe8b1556b22aee6dd1df298ccf038ad953d84",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:41Z",
+  "input": {
+    "concept_id": "concept-core-popular",
+    "sense_id": "sense-core-popular-01",
+    "en_lemma": "popular",
+    "ja_lemma": "通俗",
+    "vi_lemma": "thông tục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese '通俗' and Vietnamese 'thông tục' primarily convey the sense of 'common,' 'widespread,' or 'colloquial/vernacular,' especially for things accessible to the general public. They align well with the 'common' aspect of the English definition 'popular, common.' However, they do not adequately capture the sense of 'popular' meaning 'liked by many' (e.g., a popular singer/person). This makes them semantically narrower than the full scope of the English 'popular' as a core concept, which often includes the 'liked by many' nuance. This could lead to significant misuse by learners if not clarified or if a broader equivalent is not found."
+  }
+}

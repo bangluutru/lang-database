@@ -1,0 +1,27 @@
+{
+  "input_hash": "90d4746e0e3ea02a37f29492dc97578f8c08ec5594f52120d456e96751a0d0a4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:02:18Z",
+  "input": {
+    "concept_id": "concept-core-absolutely",
+    "sense_id": "sense-core-absolutely-01",
+    "en_lemma": "absolutely",
+    "ja_lemma": "全く",
+    "vi_lemma": "không hề",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'absolutely' and the Japanese expression '全く' are incorrectly labeled as 'verb' in the input; they are adverbs. The provided English definition and Japanese gloss correctly describe their adverbial function, specifically for emphasizing negatives. The Vietnamese expression 'không hề' is also correctly identified as an adverb with a matching definition. Once the Part-of-Speech is corrected to 'adverb' for English and Japanese, the semantic alignment, naturalness, and register are excellent, making this a strong candidate for acceptance. However, due to the fundamental grammatical error in the input's POS labeling, it requires review and correction before inclusion in a pedagogical database."
+  }
+}

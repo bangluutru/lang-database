@@ -1,0 +1,26 @@
+{
+  "input_hash": "18a4778f5229cea1ef07bdefa3ba23ea6d40bb3c9a9266d7b57f3cc4e94fa88f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:40Z",
+  "input": {
+    "concept_id": "concept-core-device",
+    "sense_id": "sense-core-device-01",
+    "en_lemma": "device",
+    "ja_lemma": "機器",
+    "vi_lemma": "cơ khí",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The Vietnamese term 'cơ khí' primarily refers to 'mechanics' (the field of study), 'mechanical engineering', or 'mechanical' (as an adjective). It does not mean 'device' or 'equipment' in the general sense. The appropriate Vietnamese term for 'device' or 'equipment' would typically be 'thiết bị' or 'máy móc'. This is a fundamental semantic mismatch, making the candidate Vietnamese expression incorrect and misleading for learners."
+  }
+}

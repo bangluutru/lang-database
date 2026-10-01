@@ -1,0 +1,26 @@
+{
+  "input_hash": "d22789cf5e68ba45106a4aaf8bf8406190cca24d16c1f797df0742aa2dc880ae",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:16Z",
+  "input": {
+    "concept_id": "concept-core-explanation",
+    "sense_id": "sense-core-explanation-01",
+    "en_lemma": "explanation",
+    "ja_lemma": "説明",
+    "vi_lemma": "thuyết minh",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The candidate Vietnamese expression 'thuyết minh' is semantically narrower than the general English 'explanation' and Japanese '説明'. While 'thuyết minh' means 'explanation, presentation, narration', it is typically used for detailed explanations, presentations, or narrations (e.g., product explanations, film narration). For the general, core learning sense of 'explanation' (e.g., 'I need an explanation'), the more natural and common Vietnamese equivalent would be 'lời giải thích' or 'sự giải thích'. Using 'thuyết minh' for the general sense would sound awkward and could mislead learners. The register of 'thuyết minh' is also slightly more formal/technical than the general 'explanation'."
+  }
+}

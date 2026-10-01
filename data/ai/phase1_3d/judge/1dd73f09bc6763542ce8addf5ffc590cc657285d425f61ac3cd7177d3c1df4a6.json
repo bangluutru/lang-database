@@ -1,0 +1,25 @@
+{
+  "input_hash": "1dd73f09bc6763542ce8addf5ffc590cc657285d425f61ac3cd7177d3c1df4a6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:06:19Z",
+  "input": {
+    "concept_id": "concept-core-reserve",
+    "sense_id": "sense-core-reserve-01",
+    "en_lemma": "reserve",
+    "ja_lemma": "予備",
+    "vi_lemma": "dự trữ",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English concept context explicitly defines 'reserve' as 'restraint, leniency'. However, the Japanese expression '予備 (yobi)' and the Vietnamese expression 'dự trữ' both refer to 'reserve' in the sense of 'a supply, spare, or backup'. This is a distinct and different core meaning of the polysemous English word 'reserve', leading to a fundamental semantic mismatch with the specified English sense."
+  }
+}

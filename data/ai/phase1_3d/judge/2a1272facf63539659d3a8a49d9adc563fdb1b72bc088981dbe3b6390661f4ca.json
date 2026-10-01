@@ -1,0 +1,26 @@
+{
+  "input_hash": "2a1272facf63539659d3a8a49d9adc563fdb1b72bc088981dbe3b6390661f4ca",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:28Z",
+  "input": {
+    "concept_id": "concept-core-construction",
+    "sense_id": "sense-core-construction-01",
+    "en_lemma": "construction",
+    "ja_lemma": "建設",
+    "vi_lemma": "diễn giải",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English sense context 'interpretation, explanation, reading' clearly indicates an abstract meaning of 'construction' (e.g., 'the construction of meaning'). The Vietnamese 'diễn giải' perfectly aligns with this sense. However, the Japanese '建設' (kensetsu) exclusively refers to physical building, establishing, or engineering, which is a completely different sense of 'construction'. The Japanese gloss incorrectly assumes the 'building' sense is intended for 'concept-core-construction', directly contradicting the provided English sense context. This creates a fundamental semantic mismatch."
+  }
+}

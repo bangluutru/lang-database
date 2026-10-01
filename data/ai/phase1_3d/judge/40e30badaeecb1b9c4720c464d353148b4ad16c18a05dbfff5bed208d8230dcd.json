@@ -1,0 +1,28 @@
+{
+  "input_hash": "40e30badaeecb1b9c4720c464d353148b4ad16c18a05dbfff5bed208d8230dcd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:40:47Z",
+  "input": {
+    "concept_id": "concept-core-everywhere",
+    "sense_id": "sense-core-everywhere-01",
+    "en_lemma": "everywhere",
+    "ja_lemma": "十方",
+    "vi_lemma": "thập phương",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "GOOD",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "REGISTER_CLASH",
+      "SENSE_DIVERGENCE",
+      "ARCHAIC_OR_OBSOLETE"
+    ],
+    "evaluation_note": "The Part-of-Speech is incorrectly listed as 'verb' for all three languages; 'everywhere' is an adverb, and '十方'/'thập phương' are nouns often used adverbially. While '十方' and 'thập phương' semantically relate to 'everywhere' (meaning 'all directions'), they are typically used in more formal, literary, or religious contexts. This creates a major register mismatch for the specified 'general, daily_life' domain, making them unnatural and somewhat archaic choices compared to more common alternatives in Japanese (e.g., どこでも, あちこち) and Vietnamese (e.g., khắp nơi, mọi nơi) for general usage."
+  }
+}

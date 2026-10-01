@@ -1,0 +1,26 @@
+{
+  "input_hash": "57b8bf5c5cb64b65a8604f5551bf3320b63f90b146439b82f5121083d24cf5a6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:32Z",
+  "input": {
+    "concept_id": "concept-core-series",
+    "sense_id": "sense-core-series-01",
+    "en_lemma": "series",
+    "ja_lemma": "連続",
+    "vi_lemma": "liên tục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'series' (noun) in its core learning sense refers to 'a number of similar or related things coming one after another' (e.g., a TV series, a series of events). The Japanese '連続' (renzoku) aligns perfectly with this, covering both the abstract sense of continuity and concrete sequences. However, the candidate Vietnamese expression 'liên tục' as a noun primarily means 'continuity' or 'incessancy' (an abstract state or quality). It does not naturally or correctly translate to 'a series' as a countable collection of items or events. For this common meaning of 'series', Vietnamese would typically use nouns such as 'loạt', 'chuỗi', 'dãy', or 'bộ'. Therefore, 'liên tục' is semantically divergent and unnatural for the intended concept."
+  }
+}

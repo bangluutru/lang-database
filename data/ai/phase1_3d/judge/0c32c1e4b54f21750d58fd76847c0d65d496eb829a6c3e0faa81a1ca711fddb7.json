@@ -1,0 +1,26 @@
+{
+  "input_hash": "0c32c1e4b54f21750d58fd76847c0d65d496eb829a6c3e0faa81a1ca711fddb7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:23:48Z",
+  "input": {
+    "concept_id": "concept-core-dry",
+    "sense_id": "sense-core-dry-01",
+    "en_lemma": "dry",
+    "ja_lemma": "乾いた",
+    "vi_lemma": "khô khan",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English expression 'dry' is defined as 'uninteresting, dull'. The Vietnamese 'khô khan' and its definition perfectly align with this sense. However, the Japanese expression '乾いた' (kawaita) is explicitly glossed as 'in the sense of 'not wet''. This is a completely different core sense of 'dry' and does not align with the 'uninteresting, dull' meaning. While '乾く' can have metaphorical uses related to lacking vitality, '乾いた' is not the standard or natural translation for 'uninteresting/dull' in the same way English 'dry' is used for a lecture, and the provided gloss confirms its primary 'not wet' meaning. This constitutes a major semantic mismatch and a false friend scenario for the intended pedagogical concept."
+  }
+}

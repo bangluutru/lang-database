@@ -1,0 +1,27 @@
+{
+  "input_hash": "935d95edf4558c5395af519ca898193148f1f7b275fa39847b34c7a47e8610ee",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:01Z",
+  "input": {
+    "concept_id": "concept-core-same",
+    "sense_id": "sense-core-same-01",
+    "en_lemma": "same",
+    "ja_lemma": "同一",
+    "vi_lemma": "đồng nhất",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'same' is primarily an adjective or pronoun, not a verb, for the core sense of 'identical' or 'one and the same'. Similarly, the Japanese expression '同一 (dōitsu)' is a noun or a no-adjective, not a standalone verb. While the Vietnamese 'đồng nhất' is correctly identified as a verb (meaning 'to unify' or 'to be identical/consistent'), the fundamental Part-of-Speech errors in English and Japanese make this concept representation grammatically unsound and pedagogically misleading."
+  }
+}

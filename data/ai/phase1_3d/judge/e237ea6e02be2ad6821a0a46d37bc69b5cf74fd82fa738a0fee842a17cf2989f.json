@@ -1,0 +1,27 @@
+{
+  "input_hash": "e237ea6e02be2ad6821a0a46d37bc69b5cf74fd82fa738a0fee842a17cf2989f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:23:58Z",
+  "input": {
+    "concept_id": "concept-core-effectively",
+    "sense_id": "sense-core-effectively-01",
+    "en_lemma": "effectively",
+    "ja_lemma": "実質",
+    "vi_lemma": "thực chất",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Part of Speech (POS) is incorrectly identified as 'verb' for all three languages. 'Effectively' is an adverb, '実質' (jisshitsu) is a noun, and 'thực chất' is a noun. This fundamental grammatical error makes the concept representation pedagogically unsound. Furthermore, while 'effectively' can mean 'in essence', its primary meaning is 'producing a desired result', leading to potential sense divergence. For a direct adverbial alignment with 'in essence', the Japanese expression should be '実質的に' (jisshitsuteki ni) and the Vietnamese 'về thực chất' or 'thực chất' used adverbially, not as a standalone noun labeled as a verb."
+  }
+}

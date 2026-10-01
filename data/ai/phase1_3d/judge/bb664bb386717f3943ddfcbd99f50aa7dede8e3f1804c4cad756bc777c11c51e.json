@@ -1,0 +1,27 @@
+{
+  "input_hash": "bb664bb386717f3943ddfcbd99f50aa7dede8e3f1804c4cad756bc777c11c51e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:01:36Z",
+  "input": {
+    "concept_id": "concept-core-normally",
+    "sense_id": "sense-core-normally-01",
+    "en_lemma": "normally",
+    "ja_lemma": "普通",
+    "vi_lemma": "phổ thông",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'normally' is an adverb, not a verb. Similarly, the Japanese '普通' is typically a な-adjective or noun (used adverbially with 'に'), not a verb. The Vietnamese 'phổ thông' is primarily an adjective meaning 'common' or 'general', and is not the most natural or direct translation for the adverbial sense of 'normally' or 'usually'. More appropriate Vietnamese options would be 'thông thường' or 'thường'. The POS errors across all three languages and the semantic mismatch for Vietnamese make this concept representation unsound."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "dad67865f42da1b5e8f40efac0e0bcaaff7b08515d732f429807119de625d488",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:45:28Z",
+  "input": {
+    "concept_id": "concept-core-important",
+    "sense_id": "sense-core-important-01",
+    "en_lemma": "important",
+    "ja_lemma": "重要",
+    "vi_lemma": "trọng yếu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'important' and Japanese '重要' are described as broad, general terms for significance. While 'trọng yếu' in Vietnamese means 'crucial' or 'vital' and is a form of importance, it is generally more formal and conveys a stronger, more strategic, or critical sense than the general English 'important' or Japanese '重要'. For the core, general learning sense of 'important', 'quan trọng' would be a more direct, natural, and semantically aligned equivalent in Vietnamese. 'Trọng yếu' is narrower in scope and higher in register than the intended general concept."
+  }
+}

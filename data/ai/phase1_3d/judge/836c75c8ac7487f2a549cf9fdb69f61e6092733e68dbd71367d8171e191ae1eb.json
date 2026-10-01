@@ -1,0 +1,27 @@
+{
+  "input_hash": "836c75c8ac7487f2a549cf9fdb69f61e6092733e68dbd71367d8171e191ae1eb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:15:24Z",
+  "input": {
+    "concept_id": "concept-core-artist",
+    "sense_id": "sense-core-artist-01",
+    "en_lemma": "artist",
+    "ja_lemma": "芸術家",
+    "vi_lemma": "nhà văn",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition explicitly narrows 'artist' to 'author, writer, novelist'. The Vietnamese 'nhà văn' perfectly aligns with this specific sense (literary artist/writer). However, the Japanese '芸術家 (geijutsuka)' refers to an artist in a general sense (visual, performing, etc.), not specifically a literary artist. The Japanese gloss itself highlights this by stating 'unlike '作家' which is primarily for literary artists.' For the specified English sense and Vietnamese term, the correct Japanese equivalent would be '作家 (sakka)'."
+  }
+}

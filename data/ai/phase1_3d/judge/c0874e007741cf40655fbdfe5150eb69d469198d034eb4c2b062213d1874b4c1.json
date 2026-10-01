@@ -1,0 +1,26 @@
+{
+  "input_hash": "c0874e007741cf40655fbdfe5150eb69d469198d034eb4c2b062213d1874b4c1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:02:34Z",
+  "input": {
+    "concept_id": "concept-core-personal",
+    "sense_id": "sense-core-personal-01",
+    "en_lemma": "personal",
+    "ja_lemma": "個人",
+    "vi_lemma": "cá nhân",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Japanese '個人' and Vietnamese 'cá nhân' are excellent and natural translations for the concept of 'individual (person)'. However, the English expression 'personal (POS: noun)' is highly unusual and awkward for this general sense. 'Personal' as a noun typically refers to 'personal matters/life' (e.g., 'the personal is political') or specific classified ads ('personals'), not a general 'individual person'. If the intended concept is 'individual (person)', the English expression should be 'individual (POS: noun)'. As presented, the English expression is a poor pedagogical choice and creates a semantic and naturalness mismatch with the other two languages."
+  }
+}

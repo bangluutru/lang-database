@@ -1,0 +1,26 @@
+{
+  "input_hash": "09f09b4419b35ef674098f072c74188b6153960fb6f121416591ef1132cfa6cb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:41Z",
+  "input": {
+    "concept_id": "concept-core-god",
+    "sense_id": "sense-core-god-01",
+    "en_lemma": "god",
+    "ja_lemma": "神",
+    "vi_lemma": "Thiên Chúa",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'Thiên Chúa' specifically refers to the monotheistic God (e.g., Christian God) and is too narrow for the general concept of 'god' or 'deity' which the English 'god' (lowercase) and Japanese '神 (kami)' can encompass. For a general 'god' or 'deity' (e.g., Greek gods, Hindu gods), Vietnamese would typically use 'thần' or 'vị thần'. The current alignment creates a semantic mismatch for a general 'god' concept. This concept should either be explicitly scoped to 'monotheistic God' or the Vietnamese expression should be changed to 'thần' with a note about 'Thiên Chúa' for the monotheistic sense."
+  }
+}

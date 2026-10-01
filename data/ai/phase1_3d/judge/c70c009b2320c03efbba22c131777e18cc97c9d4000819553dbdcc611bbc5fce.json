@@ -1,0 +1,27 @@
+{
+  "input_hash": "c70c009b2320c03efbba22c131777e18cc97c9d4000819553dbdcc611bbc5fce",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:53Z",
+  "input": {
+    "concept_id": "concept-core-comprehensive",
+    "sense_id": "sense-core-comprehensive-01",
+    "en_lemma": "comprehensive",
+    "ja_lemma": "総合",
+    "vi_lemma": "tổng hợp",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'comprehensive' is an adjective, not a verb. There is no verb 'to comprehensive'. This fundamental grammatical error makes the English entry incorrect and incompatible with the verbal POS specified. The Japanese '総合する' and Vietnamese 'tổng hợp' are both verbs meaning 'to integrate' or 'to synthesize', which would align well if the English expression were changed to a suitable verb (e.g., 'to integrate', 'to synthesize') or if the English POS for 'comprehensive' was corrected to 'adjective' (though this would then mismatch the POS of the other two entries)."
+  }
+}

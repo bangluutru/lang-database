@@ -1,0 +1,27 @@
+{
+  "input_hash": "a8b5366fe669600fe7ea560941a0890f1090409aa5c47a21cf540faa7511aa47",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:11:14Z",
+  "input": {
+    "concept_id": "concept-core-cost",
+    "sense_id": "sense-core-cost-01",
+    "en_lemma": "cost",
+    "ja_lemma": "為る",
+    "vi_lemma": "giá",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese expression 'giá' is primarily a noun meaning 'price' or 'value', not a verb meaning 'to cost'. Using 'giá' directly as a verb for 'to cost' is grammatically incorrect and unnatural in Vietnamese. The correct verbal expressions would typically be phrases like 'có giá' (to have a price), 'trị giá' (to be worth), or verbs like 'tốn' (to cost/spend). The Japanese expression 'する' (suru) can be used in contexts like 'X円する' (to cost X yen), aligning with 'to be worth' or 'to cost' in specific constructions. However, 'する' itself is a very broad verb ('to do/be') and not the most direct or general equivalent for 'to cost'; 'かかる' (kakaru) is often more appropriate for the general sense of 'to cost' (money, time, effort). The fundamental error in the Vietnamese expression makes this concept representation unsuitable."
+  }
+}

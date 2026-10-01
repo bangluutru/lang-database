@@ -1,0 +1,27 @@
+{
+  "input_hash": "f6be6d5ded413a996814398e8a32f2b745708524fac534cccb5e894a23f8bd1d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:46:10Z",
+  "input": {
+    "concept_id": "concept-core-judge",
+    "sense_id": "sense-core-judge-01",
+    "en_lemma": "judge",
+    "ja_lemma": "審判",
+    "vi_lemma": "thẩm phán",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese expression 'thẩm phán' is a noun meaning 'judge' (specifically, a legal judge in a court of law), not a verb. It cannot be used to express the action of judging or refereeing. This is a fundamental POS and semantic mismatch. Additionally, 'thẩm phán' carries a formal/legal register, which clashes with the general sense of 'judge' (referee/umpire) as a verb. The Japanese '審判' is primarily a noun; the verb form is '審判する'. The entry's POS for Japanese is also problematic for pedagogical clarity."
+  }
+}

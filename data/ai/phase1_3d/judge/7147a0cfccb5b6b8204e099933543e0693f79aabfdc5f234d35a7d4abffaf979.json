@@ -1,0 +1,27 @@
+{
+  "input_hash": "7147a0cfccb5b6b8204e099933543e0693f79aabfdc5f234d35a7d4abffaf979",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:47:27Z",
+  "input": {
+    "concept_id": "concept-core-many",
+    "sense_id": "sense-core-many-01",
+    "en_lemma": "many",
+    "ja_lemma": "多数",
+    "vi_lemma": "đa số",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The primary and critical issue is the incorrect Part-of-Speech (POS) assigned to all three expressions. 'Many' is a determiner/quantifier or pronoun, not a verb. '多数' (tasuu) is typically a noun or adjectival noun, not a verb. 'Đa số' is also a noun or adjective, not a verb. This fundamental grammatical error makes the entry pedagogically unsound and misleading. While the core semantic concept of 'large number' is present, the incorrect POS leads to a complete divergence in usage and grammatical function. Furthermore, '多数' and 'đa số' often carry a slightly more formal register or specifically imply 'majority' rather than the general English 'many'."
+  }
+}

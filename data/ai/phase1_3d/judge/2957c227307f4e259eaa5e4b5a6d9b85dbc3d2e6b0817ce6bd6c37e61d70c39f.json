@@ -1,0 +1,26 @@
+{
+  "input_hash": "2957c227307f4e259eaa5e4b5a6d9b85dbc3d2e6b0817ce6bd6c37e61d70c39f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:05:13Z",
+  "input": {
+    "concept_id": "concept-core-agenda",
+    "sense_id": "sense-core-agenda-01",
+    "en_lemma": "agenda",
+    "ja_lemma": "議題",
+    "vi_lemma": "lịch trình",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English Definition / Sense Context provided ('schedule, program, programme') aligns well with the Candidate Vietnamese Expression 'lịch trình'. However, the Japanese Expression '議題 (gidai)' specifically refers to a 'list of items to be discussed at a meeting', which is a narrower sense than the stated English definition. The Japanese gloss itself points out this divergence by mentioning '日程 (nittei)' as a better fit for 'schedule' or 'program of events'. This creates a semantic mismatch where the Japanese expression is too narrow for the intended English concept. The concept needs review to ensure all three languages align to a single, consistent core sense of 'agenda', or to select a more appropriate Japanese equivalent for the given English sense."
+  }
+}

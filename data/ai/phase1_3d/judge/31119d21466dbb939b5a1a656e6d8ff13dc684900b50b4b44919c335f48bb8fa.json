@@ -1,0 +1,27 @@
+{
+  "input_hash": "31119d21466dbb939b5a1a656e6d8ff13dc684900b50b4b44919c335f48bb8fa",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:04:48Z",
+  "input": {
+    "concept_id": "concept-core-pure",
+    "sense_id": "sense-core-pure-01",
+    "en_lemma": "pure",
+    "ja_lemma": "純粋",
+    "vi_lemma": "thuần tuý",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The primary issue is the incorrect Part of Speech (POS) assignment for the English and Vietnamese expressions. Both 'pure' (English) and 'thuần tuý' (Vietnamese) are overwhelmingly used as adjectives to convey the sense of 'pure, true, genuine, unmixed'. Listing them as nouns, especially with definitions/glosses that describe the adjectival sense, creates a fundamental semantic and grammatical mismatch. The Japanese '純粋' can be a noun (purity) or an adjective, but its glosses also point to the adjectival sense. Additionally, the Vietnamese entry lacks a proper definition, providing only an etymological note. This concept should be re-evaluated as an adjective for all three languages to ensure proper alignment."
+  }
+}

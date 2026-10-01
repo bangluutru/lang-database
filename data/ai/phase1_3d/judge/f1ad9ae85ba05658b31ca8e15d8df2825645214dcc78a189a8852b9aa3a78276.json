@@ -1,0 +1,27 @@
+{
+  "input_hash": "f1ad9ae85ba05658b31ca8e15d8df2825645214dcc78a189a8852b9aa3a78276",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:43:53Z",
+  "input": {
+    "concept_id": "concept-core-golden",
+    "sense_id": "sense-core-golden-01",
+    "en_lemma": "golden",
+    "ja_lemma": "黄金",
+    "vi_lemma": "hoàng kim",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'golden' is listed with `(POS: noun)`. However, the provided English definition / sense context ('golden, prosperous, excellent') corresponds to the *adjective* form of 'golden', not the noun. As a noun, 'golden' typically refers to a golden color or object, or informally to a golden retriever, none of which align with 'prosperous' or 'excellent'. This fundamental inconsistency in the English entry (POS vs. definition) makes the entire tri-language representation semantically unsound. The Japanese '黄金' and Vietnamese 'hoàng kim' are both nouns that can convey the sense of 'golden' (as in 'golden age'), 'prosperous', or 'excellent', and they align well with each other in terms of meaning and formal register. However, the English entry as presented is incorrect."
+  }
+}

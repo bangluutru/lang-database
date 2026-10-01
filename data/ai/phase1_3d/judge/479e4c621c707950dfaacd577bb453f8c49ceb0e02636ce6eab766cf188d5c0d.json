@@ -1,0 +1,26 @@
+{
+  "input_hash": "479e4c621c707950dfaacd577bb453f8c49ceb0e02636ce6eab766cf188d5c0d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:06:49Z",
+  "input": {
+    "concept_id": "concept-core-church",
+    "sense_id": "sense-core-church-01",
+    "en_lemma": "church",
+    "ja_lemma": "教会",
+    "vi_lemma": "giáo hội",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "NARROW"
+    ],
+    "evaluation_note": "The English 'church' and Japanese '教会' encompass both the physical building for worship and the religious organization/congregation. The candidate Vietnamese term 'giáo hội' primarily refers to the religious organization or congregation (e.g., 'Giáo hội Công giáo' - Catholic Church) and does not typically refer to the physical building. The common term for the physical church building in Vietnamese is 'nhà thờ'. Therefore, 'giáo hội' is semantically too narrow for the core concept, missing a significant aspect of the English and Japanese meanings, which would lead to pedagogical confusion. It also carries a slightly more formal register than the general sense of 'church' (building)."
+  }
+}

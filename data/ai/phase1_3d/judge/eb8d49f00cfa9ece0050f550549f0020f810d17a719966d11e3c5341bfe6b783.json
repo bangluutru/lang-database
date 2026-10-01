@@ -1,0 +1,26 @@
+{
+  "input_hash": "eb8d49f00cfa9ece0050f550549f0020f810d17a719966d11e3c5341bfe6b783",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:11:42Z",
+  "input": {
+    "concept_id": "concept-core-difficult",
+    "sense_id": "sense-core-difficult-01",
+    "en_lemma": "difficult",
+    "ja_lemma": "ややこしい",
+    "vi_lemma": "khó khăn",
+    "candidate_origin": "CURATED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English sense context ('complicated, complex, intricate') and the Japanese expression ('ややこしい' - complicated, confusing, troublesome) align well, focusing on a specific nuance of 'difficult'. However, the Vietnamese expression 'khó khăn' is a much broader term for 'difficult' or 'hardship' in general. While a complicated task is difficult, 'khó khăn' does not specifically convey the 'complicated/complex/intricate' nuance as precisely as 'phức tạp' or 'rắc rối' would in Vietnamese. This creates a semantic breadth mismatch for the intended specific sense, potentially leading to pedagogical imprecision."
+  }
+}

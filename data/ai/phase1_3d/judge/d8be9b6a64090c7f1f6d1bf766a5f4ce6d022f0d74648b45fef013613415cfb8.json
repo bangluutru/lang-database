@@ -1,0 +1,26 @@
+{
+  "input_hash": "d8be9b6a64090c7f1f6d1bf766a5f4ce6d022f0d74648b45fef013613415cfb8",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:11Z",
+  "input": {
+    "concept_id": "concept-core-certainly",
+    "sense_id": "sense-core-certainly-01",
+    "en_lemma": "certainly",
+    "ja_lemma": "是非",
+    "vi_lemma": "thị phi",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The Vietnamese expression \"thị phi\" is a noun meaning \"gossip, public opinion, right and wrong,\" which is semantically unrelated to \"certainly.\" Additionally, the Part of Speech for all three expressions (English 'certainly', Japanese '是非', Vietnamese 'thị phi') are incorrectly identified as 'verb' in the prompt; they are an adverb, adverb/interjection, and noun respectively. The Vietnamese candidate is fundamentally incorrect for this concept."
+  }
+}

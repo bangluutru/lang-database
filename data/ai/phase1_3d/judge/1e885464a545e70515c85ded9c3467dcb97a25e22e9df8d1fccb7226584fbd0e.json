@@ -1,0 +1,27 @@
+{
+  "input_hash": "1e885464a545e70515c85ded9c3467dcb97a25e22e9df8d1fccb7226584fbd0e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:44Z",
+  "input": {
+    "concept_id": "concept-core-fairly",
+    "sense_id": "sense-core-fairly-01",
+    "en_lemma": "fairly",
+    "ja_lemma": "相当",
+    "vi_lemma": "tương đương",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English expression 'fairly' (in the sense of 'considerably, rather, quite') is an adverb, not a verb. Similarly, the Japanese expression '相当' (sōtō) functions as an adverb or な-adjective in this context, not a verb. The primary issue, however, is the Vietnamese candidate 'tương đương'. While 'tương đương' is the Hán-Việt cognate of Japanese '相当', its meaning in Vietnamese is 'equivalent' or 'commensurate', not 'considerably' or 'quite'. This is a clear false friend scenario where the shared etymology does not guarantee semantic alignment. The Vietnamese expression is semantically incorrect and would be incomprehensible or misleading for learners in this context. The correct Vietnamese equivalents for 'fairly' (considerably/quite) would be 'khá', 'tương đối', or 'đáng kể'."
+  }
+}

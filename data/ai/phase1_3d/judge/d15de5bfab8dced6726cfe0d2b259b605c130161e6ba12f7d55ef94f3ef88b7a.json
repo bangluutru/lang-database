@@ -1,0 +1,26 @@
+{
+  "input_hash": "d15de5bfab8dced6726cfe0d2b259b605c130161e6ba12f7d55ef94f3ef88b7a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:12:27Z",
+  "input": {
+    "concept_id": "concept-pro-accounting-000005",
+    "sense_id": "sense-pro-accounting-000005-01",
+    "en_lemma": "Supplementary schedules",
+    "ja_lemma": "附属明細表",
+    "vi_lemma": "bảng thuyết minh chi tiết kèm theo báo cáo tài chính",
+    "candidate_origin": "OFFICIAL_CURATED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'Supplementary schedules' and the Japanese '附属明細表' represent a general accounting concept. The candidate Vietnamese expression 'bảng thuyết minh chi tiết kèm theo báo cáo tài chính' is an excellent and natural translation. However, the candidate Vietnamese definition 'Bảng biểu chi tiết kèm theo giải trình về tài sản cố định, nợ vay, vốn góp theo Luật Doanh nghiệp Nhật Bản' is overly narrow and misleading by explicitly tying the concept to 'Luật Doanh nghiệp Nhật Bản' (Japanese Corporate Law). The definition should be generalized to reflect the universal nature of supplementary schedules in accounting."
+  }
+}

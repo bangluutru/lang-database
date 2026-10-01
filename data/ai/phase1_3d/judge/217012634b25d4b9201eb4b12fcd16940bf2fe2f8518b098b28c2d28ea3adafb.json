@@ -1,0 +1,27 @@
+{
+  "input_hash": "217012634b25d4b9201eb4b12fcd16940bf2fe2f8518b098b28c2d28ea3adafb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:47:00Z",
+  "input": {
+    "concept_id": "concept-core-machine",
+    "sense_id": "sense-core-machine-01",
+    "en_lemma": "machine",
+    "ja_lemma": "機械",
+    "vi_lemma": "cơ giới",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "REGISTER_CLASH"
+    ],
+    "evaluation_note": "The Vietnamese term 'cơ giới' primarily means 'mechanized' (adjective) or refers to 'mechanized equipment/vehicles' (noun, often in compounds like 'xe cơ giới'). It is not the general word for 'machine' (máy) or 'mechanism' (cơ cấu/cơ chế). Using 'cơ giới' for the core concept of 'machine' is semantically incorrect, unnatural, and has a different register (more technical/industrial) compared to the general English and Japanese terms."
+  }
+}

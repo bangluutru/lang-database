@@ -1,0 +1,26 @@
+{
+  "input_hash": "ef9a4b85e6ef4169b11f409d7b9eeb0a68b791e5286dc9b547cdfadcf41ed703",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:08:20Z",
+  "input": {
+    "concept_id": "concept-core-solution",
+    "sense_id": "sense-core-solution-01",
+    "en_lemma": "solution",
+    "ja_lemma": "解決",
+    "vi_lemma": "giải quyết",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The English 'solution' (noun) and Japanese '解決' (noun) refer to the 'answer' or 'resolution' of a problem. The Vietnamese candidate 'giải quyết' is primarily a verb meaning 'to solve, to resolve, to settle'. While it can be nominalized to mean 'the act of solving', it is not the natural or common noun for 'solution' (the answer/result). The correct and natural Vietnamese noun for this sense would be 'giải pháp'. Using 'giải quyết' as a noun for 'solution' is unnatural and semantically inaccurate for the intended concept, leading to learner confusion."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "969b583035f1a9e091da4735a1d5b1559511db787fbc315c9368544eb32dd318",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:12:15Z",
+  "input": {
+    "concept_id": "concept-core-vote",
+    "sense_id": "sense-core-vote-01",
+    "en_lemma": "vote",
+    "ja_lemma": "投票",
+    "vi_lemma": "đầu phiếu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "GOOD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_ACCEPTABLE",
+      "REGISTER_CLASH",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Vietnamese term 'đầu phiếu' is a Hán-Việt term that means 'vote' or 'ballot', but its usage as a general noun for 'vote' in daily life is formal or somewhat archaic. More natural and common equivalents for a core learning sense in a 'general, daily_life' domain would typically be 'phiếu bầu' (ballot/vote) or 'sự bỏ phiếu' (the act of voting). This creates a minor register mismatch and impacts naturalness for learners."
+  }
+}

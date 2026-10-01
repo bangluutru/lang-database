@@ -1,0 +1,26 @@
+{
+  "input_hash": "45e69b056ca72863e847a71bd0b3d7444935c091aea3fded875ca06651801dd4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:45Z",
+  "input": {
+    "concept_id": "concept-core-council",
+    "sense_id": "sense-core-council-01",
+    "en_lemma": "council",
+    "ja_lemma": "評議会",
+    "vi_lemma": "Hội đồng",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'council' (noun), Japanese '評議会', and Vietnamese 'Hội đồng' all correctly refer to 'a group of people chosen to give advice or to make rules'. However, the provided English Definition / Sense Context ('meeting, conference, session') is incorrect and misleading for the noun 'council'. This definition describes an event or activity, not the group itself. This fundamental semantic misalignment in the English definition makes the overall concept representation pedagogically unsound and confusing. The Japanese gloss correctly identifies the core sense as 'a group of people forming a council', highlighting the discrepancy with the English definition provided."
+  }
+}

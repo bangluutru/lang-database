@@ -1,0 +1,26 @@
+{
+  "input_hash": "4ef9dc2e5859cf62a3dcc3d53b6ca0553a1d7e39dc9cea708b88017af2159fa0",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:03:36Z",
+  "input": {
+    "concept_id": "concept-core-principal",
+    "sense_id": "sense-core-principal-01",
+    "en_lemma": "principal",
+    "ja_lemma": "元本",
+    "vi_lemma": "nguyên bản",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "FALSE_FRIEND",
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The English 'principal' (referring to the main sum of money/capital) and Japanese '元本' (ganpon) correctly align. However, the candidate Vietnamese expression 'nguyên bản' means 'original version/text/copy' (e.g., 'bản gốc', 'nguyên bản của bức thư'). It does not mean 'principal' in the financial sense. The correct Vietnamese terms for 'principal' (financial capital) would be 'tiền gốc', 'vốn gốc', or 'nguyên vốn'. Therefore, 'nguyên bản' is a false friend and a semantic mismatch for this concept."
+  }
+}

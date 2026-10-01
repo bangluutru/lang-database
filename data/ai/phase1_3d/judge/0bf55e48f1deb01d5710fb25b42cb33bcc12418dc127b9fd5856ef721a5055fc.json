@@ -1,0 +1,26 @@
+{
+  "input_hash": "0bf55e48f1deb01d5710fb25b42cb33bcc12418dc127b9fd5856ef721a5055fc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:59:52Z",
+  "input": {
+    "concept_id": "concept-core-mistake",
+    "sense_id": "sense-core-mistake-01",
+    "en_lemma": "mistake",
+    "ja_lemma": "失敗",
+    "vi_lemma": "thất bại",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English expression 'mistake' (noun) and Japanese '失敗' (shippai) both encompass the general sense of an error, fault, or blunder, as well as a failure. However, the candidate Vietnamese expression 'thất bại' primarily translates to 'failure' or 'defeat'. While a mistake can lead to failure, 'thất bại' does not adequately cover the broader sense of 'mistake' as an error or an incorrect action itself. For the core concept of 'mistake' (meaning an error), more appropriate Vietnamese terms would be 'sai lầm' or 'lỗi'. The current alignment is too narrow and could mislead learners into using 'thất bại' for general errors."
+  }
+}

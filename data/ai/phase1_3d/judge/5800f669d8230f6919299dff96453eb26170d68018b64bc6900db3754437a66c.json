@@ -1,0 +1,25 @@
+{
+  "input_hash": "5800f669d8230f6919299dff96453eb26170d68018b64bc6900db3754437a66c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:21:13Z",
+  "input": {
+    "concept_id": "concept-core-conflict",
+    "sense_id": "sense-core-conflict-01",
+    "en_lemma": "conflict",
+    "ja_lemma": "争闘",
+    "vi_lemma": "tranh đấu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE"
+    ],
+    "evaluation_note": "The Japanese expression '争闘 (sōtō)' is primarily a noun meaning 'strife, struggle, conflict, fight'. It cannot be used as a standalone verb in modern Japanese; it requires the auxiliary verb 'する' to become a verb ('争闘する'). Presenting it as 'POS: verb' is grammatically incorrect and would be misleading for learners. While the underlying conceptual meaning of '争闘' aligns with 'conflict' and 'tranh đấu', its grammatical representation as a verb is fundamentally flawed, leading to a semantic and naturalness mismatch for the intended verbal concept."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "4455309635da0f3199f5e8803b5c0b4fa9fdbe5443c52f5959f9378d3235c65b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:45:32Z",
+  "input": {
+    "concept_id": "concept-core-inside",
+    "sense_id": "sense-core-inside-01",
+    "en_lemma": "inside",
+    "ja_lemma": "内部",
+    "vi_lemma": "nội bộ",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "Vietnamese 'nội bộ' refers specifically to 'internal (to an organization/group)' or 'internal affairs,' not the general physical 'inside' or 'interior' as conveyed by English 'inside' (noun) and Japanese '内部'. This is a significant semantic narrowing that would mislead learners for a core concept."
+  }
+}

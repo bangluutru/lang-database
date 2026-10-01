@@ -1,0 +1,26 @@
+{
+  "input_hash": "3dbf7e583552b8620cdf37d2cc66aabe3220e3cff6d88abf1dcf27531b862c32",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:04:31Z",
+  "input": {
+    "concept_id": "concept-core-power",
+    "sense_id": "sense-core-power-01",
+    "en_lemma": "power",
+    "ja_lemma": "力",
+    "vi_lemma": "quyền lực",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "MEDIUM",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English sense context ('authority, power, influence') and the Vietnamese expression ('quyền lực') align well. However, the Japanese expression '力' (chikara) is significantly broader, encompassing general strength, ability, force, and energy, in addition to influence. While '力' can refer to influence, '権力' (kenryoku) would be a more precise Japanese equivalent for 'power' in the specific sense of authority/political power. The current alignment is acceptable for a core concept if the breadth of '力' is explicitly noted for learners, as the Japanese gloss suggests it's a fundamental term for 'power'."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input_hash": "5f164b98d7aa4bed3eb51562e95ebcbd05b2d0085927b226ee7b1e7c9ecd2a2c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:25Z",
+  "input": {
+    "concept_id": "concept-core-sector",
+    "sense_id": "sense-core-sector-01",
+    "en_lemma": "sector",
+    "ja_lemma": "部門",
+    "vi_lemma": "bộ môn",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English definition provided ('theater of war (theatre), sector') is quite specific. However, the Japanese gloss clearly indicates a general sense of 'sector' (e.g., economic sector, public sector) translated as '部門'. The Vietnamese candidate 'bộ môn' (部門) primarily refers to an academic department or a subject/discipline. This makes 'bộ môn' semantically too narrow and incorrect for the general 'sector' meaning implied by the Japanese '部門' and common usage of English 'sector' in economic/organizational contexts. For 'economic sector' or 'public sector', Vietnamese would typically use 'khu vực' or 'lĩnh vực'. Despite sharing a Hán-Việt origin, the modern usage of 'bộ môn' does not align with the intended general concept."
+  }
+}

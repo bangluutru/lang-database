@@ -1,0 +1,25 @@
+{
+  "input_hash": "a742fd4516c2bd499d966c556abcb408ebf946165f89f2fe3f59da7406e77164",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:04:09Z",
+  "input": {
+    "concept_id": "concept-core-profit",
+    "sense_id": "sense-core-profit-01",
+    "en_lemma": "profit",
+    "ja_lemma": "利益",
+    "vi_lemma": "lợi ích",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE"
+    ],
+    "evaluation_note": "The Vietnamese term 'lợi ích' primarily means 'benefit' or 'interest', which is much broader than the financial 'profit' implied by the English 'profit' and Japanese '利益'. The correct Vietnamese equivalent for financial 'profit' is 'lợi nhuận'. Using 'lợi ích' would lead to significant semantic confusion for learners."
+  }
+}

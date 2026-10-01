@@ -1,0 +1,28 @@
+{
+  "input_hash": "2db9a970a808fce86260ef07621ac6704492518d81f47d4ffe778acee3cf2165",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:42:04Z",
+  "input": {
+    "concept_id": "concept-core-finally",
+    "sense_id": "sense-core-finally-01",
+    "en_lemma": "finally",
+    "ja_lemma": "結局",
+    "vi_lemma": "kết cục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The Part of Speech (POS) is incorrectly identified for all three languages. 'finally' is an adverb, not a verb. '結局' (kekkyoku) is primarily an adverb or noun, not a verb. Most critically, 'kết cục' in Vietnamese is a noun meaning 'outcome' or 'result', not an adverb equivalent to 'finally' or 'in the end'. While it shares Hán-Việt roots with the Japanese term, its semantic function and grammatical category are fundamentally different from the intended adverbial sense of 'finally'. The correct Vietnamese equivalents for the adverb 'finally' would typically be 'cuối cùng', 'rốt cuộc', or 'sau cùng'."
+  }
+}

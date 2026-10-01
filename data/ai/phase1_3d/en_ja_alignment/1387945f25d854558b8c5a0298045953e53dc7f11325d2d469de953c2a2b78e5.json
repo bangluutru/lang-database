@@ -1,0 +1,155 @@
+{
+  "input_hash": "1387945f25d854558b8c5a0298045953e53dc7f11325d2d469de953c2a2b78e5",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:37:24Z",
+  "input": {
+    "concept_id": "concept-core-stroke",
+    "canonical_name": "core_stroke",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-stroke-01",
+    "part_of_speech": "verb",
+    "sense_gloss_en": "stroke",
+    "sense_gloss_ja": "発作",
+    "definition_en": "Core learning sense for 'stroke': fit, attack, spasm",
+    "definition_ja": "基本語彙: 発作 (ほっさ)",
+    "en": {
+      "expression_id": "expr-en-core-stroke",
+      "lemma": "stroke",
+      "display_form": "stroke",
+      "part_of_speech": "verb",
+      "ngsl_rank": 2400,
+      "source_locator": "lemma:stroke, rank:2400",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:stroke, rank:2400",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "stroke",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-stroke",
+      "lemma": "発作",
+      "reading": "ほっさ",
+      "part_of_speech": "verb",
+      "ent_seq": 1477470,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1477470, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1477470, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "発作",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "発作"
+      ],
+      "entry_reb": [
+        "ほっさ"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "fit",
+            "attack",
+            "spasm",
+            "ictus",
+            "paroxysm",
+            "seizure",
+            "stroke"
+          ],
+          "misc": [],
+          "field": [
+            "medicine"
+          ]
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "noun (common) (futsuumeishi)"
+        ],
+        "glosses": [
+          "fit",
+          "attack",
+          "spasm",
+          "ictus",
+          "paroxysm",
+          "seizure",
+          "stroke"
+        ],
+        "misc": [],
+        "field": [
+          "medicine"
+        ]
+      }
+    },
+    "classifications": {
+      "JLPT": "N1",
+      "CEFR": "B2",
+      "JOYO_KANJI": "Grade 3",
+      "EIKEN": "Grade 2",
+      "NGSL": "Rank 2400"
+    }
+  },
+  "output": {
+    "pos_alignment": "exact",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'stroke' is explicitly assigned as a verb. In a general context, the verb 'stroke' typically means 'to move one's hand gently over a surface' (e.g., to pet an animal) or 'to hit (a ball)'. The Japanese expression '発作' (ほっさ), even if assigned as a verb (e.g., by implying '発作する'), semantically refers to 'a fit, attack, spasm, or seizure' (as confirmed by JMdict glosses). These two concepts are entirely unrelated. There appears to be a confusion with the English *noun* 'stroke' (referring to a medical event), which *does* align with '発作', but the given English lemma is a verb.",
+    "suggested_ja_replacement": {
+      "surface": "撫でる",
+      "reading": "なでる",
+      "reason": "Assuming the English verb 'stroke' refers to its most common meaning in a general, daily-life context, which is 'to pet or caress gently', the appropriate Japanese equivalent is '撫でる'."
+    }
+  }
+}

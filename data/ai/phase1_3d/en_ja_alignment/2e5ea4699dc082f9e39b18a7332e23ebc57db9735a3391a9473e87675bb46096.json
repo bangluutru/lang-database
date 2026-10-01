@@ -1,0 +1,172 @@
+{
+  "input_hash": "2e5ea4699dc082f9e39b18a7332e23ebc57db9735a3391a9473e87675bb46096",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:17:42Z",
+  "input": {
+    "concept_id": "concept-core-constantly",
+    "canonical_name": "core_constantly",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-constantly-01",
+    "part_of_speech": "verb",
+    "sense_gloss_en": "constantly",
+    "sense_gloss_ja": "常住",
+    "definition_en": "Core learning sense for 'constantly': always, constantly, eternally",
+    "definition_ja": "基本語彙: 常住 (じょうじゅう)",
+    "en": {
+      "expression_id": "expr-en-core-constantly",
+      "lemma": "constantly",
+      "display_form": "constantly",
+      "part_of_speech": "verb",
+      "ngsl_rank": 2154,
+      "source_locator": "lemma:constantly, rank:2154",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:constantly, rank:2154",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "constantly",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-constantly",
+      "lemma": "常住",
+      "reading": "じょうじゅう",
+      "part_of_speech": "verb",
+      "ent_seq": 1798050,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1798050, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1798050, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "常住",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "常住"
+      ],
+      "entry_reb": [
+        "じょうじゅう"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "adverb (fukushi)"
+          ],
+          "glosses": [
+            "always",
+            "constantly",
+            "eternally"
+          ],
+          "misc": [],
+          "field": []
+        },
+        {
+          "sense_index": 1,
+          "pos": [
+            "noun (common) (futsuumeishi)",
+            "noun or participle which takes the aux. verb suru",
+            "intransitive verb"
+          ],
+          "glosses": [
+            "constancy",
+            "eternity"
+          ],
+          "misc": [],
+          "field": [
+            "Buddhism"
+          ]
+        },
+        {
+          "sense_index": 2,
+          "pos": [
+            "noun (common) (futsuumeishi)",
+            "noun or participle which takes the aux. verb suru",
+            "intransitive verb"
+          ],
+          "glosses": [
+            "permanent residence"
+          ],
+          "misc": [],
+          "field": []
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "adverb (fukushi)"
+        ],
+        "glosses": [
+          "always",
+          "constantly",
+          "eternally"
+        ],
+        "misc": [],
+        "field": []
+      }
+    },
+    "classifications": {
+      "JLPT": null,
+      "CEFR": "B2",
+      "JOYO_KANJI": "Grade 5",
+      "EIKEN": "Grade 2",
+      "NGSL": "Rank 2154"
+    }
+  },
+  "output": {
+    "pos_alignment": "exact",
+    "semantic_alignment": "EXACT",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'constantly' is an adverb, not a verb, despite the assigned POS in the prompt. However, following the prompt's assigned POS for both, 'constantly' (verb) and '常住' (verb, as a する verb) results in an 'exact' POS alignment. Semantically, '常住' (JMdict Sense 0: 'always, constantly') is an exact match for 'constantly'. However, '常住' is a more formal or literary term, often implying permanence or eternity, and is not the most natural or common word a general learner would use for 'constantly' in everyday contexts. More natural and frequently used alternatives exist.",
+    "suggested_ja_replacement": {
+      "surface": "絶えず",
+      "reading": "たえず",
+      "reason": "'絶えず' is an adverb meaning 'constantly, incessantly, without a break'. It is a natural and common expression for 'constantly' in general Japanese, and its actual POS (adverb) aligns perfectly with the actual POS of 'constantly'."
+    }
+  }
+}

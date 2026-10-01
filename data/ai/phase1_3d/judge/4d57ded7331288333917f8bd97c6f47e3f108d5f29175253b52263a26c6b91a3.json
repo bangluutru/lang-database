@@ -1,0 +1,27 @@
+{
+  "input_hash": "4d57ded7331288333917f8bd97c6f47e3f108d5f29175253b52263a26c6b91a3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:59Z",
+  "input": {
+    "concept_id": "concept-core-different",
+    "sense_id": "sense-core-different-01",
+    "en_lemma": "different",
+    "ja_lemma": "違い",
+    "vi_lemma": "sự khác biệt",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "ACCEPT_WITH_NOTE",
+    "semantic_alignment": "EXACT",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'different (POS: noun)' is grammatically incorrect; 'different' is an adjective, and the corresponding noun is 'difference'. However, the underlying concept of 'difference' is perfectly aligned with the Japanese '違い' and Vietnamese 'sự khác biệt'. It is recommended to change the English expression to 'difference (POS: noun)' for grammatical correctness and pedagogical soundness."
+  }
+}

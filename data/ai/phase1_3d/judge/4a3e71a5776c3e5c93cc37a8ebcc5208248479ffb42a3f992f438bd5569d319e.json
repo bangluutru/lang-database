@@ -1,0 +1,27 @@
+{
+  "input_hash": "4a3e71a5776c3e5c93cc37a8ebcc5208248479ffb42a3f992f438bd5569d319e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:30Z",
+  "input": {
+    "concept_id": "concept-core-extremely",
+    "sense_id": "sense-core-extremely-01",
+    "en_lemma": "extremely",
+    "ja_lemma": "迚も",
+    "vi_lemma": "rất",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The semantic alignment between 'extremely', 'とても', and 'rất' is exact, natural, and register-matched for the core concept of 'to a very great degree'. However, the provided Part-of-Speech (POS) for both the English expression 'extremely' (listed as verb, should be adverb) and the Japanese expression '迚も' (listed as verb, should be adverb) is incorrect. This fundamental grammatical error in the concept representation requires correction before acceptance."
+  }
+}

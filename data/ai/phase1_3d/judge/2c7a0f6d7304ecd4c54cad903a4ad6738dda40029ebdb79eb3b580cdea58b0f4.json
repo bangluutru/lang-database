@@ -1,0 +1,26 @@
+{
+  "input_hash": "2c7a0f6d7304ecd4c54cad903a4ad6738dda40029ebdb79eb3b580cdea58b0f4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:07:31Z",
+  "input": {
+    "concept_id": "concept-core-selection",
+    "sense_id": "sense-core-selection-01",
+    "en_lemma": "selection",
+    "ja_lemma": "選択",
+    "vi_lemma": "sàng lọc",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The English core sense is explicitly defined as 'weeding out, elimination, culling'. The Vietnamese 'sàng lọc' perfectly aligns with this specific sense. However, the Japanese '選択 (sentaku)' primarily means 'choice' or 'selection' in the general sense of picking or choosing, not the specific sense of eliminating unwanted elements. This constitutes a significant semantic mismatch (false friend/sense divergence) for the specified core learning sense. For the given English sense, Japanese terms like 淘汰 (tōta - culling, elimination) or 選別 (senbetsu - sorting, screening) would be more appropriate."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "input_hash": "179991ec04d7d265e5d78e7ba0d5cfe440ff2d3dc8212465c317675b85933bb9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:04:16Z",
+  "input": {
+    "concept_id": "concept-core-ad",
+    "sense_id": "sense-core-ad-01",
+    "en_lemma": "ad",
+    "ja_lemma": "広告",
+    "vi_lemma": "quảng cáo",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition provided ('Common Era, CE, Christian Era') is for 'AD' (Anno Domini), not 'ad' (advertisement). This creates a fundamental semantic mismatch with the Japanese (広告) and Vietnamese (quảng cáo) expressions, which both correctly refer to 'advertisement'. The English definition must be corrected to align with the intended concept of 'advertisement'."
+  }
+}

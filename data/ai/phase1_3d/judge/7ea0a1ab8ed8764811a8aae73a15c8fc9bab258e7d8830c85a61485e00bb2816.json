@@ -1,0 +1,26 @@
+{
+  "input_hash": "7ea0a1ab8ed8764811a8aae73a15c8fc9bab258e7d8830c85a61485e00bb2816",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:41:31Z",
+  "input": {
+    "concept_id": "concept-core-expression",
+    "sense_id": "sense-core-expression-01",
+    "en_lemma": "expression",
+    "ja_lemma": "表現",
+    "vi_lemma": "biểu hiện",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English definition explicitly narrows the concept to 'countenance, look (on one's face)', referring to a facial expression. However, the Japanese '表現' (hyougen) and Vietnamese 'biểu hiện' are general terms for 'expression' or 'manifestation', covering a much broader semantic range (e.g., verbal, artistic, symptoms) than just facial expressions. This significant semantic divergence makes the alignment pedagogically unsound for a core learning sense, as it would lead to learner confusion."
+  }
+}

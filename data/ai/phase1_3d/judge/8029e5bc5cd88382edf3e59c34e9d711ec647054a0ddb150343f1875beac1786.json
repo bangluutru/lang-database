@@ -1,0 +1,27 @@
+{
+  "input_hash": "8029e5bc5cd88382edf3e59c34e9d711ec647054a0ddb150343f1875beac1786",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:06:21Z",
+  "input": {
+    "concept_id": "concept-core-basically",
+    "sense_id": "sense-core-basically-01",
+    "en_lemma": "basically",
+    "ja_lemma": "基本的に",
+    "vi_lemma": "về cơ bản",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SEMANTIC_EXACT",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'basically' and the Japanese expression '基本的に' are incorrectly tagged as 'verb' in the input data; both are adverbs. This fundamental grammatical error makes the representation pedagogically unsound as presented. However, the expressions themselves are semantically exact, natural, and register-matched across all three languages when correctly identified as adverbs. The Japanese gloss correctly identifies '基本的に' as adverbial, highlighting the need to correct the POS metadata for English and Japanese."
+  }
+}

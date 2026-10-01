@@ -1,0 +1,27 @@
+{
+  "input_hash": "f55ec99289ed6ecf08eaf5f810b3736c2b0cf37ae3f7e04c59d93a2dff869525",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:11:30Z",
+  "input": {
+    "concept_id": "concept-core-usually",
+    "sense_id": "sense-core-usually-01",
+    "en_lemma": "usually",
+    "ja_lemma": "普通に",
+    "vi_lemma": "thường",
+    "candidate_origin": "AI_CANDIDATE"
+  },
+  "output": {
+    "decision": "REVIEW",
+    "semantic_alignment": "EXACT",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SEMANTIC_EXACT",
+      "POS_INCOMPATIBLE",
+      "HIGH_CONFIDENCE_ALIGNMENT"
+    ],
+    "evaluation_note": "The semantic alignment across English 'usually', Japanese '普通に' (futsū ni), and Vietnamese 'thường' is excellent and natural. All expressions convey the core meaning of something happening habitually or as a general rule. However, the Part of Speech (POS) for both English 'usually' and Japanese '普通に' is incorrectly listed as 'verb' in the concept representation. Both are adverbs. The Japanese gloss correctly identifies '普通に' as an adverb, which contradicts the main POS entry. This fundamental grammatical error makes the representation pedagogically unsound as is and requires correction before acceptance."
+  }
+}

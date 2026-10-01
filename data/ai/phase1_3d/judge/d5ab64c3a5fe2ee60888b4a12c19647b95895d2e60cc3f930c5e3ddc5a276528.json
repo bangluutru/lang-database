@@ -1,0 +1,27 @@
+{
+  "input_hash": "d5ab64c3a5fe2ee60888b4a12c19647b95895d2e60cc3f930c5e3ddc5a276528",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:40:40Z",
+  "input": {
+    "concept_id": "concept-core-eventually",
+    "sense_id": "sense-core-eventually-01",
+    "en_lemma": "eventually",
+    "ja_lemma": "結局",
+    "vi_lemma": "kết cục",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "FALSE_FRIEND"
+    ],
+    "evaluation_note": "The concept 'eventually' is an adverb. However, the provided POS for English, Japanese, and Vietnamese expressions are all incorrectly listed as 'verb'. More critically, the Vietnamese expression 'kết cục' is primarily a noun meaning 'outcome' or 'result', not an adverbial equivalent for 'eventually'. The correct Vietnamese adverbs for 'eventually' would be 'cuối cùng', 'rốt cuộc', or 'sau cùng'. This represents a fundamental semantic and grammatical mismatch."
+  }
+}

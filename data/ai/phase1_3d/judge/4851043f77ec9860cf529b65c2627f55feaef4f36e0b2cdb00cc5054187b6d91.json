@@ -1,0 +1,27 @@
+{
+  "input_hash": "4851043f77ec9860cf529b65c2627f55feaef4f36e0b2cdb00cc5054187b6d91",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T16:00:18Z",
+  "input": {
+    "concept_id": "concept-core-mobile",
+    "sense_id": "sense-core-mobile-01",
+    "en_lemma": "mobile",
+    "ja_lemma": "機動",
+    "vi_lemma": "cơ động",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "POS_INCOMPATIBLE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English expression 'mobile' is listed as a verb, but its provided definition ('mobile, nimble, agile') clearly describes an adjective. The verb form 'to mobile' or 'to mobilize' means 'to prepare for action' or 'to make movable,' which is semantically distinct from 'nimble' or 'agile.' This fundamental POS and semantic mismatch in English makes the entry pedagogically unsound. Furthermore, if the intended concept is 'mobile/nimble/agile' (adjective), then the POS for Japanese '機動' and Vietnamese 'cơ động' (both listed as verbs) would also be incorrect, as they are primarily adjectives or nouns in this sense, or verbs meaning 'to maneuver/mobilize.' The Vietnamese definition is also not a true definition."
+  }
+}

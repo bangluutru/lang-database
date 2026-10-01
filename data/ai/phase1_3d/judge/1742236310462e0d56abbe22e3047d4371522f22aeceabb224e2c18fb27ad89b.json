@@ -1,0 +1,27 @@
+{
+  "input_hash": "1742236310462e0d56abbe22e3047d4371522f22aeceabb224e2c18fb27ad89b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:20:52Z",
+  "input": {
+    "concept_id": "concept-core-composition",
+    "sense_id": "sense-core-composition-01",
+    "en_lemma": "composition",
+    "ja_lemma": "合成",
+    "vi_lemma": "hợp thành",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "POS_INCOMPATIBLE",
+      "SENSE_DIVERGENCE",
+      "AMBIGUOUS_ALIGNMENT"
+    ],
+    "evaluation_note": "The English 'composition' and Japanese '合成' are clear nouns referring to the act or result of combining/synthesizing. The Vietnamese 'hợp thành' is primarily a verb or adjective meaning 'to form/constitute by combining'. While related conceptually, it is not a natural or direct noun equivalent for 'composition' in this sense. Using 'hợp thành' as a standalone noun for this concept is awkward and grammatically questionable in standard Vietnamese. Better noun candidates for 'composition/synthesis' would be 'sự tổng hợp' (the synthesis/compounding) or 'cấu tạo' (structure/composition) depending on the specific nuance."
+  }
+}

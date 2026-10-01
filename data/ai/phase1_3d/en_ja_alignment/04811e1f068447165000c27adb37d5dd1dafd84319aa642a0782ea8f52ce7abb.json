@@ -1,0 +1,143 @@
+{
+  "input_hash": "04811e1f068447165000c27adb37d5dd1dafd84319aa642a0782ea8f52ce7abb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_en_ja_v2",
+  "created_at": "2026-10-01T15:39:02Z",
+  "input": {
+    "concept_id": "concept-core-troop",
+    "canonical_name": "core_troop",
+    "domains": [
+      "general",
+      "daily_life"
+    ],
+    "primary_domain": "general",
+    "sense_id": "sense-core-troop-01",
+    "part_of_speech": "noun",
+    "sense_gloss_en": "troop",
+    "sense_gloss_ja": "中隊",
+    "definition_en": "Core learning sense for 'troop': company, battery, troop",
+    "definition_ja": "基本語彙: 中隊 (ちゅうたい)",
+    "en": {
+      "expression_id": "expr-en-core-troop",
+      "lemma": "troop",
+      "display_form": "troop",
+      "part_of_speech": "noun",
+      "ngsl_rank": 1457,
+      "source_locator": "lemma:troop, rank:1457",
+      "source_evidence": {
+        "source_id": "ngsl",
+        "source_version": "1.2",
+        "source_locator": "lemma:troop, rank:1457",
+        "source_record_id": null,
+        "field_name": "lemma",
+        "extracted_value": "troop",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "2098bab8955a120a9766c6282a51d7d578c6cb0a7d946600d2ffb73ba25a0b44",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:16.391224+00:00",
+        "curated_at": null,
+        "source_url": "https://www.newgeneralservicelist.com/s/NGSL_12_stats.csv",
+        "reference_url": "https://www.newgeneralservicelist.com/",
+        "license": "CC-BY-4.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": false,
+        "review_status": "verified"
+      }
+    },
+    "ja": {
+      "expression_id": "expr-ja-core-troop",
+      "lemma": "中隊",
+      "reading": "ちゅうたい",
+      "part_of_speech": "noun",
+      "ent_seq": 1424890,
+      "sense_idx": 0,
+      "source_locator": "ent_seq:1424890, sense_idx:0",
+      "source_evidence": {
+        "source_id": "jmdict",
+        "source_version": "2026-10-01",
+        "source_locator": "ent_seq:1424890, sense_idx:0",
+        "source_record_id": null,
+        "field_name": "primary_surface",
+        "extracted_value": "中隊",
+        "origin": "source_derived",
+        "model": null,
+        "generation_version": null,
+        "input_hash": null,
+        "generated_at": null,
+        "raw_sha256": "89777236dbf06f4d7b01c6dbff5e1f707978ddd067061b66bcb782d1f24e6ed3",
+        "curated_sha256": null,
+        "retrieved_at": "2026-10-01T12:47:15.524709+00:00",
+        "curated_at": null,
+        "source_url": "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+        "reference_url": "https://www.edrdg.org/edrdg/licence.html",
+        "license": "CC-BY-SA-3.0",
+        "commercial_use": true,
+        "redistribution_allowed": true,
+        "derivatives_allowed": true,
+        "attribution_required": true,
+        "share_alike": true,
+        "review_status": "verified"
+      },
+      "entry_keb": [
+        "中隊"
+      ],
+      "entry_reb": [
+        "ちゅうたい"
+      ],
+      "all_senses": [
+        {
+          "sense_index": 0,
+          "pos": [
+            "noun (common) (futsuumeishi)"
+          ],
+          "glosses": [
+            "company",
+            "battery",
+            "troop"
+          ],
+          "misc": [],
+          "field": []
+        }
+      ],
+      "target_sense": {
+        "sense_index": 0,
+        "pos": [
+          "noun (common) (futsuumeishi)"
+        ],
+        "glosses": [
+          "company",
+          "battery",
+          "troop"
+        ],
+        "misc": [],
+        "field": []
+      }
+    },
+    "classifications": {
+      "JLPT": null,
+      "CEFR": "B1",
+      "JOYO_KANJI": "Grade 4",
+      "EIKEN": "Grade Pre-2",
+      "NGSL": "Rank 1457"
+    }
+  },
+  "output": {
+    "pos_alignment": "exact",
+    "semantic_alignment": "WRONG",
+    "is_natural_for_learner": false,
+    "suggested_action": "replace_ja_expression",
+    "reason": "The English lemma 'troop' (noun) has multiple senses, including a military unit, a group of Boy Scouts/Girl Guides, or a general group of people or animals. The Japanese expression '中隊' (ちゅうたい) specifically refers to a military unit (company, battery, troop). Given the domain 'general, daily_life' and 'concept-core-troop', the intended meaning of 'troop' is likely a general group of people or animals, or perhaps a scout troop, rather than exclusively a military unit. Therefore, '中隊' is too narrow and misleading for a general learner in this context.",
+    "suggested_ja_replacement": {
+      "surface": "群れ",
+      "reading": "むれ",
+      "reason": "'群れ' (mure) is a general term for a group of people or animals (herd, flock, pack, crowd), which aligns better with the common, non-military senses of 'troop' in a general and daily life context. For a 'core' concept, this broader meaning is more appropriate than the military-specific '中隊'."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input_hash": "0fa253987b0b621c5a3b876845741bfae355a71f898f953213e9d2cdbbf7670c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "phase1_3d_judge_v1",
+  "created_at": "2026-10-01T15:22:17Z",
+  "input": {
+    "concept_id": "concept-core-decrease",
+    "sense_id": "sense-core-decrease-01",
+    "en_lemma": "decrease",
+    "ja_lemma": "減少",
+    "vi_lemma": "giảm thiểu",
+    "candidate_origin": "HANVIET_SUPPORTED"
+  },
+  "output": {
+    "decision": "REJECT",
+    "semantic_alignment": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "confidence": "HIGH",
+    "reason_codes": [
+      "SENSE_DIVERGENCE",
+      "NATURALNESS_AWKWARD"
+    ],
+    "evaluation_note": "The Vietnamese expression 'giảm thiểu' primarily means 'to minimize' (verb) or 'minimization' (noun), which is a narrower and more specific concept than the general 'decrease' or 'reduction' represented by the English 'decrease' (noun) and Japanese '減少' (noun). For a general noun 'decrease', more appropriate Vietnamese terms would be 'sự giảm', 'mức giảm', or 'sự sụt giảm'. Using 'giảm thiểu' would lead to semantic inaccuracy and unnatural usage for learners in many contexts where a general decrease is intended."
+  }
+}
