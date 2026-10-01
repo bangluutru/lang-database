@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000013",
+  "term": "純資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "全体的に日常の債権債務・経費勘定向けのテンプレート文（「照合」「補助元帳」「計上内容の差異」）を「純資産」に無理やり当てはめた形跡が顕著であり、会計実務・理論（貸借対照表の純資産の部の性質）と乖離しています。実務に即した表現への抜本的な書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "純資産を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「純資産」は資産から負債を控除した総括的な区分概念（純資産の部）であり、個別の仕訳取引として「純資産を計上する」とは言いません。通常は「純資産の部に計上する」や「純資産を算定する」と表現します。",
+      "suggested_text": "純資産の部に計上する"
+    },
+    {
+      "index": 1,
+      "text": "純資産の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "貸借対照表上の純資産の部合計残高を確認する実務文脈として自然です。",
+      "suggested_text": "純資産の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "純資産を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "純資産自体は領収書や請求書等の証憑と1対1で「照合」する対象ではなく、株主資本等変動計算書などで変動内訳を検証・把握する対象です。",
+      "suggested_text": "純資産の変動を検証する"
+    },
+    {
+      "index": 3,
+      "text": "純資産を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「精算する」は経費や立替金、または会社解散時の残余財産分配などの清算手続に用いる動詞であり、「純資産を精算する」は会計用語として破綻しています。",
+      "suggested_text": "純資産の額を算定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "機械的テンプレートによる作文です。純資産に対して「計上内容や残高に差異がないか帳簿照合する」という実務表現は不自然です（純資産は資産・負債差額および株主資本変動の集計結果であるため）。",
+      "suggested_ja": "期末の決算整理において、当期純利益の振替および株主資本等変動計算書の数値を検証し、純資産の部に計上される額を確定させます。",
+      "suggested_vi": "Trong công tác điều chỉnh quyết toán cuối kỳ, chúng tôi đối soát việc kết chuyển lợi nhuận thuần trong kỳ và số liệu trên Báo cáo thay đổi vốn chủ sở hữu để xác định số tiền ghi nhận tại phần vốn chủ sở hữu.",
+      "suggested_en": "During year-end closing adjustments, we verify the transfer of net profit and figures in the statement of changes in net assets to finalize the amount recorded in the net assets section."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「当期の決算において純資産を適正に処理いたしました」は実質的な中身がない汎用テンプレート構文です。自己株式取得や増資、利益剰余金処分などの具体的な会計事象に即した表現にすべきです。",
+      "suggested_ja": "当期は自己株式の取得および配当の実施に伴い、純資産の部における各勘定科目の異動について適正に会計処理を行いました。",
+      "suggested_vi": "Trong kỳ này, do tiến hành mua cổ phiếu quỹ và chi trả cổ tức, chúng tôi đã thực hiện xử lý kế toán đúng quy định đối với các biến động của từng tài khoản trong phần vốn chủ sở hữu.",
+      "suggested_en": "In accordance with our acquisition of treasury stock and dividend payouts during this period, we properly accounted for the movements in each account within the net assets section."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "純資産に対して「証憑書類と補助元帳を照合済みで、すべて適正に整合している」と答えるのは会計実務上あり得ません。補助元帳や個別証憑で照合するのは売掛金や買掛金などの債権債務勘定であり、純資産の増減は取締役会議事録や利益振替仕訳等で検証されます。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、株主資本等変動計算書と純資産の部の残高に不一致はありませんか。",
+        "vi": "Trong quyết toán kỳ này, có sự không khớp nào giữa Báo cáo thay đổi vốn chủ sở hữu và số dư phần vốn chủ sở hữu không?",
+        "en": "In this term's closing, are there any discrepancies between the statement of changes in net assets and the balance in the net assets section?"
+      },
+      {
+        "speaker": "B",
+        "ja": "利益剰余金の振替および配当金の処理を含め、純資産の推移が完全に一致していることを確認いたしました。",
+        "vi": "Tôi đã xác nhận rằng sự biến động của vốn chủ sở hữu hoàn toàn khớp đúng, bao gồm cả việc kết chuyển lợi nhuận giữ lại và xử lý cổ tức.",
+        "en": "I have verified that the movements in net assets match completely, including the transfer of retained earnings and the processing of dividends."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の訳語自体（Net assets / tài sản thuần / vốn chủ sở hữu）は問題ありません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fb59e615e7086720c36e7df9f3a3d3d8fa4b824276fd7d0b84f29e8784af204a",
+    "validated_at": "2026-10-01T01:33:05.512126+00:00"
+  }
+}

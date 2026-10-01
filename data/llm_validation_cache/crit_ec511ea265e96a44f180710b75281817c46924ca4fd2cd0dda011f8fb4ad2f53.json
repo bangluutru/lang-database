@@ -1,0 +1,81 @@
+{
+  "entry_id": "jp-pro-tax-000046",
+  "term": "所得控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain error in the dialogue: '所得控除' belongs exclusively to individual income tax (所得税/確定申告), but was paired with '決算申告' (corporate tax return), which does not have 所得控除. Additionally, Collocation #2 should use technical statutory terminology (控除限度額).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "所得控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional usage in Japanese tax practice."
+    },
+    {
+      "index": 1,
+      "text": "所得控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and idiomatic expression for claiming/receiving deductions."
+    },
+    {
+      "index": 2,
+      "text": "所得控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "In statutory Japanese tax terminology, '控除限度額' is the precise professional term rather than '上限額'.",
+      "suggested_text": "所得控除の限度額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "所得控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and legally accurate collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate Japanese tax phrasing; Vietnamese translation should avoid clunky full-gloss insertion but remains intelligible."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate phrasing commonly found in tax filing communications and administrative guidance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese tax law, '所得控除' (income deductions such as basic, spouse, social insurance deductions) strictly applies to individual income tax (所得税). '決算申告' specifically denotes corporate financial closing and corporate tax filing (法人税申告), where '所得控除' does not exist (corporations have 益金/損金 or 税額控除). The dialogue erroneously conflates corporate tax closing with individual income tax deductions.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における所得控除の計算根拠と証明書類は整理できましたか。",
+        "vi": "Anh/chị đã tổng hợp xong căn cứ tính các khoản giảm trừ thu nhập và chứng từ kèm theo cho kỳ quyết toán thuế này chưa?",
+        "en": "Have you organized the calculation basis and supporting documents for the income deductions in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、控除証明書と税理士の確認資料を揃えましたので、申告書への添付準備は完了しています。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ chứng nhận giảm trừ và tài liệu đối chiếu từ chuyên viên thuế, đã sẵn sàng đính kèm vào tờ khai.",
+        "en": "Yes, I have gathered the deduction certificates and the tax accountant's verification materials, so they are ready to be attached to the return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In the Vietnamese headword meaning and examples, inserting the lengthy descriptive phrase 'các khoản giảm trừ gia cảnh và xã hội vào thu nhập' is clumsy and overly specific (excluding other deductions like medical or donation deductions). 'khoản giảm trừ thu nhập' is the standard, accurate professional term."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f1fc086cd5e4679d3e0b081199b10bb3a56e8df3956148fbf403415f6dad1c46",
+    "validated_at": "2026-10-01T01:38:13.892836+00:00"
+  }
+}

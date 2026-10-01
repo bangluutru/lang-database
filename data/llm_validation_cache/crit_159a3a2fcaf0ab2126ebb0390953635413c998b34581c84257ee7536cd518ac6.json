@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000050",
+  "term": "コンプライアンス",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are acceptable, the example sentences and dialogue suffer from severe semantic template hallucinations, treating 'compliance' as a ledger account item to be booked and reconciled in month-end closing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "コンプライアンスを強化する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business Japanese collocation for strengthening compliance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "コンプライアンスを推進する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in corporate governance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "コンプライアンスの方針を策定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, though 'コンプライアンス基本方針を策定する' is also frequently used.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "コンプライアンスの体制を構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for establishing a compliance system.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic and domain error: 'コンプライアンス' (compliance) is a governance concept, not an accounting line item or financial balance that can be booked ('計上') or have account balances ('残高').",
+      "suggested_ja": "企業の社会的責任を果たすため、全社を挙げてコンプライアンスの徹底に取り組んでいます。",
+      "suggested_vi": "Để thực hiện trách nhiệm xã hội của doanh nghiệp, toàn thể công ty đang nỗ lực triệt để tuân thủ pháp luật và đạo đức kinh doanh.",
+      "suggested_en": "In order to fulfill our corporate social responsibility, the entire company is committed to ensuring strict compliance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic clash: One cannot 'process compliance' ('コンプライアンスを適正に処理いたしました') in financial settlement entries ('決算'). This is an artificial template hallucination.",
+      "suggested_ja": "新規事業の立ち上げに際しては、関係法令に抵触しないよう、事前にコンプライアンス部門への確認が不可欠です。",
+      "suggested_vi": "Khi triển khai dự án kinh doanh mới, việc xác nhận trước với bộ phận pháp chế và tuân thủ là điều không thể thiếu để tránh vi phạm các luật định liên quan.",
+      "suggested_en": "When launching a new business venture, prior consultation with the compliance department is essential to ensure adherence to relevant laws and regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe hallucination. Speaker A asks about booking discrepancies ('計上内容に差異') regarding 'compliance', and Speaker B mentions reconciling vouchers and subsidiary ledgers. Compliance cannot be booked or reconciled in accounting ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期に向けて、海外子会社を含めたコンプライアンス体制の再構築が必要ですね。",
+        "vi": "Hướng tới kỳ tiếp theo, chúng ta cần tái cơ cấu hệ thống tuân thủ, bao gồm cả các công ty con ở nước ngoài nhỉ.",
+        "en": "Looking ahead to the next fiscal year, we need to restructure our compliance framework, including for overseas subsidiaries."
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、現地の法規制に対応したガイドラインの策定を急ぎ進めます。",
+        "vi": "Vâng, tôi sẽ khẩn trương tiến hành soạn thảo hướng dẫn phù hợp với các quy định pháp luật của nước sở tại.",
+        "en": "Yes, I will promptly proceed with formulating guidelines tailored to local regulations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Term-level translations are acceptable, but the example and dialogue translations reflected the severe semantic nonsense of the Japanese source text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "365238edc8fee5a2b9719f095c8897b8d92753d3a9c6c5975a975c3b543850fc",
+    "validated_at": "2026-10-01T01:41:48.766098+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000093",
+  "term": "益金不算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション4件中3件に論理矛盾や税法上の加算・減算の取り違え（重過失）があり、例文でも「費用」に対して「益金不算入」を適用するなど税務会計上の初歩的な概念誤認が含まれているため全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "益金不算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不算入」に「算入する」という自己矛盾した不自然な語結合です。実務では「益金不算入として処理する」または「益金不算入の規定を適用する」と言います。",
+      "suggested_text": "益金不算入として処理する"
+    },
+    {
+      "index": 1,
+      "text": "益金不算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不算入」が重複しており日本語として破綻しています。実務では「益金不算入額を計算する」等を用います。",
+      "suggested_text": "益金不算入額を計算する"
+    },
+    {
+      "index": 2,
+      "text": "益金不算入の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "別表四における税務調整実務で自然に使われる表現です。",
+      "suggested_text": "益金不算入の調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "益金不算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "法人税の別表四において、益金不算入は所得金額からの「減算項目」です。「加算する」とするのは税務会計上重大な誤りです。",
+      "suggested_text": "別表四で減算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「会計上の費用」に対応する税務調整は「損金（算入・不算入）」です。「益金不算入」は「会計上の収益」に対する調整であるため、税務実務上明確な誤謬です。",
+      "suggested_ja": "受取配当金について会計上の収益と税務上の取扱いの差異を調整するため、別表四において益金不算入として減算処理を行いました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa doanh thu kế toán và quy định thuế đối với cổ tức nhận được, chúng tôi đã xử lý giảm trừ trên phụ lục số 4 theo diện không tính vào doanh thu chịu thuế.",
+      "suggested_en": "To adjust the difference between book revenue and tax treatment regarding dividend income, we deducted it on Schedule 4 as an exclusion from gross revenue."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「益金不算入の算入漏れ」は語義矛盾があり極めて不自然です。また益金不算入の漏れは税金を過大に納付する側に働くため、税務調査での指摘（追徴）を防止するためという文脈とも整合しません。",
+      "suggested_ja": "適正な税務申告を行うため、子会社からの受取配当金について益金不算入の適用漏れがないか確認しました。",
+      "suggested_vi": "Để đảm bảo kê khai thuế chính xác, chúng tôi đã kiểm tra xem có bỏ sót việc áp dụng quy định loại trừ khỏi doanh thu chịu thuế đối với cổ tức nhận từ công ty con hay không.",
+      "suggested_en": "To ensure proper tax filing, we verified that there were no omissions in applying the exclusion from gross revenue for dividends received from subsidiaries."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "申告実務における会話として意味の断絶はなく、自然なやり取りとなっています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における益金不算入の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán và hồ sơ nộp cho khoản không tính vào doanh thu chịu thuế trong kỳ quyết toán này chưa?",
+        "en": "Have you organized the calculation basis and filing documents for the exclusion from gross revenue in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、根拠資料と税理士の確認書を揃えましたので、申告書添付書類として提出可能です。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ tài liệu căn cứ và xác nhận của đại lý thuế, có thể nộp kèm theo tờ khai quyết toán rồi ạ.",
+        "en": "Yes, I have compiled the supporting documents and the tax accountant's confirmation letter, so they are ready to be submitted as attachments to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level definitions are accurate; however, the example sentences required complete rewrites due to severe domain errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "378c6d9a436db053c7bfa589258775ee0e06e4814eab1b9d7cea340fcc0bf7bd",
+    "validated_at": "2026-10-01T01:39:01.923030+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000146",
+  "term": "源泉徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object mechanically forced generic template patterns ('計上内容や残高', '決算において処理') onto '源泉徴収', violating basic Japanese tax accounting reality where withholding tax is recorded under liability accounts (預り金) upon cash disbursement rather than at annual book closing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "源泉徴収を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "源泉徴収 is an obligatory statutory deduction performed upon payment, not an operational project that one 'advances' (進める).",
+      "suggested_text": "源泉徴収を行う"
+    },
+    {
+      "index": 1,
+      "text": "源泉徴収を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Withholding tax is not spoken of as 'completed' (完了する); standard practice refers to withholding the tax and remitting it (納付する) or fulfilling the withholding obligation.",
+      "suggested_text": "源泉徴収税額を納付する"
+    },
+    {
+      "index": 2,
+      "text": "源泉徴収の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and semantically acceptable when reviewing internal operational guidelines for payroll/vendor payments.",
+      "suggested_text": "源泉徴収の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "源泉徴収を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One does not 'review' (見直す) a statutory withholding mechanism itself; one determines its applicability (要否を判断する) or checks the applicable tax rate.",
+      "suggested_text": "源泉徴収の要否を判断する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese bookkeeping, 源泉徴収 is an act; the account title carrying a balance on the balance sheet is '預り金' (specifically 源泉所得税預り金). '源泉徴収の残高' is an accounting solecism.",
+      "suggested_ja": "月末の帳簿照合において、源泉所得税預り金の計上額と納付予定額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch giữa số tiền trích thuế TNCN nợ tạm giữ và số thuế dự kiến phải nộp hay không.",
+      "suggested_en": "During month-end reconciliation, we scrutinize whether there are any discrepancies between the recorded withholding tax liability and the amount scheduled for remittance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Withholding tax occurs upon disbursement (salary, honorarium, dividend) and is remitted monthly (or bi-annually by special approval); it is not a year-end closing entry (決算) governed by accounting standards.",
+      "suggested_ja": "報酬の支払いに際しては、税法に基づき源泉徴収を適正に行い、翌月10日までに納付します。",
+      "suggested_vi": "Khi thanh toán thù lao, chúng tôi thực hiện khấu trừ thuế tại nguồn đúng theo luật thuế và nộp trước ngày 10 của tháng tiếp theo.",
+      "suggested_en": "When paying professional fees, we properly withhold tax at source in accordance with tax law and remit it by the 10th of the following month."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'源泉徴収の計上内容' is unnatural accounting terminology, and '適正に整合している' is redundant and stiff business phrasing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算と外注費の支払いに伴う源泉徴収税額は確定しましたか。",
+        "vi": "Số thuế khấu trừ tại nguồn liên quan đến bảng lương tháng này và chi phí thuê ngoài đã được chốt chưa?",
+        "en": "Has the withholding tax amount related to this month's payroll and outsourced fee payments been finalized?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、納付書と預り金元帳の突合を完了し、金額が一致していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu giấy nộp tiền với sổ cái tài khoản tiền tạm giữ và xác nhận các số tiền hoàn toàn khớp nhau.",
+        "en": "Yes, I have cross-checked the tax payment slip against the withholding tax ledger and confirmed that the amounts match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Existing definitions for the headword are accurate; inaccuracies were in the generated context sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0744fc9e52fb24b96f2b5ef7f102be9852e3c77d4820ea307186d8d6bc7e684f",
+    "validated_at": "2026-10-01T01:40:00.584941+00:00"
+  }
+}

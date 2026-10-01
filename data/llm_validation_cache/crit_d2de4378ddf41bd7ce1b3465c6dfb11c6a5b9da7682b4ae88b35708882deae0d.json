@@ -1,0 +1,69 @@
+{
+  "entry_id": "jp-pro-accounting-000003",
+  "term": "キャッシュ・フロー計算書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 relies on unnatural LLM-templated phrasing ('公認会計士の厳格な監査') rather than standard Japanese statutory accounting terminology ('会計監査人による監査'). Collocations, Example 1, and Dialogue are all high quality.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "キャッシュ・フロー計算書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic standard business and accounting collocation."
+    },
+    {
+      "index": 1,
+      "text": "キャッシュ・フロー計算書を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology in financial reporting and IR disclosure."
+    },
+    {
+      "index": 2,
+      "text": "キャッシュ・フロー計算書を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriate governance and board of directors action."
+    },
+    {
+      "index": 3,
+      "text": "キャッシュ・フロー計算書を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard financial analysis phrasing."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrasing '公認会計士の厳格な監査' is a melodramatic machine-translation cliché. In Japanese statutory corporate practice, formal audits are referred to as '会計監査人による監査' or '監査法人の監査', without dramatic modifiers like '厳格な'.",
+      "suggested_ja": "会計監査人による監査を経て、取締役会にて今期のキャッシュ・フロー計算書が正式に承認されました。",
+      "suggested_vi": "Sau khi có kết quả kiểm toán của đơn vị kiểm toán độc lập, hội đồng quản trị đã chính thức phê duyệt báo cáo lưu chuyển tiền tệ kỳ này.",
+      "suggested_en": "Following the statutory audit by the independent auditor, the board of directors officially approved this term's cash flow statement."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate, authentic accounting workflow phrasing reflecting timely disclosure (適時開示) and footnote reconciliation."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Natural, logically continuous interaction between accounting team members preparing for board reporting."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations accurately convey the business accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a1d5e0efbc03a8269c4261ee8836426737e1823b5fa6a88ef0286ff0ad8c1aae",
+    "validated_at": "2026-10-01T01:32:45.554110+00:00"
+  }
+}

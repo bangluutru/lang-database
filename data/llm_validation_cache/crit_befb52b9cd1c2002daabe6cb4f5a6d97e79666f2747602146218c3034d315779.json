@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000035",
+  "term": "源泉分離課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文がふるさと納税等の寄附金控除テンプレートから誤生成されており、「地域貢献」「控除上限額」など源泉分離課税の仕組みと完全に矛盾する致命的な事実誤認があるため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "源泉分離課税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "源泉分離課税は法定の課税方式であり、任意で「利用する」という表現は税務上不自然。",
+      "suggested_text": "源泉分離課税が適用される"
+    },
+    {
+      "index": 1,
+      "text": "源泉分離課税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税制上の表現として自然かつ頻出。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "源泉分離課税を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "制度選択や優遇税制（NISA等）とは異なり、義務的・一律に源泉徴収・課税関係が終了する仕組みであるため「活用する」は不自然。",
+      "suggested_text": "源泉分離課税として処理する"
+    },
+    {
+      "index": 3,
+      "text": "源泉分離課税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "「預貯金の利子等は源泉分離課税の対象となる」など実務で定型的に使われる自然なコロケーション。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「地域貢献」や「社内周知して活用」はふるさと納税等の寄附金控除と混同した致命的な事実誤認・テンプレート流用。",
+      "suggested_ja": "預貯金の利子や特定の発行差金については、源泉分離課税が適用されるため、確定申告を行う必要はありません。",
+      "suggested_vi": "Tiền lãi từ tiền gửi ngân hàng và một số khoản chiết khấu phát hành nhất định được áp dụng chế độ khấu trừ tại nguồn dứt điểm, do đó không cần phải thực hiện quyết toán thuế.",
+      "suggested_en": "Since separate withholding taxation applies to bank interest and certain original issue discounts, there is no need to file a tax return for them."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を試算」はふるさと納税や各種所得控除の概念であり、源泉分離課税には控除上限額という概念が存在しない。",
+      "suggested_ja": "有価証券の利子所得が源泉分離課税の対象となるか総合課税となるか、事前に税理士へ確認してください。",
+      "suggested_vi": "Vui lòng xác nhận trước với chuyên viên thuế xem thu nhập từ tiền lãi chứng khoán thuộc đối tượng khấu trừ tại nguồn dứt điểm hay tính thuế tổng hợp.",
+      "suggested_en": "Please confirm in advance with the licensed tax accountant whether the interest income from securities is subject to separate withholding taxation or comprehensive taxation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "源泉分離課税は源泉徴収のみで課税関係が完結するため、決算申告書に添付書類として提出するというやり取り自体が税務実務上矛盾している。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "受取利息について、源泉分離課税として源泉徴収された所得税等の処理は済んでいますか。",
+        "vi": "Đối với tiền lãi nhận được, khoản thuế thu nhập đã bị khấu trừ tại nguồn dứt điểm đã được xử lý xong chưa?",
+        "en": "Regarding the interest received, has the processing of the income tax withheld under separate withholding taxation been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、金融機関から届いた利息計算書をもとに、控除対象の源泉所得税額を計上済みです。",
+        "vi": "Vâng, dựa trên bảng kê tính lãi nhận được từ tổ chức tài chính, tôi đã ghi nhận số thuế thu nhập tại nguồn được khấu trừ rồi.",
+        "en": "Yes, based on the interest calculation statements from financial institutions, we have already recorded the creditable withholding tax amount."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の基本訳語（meaning_en/meaning_vi）は正確。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "77f5026a543d6528ec804182ce4ed34a0854da39cc422f311d4b1ada16517371",
+    "validated_at": "2026-10-01T01:37:58.994994+00:00"
+  }
+}

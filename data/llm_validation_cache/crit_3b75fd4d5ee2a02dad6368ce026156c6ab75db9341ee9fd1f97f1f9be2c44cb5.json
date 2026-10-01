@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000145",
+  "term": "電気通信利用役務の提供",
+  "overall_decision": "rewrite",
+  "summary_reason": "消費税法上の法定取引区分である「電気通信利用役務の提供」を、残高が存在する一般的な会計勘定科目と混同した機械的テンプレート構文が多用されており、実務教育コンテンツとして不適切です。リバースチャージや国内外判定などの税務実務に即した内容への全面改稿が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電気通信利用役務の提供を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「電気通信利用役務の提供」は取引の区分・性質であるため、直接目的語に取るのではなく「該当するか判定する」とするのが自然です。",
+      "suggested_text": "電気通信利用役務の提供に該当するか判定する"
+    },
+    {
+      "index": 1,
+      "text": "電気通信利用役務の提供を適用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「役務の提供」を「適用する」というコロケーションは意味的に破綻しています。制度や課税方式（リバースチャージ等）を適用する文脈にする必要があります。",
+      "suggested_text": "電気通信利用役務の提供に係るリバースチャージ方式を適用する"
+    },
+    {
+      "index": 2,
+      "text": "電気通信利用役務の提供を申告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "取引区分そのものを申告するのではなく、それにかかる消費税額を申告・精算します。",
+      "suggested_text": "電気通信利用役務の提供に係る消費税を計算する"
+    },
+    {
+      "index": 3,
+      "text": "電気通信利用役務の提供を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "表現として極めて漠然としており、消費税法上の実務（国外事業者からの受領や登録国外事業者番号の確認など）に即していません。",
+      "suggested_text": "電気通信利用役務の提供に係る請求書を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「電気通信利用役務の提供」は消費税法上の取引区分であり、勘定科目ではないため「残高」は存在しません。典型的な機械的テンプレート文です。",
+      "suggested_ja": "海外ベンダーから導入したクラウドサービスが「電気通信利用役務の提供」に該当するかどうか、税理士に確認を取りました。",
+      "suggested_vi": "Chúng tôi đã xác nhận với chuyên gia thuế xem dịch vụ đám mây nhập từ nhà cung cấp nước ngoài có thuộc diện 'cung cấp dịch vụ qua mạng viễn thông (dịch vụ số)' hay không.",
+      "suggested_en": "We confirmed with our tax accountant whether the cloud services procured from an overseas vendor qualify as the 'provision of services via telecommunication lines'."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "中身のない定型文であり、税務実務で何が処理されたのか（事業者向け役務提供としてのリバースチャージか、消費者向け役務提供としての仕入税額控除制限か）が不明瞭です。",
+      "suggested_ja": "国外事業者から受けた電気通信利用役務の提供について、リバースチャージ方式の対象となるか税務上の区分を精査しました。",
+      "suggested_vi": "Đối với việc cung cấp dịch vụ kỹ thuật số nhận từ doanh nghiệp nước ngoài, chúng tôi đã rà soát kỹ phân loại thuế xem có thuộc đối tượng áp dụng cơ chế tính thuế ngược (reverse-charge) hay không.",
+      "suggested_en": "Regarding the provision of telecommunications services received from a foreign business, we scrutinized the tax classification to determine whether the reverse charge mechanism applies."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "取引区分を勘定科目残高のように扱い「計上内容に差異」と問うのは不自然であり、実務会話として成立していません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外のSaaS利用料について、電気通信利用役務の提供としての消費税区分は確認できていますか。",
+        "vi": "Về phí dịch vụ SaaS nước ngoài, anh đã xác nhận phân loại thuế tiêu thụ theo diện cung cấp dịch vụ số chưa?",
+        "en": "Have you confirmed the consumption tax classification for the overseas SaaS fees as a provision of telecommunications services?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、事業者向け役務提供に該当するため、リバースチャージ方式での処理対象として登録済みです。",
+        "vi": "Vâng, do thuộc diện cung cấp dịch vụ cho doanh nghiệp (B2B), tôi đã đăng ký xử lý theo cơ chế tính thuế ngược rồi.",
+        "en": "Yes, since it qualifies as a B2B service, I have already registered it to be processed under the reverse charge mechanism."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体は概ね許容範囲ですが、文脈によっては「cung cấp dịch vụ qua mạng viễn thông / dịch vụ kỹ thuật số」や「provision of services via telecommunication lines」と明記するとより正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bec25cd1557dbf564de1de071ae6ec041b1f685712bb0107ed33f0ff5eb609f6",
+    "validated_at": "2026-10-01T01:40:01.088400+00:00"
+  }
+}

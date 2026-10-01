@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000075",
+  "term": "不可抗力条項",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 1 contains a legal semantic error ('違反する' instead of '援用する'), and Example 0 contains noticeable translation flaws in both Vietnamese and English.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不可抗力条項を設ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard drafting expression for establishing a force majeure clause in a contract.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "不可抗力条項に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A force majeure clause is an exemption/excuse provision (免責条項); parties breach contractual obligations (債務不履行・義務違反), but do not 'violate' an exemption clause. Instead, parties invoke or rely on it (援用する).",
+      "suggested_text": "不可抗力条項を援用する"
+    },
+    {
+      "index": 2,
+      "text": "不可抗力条項を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural expression meaning to apply the force majeure clause.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "不可抗力条項を精査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common legal and business review expression for scrutinizing contract wording.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese translation contains word duplication ('điều khoản điều khoản') and an unnecessary English parenthetical gloss, while the English lacks the indefinite article ('an explicit force majeure clause').",
+      "suggested_ja": "予期せぬ紛争を未然に防止するため、契約書内に明確な不可抗力条項を設けました。",
+      "suggested_vi": "Nhằm ngăn ngừa các tranh chấp phát sinh ngoài dự kiến, chúng tôi đã quy định rõ điều khoản bất khả kháng trong hợp đồng.",
+      "suggested_en": "To prevent unexpected disputes beforehand, we established an explicit force majeure clause within the contract."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, authentic Japanese legal-review sentence accurately describing consultation with corporate legal counsel.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logical and authentic workplace exchange between colleagues managing contract negotiations and risk verification.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Vietnamese has typographical repetition ('điều khoản điều khoản') and English loanword leakage '(Force Majeure)'. English in example 0 omits the required article 'an'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2cffed8ca4407428e12e7adb575a588117d4043108a6ee6b676840696b3e4c37",
+    "validated_at": "2026-10-01T01:42:11.265003+00:00"
+  }
+}

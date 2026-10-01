@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000003",
+  "term": "直接税",
+  "overall_decision": "rewrite",
+  "summary_reason": "「直接税」は財政学・税法上の分類概念であり、月次決算の実務で計上対象として扱う dialogue（「直接税の計上内容」）やコロケーション（「直接税を申告する/計算する」）に実務・ドメイン上の不整合が見られます。またベトナム語訳に重複の誤植があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "直接税を申告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「直接税」は税制上の分類概念（講学上の概念）であり、実務で個別に申告・手続する対象は「法人税」「所得税」などの個別税目です。「直接税を申告する」という言い方は実務現場では不自然です。",
+      "suggested_text": "直接税と間接税を区分する"
+    },
+    {
+      "index": 1,
+      "text": "直接税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "分類としての直接税全般の納付に言及する文脈で許容範囲内です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "直接税を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務で計算対象となるのは税額や各個別税目（法人税等）であり、「直接税を計算する」は概念と述語の組み合わせとしてやや粗く不自然です。",
+      "suggested_text": "直接税の比率"
+    },
+    {
+      "index": 3,
+      "text": "直接税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税制の仕組みや課税関係を説明する表現として極めて自然です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "実務の納付手続において「直接税の納付手続き」と包括的な分類名で呼ぶことは稀で、通常は「法人税等」や具体的な税目名を用います。学習者が実務で使う表現として違和感があります。",
+      "suggested_ja": "わが国の税制においては、所得や収益に対して直接税が課される仕組みとなっています。",
+      "suggested_vi": "Trong hệ thống thuế của nước ta, cơ chế là thuế trực thu được đánh trực tiếp vào thu nhập và lợi nhuận.",
+      "suggested_en": "Under our country's tax system, direct taxes are levied on income and profits."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本語文面は税制分析として成立していますが、ベトナム語訳に「thuế thuế trực thu」と誤字（重複）があります。",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における直接税の税負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ nội dung cải cách luật thuế, chúng tôi đã tính thử tác động đối với số tiền thuế trực thu phải nộp trong kỳ này.",
+      "suggested_en": "In light of tax law revisions, we estimated the impact on the tax burden of direct tax for this term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算や仕訳計上において「直接税」という勘定科目や呼称は存在しません（法人税等、租税公課などと呼びます）。月次決算の文脈で「直接税の計上内容」と尋ねるのは会計実務上極めて不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外子会社の税負担を分析するにあたり、直接税と間接税の内訳データを整理していただけますか。",
+        "vi": "Để phân tích gánh nặng thuế của công ty con ở nước ngoài, anh/chị có thể tổng hợp số liệu chi tiết về thuế trực thu và thuế gián thu được không?",
+        "en": "When analyzing the tax burden of overseas subsidiaries, could you compile the breakdown data of direct and indirect taxes?"
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。過年度の申告実績をもとに、税目別の比率をまとめた資料を作成します。",
+        "vi": "Tôi rõ rồi. Dựa trên số liệu khai thuế các năm trước, tôi sẽ lập tài liệu tổng hợp tỷ lệ theo từng loại thuế.",
+        "en": "Understood. I will prepare a document compiling the ratios by tax item based on past tax filing records."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "例文2のベトナム語訳に「thuế thuế trực thu」という単語の重複バグがあります。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f02bf526d2285c427828d86886889970204dffbdd4fe5a0648fa0d868438b973",
+    "validated_at": "2026-10-01T01:37:17.643980+00:00"
+  }
+}

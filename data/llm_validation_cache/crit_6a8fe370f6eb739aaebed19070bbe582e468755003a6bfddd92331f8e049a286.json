@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000160",
+  "term": "普通徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain errors across all examples and the dialogue. The candidate material hallucinated corporate accounting entries (月次決算, 帳簿照合, 残高, 補助元帳) for '普通徴収', which is exclusively an individual-paid local resident tax procedure not booked in corporate accounting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "普通徴収を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "普通徴収 is a tax collection method where the individual taxpayer pays directly via payment slip (納付書). A company does not 'advance' ordinary collection; rather, an employer switches a departing employee to ordinary collection (普通徴収に切り替える).",
+      "suggested_text": "普通徴収に切り替える"
+    },
+    {
+      "index": 1,
+      "text": "普通徴収を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Mechanically generated predicate. In payroll/tax administration, one refers to selecting ordinary collection or paying via ordinary collection.",
+      "suggested_text": "普通徴収を選択する"
+    },
+    {
+      "index": 2,
+      "text": "普通徴収の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound when reviewing administrative procedures for changing tax status.",
+      "suggested_text": "普通徴収の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "普通徴収を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company cannot 'review/re-examine' ordinary collection, as it is a statutory tax collection category set by local tax law, not an internal policy to be revised.",
+      "suggested_text": "普通徴収の納付書"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error. Companies only withhold and record 特別徴収 (special collection) on their books. 普通徴収 is paid directly by the individual to the municipality and is never recorded in corporate books or monthly balance sheet accounts.",
+      "suggested_ja": "退職者の住民税については、特別徴収から普通徴収への切替手続きを速やかに進めてください。",
+      "suggested_vi": "Đối với thuế cư trú của nhân viên đã nghỉ việc, hãy nhanh chóng làm thủ tục chuyển đổi từ thu thuế đặc biệt (khấu trừ tại nguồn) sang thu thuế thông thường (cá nhân tự nộp).",
+      "suggested_en": "Regarding resident tax for employees who have resigned, please promptly proceed with procedures to switch from special collection to ordinary collection."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe template hallucination. Accounting standards (会計基準) and corporate financial close (決算) have nothing to do with 普通徴収. 普通徴収 is governed by the Local Tax Act (地方税法) and handled by HR/payroll, not financial accounting closing entries.",
+      "suggested_ja": "確定申告の際、副業にかかる住民税の徴収方法として普通徴収を選択しました。",
+      "suggested_vi": "Khi quyết toán thuế thu nhập cá nhân, tôi đã chọn phương thức nộp thông thường (tự nộp) cho khoản thuế cư trú phát sinh từ công việc làm thêm.",
+      "suggested_en": "During the final tax return filing, I selected ordinary collection as the payment method for resident tax on my secondary income."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Completely disconnected from actual practice. Month-end corporate closing (月次決算) and subsidiary ledgers (補助元帳) do not track 普通徴収 because it is not handled on corporate accounts. The dialogue uses a generic, hallucinated accounting template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月末で退職する社員の住民税は、普通徴収への切替届を提出しますか。",
+        "vi": "Khoản thuế cư trú của nhân viên nghỉ việc vào cuối tháng này, chúng ta sẽ nộp tờ khai chuyển sang hình thức tự nộp (thông thường) chứ?",
+        "en": "Are we submitting the notification to switch to ordinary collection for the resident tax of the employee resigning at the end of this month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、最後の給与からの一括徴収を希望されていないため、普通徴収の異動届を自治体へ送付します。",
+        "vi": "Vâng, vì nhân viên không yêu cầu khấu trừ một lần vào kỳ lương cuối, nên chúng tôi sẽ gửi giấy khai báo biến động chuyển sang tự nộp đến chính quyền địa phương.",
+        "en": "Yes, since they did not request lump-sum withholding from their final paycheck, we will send the change notification for ordinary collection to the municipality."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese definition ('tự cầm giấy báo nộp thuế cư trú tại ngân hàng/cửa hàng tiện lợi') is a descriptive explanation rather than a proper terminology entry. It should be translated as 'Phương thức thu thuế thông thường (cá nhân tự nộp)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "64bd9a0ec84d93a962cb25346906cd3b24df060a124800c40a23ad2208a34f92",
+    "validated_at": "2026-10-01T01:40:14.824104+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000143",
+  "term": "電子インボイス",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple severe domain hallucinations: Example 0 and the Dialogue treated '電子インボイス' as a board/shareholder meeting report requiring drafting (推敲) and physical dispatch (発送). Collocations also used 発送 instead of 送信/発行.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電子インボイスを作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard collocation for creating an electronic invoice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "電子インボイスを提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Invoices are typically issued (発行・交付) or transmitted (送信) rather than submitted (提出), unless specifically submitted to a tax portal.",
+      "suggested_text": "電子インボイスを発行する"
+    },
+    {
+      "index": 2,
+      "text": "電子インボイスを発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "発送 applies to physical shipping/mailing of goods or paper documents. Electronic data is transmitted (送信) or delivered/sent (送付・配信).",
+      "suggested_text": "電子インボイスを送信する"
+    },
+    {
+      "index": 3,
+      "text": "電子インボイスを受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing for receiving electronic invoices.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe corporate logic error: electronic invoices are commercial transaction billing documents, not shareholder meeting or board meeting materials (confused with 招集通知/議案書). Furthermore, 発送 is incorrect for electronic data.",
+      "suggested_ja": "インボイス制度の導入に伴い、取引先との請求業務を効率化するため、電子インボイスの送受信システムを導入しました。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ hóa đơn (Invoice System), chúng tôi đã triển khai hệ thống gửi và nhận hóa đơn điện tử nhằm nâng cao hiệu quả quy trình thanh toán với đối tác.",
+      "suggested_en": "Following the introduction of the invoice system, we implemented an e-invoice transmission system to streamline billing operations with our business partners."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and compliant with the Electronic Books Preservation Act (電子帳簿保存法) requirements regarding retention of received e-invoices.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Invoices are not prepared or polished (推敲) for 'meetings', nor are electronic invoices physically dispatched (発送). The dialogue is an ungrounded template clearly intended for a report or presentation document.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先月分の取引について、主要取引先から電子インボイスはもう届いていますか。",
+        "vi": "Về các giao dịch của tháng trước, đối tác chính đã gửi hóa đơn điện tử sang chưa?",
+        "en": "Have we received the e-invoices from our major business partners for last month's transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先ほど受領を確認し、電子帳簿保存法の要件に沿ってサーバーへ格納いたしました。",
+        "vi": "Vâng, tôi vừa xác nhận đã nhận và lưu trữ vào máy chủ đúng theo các yêu cầu của Luật lưu trữ sổ sách kế toán điện tử rồi.",
+        "en": "Yes, I confirmed receipt earlier and archived them on the server in compliance with the Electronic Books Preservation Act."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese gloss unnecessarily narrows the definition by appending '(Peppol)', which is merely one technical transmission standard/network rather than the definition of the term itself."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a57b6d4af1ffe050ea9212e0c4458b952d59ad934d01d2c013f68a0af37a0f23",
+    "validated_at": "2026-10-01T01:39:55.672710+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000200",
+  "term": "事前照会制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain hallucination. The generator confused 事前照会制度 (advance tax ruling / prior inquiry) with a donation tax credit / deduction scheme (地域貢献, 控除上限額の試算, 申告書添付書類の計算根拠). Collocations, examples, and dialogue must be rewritten to reflect true tax inquiry practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "事前照会制度を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard business/tax expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "事前照会制度の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "事前照会制度 is a procedural inquiry system, not a preferential tax relief or statutory exemption scheme; one does not 'receive application of' (適用を受ける) an inquiry procedure.",
+      "suggested_text": "事前照会制度に基づいて照会する"
+    },
+    {
+      "index": 2,
+      "text": "事前照会制度を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly used in tax planning and compliance.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "事前照会制度の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to transactions eligible for prior inquiry.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Gross factual error and tautology. '地域貢献' and '節税' confounds this term with corporate donations (e.g. 企業版ふるさと納税), and '事前照会制度の制度' is an unnatural tautology. Prior inquiry clarifies tax interpretation for specific planned transactions.",
+      "suggested_ja": "新規事業スキームの税務上の適格性を事前に確認するため、国税局の事前照会制度を活用して文書照会を行いました。",
+      "suggested_vi": "Để xác nhận tính hợp lệ về mặt thuế của mô hình kinh doanh mới từ trước, chúng tôi đã tận dụng chế độ hỏi trước cơ quan thuế để gửi văn bản tham vấn lên Cục Thuế.",
+      "suggested_en": "To confirm the tax eligibility of our new business scheme in advance, we utilized the advance tax ruling system of the Regional Taxation Bureau to submit a written inquiry."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual hallucination. '控除上限額を事前に試算' mistakenly treats prior inquiry as a tax deduction cap calculation (such as donation deduction).",
+      "suggested_ja": "組織再編に伴う税務リスクを回避するため、実行前に事前照会制度の手続きを進めることにしました。",
+      "suggested_vi": "Nhằm phòng tránh các rủi ro về thuế phát sinh từ việc tái cơ cấu tổ chức, chúng tôi quyết định tiến hành thủ tục tham vấn trước cơ quan thuế trước khi thực hiện.",
+      "suggested_en": "In order to avoid tax risks associated with organizational restructuring, we decided to proceed with the advance tax ruling procedure before execution."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Conflates advance inquiries with deduction calculation proofs for tax return filing. Prior inquiry is filed before transactions/returns to seek an official written response, not an internal calculation basis for filing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "大型のグループ内再編に関する税務処理ですが、事前に国税局へ事前照会制度の利用を検討すべきでしょうか。",
+        "vi": "Về việc xử lý thuế liên quan đến tái cơ cấu quy mô lớn trong tập đoàn, chúng ta có nên cân nhắc sử dụng chế độ hỏi trước cơ quan thuế với Cục Thuế không?",
+        "en": "Regarding the tax treatment of the large-scale intra-group restructuring, should we consider using the advance tax ruling system with the Regional Taxation Bureau?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、解釈に曖昧さが残る論点ですので、顧問税理士と相談の上、事前照会制度に基づく文書照会を進めましょう。",
+        "vi": "Vâng, vì đây là vấn đề còn điểm diễn giải chưa rõ ràng, chúng ta nên thảo luận với chuyên gia thuế tư vấn và tiến hành gửi văn bản hỏi trước.",
+        "en": "Yes, as ambiguities remain regarding interpretation, let's consult with our tax advisor and proceed with a written inquiry under the advance ruling system."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the headword itself are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a2ae3a9f6d23fcc414b447a4b12ad4b5ce713eb186c277922b02f55e544ec7c8",
+    "validated_at": "2026-10-01T01:40:58.157530+00:00"
+  }
+}

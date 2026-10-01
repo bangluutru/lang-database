@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000012",
+  "term": "着手金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate relies heavily on generic, synthetically templated accounting statements and clunky translations rather than authentic commercial usage of 着手金 (retainer/upfront commitment fee).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "着手金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in accounting when recording upfront retainers or milestone contract fees as advance payments or revenue.",
+      "suggested_text": "着手金を計上する"
+    },
+    {
+      "index": 1,
+      "text": "着手金の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "着手金 itself is a transaction fee rather than a continuing balance sheet account; checking its deposit or payment status is far more standard.",
+      "suggested_text": "着手金の入金を確認する"
+    },
+    {
+      "index": 2,
+      "text": "着手金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates invoices or bank records against amounts, rather than directly applying 照合する to 着手金 without an object modifier.",
+      "suggested_text": "着手金を請求する"
+    },
+    {
+      "index": 3,
+      "text": "着手金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural expression when offsetting or finalizing upfront retainer fees upon project completion.",
+      "suggested_text": "着手金を精算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavily templated synthetic accounting sentence. English translation also lazily copies raw dictionary slashes.",
+      "suggested_ja": "業務委託契約の締結に伴い、請求書に基づき着手金30万円を前払金として計上しました。",
+      "suggested_vi": "Cùng với việc ký kết hợp đồng ủy thác nghiệp vụ, chúng tôi đã hạch toán 300.000 yên tiền tạm ứng ban đầu vào tài khoản chi phí trả trước dựa theo hóa đơn.",
+      "suggested_en": "Upon signing the outsourcing agreement, we recorded the 300,000 yen retainer fee as an advance payment based on the invoice."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Vacuous boilerplate with repetitive phrasing ('適正な...適正に処理'). Does not represent high-quality educational Japanese.",
+      "suggested_ja": "コンサルティング契約が完了したため、受領済みの着手金を最終報酬額から差し引いて精算いたしました。",
+      "suggested_vi": "Do hợp đồng tư vấn đã hoàn tất, chúng tôi đã cấn trừ khoản tiền đặt cọc ban đầu đã nhận vào tổng thù lao cuối cùng để tất toán.",
+      "suggested_en": "As the consulting agreement has concluded, we settled the account by deducting the received retainer fee from the final fee amount."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase '適正に整合している' is redundant and unnatural. The dialogue relies on an artificial template rather than realistic business interaction involving retainers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "システム開発の新規案件ですが、先方から着手金の入金は確認できていますか。",
+        "vi": "Đối với dự án phát triển hệ thống mới, anh đã xác nhận được tiền tạm ứng ban đầu từ đối tác chưa?",
+        "en": "Regarding the new system development project, have we confirmed the receipt of the initial retainer fee from the client?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、本日付で入金が確認できましたので、開発部門へ着手指示を出しました。",
+        "vi": "Vâng, khoản tiền đã vào tài khoản trong ngày hôm nay, nên tôi đã thông báo cho bộ phận phát triển bắt đầu tiến hành công việc rồi ạ.",
+        "en": "Yes, payment was confirmed as of today, so I have instructed the development department to kick off the work."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "English translations in examples contaminated with dictionary slashes ('retainer fee / initial contract fee'); Vietnamese translation 'tiền khởi động dự án' is overly narrow and unnatural compared to 'tiền tạm ứng trước/tiền đặt cọc ban đầu'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9505021f12b51ceef548b39b1c24a46f8dc165fd725512935a0a485314f707ac",
+    "validated_at": "2026-10-01T01:41:11.549434+00:00"
+  }
+}

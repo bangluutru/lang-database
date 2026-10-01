@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000114",
+  "term": "社会保険",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的な会計テンプレ構文に「社会保険」という語を機械的に当てはめた結果、「社会保険を計上する」「社会保険の残高」という実務上あり得ないコロケーションが生成されている。人事労務の実務に即した自然な例文・対話への全面差し替えが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "社会保険を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "標準的かつ頻出の労務・法務コロケーションである。",
+      "suggested_text": "社会保険を適用する"
+    },
+    {
+      "index": 1,
+      "text": "社会保険の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "資格取得・喪失等の各種手続きを表す自然な表現である。",
+      "suggested_text": "社会保険の手続きを進める"
+    },
+    {
+      "index": 2,
+      "text": "社会保険の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "短時間労働者の加入要件（週20時間等）を満たす文脈で極めて自然。",
+      "suggested_text": "社会保険の要件を満たす"
+    },
+    {
+      "index": 3,
+      "text": "社会保険を周知する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "制度そのものを直接「周知する」とするのは不自然。「社会保険の加入基準を周知する」とするか、基礎的実務用語として「社会保険に加入する」や「社会保険料を控除する」を用いるべきである。",
+      "suggested_text": "社会保険に加入する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会計・簿記実務において「社会保険」という制度名そのものを計上したり残高照合することはない（計上対象は「社会保険料」「法定福利費」「社会保険料預り金」等）。機械的なスロット充填型テンプレートによる不自然な作文である。",
+      "suggested_ja": "新入社員の入社に伴い、速やかに社会保険の資格取得届を管轄の年金事務所へ提出してください。",
+      "suggested_vi": "Cùng với việc nhân viên mới vào công ty, xin vui lòng nhanh chóng nộp tờ khai tham gia bảo hiểm xã hội lên Văn phòng Niên kim phụ trách.",
+      "suggested_en": "Following the onboarding of new employees, please promptly submit the notification of acquisition of social insurance qualification to the competent pension office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "決算において「社会保険を適正に処理いたしました」という言い回しは日本語の会計報告として成立していない（「法定福利費を処理する」または「未払社会保険料を計上する」が正確）。実務に即した人事労務・給料計算の文脈に改めるべき。",
+      "suggested_ja": "週の所定労働時間が20時間以上のパートタイマーについて、社会保険の加入要件を満たしているか確認いたしました。",
+      "suggested_vi": "Chúng tôi đã kiểm tra xem các nhân viên bán thời gian có thời gian làm việc theo quy định từ 20 giờ mỗi tuần trở lên có đáp ứng đủ điều kiện tham gia bảo hiểm xã hội hay không.",
+      "suggested_en": "We verified whether part-time workers with scheduled working hours of 20 hours or more per week meet the eligibility requirements for social insurance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「社会保険の計上内容に差異は発生していませんか」は会計用語として不自然。社会保険の制度的文脈（適用拡大や加入手続き）に即した自然なオフィス会話に刷新すべきである。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月から短時間労働者に対する社会保険の適用範囲が拡大されますが、社内での準備状況はいかがですか。",
+        "vi": "Từ tháng sau, phạm vi áp dụng bảo hiểm xã hội đối với lao động làm việc theo thời gian ngắn sẽ được mở rộng, tình hình chuẩn bị nội bộ như thế nào rồi?",
+        "en": "Starting next month, social insurance coverage for part-time workers will be expanded. What is the status of our internal preparation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "新たに対象となる従業員のリストアップを終え、順次手続きの案内を進めております。",
+        "vi": "Chúng tôi đã hoàn thành việc lập danh sách các nhân viên mới thuộc đối tượng và đang lần lượt triển khai hướng dẫn thủ tục.",
+        "en": "We have completed listing the newly eligible employees and are proceeding with the guidance on enrollment procedures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "meaning_viに「bảo hiểm xã hội bắt buộc tại Nhật Bản」と長々しい説明的定訳を置いたため、例文内でも機械的に挿入され、ベトナム語として極めて不自然な冗長表現になっている。「bảo hiểm xã hội」に是正すべきである。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e66825f60ed68297af097f8879ff806c26c789955c0fa74e56e5a1f667c98a82",
+    "validated_at": "2026-10-01T01:42:58.515477+00:00"
+  }
+}

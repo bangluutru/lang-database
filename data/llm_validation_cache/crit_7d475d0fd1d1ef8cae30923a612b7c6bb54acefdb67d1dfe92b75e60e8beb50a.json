@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000014",
+  "term": "申告納税制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain conceptual error: the collocations and example sentences severely confuse '申告納税制度' (the fundamental statutory self-assessment system under National Tax General Law) with 'ふるさと納税' (donation tax incentive schemes), rendering the sentences factually nonsensical.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "申告納税制度を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "申告納税制度 is the statutory self-assessment framework (opposed to 賦課課税制度), not an optional tax incentive or service that taxpayers 'utilize' (利用する).",
+      "suggested_text": "申告納税制度を採用する"
+    },
+    {
+      "index": 1,
+      "text": "申告納税制度の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "申告納税制度 is not a preferential tax provision or special relief that one 'receives application of' (適用を受ける). One operates under it.",
+      "suggested_text": "申告納税制度に基づく"
+    },
+    {
+      "index": 2,
+      "text": "申告納税制度を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Conflates a fundamental tax determination framework with a tax credit or tax-saving program. Taxpayers comply with it, not 'leverage' it.",
+      "suggested_text": "申告納税制度の下で申告する"
+    },
+    {
+      "index": 3,
+      "text": "申告納税制度の対象となる",
+      "decision": "rewrite",
+      "reason_code": "NATURAL",
+      "reason": "While intelligible when referring to tax categories (税目), it is more standard and educational to pair it with tax assessment typology.",
+      "suggested_text": "申告納税制度と賦課課税制度"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Gross factual hallucination: conflates 申告納税制度 (self-assessment system) with ふるさと納税 (hometown tax donation) by mentioning '節税および地域貢献'. Also contains tautological phrasing '申告納税制度の制度'.",
+      "suggested_ja": "日本の法人税や所得税は申告納税制度を採用しており、納税者自らが所得金額と税額を正しく計算して申告する必要があります。",
+      "suggested_vi": "Thuế thu nhập doanh nghiệp và thuế thu nhập cá nhân của Nhật Bản áp dụng chế độ tự khai tự nộp thuế, do đó người nộp thuế phải tự mình tính toán chính xác và kê khai số thu nhập cũng như số thuế phải nộp.",
+      "suggested_en": "Japan's corporate and income taxes adopt the self-assessment taxation system, requiring taxpayers to accurately calculate and report their income and tax liability themselves."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Mentions '控除上限額を事前に試算' (pre-calculating the deduction ceiling), which again confuses the statutory self-assessment framework with donation or credit programs (such as ふるさと納税).",
+      "suggested_ja": "申告納税制度の下では帳簿書類の正確な記録と保存が義務付けられており、税務調査においてもその正当性が問われます。",
+      "suggested_vi": "Dưới chế độ tự khai tự nộp thuế, việc ghi chép và lưu trữ sổ sách chứng từ một cách chính xác là nghĩa vụ bắt buộc, và tính hợp lệ của chúng cũng sẽ được kiểm tra khi thanh tra thuế.",
+      "suggested_en": "Under the self-assessment system, accurate recording and retention of books and records are mandatory, and their legitimacy will be examined during tax audits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Phrases like '申告納税制度の計算根拠' (computational basis of the self-assessment taxation system) are unnatural and inaccurate. A business person refers to '法人税の申告書' or '確定申告の計算根拠', not the computational basis of the system itself.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "わが国の法人税は申告納税制度に基づいているため、自主的なコンプライアンスと計算根拠の厳密な管理が求められますね。",
+        "vi": "Vì thuế pháp nhân của nước ta dựa trên chế độ tự khai tự nộp thuế, nên đòi hỏi tính tuân thủ tự nguyện và việc quản lý chặt chẽ căn cứ tính toán nhỉ.",
+        "en": "Because Japan's corporate tax is based on the self-assessment taxation system, voluntary compliance and rigorous management of calculation bases are required."
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税務調査で指摘を受けないよう、今回の決算申告でも税理士と連携して根拠資料を漏れなく整備しております。",
+        "vi": "Vâng, để tránh bị truy thu hay lưu ý trong đợt thanh tra thuế, chúng tôi đã phối hợp với cố vấn thuế chuẩn bị đầy đủ tài liệu căn cứ cho kỳ quyết toán này.",
+        "en": "Yes, to prevent any issues during a tax audit, we have worked closely with our tax accountant to thoroughly prepare all supporting documentation for this tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations 'Self-assessment taxation system' and 'chế độ tự khai tự nộp thuế' are completely accurate, though the generated sentences suffered from factual confusion."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f47a249fc037f8f569014365a74f1b171aac8b253796a59fcfc69e9a1f63457f",
+    "validated_at": "2026-10-01T01:37:29.461252+00:00"
+  }
+}

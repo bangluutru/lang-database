@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000044",
+  "term": "受取利息",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an unnatural collocation (受取利息を精算する), a repetitive template example sentence with unnatural standard phrasing ('適正な会計基準'), and awkward phrasing in the dialogue ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "受取利息を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking interest income.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "受取利息の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reviewing account balances during month-end or year-end closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "受取利息を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to cross-checking recorded interest against bank statements.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "受取利息を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies primarily to expense reimbursements, advances, or settled reciprocal accounts; interest income (受取利息) is recognized or accrued, not '精算'.",
+      "suggested_text": "受取利息を月割り計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard business Japanese used in accounting controls.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is unnatural in Japanese accounting parlance (standards are referred to as 企業会計基準 or 適用される会計基準, not '適正な'), and the repetition of '適正な...適正に' is stylistically poor and indicative of generic template generation.",
+      "suggested_ja": "当期末における定期預金および貸付金について、経過利息を計算のうえ受取利息を計上いたしました。",
+      "suggested_vi": "Đối với tiền gửi có kỳ hạn và các khoản cho vay vào cuối kỳ này, chúng tôi đã tính lãi dồn tích và hạch toán doanh thu tiền lãi.",
+      "suggested_en": "Regarding term deposits and loans at the end of the current term, we calculated accrued interest and booked the interest income."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is redundant and unnatural business Japanese. In real workplace discourse, accountants say '一致している' or '整合性が取れている'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、受取利息の計上額に通帳との差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền hạch toán doanh thu tiền lãi có phát sinh chênh lệch so với sổ phụ ngân hàng không?",
+        "en": "Are there any discrepancies between the recorded interest income and the bank statements in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "預金通帳と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ phụ ngân hàng với sổ phụ tài khoản, và xác nhận tất cả đều khớp ạ.",
+        "en": "I have already reconciled the bank statements with the subsidiary ledgers and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "'tiền lãi nhận được' is too colloquial and literal; the formal accounting term in Vietnamese enterprise financial statements is 'doanh thu tiền lãi'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2aa9dfcd6d22ab8276aef64f62d175afbaababc115fab4a4bcc4aea4c9d21728",
+    "validated_at": "2026-10-01T01:34:29.748709+00:00"
+  }
+}

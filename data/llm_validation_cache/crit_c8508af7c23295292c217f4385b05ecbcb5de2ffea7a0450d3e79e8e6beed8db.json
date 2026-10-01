@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000125",
+  "term": "D/P",
+  "overall_decision": "rewrite",
+  "summary_reason": "D/Pの会計処理に関する理解に誤りがあり、多くの例文や対話が不自然または不正確であるため、全体的な見直しが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "D/Pを開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "D/Pは決済条件であり、口座のように「開設する」ものではない。通常は「D/P条件で取引する」などと表現する。",
+      "suggested_text": "D/P条件で取引する"
+    },
+    {
+      "index": 1,
+      "text": "D/Pを決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "D/Pを提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "D/Pの不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "D/Pは決済条件であり、会計上の「計上内容」や「残高」を持つものではない。帳簿照合の対象にはなりにくい。",
+      "suggested_ja": "月末の帳簿照合において、D/P条件で取引された売掛金や買掛金に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong các khoản phải thu hoặc phải trả được giao dịch theo điều kiện D/P hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in accounts receivable or payable transacted under D/P terms."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "D/P自体を「処理する」という表現は不自然。D/P条件での取引を会計処理するという意味合いであれば、より具体的な表現が必要。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてD/P条件での取引に係る会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình hạch toán kế toán liên quan đến các giao dịch theo điều kiện D/P trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the accounting entries related to transactions under D/P terms in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "D/Pは決済条件であり、会計上の「計上内容」を持つものではないため、Aの発言が不自然。Bの回答もD/Pの性質と直接結びつかない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、D/P条件で輸出された売掛金について、何か問題は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có vấn đề gì phát sinh với các khoản phải thu từ xuất khẩu theo điều kiện D/P không?",
+        "en": "In this month's monthly closing, have there been any issues with accounts receivable from exports under D/P terms?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する船積書類と会計帳簿を照合済みで、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các chứng từ vận chuyển liên quan và sổ sách kế toán, và đã xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, we have reconciled the relevant shipping documents and accounting ledgers, and confirmed that everything has been processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9e9ef17d94c1c963a6b41b28aa0d7aa2c552dcaa6163f284788560766fad13df",
+    "validated_at": "2026-10-01T01:56:05.500131+00:00"
+  }
+}

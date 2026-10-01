@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000007",
+  "term": "CPT",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision for better conversational flow and directness in addressing the CPT-related question. Other elements are well-constructed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "CPTの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrasing for contracting under specific terms."
+    },
+    {
+      "index": 1,
+      "text": "CPTの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrasing for trading under specific pricing terms."
+    },
+    {
+      "index": 2,
+      "text": "CPTにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrasing for arranging cost allocation under specific terms."
+    },
+    {
+      "index": 3,
+      "text": "CPTにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrasing for confirming risk transfer point under specific terms."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The sentence is natural and accurately reflects business communication regarding Incoterms."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The sentence is natural and accurately reflects business communication regarding Incoterms and cost allocation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about 'CPT arrangement status' which implies the status of the CPT terms themselves or the overall shipment under CPT. Speaker B's response focuses on customs clearance and documentation, which is a part of the shipment process but doesn't directly address the 'CPT arrangement status' in a comprehensive way. The connection feels a bit off, as CPT defines responsibilities up to the named place, not just customs clearance. Also, 乙仲 (otsunaka) is a bit informal for a professional dialogue, though understandable. A more direct answer regarding the CPT-defined responsibilities would be better.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、CPT条件に基づく輸送手配の進捗はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp vận chuyển theo điều kiện CPT thế nào rồi?",
+        "en": "Regarding today's customs clearance, what is the progress of the transportation arrangements under CPT terms?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、CPT条件に基づき、指定された仕向地までの運送は手配済みです。現在、通関業者への連絡と必要書類の確認を終え、輸入申告の段階に入っております。",
+        "vi": "Vâng, theo điều kiện CPT, việc vận chuyển đến địa điểm đích đã được sắp xếp. Hiện tại, chúng tôi đã liên hệ với công ty thông quan và hoàn tất kiểm tra tài liệu, đang trong giai đoạn khai báo nhập khẩu.",
+        "en": "Yes, under CPT terms, transportation to the designated destination has been arranged. We have now completed communication with the customs broker and document verification, and are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both translations are accurate and natural."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a3867e032570b6834a20a1db883426e0febae30733b1376bdf591744b4e1cdfc",
+    "validated_at": "2026-10-01T01:53:49.278936+00:00"
+  }
+}

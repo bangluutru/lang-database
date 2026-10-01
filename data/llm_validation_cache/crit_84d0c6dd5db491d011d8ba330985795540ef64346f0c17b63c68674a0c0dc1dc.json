@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000054",
+  "term": "障害者控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 2 contains a domain misconception ('上限額' does not exist for a statutory fixed deduction), and the dialogue contains a severe domain factual error by placing individual '障害者控除' inside a corporate '決算申告' with fabricated supporting documents.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "障害者控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly frequent tax terminology.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "障害者控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and idiomatic phrasing used by taxpayers and payroll staff.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "障害者控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese tax law, 障害者控除 is a statutory fixed deduction (定額: 27万円, 40万円, or 75万円 per person), not a formula-based deduction with a variable 'cap/limit' (上限額) like 寄附金控除 or 住宅ローン控除.",
+      "suggested_text": "障害者控除の控除額を確認する"
+    },
+    {
+      "index": 3,
+      "text": "障害者控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax collocation regarding qualification criteria.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural for individual income tax return filing.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically correct and professionally plausible.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe factual error: '決算申告' refers to corporate tax returns (法人税申告), but corporations cannot claim 障害者控除 (which applies strictly to individual income tax via 年末調整 or 確定申告). Furthermore, attaching a '税理士の確認書' is fictitious; the statutory proofs are disability certificates (障害者手帳) or municipal certifications.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の年末調整における従業員の障害者控除の申告内容と確認書類は整理できましたか。",
+        "vi": "Nội dung kê khai khoản giảm trừ người khuyết tật của nhân viên và các giấy tờ xác nhận trong đợt quyết toán thuế cuối năm lần này đã được sắp xếp xong chưa?",
+        "en": "Have you organized the employee disability exemption declarations and supporting documents for this year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、対象者の扶養控除等申告書と障害者手帳の写しを確認し、控除区分の照合も完了しています。",
+        "vi": "Vâng, tôi đã kiểm tra tờ khai giảm trừ người phụ thuộc cùng bản sao sổ chứng nhận khuyết tật của các nhân sự liên quan, và đã hoàn tất việc đối chiếu phân loại giảm trừ.",
+        "en": "Yes, I have verified the declaration forms for dependents and copies of disability certificates for eligible personnel, and completed matching their deduction categories."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "923b3d2de9903186e92fe54898d1dce9205d24fa8dfa3965bceedc50c5158b75",
+    "validated_at": "2026-10-01T01:38:19.474633+00:00"
+  }
+}

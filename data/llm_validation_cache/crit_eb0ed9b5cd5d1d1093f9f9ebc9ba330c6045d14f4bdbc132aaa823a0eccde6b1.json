@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000038",
+  "term": "損益通算",
+  "overall_decision": "rewrite",
+  "summary_reason": "「損益通算（同一年内の異区分・法人間損益相殺）」を「繰越欠損金（過年度損失の将来繰越控除）」と完全に混同しており、コロケーション・例文・対話すべてに税務上の致命的な事実誤認と述語ミスマッチが発生しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損益通算を繰り越す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「損益通算」は同一年内の異なる所得区分間（またはグループ通算制度内の法人間）で利益と損失を相殺する手続き・計算行為であり、繰越欠損金のように「繰り越す」対象にはなりません（繰越しは「純損失の繰越控除」等の概念）。",
+      "suggested_text": "損益通算を行う"
+    },
+    {
+      "index": 1,
+      "text": "損益通算を控除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「損益通算」という手続き自体を「控除する」という述語に取ることは不自然です（損失を他所得から控除する、あるいは損益通算を適用する、と表現します）。",
+      "suggested_text": "損益通算を適用する"
+    },
+    {
+      "index": 2,
+      "text": "損益通算に充当する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "損益通算は充当先ではなく計算手続きそのものを指すため、実務で「損益通算に充当する」とは言いません。",
+      "suggested_text": "損益通算の対象とする"
+    },
+    {
+      "index": 3,
+      "text": "損益通算の還付を請求する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「損益通算による還付を申告する」または「損益通算を反映して還付申告を行う」が実務上正確であり、「損益通算の還付を請求する」は不自然です。",
+      "suggested_text": "損益通算により還付を受ける"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「過去に発生した損益通算を控除し」は、税法上の「繰越欠損金の控除」と「損益通算」を致命的に混同しています。損益通算は過年度の損失を繰り越して控除する制度ではありません。",
+      "suggested_ja": "不動産所得で生じた損失について他の所得との損益通算を行い、課税所得額を適正に圧縮しました。",
+      "suggested_vi": "Chúng tôi đã thực hiện bù trừ lãi lỗ giữa khoản lỗ từ thu nhập bất động sản với các nguồn thu nhập khác, qua đó giảm hợp lý thu nhập chịu thuế.",
+      "suggested_en": "We aggregated the loss incurred from real estate income against other categories of income, appropriately reducing taxable income."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「法定の繰越期間」「保有する損益通算の控除限度額」という記述は、完全に「繰越欠損金（Tax loss carryforward）」の概念を誤って当てはめており、税務上重大な事実誤認です。",
+      "suggested_ja": "グループ通算制度において子会社の当期純損失を通算親会社の所得と損益通算し、グループ全体の法人税負担を軽減しました。",
+      "suggested_vi": "Trong cơ chế tính thuế nhóm, chúng tôi đã bù trừ khoản lỗ ròng kỳ này của công ty con với thu nhập của công ty mẹ, giảm gánh nặng thuế thu nhập doanh nghiệp cho toàn tập đoàn.",
+      "suggested_en": "Under the group relief system, we aggregated the current net loss of the subsidiary with the parent company's income, mitigating the overall corporate tax burden of the group."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "単体法人の「決算申告」において単に「損益通算」と呼ぶのは不自然です（法人税単体では各事業年度の益金・損金合算であり、損益通算とは通常呼びません。個人確定申告かグループ通算制度かを明示する必要があります）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "グループ通算制度における各社間の損益通算の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã tổng hợp căn cứ tính toán và tài liệu nộp cho việc bù trừ lãi lỗ giữa các công ty trong cơ chế tính thuế nhóm chưa?",
+        "en": "Have you finalized the calculation basis and filing documents for the aggregation of profit and loss among the companies under the group relief system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通算子会社からの報告数値を取りまとめ、税理士の確認書とともに申告書添付書類として準備が完了しております。",
+        "vi": "Vâng, tôi đã tổng hợp số liệu báo cáo từ các công ty con tham gia và chuẩn bị đầy đủ tài liệu đính kèm tờ khai cùng với xác nhận của thuế lý sĩ.",
+        "en": "Yes, we have compiled the reported figures from the consolidated subsidiaries and prepared them as tax return attachments along with the licensed tax accountant's confirmation."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語レベルの英訳・越訳は正確ですが、例文側で「繰越欠損金」と混同されているため例文の再生成が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "779ab14a555f64e5a8b1d4748464a4f2d8f68eeba437997dd7e3166d0d7ef998",
+    "validated_at": "2026-10-01T01:38:02.052203+00:00"
+  }
+}

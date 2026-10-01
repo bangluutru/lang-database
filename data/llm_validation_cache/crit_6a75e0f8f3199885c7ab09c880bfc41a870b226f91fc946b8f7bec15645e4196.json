@@ -1,0 +1,74 @@
+{
+  "entry_id": "jp-pro-tax-000138",
+  "term": "輸出免税",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文2件ともに税務上の事実誤認（地域貢献の文脈混入、存在しない控除上限額への言及）が含まれる致命的なテンプレート生成であるため、全面的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出免税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "輸出免税は法定の税務上の取扱規程であり、一般的なサービスのように「利用する」とは言わず「適用を受ける」や「適用要件を満たす」を用います。",
+      "suggested_text": "輸出免税の適用要件を満たす"
+    },
+    {
+      "index": 1,
+      "text": "輸出免税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税法および実務上最も標準的かつ正確な連語です。"
+    },
+    {
+      "index": 2,
+      "text": "輸出免税を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「活用する」は制度の利用促進のような文脈で機械的に生成されがちですが、実務上は「輸出免税の証明書類を保管する」や「輸出免税取引に該当する」などが好まれます。",
+      "suggested_text": "輸出免税の証明書類を保存する"
+    },
+    {
+      "index": 3,
+      "text": "輸出免税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "取引が輸出免税に該当するかどうかを判断する実務文脈で極めて自然です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "輸出免税は消費税法に基づく国外消費に対する非課税・免税措置であり、「地域貢献の観点」や単なる「節税」で行うものではなく、事実誤認を伴う不自然なテンプレート文です。",
+      "suggested_ja": "国外取引において輸出免税の適用を受けるため、税関から交付された輸出許可書を厳格に保存・管理しています。",
+      "suggested_vi": "Để được áp dụng chính sách miễn thuế tiêu dùng xuất khẩu cho các giao dịch nước ngoài, chúng tôi lưu trữ và quản lý nghiêm ngặt tờ khai hải quan xuất khẩu do cơ quan hải quan cấp.",
+      "suggested_en": "In order to apply the export consumption tax exemption for cross-border transactions, we strictly retain and manage the export permits issued by customs."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "輸出免税に「控除上限額」という概念は存在しません（寄附金控除や税額控除等と混同したAI生成ハルシネーションです）。",
+      "suggested_ja": "今期は海外売上高が増加したため、輸出免税の適用に伴う消費税の還付申告手続きを進めています。",
+      "suggested_vi": "Do doanh thu bán hàng ra nước ngoài tăng trong kỳ này, chúng tôi đang tiến hành thủ tục hoàn thuế tiêu dùng kèm theo việc áp dụng chính sách miễn thuế xuất khẩu.",
+      "suggested_en": "Due to the increase in overseas sales this term, we are proceeding with procedures for a consumption tax refund claim associated with the export tax exemption."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算時の消費税申告における輸出免税の根拠資料（輸出許可書等）の確認プロセスとして自然な会話です。"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "基本訳語として適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7fe768d3ce443d3dcfbd315b617d93afa70e92f5a6bb7f57537118ec0ff08cb8",
+    "validated_at": "2026-10-01T01:39:51.256548+00:00"
+  }
+}

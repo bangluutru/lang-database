@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000189",
+  "term": "試算表",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains severe domain inaccuracies (sending trial balances to shareholders under statutory deadlines), unnatural collocations ('推敲' and '発送' applied to trial balances), and templated example sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "試算表を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for preparing a trial balance.",
+      "suggested_text": "試算表を作成する"
+    },
+    {
+      "index": 1,
+      "text": "試算表を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when submitting trial balances to banks, tax accountants, or management.",
+      "suggested_text": "試算表を提出する"
+    },
+    {
+      "index": 2,
+      "text": "試算表を発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "試算表 (trial balance) is an internal accounting ledger document, not physical merchandise or mail dispatched via '発送'. '確認する' or '精査する' is appropriate.",
+      "suggested_text": "試算表を精査する"
+    },
+    {
+      "index": 3,
+      "text": "試算表を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically possible when receiving from a subsidiary or client, '試算表を取りまとめる' (consolidate/compile) or '試算表を出力する' is far more standard in Japanese accounting practice.",
+      "suggested_text": "試算表を出力する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major factual error: A trial balance (試算表) is an internal working sheet, not a statutory document sent to shareholders for a general meeting of shareholders (which requires 計算書類/事業報告). Furthermore, '発送' is unnatural.",
+      "suggested_ja": "月次決算の確定後、速やかに合計残高試算表を出力し、勘定科目の残高に異常がないか精査してください。",
+      "suggested_vi": "Sau khi chốt quyết toán tháng, hãy nhanh chóng xuất bảng cân đối thử và rà soát kỹ xem số dư các tài khoản có bất thường hay không.",
+      "suggested_en": "After finalizing the monthly closing, promptly export the trial balance and scrutinize the account balances for any abnormalities."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence is a generic boilerplate template. Also, trial balances are generated internally or submitted by subsidiaries, not merely '受領した'. Vietnamese translation also redundantly copies dictionary slashes.",
+      "suggested_ja": "融資の事前審査にあたり、主要取引銀行から直近3か月分の月次試算表の提出を求められた。",
+      "suggested_vi": "Để phục vụ thẩm định sơ bộ khoản vay, ngân hàng giao dịch chính đã yêu cầu chúng tôi nộp bảng cân đối thử hàng tháng của 3 tháng gần nhất.",
+      "suggested_en": "In connection with the preliminary loan screening, our main bank requested the submission of our monthly trial balances for the last three months."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'推敲' (polishing literary composition) is never used for numerical accounting documents like a trial balance. Moreover, '発送の手配' treats an internal accounting document like physical cargo.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算について、試算表の作成状況はいかがですか。",
+        "vi": "Tình hình lập bảng cân đối thử cho đợt quyết toán tháng này thế nào rồi?",
+        "en": "How is the progress on preparing the trial balance for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "仮払金の精算が完了し、残高の突合作業も終わりましたので、本日中に試算表を共有いたします。",
+        "vi": "Khoản tạm ứng đã được hoàn ứng xong và việc đối chiếu số dư cũng hoàn tất, nên tôi sẽ chia sẻ bảng cân đối thử trong ngày hôm nay.",
+        "en": "The settlement of suspense payments is complete and account reconciliation is finished, so I will share the trial balance today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translations in the examples mechanically retained raw dictionary slashes ('bảng cân đối thử / bảng tổng hợp phát sinh')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b4ada2736d42552a25ea694b218ebe717b841f307e87b91c1ab3a29710f7f261",
+    "validated_at": "2026-10-01T01:37:04.568833+00:00"
+  }
+}

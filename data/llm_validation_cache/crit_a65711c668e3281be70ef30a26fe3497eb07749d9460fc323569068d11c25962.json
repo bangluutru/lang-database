@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000195",
+  "term": "監査法人",
+  "overall_decision": "reject",
+  "summary_reason": "組織実体（監査法人）を勘定科目（account）と誤認したテンプレート流用により、コロケーション・例文・対話の全域で致命的な意味的・実務的破綻が発生しているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "監査法人を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "監査法人は組織・法人実体であり、勘定科目ではないため「計上する」の目的語にはできません。",
+      "suggested_text": "監査法人を選任する"
+    },
+    {
+      "index": 1,
+      "text": "監査法人の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "監査法人そのものに残高は存在せず、会計用語として不成立です（監査報酬の未払金残高等であれば別）。",
+      "suggested_text": "監査法人による監査を受ける"
+    },
+    {
+      "index": 2,
+      "text": "監査法人を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "法人実体を直接「照合する」という述語の使い方はビジネス日本語として極めて不自然です。",
+      "suggested_text": "監査法人と協議する"
+    },
+    {
+      "index": 3,
+      "text": "監査法人を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算するのは費用・経費等であり、監査法人自体を精算することはできません。",
+      "suggested_text": "監査法人を変更する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "監査法人を勘定科目と混同した機械的テンプレートであり、「監査法人の計上内容や残高」という会計事象は存在しません。",
+      "suggested_ja": "期末決算の確定に先立ち、監査法人による会計監査の日程および必要書類の提出スケジュールを調整します。",
+      "suggested_vi": "Trước khi chốt quyết toán cuối kỳ, chúng tôi sẽ điều phối lịch trình kiểm toán và thời hạn nộp các chứng từ cần thiết với công ty kiểm toán độc lập.",
+      "suggested_en": "Prior to finalizing the fiscal year-end closing, we will coordinate the financial audit schedule and document submission deadlines with the audit firm."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「監査法人を適正に処理いたしました」は法人実体を仕訳処理するかのような誤った表現であり、意味を成しません。",
+      "suggested_ja": "株主総会における決議に基づき、当期の会計監査人として大手監査法人を選任いたしました。",
+      "suggested_vi": "Dựa trên nghị quyết của Đại hội đồng cổ đông, chúng tôi đã bổ nhiệm một công ty kiểm toán độc lập lớn làm kiểm toán viên tài chính cho kỳ này.",
+      "suggested_en": "Pursuant to the resolution of the General Meeting of Shareholders, we appointed a major audit firm as our independent financial auditor for the current term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "対話全体が「監査法人」を帳簿上の残高・仕訳対象（勘定科目）として扱っており、実務上あり得ない会話です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の本決算監査に向けて、監査法人からの事前質問票への対応状況はいかがですか。",
+        "vi": "Để chuẩn bị cho kỳ kiểm toán quyết toán năm nay, tình hình phản hồi bảng câu hỏi sơ bộ từ công ty kiểm toán độc lập đến đâu rồi?",
+        "en": "In preparation for this term's annual closing audit, how is the status of our response to the preliminary questionnaire from the audit firm?"
+      },
+      {
+        "speaker": "B",
+        "ja": "会計処理の根拠資料を取りまとめ済みで、本日中に監査法人へドラフトを提出予定です。",
+        "vi": "Chúng tôi đã tổng hợp xong các tài liệu căn cứ xử lý kế toán và dự kiến sẽ gửi bản nháp cho công ty kiểm toán độc lập trong ngày hôm nay.",
+        "en": "We have compiled the supporting documents for the accounting treatments and plan to submit the draft to the audit firm by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（Audit firm / công ty kiểm toán độc lập）自体は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d1d0fa2b2d04da2f8aadc6d758b26692f3394850ed069849335d4ed0896aaf23",
+    "validated_at": "2026-10-01T01:18:15.229936+00:00"
+  }
+}

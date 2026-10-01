@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000138",
+  "term": "販売費及び一般管理費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Rejected due to semantic mismatch in collocations ('販売費及び一般管理費を精算する' applies an expense reimbursement verb to an aggregate P&L line item), unnatural tautological phrasing in Example 2 ('適正な会計基準...適正に'), and stilted wording in Dialogue Speaker B ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "販売費及び一般管理費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate accounting collocation for booking SG&A expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "販売費及び一般管理費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting expression used during trial balance review in monthly/annual closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "販売費及び一般管理費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As an aggregate P&L financial statement category, SG&A is not commonly the direct object of 照合する without an explicit counterpart (e.g., 予算と照合する). A more essential operational collocation is examining its breakdown.",
+      "suggested_text": "販売費及び一般管理費の内訳を精査する"
+    },
+    {
+      "index": 3,
+      "text": "販売費及び一般管理費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "SG&A is an overarching P&L financial statement line item, not an advance payment or employee expense claim that is reimbursed/settled (精算). This is an unnatural templating error.",
+      "suggested_text": "販売費及び一般管理費を圧縮する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, authentic Japanese corporate phrasing for month-end ledger reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The collocation '適正な会計基準' is unnatural Japanese (standard phrasing is 会計基準 or 企業会計基準), and repeating '適正' twice in one sentence ('適正な...適正に') is redundant and sounds like machine-generated translationese.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期の決算において販売費及び一般管理費を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã hạch toán đúng quy định chi phí bán hàng và quản lý doanh nghiệp (SG&A) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we properly recognized selling, general, and administrative expenses in the financial closing for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is redundant and stilted Japanese. Accounting practitioners naturally state that records agree without discrepancies or omissions ('差異や計上漏れがないこと').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、販売費及び一般管理費の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí bán hàng và quản lý doanh nghiệp (SG&A) có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the SG&A entries for this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、差異や計上漏れがないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận không có chênh lệch hay sai sót bỏ sót hạch toán nào.",
+        "en": "We have reconciled the source documents with the subsidiary ledgers and confirmed there are no discrepancies or omissions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations accurately reflect accepted accounting equivalents in both English and Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e679633df16cecb75a2b21fe024b7404abaa6d0260c747de59259d597b23e935",
+    "validated_at": "2026-10-01T01:36:13.954039+00:00"
+  }
+}

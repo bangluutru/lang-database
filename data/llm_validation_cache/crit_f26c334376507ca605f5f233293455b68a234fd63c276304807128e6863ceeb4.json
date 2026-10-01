@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000090",
+  "term": "仮受金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a critical conceptual confusion between '仮受金' and '仮払金' in collocation 3 ('精算する'), along with templated, unnatural phrasing in Example 2 and Dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仮受金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking a suspense receipt upon receiving funds of undetermined nature.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仮受金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural operational expression in monthly reconciliations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仮受金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in practice when reconciling suspense receipt ledgers against bank statements.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "仮受金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Confuses '仮受金' (suspense receipts / liability) with '仮払金' (suspense payments / advances, which are '精算する'). Suspense receipts are cleared or reclassified using '振り替える' or '消し込む'.",
+      "suggested_text": "仮受金を振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and reflects standard month-end ledger reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted template phrasing ('適正な...適正に'). In real Japanese accounting, suspense receipts must be cleared to definitive accounts (such as accounts receivable) before closing.",
+      "suggested_ja": "期末決算にあたり、内容が判明した仮受金は売掛金の回収など適切な勘定科目へ振り替えました。",
+      "suggested_vi": "Khi quyết toán cuối kỳ, các khoản tiền tạm thu đã xác định được nội dung đã được kết chuyển sang tài khoản thích hợp như thu hồi nợ phải thu khách hàng.",
+      "suggested_en": "For the fiscal year-end closing, suspense receipts whose details were identified were reclassified to appropriate accounts, such as the collection of accounts receivable."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A asking about '差異' on suspense receipts is unnatural (suspense receipts are tracked for unresolved items rather than balance variance), and Speaker B's '適正に整合している' is unnatural machine-like repetition.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、内容不明のまま残っている仮受金はありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có khoản tiền tạm thu nào còn chưa rõ nội dung không?",
+        "en": "Are there any suspense receipts remaining unidentified in this month's monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "入金明細と請求書を照合し、すべて本勘定への振替処理を完了しております。",
+        "vi": "Chúng tôi đã đối chiếu chi tiết tiền vào với hóa đơn và hoàn tất việc kết chuyển toàn bộ sang tài khoản chính thức.",
+        "en": "We cross-checked the deposit details with the invoices and completed reclassifying all of them to their definitive accounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions and translations are accurate; minor revisions applied in rewritten examples."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b39cd1ef5f7847298f748c8a4087fd9074ffe95d76951de4583870dbd3f8f5a4",
+    "validated_at": "2026-10-01T01:35:15.666375+00:00"
+  }
+}

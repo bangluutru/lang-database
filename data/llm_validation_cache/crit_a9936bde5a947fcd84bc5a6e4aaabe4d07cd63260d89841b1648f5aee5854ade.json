@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000160",
+  "term": "航空運賃",
+  "overall_decision": "rewrite",
+  "summary_reason": "One example sentence contains a factual error regarding the entity invoicing air freight, and the dialogue lacks conversational continuity as Speaker B does not directly answer Speaker A's specific question about air freight arrangements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "航空運賃を支払う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "航空運賃を請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "航空運賃を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "航空運賃の発生を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in a business context.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A shipping line (船社) deals with sea freight, not air freight (航空運賃). This is a factual error in the domain.",
+      "suggested_ja": "コンテナの搬出がフリータイムを超過したため、船社より延滞料金が請求されました。",
+      "suggested_vi": "Do việc kéo container ra khỏi bãi vượt quá thời gian miễn phí lưu bãi, hãng tàu đã phát hóa đơn phạt phí lưu bãi quá hạn.",
+      "suggested_en": "Because container pickup exceeded the free time, the shipping line invoiced demurrage."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business report.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of '航空運賃の手配状況' (air freight arrangement status). It talks about customs clearance and communication with agents, which is related but not a direct answer to the specific question about air freight arrangements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、航空運賃の手配状況はいかがでしょうか。",
+        "vi": "Về trường hợp dự kiến thông quan hôm nay, tình hình sắp xếp cước vận tải hàng không thế nào rồi ạ?",
+        "en": "Regarding the case scheduled for customs clearance today, what is the status of the air freight arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "航空運賃については、先ほど航空会社への支払いを完了し、手配は滞りなく進んでおります。通関業者と乙仲への連絡も済ませており、書類の確認も完了して輸入申告に入っております。",
+        "vi": "Về cước vận tải hàng không, chúng tôi đã hoàn tất thanh toán cho hãng hàng không lúc nãy và việc sắp xếp đang tiến triển suôn sẻ. Chúng tôi cũng đã liên hệ với công ty thông quan và đại lý vận chuyển, việc kiểm tra tài liệu đã hoàn tất và đang tiến hành khai báo nhập khẩu.",
+        "en": "Regarding the air freight, payment to the airline was completed just now, and arrangements are proceeding smoothly. We have also contacted the customs broker and forwarding agent, document verification is complete, and we are now in the import declaration process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7902a7f5ca60202d800ce57eb2ed64b79a0de1f6d8c0a422271fc376036592b0",
+    "validated_at": "2026-10-01T01:56:49.850452+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000128",
+  "term": "外国為替",
+  "overall_decision": "rewrite",
+  "summary_reason": "「外国為替」という用語の使い方が全体的に不自然。会計実務においては「外国為替」そのものを計上したり処理したりするのではなく、「外貨建取引」や「外国為替関連の勘定科目」といった具体的な対象を扱う。コケーション、例文、対話の全てにおいて、この点が改善される必要がある。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "外国為替を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「外国為替」は口座や取引そのものを指すため、「開設する」という動詞は不自然。口座を開設するなら「外国為替口座を開設する」となる。",
+      "suggested_text": "外国為替取引を開始する"
+    },
+    {
+      "index": 1,
+      "text": "外国為替を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「外国為替」は決済の対象ではなく、決済手段や取引そのものを指すため、「決済する」という動詞は不自然。取引を決済するなら「外国為替取引を決済する」となる。",
+      "suggested_text": "外国為替取引を決済する"
+    },
+    {
+      "index": 2,
+      "text": "外国為替を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「外国為替」は提示するものではなく、為替レートや手形などを提示する際に使われる。このままでは意味が通じない。",
+      "suggested_text": "外国為替レートを提示する"
+    },
+    {
+      "index": 3,
+      "text": "外国為替の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「外国為替」そのものに不一致が生じるのではなく、外国為替に関連する勘定や残高に不一致が生じる。より具体的に表現すべき。",
+      "suggested_text": "外国為替関連の不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「外国為替の計上内容や残高に差異がないか精査します」という表現は、会計実務において「外国為替」という言葉の使われ方として不自然。「外国為替」は取引や概念を指し、その「計上内容」や「残高」を直接精査するとは言わない。通常は「外国為替関連の勘定科目」や「外貨建取引の残高」など、より具体的な対象を指す。",
+      "suggested_ja": "月末の帳簿照合において、外貨建取引の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của các giao dịch ngoại tệ hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of foreign currency transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「外国為替を適正に処理いたしました」という表現は、会計実務において「外国為替」という言葉の使われ方として不自然。「外国為替」そのものを処理するのではなく、「外国為替取引」や「外貨建取引」を処理する、あるいは「外国為替会計」を適用するといった表現が適切。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において外貨建取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch ngoại tệ trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed foreign currency transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「外国為替の計上内容に差異は発生していませんか」は、例と同様に「外国為替」という言葉の使い方が不自然。Bの回答も、Aの不自然な問いに合わせた形になっているため、全体として不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、外貨建取引の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của các giao dịch ngoại tệ không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for foreign currency transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の「市場」という訳語が、文脈によっては不適切。「外国為替」は市場だけでなく、取引や概念も指すため、より汎用的な訳語が望ましい。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "db830ce7f20794794cf356d394061d1e38721b033fd934372e5fec95ef0b36fb",
+    "validated_at": "2026-10-01T01:56:10.950942+00:00"
+  }
+}

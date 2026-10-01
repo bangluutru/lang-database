@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000100",
+  "term": "基本給",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatch caused by applying generic financial accounting templates (計上, 残高, 照合, 精算, 補助元帳) to an HR compensation concept ('基本給'). Needs complete rewrite focused on realistic HR, payroll, and wage regulation contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "基本給を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese accounting, base pay is an HR wage component, while the booked expense account is typically '給料手当' or '役員報酬'. Natural HR/corporate collocations are '基本給を改定する' or '基本給を引き上げる'.",
+      "suggested_text": "基本給を改定する"
+    },
+    {
+      "index": 1,
+      "text": "基本給の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Fatal accounting error: '基本給' is a monthly salary item/rate, not a cumulative balance sheet account. It cannot possess a '残高' (balance).",
+      "suggested_text": "基本給の水準を見直す"
+    },
+    {
+      "index": 2,
+      "text": "基本給を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While comparison occurs in payroll audits, pairing 基本給 directly with 照合する is unnatural. Typically one checks against employment agreements or payroll registers (賃金台帳).",
+      "suggested_text": "基本給の額を決定する"
+    },
+    {
+      "index": 3,
+      "text": "基本給を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算' applies to expense reimbursements (経費精算) or advances, never to fixed contractual base pay (基本給).",
+      "suggested_text": "基本給を据え置く"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'基本給の残高' is factually invalid in bookkeeping/accounting, and the sentence is a mechanical accounting template inappropriately applied to an HR compensation concept.",
+      "suggested_ja": "春季労使交渉の結果に基づき、全社的な賃上げに伴う基本給の改定を行いました。",
+      "suggested_vi": "Dựa trên kết quả đàm phán lao động mùa xuân, chúng tôi đã tiến hành điều chỉnh lương cơ bản theo đợt tăng lương toàn công ty.",
+      "suggested_en": "Based on the outcome of the spring labor negotiations, we revised the base salary in line with company-wide pay raises."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stilted template. Basic salary is governed primarily by employment contracts, wage regulations (賃金規程), and labor standards, not directly processed under 'accounting standards' in term-end closing.",
+      "suggested_ja": "当社の賃金規程では、役職や職能等級に応じて基本給の支給額が定められています。",
+      "suggested_vi": "Theo quy chế tiền lương của công ty chúng tôi, mức chi trả lương cơ bản được quy định theo chức vụ và ngạch bậc chuyên môn.",
+      "suggested_en": "Under our company's wage regulations, base salary amounts are determined according to managerial position and job competence grade."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Both turns force a rigid bookkeeping template onto an HR payroll term, resulting in artificial phrasing ('基本給の計上内容に差異', '補助元帳を照合済みで、すべて適正に整合している'). Dialogue should reflect realistic HR/payroll operations.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期の人件費予算を組むにあたり、基本給のベースアップ率はどの程度で見積もっていますか。",
+        "vi": "Khi lập ngân sách chi phí nhân sự cho kỳ tới, anh/chị dự tính tỷ lệ tăng lương cơ bản ở mức khoảng bao nhiêu?",
+        "en": "In formulating next term's personnel cost budget, what percentage increase are you estimating for the base pay raise?"
+      },
+      {
+        "speaker": "B",
+        "ja": "物価上昇率と業界平均を勘案し、基本給を一律3パーセント引き上げる前提で試算しています。",
+        "vi": "Cân nhắc tỷ lệ lạm phát và mức bình quân ngành, chúng tôi đang tính toán sơ bộ dựa trên giả định tăng đồng loạt 3% lương cơ bản.",
+        "en": "Taking into account inflation and industry averages, we are running trial calculations on the assumption of a flat 3% increase across the board in base salary."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Target term translations ('Base salary / Basic pay', 'lương cơ bản') are correct; issues stem entirely from artificial generated context."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e8b37c5afd980c11ea8ecabff61af7bdada8daa125aae1909df8d90d2bde2579",
+    "validated_at": "2026-10-01T01:42:37.491186+00:00"
+  }
+}

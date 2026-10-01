@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000043",
+  "term": "受取配当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an incompatible predicate ('受取配当金を精算する'), Example 1 suffers from redundant template boilerplate, and Dialogue Turn B uses stilted phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "受取配当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing dividend income in non-operating income.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "受取配当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing during trial balance review and closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "受取配当金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation when verifying dividend statements against bank receipts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "受取配当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '精算する' applies to settling expenses, advances, or outstanding debt/claims, not recognizing or handling dividend income.",
+      "suggested_text": "受取配当金の入金を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound sentence representing month-end book reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains redundant template phrasing ('適正な...適正に') and lacks substantive professional context regarding dividend recognition.",
+      "suggested_ja": "関係会社からの配当決議通知に基づき、当期の営業外収益として受取配当金を計上しました。",
+      "suggested_vi": "Dựa trên thông báo nghị quyết chia cổ tức từ công ty liên kết, chúng tôi đã hạch toán cổ tức được chia vào doanh thu ngoài hoạt động của kỳ này.",
+      "suggested_en": "Based on the dividend resolution notice from the affiliated company, we recorded dividend income under non-operating income for the current term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is an unnatural, redundant phrasing in business Japanese. In accounting verification, Japanese professionals state that figures match without discrepancy ('金額に不一致はない', '一致している').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、受取配当金の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán cổ tức được chia có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the recording of dividend income for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "配当金計算書と入金明細を照合済みで、金額に不一致がないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu giấy báo chia cổ tức với sao kê tiền vào, và xác nhận không có sai lệch về số tiền.",
+        "en": "I have reconciled the dividend calculation statements against the bank deposit details and confirmed there are no discrepancies in the amounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c491830a8680b65783f7036e3c0614de8e08d9dd931cab68b254f3da09e67066",
+    "validated_at": "2026-10-01T01:34:24.933684+00:00"
+  }
+}

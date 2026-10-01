@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000151",
+  "term": "消耗品費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate relies heavily on mechanical boilerplate templates ('適正な...適正に処理いたしました') and weak verb collocations ('消耗品費を照合する/精算する'). Rewriting to reflect real-world tax depreciation thresholds and budget variance checks is required.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "消耗品費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting phrase for recording supplies expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "消耗品費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end closing when checking trial balance expense account balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "消耗品費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An expense item is not matched directly in isolation; accountants reconcile vouchers/breakdowns or book items under supplies expenses.",
+      "suggested_text": "消耗品費として処理する"
+    },
+    {
+      "index": 3,
+      "text": "消耗品費を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reimburses/settles an expense claim (経費精算) or advances (立替金), rather than directly 'settling supplies expense' grammatically.",
+      "suggested_text": "消耗品費に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated structure ('月末の帳簿照合において...差異がないか精査します') that does not reflect realistic accounting operations regarding supplies expenses.",
+      "suggested_ja": "今月の消耗品費が予算を大幅に超過しているため、各部署の購入実績と内訳を確認してください。",
+      "suggested_vi": "Vì chi phí đồ dùng tiêu hao tháng này vượt ngân sách đáng kể, vui lòng kiểm tra tình hình mua sắm thực tế và chi tiết của từng bộ phận.",
+      "suggested_en": "Supplies expenses for this month significantly exceeded the budget, so please review each department's actual purchases and breakdown."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically awkward double use of '適正' (適正な...適正に) and entirely generic corporate boilerplate devoid of domain specificity.",
+      "suggested_ja": "取得価額が10万円未満の事務用パソコンや什器備品については、購入時に消耗品費として一括計上しています。",
+      "suggested_vi": "Đối với máy tính văn phòng và đồ đạc thiết bị có giá mua dưới 100.000 yên, chúng tôi ghi nhận một lần vào chi phí đồ dùng tiêu hao tại thời điểm mua.",
+      "suggested_en": "Office PCs and fixtures with an acquisition cost under 100,000 yen are expensed in full as supplies expenses at the time of purchase."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is an unnatural tautology/stilted phrasing in Japanese business accounting; '差異は発生していませんか' without budget/invoice context feels artificial.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の消耗品費が前月比でかなり増えていますが、何か大きな支出がありましたか。",
+        "vi": "Chi phí đồ dùng tiêu hao tháng này tăng khá nhiều so với tháng trước, có khoản chi lớn nào phát sinh không?",
+        "en": "Supplies expenses increased considerably compared to last month; were there any major purchases?"
+      },
+      {
+        "speaker": "B",
+        "ja": "新入社員用のPC周辺機器を一括購入したためです。請求書と帳簿の突合も完了しております。",
+        "vi": "Đó là do chúng ta mua hàng loạt thiết bị ngoại vi máy tính cho nhân viên mới. Tôi cũng đã hoàn tất việc đối chiếu hóa đơn với sổ sách rồi.",
+        "en": "That is due to the bulk purchase of PC peripherals for new hires. The cross-check between invoices and the ledger is already complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Definitions and original translations are accurate, though examples and dialogue require more contextualized revisions."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0534fd256e3e5ddb0afe58b15a1a9dcf9f1a803fe28203f69b0385a5d3cee67d",
+    "validated_at": "2026-10-01T01:36:25.509638+00:00"
+  }
+}

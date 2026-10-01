@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000027",
+  "term": "個別契約",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 and 2 translations contain unedited glossary slashes, and Example 0 conflates '基本合意' with the master-individual contract framework ('基本契約' vs '個別契約').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "個別契約を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and ubiquitous collocation in Japanese contract administration.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "個別契約を更新する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in temporary staffing (労働者派遣法) and recurring service engagements under a master agreement.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "個別契約を解除する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and business terminology for terminating a specific purchase order or individual agreement.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "個別契約の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrasing in legal and contract review processes.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Using '基本合意' (basic agreement/MOU) to lead directly into '個別契約' blurs the essential distinction between a Master Agreement (基本契約) and an Individual Contract (個別契約). Furthermore, the translations mechanically pasted the dictionary entry with slashes into the running sentences.",
+      "suggested_ja": "基本契約に基づき、今期発注分の個別契約を正式に締結いたします。",
+      "suggested_vi": "Căn cứ vào hợp đồng nguyên tắc, chúng tôi sẽ chính thức ký kết hợp đồng cụ thể cho đợt đặt hàng kỳ này.",
+      "suggested_en": "Based on the master agreement, we will officially execute the individual contract for this period's order."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is natural, but the Vietnamese and English translations mechanically copied the dictionary gloss with slashes ('individual contract / purchase agreement') instead of providing natural target-language equivalents.",
+      "suggested_ja": "法務部門と連携し、個別契約の条項に法的リスクが含まれていないか事前に精査しました。",
+      "suggested_vi": "Phối hợp với bộ phận pháp chế, chúng tôi đã rà soát kỹ lưỡng các điều khoản của hợp đồng cụ thể để đảm bảo không tiềm ẩn rủi ro pháp lý.",
+      "suggested_en": "In coordination with the legal department, we thoroughly reviewed the clauses of the individual contract in advance to ensure there were no legal risks."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between colleagues discussing legal feedback on an individual contract revision is realistic, logical, and appropriate for business communication.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both English and Vietnamese translations in the example sentences unprofessionally retain dictionary slashes ('individual contract / purchase agreement') instead of rendering fluent, contextual translations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3a3eef18f1e03990e6c506bac7c7a6265a82c88cb1c50d2a1138a4bb07680633",
+    "validated_at": "2026-10-01T01:41:26.518441+00:00"
+  }
+}

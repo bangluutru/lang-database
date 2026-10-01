@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "Collocations and examples are natural business Japanese, but dialogue contains awkward collocations ('昇格者に伴う') and an omitted particle ('全員分手当') that need minor rewriting.",
+  "issues": [
+    {
+      "component": "dialogue",
+      "code": "STILTED_SENTENCE",
+      "detail": "In Speaker A, '昇格者に伴う' is semantically awkward because に伴う attaches to events rather than persons (should be '昇格に伴う' or '昇格者の'). In Speaker B, '全員分手当' is missing the genitive particle の ('全員分の手当')."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "ad4483d48b599286245b1dc4fc43ee04a0cf7e386a6010c0c0c36481dfec0d68",
+    "validated_at": "2026-10-01T01:42:43.701268+00:00"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-accounting-000041",
+  "term": "繰延税金資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe accounting domain inaccuracies: mechanical templates suitable for AR/AP reconciliation were erroneously applied to deferred tax assets (e.g., matching against vouchers, routine monthly book reconciliations, and '精算'). Requires professional rewrite aligned with tax-effect accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰延税金資産を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, ubiquitous accounting collocation for recognizing deferred tax assets."
+    },
+    {
+      "index": 1,
+      "text": "繰延税金資産の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reviewing balance sheet figures during financial close."
+    },
+    {
+      "index": 2,
+      "text": "繰延税金資産を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "繰延税金資産 is calculated via tax-effect accounting worksheets rather than 'collated/matched' (照合する) like cash or AR/AP.",
+      "suggested_text": "繰延税金資産を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "繰延税金資産を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reimbursements or liquidations, never to deferred tax asset valuation/reversal.",
+      "suggested_text": "繰延税金資産の回収可能性を検討する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Deferred tax accounting is calculated at quarterly/annual close based on temporary differences, not during routine 'month-end book reconciliation' (月末の帳簿照合). This reflects a generic accounts-receivable template.",
+      "suggested_ja": "期末決算において将来の課税所得を見積もり、繰延税金資産の回収可能性を慎重に検討しました。",
+      "suggested_vi": "Trong kỳ quyết toán cuối năm, chúng tôi đã ước tính thu nhập chịu thuế trong tương lai và xem xét cẩn trọng khả năng thu hồi của tài sản thuế thu nhập hoãn lại.",
+      "suggested_en": "During the fiscal year-end closing, we estimated future taxable income and carefully assessed the recoverability of deferred tax assets."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Rhetorically redundant and stilted due to repeating '適正な' and '適正に'. Needs concrete corporate accounting context (e.g., tax-effect accounting standards).",
+      "suggested_ja": "税効果会計基準に則り、将来減算一時差異に係る繰延税金資産を計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán thuế thu nhập doanh nghiệp, chúng tôi đã ghi nhận tài sản thuế thu nhập hoãn lại liên quan đến chênh lệch tạm thời được khấu trừ.",
+      "suggested_en": "In accordance with tax-effect accounting standards, we recognized deferred tax assets relating to deductible temporary differences."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B claims to have reconciled deferred tax assets against 'vouchers and sub-ledgers' (証憑書類と補助元帳), which is factually absurd in accounting. Deferred taxes stem from temporary difference schedules and profitability projections.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、繰延税金資産の回収可能性の評価は完了していますか。",
+        "vi": "Trong đợt quyết toán kỳ này, việc đánh giá khả năng thu hồi tài sản thuế thu nhập hoãn lại đã hoàn tất chưa?",
+        "en": "Has the recoverability assessment for deferred tax assets been completed for this term's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、事業計画に基づく将来の課税所得の見積もりを精査し、監査法人とも協議済みです。",
+        "vi": "Vâng, chúng tôi đã rà soát kỹ ước tính thu nhập chịu thuế tương lai dựa trên kế hoạch kinh doanh và đã thảo luận với công ty kiểm toán.",
+        "en": "Yes, we have thoroughly reviewed future taxable income estimates based on the business plan and discussed them with the audit firm."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base term translations are standard and accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "063c9bf76c55076b991cd5031ecf4306126eefa82c2062783f24975de6b0af59",
+    "validated_at": "2026-10-01T01:34:18.793100+00:00"
+  }
+}

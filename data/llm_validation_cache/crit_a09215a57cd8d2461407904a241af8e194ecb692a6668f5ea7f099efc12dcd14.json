@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000021",
+  "term": "輸出者",
+  "overall_decision": "rewrite",
+  "summary_reason": "「輸出者」という言葉の使われ方が、役職や組織の構成員として扱われている箇所が多く、本来の「輸出を行う主体」という意味合いと乖離しているため、全体的に不自然な表現が目立つ。特に「選任する」「就任する」といった動詞との組み合わせは不適切。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出者を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「輸出者」は役割や立場を示す言葉であり、会社や役職のように「選任する」対象としては不自然。通常、輸出業務を行う「担当者」や「部署」を選任する。",
+      "suggested_text": "輸出業務担当者を選任する"
+    },
+    {
+      "index": 1,
+      "text": "輸出者に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「輸出者」は役職名ではないため、「就任する」は不自然。輸出業務を担当する、という意味合いであれば「輸出業務を担当する」などが適切。",
+      "suggested_text": "輸出業務を担当する"
+    },
+    {
+      "index": 2,
+      "text": "輸出者に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。輸出業務に関する相談相手として「輸出者」を用いることは可能。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "輸出者の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「輸出者」は職務そのものではなく、職務を行う主体を指すため、「輸出者の職務」という表現はやや冗長で不自然。「輸出業務を遂行する」がより自然。",
+      "suggested_text": "輸出業務を遂行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「輸出者」は役職ではないため、「定時株主総会の決議を経て選任される」という文脈は不自然。通常、役員や監査役などが選任の対象となる。また、「新任輸出者」という表現も一般的ではない。",
+      "suggested_ja": "輸出業務の強化のため、新たな輸出担当部署が設置されました。",
+      "suggested_vi": "Để tăng cường hoạt động xuất khẩu, một bộ phận phụ trách xuất khẩu mới đã được thành lập.",
+      "suggested_en": "To strengthen export operations, a new export department has been established."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「輸出者と定期的な報告連絡会を開催する」は、文法的には理解できるが、ビジネス文書としては「輸出者」という抽象的な主体と会議を行うという表現が不自然。具体的な担当者や部署との会議であれば自然。",
+      "suggested_ja": "業務執行の適法性を確保するため、輸出業務担当者と定期的な報告連絡会を開催しています。",
+      "suggested_vi": "Để đảm bảo tính hợp pháp trong điều hành công việc, chúng tôi tổ chức họp báo cáo định kỳ với người phụ trách nghiệp vụ xuất khẩu.",
+      "suggested_en": "To ensure the legality of business execution, we hold regular reporting sessions with the export operations manager."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「輸出者の準備状況」という表現が、具体的な業務内容を指していないため漠然としており、不自然。Speaker Bの回答も、会議の準備状況としては内容が不明確で、一般的なビジネス会話としては不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の輸出契約に関する会議に向けて、資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp về hợp đồng xuất khẩu vào tuần tới, tình hình chuẩn bị tài liệu thế nào rồi?",
+        "en": "Regarding the meeting on the export contract next week, what is the status of the document preparation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "資料の最終確認を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc kiểm tra cuối cùng tài liệu và cũng đã nhận được sự chấp thuận trước từ ban giám đốc, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final review of the documents and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7dbcfaeaf3506df559fcf33b3d8814cc0b0a6299341c09e2fdf84b2dad4b1626",
+    "validated_at": "2026-10-01T01:54:00.984790+00:00"
+  }
+}

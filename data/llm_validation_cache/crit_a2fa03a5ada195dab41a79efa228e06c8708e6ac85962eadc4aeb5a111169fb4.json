@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000079",
+  "term": "電子記録債務",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation #3 uses '精算する' instead of the standard '決済する'; Example #1 is an unnatural generic template with redundant phrasing ('適正な...適正に'); and Dialogue B contains awkward phrasing ('適正に整合している') that requires remediation to sound natural in a professional Japanese accounting department.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電子記録債務を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting usage for booking electronically recorded monetary claims/obligations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "電子記録債務の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace expression for verifying account balances against Densai records.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "電子記録債務を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase for reconciling Densai ledger entries with the electronic monetary claims registry.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "電子記録債務を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "電子記録債務 (electronic debt obligations) are settled on maturity date via bank direct debit, so '決済する' (settle) is standard accounting terminology; '精算する' is used for expense adjustments/advances rather than note/debt settlements.",
+      "suggested_text": "電子記録債務を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable sentence reflecting a standard month-end internal control and reconciliation routine.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavily templated sentence with redundant wording ('適正な...適正に'). It lacks practical accounting specificity regarding Densai operations (such as balance certificate verification or shifting from notes payable).",
+      "suggested_ja": "期末決算にあたり、でんさいネットの発行した残高証明書と電子記録債務の帳簿残高を照合しました。",
+      "suggested_vi": "Vào thời điểm quyết toán cuối kỳ, chúng tôi đã đối chiếu giấy chứng nhận số dư do Densai Net phát hành với số dư sổ sách của chứng từ nợ điện tử phải trả.",
+      "suggested_en": "For the fiscal year-end closing, we reconciled the book balance of electronically recorded obligations with the balance certificate issued by Densai Net."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase '適正に整合している' in Speaker B's reply is stilted and redundant corporate jargon. In practical workplace accounting, accountants say '問題なく一致している' or '差異がない'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、電子記録債務の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán chứng từ nợ điện tử phải trả không?",
+        "en": "In this month's monthly closing, have any discrepancies occurred in the recorded entries of electronically recorded obligations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "でんさいの開示情報と補助元帳を照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ phụ với thông tin công bố từ Densai và xác nhận mọi thứ hoàn toàn khớp, không có chênh lệch.",
+        "en": "I have reconciled the subledger with the Densai disclosure data and confirmed that they match without any discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "English and Vietnamese accounting terminology matches Japanese GAAP / EDINET taxonomy standards."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "580de1a9bf677ad45e4379dfda80e4f2f044ed540a6280372ef35ad49b45bcdc",
+    "validated_at": "2026-10-01T01:35:01.041227+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000095",
+  "term": "損金不算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション4件中3件に「不算入に算入する」などの論理的矛盾や助詞の誤用が含まれ、例文でも「損金不算入の算入漏れ」という税務上の初歩的誤謬が見られる。ベトナム語訳も述語節が名詞位置に無加工当嵌めされており全面的な修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損金不算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不算入」（算入しないこと）に対して「算入する」を組み合わせる表現は意味論的に自己矛盾しており、実務で使われない機械的生成表現である。",
+      "suggested_text": "損金不算入とする"
+    },
+    {
+      "index": 1,
+      "text": "損金不算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「不算入に不算入とする」は二重否定のような破綻した語法であり、日本語として不自然。",
+      "suggested_text": "損金不算入項目"
+    },
+    {
+      "index": 2,
+      "text": "損金不算入の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "文脈として理解は可能だが、法人税実務では「申告調整を行う」または「損金不算入額を加算する」とするのが正確かつ標準的。",
+      "suggested_text": "損金不算入の申告調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "損金不算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "別表四で加算するのは「所得金額」であり、助詞「に」の係り受けが誤り。「損金不算入額を加算する」または「損金不算入として加算する」でなければならない。",
+      "suggested_text": "損金不算入額を加算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本語の「損金不算入を適切に処理しました」は目的語として粗削り（「損金不算入額を加算処理しました」が適切）。またベトナム語訳で品詞が動詞節のまま名詞スロットに嵌め込まれており（xử lý đúng đắn không được chấp nhận...）、破綻している。",
+      "suggested_ja": "会計上の費用と税法上の取扱いの相違を調整するため、別表四において交際費等の損金不算入額を加算処理しました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa chi phí kế toán và quy định thuế, chúng tôi đã thực hiện điều chỉnh tăng thu nhập chịu thuế đối với các khoản chi phí không được trừ (như chi phí tiếp khách) trên Phụ lục 4.",
+      "suggested_en": "To reconcile book-tax differences, we properly added back non-deductible items, such as entertainment expenses, on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「損金不算入の算入漏れ」は用語が矛盾している。不算入の対象を「別表四に加算し忘れる」ことを指すならば「加算漏れ」または「申告調整漏れ」と表現しなければ税務実務上誤りである。",
+      "suggested_ja": "税務調査における否認リスクを低減するため、過年度の取引を検証し、交際費や寄附金に関する損金不算入の加算漏れがないか確認しました。",
+      "suggested_vi": "Để giảm thiểu rủi ro bị cơ quan thuế bóc tách chi phí khi thanh tra, chúng tôi đã rà soát lại các giao dịch các năm trước nhằm đảm bảo không bỏ sót việc điều chỉnh tăng thu nhập đối với các khoản chi phí không được trừ như chi phí tiếp khách và tiền quyên góp.",
+      "suggested_en": "To mitigate disallowance risks during tax audits, we reviewed prior-year transactions to ensure there were no omissions in adding back non-deductible items, such as entertainment and donation expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「損金不算入の計算根拠」という言い回しがやや曖昧である上、Bの返答にある「税理士の確認書を申告書添付書類として提出可能」という記述は、日本の税務申告実務（別表、内訳概況書、税理士法第33条の2に基づく書面添付など）と用語・手続きが乖離している。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の法人税申告における役員報酬や交際費の損金不算入額の集計は完了しましたか。",
+        "vi": "Việc tổng hợp các khoản chi phí không được trừ đối với thù lao ban giám đốc và chi phí tiếp khách trong kỳ quyết toán thuế TNDN lần này đã hoàn thành chưa?",
+        "en": "Have you finalized the aggregation of non-deductible expenses for executive compensation and entertainment expenses for this corporate tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、計算明細書を作成し、顧問税理士による別表四・別表十五のチェックも完了しております。",
+        "vi": "Vâng, bảng kê chi tiết tính toán đã được lập xong và thuế lý cố vấn cũng đã kiểm tra đối chiếu Phụ lục 4 và Phụ lục 15 rồi ạ.",
+        "en": "Yes, the detailed calculation schedules are prepared, and our tax advisor has completed the review of Schedule 4 and Schedule 15."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳において「không được chấp nhận trừ vào chi phí hợp lý」が述語文のまま名詞句の位置に挿入されており、名詞句（các khoản chi phí không được trừ）として成立していない。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "233b2ceef45ec83d800503beb95a177ee064a0bf4877ea03050ff4916d4f312e",
+    "validated_at": "2026-10-01T01:39:08.051314+00:00"
+  }
+}

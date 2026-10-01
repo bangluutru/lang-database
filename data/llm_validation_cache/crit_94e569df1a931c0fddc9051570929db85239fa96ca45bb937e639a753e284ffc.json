@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000153",
+  "term": "減価償却費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The learning object suffers from cookie-cutter generation artifacts: treating an expense account as a balance account ('残高'), applying cash/reimbursement predicates to non-cash depreciation ('精算する'), and citing vouchers ('証憑書類') instead of the fixed asset ledger in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "減価償却費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting collocation for recognizing/booking depreciation expense.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "減価償却費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "減価償却費 is a P&L expense account, not a balance sheet account. While trial balances show cumulative amounts, native accountants refer to '計上額' (accrued amount) or '減価償却累計額の残高' (accumulated depreciation balance), not '減価償却費の残高'.",
+      "suggested_text": "減価償却費の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "減価償却費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocating an expense item directly as the direct object of '照合する' without reference to the source ledger (e.g., 固定資産台帳と照合・突合する) sounds unnatural.",
+      "suggested_text": "固定資産台帳と減価償却費を突合する"
+    },
+    {
+      "index": 3,
+      "text": "減価償却費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to employee out-of-pocket expenses, travel claims, or temporary advances (仮払金). Depreciation expense is an internal non-cash calculation and is never '精算' (settled/reimbursed).",
+      "suggested_text": "減価償却費を算出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically reuses the generic template '計上内容や残高に差異がないか精査します'. Depreciation is reconciled against the fixed asset register, not a generic '帳簿照合'.",
+      "suggested_ja": "月次決算において、固定資産台帳の計算結果と計上された減価償却費に差異がないか照合します。",
+      "suggested_vi": "Trong đợt quyết toán tháng, chúng tôi đối chiếu xem có chênh lệch nào giữa kết quả tính toán trên sổ tài sản cố định và chi phí khấu hao đã hạch toán hay không.",
+      "suggested_en": "During monthly closing, we reconcile the calculated amounts from the fixed asset ledger against the recorded depreciation expense to ensure there are no discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stilted corporate tautology repeating '適正な' twice ('適正な会計基準...適正に処理いたしました'). Real reporting mentions the depreciation method (定額法/定率法) or fiscal capital expenditures.",
+      "suggested_ja": "当期に取得した設備については、社内規程に定められた定額法に基づき減価償却費を計上いたしました。",
+      "suggested_vi": "Đối với các thiết bị mua trong kỳ này, chúng tôi đã trích chi phí khấu hao theo phương pháp đường thẳng được quy định trong quy chế nội bộ công ty.",
+      "suggested_en": "For equipment acquired during the current period, we recorded depreciation expense based on the straight-line method stipulated in internal regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B claims to have reconciled '証憑書類' (receipts/vouchers) for depreciation. Depreciation is calculated internally from the Fixed Asset Register (固定資産台帳), not from vouchers/receipts. This demonstrates a clear domain factual error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、減価償却費の計上額に誤りや計上漏れはありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền trích chi phí khấu hao có sai sót hay bị bỏ sót khoản nào không?",
+        "en": "In this month's closing, are there any errors or omissions in the recorded depreciation expense?"
+      },
+      {
+        "speaker": "B",
+        "ja": "固定資産台帳と会計システムを突合済みで、すべて適正に計上されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ tài sản cố định với phần mềm kế toán và xác nhận mọi khoản đều được hạch toán thỏa đáng.",
+        "en": "We have reconciled the fixed asset register with the accounting system and confirmed that everything has been recorded properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "563c344e087b0df2b12235581e83e9d4ebf2d075baaea05e704633f16b483063",
+    "validated_at": "2026-10-01T01:36:27.230872+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000113",
+  "term": "その他資本剰余金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The content relied on generic accounting reconciliation templates (月末照合, 差異確認, 精算) completely unsuited to an equity account (その他資本剰余金), which only moves under discrete corporate finance events like dividends or treasury share disposal.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "その他資本剰余金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in contexts such as booking treasury stock disposal gains or capital reductions into other capital surplus.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "その他資本剰余金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage when verifying equity balances on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "その他資本剰余金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Equity accounts (純資産項目) are not routinely '照合' (reconciled/cross-checked) like bank accounts or AR/AP. More natural operations are drawing down or transferring (取り崩す, 振り替える).",
+      "suggested_text": "その他資本剰余金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "その他資本剰余金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to expenses, advances, or clearing accounts, not permanent equity surplus accounts.",
+      "suggested_text": "その他資本剰余金を配当原資とする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Equity transactions do not occur routinely on a monthly basis requiring 'monthly ledger discrepancy checks' (月末の帳簿照合で差異がないか精査). This is an accounting-unaware generic template. Real-world usage centers on capital reduction, treasury share disposal, or dividends.",
+      "suggested_ja": "株主総会の決議に基づき、当期はその他資本剰余金を原資とする配当を実施することといたしました。",
+      "suggested_vi": "Căn cứ vào nghị quyết của Đại hội đồng cổ đông, trong kỳ này chúng tôi quyết định thực hiện chi trả cổ tức từ nguồn thặng dư vốn khác.",
+      "suggested_en": "Based on the resolution of the general meeting of shareholders, we decided to pay dividends using other capital surplus as the source for this fiscal year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly tautological and empty sentence ('適正な会計基準...適正に処理いたしました'). Real accounting documents specify the transaction (e.g., loss/gain on disposal of treasury stock).",
+      "suggested_ja": "自己株式の処分に伴い生じた差損については、会計基準に従ってその他資本剰余金から減額処理を行いました。",
+      "suggested_vi": "Đối với khoản lỗ phát sinh từ việc thanh lý cổ phiếu quỹ, chúng tôi đã tiến hành hạch toán giảm trừ vào thặng dư vốn khác theo đúng chuẩn mực kế toán.",
+      "suggested_en": "Regarding the loss resulting from the disposal of treasury stock, we reduced it from other capital surplus in accordance with accounting standards."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if there are discrepancies in other capital surplus during standard monthly closing ('今月の月次決算で...差異は発生していませんか') is factually unrealistic for equity accounts unless an explicit corporate action took place.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の自己株式の処分差損ですが、その他資本剰余金から直接減額する処理でよろしいでしょうか。",
+        "vi": "Về khoản lỗ chênh lệch từ việc hủy/bán cổ phiếu quỹ lần này, chúng tôi hạch toán giảm trừ trực tiếp từ thặng dư vốn khác có đúng không ạ?",
+        "en": "Regarding the loss on disposal of treasury stock this time, is it correct to deduct it directly from other capital surplus?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、その他資本剰余金の残高が正の値であれば、その処理で問題ありません。",
+        "vi": "Vâng, nếu số dư thặng dư vốn khác đang là số dương thì xử lý như vậy là hoàn toàn chính xác.",
+        "en": "Yes, as long as the balance of other capital surplus is positive, that accounting treatment is fine."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the term are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "63aa1c6bc3192b9d8a6c28bd43ab2033384805d52bf09f42fdefba8715751763",
+    "validated_at": "2026-10-01T01:35:38.543958+00:00"
+  }
+}

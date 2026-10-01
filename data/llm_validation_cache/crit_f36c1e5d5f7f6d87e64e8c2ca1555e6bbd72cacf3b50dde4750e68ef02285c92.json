@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000087",
+  "term": "債務不履行",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatch and domain error: '債務不履行' (legal breach/default) was forced into generic accounting-ledger templates ('計上内容', '残高'). Both examples and dialogue must be rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "債務不履行を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard legal/business expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "債務不履行の発生を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural risk management expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "債務不履行を通知する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural formal communication in contract administration.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "債務不履行の責任を追及する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrasing for holding a party liable for breach.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "債務不履行 is a legal breach/default event, not an accounting line item with balances (残高) or accounting entries (計上内容) to reconcile on a balance sheet.",
+      "suggested_ja": "取引先による度重なる支払遅延は債務不履行に該当するため、法務部と協議の上で契約解除の手続きを進めます。",
+      "suggested_vi": "Việc đối tác nhiều lần chậm thanh toán cấu thành hành vi vi phạm nghĩa vụ hợp đồng, vì vậy chúng tôi sẽ tham vấn bộ phận pháp chế để tiến hành thủ tục chấm dứt hợp đồng.",
+      "suggested_en": "Repeated payment delays by the counterparty constitute a breach of contract, so we will consult with the legal department and proceed with contract termination."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "One does not simply 'process default in closing entries' (決算において債務不履行を適正に処理いたしました). If a counterparty defaults, the accounting impact is bad debt allowance (貸倒引当金) or impairment, not booking the default itself.",
+      "suggested_ja": "主要取引先の債務不履行に伴い、回収不能と見込まれる売掛金について貸倒引当金を計上いたしました。",
+      "suggested_vi": "Do đối tác chính không thực hiện nghĩa vụ thanh toán, chúng tôi đã trích lập dự phòng nợ phải thu khó đòi đối với các khoản phải thu dự kiến không thể thu hồi.",
+      "suggested_en": "Following the default of a major client, we recognized an allowance for doubtful accounts for receivables deemed uncollectible."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'債務不履行の計上内容' is semantically impossible in Japanese accounting. Breach/default is not an accounting entry posted to subledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "A社からの期日通りの入金が確認できていませんが、債務不履行として督促状を送付すべきでしょうか。",
+        "vi": "Chúng ta vẫn chưa nhận được khoản thanh toán đúng hạn từ Công ty A, liệu có nên gửi thư nhắc nợ viện dẫn vi phạm nghĩa vụ hợp đồng không?",
+        "en": "We haven't received payment from Company A by the due date; should we send a reminder notice regarding default?"
+      },
+      {
+        "speaker": "B",
+        "ja": "先方の経理担当者に一度連絡を入れ、事情を確認した上で法的措置を検討しましょう。",
+        "vi": "Hãy liên hệ trước với bộ phận kế toán của đối tác để làm rõ tình hình rồi mới xem xét các biện pháp pháp lý.",
+        "en": "Let's first contact their accounting department to understand the situation before considering legal measures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are correct, but example translations in candidate were dragged down by templated Japanese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "294aeb8963b230d734f9d7ad71f7930cdb3f2f4419e975b2c381cc604ecd653e",
+    "validated_at": "2026-10-01T01:42:23.089626+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000186",
+  "term": "貸方",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an ungrammatical collocation ('貸方の確認する'), an empty formulaic accounting sentence ('貸方を適正に処理いたしました'), and raw dictionary gloss artifacts in the translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貸方に記入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording an entry on the credit side.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "貸方と照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when reconciling accounts against credit items or credit balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "貸方を集計する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational expression for tallying up credit side amounts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "貸方の確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Grammatically broken templating artifact combining particle 'の' directly with the verb 'する'.",
+      "suggested_text": "貸方残高を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing describing month-end book reconciliation and verification of credit entries/balances.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'貸方を適正に処理いたしました' is a hollow, formulaic template. In Japanese accounting practice, one does not speak of 'processing the credit side' as a monolithic object.",
+      "suggested_ja": "適正な会計基準に則り、借方と貸方の金額が一致していることを確認した上で決算処理を完了しました。",
+      "suggested_vi": "Tuân thủ đúng các chuẩn mực kế toán, chúng tôi đã hoàn tất xử lý quyết toán sau khi xác nhận số tiền bên Nợ và bên Có khớp nhau.",
+      "suggested_en": "In accordance with appropriate accounting standards, we completed closing procedures after verifying that the debit and credit amounts matched."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logical workplace interaction between an accounting supervisor and staff member regarding voucher reconciliation.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both Vietnamese and English translations verbatim copy raw dictionary gloss notes ('(trong kế toán)', '(cr.)') inside full running sentences, which looks amateurish."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5b8a2cb412ae0e48190da7ff7e501b8a170b0f922b5b4ef0241e95f594bc9beb",
+    "validated_at": "2026-10-01T01:36:58.920514+00:00"
+  }
+}

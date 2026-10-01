@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000141",
+  "term": "少額特例",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are sound, both example sentences and the dialogue contain severe domain and factual hallucinations (confusing the invoice small-amount exception with charitable donations/deduction limits and inventing non-existent tax return attachment requirements).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "少額特例を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business Japanese expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "少額特例の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly formal, standard legal and tax phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "少額特例を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural in management and practical tax contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "少額特例の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax expression regarding qualification criteria.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually contradictory and templated. '地域貢献' (regional contribution) has nothing to do with the invoice small-amount exception (少額特例). It appears to be an unvetted cut-and-paste artifact from corporate hometown tax donation (企業版ふるさと納税).",
+      "suggested_ja": "インボイス制度における少額特例の要件を確認し、税込1万円未満の取引については帳簿保存のみで仕入税額控除を行う運用を周知しました。",
+      "suggested_vi": "Chúng tôi đã xác nhận các điều kiện của quy định miễn hóa đơn đối với giao dịch nhỏ trong hệ thống hóa đơn điện tử (Invoice), đồng thời phổ biến quy trình khấu trừ thuế đầu vào chỉ bằng việc lưu trữ sổ sách kế toán đối với các giao dịch dưới 1 vạn yên đã bao gồm thuế.",
+      "suggested_en": "We confirmed the requirements for the small-amount exception under the invoice system and notified the team of the procedure to claim input tax credits with book records alone for transactions under 10,000 yen (tax included)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In the context of the invoice 少額特例 (as defined in meaning_vi), there is no '控除上限額を試算' (calculating a deduction ceiling) nor special advance procedural filings; it is an exemption rule based on prior-period sales qualification.",
+      "suggested_ja": "基準期間の課税売上高が1億円以下であるため、当社は少額特例の対象となり、1万円未満の課税仕入れについてインボイスの保存が不要となります。",
+      "suggested_vi": "Do doanh thu chịu thuế trong kỳ chuẩn từ 100 triệu yên trở xuống, công ty chúng tôi thuộc đối tượng áp dụng quy định miễn hóa đơn cho giao dịch nhỏ và không cần lưu giữ hóa đơn hợp lệ đối với các khoản mua chịu thuế dưới 1 vạn yên.",
+      "suggested_en": "Because our taxable sales during the base period are 100 million yen or less, our company qualifies for the small-amount exception, exempting us from preserving invoices for taxable purchases under 10,000 yen."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Tax factual error: The invoice 少額特例 is a record-keeping simplification rule (帳簿保存). Taxpayers do not submit '税理士の確認書' (tax accountant confirmation letter) or calculation schedules as attachments (申告書添付書類) to the final tax return.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "1万円未満の経費精算について、インボイスの少額特例を適用する準備は整っていますか。",
+        "vi": "Về việc thanh toán chi phí dưới 1 vạn yên, chúng ta đã chuẩn bị xong việc áp dụng quy định ngoại lệ cho giao dịch nhỏ của hệ thống Invoice chưa?",
+        "en": "Are we fully prepared to apply the invoice system's small-amount exception to expense claims under 10,000 yen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、基準期間の売上要件を満たしていることを確認しましたので、一定の帳簿記載があれば領収書が適格請求書でなくても仕入税額控除が可能です。",
+        "vi": "Vâng, tôi đã xác nhận công ty đáp ứng đủ điều kiện doanh thu kỳ chuẩn, nên chỉ cần ghi chép sổ sách theo quy định là có thể khấu trừ thuế đầu vào dù hóa đơn không phải là hóa đơn hợp lệ.",
+        "en": "Yes, I confirmed that we meet the base period sales requirement, so input tax deductions can be claimed with requisite book entries even if the receipts are not qualified invoices."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The translation accurately captures the specific tax scheme indicated in the prompt."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ac35e7bdc3abba4082e614ca5bf55411c517d047d46cf39c52f18f3287265689",
+    "validated_at": "2026-10-01T01:39:56.358011+00:00"
+  }
+}

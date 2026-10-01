@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000112",
+  "term": "資本準備金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple instances of generic slot-filling templates that misrepresent accounting reality (treating an equity reserve as a routinely fluctuating monthly expense/settlement item) and an invalid collocation ('資本準備金を精算する').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "資本準備金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural; standard accounting phrasing when equity financing proceeds are partially allocated to capital reserve.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "資本準備金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in audit and financial reporting contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "資本準備金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, you reconcile accounts, subledgers, or statements (勘定残高を照合する, 帳簿を照合する), not an equity reserve item directly. A core corporate action verb such as 取り崩す or 資本金に組み入れる is much more relevant.",
+      "suggested_text": "資本準備金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "資本準備金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "資本準備金 is an equity capital reserve under the Companies Act, not an advance, receivable, or expense account. The predicate '精算する' (to settle/clear an expense or balance) is semantically incompatible.",
+      "suggested_text": "資本準備金を資本金に組み入れる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Capital reserves do not fluctuate in routine month-end operations. This is a generic AI template ('月末の帳簿照合において、[科目]の計上内容や残高に差異がないか...') mechanically applied to an equity item that only changes during corporate financing or restructuring events.",
+      "suggested_ja": "新株発行に伴う払込総額のうち、2分の1を超えない額を資本準備金として計上しました。",
+      "suggested_vi": "Trong tổng số tiền góp vốn từ đợt phát hành cổ phiếu mới, phần không vượt quá một phần hai đã được hạch toán vào quỹ dự trữ bổ sung vốn điều lệ.",
+      "suggested_en": "Of the total amount paid in for the new share issuance, an amount not exceeding one-half was booked as legal capital surplus."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準...適正に処理いたしました' exhibits awkward repetition of '適正' and reads like vacant boilerplate without domain specificity. Capital surplus handling requires shareholder/board resolutions under the Companies Act.",
+      "suggested_ja": "株主総会の決議に基づき、繰越欠損金を填補するため資本準備金を取り崩すこととなりました。",
+      "suggested_vi": "Căn cứ vào nghị quyết của Đại hội đồng cổ đông, công ty quyết định trích giảm quỹ dự trữ bổ sung vốn điều lệ để bù đắp các khoản lỗ lũy kế.",
+      "suggested_en": "Based on the resolution of the general meeting of shareholders, the legal capital surplus will be drawn down to cover accumulated deficits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if 'discrepancies occurred in capital reserve entries during this month's monthly closing' is divorced from actual corporate accounting practice, where capital reserve entries only occur alongside specific corporate transactions. Furthermore, '適正に整合している' is unnatural business Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の第三者割当増資に伴う資本準備金の組入額は、計算書通りに計上されていますか。",
+        "vi": "Khoản trích vào quỹ dự trữ bổ sung vốn điều lệ từ đợt phát hành riêng lẻ vừa rồi đã được hạch toán đúng như bảng tính chưa?",
+        "en": "Has the amount transferred to legal capital surplus from the recent third-party allotment been recorded according to the statement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、払込期日に登記申請書類と突合し、適正に計上されていることを確認いたしました。",
+        "vi": "Vâng, vào ngày thanh toán chúng tôi đã đối chiếu với hồ sơ đăng ký kinh doanh và xác nhận mọi thứ đã được hạch toán thỏa đáng.",
+        "en": "Yes, we cross-checked with the commercial registration documents on the payment date and confirmed it was properly recorded."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both meaning_en and meaning_vi correctly capture the legal and financial concept of 資本準備金 under the Japanese Companies Act."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "30573700b9116b2fea0a4debe1321c98ce142a5184b80fd1892321e207bc1eb4",
+    "validated_at": "2026-10-01T01:35:40.486926+00:00"
+  }
+}

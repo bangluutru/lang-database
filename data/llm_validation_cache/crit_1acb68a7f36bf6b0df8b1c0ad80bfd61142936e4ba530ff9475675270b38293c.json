@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000036",
+  "term": "船積依頼書",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs refinement to sound more natural and current in a business context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "船積依頼書を発行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "船積依頼書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "船積依頼書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "船積依頼書を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's response is a bit too formal and slightly unnatural for a direct answer to a status check. '書類の確認も完了して輸入申告に入っております' sounds like a report, not a natural conversational flow. Also, '乙仲' is a bit old-fashioned; 'フォワーダー' or '海貨業者' is more common in modern business.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、船積依頼書の手配状況はいかがでしょうか。",
+        "vi": "Về trường hợp dự kiến thông quan hôm nay, tình hình chuẩn bị bản kê chi tiết gửi hàng vận chuyển (S/I) thế nào rồi?",
+        "en": "Regarding the case scheduled for customs clearance today, what's the status of the shipping instructions (S/I) arrangement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者とフォワーダーには既に連絡済みで、書類確認も終え、輸入申告の手続きを進めています。",
+        "vi": "Chúng tôi đã liên hệ với đại lý hải quan và công ty giao nhận, việc kiểm tra tài liệu cũng đã hoàn tất và đang tiến hành thủ tục khai báo nhập khẩu.",
+        "en": "I've already contacted the customs broker and forwarder, document verification is complete, and we're proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0e2a3735900e4d29af25c6d389bccc9d015c8db792e465a93a8afe58b68e3a3c",
+    "validated_at": "2026-10-01T01:54:13.428300+00:00"
+  }
+}

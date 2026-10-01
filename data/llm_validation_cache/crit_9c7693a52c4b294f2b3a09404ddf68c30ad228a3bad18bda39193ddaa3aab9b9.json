@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000023",
+  "term": "クレーム対応",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain hallucination: an operational customer service term ('クレーム対応') was forced into generic accounting ledger/closing templates ('計上内容', '残高', '会計基準', '補助元帳'), making both example sentences and the dialogue completely nonsensical to native speakers.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "クレーム対応を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly used in business operations."
+    },
+    {
+      "index": 1,
+      "text": "クレーム対応を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase indicating completion of complaint handling."
+    },
+    {
+      "index": 2,
+      "text": "クレーム対応の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace expression for reviewing complaint resolution procedures."
+    },
+    {
+      "index": 3,
+      "text": "クレーム対応を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for revising or improving complaint handling practices."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal semantic mismatch: 'クレーム対応' (customer complaint handling) is an operational customer-service procedure, not an accounting account or financial entry that can have '計上内容' (booked content) or '残高' (ledger balance).",
+      "suggested_ja": "顧客からのクレーム対応においては、事実関係を迅速に確認した上で、誠意を持った説明を行うことが重要です。",
+      "suggested_vi": "Trong việc xử lý khiếu nại của khách hàng, điều quan trọng là phải nhanh chóng xác minh sự việc và đưa ra lời giải thích với thái độ chân thành.",
+      "suggested_en": "When handling customer complaints, it is essential to promptly verify the facts and provide an explanation in good faith."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically forced into an accounting closing template ('適正な会計基準および社内規程に則り...決算においてクレーム対応を適正に処理いたしました'). Complaint handling itself is not processed as an accounting closing item under financial accounting standards.",
+      "suggested_ja": "今回のクレーム対応で得られた教訓を活かし、再発防止に向けた業務マニュアルの改訂を行いました。",
+      "suggested_vi": "Áp dụng những bài học rút ra từ đợt xử lý khiếu nại lần này, chúng tôi đã sửa đổi sổ tay nghiệp vụ nhằm ngăn ngừa tái diễn.",
+      "suggested_en": "Applying the lessons learned from handling this complaint, we revised the operational manual to prevent recurrence."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about discrepancies in monthly closing entries for 'クレーム対応', and Speaker B refers to vouchers and subledgers ('補助元帳'). 'クレーム対応' is customer complaint resolution, not a general ledger account.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "昨日発生した製品不具合に関するクレーム対応の進捗はいかがですか。",
+        "vi": "Tiến độ xử lý khiếu nại liên quan đến sự cố sản phẩm phát sinh hôm qua thế nào rồi?",
+        "en": "How is the progress on handling the complaint regarding the product defect that occurred yesterday?"
+      },
+      {
+        "speaker": "B",
+        "ja": "お客様への初期対応とお詫びは完了し、現在は品質管理部と原因の調査を進めております。",
+        "vi": "Chúng tôi đã hoàn tất việc tiếp nhận ban đầu và xin lỗi khách hàng, hiện đang phối hợp với bộ phận quản lý chất lượng để điều tra nguyên nhân.",
+        "en": "We have completed the initial response and apology to the customer, and are currently investigating the cause with the quality assurance department."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term definitions are accurate; errors originated in the generated examples and dialogue."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a1f9a58d0c84896a4e75f5be18b76cab7c794f9f40b0f7a9e633036df1b9094b",
+    "validated_at": "2026-10-01T01:41:19.025530+00:00"
+  }
+}

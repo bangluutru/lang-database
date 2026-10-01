@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000054",
+  "term": "建設仮勘定",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an incorrect accounting predicate ('精算する' instead of '本勘定へ振り替える'), Example 2 is a generic repetitive template lacking authentic accounting context, and the dialogue contains awkward unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "建設仮勘定を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording/capitalizing construction in progress.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "建設仮勘定の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common in periodic closing and audit procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "建設仮勘定を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese accounting practice, one reconciles the balance (残高を照合する) or subledger (内訳・補助元帳を照合する), not the account entity itself directly.",
+      "suggested_text": "建設仮勘定の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "建設仮勘定を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Construction in progress is not 'cleared/settled' (精算); upon completion or commissioning, it is transferred to tangible fixed assets (本勘定に振り替える).",
+      "suggested_text": "建設仮勘定から本勘定へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable description of month-end closing procedures inspecting CIP entries and balances.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stilted boilerplate repetition of '適正な...適正に処理いたしました'. A real accounting context should address capitalization or transfer upon project completion/commissioning.",
+      "suggested_ja": "新工場の竣工に伴い、建設仮勘定に計上されていた支出を建物および機械装置の本勘定へ振り替えました。",
+      "suggested_vi": "Cùng với việc hoàn thành nhà máy mới, các khoản chi đã hạch toán vào chi phí xây dựng cơ bản dở dang đã được kết chuyển sang tài khoản chính thức là nhà xưởng và máy móc thiết bị.",
+      "suggested_en": "Upon completion of the new plant, expenditures previously recorded under construction in progress were transferred to the appropriate tangible fixed asset accounts, such as buildings and machinery."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural and redundant AI phrasing. A realistic exchange should reflect actual capex management, such as verifying completed assets for transfer to fixed asset accounts.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新工場の建設仮勘定ですが、先月竣工した設備分は本勘定への振替が済んでいますか。",
+        "vi": "Về chi phí xây dựng cơ bản dở dang của nhà máy mới, phần thiết bị đã hoàn thành nghiệm thu tháng trước đã được kết chuyển sang tài sản cố định chưa?",
+        "en": "Regarding construction in progress for the new factory, have the facilities completed last month been transferred to fixed asset accounts?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、検収書を確認のうえ、全額を機械装置勘定へ振り替え済みです。",
+        "vi": "Vâng, sau khi kiểm tra biên bản nghiệm thu, tôi đã hoàn tất kết chuyển toàn bộ vào tài khoản máy móc thiết bị rồi.",
+        "en": "Yes, after verifying the acceptance inspection certificates, we have transferred the entire amount to the machinery and equipment account."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Target term translations are accurate and standard in financial accounting."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4f6b29c75935f3876f6a21b1c94fdd319b7631b88421507c4a2179d9046a7673",
+    "validated_at": "2026-10-01T01:34:32.017313+00:00"
+  }
+}

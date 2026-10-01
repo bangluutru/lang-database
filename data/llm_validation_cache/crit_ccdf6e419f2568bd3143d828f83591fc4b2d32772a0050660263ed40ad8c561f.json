@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000013",
+  "term": "納税地",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal category error: '納税地' (tax jurisdiction/location) was inserted into generic accounting template slots ('計上内容', '残高', '適正に処理いたしました'). Complete rewriting of example sentences and dialogue is required.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "納税地を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard tax operation phrase.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "納税地を変更する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate relocation or tax restructuring contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "納税地を届け出る",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Directly matches tax administrative procedures (異動届出等).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "納税地を所轄とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Awkward grammatical relationship. The standard legal/administrative expression is '納税地を所轄する（税務署）' or '納税地を管轄する'.",
+      "suggested_text": "納税地を所轄する税務署"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe domain hallucination. '納税地' is a geographical/legal jurisdiction (place of tax payment), not a balance sheet account or journal entry. It cannot have '計上内容' or '残高'.",
+      "suggested_ja": "本社移転に伴い、所轄税務署へ納税地の異動届出書を速やかに提出する必要があります。",
+      "suggested_vi": "Do công ty đã chuyển trụ sở chính, chúng ta cần nhanh chóng nộp thông báo thay đổi địa điểm nộp thuế cho cơ quan thuế quản lý trực tiếp.",
+      "suggested_en": "Following the relocation of our head office, we need to promptly submit a notification of change in the place of tax payment to the competent tax office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Nonsensical expression. '決算において納税地を適正に処理いたしました' treats a location/jurisdiction as an accounting closing transaction.",
+      "suggested_ja": "法人税法上、内国法人の納税地は原則としてその本店または主たる事務所の所在地と定められています。",
+      "suggested_vi": "Theo Luật Thuế thu nhập doanh nghiệp, địa điểm nộp thuế của pháp nhân trong nước về nguyên tắc được quy định là trụ sở chính hoặc địa điểm kinh doanh chủ yếu.",
+      "suggested_en": "Under corporate tax law, the place of tax payment for a domestic corporation is in principle designated as the location of its head office or principal office."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there is a variance in the 'booked entries of place of tax payment' (納税地の計上内容), which is meaningless in accounting and tax.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本社オフィスの移転に伴い、納税地の異動手続きは完了していますか。",
+        "vi": "Liên quan đến việc chuyển văn phòng trụ sở chính, thủ tục thay đổi địa điểm nộp thuế đã hoàn tất chưa?",
+        "en": "With the relocation of our head office, has the procedure for changing the place of tax payment been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、旧所轄と新所轄の両方の税務署へ異動届出書の提出を完了しております。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc nộp tờ khai thay đổi cho cả cơ quan thuế quản lý cũ và mới rồi ạ.",
+        "en": "Yes, we have completed submitting the notification of change to both the former and new competent tax offices."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations ('Place of tax payment' / 'địa điểm nộp thuế') are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "47309be8dd7b1fc126efa1942ff45fe1ad34a7112cafd27719c0d9d3c8474bae",
+    "validated_at": "2026-10-01T01:37:28.859445+00:00"
+  }
+}

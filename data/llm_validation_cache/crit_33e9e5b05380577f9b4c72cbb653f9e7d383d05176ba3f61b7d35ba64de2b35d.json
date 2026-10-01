@@ -1,0 +1,81 @@
+{
+  "entry_id": "jp-pro-trade-000079",
+  "term": "全量検査",
+  "overall_decision": "rewrite",
+  "summary_reason": "One collocation was unnatural, and the dialogue lacked conversational continuity, requiring a rewrite to ensure Speaker B's response directly addressed Speaker A's question about the inspection status.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "全量検査を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "全量検査を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "全量検査を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "全量検査の適法性を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適法性」は法律や規則に合致しているかを指す言葉であり、全量検査自体が適法であるかを確認する状況は一般的ではない。全量検査は税関の指示や要請に基づいて行われるものであり、その「適法性」を企業側が確認するというのは不自然。むしろ、検査結果や手続きの「妥当性」や「正確性」を確認する方が自然。",
+      "suggested_text": "全量検査の妥当性を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the '全量検査の手配状況' (arrangement status of full inspection). While it mentions contacting customs brokers and checking documents, it doesn't explicitly state the status of the inspection itself (e.g., whether it's scheduled, underway, or completed). The response shifts focus to the import declaration process without fully answering the question about the inspection's arrangement.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、全量検査の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp kiểm tra toàn bộ 100% lô hàng thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the full physical inspection arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲には既に連絡済みで、検査官の立ち会い日時も確定しております。書類の確認も完了し、検査実施後、速やかに輸入申告に進む予定です。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, thời gian có mặt của cán bộ kiểm tra cũng đã được xác định. Việc kiểm tra chứng từ cũng đã hoàn tất, dự kiến sau khi kiểm tra xong sẽ nhanh chóng tiến hành khai báo nhập khẩu.",
+        "en": "We have already contacted the customs broker and freight forwarder, and the inspection officer's attendance time has been confirmed. Document verification is also complete, and we plan to proceed with the import declaration promptly after the inspection."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bf814da3d516ec27c9c0f0cbb5a1d1eccbbd102d221eafb73c5e3ef69dbe7804",
+    "validated_at": "2026-10-01T01:55:03.039553+00:00"
+  }
+}

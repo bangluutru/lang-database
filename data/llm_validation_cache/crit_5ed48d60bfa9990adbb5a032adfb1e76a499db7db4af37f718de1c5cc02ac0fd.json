@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000004",
+  "term": "間接税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Failed on multiple counts: inaccurate collocation ('間接税を計算する'), domain error in Japanese predicate logic and Vietnamese tax terminology in Example 0 ('適用税率を算出' / 'thu nhập chịu thuế'), translation typo in Example 1 ('thuế thuế'), and unnatural templated dialogue phrasing in Japanese corporate monthly closing context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "間接税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate tax compliance expression, commonly used when discussing domestic or overseas indirect tax (VAT/GST) filings.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "間接税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate tax procedure phrase.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "間接税を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Overly generic LLM template collocation. In business and tax practice, one calculates '間接税の税額' or discusses the fundamental economic mechanism '間接税を転嫁する' (shifting/passing on indirect tax).",
+      "suggested_text": "間接税を転嫁する"
+    },
+    {
+      "index": 3,
+      "text": "間接税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard passive construction in tax regulations and corporate transactions.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'適用税率を算出する' is logically incorrect (statutory tax rates are identified or verified, not calculated). Furthermore, in the Vietnamese translation, '課税標準' was mistranslated as 'thu nhập chịu thuế' (taxable income, which applies to direct income tax), rather than 'cơ sở tính thuế' / 'giá tính thuế' (tax base for indirect tax).",
+      "suggested_ja": "課税標準額を正確に把握した上で適用税率を確認し、納期限までに間接税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi xác định chính xác cơ sở tính thuế và biểu thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế gián thu trước thời hạn quy định.",
+      "suggested_en": "After accurately determining the tax base and verifying the applicable tax rate, we completed the payment procedure for indirect taxes before the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese translation contains a glaring duplicate word typo: 'số tiền thuế thuế gián thu phải nộp'.",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における間接税の税負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã tính toán thử nghiệm tác động đối với gánh nặng thuế gián thu trong kỳ này.",
+      "suggested_en": "Based on the tax reform details, we estimated the impact on the indirect tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'間接税の計上内容' in monthly closing is an artificial templated insertion. Real corporate accountants reconcile specific accounts such as '仮受消費税・仮払消費税' or explicitly refer to '海外VATなどの間接税勘定' / '間接税関連の残高'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外子会社の月次決算において、現地の間接税関連の仮払・仮受勘定に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng của công ty con ở nước ngoài, các tài khoản thuế gián thu tạm nộp và tạm thu tại địa phương có phát sinh chênh lệch không?",
+        "en": "In the overseas subsidiary's monthly closing, are there any discrepancies in the local indirect tax suspense accounts?"
+      },
+      {
+        "speaker": "B",
+        "ja": "現地の税務インボイスと総勘定元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu hóa đơn thuế tại địa phương với sổ cái chung và xác nhận tất cả đều khớp hợp lệ.",
+        "en": "We have reconciled the local tax invoices with the general ledger and confirmed that everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese has a conceptual mistranslation in Example 0 ('thu nhập chịu thuế' instead of 'cơ sở tính thuế/giá tính thuế') and a blatant duplicate typo in Example 1 ('thuế thuế gián thu')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "89f6d4bf0be057754b64ce04683f69db3230a65ddffd6549f76367a8c89cfad2",
+    "validated_at": "2026-10-01T01:37:20.667240+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000168",
+  "term": "単独海損",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '単独海損' (Particular Average) as an accounting entry. It is a marine insurance concept describing a type of loss, not an item that is '計上' (booked) or has a '残高' (balance) in the general ledger. The examples and dialogue incorrectly treat it as such, leading to unnatural and factually incorrect Japanese in an accounting context. The collocations themselves are generally fine, but their application in the examples and dialogue is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "単独海損が発生する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for marine losses."
+    },
+    {
+      "index": 1,
+      "text": "単独海損を算定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for calculating losses."
+    },
+    {
+      "index": 2,
+      "text": "単独海損の保険金を請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for claiming insurance."
+    },
+    {
+      "index": 3,
+      "text": "単独海損を調査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for investigating losses."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "単独海損 (Particular Average) is a concept in marine insurance, not an accounting entry that is '計上' (booked) or has a '残高' (balance) in the general ledger. It refers to a partial loss to the insured cargo or vessel, which is then subject to an insurance claim. It is not an item that would be reconciled in '帳簿照合' in the same way as typical accounting entries.",
+      "suggested_ja": "月末の帳簿照合において、単独海損に関する保険金請求の処理状況や未収金に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong tình trạng xử lý yêu cầu bồi thường bảo hiểm liên quan đến tổn thất riêng của từng chủ hàng (Particular Average - PA) hoặc các khoản phải thu hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the processing status of insurance claims related to particular average (PA) or in the outstanding receivables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, '単独海損を適正に処理いたしました' implies it's an accounting transaction or item that is 'processed' in closing entries. While the financial impact of a particular average (e.g., insurance proceeds, uninsured losses) would be reflected in financial statements, the '単独海損' itself is not an accounting item to be 'processed' in the general sense. It's a type of loss event.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において単独海損に関連する保険金収入や未補償損失を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán đúng quy định các khoản thu bảo hiểm và tổn thất không được bồi thường liên quan đến tổn thất riêng của từng chủ hàng (Particular Average - PA) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly recorded insurance proceeds and uninsured losses related to particular average (PA) in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue suffers from the same fundamental misunderstanding as the examples. '単独海損の計上内容に差異' is not a natural or correct accounting concept. '単独海損' is a marine insurance term for a type of loss, not an accounting entry that would have '計上内容' or be reconciled against '証憑書類と補助元帳' in this manner. The response also feels a bit generic for such a specific (and incorrectly applied) query.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、単独海損に関する保険金請求の処理状況について何か懸念事項はありますか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có vấn đề đáng lo ngại nào về tình trạng xử lý yêu cầu bồi thường bảo hiểm liên quan đến tổn thất riêng của từng chủ hàng không?",
+        "en": "Are there any concerns regarding the processing status of particular average insurance claims in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑書類と保険会社からの連絡を照合した結果、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu các chứng từ liên quan và thông báo từ công ty bảo hiểm, chúng tôi đã xác nhận rằng tất cả đã được xử lý đúng quy định.",
+        "en": "Yes, after cross-referencing the relevant documentation and communications from the insurance company, we have confirmed that everything has been processed appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "54add830fbbed1ad03ef89d5e003c01f7844bd139b554d90b85696f4ac661e90",
+    "validated_at": "2026-10-01T01:56:59.416085+00:00"
+  }
+}

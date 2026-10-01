@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000052",
+  "term": "利益相反取引",
+  "overall_decision": "rewrite",
+  "summary_reason": "法律上の規制概念・行為類型である「利益相反取引」を、一般契約書名（例：業務委託契約）のように扱って「締結する」「条項」「修正案」とテンプレート的にスロットインした致命的な実務的・語用論的誤りがあるため、全面改訂が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "利益相反取引を締結する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「利益相反取引」は会社法上の行為分類・概念であり、契約書名のように「締結する」と述語を取るのは不自然。「利益相反取引を行う」または「利益相反取引を承認する」が自然。",
+      "suggested_text": "利益相反取引を行う"
+    },
+    {
+      "index": 1,
+      "text": "利益相反取引を更新する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "契約書のように「利益相反取引を更新する」とは言わない。法務・コーポレートガバナンス上「利益相反取引に該当する」などが典型的。",
+      "suggested_text": "利益相反取引に該当する"
+    },
+    {
+      "index": 2,
+      "text": "利益相反取引を解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "利益相反取引は解除する対象ではなく、取締役会での承認や防止措置の対象となる。「承認を得る／受ける」が実務上極めて頻出。",
+      "suggested_text": "利益相反取引の承認を受ける"
+    },
+    {
+      "index": 3,
+      "text": "利益相反取引の条項を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "取引そのものに「条項」があるかのような表現は機械的で不自然。該当性の検証や事前審査の文脈でコロケーションを組むべき。",
+      "suggested_text": "利益相反取引を防止する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「取引先と基本合意に達したため利益相反取引を正式に締結する」という文脈は、会社法上の概念理解を著しく欠いており実務上あり得ない（契約類型スロットインの典型的な破綻）。取締役会承認を要する法務実務の文脈に改める必要がある。",
+      "suggested_ja": "取締役と当社間での不動産売買は利益相反取引に該当するため、事前に取締役会の承認を得る必要があります。",
+      "suggested_vi": "Việc mua bán bất động sản giữa giám đốc và công ty thuộc trường hợp giao dịch xung đột lợi ích, nên cần phải có sự phê duyệt trước của hội đồng quản trị.",
+      "suggested_en": "Since the real estate transaction between the director and the company constitutes a conflict-of-interest transaction, prior approval from the board of directors is required."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「利益相反取引の条項」という表現が不自然。取引が利益相反に該当するか否かの精査、または取締役会への付議手続きに関する文脈が適切。",
+      "suggested_ja": "法務部門と連携し、今回の関連当事者取引が利益相反取引に該当しないか事前に精査しました。",
+      "suggested_vi": "Phối hợp với bộ phận pháp chế, chúng tôi đã rà soát kỹ trước xem giao dịch với bên liên quan lần này có cấu thành giao dịch xung đột lợi ích hay không.",
+      "suggested_en": "In coordination with the legal department, we thoroughly examined in advance whether this related-party transaction constitutes a conflict-of-interest transaction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "契約書名のように「利益相反取引の修正案」「このまま締結手続きに進めます」とするのは実務上完全に誤り。取締役会の付議・承認手続きを巡る自然な対話に刷新すべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会に上程する役員個人所有ビルの賃貸借契約ですが、利益相反取引の事前審査は完了しましたか。",
+        "vi": "Hợp đồng thuê tòa nhà thuộc sở hữu cá nhân của thành viên HĐQT trình lên cuộc họp HĐQT tuần tới đã hoàn tất thẩm định trước về giao dịch xung đột lợi ích chưa?",
+        "en": "Regarding the lease agreement for the director's privately owned building to be submitted to next week's board meeting, has the preliminary review for conflict-of-interest transaction been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、法務部および顧問弁護士の確認を終え、特別利害関係人の議決権行使制限も含めて付議資料に反映済みです。",
+        "vi": "Vâng, chúng tôi đã hoàn tất rà soát với bộ phận pháp chế và luật sư cố vấn, đồng thời đã phản ánh các hạn chế biểu quyết đối với người có lợi ích liên quan đặc biệt vào tài liệu trình HĐQT.",
+        "en": "Yes, we have completed the review with the legal department and legal counsel, and the restrictions on voting rights for specially interested parties have already been reflected in the agenda materials."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体（Conflict-of-interest transaction / giao dịch xung đột lợi ích giữa giám đốc và công ty）は適切。例文・対話側のテンプレート不自然さを是正した。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8be3cf335bd46eb2112ae44dc6b02b8be4cd4c477e9cd8cc4dfa53863d9c40a0",
+    "validated_at": "2026-10-01T01:41:54.037236+00:00"
+  }
+}

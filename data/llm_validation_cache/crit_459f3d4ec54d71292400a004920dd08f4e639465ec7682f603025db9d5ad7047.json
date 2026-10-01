@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000154",
+  "term": "アライアンス",
+  "overall_decision": "rewrite",
+  "summary_reason": "「アライアンス」というビジネス戦略用語を、会計処理の対象となる勘定科目や取引のように扱っている点で、全体的に日本語表現が不自然かつ不正確。会計・財務のドメイン知識に誤りがあるため、全面的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "アライアンスを策定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「策定する」は計画や方針に対して使う動詞であり、アライアンスという概念には不自然。アライアンスは「締結する」「構築する」などが適切。",
+      "suggested_text": "アライアンスを締結する"
+    },
+    {
+      "index": 1,
+      "text": "アライアンスを推進する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "アライアンスを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "アライアンスを実行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「実行する」は計画やタスクに対して使う動詞であり、アライアンスという概念には不自然。アライアンスは「実施する」や「運用する」などが適切だが、文脈による。",
+      "suggested_text": "アライアンスを運用する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「アライアンスの計上内容や残高」という表現は、アライアンスが会計上の勘定科目や資産・負債のように扱われている点で不自然。アライアンス自体が帳簿に計上されたり残高を持つことはない。",
+      "suggested_ja": "月末の帳簿照合において、アライアンス関連費用の計上内容や未払金残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán chi phí liên quan đến liên minh chiến lược hoặc số dư phải trả hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries for alliance-related expenses or in outstanding balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「アライアンスを適正に処理いたしました」という表現は、アライアンスが会計処理の対象となる勘定科目であるかのような誤解を与える。アライアンス自体を会計処理するのではなく、アライアンスに伴う取引や費用を処理する。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてアライアンス関連の取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến liên minh chiến lược trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed alliance-related transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「アライアンスの計上内容に差異」という表現が、アライアンスを会計上の勘定科目として扱っている点で不自然。アライアンス自体が帳簿に計上されることはないため、会話として成立しない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、アライアンス関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán chi phí liên quan đến liên minh chiến lược không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for alliance-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "元の日本語が不自然なため、それに伴い翻訳も不自然になっている。特に「アライアンスの計上内容」や「アライアンスを処理する」といった表現が会計用語として不適切。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ec2ee6c8eba175365caed8f6a5e620d611d1037a7288f686d143e07608c90806",
+    "validated_at": "2026-10-01T01:52:51.756544+00:00"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "entry_id": "jp-pro-business-000173",
+  "term": "バーンレート",
+  "overall_decision": "rewrite",
+  "summary_reason": "The second example sentence contains a factual error regarding the interpretation of burn rate, and the Vietnamese translation for 'burn rate' is a descriptive phrase rather than a concise term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "バーンレートを算出する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "バーンレートを改善する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "バーンレートを分析する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "バーンレートの目標値を設定する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Burn rate exceeding target value is generally a negative outcome, indicating higher cash consumption than planned. The sentence implies it's positive, leading to improved profitability and capital efficiency, which is contradictory. A lower burn rate or meeting a target burn rate would be positive.",
+      "suggested_ja": "当期のバーンレートは目標値を下回り、収益性と資本効率の向上が確認されました。",
+      "suggested_vi": "Chỉ số tốc độ đốt tiền hàng tháng của startup kỳ này đã thấp hơn giá trị mục tiêu, xác nhận khả năng sinh lời và hiệu quả sử dụng vốn đã được nâng cao.",
+      "suggested_en": "This term's burn rate fell below the target value, confirming an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for 'burn rate' is overly descriptive and not a standard, concise term. 'Tốc độ đốt tiền hàng tháng của startup' is a definition, not a term. A more common and concise translation or direct loanword should be used if available, or a more natural descriptive phrase."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8c72c3236ee2adfc8b259ce09735c5d33bd8c83f548b49a36f035f1c93b1a5cc",
+    "validated_at": "2026-10-01T01:53:06.655345+00:00"
+  }
+}

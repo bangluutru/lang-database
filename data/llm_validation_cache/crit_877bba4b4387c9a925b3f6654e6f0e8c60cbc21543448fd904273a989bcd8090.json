@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000131",
+  "term": "円安",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the semantic mismatch in how '円安' is used in the examples and dialogue. '円安' refers to a market condition, not an accounting entry or balance itself. The sentences attempt to treat '円安' as a directly accountable item, which is unnatural and incorrect in a professional accounting context. The collocations are fine, but the application in sentences needs significant revision to reflect actual accounting practices related to currency fluctuations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "円安に対応する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in business contexts."
+    },
+    {
+      "index": 1,
+      "text": "円安が進行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in business contexts."
+    },
+    {
+      "index": 2,
+      "text": "円安の影響を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in business contexts."
+    },
+    {
+      "index": 3,
+      "text": "円安リスクをヘッジする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in business contexts."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「円安の計上内容や残高」という表現は不自然。「円安」は市場の状態であり、直接的に「計上内容」や「残高」を持つものではない。為替差損益や外貨建資産・負債の評価差額が計上される。",
+      "suggested_ja": "月末の帳簿照合において、為替変動による損益や外貨建残高の評価に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong lợi nhuận/thua lỗ do biến động tỷ giá hối đoái hoặc đánh giá số dư ngoại tệ hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in profits/losses due to exchange rate fluctuations or in the valuation of foreign currency balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「円安を適正に処理いたしました」という表現は不自然。「円安」は市場の状況であり、直接「処理する」対象ではない。円安によって生じた為替差損益などを会計処理する、が適切。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において円安による為替差損益を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định lợi nhuận/thua lỗ do chênh lệch tỷ giá hối đoái phát sinh từ đồng Yên giảm giá trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the foreign exchange gains/losses resulting from the weak yen in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's phrase 「円安の計上内容に差異は発生していませんか」 is unnatural. 「円安」自体が計上内容を持つわけではない。為替差損益や外貨建取引の会計処理について問うべき。Speaker B's response is also somewhat generic given the unnatural premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、円安による為替差損益の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán lợi nhuận/thua lỗ do chênh lệch tỷ giá hối đoái do đồng Yên giảm giá không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for foreign exchange gains/losses due to the weak yen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。特に大きな差異はございません。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng. Không có sự chênh lệch lớn nào.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned. There are no significant discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for the original examples and dialogue reflect the unnatural Japanese phrasing. They need to be re-translated to match the suggested natural Japanese."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "57d5dc29c87a22768e85c4617b8efcec9016edce03b55f907214760997af2603",
+    "validated_at": "2026-10-01T01:56:12.750166+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000161",
+  "term": "パイプライン管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'パイプライン管理' as an accounting item rather than a sales/business process. All examples and the dialogue incorrectly apply accounting terminology to this term, making them unnatural and factually incorrect in a business context. The collocations themselves are acceptable, but the application in sentences is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "パイプライン管理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "パイプライン管理を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "パイプライン管理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "パイプライン管理を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "パイプライン管理 (sales pipeline management) is a process, not an accounting entry or balance. It cannot be '計上' (booked) or have a '残高' (balance) in an accounting sense. This sentence fundamentally misunderstands the term's domain.",
+      "suggested_ja": "月末の営業会議で、パイプライン管理の進捗状況と見込みに差異がないか精査します。",
+      "suggested_vi": "Trong cuộc họp kinh doanh cuối tháng, chúng tôi sẽ kiểm tra kỹ lưỡng xem có sự khác biệt nào trong tiến độ và dự báo của quản lý phễu bán hàng hay không.",
+      "suggested_en": "During the month-end sales meeting, we carefully examine whether there are discrepancies in the progress and forecasts of sales pipeline management."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'パイプライン管理' is a process, not something that is '処理' (processed) in closing entries in an accounting context. It's a sales/business process, not an accounting item.",
+      "suggested_ja": "適正な営業プロセスおよび社内規程に則り、当期の営業活動においてパイプライン管理を適正に実施いたしました。",
+      "suggested_vi": "Tuân thủ các quy trình bán hàng và quy định nội bộ thích hợp, chúng tôi đã thực hiện quản lý phễu bán hàng một cách đúng đắn trong các hoạt động kinh doanh của kỳ này.",
+      "suggested_en": "In accordance with applicable sales processes and internal rules, we properly implemented sales pipeline management in this term's sales activities."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue incorrectly applies 'パイプライン管理' to accounting concepts like '計上内容に差異' (discrepancies in booked content) and '証憑書類と補助元帳を照合' (reconciling with vouchers and sub-ledgers). Sales pipeline management is not an accounting item that appears in ledgers or is booked.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次営業報告で、パイプライン管理の進捗に遅れは発生していませんか。",
+        "vi": "Trong báo cáo kinh doanh hàng tháng này, có sự chậm trễ nào trong tiến độ quản lý phễu bán hàng không?",
+        "en": "In this month's monthly sales report, are there any delays in the progress of sales pipeline management?"
+      },
+      {
+        "speaker": "B",
+        "ja": "各案件の状況を確認済みで、すべて計画通りに進捗していることを確認いたしました。",
+        "vi": "Chúng tôi đã xác nhận tình trạng của từng dự án và xác nhận rằng tất cả đều đang tiến triển theo kế hoạch.",
+        "en": "We have confirmed the status of each deal and verified that everything is progressing according to plan."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "956b553fc8e79094b2b96d991c7dd948be7bc7efc384a14ad69bc9b8c3a572ab",
+    "validated_at": "2026-10-01T01:53:00.681278+00:00"
+  }
+}

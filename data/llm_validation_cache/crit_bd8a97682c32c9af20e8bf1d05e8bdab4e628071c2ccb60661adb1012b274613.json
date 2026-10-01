@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000069",
+  "term": "契約締結",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination: the generator forced an accounting/closing-entry template ('計上内容', '残高', '決算処理') onto a procedural legal/business term ('契約締結'), resulting in completely nonsensical sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約締結を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business phrasing for moving contract execution forward.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "契約締結を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable expression indicating the completion of contract signing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "契約締結の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural expression for verifying internal/legal workflow for signing contracts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "契約締結を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reviews contract terms ('契約内容を見直す') or the decision to execute ('契約締結の可否を再検討する'), but '契約締結を見直す' is awkward Japanese.",
+      "suggested_text": "契約締結に至る"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'契約締結' (contract execution) is an event/legal act, not an accounting item that has ledger entries ('計上内容') or balance sheet balances ('残高'). This is a severe mechanical template error.",
+      "suggested_ja": "法務部門によるリーガルチェックを経て、来週早々にも相手先との契約締結に至る見込みです。",
+      "suggested_vi": "Sau khi bộ phận pháp chế rà soát tính pháp lý, dự kiến chúng tôi sẽ tiến tới ký kết hợp đồng với đối tác vào đầu tuần tới.",
+      "suggested_en": "Following the legal review by the legal department, we expect to conclude the contract signing with the counterparty early next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'決算において契約締結を適正に処理いたしました' is completely nonsensical in business and accounting. Signing an agreement is not processed as an accounting close entry.",
+      "suggested_ja": "取締役会での承認を前提として、今月末までに基本合意書に基づく契約締結を完了させる方針です。",
+      "suggested_vi": "Với điều kiện được Hội đồng Quản trị phê duyệt, chúng tôi dự kiến sẽ hoàn tất việc ký kết hợp đồng dựa trên thỏa thuận cơ bản trước cuối tháng này.",
+      "suggested_en": "Subject to board approval, we plan to finalize the execution of the contract based on the basic agreement by the end of this month."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about discrepancies in accounting entries for '契約締結' (contract signing), which is completely artificial and factually absurd in corporate accounting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規取引先との基本契約締結に向けた交渉の進捗はいかがでしょうか。",
+        "vi": "Tiến độ đàm phán để tiến tới ký kết hợp đồng nguyên tắc với đối tác mới thế nào rồi?",
+        "en": "How is the progress on negotiations toward executing the master agreement with the new client?"
+      },
+      {
+        "speaker": "B",
+        "ja": "秘密保持条項の修正で合意に達しましたので、今週中には契約締結できる見通しです。",
+        "vi": "Hai bên đã đạt được thống nhất về việc sửa đổi điều khoản bảo mật, dự kiến sẽ có thể hoàn tất ký kết hợp đồng trong tuần này.",
+        "en": "We reached an agreement on revisions to the confidentiality clause, so we expect to execute the contract within this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Original translations faithfully rendered nonsensical templated Japanese sentences ('hạch toán ký kết hợp đồng', 'entries or balances for execution of contract'); need overhaul alongside rewritten examples and dialogue."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "20f65bc8da769b66d8b94a8a4c1b0127a05b9d22969e7fdfa0046c6e4c60dd74",
+    "validated_at": "2026-10-01T01:42:06.048988+00:00"
+  }
+}

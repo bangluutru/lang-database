@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000010",
+  "term": "有価証券報告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a critical domain terminology error by conflating statutory disclosure (法定開示) with timely disclosure (適時開示), and Collocation 1 should use the standard legal/corporate verb '提出する'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "有価証券報告書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and corporate reporting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "有価証券報告書を開示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While disclosure is the concept, statutory securities reports under the Financial Instruments and Exchange Act are canonically submitted/filed ('提出する') via EDINET rather than '開示する'.",
+      "suggested_text": "有価証券報告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "有価証券報告書を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in board resolutions and corporate governance contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "有価証券報告書を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common among equity analysts and corporate finance professionals.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural register and factually appropriate representation of board approval following an audit.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Conflates regulatory regimes. '有価証券報告書' is a statutory disclosure ('法定開示') under the Financial Instruments and Exchange Act submitted to the Kanto Local Finance Bureau via EDINET, whereas '適時開示' (Timely Disclosure) refers strictly to stock exchange disclosure rules (TDnet/決算短信).",
+      "suggested_ja": "期末の法定開示に向けて、有価証券報告書の注記事項と財務諸表数値の整合性を慎重に確認しています。",
+      "suggested_vi": "Hướng tới việc công bố thông tin theo luật định vào cuối kỳ, chúng tôi đang rà soát cẩn thận tính nhất quán giữa các thuyết minh và số liệu báo cáo tài chính trong báo cáo chứng khoán hàng năm (Yukaho).",
+      "suggested_en": "Ahead of the statutory disclosure deadline at fiscal year-end, we are carefully verifying consistency between the footnotes and financial statement figures in the annual securities report."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Conversation flows logically between finance colleagues preparing board presentation materials.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "37aba2c241155e1ea7b7c933a75c816ec0d595befd2a2603f8e7593632a3c321",
+    "validated_at": "2026-10-01T01:32:58.572395+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000140",
+  "term": "2割特例",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual mismatch in both example sentences (falsely associating 2割特例 with regional contribution and deduction ceilings, typical of Furusato Nozei template leakage) and unrealistic documentary requirements in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "2割特例を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in business conversations regarding tax filing options.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "2割特例の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise statutory phrasing in Japanese consumption tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "2割特例を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing for taking advantage of the transitional tax measure.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "2割特例の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing to describe meeting the eligibility criteria for the 20% deemed tax purchase rule.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The 2割特例 is a transitional consumption tax measure for businesses switching from tax-exempt to taxable status under the invoice system. Mentioning '地域貢献' (regional contribution) is factually irrelevant and appears mechanically templated from Furusato Nozei (hometown tax).",
+      "suggested_ja": "インボイス制度導入に伴い免税事業者から課税事業者に転換したため、消費税の申告で2割特例を適用しました。",
+      "suggested_vi": "Do chuyển đổi từ doanh nghiệp miễn thuế sang doanh nghiệp chịu thuế theo việc áp dụng hệ thống hóa đơn (Invoice), chúng tôi đã áp dụng chính sách đặc lệ 20% khi kê khai thuế tiêu dùng.",
+      "suggested_en": "Since we transitioned from a tax-exempt business to a taxable business due to the introduction of the invoice system, we applied the special 20% rule for our consumption tax filing."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The 2割特例 does not feature a '控除上限額' (deduction ceiling). Under this rule, tax payable is simply fixed at 20% of output consumption tax. This sentence is also hallucinated/templated from donation or income tax credit concepts.",
+      "suggested_ja": "本則課税、簡易課税、そして2割特例の税額を事前に試算・比較した上で、最も有利な申告方法を選択しました。",
+      "suggested_vi": "Sau khi tính toán thử và so sánh số tiền thuế giữa phương pháp tính thuế thông thường, phương pháp tính thuế giản đơn và đặc lệ 20%, chúng tôi đã lựa chọn phương thức kê khai có lợi nhất.",
+      "suggested_en": "After calculating and comparing the tax amounts under standard taxation, simplified taxation, and the special 20% rule in advance, we selected the most advantageous filing method."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "To apply the 2割特例, a business simply notes it on the consumption tax return; there is no separate requirement for a '税理士の確認書' (tax accountant confirmation letter) as an official attachment. The dialogue should reflect real accounting communication.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の消費税申告ですが、本則課税ではなく2割特例を適用する形で進めてよろしいでしょうか。",
+        "vi": "Về kỳ kê khai thuế tiêu dùng lần này, chúng tôi tiến hành áp dụng quy tắc đặc lệ 20% thay vì phương pháp tính thuế thông thường có được không?",
+        "en": "Regarding this consumption tax return, may we proceed with applying the special 20% rule instead of standard taxation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、試算の結果2割特例の方が納税額を抑えられるため、確定申告書にその旨を付記して提出してください。",
+        "vi": "Được chứ, vì kết quả tính thử cho thấy đặc lệ 20% giúp giảm số tiền thuế phải nộp, nên hãy ghi chú điều đó vào tờ khai quyết toán thuế rồi nộp nhé.",
+        "en": "Yes, our preliminary calculation shows the special 20% rule minimizes the tax payable, so please note that on the final tax return and submit it."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1's Vietnamese contains an obvious repetitive typo ('chính sách chính sách ưu đãi')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c3e24e2da235273583cec55396d073b7bf079575b78dc6d20f4648bcef31ea0a",
+    "validated_at": "2026-10-01T01:39:52.727643+00:00"
+  }
+}

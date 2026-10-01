@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000110",
+  "term": "資本金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object blindly applies monthly operating expense templates (月次照合, 差異確認, 精算, 補助元帳) to 資本金 (Capital Stock/Share Capital), which violates basic corporate accounting reality and produces stilted, unteachable Japanese expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "資本金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "資本金 is an equity account; native practice strongly prefers '資本金に（として）計上する' or '資本金を組み入れる/増資する'. Using direct object '〜を計上する' alone without context sounds templated.",
+      "suggested_text": "資本金に組み入れる"
+    },
+    {
+      "index": 1,
+      "text": "資本金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and semantically acceptable, though capital stock balances rarely change outside corporate actions.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "資本金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'資本金を照合する' is unnatural on its own. One reconciles the book capital balance against legal records, e.g., '登記簿上の資本金と照合する'.",
+      "suggested_text": "登記簿の資本金額と照合する"
+    },
+    {
+      "index": 3,
+      "text": "資本金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算' applies to advances, expenses, or liquidations (e.g., 仮払金, 旅費). Capital stock (資本金) cannot be '精算' under Japanese corporate accounting terminology.",
+      "suggested_text": "資本金を減資する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese accounting practice, 資本金 does not fluctuate monthly, so checking it for monthly reconciliation variances ('月末の帳簿照合において、資本金の計上内容や残高に差異がないか') is a templated hallucination.",
+      "suggested_ja": "第三者割当増資の完了に伴い、払込総額の半分を資本金、残りを資本準備金として計上しました。",
+      "suggested_vi": "Cùng với việc hoàn tất đợt tăng vốn qua phát hành riêng lẻ, chúng tôi đã hạch toán một nửa tổng số tiền góp vào vốn điều lệ và phần còn lại vào thặng dư vốn cổ phần.",
+      "suggested_en": "Following the completion of the third-party allotment capital increase, half of the paid-in amount was recorded as share capital and the remainder as capital reserve."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence '当期の決算において資本金を適正に処理いたしました' is vacuous boilerplate. 資本金 is rarely 'processed' at closing unless there is an explicit capital reduction, stock dividend, or issuance.",
+      "suggested_ja": "中小企業向け税制特例の適用要件を満たすため、資本金を1億円以下へ減資する方針が取締役会で承認されました。",
+      "suggested_vi": "Để đáp ứng điều kiện áp dụng ưu đãi thuế dành cho doanh nghiệp vừa và nhỏ, hội đồng quản trị đã phê duyệt phương án giảm vốn điều lệ xuống dưới 100 triệu yên.",
+      "suggested_en": "The Board of Directors approved a policy to reduce share capital to 100 million yen or less in order to satisfy eligibility requirements for SME tax incentives."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about monthly discrepancies in 資本金, and Speaker B references checking an '補助元帳' (sub-ledger). 資本金 has no monthly movements or auxiliary ledgers in normal accounting operations; it is tracked against legal commercial registries and board minutes.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新株発行に伴う払込期日が昨日でしたが、資本金への組み入れ処理は完了していますか。",
+        "vi": "Hạn thanh toán tiền mua cổ phần mới phát hành là ngày hôm qua, thủ tục ghi nhận vào vốn điều lệ đã hoàn tất chưa?",
+        "en": "Yesterday was the payment due date for the new share issuance; has the entry to share capital been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、払込取扱銀行からの残高証明書を確認し、登記申請と合わせて適正に計上を完了いたしました。",
+        "vi": "Vâng, tôi đã kiểm tra giấy xác nhận số dư từ ngân hàng đại lý thanh toán và hoàn tất việc hạch toán đúng quy định cùng với hồ sơ đăng ký kinh doanh.",
+        "en": "Yes, we confirmed the balance certificate from the receiving bank and properly completed the accounting entry in conjunction with the corporate registration filing."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese gloss 'vốn điều lệ / vốn góp cổ đông' is literally embedded with slashes directly into the example translations, creating unnatural hybrid sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8280bd618e79bf7946fab407c063c6b0d3e7fc9c855d1aec7afcfc8f263da0b9",
+    "validated_at": "2026-10-01T01:35:36.687136+00:00"
+  }
+}

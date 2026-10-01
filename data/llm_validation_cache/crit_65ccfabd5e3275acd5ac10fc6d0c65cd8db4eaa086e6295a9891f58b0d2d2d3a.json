@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000012",
+  "term": "総負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "「総負債」は財務集計・分析概念（Macro/Aggregate concept）であるにもかかわらず、個別仕訳・取引勘定（Individual line item）を前提とした定型テンプレート句（「計上する」「計上内容」「精算する」「適正に処理いたしました」）に機械的に当てはめられており、実務日本語として不自然です。集計・財務分析（圧縮、増加、負債比率、財務レバレッジなど）の文脈に合わせて全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総負債を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「総負債」は貸借対照表上の集計値（合計概念）であり、個別の仕訳として「計上する」対象ではありません。個別科目なら「負債を計上する」、総額なら「総負債が膨らむ」「総負債を把握する」などが自然です。",
+      "suggested_text": "総負債を圧縮する"
+    },
+    {
+      "index": 1,
+      "text": "総負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "総負債の残高推移や期末時点の残高を確認する文脈として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "総負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "集計概念である総負債を直接「照合する」という表現は実務上不自然です。各勘定科目の残高を照合した結果として「負債合計を算出・確定する」のが実態です。",
+      "suggested_text": "総負債の推移を分析する"
+    },
+    {
+      "index": 3,
+      "text": "総負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は立替経費や未決済勘定を精算する際に用いられます。総負債全体に対しては「返済する」「弁済する」「圧縮する」を用います。",
+      "suggested_text": "総負債を返済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "集計指標である「総負債」に「計上内容」という仕訳単位の語を組み合わせているため、自動生成テンプレ特有の不自然さがあります。",
+      "suggested_ja": "財務レバレッジの改善に向けて、有利子負債を中心に総負債の圧縮を進めています。",
+      "suggested_vi": "Nhằm cải thiện đòn bẩy tài chính, chúng tôi đang thúc đẩy việc cắt giảm tổng nợ phải trả, tập trung vào các khoản nợ có chịu lãi.",
+      "suggested_en": "To improve financial leverage, we are working to reduce total liabilities, focusing primarily on interest-bearing debt."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「総負債を適正に処理いたしました」は機械的テンプレ文であり、実務で総負債を「処理する」とは表現しません。通常は個別負債の計上・評価や、財務分析における総負債の算定等として述べます。",
+      "suggested_ja": "当期末における総負債は、設備投資に伴う長期借入金の増加により前年同期比で10％増加いたしました。",
+      "suggested_vi": "Tổng nợ phải trả vào cuối kỳ này đã tăng 10% so với cùng kỳ năm trước do các khoản vay dài hạn phục vụ cho đầu tư thiết bị tăng lên.",
+      "suggested_en": "Total liabilities at the end of the current fiscal year increased by 10% year-on-year due to an increase in long-term borrowings for capital investment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「総負債の計上内容」という表現が会計実務の語感として不自然です。また、Speaker Bの「すべて適正に整合している」もぎこちない定型句です。経営会議や財務報告における自然な対話に改訂すべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、総負債の総額および負債比率はどのように着地しそうですか。",
+        "vi": "Trong kỳ quyết toán này, tổng nợ phải trả và tỷ lệ nợ dự kiến sẽ chốt ở mức như thế nào?",
+        "en": "In this term's financial results, how are the total liabilities and the debt ratio expected to finish?"
+      },
+      {
+        "speaker": "B",
+        "ja": "短期借入金の返済が進んだため、総負債は前期比で約5億円減少し、目標水準を達成できる見通しです。",
+        "vi": "Do việc trả nợ vay ngắn hạn tiến triển thuận lợi, tổng nợ phải trả đã giảm khoảng 500 triệu yên so với kỳ trước và dự kiến sẽ đạt được mức mục tiêu.",
+        "en": "Because repayments of short-term borrowings have progressed, total liabilities decreased by approximately 500 million yen from the previous period, and we expect to meet our target level."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "語義自体（Total liabilities / tổng nợ phải trả）は正確ですが、例文・対話文の日本語側の不自然さに引きずられているため例文の刷新が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b51188d5ccb8fe964575f40ba558eb5b4898ce10ca27823c4886b65f63f0a162",
+    "validated_at": "2026-10-01T01:33:03.419488+00:00"
+  }
+}

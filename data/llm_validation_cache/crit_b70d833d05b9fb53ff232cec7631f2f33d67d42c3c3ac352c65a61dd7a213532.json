@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000181",
+  "term": "プライバシーマーク",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'プライバシーマーク' as an accounting item that can be '計上' (booked) or have a '残高' (balance). This error permeates the examples and dialogue, making them unnatural and factually incorrect in a business/accounting context. The collocations are fine, but the application in sentences is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "プライバシーマークを取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "プライバシーマークを維持する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "プライバシーマークを更新する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "プライバシーマークの審査を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "プライバシーマーク is a certification, not an accounting item that can be 計上 (booked/entered) or have a 残高 (balance). This sentence fundamentally misunderstands the nature of P-Mark in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、プライバシーマーク関連の費用計上や支払いに差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong việc hạch toán hoặc thanh toán các chi phí liên quan đến chứng nhận bảo mật thông tin cá nhân uy tín (P-Mark) hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the booking or payment of expenses related to the PrivacyMark."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, プライバシーマーク cannot be 'processed' (処理する) as an accounting item in the context of closing entries. It's a certification, not an asset, liability, or expense that is directly 'processed' in financial statements.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてプライバシーマーク取得・維持にかかる費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến việc đạt được và duy trì chứng nhận bảo mật thông tin cá nhân uy tín (P-Mark) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the costs associated with obtaining and maintaining the PrivacyMark in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue assumes プライバシーマーク is an accounting entry (計上内容) which is incorrect. Speaker B's response, while grammatically plausible, is irrelevant to the premise of Speaker A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、プライバシーマーク関連の費用計上について何か問題はありましたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có vấn đề gì về việc hạch toán chi phí liên quan đến chứng nhận bảo mật thông tin cá nhân uy tín (P-Mark) không?",
+        "en": "Were there any issues with the booking of PrivacyMark-related expenses in this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu các chứng từ liên quan và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, I have reconciled the relevant supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The translations for 'プライバシーマークの計上内容や残高' and 'プライバシーマークを適正に処理いたしました' are based on the incorrect premise that P-Mark is an accounting item. They need to be revised to reflect the corrected Japanese sentences."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9acda64b6680117cdf6972d024f85ed6ae53bcabd45a4e5df10bf8cc878ef355",
+    "validated_at": "2026-10-01T01:53:30.557443+00:00"
+  }
+}

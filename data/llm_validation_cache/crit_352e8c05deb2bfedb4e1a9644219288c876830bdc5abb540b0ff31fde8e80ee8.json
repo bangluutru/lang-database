@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000135",
+  "term": "税抜経理方式",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences and the dialogue suffer from robotic templating ('方式の計上内容や残高', '方式を適正に処理いたしました') where the accounting method itself was awkwardly slotted into nominal/predicate positions intended for transactions or account balances.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税抜経理方式を採用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax terminology for adopting the tax-exclusive method.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "税抜経理方式を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard combination when applying the method to transactions or fiscal years.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "税抜経理方式を変更する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese tax law and corporate accounting, companies choose between tax-exclusive or tax-inclusive methods; '税抜経理方式を選択する' is far more precise and common than '変更する' directly targeting the method name alone.",
+      "suggested_text": "税抜経理方式を選択する"
+    },
+    {
+      "index": 3,
+      "text": "税抜経理方式で経理処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and grammatical expression for carrying out accounting under this method.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'税抜経理方式の計上内容や残高' is an unnatural template artifact. An accounting method does not possess balances; the balances belong to accounts like suspense consumption tax (仮受/仮払消費税) under this method.",
+      "suggested_ja": "当社では税抜経理方式を採用しているため、決算時には仮払消費税等と仮受消費税等の残高を相殺して精算を行います。",
+      "suggested_vi": "Do công ty chúng tôi áp dụng phương pháp hạch toán giá chưa bao gồm thuế, vào thời điểm quyết toán sẽ thực hiện bù trừ và thanh quyết toán số dư thuế GTGT đầu vào và đầu ra được tạm tính.",
+      "suggested_en": "Since our company adopts the tax-exclusive accounting method, we offset and settle the balances of suspense consumption tax paid and received at the end of the fiscal period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'税抜経理方式を適正に処理いたしました' exhibits predicate clash (one processes transactions 'according to' a method, one does not 'process a method') alongside repetitive use of '適正な...適正に'.",
+      "suggested_ja": "消費税等の会計処理については税抜経理方式を適用しており、関係法令および社内規程に則って適正に決算処理を行いました。",
+      "suggested_vi": "Về xử lý kế toán thuế tiêu dùng, chúng tôi áp dụng phương pháp hạch toán giá chưa thuế và đã thực hiện quyết toán đúng quy định theo các luật liên quan và quy chế nội bộ.",
+      "suggested_en": "Regarding accounting treatment for consumption tax, we applied the tax-exclusive accounting method and properly executed closing procedures in accordance with relevant laws and internal regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'税抜経理方式の計上内容に差異は発生していませんか' is mechanical template jargon. Accountants ask about the consumption tax treatment or the tax suspense accounts, not whether discrepancies occurred in 'the tax-exclusive method'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の月次決算について、消費税は従来通り税抜経理方式で処理されていますか。",
+        "vi": "Trong quyết toán hàng tháng kỳ này, thuế tiêu dùng vẫn được xử lý theo phương pháp hạch toán giá chưa thuế như thường lệ chứ?",
+        "en": "For this term's monthly closing, is consumption tax being processed under the tax-exclusive accounting method as usual?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税抜経理方式を継続適用しており、仮払・仮受消費税の照合も問題ありません。",
+        "vi": "Vâng, chúng tôi tiếp tục áp dụng phương pháp hạch toán giá chưa thuế, và việc đối chiếu thuế tiêu dùng tạm trả/tạm nhận cũng không có vấn đề gì.",
+        "en": "Yes, we continue to apply the tax-exclusive method, and reconciliation of suspense consumption tax paid and received shows no issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese term 'phương pháp hạch toán kế toán tách riêng thuế' is verbose; 'phương pháp hạch toán giá chưa thuế' or 'phương pháp hạch toán ghi nhận thuế riêng' is standard Vietnamese accounting parlance for tax-exclusive accounting."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f54b3a0454b996957db3e856e7eabcc29e3891df20acc1b63e807234045933c3",
+    "validated_at": "2026-10-01T01:39:51.197627+00:00"
+  }
+}

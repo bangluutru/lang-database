@@ -1,0 +1,78 @@
+{
+  "entry_id": "jp-pro-business-000150",
+  "term": "販路開拓",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term and collocations are appropriate. However, all example sentences and the dialogue contain significant domain factual errors regarding the accounting treatment of '販路開拓' (sales channel development). This activity is incorrectly treated as an accounting item with '計上内容' or '残高', which is not how it functions in professional accounting practice. This requires a complete rewrite of the examples and dialogue to reflect accurate business and accounting terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "販路開拓を推進する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "販路開拓を展開する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "販路開拓に注力する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "販路開拓を支援する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "販路開拓 (sales channel development) is an activity, not an accounting item that has '計上内容' (accounting entry content) or '残高' (balance). Expenses related to this activity are recorded, but not the activity itself as an account.",
+      "suggested_ja": "月末の帳簿照合において、販路開拓にかかる費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của các chi phí liên quan đến mở rộng kênh phân phối thị trường có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of expenses related to sales channel development."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, '販路開拓を処理する' (to process sales channel development) is unnatural in an accounting context. One processes the costs or accounting treatment related to the activity, not the activity itself as an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において販路開拓にかかる費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến mở rộng kênh phân phối thị trường trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the expenses related to sales channel development in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '販路開拓の計上内容に差異は発生していませんか' is based on a fundamental misunderstanding of accounting principles. '販路開拓' is an activity, not an account item with '計上内容'. The question should refer to expenses related to the activity.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、販路開拓にかかる費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán tháng này, nội dung hạch toán các chi phí liên quan đến mở rộng kênh phân phối thị trường có phát sinh chênh lệch không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for expenses related to sales channel development?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations for example sentences and dialogue need to be updated to reflect the corrected Japanese. The initial 'meaning_en' and 'meaning_vi' are acceptable."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "147088d09f76e2df20bdcf8e767e9353a05f3cf9c1f7b47b445731a4c543d019",
+    "validated_at": "2026-10-01T01:51:13.837931+00:00"
+  }
+}

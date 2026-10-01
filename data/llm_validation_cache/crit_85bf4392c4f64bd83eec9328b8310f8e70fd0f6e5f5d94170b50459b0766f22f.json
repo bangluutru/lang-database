@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000144",
+  "term": "福利厚生費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations are mechanically paired without authentic predicate compatibility ('照合する', '精算する'). The examples and dialogue exhibit typical LLM-templated vagueness ('差異がないか精査', '適正な...適正に処理', '適正に整合している') instead of practical accounting contexts such as budget variance, taxability, and distinction from entertainment/payroll expenses.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "福利厚生費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording welfare expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "福利厚生費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when reviewing cumulative general ledger balances during period-end closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "福利厚生費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles vouchers, breakdowns, or ledgers rather than the expense account name directly. Better to specify '内訳を照合する' or use '見直す/非課税枠を確認する'.",
+      "suggested_text": "福利厚生費の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "福利厚生費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An expense account itself is not settled/reimbursed; expenses are reimbursed *as* welfare expenses (福利厚生費として精算・処理する).",
+      "suggested_text": "福利厚生費として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence is an overly generic template. '計上内容や残高に差異がないか' lacks the reference of comparison (e.g., budget vs. actual, or subledger vs. GL). In practice, one checks if taxable/non-taxable items are appropriately classified or checks budget-to-actual variance.",
+      "suggested_ja": "月次決算にあたり、福利厚生費の発生額が予算内に収まっているか、また交際費との混同がないかを確認します。",
+      "suggested_vi": "Trong kỳ quyết toán tháng, chúng tôi kiểm tra xem số phát sinh của chi phí phúc lợi có nằm trong ngân sách hay không, đồng thời đối soát để tránh nhầm lẫn với chi phí tiếp khách.",
+      "suggested_en": "During monthly closing, we check whether incurred welfare expenses are within budget and ensure they are not conflated with entertainment expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted wording with empty buzzwords ('適正な会計基準...適正に処理いたしました'). Does not reflect authentic workplace phrasing.",
+      "suggested_ja": "税法上の非課税限度額を超過した社員旅行の費用は、福利厚生費ではなく給与手当として処理しました。",
+      "suggested_vi": "Chi phí du lịch của nhân viên vượt quá hạn mức miễn thuế theo luật thuế đã được hạch toán vào chi phí lương và phụ cấp thay vì chi phí phúc lợi.",
+      "suggested_en": "Employee trip expenses exceeding the tax-exempt threshold under tax law were processed as salary allowances rather than welfare expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異' lacks a comparator, and '適正に整合している' is awkward Japanese phrasing (redundant and unidiomatic; natural Japanese uses '整合性が取れている' or '一致している').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の福利厚生費ですが、前月比で急増している要因は何でしょうか。",
+        "vi": "Về chi phí phúc lợi tháng này, nguyên nhân khiến số tiền tăng đột biến so với tháng trước là gì vậy?",
+        "en": "Regarding this month's welfare expenses, what is the reason for the sharp increase compared to last month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "全社健康診断の受診費用を今月一括で計上したためです。証憑との突合も完了しております。",
+        "vi": "Đó là do chi phí khám sức khỏe định kỳ toàn công ty được hạch toán một lần trong tháng này. Chúng tôi cũng đã hoàn tất đối chiếu với chứng từ.",
+        "en": "That is because the company-wide health checkup expenses were booked in a lump sum this month. Reconciliation with vouchers has also been completed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "689d9acc84bd4e43138d39a0b623099ead3fb070b22d1aad8acfd4d0f48a72d6",
+    "validated_at": "2026-10-01T01:36:14.859485+00:00"
+  }
+}

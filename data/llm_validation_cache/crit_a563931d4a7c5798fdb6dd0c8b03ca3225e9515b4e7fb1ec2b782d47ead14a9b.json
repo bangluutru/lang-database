@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000169",
+  "term": "社債利息",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations and examples exhibit generic robotic slot-filling that misapplies balance sheet attributes (残高, 精算, 照合) to a P&L debt-service expense item (社債利息). Stylistic redundancies ('適正な...適正に', '適正に整合') require targeted rewrite to meet professional workplace standards.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "社債利息を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing bond interest expense as a non-operating expense.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "社債利息の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "社債利息 is a P&L expense account (営業外費用), not a balance sheet account. While ledger cumulative balances exist, native accountants routinely say '社債利息の発生額/累計額を確認する' or refer to the liability '未払社債利息の残高を確認する'.",
+      "suggested_text": "社債利息を月割り計上する"
+    },
+    {
+      "index": 2,
+      "text": "社債利息を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reconciles vouchers, schedules, or payment notices against ledger entries ('償還・利払スケジュールと照合する'), not the abstract expense item directly as the direct object of 照合する.",
+      "suggested_text": "社債利息を支払う"
+    },
+    {
+      "index": 3,
+      "text": "社債利息を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Bond interest is paid (支払う), accrued (未払計上する), or amortized with bond discount (償却する), never '精算する' (which is reserved for employee advances, travel expenses, or settling mutual open tabs).",
+      "suggested_text": "社債利息を未払計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical slot-in template conflating expense items with balance sheet balance verification. Bond interest follows predetermined payment schedules and accruals, not monthly residual balance verification.",
+      "suggested_ja": "社債の利払日に合わせ、当期分の社債利息を営業外費用として計上しました。",
+      "suggested_vi": "Vào ngày thanh toán lãi trái phiếu, chúng tôi đã hạch toán phần lãi trái phiếu của kỳ này vào chi phí ngoài hoạt động kinh doanh.",
+      "suggested_en": "In accordance with the bond interest payment date, we recorded the bond interest for the current period as a non-operating expense."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Tautological and low-information template repeating '適正な...' and '適正に処理いたしました'. Lacks real accounting substance.",
+      "suggested_ja": "社債発行差金の償却額を含め、決算期末における社債利息の按分計算を適正に行いました。",
+      "suggested_vi": "Bao gồm cả khoản khấu hao chiết khấu phát hành trái phiếu, chúng tôi đã thực hiện chính xác việc tính toán phân bổ lãi trái phiếu vào thời điểm cuối niên độ kế toán.",
+      "suggested_en": "Including the amortization of bond discounts, we properly performed the pro-rata calculation of bond interest at the fiscal year-end."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合している' is unnatural and redundant Japanese (整合すでに意味を含む). The dialogue reads as a robotic template rather than practical finance communication regarding bond coupon dates or period accruals.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、社債利息の経過勘定の計上漏れはありませんか。",
+        "vi": "Về kỳ quyết toán tháng này, có bị sót khoản hạch toán tài khoản tạm tính đối với lãi trái phiếu không?",
+        "en": "Regarding this month's closing, are there any omitted accruals for bond interest?"
+      },
+      {
+        "speaker": "B",
+        "ja": "償還表と照合し、決算日までの未払社債利息を日割りで正しく計上してあります。",
+        "vi": "Tôi đã đối chiếu với lịch trình hoàn vốn và hạch toán chính xác lãi trái phiếu phải trả theo số ngày tính đến ngày kết thúc kỳ kế toán.",
+        "en": "I reconciled it with the amortization schedule and properly accrued the interest payable on bonds on a pro-rata daily basis up to the closing date."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Definitions for meaning_vi and meaning_en are accurate for bond interest expense."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "95c2e2264dfbcc75835a4850ca3732f1a553b35fe9002db68d086fc05f75a23f",
+    "validated_at": "2026-10-01T01:36:42.068247+00:00"
+  }
+}

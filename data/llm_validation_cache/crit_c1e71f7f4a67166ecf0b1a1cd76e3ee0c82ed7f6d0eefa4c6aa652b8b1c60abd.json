@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000179",
+  "term": "不納付加算税",
+  "overall_decision": "rewrite",
+  "summary_reason": "一般的な税務用語のテンプレート文言がそのまま流用されており、源泉所得税の遅延ペナルティという「不納付加算税」の法的位置づけ・実務実態に合致していません。コロケーション・例文・対話・訳語の全面的な再構築が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不納付加算税を申告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "不納付加算税などの加算税は賦課課税方式（税務署の決定）により課される附帯税であり、納税者が自主的に「申告する」ことは制度上ありません。",
+      "suggested_text": "不納付加算税が免除される"
+    },
+    {
+      "index": 1,
+      "text": "不納付加算税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "課された不納付加算税を納付するという自然なコロケーションです。",
+      "suggested_text": "不納付加算税を納付する"
+    },
+    {
+      "index": 2,
+      "text": "不納付加算税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "納付遅延時に発生する加算税の概算額を試算・計算する文脈で成立します。",
+      "suggested_text": "不納付加算税を計算する"
+    },
+    {
+      "index": 3,
+      "text": "不納付加算税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ペナルティが科されることを表す実務上最も標準的な表現です。",
+      "suggested_text": "不納付加算税が課される"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "不納付加算税は源泉所得税等の納付遅延に対するペナルティであり、「課税標準および適用税率を正確に算出し、納期限までに納付する」という一般の本税向けテンプレート文言は実務実態と完全に乖離しています。",
+      "suggested_ja": "源泉所得税の納付期日を徒過してしまったため、本税に加えて不納付加算税を納付することになりました。",
+      "suggested_vi": "Do đã quá thời hạn nộp thuế thu nhập khấu trừ tại nguồn, chúng tôi đã phải nộp tiền phạt chậm nộp thuế khấu trừ tại nguồn cùng với tiền thuế gốc.",
+      "suggested_en": "Because we missed the statutory due date for withholding income tax, we had to pay the penalty tax for non-payment in addition to the principal tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "ペナルティである不納付加算税を「税制改正を踏まえて当期の税負担額への影響を試算する」のは、発生を前提として予算化するような不自然極まりない機械的テンプレートです。",
+      "suggested_ja": "税務署からの指摘を受ける前に自主的に納付したため、不納付加算税の税率は5％に軽減されました。",
+      "suggested_vi": "Do đã tự nguyện nộp trước khi nhận được thông báo từ cơ quan thuế, mức thuế suất phạt chậm nộp thuế khấu trừ tại nguồn đã được giảm xuống còn 5%.",
+      "suggested_en": "Because we paid voluntarily before being notified by the tax office, the penalty tax rate for non-payment was reduced to 5%."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "毎月の月次決算で不納付加算税の計上内容の差異を突合確認することは実務上あり得ません（ペナルティの発生を常態化させていることになり不適切）。納期限徒過の発覚と加算税の発生対応に関する実務会話に改める必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先月分の源泉所得税の納付が一日遅れてしまったようですが、不納付加算税は発生しますか。",
+        "vi": "Có vẻ như khoản thuế thu nhập khấu trừ tại nguồn của tháng trước đã bị nộp chậm một ngày, liệu có phát sinh tiền phạt chậm nộp không?",
+        "en": "It appears that last month's withholding income tax payment was delayed by one day; will we incur a penalty tax for non-payment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "過去1年間に滞納がなく、法定納期限から1か月以内に自主納付すれば、不納付加算税は免除される要件に該当する可能性があります。",
+        "vi": "Nếu trong vòng 1 năm qua không có tiền sử chậm nộp và chúng ta tự giác nộp trong vòng 1 tháng kể từ hạn chót theo luật định, nhiều khả năng chúng ta sẽ thỏa mãn điều kiện được miễn tiền phạt chậm nộp.",
+        "en": "If we have no record of delinquent payments in the past year and pay voluntarily within one month of the statutory deadline, we may qualify for an exemption from the penalty tax."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語定義に「(10%)」が固定で記載されていますが、税務調査前の自主納付時は5%に軽減されるため、固定税率の括弧書きは削除し「tiền phạt chậm nộp thuế khấu trừ tại nguồn」とすべきです。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "45391393331ee3e719ad4b6db60c85ba772f74f6cb4a9c094ee8bd7ff261ac45",
+    "validated_at": "2026-10-01T01:40:35.125674+00:00"
+  }
+}

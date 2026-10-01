@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000063",
+  "term": "業務委託契約書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 2 contains an unnatural predicate-noun mismatch ('契約書を解除する' instead of '契約を解除する' or '契約書を作成する'), and Vietnamese example translations suffer from templated slash-concatenation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務委託契約書を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly authentic business and legal phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "業務委託契約書を更新する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate administration when renewing term agreements on file, though '契約を更新する' or '契約書を作成・改定する' is slightly more precise legally.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "業務委託契約書を解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Semantic incompatibility between the tangible document ('契約書') and the legal status predicate ('解除する'). In Japanese civil law and corporate practice, one terminates/cancels the legal relationship itself ('業務委託契約を解除する') or revokes/shreds the document ('契約書を破棄する').",
+      "suggested_text": "業務委託契約書を作成する"
+    },
+    {
+      "index": 3,
+      "text": "業務委託契約書の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/business collocation used during contract review.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic Japanese corporate phrasing commonly heard in transaction negotiations.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Flawless enterprise wording reflecting internal compliance and risk review workflow.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Highly realistic conversational flow between enterprise professionals discussing contract negotiation and legal turnaround.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In the example translations, the Vietnamese rendered the term with raw dictionary slashes ('hợp đồng thuê khoán ngoài / dịch vụ ủy thác'), which sounds unpolished. In corporate contexts, 'hợp đồng dịch vụ' or 'hợp đồng thuê ngoài' should be selected naturally without slashes."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0c7a744663f7ee42c7cd247cf79d42194dcbf3410cc0830ea0d0694d4b92aeba",
+    "validated_at": "2026-10-01T01:42:01.863198+00:00"
+  }
+}

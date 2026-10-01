@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000062",
+  "term": "秘密保持契約",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 reverses standard business deal sequence (an NDA typically precedes a 基本合意, not follows it) and requires correction to maintain factual corporate accuracy.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "秘密保持契約を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, high-frequency collocate in legal and corporate business.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "秘密保持契約を更新する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for renewing term-limited NDAs.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "秘密保持契約を解除する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate legal collocate for terminating an NDA.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "秘密保持契約の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocate during legal review.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In standard corporate practice, an NDA is executed prior to entering substantive talks or reaching a basic agreement (基本合意), because reaching a basic agreement requires sharing confidential information. Stating that an NDA is executed because 基本合意 was reached reverses standard business transaction sequencing.",
+      "suggested_ja": "新規事業の協業に向けた具体的な協議に入るため、来週取引先と秘密保持契約を締結いたします。",
+      "suggested_vi": "Để bước vào thảo luận cụ thể về việc hợp tác kinh doanh mới, tuần tới chúng tôi sẽ ký kết thỏa thuận bảo mật thông tin (NDA) với đối tác.",
+      "suggested_en": "To enter into concrete discussions regarding new business collaboration, we will execute a non-disclosure agreement (NDA) with the partner next week."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic phrasing reflecting corporate risk management and cross-departmental coordination.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic corporate exchange between colleagues handling legal revision marks and contract closure.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both translations are accurate and professional. (Note: Ensure NDA is capitalized in English texts)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "89d9efab721a03dfd186747d200977c6863fc62271d9989bf9c53d36e8c6891d",
+    "validated_at": "2026-10-01T01:41:59.333963+00:00"
+  }
+}

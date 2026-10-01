@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000185",
+  "term": "借方",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a severe grammatical defect in collocations (借方の確認する), templated domain unnaturalness (treating 借方 as a generic direct object of 処理する), and unnatural standalone usage of debit without balancing credit in reconciliation contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "借方に記入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard bookkeeping terminology for entering an amount on the debit side.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "借方と照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In accounting, one reconciles debit with credit (貸借を照合する) or reconciles balances against subledgers; checking against 'debit' alone is unnatural.",
+      "suggested_text": "借方に計上する"
+    },
+    {
+      "index": 2,
+      "text": "借方を集計する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in trial balance and journal preparation contexts, though 借方合計を集計する is more precise.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "借方の確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Blatant grammatical error: particle 'の' directly precedes the verb '確認する'.",
+      "suggested_text": "借方残高を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is awkwardly phrased (discrepancies exist between debit and credit, not within debit in isolation). Additionally, translations contain raw dictionary gloss contamination: '(trong kế toán)' and '(dr.)'.",
+      "suggested_ja": "月末の試算表作成において、借方と貸方の合計額に差異がないか精査します。",
+      "suggested_vi": "Trong quá trình lập bảng cân đối thử cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch giữa tổng số tiền bên Nợ và bên Có hay không.",
+      "suggested_en": "During the preparation of the month-end trial balance, we thoroughly examine whether there is any discrepancy between the total debit and credit amounts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly artificial AI template. Accountants do not say '借方を適正に処理いたしました' (process debit properly). One processes transactions or entries to debit (借方に計上する/借方科目を処理する).",
+      "suggested_ja": "適正な会計基準に則り、本件の支払手数料は借方に費用として適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ đúng các chuẩn mực kế toán, chúng tôi đã hạch toán khoản phí chi trả này vào bên Nợ dưới dạng chi phí hợp lệ.",
+      "suggested_en": "In accordance with applicable accounting standards, we properly recorded these payment fees as an expense on the debit side."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if discrepancies occurred specifically in '借方の計上内容' in isolation is unidiomatic in accounting; discrepancies typically arise between debit and credit (貸借の不一致) or between the trial balance and source vouchers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "月次試算表の確認ですが、借方と貸方の数値に不一致は発生していませんか。",
+        "vi": "Về việc kiểm tra bảng cân đối thử hàng tháng, có phát sinh sự không khớp nào giữa số liệu bên Nợ và bên Có không?",
+        "en": "Regarding the monthly trial balance review, are there any discrepancies between the debit and credit figures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類および補助元帳との突合を終えており、貸借ともに一致していることを確認済みです。",
+        "vi": "Dạ, chúng tôi đã đối chiếu xong với chứng từ gốc và sổ cái phụ, xác nhận cả bên Nợ lẫn bên Có đều hoàn toàn khớp nhau.",
+        "en": "Yes, we have completed cross-checking against the source vouchers and subsidiary ledgers, and verified that both debits and credits balance out."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both English and Vietnamese translations mechanically copied metadata/gloss qualifiers ('bên Nợ (trong kế toán)', 'debit (dr.)') directly into running prose, which ruins professional fluency."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2149cdb4fcedb1fd08e4a9a09138ed740586e04cd6d04e1ba77393413ef81bfd",
+    "validated_at": "2026-10-01T01:36:58.961454+00:00"
+  }
+}

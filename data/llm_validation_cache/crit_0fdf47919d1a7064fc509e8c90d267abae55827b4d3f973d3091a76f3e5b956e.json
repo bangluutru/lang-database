@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000039",
+  "term": "仮払金",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the core concept is understood, Example 2 is a generic formulaic sentence with redundant wording ('適正な...適正に'), Collocation 2 is unnatural without a specific object of reconciliation, and the dialogue lacks realistic workplace phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仮払金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording a suspense payment/advance entry.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仮払金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard procedure in routine and closing accounting operations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仮払金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する requires two sets of records or a detailed breakdown rather than the bare account itself. '仮払金の内訳を照合する' or '仮払金を本勘定へ振り替える' is far more authentic.",
+      "suggested_text": "仮払金の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "仮払金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Core prototypical accounting collocation for clearing suspense payments/advances.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic internal accounting control sentence commonly used in month-end reporting.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Obvious generic LLM template with awkward stylistic tautology ('適正な...適正に処理いたしました'). Real accounting practice focuses on clearing滞留 (unsettled) advances to appropriate expense accounts.",
+      "suggested_ja": "期末決算にあたり、長期間滞留している仮払金の内容を精査し、適切な費用勘定へ振り替えました。",
+      "suggested_vi": "Trong kỳ quyết toán cuối năm, chúng tôi đã rà soát kỹ các khoản tạm ứng tồn đọng lâu ngày và kết chuyển sang các tài khoản chi phí phù hợp.",
+      "suggested_en": "For the fiscal year-end closing, we examined long-outstanding suspense payments and transferred them to appropriate expense accounts."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange sounds like mechanical machine-generated dialogue. '計上内容に差異は発生していませんか' is unnatural phrasing for checking advance settlements, and '適正に整合している' is redundant phrasing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、長期間未精算となっている仮払金はありませんか。",
+        "vi": "Trong đợt quyết toán tháng này, có khoản tạm ứng nào tồn đọng lâu chưa quyết toán không?",
+        "en": "Regarding this month's closing, are there any long-unsettled suspense payments?"
+      },
+      {
+        "speaker": "B",
+        "ja": "補助元帳を確認したところ、出張旅費の精算が1件遅れているのみで、他はすべて処理済みです。",
+        "vi": "Tôi đã kiểm tra sổ phụ rồi, chỉ còn duy nhất một khoản tạm ứng công tác phí bị trễ quyết toán, còn lại đều đã được xử lý xong.",
+        "en": "I checked the subsidiary ledger; only one travel expense settlement is delayed, and all others have been cleared."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations accurately convey the business meaning."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6b116835936290504e8a23d0b960367b4ec1dda9210aa6a7c744d8432e1186fd",
+    "validated_at": "2026-10-01T01:34:21.462088+00:00"
+  }
+}

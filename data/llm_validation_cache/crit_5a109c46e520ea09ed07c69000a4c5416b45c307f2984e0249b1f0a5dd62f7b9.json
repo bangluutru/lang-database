@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000025",
+  "term": "与信限度額",
+  "overall_decision": "rewrite",
+  "summary_reason": "リスク統制指標である「与信限度額（Credit Limit）」を、売上・利益のような達成目標KPI（業績評価指標）と混同した定型プロンプト汚染が発生しており、例文および会話文の全面的な差し替えが必須。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "与信限度額を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "取引先の財務状況等に基づき限度額を算出する文脈で自然に使われる表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "与信限度額を改善する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "与信限度額はリスク管理上の枠（上限額）であり、利益率や財務指標のように「改善する」とは言わない。「引き上げる／見直す／設定する」が適切。",
+      "suggested_text": "与信限度額を設定する"
+    },
+    {
+      "index": 2,
+      "text": "与信限度額を分析する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "分析の直接の対象は取引先の信用リスクや与信残高、消化状況であり、限度額単体を「分析する」とは通常言わない。「見直す」または「管理する」が自然。",
+      "suggested_text": "与信限度額を見直す"
+    },
+    {
+      "index": 3,
+      "text": "与信限度額の目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "与信限度額は貸倒リスク回避のための統制上限であり、達成を目指す「目標値」を設定する性質の指標ではない。",
+      "suggested_text": "与信限度額を超過する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "与信限度額は経営効率向上のための月次KPIではなく、取引先ごとの貸倒リスク管理のために債権残高と対比してモニタリングするものである。",
+      "suggested_ja": "貸倒リスクを抑制するため、取引先ごとの売掛金残高が与信限度額を超過していないか月次でモニタリングしています。",
+      "suggested_vi": "Để hạn chế rủi ro nợ khó đòi, chúng tôi theo dõi hàng tháng xem số dư phải thu theo từng đối tác có vượt quá hạn mức tín dụng hay không.",
+      "suggested_en": "To mitigate bad debt risk, we monitor on a monthly basis whether accounts receivable balances for each customer exceed their credit limits."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "与信限度額を「目標値を上回る」「収益性の向上」と結びつけるのは、与信管理（リスク統制）の概念に対する重大な事実誤認・テンプレート生成の破綻。",
+      "suggested_ja": "新規取引先の信用調査結果に基づき、財務状況と取引規模を勘案して与信限度額を5,000万円に設定しました。",
+      "suggested_vi": "Dựa trên kết quả thẩm định tín dụng của đối tác mới, chúng tôi đã thiết lập hạn mức tín dụng là 50 triệu yên sau khi cân nhắc tình hình tài chính và quy mô giao dịch.",
+      "suggested_en": "Based on the credit check results of the new trading partner, we set the credit limit at 50 million yen, taking into account their financial condition and transaction scale."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "与信限度額を売上や利益のような経営目標KPIと混同した典型的なAIハルシネーション構文。実務では取引先の枠拡大申請や限度額超過への対応などを協議する。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "大口顧客であるA社から取引量増加に伴う与信限度額の引き上げ申請が出ていますが、審査の進捗はいかがですか。",
+        "vi": "Khách hàng lớn là công ty A đã gửi đơn xin nâng hạn mức tín dụng do khối lượng giao dịch tăng, tiến độ thẩm định thế nào rồi?",
+        "en": "Major client Company A has applied to raise their credit limit due to increased transaction volume; what is the status of the review?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直近の決算書精査と担保評価を完了しており、限度額を現在の1億円から1億5千万円へ増額する方向で稟議を進めています。",
+        "vi": "Chúng tôi đã hoàn tất việc rà soát báo cáo tài chính gần nhất và định giá tài sản đảm bảo, đang tiến hành trình duyệt nội bộ theo hướng nâng hạn mức từ 100 triệu yên hiện tại lên 150 triệu yên.",
+        "en": "We have completed the review of their latest financial statements and collateral valuation, and are processing internal approval to increase the limit from the current 100 million yen to 150 million yen."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "見出し語自体の英訳（Credit limit）および越訳（hạn mức tín dụng tối đa cấp cho đối tác）は正確。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ec003d7cd111c9765ddb4791a71d77527c73b3d9a2d54feb70457f6ab9813867",
+    "validated_at": "2026-10-01T01:41:23.392109+00:00"
+  }
+}

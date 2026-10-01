@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000108",
+  "term": "貸倒損失",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting semantics (残高 and 精算 are incompatible with a P&L loss account), the examples and dialogue are generic mechanical templates that ignore real corporate tax write-off practices, and the Vietnamese translation suffered from clunky definition-string substitution.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貸倒損失を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax collocation for recognizing bad debt expense/loss.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "貸倒損失の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "貸倒損失 is a P&L expense item, not a cumulative balance sheet account that carries a normal balance (残高); one confirms 計上額 or instead talks about 貸倒引当金の残高.",
+      "suggested_text": "貸倒損失の計上要件を確認する"
+    },
+    {
+      "index": 2,
+      "text": "貸倒損失を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles accounts or invoices against subledgers, but does not directly '照合する' a loss account.",
+      "suggested_text": "貸倒損失として処理する"
+    },
+    {
+      "index": 3,
+      "text": "貸倒損失を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, travel expenses, or unsettled claims (仮払金・立替金・経費), not to an uncollectible loss write-off.",
+      "suggested_text": "貸倒損失を損金に算入する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "貸倒損失 is an exceptional write-off requiring specific legal/factual insolvency conditions under tax law, not a routine monthly reconciliation item with '残高'. The Vietnamese translation is also mechanical and unnatural due to verbatim substitution of the headword definition.",
+      "suggested_ja": "破産手続きの開始決定通知を受領したため、対象取引先の売掛金について税務上の要件を満たす貸倒損失として処理しました。",
+      "suggested_vi": "Do đã nhận được thông báo quyết định mở thủ tục phá sản, chúng tôi đã xử lý khoản phải thu của khách hàng này như một khoản tổn thất do nợ khó đòi đáp ứng đủ điều kiện theo luật thuế.",
+      "suggested_en": "Upon receiving the notice of the commencement of bankruptcy proceedings, we recognized the account receivable from the client as a tax-deductible bad debt loss."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive phrasing ('適正な...適正に...') and sounds like an auto-generated boilerplate rather than authentic tax/accounting business documentation.",
+      "suggested_ja": "法人税法上の損金算入要件を慎重に検討した上で、当期の決算において貸倒損失を計上いたしました。",
+      "suggested_vi": "Sau khi xem xét cẩn trọng các điều kiện đưa vào chi phí hợp lý theo Luật Thuế thu nhập doanh nghiệp, chúng tôi đã ghi nhận khoản tổn thất nợ khó đòi trong kỳ quyết toán này.",
+      "suggested_en": "After carefully reviewing the requirements for tax deductibility under the Corporation Tax Act, we recognized the bad debt loss in the settlement of accounts for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange is a cookie-cutter template. Bad debt write-offs are not monitored for 'monthly reconciliation discrepancies against subledgers' but rather for legal evidence supporting uncollectibility and proper corporate tax treatment.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "取引先A社の売掛金ですが、今期中に貸倒損失として計上できますでしょうか。",
+        "vi": "Khoản phải thu từ công ty khách hàng A liệu có thể hạch toán vào chi phí nợ khó đòi trong kỳ này được không?",
+        "en": "Regarding the accounts receivable from Client A, can we write it off as a bad debt loss during this fiscal term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "回収不能を裏付ける証憑が揃っているため、税務上の損金算入要件を満たしているか顧問税理士と最終確認を進めています。",
+        "vi": "Chứng từ chứng minh không có khả năng thu hồi đã đầy đủ, nên chúng tôi đang tiến hành xác nhận lần cuối với kế toán thuế cố vấn xem đã đáp ứng đủ điều kiện tính vào chi phí được trừ hay chưa.",
+        "en": "We have collected the supporting documents evidencing uncollectibility and are now doing a final check with our tax advisor on whether it satisfies the tax deductibility requirements."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese headword meaning 'xóa sổ khoản nợ khó đòi vào chi phí tính thuế' is a long phrase/definition rather than a standard concise accounting term ('tổn thất nợ khó đòi' or 'chi phí nợ khó đòi'), which ruined the sentence translations when substituted."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "283af2d8d1952558fe96c94b206fa75837860e4b1dcdfd1e0aaf37a7f3d7f0ba",
+    "validated_at": "2026-10-01T01:39:21.509175+00:00"
+  }
+}

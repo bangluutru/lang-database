@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000036",
+  "term": "総所得金額",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual error: '総所得金額' (individual income tax) was conflated with corporate tax concepts ('別表四' and '決算申告'). Examples and dialogue must be grounded in individual tax return (所得税の確定申告) practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総所得金額に算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and practical tax phrasing under Japanese Income Tax Law (e.g., 一時所得の2分の1を総所得金額に算入する).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "総所得金額に不算入とする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Proper tax terminology used when excluding certain non-taxable or separate taxation gains from aggregate income.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "総所得金額の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Vague and templated. In professional tax practice, total income is aggregated or computed ('総所得金額を計算する' or '総所得金額を算出する').",
+      "suggested_text": "総所得金額を算出する"
+    },
+    {
+      "index": 3,
+      "text": "総所得金額に加算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in practical tax computation contexts when adding specific income amounts.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error: '別表四' belongs to corporate tax (法人税), which calculates '各事業年度の所得の金額'. In contrast, '総所得金額' is strictly an individual income tax (所得税) concept. The two cannot be combined.",
+      "suggested_ja": "確定申告において、事業所得と不動産所得の損益通算を行い、総所得金額を正しく算出しました。",
+      "suggested_vi": "Trong tờ khai quyết toán thuế thu nhập cá nhân, chúng tôi đã thực hiện bù trừ lãi lỗ giữa thu nhập kinh doanh và thu nhập từ bất động sản để tính toán chính xác tổng số tiền thu nhập chịu thuế gộp.",
+      "suggested_en": "In the individual final tax return, we aggregated profits and losses between business income and real estate income to calculate the total income amount correctly."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'総所得金額の算入漏れ' is grammatically distorted and templated. The particle should be 'への', but more naturally tax professionals refer to '所得の申告漏れ' or '総所得金額への算入漏れ'.",
+      "suggested_ja": "税務調査での指摘を防ぐため、一時所得や雑所得を含め、総所得金額への算入漏れがないかを再点検しました。",
+      "suggested_vi": "Để phòng ngừa bị truy thu trong đợt thanh tra thuế, chúng tôi đã rà soát lại xem có bỏ sót việc tính thu nhập vãng lai hay thu nhập khác vào tổng số tiền thu nhập chịu thuế gộp hay không.",
+      "suggested_en": "To prevent discrepancies during tax audits, we double-checked to ensure that no items, including occasional income and miscellaneous income, were omitted from the total income amount."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'決算申告' strongly connotes corporate fiscal year-end filings (法人決算), creating a domain clash with '総所得金額' (an individual income tax term). Context must be clearly framed around individual final tax filing (確定申告).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "確定申告に向けた総所得金額の集計と、各種控除証明書の確認は完了しましたか。",
+        "vi": "Anh/chị đã hoàn tất việc tổng hợp tổng số tiền thu nhập chịu thuế gộp và kiểm tra các chứng từ giảm trừ cho kỳ quyết toán thuế TNCN chưa?",
+        "en": "Have you finalized the aggregation of the total income amount and verified all deduction certificates for the final tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、事業所得と譲渡所得の損益通算を含め、総所得金額の計算根拠はすべて税理士の確認が取れています。",
+        "vi": "Vâng, căn cứ tính toán tổng số tiền thu nhập chịu thuế gộp bao gồm cả việc bù trừ lãi lỗ giữa thu nhập kinh doanh và chuyển nhượng tài sản đều đã được chuyên viên thuế xác nhận đầy đủ.",
+        "en": "Yes, all supporting calculations for the total income amount, including loss aggregation between business and capital gains income, have been confirmed by the certified tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese 'tổng thu nhập ròng trong kỳ' is misleading accounting terminology (net income). '総所得金額' in Japanese Income Tax Law refers to gross aggregate income subject to progressive tax rates after allowable statutory deductions for each income category, better rendered as 'tổng số tiền thu nhập chịu thuế gộp' or 'tổng thu nhập chịu thuế (hợp nhất)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5c91d353a46a14a5fafd7a0a50111eb0295051bfe581c1622b13dea71eb868ca",
+    "validated_at": "2026-10-01T01:38:03.698408+00:00"
+  }
+}

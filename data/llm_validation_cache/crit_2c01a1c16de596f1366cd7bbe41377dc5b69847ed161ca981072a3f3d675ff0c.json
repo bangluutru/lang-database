@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000069",
+  "term": "長期前払費用",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains semantically mismatched collocations (精算する instead of 償却/振替), repetitive templated boilerplate ('適正な...適正に'), and unnatural dialogue phrasing ('適正に整合している') that fails to teach authentic accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "長期前払費用を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recording long-term prepaid expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "長期前払費用の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and frequently used when verifying balance sheet account balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "長期前払費用を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する typically takes 明細, 帳簿, or 残高 rather than the balance sheet account name directly. In practical accounting, amortizing long-term prepaid expenses is far more core.",
+      "suggested_text": "長期前払費用を償却する"
+    },
+    {
+      "index": 3,
+      "text": "長期前払費用を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Assets like 長期前払費用 are amortized or transferred under the one-year rule, not '精算' (settled/cleared like advances or travel expenses).",
+      "suggested_text": "長期前払費用を前払費用に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable sentence describing monthly reconciliation routines.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Noticeable repetition of '適正な...適正に' making it sound like an empty AI template devoid of real accounting substance (e.g., amortization or 1-year rule reclassification).",
+      "suggested_ja": "決算にあたり、長期前払費用のうち1年以内に費用化される部分を流動資産の前払費用へ振り替えました。",
+      "suggested_vi": "Khi quyết toán, chúng tôi đã kết chuyển phần chi phí trả trước dài hạn sẽ được tính vào chi phí trong vòng một năm sang chi phí trả trước thuộc tài sản ngắn hạn.",
+      "suggested_en": "During closing procedures, we reclassified the portion of long-term prepaid expenses that will be expensed within one year to current prepaid expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is redundant, stilted Japanese. The dialogue also lacks practical accounting depth regarding the account's life cycle (amortization and reclassification).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算整理にあたり、長期前払費用の当期償却額と1年基準による振替額の確認は済みましたか。",
+        "vi": "Trong quá trình điều chỉnh quyết toán, anh đã kiểm tra xong số tiền khấu hao kỳ này của chi phí trả trước dài hạn và số tiền kết chuyển theo quy tắc một năm chưa?",
+        "en": "During the closing adjustments, have you finished verifying this term's amortization amount and the reclassification under the one-year rule for long-term prepaid expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、償却スケジュール表と総勘定元帳を照合し、すべて正しく処理されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu bảng lịch trình phân bổ với sổ cái và xác nhận tất cả đã được xử lý chính xác.",
+        "en": "Yes, I reconciled the amortization schedule against the general ledger and confirmed that everything has been processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Original translations accurately matched the candidate text, but the Japanese original required substantial naturalization."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8022674bc5970af18bc58c154d3a226bcdead02903030d87d4054f4275e85da2",
+    "validated_at": "2026-10-01T01:34:52.916934+00:00"
+  }
+}

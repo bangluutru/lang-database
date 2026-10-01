@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000112",
+  "term": "償却超過額",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションにおける格助詞の誤用（『〜に算入する』『〜に不算入とする』『〜に加算する』）が複数発生しており、例文および対話文でも税務実務用語（別表十六、加算漏れ等）との整合性に改善が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "償却超過額に算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "助詞の誤用および税務用語の不整合。「償却超過額『に』算入する」ではなく、認容時に「償却超過額を損金算入する」とするのが正しい用法です。",
+      "suggested_text": "償却超過額を損金に算入する"
+    },
+    {
+      "index": 1,
+      "text": "償却超過額に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "助詞の誤用。「償却超過額『に』不算入とする」は日本語として不自然です。法人税務では「償却超過額を損金不算入とする」と表現します。",
+      "suggested_text": "償却超過額を損金不算入とする"
+    },
+    {
+      "index": 2,
+      "text": "償却超過額の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務申告書（別表四や別表十六）の作成実務において自然に使用されるコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "償却超過額に加算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "助詞の誤用。別表四において所得金額へ加算するため、「償却超過額『を』加算する」が正しい税務・会計表現です。",
+      "suggested_text": "償却超過額を加算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "会計と税務の差異調整（別表四での加算・留保処理）の実務に即しており、自然な文脈です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "税務調査で指摘対象となるのは「加算漏れ（損金不算入漏れ）」です。「算入漏れ」と書くと費用算入の漏れと混同されやすく、文脈の正確性を欠きます。",
+      "suggested_ja": "税務調査における否認リスクを低減するため、過年度の固定資産台帳を再検証し、償却超過額の加算漏れがないか確認しました。",
+      "suggested_vi": "Để giảm thiểu rủi ro bị cơ quan thuế bóc tách chi phí khi thanh tra, chúng tôi đã rà soát lại sổ tài sản cố định các năm trước nhằm xác nhận không bỏ sót việc điều chỉnh tăng thu nhập đối với phần trích khấu hao vượt mức.",
+      "suggested_en": "To reduce disallowance risks during tax audits, we re-examined prior-year fixed asset ledgers to verify there were no omissions in adding back depreciation in excess of the tax limit."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "償却超過額の申告添付書類としては「別表十六（減価償却資産の償却額の計算に関する明細書）」が実務上の必須書類です。「税理士の確認書」という表現は日本の税務申告実務としてやや不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における償却超過額の計算根拠と別表十六の準備は整いましたか。",
+        "vi": "Căn cứ tính toán khoản trích khấu hao vượt mức và Phụ lục 16 cho kỳ quyết toán thuế này đã chuẩn bị xong chưa?",
+        "en": "Are the calculation basis for depreciation in excess of the tax limit and Schedule 16 ready for this tax filing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、固定資産台帳との突合および顧問税理士による確認が完了しましたので、申告書に添付可能です。",
+        "vi": "Vâng, chúng tôi đã đối chiếu xong với sổ tài sản cố định và có xác nhận của cố vấn thuế, nên đã sẵn sàng để đính kèm tờ khai quyết toán.",
+        "en": "Yes, reconciliation with the fixed asset ledger and review by our tax advisor are complete, so they are ready to be attached to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の定訳・訳出ともに正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c725e98757a0cf17647b6c0e86d36562571cc0433d3be8154f55ecdc25d308b0",
+    "validated_at": "2026-10-01T01:39:26.482703+00:00"
+  }
+}

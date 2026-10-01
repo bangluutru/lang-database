@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000189",
+  "term": "出張申請",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding of '出張申請' (business trip request) as an accounting item. It is a procedural document, not an expense or account that is '計上' (booked/entered) or has a '残高' (balance) in financial statements. The term '出張旅費' (business travel expenses) should be used instead when discussing accounting entries and balances.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "出張申請を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for processing a request.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "出張申請を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for completing a request.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "出張申請の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for confirming procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "出張申請を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for reviewing a request.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "出張申請 (business trip request) is a document/procedure, not an accounting entry that has '計上内容' (content of booking/entry) or '残高' (balance). These terms apply to expenses or accounts, not the request itself. The sentence attempts to treat the request as an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、出張旅費の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của chi phí công tác có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for business travel expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '出張申請を処理する' (to process a business trip request) is fine, but '決算において出張申請を適正に処理いたしました' implies the *request itself* is an item in the closing entries, which is incorrect. What is processed in closing entries are the *expenses* related to the business trip, not the request document.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において出張旅費を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định chi phí công tác trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed business travel expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '出張申請の計上内容に差異は発生していませんか' is fundamentally flawed. A '出張申請' (business trip request) is a document/procedure, not an accounting item that has '計上内容' (content of booking/entry) or '差異' (discrepancy) in the context of monthly closing. This reflects the same semantic mismatch issue as the example sentences. The dialogue should focus on the *expenses* related to the business trip, not the request itself, when discussing monthly closing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、出張旅費の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, có sự khác biệt nào trong nội dung hạch toán chi phí công tác không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded business travel expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "31bd51a5f3d2a6f1f28ae0b9cc8607b6c3727957d17f2283680b0e447a851924",
+    "validated_at": "2026-10-01T01:53:25.350188+00:00"
+  }
+}

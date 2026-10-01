@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000037",
+  "term": "貸倒引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains hallucinated collocations (精算する, 照合する), repetitive templated example phrasing, and a dialogue demonstrating domain factual errors regarding accounting procedures for allowance provisions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貸倒引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly authentic accounting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "貸倒引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly used in balance sheet audits and reconciliation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "貸倒引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An allowance itself is calculated or provisioned, not directly 'cross-checked/reconciled' without reference to ledgers or calculation schedules. '繰り入れる' or '取り崩す' are standard core verbs.",
+      "suggested_text": "貸倒引当金を繰り入れる"
+    },
+    {
+      "index": 3,
+      "text": "貸倒引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算' applies to expense reimbursements, travel expenses, or settling cash advances, never to provisions or accounting reserves.",
+      "suggested_text": "貸倒引当金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and realistic for month-end reconciliation checks, although somewhat formulaic.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Awkward AI template duplication of '適正な...適正に...'. Furthermore, '適正な会計基準' is non-standard (standard phrasing is '会計基準および社内規程に則り').",
+      "suggested_ja": "期末債権の回収リスクを精査し、会計基準および社内規程に則って貸倒引当金を計上いたしました。",
+      "suggested_vi": "Chúng tôi đã rà soát kỹ rủi ro thu hồi các khoản phải thu cuối kỳ và trích lập dự phòng nợ phải thu khó đòi theo đúng chuẩn mực kế toán cùng quy chế nội bộ.",
+      "suggested_en": "We scrutinized the collection risk of receivables at fiscal year-end and recorded the allowance for doubtful accounts in accordance with accounting standards and internal rules."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Domain inaccuracy: Doubtful debt provisions are calculated from aging lists, debtor classifications, and historical default rates, not verified against '証憑書類' (source vouchers/receipts). The phrasing is generic boilerplate.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当期の貸倒引当金の繰入額ですが、大口取引先の信用リスク見直しは反映されていますか。",
+        "vi": "Về số trích lập dự phòng nợ khó đòi kỳ này, đã phản ánh việc đánh giá lại rủi ro tín dụng của các đối tác lớn chưa?",
+        "en": "Regarding the provision for doubtful accounts this term, has the credit risk reassessment for major clients been reflected?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、回収懸念先に対する引当率を引き上げ、個別評価に基づく追加引当を反映済みです。",
+        "vi": "Vâng, chúng tôi đã tăng tỷ lệ trích lập đối với các khoản nợ có nguy cơ khó đòi và đã phản ánh khoản dự phòng bổ sung dựa trên đánh giá cụ thể.",
+        "en": "Yes, we increased the provision rate for doubtful accounts and reflected additional provisions based on individual assessment."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the base term are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "51af667f59de0e941163777db2884c379a0a3ea092f106f4832603bfc400676b",
+    "validated_at": "2026-10-01T01:34:20.430225+00:00"
+  }
+}

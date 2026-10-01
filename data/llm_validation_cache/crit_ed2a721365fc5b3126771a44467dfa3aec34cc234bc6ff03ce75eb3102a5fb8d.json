@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000110",
+  "term": "特別休暇",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations are accurate, but the example sentences and dialogue erroneously forced an HR/labor term (特別休暇) into generic accounting/audit closing templates (帳簿照合, 補助元帳, 決算処理).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特別休暇を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard business/HR expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "特別休暇を付与する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard HR/corporate governance expression for granting special leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "特別休暇を消化する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace expression for utilizing/taking leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "特別休暇を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Everyday administrative/business procedure phrasing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "特別休暇 is an HR/labor benefit term (such as bereavement or marriage leave), not an accounting ledger line item reconciled against book balance (帳簿照合/残高) in month-end financial closing.",
+      "suggested_ja": "慶弔やリフレッシュを目的とする特別休暇を取得する際は、事前に社内システムから申請を行う必要があります。",
+      "suggested_vi": "Khi muốn nghỉ phép đặc biệt dành cho việc hiếu hỉ hoặc nghỉ ngơi tái tạo sức lao động, nhân viên cần phải nộp đơn trước qua hệ thống nội bộ.",
+      "suggested_en": "When taking special leave for family events or refreshment, employees must submit an application in advance via the internal company system."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence mechanically slots an HR concept into a financial reporting template (決算において特別休暇を適正に処理いたしました), which is unnatural and factually incoherent in corporate accounting.",
+      "suggested_ja": "当社では、従業員のワークライフバランス向上を目的として、新たにボランティア特別休暇を付与することといたしました。",
+      "suggested_vi": "Nhằm nâng cao sự cân bằng giữa công việc và cuộc sống cho nhân viên, công ty chúng tôi đã quyết định cấp thêm chế độ nghỉ phép đặc biệt cho hoạt động tình nguyện.",
+      "suggested_en": "To improve work-life balance for our employees, our company has decided to grant a new special leave for volunteer activities."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Special leave is an attendance/personnel matter, not an accounting account reconciled between voucher documents (証憑書類) and the subsidiary ledger (補助元帳) during monthly closing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月、結婚式を控えているのですが、慶弔に伴う特別休暇の申請手続きについて教えていただけますか。",
+        "vi": "Tháng sau tôi sẽ tổ chức đám cưới, anh/chị có thể hướng dẫn tôi thủ tục xin nghỉ phép đặc biệt cho việc hiếu hỉ được không?",
+        "en": "I have my wedding scheduled for next month. Could you explain the procedure for applying for celebratory special leave?"
+      },
+      {
+        "speaker": "B",
+        "ja": "ご結婚おめでとうございます。社内ポータルから休暇申請を行い、後日、証明書類をご提出ください。",
+        "vi": "Chúc mừng bạn nhé! Bạn hãy nộp đơn xin nghỉ trên cổng thông tin nội bộ và nộp kèm giấy tờ chứng minh sau nhé.",
+        "en": "Congratulations on your marriage! Please submit your leave request via the company portal and provide supporting documentation afterward."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The core definitions in both Vietnamese and English are accurate for this HR concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a70020ad13daac41e0d49ee944068869ec87699dbfd5915e81e32a6c31d6adfc",
+    "validated_at": "2026-10-01T01:42:47.287933+00:00"
+  }
+}

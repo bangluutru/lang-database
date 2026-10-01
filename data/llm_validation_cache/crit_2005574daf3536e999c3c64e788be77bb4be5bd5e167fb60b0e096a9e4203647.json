@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000005",
+  "term": "附属明細表",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple technical accounting inaccuracies: (1) confusing FIEA's 『附属明細表』 with Companies Act's 『附属明細書』 regarding board approval, (2) treating 注記事項 as a subcomponent of 附属明細表, and (3) referencing cash flow variance analysis in the dialogue instead of actual schedule contents (fixed assets, borrowings, reserves).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "附属明細表を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace accounting collocation for preparing supplementary schedules under the Financial Instruments and Exchange Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "附属明細表を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in securities reporting and disclosure contexts (有価証券報告書等の開示).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "附属明細表を承認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese corporate statutory law (会社法), the document requiring statutory audit and board approval is legally designated as 『附属明細書』. Under the Financial Instruments and Exchange Act (金商法), the disclosure document is 『附属明細表』, which is attached and filed rather than individually approved. A more natural collocation is 附属明細表を添付する or 附属明細表を提出する.",
+      "suggested_text": "附属明細表を添付する"
+    },
+    {
+      "index": 3,
+      "text": "附属明細表を分析する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Accountants do not typically talk about 'analyzing' supplementary schedules as a standalone target; supplementary schedules are prepared, audited, or cross-checked (照合する/監査する).",
+      "suggested_text": "附属明細表を照合する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese accounting and corporate governance, the Companies Act specifies 『附属明細書』 for board approval and statutory audit alongside 計算書類. 『附属明細表』 is specific to financial disclosures under the Financial Instruments and Exchange Act (FIEA) in the 有価証券報告書. Conflating the two creates professional inaccuracy.",
+      "suggested_ja": "有価証券報告書の提出に向けて、監査法人による監査手続きを経て附属明細表を確定させました。",
+      "suggested_vi": "Để chuẩn bị nộp báo cáo chứng khoán, chúng tôi đã hoàn thiện các bảng kê chi tiết kèm theo sau khi trải qua các thủ tục kiểm toán của công ty kiểm toán.",
+      "suggested_en": "Ahead of filing the annual securities report, we finalized the supplementary schedules following audit procedures by the audit firm."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese GAAP disclosure formats (有価証券報告書), 『注記事項』 (Notes) and 『附属明細表』 (Supplementary schedules) are distinct structural components. Saying 『附属明細表の注記事項』 is factually incorrect; one verifies consistency between the notes (注記) and the supplementary schedules (附属明細表).",
+      "suggested_ja": "有価証券報告書の開示に向けて、財務諸表の注記事項と附属明細表の数値の整合性を慎重に確認しています。",
+      "suggested_vi": "Hướng tới việc công bố báo cáo chứng khoán, chúng tôi đang rà soát cẩn thận tính nhất quán giữa số liệu trong các bảng kê chi tiết và phần thuyết minh của báo cáo tài chính.",
+      "suggested_en": "Ahead of disclosing the annual securities report, we are carefully verifying consistency between the figures in the supplementary schedules and the notes to the financial statements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B mentions '主要なキャッシュ増減要因' (primary factors of cash variance), which belongs to the Statement of Cash Flows (キャッシュ・フロー計算書), not 附属明細表 (which consists of schedules like 有形固定資産等明細表, 社債明細表, 借入金等明細表, 引当金明細表).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "有価証券報告書に添付する附属明細表について、社債や借入金の増減内訳の照合は完了しましたか。",
+        "vi": "Đối với các bảng kê chi tiết đính kèm báo cáo chứng khoán, việc đối chiếu chi tiết tăng giảm trái phiếu và các khoản vay đã hoàn tất chưa?",
+        "en": "Regarding the supplementary schedules to be attached to the annual securities report, have you completed the reconciliation of changes in bonds and borrowings?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、固定資産明細表および引当金明細表を含め、総勘定元帳との突合作業をすべて終えました。",
+        "vi": "Vâng, bao gồm cả bảng kê tài sản cố định và bảng kê các khoản dự phòng, tôi đã hoàn tất toàn bộ công việc đối chiếu với sổ cái chung.",
+        "en": "Yes, including the tangible fixed asset schedule and allowance schedule, I have finished all cross-checking against the general ledger."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese corporate finance, translating 附属明細表 as 'bảng thuyết minh chi tiết' causes confusion with 'Thuyết minh BCTC' (注記 / Notes). A more precise term in Vietnamese accounting is 'bảng kê chi tiết kèm theo báo cáo tài chính' or 'bảng phụ lục chi tiết'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5d29a6257ff79234983b25ab9218abf3845c4fe40b0f6904711b0cc4e0d227a8",
+    "validated_at": "2026-10-01T01:32:50.350752+00:00"
+  }
+}

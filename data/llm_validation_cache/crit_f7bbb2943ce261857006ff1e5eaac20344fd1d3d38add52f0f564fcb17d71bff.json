@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000122",
+  "term": "純資産合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「純資産合計」という集計項目・表示区分に対し、「計上する」「精算する」「計上内容」「適正に処理する」といった個別仕訳勘定用の述語を機械的に当てはめており、会計実務として著しく不自然です。実務に即した表現・文脈へ全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "純資産合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「純資産合計」は貸借対照表上の集計区分・計算結果（合計行）であり、個別仕訳として「計上する」対象ではありません。資本金や利益剰余金などの勘定科目であれば計上できますが、合計値そのものは算定・集計・表示するものです。",
+      "suggested_text": "純資産合計を算出する"
+    },
+    {
+      "index": 1,
+      "text": "純資産合計の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "貸借対照表の検算や残高試算表において純資産合計の数値・残高を確かめる表現として許容範囲です。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "純資産合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "前期末残高、試算表、あるいは連結パッケージと個別の突合・照合作業として実務上自然に使われます。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "純資産合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「純資産合計」は費用や仮受金などのように「精算する（清算・決済する）」対象ではありません。完全にコロケーションが破綻しています。",
+      "suggested_text": "純資産合計が表示される"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "合計行に対して「計上内容」という表現は会計実務上不自然です。また、機械的なテンプレート文の痕跡が顕著です。純資産合計は貸借対照表の貸方合計との整合性や前期比較などで論じられるのが自然です。",
+      "suggested_ja": "貸借対照表の作成にあたり、資産合計と負債・純資産合計の金額が完全に一致しているかを厳密に確認します。",
+      "suggested_vi": "Khi lập bảng cân đối kế toán, chúng tôi kiểm tra nghiêm ngặt xem tổng tài sản và tổng nợ phải trả cùng vốn chủ sở hữu có khớp nhau hoàn toàn hay không.",
+      "suggested_en": "When preparing the balance sheet, we strictly verify that total assets perfectly match the sum of total liabilities and net assets."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「純資産合計を適正に処理いたしました」は機械的生成特有の不自然な日本語です。合計金額を「処理する」とは言いません。当期純利益の振替や増資等に伴い「純資産合計が変動した」「純資産合計を確定させた」と述べるのが実務的です。",
+      "suggested_ja": "当期純利益の計上および配当金の支払いを反映した結果、当期末における純資産合計は前期比で5パーセント増加いたしました。",
+      "suggested_vi": "Sau khi phản ánh việc ghi nhận lợi nhuận thuần trong kỳ và chi trả cổ tức, tổng tài sản thuần tại thời điểm cuối kỳ này đã tăng 5% so với kỳ trước.",
+      "suggested_en": "Reflecting the recording of net income and dividend payments, total net assets at the end of this period increased by 5% compared to the previous period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの「純資産合計の計上内容」は会計上あり得ない言い回しであり、Bの「証憑書類と補助元帳を照合」も個別の仕訳勘定に対する手続であって、決算集計行である「純資産合計」のチェックに対する返答として会計実務的に乖離しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算書案ですが、貸借対照表の純資産合計と株主資本等変動計算書の期末残高に齟齬はありませんか。",
+        "vi": "Về dự thảo báo cáo tài chính kỳ này, tổng tài sản thuần trên bảng cân đối kế toán và số dư cuối kỳ trên báo cáo biến động vốn chủ sở hữu có phát sinh sai lệch gì không?",
+        "en": "Regarding the draft financial statements for this term, are there any discrepancies between the total net assets on the balance sheet and the ending balance on the statement of changes in equity?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、両者の数値を照合し、純資産合計が狂いなく一致していることを確認済みです。",
+        "vi": "Vâng, tôi đã đối chiếu số liệu của cả hai bên và xác nhận tổng tài sản thuần hoàn toàn khớp nhau không sai lệch.",
+        "en": "Yes, I have cross-checked both figures and confirmed that total net assets match perfectly without any error."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "17b988788a718bbfbd22091869e20a7f4528cba522ca4a5d9631ee7156c89b10",
+    "validated_at": "2026-10-01T01:35:50.593023+00:00"
+  }
+}

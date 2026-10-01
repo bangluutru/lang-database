@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000001",
+  "term": "国税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Accounting category mismatch in dialogue ('国税の計上'), unnatural tax predicate in Example 0 ('税率を算出する'), and raw gloss/duplication errors in Vietnamese translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "国税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax administration collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "国税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and frequently used in corporate tax procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "国税を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One calculates tax amounts ('税額を計算する') rather than the overarching statutory category '国税'. Better professional collocations include '国税を徴収する' or '国税を滞納する'.",
+      "suggested_text": "国税を徴収する"
+    },
+    {
+      "index": 3,
+      "text": "国税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate passive tax law collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'適用税率を算出する' is factually unnatural; statutory tax rates are applied or confirmed ('税率を適用・確認する'), not calculated ('算出'). The Vietnamese translation also mechanically pastes the term gloss with slashes.",
+      "suggested_ja": "課税標準額を正確に計算した上で適用税率を確認し、納期限までに国税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác giá tính thuế và xác nhận thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế quốc gia trước thời hạn.",
+      "suggested_en": "After accurately calculating the tax base and verifying the applicable tax rate, we completed the payment procedure for national tax before the statutory due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'国税の税負担額' is pleonastic ('税' repeated). Furthermore, the Vietnamese translation suffers from mechanical duplication ('thuế thuế quốc gia / thuế trung ương').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期の税負担額および国税納付額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã ước tính sơ bộ tác động đến tổng nghĩa vụ thuế và số thuế quốc gia phải nộp trong kỳ này.",
+      "suggested_en": "Based on the tax reform amendments, we projected the impact on our current-period tax burden and national tax payments."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese monthly closing ('月次決算'), accountants record specific items such as '法人税等', '未払消費税', or '預り源泉所得税'. They do not say '国税の計上内容', as '国税' is a jurisdictional classification rather than a ledger account.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "法人税や消費税など、今期納付すべき国税の概算額は把握できていますか。",
+        "vi": "Anh đã nắm được số thuế quốc gia ước tính phải nộp trong kỳ này như thuế thu nhập doanh nghiệp và thuế tiêu thụ chưa?",
+        "en": "Have you determined the estimated amount of national taxes due this term, such as corporate tax and consumption tax?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、直近の試算表をもとに国税と地方税をそれぞれ試算し、一覧表にまとめております。",
+        "vi": "Vâng, dựa trên bảng cân đối thử gần nhất, tôi đã ước tính riêng phần thuế quốc gia và thuế địa phương rồi tổng hợp vào bảng theo dõi.",
+        "en": "Yes, based on the latest trial balance, I have estimated the national and local taxes separately and compiled them into a summary schedule."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations contain raw slash glosses ('thuế quốc gia / thuế trung ương') and duplicated words ('thuế thuế')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5caa36ee16a40d998be3b7cb402733c04497b69637f1bcb5f0a0fe386301fb5f",
+    "validated_at": "2026-10-01T01:37:15.817774+00:00"
+  }
+}

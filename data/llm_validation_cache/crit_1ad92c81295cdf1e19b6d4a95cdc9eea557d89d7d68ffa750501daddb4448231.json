@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000055",
+  "term": "減価償却累計額",
+  "overall_decision": "rewrite",
+  "summary_reason": "「減価償却累計額を計上する／精算する」「計上内容」といった述語の誤用や機械的な定型文が目立ち、対話文でも固定資産会計の実務実態（固定資産台帳と元帳の照合）と乖離した証憑照合の記述が見られるため、全体的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "減価償却累計額を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "損益計算書の費用である「減価償却費」は計上しますが、貸借対照表の評価勘定である「減価償却累計額」は「控除する」「表示する」「取り崩す」とコロケーションするのが正確です。",
+      "suggested_text": "取得原価から減価償却累計額を控除する"
+    },
+    {
+      "index": 1,
+      "text": "減価償却累計額の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で頻出する自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "減価償却累計額を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "固定資産台帳と総勘定元帳の照合業務において極めて自然に使われます。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "減価償却累計額を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は立替経費や仮払金、債権債務の決済に用いる語であり、資産の評価勘定である減価償却累計額に対しては用いません。除却・売却時なら「取り崩す」を用います。",
+      "suggested_text": "除却に伴い減価償却累計額を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "累計額は時点の「残高」であり、「計上内容」という表現は機械的テンプレート臭が強く実務上違和感があります。台帳と元帳の照合という会計実務に即した表現にすべきです。",
+      "suggested_ja": "月次決算において、固定資産台帳と総勘定元帳の間で減価償却累計額の残高に差異がないか精査します。",
+      "suggested_vi": "Trong kỳ quyết toán tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch về số dư hao mòn lũy kế giữa sổ chi tiết tài sản cố định và sổ cái hay không.",
+      "suggested_en": "During the monthly closing, we carefully examine whether there are any discrepancies in the accumulated depreciation balance between the fixed asset register and the general ledger."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な…適正に」の重言があり、かつ「減価償却累計額を処理いたしました」という文末は会計実務の具体性に欠け、中身のない定型文となっています。",
+      "suggested_ja": "貸借対照表において、有形固定資産の取得原価から減価償却累計額を間接控除の形式で表示しています。",
+      "suggested_vi": "Trên bảng cân đối kế toán, chúng tôi trình bày hao mòn lũy kế dưới hình thức khấu trừ gián tiếp khỏi nguyên giá của tài sản cố định hữu hình.",
+      "suggested_en": "On the balance sheet, accumulated depreciation is presented as an indirect deduction from the acquisition cost of tangible fixed assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "減価償却累計額の残高照合において「証憑書類と補助元帳を照合」とするのは会計実務に反します（減価償却の累計残高照合は、領収書等の証憑ではなく固定資産台帳と総勘定元帳の間で行う）。また「適正に整合している」も不自然な重複語です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "固定資産台帳と総勘定元帳で、減価償却累計額の残高に差異は発生していませんか。",
+        "vi": "Có phát sinh chênh lệch về số dư hao mòn lũy kế giữa sổ chi tiết tài sản cố định và sổ cái không?",
+        "en": "Are there any discrepancies in the accumulated depreciation balance between the fixed asset register and the general ledger?"
+      },
+      {
+        "speaker": "B",
+        "ja": "今月分の減価償却計算と除却処理を反映し、両者の残高が完全に一致していることを確認済みです。",
+        "vi": "Chúng tôi đã phản ánh việc trích khấu hao và xử lý thanh lý của tháng này, và đã xác nhận số dư hai bên khớp nhau hoàn toàn.",
+        "en": "We have reflected this month's depreciation calculations and retirement entries, and confirmed that both balances match completely."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "術語の英訳（Accumulated depreciation）および越訳（hao mòn lũy kế tài sản cố định）は会計用語として正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "87bb33b7121c9251cee28aadb800f31c7b8665b9da6a8bcc0b1b3d4af9b3d091",
+    "validated_at": "2026-10-01T01:34:41.254580+00:00"
+  }
+}

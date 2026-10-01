@@ -1,0 +1,85 @@
+{
+  "entry_id": "jp-pro-accounting-000124",
+  "term": "完成工事高",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an invalid collocation predicate ('完成工事高を精算する'), a stilted and repetitive example sentence using generic template phrasing, and redundant phrasing in dialogue turn B ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完成工事高を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard industry phrase for recognizing construction revenue."
+    },
+    {
+      "index": 1,
+      "text": "完成工事高の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Although P&L accounts appear on trial balances, revenue is rarely referred to with '残高' in daily operations; '計上額' or '内訳' is much more natural.",
+      "suggested_text": "完成工事高の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "完成工事高を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Decipherable and used when verifying booked contract revenue against billing or inspection reports."
+    },
+    {
+      "index": 3,
+      "text": "完成工事高を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精算する' applies to settling expenses, advances, or outstanding balances (e.g., 仮払金, 経費, 工事未払金), not to revenue accounts like 完成工事高.",
+      "suggested_text": "完成工事高を算定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for month-end accounting procedures in a construction context."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and templated diction ('適正な...適正に処理いたしました'). Furthermore, revenue is '計上' or '認識', not vaguely '処理' in standard professional disclosure/reporting.",
+      "suggested_ja": "工事進捗度および検収状況に基づき、当期の決算において完成工事高を適正に計上いたしました。",
+      "suggested_vi": "Dựa trên tiến độ thi công và tình hình nghiệm thu, chúng tôi đã hạch toán đúng quy định doanh thu công trình xây dựng hoàn thành trong kỳ quyết toán này.",
+      "suggested_en": "Based on construction progress and acceptance inspection status, we have properly recognized net sales of completed construction contracts in this fiscal period's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural and redundant in native Japanese business communication; '整合性を確認いたしました' or '一致していることを確認いたしました' is the standard formulation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、完成工事高の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán doanh thu công trình hoàn thành có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the recognized completed contract revenue for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書および検収書と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu sổ phụ với hóa đơn và biên bản nghiệm thu, và xác nhận mọi thứ hoàn toàn khớp.",
+        "en": "We have reconciled the subsidiary ledger with the invoices and inspection certificates, confirming that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base translations accurately convey accounting terminology in construction."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "790ae01c44f4b47644c262c7d96b81266a70461fe67ac5f23ab1b976a9b2379e",
+    "validated_at": "2026-10-01T01:35:50.521327+00:00"
+  }
+}

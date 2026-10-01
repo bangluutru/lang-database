@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000117",
+  "term": "アメンド",
+  "overall_decision": "rewrite",
+  "summary_reason": "「アメンド」という用語の会計上の誤用が全体にわたって見られる。L/Cの変更手続きである「アメンド」を、会計上の「計上」や「残高」の対象として扱っている点が根本的な誤り。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "アメンドを進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「アメンド」はL/Cの変更手続きを指すため、「進める」という動詞は不自然。通常は「アメンドを申請する」「アメンド手続きを進める」など。",
+      "suggested_text": "アメンドを申請する"
+    },
+    {
+      "index": 1,
+      "text": "アメンドを完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "アメンドの手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "アメンドを見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「アメンド」はL/Cの変更自体を指すため、「見直す」という動詞は不自然。変更内容や手続きを見直す場合は「アメンド内容を見直す」「アメンド手続きを見直す」など。",
+      "suggested_text": "アメンド内容を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「アメンド」はL/Cの変更であり、会計上の「計上内容」や「残高」を持つものではない。帳簿照合の対象にはならない。",
+      "suggested_ja": "月末のL/C残高照合において、アメンドによる変更が正しく反映されているか精査します。",
+      "suggested_vi": "Khi đối chiếu số dư L/C cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem các thay đổi do tu chỉnh bổ sung nội dung thư tín dụng L/C (Amendment) đã được phản ánh chính xác hay chưa.",
+      "suggested_en": "During month-end L/C balance reconciliation, we carefully examine whether changes due to the amendment of letter of credit are correctly reflected."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「アメンド」はL/Cの変更手続きであり、会計基準や社内規程に則って「処理」する対象ではない。L/Cの変更が会計に与える影響を処理する、という文脈ならあり得るが、直接「アメンドを処理する」とは言わない。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてアメンドによるL/C条件変更が適切に反映されていることを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng các thay đổi điều kiện L/C do tu chỉnh bổ sung nội dung thư tín dụng L/C (Amendment) đã được phản ánh chính xác trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that the L/C condition changes due to the amendment of letter of credit were properly reflected in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「アメンド」はL/Cの変更であり、会計上の「計上内容」や「差異」が発生するものではない。会計処理の対象ではないため、会話が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月のL/Cアメンドの申請状況はどうなっていますか。",
+        "vi": "Tình hình nộp đơn tu chỉnh bổ sung nội dung thư tín dụng L/C (Amendment) tháng này thế nào rồi?",
+        "en": "What is the status of this month's L/C amendment applications?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、本日中に全ての手続きが完了する予定です。",
+        "vi": "Vâng, tất cả các thủ tục dự kiến sẽ hoàn tất trong ngày hôm nay.",
+        "en": "Yes, all procedures are expected to be completed by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5bc66e4c15e5e6e33eb3ab1e61bd5dd7f8a60c2e8cd785764bfee26de591fbf4",
+    "validated_at": "2026-10-01T01:55:54.923425+00:00"
+  }
+}

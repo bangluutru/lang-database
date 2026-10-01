@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000160",
+  "term": "貸倒損失",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object mechanically treats 貸倒損失 (bad debt expense) as a generic B/S operational account with routine monthly reconciliations and balances, ignoring the critical legal and tax deductibility context inherent to Japanese accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貸倒損失を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing bad debt expense.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "貸倒損失の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "貸倒損失 is an extraordinary loss/expense (P/L) item, not a cumulative balance sheet account; checking its '残高' sounds mechanically templated from balance sheet accounts. In practice, accountants check 発生額 or 税務上の損金算入要件.",
+      "suggested_text": "貸倒損失の計上要件を確認する"
+    },
+    {
+      "index": 2,
+      "text": "貸倒損失を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "You do not directly 'collate/reconcile' a loss; one reconciles supporting documents (証憑) or checks the recognized amount against debtor recovery records.",
+      "suggested_text": "貸倒損失として処理する"
+    },
+    {
+      "index": 3,
+      "text": "貸倒損失を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, travel expenses, or settlement accounts, never to writing off an uncollectible receivable as bad debt loss.",
+      "suggested_text": "貸倒損失を損金算入する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "貸倒損失 is not a routine monthly reconciliation account with a '残高'. It represents an extraordinary write-off triggered by legal bankruptcy or verified total uncollectibility under strict tax rules.",
+      "suggested_ja": "取引先の破産手続終結に伴い、回収不能となった売掛金について税法上の要件を満たしたため、当期に貸倒損失として計上しました。",
+      "suggested_vi": "Do thủ tục phá sản của đối tác đã hoàn tất và đáp ứng đủ các điều kiện theo luật thuế đối với khoản phải thu không thể thu hồi, chúng tôi đã hạch toán vào chi phí tổn thất do xóa nợ khó đòi trong kỳ này.",
+      "suggested_en": "Following the conclusion of the customer's bankruptcy proceedings and meeting tax requirements for uncollectible receivables, we recorded the amount as bad debts expense in the current period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically awkward due to repetitive wording ('適正な...適正に') and overly generic templated phrasing.",
+      "suggested_ja": "法人税法上の損金算入要件を慎重に検討した上で、回収不能債権の貸倒損失処理を行いました。",
+      "suggested_vi": "Sau khi xem xét cẩn trọng các điều kiện kết chuyển chi phí được trừ theo Luật Thuế thu nhập doanh nghiệp, chúng tôi đã tiến hành xử lý tổn thất do xóa sổ nợ khó đòi đối với các khoản nợ không có khả năng thu hồi.",
+      "suggested_en": "After careful examination of the tax deductible requirements under the Corporation Tax Act, we processed the uncollectible claims as bad debts expense."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese accounting practice, conversations about 貸倒損失 focus on whether tax/legal requirements for debt extinguishment are satisfied (損金算入要件・法的手続き), not generic monthly variance or ledger reconciliation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "破産した取引先の売掛金について、今期の決算で貸倒損失として損金算入できますか。",
+        "vi": "Đối với khoản phải thu của khách hàng đã phá sản, chúng ta có thể đưa vào chi phí tổn thất do xóa nợ khó đòi được trừ thuế trong quyết toán kỳ này không?",
+        "en": "Regarding the accounts receivable from the bankrupt customer, can we deduct it as bad debts expense in this fiscal year's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "破産管財人からの配当額確定通知書を受領しており、税法上の要件を満たしているため、計上可能です。",
+        "vi": "Chúng ta đã nhận được thông báo xác nhận số tiền phân chia tài sản từ quản tài viên phá sản và đáp ứng đủ các điều kiện theo luật thuế, nên có thể hạch toán được.",
+        "en": "We have received the notice of dividend determination from the bankruptcy trustee and it satisfies the tax requirements, so we can record it."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning 'tổn thất nợ khó đòi bị xóa nợ' is awkward. Standard accounting Vietnamese uses 'Tổn thất do xóa sổ nợ khó đòi' or 'Chi phí nợ khó đòi đã xóa sổ'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a724703c43452604c8a71781014c439f38bfc9f8f67f07ead0ebdcda2bae6598",
+    "validated_at": "2026-10-01T01:36:31.835799+00:00"
+  }
+}

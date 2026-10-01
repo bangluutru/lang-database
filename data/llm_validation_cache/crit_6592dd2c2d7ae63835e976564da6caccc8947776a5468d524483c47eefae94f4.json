@@ -1,0 +1,76 @@
+{
+  "entry_id": "jp-pro-trade-000161",
+  "term": "燃料サーチャージ",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション、例文、対話において、燃料サーチャージの性質（運賃の一部であり、フリータイム超過とは無関係）に関する誤解や不自然な表現が見られるため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "燃料サーチャージを支払う",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "燃料サーチャージを請求する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "燃料サーチャージを算出する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "燃料サーチャージの発生を防ぐ",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「発生を防ぐ」は不自然。コストや費用に対しては「抑制する」「削減する」が適切。",
+      "suggested_text": "燃料サーチャージの発生を抑制する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "フリータイム超過はデマレージ/ディテンションの対象であり、燃料サーチャージとは直接関係がない。燃料サーチャージは運賃の一部として請求される。",
+      "suggested_ja": "海上運賃に燃料サーチャージが含まれており、船社より請求されました。",
+      "suggested_vi": "Phụ phí nhiên liệu biến động (BAF/FSC) đã được bao gồm trong cước phí vận tải biển và được hãng tàu phát hóa đơn.",
+      "suggested_en": "The bunker adjustment factor (BAF) / fuel surcharge was included in the ocean freight and invoiced by the shipping line."
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「燃料サーチャージの手配状況」だが、Bの回答は通関手続きの進捗状況であり、燃料サーチャージの手配（支払い、確認など）に直接答えていない。また、燃料サーチャージは「手配」するものではなく、運賃の一部として「支払う」または「確認する」もの。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、燃料サーチャージの支払い状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình thanh toán phụ phí nhiên liệu biến động (BAF/FSC) thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the bunker adjustment factor (BAF) / fuel surcharge payment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "すでに船社への支払いを完了しており、通関業者と乙仲にもその旨を連絡済みです。書類の確認も完了し、輸入申告に入っております。",
+        "vi": "Chúng tôi đã hoàn tất thanh toán cho hãng tàu và đã thông báo cho công ty thông quan và đại lý hải quan. Việc kiểm tra chứng từ cũng đã hoàn tất và đang trong quá trình khai báo nhập khẩu.",
+        "en": "We have already completed the payment to the shipping line and informed the customs broker and forwarding agent. Document verification is also complete, and we are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳の「phụ phí nhiên liệu biến động」は、BAF/FSCの一般的な訳語としては適切だが、文脈によっては「phụ phí nhiên liệu」だけでも十分。また、例1の「phát hóa đơn phạt」は不適切。燃料サーチャージは罰金ではない。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "90a4227bb9994c285d7cc04dfcfc5fd8db3f8bcd799de494a3eeaa05b554f4f0",
+    "validated_at": "2026-10-01T01:56:50.671633+00:00"
+  }
+}

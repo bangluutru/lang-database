@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-trade-000020",
+  "term": "荷送人",
+  "overall_decision": "rewrite",
+  "summary_reason": "「荷送人」という語の使われ方が、役職者に対する表現と混同されており、全体的に不自然な日本語表現が多い。特に、株主総会での選任や業務執行の適法性といった文脈は、荷送人の役割とは合致しない。対話も荷送人の準備状況とBの回答が噛み合っていない。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "荷送人を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役職や地位のある人物に対して使う言葉であり、荷送人は契約によって決まるため不自然。",
+      "suggested_text": "荷送人を指定する"
+    },
+    {
+      "index": 1,
+      "text": "荷送人に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任する」は役職や地位に就くことを意味し、荷送人には使わない。",
+      "suggested_text": "荷送人となる"
+    },
+    {
+      "index": 2,
+      "text": "荷送人に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "荷送人の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「職務を遂行する」は公的な役職や責任を伴う業務に対して使われることが多く、荷送人の行為に対してはやや硬すぎる。単に「荷送人の業務を行う」で十分。",
+      "suggested_text": "荷送人の業務を行う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「荷送人」は株主総会で選任されるような役職ではないため、文脈が不自然。また、「新任荷送人」という表現も一般的ではない。",
+      "suggested_ja": "新しい取引の荷送人として、A社が正式に決定しました。",
+      "suggested_vi": "Công ty A đã chính thức được chỉ định làm người gửi hàng cho giao dịch mới.",
+      "suggested_en": "Company A has been officially designated as the shipper for the new transaction."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性」は企業全体の経営や役員の職務執行に対して使われる表現であり、特定の荷送人との関係で使うのは不自然。荷送人との定期的な連絡会は、通常、出荷手続きの確認や問題解決のため。",
+      "suggested_ja": "出荷業務の円滑な遂行のため、荷送人と定期的な進捗確認会を開催しています。",
+      "suggested_vi": "Để đảm bảo việc thực hiện các hoạt động vận chuyển diễn ra suôn sẻ, chúng tôi tổ chức các cuộc họp kiểm tra tiến độ định kỳ với người gửi hàng.",
+      "suggested_en": "To ensure the smooth execution of shipping operations, we hold regular progress review meetings with the shipper."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの発言は「荷送人の準備状況」を尋ねているが、Bの回答は「内容の最終推敲」や「役員の事前承認」など、荷送人自身の準備ではなく、別の資料や会議の準備について話しているように聞こえる。荷送人が会議の準備をするという文脈も不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の出荷に向けて、荷送人からの書類は全て揃っていますか。",
+        "vi": "Để chuẩn bị cho chuyến hàng tuần tới, tất cả các tài liệu từ người gửi hàng đã đầy đủ chưa?",
+        "en": "For next week's shipment, are all the documents from the shipper complete?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、最終確認を終え、本日中に運送会社へ発送の手配を行います。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc kiểm tra cuối cùng và sẽ sắp xếp việc gửi hàng cho công ty vận chuyển trong ngày hôm nay.",
+        "en": "Yes, we have completed the final check and will arrange for shipment to the carrier today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f00705fd6254bb55fa90872e40616a0a0078a24fce724209818bc717d280e1bc",
+    "validated_at": "2026-10-01T01:54:00.092367+00:00"
+  }
+}

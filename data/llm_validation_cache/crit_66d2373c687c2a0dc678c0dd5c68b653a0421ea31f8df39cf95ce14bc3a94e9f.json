@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000135",
+  "term": "完成工事原価",
+  "overall_decision": "rewrite",
+  "summary_reason": "完成工事原価（P/L費用勘定）に対して「残高を確認する」「精算する」「残高の差異」といったB/S勘定や一般経費向けの汎用テンプレート表現が機械的に適用されており、建設業会計の実務慣行と乖離しているため大幅なリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完成工事原価を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "建設業会計において、工事完成時または進行基準適用時に完成工事高に対応する原価を計上する極めて標準的なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "完成工事原価の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "完成工事原価は損益計算書（P/L）の売上原価項目（期間発生額・累計額）であり、通常貸借対照表（B/S）科目のように「残高を確認する」とは表現しません。「内訳を確認する」や「金額を算定する」が自然です。",
+      "suggested_text": "完成工事原価の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "完成工事原価を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "単独で「原価を照合する」とするよりも、予算・見積りや工事別原価台帳と突き合わせる文脈を明確にするか、「集計する」「精査する」とする方が実務的です。",
+      "suggested_text": "完成工事原価を集計する"
+    },
+    {
+      "index": 3,
+      "text": "完成工事原価を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」は仮払金や旅費経費などを清算する動詞であり、工事原価勘定に対しては使いません。未成工事支出金からの振替を表す「振り替える」が建設業会計として最も適切です。",
+      "suggested_text": "完成工事原価へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "P/L科目である完成工事原価に対して「残高に差異がないか」とするのはテンプレート的かつ会計実務の語用として不自然です。未成工事支出金からの振替や工事別原価台帳との整合性確認に修正すべきです。",
+      "suggested_ja": "月末の決算手続において、未成工事支出金から完成工事原価へ適正に振り替えられているかを精査します。",
+      "suggested_vi": "Trong thủ tục quyết toán cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem việc kết chuyển từ chi phí sản xuất kinh doanh dở dang sang giá thành công trình hoàn thành đã được thực hiện đúng quy định hay chưa.",
+      "suggested_en": "During month-end closing procedures, we carefully examine whether costs have been properly transferred from construction in progress to the cost of completed construction contracts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準...適正に処理いたしました」と「適正」が重複しており、無機質なAI生成テンプレートの典型です。個別原価計算の実務を反映した具体的な文面にすべきです。",
+      "suggested_ja": "工事進行基準に基づき、進捗度に応じた完成工事原価を当期損益計算書に適正に計上いたしました。",
+      "suggested_vi": "Dựa trên phương pháp tỷ lệ phần trăm hoàn thành, chúng tôi đã ghi nhận hợp lý giá thành công trình hoàn thành tương ứng với tiến độ vào báo cáo kết quả hoạt động kinh doanh kỳ này.",
+      "suggested_en": "Based on the percentage-of-completion method, we properly recognized the cost of completed construction contracts corresponding to progress in the current income statement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「差異は発生していませんか」は何と何の差異か曖昧であり、Bの「適正に整合している」は重言で不自然です。実行予算（見積原価）と完成工事原価の実績の比較という建設業実務に即した対話に改善します。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月引き渡した案件について、実行予算と完成工事原価に大きな乖離は出ていませんか。",
+        "vi": "Đối với các dự án đã bàn giao trong tháng này, có phát sinh độ lệch lớn giữa ngân sách thực hiện và giá thành công trình hoàn thành không?",
+        "en": "Are there any significant discrepancies between the execution budget and the cost of completed construction contracts for the projects handed over this month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "工事台帳と下請業者からの請求書を照合済みで、予算内に収まっていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ công trình với hóa đơn từ các nhà thầu phụ, và xác nhận rằng mọi chi phí đều nằm trong giới hạn ngân sách.",
+        "en": "I have reconciled the construction ledger with subcontractor invoices and confirmed that everything is within budget."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "558f69c127f33d8c861e4681ef80a9c5429ec1fd257f8d03caa826b1f3d0b5c0",
+    "validated_at": "2026-10-01T01:36:05.259530+00:00"
+  }
+}

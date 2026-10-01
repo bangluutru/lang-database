@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000046",
+  "term": "有形固定資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Japanese expressions, collocations, and dialogue are authentic and professionally sound; minor rewrite required to fix unnatural classifier in Vietnamese translation of Example 0.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "有形固定資産を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation used in statutory reporting and daily bookkeeping.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "有形固定資産を固定資産台帳に登録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Precise procedural collocation in asset accounting.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "有形固定資産を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate finance and accounting expression.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "有形固定資産を除却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting term (除却 - retirement/disposal of assets).",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is natural and professional, but the Vietnamese translation uses an awkward classifier ('mảnh tài sản', typically reserved for pieces of land 'mảnh đất').",
+      "suggested_ja": "事業拡大に向けた拠点開発のため、適正な鑑定評価を経て新たな有形固定資産を取得しました。",
+      "suggested_vi": "Nhằm phát triển cơ sở phục vụ mở rộng kinh doanh, chúng tôi đã mua tài sản cố định hữu hình mới sau khi có thẩm định giá phù hợp.",
+      "suggested_en": "To develop facilities for business expansion, we acquired new property, plant and equipment following an appropriate appraisal."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic audit and year-end inventory procedure context; grammatically and semantically sound.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic, natural workplace interaction regarding capitalization, ledger entry, and depreciation setup.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 0 Vietnamese translation had an unnatural classifier ('mảnh tài sản') that requires correction."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1beb49d9bcbb4e376293b1d27a6834bb43789fe5194613b70af847ea5bc2ffe5",
+    "validated_at": "2026-10-01T01:34:29.665207+00:00"
+  }
+}

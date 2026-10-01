@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000061",
+  "term": "借地権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe accounting domain error: General 借地権 (ordinary leasehold rights) are non-amortizable assets (非減価償却資産) under Japanese GAAP and Corporation Tax Law. The collocations, Example 2, and the dialogue mistakenly treated general leasehold rights as depreciable assets subject to useful life determination and regular amortization.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "借地権を無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting collocation under Japanese GAAP (会社計算規則・財務諸表等規則), where 借地権 is classified under 無形固定資産.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "借地権を償却する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese corporate tax law and J-GAAP, general leasehold rights (普通借地権) are non-amortizable assets (非減価償却資産). Only fixed-term leaseholds (定期借地権) are amortizable. Stating '借地権を償却する' unconditionally is factually inaccurate for general accounting usage.",
+      "suggested_text": "定期借地権を期間按分で償却する"
+    },
+    {
+      "index": 2,
+      "text": "借地権の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and accurate; leasehold rights are intangible assets subject to impairment testing (減損会計).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "借地権の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and appraisal expression (不動産鑑定・企業評価).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'事業譲受に伴って発生した資産価値を精査し' is awkward. Asset value does not 'occur' (発生する); rights are acquired or succeeded upon a business acquisition.",
+      "suggested_ja": "事業譲受に伴い取得した権利関係を精査し、適正な時価をもって無形固定資産に借地権を計上しました。",
+      "suggested_vi": "Rà soát kỹ các quyền tài sản nhận được từ việc tiếp nhận kinh doanh, chúng tôi đã ghi nhận quyền thuê đất vào tài sản cố định vô hình theo giá trị hợp lý.",
+      "suggested_en": "Upon carefully reviewing the rights acquired through the business transfer, we recognized leasehold rights under intangible fixed assets at fair market value."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Ordinary leasehold rights do not undergo '規則的な償却' (systematic amortization). Furthermore, evaluating profitability is done for impairment testing (減損会計), not for deciding whether to perform systematic amortization.",
+      "suggested_ja": "借地権は非償却資産であるため定期的な減価償却は行いませんが、収益性の低下に応じた減損の要否については毎期慎重に検討しています。",
+      "suggested_vi": "Vì quyền thuê đất là tài sản không trích khấu hao, chúng tôi không phân bổ khấu hao định kỳ nhưng vẫn rà soát cẩn trọng hàng kỳ xem có cần trích lập giảm giá trị tài sản khi khả năng sinh lời sụt giảm hay không.",
+      "suggested_en": "Since leasehold rights are non-amortizable assets, we do not depreciate them regularly; however, we carefully assess each term whether impairment is required due to declining profitability."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese accounting and tax practice, ordinary 借地権 does not have a statutory useful life (耐用年数) nor depreciation (減価償却) because it is a non-depreciable asset (非減価償却資産). Speaker A asking for '減価償却の計算方法' and Speaker B answering that they set '耐用年数' according to tax law is an accounting domain error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期取得した借地権について、固定資産台帳への登録区分と減損テストの管理方針は確認済みですか。",
+        "vi": "Về quyền thuê đất mới nhận trong kỳ này, anh/chị đã xác nhận phân loại đăng ký trên sổ tài sản cố định và chính sách quản lý kiểm tra giảm giá trị tài sản chưa?",
+        "en": "Regarding the leasehold rights acquired this term, have you confirmed the ledger classification under fixed assets and the policy for impairment testing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。普通借地権のため非償却の無形固定資産として登録し、今後の収益性低下に備えて減損兆候をモニタリングする運用といたしました。",
+        "vi": "Vâng. Vì đây là quyền thuê đất thông thường nên chúng tôi đã đăng ký là tài sản cố định vô hình không khấu hao và thiết lập quy trình theo dõi dấu hiệu suy giảm giá trị.",
+        "en": "Yes. As it is an ordinary leasehold, we registered it as a non-amortizable intangible fixed asset and established a procedure to monitor for impairment indicators."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The core terminology translations are acceptable, though 'Leasehold right' is more standard in corporate accounting than 'Right of leasehold'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e090f2622b480399aa44a8b7294a86df2ff6d6ebf470b574c814c285f26740a7",
+    "validated_at": "2026-10-01T01:34:48.708328+00:00"
+  }
+}

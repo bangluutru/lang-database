@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000184",
+  "term": "関税分類変更基準",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '関税分類変更基準' (Change in Tariff Classification - CTC) as an accounting item that can be 'booked' or have a 'balance'. CTC is a rule for determining origin, not a financial transaction or account. This error permeates the examples and dialogue, making them unnatural and factually incorrect in a professional context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関税分類変更基準を適用する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "関税分類変更基準を照会する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "関税分類変更基準を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "関税分類変更基準 is a rule/criterion, not something that can be 'paid'. You pay 'customs duties' (関税) or 'taxes' (税金).",
+      "suggested_text": "関税分類変更基準に基づいて関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "関税分類変更基準の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The phrase '関税分類変更基準の分類' is redundant and unnatural. The '基準' (criterion) itself is a classification rule. You would confirm the classification *based on* the criterion, or confirm the criterion itself.",
+      "suggested_text": "関税分類変更基準に沿った分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "関税分類変更基準 (CTC) is a rule for determining origin, not an accounting entry or balance that would be '計上' (booked) or have a '残高' (balance) in ledgers. This sentence fundamentally misunderstands the nature of CTC in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、製品の原産地規則適用における関税分類変更基準の適用状況に誤りがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sai sót nào trong việc áp dụng tiêu chí chuyển đổi mã số thuế quan (CTC) đối với quy tắc xuất xứ của sản phẩm hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any errors in the application of the Change in Tariff Classification (CTC) criterion for product origin rules."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 関税分類変更基準 is a rule, not something that is 'processed' (処理する) as an accounting item in closing entries. It's a criterion for determining origin, which then impacts customs duties, but it's not an accounting transaction itself.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において関税分類変更基準に基づく原産地判定が適切に行われたことを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng việc xác định xuất xứ dựa trên tiêu chí chuyển đổi mã số thuế quan (CTC) đã được thực hiện đúng cách trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that the origin determination based on the Change in Tariff Classification (CTC) was properly conducted in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question about '関税分類変更基準の計上内容に差異' (discrepancies in booked content of CTC) is based on a fundamental misunderstanding of what CTC is. CTC is a rule, not an accounting entry. Speaker B's response, while grammatically correct, is irrelevant to the flawed premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、輸入製品の原産地判定における関税分類変更基準の適用に問題はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có vấn đề gì trong việc áp dụng tiêu chí chuyển đổi mã số thuế quan (CTC) để xác định xuất xứ của sản phẩm nhập khẩu không?",
+        "en": "In this month's monthly closing, were there any issues with the application of the Change in Tariff Classification (CTC) for determining the origin of imported products?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連書類を確認した結果、すべて適正に適用されていることを確認いたしました。",
+        "vi": "Vâng, sau khi kiểm tra các tài liệu liên quan, chúng tôi đã xác nhận rằng tất cả đã được áp dụng đúng cách.",
+        "en": "Yes, after reviewing the relevant documents, we confirmed that everything was applied properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "252f017c4688fced411a21428ce0fc6344e01482081592bd4f23de960444e9f0",
+    "validated_at": "2026-10-01T01:57:13.743452+00:00"
+  }
+}

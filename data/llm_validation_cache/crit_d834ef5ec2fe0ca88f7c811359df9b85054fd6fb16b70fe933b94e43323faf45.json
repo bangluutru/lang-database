@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000095",
+  "term": "派遣社員",
+  "overall_decision": "rewrite",
+  "summary_reason": "役員や株主総会関連（選任・就任・適法性確保・招集通知発送など）の別用語テンプレートに「派遣社員」を機械的に置換した形跡が顕著であり、コロケーション、例文、対話のすべてにおいて意味論的矛盾および法的・実務的破綻が生じています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "派遣社員を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任」は役員・会計監査人・弁護人などに用いる法的手続きの語であり、派遣元と契約して派遣就労する「派遣社員」には適用できません。",
+      "suggested_text": "派遣社員を受け入れる"
+    },
+    {
+      "index": 1,
+      "text": "派遣社員に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任」は役職・公職・委員などに就くことを表す表現であり、雇用形態・就業形態である派遣社員には絶対に使用しません。",
+      "suggested_text": "派遣社員として働く"
+    },
+    {
+      "index": 2,
+      "text": "派遣社員に相談する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "文法的には成立しますが、ビジネス・労務管理上の特徴的かつ教育価値の高いコロケーションではありません。",
+      "suggested_text": "派遣社員を増員する"
+    },
+    {
+      "index": 3,
+      "text": "派遣社員の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "意味は通るものの不自然なテンプレート表現です。派遣法実務に即した表現にすべきです。",
+      "suggested_text": "派遣社員の契約を更新する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "定時株主総会で派遣社員を選任することは法制上・実務上あり得ません。役員選任用の文面を無批判に差し替えた重大な誤りです。",
+      "suggested_ja": "繁忙期の業務負担を軽減するため、経理部で派遣社員を2名受け入れることになりました。",
+      "suggested_vi": "Để giảm tải khối lượng công việc trong mùa cao điểm, phòng kế toán đã quyết định tiếp nhận 2 nhân viên phái cử.",
+      "suggested_en": "To reduce the workload during the peak period, the accounting department decided to take on two temporary dispatched workers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「業務執行の適法性を確保するため」は監査役等のガバナンス用語であり、派遣社員との連絡会議の目的として極めて不自然です。",
+      "suggested_ja": "派遣法を遵守し適切な労務管理を行うため、派遣社員の就業状況や契約内容を定期的に確認しています。",
+      "suggested_vi": "Nhằm tuân thủ Luật Phái cử lao động và quản lý lao động hợp lý, chúng tôi định kỳ kiểm tra tình hình làm việc và nội dung hợp đồng của nhân viên phái cử.",
+      "suggested_en": "To comply with the Worker Dispatch Act and ensure proper labor management, we regularly review the working conditions and contract details of our dispatched workers."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "発話Aでは「派遣社員の準備状況」と尋ねているのに対し、発話Bでは「内容の推敲」「発送の手配」と議案書や書類の発送に関する返答になっており、会話が完全に破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月からの新システム導入に伴い、データ移行を担当する派遣社員の手配はどうなっていますか。",
+        "vi": "Cùng với việc triển khai hệ thống mới từ tháng sau, việc bố trí nhân viên phái cử phụ trách chuyển đổi dữ liệu tiến hành đến đâu rồi?",
+        "en": "With the implementation of the new system next month, what is the status of arranging dispatched workers for data migration?"
+      },
+      {
+        "speaker": "B",
+        "ja": "すでに派遣会社にスキル要件を伝えて候補者を選定中ですので、今週中には顔合わせの日程をご相談できる見込みです。",
+        "vi": "Chúng tôi đã gửi yêu cầu kỹ năng cho công ty phái cử và đang trong quá trình sàng lọc ứng viên, dự kiến trong tuần này có thể trao đổi về lịch gặp mặt trao đổi.",
+        "en": "We have already shared the skill requirements with the temp agency and are currently screening candidates, so we expect to discuss the interview schedule by the end of this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "単語自体の語義訳は成立していますが、例文および対話がテンプレート混入により破綻しているため、提示された訳文も実務上不適切な内容を引き継いでいます。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ae0841da7d68ed0b0203c61a9836e75bfd5588f6e5e1c45c210ebe7164444c1c",
+    "validated_at": "2026-10-01T01:42:34.395361+00:00"
+  }
+}

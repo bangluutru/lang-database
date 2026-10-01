@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000057",
+  "term": "定款",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション『定款を交付する』および例文2の『発行済みの定款』という不自然・誤謬表現（株式概念との混同）を修正する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定款を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "定款そのものを「交付する」とは通常言いません（定款謄本の交付請求などはありますが、定款本体の代表的コロケーションとしては不自然）。会社法実務で最も重要かつ頻出の「定款を変更する」または「定款を認証する」が適切です。",
+      "suggested_text": "定款を変更する"
+    },
+    {
+      "index": 1,
+      "text": "定款を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "設立時や許認可申請時に官公庁・銀行等へ定款を提出する表現として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定款を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "一般的なビジネス管理として通用します（会社法上の厳密な専門用語としては「備え置く」がより正確ですが、「保管する」も日常実務で許容範囲です）。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "定款の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "絶対的記載事項・相対的記載事項などの確認作業として極めて自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "官公庁への手続き報告として自然なビジネス日本語です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "定款に「発行済み（発行済みの定款）」という表現は使いません。「発行」は株式等に用いる概念であり、定款の場合は「現行定款」や「変更後の定款」、あるいは単に「定款」と表現します。",
+      "suggested_ja": "税務調査やコンプライアンス監査に備え、現行の定款は法定の備置期間に従って本店にて厳重に管理しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế và kiểm toán tuân thủ, chúng tôi lưu trữ cẩn thận điều lệ hiện hành tại trụ sở chính theo đúng thời hạn luật định.",
+      "suggested_en": "In preparation for tax audits and compliance reviews, we securely maintain the current articles of incorporation at the head office in accordance with statutory retention periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "「法定記載事項」という実務用語も適切に使われており、会話の受け答えも自然です。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "訳語・文脈対応ともに正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5cbfe40d4296556a899ffe92929a5315ba6b1f6935237770a726bc1fd94ff3f6",
+    "validated_at": "2026-10-01T01:41:55.827613+00:00"
+  }
+}

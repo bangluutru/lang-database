@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000190",
+  "term": "決算整理仕訳",
+  "overall_decision": "rewrite",
+  "summary_reason": "会計専門用語としての基本訳は正しいものの、コロケーションの動詞選択（完了する・進める）、例文における会計概念の誤用（仕訳に残高があるとする点）、および会話文の不自然な日本語表現（適正に整合している）が目立ち、実践的なビジネス教育コンテンツとしてリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "決算整理仕訳を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「仕訳」という名詞に対して「進める」を直接結びつけるのは語調が粗く不自然です。実務では「決算整理仕訳を切る」「決算整理仕訳を行う」を用います。",
+      "suggested_text": "決算整理仕訳を切る"
+    },
+    {
+      "index": 1,
+      "text": "決算整理仕訳を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「仕訳を完了する」はコロケーションとして不自然です。仕訳は「入力する」「起票する」「計上する」とするか、作業全体として「決算整理手続きを完了する」と表現すべきです。",
+      "suggested_text": "決算整理仕訳を入力する"
+    },
+    {
+      "index": 2,
+      "text": "決算整理仕訳の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "経理実務の業務マニュアル確認や引き継ぎで極めて自然に用いられる表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "決算整理仕訳を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "試算表作成前後のレビュー作業として自然な日本語です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会計実務において「残高」を持つのは勘定科目（勘定残高）であり、「仕訳の残高」という表現は意味的・会計学的な誤用（カテゴリーエラー）です。",
+      "suggested_ja": "期末決算にあたり、減価償却費や引当金の計上漏れがないよう、決算整理仕訳を精査します。",
+      "suggested_vi": "Trong kỳ quyết toán cuối năm, chúng tôi rà soát kỹ lưỡng các bút toán điều chỉnh để không bỏ sót chi phí khấu hao hay trích lập dự phòng.",
+      "suggested_en": "During year-end closing, we thoroughly scrutinize adjusting entries to ensure no omissions in depreciation expenses or provisions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "一文の中に「適正な会計基準…適正に処理いたしました」と「適正」が重複しており、テンプレート感の強い不自然な日本語です。具体的な調整項目を入れることで実践的な教材になります。",
+      "suggested_ja": "企業会計基準および社内規程に則り、経過勘定の振替を含む決算整理仕訳を正確に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã xử lý chính xác các bút toán điều chỉnh cuối kỳ quyết toán, bao gồm cả việc kết chuyển các tài khoản chi phí, doanh thu dở dang.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we accurately processed adjusting entries, including accrued/deferred account reversals."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「計上内容に差異は発生していませんか」は仕訳に対する問い方として曖昧で不自然であり、Bの「適正に整合している」は重言気味の硬い不自然な言い回しです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算における決算整理仕訳の起票に、計上漏れや貸借の不一致はありませんか。",
+        "vi": "Trong đợt quyết toán tháng này, việc lập các bút toán điều chỉnh có bị sót hay lệch bên Nợ - bên Có không?",
+        "en": "Are there any omissions or debit/credit discrepancies in recording adjusting entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前払費用と減価償却費の振替を終え、試算表の残高と整合していることを確認済みです。",
+        "vi": "Tôi đã hoàn tất việc kết chuyển chi phí trả trước và chi phí khấu hao, đồng thời đã xác nhận khớp với số dư trên bảng cân đối thử.",
+        "en": "I have completed the adjustments for prepaid expenses and depreciation, and confirmed that they reconcile with the trial balance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "見出し語および元の対訳自体は標準的な訳語が当てられています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "23043a5980f648ea61c65fcdab44af84bcb37cb5dd37fc15e670f4bfae90f49d",
+    "validated_at": "2026-10-01T01:37:08.018638+00:00"
+  }
+}

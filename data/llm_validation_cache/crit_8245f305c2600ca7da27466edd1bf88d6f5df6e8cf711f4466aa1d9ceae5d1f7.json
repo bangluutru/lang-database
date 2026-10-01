@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000099",
+  "term": "労働条件通知書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual mismatch in Example 1 and the dialogue, which erroneously treated a statutory employment document as generic meeting materials for shareholders/board meetings.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "労働条件通知書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and HR practice when drafting terms for new hires or contract renewals.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "労働条件通知書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Under Article 15 of the Labor Standards Act, employers are mandated to 'issue/deliver' (交付する) working conditions to employees, not 'submit' (提出する) them.",
+      "suggested_text": "労働条件通知書を交付する"
+    },
+    {
+      "index": 2,
+      "text": "労働条件通知書を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable when sending onboarding documents by mail to prospective employees.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "労働条件通知書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural from the perspective of an employee or an onboarding candidate receiving the document.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A notice of working conditions (労働条件通知書) is an employment document given to employees upon hiring/contract renewal. It has zero relation to shareholder meetings (株主総会) or board meetings (取締役会). This is an erroneous automated template artifact.",
+      "suggested_ja": "労働基準法に基づき、中途採用者の入社日までに労働条件通知書を電磁的方法または書面にて交付する必要があります。",
+      "suggested_vi": "Căn cứ theo Luật Tiêu chuẩn Lao động, văn bản thông báo điều kiện lao động phải được giao bằng phương thức điện tử hoặc văn bản giấy trước ngày nhân viên tuyển dụng giữa kỳ vào công ty.",
+      "suggested_en": "Under the Labor Standards Act, the notice of working conditions must be issued either electronically or in writing by the mid-career hire's start date."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Plausible corporate context regarding compliance audits and document retention for personnel records.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Preparing a 労働条件通知書 'for next week's meeting' (来週開催予定の会議に向けて) is unnatural; this document is prepared for hiring or contract renewals, not as meeting collateral.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月入社予定の中途採用者に対する労働条件通知書の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị bản thông báo điều kiện làm việc cho nhân sự tuyển dụng giữa kỳ dự kiến vào công ty tháng tới thế nào rồi?",
+        "en": "How is the preparation of the notice of working conditions going for the mid-career hire scheduled to join next month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "提示条件の法務チェックが完了しましたので、本日中に内定者へ電子交付の手続きを行います。",
+        "vi": "Khâu kiểm tra pháp lý các điều kiện đưa ra đã hoàn tất, nên trong ngày hôm nay tôi sẽ tiến hành thủ tục cấp điện tử cho ứng viên trúng tuyển.",
+        "en": "The legal review of the proposed terms is complete, so I will process the electronic issuance to the candidate today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions accurately reflect the statutory document."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9d729c6afa46236c54eff412ffa8169cd07cf5fe3cb2b01b4826e2a563ee19d1",
+    "validated_at": "2026-10-01T01:42:35.760323+00:00"
+  }
+}

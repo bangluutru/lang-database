@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-business-000171",
+  "term": "ストックオプション",
+  "overall_decision": "rewrite",
+  "summary_reason": "One collocation was unnatural and required rewriting to accurately reflect common business and accounting practices related to stock options. The rest of the content is of high quality.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ストックオプションを支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for granting stock options."
+    },
+    {
+      "index": 1,
+      "text": "ストックオプションとして損金算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "ストックオプション自体を損金算入するのではなく、ストックオプションに関連する費用（例えば、付与費用や行使時の費用）を損金算入するのが一般的。表現が不自然。",
+      "suggested_text": "ストックオプション関連費用を損金算入する"
+    },
+    {
+      "index": 2,
+      "text": "ストックオプションの届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for submitting required documents related to stock options."
+    },
+    {
+      "index": 3,
+      "text": "ストックオプションの限度額を改定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for revising the limit of stock options, often related to shareholder resolutions or company policy."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document or internal report. The Japanese is natural and the translations are accurate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document or internal report. The Japanese is natural and the translations are accurate."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally and Speaker B's response is logical and professional. The target term is introduced naturally."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e1624590914f52e342ddee614ee9ef0d909c5af895865460dee4d2c83a5663e4",
+    "validated_at": "2026-10-01T01:53:05.321442+00:00"
+  }
+}

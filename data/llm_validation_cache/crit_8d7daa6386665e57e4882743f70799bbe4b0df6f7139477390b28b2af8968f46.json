@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000194",
+  "term": "常設的施設",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain and category error in examples and dialogue: '常設的施設' (Permanent Establishment / PE) is an international tax status concept (tax nexus), but the generated examples and dialogue mechanically treated it as an accounting balance-sheet account with 'entries', 'balances', and 'sub-ledger reconciliations'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "常設的施設の有無を判定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic legal and tax phrasing used when assessing permanent establishment exposure."
+    },
+    {
+      "index": 1,
+      "text": "常設的施設を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A PE is a legal tax nexus status, not a physical object to simply 'confirm' (確認する sounds like checking a physical building). In international tax, one assesses applicability (該当性) or status.",
+      "suggested_text": "常設的施設の該当性を検討する"
+    },
+    {
+      "index": 2,
+      "text": "常設的施設を通じて課税される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax treaty and corporate tax phrasing (taxation via permanent establishment / PE帰属所得課税)."
+    },
+    {
+      "index": 3,
+      "text": "常設的施設と認定される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and common tax term for being deemed a permanent establishment (PE認定)."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: Permanent Establishment (常設的施設/PE) is an international tax nexus status under tax treaties and corporate tax law, not an accounting ledger line item (勘定科目) with entries (計上内容) or balances (残高). Reconciling PE in month-end closing is complete nonsense.",
+      "suggested_ja": "海外子会社への長期出張者が現地で常設的施設と認定される税務リスクがないか、専門家と精査しています。",
+      "suggested_vi": "Chúng tôi đang cùng các chuyên gia rà soát kỹ lưỡng xem liệu nhân viên đi công tác dài hạn tại công ty con ở nước ngoài có nguy cơ bị cơ quan thuế sở tại coi là cơ sở thường trú chịu thuế (PE) hay không.",
+      "suggested_en": "We are closely examining with specialists whether long-term business travelers to our overseas subsidiary face tax risks of being deemed a permanent establishment (PE)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Severe hallucinated template error: A company cannot 'process a permanent establishment in closing under accounting standards' (会計基準に則り常設的施設を適正に処理いたしました). PE is a tax concept, not an accounting transaction to be booked/processed in financial closing.",
+      "suggested_ja": "現地法人の設立前に駐在員事務所を開設する場合、税務上の常設的施設に該当しないよう業務範囲を限定する必要があります。",
+      "suggested_vi": "Khi mở văn phòng đại diện trước khi thành lập pháp nhân tại địa phương, cần giới hạn phạm vi hoạt động để tránh bị coi là cơ sở thường trú chịu thuế (PE) theo luật thuế.",
+      "suggested_en": "When opening a representative office prior to establishing a local subsidiary, its scope of activities must be restricted so as not to constitute a permanent establishment for tax purposes."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The entire dialogue is built on a fundamental domain error: Speaker A asks about 'discrepancies in the booking/entries of permanent establishment' (常設的施設の計上内容に差異) in monthly closing, and Speaker B talks about reconciling vouchers with sub-ledgers. PE is an international tax liability threshold, not a general ledger account.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期から予定している海外での現地サポート業務ですが、税務上の常設的施設とみなされるリスクはありませんか。",
+        "vi": "Nghiệp vụ hỗ trợ tại chỗ ở nước ngoài dự kiến triển khai từ kỳ tới liệu có rủi ro bị cơ quan thuế coi là cơ sở thường trú chịu thuế (PE) không?",
+        "en": "Regarding the on-site overseas support operations planned for next term, is there any risk of them being deemed a permanent establishment for tax purposes?"
+      },
+      {
+        "speaker": "B",
+        "ja": "契約形態や駐在員の裁量権について国際税務の専門家と精査しており、PE認定を回避できるよう体制を調整中です。",
+        "vi": "Chúng tôi đang cùng chuyên gia thuế quốc tế rà soát kỹ hình thức hợp đồng và quyền hạn của nhân viên biệt phái, đồng thời điều chỉnh cơ cấu để tránh bị xác định là PE.",
+        "en": "We are scrutinizing the contract terms and discretionary authority of dispatched staff with international tax experts, and are adjusting the framework to avoid PE exposure."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations (PE / cơ sở thường trú chịu thuế) are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "29d9c34a82ee959340cdb976afa378abb70ec2809d6f9e2cd800ad6f59a4130f",
+    "validated_at": "2026-10-01T01:40:50.767410+00:00"
+  }
+}

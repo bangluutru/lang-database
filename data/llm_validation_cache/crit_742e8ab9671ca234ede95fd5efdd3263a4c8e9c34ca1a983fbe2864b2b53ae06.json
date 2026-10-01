@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000197",
+  "term": "同族会社",
+  "overall_decision": "reject",
+  "summary_reason": "「同族会社」という税務上の組織・法人分類概念を「会議体（株主総会）」や「案内文書」と混同したテンプレート流用の致命的な誤り（「同族会社を開催する」「臨時同族会社を招集する」等）がコロケーション・例文・対話の全域で発生しており、教育コンテンツとして完全に不適格です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "同族会社を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「同族会社」は法人・組織形態であり、会議ではないため「開催する」の目的語にできません（株主総会等との混同）。",
+      "suggested_text": "同族会社に該当する"
+    },
+    {
+      "index": 1,
+      "text": "同族会社で決議する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "決議機関は株主総会や取締役会であり、法人分類名である「同族会社」と「決議する」の共起は不自然です。",
+      "suggested_text": "同族会社の判定を行う"
+    },
+    {
+      "index": 2,
+      "text": "同族会社に報告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税法用語としての学習価値が低く、実務上典型的な共起表現ではありません。",
+      "suggested_text": "特定同族会社から除外される"
+    },
+    {
+      "index": 3,
+      "text": "同族会社へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "届出書を提出する先は税務署等であり、対象法人自身である「同族会社へ提出する」は意味が破綻しています。",
+      "suggested_text": "同族会社の行為計算否認を適用する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「臨時同族会社を招集する」という日本語は存在しません。法人格である同族会社を会議体（臨時株主総会等）と混同しています。",
+      "suggested_ja": "当社は株主の持分比率から税法上の同族会社に該当するため、役員給与の損金算入ルールには特に留意が必要です。",
+      "suggested_vi": "Do công ty chúng tôi thuộc diện công ty gia đình (chịu kiểm soát thuế đặc biệt) theo luật thuế dựa trên tỷ lệ sở hữu của cổ đông, cần đặc biệt lưu ý đến các quy định tính chi phí hợp lý được trừ đối với lương thưởng của ban điều hành.",
+      "suggested_en": "Since our company qualifies as a closely held family corporation under tax law based on shareholding ratios, special attention must be paid to the deductibility rules for executive remuneration."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "同族会社は税法上の分類概念であり、単に「〜において議案が可決された」とするのは文脈として無意味かつ不自然です。税務・ガバナンス実務に即した文に改める必要があります。",
+      "suggested_ja": "税務調査において、同族会社間で行われた不動産の低額譲渡について行為計算否認の規定が適用されました。",
+      "suggested_vi": "Trong cuộc thanh tra thuế, quy định về bác bỏ hành vi/tính toán giao dịch bất hợp lý đã được áp dụng đối với việc chuyển nhượng bất động sản giá rẻ giữa các công ty gia đình liên kết.",
+      "suggested_en": "During the tax audit, the anti-avoidance rule for family corporations was applied to the undervalue transfer of real estate between related family corporations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「同族会社の準備状況はどうなっていますか」「本日中に発送の手配を行います」は、「同族会社」を招集通知や会議と取り違えた致命的な混同であり、完全に破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "顧問税理士から、今期の株式異動に伴い当社が税法上の同族会社に該当する可能性があると指摘を受けました。",
+        "vi": "Cố vấn thuế đã lưu ý rằng sau đợt chuyển nhượng cổ phần kỳ này, công ty chúng ta có khả năng thuộc diện công ty gia đình chịu kiểm soát thuế.",
+        "en": "Our tax accountant pointed out that following this term's share transfers, our company may qualify as a family corporation under corporate tax law."
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。特定同族会社に該当した場合、留保金課税の影響も出ますので、速やかに持分比率を精査しましょう。",
+        "vi": "Tôi hiểu rồi. Nếu rơi vào trường hợp công ty gia đình đặc thù, chúng ta còn bị ảnh hưởng bởi thuế đánh trên lợi nhuận giữ lại, vì vậy hãy rà soát kỹ lại tỷ lệ sở hữu ngay nhé.",
+        "en": "Understood. If we qualify as a specified family corporation, retained earnings taxation will also come into play, so let us immediately examine the shareholding ratios in detail."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "見出し語の訳語（Family corporation / công ty gia đình chịu kiểm soát thuế đặc biệt）自体は概ね妥当ですが、文例・対話の機械的誤用に伴う訳文破綻が生じていたため、全置換が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1ec1f187bdde3647a223be2f4491cfd0ec70ebfcd51ec233e3b33d7a79c2e257",
+    "validated_at": "2026-10-01T01:40:54.105401+00:00"
+  }
+}

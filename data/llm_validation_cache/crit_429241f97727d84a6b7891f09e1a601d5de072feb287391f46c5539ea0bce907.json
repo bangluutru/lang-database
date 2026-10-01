@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000014",
+  "term": "運賃保険料込み条件",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocationの冗長表現、Exampleの重複表現と不適切な英語訳、Dialogueの応答の不自然さが見られたため、全体的に修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "運賃保険料込み条件の条件で契約する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「運賃保険料込み条件の条件で」は冗長で不自然。「運賃保険料込み条件で契約する」が自然。",
+      "suggested_text": "運賃保険料込み条件で契約する"
+    },
+    {
+      "index": 1,
+      "text": "運賃保険料込み条件の建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "運賃保険料込み条件における費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "運賃保険料込み条件における危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「運賃保険料込み条件条件」と「条件」が重複しており、不自然。また、英語訳の「adopted 運賃保険料込み条件 terms」は、専門用語をそのまま残しており、翻訳として不適切。",
+      "suggested_ja": "今回の海上輸送契約は、運賃と危険負担の範囲を明確にするため、運賃保険料込み条件を採用しました。",
+      "suggested_vi": "Hợp đồng vận tải biển lần này áp dụng điều kiện CIF để làm rõ phạm vi chịu cước phí và rủi ro.",
+      "suggested_en": "This ocean transport contract adopted CIF terms to clarify the division of freight costs and risk transfer."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現で、内容も適切です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「手配状況」について尋ねているが、Bの回答は「通関業者と乙仲への連絡を済ませており、書類の確認も完了して輸入申告に入っております」と、運賃保険料込み条件の手配状況に直接答えていない。CIF条件の手配状況には、運送業者や保険の手配状況も含まれるはず。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、運賃保険料込み条件の手配状況はいかがでしょうか。船積書類や保険の手配は完了していますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp điều kiện CIF thế nào rồi? Chứng từ vận chuyển và bảo hiểm đã hoàn tất chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the CIF arrangements? Have the shipping documents and insurance been finalized?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、船積書類は全て揃っており、保険も手配済みです。通関業者と乙仲への連絡も済ませており、輸入申告に入っております。",
+        "vi": "Vâng, tất cả chứng từ vận chuyển đã đầy đủ và bảo hiểm cũng đã được sắp xếp. Chúng tôi cũng đã liên hệ với công ty thông quan và đại lý giao nhận, và đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, all shipping documents are complete, and insurance has been arranged. We have also contacted the customs broker and forwarding agent, and the import declaration process has begun."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "Example 0の英語訳が専門用語をそのまま残しており、翻訳として不適切です。CIFは国際的に認知された略語であるため、そのまま使用すべきです。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3568aff58857c9a09023cd623c4189bfbb75eddc6c74f51dde5b7d8c564ed7b1",
+    "validated_at": "2026-10-01T01:53:56.531059+00:00"
+  }
+}

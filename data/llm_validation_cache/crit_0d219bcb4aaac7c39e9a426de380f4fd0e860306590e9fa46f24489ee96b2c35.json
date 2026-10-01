@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000152",
+  "term": "コンテナヤード",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how 'コンテナヤード' (a physical facility) is treated in accounting. It is not an item that has '計上内容' or '残高' directly, but rather the *costs* or *inventory* associated with it. This semantic mismatch permeates the examples and dialogue, making them unnatural and factually incorrect from an accounting perspective.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "コンテナヤードに搬入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "コンテナヤードから搬出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "コンテナヤードで保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "コンテナヤードの許可を取得する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "It's not common to 'obtain permission for a container yard' itself. One might obtain permission to operate a CY, or permission to enter/exit a specific CY, but the phrasing is awkward.",
+      "suggested_text": "コンテナヤードの使用許可を取得する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "コンテナヤード (CY) is a physical location/facility, not an accounting item that has '計上内容' (accounting entry details) or '残高' (balance). You account for the *costs* associated with using a CY, or the *inventory* stored in a CY, but not the CY itself as an accounting entry.",
+      "suggested_ja": "月末の帳簿照合において、コンテナヤード関連費用の計上内容や未払残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch nào trong nội dung hạch toán hoặc số dư chưa thanh toán của các chi phí liên quan đến bãi bốc dỡ và lưu giữ container tại cảng (CY) không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the accounting entries or outstanding balances for container yard-related expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'コンテナヤードを適正に処理する' implies the CY itself is an accounting transaction or asset that needs 'processing' in closing entries. It's the *costs* or *assets/inventory* related to the CY that are processed.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてコンテナヤード関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến bãi bốc dỡ và lưu giữ container tại cảng (CY) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed container yard-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same semantic mismatch as the examples. 'コンテナヤードの計上内容' is not a natural accounting concept. Speaker B's response, while grammatically correct, is based on a flawed premise from Speaker A.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、コンテナヤード関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán các chi phí liên quan đến bãi bốc dỡ và lưu giữ container tại cảng (CY) không?",
+        "en": "In this month's financial closing, are there any discrepancies in the accounting entries for container yard-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, và đã xác nhận rằng tất cả đều khớp đúng cách.",
+        "en": "Yes, I have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ebdcd2a364b2fcac5ed0471a84431fcec00d933d8de66f1b8473002573f14210",
+    "validated_at": "2026-10-01T01:56:40.999393+00:00"
+  }
+}

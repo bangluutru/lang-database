@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000074",
+  "term": "免責条項",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 1 exhibits a legal semantic mismatch ('免責条項に違反する'), and both example translations suffer from mechanical definition artifacting (slash preservation and Vietnamese duplicated words).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "免責条項を設ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and business drafting collocation for establishing an exemption clause.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "免責条項に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An exemption clause (免責条項) sets out conditions limiting or excluding liability rather than imposing an enforceable obligation that can be breached (違反する). Parties invoke, fall under, or apply an exemption clause.",
+      "suggested_text": "免責条項に該当する"
+    },
+    {
+      "index": 2,
+      "text": "免責条項を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and frequently used phrasing in contract dispute analysis.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "免責条項を精査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard contract review expression used by legal teams and executives.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is sound, but Vietnamese contains a duplicate word ('điều khoản điều khoản') and English mechanically copies the slash from the headword definition ('clause / limitation').",
+      "suggested_ja": "予期せぬ紛争を未然に防止するため、契約書内に明確な免責条項を設けました。",
+      "suggested_vi": "Để phòng ngừa tranh chấp bất ngờ phát sinh, chúng tôi đã đưa vào hợp đồng điều khoản miễn trừ trách nhiệm rõ ràng.",
+      "suggested_en": "To prevent unexpected disputes beforehand, we established an explicit exemption clause in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is natural, but English mechanically duplicates the slash from the term gloss ('exemption clause / limitation of liability').",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された免責条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ của điều khoản miễn trừ trách nhiệm do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the limitation of liability clause proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Conversational flow between corporate counsel/business personnel is authentic, concise, and logically connected.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Vietnamese has a duplicated word ('điều khoản điều khoản') in Example 0. English has raw slash-separated definition dumps ('exemption clause / limitation of liability') in both examples."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f0d57a92aefca3e70f1b2fa70953cccc722c18b87f51cbe9362b1f780caafce6",
+    "validated_at": "2026-10-01T01:42:10.836307+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000126",
+  "term": "D/A",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across collocations, examples, and dialogue is a fundamental misunderstanding of D/A as an accounting entry or balance rather than a payment method for underlying transactions. This leads to unnatural and semantically incorrect Japanese usage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "D/Aを開設する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "D/A is a payment method, not an account or facility that can be 'opened'.",
+      "suggested_text": "D/A取引を開始する"
+    },
+    {
+      "index": 1,
+      "text": "D/Aを決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for settling a D/A transaction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "D/Aを提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While documents are presented, D/A itself is not 'presented' in this context. The bank presents the documents under D/A terms.",
+      "suggested_text": "D/A条件で書類を提示する"
+    },
+    {
+      "index": 3,
+      "text": "D/Aの不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for resolving discrepancies related to D/A documents.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "D/A is a payment term, not an accounting entry or balance that is '計上' (booked/recorded) or has a '残高' (balance) in the same way as an asset or liability account. While the underlying transaction is recorded, D/A itself is not.",
+      "suggested_ja": "月末の帳簿照合において、D/A取引に関連する売掛金や買掛金の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch nào trong nội dung hạch toán hoặc số dư của các khoản phải thu hoặc phải trả liên quan đến giao dịch D/A không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of accounts receivable or payable related to D/A transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, D/A itself is not 'processed' (処理する) as an accounting item in closing entries. The underlying transactions (e.g., sales, purchases) conducted under D/A terms are processed.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてD/A条件で行われた取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch được thực hiện theo điều kiện D/A trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions conducted under D/A terms in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question about 'D/Aの計上内容に差異' (discrepancies in D/A entries) is based on a misunderstanding of D/A as an accounting entry itself, similar to the example sentences. Speaker B's response is generic and doesn't directly address the D/A aspect in a natural way for this context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、D/A取引に関連する売掛金や買掛金の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán các khoản phải thu hoặc phải trả liên quan đến giao dịch D/A không?",
+        "en": "In this month's monthly closing, have there been any discrepancies in the entries for accounts receivable or payable related to D/A transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、D/A取引に関する証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các chứng từ và sổ cái phụ liên quan đến giao dịch D/A và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers for D/A transactions and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "83450cdb6b9418814d8cf69cb8edaf158df098e3f6cdefbddeca647b617e94dc",
+    "validated_at": "2026-10-01T01:56:05.273175+00:00"
+  }
+}

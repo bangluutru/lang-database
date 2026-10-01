@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000109",
+  "term": "譲渡可能信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the unnatural and semantically incorrect application of accounting terms like '計上' and '処理' directly to '譲渡可能信用状'. An L/C is a financial instrument and a bank's commitment, not an accounting entry or balance in the same way as an asset or liability. The Japanese phrasing needs to reflect that it's the *transactions facilitated by* or *records pertaining to* the L/C that are accounted for.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "譲渡可能信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for establishing an L/C."
+    },
+    {
+      "index": 1,
+      "text": "譲渡可能信用状を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for settling an L/C."
+    },
+    {
+      "index": 2,
+      "text": "譲渡可能信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for presenting documents under an L/C."
+    },
+    {
+      "index": 3,
+      "text": "譲渡可能信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for resolving discrepancies in L/C documents."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A transferable L/C is a financial instrument, not an accounting entry that is '計上' (booked) or has a '残高' (balance) in the same way as an asset or liability account. While its value might be recorded, the phrasing '計上内容や残高に差異がないか精査します' is unnatural for an L/C itself. It's more about the underlying transaction or the bank's record of the L/C.",
+      "suggested_ja": "月末の帳簿照合において、譲渡可能信用状に関連する取引の記録内容や、銀行からの通知との間に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào giữa nội dung ghi nhận các giao dịch liên quan đến thư tín dụng có thể chuyển nhượng và thông báo từ ngân hàng hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies between the recorded details of transactions related to the transferable letter of credit and the bank's notifications."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '譲渡可能信用状を適正に処理いたしました' is awkward. An L/C is a commitment, not something that is 'processed' as an accounting entry in the same way as a transaction. One would process the *transaction* facilitated by the L/C, or the *documents* under the L/C, but not the L/C itself as an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において譲渡可能信用状を用いた取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch sử dụng thư tín dụng có thể chuyển nhượng trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions utilizing transferable letter of credit in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question about '譲渡可能信用状の計上内容に差異' suffers from the same semantic issue as the example sentences. An L/C itself isn't 'booked' in a way that would have '計上内容' (booked content) in the general ledger. Speaker B's response is also somewhat generic and doesn't directly address the specific nature of an L/C.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、譲渡可能信用状に関連する取引の記録内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có sự khác biệt nào trong nội dung ghi nhận các giao dịch liên quan đến thư tín dụng có thể chuyển nhượng không?",
+        "en": "In this month's monthly closing, have any discrepancies arisen in the recorded details of transactions related to the transferable letter of credit?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑書類と銀行からの通知を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu các chứng từ liên quan và thông báo từ ngân hàng, chúng tôi đã xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, after reconciling the relevant documentary evidence with the bank's notifications, we have confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ba9328eb6b477f5708640df7035c8bcbe9a60849bfa69dd73c0ac39e6a278632",
+    "validated_at": "2026-10-01T01:55:41.325909+00:00"
+  }
+}

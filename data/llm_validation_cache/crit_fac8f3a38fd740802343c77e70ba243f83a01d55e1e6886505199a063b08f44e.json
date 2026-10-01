@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000192",
+  "term": "定例会議",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations and example sentences are unnatural or grammatically awkward. The dialogue lacks natural conversational flow. Translations need refinement for conciseness and accuracy.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定例会議を徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「徹底する」は「定例会議」という行為そのものには直接適用しにくい。会議の内容や目的を徹底する、なら自然。",
+      "suggested_text": "定例会議を定着させる"
+    },
+    {
+      "index": 1,
+      "text": "定例会議を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定例会議を習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "定例会議の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「事前の定例会議を徹底しています」が不自然。「徹底する」の対象が不明確。会議そのものを徹底する、というよりは、会議の実施や内容を徹底する、という文脈で使う。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との定例会議を確実に実施しています。",
+      "suggested_vi": "Nhằm thúc đẩy dự án diễn ra trôi chảy, chúng tôi đảm bảo thực hiện các cuộc họp định kỳ với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we ensure the regular meetings with relevant departments are conducted."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「迅速な定例会議の習慣付け」が不自然。「迅速な」は会議の実施速度を指すのか、会議での意思決定速度を指すのか曖昧。また、「習慣付けが求められます」はやや硬い。",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、職場全体で定例会議を迅速に実施する習慣を身につけることが求められます。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh trong công việc, toàn bộ nơi làm việc cần hình thành thói quen tổ chức các cuộc họp định kỳ một cách nhanh chóng.",
+      "suggested_en": "To prevent operational issues beforehand, it is required for the entire workplace to establish a habit of promptly conducting regular meetings."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問が「徹底状況について課題は生じていませんか」であるのに対し、Bの回答が「情報共有の重要性を再認識し、迅速な対応が習慣化されてきています」と、課題の有無に直接答えていない。課題がないことを示唆する内容ではあるが、会話の繋がりが自然ではない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内における定例会議の実施状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình thực hiện các cuộc họp định kỳ trong phòng ban, có vấn đề nào phát sinh không?",
+        "en": "Regarding the status of regular meetings within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、おかげさまで大きな課題はありません。全メンバーで情報共有の重要性を再認識し、迅速な対応が習慣化されてきています。",
+        "vi": "Vâng, may mắn là không có vấn đề lớn nào. Tất cả các thành viên đã nhận thức lại tầm quan trọng của việc chia sẻ thông tin, và việc phản ứng nhanh chóng đang dần trở thành thói quen.",
+        "en": "No, fortunately, there are no major issues. All members have re-recognized the importance of information sharing, and prompt responses are becoming habitual."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Vietnamese translation for 'meaning_vi' is too long and includes examples ('hàng tuần hoặc hàng tháng') which should be part of the explanation, not the core meaning. English translation for 'meaning_en' is good. Example translations need to be updated to reflect suggested Japanese changes and improve naturalness."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "59deae1a9e72e41b95076efbc3896d78e51b9f46dec762441b96cee09f967f28",
+    "validated_at": "2026-10-01T01:53:34.059577+00:00"
+  }
+}

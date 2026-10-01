@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000025",
+  "term": "仕向地",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental semantic incompatibility between '仕向地' (destination) and accounting terms like '計上' (booking/recording) and '残高' (balance). A destination is a physical location for goods, not an accounting entry or balance. This makes the example sentences and dialogue unnatural and factually incorrect in an accounting context. The collocations themselves are fine, but the application in the examples and dialogue is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仕向地を指定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in trade/logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仕向地を変更する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in trade/logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仕向地を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in trade/logistics.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "仕向地に到着する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in trade/logistics.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "仕向地 (destination) is a location, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an accounting entry) or have a '残高' (balance). This is a fundamental semantic mismatch in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、仕向地に関する書類（船荷証券など）の内容と実際の出荷記録に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào giữa nội dung các chứng từ liên quan đến nơi đến chỉ định (như vận đơn) và hồ sơ xuất hàng thực tế hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies between the contents of documents related to the destination (e.g., bill of lading) and actual shipping records."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '仕向地を適正に処理する' in an accounting context is unnatural. '仕向地' itself is not something that is 'processed' as an accounting item. One might process documents related to it, or transactions involving it, but not the destination itself.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において仕向地に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến nơi đến chỉ định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the destination in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '仕向地の計上内容に差異は発生していませんか' suffers from the same semantic mismatch as the example sentences. '仕向地' cannot have '計上内容' (booked content/entries). This makes the entire dialogue unnatural in an accounting context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、仕向地に関する出荷データと請求書の内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào giữa dữ liệu vận chuyển liên quan đến nơi đến chỉ định và nội dung hóa đơn không?",
+        "en": "In this month's monthly closing, are there any discrepancies between the shipping data related to the destination and the invoice details?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a0e2d4d1707f9e450bca3f1ec1fa2eea38b627b696772ffb253f6362604c4158",
+    "validated_at": "2026-10-01T01:54:07.886870+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000085",
+  "term": "自動更新条項",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 1 exhibits semantic mismatch ('自動更新条項に違反する'), Example 0 contains typographical/grammatical errors in VI and EN translations, and Dialogue Turn B suffers from topical disconnect.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自動更新条項を設ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal drafting expression for stipulating an automatic renewal clause in a contract.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "自動更新条項に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An automatic renewal clause governs the procedural extension/termination mechanism of a contract; parties do not 'violate' (違反する) it, unlike a confidentiality or non-compete clause.",
+      "suggested_text": "自動更新条項を削除する"
+    },
+    {
+      "index": 2,
+      "text": "自動更新条項を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when applying contract terms for term extension.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "自動更新条項を精査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing during legal review and risk assessment of contract terms.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Vietnamese translation contains a duplicate word error ('điều khoản điều khoản') and English misses an article ('an explicit automatic renewal clause'). Japanese phrasing is acceptable but could be more realistic regarding renewal notice periods.",
+      "suggested_ja": "意図しない契約継続を防ぐため、契約書内に中途解約の予告期間を定めた明確な自動更新条項を設けました。",
+      "suggested_vi": "Để tránh việc hợp đồng vô tình bị tiếp tục gia hạn, chúng tôi đã đưa vào hợp đồng điều khoản tự động gia hạn rõ ràng kèm theo thời hạn báo trước chấm dứt.",
+      "suggested_en": "To prevent unintended contract continuations, we established an explicit automatic renewal clause stipulating a prior notice period for cancellation."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic contract negotiation sentence commonly seen in corporate legal correspondence.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A specifically asks about the automatic renewal clause, but Speaker B abruptly brings in '損害賠償条項' (damages clause) without contextual continuity.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた自動更新条項の修正案ですが、確認は済みましたか。",
+        "vi": "Về bản sửa đổi điều khoản tự động gia hạn do phòng pháp chế của đối tác gửi lại, anh đã kiểm tra xong chưa?",
+        "en": "Have you finished checking the revised draft of the automatic renewal clause returned by the counterparty's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、更新拒絶の通知期限を含めてリスクがないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xác nhận không có rủi ro nào, bao gồm cả thời hạn thông báo từ chối gia hạn, nên chúng ta có thể tiến hành thủ tục ký kết.",
+        "en": "Yes, I confirmed there are no risks involved, including the notice deadline for non-renewal, so we can proceed with the signing process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Example 0 in Vietnamese contains duplicated words ('điều khoản điều khoản') and English lacks the indefinite article."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "34e4b4a1c664b3a0a12fe3a1aa969f66ee2d1b4ef3c3edd2553dc09001caebaa",
+    "validated_at": "2026-10-01T01:42:21.075375+00:00"
+  }
+}

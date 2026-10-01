@@ -1,0 +1,72 @@
+{
+  "entry_id": "jp-pro-tax-000077",
+  "term": "賃上げ促進税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences exhibit artificial templating, tautology ('税制の制度'), and domain inaccuracies treating tax credits like subsidy applications, alongside a translation typo in Vietnamese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "賃上げ促進税制を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in business news and government guidance, though 活用する or 適用を受ける is more standard in formal corporate tax contexts."
+    },
+    {
+      "index": 1,
+      "text": "賃上げ促進税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard corporate tax terminology."
+    },
+    {
+      "index": 2,
+      "text": "賃上げ促進税制を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression in corporate management and tax planning."
+    },
+    {
+      "index": 3,
+      "text": "賃上げ促進税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to entity or expenditure eligibility."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains tautological phrasing ('〜税制の制度') and an unnatural causal premise (tax credits require raising eligible wages, not merely doing '社内周知'). Furthermore, the Vietnamese translation contains a duplicate word error ('chính sách chính sách').",
+      "suggested_ja": "全社的なベースアップを実施して要件を満たしたため、当期の確定申告において賃上げ促進税制を活用しました。",
+      "suggested_vi": "Do đã thực hiện tăng lương cơ bản trên toàn công ty và đáp ứng đủ điều kiện, chúng tôi đã áp dụng chính sách ưu đãi thuế khuyến khích tăng lương trong kỳ quyết toán thuế này.",
+      "suggested_en": "Having satisfied the requirements by implementing a company-wide base salary increase, we utilized the tax incentive for salary increases in our current tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'手続きを進めました' inappropriately conflates a tax credit deduction (which is claimed on corporate tax return schedules) with an administrative grant/subsidy application process.",
+      "suggested_ja": "今期の税額控除額を事前に試算した上で、賃上げ促進税制の適用に必要な別表や根拠資料の準備を進めました。",
+      "suggested_vi": "Sau khi tính toán trước số tiền khấu trừ thuế cho kỳ này, chúng tôi đã chuẩn bị các phụ lục và tài liệu căn cứ cần thiết để áp dụng chính sách ưu đãi thuế khuyến khích tăng lương.",
+      "suggested_en": "After estimating the tax credit amount for the current period in advance, we prepared the necessary tax schedules and supporting documents to apply the tax incentive for salary increases."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between Speaker A and B is authentic, logically coherent, and accurately reflects corporate tax closing operations (verifying calculation basis and documentation with the tax accountant)."
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example 0 contains an explicit word duplication ('chính sách chính sách') and unnatural phrasing for tax procedures in example 1."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "54421b73efe37dbb489887891d57a436fba2e28fe32af1ddc345e7164747d865",
+    "validated_at": "2026-10-01T01:38:51.335642+00:00"
+  }
+}

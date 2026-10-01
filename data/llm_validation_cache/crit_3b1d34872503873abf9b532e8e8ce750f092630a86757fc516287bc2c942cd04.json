@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000140",
+  "term": "リード獲得",
+  "overall_decision": "reject",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'リード獲得' (lead generation) as an accounting item. The examples and dialogue attempt to force a marketing concept into an accounting framework, leading to unnatural and factually incorrect Japanese expressions. This would be highly misleading for a professional learning Japanese in a corporate accounting/tax environment.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "リード獲得を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "リード獲得を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "リード獲得の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "リード獲得を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "リード獲得 (lead generation) is a marketing activity, not an accounting entry or balance that would be '計上' (booked/recorded) or have a '残高' (balance) in month-end book reconciliation. This sentence fundamentally misunderstands accounting principles.",
+      "suggested_ja": "月末の営業報告において、リード獲得の進捗状況や成果に差異がないか精査します。",
+      "suggested_vi": "Trong báo cáo kinh doanh cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong tiến độ hoặc kết quả thu hút dữ liệu khách hàng tiềm năng hay không.",
+      "suggested_en": "In the month-end sales report, we carefully examine whether there are discrepancies in the progress or results of lead generation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 'リード獲得' is a marketing process, not something that is '処理' (processed) in '決算' (closing entries) according to accounting standards. It's an expense or an activity, not an item to be accounted for directly in this manner.",
+      "suggested_ja": "適正な社内規程に則り、当期の営業活動においてリード獲得を適切に実施いたしました。",
+      "suggested_vi": "Tuân thủ các quy định nội bộ thích hợp, chúng tôi đã thực hiện thu hút dữ liệu khách hàng tiềm năng một cách phù hợp trong các hoạt động kinh doanh của kỳ này.",
+      "suggested_en": "In accordance with applicable internal rules, we properly conducted lead generation in this term's sales activities."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly applies accounting terms like '計上内容に差異' (discrepancies in recorded content) to 'リード獲得'. Lead generation is not an accounting item that would have '証憑書類' (vouchers) or '補助元帳' (subsidiary ledgers) in this context. The entire premise is flawed from an accounting perspective.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の営業会議で、リード獲得の目標達成状況に差異は発生していませんか。",
+        "vi": "Trong cuộc họp kinh doanh tháng này, có sự khác biệt nào trong tình hình đạt được mục tiêu thu hút dữ liệu khách hàng tiềm năng không?",
+        "en": "In this month's sales meeting, are there any discrepancies in the achievement status of lead generation targets?"
+      },
+      {
+        "speaker": "B",
+        "ja": "営業データと実績を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu dữ liệu bán hàng và kết quả thực tế, và đã xác nhận rằng tất cả đều khớp một cách chính xác.",
+        "en": "We have cross-referenced the sales data with actual results and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8749daad0176c08682cb449982a290fc184e9fb8848ccbe00c28c31cb51eb79a",
+    "validated_at": "2026-10-01T01:52:40.152997+00:00"
+  }
+}

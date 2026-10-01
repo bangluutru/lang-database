@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000181",
+  "term": "原産地規則",
+  "overall_decision": "rewrite",
+  "summary_reason": "「原産地規則」は会計上の「計上内容」や「残高」を持つものではなく、会計処理の対象となるのは原産地規則によって影響を受ける関税や税金などである。この基本的な理解が欠如しているため、コローケーション、例文、対話の全てにおいて不自然な表現や誤解を招く表現が散見される。特に会計・税務のドメイン知識が不足しているため、全面的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "原産地規則を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "原産地規則を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "原産地規則を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「原産地規則」は「納付」の対象ではない。納付するのは関税や税金。",
+      "suggested_text": "原産地規則に従い関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "原産地規則の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「原産地規則」自体に「分類」という概念は一般的ではない。確認するのは「品目分類」や「原産地判定基準」など。",
+      "suggested_text": "原産地規則における品目分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「原産地規則」は会計上の「計上内容」や「残高」を持つものではない。会計処理の対象となるのは、原産地規則によって影響を受ける関税や税金、またはそれに関連する費用など。",
+      "suggested_ja": "月末の帳簿照合において、原産地規則適用による関税等の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong các khoản mục hoặc số dư thuế quan, v.v. do áp dụng quy tắc xuất xứ hàng hóa hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for customs duties, etc., due to the application of rules of origin."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「原産地規則」自体を「処理する」という表現は不自然。原産地規則に基づいて関税等の会計処理を行う、という文脈が適切。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において原産地規則に基づく関税等の会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình kế toán đối với thuế quan, v.v. dựa trên quy tắc xuất xứ hàng hóa trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly performed the accounting treatment for customs duties, etc., based on rules of origin in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Example sentencesと同様に、「原産地規則の計上内容」という表現が会計上の誤解を招く。原産地規則自体が計上されるものではない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、原産地規則適用による関税等の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong các khoản mục thuế quan, v.v. do áp dụng quy tắc xuất xứ hàng hóa không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for customs duties, etc., due to the application of rules of origin?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "11621e9e75cb6102bd0e0d048cc8c9f61ca211114ab46376404e499c6e27943b",
+    "validated_at": "2026-10-01T01:57:09.360638+00:00"
+  }
+}

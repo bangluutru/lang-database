@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000158",
+  "term": "給与支払報告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "給与支払報告書は市区町村（住民税課税用）に提出する法定書類ですが、「交付する（源泉徴収票と混同）」「所轄官庁」「発行済み」など税務・労務実務上の誤用・事実不整合およびテンプレート的なぎこちなさが散見されます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "給与支払報告書を交付する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "給与支払報告書は市区町村に提出する法定書類であり、従業員等へ「交付」するものではありません（交付するのは源泉徴収票）。",
+      "suggested_text": "給与支払報告書を市区町村に提出する"
+    },
+    {
+      "index": 1,
+      "text": "給与支払報告書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "極めて自然で実務上頻出のコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "給与支払報告書を保管する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "提出書類原本は自治体へ送付するため、社内で保管・保存するのは「控え」です。また税務実務では「保存する」がより一般的です。",
+      "suggested_text": "給与支払報告書の控えを保存する"
+    },
+    {
+      "index": 3,
+      "text": "給与支払報告書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "提出前のチェック業務として自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "給与支払報告書の提出先は「所轄官庁」という漠然とした表現ではなく、従業員が居住する「各市区町村」です。実務的なリアリティに欠け機械的テンプレート感があります。",
+      "suggested_ja": "従業員の居住地を確認した上で、1月31日の提出期限までに各市区町村へ給与支払報告書を提出しなければならない。",
+      "suggested_vi": "Sau khi xác nhận nơi cư trú của nhân viên, chúng tôi phải nộp báo cáo thanh toán tiền lương cho các chính quyền cấp xã/phường/quận trước hạn chót ngày 31 tháng 1.",
+      "suggested_en": "After confirming employees' places of residence, we must submit the payroll report (salary payment report) to each municipal office by the January 31 deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "給与支払報告書は相手方に「発行」する書類ではなく、作成して提出する書類です。また社内保管対象は原本ではなく「控え」です。",
+      "suggested_ja": "各自治体へ提出した給与支払報告書の控えは、法定保存期間に従って厳重に保管・管理しています。",
+      "suggested_vi": "Bản sao lưu các báo cáo thanh toán tiền lương đã nộp cho các chính quyền địa phương được lưu trữ và quản lý cẩn thận theo thời hạn luật định.",
+      "suggested_en": "Copies of the salary payment reports submitted to each local government are strictly retained and managed in accordance with statutory retention periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "給与支払報告書の提出先を「所轄官庁」と呼ぶのは税務・人事労務実務として不自然です。「各市区町村」あるいは「各自治体」とするのが自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "各市区町村へ提出する給与支払報告書の作成と内容確認は順調に進んでいますか。",
+        "vi": "Tiến độ lập và rà soát nội dung báo cáo thanh toán tiền lương nộp cho các chính quyền địa phương vẫn diễn ra thuận lợi chứ?",
+        "en": "Is the preparation and review of the salary payment reports to be submitted to each municipality progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、従業員の住所変更や控除項目の確認を終えており、1月末の期限までに電子申告で提出可能です。",
+        "vi": "Vâng, chúng tôi đã hoàn tất kiểm tra thay đổi địa chỉ của nhân viên và các khoản khấu trừ, sẵn sàng nộp qua kê khai điện tử trước hạn chót cuối tháng 1.",
+        "en": "Yes, we have finished verifying employee address changes and deduction items, and are ready to submit via e-Tax/eLTAX by the end-of-January deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "例文1のベトナム語訳で意味定義文字列がそのまま挿入されたため「báo cáo tổng tiền lương nộp cho chính quyền địa phương cho cơ quan có thẩm quyền」と助詞・名詞が重なり不自然です。また「báo cáo thanh toán tiền lương (nộp cho địa phương)」程度に簡潔化すべきです。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ac4f9f5fe65f5a818f51d36f4411074b6002787143b5b156a7a2cd49fee39aad",
+    "validated_at": "2026-10-01T01:40:11.921593+00:00"
+  }
+}

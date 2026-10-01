@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-business-000184",
+  "term": "業務フロー",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of the term '業務フロー' (business workflow/process flow) in an accounting context. It is incorrectly treated as an accounting entry or balance, leading to unnatural collocations, factually incorrect example sentences, and a flawed dialogue. The term itself is valid, but its application in the provided content is consistently erroneous for a professional accounting/finance setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務フローを進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「業務フロー」は手順や流れを指すため、「進める」という動詞は不自然。通常は「業務を進める」や「業務フローに沿って進める」のように使う。",
+      "suggested_text": "業務フローに沿って業務を進める"
+    },
+    {
+      "index": 1,
+      "text": "業務フローを完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「業務フロー」はプロセス自体であり、完了する対象ではない。「業務フローの策定を完了する」や「業務を完了する」が自然。",
+      "suggested_text": "業務フローの策定を完了する"
+    },
+    {
+      "index": 2,
+      "text": "業務フローの手順を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「業務フロー」自体が手順や流れを意味するため、「業務フローの手順」は冗長で不自然。単に「業務フローを確認する」で十分。",
+      "suggested_text": "業務フローを確認する"
+    },
+    {
+      "index": 3,
+      "text": "業務フローを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「業務フローの計上内容や残高」という表現は会計上不適切。「業務フロー」は会計上の計上対象や残高を持つものではない。帳簿照合の対象は勘定科目や取引内容。",
+      "suggested_ja": "月末の帳簿照合において、各勘定科目の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của từng tài khoản có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for each account."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「業務フローを適正に処理いたしました」という表現は会計処理として不適切。「業務フロー」は処理する対象ではなく、業務の進め方や手順を指す。決算で処理するのは取引や勘定科目。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてすべての取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định tất cả các giao dịch trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed all transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの発言「業務フローの計上内容に差異は発生していませんか」が会計上の概念として不適切。「業務フロー」は計上内容や差異の発生対象ではない。Bの回答もAの不適切な質問に引きずられている。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、経費計上の業務フローに問題はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, quy trình luồng công việc hạch toán chi phí có vấn đề gì không?",
+        "en": "Were there any issues with the expense accounting workflow during this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、経費精算の証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ thanh toán chi phí với sổ cái phụ và xác nhận rằng tất cả đều khớp đúng cách.",
+        "en": "Yes, we have reconciled the expense reimbursement vouchers with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Original translations reflect the errors in the Japanese source. New translations are provided with the suggested Japanese rewrites."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "77b869c70b3592899f6b6834addf2fb96e3fd653400b5d9aa9cf69b0d3692bd9",
+    "validated_at": "2026-10-01T01:53:23.600726+00:00"
+  }
+}

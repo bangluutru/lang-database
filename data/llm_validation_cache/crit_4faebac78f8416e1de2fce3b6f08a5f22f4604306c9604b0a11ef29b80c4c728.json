@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000200",
+  "term": "保証金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations and example sentences, particularly those using '計上内容', felt slightly unnatural or could be improved for better authenticity in a professional Japanese accounting context. The dialogue also felt a bit stiff.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保証金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While technically possible to 'book' a deposit, it's more natural to say 'record' or 'recognize' in an accounting context. 計上する is typically used for revenue, expenses, or assets/liabilities that arise from transactions, not for the deposit itself as an action.",
+      "suggested_text": "保証金を記録する"
+    },
+    {
+      "index": 1,
+      "text": "保証金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a natural and common phrase in accounting.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保証金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a natural and common phrase in accounting.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "保証金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a natural and common phrase in accounting.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '保証金の計上内容' is slightly unnatural. It's more common to refer to the '計上額' (recorded amount) or '計上状況' (recording status) rather than '計上内容' when checking for discrepancies. Also, '精査します' is a bit stiff for a general statement; '確認します' or '検証します' might be more common.",
+      "suggested_ja": "月末の帳簿照合において、保証金の計上額や残高に差異がないか確認します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem số tiền đã hạch toán hoặc số dư của tiền ký quỹ bảo lãnh hợp đồng có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we confirm whether there are any discrepancies in the recorded amount or balance of the guarantee deposit."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This sentence is natural and appropriate for a business context, especially in an accounting report.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's '保証金の計上内容に差異は発生していませんか' is a bit formal and slightly unnatural for a direct question in a dialogue. '計上内容' is still a bit off. Speaker B's response is okay but could be more concise. The term '整合している' is fine, but '一致している' or '相違ない' might be more common in this context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、保証金の計上額に何か差異はありましたか？",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào về số tiền ký quỹ bảo lãnh đã hạch toán không?",
+        "en": "In this month's monthly closing, were there any discrepancies in the recorded amount of the guarantee deposit?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて一致していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledger, we confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d457ee355289394114434b81f007f3edb17180be2a542bf9c7e550214d2e7840",
+    "validated_at": "2026-10-01T01:53:41.695805+00:00"
+  }
+}

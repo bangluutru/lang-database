@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000167",
+  "term": "実地調査",
+  "overall_decision": "rewrite",
+  "summary_reason": "Catastrophic templating error: The candidate object treats '実地調査' (a field tax audit procedure) as a ledger entry having financial balances, accounting recognition, and reconciliation differences across both example sentences and the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "実地調査を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used when conducting field audits, though mainly from the auditor's perspective.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "実地調査を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression indicating the completion of an on-site audit.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "実地調査の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocation used when reviewing audit preparation or protocols.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "実地調査を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not typically '見直す' a tax audit itself; in a corporate tax context, companies undergo or respond to field audits.",
+      "suggested_text": "実地調査に対応する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '実地調査' (on-site audit/investigation) is an audit procedure, not a financial account or balance that can have '計上内容' or '残高'.",
+      "suggested_ja": "税務署による実地調査に備えて、過去3期分の帳簿書類および証憑を事前に整理しておきます。",
+      "suggested_vi": "Để chuẩn bị cho đợt thanh tra thực tế của cơ quan thuế, chúng tôi sẽ sắp xếp trước sổ sách kế toán và chứng từ của 3 kỳ gần nhất.",
+      "suggested_en": "In preparation for the on-site tax audit by the tax office, we will organize the accounting books and supporting documents for the past three fiscal years in advance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination: An on-site tax investigation cannot be '適正に処理いたしました' in accounting closing entries.",
+      "suggested_ja": "実地調査の当日は、調査官からの質問に対して経理担当者が事実関係を正確に説明しました。",
+      "suggested_vi": "Vào ngày thanh tra thực tế, nhân viên kế toán đã giải trình chính xác các tình tiết thực tế theo câu hỏi của thanh tra viên.",
+      "suggested_en": "On the day of the on-site audit, the accounting staff accurately explained the facts in response to questions from the tax auditor."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A treats '実地調査' as a ledger account item subject to month-end booking discrepancies ('計上内容に差異'), which is nonsensical.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週、所轄の税務署による実地調査が予定されていますが、帳簿類の準備は進んでいますか。",
+        "vi": "Tuần tới dự kiến sẽ có cuộc thanh tra thực địa của chi cục thuế quản lý, việc chuẩn bị sổ sách giấy tờ đã tiến hành đến đâu rồi?",
+        "en": "An on-site tax audit by the competent tax office is scheduled for next week; is the preparation of accounting books on track?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、直近3期分の総勘定元帳と主要な契約書を一通り揃え、応接室に用意いたしました。",
+        "vi": "Vâng, tôi đã tập hợp toàn bộ sổ cái và các hợp đồng trọng yếu của 3 kỳ gần nhất và chuẩn bị sẵn ở phòng tiếp khách rồi.",
+        "en": "Yes, we have compiled the general ledgers and major contracts for the past three fiscal years and arranged them in the meeting room."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "45eda94107dd9d18bbe80041dad807eccd23701955e6ac5019a320c95fe34e22",
+    "validated_at": "2026-10-01T01:40:22.451141+00:00"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-tax-000064",
+  "term": "寄附金控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションおよび例文は高品質ですが、対話文において法人税申告（決算申告）と所得税（寄附金控除）の混同、および税務申告添付書類の不正確さ（税理士確認書）という専門分野上の事実誤認が認められるため、対話文の差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "寄附金控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務および税務申告書作成において標準的で極めて自然な表現。"
+    },
+    {
+      "index": 1,
+      "text": "寄附金控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "国税庁の案内等でも頻出する極めて自然なコロケーション。"
+    },
+    {
+      "index": 2,
+      "text": "寄附金控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ふるさと納税や各種寄附金の控除限度額算定業務において自然な表現。"
+    },
+    {
+      "index": 3,
+      "text": "寄附金控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "特定寄附金の適格要件や支出先の適格性確認において適切。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "所得税の確定申告における実務手続きの文脈として正確かつ自然。"
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "「適用を受ける」「関係書類を添付する」など税務実務の定型句に合致している。"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「寄附金控除」は所得税法上の所得控除項目（または税額控除）であり、法人税の「決算申告」ではなく「確定申告」で使用される用語です（法人の場合は「寄附金の損金算入」）。また、申告書への添付書類は「税理士の確認書」ではなく「寄附金受領証明書」や「領収書」が実務上正確です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における寄附金控除の計算根拠と受領証明書は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán khoản giảm trừ tiền quyên góp và giấy chứng nhận tiếp nhận quyên góp cho kỳ quyết toán thuế này chưa?",
+        "en": "Have you organized the calculation basis and donation receipts for the deduction for donations in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、特定公益増進法人からの受領証明書を揃え、控除上限額の試算も完了しております。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ giấy chứng nhận tiếp nhận từ các tổ chức thúc đẩy lợi ích công cộng đặc biệt và hoàn tất việc ước tính mức trần giảm trừ.",
+        "en": "Yes, I have gathered the receipts from the designated public interest corporations and completed the trial calculation of the deduction limit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term and example translations are accurate and native professional equivalents."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dbfcf033a81d0cc8decb34a788cdaa5fb887b4625fd4e4668494d5a78592bd70",
+    "validated_at": "2026-10-01T01:38:31.122021+00:00"
+  }
+}

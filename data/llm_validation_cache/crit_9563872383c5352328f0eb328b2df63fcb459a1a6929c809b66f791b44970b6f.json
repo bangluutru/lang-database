@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000144",
+  "term": "航空会社",
+  "overall_decision": "rewrite",
+  "summary_reason": "「航空会社」という組織名を、会議や議案の対象、あるいは会議体そのものと誤解している箇所が多数見受けられる。Collocations、Examples、Dialogueの全てにおいて、この基本的な誤用が原因で不自然な表現となっている。翻訳も元の日本語の不自然さを反映しているため、全体的に大幅な修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "航空会社を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「開催する」は会議やイベントに対して使う動詞であり、「航空会社」という組織に対しては使えない。",
+      "suggested_text": "航空会社を設立する"
+    },
+    {
+      "index": 1,
+      "text": "航空会社で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「決議する」は議案や方針に対して使う動詞であり、「航空会社」という組織が何かを決議する主体となることはあっても、組織自体を決議する対象とはならない。",
+      "suggested_text": "航空会社で承認を得る"
+    },
+    {
+      "index": 2,
+      "text": "航空会社に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。航空会社に対して何かを報告する状況はあり得る。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "航空会社へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。航空会社に届出書を提出する状況はあり得る。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「臨時航空会社を招集する」は不自然。「航空会社」は組織であり、会議のように招集する対象ではない。会議を招集する主体は会社や組織である。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時株主総会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp cổ đông bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary shareholders' meeting will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「航空会社において可決されました」は不自然。「航空会社」は組織であり、その組織の内部で議案が可決されることはあっても、組織自体が可決されるわけではない。会議体や機関が可決の主体となる。",
+      "suggested_ja": "航空会社の取締役会において、今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại cuộc họp hội đồng quản trị của hãng hàng không, phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At the airline's board of directors meeting, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「航空会社の準備状況」が不自然。「航空会社」は組織であり、会議の準備状況を問う対象ではない。会議自体の準備状況を問うべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp dự kiến vào tuần tới, tình hình chuẩn bị tài liệu như thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, how is the preparation of the materials progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have finished the final draft of the content and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Meaning_vi: 「hãng hàng không chuyên chở hàng hóa」は「航空会社」の一般的な意味合いと異なる。航空会社は旅客も貨物も運ぶ。Meaning_en: 「Airline / Air cargo carrier」も同様に限定的すぎる。単に「Airline」で十分。Example sentencesの翻訳も、元の日本語が不自然なため、その不自然さを引き継いでいる。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "46ba9563d634528fa7e89b5c2fac0b96d65e2c09e6acc40d7038547c7357af12",
+    "validated_at": "2026-10-01T01:56:28.771145+00:00"
+  }
+}

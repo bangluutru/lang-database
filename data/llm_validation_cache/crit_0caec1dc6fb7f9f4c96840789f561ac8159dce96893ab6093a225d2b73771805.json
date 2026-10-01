@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000020",
+  "term": "割戻し",
+  "overall_decision": "rewrite",
+  "summary_reason": "AI特有の汎用空疎テンプレート（「〜の計上内容や残高に差異がないか精査」「適正な〜適正に処理」「適正に整合している」）が随所に見られ、ベトナム語訳にも括弧書きの直訳的フレーズが混入しているため、会計実務（変動対価・特約店リベート精算等）に根差した自然な文面への全面リライトが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "割戻しを計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "売上割戻し・仕入割戻しの引当や費用・減額計上として会計実務で極めて頻繁に使われる自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "割戻しの残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「割戻し」自体は取引事象または減額項目であり、勘定科目残高を指す場合は「割戻引当金」や「未払割戻金（割戻金）」とするのが正確。「割戻しの残高」は機械的テンプレート臭が強い。",
+      "suggested_text": "割戻額を算定する"
+    },
+    {
+      "index": 2,
+      "text": "割戻しを照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「割戻し」単体を直接照合するのではなく、契約条件や出荷実績と照合して金額を計算・突合するため、コロケーションとして不自然。",
+      "suggested_text": "割戻条件を照合する"
+    },
+    {
+      "index": 3,
+      "text": "割戻しを精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "四半期や年度末に販売実績等に応じて割戻金を精算する文脈で自然に用いられる。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「〜の計上内容や残高に差異がないか精査します」という生成AI特有の汎用テンプレート構文。実務では契約上の販売実績集計と料率に基づく算定プロセスを描くのが自然。",
+      "suggested_ja": "取引先ごとの販売実績を集計し、契約料率に基づいて今四半期の売上割戻しを計上した。",
+      "suggested_vi": "Chúng tôi đã tổng hợp doanh số bán hàng theo từng đối tác và trích trước khoản chiết khấu thương mại (rebate) của quý này dựa trên tỷ lệ theo hợp đồng.",
+      "suggested_en": "We aggregated sales performance by client and recorded the sales rebate for this quarter based on the contracted rates."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準...適正に処理いたしました」と「適正」が重複しており文体が極めて不自然かつ無内容な定型文。現行の収益認識会計基準（変動対価）に即した実践的な例文にすべき。",
+      "suggested_ja": "新収益認識会計基準に則り、取引価格から売上割戻しを変動対価として減額処理いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán ghi nhận doanh thu mới, chúng tôi đã xử lý giảm trừ khoản chiết khấu thương mại (rebate) từ giá giao dịch như một khoản biến động.",
+      "suggested_en": "In accordance with the new revenue recognition standard, we deducted sales rebates from the transaction price as variable consideration."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Bの「適正に整合している」は日本語として不自然な重複語法（整合する＝既に合致している）。また定型文同士の機械的なやり取りに見えるため、割戻金の確定実務に即した対話に刷新すべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の販売目標を達成した特約店向けの売上割戻しは、すでに計算済みですか。",
+        "vi": "Anh đã tính xong khoản chiết khấu thương mại cho các đại lý đặc quyền đạt chỉ tiêu doanh số kỳ này chưa?",
+        "en": "Have you already calculated the sales rebates for the authorized distributors that met their sales targets this term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、出荷実績データと契約料率を照合し、確定した割戻金の精算書を作成いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu dữ liệu xuất kho thực tế với tỷ lệ theo hợp đồng và lập bảng quyết toán tiền chiết khấu đã chốt.",
+        "en": "Yes, I verified the shipment performance data against the contracted rates and prepared the settlement statement for the finalized rebate amounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語訳で「khoản chiết khấu thương mại do mua số lượng lớn (Rebate)」という辞書定義的かつ長大な注記文字列が本文中にそのまま反復混入しており極めて不自然。英語も不可算/可算の扱い（rebate 単体ではなく sales rebates または a rebate）に不備がある。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8f3ce02996bf67497e48f2efdaf56c3e2c78f96e29e0dd0883768f447aa9658b",
+    "validated_at": "2026-10-01T01:41:23.684428+00:00"
+  }
+}

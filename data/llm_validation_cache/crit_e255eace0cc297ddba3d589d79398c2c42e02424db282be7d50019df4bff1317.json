@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000024",
+  "term": "売上債権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations contained semantic mismatches ('精算する' instead of '回収する/消し込む'), Example 2 suffered from unnatural templated tautology ('適正な会計基準...適正に処理'), and Dialogue Turn B used unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売上債権を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing/booking trade receivables.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売上債権の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace and auditing collocation for verifying trade receivable balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "売上債権を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While not entirely unintelligible, '債権を照合する' is imprecise. In practical accounting, one reconciles balances ('残高を照合する') or performs cash application ('消込を行う') or collection ('売上債権を回収する').",
+      "suggested_text": "売上債権を回収する"
+    },
+    {
+      "index": 3,
+      "text": "売上債権を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reports (旅費精算) or temporary advances (仮払金), not to trade receivables. Receivables are collected (回収する), cleared/reconciled (消し込む), or liquidated (流動化する).",
+      "suggested_text": "売上債権を消し込む"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard month-end closing check sentence in accounting.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is non-standard Japanese (accounting standards are '会計基準' or '公正妥当な企業会計の基準', not '適正な会計基準'). Furthermore, repeating '適正な...適正に' is stylistically poor and represents templated generation.",
+      "suggested_ja": "企業会計基準に基づき、回収懸念のある売上債権に対して適切に貸倒引当金を計上いたしました。",
+      "suggested_vi": "Căn cứ theo chuẩn mực kế toán doanh nghiệp, chúng tôi đã trích lập dự phòng nợ phải thu khó đòi một cách phù hợp đối với các khoản nợ phải thu thương mại có nguy cơ khó đòi.",
+      "suggested_en": "Based on business accounting standards, we have properly recorded an allowance for doubtful accounts against trade receivables with collection concerns."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is awkward and redundant business Japanese. In an accounting context, speakers say '突合・照合して差異がないことを確認した' or '数字が一致している'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売上債権の残高に異常値や未照合の差異は出ていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư nợ phải thu thương mại có xuất hiện giá trị bất thường hay chênh lệch chưa đối chiếu nào không?",
+        "en": "Are there any abnormal figures or unreconciled discrepancies in the trade receivables balance for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "売掛金元帳と入金明細を突き合わせ済みで、重大な差異がないことを確認しております。",
+        "vi": "Chúng tôi đã đối chiếu sổ cái chi tiết phải thu khách hàng với sao kê tiền gửi và xác nhận không có chênh lệch trọng yếu nào.",
+        "en": "We have cross-checked the accounts receivable subledger against deposit records and confirmed there are no material discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The candidate's initial translations accurately reflected the input terms, but the rewritten Japanese requires updated translations as provided above."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "752eb6783857bb4492658320c78b72431118773933ec28326a252b0cc0a3dc63",
+    "validated_at": "2026-10-01T01:33:29.941638+00:00"
+  }
+}

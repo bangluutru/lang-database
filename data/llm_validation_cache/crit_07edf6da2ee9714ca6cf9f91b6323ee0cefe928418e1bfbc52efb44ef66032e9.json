@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000067",
+  "term": "合意書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a domain factual error by confusing corporate meeting convocation notices with agreements, collocation 2 uses an unnatural verb predicate ('発送する'), and the dialogue uses unnatural phrasing ('発送の手配') for legal agreements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "合意書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly natural verb collocation for drafting an agreement.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "合意書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable when submitting agreements to courts, regulatory authorities, or parent entities.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "合意書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Agreements are typically signed/exchanged (締結する, 取り交わす) or sent (送付する). '発送' is typically reserved for merchandise, bulk corporate notices (e.g., 招集通知), or parcels.",
+      "suggested_text": "合意書を取り交わす"
+    },
+    {
+      "index": 3,
+      "text": "合意書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in business correspondence confirming receipt of signed agreement copies.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Statutory dispatch deadlines prior to shareholders or board meetings apply to convocation notices (招集通知), not bilateral written agreements (合意書). This sentence confounds corporate governance notice procedures with contract execution.",
+      "suggested_ja": "両社間の業務提携に向けた基本合意書を締結するため、法務部による最終リーガルチェックを行っています。",
+      "suggested_vi": "Để ký kết biên bản ghi nhớ/thỏa thuận hợp tác kinh doanh giữa hai công ty, chúng tôi đang tiến hành rà soát pháp lý lần cuối tại bộ phận pháp chế.",
+      "suggested_en": "We are conducting a final legal review in the legal department to conclude the memorandum of agreement for the business alliance between both companies."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Presents a genuine corporate compliance and internal control context regarding document retention.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Using '発送の手配を行います' for a bilateral agreement ahead of a meeting is awkward; in transactional practice, counterparties either exchange drafts (ドラフトを送付する) or prepare for signing/stamping (締結/押印の手配).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の提携交渉に向けて、合意書案の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị dự thảo văn bản thỏa thuận cho buổi đàm phán hợp tác tuần tới thế nào rồi?",
+        "en": "How is the preparation of the draft agreement coming along for next week's partnership negotiations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務部の推敲を終え、役員の事前承認も得られましたので、本日中に先方へドラフトを送付いたします。",
+        "vi": "Sau khi bộ phận pháp chế hoàn tất việc chỉnh sửa và nhận được phê duyệt trước từ ban giám đốc, tôi sẽ gửi bản thảo cho đối tác ngay trong ngày hôm nay.",
+        "en": "The legal department has finished revising it and we received executive pre-approval, so I will send the draft to the counterparty today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations in Example 1 and 2 lazily pasted the raw slash term 'văn bản thỏa thuận / thỏa thuận ghi nhớ' directly into sentences instead of selecting contextually appropriate wording."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8056b0066528c7458aae309912caceb5b5efd9a5400c36021f49d606d72bb536",
+    "validated_at": "2026-10-01T01:42:05.249638+00:00"
+  }
+}

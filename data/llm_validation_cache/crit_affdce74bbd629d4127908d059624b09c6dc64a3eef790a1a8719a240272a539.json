@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000040",
+  "term": "未収収益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an inaccurate accounting predicate ('未収収益を精算する'), template repetition in example 2 ('適正な...適正に'), unnatural collocation in dialogue turn B ('適正に整合している'), and raw slash notation inside Vietnamese running sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未収収益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and fundamental accounting collocation for recording accrued revenue.",
+      "suggested_text": "未収収益を計上する"
+    },
+    {
+      "index": 1,
+      "text": "未収収益の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression used in monthly closing and balance sheet verification.",
+      "suggested_text": "未収収益の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "未収収益を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in audit/reconciliation contexts, though usually used with 内訳 or 残高.",
+      "suggested_text": "未収収益を照合する"
+    },
+    {
+      "index": 3,
+      "text": "未収収益を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "未収収益 (accrued income) is an accrued asset (経過勘定), not an expense or advance payment. It is not '精算' (settled/cleared as an expense advance), but rather reversed at the beginning of the next term (洗替処理) or eliminated upon actual cash receipt (振替/消込).",
+      "suggested_text": "未収収益を振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and plausible workplace sentence for month-end account reconciliation.",
+      "suggested_ja": "月末の帳簿照合において、未収収益の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của doanh thu dồn tích có phát sinh chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for accrued income."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Tautological and formulaic templating ('適正な会計基準...適正に処理いたしました'). Real accounting communication specifies the nature of the transaction (e.g., accrued interest/rent) and uses standard phrasing rather than repeating '適正な...適正に'.",
+      "suggested_ja": "会計基準および社内規程に則り、期末時点における受取利息の未収収益を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã trích lập hợp lý doanh thu dồn tích từ lãi dự thu tại thời điểm cuối kỳ.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we have appropriately recognized accrued income for interest receivable at fiscal year-end."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合していることを確認いたしました' is mechanically generated Japanese. '整合する' describes a state of consistency and is not naturally modified by '適正に'. Natural workplace Japanese would say 'すべて一致していることを確認いたしました' or '数値に不整合がないことを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未収収益の計上漏れや残高の不整合は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh thiếu sót hạch toán hay sai lệch số dư doanh thu dồn tích nào không?",
+        "en": "Are there any omissions in entries or balance discrepancies regarding accrued income in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて数値が一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ, và xác nhận mọi số liệu đều hoàn toàn khớp nhau.",
+        "en": "I have already reconciled the source documents with the subsidiary ledger and confirmed that all figures match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations improperly embedded a slash ('doanh thu dồn tích / lãi dự thu') directly into running prose, reducing natural fluency. One term should be chosen depending on context."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "aca0879b0545b763253278420274f1c3701215524f0ecd05916a2a2f74d6a981",
+    "validated_at": "2026-10-01T01:34:20.882135+00:00"
+  }
+}

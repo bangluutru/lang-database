@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000016",
+  "term": "予定納税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain errors: The original content completely confused 予定納税 (statutory prepayment of income tax) with ふるさと納税 (hometown donation tax credit scheme), resulting in fabricated business scenarios and legally impossible statements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "予定納税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "予定納税は税法上の義務・制度的徴収手続きであり、任意に「利用する」性質のものではない。",
+      "suggested_text": "予定納税を納付する"
+    },
+    {
+      "index": 1,
+      "text": "予定納税の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "優遇措置や特例ではないため「適用を受ける」は不自然。通知を受け取る、または減額申請を行う文脈が自然。",
+      "suggested_text": "予定納税の通知を受ける"
+    },
+    {
+      "index": 2,
+      "text": "予定納税を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税負担軽減策や任意制度ではないため「活用する」は意味的・実務的に破綻している。",
+      "suggested_text": "予定納税の減額申請をする"
+    },
+    {
+      "index": 3,
+      "text": "予定納税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税法上および実務上きわめて頻出する極めて自然なコロケーション。",
+      "suggested_text": "予定納税の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「ふるさと納税」と混同されている。「節税および地域貢献」や「制度の活用」は予定納税（所得税の前払い義務）の実務定義と完全に矛盾する重大な誤謬。",
+      "suggested_ja": "前年の所得金額に基づいて税務署から予定納税の通知書が届いたため、第1期分の納付手続きを進めた。",
+      "suggested_vi": "Do nhận được thông báo nộp thuế tạm tính từ cơ quan thuế dựa trên thu nhập của năm trước, chúng tôi đã tiến hành thủ tục nộp thuế cho đợt 1.",
+      "suggested_en": "Since we received a prepayment of income tax notice from the tax office based on the previous year's income, we proceeded with the payment for the first term."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額の試算」も「ふるさと納税」の典型的な誤混同。予定納税は業績悪化等の場合に減額申請を行うのが標準的実務。",
+      "suggested_ja": "今年度は業績不振により所得が大幅に減少する見込みのため、所轄の税務署へ予定納税の減額申請書を提出した。",
+      "suggested_vi": "Do dự kiến thu nhập năm nay sẽ giảm mạnh vì tình hình kinh doanh sa sút, chúng tôi đã nộp đơn xin giảm số tiền thuế tạm tính trước lên cơ quan thuế phụ trách.",
+      "suggested_en": "As income is expected to decline significantly this fiscal year due to poor business performance, we submitted an application for reduction of estimated tax prepayment to the competent tax office."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "決算申告（法人税）で用いられるのは原則「中間納付・中間申告」であり、所得税の確定申告でも予定納税は納付済額として控除記載するのみで「計算根拠や税理士の確認書を添付書類として提出する」という実務フローは存在せず不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署から個人事業主分の予定納税の通知が届いていますが、今期の業績悪化を踏まえて減額申請を行いますか。",
+        "vi": "Cơ quan thuế đã gửi thông báo nộp thuế thu nhập tạm tính trước cho hộ kinh doanh cá thể, liệu chúng ta có nộp đơn xin giảm thuế dựa trên tình hình kinh doanh sụt giảm kỳ này không?",
+        "en": "We received the notice of estimated income tax prepayment from the tax office for the sole proprietor; will we apply for a reduction considering the downturn in this term's performance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、6月末時点の試算表をもとに税理士と協議し、期限内に減額申請の手続きを進めます。",
+        "vi": "Vâng, dựa trên bảng cân đối thử tính đến cuối tháng 6, tôi sẽ thảo luận với kế toán thuế và tiến hành thủ tục xin giảm trước thời hạn.",
+        "en": "Yes, based on the trial balance as of the end of June, I will consult with our tax accountant and proceed with the reduction application before the deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations accurately represent the prepayment of estimated income tax under Japanese tax law."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b3d651f7df6a7eab70a8d2fb89e23ece189cf283edc24a20b140a9eef41b75f2",
+    "validated_at": "2026-10-01T01:37:32.253499+00:00"
+  }
+}

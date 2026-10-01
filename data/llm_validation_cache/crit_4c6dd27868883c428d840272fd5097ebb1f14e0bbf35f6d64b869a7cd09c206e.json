@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000179",
+  "term": "地域的な包括的経済連携協定",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '地域的な包括的経済連携協定 (RCEP)' as a national-level agreement versus a corporate contract. The examples and dialogue treat RCEP as something a company directly 'concludes' or 'reviews clauses' of, which is incorrect. Companies 'utilize' or 'are affected by' such agreements. The collocations also contained unnatural predicates for international treaties.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地域的な包括的経済連携協定を締結する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "地域的な包括的経済連携協定を更新する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "国際協定は「更新する」とは言わず、「改定する」や「見直す」がより自然。",
+      "suggested_text": "地域的な包括的経済連携協定を改定する"
+    },
+    {
+      "index": 2,
+      "text": "地域的な包括的経済連携協定を解除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "国際協定は「解除する」ではなく、「脱退する」や「破棄する」が適切。",
+      "suggested_text": "地域的な包括的経済連携協定から脱退する"
+    },
+    {
+      "index": 3,
+      "text": "地域的な包括的経済連携協定の条項を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「取引先と基本合意に達したため、来週地域的な包括的経済連携協定を正式に締結いたします。」は、RCEPのような国家間の協定に対して「取引先」という言葉を使うのは不自然。また、企業がRCEPを「締結する」という表現も不適切。企業はRCEPの「恩恵を受ける」や「活用する」立場。",
+      "suggested_ja": "RCEP発効に伴い、当社のサプライチェーンにおける関税メリットを享受するため、関連部署と連携して準備を進めています。",
+      "suggested_vi": "Với việc RCEP có hiệu lực, chúng tôi đang phối hợp với các bộ phận liên quan để chuẩn bị nhằm tận dụng lợi thế về thuế quan trong chuỗi cung ứng của công ty.",
+      "suggested_en": "With the RCEP coming into effect, we are coordinating with relevant departments to prepare for leveraging tariff benefits in our company's supply chain."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "企業がRCEPの「条項に法的リスクが含まれていないか事前に精査」するという表現は不自然。RCEPは国家間の協定であり、企業がその条項を精査する立場ではない。企業はRCEPの「適用を受ける」立場であり、その「影響」や「活用方法」を検討する。",
+      "suggested_ja": "RCEPの適用を受けるにあたり、法務部門と連携し、当社の事業活動に与える影響や遵守すべき事項について詳細に検討しました。",
+      "suggested_vi": "Khi áp dụng RCEP, chúng tôi đã phối hợp với bộ phận pháp chế để xem xét chi tiết các tác động đến hoạt động kinh doanh của công ty và các vấn đề cần tuân thủ.",
+      "suggested_en": "In applying RCEP, we collaborated with the legal department to thoroughly examine its impact on our business activities and the compliance requirements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "企業がRCEPの「修正案」を確認し、「締結手続きに進める」という会話は、RCEPが国家間の協定であるという性質と合致せず、不自然。企業はRCEPを「締結」する主体ではない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "RCEP発効後の関税メリットについて、法務部から何か情報がありましたか？",
+        "vi": "Bộ phận pháp chế có thông tin gì về lợi ích thuế quan sau khi RCEP có hiệu lực không?",
+        "en": "Has the legal department provided any information regarding tariff benefits after RCEP comes into effect?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、RCEPの原産地規則を適用することで、特定の品目において関税が大幅に削減される見込みです。詳細な手続きについては、現在確認中です。",
+        "vi": "Vâng, dự kiến thuế quan sẽ giảm đáng kể đối với một số mặt hàng cụ thể khi áp dụng quy tắc xuất xứ của RCEP. Chúng tôi đang xác nhận các thủ tục chi tiết.",
+        "en": "Yes, it's expected that tariffs will be significantly reduced for specific items by applying RCEP's rules of origin. We are currently confirming the detailed procedures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ee31f41a0f6d4710253a42d41b1c833b55ddea91821aa6ecf2bb7a4ced1266f5",
+    "validated_at": "2026-10-01T01:57:09.532552+00:00"
+  }
+}

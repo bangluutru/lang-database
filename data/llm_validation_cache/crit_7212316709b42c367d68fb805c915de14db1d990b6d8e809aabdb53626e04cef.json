@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000047",
+  "term": "忠実義務",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and term translations are correct, the examples and dialogue suffer from severe mechanical hallucination, treating a Companies Act legal obligation (忠実義務) as an accounting ledger balance.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "忠実義務を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and corporate governance collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "忠実義務を果たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and highly authentic phrasing in corporate law contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "忠実義務を負う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legally precise collocation indicating that directors/officers bear a duty of loyalty.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "忠実義務に違反する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrase for breach of fiduciary duty of loyalty.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '忠実義務' (duty of loyalty) is a corporate legal obligation under the Companies Act, not an accounting entry ('計上内容') or balance sheet balance ('残高').",
+      "suggested_ja": "取締役は会社法に基づき、会社および株主に対して忠実義務を負っています。",
+      "suggested_vi": "Căn cứ theo Luật Doanh nghiệp, các thành viên hội đồng quản trị có nghĩa vụ trung thành với công ty và các cổ đông.",
+      "suggested_en": "Under the Companies Act, directors owe a duty of loyalty to the company and its shareholders."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe category error: Duty of loyalty cannot be processed as an accounting settlement item ('決算において忠実義務を適正に処理いたしました').",
+      "suggested_ja": "取締役が競業取引を行う際は、忠実義務違反とならないよう事前に取締役会の承認を得る必要があります。",
+      "suggested_vi": "Khi thành viên hội đồng quản trị thực hiện giao dịch cạnh tranh, cần phải nhận được sự phê duyệt trước từ hội đồng quản trị để không vi phạm nghĩa vụ trung thành.",
+      "suggested_en": "When a director engages in a competitive transaction, prior approval from the board of directors must be obtained to avoid a breach of the duty of loyalty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Completely unnatural and factually absurd: '忠実義務' is forced into a generic monthly accounting template involving vouchers and subsidiary ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "取締役の利益相反取引について、法務部から忠実義務違反の懸念が指摘されています。",
+        "vi": "Về giao dịch xung đột lợi ích của thành viên HĐQT, bộ phận pháp chế đang cảnh báo lo ngại về vi phạm nghĩa vụ trung thành.",
+        "en": "Regarding the director's conflict-of-interest transaction, the legal department has raised concerns about a potential breach of the duty of loyalty."
+      },
+      {
+        "speaker": "B",
+        "ja": "次回の取締役会で詳細を開示し、正式な承認手続きを進めるよう調整いたします。",
+        "vi": "Tôi sẽ điều phối để công bố chi tiết tại cuộc họp HĐQT tiếp theo và tiến hành các thủ tục phê duyệt chính thức.",
+        "en": "I will arrange to disclose the details at the next board meeting and proceed with the formal approval process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Target term translations ('Duty of loyalty' / 'nghĩa vụ trung thành với lợi ích công ty') are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4eb4df05c90e5080548b0ea23f6ae6a16219b229902a9ae88199e39250543f71",
+    "validated_at": "2026-10-01T01:41:43.199221+00:00"
+  }
+}

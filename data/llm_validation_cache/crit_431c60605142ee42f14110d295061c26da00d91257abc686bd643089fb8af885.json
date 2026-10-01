@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000153",
+  "term": "法定調書合計表",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains domain inaccuracies: confusing tax return summary submission with certificate issuance ('交付する', '発行済み'), and using generic bureaucratic boilerplate ('所轄官庁') instead of accurate tax domain terminology ('所轄税務署').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法定調書合計表を交付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "法定調書合計表 is a summary return submitted directly to the tax office (税務署), not an individual certificate issued (交付) to employees or payees. Individual slips like 源泉徴収票 are 交付; the 合計表 is 作成 or 提出.",
+      "suggested_text": "法定調書合計表を作成する"
+    },
+    {
+      "index": 1,
+      "text": "法定調書合計表を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard business/tax terminology.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "法定調書合計表を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable, though in practice '控えを保管する' is more precise.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "法定調書合計表の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard procedure in corporate accounting/HR.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "In Japanese tax administration, statutory summary tables are submitted to '所轄税務署', not generically to '所轄官庁'. Furthermore, '法令に基づく適正な手続きを遂行するため' is overly generic templated filler.",
+      "suggested_ja": "所轄税務署への法定調書合計表の提出は、毎年1月31日の期限までに完了させる必要があります。",
+      "suggested_vi": "Việc nộp bảng tổng hợp các chứng từ khấu trừ thuế bắt buộc cho chi cục thuế quản lý cần phải hoàn thành trước thời hạn ngày 31 tháng 1 hàng năm.",
+      "suggested_en": "The submission of the summary table of statutory reports to the competent tax office must be completed by the deadline of January 31 each year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "法定調書合計表 is not '発行' (issued); companies submit it and retain the filing copy ('提出した法定調書合計表の控え'). Confuses individual certificate issuance (交付/発行) with summary table filing.",
+      "suggested_ja": "税務調査に備え、提出済みの法定調書合計表の控えは、関連する支払調書とともに7年間適切に保存しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế, chúng tôi lưu giữ cẩn thận bản sao bảng tổng hợp các chứng từ khấu trừ thuế bắt buộc đã nộp cùng với các chứng từ thanh toán liên quan trong vòng 7 năm.",
+      "suggested_en": "In preparation for tax audits, we properly retain copies of filed summary tables of statutory reports along with related payment records for seven years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Business tax conversations specifically designate '所轄税務署' rather than generic '所轄官庁', and the phrase '法定記載事項の漏れがないか' sounds unnaturally stiff for oral dialogue.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "所轄税務署に提出する法定調書合計表の作成と数値の確認は順調に進んでいますか。",
+        "vi": "Việc lập bảng tổng hợp các chứng từ khấu trừ thuế bắt buộc và đối chiếu số liệu để nộp cho chi cục thuế có đang tiến triển thuận lợi không?",
+        "en": "Is the preparation and verification of figures for the summary table of statutory reports to be submitted to the competent tax office progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各支払調書との整合性を確認済みですので、1月末の期限までに提出可能です。",
+        "vi": "Vâng, chúng tôi đã đối chiếu tính nhất quán với từng chứng từ thanh toán, nên hoàn toàn có thể nộp trước thời hạn cuối tháng 1.",
+        "en": "Yes, we have already cross-checked consistency with each payment record, so it will be ready for submission by the end of January deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions convey the tax reporting concept accurately."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b5e44356651295953e9e8c06d84b8c46f7c69f9c135f8f4dc0b65830efaf80b6",
+    "validated_at": "2026-10-01T01:40:04.106742+00:00"
+  }
+}

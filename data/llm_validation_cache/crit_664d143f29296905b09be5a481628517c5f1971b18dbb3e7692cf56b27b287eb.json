@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000010",
+  "term": "免税",
+  "overall_decision": "rewrite",
+  "summary_reason": "控除（所得控除・ふるさと納税）のテンプレート文が「免税」に無批判に流用されており、税務実務上の重大な論理破綻（控除上限額の混同など）および訳文への辞書項目の機械的貼り付けが発生しているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "免税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "ビジネス・税務の実務表現としては漠然としておりテンプレート的です。実務では「免税措置を受ける」または「免税取引として処理する」が自然です。",
+      "suggested_text": "免税措置を受ける"
+    },
+    {
+      "index": 1,
+      "text": "免税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税法および実務上、極めて標準的で自然なコロケーションです。",
+      "suggested_text": "免税の適用を受ける"
+    },
+    {
+      "index": 2,
+      "text": "免税を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「免税を活用する」は口語・広報的で粗雑な印象を与えます。実務では「免税となる」「免税点を確認する」などが適切です。",
+      "suggested_text": "免税の対象となる"
+    },
+    {
+      "index": 3,
+      "text": "免税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "制度・品目・取引が免税に該当することを示す頻出・自然な表現です。",
+      "suggested_text": "免税の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「地域貢献の観点から免税の制度を活用」は寄附金控除やふるさと納税との混同が見られ、税務実務として不自然です。また訳文に辞書見出し語（slash表記）がそのまま流し込まれています。",
+      "suggested_ja": "輸出取引に係る消費税の免税措置の適用を受けるため、輸出許可書等の必要書類を整理した。",
+      "suggested_vi": "Chúng tôi đã sắp xếp các chứng từ cần thiết như tờ khai xuất khẩu đã thông quan để được áp dụng chế độ miễn thuế tiêu thụ đối với giao dịch xuất khẩu.",
+      "suggested_en": "We organized the necessary documents, such as export permits, in order to qualify for the consumption tax exemption on export transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額」は税額控除や所得控除の概念であり、免税（tax exemption）とは論理的に整合しません。控除用のテンプレートを流用した深刻な誤りです。",
+      "suggested_ja": "一定の要件を満たすことで試験研究費の輸入免税制度が適用できるか、顧問税理士に事前確認を行った。",
+      "suggested_en": "We confirmed in advance with our tax accountant whether the import duty exemption scheme for experimental research expenses could be applied by meeting certain requirements.",
+      "suggested_vi": "Chúng tôi đã xác nhận trước với chuyên gia tư vấn thuế xem liệu có thể áp dụng chế độ miễn thuế nhập khẩu cho chi phí nghiên cứu thử nghiệm khi đáp ứng các điều kiện nhất định hay không."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "決算申告の実務において単に「免税の計算根拠」と呼ぶのは不自然です。「輸出免税取引の根拠資料」や「免税事業者の判定根拠」のように具体化する必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における輸出免税取引の根拠資料と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong các tài liệu căn cứ và hồ sơ nộp cho giao dịch xuất khẩu miễn thuế trong kỳ kê khai quyết toán này chưa?",
+        "en": "Have you compiled the supporting documentation and filing attachments for the export tax exemption transactions for this final return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、輸出許可通知書と税理士の確認書を揃えましたので、申告書添付書類として提出可能です。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ thông báo cấp phép xuất khẩu và giấy xác nhận của chuyên gia tư vấn thuế, nên đã có thể nộp cùng tờ khai thuế.",
+        "en": "Yes, we have gathered the export permits and the tax accountant's verification letter, so they are ready for submission as attachments to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "meaning_vi が「miễn thuế xuất khẩu / cửa hàng miễn thuế」と極端に狭い具体例に限定されており不適切です。単に「miễn thuế (đặc quyền/chế độ miễn giảm thuế)」と定義すべきです。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "42d5fd6e08d2847fd8b4ed9be9204218e0e8910b656824c4dc654f883f32e39e",
+    "validated_at": "2026-10-01T01:37:24.591984+00:00"
+  }
+}

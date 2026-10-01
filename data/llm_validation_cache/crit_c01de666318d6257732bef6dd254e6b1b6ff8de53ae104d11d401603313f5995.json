@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000083",
+  "term": "従価税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in treating '従価税' (ad valorem duty), which is a customs duty, as a general accounting entry with '計上内容' and '残高' in the same way one might treat an internal ledger account. This leads to unnatural Japanese phrasing in examples and dialogue. While the collocations are generally fine, the application in context is problematic. The translations themselves are good, but they reflect the issues in the Japanese source.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "従価税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for applying a tax."
+    },
+    {
+      "index": 1,
+      "text": "従価税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for inquiring about a tax."
+    },
+    {
+      "index": 2,
+      "text": "従価税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for paying a tax."
+    },
+    {
+      "index": 3,
+      "text": "従価税の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for confirming a tax classification."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "従価税 (ad valorem duty) is a customs duty, not an accounting entry that has a '計上内容' (content of booking) or '残高' (balance) in the same way as a general ledger account. While it's recorded, the phrasing '計上内容や残高に差異がないか精査します' is more typical for internal accounts like receivables or payables, not a specific tax type like customs duty. Customs duties are typically paid upon import and then become part of the cost of goods.",
+      "suggested_ja": "月末の帳簿照合において、従価税の申告額と納付額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt giữa số thuế khai báo và số thuế đã nộp đối với thuế tính theo tỷ lệ phần trăm trị giá hàng hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies between the declared amount and the paid amount for ad valorem duty."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '従価税を適正に処理いたしました' (properly processed ad valorem duty) is vague and doesn't quite fit the nature of a customs duty in an accounting context. Customs duties are typically paid and then capitalized into inventory cost or expensed, not 'processed' as a standalone item in closing entries in this manner. The phrasing implies it's an internal accounting item rather than an external tax payment.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において従価税の計上を適切に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán thuế tính theo tỷ lệ phần trăm trị giá hàng một cách thích hợp trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately accounted for ad valorem duty in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue uses '従価税の計上内容に差異は発生していませんか' which, as noted in the example sentences, is an unnatural way to refer to customs duties. Customs duties are paid upon import; while they are recorded, the concept of '計上内容に差異' (discrepancy in booking content) is more suited for internal accounts or accruals, not a direct tax payment like this. The response also feels a bit generic for a specific tax type.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入貨物にかかる従価税について、申告額と納付額に相違はありませんでしたか。",
+        "vi": "Về thuế tính theo tỷ lệ phần trăm trị giá hàng đối với hàng hóa nhập khẩu tháng này, có sự khác biệt nào giữa số thuế khai báo và số thuế đã nộp không?",
+        "en": "Regarding the ad valorem duty for this month's imported goods, were there any discrepancies between the declared amount and the paid amount?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税関からの通知書と社内記録を照合し、すべて適切に処理されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu thông báo từ hải quan với hồ sơ nội bộ và xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, I have reconciled the customs notice with our internal records and confirmed that everything has been processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1ce649d0e5827cfadd22b2756f8c37ddf59be0f56b203cee4bcf2b16ca75abf7",
+    "validated_at": "2026-10-01T01:55:08.949299+00:00"
+  }
+}

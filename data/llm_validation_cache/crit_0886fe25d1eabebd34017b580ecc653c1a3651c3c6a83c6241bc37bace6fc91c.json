@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000156",
+  "term": "基礎控除申告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "基礎控除申告書は『従業員が会社に提出し、会社が7年間保管する』内部申告書類ですが、例文および対話において『会社が所轄官庁へ提出する』という重大な税務実務の事実誤認（DOMAIN_FACTUAL_ERROR）が含まれているため、全面的な書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "基礎控除申告書を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「交付する」は源泉徴収票などの証明・通知文書を渡す際に用いられ、申告用紙を渡す場合は「配布する」または従業員から集約する文脈で「回収する」が自然です。",
+      "suggested_text": "基礎控除申告書を回収する"
+    },
+    {
+      "index": 1,
+      "text": "基礎控除申告書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "従業員が勤務先に対して提出する定型表現として自然です。"
+    },
+    {
+      "index": 2,
+      "text": "基礎控除申告書を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "会社（源泉徴収義務者）が法定期間（原則7年間）原本を保存する義務に合致しています。"
+    },
+    {
+      "index": 3,
+      "text": "基礎控除申告書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "年末調整の実務プロセス（人事・労務担当者による検算・点検）として極めて自然です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "重大な税務実務エラーです。基礎控除申告書は従業員が給与支払者（勤務先）に提出するものであり、会社が所轄官庁（税務署等）へ直接提出する書類ではありません（会社側が保管します）。",
+      "suggested_ja": "年末調整の手続きを円滑に進めるため、全従業員に対して期限内に基礎控除申告書を提出するよう周知いたしました。",
+      "suggested_vi": "Để thủ tục điều chỉnh thuế cuối năm diễn ra suôn sẻ, chúng tôi đã thông báo đến toàn thể nhân viên nộp tờ khai giảm trừ cơ bản đúng thời hạn.",
+      "suggested_en": "To facilitate smooth year-end tax adjustment procedures, we notified all employees to submit their declaration of basic exemption by the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発行済みの基礎控除申告書」は不自然です。会社は用紙を発行・保管するのではなく、従業員から「提出（回収）された申告書」を保管します。",
+      "suggested_ja": "税務調査に備え、従業員から回収した基礎控除申告書は法令の規定に従って7年間厳重に保管しています。",
+      "suggested_vi": "Để chuẩn bị cho việc thanh tra thuế, các tờ khai giảm trừ cơ bản thu thập từ nhân viên được lưu trữ cẩn thận trong vòng 7 năm theo quy định pháp luật.",
+      "suggested_en": "In preparation for tax audits, declarations of basic exemption collected from employees are securely retained for seven years in accordance with statutory requirements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "話者Aの「所轄官庁へ提出する基礎控除申告書」は税務実務上明確な誤りです（税務署へ提出するのではなく、社内回収・保管を行う書類です）。社内年末調整の実務会話として書き直す必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "全社向けの年末調整の案内と、基礎控除申告書の回収状況はいかがですか。",
+        "vi": "Tình hình thông báo điều chỉnh thuế cuối năm toàn công ty và thu thập tờ khai giảm trừ cơ bản thế nào rồi?",
+        "en": "How is the company-wide year-end adjustment notice and the collection of the declarations of basic exemption progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "現在約8割の従業員から提出されており、記載事項の点検を順次進めているところです。",
+        "vi": "Hiện tại đã có khoảng 80% nhân viên nộp, và chúng tôi đang lần lượt tiến hành kiểm tra các nội dung kê khai.",
+        "en": "Currently, about 80% of employees have submitted them, and we are reviewing the entered information in sequence."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳「tờ khai giảm trừ bản thân và vợ chồng cuối năm」は実務上の兼用様式を指していますが、「基礎控除」単体としては「giảm trừ cơ bản (bản thân)」と明確に定義する方が学術・実務教育上正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "79a03078b8f53ef87055222a691a125e92c9f0b7a2424ae2553cfed871c50251",
+    "validated_at": "2026-10-01T01:40:09.297486+00:00"
+  }
+}

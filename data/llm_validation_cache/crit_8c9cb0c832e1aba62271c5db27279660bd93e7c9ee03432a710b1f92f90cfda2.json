@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000043",
+  "term": "青色申告特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Terminology error in English ('credit' vs 'deduction'), domain confusion in dialogue mixing individual tax deduction with corporate '決算申告', and collocation semantic mismatch ('上限額を計算する').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "青色申告特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, frequently used professional collocation."
+    },
+    {
+      "index": 1,
+      "text": "青色申告特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business phrasing."
+    },
+    {
+      "index": 2,
+      "text": "青色申告特別控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The maximum deduction amount is statutorily fixed (650,000 yen, 550,000 yen, or 100,000 yen) and is not 'calculated' (上限額は計算するものではなく法定されている). One calculates the deduction amount itself or verifies requirements.",
+      "suggested_text": "青色申告特別控除の適用要件を確認する"
+    },
+    {
+      "index": 3,
+      "text": "青色申告特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and highly natural tax usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "In English, '控除' against income is a 'deduction', not a 'credit' (tax credit is 税額控除). In Vietnamese, parenthetical gloss '(tối đa 65 vạn yên)' was mechanically copied into the running sentence.",
+      "suggested_ja": "法定要件を慎重に確認した上で、今年度の確定申告において青色申告特別控除を適用しました。",
+      "suggested_vi": "Sau khi kiểm tra cẩn thận các điều kiện theo luật định, chúng tôi đã áp dụng khoản khấu trừ đặc biệt cho tờ khai thuế xanh trong kỳ quyết toán thuế năm nay.",
+      "suggested_en": "After carefully verifying the statutory requirements, we applied the special blue return deduction in this year's tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Mechanical insertion of parenthetical gloss in Vietnamese translation and mistranslation of 'deduction' as 'credit' in English.",
+      "suggested_ja": "青色申告特別控除の適用を受けるため、関係書類を整備して申告書に添付しました。",
+      "suggested_vi": "Để được áp dụng khoản khấu trừ đặc biệt cho tờ khai thuế xanh, chúng tôi đã hoàn thiện các chứng từ liên quan và đính kèm vào tờ khai.",
+      "suggested_en": "In order to apply for the special blue return deduction, we prepared the relevant supporting documents and attached them to the tax return."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'青色申告特別控除' is exclusively an individual income tax (所得税) deduction and does not exist in corporate tax (法人税). Speaker A refers to '決算申告' (corporate settlement/return terminology), which causes tax domain confusion. It should refer to '確定申告'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における青色申告特別控除の適用要件と提出書類は整理できましたか。",
+        "vi": "Anh đã tổng hợp các điều kiện áp dụng và hồ sơ nộp cho khoản khấu trừ đặc biệt tờ khai xanh trong kỳ quyết toán thuế lần này chưa?",
+        "en": "Have you organized the eligibility requirements and filing documents for the special blue return deduction for this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、電子申告の要件と青色申告決算書の作成を確認しましたので、65万円控除の適用が可能です。",
+        "vi": "Vâng, tôi đã xác nhận các yêu cầu về nộp thuế điện tử và việc lập báo cáo quyết toán thuế xanh, nên có thể áp dụng mức khấu trừ 65 vạn yên.",
+        "en": "Yes, I have verified the e-Filing requirements and the blue return financial statements, so we are eligible for the 650,000 yen deduction."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "English incorrectly uses 'credit' instead of 'deduction' (控除). Vietnamese definitions contaminated example sentences with mechanical parentheticals '(tối đa 65 vạn yên)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a37fedb2a776a2ccf6e2113f034049427f637ec1effdf6e03386f4916c0dd85a",
+    "validated_at": "2026-10-01T01:38:10.883433+00:00"
+  }
+}

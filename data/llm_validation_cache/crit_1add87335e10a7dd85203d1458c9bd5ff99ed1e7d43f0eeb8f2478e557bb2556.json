@@ -1,0 +1,70 @@
+{
+  "entry_id": "jp-pro-trade-000065",
+  "term": "輸入申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "一部のコロケーションとダイアログに不自然な表現が見られたため、修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸入申告を行う",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "輸入申告を完了する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "輸入申告を申請する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「輸入申告」は申請行為そのものであり、それを「申請する」という表現は冗長で不自然。通常は「輸入申告を行う」または「輸入申告書を提出する」と表現する。",
+      "suggested_text": "輸入申告書を提出する"
+    },
+    {
+      "index": 3,
+      "text": "輸入申告の適法性を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bの返答がやや不自然。「乙仲への連絡を済ませており」は口語としては硬く、「乙仲に連絡済みで」の方が自然。また、「書類の確認も完了して輸入申告に入っております」は、書類確認と輸入申告が並列で、かつ「入っております」がやや機械的。より自然な流れにする。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、輸入申告の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình chuẩn bị kê khai hải quan nhập khẩu thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the import declaration arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲には連絡済みで、書類の確認も終え、現在輸入申告手続きを進めているところです。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, đã hoàn tất kiểm tra chứng từ và đang tiến hành thủ tục kê khai hải quan nhập khẩu.",
+        "en": "We've already contacted the customs broker and freight forwarder, completed document verification, and are currently proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c7c5c64cc196fd458d87dd65217248d78d93f6248e4a91c957c3c44975989818",
+    "validated_at": "2026-10-01T01:54:42.818309+00:00"
+  }
+}

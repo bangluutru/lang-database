@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000047",
+  "term": "基礎控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe factual error in tax domain: '基礎控除' was mistakenly used in corporate closing context (決算申告), where it does not exist under Japanese tax law, and Example 2 hallucinated non-existent document attachment requirements for basic exemptions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "基礎控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural tax terminology for applying the basic deduction/exemption.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "基礎控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural phrasing used in tax filing contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "基礎控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "基礎控除 is a statutory deduction amount or graduated amount, not an expense cap or ceiling (上限額). Practitioners say 基礎控除額を算出する or 基礎控除額を計算する.",
+      "suggested_text": "基礎控除額を算出する"
+    },
+    {
+      "index": 3,
+      "text": "基礎控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, particularly following tax reforms that set income thresholds (e.g., 合計所得金額2,500万円以下) to qualify for 基礎控除.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and realistic for individual income tax returns.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual tax error: claiming 基礎控除 (basic exemption) in Japan does not require preparing and attaching supporting documents (関係書類を添付). Attachments are required for deductions like medical expenses or mortgage credits, but not basic personal exemption.",
+      "suggested_ja": "合計所得金額が基準を超えているため、今年度は基礎控除の適用額が段階的に減額されます。",
+      "suggested_vi": "Do tổng thu nhập vượt quá mức tiêu chuẩn, mức giảm trừ cơ bản của năm nay sẽ bị giảm dần theo từng bậc.",
+      "suggested_en": "Since total income exceeds the statutory threshold, the basic exemption amount will be phased out this fiscal year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe tax domain error: '決算申告' (corporate closing tax return) does not have 基礎控除. 基礎控除 exists only in individual income tax (所得税), inheritance tax (相続税), and gift tax (贈与税). Corporations do not receive a basic exemption, nor are there tax accountant certificates attached for it.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の確定申告ですが、合計所得金額が2,500万円を超えるため、基礎控除は適用外でよろしいでしょうか。",
+        "vi": "Về tờ khai thuế thu nhập cá nhân của giám đốc, do tổng thu nhập vượt quá 25 triệu yên nên sẽ không áp dụng khoản giảm trừ cơ bản đúng không ạ?",
+        "en": "Regarding the director's individual tax return, since total income exceeds 25 million yen, is it correct that the basic exemption does not apply?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、所得制限に該当しますので、基礎控除額をゼロとして申告書を作成してください。",
+        "vi": "Vâng, do thuộc diện giới hạn thu nhập, bạn hãy lập tờ khai với mức giảm trừ cơ bản là 0 yên nhé.",
+        "en": "Yes, as the income cap applies, please prepare the return with a basic exemption amount of zero."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5d34cb32ca00bd4e37332bc4e6154da6ada70a75dfdd41b10cc308f7c8c71f2d",
+    "validated_at": "2026-10-01T01:38:15.937863+00:00"
+  }
+}

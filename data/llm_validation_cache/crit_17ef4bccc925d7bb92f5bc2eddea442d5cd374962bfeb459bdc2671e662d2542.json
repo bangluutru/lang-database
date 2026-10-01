@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000122",
+  "term": "勤怠管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain templating error: '勤怠管理' (an HR labor tracking concept) was forced into financial accounting templates ('計上内容', '残高', '会計基準', '決算', '補助元帳'), producing nonsensical Japanese business sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "勤怠管理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically acceptable, though somewhat generic for project-based HR implementations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "勤怠管理を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "勤怠管理 is an ongoing operational system or administrative function, not a single task that one 'completes' (完了する). For month-end closure, '勤怠データを確定する' or for operational rigor, '勤怠管理を徹底する' is standard.",
+      "suggested_text": "勤怠管理を徹底する"
+    },
+    {
+      "index": 2,
+      "text": "勤怠管理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocation used in onboarding, HR compliance, and internal audits.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "勤怠管理を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation when revising working hours, remote work policies, or HR systems.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '勤怠管理' (attendance management) is an HR/labor process and cannot be booked ('計上内容') or possess a financial balance ('残高'). This is an artifact of a mechanical accounting template.",
+      "suggested_ja": "月末の給与計算に向けて、各部署の勤怠管理データに打刻漏れや承認漏れがないか精査します。",
+      "suggested_vi": "Để chuẩn bị cho việc tính lương cuối tháng, chúng tôi kiểm tra kỹ lưỡng dữ liệu quản lý chấm công của các phòng ban xem có bị thiếu sót lượt chấm công hay chưa được duyệt hay không.",
+      "suggested_en": "Ahead of month-end payroll calculation, we closely check each department's attendance management data for missing clock-ins or unapproved records."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'勤怠管理' is governed by the Labor Standards Act (労働基準法) and internal work regulations (就業規則), not accounting standards ('会計基準'), and it is not an item processed in financial closing ('決算において勤怠管理を適正に処理').",
+      "suggested_ja": "労働基準法および社内規程に則り、長時間労働を抑制するため勤怠管理の運用を見直しました。",
+      "suggested_vi": "Tuân thủ Luật Tiêu chuẩn Lao động và quy chế nội bộ, chúng tôi đã rà soát lại quy trình quản lý chấm công nhằm hạn chế tình trạng làm việc quá giờ.",
+      "suggested_en": "In accordance with the Labor Standards Act and internal regulations, we revised our attendance management practices to prevent excessive overtime."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about financial discrepancies in entries ('計上内容に差異') for attendance management, and Speaker B refers to verifying supporting documents against subsidiary ledgers ('補助元帳'). Attendance management tracks hours worked, not ledger entries. The dialogue is factually absurd.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算の締め日ですが、各部署の勤怠管理の承認はすべて完了していますか。",
+        "vi": "Hôm nay là hạn chốt tính lương tháng này, việc phê duyệt chấm công của các phòng ban đã hoàn tất hết chưa?",
+        "en": "Today is the cutoff for this month's payroll; has the approval of attendance management data been completed across all departments?"
+      },
+      {
+        "speaker": "B",
+        "ja": "未承認だった営業部を含め、先ほど全社分の勤怠データの確定が完了いたしました。",
+        "vi": "Bao gồm cả phòng kinh doanh chưa duyệt trước đó, toàn bộ dữ liệu chấm công của công ty vừa được xác nhận hoàn tất.",
+        "en": "Including the sales department which was pending, we just finalized the attendance data for the entire company."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base translations for the term itself ('Attendance management' / 'quản lý chấm công và chuyên cần') are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6396ab18629b4ef98650ba817f5d3680543e6ad14e16d6169cd70736269fce8e",
+    "validated_at": "2026-10-01T01:42:59.823674+00:00"
+  }
+}

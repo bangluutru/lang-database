@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000029",
+  "term": "山林所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains critical factual tax errors: timber income is an individual income tax category taxed separately (申告分離課税 / 5分5乗方式), yet Example 2 treated it as comprehensive taxation (総合課税) and the dialogue placed it in a corporate monthly closing (月次決算) setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "山林所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to calculating the net timber income amount.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "山林所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate tax term collocation for classifying receipts into timber income under the Income Tax Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "山林所得を合算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese Income Tax Law, timber income is subject to separate taxation (申告分離課税・5分5乗方式), not aggregated (合算) with comprehensive income.",
+      "suggested_text": "山林所得の特別控除を適用する"
+    },
+    {
+      "index": 3,
+      "text": "山林所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard procedural phrasing for individual tax return filing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and appropriately describes calculating timber income on an individual return.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually incorrect tax law statement: timber income is not subject to comprehensive taxation (総合課税), but calculated separately using the five-division, five-multiplication method (5分5乗方式).",
+      "suggested_ja": "山林所得は他の所得と合算せず、税負担を緩和するための5分5乗方式を適用して税額を算出します。",
+      "suggested_vi": "Thu nhập từ chuyển nhượng rừng cây không cộng gộp với các khoản thu nhập khác, mà được áp dụng phương pháp 5 phần 5 thừa để tính số thuế nhằm giảm bớt gánh nặng thuế.",
+      "suggested_en": "Timber income is not aggregated with other income; tax is computed using the five-division, five-multiplication method to mitigate tax liability."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "山林所得 is an individual income tax (所得税) classification, not an item found in corporate monthly financial closing (月次決算) or subsidiary ledgers. The scenario must reflect an individual tax return review at an accounting firm or tax advisory context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "関与先である個人事業主の確定申告ですが、所有期間5年超の山林所得の計算は済んでいますか。",
+        "vi": "Về tờ khai thuế thu nhập cá nhân của khách hàng, anh đã tính xong phần thu nhập từ rừng cây sở hữu trên 5 năm chưa?",
+        "en": "Regarding the individual client's final tax return, have you finished calculating the timber income for the forest held over five years?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、特別控除額の50万円を控除し、5分5乗方式で適正に税額を試算いたしました。",
+        "vi": "Vâng, tôi đã khấu trừ khoản giảm trừ đặc biệt 500.000 yên và tạm tính thuế chính xác theo phương pháp 5 phần 5 thừa rồi.",
+        "en": "Yes, I deducted the 500,000 yen special deduction and correctly estimated the tax using the five-division, five-multiplication method."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6b85020d2f7d83e6a8d082ca929fc91ffc82ec817b134fadaa215ac2295fea0f",
+    "validated_at": "2026-10-01T01:37:47.196466+00:00"
+  }
+}

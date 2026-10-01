@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-business-000005",
+  "term": "納品書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 and the dialogue suffered from extreme domain hallucination, conflating a routine commercial delivery note (納品書) with corporate governance documents such as board meeting notices and executive proposals.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "納品書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business collocation for creating a delivery slip."
+    },
+    {
+      "index": 1,
+      "text": "納品書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common when submitting delivery slips to clients or accounting departments."
+    },
+    {
+      "index": 2,
+      "text": "納品書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'発送する' strictly applies to cargo, packages, or goods. For documents like delivery slips, '送付する', '発行する', or '同封する' is standard Japanese.",
+      "suggested_text": "納品書を発行する"
+    },
+    {
+      "index": 3,
+      "text": "納品書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business collocation for receiving and acknowledging a delivery note."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination. A '納品書' (delivery slip) accompanies goods; it has nothing to do with statutory deadlines or proceedings for shareholder meetings and board meetings. This mistakenly reused a template intended for convocation notices (招集通知) or financial statements (計算書類).",
+      "suggested_ja": "商品が倉庫に到着した際は、現品と納品書の記載内容を照合した上で、受領印を押印してください。",
+      "suggested_vi": "Khi hàng hóa đến kho, vui lòng đối chiếu hàng thực tế với nội dung trên phiếu giao hàng trước khi đóng dấu biên nhận.",
+      "suggested_en": "When goods arrive at the warehouse, please verify the physical items against the delivery slip before stamping for receipt."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural description of internal controls and document retention under corporate accounting practices."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Gross mismatch with reality. A delivery slip (納品書) is not prepared for meetings, nor does it require executive pre-approval (役員の事前承認) or literary drafting/polishing (推敲). This is a copy-paste artifact from a board agenda or proposal template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日納品された部材ですが、同封されているはずの納品書が見当たりません。",
+        "vi": "Về số linh kiện giao hôm nay, tôi không thấy phiếu giao hàng đáng lẽ phải được gửi kèm bên trong.",
+        "en": "Regarding the materials delivered today, I can't seem to find the delivery slip that was supposed to be enclosed."
+      },
+      {
+        "speaker": "B",
+        "ja": "申し訳ありません。仕入先に確認したところ、別途PDFにて送付済みとのことですので、すぐに転送いたします。",
+        "vi": "Tôi thành thật xin lỗi. Sau khi kiểm tra với nhà cung cấp, họ báo đã gửi riêng qua file PDF, tôi sẽ chuyển tiếp ngay cho anh.",
+        "en": "I apologize. I checked with the supplier and they mentioned it was sent separately as a PDF, so I will forward it to you immediately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations accurately reflect 'phiếu giao hàng' and 'Delivery slip / Delivery note'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "87d2cdf1f93e4843e440d7195f8b1ee78da6368560200f0af74714c6afbdde6d",
+    "validated_at": "2026-10-01T01:41:04.991384+00:00"
+  }
+}

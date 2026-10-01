@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000157",
+  "term": "保険料控除申告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain factual error and synthetic templating: the prompt assumes '保険料控除申告書' is submitted by companies to government authorities (所轄官庁), whereas under Japanese tax law it is submitted by employees to their employer for year-end tax adjustments and kept internally.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保険料控除申告書を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While the tax code mentions 給与支払者が申告書を交付する, in actual business HR/accounting practice, companies 配布する (distribute) or 回収する (collect) these forms to/from employees. 交付する is typically used for official certificates like 源泉徴収票.",
+      "suggested_text": "保険料控除申告書を回収する"
+    },
+    {
+      "index": 1,
+      "text": "保険料控除申告書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used by employees submitting the form to their employer during year-end tax adjustment (年末調整).",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "保険料控除申告書を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural. Employers are statutorily required to archive and retain submitted forms for 7 years.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "保険料控除申告書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase used when reviewing employee submissions against attached certificates.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual error under Japanese tax law: Companies do not submit '保険料控除申告書' to the tax office (所轄官庁/税務署). Employees submit them to the employer for year-end tax adjustment (年末調整), and the employer retains them internally. This is an artificial, mechanically templated sentence.",
+      "suggested_ja": "年末調整の計算を正確に行うため、全従業員に対して保険料控除申告書と控除証明書の期日内提出を求めています。",
+      "suggested_vi": "Để thực hiện chính xác việc tính toán quyết toán thuế cuối năm, chúng tôi yêu cầu toàn thể nhân viên nộp tờ khai giảm trừ phí bảo hiểm kèm theo giấy chứng nhận giảm trừ đúng thời hạn.",
+      "suggested_en": "To ensure accurate year-end tax adjustment calculations, we require all employees to submit their insurance deduction declarations and deduction certificates by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '発行済みの保険料控除申告書' is semantically incorrect; employees fill out and submit declaration forms, they are not 'issued' (発行) by the company. The employer stores '回収した/提出された' forms.",
+      "suggested_ja": "税務調査に備え、従業員から回収した保険料控除申告書は原本のまま法令で定められた7年間厳重に保管しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế, các tờ khai giảm trừ phí bảo hiểm thu thập từ nhân viên được lưu trữ cẩn thận dưới dạng bản gốc trong thời hạn 7 năm theo luật định.",
+      "suggested_en": "In preparation for tax audits, the insurance deduction declarations collected from employees are securely retained in their original form for the statutory period of seven years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Both Speaker A and B state that the '保険料控除申告書' is prepared and submitted to the competent authority (所轄官庁へ提出する), which is factually incorrect in Japanese tax administration. The dialogue should reflect internal corporate workflow between HR/Payroll staff handling employee submissions.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整に向けた従業員からの保険料控除申告書の回収と、記載事項の点検は順調に進んでいますか。",
+        "vi": "Tiến độ thu thập tờ khai giảm trừ phí bảo hiểm từ nhân viên và kiểm tra các mục kê khai phục vụ quyết toán thuế cuối năm diễn ra thuận lợi chứ?",
+        "en": "Is the collection of insurance deduction declarations from employees and the verification of their entries progressing smoothly for the year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、控除証明書との突合を進めており、不備のある申告書については順次再提出を依頼しています。",
+        "vi": "Vâng, chúng tôi đang đối chiếu với giấy chứng nhận giảm trừ, và đối với các tờ khai có sai sót thì đang yêu cầu nộp lại theo trình tự.",
+        "en": "Yes, we are cross-checking them against deduction certificates and requesting resubmissions for any incomplete declarations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are acceptable, though meaning_vi focuses specifically on life/earthquake insurance rather than the general category (which also covers social insurance and small business mutual aid)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b632266eea4f6319b65af58c6fd24085c6265a986b1f0dcfe2b240962abd81fc",
+    "validated_at": "2026-10-01T01:40:12.342778+00:00"
+  }
+}

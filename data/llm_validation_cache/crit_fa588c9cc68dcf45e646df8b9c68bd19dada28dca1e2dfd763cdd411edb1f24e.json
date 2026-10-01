@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000099",
+  "term": "社債",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains unnatural accounting collocations ('社債を精算する' instead of '社債を償還する') and generic, stilted AI template sentences that fail to reflect actual accounting practices for bonds payable (e.g., amortized cost, redemption, interest schedule).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "社債を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting action denoting the recognition/booking of bonds payable.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "社債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard audit/accounting procedure for verifying liability balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "社債を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles the bond ledger (社債原簿) or the balance, not the bond itself as a direct object in professional practice.",
+      "suggested_text": "社債原簿と照合する"
+    },
+    {
+      "index": 3,
+      "text": "社債を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Bonds payable are not 'settled/liquidated' (精算); the correct legal and accounting terminology is redemption (償還).",
+      "suggested_text": "社債を償還する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Plausible month-end verification routine, though slightly templated.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly artificial boilerplate with redundant phrasing ('適正な...適正に') that lacks concrete corporate bond accounting context (e.g., amortized cost method, interest accrual, redemption).",
+      "suggested_ja": "当期末において、発行済社債について償却原価法を適用し、社債利息および社債の評価額を計上いたしました。",
+      "suggested_vi": "Vào cuối kỳ này, chúng tôi đã áp dụng phương pháp giá gốc phân bổ cho trái phiếu đã phát hành, đồng thời hạch toán chi phí lãi trái phiếu và giá trị ghi sổ của trái phiếu.",
+      "suggested_en": "At the end of this fiscal year, we applied the amortized cost method to outstanding bonds and recognized bond interest expenses and the carrying amount of the bonds."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bonds payable are rarely subject to generic 'discrepancy' checks like accounts receivable/payable, and '適正に整合している' is unnatural Japanese collocation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期満期を迎える社債の償還準備および利息計算の進捗はいかがですか。",
+        "vi": "Tiến độ chuẩn bị đáo hạn và tính lãi cho các trái phiếu công ty đến hạn trong kỳ này thế nào rồi?",
+        "en": "How is the progress on the redemption preparation and interest calculation for the corporate bonds maturing this term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "社債原簿と償還スケジュールを照合済みで、資金の手当てを含め予定通り進んでおります。",
+        "vi": "Chúng tôi đã đối chiếu sổ trái phiếu với lịch thanh toán và mọi việc đang diễn ra đúng tiến độ, bao gồm cả việc thu xếp nguồn vốn.",
+        "en": "We have reconciled the bond register with the redemption schedule, and everything is proceeding as planned, including funding arrangements."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the source, though the underlying Japanese requires enhancement."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "865d5c29bbfe2f5fc59ec7bb48114390d4e16e2875edfc4e60117ed448f38479",
+    "validated_at": "2026-10-01T01:35:22.169585+00:00"
+  }
+}

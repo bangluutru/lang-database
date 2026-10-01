@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000014",
+  "term": "自己資本比率",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences suffer from domain accounting factual errors: equity ratio is not a divisional metric nor does it directly measure capital efficiency/profitability.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自己資本比率を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for calculating equity ratio.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "自己資本比率を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate management expression for improving financial soundness.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "自己資本比率を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in financial statement analysis contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "自己資本比率の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in medium-term management plans and financial targets.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "自己資本比率 (equity ratio) is a corporate-level balance sheet metric of financial solvency; individual operating divisions (各事業部門) do not hold balance-sheet equity or track division-level equity ratios.",
+      "suggested_ja": "財務健全性の向上に向け、財務部門では自己資本比率の推移を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới việc nâng cao tính lành mạnh tài chính, bộ phận tài chính đang theo dõi biến động tỷ lệ vốn chủ sở hữu hàng tháng.",
+      "suggested_en": "To improve financial soundness, the finance department monitors the trend of the equity ratio on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "An increase in equity ratio primarily signifies financial stability and safety (財務健全性), not profitability or capital efficiency (資本効率/ROE, which often decreases as leverage declines).",
+      "suggested_ja": "当期の自己資本比率は目標値を上回り、財務基盤のさらなる安定化が確認されました。",
+      "suggested_vi": "Tỷ lệ vốn chủ sở hữu kỳ này đã vượt mức mục tiêu, xác nhận nền tảng tài chính càng thêm ổn định.",
+      "suggested_en": "This term's equity ratio exceeded the target value, confirming further stabilization of the financial base."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Exchange between finance managers regarding solvency metrics and targets is logical and natural.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7501c84100555735ec44a0411fc72318e23b1422879aa4514702cc047e703bce",
+    "validated_at": "2026-10-01T01:33:06.790274+00:00"
+  }
+}

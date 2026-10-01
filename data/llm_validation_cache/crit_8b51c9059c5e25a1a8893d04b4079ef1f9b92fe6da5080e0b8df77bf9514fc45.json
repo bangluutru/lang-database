@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000155",
+  "term": "扶養控除等申告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "扶養控除等申告書を「会社が作成して税務署（所轄官庁）に提出する書類」と誤認したAI特有の重大な税務実務エラー（ファクトエラー）が例文および対話の両方に含まれているため、全面書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "扶養控除等申告書を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「交付する」は源泉徴収票などに用いるのが一般的です。扶養控除等申告書は会社が従業員に「配布する」、あるいは記入後に「回収する」と表現するのが実務上極めて自然です。",
+      "suggested_text": "扶養控除等申告書を配布する"
+    },
+    {
+      "index": 1,
+      "text": "扶養控除等申告書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "従業員が勤務先へ提出するコロケーションとして自然です（ただし提出先は税務署ではなく勤務先です）。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "扶養控除等申告書を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "事業主が法定期間（原則7年間）社内に保管・保存する義務を表す表現として適切です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "扶養控除等申告書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "人事・総務担当者が年末調整時に従業員の申告内容を確認する実務表現として適切です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "税務実務上の重大な誤りです。扶養控除等申告書は従業員が「給与支払者（勤務先）」に提出し会社側が保管する書類であり、「所轄官庁（税務署等）」へ提出する書類ではありません（所轄税務署へ提出するのは源泉徴収票等法定調書です）。",
+      "suggested_ja": "年末調整の円滑な実施のため、全従業員に対して期限内に扶養控除等申告書を提出するよう周知いたしました。",
+      "suggested_vi": "Để thực hiện quyết toán thuế cuối năm suôn sẻ, chúng tôi đã thông báo đến toàn thể nhân viên về việc nộp tờ khai người phụ thuộc giảm trừ gia cảnh đúng thời hạn.",
+      "suggested_en": "To ensure smooth year-end tax adjustments, we notified all employees to submit their declaration of exemption for dependents within the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発行済みの扶養控除等申告書」は不自然です。申告書は会社が発行するものではなく従業員から「回収した」あるいは「提出された」書類です。",
+      "suggested_ja": "税務調査に備え、従業員から回収した扶養控除等申告書は法令で定められた7年間の保存期間に従って厳重に保管しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế, chúng tôi lưu trữ cẩn thận các tờ khai người phụ thuộc giảm trừ gia cảnh thu thập từ nhân viên theo thời hạn lưu trữ 7 năm theo luật định.",
+      "suggested_en": "In preparation for tax audits, we securely retain the declarations of exemption for dependents collected from employees in accordance with the statutory seven-year retention period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Example 1と同様、「所轄官庁へ提出する扶養控除等申告書」という前提が税法上明白な誤りです。扶養控除等申告書は社内従業員から回収・点検し、年末調整計算に使用した上で社内保存する書類です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整に向けた扶養控除等申告書の回収と、記載事項の点検は順調に進んでいますか。",
+        "vi": "Tiến độ thu thập tờ khai người phụ thuộc giảm trừ gia cảnh và kiểm tra các mục kê khai phục vụ quyết toán thuế cuối năm vẫn tiến triển thuận lợi chứ?",
+        "en": "Is the collection of dependency exemption declarations and verification of their entries progressing smoothly for the year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、控除対象配偶者や扶養親族の記載漏れがないか確認を進めており、予定通り月内に完了する見込みです。",
+        "vi": "Vâng, chúng tôi đang rà soát xem có thiếu sót thông tin người phối ngẫu hoặc người phụ thuộc được giảm trừ hay không, và dự kiến sẽ hoàn thành trong tháng theo đúng kế hoạch.",
+        "en": "Yes, we are checking for any omissions regarding eligible spouses and dependents, and we expect to complete it within this month as scheduled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体の定義・訳語選択は問題ありません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9c82999b4c2e8aa860111f8b5a588c1a836770fb43fb55dbf9b2f905254b80eb",
+    "validated_at": "2026-10-01T01:40:09.570310+00:00"
+  }
+}

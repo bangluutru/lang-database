@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000152",
+  "term": "フランチャイズ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the unnatural and semantically incorrect use of 'フランチャイズ' as a direct accounting item. While 'フランチャイズ' is a valid business term, its application in accounting contexts needs to refer to 'franchise business/operations' or 'items related to franchise' rather than 'franchise' itself as an entry or balance. This makes the current sentences unnatural and potentially misleading for a professional learning Japanese accounting terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "フランチャイズを構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for establishing a franchise system."
+    },
+    {
+      "index": 1,
+      "text": "フランチャイズを展開する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for expanding a franchise business."
+    },
+    {
+      "index": 2,
+      "text": "フランチャイズを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for reviewing a franchise system or agreement."
+    },
+    {
+      "index": 3,
+      "text": "フランチャイズに加盟する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for joining a franchise."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "フランチャイズ (franchise) refers to a business model or system, not an accounting entry or balance. You cannot 'account for' or have a 'balance' of 'franchise' itself. You account for assets/liabilities/revenues/expenses related to a franchise business. The phrasing 'フランチャイズの計上内容や残高' is unnatural and semantically incorrect in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、フランチャイズ事業に関する収益や費用の計上内容、および関連する債権債務の残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán doanh thu, chi phí liên quan đến hoạt động nhượng quyền thương mại, cũng như số dư các khoản phải thu, phải trả liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries for revenues and expenses related to the franchise business, and in the balances of related receivables and payables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'フランチャイズを適正に処理する' is unnatural. You process transactions, revenues, expenses, or assets/liabilities related to a franchise, not the franchise itself as an accounting item. The term 'フランチャイズ' is too broad to be 'processed' in this accounting context.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてフランチャイズ事業に関連する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình xử lý kế toán liên quan đến hoạt động nhượng quyền thương mại trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly performed the accounting treatment related to the franchise business in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The phrase 'フランチャイズの計上内容に差異は発生していませんか' suffers from the same semantic issue as the example sentences. 'フランチャイズ' itself is not an item that has '計上内容' (accounting entry details) in this direct sense. It's the transactions or accounts related to the franchise business. Speaker B's response is fine if the question were natural, but the premise is flawed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、フランチャイズ事業に関する収益や費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, có sự chênh lệch nào trong nội dung hạch toán doanh thu và chi phí liên quan đến hoạt động nhượng quyền thương mại không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for revenues and expenses related to the franchise business?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "010e4a3429b15ace3f0dbed88a0ac9c8a8d03925d31bac9ea53c92bd74f4adca",
+    "validated_at": "2026-10-01T01:52:50.102691+00:00"
+  }
+}

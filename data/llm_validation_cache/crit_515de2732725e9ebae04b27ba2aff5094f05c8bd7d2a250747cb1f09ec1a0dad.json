@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000157",
+  "term": "保険料",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 and the dialogue exhibit repetitive, vacuous AI-templated phrasing ('適正な...適正に', '適正に整合している'). Additionally, the Vietnamese translation unduly restricts '保険料' to property insurance ('phí bảo hiểm tài sản'). These elements require replacement with realistic accounting practices such as periodic allocation and accrual/deferral adjustments.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保険料を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing/booking insurance expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "保険料の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end trial balance reviews when verifying general ledger balances for the insurance expense account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保険料を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, one reconciles invoices or policy schedules against the ledger (保険料の請求書と帳簿を照合する), rather than directly using '保険料を照合する'. A much more typical accounting operation for insurance is periodic allocation or deferral.",
+      "suggested_text": "保険料を期間按分する"
+    },
+    {
+      "index": 3,
+      "text": "保険料を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard, especially in the context of annual labor insurance premium settlement (労働保険料の確定精算) or corporate insurance adjustments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Reasonable corporate accounting check during monthly closing, though slightly formulaic.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly repetitive AI template phrasing ('適正な...' followed immediately by '適正に処理いたしました'). Real accounting documentation would specify the nature of the accounting treatment, such as deferring unexpired insurance to prepaid expenses (前払費用).",
+      "suggested_ja": "当期に一括前払いした損害保険料のうち、翌期以降の対応分は前払費用へ振り替えて適切に処理しました。",
+      "suggested_vi": "Trong số phí bảo hiểm phi nhân thọ đã thanh toán trước một lần trong kỳ, phần tương ứng với các kỳ sau đã được kết chuyển sang chi phí trả trước và xử lý phù hợp.",
+      "suggested_en": "Out of the non-life insurance premiums paid in a lump sum in the current period, the portion corresponding to subsequent periods was appropriately reclassified to prepaid expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase 'すべて適正に整合していることを確認いたしました' is redundant and unnatural ('整合している' already implies consistency; '適正に整合' is stilted AI Japanese). Furthermore, asking if '計上内容に差異は発生していませんか' without specifying the benchmark (e.g., budget vs. actual, or invoice vs. ledger) sounds artificial.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の保険料について、年払い分の期間按分と前払費用の振替は済んでいますか。",
+        "vi": "Về chi phí bảo hiểm tháng này, việc phân bổ theo kỳ cho khoản thanh toán năm và kết chuyển chi phí trả trước đã hoàn tất chưa?",
+        "en": "Regarding this month's insurance expenses, have the monthly amortization of the annual premium and the transfer to prepaid expenses been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、保険証券の明細と照合の上、当月発生分を適正に計上しております。",
+        "vi": "Vâng, sau khi đối chiếu với bảng kê hợp đồng bảo hiểm, chúng tôi đã hạch toán chính xác phần phát sinh trong tháng này.",
+        "en": "Yes, after reconciling with the insurance policy schedule, we have properly booked the amount incurred for the current month."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning 'phí bảo hiểm tài sản' (property insurance premium) is overly restrictive for the generic accounting account '保険料' (Insurance expenses / Chi phí bảo hiểm)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6bb4f388b4d082170bba51a84923d2c5f244e32fe93c066a45920fe0e10530a7",
+    "validated_at": "2026-10-01T01:36:28.200953+00:00"
+  }
+}

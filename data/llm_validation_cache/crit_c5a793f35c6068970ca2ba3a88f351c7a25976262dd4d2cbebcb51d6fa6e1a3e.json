@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000129",
+  "term": "一括比例配分法",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文がふるさと納税等の寄附金控除テンプレートから機械生成されており、「地域貢献」「控除上限額」など消費税の仕入税額控除計算と乖離した重大なドメイン事実誤認（Domain Factual Error）が含まれています。コロケーションおよび対話も含めて実務に即した内容へ全面修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "一括比例配分法を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「一括比例配分法」は消費税の仕入控除税額の計算・選択方式であり、補助金や優遇制度のように「利用する」とは言いません。「選択する」または「適用する」が適切です。",
+      "suggested_text": "一括比例配分法を選択する"
+    },
+    {
+      "index": 1,
+      "text": "一括比例配分法の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "納税者が自主的に選ぶ計算方式であるため、受動的な「適用を受ける」よりも能動的に「適用する」または「一括比例配分法により計算する」とするのが自然です。",
+      "suggested_text": "一括比例配分法を適用する"
+    },
+    {
+      "index": 2,
+      "text": "一括比例配分法を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "計算区分方式に対して「活用する」という動詞は業務実務上不自然です。「一括比例配分法を採用する」が適切です。",
+      "suggested_text": "一括比例配分法を採用する"
+    },
+    {
+      "index": 3,
+      "text": "一括比例配分法の対象となる",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "方式自体が対象になるのではなく、企業が方式を選択します。実務では2年間の拘束ルールが重要となるため「継続適用」などのコロケーションが教育上極めて有用です。",
+      "suggested_text": "一括比例配分法の継続適用"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「地域貢献」や「社内周知を行って制度を活用」は、ふるさと納税などの地域振興型優遇税制のテンプレートの明らかな混入です。消費税の仕入控除税額計算方法である「一括比例配分法」と全く無関係です。",
+      "suggested_ja": "個別対応方式と一括比例配分法のどちらが税負担上有利か、課税売上割合を踏まえて試算を行った。",
+      "suggested_vi": "Chúng tôi đã tính toán thử dựa trên tỷ lệ doanh số chịu thuế để xem phương pháp phân định riêng hay phương pháp phân bổ theo tỷ lệ sẽ có lợi hơn về mặt thuế.",
+      "suggested_en": "We ran a simulation based on our taxable sales ratio to determine whether the specific identification method or the proportional allocation method would be more tax-advantageous."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「控除上限額を事前に試算」も寄附金控除等のテンプレートの混入です。消費税の仕入控除において「控除上限額」とは言わず、実務では2年間の継続適用義務（いわゆる2年縛り）が最重要の留意点です。",
+      "suggested_ja": "一括比例配分法を選択すると最低2年間は個別対応方式へ変更できないため、翌期の設備投資計画も考慮して慎重に判断した。",
+      "suggested_vi": "Do việc lựa chọn phương pháp phân bổ theo tỷ lệ đồng nghĩa với việc không thể chuyển lại phương pháp phân định riêng trong ít nhất 2 năm, chúng tôi đã cân nhắc kỹ lưỡng cả kế hoạch đầu tư thiết bị của kỳ tới.",
+      "suggested_en": "Since electing the proportional allocation method restricts us from switching back to the specific identification method for at least two years, we made our decision carefully taking next term's capital expenditure plans into account."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "一括比例配分法の申告において「税理士の確認書」を添付書類として提出するような法定要件や慣行はありません（付表2などを添付します）。実務上、個別対応方式との選択判断に関する会話にするのが教育的です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の消費税申告ですが、個別対応方式と一括比例配分法のどちらを採用する方針ですか。",
+        "vi": "Về việc kê khai thuế tiêu thụ kỳ này, chúng ta dự định áp dụng phương pháp phân định riêng hay phương pháp phân bổ theo tỷ lệ?",
+        "en": "Regarding this period's consumption tax filing, which approach do we plan to adopt: the specific identification method or the proportional allocation method?"
+      },
+      {
+        "speaker": "B",
+        "ja": "課税仕入れの区分集計にかかる実務負担と控除税額を比較検討した結果、今回は一括比例配分法を選択する予定です。",
+        "vi": "Sau khi cân nhắc giữa gánh nặng nghiệp vụ phân loại chi phí đầu vào chịu thuế và số thuế được khấu trừ, kỳ này chúng tôi dự kiến chọn phương pháp phân bổ theo tỷ lệ.",
+        "en": "After weighing the administrative burden of classifying taxable purchases against the amount of deductible tax, we plan to elect the proportional allocation method this time."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語対訳自体（Proportional allocation method / phương pháp khấu trừ thuế đầu vào theo tỷ lệ bình quân）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f046232a574d7b59a0ed772d4e39fae73828ef2394f175f0d4283582de1067d0",
+    "validated_at": "2026-10-01T01:39:45.470846+00:00"
+  }
+}

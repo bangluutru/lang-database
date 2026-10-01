@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000067",
+  "term": "給与所得控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain factual errors: the candidate treated 給与所得控除 (an automatic individual income tax deduction) as an expense requiring supporting documents in corporate tax returns (決算申告), demonstrating mechanical LLM templating completely unsuited for professional Japanese instruction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "給与所得控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used in payroll calculation, year-end adjustments, and individual income tax returns.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "給与所得控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing referring to taxpayers receiving the statutory employment income deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "給与所得控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The ceiling amount (上限額) is fixed by tax law (currently 1,950,000 yen for income exceeding 8.5 million yen) rather than individually calculated; one calculates the deduction itself ('給与所得控除額を計算する') or applies the ceiling ('上限額が適用される').",
+      "suggested_text": "給与所得控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "給与所得控除の要件を満たす",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Standard 給与所得控除 is an automatic statutory deduction based strictly on gross employment income; it does not have qualifying criteria/conditions ('要件') to satisfy.",
+      "suggested_text": "給与所得控除の上限が適用される"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "給与所得控除 is calculated mechanically based on gross salary according to statutory tax brackets; it does not require vetting 'statutory requirements' (法定要件を慎重に確認した上で). Such phrasing is templated and factually inaccurate for standard deductions.",
+      "suggested_ja": "年末調整の計算実務において、年間の給与収入額に応じた給与所得控除額を適用しました。",
+      "suggested_vi": "Trong nghiệp vụ tính quyết toán thuế cuối năm, chúng tôi đã áp dụng mức giảm trừ thu nhập từ tiền lương, tiền công tương ứng với tổng thu nhập tiền lương trong năm.",
+      "suggested_en": "In the year-end tax adjustment process, we applied the employment income deduction corresponding to the annual gross salary amount."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "給与所得控除 is automatically deducted on the withholding slip (源泉徴収票) or individual return; there are no supporting documents attached to a tax return specifically to claim standard 給与所得控除.",
+      "suggested_ja": "税制改正により給与所得控除の上限額が引き下げられたため、高額所得者の税負担が増加しました。",
+      "suggested_vi": "Do cải cách thuế làm giảm trần mức giảm trừ thu nhập tiền lương, gánh nặng thuế của những người có thu nhập cao đã tăng lên.",
+      "suggested_en": "Due to tax reforms lowering the cap on the employment income deduction, the tax burden on high-income earners increased."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Catastrophic tax factual error: '決算申告' is corporate tax filing, whereas '給与所得控除' exists only in individual income tax (所得税) and year-end payroll adjustment (年末調整). Corporations do not claim or submit supporting documents for 給与所得控除 in corporate tax filings.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今年の年末調整における給与所得控除の計算ロジックは、最新の税制改正を反映できていますか。",
+        "vi": "Logic tính khoản giảm trừ thu nhập từ tiền lương trong đợt quyết toán thuế cuối năm nay đã cập nhật theo luật thuế mới nhất chưa?",
+        "en": "Has the calculation logic for the employment income deduction in this year's year-end tax adjustment been updated to reflect the latest tax reforms?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、給与計算システムの設定を改定し、控除額の上限規定も含めて反映済みです。",
+        "vi": "Vâng, chúng tôi đã cập nhật cài đặt trên hệ thống tính lương, bao gồm cả quy định về mức trần giảm trừ.",
+        "en": "Yes, we have updated the payroll system settings, including the deduction ceiling provisions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are appropriate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a07e45e1290d0d3a8f1aed7c98e5b05baba664758fa8baa06ef04d2219133f18",
+    "validated_at": "2026-10-01T01:38:30.397668+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000186",
+  "term": "自己申告制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationsとDialogueに不自然な表現や改善の余地があるため、全体的に修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自己申告制度を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「制度を行う」は不自然。制度は「導入する」「適用する」などが適切。",
+      "suggested_text": "自己申告制度を導入する"
+    },
+    {
+      "index": 1,
+      "text": "自己申告制度を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「制度を完了する」は不自然。制度は完了するものではなく、手続きや申請が完了するもの。",
+      "suggested_text": "自己申告制度の手続きを完了する"
+    },
+    {
+      "index": 2,
+      "text": "自己申告制度を申請する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「制度を申請する」は不自然。制度そのものを申請するのではなく、制度の適用を申請する。",
+      "suggested_text": "自己申告制度の適用を申請する"
+    },
+    {
+      "index": 3,
+      "text": "自己申告制度の適法性を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「関係官庁の要件を満たすため速やかに自己申告制度の手続きを完了させました」は、やや硬く、自然なビジネス文書としては不自然。また、「関係官庁の要件を満たすため」と「速やかに」の繋がりもやや不自然。",
+      "suggested_ja": "税関への本申告に先立ち、関係官庁の要件を満たすべく、自己申告制度の手続きを速やかに完了させました。",
+      "suggested_vi": "Trước khi khai báo chính thức với hải quan, chúng tôi đã nhanh chóng hoàn tất thủ tục theo chế độ tự chứng nhận xuất xứ của nhà xuất khẩu để đáp ứng các yêu cầu của cơ quan có thẩm quyền.",
+      "suggested_en": "Prior to the formal customs declaration, we promptly completed the procedures for the self-certification system of origin to meet the requirements of the competent authorities."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然なビジネス文書の表現。"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「手配状況」についてだが、Bの回答は「連絡を済ませており、書類の確認も完了して輸入申告に入っております」と、手配状況の具体的な進捗を答えているものの、Aの質問の意図（例えば、問題なく進んでいるか、いつまでに完了するかなど）を完全に汲み取っているとは言えない。また、「乙仲」という言葉は、現代のビジネスシーンではあまり使われず、「通関業者」で統一されることが多い。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、自己申告制度の手配状況はいかがでしょうか。問題なく進んでいますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình chuẩn bị cho chế độ tự chứng nhận xuất xứ thế nào rồi? Có vấn đề gì không?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the self-certification system arrangements? Is everything proceeding smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者への連絡は済んでおり、必要な書類の確認も完了し、現在輸入申告の段階に入っております。問題ございません。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan, việc kiểm tra các chứng từ cần thiết cũng đã hoàn tất và hiện đang trong giai đoạn khai báo nhập khẩu. Không có vấn đề gì ạ.",
+        "en": "Yes, we have already contacted the customs broker, completed the verification of necessary documents, and are now in the import declaration phase. There are no issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eeb9ddcf4e48206ed7ecd6b0c08b1e7ba66ca511d8b589722ec51b52ff804e87",
+    "validated_at": "2026-10-01T01:57:16.036585+00:00"
+  }
+}

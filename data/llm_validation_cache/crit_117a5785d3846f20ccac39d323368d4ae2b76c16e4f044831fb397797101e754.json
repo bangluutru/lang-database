@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000138",
+  "term": "コルレス銀行",
+  "overall_decision": "reject",
+  "summary_reason": "The core understanding of 'コルレス銀行' as an organization versus a meeting/event is fundamentally flawed throughout the collocations, examples, and dialogue. This leads to pervasive semantic and domain-specific errors that make the learning object unsuitable for professional instruction without significant revision.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "コルレス銀行を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「コルレス銀行」は組織名であり、会議やイベントのように「開催する」対象ではない。銀行自体を開催することはできない。",
+      "suggested_text": "コルレス契約を締結する"
+    },
+    {
+      "index": 1,
+      "text": "コルレス銀行で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「コルレス銀行」は組織名であり、会議体ではないため、その場所で決議を行うという表現は不自然。決議は会議体で行われる。",
+      "suggested_text": "コルレス銀行との協議で合意する"
+    },
+    {
+      "index": 2,
+      "text": "コルレス銀行に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "コルレス銀行に対して業務上の報告を行うことは自然な行為。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "コルレス銀行へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "コルレス銀行に対して必要な届出書を提出することは自然な行為。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「コルレス銀行」は会議体ではないため、「臨時コルレス銀行を招集する」という表現は誤り。コルレス銀行は金融機関であり、会議を開く対象ではない。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時取締役会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp hội đồng quản trị bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary board meeting will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「コルレス銀行において」経営方針や予算が可決されることはない。これは会議体（例：取締役会、株主総会）で行われること。",
+      "suggested_ja": "取締役会において今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại cuộc họp hội đồng quản trị, phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At the board meeting, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「コルレス銀行の準備状況」という表現が不自然。コルレス銀行は準備する対象ではなく、金融機関そのものを指す。会議の準備状況を尋ねる文脈でコルレス銀行を使うのは誤り。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定のコルレス契約に関する会議に向けて、準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị cho cuộc họp về hợp đồng ngân hàng đại lý thanh toán quốc tế dự kiến diễn ra vào tuần tới như thế nào rồi?",
+        "en": "Regarding the meeting on the correspondent banking agreement scheduled for next week, what is the preparation status?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc điều hành, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final draft of the content and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "226ccfb1ae591d5765ed2af9fd8c82e6f7891d3502302aad56d7342797d04118",
+    "validated_at": "2026-10-01T01:56:20.958439+00:00"
+  }
+}

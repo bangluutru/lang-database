@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000163",
+  "term": "雑費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The submission relies heavily on unnatural, copy-paste templates ('残高に差異がないか', '適正な...適正に処理いたしました', '適正に整合している') that fail to reflect authentic accounting discourse surrounding 雑費, which typically centers on materiality thresholds and breakdown scrutiny.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雑費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking miscellaneous expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雑費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when checking ledger balances during closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "雑費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly reconcile an expense category itself; native practice collocates with the breakdown or vouchers (e.g., 雑費の内訳を照合する or 雑費として処理する).",
+      "suggested_text": "雑費の内訳を確認する"
+    },
+    {
+      "index": 3,
+      "text": "雑費を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese business practice, 精算する applies to advance payments or expenses in general (立替金, 経費), whereas 雑費 is an accounting line item generally handled with 処理する or 振り替える.",
+      "suggested_text": "雑費として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '残高に差異がないか精査します' is a templated formula applied mechanically to a P&L expense account. For 雑費, accounting scrutiny focuses on whether other specific expense items are improperly mixed in or if amounts exceed thresholds.",
+      "suggested_ja": "月次決算のレビューにおいて、雑費に本来他の勘定科目へ計上すべき費用が含まれていないか精査します。",
+      "suggested_vi": "Trong đợt rà soát quyết toán tháng, chúng tôi kiểm tra kỹ lưỡng xem trong chi phí tạp có khoản nào đáng lẽ phải hạch toán vào tài khoản khác hay không.",
+      "suggested_en": "During the monthly closing review, we carefully examine whether the miscellaneous expenses include items that should have been booked under other accounts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is unidiomatic (the standard term is 一般に公正妥当と認められる会計基準 or simply 会計基準), and repeating '適正な...適正に' is stylistically clumsy and templated.",
+      "suggested_ja": "社内規程および会計基準に則り、少額かつ重要性の乏しい費用のみを雑費として処理いたしました。",
+      "suggested_vi": "Tuân thủ quy chế nội bộ và chuẩn mực kế toán, chúng tôi chỉ xử lý các khoản chi nhỏ và có tính trọng yếu thấp vào mục chi phí tạp.",
+      "suggested_en": "In accordance with internal regulations and accounting standards, we recorded only minor, immaterial expenses as miscellaneous expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'雑費の計上内容に差異は発生していませんか' and '適正に整合している' are mechanical template artifacts. In actual practice, managers query unusual increases in 雑費 or whether vouchers support the breakdown.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の雑費ですが、前月比で大幅に増加している要因は何でしょうか。",
+        "vi": "Về chi phí tạp tháng này, nguyên nhân nào khiến nó tăng mạnh so với tháng trước vậy?",
+        "en": "Regarding miscellaneous expenses this month, what is causing the significant increase compared to last month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "オフィスのレイアウト変更に伴う一時的な廃棄費用が含まれているためです。内訳明細を提出いたします。",
+        "vi": "Dạ là do có bao gồm chi phí xử lý rác thải tạm thời phát sinh khi thay đổi bố cục văn phòng. Tôi xin gửi bảng kê chi tiết.",
+        "en": "It is due to temporary disposal costs associated with the office layout change. I will submit the itemized breakdown."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "'chi phí lặt vặt khác' is colloquial. In Vietnamese corporate accounting, the standard technical term for 雑費 is 'chi phí tạp' or 'chi phí khác'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6e53c70d7bd653e78e5fc1ed6a71a708a24bdfc9f7dd14d95d187a03d37f8656",
+    "validated_at": "2026-10-01T01:36:38.419272+00:00"
+  }
+}

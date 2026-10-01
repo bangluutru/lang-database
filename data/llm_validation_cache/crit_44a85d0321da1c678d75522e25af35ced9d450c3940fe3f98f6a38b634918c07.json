@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000131",
+  "term": "見込み客",
+  "overall_decision": "rewrite",
+  "summary_reason": "Total template contamination: Collocations, examples, and dialogue were blindly generated using templates meant for corporate officers (取締役/監査役) and corporate documents, resulting in completely absurd sentences for '見込み客'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "見込み客を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "見込み客 (prospective customer/lead) is an external sales target, not a corporate officer or auditor who can be elected or appointed (選任する).",
+      "suggested_text": "見込み客を開拓する"
+    },
+    {
+      "index": 1,
+      "text": "見込み客に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One cannot take office (就任する) as a prospective customer; this is a template error from officer roles.",
+      "suggested_text": "見込み客にアプローチする"
+    },
+    {
+      "index": 2,
+      "text": "見込み客に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A company does not seek consultation from a sales lead; standard sales activities involve nurturing or acquiring leads.",
+      "suggested_text": "見込み客を育成する"
+    },
+    {
+      "index": 3,
+      "text": "見込み客の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A customer has no corporate duties (職務) to execute for the company; severe template hallucination.",
+      "suggested_text": "見込み客のリストを作成する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Nonsensical sentence mechanically cloned from a director appointment template; leads are not appointed via general shareholder meetings.",
+      "suggested_ja": "展示会への出展を通じて、多数の有望な見込み客を獲得することができました。",
+      "suggested_vi": "Thông qua việc tham gia triển lãm, chúng tôi đã thu hút được rất nhiều khách hàng tiềm năng đầy triển vọng.",
+      "suggested_en": "Through participating in the exhibition, we were able to acquire a large number of promising leads."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Nonsensical sentence cloned from an auditor template; holding meetings with prospective customers does not ensure the legality of business execution.",
+      "suggested_ja": "獲得した見込み客に対して定期的にメルマガを配信し、購買意欲を高めています。",
+      "suggested_vi": "Chúng tôi định kỳ gửi bản tin qua email cho các khách hàng tiềm năng đã thu thập được để gia tăng nhu cầu mua sắm.",
+      "suggested_en": "We regularly send email newsletters to acquired leads to nurture their purchase intent."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A treats '見込み客' as an object or material to be prepared, and Speaker B treats it as a written document being drafted, approved by directors, and dispatched. The dialogue makes no sense for the term 'lead/prospective customer'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日のウェビナーで獲得した見込み客へのフォローアップ状況はいかがですか。",
+        "vi": "Tình hình theo dõi các khách hàng tiềm năng thu được từ buổi hội thảo trực tuyến hôm trước thế nào rồi?",
+        "en": "How is the follow-up progressing for the leads we acquired from the recent webinar?"
+      },
+      {
+        "speaker": "B",
+        "ja": "確度の高い企業から順次架電しており、すでに数社と個別商談のアポイントが取れました。",
+        "vi": "Chúng tôi đang lần lượt gọi điện cho các công ty có tiềm năng cao và đã chốt được lịch hẹn đàm phán riêng với một vài công ty rồi.",
+        "en": "We are calling high-priority companies first, and we have already secured individual business meetings with several of them."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are correct, though all input sentences were invalid hallucinations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ebf87a9832770fbb9129ba5565fcb0874628dbe20b82e8eef6fff4aae47d4acc",
+    "validated_at": "2026-10-01T01:43:08.700822+00:00"
+  }
+}

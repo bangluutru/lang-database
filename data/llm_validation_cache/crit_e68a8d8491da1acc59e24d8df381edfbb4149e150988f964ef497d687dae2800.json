@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000018",
+  "term": "督促状",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic hallucination in Example 0 and Dialogue where '督促状' (demand/dunning letter) was blindly inserted into boilerplate templates meant for corporate meeting notices (招集通知) or general meeting materials.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "督促状を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and accounting phrase for drafting a payment reminder or demand letter.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "督促状を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A 督促状 (dunning letter/payment demand) is dispatched, sent, or issued to an overdue counterparty (発送する/送付する/発行する), never 'submitted' (提出する) like an application, report, or regulatory filing.",
+      "suggested_text": "督促状を送付する"
+    },
+    {
+      "index": 2,
+      "text": "督促状を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business procedure for dispatching overdue payment notices.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "督促状を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Valid formal collocation for receiving a demand letter or tax reminder.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe contextual error. A 督促状 (dunning/demand letter for overdue payment or obligation) has nothing to do with convening or running a shareholders' or board meeting (which requires a 招集通知). This is an erroneous slot-filled template.",
+      "suggested_ja": "支払期日を過ぎても入金が確認できない取引先に対し、経理部門より督促状を発送いたしました。",
+      "suggested_vi": "Đối với các đối tác quá hạn thanh toán mà vẫn chưa xác nhận được tiền về, phòng kế toán đã gửi thư nhắc nợ.",
+      "suggested_en": "The accounting department dispatched demand letters to clients whose payments have not been confirmed past the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated boilerplate ('内部統制およびコンプライアンスの証跡として...厳重に保管しています'). In reality, a company typically issues 督促状 to recover accounts receivable, and issuing them requires an audit trail.",
+      "suggested_ja": "売掛金の未回収が長期化している案件については、法的手続きへ移行する前に再度督促状を送付する必要があります。",
+      "suggested_vi": "Đối với các khoản nợ phải thu quá hạn kéo dài, cần phải gửi lại thư đôn đốc thanh toán trước khi chuyển sang các thủ tục pháp lý.",
+      "suggested_en": "For accounts receivable that remain overdue for an extended period, we need to send another demand letter before escalating to legal proceedings."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Nonsensical context. Preparing a 督促状 (payment reminder / demand letter) 'for a meeting scheduled next week' is completely disconnected from real-world business practice. It confuses a demand letter with meeting materials or convocation notices.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "期日を過ぎても未入金のA社に対して、督促状の送付準備は進んでいますか。",
+        "vi": "Đối với Công ty A vẫn chưa thanh toán dù đã quá hạn, việc chuẩn bị gửi thư nhắc nợ tiến hành đến đâu rồi?",
+        "en": "How is the preparation going for sending the demand letter to Company A, who is still overdue on payment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "文面の法務確認と経理部長の承認が下りましたので、本日内容証明郵便にて発送いたします。",
+        "vi": "Văn bản đã được pháp chế xem xét và trưởng phòng kế toán phê duyệt, nên hôm nay chúng tôi sẽ gửi bằng thư chứng nhận nội dung.",
+        "en": "Legal review and the accounting manager's approval are complete, so we will send it today via content-certified mail."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The base definitions are acceptable, but the example and dialogue translations reflected completely hallucinated context from mechanical template mashups."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "33079aa2497aee99eadaddfffb79883430a0c76838302284054cd67b1e48f79d",
+    "validated_at": "2026-10-01T01:41:16.989928+00:00"
+  }
+}

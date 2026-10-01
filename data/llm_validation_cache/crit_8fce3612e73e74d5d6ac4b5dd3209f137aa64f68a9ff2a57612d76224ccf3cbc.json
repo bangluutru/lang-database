@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000192",
+  "term": "該非判定",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '該非判定' (applicability determination for export control) as an accounting entry or balance. The original examples and dialogue incorrectly apply accounting terminology ('計上', '残高', '処理' in a financial closing context) to a trade compliance procedure. This makes the Japanese unnatural and factually incorrect in a business context. All examples and the dialogue require significant rewriting to reflect the true nature of '該非判定' and its proper usage in a professional setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "該非判定を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "該非判定を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "該非判定の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "該非判定を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "該非判定 (applicability determination for export control) is a process, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an accounting entry) or have a '残高' (balance). The sentence incorrectly applies accounting terms to a trade compliance procedure.",
+      "suggested_ja": "月末の帳簿照合において、輸出管理に関する該非判定の記録に不備がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có bất kỳ thiếu sót nào trong hồ sơ thẩm định đánh giá tính chất nhạy cảm của hàng hóa liên quan đến kiểm soát xuất khẩu hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any deficiencies in the records of applicability determination for export control."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 該非判定 is a compliance process, not an item that is '処理' (processed) in the context of financial closing entries (決算). While the process itself is handled, the phrasing '該非判定を適正に処理いたしました' in a financial closing context is unnatural and semantically incorrect. It implies 該非判定 is an accounting transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において輸出管理に関する該非判定が適切に行われたことを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng việc thẩm định đánh giá tính chất nhạy cảm của hàng hóa liên quan đến kiểm soát xuất khẩu đã được thực hiện đúng cách trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that the applicability determination for export control was properly conducted during this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '該非判定の計上内容に差異は発生していませんか' incorrectly treats 該非判定 as an accounting entry ('計上内容') that can have discrepancies. This reflects the same semantic misunderstanding as in the example sentences. Speaker B's response, while grammatically correct, is disconnected because the premise of A's question is flawed in the context of 該非判定.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、輸出管理に関する該非判定の記録に不備はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, hồ sơ thẩm định đánh giá tính chất nhạy cảm của hàng hóa liên quan đến kiểm soát xuất khẩu có bất kỳ thiếu sót nào không?",
+        "en": "In this month's monthly closing, were there any deficiencies in the records of applicability determination for export control?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連書類とシステム記録を照合済みで、すべて適切に管理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các tài liệu liên quan và hồ sơ hệ thống, và đã xác nhận rằng tất cả đều được quản lý đúng cách.",
+        "en": "Yes, we have reconciled the relevant documents and system records, and confirmed that everything is properly managed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The original English and Vietnamese translations for '該非判定' (Classification / Applicability determination and thẩm định đánh giá tính chất nhạy cảm của hàng hóa công nghệ) are generally acceptable for the term itself. However, the issue lies in the example sentences and dialogue where the Japanese text incorrectly applies accounting concepts to '該非判定'. The suggested rewrites for the Japanese examples and dialogue necessitate corresponding changes in the English and Vietnamese translations to maintain accuracy and naturalness in the corrected context. The original translations for the term itself are fine, but the context in which they were used was flawed."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9964adefeb19df63f80f65cf20c5ed4172fe1a3ccb70ce5bdd97e039fefeb151",
+    "validated_at": "2026-10-01T01:57:24.341251+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000123",
+  "term": "タイムカード",
+  "overall_decision": "rewrite",
+  "summary_reason": "株主総会・取締役会の招集通知テンプレートが『タイムカード』に誤混入しており、例文1および会話文が業務実態として完全に破綻しているため、勤怠管理・労務実務に即した内容への全面リライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "タイムカードを作成する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "タイムカードは「作成する」よりも、打刻・記録する動作の「押す／打刻する」、または月末処理の「集計する」と共起するのが極めて自然です。",
+      "suggested_text": "タイムカードを押す"
+    },
+    {
+      "index": 1,
+      "text": "タイムカードを提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "月末の勤怠締め日に従業員が人事・総務部門へ提出する表現として極めて自然です。",
+      "suggested_text": "タイムカードを提出する"
+    },
+    {
+      "index": 2,
+      "text": "タイムカードを発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "タイムカードを社外や関係者へ発送する業務実態はなく、招集通知等のテンプレート混入です。",
+      "suggested_text": "タイムカードを集計する"
+    },
+    {
+      "index": 3,
+      "text": "タイムカードを受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "人事・労務実務では受領というより「回収する」や「保管する（労働基準法による保存義務）」が適切です。",
+      "suggested_text": "タイムカードを回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "株主総会や取締役会に向けてタイムカードを発送するという、致命的なテンプレート混入（招集通知等の流用）が発生しています。",
+      "suggested_ja": "月末の勤怠締め日を過ぎたため、各部署から提出されたタイムカードを集計して給与計算を進めてください。",
+      "suggested_vi": "Vì đã qua ngày chốt công cuối tháng, vui lòng tổng hợp thẻ chấm công được gửi từ các phòng ban để tiến hành tính lương.",
+      "suggested_en": "Since the end-of-month attendance cutoff has passed, please tally the time cards submitted by each department and proceed with payroll processing."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "文脈自体は労働関連記録の保管として理解できますが、「受領したタイムカード」という表現が硬直的であり、労働基準法に基づく法定保存義務（勤怠記録の保存）に即した自然な表現に改めるべきです。",
+      "suggested_ja": "労働基準法に基づく労務管理の証跡として、回収した過去数年分のタイムカードを厳重に保管しています。",
+      "suggested_vi": "Làm chứng từ quản lý lao động theo Luật Tiêu chuẩn Lao động, chúng tôi lưu trữ nghiêm ngặt thẻ chấm công đã thu hồi trong những năm qua.",
+      "suggested_en": "As audit evidence of labor management under the Labor Standards Act, we securely archive the collected time cards from the past several years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "会議の準備としてタイムカードの内容を推敲・役員承認・発送するという、完全に無関係な会議資料テンプレートが適用されており、実務上全く成立しません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算を行いたいのですが、営業部のタイムカードの回収状況はどうなっていますか。",
+        "vi": "Tôi muốn tiến hành tính lương tháng này, tình hình thu thẻ chấm công của phòng kinh doanh thế nào rồi?",
+        "en": "I'd like to run this month's payroll; what is the status of collecting the sales department's time cards?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直行直帰のメンバー分も含めて先ほど全員分が揃いましたので、これから集計に入ります。",
+        "vi": "Vừa nãy đã tập hợp đủ của toàn bộ nhân viên bao gồm cả những người đi thẳng về thẳng, giờ tôi sẽ bắt đầu tổng hợp dữ liệu.",
+        "en": "We just gathered everyone's cards, including those working directly off-site, so I will begin tallying them now."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳としての thẻ chấm công / time card は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "840416f23119c1199499c7a4134475346aa639562441c4a91f9eb3a1221914f2",
+    "validated_at": "2026-10-01T01:43:02.581925+00:00"
+  }
+}

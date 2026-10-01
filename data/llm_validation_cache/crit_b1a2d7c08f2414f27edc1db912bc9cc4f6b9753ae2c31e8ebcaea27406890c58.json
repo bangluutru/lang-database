@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000164",
+  "term": "営業利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain mismatch: The content treated 営業利益 (an income statement subtotal calculated as Gross Profit minus SG&A) as if it were a journal entry line item with account balances and subledgers to be reconciled with vouchers.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "営業利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in financial reporting and earnings releases (e.g., 営業利益◯億円を計上する).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "営業利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "営業利益 is a calculated subtotal on the P/L, not a balance-sheet or ledger account that carries a '残高' (balance).",
+      "suggested_text": "営業利益を確保する"
+    },
+    {
+      "index": 2,
+      "text": "営業利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Profit subtotals are analyzed, calculated, or compared against budget (分析する/算出する/比較する), not reconciled (照合する) like bank or voucher accounts.",
+      "suggested_text": "営業利益を算出する"
+    },
+    {
+      "index": 3,
+      "text": "営業利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "営業利益 cannot be settled/cleared (精算する). '精算' applies to advances, expenses, or accounts payable/receivable.",
+      "suggested_text": "営業利益率を改善する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "営業利益 has no '残高' (balance) and is not a journalized entry reconciled during month-end book reconciliations. This is an artificial template applied indiscriminately to a P/L summary indicator.",
+      "suggested_ja": "販管費の抑制に努めた結果、当期の営業利益は当初予算を大幅に上回る見込みです。",
+      "suggested_vi": "Nhờ nỗ lực cắt giảm chi phí bán hàng và quản lý doanh nghiệp, lợi nhuận thuần từ hoạt động kinh doanh kỳ này dự kiến sẽ vượt đáng kể so với ngân sách ban đầu.",
+      "suggested_en": "As a result of efforts to curb SG&A expenses, operating profit for the current fiscal year is projected to significantly exceed the initial budget."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'営業利益を適正に処理いたしました' is empty template corporate-speak. One records revenues/expenses or calculates operating profit, but does not 'process' operating profit itself.",
+      "suggested_ja": "主力のクラウド事業における売上高の伸長が寄与し、第3四半期の営業利益は前年同期比で15%増となりました。",
+      "suggested_vi": "Nhờ đóng góp từ sự tăng trưởng doanh thu của mảng dịch vụ đám mây chủ lực, lợi nhuận thuần từ hoạt động kinh doanh quý 3 đã tăng 15% so với cùng kỳ năm trước.",
+      "suggested_en": "Driven by revenue growth in the core cloud business, operating profit for the third quarter increased by 15% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "営業利益 does not have a subledger (補助元帳), nor is it reconciled against vouchers (証憑書類). Real-world discussions regarding operating profit center around budget variances, cost increases, and landing forecasts.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、営業利益が予算を下回っている要因は何でしょうか。",
+        "vi": "Trong báo cáo quyết toán tháng này, nguyên nhân khiến lợi nhuận thuần từ hoạt động kinh doanh thấp hơn dự toán là gì vậy?",
+        "en": "Looking at this month's financial results, what is the main reason operating profit fell short of the budget?"
+      },
+      {
+        "speaker": "B",
+        "ja": "原材料価格の高騰に伴い売上原価率が悪化したことに加え、新規プロモーションに伴う広告宣伝費が先行したためです。",
+        "vi": "Đó là do tỷ lệ giá vốn hàng bán tăng vì giá nguyên vật liệu đầu vào tăng cao, cùng với chi phí quảng cáo tăng trước cho chiến dịch quảng bá mới.",
+        "en": "In addition to a deteriorated cost-of-sales ratio driven by soaring raw material prices, advertising expenses for the new promotional campaign were incurred ahead of schedule."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d818dd03717f862d019eeea22653c7def0393ee1e901f96f1e2b626ef71f8291",
+    "validated_at": "2026-10-01T01:36:38.904381+00:00"
+  }
+}

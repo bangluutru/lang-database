@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000016",
+  "term": "現金及び預金",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションにおける述語ミスマッチ（「精算する」の誤用等）に加え、例文・対話が実務に即さない空疎な自動生成テンプレート表現（「適正に〜適正に処理」「適正に整合している」）となっているため、実務で使われる自然な表現への書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "現金及び預金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "勘定科目としての「現金及び預金」は単体で直接「計上する」というより、「流動資産として計上する」または「実査する」「残高を確定する」と表現するのが実務上自然です。",
+      "suggested_text": "現金及び預金を実査する"
+    },
+    {
+      "index": 1,
+      "text": "現金及び預金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で頻出する極めて自然なコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "現金及び預金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "資産科目自体を照合するのではなく、「帳簿残高と実際有高（または残高証明書）を照合する」のように残高を対象とするのが正確です。",
+      "suggested_text": "現金及び預金の残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "現金及び預金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」の対象は仮払金・立替金・経費などであり、現金及び預金そのものを精算することは意味論的に誤りです。",
+      "suggested_text": "現金及び預金を組み替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「計上内容や残高に差異がないか」という表現はぎこちなく、実務では「帳簿残高と実際有高（または銀行残高証明書）の差異」を精査・確認します。",
+      "suggested_ja": "月末の決算手続において、現金及び預金の帳簿残高と実際有高に差異が生じていないか精査します。",
+      "suggested_vi": "Trong thủ tục quyết toán cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có phát sinh chênh lệch giữa số dư trên sổ sách và số dư thực tế của tiền mặt và tiền gửi ngân hàng hay không.",
+      "suggested_en": "During month-end closing procedures, we carefully examine whether there are any discrepancies between book balances and actual balances of cash and deposits."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜適正に処理いたしました」という重複があり、かつ会計実務として「現金及び預金を適正に処理した」という報告内容は具体性を欠く空虚なテンプレート文です。",
+      "suggested_ja": "期末決算にあたり、銀行の残高証明書を取り寄せて現金及び預金の残高を確定させました。",
+      "suggested_vi": "Phục vụ cho đợt quyết toán cuối kỳ, chúng tôi đã xin giấy xác nhận số dư từ ngân hàng và chốt số dư tiền mặt và tiền gửi ngân hàng.",
+      "suggested_en": "For the fiscal year-end closing, we obtained bank balance certificates and confirmed the balance of cash and deposits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「計上内容に差異は発生していませんか」「適正に整合している」は実務日本語として極めて不自然な重言・テンプレート的言い回しです。通常は「残高に差異（ズレ）は出ていませんか」「不一致のないことを確認いたしました」などと表現します。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、現金及び預金の残高に差異は出ていませんか。",
+        "vi": "Trong đợt quyết toán tháng này, số dư tiền mặt và tiền gửi ngân hàng có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the cash and deposit balances for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "預金通帳および金庫の実際有高と元帳を照合済みで、不一致のないことを確認しております。",
+        "vi": "Tôi đã đối chiếu sổ phụ ngân hàng và số dư thực tế trong két sắt với sổ cái, và xác nhận không có sai lệch nào.",
+        "en": "We have reconciled the bank passbooks and actual vault counts against the ledger and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "訳語自体は問題ありませんが、例文および対話のリライトに伴い訳文の更新が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bf485356c67ee01eb8a57fa9a47f1a8407c3bc6742360e858c162bf4f1023874",
+    "validated_at": "2026-10-01T01:33:11.780921+00:00"
+  }
+}

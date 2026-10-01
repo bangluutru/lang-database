@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000072",
+  "term": "特恵税率",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how '特恵税率' (GSP rate) is treated in an accounting context. A tax rate is not an accounting entry or balance itself; it's a factor used to calculate a tax amount (customs duty), which is then accounted for. This error permeates the collocations, example sentences, and dialogue, making them unnatural and factually incorrect from an accounting perspective.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特恵税率を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "特恵税率を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "特恵税率を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You don't 'pay' a tax rate; you pay the tax amount calculated using the rate. The rate itself is not paid.",
+      "suggested_text": "特恵税率を適用して関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "特恵税率の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Tax rates themselves are not 'classified'. Goods are classified, and then a rate is applied. This phrasing is awkward.",
+      "suggested_text": "特恵税率の適用対象品目を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "特恵税率 (GSP rate) is a rate, not an accounting entry or balance. It's used to calculate customs duty, which is then accounted for. You cannot 'book' or have a 'balance' of a rate itself. The Japanese sentence implies the rate itself is an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、特恵税率が適用された関税の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của thuế quan đã áp dụng thuế suất ưu đãi đặc biệt (GSP) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for customs duties to which the generalized system of preferences (GSP) rate was applied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, '特恵税率を処理する' (processing a tax rate) is unnatural in an accounting context. You process the customs duty, or apply the rate. The rate itself is not an item to be processed in closing entries.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において特恵税率の適用による関税を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định thuế quan áp dụng thuế suất ưu đãi đặc biệt (GSP) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed customs duties resulting from the application of the generalized system of preferences (GSP) rate in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '特恵税率の計上内容に差異は発生していませんか' is problematic for the same reason as the example sentences: a tax rate itself is not 'booked' or 'entered' in accounting. Speaker B's response is also unnatural as it implies the rate itself has supporting documents and ledgers, rather than the customs duty amount.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、特恵税率が適用された関税の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán thuế quan đã áp dụng thuế suất ưu đãi đặc biệt (GSP) không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for customs duties to which the GSP rate was applied?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, I have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The original Japanese sentences contain factual errors regarding accounting for tax rates. The translations, while grammatically correct, reflect these errors. The suggested translations are updated to reflect the corrected Japanese."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "49c8815bd4e98f45110c106bb6dedae04cf17e8686f5ef6a0bafbafec5434812",
+    "validated_at": "2026-10-01T01:54:55.909949+00:00"
+  }
+}

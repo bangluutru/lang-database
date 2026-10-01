@@ -1,0 +1,81 @@
+{
+  "entry_id": "jp-pro-tax-000056",
+  "term": "ひとり親控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal tax domain error in dialogue: ひとり親控除 (an individual income tax deduction) cannot exist in a '決算申告' (corporate tax return); must be framed in 年末調整 (year-end adjustment) or 確定申告. Additionally, Collocation 2 is factually flawed because ひとり親控除 is a flat statutory amount with no variable '上限額'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ひとり親控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural tax/payroll terminology."
+    },
+    {
+      "index": 1,
+      "text": "ひとり親控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural phrasing for receiving the deduction."
+    },
+    {
+      "index": 2,
+      "text": "ひとり親控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "ひとり親控除 is a flat statutory deduction (350,000 yen for national income tax; 300,000 yen for local resident tax), not a variable calculation with an 'upper limit' (上限額) like medical expense or donation deductions. The natural action is verifying eligibility criteria or confirming deduction amounts.",
+      "suggested_text": "ひとり親控除の適用可否を判定する"
+    },
+    {
+      "index": 3,
+      "text": "ひとり親控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Correct and standard terminology regarding statutory criteria."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and natural in individual tax return (確定申告) contexts."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage for attaching verification documents."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Factually incorrect tax terminology: '決算申告' refers specifically to corporate financial closing and corporate tax returns (法人税申告). ひとり親控除 is an individual income tax deduction (所得税の所得控除), which only occurs in individual tax filings (個人確定申告) or company year-end payroll adjustments (年末調整). Using '決算申告' for an individual deduction is a serious domain error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員の年末調整におけるひとり親控除の適用要件と提出書類は確認できましたか。",
+        "vi": "Anh/chị đã kiểm tra điều kiện áp dụng và hồ sơ nộp về khoản giảm trừ cha mẹ đơn thân trong đợt quyết toán thuế cuối năm của nhân viên chưa?",
+        "en": "Have you verified the eligibility requirements and submitted documents for the single parent deduction in the employees' year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、扶養控除等申告書と所得要件の確認が取れましたので、問題なく処理可能です。",
+        "vi": "Vâng, tôi đã kiểm tra xong tờ khai giảm trừ người phụ thuộc và điều kiện thu nhập, nên có thể xử lý thỏa đáng.",
+        "en": "Yes, we have verified the Declaration for Exemption for Dependents and the income requirements, so we can process it without issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Accurate definitions in both languages, although 'deduction' is more precise than 'exemption' for Japanese 所得控除, 'exemption' is commonly accepted."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "63d57327a079fe83eabc820347efabe4ae0d7884d3cd9403367d57620e1c1c0c",
+    "validated_at": "2026-10-01T01:38:22.053511+00:00"
+  }
+}

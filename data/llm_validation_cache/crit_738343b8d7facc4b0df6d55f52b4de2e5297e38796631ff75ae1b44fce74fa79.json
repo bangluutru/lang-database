@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000162",
+  "term": "乙欄",
+  "overall_decision": "rewrite",
+  "summary_reason": "乙欄（源泉徴収税額表の区分）の基本概念がふるさと納税等の節税制度と完全に混同されており、コロケーション・例文・対話すべてに重大な業務的・税法的事実誤認が含まれているため全面的に書き直します。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "乙欄を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "乙欄は源泉徴収税額表の税率区分であり、優遇制度やサービスではないため「利用する」とは言いません。通常は「適用する」を用います。",
+      "suggested_text": "乙欄を適用する"
+    },
+    {
+      "index": 1,
+      "text": "乙欄の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "給与所得者が2か所以上から給与を受ける場合などに使われる自然な表現です。",
+      "suggested_text": "乙欄の適用を受ける"
+    },
+    {
+      "index": 2,
+      "text": "乙欄を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "乙欄は控除のない高い源泉徴収税率が適用される区分であり、メリットとして「活用する」対象ではありません。",
+      "suggested_text": "乙欄で源泉徴収する"
+    },
+    {
+      "index": 3,
+      "text": "乙欄の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "扶養控除等申告書の提出がない従業員などが該当する文脈で自然に用いられます。",
+      "suggested_text": "乙欄の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献」「制度を活用」など、ふるさと納税等の別制度と混同した深刻な事実誤認・定型文の流用が見られます。乙欄は副業等の源泉徴収区分です。",
+      "suggested_ja": "副業として勤務している従業員については、扶養控除等申告書の提出がないため、源泉徴収税額表の乙欄を適用します。",
+      "suggested_vi": "Đối với nhân viên làm việc dưới hình thức nghề phụ, do không nộp tờ khai giảm trừ người phụ thuộc, chúng tôi sẽ áp dụng cột B (Ất) trên bảng thuế khấu trừ tại nguồn.",
+      "suggested_en": "For employees working as a side job, Column B of the withholding tax table is applied because they have not submitted a declaration for exemption for dependents."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を試算」「計画的に手続きを進める」も寄附金控除等との混同です。乙欄自体に控除限度額という概念はありません。",
+      "suggested_ja": "他社を本業とするアルバイトスタッフの給与計算では、甲欄ではなく乙欄で所得税を源泉徴収する必要があります。",
+      "suggested_vi": "Trong tính lương cho nhân viên bán thời gian có công việc chính ở công ty khác, cần phải khấu trừ thuế thu nhập tại nguồn theo cột B (Ất) thay vì cột A (Giáp).",
+      "suggested_en": "In payroll calculations for part-time staff whose primary job is at another company, income tax must be withheld using Column B rather than Column A."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "乙欄は毎月の給与計算・源泉徴収の事務処理であり、法人決算申告書に計算根拠や税理士確認書を添付して提出する性質のものではありません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新しく採用した業務委託契約から切り替えたパートの方ですが、他社が本業なら乙欄での源泉徴収になりますね。",
+        "vi": "Nhân viên bán thời gian mới tuyển chuyển từ hợp đồng khoán việc, nếu công việc chính là ở công ty khác thì sẽ bị khấu trừ theo cột B (Ất) đúng không?",
+        "en": "Regarding the newly hired part-timer who switched from an outsourcing contract, if their primary job is elsewhere, withholding tax should be calculated under Column B, right?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。扶養控除等申告書の提出がありませんでしたので、給与計算システムで乙欄区分に設定済みです。",
+        "vi": "Vâng. Do họ không nộp tờ khai giảm trừ người phụ thuộc, tôi đã thiết lập phân loại sang cột B (Ất) trên hệ thống tính lương rồi.",
+        "en": "Yes. Since they did not submit the declaration for exemption for dependents, I have already set their classification to Column B in the payroll system."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体は「cột B trên bảng thuế khấu trừ」および「Column B of tax withholding table」で合致しています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b61ef98643689f75e8580d270c12b7f2ffb4fc06cabc32cd859173efed263f34",
+    "validated_at": "2026-10-01T01:40:17.270810+00:00"
+  }
+}

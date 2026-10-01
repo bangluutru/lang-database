@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000147",
+  "term": "源泉徴収義務者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe hallucination and domain factual errors throughout: the model erroneously treated '源泉徴収義務者' (statutory tax status of an employer/payer) as an elected corporate officer or a dispatched document.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "源泉徴収義務者を選任する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese tax law, a withholding agent (源泉徴収義務者) is a statutory status automatically assigned to paying entities (companies/employers), not an officer position to be elected or appointed.",
+      "suggested_text": "源泉徴収義務者に該当する"
+    },
+    {
+      "index": 1,
+      "text": "源泉徴収義務者に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One does not 'assume office' (就任する) as a withholding agent.",
+      "suggested_text": "源泉徴収義務者となる"
+    },
+    {
+      "index": 2,
+      "text": "源泉徴収義務者に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxpayers consult tax offices or licensed tax accountants, not a withholding agent. Natural collocations focus on obligations or liabilities.",
+      "suggested_text": "源泉徴収義務を果たす"
+    },
+    {
+      "index": 3,
+      "text": "源泉徴収義務者の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "It is not a job title with specific personal duties, but a legal obligation to withhold and remit taxes.",
+      "suggested_text": "源泉徴収義務者としての責任を負う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal factual error: A withholding agent is not an officer elected at an annual general meeting of shareholders (株主総会). The generator confused this term with corporate auditors or directors.",
+      "suggested_ja": "給与を支払う法人は、所得税法上の源泉徴収義務者として、税額を天引きして国に納付しなければならない。",
+      "suggested_vi": "Pháp nhân chi trả lương, với tư cách là người có nghĩa vụ khấu trừ thuế tại nguồn theo Luật Thuế thu nhập, phải khấu trừ tiền thuế và nộp cho nhà nước.",
+      "suggested_en": "A corporation that pays salaries must, as a withholding agent under the Income Tax Act, deduct tax and remit it to the national government."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The company itself is the withholding agent; a company does not hold regular liaison/reporting meetings with the withholding agent.",
+      "suggested_ja": "外国法人への報酬支払いが発生したため、当社が源泉徴収義務者として課税対象となるか税務署に確認した。",
+      "suggested_vi": "Do phát sinh việc chi trả thù lao cho pháp nhân nước ngoài, công ty chúng tôi đã xác nhận với cơ quan thuế xem liệu công ty có thuộc đối tượng chịu thuế với tư cách là người có nghĩa vụ khấu trừ thuế tại nguồn hay không.",
+      "suggested_en": "Since remuneration was paid to a foreign corporation, we confirmed with the tax office whether our company is subject to withholding obligations as a withholding agent."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Completely nonsensical dialogue. The prompt treats '源泉徴収義務者' as if it were a document to be drafted, approved by executives, and dispatched.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外のフリーランスへ翻訳料を支払う予定ですが、当社は源泉徴収義務者として税金を差し引く必要がありますか。",
+        "vi": "Chúng ta dự định trả phí dịch thuật cho một freelancer ở nước ngoài, vậy công ty mình với tư cách là người có nghĩa vụ khấu trừ thuế tại nguồn có cần phải trích nộp thuế không?",
+        "en": "We plan to pay translation fees to an overseas freelancer; does our company need to deduct taxes as a withholding agent?"
+      },
+      {
+        "speaker": "B",
+        "ja": "役務提供地や租税条約の適用関係によって異なるため、顧問税理士に確認した上で手続きを進めましょう。",
+        "vi": "Tùy thuộc vào nơi cung ứng dịch vụ và việc áp dụng hiệp định thuế mà sẽ khác nhau, nên chúng ta hãy xác nhận với chuyên gia tư vấn thuế trước khi tiến hành thủ tục nhé.",
+        "en": "It depends on the place of service provision and the application of tax treaties, so let's consult our corporate tax accountant before proceeding."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term translations are correct, though the generated sentences completely misapplied the term's meaning."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "961d828a0ae46fc4f615025c6f5ae46b6a3058f821a74c836b46a60e3cfe090f",
+    "validated_at": "2026-10-01T01:40:01.568057+00:00"
+  }
+}

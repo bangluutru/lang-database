@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000167",
+  "term": "シード期",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how 'シード期' (seed stage) relates to accounting concepts. 'シード期' refers to a company's development phase, not an accounting item that can be '計上' (booked/recorded) or have a '残高' (balance). The examples and dialogue attempt to force this semantic mismatch, leading to unnatural and incorrect Japanese. The collocations are generally fine as they describe actions related to the seed stage itself, but the examples and dialogue need significant revision to reflect proper accounting terminology and natural usage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "シード期を迎える",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "シード期へ移行する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "シード期における資金調達を行う",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "シード期を支援する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "シード期 (seed stage) は企業の成長段階を指す言葉であり、会計上の「計上内容」や「残高」を持つ対象ではありません。会計処理の対象となるのは、シード期の企業が行った取引や資産・負債などです。この文は概念的に誤りです。",
+      "suggested_ja": "月末の帳簿照合において、シード期の企業に関する取引の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của các giao dịch liên quan đến các công ty ở giai đoạn hạt giống khởi nghiệp hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for transactions related to seed-stage companies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "シード期そのものを会計処理する、という表現は不自然です。会計処理の対象は、シード期の企業が行った会計事象です。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてシード期の企業に関する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các nghiệp vụ kế toán liên quan đến các công ty ở giai đoạn hạt giống khởi nghiệp trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed accounting transactions related to seed-stage companies in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "シード期は企業の成長段階であり、会計上の「計上内容」や「差異」の直接的な対象にはなりません。会話が不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、シード期のスタートアップ企業への投資案件の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của các khoản đầu tư vào các công ty khởi nghiệp ở giai đoạn hạt giống không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for investment projects in seed-stage startups?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "698a9547dc47c53e08246b5433a2a57ba43e59b691836d089dc85a45941deede",
+    "validated_at": "2026-10-01T01:53:00.167088+00:00"
+  }
+}

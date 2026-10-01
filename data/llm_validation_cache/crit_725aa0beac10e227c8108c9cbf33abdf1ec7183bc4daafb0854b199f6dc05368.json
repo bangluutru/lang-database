@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000040",
+  "term": "メイツレシート",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs minor refinement to sound more natural and less like a templated report in a conversational context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "メイツレシートを発行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "メイツレシートを受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "メイツレシートを提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "メイツレシートを提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's response is a bit too formal and comprehensive for a quick check on document status. It sounds like a prepared report rather than a natural conversational update. The phrase '書類の確認も完了して輸入申告に入っております' is slightly clunky.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、メイツレシートの手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp biên lai thuyền phó nhận hàng lên tàu thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the mate's receipt arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲には連絡済みで、書類確認も終え、輸入申告の段階に入っています。",
+        "vi": "Chúng tôi đã liên hệ với đại lý hải quan và công ty giao nhận, việc kiểm tra chứng từ cũng đã hoàn tất và đang trong giai đoạn khai báo nhập khẩu.",
+        "en": "We've already contacted the customs broker and the forwarding agent, document verification is complete, and we're now in the import declaration phase."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6ea21ef55b8984db7ca2fff67b61563e960cfd3e45df4d0176c3e442e2ef5473",
+    "validated_at": "2026-10-01T01:54:17.287589+00:00"
+  }
+}

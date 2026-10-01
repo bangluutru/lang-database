@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000004",
+  "term": "注文請書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe context mismatch and synthetic templating in Example 1 and the Dialogue: '注文請書' (commercial sales contract confirmation) was inappropriately forced into corporate governance contexts (shareholder meetings, executive board reviews, text drafting).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "注文請書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business phrasing for creating an order confirmation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "注文請書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A seller issues or sends an order confirmation to a buyer upon receiving a purchase order; '発行する' or '交付する' is standard commercial parlance rather than '提出する' (submitting an application/report).",
+      "suggested_text": "注文請書を発行する"
+    },
+    {
+      "index": 2,
+      "text": "注文請書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While physical mail is used, business practice overwhelmingly prefers '送付する' or '発行する' for transactional documents, as '発送' typically connotes goods or shipments.",
+      "suggested_text": "注文請書を送付する"
+    },
+    {
+      "index": 3,
+      "text": "注文請書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for the purchasing party receiving the confirmation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination/mechanically generated template: an order confirmation (注文請書) is a commercial sales contract document between buyer and seller, completely unrelated to statutory notice requirements for shareholder meetings (株主総会) or board meetings (取締役会).",
+      "suggested_ja": "発注元から注文書を受領次第、契約内容を確認した上で速やかに注文請書を発行してください。",
+      "suggested_vi": "Ngay sau khi nhận được đơn đặt hàng từ bên mua, vui lòng kiểm tra nội dung hợp đồng và nhanh chóng phát hành giấy xác nhận nhận đơn hàng.",
+      "suggested_en": "Upon receipt of the purchase order from the client, please verify the contract details and issue the order confirmation promptly."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic use case; order confirmations serve as critical audit evidence for internal control and tax compliance.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The conversation treats 注文請書 as if it were a presentation deck or strategic proposal prepared for an upcoming internal meeting requiring literary editing ('推敲') and executive approval. In reality, it is a standard transaction document confirming an order from a client.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "昨日A社から受託案件の注文書が届いていましたが、注文請書はもう送付しましたか。",
+        "vi": "Hôm qua bên công ty A đã gửi đơn đặt hàng dự án ủy thác, anh/chị đã gửi giấy xác nhận đơn hàng cho họ chưa?",
+        "en": "We received the purchase order from Company A yesterday for the contracted project. Have you sent the order confirmation yet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "納期と支払条件の確認が完了しましたので、電子印鑑を押印のうえ本日中に送付いたします。",
+        "vi": "Tôi đã đối chiếu xong thời hạn giao hàng và điều khoản thanh toán, sẽ đóng dấu điện tử và gửi đi ngay trong ngày hôm nay.",
+        "en": "We've finished verifying the delivery schedule and payment terms, so I will affix the e-seal and send it out today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Definitions for meaning_en and meaning_vi are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "da87e0af9b6b2bd9e8b803511cb4028dabc83a47958fbc665f6cb9a606711d5a",
+    "validated_at": "2026-10-01T01:41:00.400281+00:00"
+  }
+}

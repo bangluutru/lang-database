@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000027",
+  "term": "商品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatch in collocation 3 ('商品を精算する' is incorrect accounting Japanese) and empty templated phrasing in Example 1 requiring concrete accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "商品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing merchandise on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "商品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to verifying the balance of the merchandise inventory account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "商品を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In accounting, one reconciles ledger balances with physical stock counts rather than 'matching merchandise' directly.",
+      "suggested_text": "商品を棚卸する"
+    },
+    {
+      "index": 3,
+      "text": "商品を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to expenses (経費), advances (仮払金), or travel reimbursements (旅費), never to merchandise inventory.",
+      "suggested_text": "商品の評価損を計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business phrasing for month-end reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly repetitive and generic boilerplate ('適正な...適正に処理いたしました') with no meaningful accounting substance.",
+      "suggested_ja": "期末決算において商品の実地棚卸を実施し、評価損および棚卸減耗損を適切に計上いたしました。",
+      "suggested_vi": "Trong đợt quyết toán cuối kỳ, chúng tôi đã tiến hành kiểm kê thực tế hàng hóa và hạch toán phù hợp khoản lỗ giảm giá cũng như hao hụt tồn kho.",
+      "suggested_en": "During the fiscal year-end closing, we conducted a physical inventory count of merchandise and properly recorded valuation losses and inventory shrinkage."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logical exchange and standard corporate audit/reconciliation dialogue.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "58ab7cba1f8776d39bd6b45e29d91ecd0df576d5f90b310f10a0d8fbd3862dc4",
+    "validated_at": "2026-10-01T01:33:34.751678+00:00"
+  }
+}

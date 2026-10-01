@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000108",
+  "term": "変形労働時間制",
+  "overall_decision": "rewrite",
+  "summary_reason": "The examples and dialogue incorrectly apply accounting terms like '計上内容' and '残高' to '変形労働時間制' itself, which is a labor system, not an accounting entry or balance. This indicates a fundamental misunderstanding of how the term interacts with accounting concepts. The translations are generally good but need to reflect the corrected Japanese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "変形労働時間制を導入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "変形労働時間制を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "変形労働時間制に関する労使協定を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "変形労働時間制の運用を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「変形労働時間制の計上内容や残高」という表現は不自然です。変形労働時間制は制度であり、会計上の「計上内容」や「残高」を持つものではありません。給与計算や勤怠管理の文脈で使われるべきです。",
+      "suggested_ja": "月末の帳簿照合において、変形労働時間制に基づく勤怠データや給与計算に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong dữ liệu chấm công hoặc tính toán lương dựa trên chế độ thời gian làm việc biến đổi hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in attendance data or payroll calculations based on the variable working hours system."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「変形労働時間制を適正に処理いたしました」という表現は不自然です。変形労働時間制は会計基準や社内規程に則って「処理」する対象ではありません。この制度に基づいて行われる勤怠管理や給与計算が「適正に処理」されるべきです。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において変形労働時間制に基づく給与計算が適正に行われたことを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng việc tính toán lương dựa trên chế độ thời gian làm việc biến đổi đã được thực hiện đúng quy định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that payroll calculations based on the variable working hours system were properly processed in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "「変形労働時間制の計上内容に差異」という表現が不自然です。変形労働時間制自体が会計上の「計上内容」を持つわけではありません。勤怠管理や給与計算の差異について尋ねるべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、変形労働時間制に基づく勤怠管理や給与計算に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có phát sinh chênh lệch nào trong việc quản lý chấm công hoặc tính toán lương dựa trên chế độ thời gian làm việc biến đổi không?",
+        "en": "In this month's monthly closing, have there been any discrepancies in attendance management or payroll calculations based on the variable working hours system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、勤怠データと給与計算システムを照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu dữ liệu chấm công và hệ thống tính lương, và đã xác nhận rằng tất cả đều khớp một cách chính xác.",
+        "en": "Yes, we have reconciled the attendance data and the payroll system, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dbda6be0c75184ebb2e1f5d7c92b74141b76c501ab38b39a7845e6709fb1808e",
+    "validated_at": "2026-10-01T01:52:42.029413+00:00"
+  }
+}

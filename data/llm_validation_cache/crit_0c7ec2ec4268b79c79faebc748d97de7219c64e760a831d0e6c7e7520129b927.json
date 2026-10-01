@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000120",
+  "term": "給与明細",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination. The example sentences and dialogue treat 給与明細 (payslips) as if they were board meeting agenda documents requiring literary polishing (推敲) and statutory dispatch for shareholder meetings.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "給与明細を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for HR/payroll creating salary statements.",
+      "suggested_text": "給与明細を作成する"
+    },
+    {
+      "index": 1,
+      "text": "給与明細を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "From a corporate payroll perspective, companies issue or distribute payslips rather than submit them. '発行する' or '交付する' is standard legal/business usage.",
+      "suggested_text": "給与明細を発行する"
+    },
+    {
+      "index": 2,
+      "text": "給与明細を発送する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "While physical slips can be mailed, modern business practice predominantly uses '配信する' (electronic delivery) or '交付する' (statutory term for issuance/delivery).",
+      "suggested_text": "給与明細を配信する"
+    },
+    {
+      "index": 3,
+      "text": "給与明細を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate formal expression for an employee receiving a payslip.",
+      "suggested_text": "給与明細を受領する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A payslip (給与明細) is an individual remuneration breakdown for employees; it is completely unrelated to convening or running a shareholders' meeting or board of directors' meeting. This is a severe templating error.",
+      "suggested_ja": "毎月の支給日までに全従業員へ給与明細を電子的手段により交付することが、労働基準法および社内規程に定められています。",
+      "suggested_vi": "Việc cấp phát phiếu lương bằng phương thức điện tử cho toàn bộ nhân viên trước ngày trả lương hàng tháng được quy định bởi Luật Tiêu chuẩn Lao động và quy chế nội bộ công ty.",
+      "suggested_en": "Delivering payslips to all employees electronically by the monthly payment date is stipulated by the Labor Standards Act and internal company regulations."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Companies retain wage ledgers (賃金台帳) and payroll records; saying a department archives 'received payslips' (受領した給与明細) as internal control evidence confuses the employee's role with the company's administrative obligations.",
+      "suggested_ja": "従業員からの照会や労務監査に迅速に対応できるよう、過去の給与明細データは人事給与システム上で厳重に保管されています。",
+      "suggested_vi": "Để có thể phản hồi nhanh chóng các thắc mắc từ nhân viên và phục vụ công tác thanh tra lao động, dữ liệu phiếu lương trong quá khứ được lưu trữ bảo mật trên hệ thống nhân sự tiền lương.",
+      "suggested_en": "Past payslip data is securely archived in the HR and payroll system to respond promptly to employee inquiries and labor audits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Payslips are not compiled for 'upcoming meetings', nor do they undergo '推敲' (editorial drafting/polishing). This is an inappropriate generic document template applied to payroll.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与明細のWEB配信準備は、予定どおり進んでいますか。",
+        "vi": "Việc chuẩn bị phát hành phiếu lương trực tuyến tháng này có đang tiến hành đúng tiến độ không?",
+        "en": "Is the preparation for the online distribution of this month's payslips proceeding on schedule?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、勤怠データの締めと社会保険料の控除計算が完了しましたので、明朝には各従業員へ公開可能です。",
+        "vi": "Vâng, việc chốt dữ liệu chấm công và tính toán các khoản khấu trừ bảo hiểm xã hội đã hoàn tất, nên sáng mai có thể công bố cho từng nhân viên.",
+        "en": "Yes, the attendance cutoff and social insurance deduction calculations are complete, so they can be released to all employees tomorrow morning."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese meaning contains an unnecessary parenthetical '(Payslip)' and is overly verbose. 'Phiếu lương' or 'Bảng lương chi tiết' is standard business Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ad14c773283a198acf757ea06ec90034ec5b54dc32588436500993f5331ff6e3",
+    "validated_at": "2026-10-01T01:43:00.381432+00:00"
+  }
+}

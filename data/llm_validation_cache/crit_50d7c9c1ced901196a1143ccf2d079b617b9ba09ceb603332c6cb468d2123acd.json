@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000055",
+  "term": "寡婦控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 2 contains a factual inaccuracy regarding fixed deductions, and the dialogue exhibits a severe tax domain error conflating corporate tax settlement (決算申告) with an individual income tax deduction (寡婦控除).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "寡婦控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural tax accounting phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "寡婦控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used by taxpayers.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "寡婦控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "寡婦控除 is a statutory fixed deduction (定額控除: 27万円 for income tax), not a deduction with a variable upper limit to be calculated.",
+      "suggested_text": "寡婦控除の適用要件を確認する"
+    },
+    {
+      "index": 3,
+      "text": "寡婦控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate legal/tax condition matching phrasing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage in the context of an individual income tax return.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural Japanese expression for tax return attachment preparation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe factual error: '決算申告' refers to corporate tax filing (法人税申告), but '寡婦控除' is exclusively an individual income tax deduction (所得税の所得控除). In a business or accounting setting, this deduction is handled during payroll year-end adjustment (年末調整) or individual tax filing (確定申告), never in corporate '決算申告'. Additionally, attaching a '税理士の確認書' for widow deduction is completely ungrounded in real practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整の書類を確認したのですが、従業員の寡婦控除の適用要件や添付書類に漏れはありませんか。",
+        "vi": "Tôi đã kiểm tra hồ sơ quyết toán thuế cuối năm, không biết các điều kiện áp dụng khoản giảm trừ phụ nữ góa chồng và chứng từ đính kèm của nhân viên có bị thiếu sót gì không?",
+        "en": "I reviewed the year-end tax adjustment documents. Are there any omissions regarding the employee's eligibility or supporting documents for the widow deduction?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、提出された扶養控除等申告書と所得要件の確認を済ませており、問題なく処理可能です。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc đối chiếu tờ khai giảm trừ người phụ thuộc đã nộp cùng điều kiện thu nhập, nên có thể xử lý mà không có vấn đề gì.",
+        "en": "Yes, we have verified the submitted Declaration for Exemption for Dependents and the income requirements, so we can process it without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "902b1fb0b1a2e8c28ee82ea2a6891114608bd6577c7407b5063a6b2f44f794d9",
+    "validated_at": "2026-10-01T01:38:16.056239+00:00"
+  }
+}

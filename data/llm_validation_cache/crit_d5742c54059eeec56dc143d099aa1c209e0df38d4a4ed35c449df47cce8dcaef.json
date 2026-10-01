@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000152",
+  "term": "修繕費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Template collocations ('修繕費を精算する', '修繕費を照合する') and boilerplate sentences exhibit LLM artifacting rather than authentic Japanese corporate tax and accounting practice, which revolves critically around distinguishing 修繕費 from 資本的支出.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "修繕費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking repair and maintenance expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "修繕費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end closing when verifying trial balance balances (残高試算表).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "修繕費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates or reconciles vouchers/details rather than an expense line itself; '修繕費の内訳を照合する' or '修繕費と資本的支出を区分する' is far more authentic in corporate accounting.",
+      "suggested_text": "修繕費と資本的支出を区分する"
+    },
+    {
+      "index": 3,
+      "text": "修繕費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "修繕費 involves vendor billing and contractor payments, not employee expense reimbursements (精算). A realistic corporate collocation would be '修繕費として処理する'.",
+      "suggested_text": "修繕費として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical sentence for month-end reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive use of '適正' (適正な...適正に) and vague generic boilerplate that fails to reflect the core accounting challenge of 修繕費 (distinguishing expense vs. capital expenditure).",
+      "suggested_ja": "本社ビルの外壁補修工事について、税務上の判定基準に基づき資本的支出ではなく修繕費として費用処理しました。",
+      "suggested_vi": "Đối với công trình sửa chữa tường ngoài của tòa nhà trụ sở chính, căn cứ vào tiêu chuẩn xét duyệt theo luật thuế, chúng tôi đã xử lý tính vào chi phí sửa chữa thay vì chi phí vốn hóa.",
+      "suggested_en": "Regarding the exterior wall repairs of the head office building, we expensed the costs as repair and maintenance expenses rather than capital expenditures based on tax criteria."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural phrasing ('整合性が取れている' or '一致している' is standard), and the dialogue genericizes repair expenses rather than touching on realistic accounting verification.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "工場設備の改修費用ですが、修繕費と資本的支出の区分判定は完了していますか。",
+        "vi": "Về chi phí cải tạo thiết bị nhà máy, anh/chị đã hoàn tất việc phân định giữa chi phí sửa chữa và chi phí vốn hóa chưa?",
+        "en": "Regarding the factory equipment refurbishment costs, have you completed determining the classification between repair expenses and capital expenditures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、見積書と工事仕様書を確認し、全額修繕費として処理できる要件を満たしていることを確認しました。",
+        "vi": "Vâng, tôi đã kiểm tra báo giá và quy cách kỹ thuật thi công, đồng thời xác nhận đáp ứng đủ điều kiện để xử lý toàn bộ vào chi phí sửa chữa.",
+        "en": "Yes, I reviewed the quotation and construction specifications and confirmed that it meets the criteria to be fully expensed as repair and maintenance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations for term and core definitions are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "700e603266f3882517787d2a8863b358204acb4dcbda3e28dbf673f6b95fc5f9",
+    "validated_at": "2026-10-01T01:36:24.979241+00:00"
+  }
+}

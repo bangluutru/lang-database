@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000007",
+  "term": "課税所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 1 contains an unnatural hybrid phrase ('課税所得に不算入とする' instead of standard tax terminology like '課税所得から控除する'), Example 0 uses unnatural templated phrasing ('課税所得を適切に処理しました'), and Example 1 suffers from a semantic/domain error ('課税所得の算入漏れ' instead of '課税所得の申告漏れ').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税所得に算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate tax discussions to denote including an item in the taxable income base.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "課税所得に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese tax law and practice, non-inclusion is expressed with the specific statutory categories ('益金不算入とする' / '損金不算入とする') or deducted from taxable income ('課税所得から控除する' / '課税所得から除外する'). '課税所得に不算入とする' is unnatural phrasing.",
+      "suggested_text": "課税所得から控除する"
+    },
+    {
+      "index": 2,
+      "text": "課税所得の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional expression for tax reconciliation adjustments.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "課税所得に加算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Completely standard phrasing when making tax adjustments (加算調整).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'別表四において課税所得を適切に処理しました' is stilted. On Schedule 4 (別表四), one performs tax adjustments (税務調整) to calculate taxable income (課税所得を適正に算出する).",
+      "suggested_ja": "会計上の費用と税務上の取扱いの相違を調整するため、別表四において税務調整を行い、課税所得を適正に算出しました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa chi phí kế toán và quy định thuế, chúng tôi đã thực hiện điều chỉnh thuế trên Phụ lục 4 để xác định chính xác thu nhập chịu thuế.",
+      "suggested_en": "To reconcile differences between accounting expenses and tax treatments, we performed tax adjustments on Schedule 4 and accurately calculated taxable income."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'課税所得の算入漏れ' is a semantic clash. Taxable income is the total net tax base; individual items (revenue/expenses) are omitted or included, leading to '申告漏れ' (underreporting of taxable income) or '益金の算入漏れ'. The standard tax term is '課税所得の申告漏れ'.",
+      "suggested_ja": "税務調査における指摘を防止するため、過年度の取引を検証し課税所得の申告漏れがないか確認しました。",
+      "suggested_vi": "Để phòng ngừa các sai sót bị cơ quan thuế chỉ ra trong đợt thanh tra, chúng tôi đã rà soát lại các giao dịch các năm trước để xác nhận không bị bỏ sót kê khai thu nhập chịu thuế.",
+      "suggested_en": "To prevent issues raised during a tax audit, we reviewed prior-year transactions to ensure there were no omissions in reporting taxable income."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Exchange between corporate accounting staff regarding preparation of tax filing workpapers is logical and fluent.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "679c9be724a9a63b3d463d18c80377c0b7f927323f42d062fe993a79ebfec407",
+    "validated_at": "2026-10-01T01:37:20.741768+00:00"
+  }
+}

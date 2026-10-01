@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000011",
+  "term": "軽減税率",
+  "overall_decision": "rewrite",
+  "summary_reason": "消費税の「軽減税率」がふるさと納税や税額控除制度と混同されており、「利用する」「活用する」「控除上限額」「地域貢献」など致命的な税法上・実務上の誤りが含まれています。消費税の複数税率（8%/10%）およびインボイス制度の実務に即した内容への全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "軽減税率を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "軽減税率は法定の税率区分であり、割引や制度のように「利用する」とは言いません。「軽減税率を適用する」または「軽減税率が適用される」が自然です。",
+      "suggested_text": "軽減税率を適用する"
+    },
+    {
+      "index": 1,
+      "text": "軽減税率の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税制実務として極めて標準的かつ自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "軽減税率を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "軽減税率は対象品目（飲食料品等）に対して一律に定められた税率であり、節税策や優遇策のように能動的に「活用する」対象ではありません。",
+      "suggested_text": "軽減税率の対象品目"
+    },
+    {
+      "index": 3,
+      "text": "軽減税率の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "消費税実務で頻出する正確な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「地域貢献」や「節税」のために軽減税率を活用するという記述は事実誤認です。軽減税率は消費税法上、飲食料品等の対象取引に8%が機械的に適用されるものであり、ふるさと納税や税額控除制度と混同されています。",
+      "suggested_ja": "飲食料品の仕入れや販売においては、標準税率と区別して軽減税率の対象品目を管理する必要があります。",
+      "suggested_vi": "Trong việc mua vào và bán ra thực phẩm, đồ uống, cần phải quản lý các mặt hàng chịu thuế suất giảm nhẹ tách biệt với thuế suất tiêu chuẩn.",
+      "suggested_en": "When purchasing or selling food and beverages, it is necessary to manage items subject to the reduced tax rate separately from the standard tax rate."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "軽減税率に「控除上限額」は存在しません。寄附金控除やふるさと納税のテンプレートが誤用されています。",
+      "suggested_ja": "インボイス制度の導入に伴い、適格請求書上で標準税率と軽減税率それぞれの税額を明確に区分記載しました。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ hóa đơn hợp lệ (invoice system), chúng tôi đã ghi rõ ràng riêng biệt số thuế cho từng mức thuế suất tiêu chuẩn và thuế suất giảm nhẹ trên hóa đơn.",
+      "suggested_en": "With the introduction of the qualified invoice system, we clearly broke down the tax amounts for both the standard and reduced tax rates on our invoices."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "消費税申告で「軽減税率の計算根拠として税理士の確認書を申告書添付書類として提出する」という実務フローは不自然です。消費税申告では税率ごとに区分経理された売上・仕入の集計表や区分記載・インボイスの確認が中心となります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の消費税申告に向けて、軽減税率対象の仕入れと標準税率分の区分経理は完了していますか。",
+        "vi": "Để chuẩn bị cho kỳ khai thuế tiêu thụ lần này, việc hạch toán phân loại giữa hàng mua vào chịu thuế suất giảm nhẹ và thuế suất tiêu chuẩn đã hoàn tất chưa?",
+        "en": "For this consumption tax filing, have you completed the categorized accounting between purchases subject to the reduced tax rate and the standard tax rate?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、レシートや請求書を精査し、軽減税率8%と標準税率10%の集計および証憑の突合はすべて完了しております。",
+        "vi": "Vâng, chúng tôi đã rà soát kỹ các hóa đơn, biên lai và hoàn tất toàn bộ việc tổng hợp cũng như đối chiếu chứng từ giữa thuế suất giảm nhẹ 8% và thuế suất tiêu chuẩn 10%.",
+        "en": "Yes, we have reviewed the receipts and invoices, and the aggregation and voucher reconciliation for both the 8% reduced rate and the 10% standard rate are fully complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（reduced tax rate / thuế suất ưu đãi giảm nhẹ）自体は許容範囲内ですが、例文の文脈は税務実務の誤解に基づいていたため例文側で全面改訂が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "880fd5d8a16a723b6765f2b346b46bf64ef61a205ca7e0fe64c9f43f77becf2f",
+    "validated_at": "2026-10-01T01:37:25.394808+00:00"
+  }
+}

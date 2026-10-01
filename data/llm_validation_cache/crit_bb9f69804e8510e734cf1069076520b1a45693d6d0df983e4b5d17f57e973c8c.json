@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000045",
+  "term": "委任状",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文1において日本の会社法（取締役会における代理行使の原則禁止）に反する法務的誤謬が含まれている点、および対話文において委任状に「推敲」を充てる不自然なレジスター・語感の乱れが見られるため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "委任状を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務上極めて頻出かつ自然なコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "委任状を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "行政手続きや株主総会等の文脈で一般的に使われる自然な表現です。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "委任状を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "株主や関係者に対して委任状（用紙）を送付・発送する実務表現として適切です。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "委任状を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "回収・受け取りの実務管理において標準的なコロケーションです。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "日本の会社法上、取締役会において取締役が委任状（代理人）によって出席・表決することは原則として認められていません（会社法369条）。株主総会と取締役会を同列に扱い「取締役会のために委任状を発送する」とする記述は法務実務上重大な誤りです。",
+      "suggested_ja": "株主総会を円滑に進行するため、法定期限内に議決権行使にかかる委任状用紙を株主各位へ発送いたしました。",
+      "suggested_vi": "Để đại hội đồng cổ đông diễn ra suôn sẻ, chúng tôi đã gửi biểu mẫu giấy ủy quyền thực hiện quyền biểu quyết cho các cổ đông đúng thời hạn luật định.",
+      "suggested_en": "To facilitate smooth proceedings for the general meeting of shareholders, we dispatched the proxy voting forms to shareholders within the statutory deadline."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "内部統制およびコンプライアンス監査の証跡管理という実務文脈に合致しており、極めて自然です。",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "定型的な法的文書である「委任状」に対して、文章の修辞や文学的表現を練る意味合いが強い「推敲（すいこう）」を用いるのは語感として不自然です。「文案の確認」「リーガルチェック」「内容の精査」などを用いるべきです。また、会議の対象を株主総会等に具体化するとビジネス会話としてより自然になります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の臨時株主総会に向けて、委任状の準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị giấy ủy quyền cho đại hội đồng cổ đông bất thường dự kiến tổ chức vào tuần tới thế nào rồi?",
+        "en": "What is the status of the proxy preparations for the extraordinary general meeting of shareholders scheduled for next week?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務による文案の最終確認を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Pháp chế đã hoàn tất kiểm tra lần cuối dự thảo và chúng tôi cũng đã có chấp thuận trước của ban lãnh đạo, nên hôm nay sẽ tiến hành gửi đi.",
+        "en": "Legal has finalized the text review and we have obtained executive approval, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3b8ee42a1a30d4ca5416a92a3be49ee33bb64539b7f04cead89420206494349b",
+    "validated_at": "2026-10-01T01:41:51.109348+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000036",
+  "term": "短期貸付金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a semantic mismatch collocation ('精算する' instead of '回収する'), hollow AI template phrasing in Example 2, and stilted unnatural phrasing ('適正に整合している') in Dialogue Turn B.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "短期貸付金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting action for booking short-term loans receivable.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "短期貸付金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrase for verifying the account balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "短期貸付金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, one reconciles the balance or ledger details (残高・明細を照合する) rather than the account itself.",
+      "suggested_text": "短期貸付金の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "短期貸付金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Loans (貸付金) are collected (回収する) or repaid (返済を受ける). '精算する' applies to expense reimbursements and suspense payments (仮払金・立替金).",
+      "suggested_text": "短期貸付金を回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, authentic month-end closing check sentence.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive, vacuous template sentence with duplicate '適正な...適正に' and no concrete accounting substance. Should reflect real evaluation such as interest calculation or allowance for doubtful accounts.",
+      "suggested_ja": "子会社に対する短期貸付金について、回収可能性を検討した上で貸倒引当金を計上しました。",
+      "suggested_vi": "Đối với khoản cho vay ngắn hạn cấp cho công ty con, chúng tôi đã trích lập dự phòng nợ phải thu khó đòi sau khi đánh giá khả năng thu hồi.",
+      "suggested_en": "Regarding short-term loans receivable to the subsidiary, we recorded an allowance for doubtful accounts after assessing collectibility."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The response 'すべて適正に整合していることを確認いたしました' is tautological and awkward business Japanese. '一致している' or '差異がない' is the standard accounting idiom.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、短期貸付金の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán khoản cho vay ngắn hạn không?",
+        "en": "Are there any discrepancies in the short-term loans receivable entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "金銭消費貸借契約書と補助元帳を照合済みで、残高に差異がないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu hợp đồng vay tiền với sổ phụ và xác nhận không có chênh lệch nào trong số dư.",
+        "en": "We have reconciled the loan agreements with the subsidiary ledger and confirmed that there are no discrepancies in the balances."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b2b4a01e7f0c332342c041ce23c6bdb239edc06eb1e231d9dc90311371c6e967",
+    "validated_at": "2026-10-01T01:34:18.263537+00:00"
+  }
+}

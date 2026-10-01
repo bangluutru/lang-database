@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000111",
+  "term": "スタンドバイL/C",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the fundamental misunderstanding of how Standby L/Cs are treated in accounting. They are contingent liabilities, not direct accounting entries with '計上内容' or '残高' in the typical sense. This impacts the naturalness and factual correctness of examples and dialogue. The collocations also had one semantic mismatch.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "スタンドバイL/Cを開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for establishing an SBLC."
+    },
+    {
+      "index": 1,
+      "text": "スタンドバイL/Cを決済する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "SBLC is a guarantee, not a payment instrument itself. It is 'drawn upon' or 'exercised' when the primary obligation defaults, leading to payment. '決済する' implies direct settlement of the SBLC itself, which is inaccurate. It's more appropriate to say 'スタンドバイL/Cに基づく支払いを行う' (make a payment based on SBLC) or 'スタンドバイL/Cが実行される' (SBLC is executed/drawn).",
+      "suggested_text": "スタンドバイL/Cを実行する"
+    },
+    {
+      "index": 2,
+      "text": "スタンドバイL/Cを提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in the context of presenting documents for an SBLC."
+    },
+    {
+      "index": 3,
+      "text": "スタンドバイL/Cの不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrase for resolving discrepancies in L/C documents."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "SBLC is an off-balance sheet item (偶発債務) until it is drawn upon. It does not have '計上内容' (accounting entry details) or '残高' (balance) in the same way as on-balance sheet assets/liabilities. While its commitment amount is monitored, it's not '計上' in the sense of booking an entry or having a '残高' that needs reconciliation against ledgers in the typical sense. The phrasing '計上内容や残高に差異がないか精査します' is more suited for actual balance sheet accounts.",
+      "suggested_ja": "月末の帳簿照合において、スタンドバイL/Cの偶発債務としての管理状況や、関連する保証債務残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem tình hình quản lý nghĩa vụ nợ tiềm tàng của thư tín dụng dự phòng bảo lãnh (Standby L/C) và số dư nghĩa vụ bảo lãnh liên quan có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the management status of standby letters of credit as contingent liabilities or in the related guarantee liability balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 'スタンドバイL/Cを適正に処理いたしました' (properly processed SBLC) is vague and misleading. SBLCs are contingent liabilities and are typically disclosed in financial statements, not 'processed' as a direct accounting entry in the same way as revenue or expenses. The term '処理' is too broad and doesn't accurately reflect the accounting treatment of an SBLC.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてスタンドバイL/Cの偶発債務としての開示を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện công bố nghĩa vụ nợ tiềm tàng của thư tín dụng dự phòng bảo lãnh (Standby L/C) một cách đúng đắn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly disclosed standby letters of credit as contingent liabilities in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question about '計上内容に差異は発生していませんか' (discrepancies in accounting entry details) for an SBLC is based on a misunderstanding of how SBLCs are accounted for (as contingent liabilities, not direct entries with '内容' in the typical sense). Speaker B's response about '証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました' is a standard response for on-balance sheet items, but less fitting for the specific nature of SBLCs as off-balance sheet items.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、スタンドバイL/Cの偶発債務としての管理状況や、関連する保証債務残高に問題はありませんか。",
+        "vi": "Trong quyết toán hàng tháng này, tình hình quản lý nghĩa vụ nợ tiềm tàng của thư tín dụng dự phòng bảo lãnh (Standby L/C) và số dư nghĩa vụ bảo lãnh liên quan có vấn đề gì không?",
+        "en": "In this month's monthly closing, are there any issues with the management status of standby letters of credit as contingent liabilities or with the related guarantee liability balances?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する契約書や内部記録を確認し、偶発債務としての開示状況は適正であることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã kiểm tra các hợp đồng liên quan và hồ sơ nội bộ, và xác nhận rằng tình hình công bố nghĩa vụ nợ tiềm tàng là phù hợp.",
+        "en": "Yes, we have checked the relevant contracts and internal records, and confirmed that the disclosure status as contingent liabilities is appropriate."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f29dcf1403db55437f9a6233b64bf73a983d0f51614ed44f62845c36d79801c0",
+    "validated_at": "2026-10-01T01:55:47.566123+00:00"
+  }
+}

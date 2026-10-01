@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000047",
+  "term": "輸出許可書",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に高品質ですが、コロケーションの一部に修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出許可書を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「交付する」は通常、公的機関が書類を発行する際に使う動詞であり、輸出許可書を「交付する」のは申請者側ではなく、許可を出す側である。申請者が許可書を「交付する」という表現は不自然。",
+      "suggested_text": "輸出許可書を申請する"
+    },
+    {
+      "index": 1,
+      "text": "輸出許可書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。"
+    },
+    {
+      "index": 2,
+      "text": "輸出許可書を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。"
+    },
+    {
+      "index": 3,
+      "text": "輸出許可書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然で、会計・税務・貿易の文脈に合致しています。"
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然で、会計・税務・貿易の文脈に合致しています。"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "会話の流れが自然で、ビジネスの文脈に合致しています。"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c2144f2c3855fe6dbad4edc41877e3b5b68fa6c551798ff87ce68d918f93d5c5",
+    "validated_at": "2026-10-01T01:54:23.304771+00:00"
+  }
+}

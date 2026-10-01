@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000010",
+  "term": "DPU",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs refinement to ensure a more natural and comprehensive conversational flow, where Speaker B's response directly addresses the scope of Speaker A's inquiry regarding DPU arrangements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "DPUの条件で契約する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "DPUの建値で取引する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "DPUにおける費用負担を取り決める",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "DPUにおける危険移転の時点を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about DPU arrangements, implying the status of the DPU process itself. Speaker B's response focuses on customs clearance and documentation, which is a part of the overall process but doesn't directly address the 'DPU arrangement status' in a comprehensive way. It feels like a partial answer rather than a direct update on the DPU process.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、DPUの手配状況はいかがでしょうか。荷揚げやその後の配送手配は順調に進んでいますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp DPU thế nào rồi? Việc dỡ hàng và sắp xếp vận chuyển tiếp theo có thuận lợi không?",
+        "en": "Regarding the shipment scheduled for customs clearance today, how are the DPU arrangements progressing? Are the unloading and subsequent delivery arrangements proceeding smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は済ませており、書類確認も完了して輸入申告に入っております。荷揚げ後の国内配送についても、すでに運送会社と調整済みです。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, việc kiểm tra chứng từ đã hoàn tất và đang tiến hành khai báo nhập khẩu. Việc vận chuyển nội địa sau khi dỡ hàng cũng đã được điều phối với công ty vận tải.",
+        "en": "Yes, we have contacted the customs broker and forwarding agent, document verification is complete, and we are proceeding with the import declaration. Domestic delivery after unloading has also been coordinated with the transport company."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "89ce47e86a9cb463cf099edffa560038174c449b1f2f9b7a76309b7cc2e982d6",
+    "validated_at": "2026-10-01T01:53:49.298937+00:00"
+  }
+}

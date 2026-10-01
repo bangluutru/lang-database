@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000103",
+  "term": "接待飲食費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object suffered from rigid, prefabricated LLM templates ('残高を確認する', '計上内容や残高に差異がないか', '適正に...適正に処理'). Rewrite replaces them with authentic corporate tax and accounting practices regarding documentary verification and tax deductibility thresholds.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "接待飲食費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, frequently used accounting expression for booking dining and entertainment expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "接待飲食費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As a P&L expense item, native practitioners rarely speak of its '残高' (balance) in isolation; '内訳' (breakdown) or '損金算入限度額' is the authentic collocated focus in tax/accounting.",
+      "suggested_text": "接待飲食費の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "接待飲食費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates or reconciles vouchers, receipts, or breakdown ledgers ('領収書を照合する', '内訳を照合する'), not the abstract expense category itself.",
+      "suggested_text": "接待飲食費の領収書を照合する"
+    },
+    {
+      "index": 3,
+      "text": "接待飲食費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and common workplace phrasing for settling/reimbursing entertainment dining expenses.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Plugging '接待飲食費' into an abstract '[X]の計上内容や残高に差異がないか' frame is robotic. In tax practice, verification centers on documentary evidence (participant count, receipts) and tax deductibility thresholds.",
+      "suggested_ja": "月次決算にあたり、接待飲食費について参加者名簿や領収書などの証憑書類が揃っているか精査します。",
+      "suggested_vi": "Trong kỳ quyết toán tháng, chúng tôi kiểm tra kỹ lưỡng xem các chứng từ như danh sách người tham gia và hóa đơn của chi phí ăn uống tiếp khách đã đầy đủ hay chưa.",
+      "suggested_en": "During the monthly closing, we carefully examine dining and entertainment expenses to ensure that supporting documents, such as attendee lists and receipts, are fully provided."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly templated filler sentence exhibiting poor stylistic repetition ('適正な会計基準...適正に処理いたしました'). Real tax/accounting contexts specifically address distinction from general entertainment expenses (交際費) or deduction limits.",
+      "suggested_ja": "税制改正を踏まえ、1人あたり1万円以下の要件を満たす接待飲食費を交際費等から区分して処理いたしました。",
+      "suggested_vi": "Căn cứ theo sửa đổi luật thuế, chúng tôi đã phân loại và xử lý các khoản chi phí ăn uống tiếp khách đáp ứng điều kiện từ 10.000 yên trở xuống cho mỗi người tách biệt khỏi chi phí tiếp khách thông thường.",
+      "suggested_en": "In light of the tax reform, we separately processed dining and entertainment expenses meeting the 10,000 yen or less per person threshold from general entertainment expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrases like '計上内容に差異は発生していませんか' and '適正に整合している' are awkward, repetitive LLM clichés. A genuine accounting dialogue focuses on whether expenses meet documentary and threshold requirements for tax classification.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の接待飲食費ですが、損金算入の要件を満たしているか証憑の確認は終わっていますか。",
+        "vi": "Về chi phí ăn uống tiếp khách tháng này, anh đã hoàn tất việc kiểm tra chứng từ xem có đáp ứng đủ điều kiện tính vào chi phí được trừ chưa?",
+        "en": "Regarding this month's dining and entertainment expenses, have you finished verifying the vouchers to ensure they meet tax-deductibility requirements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、領収書と参加者リストを照合し、すべて会議費や交際費と適切に区分されていることを確認しました。",
+        "vi": "Vâng, tôi đã đối chiếu hóa đơn với danh sách người tham gia và xác nhận mọi khoản đều được phân loại đúng với chi phí hội nghị và chi phí tiếp khách thông thường.",
+        "en": "Yes, I reconciled the receipts with the attendee lists and confirmed that all items are properly segregated between conference expenses and general entertainment expenses."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Initial translations were grammatically literal reflections of the Japanese input, but rewrites provide substantial domain-specific naturalness in both target languages."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d24a00f448da08e81cf9866fa4d46298790925c9d3bca7e0fa58876e52b1936b",
+    "validated_at": "2026-10-01T01:39:14.676666+00:00"
+  }
+}

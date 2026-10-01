@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000175",
+  "term": "容積重量",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations are generally good, example sentences and dialogue contain unnatural phrasing and a semantic issue regarding the interpretation of '容積重量' exceeding a target, requiring revision for authenticity and clarity in a professional context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "容積重量を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation for calculating volumetric weight.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "容積重量を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression in a business context to improve a metric.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "容積重量を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for analyzing a metric.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "容積重量の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for setting a target value for a metric.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '容積重量の数値を月次でモニタリングしています' sounds somewhat mechanical. While understandable, '容積重量を月次でモニタリングしています' or '容積重量の推移を月次でモニタリングしています' would be more natural. Also, '経営効率の改善に向け' is slightly stiff; '経営効率改善のため' or '経営効率の改善を図るため' would be more common.",
+      "suggested_ja": "経営効率改善のため、各事業部門で容積重量を月次でモニタリングしています。",
+      "suggested_vi": "Để cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi trọng lượng quy đổi theo thể tích (Volumetric Weight) hàng tháng.",
+      "suggested_en": "To improve operational efficiency, each business division monitors volumetric weight / dimensional weight on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "While '容積重量' is a cost-related metric in logistics, directly linking its exceeding a target value to '収益性と資本効率の向上' (improvement in profitability and capital efficiency) without further context is a semantic leap. High volumetric weight usually means higher shipping costs, which would negatively impact profitability unless managed effectively. The sentence implies that a higher volumetric weight is a positive outcome, which is counter-intuitive for cost management. If the target was to *reduce* volumetric weight, then exceeding a *reduction target* would be positive. As written, it's confusing.",
+      "suggested_ja": "当期の容積重量は目標値を下回り、物流コストの削減を通じて収益性向上に貢献しました。",
+      "suggested_vi": "Trọng lượng quy đổi theo thể tích (Volumetric Weight) kỳ này đã thấp hơn giá trị mục tiêu, góp phần nâng cao khả năng sinh lời thông qua việc giảm chi phí logistics.",
+      "suggested_en": "This term's volumetric weight / dimensional weight was below the target value, contributing to improved profitability through reduced logistics costs."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '容積重量の推移と改善目標に対する進捗はいかがですか' is a bit long and slightly unnatural for a direct question in a business meeting. '改善目標に対する進捗' is okay, but '容積重量の推移と' makes it a bit clunky. Speaker B's response is fine, but the premise of A's question needs refinement.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析についてですが、容積重量の改善目標に対する進捗はいかがでしょうか。",
+        "vi": "Về phân tích tài chính kỳ này, tiến độ đạt được mục tiêu cải thiện trọng lượng quy đổi theo thể tích (Volumetric Weight) như thế nào?",
+        "en": "Regarding this term's financial analysis, what is the progress towards the volumetric weight improvement target?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前四半期と比較して着実に改善傾向を示しており、期末の経営目標を達成できる見通しです。",
+        "vi": "So với quý trước, chúng tôi đang cho thấy xu hướng cải thiện ổn định và dự kiến sẽ đạt được mục tiêu kinh doanh cuối kỳ.",
+        "en": "Compared to the previous quarter, we are showing a steady improvement trend and expect to achieve the year-end business objectives."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1813ce951baa9415b89e561678e339df25a15e4a40a6b9096702e8ef701522b9",
+    "validated_at": "2026-10-01T01:57:02.843205+00:00"
+  }
+}

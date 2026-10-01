@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-accounting-000127",
+  "term": "当期商品仕入高",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an invalid collocation (当期商品仕入高を精算する), generic mechanical sentence templates repeating empty corporate buzzwords, and stilted unnatural phrasing in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "当期商品仕入高を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when recording or presenting total merchandise purchases for the period."
+    },
+    {
+      "index": 1,
+      "text": "当期商品仕入高の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in financial audit and trial balance verification."
+    },
+    {
+      "index": 2,
+      "text": "当期商品仕入高を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural for reconciliation with purchase journals and invoices."
+    },
+    {
+      "index": 3,
+      "text": "当期商品仕入高を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」 applies to advance payments, travel expenses, or accounts to be cleared, not to the aggregate merchandise purchases figure.",
+      "suggested_text": "当期商品仕入高を確定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical fill-in-the-blank template. In month-end closings, practitioners track monthly purchases (当月仕入高) rather than calling it 当期商品仕入高, which specifically belongs to period-end Cost of Goods Sold calculation on the P&L.",
+      "suggested_ja": "損益計算書の売上原価を算定するため、期首商品棚卸高に当期商品仕入高を加算します。",
+      "suggested_vi": "Để tính giá vốn hàng bán trên báo cáo kết quả hoạt động kinh doanh, chúng tôi cộng tổng giá trị mua hàng trong kỳ vào giá trị hàng tồn kho đầu kỳ.",
+      "suggested_en": "To calculate the cost of goods sold on the income statement, purchases of merchandise during the period are added to the beginning merchandise inventory."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive boilerplate ('適正な...適正に処理いたしました') with zero substantive accounting information.",
+      "suggested_ja": "期末決算にあたり、仕入帳と買掛金元帳を照合して当期商品仕入高の金額を確定させました。",
+      "suggested_vi": "Vào thời điểm quyết toán cuối kỳ, chúng tôi đã đối chiếu sổ nhật ký mua hàng với sổ cái phải trả người bán để chốt số liệu tổng giá trị mua hàng trong kỳ.",
+      "suggested_en": "For the fiscal year-end closing, we reconciled the purchase journal with the accounts payable ledger to finalize the purchases of merchandise during the period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural Japanese (tautological combining of 適正 and 整合). In a monthly context, referring directly to 当期商品仕入高 without year-to-date context feels artificial.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算整理前の試算表ですが、当期商品仕入高の集計に漏れはありませんか。",
+        "vi": "Đây là bảng cân đối thử trước các bút toán điều chỉnh cuối kỳ, liệu có bị sót khoản nào trong phần tổng hợp giá trị mua hàng trong kỳ không?",
+        "en": "Regarding the pre-closing trial balance, are there any omissions in the aggregation of purchases of merchandise during the period?"
+      },
+      {
+        "speaker": "B",
+        "ja": "仕入先からの請求書と検収データをすべて照合済みですので、計上漏れはございません。",
+        "vi": "Tôi đã đối chiếu toàn bộ hóa đơn từ nhà cung cấp với dữ liệu nghiệm thu, nên không có sai sót hay ghi nhận thiếu nào.",
+        "en": "We have reconciled all vendor invoices against acceptance inspection data, so there are no unrecorded entries."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations accurately convey standard accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e5ff7a3d256237c7a10cefe05a299d83465e4cea321d94fa44b406c25fdc5ef0",
+    "validated_at": "2026-10-01T01:35:56.510365+00:00"
+  }
+}

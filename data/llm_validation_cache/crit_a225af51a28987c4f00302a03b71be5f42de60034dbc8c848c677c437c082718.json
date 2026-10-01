@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000041",
+  "term": "青色申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations conflate the filing system (青色申告) with the physical/electronic tax form (青色申告書) or approval application (承認申請). The example sentences and dialogue use generic and factually loose tax expressions (e.g., '青色申告の計算根拠', '税理士の確認書'). Vietnamese translations mechanically paste gloss-level terminology into inappropriate grammatical positions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "青色申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, natural collocation for undertaking a blue return filing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "青色申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "『青色申告』is the status/system or filing act; the submitted physical or electronic document is『青色申告書』. One files or submits『青色申告書を提出する』or undertakes『青色申告を行う』.",
+      "suggested_text": "青色申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "青色申告の期限",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "Vague in professional corporate tax. It should specify whether it refers to the filing deadline (申告期限) or the application deadline for approval (承認申請期限).",
+      "suggested_text": "青色申告の承認申請期限"
+    },
+    {
+      "index": 3,
+      "text": "青色申告の手続きを進める",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "Mechanically templated expression. In corporate tax accounting, high-value collocations involve applying benefits or seeking approval (e.g., 承認を受ける, 控除/特典を適用する).",
+      "suggested_text": "青色申告の承認を受ける"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "『青色申告の手続きを完了しました』sounds templated and slightly unnatural in tax reports. Corporations state『青色申告による確定申告を完了しました』or『青色申告書を提出しました』. Furthermore, the Vietnamese translation literally inserts the definition ('thủ tục chế độ kê khai...'), which is ungrammatical.",
+      "suggested_ja": "期末決算の確定に伴い、所轄税務署に対して法定申告期限内に青色申告書を提出しました。",
+      "suggested_vi": "Sau khi chốt số liệu quyết toán cuối kỳ, chúng tôi đã nộp tờ khai thuế mẫu xanh cho chi cục thuế quản lý trong thời hạn luật định.",
+      "suggested_en": "Following the finalization of the fiscal year-end accounts, we submitted the blue return tax form to the competent tax office within the statutory filing deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax, corporate filing involves submitting attachments like balance sheets, income statements, and specific tax schedules (別表). Saying『青色申告の提出書類を整えました』is unidiomatic;『青色申告に必要な添付書類を整備しました』or『青色申告の承認申請書類を整えました』is standard. Vietnamese translation also awkwardly inserts 'nộp chế độ kê khai thuế...'.",
+      "suggested_ja": "顧問税理士の助言を受け、欠損金の繰越控除を適用するため青色申告に必要な添付書類を整備しました。",
+      "suggested_vi": "Nhận tư vấn từ thuế lý cố vấn, chúng tôi đã chuẩn bị đầy đủ các chứng từ đính kèm cần thiết cho việc khai thuế mẫu xanh nhằm áp dụng chuyển lỗ sang các kỳ sau.",
+      "suggested_en": "Following advice from our advisory tax accountant, we prepared the required supporting documents for the blue return to apply the carryforward of net operating losses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "『青色申告の計算根拠』is awkward and non-standard tax terminology (one calculates taxable income or tax deductions under blue return, not the return category itself). Likewise,『税理士の確認書』is not a standard corporate tax submission under the blue return system; corporate filings utilize the Tax Accountant Act Article 33-2 audit document (書面添付) or direct agent sign-off.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の法人税申告で青色申告の特典を適用するための添付書類や別表は揃いましたか。",
+        "vi": "Các tài liệu đính kèm và bảng biểu phụ lục để áp dụng các ưu đãi của chế độ khai thuế mẫu xanh trong kỳ kê khai thuế thu nhập doanh nghiệp lần này đã được chuẩn bị đầy đủ chưa?",
+        "en": "Have all the required attachments and tax schedules been prepared to apply the blue return benefits for this corporate tax filing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、複式簿記に基づく決算書一式と税理士の添付書面が整いましたので、期限内に申告可能です。",
+        "vi": "Vâng, toàn bộ báo cáo tài chính lập theo phương pháp ghi sổ kép và văn bản đính kèm của thuế lý đã hoàn tất, nên chúng ta có thể nộp đúng hạn.",
+        "en": "Yes, the full set of financial statements based on double-entry bookkeeping and the tax accountant's accompanying document are ready, so we can file within the deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations mechanically paste the term glossary definition ('chế độ kê khai thuế sổ sách mẫu xanh') into noun slots where documents/returns are meant, resulting in ungrammatical phrasing like 'hoàn tất thủ tục chế độ...' and 'nộp chế độ...'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "699713356881a52fc40c75430f168816e7a8ae7494744ca632473e7532d550f4",
+    "validated_at": "2026-10-01T01:38:04.901948+00:00"
+  }
+}

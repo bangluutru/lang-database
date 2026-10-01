@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000071",
+  "term": "協定税率",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across collocations, examples, and dialogue is a fundamental misunderstanding of '協定税率' as a rate versus a monetary amount. It is consistently treated as an amount that can be '計上' or have a '残高', which is incorrect in accounting and trade contexts. This leads to unnatural and factually incorrect Japanese expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "協定税率を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 1,
+      "text": "協定税率を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 2,
+      "text": "協定税率を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You pay '関税' (customs duty), not '協定税率' (concession tax rate). The tax rate is a percentage, not an amount to be paid.",
+      "suggested_text": "協定税率を適用して関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "協定税率の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "協定税率 itself is not classified. What is classified is the '品目' (item) or '貨物' (goods) to determine which 協定税率 applies. The classification is usually 'HSコード' (HS code).",
+      "suggested_text": "協定税率の適用対象品目を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "協定税率 is a rate, not an amount that is '計上' (booked/entered) or has a '残高' (balance). These terms are used for monetary amounts or accounts. You apply a tax rate to calculate a tax amount, which is then booked.",
+      "suggested_ja": "月末の帳簿照合において、協定税率が適用された取引の計上内容や関税額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số tiền thuế quan của các giao dịch áp dụng thuế suất theo hiệp định hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or the customs duty amounts for transactions where concession tax rates were applied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 協定税率 is a rate, not something that is '処理' (processed) in closing entries in the sense of an accounting transaction. You process the *customs duty* calculated using the concession tax rate.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において協定税率を適用した関税を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định thuế quan áp dụng thuế suất theo hiệp định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the customs duties, for which concession tax rates were applied, in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question is based on the incorrect premise that 協定税率 itself is '計上' (booked) and has '差異' (discrepancies) in its entries. This is an accounting error. The discrepancy would be in the *amount of customs duty* calculated using the rate, or in the *application* of the rate.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、協定税率が適用された関税の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán thuế quan áp dụng thuế suất theo hiệp định không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for customs duties where concession tax rates were applied?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng một cách thích hợp.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c8873f7511354d854beb925ede5e49172cd66d3bae762d0eeea1ed835bd5c00d",
+    "validated_at": "2026-10-01T01:54:55.467822+00:00"
+  }
+}

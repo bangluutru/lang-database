@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000036",
+  "term": "執行役員",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a factual legal error regarding corporate governance (appointing 執行役員 via 株主総会 instead of 取締役会), unnatural dialogue phrasing ('発送の手配' for meeting coordination), and crude slash-separated translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "執行役員を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate phrase for appointing an executive/operating officer (typically by the board of directors).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "執行役員に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for assuming the post of operating officer.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "執行役員に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural workplace collocation for consulting an executive officer.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "執行役員の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard formal expression for carrying out the duties of an executive officer.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese corporate law (Companies Act), 執行役員 (operating officer) is not a statutory officer (役員) elected by shareholders; they are appointed by the Board of Directors (取締役会), not the General Meeting of Shareholders (株主総会). Furthermore, the translations mechanically copy-pasted definition slashes into running text.",
+      "suggested_ja": "本日開催された取締役会の決議を経て、当社の新任執行役員が正式に選任されました。",
+      "suggested_vi": "Thông qua nghị quyết của hội đồng quản trị diễn ra hôm nay, giám đốc điều hành mới của công ty chúng tôi đã được chính thức bổ nhiệm.",
+      "suggested_en": "Following the resolution passed at today's board of directors meeting, our company's new executive officer was officially appointed."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural Japanese sentence reflecting internal controls and compliance monitoring between management and executive officers.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'執行役員の準備状況' is ambiguously phrased (implies the officer oneself is being prepared), and '発送の手配' is unnatural for meeting materials (typically 送付, 配布, or 事前共有). The context between A and B feels disjointed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の経営会議に向けて、執行役員への事前説明の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị giải trình trước cho các phó tổng điều hành hướng tới cuộc họp ban điều hành tuần tới thế nào rồi?",
+        "en": "How are the preparations coming along for the briefing to the executive officers ahead of next week's management meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "資料の最終確認が完了しましたので、本日中に各執行役員へ事前共有いたします。",
+        "vi": "Tài liệu đã được rà soát lần cuối xong, nên trong ngày hôm nay tôi sẽ chia sẻ trước cho các phó tổng điều hành.",
+        "en": "The final review of the materials is complete, so I will share them with each executive officer by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations in example 0 carry over slash-separated dictionary glosses ('Phó tổng giám đốc điều hành / Trưởng khối nghiệp vụ' and 'operating officer / executive officer') into running prose instead of choosing contextually natural terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6da1d62c20b04013212f0ed25d7d1dc0aced447048238e8d484e3404cc3c14ec",
+    "validated_at": "2026-10-01T01:41:34.599413+00:00"
+  }
+}

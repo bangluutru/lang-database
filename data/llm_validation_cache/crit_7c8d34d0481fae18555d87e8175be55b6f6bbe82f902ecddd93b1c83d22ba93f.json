@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-tax-000189",
+  "term": "審査請求",
+  "overall_decision": "rewrite",
+  "summary_reason": "税務行政上の不服申立手続である『審査請求』に対し、汎用的な月次決算・帳簿照合のテンプレート文が無理やり当てはめられており、会計・税務実務上あり得ない深刻な誤り（ハルシネーション）が発生しています。例文および対話の全面的な書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "審査請求を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "法律・税務実務において「進める」は口語的でやや不自然。「審査請求を行う」または「審査請求を申し立てる」が正確なコロケーションです。",
+      "suggested_text": "審査請求を申し立てる"
+    },
+    {
+      "index": 1,
+      "text": "審査請求を完了する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "審査請求は裁決を求める手続であるため、申立側が「完了する」とは表現しません。「審査請求の手続きを執る」や「審査請求を提起する」とします。",
+      "suggested_text": "審査請求を提起する"
+    },
+    {
+      "index": 2,
+      "text": "審査請求の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内や税理士との間で手続フローを確認する文脈として自然です。"
+    },
+    {
+      "index": 3,
+      "text": "審査請求を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "審査請求そのものを「見直す」という用法は不自然です。請求を取り止める場合は「取り下げる」、方針を再検討する場合は「審査請求の要否を検討する」とします。",
+      "suggested_text": "審査請求を取り下げる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「審査請求」は税務署等の処分に対する行政不服申立手続であり、帳簿に計上したり残高が存在する勘定科目ではありません。会計テンプレートの機械的適用による致命的な事実誤認です。",
+      "suggested_ja": "税務署による更正処分に不服があるため、国税不服審判所に対して審査請求を行う方針を固めました。",
+      "suggested_vi": "Do không đồng ý với quyết định ấn định thuế của Chi cục Thuế, chúng tôi đã thống nhất phương án nộp đơn khiếu nại lên Viện phúc thẩm phán quyết thuế quốc gia.",
+      "suggested_en": "Since we object to the reassessment disposition by the tax office, we have decided to file a request for examination with the National Tax Tribunal."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "審査請求は決算処理で「適正に処理する」対象の会計事象ではありません。申立期限や手続に関する実務的な文脈に差し替える必要があります。",
+      "suggested_ja": "国税通則法に基づき、更正通知書を受領した日の翌日から起算して3か月以内に審査請求書を提出しなければなりません。",
+      "suggested_vi": "Căn cứ theo Luật Quản lý Thuế Thông thường, đơn khiếu nại phải được nộp trong vòng 3 tháng kể từ ngày tiếp theo ngày nhận được thông báo ấn định thuế.",
+      "suggested_en": "Under the Act on General Rules for National Taxes, a request for examination must be submitted within three months calculated from the day following the date of receipt of the notice of reassessment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "審査請求を「月次決算で計上し、補助元帳と照合する」という完全に破綻した架空の会計処理が描かれており、教育用教材として有害です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署から受領した追徴課税処分について、顧問税理士と協議の上、審査請求を申し立てるべきでしょうか。",
+        "vi": "Về quyết định truy thu thuế nhận được từ cơ quan thuế, sau khi trao đổi với kế toán thuế tư vấn, chúng ta có nên nộp đơn khiếu nại không?",
+        "en": "Regarding the additional tax assessment disposition received from the tax office, should we file a request for examination after consulting with our tax advisor?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、当局側の事実誤認の可能性が高いため、不服申立期限内に国税不服審判所へ審査請求書を提出しましょう。",
+        "vi": "Vâng, do khả năng cao cơ quan thuế đã nhầm lẫn về mặt thực tế, chúng ta nên nộp đơn khiếu nại lên Viện phúc thẩm phán quyết thuế quốc gia trong thời hạn quy định.",
+        "en": "Yes, as there is a high probability of a factual misunderstanding by the authorities, let's submit a request for examination to the National Tax Tribunal within the appeal deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語単体の訳語としては概ね妥当ですが、文脈が税法分野（国税不服審判所への不服申立て）であることを明確に踏まえる必要があります。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ec5a58b2d3b930af032df56d0cb76314e80c71e41b88ca8055c7e2ca9fe5f5eb",
+    "validated_at": "2026-10-01T01:40:46.785701+00:00"
+  }
+}

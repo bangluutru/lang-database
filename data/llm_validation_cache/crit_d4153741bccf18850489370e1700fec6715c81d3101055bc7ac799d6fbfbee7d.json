@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000060",
+  "term": "印鑑証明書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic and domain errors: the generator treated '印鑑証明書' (an official government-issued seal certificate) as if it were a company-authored document that can be drafted, polished (推敲), and dispatched to meeting attendees.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "印鑑証明書を作成する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An 印鑑証明書 is an official certificate issued by the Legal Affairs Bureau (法務局) or municipal office; a company or individual cannot 'create' (作成する) it. The natural predicates are 取得する, 交付を受ける, or 発行する (by authorities).",
+      "suggested_text": "印鑑証明書を取得する"
+    },
+    {
+      "index": 1,
+      "text": "印鑑証明書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and administrative collocation.",
+      "suggested_text": "印鑑証明書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "印鑑証明書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While physically possible to mail, seal certificates are typically 'attached' (添付する), 'requested/ordered' (取り寄せる), or 'submitted' (提出する) in corporate transactions rather than mass-shipped (発送する).",
+      "suggested_text": "印鑑証明書を添付する"
+    },
+    {
+      "index": 3,
+      "text": "印鑑証明書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in procurement, contract execution, and legal verification contexts.",
+      "suggested_text": "印鑑証明書を受領する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually absurd under the Companies Act. Companies send convocation notices (招集通知) to shareholders/directors, not seal registration certificates (印鑑証明書). Seal certificates are typically collected from incoming directors for commercial registration (登記申請) or exchanged for important contracts.",
+      "suggested_ja": "不動産売買契約の締結および所有権移転登記のため、法務局で発行された印鑑証明書を提出いたしました。",
+      "suggested_vi": "Để ký kết hợp đồng mua bán bất động sản và đăng ký chuyển nhượng quyền sở hữu, chúng tôi đã nộp giấy chứng nhận con dấu do Cục Pháp vụ cấp.",
+      "suggested_en": "We submitted the seal registration certificate issued by the Legal Affairs Bureau for the real estate purchase agreement and ownership transfer registration."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Realistic corporate compliance context where counterparties' seal certificates must be preserved as audit trail evidence.",
+      "suggested_ja": "内部統制およびコンプライアンスの証跡として、担当部署にて受領した印鑑証明書を厳重に保管しています。",
+      "suggested_vi": "Làm bằng chứng kiểm soát nội bộ và tuân thủ quy định, bộ phận phụ trách lưu trữ nghiêm ngặt giấy chứng nhận con dấu pháp nhân đã nhận.",
+      "suggested_en": "As evidence of internal control and compliance, the department in charge securely archives the received seal registration certificate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical factual hallucination: Speaker B talks about 'polishing the draft' (内容の最終推敲) and getting 'executive pre-approval' for an official government-issued seal certificate. An 印鑑証明書 cannot be edited or drafted; it is retrieved from the registry office.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "大口の取引基本契約を締結する予定ですが、先方の印鑑証明書はもう受領していますか。",
+        "vi": "Chúng ta sắp ký hợp đồng nguyên tắc giao dịch lớn, bạn đã nhận được giấy chứng nhận con dấu của đối tác chưa?",
+        "en": "We are scheduled to conclude a major basic transaction agreement; have we already received the counterparty's seal registration certificate?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、発行から3か月以内の原本を昨日受領し、契約書に押印された印影と一致することを確認いたしました。",
+        "vi": "Vâng, hôm qua tôi đã nhận bản chính cấp trong vòng 3 tháng và xác nhận khớp với con dấu đóng trên hợp đồng rồi.",
+        "en": "Yes, we received the original certificate issued within three months yesterday and verified that it matches the seal impression on the contract."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term definitions are accurate; however, example and dialogue translations reflected the underlying factual errors of the source text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a658b129f39c21d73ab7626208944adb53071f83b6886803dc6c66628cc2b579",
+    "validated_at": "2026-10-01T01:41:58.852032+00:00"
+  }
+}

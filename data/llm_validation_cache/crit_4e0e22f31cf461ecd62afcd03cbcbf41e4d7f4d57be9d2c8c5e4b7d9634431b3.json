@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000073",
+  "term": "損害賠償請求",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic and domain mismatch: the legal/dispute term '損害賠償請求' was forced into generic accounting-ledger templates ('計上内容や残高', '補助元帳と照合'), producing factually absurd Japanese that cannot be taught to foreign professionals.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損害賠償請求を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in corporate legal disputes to refer to proceeding with a damages claim.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "損害賠償請求を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Legal claims are filed, resolved, settled, or withdrawn, not 'completed' (完了する).",
+      "suggested_text": "損害賠償請求を受ける"
+    },
+    {
+      "index": 2,
+      "text": "損害賠償請求の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in business dispute preparation when verifying procedural steps with legal counsel.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "損害賠償請求を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not 'review/revise' (見直す) a claim like a business plan or budget; standard legal verbs are 検討する (consider) or 取り下げる (withdraw).",
+      "suggested_text": "損害賠償請求を検討する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'損害賠償請求' (claim/demand for damages) is a legal action/dispute procedure, not an accounting account title with a ledger balance (計上内容や残高) to reconcile at month-end.",
+      "suggested_ja": "取引先の契約違反により甚大な損失が発生したため、法務部と協議の上、損害賠償請求を行うことを決定いたしました。",
+      "suggested_vi": "Do hành vi vi phạm hợp đồng của đối tác gây ra tổn thất nghiêm trọng, sau khi thảo luận với bộ phận pháp chế, chúng tôi đã quyết định thực hiện yêu cầu đòi bồi thường thiệt hại.",
+      "suggested_en": "Due to substantial losses caused by the counterparty's breach of contract, we decided to file a claim for damages after consulting with the legal department."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically applied template. A company does not simply 'process a damages claim in closing entries'; liabilities arising from damages claims are accounted for as provisions (引当金) or contingent liabilities (偶発債務).",
+      "suggested_ja": "取引先から提起された損害賠償請求について、敗訴の可能性と影響額を精査し、決算において引当金を適切に計上しました。",
+      "suggested_vi": "Đối với yêu cầu bồi thường thiệt hại do đối tác đệ trình, chúng tôi đã xem xét kỹ lưỡng khả năng thua kiện cùng số tiền ảnh hưởng, và đã trích lập dự phòng một cách phù hợp trong kỳ quyết toán.",
+      "suggested_en": "Regarding the damages claim filed by the business partner, we carefully evaluated the likelihood of loss and its financial impact, and properly recognized a provision in the financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "A legal dispute/claim (損害賠償請求) does not have an accounting subsidiary ledger (補助元帳) or month-end balance discrepancies to match against vouchers in routine monthly closing. This is a severe templating error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "取引先から受領した損害賠償請求の通知書について、法務部との協議状況はいかがですか。",
+        "vi": "Tình hình thảo luận với bộ phận pháp chế về thông báo yêu cầu bồi thường thiệt hại nhận được từ đối tác như thế nào rồi?",
+        "en": "What is the status of the discussions with the legal department regarding the notice of claim for damages received from our business partner?"
+      },
+      {
+        "speaker": "B",
+        "ja": "顧問弁護士に契約書と納品履歴を共有し、当社の法的責任の有無について至急精査してもらっています。",
+        "vi": "Chúng tôi đã chia sẻ hợp đồng và lịch sử giao hàng cho luật sư cố vấn để khẩn trương rà soát xem công ty có trách nhiệm pháp lý hay không.",
+        "en": "We have shared the contract and delivery records with legal counsel, who is urgently examining whether our company bears legal liability."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base translations for the headword are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "de356ff6b56299a9d17d9846a420571bfdc204ef07898459f3d3cfb5925ea90b",
+    "validated_at": "2026-10-01T01:42:13.549425+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000103",
+  "term": "残業手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations suffer from template substitution (using 精算, 残高, and 照合 unnaturally with an expense allowance item). Both examples and the dialogue rely on generic accounting templates rather than authentic payroll accounting terminology (e.g., 勤怠データ vs 支給額).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "残業手当を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accruing or recording overtime allowance as an expense (人件費/未払費用) is standard accounting practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "残業手当の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "残業手当 is a payroll expense item, not a balance sheet account with a conventional '残高'. Native speakers say 支給額, 実績額, or 未払額.",
+      "suggested_text": "残業手当の支給額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "残業手当を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocating 照合する directly with an allowance name is vague. In practice, one verifies calculation against attendance records.",
+      "suggested_text": "残業手当を計算する"
+    },
+    {
+      "index": 3,
+      "text": "残業手当を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to out-of-pocket expenses or advances (経費精算). Overtime allowance is wage compensation and is '支給する' or '支払う', not '精算する'.",
+      "suggested_text": "残業手当を支給する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Applying '残高' to 残業手当 reveals robotic template substitution. Verification in payroll/accounting is done against timecard/attendance logs (勤怠データ).",
+      "suggested_ja": "月次決算の締めに伴い、勤怠データと残業手当の計上額に齟齬がないか精査します。",
+      "suggested_vi": "Cùng với việc chốt quyết toán tháng, chúng tôi rà soát kỹ xem có sự sai lệch nào giữa dữ liệu chấm công và số tiền phụ cấp làm thêm giờ đã hạch toán hay không.",
+      "suggested_en": "In line with the monthly closing, we carefully examine whether there are discrepancies between attendance records and the recorded overtime allowance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Cookie-cutter template with awkward repetition ('適正な...適正に'). A realistic corporate sentence should reflect actual HR/payroll labor-management context.",
+      "suggested_ja": "就業規則および労使協定（36協定）に則り、当月発生した残業手当を適正に支給・計上いたしました。",
+      "suggested_vi": "Tuân thủ nội quy lao động và thỏa ước lao động tập thể (Thỏa ước 36), chúng tôi đã chi trả và hạch toán đúng quy định các khoản phụ cấp làm thêm giờ phát sinh trong tháng.",
+      "suggested_en": "In accordance with work regulations and the labor-management agreement (Article 36 Agreement), we properly disbursed and recorded the overtime allowance incurred this month."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合している' is unnatural business Japanese. For overtime allowances, reconciliation occurs between 勤怠実績 (actual hours) and 給与システム/仕訳データ, not generic 証憑書類 and 補助元帳.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、残業手当の計上額と勤怠集計データに差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, có chênh lệch nào giữa số tiền hạch toán phụ cấp làm thêm giờ và dữ liệu tổng hợp chấm công không?",
+        "en": "In this month's closing, are there any discrepancies between the recorded overtime allowance and the aggregated attendance data?"
+      },
+      {
+        "speaker": "B",
+        "ja": "タイムカードの実績データと給与計算システムを照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu dữ liệu thực tế từ thẻ chấm công với hệ thống tính lương và xác nhận tất cả đều khớp hoàn toàn.",
+        "en": "We have reconciled the actual timecard data with the payroll system and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning contained unnatural parenthetical English 'tiền lương làm thêm giờ (Overtime)'. The standard term is 'phụ cấp làm thêm giờ' or 'tiền làm thêm giờ'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e6e6b580523d5b4c357513d8773952b7e568728000299282bab6bad7c36dea96",
+    "validated_at": "2026-10-01T01:42:41.069365+00:00"
+  }
+}

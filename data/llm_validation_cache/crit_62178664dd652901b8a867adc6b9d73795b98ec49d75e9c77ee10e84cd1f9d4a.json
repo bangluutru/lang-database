@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000172",
+  "term": "更正処分",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain mismatch: The sentences and dialogue treated 更正処分 (administrative tax reassessment disposition) as a routine monthly accounting book entry with balances and month-end discrepancies, which is completely inaccurate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "更正処分を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "更正処分 is an administrative disposition issued by the tax authorities, not a routine company task to 'advance'. From a corporate perspective, one would say '更正処分への対応を進める' or '更正処分を受ける'.",
+      "suggested_text": "更正処分の通知を受ける"
+    },
+    {
+      "index": 1,
+      "text": "更正処分を完了する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A disposition is rendered/executed by an authority, not 'completed' by a corporate department.",
+      "suggested_text": "更正処分を不服として申し立てる"
+    },
+    {
+      "index": 2,
+      "text": "更正処分の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and semantically acceptable when reviewing administrative tax procedures, though '更正処分への対応手順' would be more corporate-focused.",
+      "suggested_text": "更正処分の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "更正処分を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxpayers cannot unilaterally 'review/revise' a government disposition; they file an appeal or request for cancellation (取消請求).",
+      "suggested_text": "更正処分の取消しを求める"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A tax correction disposition (更正処分) is not a routine accounting balance or monthly reconciliation line item (更正処分の残高・計上内容). This is an AI hallucination conflating administrative tax penalties with monthly ledger entries.",
+      "suggested_ja": "税務当局から更正処分を受けた場合、追納すべき法人税額および附帯税の影響を精査する必要があります。",
+      "suggested_vi": "Trong trường hợp nhận quyết định ấn định lại số thuế từ cơ quan thuế, chúng tôi cần rà soát kỹ lưỡng số thuế TNDN và các khoản tiền thuế phụ phát sinh phải nộp bổ sung.",
+      "suggested_en": "If we receive a reassessment disposition from the tax authorities, we need to closely examine the additional corporate tax and related penalties to be paid."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Treats 更正処分 as a generic periodic closing entry ('当期の決算において更正処分を適正に処理いたしました'). A disposition is received from the tax authority; what is accounted for is the resulting additional tax/penalties.",
+      "suggested_ja": "過年度の税務調査に基づく更正処分の通知を受け、追徴税額を決算において引当計上しました。",
+      "suggested_vi": "Sau khi nhận thông báo quyết định ấn định lại số thuế dựa trên đợt thanh tra thuế các niên độ trước, chúng tôi đã trích lập dự phòng cho số tiền thuế truy thu trong kỳ quyết toán.",
+      "suggested_en": "Having received notice of a reassessment disposition based on a tax audit of prior fiscal years, we recorded a provision for the additional tax assessment in our financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking whether there are discrepancies in '更正処分の計上内容' in monthly closing is fundamentally flawed in accounting and tax law.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "国税局から受領した更正処分の通知書について、顧問税理士への相談は進んでいますか。",
+        "vi": "Về thông báo quyết định ấn định lại số thuế nhận từ Cục Thuế, việc tham vấn chuyên gia thuế phụ trách đã tiến hành đến đâu rồi?",
+        "en": "Regarding the notice of reassessment disposition received from the Regional Taxation Bureau, how is the consultation with our tax accountant progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、指摘事項の根拠法令を確認した上で、不服申立てを行うかどうかの検討に入っております。",
+        "vi": "Vâng, sau khi rà soát căn cứ pháp lý của các điểm kiến nghị, chúng tôi đang tiến hành xem xét liệu có nên khiếu nại hay không.",
+        "en": "Yes, after verifying the legal basis of the findings, we have begun evaluating whether to file an appeal."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are adequate, but the term specifically means reassessment disposition/official tax correction by the tax office."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c1e9777e81bcf601711fcd3ff159a54f0ddcd052caeba059f63aa85e86354109",
+    "validated_at": "2026-10-01T01:40:26.406769+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000116",
+  "term": "消費税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Japanese collocations, examples, and dialogue are excellent and native-grade, but the Vietnamese translations contain domain inaccuracies and duplicate typos requiring correction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "消費税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and essential tax compliance collocation in corporate accounting.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "消費税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and universally used tax remittance collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "消費税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational expression for tax calculation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "消費税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Proper statutory and transactional phrasing for the imposition of consumption tax.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is natural, but the Vietnamese translation incorrectly renders '課税標準' (tax base / cơ sở tính thuế) as 'thu nhập chịu thuế' (taxable income, which applies to CIT/PIT, not VAT). Also, mechanical slash concatenation from the definition should be smoothed out.",
+      "suggested_ja": "課税標準額および適用税率を正確に算出し、納期限までに消費税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác giá tính thuế và thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế tiêu dùng trước thời hạn.",
+      "suggested_en": "Accurately calculating the tax base and applicable tax rates, we completed the payment of consumption tax by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is highly authentic and professional, but Vietnamese contains a typographical repetition error ('thuế thuế') and awkward slash templating.",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における消費税の税負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã tính toán sơ bộ tác động đến số tiền thuế tiêu dùng phải nộp trong kỳ này.",
+      "suggested_en": "In light of the tax reform details, we have estimated the impact on the consumption tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Exemplary monthly close dialogue between accounting professionals; terminology (証憑書類, 補助元帳, 整合) and tone are completely authentic.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese has a domain term inaccuracy (confusing VAT tax base with taxable income) and a duplicate word typo ('thuế thuế')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "03a31ff376f3eacfe60099fa7648573d901c77f2886ac45655a961922bc065fa",
+    "validated_at": "2026-10-01T01:39:27.818867+00:00"
+  }
+}

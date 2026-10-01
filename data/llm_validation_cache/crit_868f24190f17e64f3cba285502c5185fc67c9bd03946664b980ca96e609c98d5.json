@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000018",
+  "term": "確定申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 1 incorrectly pairs the action '確定申告' with '提出する' instead of '確定申告書'; the dialogue uses redundant phrasing ('決算申告における確定申告'); and Vietnamese translations carry mechanical slash-delimited dictionary artifacts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "確定申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly authentic verb pairing for tax filing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "確定申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「確定申告」は申告行為・手続の名称であり、「提出する」の目的語には帳票である「確定申告書」を取るのが正確です（申告を提出するとは言わず、申告書を提出するか、確定申告を行うと言います）。",
+      "suggested_text": "確定申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "確定申告の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business Japanese expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "確定申告の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate process expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is authentic, but the Vietnamese translation mechanically copied the dictionary definition with slashes ('quyết toán thuế / kê khai thuế chính thức') directly into the sentence.",
+      "suggested_ja": "期末決算の確定に伴い、所轄税務署に対して法定申告期限内に確定申告の手続きを完了しました。",
+      "suggested_vi": "Sau khi chốt số liệu quyết toán cuối kỳ, chúng tôi đã hoàn tất thủ tục quyết toán thuế trong thời hạn luật định tại chi cục thuế quản lý.",
+      "suggested_en": "Upon finalizing the fiscal year-end closing, we completed the final tax return filing procedures at the competent tax office within the statutory deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Like example 0, the Vietnamese translation directly inserted the slash-separated gloss ('quyết toán thuế / kê khai thuế chính thức'). Additionally, English 'assembled the submission documents for final tax return' lacks the required article/preposition structure.",
+      "suggested_ja": "顧問税理士の助言を受け、適正な税法解釈に基づき確定申告の提出書類を整えました。",
+      "suggested_vi": "Nhận tư vấn từ thuế lý cố vấn, chúng tôi đã hoàn thiện hồ sơ nộp tờ khai quyết toán thuế dựa trên việc áp dụng chuẩn xác luật thuế.",
+      "suggested_en": "Following the advice of our advisory tax accountant, we prepared the filing documents for the final tax return in accordance with appropriate tax law interpretations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「今回の決算申告における確定申告」は「決算申告（決算に基づく申告）」と「確定申告」の語義が重複しており、実務日本語として不自然でぎこちない表現です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算に伴う法人税の確定申告について、計算根拠と提出書類の準備は完了しましたか。",
+        "vi": "Về việc quyết toán thuế thu nhập doanh nghiệp cho kỳ này, anh đã hoàn tất việc chuẩn bị căn cứ tính thuế và hồ sơ nộp thuế chưa?",
+        "en": "Regarding the final corporate tax return for this fiscal period, have the calculation bases and filing documents been prepared?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、勘定科目の内訳書と税理士の確認書面が揃いましたので、期日通りに電子申告できます。",
+        "vi": "Vâng, bảng kê chi tiết các tài khoản và văn bản xác nhận của thuế lý đều đã đầy đủ, nên chúng ta có thể nộp tờ khai điện tử đúng hạn.",
+        "en": "Yes, the breakdown of accounts and the tax accountant's confirmation documents are ready, so we can file electronically on schedule."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations in both example sentences contain raw dictionary slash notations ('quyết toán thuế / kê khai thuế chính thức') rather than contextual professional terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2c85e017e5446d8e067386b5d21f075cb8ad054bea11eb40aae929a57727d6bf",
+    "validated_at": "2026-10-01T01:37:33.536890+00:00"
+  }
+}

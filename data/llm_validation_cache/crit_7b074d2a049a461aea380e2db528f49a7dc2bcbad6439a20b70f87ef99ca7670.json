@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000121",
+  "term": "適格請求書等保存方式",
+  "overall_decision": "rewrite",
+  "summary_reason": "文脈が「ふるさと納税」や「寄附金控除」のプロンプトテンプレートと混同されており、「地域貢献」「控除上限額の試算」「添付書類として税務署に提出」など、日本の消費税インボイス制度の実務および税法上の要件と完全に乖離した重大な誤りが含まれています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "適格請求書等保存方式を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "適格請求書等保存方式は法定の税制・保存制度であり、サービスのように「利用する」とは言いません。「対応する」や「導入する」を用います。",
+      "suggested_text": "適格請求書等保存方式に対応する"
+    },
+    {
+      "index": 1,
+      "text": "適格請求書等保存方式の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "仕入税額控除の要件等に関連して法務・税務文書で許容される表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "適格請求書等保存方式を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "適格請求書等保存方式は義務的要件を伴う帳簿および請求書の保存制度であり、優遇税制のようにメリットを「活用する」対象ではありません。",
+      "suggested_text": "適格請求書等保存方式へ移行する"
+    },
+    {
+      "index": 3,
+      "text": "適格請求書等保存方式の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "課税仕入れや取引区分が制度の対象となるか否かを論ずる文脈で極めて自然です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献」「制度を活用」はふるさと納税等の別制度と混同した重大な事実誤認（ハルシネーション）です。インボイス制度は地域貢献や節税を目的とするものではありません。",
+      "suggested_ja": "適格請求書等保存方式の導入に伴い、受領した請求書に登録番号が記載されているかの確認手順をマニュアル化しました。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ lưu trữ hóa đơn đạt chuẩn, chúng tôi đã xây dựng quy trình kiểm tra xem hóa đơn nhận được có ghi mã số đăng ký hay không thành tài liệu hướng dẫn.",
+      "suggested_en": "Following the implementation of the qualified invoice storage system, we standardized the procedure for verifying whether received invoices include a registered business number."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を試算」も寄附金控除等との混同です。適格請求書等保存方式は仕入税額控除の適用要件であり、控除上限額を試算して計画的に手続きを行うという記述は税務実務上不適格です。",
+      "suggested_ja": "仕入税額控除の要件を満たすため、適格請求書等保存方式に準拠した会計システムへの改修を期日までに完了させました。",
+      "suggested_vi": "Để đáp ứng các điều kiện khấu trừ thuế đầu vào, chúng tôi đã hoàn tất việc nâng cấp hệ thống kế toán tuân thủ chế độ lưu trữ hóa đơn đạt chuẩn đúng thời hạn.",
+      "suggested_en": "In order to meet the requirements for purchase tax credits, we completed modifications to our accounting system in compliance with the qualified invoice storage system by the deadline."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "適格請求書等保存方式において、受領した適格請求書等は「社内保存」が義務付けられているものであり、消費税申告書に添付書類として税務署へ提出するものではありません。実務の法令要件と乖離しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "適格請求書等保存方式への移行にあたり、免税事業者である取引先への対応方針は定まりましたか。",
+        "vi": "Liên quan đến việc chuyển đổi sang chế độ lưu trữ hóa đơn đạt chuẩn, công ty đã chốt chính sách xử lý đối với các đối tác là doanh nghiệp được miễn thuế chưa?",
+        "en": "Regarding the transition to the qualified invoice storage system, have we finalized our policy for dealing with tax-exempt business partners?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、経過措置期間中の税額計算への影響を試算した上で、今後の取引条件について個別に協議を進める予定です。",
+        "vi": "Vâng, sau khi tính toán thử nghiệm tác động đến việc tính thuế trong giai đoạn chuyển tiếp, chúng tôi dự kiến sẽ đàm phán riêng về các điều kiện giao dịch sau này.",
+        "en": "Yes, after estimating the impact on tax calculations during the transitional measures period, we plan to negotiate future transaction terms individually."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の定訳（Qualified invoice storage system / chế độ lưu trữ hóa đơn đạt chuẩn）自体は妥当です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6f343c0d7652f931a7ecc5229797cdf5acc9d1ea5ee582e01cf1e2da2f14ef4c",
+    "validated_at": "2026-10-01T01:39:38.105386+00:00"
+  }
+}

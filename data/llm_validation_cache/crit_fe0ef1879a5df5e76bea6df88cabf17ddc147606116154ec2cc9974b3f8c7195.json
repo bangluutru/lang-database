@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000020",
+  "term": "定期預金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an illegitimate collocation ('定期預金を精算する'), repetitive hollow template phrasing in Example 2, and an unnaturally worded dialogue turn ('適正に整合している') lacking typical banking audit terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定期預金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in accounting for booking time deposits as an asset entry.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "定期預金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace collocations for cash and bank auditing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定期預金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in book closing to mean reconciling bank deposit records with balance certificates.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "定期預金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Bank deposits are not '精算' (settled/reimbursed). They are '預け入れる' (deposited) or '解約する' (closed/withdrawn).",
+      "suggested_text": "定期預金を解約する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear and common scenario for month-end reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Hollow boilerplate containing double '適正' (適正な...適正に処理). Lacks real accounting substance. A practical sentence should depict actual accounting treatment, such as reclassifying deposits maturing within one year or recognizing accrued interest.",
+      "suggested_ja": "決算日の翌日から1年以内に満期が到来する定期預金については、固定資産から流動資産へ振替処理を行いました。",
+      "suggested_vi": "Đối với các khoản tiền gửi tiết kiệm có kỳ hạn đáo hạn trong vòng một năm kể từ ngày sau ngày kết thúc niên độ kế toán, chúng tôi đã thực hiện bút toán kết chuyển từ tài sản dài hạn sang tài sản ngắn hạn.",
+      "suggested_en": "Time deposits maturing within one year from the day after the fiscal year-end were reclassified from fixed assets to current assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural repetitive AI phrasing. In practical treasury/accounting, deposits are reconciled against bank balance certificates (残高証明書).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、定期預金の残高証明書との照合は完了していますか。",
+        "vi": "Trong đợt quyết toán tháng này, việc đối chiếu số dư tiền gửi có kỳ hạn với giấy chứng nhận số dư của ngân hàng đã hoàn thành chưa?",
+        "en": "Has the reconciliation of time deposits against bank balance certificates been completed for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、金融機関から受領した残高証明書と補助元帳を照合し、差異がないことを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu giấy chứng nhận số dư nhận từ tổ chức tài chính với sổ phụ kế toán và xác nhận không có chênh lệch nào.",
+        "en": "Yes, we reconciled the balance certificates received from financial institutions with the subsidiary ledgers and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "11708baf66fe54986497f92f04a36992f97e259b6ec2b2712eefd4a7cc571f1a",
+    "validated_at": "2026-10-01T01:33:17.808234+00:00"
+  }
+}

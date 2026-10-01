@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000115",
+  "term": "厚生年金保険",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic category confusion: the model treated the statutory system '厚生年金保険' as an accounting balance sheet item ('計上内容や残高', '適正に処理'), rather than distinguishing between the social insurance scheme itself and its premiums ('厚生年金保険料' / '法定福利費'). Examples and dialogue must be rewritten to reflect authentic HR/payroll practices.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "厚生年金保険を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used especially in HR and labor administration regarding extending coverage to employees or establishments.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "厚生年金保険に加入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and common workplace phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "厚生年金保険の保険料を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate payroll/accounting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "厚生年金保険の届出を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Combining '届出' (notification) with '提出する' is redundant and slightly awkward in official business/pension administration; standard phrasing is '届出を行う' or '届書を提出する'.",
+      "suggested_text": "厚生年金保険の届書を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese financial accounting, one does not record or maintain balances of the insurance scheme itself ('厚生年金保険の計上内容や残高'); the proper subject is the premium ('厚生年金保険料') or the liability/withholding account ('預り金' / '未払金').",
+      "suggested_ja": "月末の帳簿照合において、給与控除された厚生年金保険料の預り金残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem số dư tài khoản tiền gửi giữ lại đối với bảo hiểm lương hưu phúc lợi được khấu trừ từ lương có bị chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully verify whether there are any discrepancies in the balance of withheld employees' pension insurance premiums deducted from payroll."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a generic template ('適正な会計基準および社内規程に則り...厚生年金保険を適正に処理いたしました') with category mismatch. An insurance system itself is not processed in closing entries; premium expenses and employer contributions ('法定福利費') are.",
+      "suggested_ja": "法改正に伴い、短時間労働者に対する厚生年金保険の適用要件を人事労務部門で再確認しました。",
+      "suggested_vi": "Cùng với việc sửa đổi luật, bộ phận nhân sự và lao động đã rà soát lại các điều kiện áp dụng bảo hiểm lương hưu phúc lợi đối với lao động làm việc bán thời gian.",
+      "suggested_en": "In accordance with legal revisions, the HR and labor department re-verified the eligibility criteria for enrolling part-time workers in employees' pension insurance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Accountants reconcile '厚生年金保険料' (premiums) or '法定福利費'/'社会保険料預り金', not '厚生年金保険'. Furthermore, Speaker B's response ('すべて適正に整合していることを確認いたしました') sounds like an unnatural synthetic template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算で、新入社員の厚生年金保険の加入手続きはすべて完了していますか。",
+        "vi": "Trong đợt tính lương tháng này, thủ tục tham gia bảo hiểm lương hưu phúc lợi cho các nhân viên mới đã hoàn tất hết chưa?",
+        "en": "Has the enrollment procedure for employees' pension insurance for all new hires been completed in this month's payroll?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、年金事務所への届書提出と標準報酬月額の登録は滞りなく完了しております。",
+        "vi": "Vâng, việc nộp tờ khai lên Văn phòng Hưu trí và đăng ký mức thù lao tiêu chuẩn hàng tháng đều đã được hoàn thành thuận lợi.",
+        "en": "Yes, submission of the notifications to the Japan Pension Service office and registration of their standard monthly remuneration have all been completed without delay."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fc4dbc5f8480caef6462d69519b769bb0fa74c598e13cec000fe4bb5a130dd18",
+    "validated_at": "2026-10-01T01:42:53.740039+00:00"
+  }
+}

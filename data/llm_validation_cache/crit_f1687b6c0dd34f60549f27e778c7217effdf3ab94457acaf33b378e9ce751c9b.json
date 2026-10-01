@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000093",
+  "term": "正社員",
+  "overall_decision": "rewrite",
+  "summary_reason": "監査役・役員向けのプロンプトテンプレートに「正社員」を機械的に当てはめた結果、「株主総会で正社員を選任する」などの重大な事実誤認（会社法上の誤り）や、文脈崩壊した会話文が生成されています。全面的にHR・労務管理に即した自然な表現に書き直す必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "正社員を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役員や監査役等に用いる表現であり、正社員には「採用する」または「登用する」を用いるのが自然です。",
+      "suggested_text": "正社員を採用する"
+    },
+    {
+      "index": 1,
+      "text": "正社員に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任する」は役職や機関の地位に就く際に用います。正社員の場合は「正社員になる」「正社員へ登用される」が適切です。",
+      "suggested_text": "正社員へ登用される"
+    },
+    {
+      "index": 2,
+      "text": "正社員に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "文法的には成立しますが、学習用コロケーションとして不自然かつ一般的ではありません。「正社員の比率」「正社員として雇用する」等が適しています。",
+      "suggested_text": "正社員として雇用する"
+    },
+    {
+      "index": 3,
+      "text": "正社員の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "役員の職務遂行テンプレートの流用であり、正社員に対して単独で用いるビジネス表現としては不自然です。",
+      "suggested_text": "正社員の待遇を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "株主総会の決議で選任されるのは役員（取締役・監査役等）であり、正社員が株主総会で選任されることは会社法上あり得ません。役員用テンプレートの不当な流用です。",
+      "suggested_ja": "優秀な契約社員を正社員として登用する制度を新たに導入しました。",
+      "suggested_vi": "Chúng tôi đã áp dụng một chế độ mới nhằm chuyển đổi các nhân viên hợp đồng xuất sắc thành nhân viên chính thức.",
+      "suggested_en": "We have introduced a new system to promote outstanding contract employees to regular full-time positions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性を確保するため」は監査役等の職務文脈であり、正社員を主語・対象としたビジネス実務文言として不適切です。",
+      "suggested_ja": "人手不足に対応するため、来期は正社員の採用枠を拡大する予定です。",
+      "suggested_vi": "Để ứng phó với tình trạng thiếu hụt nhân lực, chúng tôi dự kiến sẽ mở rộng chỉ tiêu tuyển dụng nhân viên chính thức trong kỳ tới.",
+      "suggested_en": "To address the labor shortage, we plan to expand the hiring quota for regular employees in the upcoming term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "役員向け招集通知等のテンプレートが混入しており、Aの「正社員の準備状況」という問いかけ自体が意味不明で、Bの「発送の手配を行います」との整合性も破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来年度の採用計画ですが、正社員の増員は何名程度を想定していますか。",
+        "vi": "Về kế hoạch tuyển dụng năm tới, anh dự kiến tăng khoảng bao nhiêu nhân viên chính thức?",
+        "en": "Regarding next year's hiring plan, approximately how many regular employees are you anticipating adding?"
+      },
+      {
+        "speaker": "B",
+        "ja": "事業拡大に伴い、営業部門を中心に正社員を5名ほど追加採用したいと考えています。",
+        "vi": "Cùng với việc mở rộng kinh doanh, chúng tôi dự định tuyển thêm khoảng 5 nhân viên chính thức, chủ yếu ở bộ phận kinh doanh.",
+        "en": "Due to business expansion, we are looking to hire about five additional regular employees, primarily in the sales department."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体は問題ありませんが、例文・会話の文脈が破綻しているため文単位の再生成が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ac13a29d75929c3cb7e5d45d2c1e80ecc0e2a16fa0d0392e97ffe53bccf6d86b",
+    "validated_at": "2026-10-01T01:42:30.187163+00:00"
+  }
+}

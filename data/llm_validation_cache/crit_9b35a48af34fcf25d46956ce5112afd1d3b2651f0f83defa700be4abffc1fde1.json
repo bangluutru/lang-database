@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000064",
+  "term": "出資金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The learning object exhibits hallmark signs of mechanical slot-filling: treating '出資金' as a generic monthly expense/working capital account rather than a non-current asset, mixing up kanji ('精算' vs liquidation/refund), and relying on tautological filler ('適正に整合している'). It requires rewrites tailored to authentic corporate accounting scenarios.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "出資金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting usage for recording capital contributions.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "出資金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression used in auditing and financial closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "出資金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "出資金 (capital investment) itself is not directly 'reconciled' (照合); usually one reconciles the balance with a confirmation letter (残高確認書と照合する) or uses more natural actions such as '出資金を払い込む' (pay in capital) or '出資金を評価する' (value/assess capital investment).",
+      "suggested_text": "出資金を払い込む"
+    },
+    {
+      "index": 3,
+      "text": "出資金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Confuses '精算' (expense adjustment/settlement) with '清算' (corporate liquidation) or '払戻し' (refund/redemption of capital contribution). In corporate accounting, '出資金を回収する' or '出資金を減損処理する' is standard.",
+      "suggested_text": "出資金を回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "出資金 is a non-current asset (投資その他の資産) that rarely changes on a monthly basis. Monthly reconciliation checks ('月末の帳簿照合') for 出資金 represent a mechanically templated sentence not reflecting real-world corporate finance or accounting practice.",
+      "suggested_ja": "出資先企業の業績悪化に伴い、保有する出資金について減損処理の要否を検討する必要があります。",
+      "suggested_vi": "Do tình hình kinh doanh của công ty nhận vốn góp suy giảm, chúng ta cần xem xét việc có phải trích lập dự phòng giảm giá cho khoản vốn góp đầu tư đang nắm giữ hay không.",
+      "suggested_en": "Due to the deteriorating performance of the investee company, we need to consider whether an impairment loss must be recognized on the investment in capital."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive artificial phrasing ('適正な会計基準...適正に処理いたしました') and conveys zero concrete accounting meaning.",
+      "suggested_ja": "合弁会社の設立に伴い、当社の出資比率に応じた出資金5,000万円を普通預金口座から払い込みました。",
+      "suggested_vi": "Cùng với việc thành lập công ty liên doanh, chúng tôi đã thanh toán khoản vốn góp 50 triệu yên theo tỷ lệ góp vốn của công ty từ tài khoản tiền gửi thông thường.",
+      "suggested_en": "Following the establishment of the joint venture, we transferred 50 million yen in capital contribution from our ordinary deposit account in accordance with our investment ratio."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Monthly variance checks for 出資金 are unnatural template artifacts. Furthermore, Speaker B's response 'すべて適正に整合している' is tautological and awkward Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新設した海外子会社への出資金ですが、送金手続きおよび会計上の計上は完了していますか。",
+        "vi": "Về khoản vốn góp vào công ty con ở nước ngoài mới thành lập, thủ tục chuyển tiền và hạch toán kế toán đã hoàn tất chưa?",
+        "en": "Regarding the capital investment in the newly established overseas subsidiary, have the remittance procedures and accounting entries been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、外為送金指図書と着金通知を確認し、関係会社出資金として処理済みです。",
+        "vi": "Vâng, tôi đã kiểm tra lệnh chuyển tiền ngoại hối và thông báo nhận tiền, đồng thời đã hạch toán vào khoản vốn góp vào công ty liên kết.",
+        "en": "Yes, I have confirmed the foreign exchange remittance application and the receipt notice, and recorded it as investment in capital of an affiliated company."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are adequate, though the example translations were hampered by the templated Japanese source text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eb5cc55e9bfddf560be74df5faec3de824ab52b7dd2a75fe1da4f7eb82ff375b",
+    "validated_at": "2026-10-01T01:34:44.612700+00:00"
+  }
+}

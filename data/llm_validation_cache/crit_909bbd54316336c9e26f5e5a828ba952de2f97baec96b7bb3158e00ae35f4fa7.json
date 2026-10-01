@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-trade-000023",
+  "term": "建値",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations are unnatural or redundant. Example sentence 2 contains an unnatural phrase. The dialogue is disconnected and does not logically follow. Translations are inconsistent and could be more professional and accurate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "建値の条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in trade contracts."
+    },
+    {
+      "index": 1,
+      "text": "建値の建値で取引する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Redundant and unnatural. '建値で取引する' is sufficient. '建値の建値' is not a standard phrase.",
+      "suggested_text": "建値で取引する"
+    },
+    {
+      "index": 2,
+      "text": "建値における費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for defining cost allocation based on trade terms."
+    },
+    {
+      "index": 3,
+      "text": "建値における危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for confirming risk transfer point based on trade terms."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible business communication. The use of '建値条件' is appropriate."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '建値建値での取引' is unnatural and redundant. It should be '建値での取引'.",
+      "suggested_ja": "建値での取引に基づき、仕向港での荷揚げ費用と輸入関税を輸入者側で負担します。",
+      "suggested_vi": "Căn cứ giao dịch theo giá chào hàng theo điều kiện giao nhận, chi phí dỡ hàng tại cảng đích và thuế nhập khẩu do bên nhập khẩu chịu.",
+      "suggested_en": "Based on transactions priced under the agreed trade terms, unloading costs at the port of destination and import duties are borne by the importer."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about '建値の手配状況' (arrangement status of trade terms), which implies clarification or confirmation of the terms themselves. Speaker B's response about customs broker, forwarder contact, and import declaration is a non-sequitur. It addresses customs procedures, not the '建値' arrangement. The dialogue does not flow logically.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、建値の条件はFOBでよろしかったでしょうか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, điều kiện giá chào hàng là FOB có đúng không ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, were the trade terms confirmed as FOB?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、FOBで手配済みです。書類にもその旨記載されており、通関業者にも伝達済みです。",
+        "vi": "Vâng, đã được sắp xếp theo điều kiện FOB. Điều này cũng được ghi rõ trong tài liệu và đã được thông báo cho công ty thông quan.",
+        "en": "Yes, it's arranged as FOB. That's noted in the documents and has been communicated to the customs broker."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese translation for '建値' as 'giá chào hàng theo điều kiện giao nhận (Trade terms price)' is overly verbose and includes an English term. A more concise and professional translation would be 'điều kiện giao hàng' or 'điều kiện thương mại'. The English translation 'Price terms / Quotation terms' is acceptable, but 'Trade terms' or 'Incoterms' might be more precise depending on context. In the example sentences, '建値' is translated as '建値 terms' or '建値', which is not a translation but a transliteration/retention. It should be translated to 'trade terms' or 'Incoterms' for clarity."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c9940428d1804aa1b05bc957e1a01992d270b44f09ba25cc51736a47eacc4ebf",
+    "validated_at": "2026-10-01T01:54:04.211277+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000063",
+  "term": "関係会社株式",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain accounting errors in J-GAAP financial reporting rules: 関係会社株式 is held for operational control (not surplus fund management) and is accounted for at historical cost subject to impairment, never marked to market with valuation differences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関係会社株式を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard accounting usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "関係会社株式を時価評価する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under J-GAAP (Financial Instruments Accounting Standard), shares of subsidiaries and associates (関係会社株式) are measured at cost (取得原価), not mark-to-market (時価評価). Only impairment test/loss (減損処理・評価損) applies.",
+      "suggested_text": "関係会社株式を減損処理する"
+    },
+    {
+      "index": 2,
+      "text": "関係会社株式を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for M&A, capital participation, or subsidiary establishment.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "関係会社株式の売却益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting collocation used when recording extraordinary income on disposal of affiliate shares.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "関係会社株式 are held for group control, operational synergy, or affiliate governance, not for 'management of surplus funds' (余剰資金の安定的運用), which describes treasury/portfolio investments.",
+      "suggested_ja": "グループシナジーの最大化および事業基盤の強化を目的として、関係会社株式を長期的に保有しています。",
+      "suggested_vi": "Chúng tôi nắm giữ dài hạn cổ phiếu công ty con / liên kết nhằm mục đích tối đa hóa hiệp đồng tập đoàn và củng cố nền tảng kinh doanh.",
+      "suggested_en": "We hold shares of subsidiaries and associates on a long-term basis to maximize group synergies and strengthen our business foundation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe accounting error. Under J-GAAP, 関係会社株式 is carried at cost and is NOT subject to fair value mark-to-market (時価評価) or valuation difference accounting (評価差額計上). When value falls substantially, it is subjected to impairment (減損処理 / 評価損の計上).",
+      "suggested_ja": "対象子会社の業績悪化に伴い実質価額が著しく下落したため、関係会社株式の減損処理を実施し評価損を計上しました。",
+      "suggested_vi": "Do giá trị thực tế sụt giảm đáng kể theo sau kết quả kinh doanh đi xuống của công ty con mục tiêu, chúng tôi đã trích lập tổn thất tài sản và ghi nhận khoản lỗ do đánh giá lại cổ phiếu công ty con.",
+      "suggested_en": "Due to a substantial decline in net asset value caused by the deteriorating performance of the target subsidiary, we performed an impairment write-down and recognized a valuation loss on the subsidiary shares."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "関係会社株式 rarely incurs routine balance discrepancies in monthly closings unless there is capital participation or restructuring; '計上内容に差異' sounds like an automated template for cash/receivables reconciliations rather than equity investments.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当期に実施した現地法人の増資に伴う関係会社株式の計上処理は完了していますか。",
+        "vi": "Thủ tục hạch toán cổ phiếu công ty con / liên kết đi kèm đợt tăng vốn cho pháp nhân địa phương trong kỳ này đã hoàn tất chưa?",
+        "en": "Has the accounting treatment for affiliate shares related to this term's local subsidiary capital increase been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、送金指図書および現地発行の株式引受証明書と照合の上、適正に資産計上いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu với lệnh chuyển tiền và chứng nhận nhận cổ phần do địa phương phát hành, sau đó ghi nhận tài sản hợp lệ rồi ạ.",
+        "en": "Yes, after verifying against the remittance application and the local share subscription certificate, we have properly recognized it as an asset."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Existing translations faithfully rendered factually erroneous accounting statements (e.g. mark-to-market valuation of subsidiary shares). Must be updated alongside rewritten Japanese text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6435ebf963faa442f0bfa3e425222123674cc526a32c0610dc322a4968e026c9",
+    "validated_at": "2026-10-01T01:34:44.048597+00:00"
+  }
+}

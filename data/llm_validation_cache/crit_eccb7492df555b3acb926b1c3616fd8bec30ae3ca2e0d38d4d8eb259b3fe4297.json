@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000046",
+  "term": "善管注意義務",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and headword translations are high quality, both example sentences and the dialogue suffer from severe hallucinated templating, treating a corporate legal obligation (duty of care) as an accounting ledger entry with balances and closing adjustments.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "善管注意義務を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal collocation in Japanese corporate governance and compliance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "善管注意義務を果たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and frequent legal collocation meaning to fulfill one's duty of care.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "善管注意義務を負う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrase denoting bearing the duty of care (e.g., directors toward the company).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "善管注意義務に違反する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrasing for breach of duty of care.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "善管注意義務 (legal duty of care) is an abstract legal obligation of directors/managers under corporate law; it is completely impossible to 'book' (計上する) or have an account balance (残高) for it in financial reconciliation.",
+      "suggested_ja": "取締役は会社法に基づき、善良な管理者としての注意をもってその職務を執行する善管注意義務を負っています。",
+      "suggested_vi": "Căn cứ theo Luật Doanh nghiệp, giám đốc có nghĩa vụ của người quản lý mẫn cán, phải thực hiện chức trách của mình với sự cẩn trọng của một người quản lý mẫn cán.",
+      "suggested_en": "Under the Companies Act, directors owe the duty of care of a prudent manager to execute their duties with due diligence."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Mechanically templated accounting expression. 善管注意義務 cannot be 'processed in financial closing entries' (決算において適正に処理いたしました).",
+      "suggested_ja": "新規事業への大規模な投資判断においては、取締役会として善管注意義務に違反しないよう、事前に弁護士や専門家の助言を得ることが重要です。",
+      "suggested_vi": "Khi đưa ra quyết định đầu tư quy mô lớn vào mảng kinh doanh mới, điều quan trọng là hội đồng quản trị phải nhận được tư vấn trước từ luật sư và chuyên gia để không vi phạm nghĩa vụ của người quản lý mẫn cán.",
+      "suggested_en": "In making large-scale investment decisions for a new business, it is vital for the board of directors to seek prior legal and expert advice to ensure they do not breach their duty of care."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Catastrophic semantic mismatch: Speaker A asks whether there is a discrepancy in the booked entries of '善管注意義務' in monthly closing, and Speaker B talks about reconciling vouchers and subledgers. A legal duty of care has zero connection to accounting vouchers or ledger entries.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回のM&A案件を進めるにあたり、取締役の善管注意義務の観点から法的リスクの精査は済んでいますか。",
+        "vi": "Khi xúc tiến thương vụ M&A lần này, việc rà soát rủi ro pháp lý từ góc độ nghĩa vụ của người quản lý mẫn cán của các giám đốc đã hoàn tất chưa?",
+        "en": "In proceeding with this M&A project, has the legal risk review been completed from the perspective of the directors' duty of care?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、外部の顧問弁護士によるリーガルチェックを実施し、意思決定プロセスに瑕疵がないことを確認しております。",
+        "vi": "Vâng, chúng tôi đã tiến hành kiểm tra pháp lý với luật sư cố vấn bên ngoài và xác nhận rằng quy trình ra quyết định không có bất kỳ sai sót nào.",
+        "en": "Yes, we conducted a legal review with outside counsel and confirmed that there are no flaws in the decision-making process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Headword translations into English and Vietnamese are accurate legal equivalents."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3acae80009925a104af7057a5465f575788d6c05d920b3bed8c1384da02a1c6a",
+    "validated_at": "2026-10-01T01:41:45.134807+00:00"
+  }
+}

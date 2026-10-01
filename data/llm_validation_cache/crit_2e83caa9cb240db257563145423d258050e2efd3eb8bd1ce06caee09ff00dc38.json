@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000119",
+  "term": "荷為替",
+  "overall_decision": "rewrite",
+  "summary_reason": "「荷為替」が会計上の勘定科目であるかのような誤解を与える表現が散見される。荷為替は決済手段であり、直接的に「計上」や「残高」を持つものではない。荷為替に関連する債権債務や取引について言及するように修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "荷為替を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、荷為替には不自然。荷為替は「組む」「手配する」などが適切。",
+      "suggested_text": "荷為替を組む"
+    },
+    {
+      "index": 1,
+      "text": "荷為替を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "荷為替を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "荷為替の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「荷為替の計上内容や残高に差異がないか精査します」は、荷為替が会計上の勘定科目であるかのような誤解を与える。荷為替は決済手段であり、直接的に「計上内容」や「残高」を持つものではない。荷為替に関連する債権債務の計上や残高について言及すべき。",
+      "suggested_ja": "月末の帳簿照合において、荷為替に関連する債権債務の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số dư của các khoản phải thu/phải trả liên quan đến thanh toán nhờ thu kèm chứng từ hàng hóa hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for receivables/payables related to documentary bills/documentary collections."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「荷為替を適正に処理いたしました」は、荷為替自体を会計処理の対象とするかのような誤解を与える。荷為替は決済手段であり、会計処理の対象となるのは荷為替に関連する取引（売上債権など）である。文脈として不自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において荷為替に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến thanh toán nhờ thu kèm chứng từ hàng hóa trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to documentary bills/documentary collections in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "例と同様に、「荷為替の計上内容」という表現が不適切。荷為替自体が計上されるものではなく、荷為替に関連する債権債務が計上される。Bの回答も、荷為替の計上内容の差異について直接答えていないため、会話の連続性に欠ける。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、荷為替に関連する債権債務の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán các khoản phải thu/phải trả liên quan đến thanh toán nhờ thu kèm chứng từ hàng hóa không?",
+        "en": "In this month's closing, have there been any discrepancies in the entries for receivables/payables related to documentary bills/documentary collections?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、関連する債権債務の計上はすべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả các khoản phải thu/phải trả liên quan đã được hạch toán đúng cách và khớp với nhau.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that all related receivables/payables entries are properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dea40c45f3416495edbc864101a34c064f6fbdef57010c274ce16f787f95fc4d",
+    "validated_at": "2026-10-01T01:55:57.942590+00:00"
+  }
+}

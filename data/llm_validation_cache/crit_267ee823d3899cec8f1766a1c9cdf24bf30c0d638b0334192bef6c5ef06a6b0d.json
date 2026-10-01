@@ -1,0 +1,70 @@
+{
+  "entry_id": "jp-pro-tax-000022",
+  "term": "復興特別所得税",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション「申告する」の実務的違和感（源泉徴収するへの差し替え推奨）、例文2における法人税務上の概念混同（復興特別所得税は法人の自社税負担額ではなく源泉徴収・控除項目）およびベトナム語訳の重複誤字のため、一部書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "復興特別所得税を申告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務上、復興特別所得税は単独で申告することはなく、「所得税及び復興特別所得税」として申告するか、企業実務（経理・労務）では「源泉徴収する」という形での接触が圧倒的に多く自然です。",
+      "suggested_text": "復興特別所得税を源泉徴収する"
+    },
+    {
+      "index": 1,
+      "text": "復興特別所得税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "源泉徴収義務者としての納付実務など、文脈として自然に使われます。"
+    },
+    {
+      "index": 2,
+      "text": "復興特別所得税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "基準所得税額に2.1%を乗じる計算実務などで自然に用いられます。"
+    },
+    {
+      "index": 3,
+      "text": "復興特別所得税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "課税要件や税制説明において定型的で自然な表現です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "源泉所得税・復興特別所得税の納付手続きを指す文脈として文法・実務表現ともに成立しています。"
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "法人の税負担において「復興特別所得税の税負担額」と表現するのは不自然です（法人に課されていたのは既に終了した『復興特別法人税』であり、復興特別所得税は利子・配当泉等で源泉徴収されても法人税前払として税額控除されます）。給与・報酬の源泉徴収実務に即した文脈に改めるべきです。またベトナム語訳に「thuế thuế」の重複誤脱があります。",
+      "suggested_ja": "役員報酬および給与計算において、所得税と併せて復興特別所得税の源泉徴収額が正しく計算されているか確認しました。",
+      "suggested_vi": "Chúng tôi đã kiểm tra xem số tiền khấu trừ tại nguồn đối với thuế thu nhập đặc biệt tái thiết cùng với thuế thu nhập đã được tính toán chính xác trong bảng lương và thù lao hội đồng quản trị hay chưa.",
+      "suggested_en": "We verified that the special income tax for reconstruction, along with standard income tax, was accurately withheld in the payroll and executive compensation calculations."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "月次決算における源泉税預り金や仮払税金の照合作業として実務的かつ自然な会話です。「適正に整合している」はやや重い表現ですが許容範囲内です。"
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "例文2のベトナム語訳に「thuế thuế thu nhập...」という単語の重複バグが存在します。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e83699d396fc6f82a1c5c69599b3bf6a2c5f9ec19aa02a722e8763ae3a3f280c",
+    "validated_at": "2026-10-01T01:37:47.308266+00:00"
+  }
+}

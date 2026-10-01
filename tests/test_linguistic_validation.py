@@ -26,7 +26,7 @@ PROD_FILE = BASE_DIR / "data" / "production" / "vocabulary.jsonl"
 
 
 # ============================================================================
-# 1. COLLOCATION REGRESSION SUITE (Section 23)
+# 1. COLLOCATION REGRESSION SUITE (Section 23 & 38)
 # ============================================================================
 
 FAIL_COLLOCATIONS = [
@@ -34,6 +34,11 @@ FAIL_COLLOCATIONS = [
     ("事前確定届出給与を効率化する", "executive_compensation", "tax"),
     ("土地を精算する", "tangible_fixed_asset", "accounting"),
     ("FOBの残高", "incoterms_rule", "trade"),
+    ("監査法人を計上する", "professional_service_firm", "accounting"),
+    ("監査法人の残高", "professional_service_firm", "accounting"),
+    ("監査法人を精算する", "professional_service_firm", "accounting"),
+    ("監査法人を照合する", "professional_service_firm", "accounting"),
+    ("キャッシュ・フロー計算書を計上する", "financial_statement", "accounting"),
 ]
 
 PASS_COLLOCATIONS = [
@@ -43,6 +48,11 @@ PASS_COLLOCATIONS = [
     ("ふるさと納税を利用する", "tax_scheme", "tax"),
     ("事前確定届出給与を支給する", "executive_compensation", "tax"),
     ("貸借対照表を作成する", "financial_statement", "accounting"),
+    ("監査法人を選任する", "professional_service_firm", "accounting"),
+    ("監査法人の監査を受ける", "professional_service_firm", "accounting"),
+    ("監査法人と契約を締結する", "professional_service_firm", "accounting"),
+    ("キャッシュ・フロー計算書を作成する", "financial_statement", "accounting"),
+    ("キャッシュ・フロー計算書を開示する", "financial_statement", "accounting"),
 ]
 
 
@@ -87,7 +97,7 @@ def test_translation_contamination_clean_vietnamese():
 
 
 # ============================================================================
-# 3. PRODUCTION LINGUISTIC STATUS CONFORMANCE (Section 21)
+# 3. PRODUCTION LINGUISTIC STATUS CONFORMANCE (Section 21 & 31)
 # ============================================================================
 
 def test_production_learning_objects_have_no_generated_status():
@@ -117,3 +127,119 @@ def test_production_learning_objects_have_no_generated_status():
                     f"Dialogue in {entry_id} has invalid status {dia.get('status')}"
                 )
                 assert dia.get("status") != "generated"
+
+
+# ============================================================================
+# 4. PHASE 1.1B SEMANTIC CLASSIFICATION REGRESSION TESTS (Section 23, 24, 38)
+# ============================================================================
+
+def test_kansa_hojin_semantic_concept_and_sentences():
+    """監査法人 must be classified as professional_service_firm (not account) and have authentic collocations."""
+    assert PROD_FILE.exists()
+    found = False
+    with open(PROD_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            entry = json.loads(line)
+            if entry["term"]["surface"] == "監査法人":
+                found = True
+                sem_class = entry.get("semantic_class") or entry.get("domain", {}).get("semantic_class")
+                assert sem_class != "account", "監査法人 must NOT be classified as account!"
+                assert sem_class in ["professional_service_firm", "audit_firm", "organization"]
+
+                # Ensure bad predicates are not present in collocations
+                bad_verbs = ["計上する", "残高", "精算する", "照合する"]
+                for col in entry.get("collocations", []):
+                    assert not any(bv in col["text"] for bv in bad_verbs), f"Bad collocation in 監査法人: {col['text']}"
+
+                # Ensure examples and dialogue do not contain '計上内容'
+                for ex in entry.get("examples", []):
+                    assert "計上内容" not in ex["ja"], f"Unnatural example in 監査法人: {ex['ja']}"
+                    assert "残高に差異" not in ex["ja"], f"Unnatural example in 監査法人: {ex['ja']}"
+
+                for dia in entry.get("dialogue", []):
+                    assert "計上内容" not in dia["ja"], f"Unnatural dialogue in 監査法人: {dia['ja']}"
+                break
+    assert found, "監査法人 record not found in production file!"
+
+
+def test_cash_flow_statement_collocations_and_sentences():
+    """キャッシュ・フロー計算書 must not have accounting-booking expressions."""
+    assert PROD_FILE.exists()
+    found = False
+    with open(PROD_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            entry = json.loads(line)
+            if entry["term"]["surface"] == "キャッシュ・フロー計算書":
+                found = True
+                sem_class = entry.get("semantic_class") or entry.get("domain", {}).get("semantic_class")
+                assert sem_class in ["financial_statement", "document"]
+                for col in entry.get("collocations", []):
+                    assert "計上する" not in col["text"], f"Bad collocation in キャッシュ・フロー計算書: {col['text']}"
+                for dia in entry.get("dialogue", []):
+                    assert "計上内容に差異" not in dia["ja"], f"Bad dialogue in キャッシュ・フロー計算書: {dia['ja']}"
+                break
+    assert found, "キャッシュ・フロー計算書 not found in production file!"
+
+
+# ============================================================================
+# 5. FAKE JUDGE PREVENT & LLM VALIDATION INTEGRITY (Section 18, 38, 39)
+# ============================================================================
+
+def test_fake_judge_identifiers_forbidden():
+    """Independent-linguistic-judge-2.0 or other fake heuristic labels must NOT masquerade as LLM models."""
+    assert PROD_FILE.exists()
+    with open(PROD_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            entry = json.loads(line)
+            val = entry.get("linguistic_validation", {})
+            judge = val.get("linguistic_judge", {})
+            model = judge.get("model", "")
+
+            # Must NOT use fake name
+            assert model != "independent-linguistic-judge-2.0", f"Fake judge found in {entry['id']}"
+
+            # Must be genuine Gemini 3.8 Flash model
+            assert "gemini-3.8-flash" in model or "gemini" in model.lower(), (
+                f"Missing real Gemini model metadata in {entry['id']}: model='{model}'"
+            )
+
+            # Must have valid SHA-256 input hash
+            input_hash = judge.get("input_hash", "")
+            assert len(input_hash) == 64, f"Invalid or missing SHA-256 input_hash in {entry['id']}"
+
+            # Must have prompt version
+            assert judge.get("prompt_version") == "linguistic_judge_v1"
+
+
+def test_deterministic_only_cannot_be_production_verified():
+    """An entry that only passed deterministic validation cannot become production_verified without LLM evidence."""
+    mock_entry = {
+        "id": "mock-001",
+        "linguistic_validation": {
+            "status": "linguistically_validated",
+            "deterministic_validation": {
+                "status": "pass",
+                "validator_version": "v1.1.0b-deterministic-rules"
+            }
+            # Missing LLM evidence!
+        },
+        "collocations": [{"status": "linguistically_validated", "text": "申請書を提出する"}],
+        "examples": [{"status": "linguistically_validated", "ja": "申請書を提出します。"}],
+        "dialogue": [{"status": "linguistically_validated", "ja": "申請書を提出しましたか。"}]
+    }
+
+    ling_val = mock_entry.get("linguistic_validation", {})
+    has_llm_evidence = (
+        ling_val.get("semantic_audit", {}).get("model") == "gemini-3.8-flash"
+        and ling_val.get("linguistic_judge", {}).get("model") == "gemini-3.8-flash"
+        and bool(ling_val.get("semantic_audit", {}).get("input_hash"))
+        and bool(ling_val.get("linguistic_judge", {}).get("input_hash"))
+    )
+    assert not has_llm_evidence, "Deterministic-only entry must fail LLM evidence check!"
+

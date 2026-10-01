@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000062",
+  "term": "生命保険料控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a critical domain factual error in the dialogue (attributing an individual tax deduction to corporate '決算申告' and referencing a non-existent '税理士の確認書'), along with hollow, templated example sentences that omit authentic tax workflow terminology such as '年末調整' and '控除証明書'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "生命保険料控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage by tax professionals, payroll software, or corporate HR handling tax calculations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "生命保険料控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression from the taxpayer's perspective.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "生命保険料控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic expression reflecting the Japanese statutory brackets (old vs. new policy caps).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "生命保険料控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural legal/tax phrasing regarding qualification criteria for the deduction.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The framing '法定要件を慎重に確認した上で...適用しました' is generic mechanical AI templating. In business practice, this deduction is primarily handled in year-end tax adjustments (年末調整) or individual returns using deduction certificates (控除証明書).",
+      "suggested_ja": "年末調整において生命保険料控除を正しく適用するため、従業員に保険会社発行の控除証明書の提出を求めました。",
+      "suggested_vi": "Để áp dụng chính xác khoản giảm trừ phí bảo hiểm nhân thọ trong đợt quyết toán thuế cuối năm, chúng tôi đã yêu cầu nhân viên nộp giấy chứng nhận giảm trừ do công ty bảo hiểm cấp.",
+      "suggested_en": "To properly apply the deduction for life insurance premiums in the year-end tax adjustment, we requested employees to submit the deduction certificates issued by insurance companies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Phrasing '関係書類を整備して' is vague and templated. The statutory document required is specifically the '控除証明書' (deduction certificate).",
+      "suggested_ja": "生命保険料控除の適用を受けるため、保険会社から送付された控除証明書を確定申告書に添付しました。",
+      "suggested_vi": "Để được áp dụng khoản giảm trừ phí bảo hiểm nhân thọ, tôi đã đính kèm giấy chứng nhận giảm trừ nhận được từ công ty bảo hiểm vào tờ khai quyết toán thuế thu nhập cá nhân.",
+      "suggested_en": "To claim the deduction for life insurance premiums, I attached the deduction certificate sent by the insurance company to my tax return."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Major tax factual error: '生命保険料控除' is an individual income tax deduction (所得税の所得控除), not a corporate deduction applicable to corporate financial closing/filing ('決算申告'). Furthermore, deduction claims require '保険料控除証明書' from insurers, not a '税理士の確認書'. The dialogue must be re-situated in an HR/payroll Year-End Adjustment (年末調整) context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員から提出された年末調整書類の中で、生命保険料控除の証明書に不備や未提出はありませんか。",
+        "vi": "Trong số các hồ sơ quyết toán thuế cuối năm do nhân viên nộp, có trường hợp nào bị thiếu hoặc có sai sót về giấy chứng nhận giảm trừ phí bảo hiểm nhân thọ không?",
+        "en": "Among the year-end tax adjustment documents submitted by employees, are there any missing or incomplete life insurance premium deduction certificates?"
+      },
+      {
+        "speaker": "B",
+        "ja": "新旧契約の区分を含めて一通り確認が完了しており、控除額の再計算も順調に進んでいます。",
+        "vi": "Chúng tôi đã kiểm tra xong toàn bộ bao gồm cả việc phân loại hợp đồng cũ và mới, việc tính toán lại số tiền giảm trừ cũng đang diễn ra thuận lợi.",
+        "en": "We have completed reviewing everything, including distinguishing between old and new contracts, and the recalculation of deduction amounts is proceeding smoothly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations are accurate and standard in both Vietnamese and English."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5c0b5b8cf0f74dbd1b99d1438e84ed059c593db6a4bd78ba77efe14d141d4eac",
+    "validated_at": "2026-10-01T01:38:29.024449+00:00"
+  }
+}

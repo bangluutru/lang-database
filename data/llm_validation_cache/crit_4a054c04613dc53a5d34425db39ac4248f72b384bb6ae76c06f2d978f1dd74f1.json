@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000092",
+  "term": "役員賞与引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting semantics ('照合する', '精算する' instead of '取崩す', '戻し入れる'). The example sentences and dialogue suffer from mechanical template phrasing ('適正に整合している', redundant '適正') and lack real-world corporate governance context (shareholder meeting approval and subsequent reversal).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "役員賞与引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/accruing provision for directors' bonuses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "役員賞与引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation used during balance sheet review.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "役員賞与引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, one does not directly '照合する' an allowance/provision itself; one matches balances ('残高を照合する') or books/reverses it ('取り崩す'). '役員賞与引当金を取り崩す' is far more authentic and critical for learners.",
+      "suggested_text": "役員賞与引当金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "役員賞与引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Provisions/allowances are not '精算する' (settled/cleared like expense advances); they are either reversed (戻入/取崩) or resolved upon actual payment of the bonus.",
+      "suggested_text": "役員賞与引当金を戻し入れる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Sounds like a generic automated template ('計上内容や残高に差異がないか精査します'). In corporate practice, 役員賞与引当金 is an accrual estimated based on company earnings or bylaws, not an account mechanically reconciled monthly for 'discrepancies'.",
+      "suggested_ja": "当期の業績見通しおよび役員退任・報酬規程に基づき、決算において役員賞与引当金を見積もり計上しました。",
+      "suggested_vi": "Dựa trên triển vọng kết quả kinh doanh kỳ này và quy chế thù lao ban điều hành, chúng tôi đã ước tính và trích lập dự phòng tiền thưởng ban giám đốc trong kỳ quyết toán.",
+      "suggested_en": "Based on the earnings forecast for the current period and the executive compensation rules, we estimated and recorded the provision for directors' bonuses in the closing entries."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains redundant tautology ('適正な会計基準...適正に処理いたしました') and is devoid of concrete business substance, indicating generic template generation.",
+      "suggested_ja": "定時株主総会における役員賞与支給案の承認可決を受け、前期末に計上した役員賞与引当金を取り崩して支給を実行しました。",
+      "suggested_vi": "Sau khi đại hội đồng cổ đông thường niên thông qua phương án chi trả tiền thưởng ban điều hành, chúng tôi đã hoàn nhập/sử dụng dự phòng tiền thưởng ban giám đốc trích lập cuối kỳ trước để thực hiện chi trả.",
+      "suggested_en": "Following the approval of the director bonus distribution plan at the ordinary general meeting of shareholders, we reversed the provision for directors' bonuses recorded at the previous year-end and disbursed the payments."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合していることを確認いたしました' is grammatically awkward and redundant ('適正に整合している' is unidiomatic Japanese; one says '整合性を確認いたしました' or '一致していることを確認いたしました'). Furthermore, monthly voucher reconciliation is unnatural for director bonus reserves.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "株主総会で役員賞与の支給議案が可決されましたが、引当金の取崩し処理は完了していますか。",
+        "vi": "Nghị quyết chi trả tiền thưởng ban điều hành đã được đại hội đồng cổ đông thông qua rồi, việc hạch toán sử dụng/hoàn nhập khoản dự phòng đã hoàn tất chưa?",
+        "en": "The resolution to pay directors' bonuses was approved at the shareholders' meeting; has the reversal of the provision been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、総会決議の支給総額に基づき、役員賞与引当金の取崩しおよび源泉徴収の手続きを済ませております。",
+        "vi": "Vâng, căn cứ vào tổng mức chi trả theo nghị quyết đại hội đồng cổ đông, chúng tôi đã hoàn tất thủ tục hoàn nhập dự phòng tiền thưởng ban giám đốc và khấu trừ thuế tại nguồn.",
+        "en": "Yes, based on the total payout approved at the general meeting, we have completed the reversal of the provision for directors' bonuses and the withholding tax procedures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "af62b264185b8d85ee9f46c6e0baaea7eb28dca82c89c4d7496f7d08317ae72e",
+    "validated_at": "2026-10-01T01:35:13.922083+00:00"
+  }
+}

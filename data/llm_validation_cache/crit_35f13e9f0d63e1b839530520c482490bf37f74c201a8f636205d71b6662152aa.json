@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000096",
+  "term": "総合保税地域",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding of how '総合保税地域' (an area/system) relates to accounting concepts like '計上内容' and '残高'. These terms apply to assets, liabilities, or transactions, not the physical location or regulatory framework itself. The collocations are appropriate, but the application in sentences and dialogue is semantically incorrect from an accounting perspective.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総合保税地域に搬入する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "総合保税地域から搬出する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "総合保税地域で保管する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "総合保税地域の許可を取得する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「総合保税地域」は場所や制度を指すため、「計上内容」や「残高」を持つ対象ではありません。会計処理の対象となるのは、その地域で保管されている「貨物」や、関連する「費用」などです。この文は会計の概念と「総合保税地域」の概念が混同されています。",
+      "suggested_ja": "月末の帳簿照合において、総合保税地域で保管されている貨物の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số dư của hàng hóa được lưu giữ tại khu kinh tế bảo thuế tích hợp đa chức năng hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for goods stored in the integrated bonded area."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「総合保税地域」そのものを会計処理する、という表現は不自然です。会計処理の対象となるのは、その地域に関連する取引や資産（例：保管料、搬入出費用、保管貨物など）です。場所や制度を「処理する」という表現は適切ではありません。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において総合保税地域に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến khu kinh tế bảo thuế tích hợp đa chức năng trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the integrated bonded area in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker Aの質問が、Example 0と同様に「総合保税地域」を会計上の「計上内容」の対象としているため、不自然です。場所や制度自体に計上内容や差異は発生しません。関連する貨物や費用について問うべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、総合保税地域で保管している貨物の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán của hàng hóa đang được lưu giữ tại khu kinh tế bảo thuế tích hợp đa chức năng không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for goods stored in the integrated bonded area?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9ac6925b19da9e83f31181ccba4eed56e0e51b595706f31444398561cbb43cde",
+    "validated_at": "2026-10-01T01:55:25.545751+00:00"
+  }
+}

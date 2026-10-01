@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000103",
+  "term": "繰延税金負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "While individual translations are grammatically acceptable, the collocations, examples, and dialogue suffer from serious domain factual inaccuracies. Deferred tax liabilities were treated like transactional trade payables subject to monthly voucher matching rather than temporary difference calculations under tax effect accounting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰延税金負債を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing deferred tax liabilities.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "繰延税金負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly used when reviewing balance sheet items.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "繰延税金負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Deferred tax liabilities arise from temporary difference calculations rather than transactional reconciliation against external counterparty records or subledgers. '算定する' (calculate) or '認識する' (recognize) is far more natural.",
+      "suggested_text": "繰延税金負債を算定する"
+    },
+    {
+      "index": 3,
+      "text": "繰延税金負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Accounting accounts for deferred taxes are not 'settled/reimbursed' (精算する). They are reversed ('取り崩す') as temporary differences reverse.",
+      "suggested_text": "繰延税金負債を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Tax effect accounting entries are calculated during quarterly or annual closes based on temporary differences, not routine monthly book reconciliations (月末の帳簿照合). This reflects an unnatural generic template.",
+      "suggested_ja": "その他有価証券評価差額金の増加に伴い、繰延税金負債を追加で計上しました。",
+      "suggested_vi": "Cùng với sự gia tăng của khoản chênh lệch đánh giá chứng khoán khác, chúng tôi đã ghi nhận bổ sung nợ thuế thu nhập hoãn lại phải trả.",
+      "suggested_en": "Following the increase in valuation difference on available-for-sale securities, we recorded additional deferred tax liabilities."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive phrasing ('適正な...適正に') and is an empty corporate platitude devoid of genuine accounting context.",
+      "suggested_ja": "税効果会計の適用指針に基づき、将来加算一時差異に係る繰延税金負債を適切に計上いたしました。",
+      "suggested_vi": "Dựa trên hướng dẫn áp dụng kế toán thuế thu nhập doanh nghiệp hoãn lại, chúng tôi đã ghi nhận thỏa đáng nợ thuế thu nhập hoãn lại phải trả liên quan đến các khoản chênh lệch tạm thời chịu thuế.",
+      "suggested_en": "In accordance with the implementation guidance on tax effect accounting, we properly recognized deferred tax liabilities related to taxable temporary differences."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Deferred tax liabilities do not possess 'source vouchers' (証憑書類) or 'subsidiary ledgers' (補助元帳) to reconcile against. They are calculated on tax effect schedules based on book-tax differences. The exchange demonstrates a clear lack of corporate accounting authenticity.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "評価益の計上に伴う繰延税金負債の算定根拠を確認させていただけますか。",
+        "vi": "Anh/chị có thể cho tôi kiểm tra căn cứ tính toán nợ thuế thu nhập hoãn lại phải trả phát sinh từ việc ghi nhận lãi đánh giá lại không?",
+        "en": "Could you let me review the calculation basis for the deferred tax liabilities associated with the recognition of valuation gains?"
+      },
+      {
+        "speaker": "B",
+        "ja": "税効果計算シートと税率の適用根拠をまとめましたので、共有いたします。",
+        "vi": "Tôi đã tổng hợp bảng tính thuế hoãn lại và căn cứ áp dụng thuế suất, xin gửi lại để anh/chị xem.",
+        "en": "I have compiled the tax effect calculation sheet and the basis for the applicable tax rate, so I will share them with you."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "964affaefe4121d9714edde98a4eece28a548d39b217c51f959d1909b7d919a1",
+    "validated_at": "2026-10-01T01:35:27.055283+00:00"
+  }
+}

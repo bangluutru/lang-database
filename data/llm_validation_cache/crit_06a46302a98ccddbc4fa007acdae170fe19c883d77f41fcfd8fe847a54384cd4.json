@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000058",
+  "term": "商業登記",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain/factual error: A corporate legal procedure (商業登記) was mechanically forced into an accounting ledger/closing template ('計上内容', '残高', '補助元帳', '会計基準'). All examples and dialogues must be rewritten to reflect genuine legal/corporate secretarial practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "商業登記を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression indicating moving forward with the legal commercial registration process.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "商業登記を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to the completion of commercial registration.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "商業登記の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for verifying registration filing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "商業登記を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Commercial registration is a statutory filing with the Legal Affairs Bureau; one does not 'review/revise' the registration itself in this manner. Commonly paired with 申請する (apply/file) or 変更する (modify registered matters).",
+      "suggested_text": "商業登記を申請する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '商業登記' (commercial registration) is a corporate legal filing procedure under the Ministry of Justice/Legal Affairs Bureau. It is not an accounting line item, balance sheet account, or book balance, and cannot have '計上内容' or '残高'.",
+      "suggested_ja": "役員変更に伴い、法務局へ商業登記の変更申請を速やかに行う必要があります。",
+      "suggested_vi": "Cùng với việc thay đổi nhân sự ban điều hành, chúng ta cần nhanh chóng nộp đơn đăng ký thay đổi nội dung đăng ký kinh doanh lên Cục Pháp vụ.",
+      "suggested_en": "Following the change of officers, we need to promptly file an application for changes in commercial registration with the Legal Affairs Bureau."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe domain error: Commercial registration is a legal/corporate secretarial procedure, not an accounting item governed by accounting standards (会計基準) or processed during fiscal year-end closing (決算).",
+      "suggested_ja": "本店の移転手続きが完了したため、司法書士に依頼して商業登記の変更手続きを進めています。",
+      "suggested_vi": "Do thủ tục chuyển trụ sở chính đã hoàn tất, chúng tôi đang nhờ chuyên viên tư pháp (Shihoushoshi) tiến hành thủ tục thay đổi đăng ký thương mại.",
+      "suggested_en": "Now that the head office relocation procedures are complete, we are working with a judicial scrivener to proceed with the commercial registration update."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fatal hallucination of a generic accounting template: '商業登記の計上内容' (booking of commercial registration) and reconciling it against subsidiary ledgers (補助元帳) is completely nonsensical in real corporate practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "株主総会で選任された新役員の商業登記の手続きは、いつ頃完了する予定ですか。",
+        "vi": "Thủ tục đăng ký thương mại cho các thành viên ban điều hành mới được bổ nhiệm tại Đại hội đồng cổ đông dự kiến khi nào sẽ hoàn tất?",
+        "en": "When do you expect the commercial registration procedures for the new officers appointed at the shareholders' meeting to be completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "必要書類を揃えて司法書士に提出済みですので、来週中には登記完了の予定です。",
+        "vi": "Chúng tôi đã chuẩn bị đầy đủ giấy tờ cần thiết và nộp cho chuyên viên tư pháp rồi, dự kiến việc đăng ký sẽ hoàn tất trong tuần tới.",
+        "en": "We have compiled the required documents and submitted them to the judicial scrivener, so the registration should be completed sometime next week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are acceptable, but the example sentences contained severe hallucinations in the source text which infected the translations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dc1ebbea51cb969ef15b4a3fbb4f51f4172a6c1b127f6301adb622db3f45e9e2",
+    "validated_at": "2026-10-01T01:41:56.504883+00:00"
+  }
+}

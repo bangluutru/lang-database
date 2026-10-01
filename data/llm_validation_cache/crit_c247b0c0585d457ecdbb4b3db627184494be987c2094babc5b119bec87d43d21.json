@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000195",
+  "term": "過少資本税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "過少資本税制（租税回避防止・損金不算入規制）を優遇税制・減税措置と混同したテンプレート文章がコロケーションおよび例文に混入しており、実務教育上致命的な誤りを含んでいます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "過少資本税制を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "過少資本税制は租税回避防止のための規制（利子損金不算入措置）であり、優遇税制のように「利用する」対象ではありません。",
+      "suggested_text": "過少資本税制に抵触する"
+    },
+    {
+      "index": 1,
+      "text": "過少資本税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法令用語・実務表現として自然です（損金不算入の制約を受ける文脈で使用）。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "過少資本税制を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "規制・損金不算入制度であるため「活用する」は実務上あり得ない重大な誤用です。",
+      "suggested_text": "過少資本税制の適用を回避する"
+    },
+    {
+      "index": 3,
+      "text": "過少資本税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "海外親会社等からの借入金が負債資本比率基準を超えるかどうかの文脈で極めて自然です。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "過少資本税制は海外関連者からの過剰借入れによる租税回避を規制する制度であり、「節税および地域貢献」「制度を活用」という記述は根本的な制度誤認です。",
+      "suggested_ja": "親会社からの借入金が資本金の3倍を超過しているため、過少資本税制の適用対象となり利子の一部が損金不算入となります。",
+      "suggested_vi": "Do khoản vay từ công ty mẹ vượt quá ba lần vốn chủ sở hữu, công ty thuộc đối tượng áp dụng quy định vốn mỏng và một phần chi phí lãi vay sẽ không được trừ khi tính thuế.",
+      "suggested_en": "Because borrowings from the parent company exceed three times the equity, thin capitalization rules apply and a portion of the interest expenses will be non-deductible."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "優遇税制向けのテンプレートを流用しており、「控除上限額」「計画的に手続きを進める」という表現は過少資本税制の計算・申告実務に合致しません。",
+      "suggested_ja": "海外関連者に対する負債比率を精査し、過少資本税制に基づく損金不算入額を事前に試算しました。",
+      "suggested_vi": "Chúng tôi đã rà soát kỹ tỷ lệ nợ trên vốn đối với các bên liên kết nước ngoài và tính toán thử số tiền lãi vay không được trừ theo quy định vốn mỏng.",
+      "suggested_en": "We carefully reviewed the debt-to-equity ratio regarding foreign related parties and calculated in advance the non-deductible amount under the thin capitalization rules."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算申告時における別表添付書類や計算根拠の確認という実務に即しており、会話の流れも自然です。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の meaning_vi は一般的に「quy tắc vốn mỏng」または「quy định về vốn mỏng」と訳されます。「chính sách thuế chống doanh nghiệp mỏng vốn」は説明的すぎて不自然であり、例文0でも「chính sách chính sách...」と重複しています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "203e05f17de64eec83b6090e7463a84541c846b9b00ab11133b181807ae24ff6",
+    "validated_at": "2026-10-01T01:40:52.894024+00:00"
+  }
+}

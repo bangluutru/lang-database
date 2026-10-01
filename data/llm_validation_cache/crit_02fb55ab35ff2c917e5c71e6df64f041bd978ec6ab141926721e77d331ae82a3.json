@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000021",
+  "term": "売掛金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation #3 uses '精算' incorrectly for receivables instead of '消込' or '回収'. Example #1 suffers from generic template redundancy ('適正な...適正に'), and the dialogue contains stilted, unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売掛金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recognizing trade receivables.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売掛金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for checking the accounts receivable balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "売掛金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Decipherable and used in monthly reconciliation contexts, though '売掛金残高を照合する' is more precise.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "売掛金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese accounting practice, '精算' is used for expense settlements (経費精算) or advances (仮払金). Trade receivables are typically collected ('回収する') or reconciled/cleared against incoming payments ('消し込む').",
+      "suggested_text": "売掛金を消し込む"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, authentic month-end closing task description with correct domain context.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted template phrasing ('適正な...適正に処理いたしました'). Real accounting disclosures or reports specify concrete treatments such as checking recoverability or booking an allowance for doubtful accounts.",
+      "suggested_ja": "期末の決算処理において、回収遅延が生じている売掛金に対して貸倒引当金を計上いたしました。",
+      "suggested_vi": "Trong quá trình quyết toán cuối kỳ, chúng tôi đã trích lập dự phòng nợ phải thu khó đòi đối với các khoản phải thu khách hàng bị chậm thanh toán.",
+      "suggested_en": "During the fiscal year-end closing process, we recorded an allowance for doubtful accounts for trade receivables that are overdue."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異' and '適正に整合している' sound redundant and unnatural in real workplace conversation. A native finance supervisor would ask about balance discrepancies ('残高の差異'), and Speaker B would confirm that ledger balances match supporting documents without tautological phrasing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売掛金の残高に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư khoản phải thu khách hàng có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies in the accounts receivable balance for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "売掛金補助元帳と請求書を照合済みで、差異がないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ phụ khoản phải thu với hóa đơn và xác nhận không có chênh lệch nào.",
+        "en": "I have already reconciled the accounts receivable subsidiary ledger with the invoices and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations accurately reflect 'accounts receivable - trade' / 'khoản phải thu khách hàng'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bb9ece430f0886946f981f4a51c4368b74bbbb2187fe074807f8f4d11bf1dd70",
+    "validated_at": "2026-10-01T01:33:25.578508+00:00"
+  }
+}

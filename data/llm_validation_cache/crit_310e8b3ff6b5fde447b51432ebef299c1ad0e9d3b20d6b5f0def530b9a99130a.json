@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000016",
+  "term": "振込手数料",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, examples, and the dialogue suffered from mechanical templating ('残高を確認する', '適正に整合している', citing full accounting standards for minor bank fees). They must be rewritten to reflect authentic Japanese business and accounts payable workflows.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "振込手数料を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural expression when recording bank transfer fee expenses in bookkeeping.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "振込手数料の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "As an expense item (P/L), bank transfer fees are rarely referred to as having a 'balance' (残高). Core workplace usage revolves around who bears the fee or deducting it.",
+      "suggested_text": "振込手数料を負担する"
+    },
+    {
+      "index": 2,
+      "text": "振込手数料を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While mechanically understandable, native accounting and trade contexts far more commonly use '振込手数料を差し引く' (deduct transfer fee) when paying or receiving invoices.",
+      "suggested_text": "振込手数料を差し引く"
+    },
+    {
+      "index": 3,
+      "text": "振込手数料を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural when reimbursing or settling transfer fees incurred during business expense settlements.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Referring to '振込手数料の残高' is templated and unnatural in accounting practice. The sentence should reflect standard payment or reconciliation practices.",
+      "suggested_ja": "売掛金の入金照合を行ったところ、振込手数料が差し引かれて入金されていました。",
+      "suggested_vi": "Khi đối chiếu tiền chuyển vào của khoản phải thu khách hàng, tôi thấy tiền đã được chuyển sau khi khấu trừ phí chuyển khoản.",
+      "suggested_en": "Upon reconciling accounts receivable payments, I noticed that the payment was received with the bank transfer fee deducted."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Pompous generic template ('適正な会計基準および社内規程に則り...'). Nobody cites accounting standards to justify processing trivial bank transfer fees.",
+      "suggested_ja": "契約書の取り決めに従い、今回の振込手数料は当社にて負担することといたします。",
+      "suggested_vi": "Theo thỏa thuận trong hợp đồng, công ty chúng tôi sẽ chịu chi phí chuyển khoản ngân hàng lần này.",
+      "suggested_en": "In accordance with the agreement in the contract, our company will bear the bank transfer fee for this transaction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Both turns are overly generic template outputs. '適正に整合している' is awkward Japanese, and monthly closing discussions rarely center on transfer fee discrepancies in this manner. A realistic context about fee allocation between business partners is essential.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "A社からの請求書ですが、振込手数料は先方負担と当社負担のどちらになっていますか。",
+        "vi": "Về hóa đơn từ Công ty A, phí chuyển khoản là do phía họ hay công ty chúng ta chịu vậy?",
+        "en": "Regarding the invoice from Company A, is the bank transfer fee to be borne by them or by us?"
+      },
+      {
+        "speaker": "B",
+        "ja": "基本契約に基づき当社負担となっておりますので、手数料を含めた金額で振込手配を進めます。",
+        "vi": "Theo hợp đồng nguyên tắc thì bên mình chịu, nên tôi sẽ tiến hành thủ tục chuyển khoản gồm cả tiền phí.",
+        "en": "Based on the master agreement, it is to be borne by us, so I will arrange the transfer with the fee included."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the base term are accurate, but contextual examples require overhaul."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b16a410a7d552a16b8fca549ef66b3fb7dc6156e72634e0a2c7a6267f7bb35c9",
+    "validated_at": "2026-10-01T01:41:13.922465+00:00"
+  }
+}

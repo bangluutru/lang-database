@@ -1,0 +1,85 @@
+{
+  "entry_id": "jp-pro-accounting-000028",
+  "term": "製品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an impossible collocation ('製品を精算する'), vague template expressions ('製品を適正に処理いたしました'), and stilted dialogue phrasing that should not be taught to corporate learners.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "製品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording finished goods inventory."
+    },
+    {
+      "index": 1,
+      "text": "製品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic phrasing for verifying the ledger balance of finished goods."
+    },
+    {
+      "index": 2,
+      "text": "製品を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In accounting, one reconciles physical goods with ledger records (実地棚卸高と帳簿を照合する) rather than vaguely 'reconciling finished goods'. For an inventory account, evaluating valuation or inventory taking is standard.",
+      "suggested_text": "製品の棚卸を行う"
+    },
+    {
+      "index": 3,
+      "text": "製品を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Semantic mismatch. '精算' applies to expense reimbursements, travel claims, or temporary advances (仮払金), never to finished goods inventory (製品).",
+      "suggested_text": "製品の評価損を計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical sentence for month-end reconciliation checking entry details and balance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and vague boilerplate ('適正な...適正に処理いたしました'). '製品を処理する' lacks practical accounting substance (e.g., whether determining inventory value or booking valuation loss).",
+      "suggested_ja": "期末の実地棚卸結果に基づき、製品の帳簿価額と実数を照合した上で適正な残高を確定しました。",
+      "suggested_vi": "Dựa trên kết quả kiểm kê thực tế cuối kỳ, chúng tôi đã đối chiếu số lượng thực tế với giá trị ghi sổ của thành phẩm và chốt số dư chuẩn xác.",
+      "suggested_en": "Based on the results of the physical count at term-end, we reconciled the actual quantities with the book values of finished goods to finalize the accurate balance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' in Speaker B is redundant and unnaturally stilted Japanese ('整合している' already implies proper matching; pairing it with '適正に' is mechanical template jargon).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、製品の計上残高に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, số dư ghi nhận của thành phẩm có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the recorded balance of finished goods for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "製造指図書および受払簿と補助元帳を照合済みで、差異なく整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu sổ phụ với lệnh sản xuất và sổ theo dõi xuất nhập, xác nhận số liệu đã khớp và không có chênh lệch.",
+        "en": "We have reconciled the sub-ledger against the production orders and inventory movement registers, and confirmed that everything matches without discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of existing materials are grammatically accurate, though the underlying Japanese source sentences suffered from template artifacts."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "67685eff9a9a44f51b9ca3cc329325d45f545cff3a6f5c540326526925dfeece",
+    "validated_at": "2026-10-01T01:33:37.775489+00:00"
+  }
+}

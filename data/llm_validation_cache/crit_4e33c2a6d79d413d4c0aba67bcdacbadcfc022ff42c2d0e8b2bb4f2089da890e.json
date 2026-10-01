@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-trade-000019",
+  "term": "荷受人",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term '荷受人' (consignee) is consistently misused throughout the collocations, examples, and dialogue. It is treated as an internal corporate role or executive, rather than a party in a shipping contract. This indicates a fundamental misunderstanding of the term's domain and semantic scope, leading to unnatural and factually incorrect Japanese expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "荷受人を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役員や監査人など、組織内の役職に就かせる際に使う。荷受人は契約上の役割であり、選任する対象ではない。",
+      "suggested_text": "荷受人を指定する"
+    },
+    {
+      "index": 1,
+      "text": "荷受人に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任する」は役職に就く際に使う。荷受人は役職ではない。",
+      "suggested_text": "荷受人となる"
+    },
+    {
+      "index": 2,
+      "text": "荷受人に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    },
+    {
+      "index": 3,
+      "text": "荷受人の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「職務」は公的な役職や組織内の役割に対して使われることが多い。荷受人の役割は「職務」というより「義務」や「責任」に近い。",
+      "suggested_text": "荷受人の義務を果たす"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「荷受人」は株主総会で選任されるような役職ではない。文脈が完全に不適切。",
+      "suggested_ja": "輸入契約に基づき、当社が荷受人として指定されました。",
+      "suggested_vi": "Dựa trên hợp đồng nhập khẩu, công ty chúng tôi đã được chỉ định là người nhận hàng.",
+      "suggested_en": "Based on the import contract, our company has been designated as the consignee."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「業務執行の適法性」と「荷受人」は直接的な関連性が薄い。荷受人はあくまで貨物の受領者であり、企業の業務執行全体に関わる存在ではない。",
+      "suggested_ja": "貨物の円滑な引き渡しのため、荷受人と定期的に連絡を取り合っています。",
+      "suggested_vi": "Để đảm bảo việc giao nhận hàng hóa suôn sẻ, chúng tôi thường xuyên liên lạc với người nhận hàng.",
+      "suggested_en": "To ensure smooth delivery of goods, we maintain regular communication with the consignee."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「荷受人」は会議の準備状況を問われるような主体ではない。また、Bの発言内容も荷受人とは無関係。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の輸入貨物の荷受人について、何か確認事項はありますか。",
+        "vi": "Về người nhận hàng cho lô hàng nhập khẩu lần này, có vấn đề gì cần xác nhận không?",
+        "en": "Regarding the consignee for this import shipment, are there any points to confirm?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、荷受人である〇〇商事様には、すでに到着予定日と通関に必要な書類について連絡済みです。",
+        "vi": "Vâng, chúng tôi đã thông báo cho Công ty Thương mại XX, là người nhận hàng, về ngày dự kiến đến và các tài liệu cần thiết cho thủ tục hải quan.",
+        "en": "Yes, we have already informed XX Trading Co., the consignee, about the estimated arrival date and the necessary documents for customs clearance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6455aa366d98a853b684eaec5f2e1125f4fec178e59003bae03cd88214a59b7c",
+    "validated_at": "2026-10-01T01:53:58.670935+00:00"
+  }
+}

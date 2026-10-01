@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000100",
+  "term": "定期同額給与",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a severe Japanese corporate tax factual error confusing 定期同額給与 with 事前確定届出給与 regarding prior tax office notification requirements across collocations, examples, and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定期同額給与を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate and tax phrasing for paying regular equal executive compensation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "定期同額給与として損金算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate tax accounting terminology under Corporation Tax Act Article 34.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定期同額給与の届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factually incorrect under Japanese corporate tax law. Prior notification to tax authorities (届出書) applies to 事前確定届出給与, not to regular fixed salary (定期同額給与).",
+      "suggested_text": "定期同額給与の額を改定する"
+    },
+    {
+      "index": 3,
+      "text": "定期同額給与の限度額を改定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Executive compensation caps (限度額) are set for total executive remuneration (役員報酬総額) at the general meeting of shareholders, not specifically for 定期同額給与 itself.",
+      "suggested_text": "定期同額給与に該当する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects statutory executive remuneration procedure following shareholder resolution.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major tax law error. Corporate Tax Act does not require filing a notification (届出書) with the tax office for 定期同額給与 to qualify for deduction; that requirement is specifically for 事前確定届出給与 (pre-determined bonus/compensation). Regular salary must instead be revised within 3 months of the start of the fiscal year.",
+      "suggested_ja": "定期同額給与として損金算入を認めてもらうため、事業年度開始から3か月以内に役員報酬の改定決議を行いました。",
+      "suggested_vi": "Để được chấp nhận tính vào chi phí được trừ dưới dạng tiền lương định kỳ cố định của ban điều hành, chúng tôi đã thực hiện nghị quyết điều chỉnh thù lao trong vòng 3 tháng kể từ ngày bắt đầu năm tài chính.",
+      "suggested_en": "To qualify for tax deduction as regular fixed salary for directors, we resolved the executive remuneration adjustment within three months from the start of the fiscal year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The exchange perpetuates the misconception that special filing documents (提出書類) exist for 定期同額給与 and misrepresents tax filing practice ('税理士の確認書を申告書添付書類として提出'). Real-world audits verify shareholder/board minutes and payroll ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期改定した役員報酬について、定期同額給与の要件を満たしているか議事録等の証拠書類は確認できましたか。",
+        "vi": "Đối với thù lao ban giám đốc được điều chỉnh kỳ này, anh đã kiểm tra các chứng từ như biên bản họp để đảm bảo đáp ứng điều kiện tiền lương định kỳ cố định chưa?",
+        "en": "Regarding the executive compensation revised this term, have you verified the supporting documents such as meeting minutes to ensure they meet the requirements for regular fixed salary?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、期首から3か月以内の株主総会議事録と支給明細を突合し、問題ないことを顧問税理士と確認済みです。",
+        "vi": "Vâng, tôi đã đối chiếu chi tiết chi trả với biên bản đại hội đồng cổ đông trong vòng 3 tháng đầu kỳ và đã xác nhận không có vấn đề gì với thuế lý cố vấn.",
+        "en": "Yes, I have cross-checked the payroll details against the minutes of the shareholders' meeting held within three months of the start of the period, and confirmed everything with our tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese, 'tiền lương ban giám đốc chi trả định kỳ bằng nhau' is an awkward, overly literal clause. 'Tiền lương định kỳ cố định của ban giám đốc/điều hành' is standard professional business phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b8a5c356f460927c198a822e813ffb8eeae5ae162b4a2701c2c6b5cbb80da622",
+    "validated_at": "2026-10-01T01:39:14.053070+00:00"
+  }
+}

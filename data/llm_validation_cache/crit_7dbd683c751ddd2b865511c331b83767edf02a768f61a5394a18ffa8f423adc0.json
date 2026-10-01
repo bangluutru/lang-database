@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000073",
+  "term": "暫定税率",
+  "overall_decision": "rewrite",
+  "summary_reason": "「暫定税率」は税率そのものであり、会計上の「計上」や「残高」の対象となるのは、その税率が適用された「税額」や「関税額」である。この基本的な会計・税務上の概念の混同が見られるため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "暫定税率を適用する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "暫定税率を照会する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "暫定税率を納付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「暫定税率」は税率そのものであり、税率を納付するという表現は不自然。税金を納付する、または税率に基づいて計算された税額を納付する、が適切。",
+      "suggested_text": "暫定税率に基づく税額を納付する"
+    },
+    {
+      "index": 3,
+      "text": "暫定税率の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「暫定税率」は税率の種類であり、それ自体を分類するという表現は不自然。税率が適用される品目の分類を確認する、または税率の適用区分を確認する、が適切。",
+      "suggested_text": "暫定税率の適用区分を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「暫定税率の計上内容や残高」という表現は不自然。「暫定税率」は税率であり、会計上の「計上内容」や「残高」を持つのは税額や関税である。税率そのものに「残高」は存在しない。",
+      "suggested_ja": "月末の帳簿照合において、暫定税率が適用された関税額の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của số tiền thuế quan áp dụng thuế suất tạm thời có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for the customs duties to which the temporary duty rate was applied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「暫定税率を適正に処理いたしました」という表現は不自然。「暫定税率」は税率であり、処理の対象となるのは税額や関税である。税率そのものを「処理する」とは言わない。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において暫定税率が適用される関税額を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định số tiền thuế quan áp dụng thuế suất tạm thời trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the customs duties to which the temporary duty rate was applied in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "例示文と同様に、「暫定税率の計上内容」という表現が不自然。税率そのものではなく、税率が適用された関税額の計上内容について問うのが自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、暫定税率が適用された関税額の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán số tiền thuế quan áp dụng thuế suất tạm thời không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for the customs duties to which the temporary duty rate was applied?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2aa7a8067633ea9d312730cde91ec0e8615c85648e542139ff73eeb3074a0e93",
+    "validated_at": "2026-10-01T01:55:00.618431+00:00"
+  }
+}

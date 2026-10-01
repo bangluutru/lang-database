@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000093",
+  "term": "製品保証引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate contained severe domain inconsistencies: provisions are accounting estimates, not voucher-cleared line items ('精算する' and checking against '証憑書類' are domain misfits). Collocations and dialogue require adjustment to reflect actual accounting practices (historical actual ratio calculation and draw-downs).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "製品保証引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing/booking a provision for warranties.",
+      "suggested_text": "製品保証引当金を計上する"
+    },
+    {
+      "index": 1,
+      "text": "製品保証引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrase when checking the ledger balance of the provision account.",
+      "suggested_text": "製品保証引当金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "製品保証引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not 'reconcile' an allowance directly; rather, one calculates it or reconciles the balance/supporting schedule. '算定する' (calculate/estimate) is far more standard for provisions.",
+      "suggested_text": "製品保証引当金を算定する"
+    },
+    {
+      "index": 3,
+      "text": "製品保証引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Provisions (引当金) are never 'settled/reimbursed' (精算); they are drawn down (取り崩す) or reversed (戻入する).",
+      "suggested_text": "製品保証引当金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and comprehensible description of month-end book examination, though slightly generic.",
+      "suggested_ja": "月末の帳簿照合において、製品保証引当金の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của dự phòng bảo hành sản phẩm có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for provision for product warranties."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains redundant and awkward wording ('適正な会計基準' is unidiomatic; repeated '適正な...適正に'). Realistic business Japanese should describe calculation based on past warranty actuals.",
+      "suggested_ja": "過去のアフターサービス実績率に基づき、当期の売上高に応じた製品保証引当金を計上いたしました。",
+      "suggested_vi": "Dựa trên tỷ lệ chi phí dịch vụ hậu mãi thực tế trong quá khứ, chúng tôi đã trích lập dự phòng bảo hành sản phẩm tương ứng với doanh thu kỳ này.",
+      "suggested_en": "Based on historical after-sales service cost ratios, we recorded the provision for product warranties corresponding to this term's net sales."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "引当金 is an accounting estimate calculated via past repair ratios, not an invoice-backed line item verified against source vouchers (証憑書類). Treating it like an AP balance reconciliation is factually incongruent in accounting practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の製品保証引当金の算定基準について、過去実績率の見直しは反映されていますか。",
+        "vi": "Về tiêu chí tính dự phòng bảo hành sản phẩm kỳ này, việc rà soát lại tỷ lệ thực tế trong quá khứ đã được phản ánh chưa?",
+        "en": "Regarding the calculation basis for this term's warranty provision, has the revision of historical actual ratios been reflected?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、直近3年間の無償修理実績データを集計し、適正な引当率で計算を完了しております。",
+        "vi": "Vâng, chúng tôi đã tổng hợp dữ liệu chi phí sửa chữa miễn phí thực tế trong 3 năm gần nhất và hoàn tất việc tính toán theo tỷ lệ trích lập phù hợp.",
+        "en": "Yes, we compiled actual free-repair data over the past three years and completed the calculation using the appropriate provision rate."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term definitions in Vietnamese and English are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "45b721a518224fd22b50564158b3f5d9ca194e6dd31f8dd12b83a1a1331171f9",
+    "validated_at": "2026-10-01T01:35:18.049687+00:00"
+  }
+}

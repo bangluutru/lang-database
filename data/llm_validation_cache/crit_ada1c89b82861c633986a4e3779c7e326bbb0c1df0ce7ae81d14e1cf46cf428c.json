@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000159",
+  "term": "特別徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "人事給与・法定税務手続きである「特別徴収（住民税）」が、汎用的な「決算・残高照合」テンプレートに機械的に流し込まれており、実務的リアリティおよびコロケーションの整合性を著しく欠いています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特別徴収を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「特別徴収」は制度・徴収方法であり、単体で「進める」とするのは漠然として不自然。実務では「特別徴収を実施する」または「特別徴収への切替を進める」と言います。",
+      "suggested_text": "特別徴収を実施する"
+    },
+    {
+      "index": 1,
+      "text": "特別徴収を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "徴収自体は毎月継続する法定業務であるため「完了する」は不自然。切替手続きや税額の納付を完了するという文脈で用いられます。",
+      "suggested_text": "特別徴収税額を納付する"
+    },
+    {
+      "index": 2,
+      "text": "特別徴収の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "給与天引きや各市区町村への納付手続きを確認する実務文脈として自然です。",
+      "suggested_text": "特別徴収の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "特別徴収を見直す",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "給与所得者の住民税特別徴収は法令上の義務（特別徴収義務者指定）であり、企業が裁量で見直す対象ではありません。",
+      "suggested_text": "特別徴収への切替を申請する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「特別徴収の残高」という表現は不自然。特別徴収した住民税は会計上「預り金」として処理されるため、預り金残高や納付額との突合として表現すべきです。",
+      "suggested_ja": "給料計算の確定後、住民税の特別徴収税額と預り金残高に差異がないか精査します。",
+      "suggested_vi": "Sau khi chốt tính lương, chúng tôi kiểm tra kỹ xem số tiền thuế cư trú trích thu đặc biệt và số dư tài khoản tiền tạm giữ có chênh lệch hay không.",
+      "suggested_en": "After payroll is finalized, we carefully verify that there are no discrepancies between the special collection amount of residence tax and the deposits received balance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "典型的な穴埋めテンプレート。「特別徴収」は毎月の給料から天引きして市区町村へ翌月10日までに納める法定手続であり、「当期の決算において適正に処理いたしました」という決算処理の文脈は税務実務上著しく不自然です。",
+      "suggested_ja": "中途入社した社員について、普通徴収から特別徴収への切替手続きを速やかに行いました。",
+      "suggested_vi": "Đối với nhân viên gia nhập giữa năm, chúng tôi đã nhanh chóng thực hiện thủ tục chuyển đổi từ thu thường sang trích thu đặc biệt tại nguồn.",
+      "suggested_en": "For employees hired mid-year, we promptly carried out procedures to switch from ordinary collection to special collection of residence tax."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "特別徴収は月次決算の科目照合テンプレートに無理やり当てはめられており、給与厚生・人事労務実務としての臨場感に欠けます。市区町村から送付される「税額通知書」と給与天引きの照合を題材にするのが適切です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "各市区町村から届いた住民税の特別徴収税額通知書は、給与システムに反映済みですか。",
+        "vi": "Thông báo mức thuế cư trú trích thu đặc biệt gửi từ các chính quyền địa phương đã được nhập vào hệ thống tính lương chưa?",
+        "en": "Have the special collection residence tax notices received from each municipality been updated in the payroll system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、全従業員分の税額改定の登録を完了し、今月支給分の控除額と整合していることを確認しました。",
+        "vi": "Vâng, tôi đã hoàn tất việc đăng ký điều chỉnh số thuế cho toàn bộ nhân viên và đối chiếu khớp với khoản khấu trừ của kỳ lương tháng này.",
+        "en": "Yes, I have completed registering the revised tax amounts for all employees and confirmed they match the deduction for this month's payroll."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Bản dịch nghĩa gốc chính xác về mặt nghiệp vụ thuế."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "699a080eca66643a1e418a74f4ec40b4969ec4a22514b7b605fbfdf78d20a767",
+    "validated_at": "2026-10-01T01:40:14.734511+00:00"
+  }
+}

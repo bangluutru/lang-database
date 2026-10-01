@@ -1,0 +1,69 @@
+{
+  "entry_id": "jp-pro-accounting-000008",
+  "term": "四半期財務諸表",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a critical domain error: quarterly statements undergo '四半期レビュー' (review), not '監査' (full audit). Example 1 requires adjustment to reflect standard accounting reality.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "四半期財務諸表を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for preparing quarterly financial statements."
+    },
+    {
+      "index": 1,
+      "text": "四半期財務諸表を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional term for statutory/timely disclosure."
+    },
+    {
+      "index": 2,
+      "text": "四半期財務諸表を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural governance terminology for board approval."
+    },
+    {
+      "index": 3,
+      "text": "四半期財務諸表を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology for variance and financial analysis."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese accounting practice under statutory regulations (FIEA/JICPA), quarterly financial statements undergo a 'quarterly review' (四半期レビュー) by CPAs/audit firms, not a full audit (監査). Using '監査' for quarterly reporting is technically imprecise and misleading to learners.",
+      "suggested_ja": "監査法人による四半期レビューを経て、取締役会にて今期の四半期財務諸表が正式に承認されました。",
+      "suggested_vi": "Sau khi hoàn tất thủ tục soát xét quý của công ty kiểm toán, hội đồng quản trị đã chính thức phê duyệt báo cáo tài chính quý kỳ này.",
+      "suggested_en": "Following a quarterly review by the audit firm, the board of directors officially approved this term's quarterly financial statements."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic corporate disclosure workflow, natural phrasing and accurate translations."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logically connected turns between accounting staff/manager, natural terminology regarding variance analysis and board reporting."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations are accurate and natural for corporate accounting context."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d059c0501f58949a59704a7ddca1a525b3cf0d739148e23a04b3824e69c12dc7",
+    "validated_at": "2026-10-01T01:32:50.654321+00:00"
+  }
+}

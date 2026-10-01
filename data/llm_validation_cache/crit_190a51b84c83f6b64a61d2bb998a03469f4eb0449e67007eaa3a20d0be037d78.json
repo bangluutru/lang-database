@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000111",
+  "term": "税務上の減価償却限度額",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションおよび例文において、「損金算入・別表調整の対象となる費用額（減価償却超過額等）」と「計算上の上限枠（償却限度額）」の混同が著しく、法人税実務として致命的な誤用が含まれているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税務上の減価償却限度額に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「限度額」は計算上の上限枠であり、何かを「限度額に算入する」という表現は税務実務上不自然。「損金算入」と混同されている。",
+      "suggested_text": "税務上の減価償却限度額を計算する"
+    },
+    {
+      "index": 1,
+      "text": "税務上の減価償却限度額に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「損金不算入とする」の誤用。「限度額に不算入とする」は日本語として意味をなさない。",
+      "suggested_text": "税務上の減価償却限度額を超過する"
+    },
+    {
+      "index": 2,
+      "text": "税務上の減価償却限度額の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務で調整（申告調整）するのは限度額そのものではなく「償却超過額」である。限度額に対しては「算出する」「計算する」が適切。",
+      "suggested_text": "税務上の減価償却限度額を算出する"
+    },
+    {
+      "index": 3,
+      "text": "税務上の減価償却限度額に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "別表四の加算項目（留保）として処理されるのは「減価償却超過額」であり、限度額に加算するわけではない。",
+      "suggested_text": "税務上の減価償却限度額に達する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "別表四で調整・処理するのは「限度額」そのものではなく、限度額を超えて費用計上した「減価償却超過額」であるため、実務上の事実関係として不正確。",
+      "suggested_ja": "会計上の減価償却費が税務上の減価償却限度額を超過したため、別表四において償却超過額を加算調整しました。",
+      "suggested_vi": "Do chi phí khấu hao kế toán vượt quá mức trần chi phí khấu hao được trừ theo luật thuế, chúng tôi đã điều chỉnh cộng tăng phần chi phí trích vượt trên phụ lục số 4.",
+      "suggested_en": "Since the accounting depreciation exceeded the allowable limit for tax depreciation, we added back the excess depreciation on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「限度額の算入漏れ」は税務概念として破綻している。限度額は枠であり、算入/不算入されるのは「減価償却費」である。",
+      "suggested_ja": "税務調査における否認リスクを低減するため、取得資産ごとの税務上の減価償却限度額が正しく計算されているか再検証しました。",
+      "suggested_vi": "Để giảm thiểu rủi ro bị bóc tách chi phí trong thanh tra thuế, chúng tôi đã rà soát lại xem mức trần chi phí khấu hao được trừ theo luật thuế cho từng tài sản đã được tính toán chính xác hay chưa.",
+      "suggested_en": "To minimize disallowance risks during a tax audit, we re-verified whether the allowable limit for tax depreciation was accurately calculated for each acquired asset."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算申告時の計算根拠確認と添付資料の準備に関するやり取りとして自然であり、専門用語の文脈も合致している。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語レベルの英語・ベトナム語対訳は適切。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "703845c78af0aff9787399d96ed5f3ad248280c2c566e7d490266baa0d3b12ef",
+    "validated_at": "2026-10-01T01:39:23.296399+00:00"
+  }
+}

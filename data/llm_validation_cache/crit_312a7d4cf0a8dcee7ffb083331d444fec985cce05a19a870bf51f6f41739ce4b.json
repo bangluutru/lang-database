@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000017",
+  "term": "危険負担の移転",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the treatment of '危険負担の移転' as a tangible object or clause itself, rather than a concept defined by clauses. This leads to unnatural collocations, example sentences, and dialogue. The Vietnamese translation is also overly descriptive for a term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "危険負担の移転を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「危険負担の移転」は契約条項そのものではなく、契約条項によって定められる概念であるため、「設ける」という動詞は不自然。契約条項を設ける、という文脈なら自然。",
+      "suggested_text": "危険負担の移転に関する条項を設ける"
+    },
+    {
+      "index": 1,
+      "text": "危険負担の移転に違反する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「危険負担の移転」は概念であり、それに違反するという表現は不自然。危険負担の移転に関する合意や条項に違反する、という文脈なら自然。",
+      "suggested_text": "危険負担の移転に関する合意に違反する"
+    },
+    {
+      "index": 2,
+      "text": "危険負担の移転を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「危険負担の移転」は概念であり、それを適用するという表現は不自然。危険負担の移転に関する規定や原則を適用する、という文脈なら自然。",
+      "suggested_text": "危険負担の移転に関する規定を適用する"
+    },
+    {
+      "index": 3,
+      "text": "危険負担の移転を精査する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「危険負担の移転」という概念そのものを精査するのではなく、その内容や条項を精査する、という文脈が自然。",
+      "suggested_text": "危険負担の移転に関する条項を精査する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「明確な危険負担の移転を設ける」が不自然。契約書に記載されるのは「危険負担の移転に関する条項」であり、概念そのものではない。",
+      "suggested_ja": "予期せぬ紛争を未然に防止するため、契約書内に危険負担の移転に関する明確な条項を設けました。",
+      "suggested_vi": "Để ngăn ngừa các tranh chấp bất ngờ từ trước, chúng tôi đã đưa vào hợp đồng điều khoản rõ ràng về việc chuyển giao rủi ro.",
+      "suggested_en": "To prevent unexpected disputes beforehand, we established clear clauses regarding the transfer of risk within the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「危険負担の移転の文言を一部修正しました」が不自然。概念そのものの文言ではなく、その内容を記述した条項の文言を修正する。",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された危険負担の移転に関する条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ của điều khoản chuyển giao rủi ro do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the transfer of risk clause proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「危険負担の移転の修正案」は、概念そのものの修正案という点で不自然。Bの発言「損害賠償条項を含めてリスクがないことを確認いたしました」は、危険負担の移転の確認に対する応答としてやや唐突で、文脈が不足している。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた危険負担の移転に関する条項の修正案ですが、確認は済みましたか。",
+        "vi": "Dự thảo sửa đổi điều khoản chuyển giao rủi ro từ bộ phận pháp chế của đối tác đã được xác nhận chưa?",
+        "en": "Have you confirmed the revised draft of the transfer of risk clause that came back from the counterparty's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、損害賠償条項との整合性も含め、法務部と連携してリスクがないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, chúng tôi đã xác nhận không có rủi ro nào, kể cả về tính nhất quán với điều khoản bồi thường thiệt hại, sau khi phối hợp với bộ phận pháp chế, nên chúng tôi sẽ tiến hành thủ tục ký kết.",
+        "en": "Yes, we've confirmed there are no risks, including consistency with the indemnity clause, in coordination with the legal department, so we can proceed with the signing process as is."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translation for '危険負担の移転' is too long and descriptive. It should be a concise term."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d6632b492c4962d8d9ae07dd82f4f88d268dd93b5cf6add73e0bef16e67e424c",
+    "validated_at": "2026-10-01T01:53:58.797215+00:00"
+  }
+}

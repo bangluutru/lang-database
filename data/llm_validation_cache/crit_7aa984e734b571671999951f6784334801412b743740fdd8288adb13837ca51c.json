@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000130",
+  "term": "製造原価",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object relies on rigid generic accounting templates that incorrectly treat 製造原価 (a cost accumulation flow) as a balance-sheet account with '残高' and predicate '精算する'. Collocations, examples, and dialogue need replacement with authentic manufacturing cost accounting expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "製造原価を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in accounting contexts when booking costs into the cost of manufacturing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "製造原価の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "製造原価 (manufacturing cost) is a flow/period accumulation figure reported on the statement of cost of goods manufactured, not a balance sheet account with an ongoing '残高' (balance). '内訳を確認する' or '推移を確認する' is the natural professional phrasing.",
+      "suggested_text": "製造原価の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "製造原価を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not simply '照合する' manufacturing costs without a comparator; standard workplace collocations focus on calculation, aggregation, or analysis.",
+      "suggested_text": "製造原価を算定する"
+    },
+    {
+      "index": 3,
+      "text": "製造原価を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精算' refers to settling cash advances, travel expenses, or accounts between parties; manufacturing costs cannot be '精算'ed.",
+      "suggested_text": "製造原価を集計する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a mechanical template inserting the term alongside '残高' and '帳簿照合'. Manufacturing cost does not hold a ledger balance (残高) to reconcile against in this manner.",
+      "suggested_ja": "原材料費の高騰を受け、今期の製造原価は前年同期比で約8％増加しました。",
+      "suggested_vi": "Do chi phí nguyên vật liệu tăng cao, chi phí sản xuất chế tạo kỳ này đã tăng khoảng 8% so với cùng kỳ năm ngoái.",
+      "suggested_en": "Due to surging raw material costs, manufacturing costs this term increased by approximately 8% year-on-year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Template filler sentence devoid of concrete accounting substance. A professional course should demonstrate actual manufacturing cost components (materials, labor, overhead, work-in-progress).",
+      "suggested_ja": "期末の製造原価報告書を作成するため、材料費・労務費・経費の配賦計算を行いました。",
+      "suggested_vi": "Để lập báo cáo chi phí sản xuất chế tạo cuối kỳ, chúng tôi đã thực hiện tính toán phân bổ chi phí nguyên vật liệu, nhân công và chi phí chung.",
+      "suggested_en": "In order to prepare the end-of-period cost of goods manufactured statement, we calculated the allocation of material, labor, and overhead costs."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange is a generic template ('差異は発生していませんか / 整合していることを確認いたしました') that does not reflect realistic accounting discussions about manufacturing costs (e.g., standard vs. actual variance, overhead allocation).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の工場別の製造原価ですが、予算比で大きな乖離は出ていますか。",
+        "vi": "Về chi phí sản xuất chế tạo theo từng nhà máy trong tháng này, có chênh lệch lớn so với ngân sách không?",
+        "en": "Regarding this month's manufacturing costs by plant, are there any significant variances compared to budget?"
+      },
+      {
+        "speaker": "B",
+        "ja": "第2工場で光熱費の配賦額が膨らんでおり、製造原価を数パーセント押し上げています。",
+        "vi": "Tại nhà máy số 2, chi phí điện nước phân bổ tăng cao, làm đội chi phí sản xuất chế tạo lên vài phần trăm.",
+        "en": "At Plant 2, the allocated utility expenses surged, pushing up manufacturing costs by a few percent."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b980910e2aa89a9dd543dab0e08918af3b20ad722490dbc6df89771986399763",
+    "validated_at": "2026-10-01T01:36:01.458927+00:00"
+  }
+}

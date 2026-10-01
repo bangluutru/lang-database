@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000147",
+  "term": "広告宣伝費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting reality (精算 cannot apply to B2B advertising; 照合 requires 明細/請求書), example sentences exhibit formulaic redundancy ('適正な...適正に'), and the dialogue features unnatural unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "広告宣伝費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking advertising expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "広告宣伝費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when checking trial balance or general ledger balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "広告宣伝費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An expense account itself is not directly 'collated'; one reconciles invoices, subledgers, or itemized breakdowns against entries.",
+      "suggested_text": "広告宣伝費の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "広告宣伝費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to employee advance payments (立替金, 仮払金, 旅費交通費). Advertising expenses are B2B vendor transactions paid via accounts payable, not employee expense reimbursements.",
+      "suggested_text": "広告宣伝費を配賦する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'帳簿照合において' and '計上内容や残高に差異がないか' are mechanically constructed and vague (a variance against what?). Real practice checks invoices against ledger entries or checks for unrecorded liabilities.",
+      "suggested_ja": "月次決算の締め作業において、広告宣伝費の請求書と帳簿記録を突き合わせ、計上漏れや差異がないか精査します。",
+      "suggested_vi": "Trong công tác chốt sổ kế toán hàng tháng, chúng tôi đối chiếu hóa đơn chi phí quảng cáo với sổ sách để kiểm tra kỹ lưỡng xem có phát sinh chênh lệch hay sót hạch toán hay không.",
+      "suggested_en": "During month-end closing, we cross-check advertising expense invoices against ledger entries to scrutinize for any omissions or discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is unnatural Japanese (the standard term is 企業会計基準 or 一般に公正妥当と認められる会計基準), and repeating '適正な...適正に' in the same sentence is redundant machine artifact.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期に実施したプロモーションにかかる広告宣伝費を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã hạch toán phù hợp chi phí quảng cáo cho các chương trình khuyến mãi thực hiện trong kỳ này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we have appropriately recorded advertising expenses for promotional campaigns conducted during this period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural tautology in Japanese business dialogue. Professional accounting staff would say 'すべて一致していることを確認いたしました' or report specific confirmation results.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、広告宣伝費の計上額に予算との大きな乖離や未処理の請求書はありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, chi phí quảng cáo có chênh lệch lớn so với ngân sách hoặc còn hóa đơn nào chưa xử lý không?",
+        "en": "In this month's closing, are there any significant variances from the budget or unprocessed invoices regarding advertising expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "代理店からの請求書と補助元帳を照合済みで、すべて過不足なく計上されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu hóa đơn từ các đại lý quảng cáo với sổ phụ, và xác nhận mọi khoản đều được hạch toán đầy đủ, chính xác.",
+        "en": "We have reconciled the agency invoices with the subsidiary ledger and confirmed that all entries have been recorded completely and accurately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f12505208f1fdc7a49791246b50cb57d3aed9b9d18264b86f19fd55eaaa6f9aa",
+    "validated_at": "2026-10-01T01:36:18.198772+00:00"
+  }
+}

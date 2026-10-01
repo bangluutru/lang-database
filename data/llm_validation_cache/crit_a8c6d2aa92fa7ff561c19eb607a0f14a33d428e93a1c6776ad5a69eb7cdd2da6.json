@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000101",
+  "term": "役職手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate treated 役職手当 (an HR/payroll salary expense item) with generic balance-sheet accounting templates ('残高を確認する', '精算する', '適正に整合している'), resulting in conceptually flawed and stilted Japanese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "役職手当を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in monthly payroll accounting when booking allowances by department or line item.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "役職手当の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "役職手当 is a payroll expense item, not a balance-sheet account. Expenses do not have a '残高' (balance); one checks 支給額 (payment amount) or 累計額 (cumulative amount).",
+      "suggested_text": "役職手当の支給額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "役職手当を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly collate an allowance noun; one reconciles the allowance amount against personnel records or payroll ledgers (人事情報/給料台帳と照合する).",
+      "suggested_text": "役職手当を人事発令と照合する"
+    },
+    {
+      "index": 3,
+      "text": "役職手当を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, out-of-pocket expenses, or temporary payments (経費・仮払金), not to fixed monthly salary allowances, which are '支給する' (disbursed).",
+      "suggested_text": "役職手当を支給する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Refers to '役職手当の残高' (balance of position allowance), which is conceptually erroneous for an income statement payroll expense item.",
+      "suggested_ja": "人事異動に伴い、対象社員の役職手当が給与計算システムに正しく反映されているか確認してください。",
+      "suggested_vi": "Vui lòng kiểm tra xem phụ cấp chức vụ của các nhân viên thuộc diện điều động nhân sự đã được phản ánh chính xác vào hệ thống tính lương hay chưa.",
+      "suggested_en": "Please verify whether the position allowances for the affected employees have been properly updated in the payroll system following the personnel transfers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Shows mechanistic templating with clumsy repetition of '適正な...適正に'. Allowances are primarily governed by wage regulations (賃金規程), not corporate accounting standards.",
+      "suggested_ja": "当社の賃金規程に基づき、課長職以上の昇進者に対して新たに役職手当を支給いたします。",
+      "suggested_vi": "Căn cứ theo quy chế tiền lương của công ty, chúng tôi sẽ bắt đầu chi trả phụ cấp chức vụ cho những nhân sự được thăng chức từ cấp trưởng phòng trở lên.",
+      "suggested_en": "In accordance with our company wage regulations, position allowances will be newly paid to employees promoted to section manager or above."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is awkward and redundant, and treating 役職手当 as a voucher-to-subsidiary-ledger reconciliation item lacks authentic HR/payroll realism.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算で、昇格者に伴う役職手当の増額は反映されていますか。",
+        "vi": "Trong đợt tính lương tháng này, việc tăng phụ cấp chức vụ cho những người được thăng chức đã được phản ánh chưa?",
+        "en": "Has the increase in position allowances for promoted staff been reflected in this month's payroll?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、人事発令書と突合のうえ、全員分手当の更新が完了しております。",
+        "vi": "Vâng, tôi đã đối chiếu với quyết định bổ nhiệm nhân sự và hoàn tất việc cập nhật phụ cấp cho toàn bộ nhân viên rồi ạ.",
+        "en": "Yes, I cross-checked with the personnel appointment notices and confirmed all allowances have been updated."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "'Executive allowance' is misleading in Japanese corporate practice; board executives (役員) receive 役員報酬, whereas 役職手当 is typically paid to employed managers (課長, 部長, etc.). Better: 'Managerial allowance / Position allowance'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8fcec40bf7a656e6f79d09c0c9ccbcd05885853a7c019c5e7e6af5debdf449bd",
+    "validated_at": "2026-10-01T01:42:39.127064+00:00"
+  }
+}

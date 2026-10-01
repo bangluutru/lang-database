@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000081",
+  "term": "商標権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and dialogue are professional and authentic, but Example 0 contains awkward phrasing ('発生した資産価値') and the English translations need grammatical correction regarding the bare singular noun 'trademark right'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "商標権を無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise accounting terminology for recognizing trademark rights as intangible fixed assets.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "商標権を償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation referring to the systematic amortization of trademark rights under Japanese GAAP/Tax law.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "商標権の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting phrasing for conducting impairment accounting on trademark rights.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "商標権の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business and valuation expression regarding appraising trademark asset value.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '発生した資産価値' (asset value that arose) is awkward in Japanese accounting; assets or rights are acquired ('取得した'), and purchase price allocation values them ('取得した資産の評価を精査し'). Additionally, English translation lacks proper pluralization ('trademark right' -> 'trademark rights').",
+      "suggested_ja": "事業譲受に伴い取得した資産の評価を精査し、商標権を無形固定資産として計上しました。",
+      "suggested_vi": "Rà soát kỹ định giá các tài sản nhận được từ việc nhận chuyển nhượng kinh doanh, chúng tôi đã ghi nhận quyền sở hữu nhãn hiệu vào tài sản cố định vô hình.",
+      "suggested_en": "Examining the valuation of assets acquired through the business transfer, we recognized the trademark rights as intangible fixed assets."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Factually accurate and authentic representation of J-GAAP accounting practice concerning systematic amortization and impairment testing.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B is practical, authentic, and naturally models corporate accounting operations regarding the fixed asset register and depreciation/amortization settings.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translations unidiomatically treat 'trademark right' as a bare singular count noun instead of plural 'trademark rights' or 'the trademark right'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5ffcb6727d3391f7ce558de3694627480880035f2e35dc904161a5077e323931",
+    "validated_at": "2026-10-01T01:42:24.591501+00:00"
+  }
+}

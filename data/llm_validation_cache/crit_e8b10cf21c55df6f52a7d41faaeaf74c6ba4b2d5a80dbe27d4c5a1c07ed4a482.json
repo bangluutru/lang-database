@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000121",
+  "term": "差引支給額",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination: the generator treated 差引支給額 (employee net take-home pay) as a corporate profitability KPI, producing factually absurd collocations, examples, and dialogue relating to corporate efficiency and financial analysis.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "差引支給額を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard payroll phrase: calculating net pay by subtracting deductions from gross salary.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "差引支給額を改善する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "差引支給額 (net take-home pay) is a payroll calculation result on a payslip, not a corporate operational KPI that a company seeks to '改善' (improve).",
+      "suggested_text": "差引支給額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "差引支給額を分析する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In corporate payroll and accounting, companies analyze 人件費 (personnel expenses) or 基本給 (base salary), not individual take-home pay (差引支給額), which varies by personal tax/social insurance deductions.",
+      "suggested_text": "差引支給額を口座に振り込む"
+    },
+    {
+      "index": 3,
+      "text": "差引支給額の目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "差引支給額 is personal net pay, not a corporate target metric (目標値). This is a template hallucination treating payroll terms as financial management KPIs.",
+      "suggested_text": "差引支給額の内訳を記載する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Gross factual and contextual error. Business units do not monitor '差引支給額' (individual take-home pay) to improve operational efficiency. This is a generic KPI template blindly applied to a payroll term.",
+      "suggested_ja": "総支給額から社会保険料と源泉所得税を控除したものが、給与明細に記載される差引支給額となります。",
+      "suggested_vi": "Số tiền còn lại sau khi khấu trừ bảo hiểm xã hội và thuế thu nhập cá nhân từ tổng thu nhập chính là số tiền lương thực lĩnh được ghi trên phiếu lương.",
+      "suggested_en": "The amount remaining after deducting social insurance premiums and withholding income tax from the gross pay is the net pay indicated on the pay slip."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Nonsensical financial logic: net take-home pay exceeding a target does not confirm improvement in profitability or capital efficiency. Complete template hallucination.",
+      "suggested_ja": "法改正による社会保険料率の改定に伴い、今月支給分の給与における差引支給額に変動が生じています。",
+      "suggested_vi": "Do việc điều chỉnh tỷ lệ đóng bảo hiểm xã hội theo luật sửa đổi, số tiền thực lĩnh trong kỳ lương tháng này đã có sự thay đổi.",
+      "suggested_en": "Due to the revision of social insurance premium rates under the legal amendment, there has been a change in the net take-home pay for this month's salary payment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A treats 差引支給額 as a financial performance KPI in financial analysis (財務分析), which is completely erroneous. The dialogue must reflect realistic HR/payroll accounting communication.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "給与計算システムを更新したとのことですが、差引支給額の計算ロジックに不整合は起きていませんか。",
+        "vi": "Nghe nói hệ thống tính lương vừa được cập nhật, có xảy ra sự sai lệch nào trong logic tính toán số tiền thực lĩnh không?",
+        "en": "I understand the payroll system was updated; are there any discrepancies in the calculation logic for net pay?"
+      },
+      {
+        "speaker": "B",
+        "ja": "各種控除額を含めてテスト計算を実施しましたが、差引支給額の算出結果に問題はありませんでした。",
+        "vi": "Chúng tôi đã chạy tính toán thử nghiệm bao gồm các khoản khấu trừ, kết quả tính số tiền thực lĩnh hoàn toàn không có vấn đề gì.",
+        "en": "We performed test calculations including all deductions, and there were no issues with the resulting net pay amounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese meaning 'số tiền lương thực lĩnh vào tài khoản' is unnecessarily long and verbose for a term definition. A standard, concise terminology is 'tiền lương thực lĩnh' or 'lương thực lĩnh'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8616579e89076ed822283b4c0f874ccae1f7bbad29af3ca4047e46a1ab796ec0",
+    "validated_at": "2026-10-01T01:42:58.880669+00:00"
+  }
+}

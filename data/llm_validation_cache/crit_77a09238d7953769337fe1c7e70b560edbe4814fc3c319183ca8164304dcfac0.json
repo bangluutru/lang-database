@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000142",
+  "term": "乙仲",
+  "overall_decision": "reject",
+  "summary_reason": "The core understanding of '乙仲' as a customs broker/forwarding agent is fundamentally flawed throughout the entire learning object. It is consistently treated as a deliberative body, a meeting, or a document, rather than an external service provider. This leads to unnatural collocations, factually incorrect example sentences, and a disconnected dialogue. The translations also contain unnecessary additions. The entire object requires a complete overhaul based on a correct understanding of the term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "乙仲を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "乙仲 (customs broker/forwarding agent) is an organization/person, not an event or meeting that can be 'held' (開催する). This predicate is completely inappropriate.",
+      "suggested_text": "乙仲を選定する"
+    },
+    {
+      "index": 1,
+      "text": "乙仲で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "決議する (to resolve/decide by vote) is an action taken by a deliberative body (e.g., a board meeting, shareholders' meeting), not by a customs broker itself. A customs broker executes tasks, it does not 'resolve' things in this sense.",
+      "suggested_text": "乙仲に依頼する"
+    },
+    {
+      "index": 2,
+      "text": "乙仲に報告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While technically possible to report *to* a customs broker, it's highly unnatural in a business context where the broker is a service provider. One would typically 'instruct' or 'consult' them, not 'report' to them as if they were a superior or a regulatory body.",
+      "suggested_text": "乙仲に連絡する"
+    },
+    {
+      "index": 3,
+      "text": "乙仲へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "届出書 (notification/application form) is typically submitted to government agencies or regulatory bodies, not to a customs broker. A customs broker *prepares* and *submits* such documents *on behalf of* their client to the relevant authorities.",
+      "suggested_text": "乙仲に書類を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence treats 乙仲 as if it were a deliberative body (like a board meeting or shareholders' meeting) that can 'convene' (招集する) and 'resolve critical proposals' (重要議案の決議を行う). This is a fundamental misunderstanding of what a customs broker is. A customs broker is a service provider, not a decision-making corporate organ.",
+      "suggested_ja": "来週の輸出業務に向けて、乙仲との打ち合わせを招集する運びとなりました。",
+      "suggested_vi": "Để chuẩn bị cho nghiệp vụ xuất khẩu tuần tới, chúng tôi sẽ triệu tập cuộc họp với đại lý giao nhận hải quan.",
+      "suggested_en": "To prepare for next week's export operations, a meeting with the customs broker will be convened."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, this sentence incorrectly portrays 乙仲 as a body that can 'approve management policy and budget allocation' (経営方針および予算配分案が可決される). This is an action of a company's internal management or board, not an external service provider like a customs broker.",
+      "suggested_ja": "乙仲との連携により、今期の物流コスト削減案が原案通り実行されました。",
+      "suggested_vi": "Nhờ sự phối hợp với đại lý giao nhận hải quan, đề xuất cắt giảm chi phí logistics kỳ này đã được thực hiện theo đúng kế hoạch ban đầu.",
+      "suggested_en": "Through collaboration with the customs broker, this term's logistics cost reduction plan was executed as originally proposed."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'preparation status of 乙仲' for a meeting, implying 乙仲 is the meeting itself or a document for it. Speaker B's response about 'finalizing content' and 'obtaining executive approval' further reinforces this misunderstanding, treating 乙仲 as a document or proposal, not an organization. The dialogue completely misinterprets the nature of 乙仲.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の輸出通関に向けて、乙仲への手配状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho thủ tục thông quan xuất khẩu tuần tới, tình hình sắp xếp với đại lý giao nhận hải quan thế nào rồi?",
+        "en": "Regarding the export customs clearance next week, what is the status of arrangements with the customs broker?"
+      },
+      {
+        "speaker": "B",
+        "ja": "必要な書類は全て乙仲に提出済みで、本日中に通関手続きを開始するとの連絡を受けております。",
+        "vi": "Tất cả các tài liệu cần thiết đã được nộp cho đại lý giao nhận hải quan, và chúng tôi đã nhận được thông báo rằng họ sẽ bắt đầu thủ tục thông quan trong hôm nay.",
+        "en": "All necessary documents have been submitted to the customs broker, and we've been informed that they will commence customs procedures today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The English and Vietnamese translations for '乙仲' consistently include '(traditional term)' which is redundant and clunky in professional contexts. While it is a traditional term, it's simply 'customs broker' or 'forwarding agent' in modern usage. The Vietnamese translation also adds 'tại cảng' (at the port) which is not always implied or necessary."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7f7f1ed0b6548cd57ada9a70479e5b78ee2a97c1f5530830e1355083cad3fa0b",
+    "validated_at": "2026-10-01T01:56:28.841136+00:00"
+  }
+}

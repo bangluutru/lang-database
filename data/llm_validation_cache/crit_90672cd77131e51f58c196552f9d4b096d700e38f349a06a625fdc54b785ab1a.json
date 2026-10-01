@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000009",
+  "term": "決算短信",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 contains a fundamental accounting regulatory error (stating that kessan tanshin undergoes rigorous CPA audit before board approval, which contradicts Japanese stock exchange disclosure rules where kessan tanshin is non-statutory and unaudited).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "決算短信を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and IR workplace collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "決算短信を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic terminology used under Tokyo Stock Exchange timely disclosure regulations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "決算短信を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately represents board approval of earnings releases.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "決算短信を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation common among equity analysts and corporate planners.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Tokyo Stock Exchange listing regulations, kessan tanshin (決算短信) is timely disclosure and is strictly exempt from statutory audit certification by CPAs prior to release. Conflating kessan tanshin with audited annual securities reports (有価証券報告書) or statutory financial statements (計算書類) is a notable domain factual inaccuracy.",
+      "suggested_ja": "取締役会での承認を経て、本日15時に今期の決算短信を適時開示システム（TDnet）にて公表する予定です。",
+      "suggested_vi": "Sau khi được Hội đồng Quản trị thông qua, dự kiến bản tóm tắt kết quả kinh doanh kỳ này sẽ được công bố trên hệ thống công bố thông tin kịp thời (TDnet) vào lúc 15 giờ hôm nay.",
+      "suggested_en": "Following approval by the Board of Directors, we plan to release this fiscal period's earnings report via the timely disclosure system (TDnet) at 15:00 today."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately depicts internal review procedures prior to timely disclosure.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic corporate accounting/IR exchange with clear turn-taking and appropriate business honorific register.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both language definitions and dialogue translations are natural and accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "73689a67dde0d12143c76d74ab3bf2aa5c7c9ea77415ea4c75b113c7f56decf2",
+    "validated_at": "2026-10-01T01:32:56.229416+00:00"
+  }
+}

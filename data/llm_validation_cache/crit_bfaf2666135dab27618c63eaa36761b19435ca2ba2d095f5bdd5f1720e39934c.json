@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000075",
+  "term": "HSコード",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of what an HS Code is and how it relates to accounting and financial reporting. HS Codes are for product classification for customs purposes, not for accounting entries, balances, or processing in financial statements. This leads to semantic mismatches in collocations, factual errors in examples, and unnatural dialogue. A complete rewrite is necessary to align the content with actual trade and accounting practices.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "HSコードを適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "HSコードを照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "HSコードを納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "HSコードは税金や料金ではないため、納付する対象ではありません。関税や消費税を納付する際にHSコードが関連しますが、HSコード自体を納付することはありません。",
+      "suggested_text": "HSコードに基づいて関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "HSコードの分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "HSコードは商品の分類コードであり、会計上の『計上内容』や『残高』を持つものではありません。帳簿照合の対象にはなりません。",
+      "suggested_ja": "月末の帳簿照合において、計上された商品のHSコードが適切に分類されているか、また関連する関税額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem mã HS của hàng hóa đã được hạch toán có được phân loại chính xác hay không, và liệu có sự chênh lệch nào trong số tiền thuế quan liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether the HS codes of recorded goods are appropriately classified and if there are any discrepancies in the related customs duty amounts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "HSコードは会計処理の対象ではありません。『HSコードを処理する』という表現は不自然です。HSコードは商品の分類に用いられ、会計基準や社内規程に則って『処理』されるものではありません。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において、輸入商品のHSコードに基づく関税計算が適正に行われたことを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng việc tính toán thuế quan dựa trên mã HS của hàng hóa nhập khẩu đã được thực hiện đúng quy định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that customs duty calculations based on the HS codes of imported goods were properly performed in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "HSコードは会計上の『計上内容』を持つものではなく、月次決算で『差異が発生する』という表現は不適切です。HSコードは商品の分類コードであり、会計帳簿の項目ではありません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入取引について、HSコードの分類に誤りがないか確認しましたか？",
+        "vi": "Bạn đã kiểm tra xem có lỗi phân loại mã HS nào đối với các giao dịch nhập khẩu trong tháng này không?",
+        "en": "Have you checked for any errors in HS code classification for this month's import transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、すべての輸入申告書と商品情報を照合し、HSコードが適切に適用されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu tất cả các tờ khai nhập khẩu và thông tin hàng hóa, và đã xác nhận rằng mã HS đã được áp dụng chính xác.",
+        "en": "Yes, I have cross-referenced all import declarations and product information and confirmed that the HS codes have been applied correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations for examples and dialogue need to be rewritten to match the corrected Japanese content and ensure domain accuracy."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0a9bc7ebc89b926572757fa99fe07fc4adec0ab17cf0e0a543acce24eea4a35c",
+    "validated_at": "2026-10-01T01:54:57.690071+00:00"
+  }
+}

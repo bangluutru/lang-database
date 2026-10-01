@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000018",
+  "term": "費用負担の分岐点",
+  "overall_decision": "rewrite",
+  "summary_reason": "Many collocations and example sentences contain unnatural or redundant Japanese expressions. The dialogue is stilted and lacks natural flow. The English translation of the term itself is too generic and its usage in examples is unnatural.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "費用負担の分岐点の条件で契約する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「費用負担の分岐点」は条件そのものであり、「条件で契約する」は冗長で不自然。通常は「費用負担の分岐点を定める条件で契約する」または「費用負担の分岐点に関する条件で契約する」のように表現する。",
+      "suggested_text": "費用負担の分岐点を定める条件で契約する"
+    },
+    {
+      "index": 1,
+      "text": "費用負担の分岐点の建値で取引する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「建値」は価格設定の基準を指すため、「費用負担の分岐点」という概念に直接適用するのは不自然。インコタームズなどの取引条件を指す場合は「費用負担の分岐点を含む建値」や「費用負担の分岐点を考慮した建値」のように表現すべき。",
+      "suggested_text": "費用負担の分岐点を含む建値で取引する"
+    },
+    {
+      "index": 2,
+      "text": "費用負担の分岐点における費用負担を取り決める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「費用負担の分岐点」自体が費用負担の取り決めを意味するため、「費用負担を取り決める」と重複し不自然。通常は「費用負担の分岐点を定める」または「費用負担の分岐点を取り決める」と表現する。",
+      "suggested_text": "費用負担の分岐点を取り決める"
+    },
+    {
+      "index": 3,
+      "text": "費用負担の分岐点における危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。インコタームズでは費用負担の分岐点と危険移転の時点が異なる場合があるため、確認することは重要。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「費用負担の分岐点条件を採用しました」は不自然。「費用負担の分岐点を明確にする条件を採用しました」または「費用負担の分岐点に関する条件を採用しました」がより自然。",
+      "suggested_ja": "今回の海上輸送契約は、運賃と危険負担の範囲を明確にするため、費用負担の分岐点を定める条件を採用しました。",
+      "suggested_vi": "Hợp đồng vận tải biển lần này áp dụng điều kiện xác định điểm phân chia nghĩa vụ chi trả chi phí vận chuyển để làm rõ phạm vi chịu cước phí và rủi ro.",
+      "suggested_en": "This ocean transport contract adopted terms that define the division of costs to clarify the scope of freight costs and risk transfer."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「費用負担の分岐点建値での取引」は不自然。「費用負担の分岐点を考慮した建値での取引」や「費用負担の分岐点を含む取引条件での建値」がより自然。",
+      "suggested_ja": "費用負担の分岐点を考慮した建値での取引に基づき、仕向港での荷揚げ費用と輸入関税を輸入者側で負担します。",
+      "suggested_vi": "Căn cứ giao dịch theo giá đã tính đến điểm phân chia nghĩa vụ chi trả chi phí vận chuyển, chi phí dỡ hàng tại cảng đích và thuế nhập khẩu do bên nhập khẩu chịu.",
+      "suggested_en": "Based on transactions priced with consideration for the division of costs, unloading costs at the port of destination and import duties are borne by the importer."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言が不自然。「費用負担の分岐点の手配状況」という表現は一般的ではない。通常は「費用負担の分岐点に関する手配」や「費用負担の分岐点についての手配状況」のように表現する。また、Bの回答がAの質問に直接答えていない。通関業者や乙仲への連絡は手配の一部だが、全体像が見えない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、費用負担の分岐点に関する手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp liên quan đến điểm phân chia nghĩa vụ chi trả chi phí vận chuyển thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of arrangements concerning the division of costs?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は完了しており、費用負担の分岐点についても先方と確認済みです。現在は書類確認を終え、輸入申告に入っております。",
+        "vi": "Vâng, đã liên hệ xong với công ty thông quan và đại lý vận chuyển, cũng đã xác nhận điểm phân chia nghĩa vụ chi trả chi phí vận chuyển với bên đối tác. Hiện tại, chúng tôi đã hoàn tất kiểm tra hồ sơ và đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, we have completed contacting the customs broker and forwarding agent, and have also confirmed the division of costs with the other party. We have now finished document verification and are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translation for '費用負担の分岐点' as 'division of costs' is too generic. In the context of trade, 'division of costs' or 'cost allocation point' would be more precise, especially when referring to Incoterms. The example sentences use '費用負担の分岐点 terms' which is a direct transliteration and not natural English. It should be 'terms regarding the division of costs' or 'cost allocation terms'."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "07bb69e307ed1ee11021a2a121385bb139cd764e84f4b247d2731b6827f3564d",
+    "validated_at": "2026-10-01T01:54:06.211408+00:00"
+  }
+}

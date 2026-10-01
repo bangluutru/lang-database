@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000137",
+  "term": "競合他社",
+  "overall_decision": "reject",
+  "summary_reason": "「競合他社」という用語の使い方が、コロケーション、例文、対話の全てにおいて根本的に誤っており、日本語として全く自然ではない。このままでは学習者に誤った用法を教えてしまうため、全面的に書き直しが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "競合他社を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「開催する」は会議やイベントに対して使う動詞であり、「競合他社」という組織に対しては使えない。",
+      "suggested_text": "競合他社を分析する"
+    },
+    {
+      "index": 1,
+      "text": "競合他社で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「決議する」は組織や会議が何かを決定する際に使う動詞であり、「競合他社」という組織自体が決議の主体になることは稀。また、自社が競合他社で決議を行うことはない。",
+      "suggested_text": "競合他社の動向を決議する"
+    },
+    {
+      "index": 2,
+      "text": "競合他社に報告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "通常、自社が競合他社に何かを報告することはない。報告は社内や関連会社、株主などに対して行うもの。",
+      "suggested_text": "競合他社を報告する"
+    },
+    {
+      "index": 3,
+      "text": "競合他社へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "競合他社に届出書を提出することは一般的ではない。届出書は行政機関や関連団体に提出するもの。",
+      "suggested_text": "競合他社に関する届出書を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「競合他社を招集する」という表現は不自然。競合他社は自社が招集する対象ではない。会議を招集するのであれば「臨時株主総会を招集する」などとなる。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時株主総会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp cổ đông bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary general meeting of shareholders will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「競合他社において」という表現は、自社が競合他社内で何かを行うような誤解を与える。また、競合他社の経営方針や予算配分が自社の例として提示されるのは不適切。",
+      "suggested_ja": "当社において今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại công ty chúng tôi, phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At our company, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "「競合他社の準備状況」という表現は不自然。会議の準備状況を尋ねる際に、競合他社が会議の準備をする主体であるかのような誤解を与える。また、Bの発言も競合他社の準備状況に対する返答としては不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp dự kiến vào tuần tới, tình hình chuẩn bị tài liệu như thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, what is the status of the document preparation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong hôm nay.",
+        "en": "We have finished the final draft of the content and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語、英語ともに、元の日本語の誤った文脈をそのまま翻訳しているため、不自然な表現になっている。特に「競合他社」を会議の主体や場所として翻訳している点が問題。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0e8faa5932f1162137d97667422292d89fe115717d763a90c4801e8676744e4f",
+    "validated_at": "2026-10-01T01:52:44.015065+00:00"
+  }
+}

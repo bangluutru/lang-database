@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000048",
+  "term": "競業避止義務",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain hallucination: accounting boilerplate templates (book reconciliation, closing entries, subsidiary ledgers) were mechanically forced onto a legal/employment law covenant.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "競業避止義務を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural legal/HR collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "競業避止義務を果たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable and natural phrasing for fulfilling an obligation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "競業避止義務を負う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Extremely common legal phrasing for bearing a non-compete duty.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "競業避止義務に違反する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal collocation for breaching non-compete obligations.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A non-compete obligation is a legal/HR covenant, not an accounting account balance or ledger entry to reconcile.",
+      "suggested_ja": "役員や重要機密に触れる従業員が退職する際には、競業避止義務に関する誓約書の提出を徹底しています。",
+      "suggested_vi": "Khi cán bộ quản lý hoặc nhân viên tiếp cận bí mật quan trọng nghỉ việc, chúng tôi yêu cầu nộp đầy đủ bản cam kết về nghĩa vụ không cạnh tranh.",
+      "suggested_en": "When executives or employees with access to critical confidential information leave the company, we ensure the submission of a non-compete pledge."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Blind templating of financial closing onto a legal covenant; non-compete obligations are not processed as accounting closing entries.",
+      "suggested_ja": "就業規則および秘密保持規程に則り、退職後一定期間における同業他社への転職を制限する競業避止義務を定めています。",
+      "suggested_vi": "Căn cứ theo nội quy lao động và quy định bảo mật, chúng tôi quy định nghĩa vụ không cạnh tranh nhằm hạn chế việc chuyển sang làm việc cho công ty đối thủ trong một thời gian nhất định sau khi nghỉ việc.",
+      "suggested_en": "In accordance with employment regulations and confidentiality rules, we stipulate non-compete obligations restricting employment with competitors for a specified period after retirement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Complete domain mismatch; non-compete obligations do not appear on monthly closing books or subsidiary ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "開発部長の転職に伴い、競業避止義務違反の恐れがないか法務部に確認してもらえますか。",
+        "vi": "Liên quan đến việc Trưởng phòng R&D chuyển việc, anh có thể nhờ phòng Pháp chế kiểm tra xem có nguy cơ vi phạm nghĩa vụ không cạnh tranh hay không?",
+        "en": "With the R&D director changing jobs, could you have the legal department check whether there is any risk of breach of non-compete obligations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。入社時および退職時の誓約書の規定範囲を直ちに精査させます。",
+        "vi": "Tôi hiểu rồi. Tôi sẽ yêu cầu họ rà soát ngay phạm vi quy định trong bản cam kết ký lúc vào công ty và khi thôi việc.",
+        "en": "Understood. I will have them immediately examine the scope of the non-compete pledges signed upon joining and resigning."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings for the headword are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1596e50707bbf290be117989fb03e31c8c57c5a8ea85406fc8c2fa7312d0a454",
+    "validated_at": "2026-10-01T01:41:43.948411+00:00"
+  }
+}

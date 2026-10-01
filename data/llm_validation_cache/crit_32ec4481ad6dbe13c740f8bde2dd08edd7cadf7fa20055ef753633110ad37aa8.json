@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000167",
+  "term": "営業外費用",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 feature unnatural predicate pairing and semantic mismatch, Example 1 relies on repetitive template filler, and the dialogue contains stilted phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "営業外費用を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking non-operating expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "営業外費用の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end closing / trial balance verification contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "営業外費用を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles vouchers or breakdown items (内訳/明細) rather than directly applying '照合する' to the account classification itself.",
+      "suggested_text": "営業外費用の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "営業外費用を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to reimbursable business expenses or advance payments (立替金/仮払金), not high-level P&L accounts such as interest expense or FX loss.",
+      "suggested_text": "営業外費用に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriate description of month-end reconciliation procedure.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Displays redundant templated rhetoric ('適正な...適正に処理いたしました') lacking practical business specificity.",
+      "suggested_ja": "当期に発生した為替差損および借入金の支払利息は、営業外費用として計上しています。",
+      "suggested_vi": "Các khoản lỗ tỷ giá và chi phí lãi vay phát sinh trong kỳ này được hạch toán vào chi phí ngoài hoạt động kinh doanh.",
+      "suggested_en": "Foreign exchange losses and interest paid on borrowings incurred during this term are recognized as non-operating expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The expression '適正に整合している' is unnatural business Japanese jargon bordering on tautology; also '差異は発生していませんか' is better phrased as '差異はありませんか'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、営業外費用の計上内容に不明な差異はありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí ngoài hoạt động kinh doanh có chênh lệch nào chưa rõ không?",
+        "en": "In this month's closing, are there any unexplained discrepancies in the non-operating expense entries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, và xác nhận mọi thứ đều khớp chính xác không có vấn đề gì.",
+        "en": "I have already reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches properly without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both Vietnamese and English translations accurately reflect the accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fdaf5de1882952ed6b1b16715739de05b683deaa48fae4622356427a2bcec167",
+    "validated_at": "2026-10-01T01:36:42.535965+00:00"
+  }
+}

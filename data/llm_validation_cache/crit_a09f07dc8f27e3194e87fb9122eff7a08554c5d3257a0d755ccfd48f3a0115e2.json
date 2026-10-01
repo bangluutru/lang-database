@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000177",
+  "term": "無申告加算税",
+  "overall_decision": "rewrite",
+  "summary_reason": "ペナルティ（附帯税）である無申告加算税に対し、定常的な本税（法人税・消費税等）向けのテンプレート文を無理に当てはめており、実務的・論理的な破綻が多数見られます。実務即応の文脈に全面改訂する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "無申告加算税を申告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "納税者が加算税自体を申告することはありません。加算税は税務署から賦課決定される附帯税です。申告するのは『期限後申告』等です。",
+      "suggested_text": "無申告加算税が賦課される"
+    },
+    {
+      "index": 1,
+      "text": "無申告加算税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "賦課決定された加算税を納める表現として自然です。",
+      "suggested_text": "無申告加算税を納付する"
+    },
+    {
+      "index": 2,
+      "text": "無申告加算税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税理士や経理担当者が自主申告や修正申告に伴う追徴リスクとして試算する文脈で成立します。",
+      "suggested_text": "無申告加算税を計算する"
+    },
+    {
+      "index": 3,
+      "text": "無申告加算税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ペナルティが科される標準的なコロケーションです。",
+      "suggested_text": "無申告加算税が課される"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "定型文の流用です。無申告加算税は期限内に申告しなかったことに対するペナルティであり、『課税標準および適用税率を正確に算出し、納期限までに納付手続きを完了した』という前向きな定常業務の文脈と論理的に破綻しています。",
+      "suggested_ja": "期限後申告を行ったため、本税に加えて無申告加算税が課される見込みです。",
+      "suggested_vi": "Do nộp tờ khai sau thời hạn luật định, dự kiến chúng tôi sẽ bị áp dụng tiền phạt do không nộp tờ khai đúng hạn bên cạnh số tiền thuế gốc.",
+      "suggested_en": "Since we filed the return after the statutory due date, it is expected that a penalty tax for failure to file will be levied in addition to the principal tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "定型テンプレートの当てはめです。無申告加算税は法令違反に伴う附帯税であり、通常の企業が『税制改正を踏まえて当期の税負担額への影響を試算する』対象ではありません。",
+      "suggested_ja": "税務調査の通知を受け、無申告となっていた過去の海外取引について無申告加算税の発生リスクを精査しています。",
+      "suggested_vi": "Sau khi nhận thông báo thanh tra thuế, chúng tôi đang rà soát kỹ lưỡng rủi ro phát sinh tiền phạt do không nộp tờ khai liên quan đến các giao dịch nước ngoài chưa kê khai trước đây.",
+      "suggested_en": "Following notice of a tax audit, we are scrutinizing the risk of non-filing penalty taxes regarding previously unfiled overseas transactions."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算で無申告加算税の計上差異を補助元帳と照合するというシチュエーションは実務上あり得ません。加算税は定常的な月次処理ではなく、申告漏れ等が発生した際の一時的な損失（雑損失・租税公課）です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "子会社で期限後申告となった件ですが、無申告加算税の金額は確定しましたか。",
+        "vi": "Về việc công ty con nộp tờ khai muộn, số tiền phạt do không nộp tờ khai đúng hạn đã được xác định chưa?",
+        "en": "Regarding the late filing by the subsidiary, has the amount of the penalty tax for failure to file been confirmed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "税務署からの賦課決定通知書を受領し、金額を確認の上、追徴分として納付手配を進めております。",
+        "vi": "Chúng tôi đã nhận thông báo ấn định thuế từ cơ quan thuế, đã đối chiếu số tiền và đang sắp xếp nộp phần thuế truy thu này.",
+        "en": "We received the assessment notice from the tax office, verified the amount, and are arranging payment for the additional penalty."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳で例文中に括弧書きの税率「(15-30%)」が機械的に埋め込まれており、自然なビジネス文ではありません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f91d6eb5c6feb989675517a3466261296e87968c20ddb344dbe9474a7ccb17ee",
+    "validated_at": "2026-10-01T01:40:32.997842+00:00"
+  }
+}

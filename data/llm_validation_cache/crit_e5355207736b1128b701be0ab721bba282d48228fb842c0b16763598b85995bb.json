@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000174",
+  "term": "ラッシング",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure conversational continuity and direct relevance of Speaker B's response to Speaker A's question.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ラッシングを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "ラッシングが完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "ラッシングの作業手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "ラッシング時の安全対策を講じる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of 'lashing arrangement' (ラッシングの手配状況) but rather shifts to customs clearance and documentation. While related to the overall shipping process, it doesn't provide the requested update on lashing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、ラッシングの手配状況はいかがでしょうか。",
+        "vi": "Về trường hợp dự kiến thông quan hôm nay, tình hình sắp xếp chằng buộc hàng hóa thế nào rồi ạ?",
+        "en": "Regarding the case scheduled for customs clearance today, what is the status of the lashing arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "ラッシングは先ほど完了し、現在、通関業者と乙仲への連絡を済ませ、書類の確認も完了して輸入申告に入っております。",
+        "vi": "Việc chằng buộc hàng hóa đã hoàn tất lúc nãy, hiện tại chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, việc kiểm tra tài liệu cũng đã hoàn tất và đang tiến hành khai báo nhập khẩu.",
+        "en": "Lashing was completed a short while ago. We have now contacted the customs broker and forwarding agent, completed document verification, and are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ff1b4b0bdc61743f151d9d609b435bd445bfa4fdc657aa96411a6677cccf6f12",
+    "validated_at": "2026-10-01T01:57:01.016938+00:00"
+  }
+}

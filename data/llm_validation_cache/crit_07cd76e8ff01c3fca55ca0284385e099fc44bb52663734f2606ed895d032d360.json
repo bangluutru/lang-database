@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000079",
+  "term": "中小企業投資促進税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and workplace dialogue are solid, but both example sentences rely on unnatural templating with tautological phrasing ('税制の制度') and factual disconnects regarding tax incentive criteria. Both examples require revisions along with their translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "中小企業投資促進税制を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate management and advisory contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "中小企業投資促進税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard statutory terminology in Japanese tax filings.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "中小企業投資促進税制を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business register expression for capital expenditure planning.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "中小企業投資促進税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression when determining eligibility of qualifying assets.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Pleonastic '〜税制の制度を活用しました' is unnatural Japanese (tautology of 制/制度). Furthermore, connecting machinery investment tax incentives to '地域貢献' is factually mismatched with the incentive's statutory purpose (productivity enhancement). Vietnamese also suffers from duplicate text ('chính sách chính sách').",
+      "suggested_ja": "工場への最新機械設備の導入に伴い、中小企業投資促進税制を活用して特別償却を計上しました。",
+      "suggested_vi": "Cùng với việc đưa máy móc thiết bị hiện đại vào nhà máy, chúng tôi đã tận dụng chính sách ưu đãi thuế đầu tư cho doanh nghiệp vừa và nhỏ để trích khấu hao đặc biệt.",
+      "suggested_en": "Following the introduction of state-of-the-art machinery at the plant, we utilized the SME capital investment tax incentive to record special depreciation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'計画的に中小企業投資促進税制の手続きを進めました' is a vague, templated collocation. In corporate practice, companies confirm whether newly acquired assets meet the designated requirements before applying the deduction or special depreciation on tax return schedule 16.",
+      "suggested_ja": "取得した機械が中小企業投資促進税制の要件を満たしていることを確認し、税額控除の適用に向けて別表を作成しました。",
+      "suggested_vi": "Sau khi xác nhận máy móc mua về đáp ứng đủ điều kiện của chính sách ưu đãi thuế đầu tư cho doanh nghiệp vừa và nhỏ, chúng tôi đã lập phụ biểu để áp dụng khấu trừ thuế.",
+      "suggested_en": "After confirming that the acquired machinery met the requirements of the SME capital investment tax incentive, we prepared the tax return schedules to claim the tax credit."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between the manager and accounting staff regarding tax filing documentation and supporting evidence is practical, professional, and logically sound.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Example 0 in Vietnamese contains a duplicate word ('chính sách chính sách'). Example 1 in English ('proceeded with the tax incentive') lacks proper syntactic collocations ('applying for' / 'procedures for')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "86cbdf11ef64d4e6424b776c574c2787cd3638f75c0299daddbc23403a716629",
+    "validated_at": "2026-10-01T01:38:44.975375+00:00"
+  }
+}

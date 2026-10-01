@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000060",
+  "term": "保税運送申告書",
+  "overall_decision": "pass",
+  "summary_reason": "全体的に品質は高いですが、コロケーションの一つに不自然な表現があったため修正を推奨します。それ以外は、例文、対話、翻訳ともにビジネスシーンで自然に使用できるレベルです。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保税運送申告書を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「交付する」は通常、公的機関が書類を発行する際に使う表現であり、企業が申告書を「交付する」のは不自然。企業は「提出する」または「作成する」。",
+      "suggested_text": "保税運送申告書を作成する"
+    },
+    {
+      "index": 1,
+      "text": "保税運送申告書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保税運送申告書を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "保税運送申告書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現です。法令遵守の姿勢も適切に示されています。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務調査やコンプライアンス監査への備えという文脈で、書類の保管について言及するのは自然です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Aの発言に対するBの応答が論理的で、会話の流れも自然です。専門用語も適切に使われています。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ff47ec90119808c29229e1a80dc39e24b1d326e6c0ff1afa3236cd7f0f6879ec",
+    "validated_at": "2026-10-01T01:54:35.567385+00:00"
+  }
+}

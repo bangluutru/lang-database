@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000123",
+  "term": "売上高",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an impossible collocation ('売上高を精算する'), inappropriate application of P/L vs B/S accounting concepts ('売上高の残高'), redundant phrasing in the dialogue, and mechanical dictionary copy-pasting across translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売上高を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, correct accounting collocation for recognizing revenue/net sales.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売上高の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "売上高 is a P/L (income statement) revenue item, typically referred to as 累計額, 計上額, or 実績, whereas 残高 predominantly applies to B/S (balance sheet) account balances.",
+      "suggested_text": "売上高の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "売上高を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in audit and reconciliation procedures (e.g., matching revenue records against external vouchers or budget figures).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "売上高を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算する (to settle/reimburse) applies to expenses, advances, or claims (経費, 旅費, 仮払金), never to revenue (売上高).",
+      "suggested_text": "売上高を分析する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Applying '残高' to 売上高 is conceptually unnatural for a P/L account in Japanese practice. Also, the translations mechanically pasted the slash-delimited dictionary gloss ('doanh thu bán hàng / tổng doanh thu thuần', 'net sales / revenue').",
+      "suggested_ja": "月末の帳簿照合において、売上高の計上漏れや金額の差異がないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sai sót hay chênh lệch nào về số tiền ghi nhận doanh thu hay không.",
+      "suggested_en": "During month-end reconciliation, we carefully verify that there are no unrecorded sales or discrepancies in revenue recognition."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence displays heavy templating with clumsy repetition of '適正な...適正に'. Translations also contain slash-delimited dictionary definitions instead of natural prose.",
+      "suggested_ja": "適用される会計基準および社内規程に則り、当期の売上高を正しく計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán hiện hành và quy định nội bộ, chúng tôi đã ghi nhận doanh thu kỳ này một cách chuẩn xác.",
+      "suggested_en": "In accordance with applicable accounting standards and internal policies, revenue for the current fiscal term was accurately recognized."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase '適正に整合している' in Speaker B is redundant and unnaturally stiff. A more natural corporate phrasing is '整合性を確認いたしました' or simply '数値が一致していることを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売上高の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán doanh thu có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the revenue entries for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と売上補助元帳を突合済みで、数値の整合性を確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ doanh thu và xác nhận các số liệu đều khớp.",
+        "en": "I have already reconciled the supporting documents against the sales subsidiary ledger and confirmed that all figures are consistent."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both language outputs in the examples mechanically pasted dictionary strings with slashes (e.g. 'doanh thu bán hàng / tổng doanh thu thuần' and 'net sales / revenue') rather than rendering fluent, natural context-appropriate sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c6e3784fd16627c2d6babd4d6fb13a435b98371d15839b73463c902ccca248a1",
+    "validated_at": "2026-10-01T01:35:49.411953+00:00"
+  }
+}

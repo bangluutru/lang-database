@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000178",
+  "term": "法人税等調整額",
+  "overall_decision": "rewrite",
+  "summary_reason": "損益項目である法人税等調整額に対して『残高』『精算する』といったB/S科目や経費精算用テンプレート表現を混同しており、対話部分でも外部証憑が存在しない調整額を『証憑書類と照合する』とする重大な会計実務上の誤認が含まれているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法人税等調整額を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording deferred tax expense/benefit on the income statement.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "法人税等調整額の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "『法人税等調整額』は損益計算書（P/L）項目であり、通常『残高』ではなく『計上額』『影響額』と表現します（残高はB/Sの繰延税金資産・負債に対して使われます）。",
+      "suggested_text": "法人税等調整額の計上額を算定する"
+    },
+    {
+      "index": 2,
+      "text": "法人税等調整額を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税効果会計の調整額自体を単体で『照合する』とはあまり言わず、税効果計算シートと整合性を確かめるか、繰延税金資産等の増減と関連付けて表現するのが自然です。",
+      "suggested_text": "法人税等調整額を計算シートと突合する"
+    },
+    {
+      "index": 3,
+      "text": "法人税等調整額を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税効果会計の期間配分項目である調整額を『精算する』という用法は会計実務に存在せず、明らかな不自然さがあります。",
+      "suggested_text": "法人税等調整額を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "法人税等調整額はP/L項目であるため『残高に差異』という表現は会計上不自然であり、通常は月次でなく四半期や年度決算の税効果計算で精査されます。またテンプレ的な表現です。",
+      "suggested_ja": "四半期決算において一時差異の増減を集計し、損益計算書に法人税等調整額を正しく反映させた。",
+      "suggested_vi": "Trong kỳ quyết toán quý, chúng tôi đã tổng hợp sự biến động của chênh lệch tạm thời và phản ánh chính xác chi phí thuế hoãn lại vào báo cáo kết quả hoạt động kinh doanh.",
+      "suggested_en": "During the quarterly closing, we aggregated changes in temporary differences and accurately reflected deferred income taxes in the income statement."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "『適正な会計基準…適正に処理いたしました』と『適正』が重複した不自然な自動生成テンプレート文です。実務に即した文脈への修正が必要です。",
+      "suggested_ja": "税効果会計基準に則り、繰延税金資産の回収可能性を検討した上で、当期の法人税等調整額を計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán thuế thu nhập, sau khi đánh giá khả năng thu hồi tài sản thuế hoãn lại, chúng tôi đã hạch toán chi phí thuế hoãn lại cho kỳ này.",
+      "suggested_en": "In accordance with tax effect accounting standards, we recorded deferred income taxes for the current period after reviewing the recoverability of deferred tax assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "法人税等調整額は税務申告書の一時差異等から算出される会計的調整項目であり、外部の『証憑書類』（領収書や請求書など）と照合するものではありません。会計実務として明白な誤りです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、法人税等調整額の試算結果はどうなっていますか。",
+        "vi": "Trong đợt quyết toán kỳ này, kết quả tính toán sơ bộ chi phí thuế hoãn lại thế nào rồi?",
+        "en": "What is the preliminary result for income taxes - deferred in this term's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "一時差異管理シートと税務申告調整額を突合し、計上額の妥当性を監査法人と確認中です。",
+        "vi": "Chúng tôi đã đối chiếu bảng quản lý chênh lệch tạm thời với các khoản điều chỉnh quyết toán thuế và đang xác nhận tính hợp lý của số tiền hạch toán với công ty kiểm toán.",
+        "en": "We cross-checked the temporary difference schedule with tax return adjustments and are currently verifying the validity of the booked amount with the audit firm."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese are standard and accurate in accounting contexts."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ce096ec3e987e85402a600daca943a838035ec0d75a5d6e3d82219e1fa7de391",
+    "validated_at": "2026-10-01T01:36:56.573354+00:00"
+  }
+}

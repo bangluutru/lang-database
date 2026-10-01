@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-business-000164",
+  "term": "キーパーソン",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core meaning of 'キーパーソン' is misinterpreted in the provided translations and examples. It's used in too formal a context where more specific corporate titles or roles would be appropriate, leading to unnatural Japanese sentences. The Vietnamese translation is particularly off-target, and the English translation is too strong. The dialogue also suffers from unnatural phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "キーパーソンを選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "キーパーソンに就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "キーパーソンに相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "キーパーソンの職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically possible, 'キーパーソンの職務' is an awkward phrasing. 'キーパーソンとしての職務' or 'キーパーソンが職務を遂行する' would be more natural. 'キーパーソン' itself implies a role, so '職務' is somewhat redundant or awkwardly attached.",
+      "suggested_text": "キーパーソンとして職務を遂行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The term 'キーパーソン' is generally used in a more informal or strategic context, often referring to an influential individual in a project, negotiation, or sales process. It's rarely used in formal corporate governance documents like shareholder meeting resolutions to refer to a newly appointed officer. For a formal appointment, terms like '取締役', '執行役員', '役員' are used. The Vietnamese translation also misinterprets 'キーパーソン' as 'người nắm quyền quyết định mua sắm cốt lõi', which is too specific and not implied by the Japanese term.",
+      "suggested_ja": "新プロジェクトの成功に向けて、A氏がキーパーソンに選任されました。",
+      "suggested_vi": "Để đảm bảo thành công cho dự án mới, ông A đã được chọn làm người chủ chốt.",
+      "suggested_en": "Mr. A has been appointed as the key person for the success of the new project."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Similar to the first example, 'キーパーソン' is not typically used in formal compliance or legal contexts like '業務執行の適法性確保'. For such matters, one would refer to '担当役員', '責任者', or '関係者'. The phrase 'キーパーソンと定期的な報告連絡会を開催しています' sounds somewhat forced in this formal context. The Vietnamese translation again uses 'người nắm quyền quyết định mua sắm cốt lõi', which is an incorrect interpretation of 'キーパーソン'.",
+      "suggested_ja": "プロジェクトの進捗状況を共有するため、キーパーソンとの定例会議を毎週開催しています。",
+      "suggested_vi": "Để chia sẻ tình hình tiến độ dự án, chúng tôi tổ chức cuộc họp định kỳ hàng tuần với người chủ chốt.",
+      "suggested_en": "To share project progress, we hold weekly regular meetings with the key person."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'preparation status of the key person' (キーパーソンの準備状況). This phrasing is awkward. It implies the key person themselves is being prepared, rather than the materials or tasks related to them. Speaker B's response about 'finalizing content' and 'obtaining prior approval from executives' doesn't directly address the 'key person's preparation status' but rather the preparation of meeting materials, which is a plausible interpretation but highlights the awkwardness of A's question. A more natural question would be about the 'preparations for the key person' or 'materials for the key person'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、キーパーソンへの説明資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp dự kiến vào tuần tới, tình hình chuẩn bị tài liệu thuyết trình cho người chủ chốt thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, what is the preparation status of the briefing materials for the key person?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc điều hành, vì vậy chúng tôi sẽ sắp xếp gửi đi trong hôm nay.",
+        "en": "We have completed the final draft of the content and have also obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese translation 'người nắm quyền quyết định mua sắm cốt lõi' is overly specific and incorrect for 'キーパーソン'. 'Key decision maker' in English is also too strong; 'key person' or 'influential person' is more appropriate for 'キーパーソン'. The term 'キーパーソン' in Japanese business context often refers to an influential individual in a project, negotiation, or sales process, not necessarily a 'decision maker' in a formal corporate sense, and certainly not specifically for 'purchasing'. A more general translation is needed for both."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "760ddc286f4a1f37937eb8b62376af66d116a793e2ba4887e8f860224228268d",
+    "validated_at": "2026-10-01T01:53:01.596106+00:00"
+  }
+}

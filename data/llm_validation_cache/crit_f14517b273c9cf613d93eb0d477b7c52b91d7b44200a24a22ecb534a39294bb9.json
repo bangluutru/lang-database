@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000075",
+  "term": "固定資産合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「合計（小計・集計値）」という集計項目に対して「計上する」「精算する」「処理する」などの述語が不適切に適用されており、機械生成特有のコロケーション破綻が発生しています。財務諸表・台帳突合の実務に即した自然な表現に全面修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定資産合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「合計」は集計・計算の結果であり、仕訳や計上の直接の対象（勘定科目）ではないため不自然です。",
+      "suggested_text": "固定資産合計を算出する"
+    },
+    {
+      "index": 1,
+      "text": "固定資産合計の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「合計」自体に残高という修飾を重ねるのは不自然です。「固定資産の残高合計」とするか、単に「固定資産合計を確認する」と表現します。",
+      "suggested_text": "固定資産合計を確認する"
+    },
+    {
+      "index": 2,
+      "text": "固定資産合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "貸借対照表上の合計値と固定資産台帳の集計値を照合するという文脈で自然に使われます。",
+      "suggested_text": "固定資産合計を照合する"
+    },
+    {
+      "index": 3,
+      "text": "固定資産合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "固定資産の合計行を「精算」することは会計実務上あり得ません。",
+      "suggested_text": "固定資産合計を試算表に反映する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「固定資産合計の計上内容」という表現は不自然です（合計行を計上するのではなく、個別の固定資産を計上した結果が合計となるため）。台帳と総勘定元帳の合計値照合の実務に即した表現へ修正が必要です。",
+      "suggested_ja": "月末の帳簿照合において、固定資産台帳と総勘定元帳の固定資産合計に差異がないか精査します。",
+      "suggested_vi": "Trong việc đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch giữa tổng tài sản dài hạn trên sổ cái và trên sổ tài sản cố định hay không.",
+      "suggested_en": "During month-end reconciliation, we thoroughly inspect whether there are discrepancies between total non-current assets in the general ledger and the fixed asset register."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「固定資産合計を適正に処理いたしました」は機械的テンプレートによる破綻表現です。合計額は処理するものではなく、算定・開示されるものです。",
+      "suggested_ja": "設備投資に伴う新規取得と減価償却の反映により、当期末の固定資産合計は前期比で5%増加しました。",
+      "suggested_vi": "Do ghi nhận các tài sản mua mới cùng chi phí khấu hao theo các khoản đầu tư cơ bản, tổng tài sản dài hạn vào cuối kỳ này đã tăng 5% so với kỳ trước.",
+      "suggested_en": "Reflecting new acquisitions and depreciation from capital investments, total non-current assets at the end of this term increased by 5% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの発言「固定資産合計の計上内容に差異」は語彙の組み合わせが不自然です。またBの発言「証憑書類と補助元帳を照合」も固定資産合計の確認会話としてはピントがずれています（固定資産台帳と元帳の照合が実務的です）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、固定資産台帳と貸借対照表の固定資産合計に差異は発生していませんか。",
+        "vi": "Trong quyết toán tháng này, có chênh lệch nào giữa sổ tài sản cố định và tổng tài sản dài hạn trên bảng cân đối kế toán không?",
+        "en": "In this month's monthly closing, are there any discrepancies between the fixed asset register and total non-current assets on the balance sheet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "新工場の設備取得も含めて台帳との照合を完了しており、固定資産合計は完全に一致しております。",
+        "vi": "Chúng tôi đã hoàn thành đối chiếu với sổ phụ bao gồm cả các thiết bị mới cho nhà máy, và tổng tài sản dài hạn hoàn toàn khớp nhau.",
+        "en": "We have completed reconciliation with the register, including equipment acquisitions for the new factory, and the total non-current assets match completely."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "基本訳語「Total non-current assets」「tổng tài sản dài hạn」は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "153c8b667361fe0a7b1080eb35e143014d98c91981eb119d596180d20cf95111",
+    "validated_at": "2026-10-01T01:34:56.404585+00:00"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000182",
+  "term": "完全生産品",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term '完全生産品' is a customs/trade concept related to rules of origin, not an accounting concept. The original examples and dialogue incorrectly apply it to accounting entries, balances, and reconciliation. This fundamental domain mismatch makes the provided learning object misleading and unsuitable for professional education without significant revision.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完全生産品を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用する」は規則や基準に対して使う動詞であり、物品である「完全生産品」には直接適用しない。関税率や原産地規則を適用する際に「完全生産品」の概念を用いる。",
+      "suggested_text": "完全生産品として適用する"
+    },
+    {
+      "index": 1,
+      "text": "完全生産品を照会する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「照会する」は情報や事実を問い合わせる際に使う動詞であり、物品そのものを照会するとは言わない。完全生産品であるか否か、その分類について照会する。",
+      "suggested_text": "完全生産品であるか照会する"
+    },
+    {
+      "index": 2,
+      "text": "完全生産品を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「納付する」は金銭や物品を国や公共団体に納める際に使う動詞であり、物品である「完全生産品」そのものを納付するとは言わない。関税などを納付する際に、その対象となる物品が完全生産品であるという文脈で使われる。",
+      "suggested_text": "完全生産品に係る関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "完全生産品の分類を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「完全生産品」は関税分類や原産地規則の概念であり、会計上の「計上」や「残高」とは直接関連しない。会計帳簿に計上されるのは、物品の取得原価や売上高などであり、その物品が完全生産品であるか否かは会計処理の直接的な対象ではない。",
+      "suggested_ja": "月末の帳簿照合において、輸入貨物の原産地規則適用状況、特に完全生産品としての分類が適切であったかを確認します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra xem tình hình áp dụng quy tắc xuất xứ đối với hàng hóa nhập khẩu, đặc biệt là việc phân loại là hàng hóa được sản xuất thuần túy 100% tại một quốc gia (Wholly Obtained), có phù hợp hay không.",
+      "suggested_en": "During month-end book reconciliation, we verify whether the application of rules of origin for imported goods, especially their classification as wholly obtained goods, was appropriate."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "上記と同様、「完全生産品」は会計処理の直接的な対象ではない。会計基準や社内規程に則って処理されるのは、物品の取得、販売、評価などであり、その物品が完全生産品であるという属性そのものを「処理する」とは言わない。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において、輸入貨物の原産地規則適用に関する記録を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các hồ sơ liên quan đến việc áp dụng quy tắc xuất xứ đối với hàng hóa nhập khẩu trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed records related to the application of rules of origin for imported goods in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「完全生産品」は会計上の「計上内容」や「差異」の対象ではないため、会話の前提が不適切。貿易実務における原産地規則の確認や関税申告の文脈で用いるべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入申告で、完全生産品として申告した貨物の原産地証明書に不備はありませんでしたか。",
+        "vi": "Trong tờ khai nhập khẩu tháng này, giấy chứng nhận xuất xứ của hàng hóa được khai báo là hàng hóa được sản xuất thuần túy 100% tại một quốc gia (Wholly Obtained) có vấn đề gì không?",
+        "en": "Regarding this month's import declaration, were there any deficiencies in the certificate of origin for the goods declared as wholly obtained?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税関からの照会もなく、すべて適正に受理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã xác nhận rằng tất cả đã được chấp nhận một cách phù hợp mà không có bất kỳ yêu cầu nào từ hải quan.",
+        "en": "Yes, I've confirmed that everything was properly accepted without any inquiries from customs."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "36100722e55448dafaa15505719d2b30e45742a8a92bb077cc9994ca827f2f33",
+    "validated_at": "2026-10-01T01:57:11.429522+00:00"
+  }
+}

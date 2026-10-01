@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000182",
+  "term": "スキャナ保存",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain errors: 'スキャナ保存' (Scanner Storage under the Electronic Books Preservation Act) was mechanically treated by templates as a general accounting ledger item with 'booked contents and balances' (計上内容・残高).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "スキャナ保存を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in corporate environments when promoting the transition to scanner storage under the Electronic Books Preservation Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "スキャナ保存を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'スキャナ保存' is an ongoing document preservation method/system under tax law, not a discrete task that one 'completes'.",
+      "suggested_text": "スキャナ保存を導入する"
+    },
+    {
+      "index": 2,
+      "text": "スキャナ保存の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase for checking compliance and internal workflows.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "スキャナ保存を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression referring to reviewing operational procedures or compliance requirements.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'スキャナ保存' is an electronic document preservation method under the Electronic Books Preservation Act (電子帳簿保存法); it is not an accounting line item and has no '計上内容' (booked contents) or '残高' (balances).",
+      "suggested_ja": "電子帳簿保存法に基づき、受領した紙の領収書や請求書は速やかにスキャナ保存を行っています。",
+      "suggested_vi": "Căn cứ theo Luật Lưu trữ Sổ sách Kế toán Điện tử, các hóa đơn và biên lai giấy nhận được đều được thực hiện lưu trữ số hóa qua máy quét một cách nhanh chóng.",
+      "suggested_en": "In accordance with the Electronic Books Preservation Act, received paper receipts and invoices are promptly scanned and archived."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'スキャナ保存を適正に処理いたしました' treats scanner storage as an accounting closing entry, which is nonsensical.",
+      "suggested_ja": "社内規程を改定し、領収書のスキャナ保存要件を満たすタイムスタンプの付与運用を徹底しています。",
+      "suggested_vi": "Chúng tôi đã sửa đổi quy chế nội bộ và quán triệt việc gắn dấu thời gian (timestamp) nhằm đáp ứng đầy đủ các điều kiện lưu trữ số hóa hóa đơn qua máy quét.",
+      "suggested_en": "We have revised our internal regulations and thoroughly enforced the application of timestamps to meet the scanner storage requirements for receipts."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking whether 'discrepancies occurred in the booked contents of scanner storage' ('スキャナ保存の計上内容に差異は発生していませんか') represents a severe factual hallucination conflating document archiving with accounting ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "電子帳簿保存法の改正に伴い、領収書のスキャナ保存への移行状況はいかがですか。",
+        "vi": "Liên quan đến việc sửa đổi Luật Lưu trữ Sổ sách Điện tử, tiến độ chuyển đổi sang lưu trữ số hóa hóa đơn bằng máy quét hiện thế nào rồi?",
+        "en": "Following the revision of the Electronic Books Preservation Act, how is the transition to scanner storage for receipts progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "社内規程の整備とスマホ撮影アプリの導入が完了し、来月より本格運用を開始する予定です。",
+        "vi": "Chúng tôi đã hoàn tất việc xây dựng quy chế nội bộ và triển khai ứng dụng chụp ảnh bằng điện thoại thông minh, dự kiến sẽ đưa vào vận hành chính thức từ tháng sau.",
+        "en": "We have established internal regulations and implemented the smartphone capture app, with full-scale operations scheduled to begin next month."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations accurately reflect the tax/compliance concept, though the generated example/dialogue translations inherited the source factual errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "227da7ce60cd268eb4d68e347b610dd8dc323f24169125dd6a73f79719a9dee0",
+    "validated_at": "2026-10-01T01:40:35.704952+00:00"
+  }
+}

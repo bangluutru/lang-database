@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000168",
+  "term": "反面調査",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic hallucination. The generator treated '反面調査' (a statutory counterparty tax investigation by tax authorities) as an accounting entry/balance to be reconciled and booked during month-end closing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "反面調査を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "反面調査 is an external inquiry/investigation conducted by tax authorities on business counterparties. From a corporate business perspective, one undergoes or responds to it, rather than 'progresses' it.",
+      "suggested_text": "反面調査に対応する"
+    },
+    {
+      "index": 1,
+      "text": "反面調査を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Tax authorities conduct and conclude the investigation, but for a corporate learning object, '反面調査を受ける' (undergo a cross-check audit) is the standard authentic workplace collocation.",
+      "suggested_text": "反面調査を受ける"
+    },
+    {
+      "index": 2,
+      "text": "反面調査の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in the context of preparing an internal manual or readiness checklist for when tax auditors conduct a counterparty investigation.",
+      "suggested_text": "反面調査の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "反面調査を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company cannot 'review/revise' a statutory tax investigation carried out by the tax office.",
+      "suggested_text": "反面調査が入る"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error. 反面調査 is a tax audit procedure targeting counterparties, not an accounting entry or ledger item. It has neither 'entries' (計上内容) nor 'balances' (残高).",
+      "suggested_ja": "主要取引先への税務調査に伴い、当社にも反面調査が入る可能性があるため、過去3年分の取引証憑を整理しておいてください。",
+      "suggested_vi": "Do cơ quan thuế đang tiến hành thanh tra một đối tác lớn, có khả năng công ty chúng ta cũng sẽ bị thanh tra đối chiếu chéo, vì vậy hãy sắp xếp lại toàn bộ chứng từ giao dịch trong 3 năm qua.",
+      "suggested_en": "Following a tax audit of a major client, there is a possibility that our company may also undergo a cross-check tax audit, so please organize transaction vouchers from the past three years."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error. An external tax investigation cannot be 'accounted for or processed in closing entries' (決算において反面調査を適正に処理いたしました).",
+      "suggested_ja": "税務署から取引先に関する反面調査の依頼があったため、顧問税理士と協議のうえ、求められた請求書および納品書の控えを提出しました。",
+      "suggested_vi": "Nhận được yêu cầu thanh tra đối chiếu chéo liên quan đến đối tác từ cơ quan thuế, sau khi thảo luận với cố vấn thuế, chúng tôi đã nộp bản lưu hóa đơn và phiếu giao hàng theo yêu cầu.",
+      "suggested_en": "Upon receiving a request from the tax office for a cross-check audit concerning a client, we consulted with our tax advisor and submitted the requested copies of invoices and delivery notes."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The entire dialogue treats 反面調査 as a month-end ledger reconciliation balance that is booked, which is factually nonsensical in accounting and tax law.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署から、先月倒産した取引先に関する反面調査の連絡が入ったのですが、どのように対応すべきでしょうか。",
+        "vi": "Cơ quan thuế đã liên hệ về việc thanh tra đối chiếu chéo liên quan đến đối tác bị phá sản tháng trước, chúng ta nên xử lý thế nào ạ?",
+        "en": "We received notice from the tax office regarding a cross-check audit for the client that went bankrupt last month. How should we handle this?"
+      },
+      {
+        "speaker": "B",
+        "ja": "顧問税理士に至急連絡するとともに、該当する契約書や入出金明細の原本を速やかに準備してください。",
+        "vi": "Hãy liên hệ khẩn cấp với cố vấn thuế, đồng thời nhanh chóng chuẩn bị bản gốc các hợp đồng và sao kê thu chi liên quan.",
+        "en": "Please contact our tax advisor immediately and promptly prepare the originals of the relevant contracts and payment records."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term translations are acceptable, but the sentences and dialogue contained complete domain hallucinations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eb4bde67d4f9b599308e9efff827d7ea15b095f98c27862ac71e3cb92f6c0d91",
+    "validated_at": "2026-10-01T01:40:20.553223+00:00"
+  }
+}

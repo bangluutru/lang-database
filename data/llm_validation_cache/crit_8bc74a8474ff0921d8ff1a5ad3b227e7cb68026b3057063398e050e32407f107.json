@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000162",
+  "term": "顧客台帳",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations and example sentences contain unnatural predicates or factual inaccuracies regarding the use of '顧客台帳' in a corporate setting. The dialogue also feels stilted and overly formal for a natural conversation. The core issue is the understanding of what a '顧客台帳' entails and how it is typically handled/shared in a business context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "顧客台帳を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "顧客台帳を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "顧客台帳を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While technically possible, '発送する' (to dispatch/send out) is less common for a '顧客台帳' (customer ledger/database) in a business context. '送付する' (to send) or '共有する' (to share) would be more natural depending on the context.",
+      "suggested_text": "顧客台帳を送付する"
+    },
+    {
+      "index": 3,
+      "text": "顧客台帳を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "It is highly unusual and potentially a compliance/privacy issue to 'dispatch' or 'send' a full '顧客台帳' (customer ledger/database) to 'all parties' for a shareholders' meeting or board meeting. Relevant extracts or summaries might be shared, but not the entire ledger. The premise is flawed.",
+      "suggested_ja": "株主総会や取締役会を円滑に進行するため、法定期限内に必要な顧客情報を関係者へ共有いたしました。",
+      "suggested_vi": "Để đại hội đồng cổ đông hoặc họp hội đồng quản trị diễn ra suôn sẻ, chúng tôi đã chia sẻ thông tin khách hàng cần thiết với các bên liên quan trong thời hạn luật định.",
+      "suggested_en": "To facilitate smooth proceedings for the board or shareholders meeting, we shared the necessary customer information with all relevant parties within the statutory deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '受領した顧客台帳を厳重に保管しています' is grammatically correct but sounds a bit stiff and templated. While '受領した' is fine, '保管しています' is a bit generic. More specific actions like '管理しています' (managing) or '適切に保管しています' (appropriately storing) might be more natural depending on the nuance. Also, '顧客台帳' itself is often a digital database, so '保管' might imply physical storage which isn't always the case. The premise of '受領した顧客台帳' implies it was received from an external party, which is less common for an internal '顧客台帳' that a department would manage.",
+      "suggested_ja": "内部統制およびコンプライアンスの証跡として、担当部署にて顧客台帳を適切に管理しています。",
+      "suggested_vi": "Làm bằng chứng kiểm soát nội bộ và tuân thủ quy định, bộ phận phụ trách quản lý sổ theo dõi hồ sơ khách hàng (CRM) một cách thích hợp.",
+      "suggested_en": "As evidence of internal control and compliance, the department in charge appropriately manages the customer ledger / client database (CRM)."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's response '内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。' is a bit formal and slightly unnatural for a direct verbal exchange about '顧客台帳'. '発送の手配を行います' is also less natural for a customer ledger, as discussed in collocations. It sounds like a prepared statement rather than a natural conversation. Also, '最終推敲' (final draft/revision) is more for documents like reports or proposals, not typically for a '顧客台帳' which is a record.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、顧客台帳の準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị sổ theo dõi hồ sơ khách hàng (CRM) cho cuộc họp dự kiến vào tuần tới thế nào rồi?",
+        "en": "What's the status of the customer ledger preparation for next week's meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の確認を終え、役員の承認も得られましたので、本日中に共有の手配を進めます。",
+        "vi": "Chúng tôi đã hoàn tất việc xác nhận nội dung và nhận được sự chấp thuận của ban giám đốc, vì vậy chúng tôi sẽ tiến hành sắp xếp việc chia sẻ trong ngày hôm nay.",
+        "en": "We've finished reviewing the content and received executive approval, so we'll proceed with arrangements to share it today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e51509e31e53dd152e56f67d62dbc54a0fc7ca0c5d2c5f2449ce4ee17f5fe773",
+    "validated_at": "2026-10-01T01:53:01.704905+00:00"
+  }
+}

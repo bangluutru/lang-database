@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000034",
+  "term": "申告分離課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "税法上の事実誤認（個人所得税の制度である申告分離課税を法人の決算申告や地域貢献・控除上限額と混同）が複数見られ、教育用例文・対話として致命的な欠陥があるため全面的リライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "申告分離課税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税法上の制度に対して「利用する」は日常語的で稚拙です。実務では「選択する」を用います。",
+      "suggested_text": "申告分離課税を選択する"
+    },
+    {
+      "index": 1,
+      "text": "申告分離課税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務実務・条文上も極めて自然で頻出するコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "申告分離課税を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「活用する」は制度の性格（課税方式の選択・適用）に対してややマーケティング・日常表現寄りで不自然です。「申告分離課税により申告する」や「申告分離課税を選択する」が適切です。",
+      "suggested_text": "申告分離課税により申告する"
+    },
+    {
+      "index": 3,
+      "text": "申告分離課税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "譲渡所得や配当所得等が課税要件を満たす文脈で極めて自然です。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「地域貢献」や「社内周知」という文脈はふるさと納税等と混同した機械的テンプレートであり、所得税の申告分離課税（株式・不動産譲渡等）の実務と完全に乖離しています。",
+      "suggested_ja": "上場株式等の配当所得については、過去の譲渡損失と損益通算を行うため、総合課税ではなく申告分離課税を選択しました。",
+      "suggested_vi": "Đối với thu nhập từ cổ tức của cổ phiếu niêm yết, chúng tôi đã chọn chế độ kê khai thuế riêng biệt thay vì đánh thuế tổng hợp để thực hiện bù trừ lãi lỗ với các khoản lỗ chuyển nhượng trong quá khứ.",
+      "suggested_en": "Regarding dividend income from listed shares, we opted for separate self-assessment taxation instead of comprehensive taxation in order to offset gains against past capital losses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「控除上限額を試算した上で…申告分離課税の手続きを進めました」は、寄附金控除等の定型文を流用した不自然な記述です。不動産や株式の売却益に対する特別控除や税率適用の文脈に修正すべきです。",
+      "suggested_ja": "土地の譲渡益について特別控除の適用要件を事前に確認した上で、申告分離課税として確定申告の準備を進めました。",
+      "suggested_vi": "Sau khi kiểm tra trước các điều kiện áp dụng khoản giảm trừ đặc biệt đối với phần lãi từ chuyển nhượng đất đai, chúng tôi đã tiến hành chuẩn bị hồ sơ quyết toán thuế theo chế độ kê khai thuế riêng biệt.",
+      "suggested_en": "After confirming the eligibility requirements for the special deduction on real estate capital gains in advance, we proceeded with preparing the tax return under separate self-assessment taxation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「申告分離課税」は個人所得税の制度であり、法人の「決算申告」には存在しません（法人は全所得を一括して益金・損金計算します）。個人の確定申告またはオーナー役員の株式譲渡等の文脈に是正する必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の株式譲渡益について、今回の確定申告では申告分離課税を選択する方針でよろしいですか。",
+        "vi": "Đối với khoản lãi chuyển nhượng cổ phần của giám đốc điều hành, chúng ta sẽ chọn chế độ kê khai thuế riêng biệt trong đợt quyết toán thuế này đúng không?",
+        "en": "Regarding the director's capital gains from stock transfers, are we proceeding with electing separate self-assessment taxation for this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。総合課税に比べて税率面で有利となるため、必要書類を揃えて申告分離課税で提出します。",
+        "vi": "Vâng. Phương thức này có lợi hơn về mặt thuế suất so với đánh thuế tổng hợp, nên chúng tôi sẽ chuẩn bị đầy đủ chứng từ cần thiết và nộp theo chế độ kê khai riêng biệt.",
+        "en": "Yes. Since it is more advantageous in terms of the tax rate compared to comprehensive taxation, we will prepare the necessary documents and file under separate self-assessment taxation."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語自体の英訳（Separate self-assessment taxation）・越訳（chế độ kê khai thuế riêng biệt）は専門用語として正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7aca44c50e5f1ef04b4e5b8ed07fa6357c9aeb07164154a32c6a3e1b7c097f96",
+    "validated_at": "2026-10-01T01:38:02.576593+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000051",
+  "term": "特定扶養親族",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe category hallucination. The generator mistakenly treated '特定扶養親族' (a tax category for dependent children aged 19-22) as a corporate governance officer (like a statutory auditor) and a written board document.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特定扶養親族を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "特定扶養親族 refers to a tax category of dependent relatives (aged 19–22). It is not a corporate officer or legal entity to be appointed.",
+      "suggested_text": "特定扶養親族に該当する"
+    },
+    {
+      "index": 1,
+      "text": "特定扶養親族に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A tax dependent category cannot be inaugurated or assumed as a corporate post.",
+      "suggested_text": "特定扶養親族として申告する"
+    },
+    {
+      "index": 2,
+      "text": "特定扶養親族に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Does not reflect corporate, tax, or payroll terminology.",
+      "suggested_text": "特定扶養親族の控除額"
+    },
+    {
+      "index": 3,
+      "text": "特定扶養親族の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A dependent has no corporate duties (職務) to execute.",
+      "suggested_text": "特定扶養親族の要件を満たす"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Hallucinated corporate officer template: shareholders do not appoint a tax dependent relative at an AGM.",
+      "suggested_ja": "19歳以上23歳未満の子どもは特定扶養親族に該当するため、年末調整で控除額が加算されます。",
+      "suggested_vi": "Con từ đủ 19 tuổi đến dưới 23 tuổi thuộc diện người phụ thuộc đặc biệt, do đó sẽ được cộng thêm mức giảm trừ trong kỳ điều chỉnh thuế cuối năm.",
+      "suggested_en": "Children aged 19 to under 23 qualify as specified dependents, which increases the deduction amount during year-end tax adjustments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Companies do not hold regular reporting/compliance meetings with tax dependents of employees.",
+      "suggested_ja": "年末調整の扶養控除等申告書を提出する際は、扶養親族の年齢を確認し、特定扶養親族の欄に正しく記載してください。",
+      "suggested_vi": "Khi nộp tờ khai khấu trừ người phụ thuộc cho điều chỉnh thuế cuối năm, vui lòng kiểm tra độ tuổi của người phụ thuộc và điền chính xác vào mục người phụ thuộc đặc biệt.",
+      "suggested_en": "When submitting the application for dependent deductions for year-end tax adjustments, please verify the dependent's age and fill out the specified dependents section correctly."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue treats '特定扶養親族' as a written report or meeting agenda being drafted, approved by executives, and mailed out.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整の書類を確認しているのですが、長男が今年19歳になった場合、特定扶養親族に該当しますか。",
+        "vi": "Tôi đang kiểm tra giấy tờ điều chỉnh thuế cuối năm, nếu con trai cả tròn 19 tuổi trong năm nay thì có thuộc diện người phụ thuộc đặc biệt không?",
+        "en": "I'm checking the year-end tax adjustment forms. If my eldest son turned 19 this year, does he qualify as a specified dependent?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、その年の12月31日時点で19歳以上23歳未満であれば特定扶養親族となり、控除額が一般の扶養控除より大きくなります。",
+        "vi": "Vâng, nếu tính đến ngày 31 tháng 12 của năm đó mà từ đủ 19 tuổi đến dưới 23 tuổi thì sẽ là người phụ thuộc đặc biệt, và mức giảm trừ sẽ lớn hơn mức giảm trừ người phụ thuộc thông thường.",
+        "en": "Yes, if he is between 19 and under 23 years old as of December 31 of that year, he qualifies as a specified dependent and is eligible for a larger deduction than standard dependents."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The dictionary translations of the headword itself are acceptable, but all generated text was contextually invalid."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6100e872e564ebb70ae8f947c2675c79814b5bb58fa6962a6402f74ec5591eee",
+    "validated_at": "2026-10-01T01:38:15.922360+00:00"
+  }
+}

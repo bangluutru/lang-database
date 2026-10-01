@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000165",
+  "term": "非居住者の源泉徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文が「ふるさと納税」のテンプレート（地域貢献、控除上限額の試算）から機械的に流用されており、税務実務として致命的な事実誤認を含んでいます。コロケーションおよび対話文も源泉徴収義務の実態に即した内容へ全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "非居住者の源泉徴収を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "源泉徴収は税法上の義務（徴収・納付義務）であり、納税者が任意に「利用する」性質の制度ではありません。",
+      "suggested_text": "非居住者の源泉徴収を行う"
+    },
+    {
+      "index": 1,
+      "text": "非居住者の源泉徴収の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "非居住者に対する課税において「源泉徴収の適用を受ける」という表現は不自然です。免除を受けるか、租税条約による軽減税率の適用を受ける文脈が自然です。",
+      "suggested_text": "非居住者の源泉徴収を免除される"
+    },
+    {
+      "index": 2,
+      "text": "非居住者の源泉徴収を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "源泉徴収は天引き義務であり、「活用する」という能動的なメリット享受の動詞とは共起しません。",
+      "suggested_text": "非居住者の源泉徴収税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "非居住者の源泉徴収の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務上極めて頻出する自然な共起表現です。",
+      "suggested_text": "非居住者の源泉徴収の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献の観点から…制度を活用しました」は、ふるさと納税等の文面を流用した明らかなテンプレート混入です。非居住者の源泉徴収に地域貢献や節税の活用余地はありません。",
+      "suggested_ja": "海外在住のフリーランスに報酬を支払うにあたり、非居住者の源泉徴収として原則20.42％の税率で源泉徴収を行いました。",
+      "suggested_vi": "Khi chi trả thù lao cho freelancer cư trú tại nước ngoài, chúng tôi đã thực hiện khấu trừ thuế tại nguồn đối với người không cư trú theo mức thuế suất nguyên tắc là 20,42%.",
+      "suggested_en": "When paying remuneration to an overseas freelancer, we deducted withholding tax for non-residents at the standard statutory rate of 20.42%."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「今年度の控除上限額を事前に試算した上で」もふるさと納税の流用であり、非居住者への国内源泉所得の源泉徴収実務とは事実上完全に乖離しています。",
+      "suggested_ja": "支払期日までに租税条約に関する届出書を受領できなかったため、非居住者の源泉徴収を国内法所定の税率で執行しました。",
+      "suggested_vi": "Do không nhận được thông báo áp dụng hiệp định tránh đánh thuế hai lần trước ngày thanh toán, chúng tôi đã tiến hành khấu trừ thuế tại nguồn đối với người không cư trú theo mức thuế suất luật định trong nước.",
+      "suggested_en": "Because we did not receive the application form for the tax treaty by the payment due date, we executed the withholding tax for non-residents at the statutory domestic tax rate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "非居住者の源泉徴収は支払月の翌月10日までに徴収高計算書を添えて納付するものであり、「決算申告書添付書類として提出」というやり取りは税務実務上不自然です。支払時の租税条約適用や支払調書作成の文脈に修正すべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外子会社への技術指導料の支払いに伴う、非居住者の源泉徴収の減免手続きは完了していますか。",
+        "vi": "Thủ tục xin miễn giảm khấu trừ thuế tại nguồn đối với người không cư trú liên quan đến chi phí hướng dẫn kỹ thuật trả cho công ty con ở nước ngoài đã hoàn tất chưa?",
+        "en": "Has the exemption procedure for withholding tax for non-residents regarding the technical service fee paid to the overseas subsidiary been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、相手先から居住者証明書を回収し、管轄税務署へ租税条約の届出書を事前提出済みです。",
+        "vi": "Vâng, chúng tôi đã thu thập giấy chứng nhận cư trú từ đối tác và nộp trước thông báo áp dụng hiệp định thuế lên cơ quan thuế có thẩm quyền rồi ạ.",
+        "en": "Yes, we collected the certificate of residency from the counterparty and submitted the tax treaty application in advance to the competent tax office."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語自体の英訳・越訳は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dce706f14064ce98944be2b48aada196c096d81633534971a3b1f8c13874911d",
+    "validated_at": "2026-10-01T01:40:20.461650+00:00"
+  }
+}

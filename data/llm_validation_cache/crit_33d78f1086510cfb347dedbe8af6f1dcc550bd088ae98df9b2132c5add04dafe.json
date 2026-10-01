@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000102",
+  "term": "交際費等の損金不算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション4件中3件に「不算入に算入する」「不算入に不算入とする」といった致命的な語義矛盾・文法エラーがあり、例文・対話にも「算入漏れ」「税理士の確認書」といった税務実務の基本概念から乖離した表現が含まれているため、全体的な再生成が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "交際費等の損金不算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「損金不算入」という不参入項目に対して「算入する」とするのは自己矛盾しており、税務実務上あり得ない極めて不自然な表現です。",
+      "suggested_text": "交際費等の損金不算入額を計算する"
+    },
+    {
+      "index": 1,
+      "text": "交際費等の損金不算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不算入に不算入とする」という無意味な同語反復・語義破綻が生じています。",
+      "suggested_text": "交際費等の損金不算入規定を適用する"
+    },
+    {
+      "index": 2,
+      "text": "交際費等の損金不算入の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "意味は通じますが、実務では「交際費等の損金不算入額の調整（申告調整）を行う」のように「額」を補うか「損金不算入として調整する」とするのが自然です。",
+      "suggested_text": "交際費等の損金不算入額の調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "交際費等の損金不算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "助詞の使い方が誤っています。別表四で所得に加算するため、「損金不算入『に』加算する」ではなく「損金不算入『として』加算する」または「損金不算入額を加算する」とする必要があります。",
+      "suggested_text": "交際費等の損金不算入として加算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「損金不算入を適切に処理しました」は目的語と述語の組み合わせがやや舌足らずで機械的です。法人税実務では「損金不算入額を加算処理しました」または「損金不算入の申告調整を行いました」と表現します。",
+      "suggested_ja": "会計上の費用と税務上の取扱いの差異を調整するため、別表四において交際費等の損金不算入額を加算処理しました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa chi phí kế toán và quy định thuế, chúng tôi đã thực hiện điều chỉnh tăng thu nhập tính thuế đối với khoản chi phí tiếp khách không được trừ trên Phụ lục 4.",
+      "suggested_en": "To reconcile book-tax differences, we treated the non-deductible entertainment expenses as an add-back adjustment on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「損金不算入の算入漏れ」は用語が自己矛盾しており実務上不適切です。損金不算入項目が所得加算から漏れていたことを指すなら「加算漏れ」または「調整漏れ」と言います。",
+      "suggested_ja": "税務調査における否認リスクを低減するため、過年度の取引を検証し交際費等の損金不算入の加算漏れがないか確認しました。",
+      "suggested_vi": "Để giảm thiểu rủi ro bị cơ quan thuế xuất toán khi thanh tra, chúng tôi đã rà soát lại các giao dịch các năm trước để xác nhận không bị sót khoản điều chỉnh tăng do chi phí tiếp khách không được trừ.",
+      "suggested_en": "To mitigate tax audit adjustment risks, we examined prior-year transactions to ensure there were no omissions in adding back non-deductible entertainment expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "日本の法人税申告の実務において「税理士の確認書を申告書添付書類として提出する」という慣行・書式は存在しません（税理士法第33条の2の書面添付や別表十五等を指すのが自然です）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における交際費等の損金不算入の計算根拠と別表十五の作成状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị căn cứ tính toán chi phí tiếp khách không được trừ và lập Phụ lục 15 cho kỳ quyết toán thuế này thế nào rồi?",
+        "en": "What is the status of the calculation basis and Schedule 15 preparation for the non-deductible entertainment expenses in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "飲食費の5,000円基準の適用判定も含めて集計を終え、顧問税理士のレビューも完了しております。",
+        "vi": "Chúng tôi đã tổng hợp xong bao gồm cả việc xét điều kiện áp dụng định mức 5.000 yên đối với chi phí ăn uống, và thuế lý cố vấn cũng đã hoàn thành việc soát xét.",
+        "en": "We have finalized the aggregation including the 5,000-yen rule eligibility for food and beverage expenses, and the tax accountant's review is also complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳の「quy định khống chế chi phí tiếp khách đối ngoại」は規定全体の概要説明としては通じるものの、税務項目としての名詞としては「khoản chi phí tiếp khách không được trừ (khi tính thuế TNDN)」とする方が法人税実務の対訳として正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "cf1c72caf3c23b9494ff721ae60294370c4f0ec0ad02eea6290fd94be8c0b7d0",
+    "validated_at": "2026-10-01T01:39:12.746873+00:00"
+  }
+}

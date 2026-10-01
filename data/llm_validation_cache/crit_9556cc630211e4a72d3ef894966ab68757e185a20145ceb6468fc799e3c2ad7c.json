@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000088",
+  "term": "不当廉売関税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The examples and dialogue, while grammatically correct, use somewhat templated and slightly unnatural phrasing for a native Japanese speaker in a corporate context, particularly regarding the 'balance' and 'processing' of anti-dumping duties. The collocation '分類を確認する' also has a semantic mismatch. The core issue is naturalness and authenticity in a professional setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不当廉売関税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for applying tariffs."
+    },
+    {
+      "index": 1,
+      "text": "不当廉売関税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common usage for inquiring about tariffs."
+    },
+    {
+      "index": 2,
+      "text": "不当廉売関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for paying duties/taxes."
+    },
+    {
+      "index": 3,
+      "text": "不当廉売関税の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Anti-dumping duty itself is a type of tariff, not something that has a 'classification' in the same way goods do. One might confirm the 'applicability' or 'calculation basis' but not its 'classification'.",
+      "suggested_text": "不当廉売関税の適用有無を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrasing '不当廉売関税の計上内容や残高に差異がないか精査します' is unnatural. Anti-dumping duties are typically paid upon import or assessed, not 'accounted for' in a way that would have a 'balance' in the same sense as a general ledger account for assets or liabilities. While they are recorded, the phrasing implies a continuous balance like a receivable/payable, which is less common for a duty. '計上内容' is acceptable, but '残高' is awkward here. Also, '精査します' is a bit strong for a routine check, '確認します' or '照合します' would be more natural.",
+      "suggested_ja": "月末の帳簿照合において、不当廉売関税の計上内容に差異がないか確認します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán thuế chống bán phá giá (Anti-dumping Duty) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully check for discrepancies in the entries for anti-dumping duty (AD)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Similar to the first example, '不当廉売関税を適正に処理いたしました' is grammatically correct but sounds somewhat generic and templated. While '処理する' is used for accounting, the context of '不当廉売関税' makes it sound a bit forced. It's more natural to say '不当廉売関税を適正に計上いたしました' (properly recorded) or '不当廉売関税に関する会計処理を適正に行いました' (properly performed accounting treatment for AD duty).",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において不当廉売関税を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán đúng quy định thuế chống bán phá giá (Anti-dumping Duty) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly recorded anti-dumping duty (AD) in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '不当廉売関税の計上内容に差異は発生していませんか' is a bit stiff. While understandable, it's not the most natural way to ask in a business conversation. '計上内容に差異はありませんか' or '計上内容に問題はありませんか' would be more common. Speaker B's response is also a bit formal and slightly unnatural for a direct answer to a question about discrepancies. 'すべて適正に整合していることを確認いたしました' is overly verbose. A simpler '差異はございません' or '問題ございません' followed by the verification method would be more natural.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、不当廉売関税の計上内容に差異はありませんか。",
+        "vi": "Trong quyết toán hàng tháng này, nội dung hạch toán thuế chống bán phá giá có chênh lệch gì không?",
+        "en": "Are there any discrepancies in the anti-dumping duty entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合し、差異がないことを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận không có chênh lệch nào.",
+        "en": "Yes, I've reconciled the supporting documents with the sub-ledger and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "adf34dddd5d5da6dbda8954755d8b723eaf395a71bfcdc7696e22cd67b6ad38a",
+    "validated_at": "2026-10-01T01:55:15.211823+00:00"
+  }
+}

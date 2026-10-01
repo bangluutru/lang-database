@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000198",
+  "term": "貿易摩擦",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental semantic mismatch and domain factual error regarding how '貿易摩擦' (trade friction) is treated in an accounting context. It is not an accounting entry or balance itself, but rather a cause of financial impacts that are accounted for. The current sentences are grammatically decipherable but unnatural and incorrect from an accounting perspective, making them unsuitable for professional learning.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貿易摩擦が激化する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "貿易摩擦を回避する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "貿易摩擦について協議する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "貿易摩擦の影響を調査する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "貿易摩擦 is a phenomenon, not an accounting entry or balance. It cannot be '計上' (booked/recorded) or have a '残高' (balance). This sentence demonstrates a fundamental misunderstanding of accounting principles and the nature of '貿易摩擦'.",
+      "suggested_ja": "月末の帳簿照合において、貿易摩擦に起因する損失や引当金の計上内容、および関連する勘定残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán các khoản lỗ hoặc dự phòng phát sinh từ xung đột thương mại, cũng như số dư tài khoản liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries for losses or provisions arising from trade friction, and the balances of related accounts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '貿易摩擦' itself cannot be '処理' (processed) in accounting terms. What can be processed are the financial impacts or consequences of trade friction, such as tariffs, subsidies, or related provisions. The current phrasing is grammatically possible but semantically nonsensical in an accounting context.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において貿易摩擦に起因する影響額を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các khoản ảnh hưởng phát sinh từ xung đột thương mại trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the financial impacts arising from trade friction in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question about '貿易摩擦の計上内容に差異' is based on the same fundamental accounting misunderstanding as the example sentences. '貿易摩擦' is not an item that is '計上' (booked) in ledgers. Speaker B's response, while grammatically correct, is irrelevant to the flawed premise of Speaker A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、貿易摩擦の影響による関税費用や補助金などの計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán các khoản mục như chi phí thuế quan hoặc trợ cấp do ảnh hưởng của xung đột thương mại không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for items such as tariff costs or subsidies due to the impact of trade friction?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các chứng từ liên quan và sổ cái phụ, và đã xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the relevant supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2f46b4437a571d0ed16195490fac63918fc0b6710707561807eb883e946bcb51",
+    "validated_at": "2026-10-01T01:57:28.660604+00:00"
+  }
+}

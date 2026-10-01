@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000134",
+  "term": "製造間接費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The object relies heavily on generic mechanical accounting templates (残高を確認する, 照合する, 精算する) that ignore standard cost-accounting reality. 製造間接費 must be contextualized around allocation (配賦), actual vs. predetermined rates, and allocation variances (配賦差異).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "製造間接費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and semantically standard for recognizing manufacturing overhead expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "製造間接費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Manufacturing overhead is an aggregation/allocation account cleared to work-in-process (仕掛品) or variance accounts; standard practice focuses on allocation (配賦) or allocation variance (配賦差異) rather than a persistent 'balance'.",
+      "suggested_text": "製造間接費を配賦する"
+    },
+    {
+      "index": 2,
+      "text": "製造間接費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Overhead itself is not directly 'collated'; one reconciles its breakdown or vouchers (内訳を照合する). In cost accounting, calculating or analyzing overhead variance is the definitive collocation.",
+      "suggested_text": "製造間接費の配賦差異を分析する"
+    },
+    {
+      "index": 3,
+      "text": "製造間接費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' (settling an advance/expense claim) does not apply to manufacturing overhead in standard cost accounting.",
+      "suggested_text": "製造間接費の実際発生額を集計する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic accounting boilerplate that mischaracterizes cost accounting; in practice, practitioners investigate variances between predetermined and actual allocation (配賦差異) rather than generic 'book balances'.",
+      "suggested_ja": "月次原価計算において、製造間接費の予定配賦額と実際発生額との間に生じた配賦差異を精査します。",
+      "suggested_vi": "Trong tính giá thành hàng tháng, chúng tôi xem xét kỹ lưỡng chênh lệch phân bổ phát sinh giữa chi phí sản xuất chung phân bổ theo định mức và chi phí thực tế phát sinh.",
+      "suggested_en": "In monthly cost accounting, we closely examine the allocation variance arising between predetermined and actual manufacturing overhead."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly repetitive, robotic template ('適正な...適正に') that lacks domain-specific pedagogical substance.",
+      "suggested_ja": "当期は工場の稼働率低下に伴い、製造間接費の操業度差異が不利差異として計上されました。",
+      "suggested_vi": "Kỳ này, do tỷ lệ vận hành nhà máy sụt giảm, chênh lệch năng lực hoạt động của chi phí sản xuất chung đã được ghi nhận là chênh lệch bất lợi.",
+      "suggested_en": "Due to lower factory utilization this term, the manufacturing overhead idle capacity variance was recognized as an unfavorable variance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The exchange treats manufacturing overhead as a simple AP/ledger reconciliation item rather than a cost-accounting allocation process; '適正に整合している' is also tautological and stilted.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、製造間接費の配賦差異が大きく膨らんでいるようですが、原因は何でしょうか。",
+        "vi": "Trong kỳ quyết toán tháng này, chênh lệch phân bổ chi phí sản xuất chung có vẻ tăng mạnh, nguyên nhân là gì vậy?",
+        "en": "In this month's closing, manufacturing overhead allocation variance seems to have expanded significantly. What is the cause?"
+      },
+      {
+        "speaker": "B",
+        "ja": "主力ラインの点検停止による操業度低下と、夏季の電力料金高騰による予算差異が主な要因です。",
+        "vi": "Yếu tố chính là do sụt giảm năng lực hoạt động vì tạm dừng bảo dưỡng dây chuyền chủ lực và chênh lệch ngân sách do giá điện mùa hè tăng cao.",
+        "en": "The main factors are capacity variance from maintenance downtime on our main line and budget variance caused by soaring summer electricity rates."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "479badb33d2de6b007183c141da3fab938a5d738bc0563e5be13aaa604f18605",
+    "validated_at": "2026-10-01T01:36:02.648666+00:00"
+  }
+}

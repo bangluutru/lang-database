@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000139",
+  "term": "役員報酬",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 1 and 2 lack statutory accounting precision; Example 1 suffers from semantic redundancy ('役員に対して...役員報酬'); Example 2 misnames the tax filing document; and Vietnamese translations contain raw slash formatting artifacts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "役員報酬を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly frequent business and accounting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "役員報酬として損金算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese tax accounting, the object of inclusion is the remuneration itself ('役員報酬を損金算入する' or '損金に算入する'). Using 'として' is unidiomatic and redundant.",
+      "suggested_text": "役員報酬を損金算入する"
+    },
+    {
+      "index": 2,
+      "text": "役員報酬の届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "There is no statutory tax filing officially titled '役員報酬の届出書'. In tax practice, it is specifically termed '事前確定届出給与に関する届出書', or in corporate governance, '役員報酬規程を改定する'.",
+      "suggested_text": "事前確定届出給与の届出書を提出する"
+    },
+    {
+      "index": 3,
+      "text": "役員報酬の限度額を改定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate legal/accounting collocation referencing statutory cap adjustments at shareholder meetings.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits tautology with '役員に対して...役員報酬を支給'. Furthermore, the Vietnamese translation mechanically pasted the headword slash ('thù lao ban giám đốc / ban điều hành').",
+      "suggested_ja": "定時株主総会の決議に基づき、所定の支給期日に役員報酬を支給いたしました。",
+      "suggested_vi": "Căn cứ theo nghị quyết của đại hội đồng cổ đông thường niên, chúng tôi đã chi trả thù lao ban điều hành vào đúng ngày quy định.",
+      "suggested_en": "In accordance with the resolution of the annual general meeting of shareholders, executive compensation was paid on the scheduled payment date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese Corporation Tax Law (Article 34), non-periodic fixed pay requires a '事前確定届出給与に関する届出書'; calling it vaguely '役員報酬に関する届出書' teaches imprecise terminology. The Vietnamese text also suffers from raw dictionary slash insertion.",
+      "suggested_ja": "法人税法上の損金算入要件を満たすため、事前に税務署へ事前確定届出給与に関する届出書を提出しました。",
+      "suggested_vi": "Để đáp ứng đủ điều kiện tính vào chi phí được trừ theo Luật Thuế thu nhập doanh nghiệp, chúng tôi đã nộp trước thông báo về tiền lương xác định trước cho cơ quan thuế.",
+      "suggested_en": "In order to meet the statutory deduction requirements under corporate tax law, we submitted the notification for predetermined compensation to the tax office in advance."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between the accounting manager/staff regarding substantiation documents and tax advisor confirmation is authentic and coherent.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations in both examples unprofessionally copied raw dictionary delimiters (' / ') verbatim into running prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "60f871d0cc3764f6f72172a60c2ca9d78135a097b7e0795dd5963ad5cc3fe0f5",
+    "validated_at": "2026-10-01T01:36:12.034385+00:00"
+  }
+}

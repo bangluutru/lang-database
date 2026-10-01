@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000181",
+  "term": "電子取引",
+  "overall_decision": "reject",
+  "summary_reason": "税務ドメインの重要概念である「電子取引（電帳法関係）」を、社内連絡・情報共有（報連相）の汎用定型文テンプレートに無理やり代入したことによる重大な意味破綻・文脈崩壊が全体に発生しているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電子取引を徹底する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「電子取引」は税法上の取引形態（電子帳簿保存法）であり、「徹底する」と組み合わせるのは「連絡・周知の徹底」などの社内コミュニケーションテンプレートを誤適用した不自然なコロケーション。",
+      "suggested_text": "電子取引のデータを保存する"
+    },
+    {
+      "index": 1,
+      "text": "電子取引を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "文法・意味ともに自然で標準的な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "電子取引を習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「電子取引」は商取引・税務データ保存の概念であり、「習慣づける」という動作主の個人の習慣を指す述語とは意味論的に整合しない（報連相の定型文テンプレート汚染）。",
+      "suggested_text": "電子取引の要件を満たす"
+    },
+    {
+      "index": 3,
+      "text": "電子取引の重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "抽象的・紋切り型のスローガン表現であり、税務・実務現場で用いられる実践的コロケーションではない。",
+      "suggested_text": "電子取引に対応する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「関係部署への事前の電子取引を徹底しています」は、「事前連絡」や「事前相談」の定型文に「電子取引」を機械的に代入した致命的な意味破綻（電子取引は部署間連絡ではない）。",
+      "suggested_ja": "電子帳簿保存法の改正に伴い、電子取引で受領した請求書は電子データのまま保存することが義務付けられました。",
+      "suggested_vi": "Cùng với việc sửa đổi Luật lưu trữ sổ sách kế toán điện tử, các hóa đơn nhận được qua giao dịch điện tử bắt buộc phải được lưu trữ dưới dạng dữ liệu điện tử.",
+      "suggested_en": "Following the revision of the Electronic Books Preservation Act, it is mandatory to preserve invoices received via electronic transactions as electronic data."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「迅速な電子取引の習慣付け」は報連相のテンプレート表現の誤用であり、税務会計における「電子取引」の実態（EDIや電子メール送受信等）と完全に乖離している。",
+      "suggested_ja": "電子取引における取引情報の改ざんを防止するため、訂正削除履歴が残るクラウドシステムを導入しました。",
+      "suggested_vi": "Để ngăn ngừa việc giả mạo thông tin giao dịch trong các giao dịch điện tử, chúng tôi đã áp dụng hệ thống đám mây có lưu lịch sử chỉnh sửa và xóa.",
+      "suggested_en": "To prevent tampering with transaction data in electronic transactions, we implemented a cloud system that tracks correction and deletion histories."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "発話Aの「電子取引の徹底状況」および発話Bの「情報共有の重要性を再認識し、迅速な対応が習慣化」は、完全に業務連絡・情報共有のテンプレ使い回しであり、税務ドメインの電子取引の実務（データ保存要件、タイムスタンプ、インボイス等）を一切反映していない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "電子取引で受け取ったPDFの領収書は、どのように保存すればよいでしょうか。",
+        "vi": "Hóa đơn PDF nhận được qua giao dịch điện tử thì nên lưu trữ như thế nào ạ?",
+        "en": "How should we store PDF receipts received via electronic transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "電子帳簿保存法の要件に沿って、検索可能な専用のクラウドフォルダに保管してください。",
+        "vi": "Bạn hãy lưu trữ vào thư mục đám mây chuyên dụng có thể tìm kiếm theo đúng yêu cầu của Luật lưu trữ sổ sách kế toán điện tử nhé.",
+        "en": "Please store them in the dedicated searchable cloud folder in accordance with the requirements of the Electronic Books Preservation Act."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "meaning_viの「giao dịch điện tử nhận hóa đơn qua mạng」は説明的かつ限定的すぎる。税務用語として単に「giao dịch điện tử」とするか、文脈を補足するべき。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8ff63a4c620c64af08b281523e5038f98576d2487d1b9383c327c04c021e6f12",
+    "validated_at": "2026-10-01T01:40:35.879684+00:00"
+  }
+}

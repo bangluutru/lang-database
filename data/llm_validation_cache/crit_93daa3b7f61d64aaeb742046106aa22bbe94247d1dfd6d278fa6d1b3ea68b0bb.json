@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000114",
+  "term": "利益剰余金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate suffers from severe accounting domain errors. Mechanical template slot-filling was used: treating equity balance (利益剰余金) as an operating expense account subject to voucher matching and routine monthly settlement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "利益剰余金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "利益剰余金 is an equity (net assets) balance accumulated over time, not a specific transaction or flow item that one '計上する' (books/records). One typically transfers to it (利益剰余金に振り替える) or builds it up (積み立てる).",
+      "suggested_text": "利益剰余金を積み立てる"
+    },
+    {
+      "index": 1,
+      "text": "利益剰余金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for verifying the retained earnings balance on the balance sheet.",
+      "suggested_text": "利益剰余金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "利益剰余金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reconciles accounts or ledgers against statements (e.g., 株主資本等変動計算書と照合する), but directly taking 利益剰余金 as the direct object of 照合する is unnatural.",
+      "suggested_text": "利益剰余金の変動額を把握する"
+    },
+    {
+      "index": 3,
+      "text": "利益剰余金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 (settlement/clearance) applies to advances, travel expenses, or liquidation balances, never to equity accounts like 利益剰余金.",
+      "suggested_text": "利益剰余金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Template hallucination. Retained earnings does not generate monthly voucher-level entry discrepancies (計上内容の差異) checked against vouchers during routine month-end closing.",
+      "suggested_ja": "株主総会の決議に基づき、当期の利益剰余金から配当金を支払うとともに、一部を別途積立金へ振り替えました。",
+      "suggested_vi": "Căn cứ theo nghị quyết của Đại hội đồng cổ đông, chúng tôi đã chi trả cổ tức từ thặng dư lợi nhuận kỳ này, đồng thời chuyển một phần vào quỹ dự phòng riêng.",
+      "suggested_en": "Based on the resolution of the general meeting of shareholders, dividends were paid from retained earnings for this term, and a portion was transferred to separate reserve funds."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic boilerplate ('適正に処理いたしました') lacking practical business substance for an equity account.",
+      "suggested_ja": "好調な業績を背景に当期純利益を確保したことで、当四半期末における利益剰余金の残高は前年同期を大幅に上回りました。",
+      "suggested_vi": "Nhờ kết quả kinh doanh khả quan bảo đảm được lợi nhuận thuần trong kỳ, số dư thặng dư lợi nhuận vào cuối quý này đã vượt đáng kể so với cùng kỳ năm trước.",
+      "suggested_en": "With net income secured by strong business performance, the balance of retained earnings at the end of this quarter significantly exceeded that of the same period last year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B claims to have reconciled vouchers (証憑書類) and subsidiary ledgers (補助元帳) for 利益剰余金 on a monthly basis, which is factually nonsensical in accounting. Retained earnings is part of shareholders' equity and changes mainly with net profit transfers or dividend appropriations, not petty vouchers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "株主資本等変動計算書の作成にあたり、当期の利益剰余金の増減内訳は確認できましたか。",
+        "vi": "Khi lập Báo cáo biến động vốn chủ sở hữu, anh đã kiểm tra chi tiết các khoản tăng giảm của thặng dư lợi nhuận kỳ này chưa?",
+        "en": "In preparing the statement of changes in equity, were you able to verify the breakdown of changes in retained earnings for this term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、配当金の支払額および当期純利益の振替額について、総勘定元帳との整合性を確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu tính khớp đúng giữa số tiền chi trả cổ tức, số chuyển lợi nhuận thuần kỳ này với sổ cái chung rồi.",
+        "en": "Yes, I verified the consistency of dividend payouts and net income transfers against the general ledger."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation in Example 0 mechanically left the slash options 'thặng dư lợi nhuận / lợi nhuận giữ lại' inside running prose instead of choosing one natural term."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d00a09d450cb07f6a9ac290f2d4682633c2bf5912412592f3c3cdde9bcb83054",
+    "validated_at": "2026-10-01T01:35:41.189324+00:00"
+  }
+}

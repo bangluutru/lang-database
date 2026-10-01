@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000015",
+  "term": "運賃込み条件",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション、例文、対話、ベトナム語訳に改善の余地があるため、全体的に修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "運賃込み条件の条件で契約する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「運賃込み条件の条件で」は冗長で不自然。単に「運賃込み条件で契約する」で十分。",
+      "suggested_text": "運賃込み条件で契約する"
+    },
+    {
+      "index": 1,
+      "text": "運賃込み条件の建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "運賃込み条件における費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "運賃込み条件における危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「運賃込み条件条件」と「条件」が重複しており不自然。また、「運賃と危険負担の範囲を明確にするため」という理由付けがやや冗長で、ビジネス文書としてはより簡潔な表現が好ましい。",
+      "suggested_ja": "今回の海上輸送契約は、費用負担と危険移転の明確化のため、運賃込み条件を採用しました。",
+      "suggested_vi": "Hợp đồng vận tải biển lần này áp dụng điều kiện bao gồm cước vận tải biển để làm rõ việc phân chia chi phí và chuyển giao rủi ro.",
+      "suggested_en": "This ocean transport contract adopted 運賃込み条件 terms to clarify the division of costs and risk transfer."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現で、内容も適切です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「運賃込み条件の手配状況」について尋ねているが、Bの回答は「通関業者と乙仲への連絡」「書類確認」「輸入申告」と、手配状況の一部ではあるものの、運賃込み条件に特化した回答になっておらず、質問の意図と回答がややずれている。また、Aの質問がやや唐突で、文脈が不足している。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "〇〇案件の通関についてですが、運賃込み条件での手配は順調に進んでいますか？",
+        "vi": "Về việc thông quan cho dự án ○○, việc sắp xếp theo điều kiện bao gồm cước vận tải biển có đang tiến triển tốt không?",
+        "en": "Regarding customs clearance for the ○○ project, are the arrangements under 運賃込み条件 progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は完了し、書類確認も終えて輸入申告に入っています。運賃込み条件に関する手続きも問題なく進んでいます。",
+        "vi": "Vâng, việc liên hệ với công ty thông quan và đại lý vận chuyển đã hoàn tất, kiểm tra chứng từ cũng đã xong và đang trong quá trình khai báo nhập khẩu. Các thủ tục liên quan đến điều kiện bao gồm cước vận tải biển cũng đang tiến triển tốt.",
+        "en": "Yes, communication with the customs broker and shipping agent is complete, document verification is finished, and we've moved into import declaration. Procedures related to 運賃込み条件 are also progressing without issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の「điều kiện bao gồm cước vận tải biển (thuật ngữ tiếng Nhật của CFR)」は、括弧書きの部分が説明的で、専門用語としては冗長。単に「điều kiện CFR (Cost and Freight)」または「điều kiện bao gồm cước vận tải biển」とする方が自然。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "64e1bcd64f77717d82be996d14f537a6d453e7406c87d55c7f1c80d43936b0d5",
+    "validated_at": "2026-10-01T01:53:57.795953+00:00"
+  }
+}

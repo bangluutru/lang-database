@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-trade-000136",
+  "term": "TTS",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a misunderstanding of how 'TTS' functions in a corporate context. It's an external rate, not an internal metric to be 'calculated,' 'improved,' or to have 'target values' set for it directly. The examples and dialogue reflect this fundamental misunderstanding, leading to unnatural Japanese expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "TTSを算出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "TTS is a rate provided by banks, not something a company 'calculates' in the same way it calculates profit or cost. It's 'applied' or 'used'.",
+      "suggested_text": "TTSを適用する"
+    },
+    {
+      "index": 1,
+      "text": "TTSを改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A company cannot 'improve' the TTS rate itself; it's a market rate set by banks. They can improve their use of it or their hedging strategies related to it.",
+      "suggested_text": "TTSレートの適用条件を改善する"
+    },
+    {
+      "index": 2,
+      "text": "TTSを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Analyzing market rates is a common business activity."
+    },
+    {
+      "index": 3,
+      "text": "TTSの目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Companies don't set a 'target value' for TTS itself, as it's an external rate. They might set targets for financial outcomes influenced by TTS, or for the spread they get from their bank.",
+      "suggested_text": "TTS変動による影響の目標値を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Monitoring 'TTS metrics' monthly is unnatural. Companies monitor the impact of TTS on their financials, or their foreign exchange exposure, not the rate itself as a performance metric.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門でTTS変動による為替リスクを月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi rủi ro tỷ giá do biến động TTS hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors foreign exchange risk due to TTS fluctuations on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "TTS itself is a rate, not a performance indicator that 'exceeds a target value' to confirm profitability improvement. It's the *result* of transactions at that rate that impacts profitability.",
+      "suggested_ja": "当期の為替差益はTTSの有利な変動により目標値を上回り、収益性と資本効率の向上が確認されました。",
+      "suggested_vi": "Lợi nhuận từ chênh lệch tỷ giá kỳ này đã vượt giá trị mục tiêu nhờ biến động TTS thuận lợi, xác nhận khả năng sinh lời và hiệu quả sử dụng vốn đã được nâng cao.",
+      "suggested_en": "This term's foreign exchange gains exceeded the target value due to favorable TTS fluctuations, confirming an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question about 'TTS's trend and progress towards improvement targets' is unnatural. TTS is a market rate, not something a company directly improves. Speaker B's response is also generic and doesn't specifically address TTS.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析において、TTS変動による為替リスク管理の進捗はいかがですか。",
+        "vi": "Trong phân tích tài chính kỳ này, tiến độ quản lý rủi ro tỷ giá do biến động TTS như thế nào?",
+        "en": "In this term's financial analysis, how is the progress of foreign exchange risk management due to TTS fluctuations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前四半期と比較して為替ヘッジ戦略が奏功し、TTS変動による影響は着実に抑制されており、期末の経営目標達成に貢献できる見通しです。",
+        "vi": "So với quý trước, chiến lược phòng ngừa rủi ro tỷ giá đã thành công, ảnh hưởng từ biến động TTS đang được kiểm soát ổn định, dự kiến sẽ đóng góp vào việc đạt được mục tiêu kinh doanh cuối kỳ.",
+        "en": "Compared to the previous quarter, our foreign exchange hedging strategy has been effective, and the impact of TTS fluctuations is steadily being suppressed, contributing to the achievement of our year-end business objectives."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6b9dd88489d52f55aa601e20c0cccf721e79489b4107838851d43b5e1e22d210",
+    "validated_at": "2026-10-01T01:56:18.691561+00:00"
+  }
+}

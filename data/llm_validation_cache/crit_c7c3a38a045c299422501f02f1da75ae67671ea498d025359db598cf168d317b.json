@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000064",
+  "term": "雇用契約書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual error: Example 0 claims an employment contract is signed with a business partner (取引先), and the dialogue mistakenly refers to the individual employee having a corporate legal department (先方法務部). Collocation 2 also confuses the document (契約書) with the legal status (契約).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雇用契約書を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business expression for executing an employment agreement.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雇用契約書を更新する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in HR operations when renewing fixed-term employment contracts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "雇用契約書を解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One terminates the legal contract relationship (雇用契約を解除・解約する), not the physical/electronic document (契約書). For the document itself, 交付する (issue) or 取り交わす (exchange) is natural.",
+      "suggested_text": "雇用契約書を取り交わす"
+    },
+    {
+      "index": 3,
+      "text": "雇用契約書の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and highly relevant collocation for reviewing contract clauses.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A company signs an employment contract (雇用契約書) with an individual employee or candidate (入社予定者/採用内定者), never with a business partner (取引先). This is an unnatural hallucinated B2B template.",
+      "suggested_ja": "中途採用者の入社日が確定したため、来週雇用契約書を正式に締結いたします。",
+      "suggested_vi": "Do ngày gia nhập công ty của nhân sự tuyển dụng giữa kỳ đã được ấn định, tuần tới chúng tôi sẽ chính thức ký kết hợp đồng lao động.",
+      "suggested_en": "Now that the start date for the mid-career hire has been finalized, we will officially execute the employment contract next week."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural context of HR coordinating with the legal department to vet clauses of an employment contract for compliance.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "An employment contract is signed with an individual employee; referring to '先方法務部' (the other party's legal department) makes no sense in an employment context. This is an erroneous copy-paste of a B2B transaction template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月入社予定の専門職社員の雇用契約書ですが、労働条件の確認は済みましたか。",
+        "vi": "Về hợp đồng lao động của nhân viên chuyên trách dự kiến vào công ty tháng tới, anh đã xác nhận các điều kiện lao động xong chưa?",
+        "en": "Regarding the employment contract for the specialized employee joining next month, have you finished reviewing the working conditions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、法務部とすり合わせを行い、競業避止義務条項を含めて問題ないことを確認いたしました。",
+        "vi": "Vâng, tôi đã đối soát với phòng pháp chế và xác nhận rằng mọi thứ, bao gồm cả điều khoản không cạnh tranh, đều ổn thỏa.",
+        "en": "Yes, we coordinated with the legal department and confirmed there are no issues, including the non-compete clause."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ea548c3930c0a075ee489fc40762fd114d8b7519e8c172ff022c1566b6be6944",
+    "validated_at": "2026-10-01T01:42:03.002009+00:00"
+  }
+}

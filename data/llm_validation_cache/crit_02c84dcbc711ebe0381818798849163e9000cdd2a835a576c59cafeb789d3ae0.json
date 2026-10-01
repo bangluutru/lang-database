@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000087",
+  "term": "地方法人税",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are sound, Example 0 conflated calculating statutory tax rates with tax calculation, Example 1 contained a Vietnamese translation stutter, and the workplace dialogue applied a generic 'voucher vs. subledger' reconciliation template that does not make domain sense for tax accruals in monthly closings.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地方法人税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate tax collocation used during corporate tax return preparation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "地方法人税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and accurate business tax phrase.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "地方法人税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting practice phrase for tax estimation and calculation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "地方法人税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legally accurate passive formulation for tax imposition.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax law, tax rates (適用税率) are fixed statutory rates and are not 'calculated' (算出). Furthermore, the tax base (課税標準) of 地方法人税 is the national corporation tax amount (基準法人税額), not general taxable income as mistakenly translated in the Vietnamese version.",
+      "suggested_ja": "基準法人税額に基づいて地方法人税を算出し、法定納期限までに納付手続きを完了しました。",
+      "suggested_vi": "Chúng tôi đã tính toán thuế pháp nhân địa phương dựa trên số thuế pháp nhân cơ sở và hoàn tất thủ tục nộp thuế trước thời hạn quy định.",
+      "suggested_en": "We calculated the local corporation tax based on the standard corporate tax amount and completed the payment procedures by the statutory due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is authentic, but the Vietnamese translation contains a stuttering typographic error ('số tiền thuế thuế pháp nhân').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における地方法人税の税負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ nội dung cải cách luật thuế, chúng tôi đã tính thử tác động đối với gánh nặng thuế pháp nhân địa phương (thuế quốc gia nộp chuyển tiếp) trong kỳ này.",
+      "suggested_en": "In light of tax law revisions, we estimated the impact on the tax burden of local corporation tax for this term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In monthly closing (月次決算), local corporation tax is recognized as an accrued estimate (未払法人税等/引当計上). Reconciling against '証憑書類' (invoices/payment vouchers) makes no sense in this monthly estimation context because no return has been filed or paid yet. The dialogue feels like a templated, mechanical exchange.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算における未払法人税等の計上ですが、地方法人税の計算ロジックに誤りはありませんか。",
+        "vi": "Về việc trích trước thuế pháp nhân phải nộp trong kỳ quyết toán tháng này, logic tính thuế pháp nhân địa phương có sai sót gì không?",
+        "en": "Regarding the accrual of corporate taxes payable in this month's closing, are there any errors in the local corporation tax calculation logic?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、基準法人税額に現行税率を正しく適用し、過不足なく見積計上されていることを確認済みです。",
+        "vi": "Vâng, tôi đã xác nhận rằng thuế suất hiện hành đã được áp dụng chính xác trên số thuế pháp nhân cơ sở và việc trích trước ước tính không có thừa thiếu.",
+        "en": "Yes, I have confirmed that the current tax rate is correctly applied to the standard corporate tax amount, and the estimated accrual is appropriately recognized without discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1 had a duplicated word typo ('thuế thuế') and Example 0 had an inaccurate domain translation for 課税標準 in the context of 地方法人税."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "508c8d88a69cc7eb99bbbe78cddf639cadef4d383241465e114e568d6255e68f",
+    "validated_at": "2026-10-01T01:38:58.549979+00:00"
+  }
+}

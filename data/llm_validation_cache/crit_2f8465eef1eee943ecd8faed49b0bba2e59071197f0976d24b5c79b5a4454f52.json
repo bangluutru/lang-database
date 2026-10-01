@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000054",
+  "term": "稟議書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain misconception: the generated Japanese treats '稟議書' (internal ringi approval memo) as an external meeting notice (招集通知) sent out to shareholders ('発送する', '法定期限内', '全関係者へ発送'). Collocations, examples, and dialogue require immediate rewrite to reflect genuine internal approval workflows.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "稟議書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate expression for drafting an approval request.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "稟議書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when submitting a draft approval request to superiors or reviewing departments.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "稟議書を発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A 稟議書 is an internal ringi approval document circulated within an organization; '発送する' (dispatching externally by post/courier) is fundamentally incompatible.",
+      "suggested_text": "稟議書を回覧する"
+    },
+    {
+      "index": 3,
+      "text": "稟議書を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'受領する' is typically used for goods, external invoices, or formal receipts. For an internal ringi proposal, natural predicates are '承認する' (approve) or '決裁する' (finalize sanction).",
+      "suggested_text": "稟議書を承認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe corporate governance error: 稟議書 has been completely confused with 招集通知 (notice of convocation). Internal approval documents are never dispatched under statutory deadlines to shareholders.",
+      "suggested_ja": "新規基幹システムの導入にあたり、投資対効果を明記した稟議書を起案した。",
+      "suggested_vi": "Để triển khai hệ thống quản trị cốt lõi mới, tôi đã lập tờ trình phê duyệt nội bộ nêu rõ hiệu quả đầu tư.",
+      "suggested_en": "In introducing the new core system, I drafted an internal approval request specifying the return on investment."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'担当部署にて受領した稟議書' is awkward corporate phrasing. Ringi documents are archived after formal sanction/approval ('決裁済みの稟議書').",
+      "suggested_ja": "内部統制および監査の証跡として、決裁済みの稟議書を厳重に保管しています。",
+      "suggested_vi": "Để làm bằng chứng kiểm soát nội bộ và phục vụ kiểm toán, các tờ trình phê duyệt nội bộ đã được quyết tài (phê duyệt) đều được lưu trữ nghiêm ngặt.",
+      "suggested_en": "As audit evidence and for internal control purposes, approved ringi approval requests are strictly archived."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B mentions '本日中に発送の手配を行います' (dispatching ringisho today), which demonstrates a total misunderstanding of internal ringi circulation workflows.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規サーバー購入の稟議書、承認状況はどうなっていますか。",
+        "vi": "Tờ trình xin phê duyệt mua máy chủ mới hiện tình trạng thế nào rồi?",
+        "en": "What is the approval status of the ringi request for purchasing the new server?"
+      },
+      {
+        "speaker": "B",
+        "ja": "経理部の事前確認が完了しましたので、本日中に役員決裁へ回します。",
+        "vi": "Bộ phận kế toán đã kiểm tra xong trước rồi, nên trong ngày hôm nay tôi sẽ chuyển tiếp để ban điều hành quyết tài phê duyệt.",
+        "en": "The accounting department has finished its preliminary review, so I will route it for executive approval today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term definitions are accurate, but the example/dialogue translations inherited the severe factual errors of the source Japanese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a3e5b1505b6ea089c050164e15d915f6c220be3c6ce081471ef1efc8eaf6e690",
+    "validated_at": "2026-10-01T01:41:54.031191+00:00"
+  }
+}

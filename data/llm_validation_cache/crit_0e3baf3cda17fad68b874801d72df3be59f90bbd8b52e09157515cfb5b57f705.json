@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000125",
+  "term": "簡易課税制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences suffer from severe domain factual hallucinations ('地域貢献', '控除上限額', and repetitive phrasing '制度の制度'), confusing consumption tax with charitable donations. The dialogue relies on generic AI tropes instead of real tax accounting procedures.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "簡易課税制度を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in practical business discussions, though 選択する is more technically precise.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "簡易課税制度の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard statutory phrasing in Japanese consumption tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "簡易課税制度を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in business management and tax planning contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "簡易課税制度の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for meeting eligibility criteria (under 50 million yen in taxable sales).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Conflates consumption tax simplified taxation with regional donation tax credits ('地域貢献'). Also contains an awkward repetition ('簡易課税制度の制度').",
+      "suggested_ja": "基準期間の課税売上高が5,000万円以下となったため、事務負担軽減と節税効果を考慮して簡易課税制度を選択しました。",
+      "suggested_vi": "Vì doanh số chịu thuế của kỳ tính thuế cơ sở từ 50 triệu yên trở xuống, chúng tôi đã chọn chế độ tính thuế giản đơn nhằm giảm bớt gánh nặng hành chính và tối ưu hiệu quả tiết kiệm thuế.",
+      "suggested_en": "Since taxable sales for the base period fell to 50 million yen or less, we opted for the simplified taxation system to reduce administrative burden and optimize tax savings."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'控除上限額' (deduction ceiling) does not exist under the simplified consumption tax regime; the system applies a deemed purchase rate (みなし仕入率) based on business classification.",
+      "suggested_ja": "みなし仕入率を用いた試算を行い、原則課税よりも納税額が抑えられることを確認した上で簡易課税制度の届出書を提出しました。",
+      "suggested_vi": "Sau khi tính toán thử nghiệm bằng tỷ lệ mua vào ước tính và xác nhận rằng số tiền thuế phải nộp sẽ thấp hơn so với phương pháp tính thuế thông thường, chúng tôi đã nộp tờ khai đăng ký áp dụng chế độ tính thuế giản đơn.",
+      "suggested_en": "After simulating calculations using the deemed purchase rate and confirming that the tax liability would be lower than under the standard taxation method, we submitted the notification for the simplified taxation system."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Under Japanese tax practice, '税理士の確認書' is not a statutory attachment for a consumption tax return; the calculation is filed using official schedules (付表) based on the deemed purchase rate.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の消費税申告ですが、簡易課税制度における事業区分の判定とみなし仕入率の適用は確認済みですか。",
+        "vi": "Về việc kê khai thuế tiêu dùng kỳ này, anh/chị đã xác nhận xong việc phân loại ngành nghề kinh doanh và áp dụng tỷ lệ mua vào ước tính theo chế độ thuế giản đơn chưa?",
+        "en": "Regarding this period's consumption tax filing, have you verified the business classification and the application of the deemed purchase rate under the simplified taxation system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、売上内訳を精査し、第3種と第5種の按分計算および付表の作成まで完了しております。",
+        "vi": "Vâng, tôi đã rà soát chi tiết cơ cấu doanh thu, hoàn tất việc tính toán phân bổ cho ngành loại 3 và loại 5 cũng như lập các biểu mẫu đính kèm.",
+        "en": "Yes, I have scrutinized the sales breakdown and completed both the proportional calculation for Types 3 and 5 and the preparation of the supplementary schedules."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The term translations themselves are accurate; however, the example sentences require full rewrite due to fundamental domain factual errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d49ffc7d2f03ac4206cc683e4fcc22c6d2344561d536ca84425da04145b3f7fa",
+    "validated_at": "2026-10-01T01:39:38.135899+00:00"
+  }
+}

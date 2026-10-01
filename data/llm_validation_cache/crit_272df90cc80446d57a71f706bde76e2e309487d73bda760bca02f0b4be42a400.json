@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000052",
+  "term": "燻蒸証明書",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure conversational continuity and directness in addressing the question about the fumigation certificate's status.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "燻蒸証明書を発行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "燻蒸証明書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "燻蒸証明書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "燻蒸証明書を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of the fumigation certificate, which was Speaker A's primary question. It mentions contacting parties and document confirmation, but not the certificate's specific status.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、燻蒸証明書の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình chuẩn bị chứng nhận hun trùng khử mọt bao bì gỗ thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the fumigation certificate arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、燻蒸証明書は既に通関業者へ提出済みで、現在輸入申告の手続きを進めております。",
+        "vi": "Vâng, chứng nhận hun trùng khử mọt bao bì gỗ đã được nộp cho đại lý hải quan và chúng tôi đang tiến hành thủ tục khai báo nhập khẩu.",
+        "en": "Yes, the fumigation certificate has already been submitted to the customs broker, and we are currently proceeding with the import declaration procedures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3cdc8fd58b959dd0c4e1a69e78717396ebb701eaeba99e2887c02e81dcb566c6",
+    "validated_at": "2026-10-01T01:54:28.345993+00:00"
+  }
+}

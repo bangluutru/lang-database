@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000028",
+  "term": "相殺",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なスロット埋め込み型テンプレート文（「Xの計上内容や残高」「適正な…適正に」）が散見され、「相殺の残高」など会計実務上不適切なコロケーションを含んでいるため全面的な修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "相殺を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「相殺」単体よりも実務では「相殺処理を進める」または「売掛金と買掛金を相殺する」とするのが自然です。",
+      "suggested_text": "相殺処理を進める"
+    },
+    {
+      "index": 1,
+      "text": "相殺を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "機械的テンプレート表現です。実務では「相殺処理を完了する」や「相殺手続きを完了する」と表現します。",
+      "suggested_text": "相殺処理を完了する"
+    },
+    {
+      "index": 2,
+      "text": "相殺の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "相殺合意や社内処理の手順確認として実務で許容される自然な表現です。",
+      "suggested_text": "相殺の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "相殺を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「相殺」という法律行為・会計処理そのものを「見直す」とは言いません。相殺の「条件」や「合意内容」を見直す必要があります。",
+      "suggested_text": "相殺条件を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「相殺の残高」という会計用語は存在せず不自然です（相殺は残高を消去する行為）。「相殺後の残高」または「取引先との相殺額」とすべきです。",
+      "suggested_ja": "月末の帳簿照合において、取引先との相殺処理内容や相殺後の残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung cấn trừ công nợ với đối tác và số dư sau cấn trừ có phát sinh chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we thoroughly verify whether there are any discrepancies in the offset processing details with business partners or the post-offset balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準…適正に処理いたしました」と「適正」が重複しており、テンプレート臭が強く文体として拙劣です。",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期の決算において売掛金と買掛金の相殺処理を適切に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã thực hiện đúng quy định việc cấn trừ giữa các khoản phải thu và phải trả trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we properly executed the offset processing of accounts receivable and accounts payable for this closing period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「相殺の計上内容」や「適正に整合している」など、機械生成特有のぎこちない言い回しが目立ちます。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、主要取引先との相殺処理に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, việc cấn trừ công nợ với các đối tác chính có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the offset processing with major business partners for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、相殺残高の整合性が取れていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu xong chứng từ với sổ phụ và xác nhận số dư cấn trừ hoàn toàn khớp nhau.",
+        "en": "I have already reconciled the source documents with the subsidiary ledger and confirmed that the offset balances match correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "日英翻訳ともに用語定義「cấn trừ công nợ giữa hai bên」や「offset / set-off of debts」を文脈を無視して強引に埋め込んでおり、文として不自然。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d82aa62a24f34e4f14403c858dbf254bbac58fbc6fa01471534cba897e6981dc",
+    "validated_at": "2026-10-01T01:41:26.394024+00:00"
+  }
+}

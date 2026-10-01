@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000192",
+  "term": "会計上の見積り",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文・対話・一部のコロケーションにおいて、会計上の見積りの実務的性質（仮定・不確実性・監査人との協議）が無視され、一般仕訳や帳簿照合の汎用テンプレート文言が機械的に流用されており、教育コンテンツとして不適切です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "会計上の見積りを進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「進める」は汎用テンプレート的で、実務では「会計上の見積りを行う」「策定する」「実施する」と表現します。",
+      "suggested_text": "会計上の見積りを行う"
+    },
+    {
+      "index": 1,
+      "text": "会計上の見積りを完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「見積りを完了する」よりも、実務上極めて頻出かつ重要な「見積りの不確実性を評価する」や「見積りの合理性を検討する」を教えるべきです。",
+      "suggested_text": "会計上の見積りの合理性を検討する"
+    },
+    {
+      "index": 2,
+      "text": "会計上の見積りの手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内マニュアルや内部統制の文脈で自然に使用されます。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "会計上の見積りを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実績との乖離や市場環境の変化に伴う見直しの文脈で自然かつ定着した表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「会計上の見積り」（引当金や減損等）は前提条件・仮定に基づいて算出するものであり、月末の帳簿照合で「残高に差異がないか」を突合する対象ではありません。定型文テンプレートへの無理な当てはめです。",
+      "suggested_ja": "市場環境の悪化に伴い、将来キャッシュ・フローを見直した結果、会計上の見積りを変更しました。",
+      "suggested_vi": "Do môi trường thị trường xấu đi, sau khi xem xét lại dòng tiền tương lai, chúng tôi đã thay đổi ước tính kế toán.",
+      "suggested_en": "Due to worsening market conditions, we revised our accounting estimates following a review of future cash flows."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準…適正に処理」と「適正」が重複しており、機械的テンプレート感が強いです。実務に即した具体的な監査や注記の文脈にするべきです。",
+      "suggested_ja": "貸倒引当金や退職給付引当金など、会計上の見積りの合理性について監査法人と協議を行いました。",
+      "suggested_vi": "Chúng tôi đã thảo luận với công ty kiểm toán về tính hợp lý của các ước tính kế toán như dự phòng nợ phải thu khó đòi và dự phòng trợ cấp hưu trí.",
+      "suggested_en": "We discussed the reasonableness of accounting estimates, such as allowance for doubtful accounts and retirement benefit provisions, with the audit firm."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "会計上の見積り（主観的判断・予測を含むもの）に対し、証憑書類と補助元帳の照合で整合性を確認するという回答は会計実務の論理として破綻しています（請求書照合のような定型処理と混同されています）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、会計上の見積りに用いた仮定の妥当性は検証できていますか。",
+        "vi": "Trong kỳ quyết toán này, chúng ta đã kiểm chứng được tính hợp lý của các giả định sử dụng cho ước tính kế toán chưa?",
+        "en": "Have we verified the reasonableness of the assumptions used for accounting estimates in this term's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、直近の事業計画と市場データを反映し、監査法人とも事前に認識をすり合わせております。",
+        "vi": "Vâng, chúng tôi đã phản ánh kế hoạch kinh doanh và dữ liệu thị trường mới nhất, đồng thời đã thống nhất trước nhận định với công ty kiểm toán.",
+        "en": "Yes, we have reflected the latest business plans and market data, and we have already aligned our understanding with the audit firm in advance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の基本訳語（Accounting estimates / ước tính kế toán）自体は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1e8d79f7705baf236d6a2eb11f82abcb18330c79b7dbbd33993586337baa8069",
+    "validated_at": "2026-10-01T01:37:07.816300+00:00"
+  }
+}

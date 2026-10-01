@@ -1,0 +1,81 @@
+{
+  "entry_id": "jp-pro-tax-000069",
+  "term": "特定支出控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain error in the dialogue combining corporate settlement ('決算申告') with an individual employment deduction ('特定支出控除'), alongside an erroneous statutory document ('税理士の確認書' instead of '給与支払者の証明書'). Collocation index 2 also suffers from a factual mismatch ('上限額').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特定支出控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural tax practice collocation."
+    },
+    {
+      "index": 1,
+      "text": "特定支出控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for a taxpayer receiving/claiming this deduction."
+    },
+    {
+      "index": 2,
+      "text": "特定支出控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factually inaccurate. Unlike donation deductions (寄附金控除/ふるさと納税), '特定支出控除' has no general cap/upper limit (上限額); rather, it requires calculating the threshold (適用判定基準額) or the deduction amount itself (特定支出控除額).",
+      "suggested_text": "特定支出控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "特定支出控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for meeting statutory eligibility criteria."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural sentence structure and terminology in the context of filing an individual final income tax return."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately expresses the preparation and attachment of documentation required for claiming the deduction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fatal domain errors: 1) '決算申告' refers exclusively to corporate tax returns, whereas '特定支出控除' is an individual income tax deduction for employment income earners (給与所得者) filed under '所得税の確定申告'. 2) The legally required statutory attachment is the employer's certification ('給与支払者の証明書'), not a '税理士の確認書'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の確定申告における特定支出控除の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán và hồ sơ nộp kèm cho khoản giảm trừ chi phí đặc thù trong tờ khai quyết toán thuế thu nhập của giám đốc chưa?",
+        "en": "Have you organized the calculation basis and filing documents for the deduction for specified expenditures in the director's individual tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、支出の領収書と会社発行の給与支払者の証明書を揃えましたので、申告書に添付可能です。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ hóa đơn chi tiêu cùng với giấy chứng nhận do công ty phát hành, sẵn sàng để đính kèm vào tờ khai quyết toán.",
+        "en": "Yes, we have compiled the expense receipts and the employer certificate issued by the company, so they are ready to be attached to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Accurate, established legal and tax terminology in both English and Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d1f68cee535730916c43c99ff1f58bece32988edc6b287e90c9e3e4016af763b",
+    "validated_at": "2026-10-01T01:38:36.725548+00:00"
+  }
+}

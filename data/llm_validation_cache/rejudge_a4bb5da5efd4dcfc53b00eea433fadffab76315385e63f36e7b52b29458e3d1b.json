@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "Japanese collocations, examples, and dialogue are exceptionally natural and accurate for Japanese corporate HR and payroll practices. However, meaning_vi erroneously conflates 健康保険 with 国民健康保険 ('quốc gia') and requires adjustment.",
+  "issues": [
+    {
+      "component": "translations",
+      "code": "TRANSLATION_ERROR",
+      "detail": "meaning_vi specifies 'bảo hiểm y tế quốc gia', which technically denotes 国民健康保険 (National Health Insurance). In a corporate business context, 健康保険 corresponds to employee health insurance and should simply be 'bảo hiểm y tế'."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "41fbe69b902523ffa96faab94df173f1480680f6469531fcd6a4aeca92a02238",
+    "validated_at": "2026-10-01T01:43:01.232396+00:00"
+  }
+}

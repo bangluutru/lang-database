@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000042",
+  "term": "白色申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 1 has a predicate mismatch ('白色申告を提出する' -> '白色申告書を提出する'), Example 2 and Dialogue ignore the real-world tax reality of White Returns (which are primarily used by sole proprietors without blue return approvals, requiring '収支内訳書'), and Vietnamese translations suffer from unedited template insertions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "白色申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrasing for performing a white return filing.",
+      "suggested_text": "白色申告を行う"
+    },
+    {
+      "index": 1,
+      "text": "白色申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「申告」is an action/regime, whereas「提出する」requires a physical or electronic document as its direct object. Natural business phrasing requires「白色申告書を提出する」or「白色申告で申告する」.",
+      "suggested_text": "白色申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "白色申告の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression referring to the statutory deadline for white return filing.",
+      "suggested_text": "白色申告の期限"
+    },
+    {
+      "index": 3,
+      "text": "白色申告の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business Japanese for proceeding with filing procedures.",
+      "suggested_text": "白色申告の手続きを進める"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese translation awkwardly forces the raw glossary definition ('thủ tục chế độ kê khai thuế sổ sách mẫu trắng'), resulting in unnatural Vietnamese syntax.",
+      "suggested_ja": "所轄の税務署に対し、法定申告期限内に白色申告の手続きを完了しました。",
+      "suggested_vi": "Chúng tôi đã hoàn tất thủ tục kê khai thuế mẫu trắng trong thời hạn quy định tại chi cục thuế phụ trách.",
+      "suggested_en": "We completed the white return procedures within the statutory deadline at the competent tax office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Corporations retaining an advisory tax accountant (顧問税理士) overwhelmingly file Blue Returns (青色申告) to secure tax deductions and loss carryforwards; filing a White Return in this context is artificial and unrepresentative of standard corporate practice. Contextualizing it around sole proprietorship or failure/waiver of blue status makes it realistic.",
+      "suggested_ja": "青色申告の承認申請を行っていないため、今期は白色申告にて収支内訳書および確定申告書を提出します。",
+      "suggested_vi": "Do chưa đăng ký phê duyệt chế độ kê khai thuế mẫu xanh, kỳ này chúng tôi nộp bảng kê thu chi và tờ khai quyết toán thuế theo chế độ kê khai thuế mẫu trắng.",
+      "suggested_en": "Since we have not applied for blue return status, we will submit the statement of revenue and expenditure and tax return as a white return for this period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's phrasing '白色申告の計算根拠と提出書類' sounds contrived. In actual tax practice, white return filings require specific documents like the '収支内訳書' (statement of income and expenditure). B's response about '税理士の確認書' for a white return is also atypical.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の確定申告は白色申告となりますが、収支内訳書の作成は順調ですか。",
+        "vi": "Kỳ quyết toán thuế này chúng ta kê khai theo mẫu trắng, việc lập bảng kê thu chi có thuận lợi không?",
+        "en": "This period's final tax return will be a white return; is the preparation of the income and expenditure statement going smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、売上と経費の集計および領収書の整理が済みましたので、本日中に提出用書類が整います。",
+        "vi": "Vâng, việc tổng hợp doanh thu, chi phí và sắp xếp hóa đơn đã xong, trong ngày hôm nay hồ sơ nộp sẽ hoàn tất.",
+        "en": "Yes, we have tallied sales and expenses and organized receipts, so the submission documents will be ready today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning 'chế độ kê khai thuế sổ sách mẫu trắng' is overly wordy and caused mechanical, awkward embedding in sentences. It should be streamlined to 'kê khai thuế mẫu trắng' or 'chế độ kê khai thuế mẫu trắng'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "53dfd81c6f72098625cc0947425cd20c22a96feafe46b2b074c54eb4c8b1624b",
+    "validated_at": "2026-10-01T01:38:05.180545+00:00"
+  }
+}

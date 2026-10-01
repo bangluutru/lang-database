@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000050",
+  "term": "扶養控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain factual error in dialogue: '決算申告' (corporate tax filing) was conflated with an individual tax deduction ('扶養控除'). In addition, collocation 2 ('上限額を計算する') misrepresents the fixed statutory nature of dependent deductions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "扶養控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in individual taxation and payroll accounting.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "扶養控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used by taxpayers qualifying for and receiving the dependent deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "扶養控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "扶養控除 consists of statutory fixed amounts per dependent category (e.g., 380,000 yen, 630,000 yen), not a variable allowance subject to a calculated ceiling (上限額). The standard business collocation is '扶養控除額を計算する' or '扶養控除等申告書を提出する'.",
+      "suggested_text": "扶養控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "扶養控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and accurate phrasing regarding statutory eligibility criteria for dependents.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically correct and factually valid in the context of an individual tax return (確定申告).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic practice, particularly relevant to documentation required for non-resident dependents (国外居住親族).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical tax domain error: '決算申告' refers specifically to corporate tax filing (法人税申告). Corporations cannot claim '扶養控除' (exemption for dependents), which is exclusively an individual income tax (所得税/住民税) concept handled via year-end tax adjustment (年末調整) or individual tax returns.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今年の年末調整における従業員の扶養控除等申告書と添付書類の確認は完了しましたか。",
+        "vi": "Anh/chị đã hoàn tất việc kiểm tra tờ khai giảm trừ người phụ thuộc và các chứng từ đính kèm của nhân viên trong đợt quyết toán thuế cuối năm nay chưa?",
+        "en": "Have you completed checking the employees' dependent exemption declarations and attached documents for this year's year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、国外居住親族の送金関係書類を含め、すべての要件確認を終えて給与計算システムへ反映済みです。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc xác minh mọi điều kiện, bao gồm cả chứng từ chuyển tiền cho thân nhân cư trú ở nước ngoài, và đã cập nhật vào hệ thống tính lương rồi.",
+        "en": "Yes, we have verified all statutory requirements, including remittance certificates for non-resident dependents, and reflected them in the payroll system."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are comprehensible and professional, though 'khoản giảm trừ người phụ thuộc' is preferred over appending 'trong gia đình'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "38236dc8b2c26e87f39f4360c4e50a2fab7b347975ff16d1bcc48b4dc276f5f0",
+    "validated_at": "2026-10-01T01:38:13.574635+00:00"
+  }
+}

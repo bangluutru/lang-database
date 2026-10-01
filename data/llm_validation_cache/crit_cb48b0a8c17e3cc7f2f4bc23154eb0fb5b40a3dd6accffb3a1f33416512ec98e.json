@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000038",
+  "term": "立替金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 is an artificial cookie-cutter template with duplicate '適正', Dialogue B uses the awkward collocation '適正に整合している', collocation 2 pairs the account title inappropriately with '照合する', and translations suffer from unedited definition slashes.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "立替金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording/booking advances paid.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "立替金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard procedure in internal controls and book closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "立替金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, one reconciles/collates balances, ledgers, or receipts (残高・明細・証憑を照合する) rather than the account itself directly. Alternatively, '立替金を回収する' (collect/recover advances paid) is far more standard.",
+      "suggested_text": "立替金を回収する"
+    },
+    {
+      "index": 3,
+      "text": "立替金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly frequent and authentic collocation for settling advance payments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic sentence depicting month-end verification of entries and balances.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavy boilerplate template sentence with redundant repetition of '適正な' and '適正に', lacking realistic accounting substance.",
+      "suggested_ja": "従業員が一時的に立て替えた経費については、領収書を添付のうえ、期日までに立替金の精算申請を行ってください。",
+      "suggested_vi": "Đối với các chi phí mà nhân viên đã tạm ứng chi trả, vui lòng đính kèm hóa đơn và nộp đơn đề nghị thanh toán tạm ứng trước thời hạn.",
+      "suggested_en": "For expenses temporarily paid out-of-pocket by employees, please attach the receipts and submit an advance settlement request by the deadline."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase '適正に整合している' in Speaker B is unnatural and redundant pseudo-business Japanese. In accounting dialogue, speakers use '一致している' or '差異がない'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、立替金の残高に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, số dư khoản tạm ứng chi có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the balance of advances paid for this month's monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, và xác nhận mọi thứ hoàn toàn khớp.",
+        "en": "We have already reconciled the vouchers with the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations in examples contain raw slash formatting ('khoản chi hộ / tạm ứng chi', 'advances paid / claims for reimbursement') carried over directly from lexical definitions instead of fluent, context-appropriate phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0a4ce2eb6795c7e72412b6c50f273edfaaf40042964b388236740e0a0227eea6",
+    "validated_at": "2026-10-01T01:34:19.672829+00:00"
+  }
+}

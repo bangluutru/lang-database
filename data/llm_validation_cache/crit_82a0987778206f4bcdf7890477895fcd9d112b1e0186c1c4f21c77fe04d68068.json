@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000148",
+  "term": "FCL貨物",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how 'FCL貨物' (a physical good/shipping type) interacts with accounting terminology like '計上' and '残高'. The examples and dialogue attempt to treat the cargo itself as an accounting entry, which is unnatural and incorrect in a professional accounting context. The collocations are fine, but the application in sentences and dialogue is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "FCL貨物を手配する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "FCL貨物に仕分ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "FCL貨物として輸送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "FCL貨物の運賃を比較する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "FCL貨物 is a type of cargo, not an accounting entry or balance. It cannot be '計上' (booked/recorded) or have a '残高' (balance) in an accounting sense. The sentence attempts to apply accounting terms to a physical good, which is unnatural.",
+      "suggested_ja": "月末の帳簿照合において、FCL貨物に関する売上や仕入れの計上内容、および未決済残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán doanh thu hoặc mua hàng liên quan đến hàng nguyên container (FCL) và số dư chưa thanh toán hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded sales or purchases related to FCL cargo, and any outstanding balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'FCL貨物を処理する' in an accounting context is unnatural. One processes the accounting entries related to FCL cargo, not the cargo itself. The phrasing 'FCL貨物を適正に処理いたしました' sounds like the cargo itself was handled or disposed of, not accounted for.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてFCL貨物に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến hàng nguyên container (FCL) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to full container load (FCL) in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question about 'FCL貨物の計上内容に差異' is based on the same semantic misunderstanding as the example sentences. FCL cargo itself is not '計上' (booked) in accounting. The dialogue needs to reflect accounting for transactions related to FCL cargo.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、FCL貨物に関する売上や仕入れの計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán doanh thu hoặc mua hàng liên quan đến hàng nguyên container (FCL) không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded sales or purchases related to FCL cargo?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5e0ee8daad33defe9a5f9b5ac2219aff908d18603bcc363ec7062186212ed28b",
+    "validated_at": "2026-10-01T01:56:36.841887+00:00"
+  }
+}

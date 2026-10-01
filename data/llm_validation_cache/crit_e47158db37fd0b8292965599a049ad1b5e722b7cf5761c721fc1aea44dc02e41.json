@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000082",
+  "term": "1年内返済予定の長期借入金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a severe semantic mismatch in collocation (借入金を精算する is incorrect Japanese accounting usage), an unnatural/robotic template in Example 2, and artificial phrasing in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "1年内返済予定の長期借入金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation (often used when booking or reclassifying current portion of long-term debt).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "1年内返済予定の長期借入金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural procedure in monthly/annual closing reconciliations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "1年内返済予定の長期借入金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles the balance against the repayment schedule (返済予定表と残高を照合する), not the debt itself directly without specifying the counter-document or balance.",
+      "suggested_text": "1年内返済予定の長期借入金を返済予定表と照合する"
+    },
+    {
+      "index": 3,
+      "text": "1年内返済予定の長期借入金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Bank borrowings are repaid (返済する) or reclassified (振り替える), never 'settled/cleared' with '精算する' (which is reserved for travel/out-of-pocket expenses or suspense payments).",
+      "suggested_text": "1年内返済予定の長期借入金へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting context and natural Japanese register.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly repetitive and stilted template Japanese ('適正な...適正に処理いたしました'). Real-world accounting reporting specifically mentions reclassifying the one-year maturity portion from non-current liabilities.",
+      "suggested_ja": "当期末の決算において、長期借入金のうち1年以内に返済期日が到来する分を「1年内返済予定の長期借入金」へ振り替えました。",
+      "suggested_vi": "Trong kỳ quyết toán cuối niên độ này, phần nợ dài hạn đến hạn trả trong vòng một năm đã được kết chuyển sang khoản mục 'nợ dài hạn đến hạn trả trong vòng 1 năm'.",
+      "suggested_en": "In the fiscal year-end closing, the portion of long-term debt maturing within one year was reclassified to the current portion of long-term borrowings."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異は発生していませんか' and '適正に整合している' sound artificially generated and unnatural. In practice, closing staff verify whether balances match the loan repayment schedule (返済予定表).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算整理にあたって、1年内返済予定の長期借入金の振替額は返済予定表と一致していますか。",
+        "vi": "Trong quá trình điều chỉnh quyết toán, số tiền kết chuyển của nợ dài hạn đến hạn trả trong vòng 1 năm có khớp với lịch trả nợ không?",
+        "en": "In the closing adjustments, does the reclassification amount for the current portion of long-term borrowings match the repayment schedule?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各金融機関の返済予定表と残高を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu số dư với lịch trả nợ của từng tổ chức tín dụng và xác nhận tất cả đều khớp.",
+        "en": "Yes, we have reconciled the balances with each financial institution's repayment schedule and confirmed that all match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The term translations are standard accounting terminology in both languages."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3c998d738676cf4e17592c07d7c91250daf5474a6fddce898c07195ee4ba090c",
+    "validated_at": "2026-10-01T01:35:04.692097+00:00"
+  }
+}

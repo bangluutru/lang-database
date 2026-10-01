@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000045",
+  "term": "専従者控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences are natural and technically sound, but the dialogue conflates corporate tax terminology ('決算申告') and an awkward document name ('税理士の確認書') with individual income tax 白色申告 practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "専従者控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard professional collocation in tax return preparations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "専従者控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard statutory and conversational phrasing for receiving the deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "専従者控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate for calculating statutory caps (e.g., 860,000 yen for spouse, 500,000 yen for others, or income allocation formula).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "専従者控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation regarding statutory requirements (working more than 6 months, age 15+, etc.).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage in the context of filing individual income tax returns.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing for preparing necessary tax filing attachments.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "専従者控除 is strictly an individual income tax (所得税 / 白色申告) concept, whereas '決算申告' typically refers to corporate tax filing (法人税申告). Furthermore, '税理士の確認書' is unnatural in this specific filing context; referencing '収支内訳書' (statement of income and expenses) or direct supporting documents for family employee work status is factually and practically precise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における専従者控除の計算根拠と収支内訳書は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính mức trừ cho người nhà phụ việc và bảng kê thu chi cho kỳ quyết toán thuế này chưa?",
+        "en": "Have you prepared the calculation basis and the statement of income and expenses for the deduction for family employees in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、専従期間の確認資料と控除額の計算をまとめましたので、確定申告書に添付可能です。",
+        "vi": "Vâng, tôi đã tổng hợp tài liệu xác nhận thời gian làm việc của người phụ việc và tính toán mức khấu trừ, đã sẵn sàng để đính kèm vào tờ khai quyết toán thuế.",
+        "en": "Yes, I have compiled the verification records for the employment period and calculated the deduction amount, so they are ready to be attached to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d2451eb8079f00825348402c386963a55448b5626ec2d6b3dbb13d314d388175",
+    "validated_at": "2026-10-01T01:38:01.850328+00:00"
+  }
+}

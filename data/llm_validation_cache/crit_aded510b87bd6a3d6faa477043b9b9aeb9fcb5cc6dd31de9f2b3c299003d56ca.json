@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000134",
+  "term": "総額表示",
+  "overall_decision": "rewrite",
+  "summary_reason": "消費税の価格表示義務である「総額表示」に対し、控除制度や節税優遇措置のテキストテンプレートが混入し、例文・対話が致命的な事実誤認を犯しているため全面書き換えが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総額表示を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "総額表示は消費税法に基づく価格表示の法的義務であり、自社の都合で「利用する」ものではない。",
+      "suggested_text": "総額表示に対応する"
+    },
+    {
+      "index": 1,
+      "text": "総額表示の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "総額表示は優遇税制や特例制度ではないため、「適用を受ける」という表現は誤用。",
+      "suggested_text": "総額表示を義務付ける"
+    },
+    {
+      "index": 2,
+      "text": "総額表示を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "義務付けられた表示ルールに対して「活用する」という動詞は文脈上成立しない。",
+      "suggested_text": "総額表示に切り替える"
+    },
+    {
+      "index": 3,
+      "text": "総額表示の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "事業者や値札・広告が義務の対象となる文脈で頻繁に使用される自然なコロケーション。",
+      "suggested_text": "総額表示の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "総額表示は消費税込み価格を表示する義務であり、「節税」や「地域貢献」とは一切無関係。他制度のテンプレート混入。",
+      "suggested_ja": "消費税法に基づく総額表示義務化に伴い、店頭のPOPや自社ECサイトの価格改定を速やかに実施した。",
+      "suggested_vi": "Cùng với việc bắt buộc niêm yết giá gộp theo Luật Thuế tiêu thụ, chúng tôi đã nhanh chóng điều chỉnh lại giá trên bảng giá tại cửa hàng và trang thương mại điện tử của công ty.",
+      "suggested_en": "Following the mandate for total price display under the Consumption Tax Act, we promptly updated the prices on in-store POP displays and our e-commerce site."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "総額表示に「控除上限額」や申請手続きは存在しない。ふるさと納税等の寄付金控除テンプレートが誤用されている。",
+      "suggested_ja": "消費者向けのチラシやカタログを作成する際は、税抜価格のみでなく総額表示を徹底する必要がある。",
+      "suggested_vi": "Khi tạo tờ rơi hoặc catalog hướng tới người tiêu dùng, cần phải triệt để niêm yết giá đã bao gồm thuế thay vì chỉ để giá trước thuế.",
+      "suggested_en": "When creating flyers and catalogs for consumers, it is essential to ensure total price display rather than just showing tax-exclusive prices."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "総額表示は決算申告で計算根拠を提出したり税理士の確認書を添付したりする申告項目ではない。表示規制のコンプライアンスに関する対話に改めるべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期のリニューアルに向けて、店頭メニューやWebサイトの価格表記が総額表示に準拠しているか確認してもらえますか。",
+        "vi": "Để chuẩn bị cho đợt đổi mới vào kỳ tới, anh có thể kiểm tra xem phần hiển thị giá trên menu tại cửa hàng và website đã tuân thủ quy định niêm yết giá bao gồm thuế chưa?",
+        "en": "Could you check if the price displays on our store menus and website comply with the total price display obligation for next term's renewal?"
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。税込み価格が明確に表示されているか、デザイン担当者と各販促物を再点検します。",
+        "vi": "Tôi rõ rồi. Tôi sẽ cùng người phụ trách thiết kế rà soát lại toàn bộ ấn phẩm quảng cáo xem giá đã bao gồm thuế đã được hiển thị rõ ràng chưa.",
+        "en": "Understood. I will re-check all promotional materials with the designer to ensure the tax-inclusive prices are clearly displayed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の英訳およびベトナム語訳は適切だが、例文・対話内での文脈整合性が完全に崩壊していた。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "54e4c6efa63de8bdc435764b935c0676662947ec32833debaf90ea0d78ee3599",
+    "validated_at": "2026-10-01T01:39:50.534228+00:00"
+  }
+}

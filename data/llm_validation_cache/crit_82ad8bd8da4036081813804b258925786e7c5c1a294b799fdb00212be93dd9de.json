@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000104",
+  "term": "長期未払金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an unnatural predicate ('精算する' instead of B/S liability terms), Example 1 is an empty template with redundant wording ('適正な...適正に'), and the dialogue contains stilted, unnatural phrasing ('適正に整合している'). High-value accounting reclassifications (one-year rule) should be introduced instead.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "長期未払金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing a long-term accounts payable liability.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "長期未払金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and frequent phrase used during balance sheet review and audit procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "長期未払金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural usage in auditing and monthly/annual reconciliation against contracts or sub-ledgers.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "長期未払金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '精算する' is used for expense settlement or advance payments (仮払金・立替金). For long-term liabilities, standard actions are repayment ('支払う', '返済する') or reclassification under the one-year rule ('1年内返済分に振り替える').",
+      "suggested_text": "長期未払金を流動負債に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting terminology and natural register for internal review documentation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence is a generic AI template with redundant phrasing ('適正な...適正に処理いたしました') and conveys little educational accounting substance. An authentic sentence should demonstrate the standard accounting treatment under the one-year rule (ワン・イヤールール).",
+      "suggested_ja": "期末決算において、ワン・イヤールール（1年基準）に基づき、長期未払金のうち翌期に支払期日が到来する分を未払金へ振り替えました。",
+      "suggested_vi": "Trong kỳ quyết toán cuối niên độ, dựa trên nguyên tắc một năm (one-year rule), chúng tôi đã kết chuyển phần nợ đến hạn thanh toán trong niên độ tiếp theo từ khoản phải trả dài hạn khác sang khoản phải trả khác ngắn hạn.",
+      "suggested_en": "During year-end closing, in accordance with the one-year rule, we reclassified the portion of long-term accounts payable - other maturing in the next fiscal year to current accounts payable."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合していることを確認いたしました' is redundant and stilted Japanese. In corporate accounting dialogue, accountants state that amounts match auxiliary ledgers and source documents ('残高は一致しております' or '整合性を確認いたしました').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算にあたり、長期未払金の残高と返済予定表に齟齬はありませんか。",
+        "vi": "Trong kỳ quyết toán này, số dư khoản phải trả dài hạn khác và lịch trình thanh toán có điểm nào sai lệch không?",
+        "en": "For this fiscal year's closing, are there any discrepancies between the balance of long-term accounts payable - other and the repayment schedule?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類および補助元帳と突合済みで、すべて一致していることを確認しております。",
+        "vi": "Tôi đã đối chiếu với chứng từ gốc và sổ phụ, xác nhận tất cả số liệu đều hoàn toàn khớp.",
+        "en": "I have reconciled them against the supporting documents and subsidiary ledgers, confirming that all numbers match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions and initial translations are accurate and adhere to corporate financial accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1db29181f9e4e983b823cbd0a2e1bdb10a59c9b8a7e3cc9c879ca75d09879f0f",
+    "validated_at": "2026-10-01T01:35:29.189545+00:00"
+  }
+}

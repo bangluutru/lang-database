@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000091",
+  "term": "損金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple technical domain inaccuracies: '損金に加算する' is conceptually invalid under Japanese corporate tax accounting, Example 1 confuses tax audit risk orientation (omissions vs. improper deductions), and Example 0/dialogue rely on generic templated Japanese rather than realistic corporate tax terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損金に算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and standard Japanese corporate tax phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "損金に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Grammatically awkward. In Japanese tax practice, the established compound collocation is '損金不算入とする' or '損金不算入となる', omitting the particle 'に'.",
+      "suggested_text": "損金不算入とする"
+    },
+    {
+      "index": 2,
+      "text": "損金の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Vague and unidiomatic in corporate tax practice. Adjustments are termed '申告調整を行う' or '税務調整を行う', whereas the standard collocation with '損金' is '損金経理をする' or '損金算入限度額'.",
+      "suggested_text": "損金経理をする"
+    },
+    {
+      "index": 3,
+      "text": "損金に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Substantive tax accounting error. In Japanese corporate tax (Schedule 4), additions ('加算') are made to taxable income (typically as '損金不算入' or '益金算入'). One does not 'add to sonkin'.",
+      "suggested_text": "損金の額に算入する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'別表四において損金を適切に処理しました' is vague, templated, and unnatural. In practice, practitioners adjust specific non-deductible items (e.g., '損金不算入額を申告調整する'). Furthermore, the Vietnamese translation mechanically embeds the dictionary gloss with parentheses.",
+      "suggested_ja": "会計上の費用と税務上の損金の差異を調整するため、別表四において交際費等の損金不算入額を申告調整しました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa chi phí kế toán và chi phí được trừ theo luật thuế, chúng tôi đã thực hiện điều chỉnh các khoản chi phí không được trừ trên Phụ lục 4.",
+      "suggested_en": "To reconcile book-tax differences, we made tax adjustments on Schedule 4 for non-deductible expenses, such as entertainment expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Logical mismatch in tax practice: tax audits (税務調査) primarily target the *overstatement* or improper deduction of expenses (損金の過大計上・否認), not '算入漏れ' (deduction omissions, which would favor the tax office). Checking for audit risk involves confirming non-deductible items were not improperly expensed.",
+      "suggested_ja": "税務調査での否認リスクを低減するため、交際費や寄付金について損金算入限度額を超過していないか確認しました。",
+      "suggested_vi": "Để giảm thiểu rủi ro bị cơ quan thuế bóc tách chi phí khi thanh tra, chúng tôi đã kiểm tra xem chi phí tiếp khách và tiền quyên góp có vượt quá hạn mức được trừ hay không.",
+      "suggested_en": "To mitigate disallowance risks during a tax audit, we verified that entertainment and donation expenses did not exceed their statutory deduction limits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'損金の計算根拠' is mechanically templated, and '税理士の確認書' is not a customary statutory attachment for a corporate tax return (a tax agent's attachment is specifically '税理士法第33条の2の書面').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の法人税申告に向けて、交際費や減価償却費の損金算入限度額の計算は完了しましたか。",
+        "vi": "Để chuẩn bị nộp tờ khai thuế TNDN kỳ này, anh đã tính xong hạn mức chi phí được trừ cho chi phí tiếp khách và khấu hao chưa?",
+        "en": "Have you completed calculating the deductible expense limits for entertainment and depreciation expenses for this period's corporate tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、計算明細書を作成し、顧問税理士によるレビューも完了しております。",
+        "vi": "Vâng, tôi đã lập bảng kê chi tiết tính toán và đã được thuế lý tư vấn xem xét xong rồi.",
+        "en": "Yes, the calculation schedules have been prepared and reviewed by our tax advisor."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese gloss '(theo luật thuế)' was redundantly pasted verbatim into example sentences rather than integrated into natural business Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9aa791c87da3f829e4917d0b9b35fe0bebe1d6fc1e8dccd312f3c5ca36972915",
+    "validated_at": "2026-10-01T01:39:00.152980+00:00"
+  }
+}

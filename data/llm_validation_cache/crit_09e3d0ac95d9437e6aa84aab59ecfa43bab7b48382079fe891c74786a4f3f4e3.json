@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000074",
+  "term": "実行関税率表",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '実行関税率表' as an accounting entry rather than a reference document for calculating duties. This leads to unnatural collocations, factually incorrect example sentences, and a disconnected dialogue. Extensive rewrites are needed to align the content with actual trade and accounting practices.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "実行関税率表を適用する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "実行関税率表を照会する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "実行関税率表を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You don't 'pay' a tariff schedule; you pay customs duties based on it. The schedule itself is not something to be paid.",
+      "suggested_text": "実行関税率表に基づいて関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "実行関税率表の分類を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "実行関税率表 (Customs Tariff Schedule) is a document/list, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an entry) or have a '残高' (balance). This sentence fundamentally misunderstands the nature of a tariff schedule in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、輸入貨物の関税額が実行関税率表に基づいて適正に計算・計上されているか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem số tiền thuế quan của hàng hóa nhập khẩu đã được tính toán và hạch toán chính xác dựa trên biểu thuế quan xuất nhập khẩu hiện hành hay chưa.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether the customs duties for imported goods have been properly calculated and recorded based on the Customs Tariff Schedule."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '実行関税率表' is a schedule, not something that is 'processed' (処理する) as an accounting item in closing entries. You process the *duties* based on the schedule, or you apply the schedule. The sentence implies the schedule itself is an accounting transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において実行関税率表に基づき計算された関税を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các khoản thuế quan được tính toán dựa trên biểu thuế quan xuất nhập khẩu hiện hành trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the customs duties calculated based on the Customs Tariff Schedule in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question is based on the same fundamental misunderstanding as the example sentences: a tariff schedule is not an accounting entry ('計上内容') that would have discrepancies in a monthly closing. Speaker B's response, while grammatically correct, is disconnected from the flawed premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入申告において、実行関税率表の適用に誤りはありませんでしたか。",
+        "vi": "Trong tờ khai nhập khẩu tháng này, có sai sót nào trong việc áp dụng biểu thuế quan xuất nhập khẩu hiện hành không?",
+        "en": "Were there any errors in applying the Customs Tariff Schedule in this month's import declarations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関書類と実行関税率表の分類を照合し、すべて適正に適用されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ hải quan với phân loại trong biểu thuế quan xuất nhập khẩu hiện hành và xác nhận rằng tất cả đã được áp dụng chính xác.",
+        "en": "Yes, we have cross-referenced the customs documents with the classifications in the Customs Tariff Schedule and confirmed that everything has been applied correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "20024b14a05ece0765702e52b909acf2e4873800246902573fd6e2057c30543c",
+    "validated_at": "2026-10-01T01:54:58.258044+00:00"
+  }
+}

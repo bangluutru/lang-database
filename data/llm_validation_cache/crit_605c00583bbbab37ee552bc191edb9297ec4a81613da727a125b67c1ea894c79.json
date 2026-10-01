@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-business-000187",
+  "term": "経費精算",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the understanding and usage of '経費精算' as a noun that can have '計上内容' or '残高'. While '経費精算' is a process, the examples and dialogue treat it as an account item, leading to unnatural Japanese expressions. The Vietnamese translation is also overly specific and verbose.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "経費精算を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "経費精算を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "経費精算の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "経費精算を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrasing '経費精算の計上内容や残高に差異がないか精査します' is unnatural. '経費精算' refers to the process itself, not an item that has '計上内容' or '残高' in the same way an account or ledger item would. It should refer to the details or results of the expense reimbursement.",
+      "suggested_ja": "月末の帳簿照合において、経費精算の内容に計上漏れや誤りがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung thanh toán hoàn trả chi phí công tác có bị bỏ sót hoặc sai sót không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any omissions or errors in the details of expense reimbursements."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's '経費精算の計上内容に差異は発生していませんか' is unnatural. '経費精算' itself doesn't have '計上内容' in this context. It should refer to the results or items of the expense reimbursement. Speaker B's response is also a bit stiff.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、経費精算の内容に何か問題はありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, nội dung thanh toán hoàn trả chi phí có vấn đề gì không?",
+        "en": "Were there any issues with the expense reimbursements in this month's monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合し、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, I have reconciled the supporting documents with the subsidiary ledger and confirmed that everything has been processed properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for '経費精算' as 'thủ tục thanh toán hoàn trả chi phí công tác' is too long and specific. 'Chi phí công tác' (business trip expenses) is only one type of expense. A more general term like 'thanh toán chi phí' or 'hoàn trả chi phí' would be better. The current translation also makes the sentences unnecessarily long and clunky."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "438f4969abb66174c8b1a653b71e8ad6bd58fe1393b1ddcf8af85fdbddb3c33a",
+    "validated_at": "2026-10-01T01:53:24.154099+00:00"
+  }
+}

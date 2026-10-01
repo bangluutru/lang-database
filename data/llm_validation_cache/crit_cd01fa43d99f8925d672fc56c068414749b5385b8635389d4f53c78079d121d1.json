@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000092",
+  "term": "指定保税地域",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding of '指定保税地域' as an accounting item rather than a physical location for goods. This leads to semantic mismatches with accounting predicates like '計上する' and '処理する', making the Japanese unnatural and factually incorrect in a business context. The collocations also had one instance of semantic mismatch.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "指定保税地域に搬入する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "指定保税地域から搬出する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "指定保税地域で保管する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "指定保税地域の許可を取得する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A Designated Bonded Area is a location designated by customs, not something that requires a 'permit' to acquire. One might obtain permission to use or operate within one, but not 'acquire the permit of' the area itself.",
+      "suggested_text": "指定保税地域での許可を取得する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A 'designated bonded area' is a physical location, not an accounting entry or balance. It cannot be '計上' (booked/recorded) or have a '残高' (balance) in an accounting sense. The sentence attempts to treat a physical location as an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、指定保税地域に搬入された貨物の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của hàng hóa được đưa vào khu vực bảo thuế công cộng do nhà nước chỉ định hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of goods brought into the designated bonded area."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, a 'designated bonded area' is a location and cannot be 'processed' (処理する) in an accounting closing entry. Accounting processes deal with transactions, assets, liabilities, etc., not the physical location itself.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において指定保税地域に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến khu vực bảo thuế công cộng do nhà nước chỉ định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the designated bonded area in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question implies that '指定保税地域' itself is an accounting item that can have '計上内容' (booked content) and '差異' (discrepancies), which is incorrect. It's a location, not an account. Speaker B's response, while grammatically correct, is disconnected from the flawed premise of Speaker A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、指定保税地域に保管されている貨物の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của hàng hóa được lưu giữ tại khu vực bảo thuế công cộng do nhà nước chỉ định không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for the goods stored in the designated bonded area?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp một cách chính xác.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "966665bcc5101356ab9f13b16423f6c806135a03f8e2a733129bd6f801cbbf74",
+    "validated_at": "2026-10-01T01:55:19.530840+00:00"
+  }
+}

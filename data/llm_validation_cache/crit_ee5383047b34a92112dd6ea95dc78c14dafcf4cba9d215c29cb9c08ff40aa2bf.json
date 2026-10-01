@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000030",
+  "term": "譲渡所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "「譲渡所得」は個人の所得税法に特有の概念であるにもかかわらず、会話例で法人の月次決算や補助元帳と結びつける重大なドメイン混同（DOMAIN_ERROR）が発生しています。また例文1においても「必要経費」という不適切な税務用語が使われているため、実務に即した正確な内容への書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "譲渡所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然なコロケーションです。税務実務では「譲渡所得（の金額）を計算する」も非常によく使われます。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "譲渡所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "所得税法上の所得区分（事業所得や雑所得との切り分け）において頻出する極めて自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "譲渡所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "総合課税の譲渡所得を総所得金額へ合算する税務処理として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "譲渡所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "確定申告実務において常用される自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "所得税法上、譲渡所得の控除項目は「必要経費」ではなく「取得費」および「譲渡費用」と厳格に規定されています。「各種収入金額および必要経費」という表現は事業所得や雑所得のテンプレートの混入であり、税法上の正確性を欠きます。",
+      "suggested_ja": "不動産の売買契約書等から売却価額や取得費、譲渡費用を精査し、譲渡所得の金額を適正に計算しました。",
+      "suggested_vi": "Chúng tôi đã rà soát kỹ giá bán, chi phí mua vào và chi phí chuyển nhượng từ hợp đồng mua bán bất động sản để tính toán chính xác số tiền thu nhập từ chuyển nhượng tài sản.",
+      "suggested_en": "Based on real estate sales contracts and related documents, we carefully verified the sales price, acquisition costs, and transfer expenses to properly compute the capital gains amount."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "所得税法における総合課税の譲渡所得と損益通算・課税標準の計算プロセスを的確に反映した自然な例文です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "重大な税務・会計の混同があります。「譲渡所得」は所得税法上の個人に対する所得区分であり、法人の「月次決算」で計上されることはありません（法人は固定資産売却益などの損益科目として計上）。また個人の確定申告において月次決算で補助元帳と照合するという設定も実務上不自然です。税理士事務所とクライアント（または所内での個人確定申告案件のやりとり）に是正すべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "オーナー社長が売却された個人所有の不動産について、譲渡所得の試算は完了しましたか。",
+        "vi": "Về bất động sản thuộc sở hữu cá nhân mà giám đốc kiêm chủ sở hữu đã bán, anh đã hoàn thành việc tính thử thu nhập từ chuyển nhượng tài sản chưa?",
+        "en": "Have you finished estimating the capital gains on the personal real estate sold by the owner-president?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、当時の購入時の売買契約書から取得費を確認し、概算税額を算出した資料を準備いたしました。",
+        "vi": "Vâng, tôi đã xác nhận chi phí mua vào từ hợp đồng mua bán vào thời điểm đó và chuẩn bị tài liệu tính toán số thuế ước tính rồi.",
+        "en": "Yes, I verified the acquisition cost from the purchase contract at the time of acquisition and prepared the document estimating the tax amount."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "訳語自体はいずれも正確かつ自然です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2ea0038e79c3b43797eda6145f06205b5e69943b79933f87efc70b76e599ec43",
+    "validated_at": "2026-10-01T01:37:49.069610+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000140",
+  "term": "外貨預金",
+  "overall_decision": "rewrite",
+  "summary_reason": "「計上する」の用法に不自然な点が見られ、口語表現も硬すぎるため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "外貨預金を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「計上する」は、会計上の項目を帳簿に記録する際に用いる動詞であり、外貨預金という資産そのものに対して直接用いるのは不自然。外貨預金は「計上される」ものであり、主体が「計上する」対象ではない。",
+      "suggested_text": "外貨預金を記録する / 外貨預金を認識する"
+    },
+    {
+      "index": 1,
+      "text": "外貨預金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "外貨預金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "外貨預金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「外貨預金の計上内容」という表現は不自然。「計上」は行為であり、その「内容」という組み合わせは一般的ではない。また、「差異がないか精査します」はやや硬すぎる。",
+      "suggested_ja": "月末の帳簿照合において、外貨預金の記録内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung ghi nhận hoặc số dư của tài khoản tiền gửi bằng đồng ngoại tệ có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded details or balances for foreign currency deposits."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現で、会計処理に関する文脈で適切。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「外貨預金の計上内容に差異は発生していませんか」は、口語としては不自然で硬い。Bの「証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました」も、口語としては非常に硬く、報告書のような印象を与える。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、外貨預金の計上内容に何か問題はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, nội dung ghi nhận tài khoản tiền gửi ngoại tệ có vấn đề gì không?",
+        "en": "Were there any issues with the foreign currency deposit entries in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適切に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ phụ, tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledger, I confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "44ae9dbcf35692ec5fc91633f6c95be7b16f419719636b676a43f47e3d7dc543",
+    "validated_at": "2026-10-01T01:56:23.006530+00:00"
+  }
+}

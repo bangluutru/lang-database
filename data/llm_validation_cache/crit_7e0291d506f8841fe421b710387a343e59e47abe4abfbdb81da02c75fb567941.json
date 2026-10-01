@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000056",
+  "term": "職務権限規程",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe conceptual hallucination: the generator treated '職務権限規程' (an internal corporate governance regulation) as if it were a notice or mail packet to be 'dispatched' (発送) or 'received' (受領) under statutory deadlines for meetings.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "職務権限規程を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Creating/drafting regulations on administrative authority is a common and natural workplace activity.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "職務権限規程を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Internal corporate regulations are typically enacted, revised, or submitted for approval (付議・上程する), rather than merely 'submitted' (提出する).",
+      "suggested_text": "職務権限規程を改定する"
+    },
+    {
+      "index": 2,
+      "text": "職務権限規程を発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company regulation (規程) is an internal governance document; it is not dispatched/shipped (発送する) like a parcel, notice, or letter.",
+      "suggested_text": "職務権限規程を周知する"
+    },
+    {
+      "index": 3,
+      "text": "職務権限規程を受領する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Internal authority rules are complied with, operated under, or established, not received/receipted (受領する) like transactional documents or goods.",
+      "suggested_text": "職務権限規程に準拠する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "職務権限規程 is an internal document defining authorization limits and organizational responsibilities. It is not a document dispatched to shareholders or meeting attendees under statutory deadlines (conflated with 招集通知).",
+      "suggested_ja": "組織改編に伴い、決裁フローの見直しを行うため、職務権限規程の改定案を取締役会に上程した。",
+      "suggested_vi": "Cùng với việc tái cơ cấu tổ chức, chúng tôi đã trình dự thảo sửa đổi quy chế phân quyền chức vụ lên Hội đồng quản trị để rà soát lại quy trình phê duyệt.",
+      "suggested_en": "Following the organizational restructuring, we submitted a draft amendment to the administrative authority regulations to the Board of Directors to review the approval workflow."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Treating internal regulations as 'received documents' (受領した規程) kept as evidence of compliance is unnatural and reflects a templated misunderstanding of compliance documentation.",
+      "suggested_ja": "内部統制を有効に機能させるため、各部門における業務処理が職務権限規程に準拠しているかを定期的に監査している。",
+      "suggested_vi": "Để đảm bảo kiểm soát nội bộ hoạt động hiệu quả, chúng tôi định kỳ kiểm toán xem việc xử lý nghiệp vụ tại từng bộ phận có tuân thủ quy chế phân quyền chức vụ hay không.",
+      "suggested_en": "To ensure effective internal control, we periodically audit whether business operations in each department comply with the administrative authority regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B mentions '発送の手配を行う' (arranging dispatch) for an internal administrative authority regulation, which makes no sense in corporate governance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "組織改編に伴う職務権限規程の改定案ですが、進捗はいかがでしょうか。",
+        "vi": "Tiến độ dự thảo sửa đổi quy chế phân quyền chức vụ do tái cơ cấu tổ chức đến đâu rồi?",
+        "en": "How is the progress on the draft amendment to the administrative authority regulations following the organizational restructuring?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務部門のリーガルチェックを終えましたので、来週の経営会議に付議する予定です。",
+        "vi": "Bộ phận pháp chế đã hoàn tất việc rà soát pháp lý, nên chúng tôi dự kiến sẽ trình lên cuộc họp ban điều hành vào tuần tới.",
+        "en": "The legal department has finished its review, so we plan to submit it to next week's executive committee meeting."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base translations for the term itself are accurate, though the generated example and dialogue contents suffered from heavy templating."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ca86ebbd2b46400caa204e4cd8ebb4e5197aee2083ca7bddccc12430da8e06f7",
+    "validated_at": "2026-10-01T01:41:55.396682+00:00"
+  }
+}

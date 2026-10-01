@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000013",
+  "term": "手付金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation #2 ('手付金を照合する') has an unnatural predicate, Example #1 is an empty synthetic template with repetitive '適正', and Dialogue turn B uses unnatural phrasing ('適正に整合している'). High-yield corrections provided.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手付金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "While formally booked under 前払金 or 前受金 in standard B/S taxonomy, practitioners frequently refer to recording earnest money entries as 手付金の計上.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "手付金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when reviewing auxiliary ledgers or escrow balances for pending property/contract acquisitions.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "手付金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not reconcile the 'earnest money' itself; rather, one matches vouchers, balances, or contracts (手付金の領収証や残高を照合する). A vastly more natural, high-frequency corporate collocation is '手付金を充当する' (applying earnest money to total consideration upon closing).",
+      "suggested_text": "手付金を充当する"
+    },
+    {
+      "index": 3,
+      "text": "手付金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for settling or liquidating earnest money upon contract execution or cancellation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and depicts realistic month-end ledger verification, though slightly formulaic.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains obvious AI boilerplate tautology ('適正な会計基準...適正に処理いたしました') that lacks authentic situational context for earnest money, which is tied to commercial or real estate transactions.",
+      "suggested_ja": "不動産売買契約の締結に伴い受領した手付金は、残代金の決済時に売買代金へ充当しました。",
+      "suggested_vi": "Tiền đặt cọc nhận được khi ký kết hợp đồng mua bán bất động sản đã được cấn trừ vào giá mua bán khi thanh toán số tiền còn lại.",
+      "suggested_en": "The earnest money received upon signing the real estate sales contract was applied toward the purchase price at final settlement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase 'すべて適正に整合していることを確認いたしました' is redundant and mechanical. Natural corporate accounting parlance uses '差異はなく、一致していることを確認いたしました' or '整合が取れていることを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、受領した手付金の計上漏れや残高の差異はありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có bị sót hạch toán hoặc chênh lệch số dư đối với tiền đặt cọc đã nhận không?",
+        "en": "In this month's financial closing, are there any omitted entries or balance discrepancies regarding the received earnest money?"
+      },
+      {
+        "speaker": "B",
+        "ja": "契約書および入金明細と補助元帳を照合済みで、不一致のないことを確認しております。",
+        "vi": "Chúng tôi đã đối chiếu sổ phụ với hợp đồng và chứng từ nợ/có ngân hàng, xác nhận không có điểm nào sai lệch.",
+        "en": "We have already reconciled the subsidiary ledger against the contracts and bank statements, confirming there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Target terms and meanings accurately correspond to contract deposit / earnest money."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "affc4990536c2e3f8b063e01f21dec98601e10210717b65b9e9041c4a541b418",
+    "validated_at": "2026-10-01T01:41:11.547407+00:00"
+  }
+}

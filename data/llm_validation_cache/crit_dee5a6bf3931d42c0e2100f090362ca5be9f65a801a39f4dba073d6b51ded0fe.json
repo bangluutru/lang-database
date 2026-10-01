@@ -1,0 +1,69 @@
+{
+  "entry_id": "jp-pro-trade-000121",
+  "term": "手形取立",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations contain unnatural predicate-noun combinations that require revision for professional use. Examples and dialogue are acceptable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形取立を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、「手形取立」という行為に対しては不自然。",
+      "suggested_text": "手形取立を依頼する"
+    },
+    {
+      "index": 1,
+      "text": "手形取立を決済する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「手形取立」は決済行為そのものであり、それを「決済する」という表現は冗長で不自然。手形が決済される、または取立が完了するという意味合いで使う。",
+      "suggested_text": "手形取立が完了する"
+    },
+    {
+      "index": 2,
+      "text": "手形取立を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「提示する」は手形そのものに対して使う動詞であり、「手形取立」という行為に対しては不自然。",
+      "suggested_text": "手形取立を依頼する"
+    },
+    {
+      "index": 3,
+      "text": "手形取立の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然なビジネス文書の表現。"
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然なビジネス文書の表現。"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "自然な会話の流れで、ビジネスシーンに合致している。"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9bd6d4a05f1f015af4287bdd40b1fd17c0d966e31c912b3c251d6a8700704da4",
+    "validated_at": "2026-10-01T01:55:55.818447+00:00"
+  }
+}

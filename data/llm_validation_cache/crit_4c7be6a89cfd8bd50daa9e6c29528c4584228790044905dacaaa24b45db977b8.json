@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000035",
+  "term": "監査役",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations and Japanese example sentences are accurate, dialogue line A exhibits unnatural phrasing ('監査役の準備状況') and the translations suffer from mechanical definition pasting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "監査役を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard Companies Act terminology for appointing a corporate auditor.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "監査役に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, natural collocation for assuming the office of auditor.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "監査役に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing in corporate compliance and governance contexts.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "監査役の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic legal and corporate governance register.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is natural, but English and Vietnamese mechanically paste the dictionary definition verbatim (including slashes and unwieldy titles).",
+      "suggested_ja": "定時株主総会の決議を経て、当社の新任監査役が正式に選任されました。",
+      "suggested_vi": "Thông qua nghị quyết của Đại hội đồng cổ đông thường niên, Kiểm soát viên mới của công ty chúng tôi đã chính thức được bổ nhiệm.",
+      "suggested_en": "Following the resolution at the annual general meeting of shareholders, our company's new statutory auditor was officially appointed."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is natural corporate governance phrasing, but EN/VI contain raw definition copy-paste artifacts ('corporate auditor / statutory auditor').",
+      "suggested_ja": "業務執行の適法性を確保するため、監査役と定期的な報告連絡会を開催しています。",
+      "suggested_vi": "Nhằm đảm bảo tính hợp pháp trong điều hành hoạt động kinh doanh, chúng tôi định kỳ tổ chức các cuộc họp báo cáo với Kiểm soát viên.",
+      "suggested_en": "To ensure the legality of business execution, we hold regular reporting liaison meetings with the corporate auditors."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A says '監査役の準備状況' to mean preparation of materials for the auditor/audit committee, which is unnatural Japanese (treating the person as an event/document). B's response about '発送の手配' also sounds unnatural without specifying target or document context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の監査役会に向けて、提出資料の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị tài liệu trình cho phiên họp Ban kiểm soát dự kiến tổ chức vào tuần tới thế nào rồi?",
+        "en": "How is the preparation of the submission materials going for next week's Board of Corporate Auditors meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、担当役員の事前承認も得られましたので、本日中に監査役室へ送付いたします。",
+        "vi": "Chúng tôi đã hoàn thiện bản thảo cuối cùng và nhận được phê duyệt trước từ giám đốc phụ trách, nên sẽ gửi sang Văn phòng Ban kiểm soát trong ngày hôm nay.",
+        "en": "We have completed the final review and obtained prior approval from the officer in charge, so we will send them to the Corporate Auditors' Office by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both English and Vietnamese examples suffered from mechanical concatenation of the headword definition string rather than natural sentence-level translation."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "80528a79df189c2bf733b17c78f969f16ae38b4fd6ce2fe8ef1235d7623383be",
+    "validated_at": "2026-10-01T01:41:33.664800+00:00"
+  }
+}

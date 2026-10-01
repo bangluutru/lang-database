@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000126",
+  "term": "期首商品棚卸高",
+  "overall_decision": "rewrite",
+  "summary_reason": "Accounting domain inaccuracies and mechanical template reuse detected: beginning merchandise inventory (期首商品棚卸高) is fixed at the start of the period and cannot be audited month-to-month as monthly activity, predicates like '精算する' and '残高' are semantically flawed for this line item, and dialogue turns relied on generic non-specific filler words.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "期首商品棚卸高を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting usage when transferring beginning inventory to cost of goods sold.",
+      "suggested_text": "期首商品棚卸高を計上する"
+    },
+    {
+      "index": 1,
+      "text": "期首商品棚卸高の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「期首商品棚卸高」自体が金額（高）を表すP/L売上原価の内訳項目であり、「〜の残高」と重ねるのは語義的に不自然です。「前期末残高との一致を確認する」または「期首商品棚卸高の金額を確定する」とすべきです。",
+      "suggested_text": "期首商品棚卸高を確定する"
+    },
+    {
+      "index": 2,
+      "text": "期首商品棚卸高を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for reconciling the beginning inventory figure against prior period ending inventory.",
+      "suggested_text": "期首商品棚卸高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "期首商品棚卸高を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "棚卸高（評価額・残高）に対して「精算する」という述語は会計実務上用いられません。売上原価への振替や前期繰越残高との突き合わせが適切です。",
+      "suggested_text": "期首商品棚卸高を売上原価へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "期首商品棚卸高は期首（または第1四半期初）に確定するものであり、毎月の「月末の帳簿照合」で継続して計上内容や残高差異を精査する対象ではありません。また「計上内容や残高」という表現もテンプレート臭が強く実務に即していません。",
+      "suggested_ja": "当期首の帳簿照合において、期首商品棚卸高が前期末の繰越商品残高と完全に一致していることを精査しました。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách đầu kỳ này, chúng tôi đã kiểm tra kỹ lưỡng và xác nhận giá trị hàng tồn kho đầu kỳ hoàn toàn khớp với số dư hàng tồn kho kết chuyển cuối kỳ trước.",
+      "suggested_en": "During our book reconciliation at the beginning of the fiscal period, we verified that beginning merchandise inventory matches the carryover inventory balance from the end of the previous period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜に則り、当期の決算において〜を適正に処理いたしました」と「適正」が重複しており、機械的テンプレート構文となっています。具体的な会計処理（繰越商品勘定からの振替や実地棚卸との突合）を描写すべきです。",
+      "suggested_ja": "決算整理仕訳において、繰越商品を売上原価勘定へ振り替え、期首商品棚卸高を正確に反映させました。",
+      "suggested_vi": "Trong bút toán điều chỉnh cuối kỳ, chúng tôi đã kết chuyển hàng tồn kho sang tài khoản giá vốn hàng bán để phản ánh chính xác giá trị hàng tồn kho đầu kỳ.",
+      "suggested_en": "In our adjusting closing entries, we transferred carryover inventory to the cost of sales account, accurately reflecting the beginning merchandise inventory."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "一般的な「今月の月次決算」で毎月「期首商品棚卸高」の差異を確認することは会計実務上不自然です（期首棚卸高は年度当初に確定済み）。また期首棚卸高の照合先として「証憑書類」と答えるのも具体性を欠くAIテンプレートです。事業年度開始直後（第1期/初月）の文脈を明示するか、年度決算の文脈に改める必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当期の期首商品棚卸高ですが、前期末の実地棚卸表および貸借対照表の残高と一致していますか。",
+        "vi": "Về giá trị hàng tồn kho đầu kỳ này, số liệu đã khớp với bảng kiểm kê thực tế và số dư trên bảng cân đối kế toán cuối kỳ trước chưa?",
+        "en": "Regarding beginning merchandise inventory for this term, does it reconcile with the prior term-end physical inventory sheet and balance sheet balances?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、商品有高帳の繰越残高と前期の決算報告書を照合し、差異がないことを確認済みです。",
+        "vi": "Vâng, tôi đã đối chiếu số dư kết chuyển trên sổ chi tiết hàng tồn kho với báo cáo tài chính kỳ trước và xác nhận không có chênh lệch.",
+        "en": "Yes, I have cross-checked the carried-forward balance on the inventory ledger against the previous period's financial statements and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are correct and professional."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f4596c6caa263d3d08862556ab8d6f4e300925c9e7d901814a1ead4ca341cfa1",
+    "validated_at": "2026-10-01T01:35:56.760313+00:00"
+  }
+}

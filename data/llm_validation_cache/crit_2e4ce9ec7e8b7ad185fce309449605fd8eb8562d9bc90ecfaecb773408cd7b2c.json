@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000165",
+  "term": "紹介営業",
+  "overall_decision": "rewrite",
+  "summary_reason": "「紹介営業」という言葉の使い方が、社内調整やトラブル防止といった文脈で不自然であり、本来の顧客獲得という目的から逸脱している。コケーションや例文、対話において、この言葉の適用範囲が誤解されている可能性が高い。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "紹介営業を徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「徹底する」は具体的な行動や方針に対して使われることが多く、「紹介営業」という概念そのものに直接適用するのは不自然。紹介営業の『実施』や『強化』を徹底する、なら自然。",
+      "suggested_text": "紹介営業を強化する"
+    },
+    {
+      "index": 1,
+      "text": "紹介営業を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "紹介営業を習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "紹介営業の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「紹介営業」は顧客獲得のための営業手法であり、社内部署への「紹介営業」という使い方は一般的ではない。社内調整や根回しを指すなら別の表現が適切。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署への事前の根回しを徹底しています。",
+      "suggested_vi": "Nhằm thúc đẩy dự án diễn ra trôi chảy, chúng tôi triệt để thực hiện việc chuẩn bị trước với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we thoroughly conduct prior internal coordination with relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務上のトラブルを未然に防ぐ」ことと「紹介営業の習慣付け」の因果関係が不明瞭で、文脈として不自然。紹介営業は顧客獲得が目的であり、トラブル防止とは直接結びつかない。",
+      "suggested_ja": "顧客との信頼関係を構築し、業務上のトラブルを未然に防ぐため、迅速な情報共有の習慣付けが職場全体で求められます。",
+      "suggested_vi": "Để xây dựng mối quan hệ tin cậy với khách hàng và ngăn ngừa rủi ro phát sinh trong công việc, việc tạo thói quen chia sẻ thông tin nhanh chóng là rất cần thiết trong toàn cơ quan.",
+      "suggested_en": "To build trust with clients and prevent operational issues beforehand, establishing a habit of prompt information sharing is required across the workplace."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの質問が硬く、Bの回答も「紹介営業」の具体的な状況に触れておらず、一般的な情報共有の話になっているため、会話の繋がりが弱い。また、社内での「紹介営業」という言葉の使い方が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "最近、新規顧客獲得のための紹介営業について、何か課題は出ていませんか？",
+        "vi": "Gần đây, về việc bán hàng thông qua người quen giới thiệu để thu hút khách hàng mới, có vấn đề nào phát sinh không?",
+        "en": "Recently, regarding referral sales for new customer acquisition, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、全メンバーで顧客情報の共有を徹底し、迅速な対応を習慣化することで、成約率が向上してきました。",
+        "vi": "Vâng, bằng cách toàn bộ thành viên triệt để chia sẻ thông tin khách hàng và tạo thói quen phản ứng nhanh chóng, tỷ lệ chốt hợp đồng đã được cải thiện.",
+        "en": "Yes, by ensuring all members thoroughly share customer information and habituating prompt responses, our closing rate has improved."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "acf597750f370ee0916046ff9038bddf96f32f7c62bdb8072e11d5d8321bf371",
+    "validated_at": "2026-10-01T01:53:00.578608+00:00"
+  }
+}

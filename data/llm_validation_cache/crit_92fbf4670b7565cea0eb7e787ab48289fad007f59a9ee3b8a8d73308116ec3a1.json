@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000198",
+  "term": "限定付適正意見",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains fatal accounting errors where mechanical template insertion produced nonsensical statements: claiming a qualified opinion confirms full fairness, and stating that having zero audit findings leads to a qualified opinion.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "限定付適正意見を表明する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting terminology for an auditor expressing a qualified opinion.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "限定付適正意見を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used from the audited company's perspective upon receiving the audit report.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "限定付適正意見を記載する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Audit opinions are 'expressed' (表明する) or 'attached/issued' (付される/出される), not merely 'written' (記載する). In corporate practice, '限定付適正意見を回避する' (avoid a qualified opinion) is an essential collocation.",
+      "suggested_text": "限定付適正意見を回避する"
+    },
+    {
+      "index": 3,
+      "text": "限定付適正意見が付される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard expression in Japanese financial and accounting disclosures.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual accounting contradiction: A '限定付適正意見' (qualified opinion) indicates a material exception or scope limitation ('除外事項を除き適正'). One does not receive a qualified opinion to confirm that financial statements are fully fair. That would be an '無限定適正意見' (unqualified/clean opinion).",
+      "suggested_ja": "海外子会社における棚卸資産の評価に関して一部監査範囲の制約があったため、監査法人より限定付適正意見が付されました。",
+      "suggested_vi": "Do có giới hạn nhất định về phạm vi kiểm toán đối với việc đánh giá hàng tồn kho tại công ty con ở nước ngoài, công ty kiểm toán đã đưa ra ý kiến chấp nhận từng phần có ngoại trừ.",
+      "suggested_en": "Due to a limitation in the audit scope regarding inventory valuation at an overseas subsidiary, the audit firm issued a qualified opinion."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically correct and factually feasible, describing disclosure of a qualified opinion in an annual securities report.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical accounting contradiction: Speaker B states that there are 'no material findings or unresolved issues' (重要な指摘事項や未解消の論点はなく) and therefore they expect to receive a 'qualified opinion' (限定付適正意見). If there are no issues, the company receives an UNQUALIFIED opinion (無限定適正意見). A qualified opinion is only issued when an unresolved material matter exists.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外子会社の監査手続に一部制約が生じている件ですが、監査意見への影響はどうなりそうですか。",
+        "vi": "Về việc thủ tục kiểm toán tại công ty con ở nước ngoài phát sinh một số giới hạn, dự kiến sẽ ảnh hưởng thế nào đến ý kiến kiểm toán?",
+        "en": "Regarding the scope limitation encountered during the audit procedures for the overseas subsidiary, what is the expected impact on the audit opinion?"
+      },
+      {
+        "speaker": "B",
+        "ja": "当該事項を除外事項とする、限定付適正意見が付される見通しとなっております。",
+        "vi": "Dự kiến sẽ là ý kiến chấp nhận từng phần có ngoại trừ đối với nội dung nói trên.",
+        "en": "It is expected that a qualified opinion will be issued, with that matter treated as an exception."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "72d76891b2ea185996107f07315770bfe55b3bb7f49a594d64da29b7653088f2",
+    "validated_at": "2026-10-01T01:37:11.159634+00:00"
+  }
+}

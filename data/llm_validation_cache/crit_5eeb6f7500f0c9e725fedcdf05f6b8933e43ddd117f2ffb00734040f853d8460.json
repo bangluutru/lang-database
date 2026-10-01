@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000020",
+  "term": "修正申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual error in Example 1: Japanese tax law defines any filing before the statutory deadline as '訂正申告', not '修正申告' (which strictly occurs post-deadline for underreported tax). Collocations and dialogue also required alignment with authentic tax compliance reality.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "修正申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional collocation in corporate accounting and tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "修正申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「修正申告」is the act/filing itself; the physical or electronic document submitted is「修正申告書」. In professional tax and accounting education,「修正申告書を提出する」or「修正申告を行う」must be taught.",
+      "suggested_text": "修正申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "修正申告の期限",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Unlike initial returns (確定申告), an amended return has no inherent statutory deadline (法定申告期限), unless referring to a deadline specified by tax authorities during an audit or the statute of limitations. A more authentic corporate collocation is responding to an audit recommendation or filing an amended return.",
+      "suggested_text": "修正申告に応じる"
+    },
+    {
+      "index": 3,
+      "text": "修正申告の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural workplace expression when processing an amended tax return.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal Japanese tax law error: Filing a corrected return within the statutory filing deadline (法定申告期限内) is legally a '訂正申告' (superseding return), NOT a '修正申告'. Under NTA regulations, '修正申告' is strictly filed *after* the statutory deadline when tax liability was understated.",
+      "suggested_ja": "税務調査における指摘事項を受け、所轄税務署に対して過年度分の修正申告の手続きを完了しました。",
+      "suggested_vi": "Tiếp thu các điểm lưu ý từ cuộc thanh tra thuế, chúng tôi đã hoàn tất thủ tục kê khai điều chỉnh nộp bổ sung thuế cho các năm tài chính trước tại chi cục thuế trực tiếp quản lý.",
+      "suggested_en": "Following the findings from the tax audit, we completed the procedures for filing an amended tax return for prior fiscal years with the competent tax office."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural Japanese representing consultation with an external licensed tax accountant (顧問税理士) to prepare amended return documents.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Phraing '今回の決算申告における修正申告' conflates current-year final returns (確定申告) with amended returns (修正申告). Amended returns almost always address errors in prior periods or post-filing adjustments.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務調査で指摘された売上計上漏れについて、修正申告の計算根拠と提出書類は整理できましたか。",
+        "vi": "Về phần doanh thu chưa ghi nhận do đợt kiểm tra thuế chỉ ra, anh đã tổng hợp xong căn cứ tính toán và hồ sơ nộp tờ khai bổ sung chưa?",
+        "en": "Regarding the omitted revenue pointed out in the tax audit, have you organized the calculation rationale and filing documents for the amended return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、根拠資料と顧問税理士の確認書を揃えましたので、本日中に電子申告にて提出可能です。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ tài liệu căn cứ và biên bản xác nhận từ chuyên viên thuế cố vấn, có thể nộp qua hệ thống kê khai điện tử ngay trong hôm nay.",
+        "en": "Yes, I have compiled the supporting documentation and confirmation letter from our advisory tax accountant, so we can file it via e-Tax within today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are professionally sound, though context-dependent adjustments follow the rewritten sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "41de119ae6c6dd9a6be3a28f184ef6b87c1ba66d47bbd270b49804164873a382",
+    "validated_at": "2026-10-01T01:37:48.680838+00:00"
+  }
+}

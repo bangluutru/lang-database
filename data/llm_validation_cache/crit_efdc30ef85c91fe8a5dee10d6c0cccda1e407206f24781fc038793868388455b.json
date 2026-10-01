@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000029",
+  "term": "半製品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 feature unnatural predicate pairing and severe semantic mismatch (精算 cannot apply to inventory items), and Example 1 is an unidiomatic repetitive LLM template.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "半製品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural accounting expression for recording semi-finished goods on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "半製品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression referring to verifying the ledger balance of semi-finished goods inventory.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "半製品を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する typically takes records, ledgers, or data as direct objects (e.g., 帳簿と現品を照合する), not the physical asset itself directly as '半製品を照合する'.",
+      "suggested_text": "半製品の実地棚卸を行う"
+    },
+    {
+      "index": 3,
+      "text": "半製品を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to expenses, advances, or monetary settlements (e.g., 経費精算, 仮払金精算), not to inventory assets like 半製品.",
+      "suggested_text": "半製品の評価損を計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear and realistic accounting workplace sentence for monthly reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavily templated boilerplate featuring redundant word repetition ('適正な...' and '適正に処理'). Lacks practical specificity in cost accounting.",
+      "suggested_ja": "期末棚卸において正味売却価額が下落していたため、半製品の評価損を計上しました。",
+      "suggested_vi": "Do giá trị thuần có thể thực hiện được bị giảm trong kỳ kiểm kê cuối kỳ, chúng tôi đã trích lập dự phòng giảm giá bán thành phẩm.",
+      "suggested_en": "Due to a decline in net realizable value during the year-end inventory count, we recognized a valuation loss on semi-finished goods."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Contextually appropriate monthly closing exchange between finance/accounting staff.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Existing translations accurately match the source terms and text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7bd0079dde7e56dc7601140829d093195aece8eb33370b5716262840d23c4579",
+    "validated_at": "2026-10-01T01:33:38.598452+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000197",
+  "term": "備品管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the incorrect application of accounting terms like '計上' and '残高' to '備品管理' (equipment management) as a process, rather than to the actual equipment assets or their ledger entries. This creates semantically unnatural and incorrect expressions in a professional accounting context. The collocations are acceptable as they describe actions related to the management process itself, not its accounting treatment.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "備品管理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for advancing or implementing equipment management."
+    },
+    {
+      "index": 1,
+      "text": "備品管理を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for completing equipment management tasks or processes."
+    },
+    {
+      "index": 2,
+      "text": "備品管理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for confirming procedures related to equipment management."
+    },
+    {
+      "index": 3,
+      "text": "備品管理を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for reviewing or revising equipment management practices."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "備品管理 (equipment management) is a process/system, not an item that can be '計上' (booked/recorded as an accounting entry) or have a '残高' (balance). These terms apply to assets or accounts, not the management process itself. The sentence structure is grammatically plausible but semantically incorrect in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、備品台帳の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của sổ cái tài sản cố định có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances in the equipment ledger."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '備品管理を適正に処理いたしました' is semantically awkward. '処理する' (to process) can apply to transactions or data, but applying it directly to '備品管理' (the management process itself) in the context of '決算' (financial closing) is unnatural. One 'processes' the accounting for equipment, not the 'management' of it.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において備品の会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện xử lý kế toán tài sản cố định một cách đúng đắn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the accounting for equipment in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '備品管理の計上内容に差異は発生していませんか' suffers from the same semantic issue as the example sentences. '備品管理' (equipment management) does not have '計上内容' (entries/recorded content) in the accounting sense. It's the individual equipment items or the equipment ledger that would have entries. Speaker B's response is grammatically fine but responds to a semantically flawed premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、備品台帳の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của sổ cái tài sản cố định không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries in the equipment ledger?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for '備品管理の計上内容' and '備品管理を適正に処理いたしました' directly translate the Japanese without correcting the underlying semantic issue, thus perpetuating the unnaturalness. They should be revised to reflect the corrected Japanese."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a7875cba99c5f58e750afa3b53f8433e4a74550b5b34e3f296b57c908c919a24",
+    "validated_at": "2026-10-01T01:53:38.537977+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000148",
+  "term": "源泉所得税",
+  "overall_decision": "rewrite",
+  "summary_reason": "税務実務上の概念的誤り（源泉所得税は申告ではなく徴収納付、企業側の税負担額ではない点）およびベトナム語訳の過度な限定解釈と重複誤記のため、例文・コロケーション・訳語の修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "源泉所得税を申告する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "日本の税務実務上、源泉所得税は申告納付方式（確定申告等）ではなく、徴収・納付（法定調書提出および所得税徴収高計算書による納付）の形式をとるため、「申告する」という表現は不適切。「徴収する」が最適。",
+      "suggested_text": "源泉所得税を徴収する"
+    },
+    {
+      "index": 1,
+      "text": "源泉所得税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "毎月の納付実務（原則翌月10日納期限）で極めて頻繁に使用される自然な連語。",
+      "suggested_text": "源泉所得税を納付する"
+    },
+    {
+      "index": 2,
+      "text": "源泉所得税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "給与計算や支払調書作成時の実務表現として自然。",
+      "suggested_text": "源泉所得税を計算する"
+    },
+    {
+      "index": 3,
+      "text": "源泉所得税が課される",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "源泉所得税は徴収・納付の手法であり、「課される」対象は通常「所得税」または「源泉徴収の対象となる」と表現するのが税法上および実務上自然。「源泉所得税を控除する」への変更を推奨。",
+      "suggested_text": "源泉所得税を控除する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "納期限前の納付手続き報告として文脈・語彙ともに自然で問題なし。",
+      "suggested_ja": "課税標準および適用税率を正確に算出し、納期限までに源泉所得税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác thu nhập chịu thuế và thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế thu nhập khấu trừ tại nguồn trước thời hạn.",
+      "suggested_en": "Accurately calculating the tax base and applicable tax rates, we completed the payment procedures for withheld income tax by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "源泉徴収義務者（企業）側にとって源泉所得税は預り金（立替徴収・納付）であり、自社の「税負担額」ではないため論理的破綻がある。またベトナム語訳に「tiền thuế tiền thuế」という明らかな重複バグが存在する。",
+      "suggested_ja": "税制改正の内容を踏まえ、報酬等の支払いに係る源泉所得税の控除額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã tính thử tác động đối với số tiền khấu trừ thuế thu nhập tại nguồn liên quan đến việc chi trả thù lao.",
+      "suggested_en": "In light of the tax reform, we estimated the impact on the deduction amounts of withheld income tax related to remuneration payments."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "月次決算時の預り源泉所得税勘定と補助簿・証憑の照合業務として極めて実務的かつ自然な会話展開。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、源泉所得税の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong các khoản ghi nhận thuế thu nhập khấu trừ tại nguồn không?",
+        "en": "Are there any discrepancies in the booked amounts of withheld income tax for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi thứ hoàn toàn khớp nhau.",
+        "en": "I have already reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の基本定義および例文1に「tiền thuế thu nhập cá nhân bị khấu trừ tại nguồn」とあるが、源泉所得税は法人や非居住者にも適用されるため「thuế thu nhập cá nhân」（個人所得税）に限定するのは不適切。また例文1で「tiền thuế tiền thuế」の重複誤記あり。「thuế thu nhập khấu trừ tại nguồn」とすべき。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4b394bc507c72a9332c599f4e0812ef30afbdbef4fa64bec60606bb1981fe8cc",
+    "validated_at": "2026-10-01T01:40:06.575948+00:00"
+  }
+}

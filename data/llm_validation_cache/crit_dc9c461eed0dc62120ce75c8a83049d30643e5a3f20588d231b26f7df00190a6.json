@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000179",
+  "term": "情報セキュリティ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how '情報セキュリティ' (information security) relates to accounting terminology. It is not an item that is '計上' (booked/recorded) or has a '残高' (balance) in the same way financial accounts do. The examples and dialogue incorrectly apply accounting predicates to an abstract concept. The collocations are fine, but the application in sentences is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "情報セキュリティを強化する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "情報セキュリティを推進する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "情報セキュリティの規程を策定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "情報セキュリティの監査を実施する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "情報セキュリティ (information security) is not an accounting item that can be '計上' (booked/recorded) or have a '残高' (balance). These terms are used for financial transactions or accounts. The sentence attempts to apply accounting concepts to an abstract management concept.",
+      "suggested_ja": "月末の帳簿照合において、情報セキュリティ関連費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của các khoản chi phí liên quan đến an toàn an ninh thông tin có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for information security-related expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '情報セキュリティ' itself is not something that is '処理' (processed) in closing entries in an accounting sense. Accounting entries process financial transactions or assets/liabilities. The sentence attempts to apply accounting concepts to an abstract management concept.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において情報セキュリティ関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các khoản chi phí liên quan đến an toàn an ninh thông tin trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed information security-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue uses '情報セキュリティの計上内容に差異' which is an accounting term applied incorrectly to '情報セキュリティ'. Information security is not an accounting item that has '計上内容' (recorded details) in the same way a financial account does. The response also feels a bit generic given the specific (and incorrect) premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、情報セキュリティ関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán chi phí liên quan đến an toàn an ninh thông tin không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded details of information security-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b54cb7352dc72c107f5526127d64b46e9bcc8cd405bf92029cc2dd0253b4f9f6",
+    "validated_at": "2026-10-01T01:53:14.909883+00:00"
+  }
+}

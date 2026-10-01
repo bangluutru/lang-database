@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000184",
+  "term": "仕訳",
+  "overall_decision": "rewrite",
+  "summary_reason": "会計実務の語法（仕訳を切る／起票する、仕訳自体の残高は存在しない点、貸借一致の概念）の不備、および例文・訳文の機械的テンプレート重複が顕著であるため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仕訳を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務では「仕訳を切る」「仕訳を入力する」「仕訳作業を進める」と表現するのが通例であり、「仕訳を進める」単独では座りが悪いです。",
+      "suggested_text": "仕訳を切る"
+    },
+    {
+      "index": 1,
+      "text": "仕訳を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「仕訳の入力を完了する」または「仕訳の起票を完了する」とするのが自然です。",
+      "suggested_text": "仕訳を起票する"
+    },
+    {
+      "index": 2,
+      "text": "仕訳の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "業務マニュアルや新任担当者への指示などで自然に用いられるコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "仕訳を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "決算整理や監査前のチェックにおいて頻繁に使われる自然な表現です。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "仕訳自体に残高（残高があるのは勘定科目や口座）は存在せず、「仕訳の残高」は会計用語として不正確です。また英訳・越訳ともに辞書形のスラッシュ表記が混入しています。",
+      "suggested_ja": "月末の帳簿照合において、仕訳の貸借金額や勘定科目に誤りがないか精査します。",
+      "suggested_vi": "Trong quá trình đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sai sót nào về số tiền ghi nợ/có hoặc tài khoản hạch toán trong các bút toán hay không.",
+      "suggested_en": "During month-end reconciliation, we thoroughly verify that there are no errors in debit/credit amounts or account titles in the journal entries."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "一文の中に「適正な…適正に」と重複しており拙劣です。また「適正な会計基準」という表現も不自然（通常は「企業会計基準」等）であり、テンプレート感の強い不自然な文です。",
+      "suggested_ja": "企業会計基準および社内規程に則り、期末の決算整理仕訳を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã ghi nhận hợp lý các bút toán điều chỉnh cuối kỳ quyết toán.",
+      "suggested_en": "In accordance with accounting standards and internal policies, we have properly recorded the period-end adjusting journal entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「仕訳の計上内容に差異は発生していませんか」は不自然です（差異が出るのは貸借の金額や試算表との突合など）。また「適正に整合している」も重複表現で不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、起票した仕訳の貸借に不一致や差異は出ていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, các bút toán đã tạo có phát sinh chênh lệch hay bất đồng số dư nợ/có nào không?",
+        "en": "In this month-end closing, are there any discrepancies or mismatches in the debits and credits of the recorded journal entries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, tất cả đều hoàn toàn khớp nhau.",
+        "en": "I have already reconciled the supporting documents with the sub-ledgers and confirmed that everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "越訳において単語リストの表記（bút toán kế toán / định khoản）が例文中にそのまま埋め込まれており、英訳でも冠詞欠落や「entries or balances for journal entry」など不自然な英語表現が目立ちます。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b5f0c29cfea4e3bc90e52beac651125583eb5939154fd3f9ea0dc5d6a0af3ed8",
+    "validated_at": "2026-10-01T01:36:57.548049+00:00"
+  }
+}

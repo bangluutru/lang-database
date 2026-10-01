@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000124",
+  "term": "後日送金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocationsに不自然な表現が含まれているため、修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "後日送金を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、送金方法には使わない。",
+      "suggested_text": "後日送金条件を設定する"
+    },
+    {
+      "index": 1,
+      "text": "後日送金を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "後日送金を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「提示する」は書類や意見に対して使う動詞であり、送金方法には使わない。",
+      "suggested_text": "後日送金条件を提示する"
+    },
+    {
+      "index": 3,
+      "text": "後日送金の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "経理部門での会話として自然で、応答も論理的。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "84c646760c1a5044d300e80a1ba5de777f2fc4c175a1129d8380e6799bcd611b",
+    "validated_at": "2026-10-01T01:56:02.003848+00:00"
+  }
+}

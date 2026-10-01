@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000148",
+  "term": "市場調査",
+  "overall_decision": "reject",
+  "summary_reason": "The core examples and dialogue are built upon a fundamental accounting factual error, treating '市場調査' (market research) as an account item with '計上内容' (entries) and '残高' (balance) rather than '市場調査費' (market research expenses). This makes the content unsuitable for teaching in a professional accounting context without significant revision.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "市場調査を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "市場調査を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "市場調査の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "市場調査を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "市場調査 (market research) is an activity, not an account item that has '計上内容' (accounting entries) or '残高' (balance). It should refer to '市場調査費' (market research expenses) in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、市場調査費の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của chi phí nghiên cứu thị trường có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for market research expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, '市場調査' (market research) is an activity, not something directly '処理する' (processed) in closing entries. The '費用' (expenses) or '原価' (costs) associated with market research would be processed.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において市場調査費を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định chi phí nghiên cứu thị trường trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed market research expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question contains an accounting factual error, treating '市場調査' as an account item that has '計上内容'. It should refer to '市場調査費'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、市場調査費の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán chi phí nghiên cứu thị trường không?",
+        "en": "Are there any discrepancies in the market research expenses recorded in this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "I have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The original Japanese examples and dialogue contained domain-specific factual errors regarding accounting treatment of '市場調査'. The translations accurately reflected these errors. Therefore, the translations need to be rewritten to align with the corrected Japanese text, specifically by adding 'expenses' or 'chi phí' where appropriate."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9ef39104155cf703e4172918e028e6603e3746a1725bac93ddb98fac24029df5",
+    "validated_at": "2026-10-01T01:51:09.406201+00:00"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "entry_id": "jp-pro-business-000188",
+  "term": "立替精算",
+  "overall_decision": "rewrite",
+  "summary_reason": "The example sentences and dialogue, while grammatically correct, exhibit some unnatural phrasing and overly formal/stilted expressions that do not fully reflect authentic business communication. The term '計上内容' is particularly awkward in these contexts. The core meaning is conveyed, but the naturalness needs improvement for professional learning.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "立替精算を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "立替精算を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "立替精算の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "立替精算を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '立替精算の計上内容や残高に差異がないか精査します' is grammatically understandable but sounds somewhat mechanical and less natural for a business context. '計上内容' is a bit clunky. '残高' for 立替精算 is also slightly off; it's more about the amount to be reimbursed rather than a balance in the typical sense.",
+      "suggested_ja": "月末の帳簿照合において、立替精算の金額や処理に誤りがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sai sót nào trong số tiền hoặc quy trình quyết toán tiền chi hộ công ty không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any errors in the amounts or processing of out-of-pocket expense reimbursements."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '立替精算の計上内容に差異は発生していませんか' is a bit formal and less conversational for a direct question. '計上内容' is again a bit stiff. Speaker B's response is also very formal and sounds like a prepared statement rather than a natural conversation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の立替精算、何か問題はありませんでしたか？",
+        "vi": "Quyết toán tiền chi hộ công ty tháng này, có vấn đề gì không?",
+        "en": "Regarding this month's expense reimbursements, were there any issues?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適切に処理されていることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều được xử lý đúng cách.",
+        "en": "Yes, after cross-referencing the supporting documents and subsidiary ledger, we confirmed that everything has been processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b1a3cd0406858b320a14026b0b9e726c0e561284b3573c36f660764fe2c3a66a",
+    "validated_at": "2026-10-01T01:53:30.114483+00:00"
+  }
+}

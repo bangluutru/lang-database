@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000153",
+  "term": "コンテナフレイトステーション",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental semantic mismatch in applying accounting terminology ('計上内容', '残高', '処理する') directly to a physical logistics facility (CFS). While the term 'CFS' itself is correct, its usage in an accounting context is unnatural and misleading. The collocations are mostly fine, but the examples and dialogue require significant revision to reflect how a CFS would actually be discussed in a corporate accounting or trade setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "コンテナフレイトステーションに搬入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in logistics."
+    },
+    {
+      "index": 1,
+      "text": "コンテナフレイトステーションから搬出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in logistics."
+    },
+    {
+      "index": 2,
+      "text": "コンテナフレイトステーションで保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in logistics."
+    },
+    {
+      "index": 3,
+      "text": "コンテナフレイトステーションの許可を取得する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A Container Freight Station (CFS) is a facility, not an entity that grants permission. One might obtain permission to use a CFS, or permission from a customs authority related to goods at a CFS, but not 'permission of the CFS' itself. This is semantically incorrect.",
+      "suggested_text": "コンテナフレイトステーションへの搬入許可を取得する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A CFS is a physical location/facility for cargo consolidation, not an accounting item that has '計上内容' (accounting entry details) or '残高' (balance). These terms are typically applied to accounts, assets, or liabilities, not a facility itself. The sentence attempts to force an accounting context onto a logistics facility in an unnatural way.",
+      "suggested_ja": "月末の帳簿照合において、コンテナフレイトステーションに保管されている貨物の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của hàng hóa được lưu giữ tại kho gom và chia hàng lẻ tại cảng (CFS) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the accounting entries or balances of goods stored at the Container Freight Station (CFS)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'コンテナフレイトステーションを適正に処理いたしました' (we properly processed the CFS) is semantically incorrect in an accounting context. You process transactions, assets, liabilities, or expenses related to a CFS, but not the CFS itself as an accounting item. The phrasing is unnatural and indicates a misunderstanding of how CFS relates to accounting.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてコンテナフレイトステーション関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến kho gom và chia hàng lẻ tại cảng (CFS) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the Container Freight Station (CFS) related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question 'コンテナフレイトステーションの計上内容に差異は発生していませんか' (Are there discrepancies in the accounting entries of the CFS?) is fundamentally flawed for the same reasons as the example sentences. A CFS does not have 'accounting entries' in this context. Speaker B's response, while grammatically correct, is a direct answer to a flawed premise, making the entire exchange unnatural and misleading for a professional learning context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、コンテナフレイトステーションでの保管料や作業料の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong các khoản mục hạch toán phí lưu kho hoặc phí xử lý tại kho gom và chia hàng lẻ tại cảng (CFS) không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for storage fees or handling charges at the Container Freight Station (CFS)?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu các chứng từ và sổ cái phụ, và đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, I have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are accurate and professional for the original (albeit flawed) Japanese text."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ba5dd4f24ea7626ae360d60893ffd9947b17a4946ecbe271011789cd264550f0",
+    "validated_at": "2026-10-01T01:56:41.958054+00:00"
+  }
+}

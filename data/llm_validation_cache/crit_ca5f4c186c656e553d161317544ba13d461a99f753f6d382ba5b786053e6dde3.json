@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000093",
+  "term": "保税蔵置場",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the semantic incompatibility of '保税蔵置場' with accounting terms like '計上内容' and '残高'. A bonded warehouse is a facility, not an accounting entry or an asset with a balance sheet balance itself. The goods *within* the bonded warehouse are what get accounted for. This fundamental misunderstanding propagates through examples and dialogue, making them unnatural and potentially misleading for a professional learning Japanese in an accounting context. The Vietnamese translation for the term itself is also overly verbose.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保税蔵置場に搬入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "保税蔵置場から搬出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "保税蔵置場で保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "保税蔵置場の許可を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「保税蔵置場の計上内容や残高」という表現は不自然。保税蔵置場自体は会計上の残高を持つものではなく、そこに保管されている貨物が計上対象となる。また、「差異がないか精査します」はやや硬すぎる。",
+      "suggested_ja": "月末の帳簿照合において、保税蔵置場に保管されている貨物の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của hàng hóa được lưu giữ tại kho bảo thuế tư nhân được cấp phép hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for goods stored in the bonded warehouse."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「保税蔵置場を適正に処理いたしました」という表現は不自然。保税蔵置場自体を会計処理するのではなく、保税蔵置場に関連する取引や資産（保管されている貨物など）を処理する。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において保税蔵置場に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến kho bảo thuế tư nhân được cấp phép trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the bonded warehouse in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Aの発言「保税蔵置場の計上内容に差異は発生していませんか」が、例と同様に保税蔵置場自体を計上対象としている点で不自然。Bの返答はAの不自然な質問に答えているため、全体として不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、保税蔵置場に保管されている貨物の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của hàng hóa được lưu giữ tại kho bảo thuế tư nhân được cấp phép không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for goods stored in the bonded warehouse?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translation for '保税蔵置場' as 'kho bảo thuế tư nhân được cấp phép' is too long and specific. 'Kho ngoại quan' or 'kho bảo thuế' is more common and concise."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bcc50fea2207c346fcb908b2e52f99220dff9aa42846b86badb66c9b93e80653",
+    "validated_at": "2026-10-01T01:55:23.368709+00:00"
+  }
+}

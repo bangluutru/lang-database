@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000040",
+  "term": "専従者給与",
+  "overall_decision": "rewrite",
+  "summary_reason": "「専従者給与」は個人事業主の所得税制（青色申告）における専門用語であるにもかかわらず、生成された例文や対話が法人の会計基準や月次決算のテンプレート文を無批判に流用しており、重大なドメイン事実誤認および不自然な述語結合（残高確認、精算など）が見られるため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "専従者給与を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "必要経費として専従者給与を帳簿に計上するという文脈で自然に使われる。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "専従者給与の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "専従者給与は費用（必要経費）項目であり、通常「残高を確認する」という対象にはならない。届出額との照合や支給額の確認が一般的。",
+      "suggested_text": "専従者給与の届出額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "専従者給与を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "給与項目そのものを直接「照合する」というコロケーションは不自然。届出書の内容や源泉徴収税額と照合するか、経費に算入するなどの述語が自然。",
+      "suggested_text": "専従者給与を経費に算入する"
+    },
+    {
+      "index": 3,
+      "text": "専従者給与を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "専従者給与は立替金や仮払金ではないため、「精算する」とは言わない。支給または支払う対象である。",
+      "suggested_text": "専従者給与を支給する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "費用の「残高」という表現が不自然であり、月次決算の機械的テンプレート文になっている。税務上の届出上限額の遵守や源泉所得税の実務に即した表現に改めるべき。",
+      "suggested_ja": "税務署へ事前に提出した届出書の金額を超えていないか、専従者給与の支給実績を確認します。",
+      "suggested_vi": "Chúng tôi kiểm tra thực tế chi trả tiền lương cho người nhà cùng làm việc xem có vượt quá số tiền trong bản thông báo đã nộp trước cho cơ quan thuế hay không.",
+      "suggested_en": "We will verify the actual payments of salaries to family employees to ensure they do not exceed the amount specified in the notification previously submitted to the tax office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "専従者給与は個人事業主（所得税青色申告）特有の税務概念であり、一般法人に適用される「会計基準」や「社内規程」に則って処理するというのは事実誤認である（法人の場合は役員報酬や一般給与となる）。",
+      "suggested_ja": "青色申告の要件を満たすため、税務署への届出に基づき適正な金額の専従者給与を必要経費に算入しました。",
+      "suggested_vi": "Để đáp ứng các điều kiện của kê khai thuế mẫu xanh (aoiro shinkoku), chúng tôi đã kết chuyển mức lương hợp lý của người nhà cùng làm việc vào chi phí cần thiết dựa trên thông báo gửi cơ quan thuế.",
+      "suggested_en": "To fulfill the requirements for the blue return, we included an appropriate amount of family employee salaries into necessary business expenses based on the notification filed with the tax office."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "個人事業の税務概念である専従者給与に対して、法人の月次決算テンプレート（差異発生・補助元帳照合・適正に整合）を当てはめており、実務会話として著しく不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "専従者給与を必要経費として計上する場合、事前に税務署へ届出書の提出が必要でしたよね。",
+        "vi": "Nếu muốn hạch toán tiền lương của người nhà cùng làm việc vào chi phí cần thiết thì trước đó cần phải nộp bản thông báo cho cơ quan thuế đúng không?",
+        "en": "If we want to record salaries paid to family employees as necessary expenses, we need to submit a notification to the tax office in advance, right?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。すでに青色事業専従者給与に関する届出書を提出済みですので、その記載金額の範囲内で支給額を管理しています。",
+        "vi": "Vâng. Chúng tôi đã nộp Bản thông báo về tiền lương trả cho người nhà cùng làm việc diện kê khai xanh rồi, nên mức chi trả đang được quản lý trong phạm vi số tiền đã khai báo đó.",
+        "en": "Yes. We have already submitted the notification regarding salaries for family employees filing blue returns, so we manage payment amounts within the reported limits."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語自体の定義訳（日・英・越）は概ね適切である。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "95d7940d7a846d2bfdd2b4c7623d4d84a431c624f6ece0c212fc8009217d3fcc",
+    "validated_at": "2026-10-01T01:38:01.584127+00:00"
+  }
+}

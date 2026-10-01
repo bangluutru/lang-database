@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-accounting-000042",
+  "term": "未着品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an unnatural predicate collocation ('未着品を精算する'), a vacuous AI-templated example sentence ('適正な...適正に...'), and stilted phrasing in the dialogue response ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未着品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking goods in transit as an asset."
+    },
+    {
+      "index": 1,
+      "text": "未着品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase used during month-end or year-end balance reconciliation."
+    },
+    {
+      "index": 2,
+      "text": "未着品を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable expression for reconciling goods in transit against shipping documents or ledgers."
+    },
+    {
+      "index": 3,
+      "text": "未着品を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "『精算する』 applies to expenses, advances, or settlement of debts, not to inventory asset accounts like 未着品. When goods arrive, they are reclassified (振り替える) to 仕入 or 商品.",
+      "suggested_text": "未着品を振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic context detailing month-end reconciliation and checking for discrepancies in goods in transit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically generated template with repetitive phrasing ('適正な...適正に'). It lacks authentic operational substance regarding shipping documents or FOB terms typical in accounting for goods in transit.",
+      "suggested_ja": "期末時点で船積みが完了している未着品について、船荷証券（B/L）に基づき資産計上を行いました。",
+      "suggested_vi": "Đối với hàng đang đi đường đã hoàn tất việc bốc hàng lên tàu tại thời điểm cuối kỳ, chúng tôi đã ghi nhận tài sản dựa trên vận đơn đường biển (B/L).",
+      "suggested_en": "For goods in transit that were shipped as of the fiscal year-end, we recorded them as assets based on the bills of lading (B/L)."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合していることを確認いたしました' is redundant and stilted AI-style Japanese. Natural business accounting phrasing uses '一致している' or '残高の不一致がない'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未着品の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán hàng đang đi đường không?",
+        "en": "Are there any discrepancies in the entries for goods in transit in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "船積書類と補助元帳を照合済みで、残高に不一致がないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ giao hàng với sổ phụ và xác nhận không có sự không khớp nào về số dư.",
+        "en": "We have already reconciled the shipping documents with the sub-ledger and confirmed that there are no balance discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings and translations are accurate and standard for 'goods in transit' / 'hàng đang đi đường'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "44a5ba664b962916a5aea7a3351fda5c311356c851dcb56c8b24721cabdc8a1f",
+    "validated_at": "2026-10-01T01:34:21.790461+00:00"
+  }
+}

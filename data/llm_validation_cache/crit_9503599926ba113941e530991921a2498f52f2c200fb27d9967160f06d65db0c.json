@@ -1,0 +1,70 @@
+{
+  "entry_id": "jp-pro-accounting-000051",
+  "term": "車両運搬具",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 2 confuses '台帳に登録する' with '資産計上する', and Example 0 contains a domain classification error by linking production line rationalization to '車両運搬具' rather than logistics/delivery assets.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "車両運搬具を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and common accounting collocation."
+    },
+    {
+      "index": 1,
+      "text": "車両運搬具を減価償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard accounting usage."
+    },
+    {
+      "index": 2,
+      "text": "車両運搬具を固定資産台帳に計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, assets are '計上する' to financial statements (貸借対照表/資産に計上する) but '登録する' or '記載する' to a ledger (台帳に登録する). Combining '台帳' with '計上する' is unnatural.",
+      "suggested_text": "車両運搬具を固定資産台帳に登録する"
+    },
+    {
+      "index": 3,
+      "text": "車両運搬具の耐用年数",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Equipment introduced to streamline a 'production line' (生産ラインの合理化) is classified as '機械及び装置' (Machinery and Equipment), not '車両運搬具'. '車両運搬具' applies to delivery trucks, company cars, or transport vehicles, typically tied to logistics or sales expansion (物流・配送体制の強化). In addition, the English translation has a grammatical agreement mismatch ('vehicles and recorded it').",
+      "suggested_ja": "配送体制の強化に向けて商用バンを新たに取得し、車両運搬具として固定資産台帳に登録しました。",
+      "suggested_vi": "Để tăng cường hệ thống giao hàng, chúng tôi đã mua mới xe tải thương mại và đăng ký vào sổ tài sản cố định dưới mục phương tiện vận tải.",
+      "suggested_en": "To strengthen our delivery network, we acquired new commercial vans and recorded them in the fixed asset register under vehicles."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Flawless corporate accounting sentence with accurate terminology and translation equivalence."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Smooth, professional exchange between accounting professionals regarding fixed asset registration and depreciation determination."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings accurately convey the accounting balance sheet line item."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4e32d29c612fc98c9c7a0f435fcae9a0018aafd7b1ceb93df4f11d6111be7b16",
+    "validated_at": "2026-10-01T01:34:31.028147+00:00"
+  }
+}

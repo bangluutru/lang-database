@@ -1,0 +1,73 @@
+{
+  "entry_id": "jp-pro-business-000139",
+  "term": "顧客満足度",
+  "overall_decision": "rewrite",
+  "summary_reason": "The Japanese content (collocations, examples, dialogue) is natural and appropriate for a professional context. English translations are also good. However, the Vietnamese translations for the example sentences contain a minor but noticeable repetition ('chỉ số chỉ số hài lòng') which needs correction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "顧客満足度を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for a metric."
+    },
+    {
+      "index": 1,
+      "text": "顧客満足度を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common business objective."
+    },
+    {
+      "index": 2,
+      "text": "顧客満足度を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common action for data/metrics."
+    },
+    {
+      "index": 3,
+      "text": "顧客満足度の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common action for setting targets for metrics."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation contains a repetitive phrase 'chỉ số chỉ số hài lòng'.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で顧客満足度の数値を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi chỉ số hài lòng của khách hàng (CS) hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors customer satisfaction (cs) metrics on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation contains a repetitive phrase 'chỉ số chỉ số hài lòng'.",
+      "suggested_ja": "当期の顧客満足度は目標値を上回り、収益性と資本効率の向上が確認されました。",
+      "suggested_vi": "Chỉ số hài lòng của khách hàng (CS) kỳ này đã vượt giá trị mục tiêu, xác nhận khả năng sinh lời và hiệu quả sử dụng vốn đã được nâng cao.",
+      "suggested_en": "This term's customer satisfaction (cs) exceeded the target value, confirming an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue is natural, logical, and flows well in both Japanese and its translations. The term is introduced appropriately.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations in example sentences contain a repetitive phrase ('chỉ số chỉ số hài lòng')."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a27898e0e946f14d644fe574bb9f0cf91cbeb71e8f1bbde2a13e079fcba9c4e2",
+    "validated_at": "2026-10-01T01:50:29.210540+00:00"
+  }
+}

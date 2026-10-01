@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000197",
+  "term": "無限定適正意見",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains dictionary slash-notation template leaks in English translations, technically flawed audit concepts ('旨を担保する'), and unnatural collocation repetitions ('意見を受領する').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "無限定適正意見を表明する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise audit terminology; auditors express an unqualified opinion on financial statements.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "無限定適正意見を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, corporate entities typically 'obtain/secure' an opinion (意見を得る / 意見を取得する) or 'receive an audit report' (監査報告書を受領する).",
+      "suggested_text": "無限定適正意見を得る"
+    },
+    {
+      "index": 2,
+      "text": "無限定適正意見を記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in reference to stating an opinion in the audit report.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "無限定適正意見が付される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and formal phrasing in Japanese accounting and statutory disclosure.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In auditing standards, audits provide 'reasonable assurance', not a guarantee ('担保する旨' is unnatural/inaccurate). Furthermore, the English translation contains raw dictionary template slash-notation 'a(n) unqualified opinion / clean opinion'.",
+      "suggested_ja": "当期の財務諸表について独立監査人による厳格な監査を受け、無限定適正意見を得ることができました。",
+      "suggested_vi": "Đối với báo cáo tài chính kỳ này, sau khi trải qua đợt kiểm toán nghiêm ngặt từ kiểm toán viên độc lập, chúng tôi đã nhận được ý kiến kiểm toán chấp nhận toàn phần.",
+      "suggested_en": "Following a rigorous audit of this period's financial statements by an independent auditor, we obtained an unqualified opinion."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The English output leaks unparsed prompt metadata ('unqualified opinion / clean opinion'). In Japanese, audit reports attached to annual securities reports are formally issued by audit firms (監査法人) or independent CPAs.",
+      "suggested_ja": "有価証券報告書において、監査法人による無限定適正意見が付された監査報告書を開示しました。",
+      "suggested_vi": "Trong báo cáo chứng khoán định kỳ, chúng tôi đã công bố báo cáo kiểm toán có ý kiến chấp nhận toàn phần từ công ty kiểm toán.",
+      "suggested_en": "In the annual securities report, we disclosed the audit report issued with an unqualified opinion by the audit firm."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Repeating '無限定適正意見を受領' twice sounds unnatural and mechanically generated. In actual executive reporting, speakers discuss whether the clean opinion can be obtained ('得られる見通し'). Dialogue translations are also missing in the candidate.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "独立監査人による期末監査の進捗はいかがですか。無限定適正意見が得られる見通しでしょうか。",
+        "vi": "Tiến độ kiểm toán cuối kỳ của kiểm toán viên độc lập thế nào rồi? Dự kiến chúng ta có nhận được ý kiến chấp nhận toàn phần không?",
+        "en": "How is the progress on the year-end audit by the independent auditor? Are we on track to receive an unqualified opinion?"
+      },
+      {
+        "speaker": "B",
+        "ja": "重要な指摘事項や未解消の会計論点はなく、予定通り無限定適正意見が付される見込みです。",
+        "vi": "Không có phát hiện trọng yếu hay vấn đề kế toán nào chưa được giải quyết, dự kiến báo cáo sẽ được đính kèm ý kiến chấp nhận toàn phần đúng kế hoạch.",
+        "en": "There are no material findings or unresolved accounting issues, so we anticipate being issued an unqualified opinion as scheduled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translations suffered from raw prompt concatenation artifacts ('a(n) unqualified opinion / clean opinion')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "708f894c00337a4d686e5ff481370d8e9a7f5a3094a39626f9f4b2f368320263",
+    "validated_at": "2026-10-01T01:37:12.846360+00:00"
+  }
+}

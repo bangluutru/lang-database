@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000021",
+  "term": "値引き",
+  "overall_decision": "rewrite",
+  "summary_reason": "「根回し」や「情報共有」用の汎用テンプレートに「値引き」を機械的に差し替えた致命的なテンプレート汚染が発生しており、例文・対話・コロケーションの大部分が実務日本語として破綻しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "値引きを徹底する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "値引き（価格の引き下げ）は業務規律やルールの文脈のように『徹底する』対象として不自然です。値引き枠の管理や値引き販売の文脈にする必要があります。",
+      "suggested_text": "値引きを要請する"
+    },
+    {
+      "index": 1,
+      "text": "値引きを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "標準的かつ自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "値引きを習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "値引きを『習慣づける』というのはビジネス商慣行として極めて不自然であり、利益率低下を招くため推奨される業務習慣になり得ません。",
+      "suggested_text": "値引きに応じる"
+    },
+    {
+      "index": 3,
+      "text": "値引きの重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "値引きの重要性を社内で共有するという表現は商業実務上著しく不自然です（通常は安易な値引きを抑止します）。",
+      "suggested_text": "値引き幅を交渉する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「関係部署への事前の値引きを徹底」は『根回し』や『事前調整』等のテンプレートに単語を機械的置換した明白な破綻文です。",
+      "suggested_ja": "大口顧客からの受注を確保するため、営業部長の承認を得て一定の値引きを行いました。",
+      "suggested_vi": "Để đảm bảo đơn hàng từ khách hàng lớn, chúng tôi đã giảm giá trực tiếp một mức nhất định sau khi được Trưởng phòng Kinh doanh phê duyệt.",
+      "suggested_en": "To secure the order from a major client, we offered a certain discount after obtaining approval from the sales director."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「トラブル防止のために値引きの習慣付けが求められる」は業務プロセスとして意味不明であり、社内報連相テンプレートの機械的流用です。",
+      "suggested_ja": "過度な値引きは自社の利益率を圧迫するため、明確な値引き基準を設ける必要があります。",
+      "suggested_vi": "Việc giảm giá quá mức sẽ gây áp lực lên tỷ suất lợi nhuận của công ty, do đó cần phải thiết lập các tiêu chuẩn giảm giá rõ ràng.",
+      "suggested_en": "Excessive discounts squeeze our profit margins, so it is necessary to establish clear discounting criteria."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの発言は「値引きの徹底状況」と不自然であり、Bの返答は唐突に「情報共有」にすり替わっており、会話が完全に破綻しています（情報共有テンプレの混入）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "取引先からさらなる値引きを求められているのですが、どう対応すべきでしょうか。",
+        "vi": "Đối tác đang yêu cầu giảm giá thêm nữa, chúng ta nên xử lý thế nào ạ?",
+        "en": "The client is asking for a further discount. How should we handle this?"
+      },
+      {
+        "speaker": "B",
+        "ja": "これ以上の値引きは採算割れのリスクがあるので、納期の短縮や付加サービスで交渉してみてください。",
+        "vi": "Nếu giảm giá thêm nữa sẽ có nguy cơ bán dưới giá thành (không sinh lời), nên anh hãy thử đàm phán bằng cách rút ngắn tiến độ giao hàng hoặc dịch vụ gia tăng xem sao.",
+        "en": "Any further price reduction risks falling below profitability, so please try negotiating by offering faster delivery or value-added services instead."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語自体の定義（meaning_en, meaning_vi）は正確ですが、例文・対話文は元日本語の破綻を直訳しているため再生成が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "550e2040536201841a3a6bfed2629ed5d9ca01645a1cb460e9639c52701186d9",
+    "validated_at": "2026-10-01T01:41:16.641135+00:00"
+  }
+}

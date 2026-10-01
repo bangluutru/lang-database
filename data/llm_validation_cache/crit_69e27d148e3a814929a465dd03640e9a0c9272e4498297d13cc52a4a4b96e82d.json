@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000098",
+  "term": "申告調整",
+  "overall_decision": "rewrite",
+  "summary_reason": "提示された4つのコロケーションすべてに助詞の誤用、術語の組み合わせの誤り（算入／不算入の対象違い）、または同語反復（調整の調整）が含まれており、教育用コンテンツとして学習者に誤った語法を刷り込むリスクが高いため全面的な書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "申告調整に算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「算入する」の対象は通常「益金」または「損金」であり、「申告調整に算入する」という格助詞・述語の組み合わせは税務実務上不自然です。",
+      "suggested_text": "申告調整を行う"
+    },
+    {
+      "index": 1,
+      "text": "申告調整に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「不算入とする」は「損金不算入」「益金不算入」のように使われる術語であり、「申告調整に不算入とする」は誤用です。",
+      "suggested_text": "申告調整項目を洗い出す"
+    },
+    {
+      "index": 2,
+      "text": "申告調整の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「調整の調整を行う」という同語反復（重言）となっており、極めて不自然な日本語です。",
+      "suggested_text": "申告調整漏れを防ぐ"
+    },
+    {
+      "index": 3,
+      "text": "申告調整に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "助詞の使い方が不自然です。税務実務では申告調整という枠組みの中で所得に加算するため、「申告調整で加算する」とする必要があります。",
+      "suggested_text": "申告調整で加算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「相違を調整するため…申告調整を適切に処理しました」と調整が重複して文体が不自然です。また英訳の「adjusted tax return adjustments」も重言となっています。",
+      "suggested_ja": "会計上の利益と税務上の所得の差異を解消するため、別表四において適切な申告調整を行いました。",
+      "suggested_vi": "Để xử lý sự chênh lệch giữa lợi nhuận kế toán và thu nhập chịu thuế, chúng tôi đã thực hiện điều chỉnh khi quyết toán thuế phù hợp trên Phụ lục 4.",
+      "suggested_en": "To reconcile the difference between accounting profit and taxable income, we made appropriate tax return adjustments on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「申告調整の算入漏れ」は「申告調整漏れ」と「損金・益金算入漏れ」が混ざった不自然な造語表現です。",
+      "suggested_ja": "税務調査における指摘を未然に防ぐため、過年度の取引を再検証し、別表四での申告調整漏れがないか確認しました。",
+      "suggested_vi": "Để phòng ngừa các vấn đề bị cơ quan thuế chất vấn trong thanh tra, chúng tôi đã kiểm tra lại các giao dịch của các năm trước và xác nhận không có thiếu sót trong các khoản điều chỉnh khi khai thuế trên Phụ lục 4.",
+      "suggested_en": "To prevent issues during tax audits, we reviewed prior-year transactions to ensure no tax return adjustments were omitted on Schedule 4."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "申告調整（別表四・五）自体は法人税申告書の根幹部分であり、「申告書添付書類として提出する」という表現や「税理士の確認書を添付書類とする」という説明は日本の税務申告の実務慣行として違和感があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の法人税申告における申告調整項目と、別表四の加算・減算の根拠資料はまとまりましたか。",
+        "vi": "Các khoản mục điều chỉnh khi khai thuế TNDN kỳ này và tài liệu căn cứ cho các khoản tăng giảm trên Phụ lục 4 đã được tổng hợp xong chưa?",
+        "en": "Have you compiled the tax return adjustment items and the supporting documents for additions and deductions on Schedule 4 for this period's corporate tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、交際費等の損金不算入額も含めて集計が完了し、顧問税理士のレビューも済んでおります。",
+        "vi": "Vâng, việc tổng hợp bao gồm cả các khoản không được trừ như chi phí tiếp khách đã hoàn tất, và thuế vụ cố vấn cũng đã soát xét xong.",
+        "en": "Yes, the calculations, including non-deductible entertainment expenses, are complete, and our tax advisor has already reviewed them."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳としての「Tax return adjustments」「điều chỉnh chênh lệch giữa kế toán và luật thuế」は専門用語の趣旨を正しく捉えています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ac9574034b754aa5063b766fc79d03376f6273651ca8872280c0766ac3c0fd72",
+    "validated_at": "2026-10-01T01:39:10.509639+00:00"
+  }
+}

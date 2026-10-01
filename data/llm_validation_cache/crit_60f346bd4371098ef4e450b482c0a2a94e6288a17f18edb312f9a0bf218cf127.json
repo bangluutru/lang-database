@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000164",
+  "term": "報酬・料金等の源泉徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains domain-level category errors (conflating the statutory tax deduction procedure with balance sheet accounts and citing accounting standards rather than tax law) as well as formulaic, unnatural collocations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "報酬・料金等の源泉徴収を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "源泉徴収 is a specific legal tax deduction procedure; pairing it with generic '進める' sounds templated. '源泉徴収を行う' or '源泉徴収の要否を判定する' is authentic business Japanese.",
+      "suggested_text": "報酬・料金等の源泉徴収を行う"
+    },
+    {
+      "index": 1,
+      "text": "報酬・料金等の源泉徴収を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Mechanical template. In tax accounting, professionals refer to calculating the tax ('税額を算出する') or paying the withheld tax ('納付を完了する').",
+      "suggested_text": "報酬・料金等の源泉徴収税額を算出する"
+    },
+    {
+      "index": 2,
+      "text": "報酬・料金等の源泉徴収の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and naturally used when reviewing administrative workflows for withholding tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "報酬・料金等の源泉徴収を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "源泉徴収 is a statutory obligation prescribed by the Income Tax Act; one does not arbitrarily 'review/revise' the withholding itself, but rather verifies whether withholding is required.",
+      "suggested_text": "報酬・料金等の源泉徴収の要否を判定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'源泉徴収' is an action/statutory procedure, not a balance sheet account. One cannot check the '残高' (balance) of a procedure; the balance belongs to '預り金' (withholding tax payable) or refers to '源泉徴収税額'.",
+      "suggested_ja": "月末の帳簿照合において、専門家への支払いに伴う報酬・料金等の源泉徴収税額と預り金残高に差異がないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch giữa số thuế khấu trừ tại nguồn đối với thù lao, phí dịch vụ chuyên gia và số dư tài khoản tiền gửi giữ hộ (thuế khấu trừ phải nộp) hay không.",
+      "suggested_en": "During month-end reconciliation, we carefully verify that there are no discrepancies between the withholding tax amounts on professional fees and remuneration and the balance of withheld tax payables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Withholding tax obligations are dictated by the Income Tax Act (所得税法), not '会計基準' (accounting standards). Stating that withholding tax was handled in compliance with accounting standards is factually inaccurate in a corporate tax context.",
+      "suggested_ja": "所得税法および関連法令に則り、弁護士や税理士への支払いに係る報酬・料金等の源泉徴収を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ Luật Thuế thu nhập và các văn bản pháp luật liên quan, chúng tôi đã xử lý đúng quy định việc khấu trừ thuế tại nguồn đối với thù lao và phí dịch vụ chi trả cho luật sư và chuyên gia tư vấn thuế.",
+      "suggested_en": "In accordance with the Income Tax Act and related regulations, we properly processed the withholding tax on remuneration and fees paid to attorneys and tax accountants."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A refers to '源泉徴収の計上内容に差異' which is unnatural phrasing (procedure vs ledger entry). The exchange should specifically mention '源泉徴収税額' and '預り金'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、報酬・料金等に係る源泉徴収税額と預り金勘定に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch giữa số thuế khấu trừ tại nguồn đối với thù lao, phí dịch vụ và tài khoản tiền gửi giữ hộ không?",
+        "en": "In this month's closing, are there any discrepancies between the withholding tax amounts on remuneration and fees and the tax payable account?"
+      },
+      {
+        "speaker": "B",
+        "ja": "支払調書および請求書と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu các chứng từ thanh toán, hóa đơn với sổ phụ chi tiết và xác nhận tất cả đều khớp đúng.",
+        "en": "We have cross-checked the payment records and invoices against the sub-ledger and confirmed that everything reconciles properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese definition embeds '(10.21%)' directly into the core translation. While 10.21% is standard for individual residents up to 1M JPY, the statutory scope of '報酬・料金等' also includes amounts taxed at 20.42% and non-resident withholding. Restricting the term definition to 10.21% is overly narrow."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "49a67cf6bff2b0b53e9be29c0b0d09f8fe9bea471e48e855715925b5c4e52ab5",
+    "validated_at": "2026-10-01T01:40:18.221819+00:00"
+  }
+}

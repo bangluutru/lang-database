@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000166",
+  "term": "営業外収益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an impossible predicate ('営業外収益を精算する') and Example 1 exhibits unnatural repetitive template phrasing ('適正な...適正に') that needs refinement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "営業外収益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing non-operating income.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "営業外収益の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common task during monthly and fiscal closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "営業外収益を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in monthly closing reconciliation contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "営業外収益を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '精算する' applies to expense reimbursements (経費精算), advances (仮払金), or settling mutual debts/credits, never to an income classification category like 営業外収益.",
+      "suggested_text": "営業外収益の内訳を精査する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, standard operational description of month-end closing review.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stilted template repetition of '適正な' and '適正に' in the same sentence ('適正な会計基準...適正に処理いたしました'). In business Japanese, '企業会計基準および社内規程に則り、当期の決算において営業外収益を適切に処理いたしました' is the authentic form.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期決算における営業外収益を適切に処理いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã xử lý thỏa đáng các khoản doanh thu hoạt động tài chính và thu nhập ngoài hoạt động trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we have appropriately processed non-operating income for the current fiscal period."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic exchange between finance team members verifying reconciliations during monthly closing.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f820000a76eeeb9f3070d4b7eac046610f10d702ba0b2c66b2b5b50e55df7f71",
+    "validated_at": "2026-10-01T01:36:39.021689+00:00"
+  }
+}

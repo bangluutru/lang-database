@@ -1,0 +1,79 @@
+{
+  "entry_id": "jp-pro-trade-000143",
+  "term": "船社",
+  "overall_decision": "rewrite",
+  "summary_reason": "「船社」という組織名と動詞の組み合わせに不自然な点が複数見られた。特に「船社を開催する」「臨時船社を招集する」は日本語として成立しない。また、対話文も不自然な表現と会話の繋がりが見られたため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "船社を開催する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開催する」は会議やイベントに対して使う動詞であり、組織である「船社」に対しては使わない。組織は「設立する」や「運営する」など。",
+      "suggested_text": "船社を設立する"
+    },
+    {
+      "index": 1,
+      "text": "船社で決議する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「船社で決議する」は文法的に可能だが、より自然な表現は「船社が（～を）決議する」または「船社において（～が）決議される」。",
+      "suggested_text": "船社が決議する"
+    },
+    {
+      "index": 2,
+      "text": "船社に報告する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "船社へ届出書を提出する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「臨時船社を招集する」は不自然。「船社」は組織であり、会議のように「招集する」対象ではない。会議を招集するのは「船社」の役員など。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時役員会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp hội đồng quản trị bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary board meeting will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「船社の準備状況」が不自然。「船社」は組織であり、会議の準備をするのは「船社」の担当者や部署。また、Bの回答がAの質問と直接的に繋がっていない。Aは「船社の準備状況」を尋ねているが、Bは「内容の最終推敲」や「発送の手配」について答えている。会議の準備状況を尋ねるなら、より具体的に「会議の資料の準備状況」などとすべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp dự kiến vào tuần tới, tình hình chuẩn bị tài liệu thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, what is the status of the document preparation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ tiến hành sắp xếp việc gửi đi trong hôm nay.",
+        "en": "We have finished the final review of the content and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の「hãng tàu biển vận tải hàng hóa quốc tế」は「船社」の一般的な意味としては長すぎる。単に「hãng tàu」で十分。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2adb95bb441324adcc3853c6f90fb7c016e4429a5afb9fa96736daca7b6f61dc",
+    "validated_at": "2026-10-01T01:56:26.987132+00:00"
+  }
+}

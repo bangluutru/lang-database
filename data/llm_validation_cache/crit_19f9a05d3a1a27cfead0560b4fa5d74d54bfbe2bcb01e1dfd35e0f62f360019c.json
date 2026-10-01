@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000009",
+  "term": "DAP",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations and example sentences are excellent and natural. However, the dialogue lacks conversational continuity, with Speaker B's response not fully addressing Speaker A's broader question about 'DAPの手配状況'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "DAPの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural expression for contracting under specific Incoterms."
+    },
+    {
+      "index": 1,
+      "text": "DAPの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrase for trading based on a specific pricing term (建値)."
+    },
+    {
+      "index": 2,
+      "text": "DAPにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common way to discuss cost allocation under Incoterms."
+    },
+    {
+      "index": 3,
+      "text": "DAPにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriate and natural expression for confirming risk transfer points in trade."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately reflects business communication regarding Incoterms. The translations are also accurate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and correctly describes cost responsibilities under DAP. The translations are accurate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about 'DAPの手配状況' (DAP arrangement status), which implies the overall logistics and delivery. Speaker B's response focuses only on customs clearance and forwarding agent contact, which is a part of the process but doesn't fully address '手配状況' in a comprehensive way. It feels like a partial answer rather than a complete update on the DAP arrangements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、DAPの手配状況はいかがでしょうか。輸入者側への引き渡し準備は進んでいますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp DAP thế nào rồi? Việc chuẩn bị bàn giao cho bên nhập khẩu đã tiến triển đến đâu?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the DAP arrangements? Are preparations for handover to the importer progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は済ませており、書類確認も完了し輸入申告に入っております。輸入者側への引き渡しについては、通関後すぐに配送手配を進める予定です。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan và đại lý giao nhận, việc kiểm tra chứng từ cũng đã hoàn tất và đang tiến hành khai báo nhập khẩu. Về việc bàn giao cho bên nhập khẩu, chúng tôi dự kiến sẽ sắp xếp vận chuyển ngay sau khi thông quan.",
+        "en": "Yes, we have contacted the customs broker and forwarding agent, document verification is complete, and we are proceeding with the import declaration. For the handover to the importer, we plan to arrange delivery immediately after customs clearance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d05a94779176187503a0761a5c6624d11e81d80a679b6f1739d334e296a43c80",
+    "validated_at": "2026-10-01T01:53:49.797273+00:00"
+  }
+}

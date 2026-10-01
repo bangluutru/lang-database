@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000107",
+  "term": "負債合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「負債合計」は計算・集計された合計項目（サマリー行）であるにもかかわらず、個別勘定科目と同じように「計上する」「精算する」「計上内容」といった述語と機械的に結合されており、会計実務として不自然な表現が散見されます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "負債合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「負債合計」は貸借対照表の集計行（合計額）であり、個別の仕訳として「計上」する対象ではないため不自然です。",
+      "suggested_text": "負債合計を集計する"
+    },
+    {
+      "index": 1,
+      "text": "負債合計の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「残高」は各勘定科目に用いるのが一般的であり、合計項目に対しては「負債合計額を確認する」またはシンプルに「負債合計を確認する」とするのが自然です。",
+      "suggested_text": "負債合計を確認する"
+    },
+    {
+      "index": 2,
+      "text": "負債合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "試算表や元帳、前年数値などと負債合計の数値を突き合わせる文脈として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "負債合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は立替経費や仮払金等に対して行う処理であり、集計値である「負債合計」を精算することは実務上ありません。負債を減らす文脈なら「圧縮する」などが適切です。",
+      "suggested_text": "負債合計を圧縮する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「負債合計の計上内容」という表現は機械的です。計上されるのは個別科目であり、合計値に対しては「試算表と貸借対照表の負債合計に差異がないか」などとするのが自然です。",
+      "suggested_ja": "月末の決算整理において、試算表と貸借対照表の負債合計に差異が生じていないか精査します。",
+      "suggested_vi": "Trong quá trình điều chỉnh quyết toán cuối tháng, chúng tôi rà soát kỹ lưỡng xem có phát sinh chênh lệch ở tổng nợ phải trả giữa bảng cân đối thử và bảng cân đối kế toán hay không.",
+      "suggested_en": "During month-end closing adjustments, we carefully examine whether there are any discrepancies in total liabilities between the trial balance and the balance sheet."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「負債合計を適正に処理いたしました」はテンプレート的で意味が通りません。合計項目は「処理」するものではなく、集計・開示されるものです。実務的な財務報告の文脈に修正すべきです。",
+      "suggested_ja": "有利子負債の返済が進んだことにより、当期の負債合計は前期末と比べて大幅に減少しました。",
+      "suggested_vi": "Nhờ tiến độ thanh toán các khoản nợ phải trả lãi diễn ra thuận lợi, tổng nợ phải trả kỳ này đã giảm đáng kể so với cuối kỳ trước.",
+      "suggested_en": "Due to progress in repaying interest-bearing debt, total liabilities for this fiscal term decreased significantly compared to the end of the previous term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「負債合計の計上内容に差異」は合計値の概念と計上の概念が混同されており不自然です。また、Bが「証憑書類と補助元帳」を持ち出すのも、全体の合計値の確認としては粒度が不自然に乖離しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、総勘定元帳と貸借対照表の間で負債合計に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, tổng nợ phải trả giữa sổ cái và bảng cân đối kế toán có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in total liabilities between the general ledger and the balance sheet in this month's monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "各科目の残高確認をすべて完了しており、負債合計の数値も完全に一致しております。",
+        "vi": "Chúng tôi đã hoàn tất việc kiểm tra số dư của tất cả các tài khoản, và con số tổng nợ phải trả cũng hoàn toàn khớp nhau.",
+        "en": "We have completed balance verifications for all accounts, and the total liability figures match perfectly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳「Total liabilities」「tổng nợ phải trả」は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "14fb685f0da1b1c03521a6f8be0c9d4c0886f57af2399ed0e9c4d830ebe613e1",
+    "validated_at": "2026-10-01T01:35:34.445512+00:00"
+  }
+}

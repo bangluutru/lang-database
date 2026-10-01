@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000199",
+  "term": "不適正意見",
+  "overall_decision": "reject",
+  "summary_reason": "Fatal domain contradiction: Examples and dialogue mechanically treat '不適正意見' (adverse opinion) as a desirable, clean audit outcome ('受領できる見通し', '適正に表示されている旨を担保するため'), reflecting severe hallucination/templating errors.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不適正意見を表明する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting terminology for an auditor issuing/expressing an adverse opinion.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "不適正意見を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'受領する' implies routine administrative receipt or acceptance. An adverse opinion is a severe punitive finding issued to an entity; '不適正意見を受ける' or '不適正意見が出される' is natural.",
+      "suggested_text": "不適正意見を受ける"
+    },
+    {
+      "index": 2,
+      "text": "不適正意見を記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate expression referring to recording or stating an adverse opinion in an audit report.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "不適正意見が付される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic standard auditing collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Catastrophic factual error: The sentence claims an adverse opinion was received to prove that financial statements are 'fairly presented' (適正に表示されている). An adverse opinion means the statements are materially misstated and NOT fairly presented.",
+      "suggested_ja": "連結財務諸表において広範かつ重要な虚偽記載が是正されなかったため、監査法人から不適正意見を表明された。",
+      "suggested_vi": "Do các sai sót trọng yếu và lan tỏa trong báo cáo tài chính hợp nhất không được điều chỉnh, công ty kiểm toán đã đưa ra ý kiến không chấp nhận.",
+      "suggested_en": "Because pervasive and material misstatements in the consolidated financial statements were not corrected, the audit firm issued an adverse opinion."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "While grammatically coherent, treating an adverse opinion as standard disclosure routine lacks real-world contextual authenticity. An adverse opinion threatens stock exchange listing.",
+      "suggested_ja": "監査報告書において不適正意見が付された場合、証券取引所の上場廃止基準に抵触する恐れがある。",
+      "suggested_vi": "Nếu bị kiểm toán đưa ra ý kiến không chấp nhận trong báo cáo kiểm toán, doanh nghiệp có nguy cơ vi phạm tiêu chuẩn hủy niêm yết của sở giao dịch chứng khoán.",
+      "suggested_en": "If an adverse opinion is rendered in the audit report, the company risks violating the stock exchange's delisting criteria."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical domain error: Speaker B states that because there are no material findings or unresolved issues, they expect to receive an 'adverse opinion' as scheduled. The generator mechanically templated a positive/clean opinion dialogue with '不適正意見'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の会計不正の件、監査法人から不適正意見が出される可能性はあるのでしょうか。",
+        "vi": "Về vụ việc gian lận kế toán lần này, liệu có khả năng công ty kiểm toán sẽ đưa ra ý kiến không chấp nhận không?",
+        "en": "Regarding this accounting fraud case, is there a possibility that the audit firm will issue an adverse opinion?"
+      },
+      {
+        "speaker": "B",
+        "ja": "影響額が極めて広範にわたるため、訂正報告書を出せなければ不適正意見を免れない恐れがあります。",
+        "vi": "Do mức độ ảnh hưởng vô cùng rộng, nếu chúng ta không nộp được báo cáo sửa đổi, e rằng khó tránh khỏi ý kiến không chấp nhận.",
+        "en": "Because the financial impact is extremely pervasive, we may not be able to avoid an adverse opinion unless we file an amended report."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations for 'Adverse opinion' are accurate; failures stem from the generated context."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "86e0687d863bd32fc4f90b62c11dfcfae1c394892eb3b82820641133a42dde45",
+    "validated_at": "2026-10-01T01:37:11.600021+00:00"
+  }
+}

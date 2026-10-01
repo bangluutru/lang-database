@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000150",
+  "term": "源泉徴収票",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the term, collocations, and core definitions are accurate, the example sentences and workplace dialogue rely heavily on bureaucratic template phrasing ('所轄官庁', '手続きを遂行するため') rather than authentic corporate payroll/tax Japanese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "源泉徴収票を交付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Statutory and standard business expression under Japanese Income Tax Act (所得税法第226条).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "源泉徴収票を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and accurate regarding submission to the competent tax office (所轄税務署).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "源泉徴収票を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression used by both payroll departments and individual employees.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "源泉徴収票の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Fully natural phrasing for payroll verification and tax filing audits.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Using '所轄官庁' and '手続きを遂行するため' sounds like rigid synthetic boilerplate. In Japanese tax operations, the submission target is specifically '所轄税務署', and it is typically submitted alongside the 法定調書合計表 after 年末調整.",
+      "suggested_ja": "年末調整の完了に伴い、所轄税務署に対して法定調書合計表とともに源泉徴収票を期限内に提出いたしました。",
+      "suggested_vi": "Sau khi hoàn tất quyết toán thuế cuối năm, chúng tôi đã nộp phiếu xác nhận khấu trừ thuế cùng với bảng kê tổng hợp chứng từ luật định cho cơ quan thuế trực thuộc đúng thời hạn.",
+      "suggested_en": "Following the completion of the year-end tax adjustment, we submitted the withholding tax slips along with the statutory report summary to the competent tax office within the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Statutory documents are referenced as '交付済みの源泉徴収票（の控え）' rather than '発行済み', and statutory records in tax law are standardly described with '保存期間に従い適切に保存' rather than '厳重に保管'.",
+      "suggested_ja": "将来の税務調査に備え、交付した源泉徴収票の控えを法令で定められた保存期間に従って適切に保存しています。",
+      "suggested_vi": "Để chuẩn bị cho các đợt thanh tra thuế trong tương lai, chúng tôi lưu giữ bản sao các chứng từ khấu trừ thuế đã cấp một cách phù hợp theo thời hạn luật định.",
+      "suggested_en": "In preparation for future tax audits, we properly retain copies of the issued withholding tax slips in accordance with the statutory retention period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Native speakers do not ask '所轄官庁へ提出する源泉徴収票の作成と記載事項の点検は順調に進んでいますか'. In an enterprise setting, they refer to year-end tax adjustment preparation or employee delivery, such as '年末調整に伴う源泉徴収票の作成'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整に伴う従業員への源泉徴収票の交付準備は、順調に進んでいますか。",
+        "vi": "Công tác chuẩn bị cấp chứng từ khấu trừ thuế thu nhập cá nhân cho nhân viên sau quyết toán thuế cuối năm có diễn ra thuận lợi không?",
+        "en": "Is the preparation for issuing withholding tax slips to employees following the year-end tax adjustment progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、控除額や税額の検算はすべて完了しており、予定通り来週初めには全社員へ交付できる見通しです。",
+        "vi": "Vâng, việc kiểm tra đối chiếu các khoản giảm trừ và tiền thuế đã hoàn tất, dự kiến sẽ cấp phát cho toàn bộ nhân viên vào đầu tuần tới đúng như kế hoạch.",
+        "en": "Yes, all verifications of deductions and tax amounts are complete, and we expect to issue them to all employees early next week as scheduled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both meaning definitions are accurate and clearly communicate the statutory tax document."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "102e8d12f6994c0e25be155e0616dbd94e4cfdbd3206cdf43c5ed22aabfe91ca",
+    "validated_at": "2026-10-01T01:40:05.916131+00:00"
+  }
+}

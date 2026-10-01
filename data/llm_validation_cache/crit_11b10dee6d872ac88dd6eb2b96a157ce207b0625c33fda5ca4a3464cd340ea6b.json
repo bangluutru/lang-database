@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000150",
+  "term": "会議費",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the core term and basic usages are sound, Collocation 2 is an unnatural predicate pairing, Example 2 relies on an awkward machine-generated template ('適正な...適正に') that ignores real-world Japanese corporate tax context, and Dialogue Turn B suffers from redundant phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "会議費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting expression for booking meeting expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "会議費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in trial balance reviews and monthly closing audits.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "会議費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する requires two specific targets (e.g., 証憑と元帳) or an explicit comparative source; taking the abstract expense account directly as an object sounds mechanical.",
+      "suggested_text": "会議費として処理する"
+    },
+    {
+      "index": 3,
+      "text": "会議費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and ubiquitous in routine expense reimbursement workflows.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural context for accounting control and review during monthly closings.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive templated phrasing ('適正な会計基準...適正に処理いたしました') and lacks accounting realism, as 会議費 is governed primarily by tax regulations (vs. 交際費) rather than '会計基準'.",
+      "suggested_ja": "税法上の要件および社内規程に則り、1人当たり1万円以下の飲食費を交際費ではなく会議費として処理しました。",
+      "suggested_vi": "Tuân thủ các quy định của luật thuế và quy chế nội bộ, chi phí ăn uống dưới 10.000 yên một người đã được hạch toán vào chi phí hội họp thay vì chi phí tiếp khách.",
+      "suggested_en": "In accordance with tax law requirements and internal regulations, meal expenses of 10,000 yen or less per person were processed as meeting expenses rather than entertainment expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrase 'すべて適正に整合していることを確認いたしました' is tautological and rigid ('適正に整合'). A natural business response would specify reconciliation between receipts and ledger entries without robotic redundancy.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、会議費の計上内容に差異や不明な点はありませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán chi phí hội họp có phát sinh chênh lệch hay điểm nào chưa rõ không?",
+        "en": "Are there any discrepancies or unclear points regarding the meeting expenses in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "領収書と補助元帳を突き合わせて確認しましたが、すべて一致しております。",
+        "vi": "Tôi đã đối chiếu biên lai với sổ phụ, tất cả đều hoàn toàn khớp ạ.",
+        "en": "I cross-checked the receipts against the subsidiary ledger, and everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "30e98acb0fecb0c56c579e5d6dc14c868009dc1aad38f5e5dc7757ae34d6e991",
+    "validated_at": "2026-10-01T01:36:25.863612+00:00"
+  }
+}

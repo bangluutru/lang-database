@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000117",
+  "term": "繰越利益剰余金",
+  "overall_decision": "rewrite",
+  "summary_reason": "繰越利益剰余金（資本・純資産項目）に対して、日常経費や売買掛金のような流動資産・負債勘定向けの汎用テンプレート（「精算する」「証憑書類と補助元帳を照合」等）が機械的に適用されており、会計実務上重大な誤りが含まれています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰越利益剰余金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "繰越利益剰余金は純資産の勘定科目であり、単体で「〜を計上する」とするよりも「繰越利益剰余金へ振り替える」や「繰越利益剰余金に算入する」とするのが会計実務上自然です。",
+      "suggested_text": "繰越利益剰余金へ振り替える"
+    },
+    {
+      "index": 1,
+      "text": "繰越利益剰余金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "期首残高や決算時の残高確認として実務上頻繁に用いられる自然なコロケーションです。",
+      "suggested_text": "繰越利益剰余金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "繰越利益剰余金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "勘定科目そのものを直接「照合する」とするのはやや不自然です。株主資本等変動計算書や前期繰越残高と照合するため、「残高を照合する」とするのが適切です。",
+      "suggested_text": "繰越利益剰余金の残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "繰越利益剰余金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は仮払金や立替金、経費、債権債務の決済に用いる動作です。資本項目である繰越利益剰余金を「精算する」とは言いません。配当などで減額する場合は「取り崩す」を用います。",
+      "suggested_text": "繰越利益剰余金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "繰越利益剰余金は株主総会決議（剰余金の処分）や本決算時の当期純損益振替で動く資本項目であり、月末の月次ルーティンで「計上内容の差異を精査する」対象ではありません。日常取引勘定のテンプレートを機械的に流用した不自然な文です。",
+      "suggested_ja": "株主総会の決議に基づき、繰越利益剰余金を財源として配当金の支払いを決定しました。",
+      "suggested_vi": "Căn cứ theo nghị quyết của Đại hội đồng cổ đông, chúng tôi đã quyết định chi trả cổ tức từ nguồn lợi nhuận sau thuế chưa phân phối lũy kế.",
+      "suggested_en": "Based on the resolution of the general meeting of shareholders, we decided to pay dividends funded from retained earnings brought forward."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "決算処理において繰越利益剰余金を会計基準や規程に則って処理した旨を報告する表現として自然です。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において繰越利益剰余金を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định lợi nhuận sau thuế chưa phân phối lũy kế trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed retained earnings brought forward in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "繰越利益剰余金は純資産項目であり、領収書等の「証憑書類」や「補助元帳」と突き合わせる勘定ではありません。月次決算でこのような対話を行うのは会計実務として著しく不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算整理後、当期純利益の繰越利益剰余金への振替仕訳は完了していますか。",
+        "vi": "Sau khi điều chỉnh quyết toán, bút toán kết chuyển lợi nhuận thuần trong kỳ vào lợi nhuận sau thuế chưa phân phối lũy kế đã hoàn tất chưa?",
+        "en": "Following the closing adjustments, has the entry transferring net income for the period to retained earnings brought forward been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、振替仕訳および株主資本等変動計算書との整合性も確認済みです。",
+        "vi": "Vâng, chúng tôi đã kiểm tra bút toán kết chuyển và đảm bảo tính nhất quán với báo cáo biến động vốn chủ sở hữu rồi.",
+        "en": "Yes, the closing transfer entry has been posted, and consistency with the statement of changes in equity has also been verified."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳は会計用語として正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8561b2bb441cfc1758eafe84e4924495f58fb0314256017991ce1ce6d7eee5ef",
+    "validated_at": "2026-10-01T01:35:45.450398+00:00"
+  }
+}

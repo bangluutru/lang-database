@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000046",
+  "term": "白地裏書",
+  "overall_decision": "rewrite",
+  "summary_reason": "「白地裏書」という用語の会計上の扱いに関する根本的な誤解が見られる。白地裏書は裏書行為であり、それ自体が会計帳簿に計上されたり、残高を持ったりするものではない。手形や小切手といった証券の裏書行為として理解し、その証券の会計処理について言及すべきである。全体的に、用語の概念理解が不正確なため、全面的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "白地裏書を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設などに使う動詞であり、白地裏書には適用されない。白地裏書は行為や状態を指すため、開設するとは結びつかない。",
+      "suggested_text": "白地裏書を行う"
+    },
+    {
+      "index": 1,
+      "text": "白地裏書を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "白地裏書は手形や小切手の裏書行為であり、それ自体を「決済する」という表現は不自然。決済されるのは手形や小切手そのものであり、裏書ではない。",
+      "suggested_text": "白地裏書された手形を決済する"
+    },
+    {
+      "index": 2,
+      "text": "白地裏書を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "白地裏書は裏書行為であり、提示されるのは裏書された手形や小切手。裏書そのものを提示するとは言わない。",
+      "suggested_text": "白地裏書された手形を提示する"
+    },
+    {
+      "index": 3,
+      "text": "白地裏書の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "白地裏書は裏書行為であり、それ自体に「不一致」が生じることは通常ない。不一致が生じるのは、裏書された証券の内容や処理に関してであり、白地裏書そのものではない。",
+      "suggested_text": "白地裏書に関する不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "白地裏書は手形や小切手の裏書行為であり、会計帳簿に「計上」される対象ではない。また、「残高」という概念も白地裏書には適用されない。手形や小切手の残高であれば理解できるが、白地裏書そのものの残高は存在しない。",
+      "suggested_ja": "月末の帳簿照合において、白地裏書された手形や小切手の処理内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung xử lý hoặc số dư của các hối phiếu, séc đã được ký hậu để trống có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the processing or balances of bills and checks that have been blank endorsed."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "白地裏書は会計処理の対象ではなく、手形や小切手の裏書行為。会計基準や社内規程に則って「処理」されるのは、裏書された手形や小切手そのものの会計処理であり、白地裏書という行為ではない。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において白地裏書された手形や小切手を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các hối phiếu, séc đã được ký hậu để trống trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the blank-endorsed bills and checks in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "白地裏書は会計帳簿に「計上」されるものではなく、また「差異」が生じる対象でもない。手形や小切手の裏書行為そのものに差異は発生しないため、会話の前提が誤っている。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、白地裏書された手形や小切手の処理に問題は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có vấn đề gì phát sinh trong việc xử lý các hối phiếu, séc đã được ký hậu để trống không?",
+        "en": "In this month's monthly closing, have there been any issues with the processing of blank-endorsed bills or checks?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything has been processed appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "deeae6988bb71820e990136c28221801fb0e84260452012ad0dc4e31398cbdb8",
+    "validated_at": "2026-10-01T01:54:26.286135+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000185",
+  "term": "マイナポータル連携",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain and accounting factual errors. The generator mechanically inserted 'マイナポータル連携' into generic monthly closing / ledger reconciliation templates (計上内容, 残高, 会計基準), which is nonsensical for an e-Tax/HR digital integration feature.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "マイナポータル連携を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used when promoting or implementing Myna Portal data integration for tax returns or year-end adjustments.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "マイナポータル連携を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for completing the authentication/linkage process.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "マイナポータル連携の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace phrasing when checking setup workflows for employees.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "マイナポータル連携を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Myna Portal integration is an IT/tax connection feature configured by users or systems; one configures or uses it rather than 'reviewing' it in this vague manner.",
+      "suggested_text": "マイナポータル連携を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination: 'マイナポータル連携' is a data transfer mechanism for individual tax filing and year-end adjustments (deduction certificates, medical expenses). It has no accounting balance (残高) or bookkeeping entries (計上内容) to reconcile in monthly book closing.",
+      "suggested_ja": "年末調整の業務効率化に向けて、給与計算システムとマイナポータル連携の導入を検討しています。",
+      "suggested_vi": "Để nâng cao hiệu quả quyết toán thuế cuối năm, chúng tôi đang xem xét việc áp dụng tính năng liên kết Myna Portal với hệ thống tính lương.",
+      "suggested_en": "To streamline year-end tax adjustment operations, we are considering introducing Myna Portal linkage with our payroll system."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe domain mismatch: Myna Portal integration is not an accounting item governed by accounting standards (会計基準) or recorded in corporate financial statements (決算).",
+      "suggested_ja": "確定申告の際にマイナポータル連携を利用すれば、生命保険料控除証明書などのデータを自動で一括取得できます。",
+      "suggested_vi": "Khi sử dụng tính năng liên kết Myna Portal trong kỳ kê khai thuế thu nhập cá nhân, dữ liệu như chứng từ khấu trừ bảo hiểm nhân thọ có thể được tự động tải về đồng loạt.",
+      "suggested_en": "Using Myna Portal linkage during tax filing allows you to automatically retrieve data such as life insurance deduction certificates in a single batch."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The entire dialogue treats 'マイナポータル連携' as an accounting journal entry verified against subsidiary ledgers in monthly closing, which is completely fictitious in Japanese business practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今年の年末調整からマイナポータル連携を導入しますが、従業員への周知は進んでいますか。",
+        "vi": "Chúng ta sẽ áp dụng liên kết Myna Portal từ đợt quyết toán thuế cuối năm nay, việc thông báo đến nhân viên tiến hành đến đâu rồi?",
+        "en": "We are introducing Myna Portal linkage starting with this year's year-end tax adjustment. Is the announcement to employees progressing well?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、マニュアルを作成して社内ポータルに掲載し、連携手順の説明会も予定しています。",
+        "vi": "Vâng, chúng tôi đã soạn sách hướng dẫn đưa lên cổng thông tin nội bộ và cũng lên lịch tổ chức buổi giải thích các bước liên kết.",
+        "en": "Yes, we have prepared a manual, posted it on the intranet, and scheduled an explanatory session on the linkage procedure."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese, 'thẻ cư trú' means residence card (在留カード), whereas My Number is 'thẻ số cá nhân' or simply 'My Number'. The term should be translated as 'tính năng liên kết Cổng thông tin My Number (Myna Portal)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f5ef3dd5c8b2992c33d5f0920439ffcac4ef2fc3bdcd948541ce13438d198653",
+    "validated_at": "2026-10-01T01:40:40.645023+00:00"
+  }
+}

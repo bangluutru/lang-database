@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000082",
+  "term": "控除余裕額",
+  "overall_decision": "rewrite",
+  "summary_reason": "控除余裕額（外国税額控除等の控除限度枠の余り）の税法上の概念が、「税額控除制度そのもの」や「未消化控除税額」と混同されており、コロケーション・例文・対話・訳語のすべてにおいて実務上不自然なテンプレート表現となっています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "控除余裕額を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「控除余裕額」は控除限度額の枠の余り（金額差額）であり、制度そのものではないため、「適用する」と係らせるのは不自然です。「生じる」や「充当する」が適切です。",
+      "suggested_text": "控除余裕額が生じる"
+    },
+    {
+      "index": 1,
+      "text": "控除余裕額を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「控除の適用を受ける」という言い回しとの混同です。金額（余裕額）自体を「受ける」とは言いません。",
+      "suggested_text": "控除余裕額に充当する"
+    },
+    {
+      "index": 2,
+      "text": "控除余裕額の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "控除余裕額自体が「控除限度額－控除対象税額」で算出される差額であり、「控除余裕額の上限額」という概念は税務上存在せず重複表現です。",
+      "suggested_text": "控除余裕額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "控除余裕額の要件を満たす",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "控除余裕額は計算上のマージン・差額であり、それ単体に固有の要件が設定されているわけではありません。",
+      "suggested_text": "繰越控除余裕額を管理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除余裕額を適用しました」は税法上の用法として誤りです。控除余裕額は適用するものではなく、発生した余裕額を過去の控除限度超過額に充当するか、翌期以降に繰り越すものです。",
+      "suggested_ja": "当期は外国税額控除の限度額に達しなかったため、控除余裕額が生じ、前期から繰り越された控除限度超過額に充当しました。",
+      "suggested_vi": "Kỳ này do chưa đạt mức giới hạn khấu trừ thuế nước ngoài nên đã phát sinh hạn mức khấu trừ còn dư, và chúng tôi đã bù trừ vào số tiền vượt giới hạn khấu trừ được chuyển từ kỳ trước.",
+      "suggested_en": "Since we did not reach the foreign tax credit limit in the current period, an excess tax credit limit arose and was applied to offset the excess creditable tax carried forward from the previous period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「控除余裕額の適用を受ける」という機械的テンプレート表現が使われており、税務実務の日本語として不自然です。",
+      "suggested_ja": "別表六（二）を作成し、今期生じた控除余裕額を翌期以降へ繰り越すための手続きを完了しました。",
+      "suggested_vi": "Chúng tôi đã lập Phụ lục 6(2) và hoàn tất các thủ tục để kết chuyển hạn mức khấu trừ còn dư phát sinh trong kỳ này sang các kỳ sau.",
+      "suggested_en": "We prepared Schedule 6(2) and completed the procedures to carry forward the unused credit limitation margin arising in this period to subsequent periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "控除余裕額に対して「税理士の確認書を申告書添付書類として提出する」というやり取りは、日本の法人税実務（外国税額控除等）において不正確かつ不自然なテンプレート会話です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "外国税額控除について、今期発生した控除余裕額の計算と別表の記載は問題ありませんか。",
+        "vi": "Về phần khấu trừ thuế nước ngoài, việc tính toán hạn mức khấu trừ còn dư phát sinh kỳ này và việc kê khai trên phụ lục đã ổn thỏa chưa?",
+        "en": "Regarding the foreign tax credit, is there any issue with the calculation of the unused credit limit incurred this period and its entry on the schedule?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、前期繰越分の超過額への充当関係も含めて別表六を再確認しましたので、問題ありません。",
+        "vi": "Vâng, tôi đã đối soát lại Phụ lục 6 bao gồm cả phần bù trừ vào số vượt mức kết chuyển từ kỳ trước, không có vấn đề gì ạ.",
+        "en": "Yes, I have rechecked Schedule 6, including the application against the excess tax carried forward from the prior period, and everything is in order."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "控除余裕額は「税額控除自体の未消化分」ではなく、「控除限度額に生じた余り（枠の余白）」を指します。英語は'Unused tax credit carried forward'ではなく'Excess credit limit'または'Unused tax credit limitation'、ベトナム語は'hạn mức khấu trừ thuế còn dư'が正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8a9bc0276704f0d54b22c6053b74132896f89c74c2dfa5dfbefb48ecf43e9490",
+    "validated_at": "2026-10-01T01:38:50.571013+00:00"
+  }
+}

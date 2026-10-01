@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000161",
+  "term": "甲欄",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination. The generator treated '甲欄' (a withholding tax table classification category) as if it were a balance sheet account with financial balances and closing journal entries. Both examples and the dialogue must be rewritten completely into authentic payroll/withholding tax operational contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "甲欄を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard payroll and tax withholding phrasing when applying Column A tax rates.",
+      "suggested_text": "甲欄を適用する"
+    },
+    {
+      "index": 1,
+      "text": "甲欄に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when categorizing payees based on whether dependent exemption forms are submitted.",
+      "suggested_text": "甲欄に区分する"
+    },
+    {
+      "index": 2,
+      "text": "甲欄を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in payroll operations when checking tax withholding tables or employee setup.",
+      "suggested_text": "甲欄を確認する"
+    },
+    {
+      "index": 3,
+      "text": "甲欄を選択する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural when configuring tax deduction categories in payroll calculation systems.",
+      "suggested_text": "甲欄を選択する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "甲欄 (Column A of the tax withholding table) is an administrative tax classification rule under the Income Tax Act, not an accounting item or ledger balance. Phrases like '甲欄の計上内容や残高' are factually absurd.",
+      "suggested_ja": "給与所得者の扶養控除等申告書が提出されている従業員については、源泉徴収税額表の甲欄を適用して所得税を計算します。",
+      "suggested_vi": "Đối với nhân viên đã nộp Tờ khai giảm trừ gia cảnh người có thu nhập từ tiền lương, chúng tôi sẽ áp dụng Cột A (cột Giáp) trên bảng thuế khấu trừ để tính thuế thu nhập cá nhân.",
+      "suggested_en": "For employees who have submitted the Application for Exemption for Dependents, income tax is calculated by applying Column A of the withholding tax table."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Withholding tax tables fall under the Income Tax Act and payroll operations, not corporate accounting standards (会計基準) or financial closing adjustments (当期の決算において甲欄を処理).",
+      "suggested_ja": "パートタイマーであっても、扶養控除等申告書の提出があれば乙欄ではなく甲欄で源泉徴収税額を算出する必要があります。",
+      "suggested_vi": "Ngay cả đối với nhân viên bán thời gian, nếu đã nộp Tờ khai giảm trừ gia cảnh thì cần tính thuế khấu trừ tại nguồn theo Cột A thay vì Cột B.",
+      "suggested_en": "Even for part-time workers, if they have submitted the dependent exemption form, the withholding tax amount must be calculated using Column A instead of Column B."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Both turns use hallucinated template language ('甲欄の計上内容に差異', '補助元帳を照合'). Withholding tables govern payroll calculations, not monthly book ledger reconciling.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新しく入社した中途採用の方ですが、税額計算は甲欄を適用してよろしいですか。",
+        "vi": "Đối với nhân viên mới chuyển việc vào công ty, chúng ta áp dụng Cột A để tính thuế được chưa ạ?",
+        "en": "Regarding the newly hired mid-career employee, should we apply Column A for the tax calculation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "扶養控除等申告書と前職の源泉徴収票が提出済みであることを確認しましたので、甲欄で処理してください。",
+        "vi": "Tôi đã xác nhận họ đã nộp Tờ khai giảm trừ gia cảnh và chứng từ khấu trừ thuế của công ty cũ, nên hãy xử lý theo Cột A nhé.",
+        "en": "I have confirmed that their dependent exemption form and previous employer's withholding slip have been submitted, so please process it under Column A."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "In the original examples, the Vietnamese and English mechanically pasted the dictionary definition with parenthetical glosses into the sentence bodies, compounding the factual errors of the Japanese original."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7465bc9a79b512893afad39f6c2050c55520a3e01435c13f28be697cbac38c83",
+    "validated_at": "2026-10-01T01:40:15.548075+00:00"
+  }
+}

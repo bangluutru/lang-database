@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000018",
+  "term": "当座預金",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なAI生成テンプレート構文（「〜を計上する」「適正な会計基準に基づき適正に処理」）が散見され、当座預金における最も基本的な実務である「銀行勘定調整（銀行残高証明書との突合）」のリアリティが反映されていません。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "当座預金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「当座預金」は勘定科目・預金形態であり、費用や売上のように「計上する」とは通常言いません。実務では「当座預金に預け入れる」「当座預金へ振り替える」等と表現します。",
+      "suggested_text": "当座預金へ振り替える"
+    },
+    {
+      "index": 1,
+      "text": "当座預金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で極めて頻繁に使用される自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "当座預金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "帳簿残高と銀行照合表を突き合わせる実務表現として成立しています。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "当座預金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "当座預金は精算（立替金や仮払金の清算など）の対象ではありません。口座自体の解約や、残高の調整・照合が適切な文脈です。",
+      "suggested_text": "当座勘定調整を行う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「計上内容や残高に差異がないか」は機械的テンプレート臭が残ります。銀行残高証明書と帳簿残高の突合（銀行勘定調整）という会計実務に即した表現にすべきです。またベトナム語訳にスラッシュが残っており不自然です。",
+      "suggested_ja": "月末の締め処理において、当座預金の出納帳残高と銀行の残高証明書を照合し、差異がないか精査します。",
+      "suggested_vi": "Trong quy trình khóa sổ cuối tháng, chúng tôi đối chiếu số dư sổ quỹ tiền gửi thanh toán với giấy chứng nhận số dư của ngân hàng để kiểm tra kỹ lưỡng xem có chênh lệch hay không.",
+      "suggested_en": "During month-end closing, we reconcile the checking account ledger balance with the bank statement of balance to thoroughly check for any discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準および社内規程に則り、当期の決算において〜を適正に処理いたしました」は具体性が皆無の機械生成テンプレート文です。教育的価値がありません。",
+      "suggested_ja": "決算日時点の未達取引を反映するため、当座預金の銀行勘定調整表を作成いたしました。",
+      "suggested_vi": "Chúng tôi đã lập bảng điều chỉnh tài khoản ngân hàng cho tiền gửi thanh toán nhằm phản ánh các giao dịch chưa khớp tính đến ngày khóa sổ tài chính.",
+      "suggested_en": "We prepared a bank reconciliation statement for the checking account to reflect in-transit transactions as of the closing date."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "当座預金の残高確認の実務では、単に社内の「証憑書類と補助元帳」を突き合わせるのではなく、「銀行の残高証明書（または当座照合表）」と突合するのが中核業務です。実務の整合性を欠いています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、当座預金の帳簿残高と銀行残高に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư trên sổ sách của tiền gửi thanh toán và số dư ngân hàng có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies between our checking account book balance and the bank balance in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "残高証明書と照合し、未達取引を含めた銀行勘定調整表を作成して一致を確認いたしました。",
+        "vi": "Tôi đã đối chiếu với giấy chứng nhận số dư, lập bảng điều chỉnh tài khoản ngân hàng bao gồm các giao dịch đang chuyển và xác nhận số liệu đã khớp.",
+        "en": "I reconciled it with the bank statement of balance and verified that they match by preparing a bank reconciliation statement including in-transit items."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語例文において「tiền gửi vãng lai / tiền gửi thanh toán」とスラッシュ付きの原義がそのまま流し込まれており、自然な訳文になっていません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "158f15fd42441bf1ead23bb5592566a544d5a425eab605e8fb1bef2f8a433ab9",
+    "validated_at": "2026-10-01T01:33:17.307067+00:00"
+  }
+}

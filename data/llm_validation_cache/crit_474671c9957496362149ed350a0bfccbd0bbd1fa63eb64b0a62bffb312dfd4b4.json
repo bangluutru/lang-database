@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000087",
+  "term": "前受金",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the core concept is sound, Example 1 exhibits tautological phrasing ('適正な...適正に...') and non-standard phrasing ('適正な会計基準'), Dialogue Turn B contains unnatural phrasing ('適正に整合している'), and Collocation 2 should feature the core accounting action '前受金を取り崩す' rather than the loose '前受金を照合する'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "前受金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording advances received.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "前受金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and common in monthly closing and balance verification.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "前受金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocating 照合する directly with an account name is imprecise. In accounting, one reconciles ledger balances (前受金残高を照合する) or releases advances to revenue upon performance (前受金を取り崩す / 前受金を売上に振り替える).",
+      "suggested_text": "前受金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "前受金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in practical settlement contexts when contracts conclude or deliveries occur.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate, natural Japanese for month-end reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically awkward due to duplicate phrasing (適正な...適正に...). Furthermore, '適正な会計基準' is non-standard Japanese accounting terminology (standard terms are 会計基準, 企業会計基準, or 一般に公正妥当と認められる企業会計の基準). Specifying the actual accounting event (e.g. transfer to revenue upon delivery) is much more instructive.",
+      "suggested_ja": "会計基準および社内規程に則り、商品の引き渡し完了に伴って前受金を売上高へ適切に振り替えました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã kết chuyển hợp lệ tiền khách hàng trả trước sang doanh thu khi hoàn tất việc bàn giao hàng hóa.",
+      "suggested_en": "In accordance with accounting standards and internal rules, we properly reclassified advances received into revenue upon completion of product delivery."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' in Speaker B's line is redundant and unnatural business Japanese. '整合している' already means consistent/aligned; pairing it with '適正に' feels like synthetic template output. '差異なく一致している' or simply '整合している' is authentic.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、前受金の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán tiền khách hàng trả trước có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the recording of advances received in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi thứ hoàn toàn khớp, không có chênh lệch.",
+        "en": "I have reconciled the vouchers with the subsidiary ledger and confirmed that everything matches without discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are accurate and reflect standard professional terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "619b69a0f98ee4ea4ff0c11905c3b6518cbfdbd70144def2792799c47a66fd99",
+    "validated_at": "2026-10-01T01:35:10.618649+00:00"
+  }
+}

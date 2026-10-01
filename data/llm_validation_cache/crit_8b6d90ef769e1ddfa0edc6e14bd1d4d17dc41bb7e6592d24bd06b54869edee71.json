@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000105",
+  "term": "休日出勤手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate treats a payroll allowance (手当) as if it were a generic balance-sheet ledger account with balances ('残高') and settlements ('精算'), producing unnatural collocations and robotic, templated sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "休日出勤手当を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accruing or recording holiday work allowance as part of labor costs/payroll is acceptable business accounting usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "休日出勤手当の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "休日出勤手当 is an expense/payroll component, not a cumulative balance sheet account that holds a '残高' (balance).",
+      "suggested_text": "休日出勤手当の支給実績を確認する"
+    },
+    {
+      "index": 2,
+      "text": "休日出勤手当を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocating an allowance directly with 照合する is unnatural; business practice cross-checks attendance records with allowance calculations.",
+      "suggested_text": "勤怠データと休日出勤手当を照合する"
+    },
+    {
+      "index": 3,
+      "text": "休日出勤手当を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Allowances (手当) are disbursed/paid (支給する), not settled or reimbursed (精算する is for advance expenses like travel).",
+      "suggested_text": "休日出勤手当を支給する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Payroll allowances are P&L expenses and do not carry a balance ('残高'). This is a generic AI template pasted onto an incompatible term.",
+      "suggested_ja": "勤怠管理システムの打刻データと給与計算データを照合し、休日出勤手当の計算に過不足がないか精査します。",
+      "suggested_vi": "Chúng tôi đối chiếu dữ liệu chấm công từ hệ thống quản lý chuyên cần với dữ liệu tính lương để kiểm tra kỹ lưỡng xem có sai sót hay thừa thiếu trong việc tính phụ cấp làm việc ngày nghỉ hay không.",
+      "suggested_en": "We cross-check timestamp data from the attendance management system against payroll calculations to thoroughly verify that holiday work allowances are calculated accurately without discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Formulaic repetition of '適正な...適正に' is stylistically poor and lacks domain substance. A realistic example should refer to Labor Standards Act compliance or monthly accrual.",
+      "suggested_ja": "休日出勤手当は労働基準法第37条の規定に基づき、法定休日割増率を適用して計算のうえ、当月の人件費として計上いたします。",
+      "suggested_vi": "Phụ cấp làm việc ngày nghỉ được tính theo tỷ lệ phụ trội cho ngày nghỉ theo luật định dựa trên Điều 37 Luật Tiêu chuẩn Lao động, và được hạch toán vào chi phí nhân công trong tháng.",
+      "suggested_en": "Holiday work allowance is calculated by applying the statutory holiday surcharge rate pursuant to Article 37 of the Labor Standards Act and is recorded as personnel expense for the current month."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrases like '計上内容に差異は発生していませんか' and '適正に整合している' are repetitive, unnatural corporate template jargon that fails to reflect real accounting/payroll dialogue.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の休日出勤手当の集計について、勤怠データとの突合は完了していますか。",
+        "vi": "Về việc tổng hợp phụ cấp làm việc ngày nghỉ tháng này, bạn đã đối chiếu xong với dữ liệu chấm công chưa?",
+        "en": "Regarding the aggregation of this month's holiday work allowance, have you finished cross-checking it with the attendance data?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、現場のタイムカード実績と照合済みで、未払分も含めて給与計算システムへ正確に反映いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu với bảng chấm công thực tế tại hiện trường và cập nhật chính xác vào hệ thống tính lương, bao gồm cả các khoản trích trước chưa thanh toán.",
+        "en": "Yes, I have cross-checked it against the on-site timecard records and accurately reflected everything, including accrued amounts, into the payroll system."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning 'phụ cấp đi làm ngày nghỉ lễ theo luật định' is overly restrictive to public holidays (ngày nghỉ lễ), whereas 休日出勤 in Japan primarily refers to statutory weekly rest days (法定休日) or prescribed non-working days. More natural: 'phụ cấp làm thêm ngày nghỉ'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d61d29c0cf2c90a2e8704a52d2795c9798c399306ed3a44d9b1535d8257c1f9a",
+    "validated_at": "2026-10-01T01:42:43.993254+00:00"
+  }
+}

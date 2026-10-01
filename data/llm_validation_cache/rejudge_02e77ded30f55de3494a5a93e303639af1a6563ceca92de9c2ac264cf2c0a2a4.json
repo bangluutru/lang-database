@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "The candidate is high-quality and practical for business Japanese, but Example 1 contains a predicate error ('契約書を締結する' instead of '契約を締結する' or '契約書を取り交わす').",
+  "issues": [
+    {
+      "component": "examples",
+      "code": "UNNATURAL_PREDICATE",
+      "detail": "In Example 1, '契約書を締結いたしました' combines the document '契約書' with '締結する'. The standard business/legal collocations are '契約を締結する' or '契約書を取り交わす／調印する'."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "10d1479dc3f96cb16728a147473c36ee752760b375860a55938632cff6192727",
+    "validated_at": "2026-10-01T01:42:04.306406+00:00"
+  }
+}

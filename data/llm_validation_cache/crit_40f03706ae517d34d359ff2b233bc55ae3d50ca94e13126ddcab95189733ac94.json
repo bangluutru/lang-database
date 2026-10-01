@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000118",
+  "term": "自己株式",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なスロットイン生成（どの勘定科目にも同じ照合・精算・差異精査の文を流し込む手法）により、「自己株式を精算する」という致命的な会計誤謬や、資本取引としての実務文脈を無視した不自然な例文・対話文が生成されているため、全面的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自己株式を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "純資産の部の控除項目として計上する文脈などで自然に使用される表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "自己株式の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "決算期末や株主資本等変動計算書の作成時に残高を確認する自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "自己株式を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "株式そのものを「照合する」とは言わず、株主名簿や保管証明書と帳簿を照合するなど具体的な対象を伴うべきです。通常は「取得する」「処分する」が代表的です。",
+      "suggested_text": "自己株式を処分する"
+    },
+    {
+      "index": 3,
+      "text": "精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "自己株式は仮払金や立替金ではないため「精算する」という述語は会計上完全に不適合です。株式の消滅手続きは「消却する」と言います。",
+      "suggested_text": "自己株式を消却する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「月末の帳簿照合において〜計上内容や残高に差異がないか精査します」という汎用テンプレートの当てはめで、日常的に頻繁な残高異動が生じない自己株式の実務実態と乖離しています。",
+      "suggested_ja": "取締役会決議に基づき市場から取得した自己株式は、純資産の部の控除項目として適正に計上してください。",
+      "suggested_vi": "Cổ phiếu quỹ được mua lại từ thị trường theo nghị quyết của Hội đồng quản trị phải được hạch toán đúng quy định như một khoản giảm trừ trong vốn chủ sở hữu.",
+      "suggested_en": "Please properly record the treasury shares acquired from the market based on the board resolution as a deduction under net assets."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準…適正に処理いたしました」と「適正」が重複しており、機械的な空疎な定型文です。消却や売却・処分など実態に即した会計処理を示すべきです。",
+      "suggested_ja": "当期に保有する自己株式の一部を消却したため、株主資本等変動計算書および注記事項にその旨を反映しました。",
+      "suggested_vi": "Do đã hủy bỏ một phần cổ phiếu quỹ nắm giữ trong kỳ này, chúng tôi đã phản ánh nội dung đó vào báo cáo thay đổi vốn chủ sở hữu và thuyết minh báo cáo tài chính.",
+      "suggested_en": "Since a portion of the treasury shares held was retired during the current period, we reflected this in the statement of changes in net assets and the accompanying notes."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算で自己株式の計上内容に差異を懸念し補助元帳と照合するというやり取りは、売掛金や買掛金のスロットイン定型文であり、臨時的・資本取引である自己株式のコーポレート実務として極めて不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の取締役会で決議された自己株式の取得枠ですが、今月の買付実績と残高の集計は完了していますか。",
+        "vi": "Về hạn mức mua lại cổ phiếu quỹ đã được thông qua tại cuộc họp Hội đồng quản trị hôm trước, việc tổng hợp số dư và kết quả mua vào trong tháng này đã hoàn tất chưa?",
+        "en": "Regarding the treasury share repurchase limit approved at the recent board meeting, have you completed tallying this month's purchase results and remaining balance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、信託銀行からの取引報告書と信託口の自己株式残高を突き合わせ、すべて一致していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu báo cáo giao dịch từ ngân hàng ủy thác với số dư cổ phiếu quỹ tại tài khoản ủy thác và xác nhận tất cả đều khớp.",
+        "en": "Yes, I cross-checked the transaction report from the trust bank with the treasury share balance in the trust account and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の基本訳語（cổ phiếu quỹ / Treasury shares）自体は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bc7e62d63d526fb3fe16fd6699cdd1ab05183dffe3c2bcec8a11ac48ffb8e2b1",
+    "validated_at": "2026-10-01T01:35:46.989058+00:00"
+  }
+}

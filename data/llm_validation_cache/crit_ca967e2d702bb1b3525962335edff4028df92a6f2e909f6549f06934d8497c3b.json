@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000072",
+  "term": "住宅借入金等特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "The workplace dialogue commits a critical tax domain error by attaching an individual income tax deduction to corporate financial closing (決算申告), and the Vietnamese translations contain repetitive English parenthetical leakage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "住宅借入金等特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax collocations for applying the tax credit.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "住宅借入金等特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrasing in statutory tax guidelines and practical discussions.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "住宅借入金等特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase used when calculating the cap on eligible mortgage tax credits.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "住宅借入金等特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and administrative collocation regarding qualification criteria.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Vietnamese translation suffers from cross-language contamination with '(Housing Loan Tax Deduction)' inserted directly into the text.",
+      "suggested_ja": "法定要件を慎重に確認した上で、今年度の確定申告において住宅借入金等特別控除を適用しました。",
+      "suggested_vi": "Sau khi rà soát kỹ lưỡng các điều kiện theo luật định, chúng tôi đã áp dụng khoản khấu trừ thuế vay mua nhà trong tờ khai quyết toán thuế năm nay.",
+      "suggested_en": "After carefully verifying the statutory requirements, we applied the special tax credit for loans on dwellings in this fiscal year's tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Vietnamese translation contains raw English parenthetical leakage '(Housing Loan Tax Deduction)'.",
+      "suggested_ja": "住宅借入金等特別控除の適用を受けるため、関係書類を整備して申告書に添付しました。",
+      "suggested_vi": "Để được hưởng khoản khấu trừ thuế vay mua nhà, chúng tôi đã hoàn thiện các chứng từ liên quan và đính kèm vào tờ khai.",
+      "suggested_en": "In order to claim the special tax credit for loans on dwellings, we prepared the relevant supporting documents and attached them to the tax return."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Factual tax domain error: '決算申告' refers to corporate tax filing / financial closing, but '住宅借入金等特別控除' is exclusively an individual income tax credit (所得税の税額控除) claimed in individual tax returns (確定申告) or year-end adjustments (年末調整). Corporate entities never declare this in a corporate financial closing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員から提出された住宅借入金等特別控除申告書と残高証明書の確認は完了しましたか。",
+        "vi": "Anh/chị đã kiểm tra xong tờ khai khấu trừ thuế vay mua nhà và giấy chứng nhận số dư do nhân viên nộp chưa?",
+        "en": "Have you finished checking the housing loan tax deduction declaration forms and balance certificates submitted by the employees?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、適用要件をすべて満たしていることを確認しましたので、年末調整の税額計算に反映させます。",
+        "vi": "Vâng, tôi đã xác nhận toàn bộ điều kiện áp dụng đều được thỏa mãn nên sẽ phản ánh vào việc tính thuế quyết toán cuối năm.",
+        "en": "Yes, I confirmed that all eligibility requirements are met, so I will reflect them in the year-end tax adjustment calculations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations contain repetitive cross-language template leakage: parenthetical English term '(Housing Loan Tax Deduction)' embedded into translated prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e5700ffc215680244e3e87d77d7dc67e0306694144ca28c1b09cabc4fd854bb9",
+    "validated_at": "2026-10-01T01:38:41.740774+00:00"
+  }
+}

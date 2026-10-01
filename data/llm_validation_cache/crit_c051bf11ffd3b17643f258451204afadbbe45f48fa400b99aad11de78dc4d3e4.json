@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000180",
+  "term": "電子帳簿保存法",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the headword and collocations are solid, the example sentences and dialogue suffer from obvious synthetic template syndrome, lacking domain fidelity to authentic corporate tax and accounting operations (e.g., electronic data storage, searchability, timestamps, tax advisor consultations).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電子帳簿保存法を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and grammatically sound business collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "電子帳簿保存法の規定に基づく",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and administrative collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "電子帳簿保存法の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard statutory application phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "電子帳簿保存法の改正内容を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic given frequent recent statutory revisions (e.g., 2022 and 2024 reforms).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits mechanical boilerplate templating ('適法かつ健全な事業運営を維持するため、全社を挙げて...'). In practical corporate tax and accounting workflows, 電子帳簿保存法 relates specifically to invoice data preservation, timestamping, searchability, and scanner retention systems rather than vague moralistic adherence.",
+      "suggested_ja": "電子帳簿保存法の改正に伴い、電子取引における領収書や請求書のデータ保存要件を満たすよう経理システムを改修しました。",
+      "suggested_vi": "Cùng với việc sửa đổi Luật lưu trữ sổ sách kế toán điện tử, chúng tôi đã nâng cấp hệ thống kế toán để đáp ứng các yêu cầu lưu trữ dữ liệu hóa đơn và biên lai trong các giao dịch điện tử.",
+      "suggested_en": "Following the revision of the Electronic Books Preservation Act, we updated our accounting system to satisfy data retention requirements for electronic transaction receipts and invoices."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The law took effect in 1998; saying '電子帳簿保存法の施行に伴う' right after '最新の法改正を踏まえ' is contradictory and unidiomatic (it should be '改正法の施行' or '法改正に伴う'). Furthermore, operational 電帳法 adjustments in Japanese companies are primarily guided by certified public tax accountants (税理士) and systems vendors, not predominantly corporate litigation attorneys (顧問弁護士).",
+      "suggested_ja": "最新の法改正を踏まえ、顧問税理士の指導を仰ぎながら電子帳簿保存法に対応した事務処理規程を整備しました。",
+      "suggested_vi": "Dựa trên sửa đổi luật mới nhất, dưới sự hướng dẫn của cố vấn thuế, chúng tôi đã hoàn thiện quy chế xử lý nghiệp vụ đáp ứng Luật lưu trữ sổ sách kế toán điện tử.",
+      "suggested_en": "In light of the latest statutory revisions and under the guidance of our tax advisor, we established administrative handling procedures compliant with the Electronic Books Preservation Act."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The exchange is an artificial template. Companies do not evaluate whether a single transaction complies with 電子帳簿保存法 by having a lawyer and tax accountant scrutinize statutory articles; 電帳法 governs systems, preservation workflows, and electronic document storage (such as PDF invoices via email or EDI).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "電子取引で受領した請求書について、電子帳簿保存法の保存要件は満たせていますか。",
+        "vi": "Đối với các hóa đơn nhận được qua giao dịch điện tử, chúng ta đã đáp ứng đủ điều kiện lưu trữ của Luật lưu trữ sổ sách kế toán điện tử chưa?",
+        "en": "For invoices received via electronic transactions, have we met the retention requirements under the Electronic Books Preservation Act?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、タイムスタンプの付与と検索要件の双方について、規定どおりクラウドシステム上で担保できています。",
+        "vi": "Vâng, cả việc gắn dấu thời gian và các yêu cầu tìm kiếm đều đã được đảm bảo trên hệ thống đám mây theo đúng quy định.",
+        "en": "Yes, both timestamping and searchability requirements are properly ensured on our cloud system in accordance with the regulations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations are acceptable, but sentence-level exemplars required replacement due to domain and authenticity issues."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "965028bafa80460fd36537d550d97fb622f5255efd936f588f7a460fc7a48667",
+    "validated_at": "2026-10-01T01:40:40.607494+00:00"
+  }
+}

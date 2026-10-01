@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000116",
+  "term": "健康保険",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are natural, the example sentences and dialogue commit semantic and domain errors by treating '健康保険' (insurance scheme) directly as an accounting line item ('健康保険の計上', '健康保険の残高') rather than '健康保険料' or utilizing authentic HR social insurance administrative contexts. Additionally, the Vietnamese headword definition erroneously conflates it with National Health Insurance (国民健康保険).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "健康保険に加入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural HR/labor expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "健康保険の保険料を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic payroll and accounting expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "健康保険の手続きを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace administrative collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "健康保険の資格を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate statutory phrasing (資格取得届) used in Japanese labor management.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'健康保険' is an insurance system/category, not an accounting account or balance item. In financial and payroll reconciliation, the actual target is '健康保険料' (health insurance premiums) or '法定福利費'/'預り金'.",
+      "suggested_ja": "新入社員の入社に伴い、人事総務部で健康保険の被扶養者異動届を速やかに年金事務所へ提出した。",
+      "suggested_vi": "Cùng với việc nhân viên mới vào công ty, phòng Nhân sự - Tổng vụ đã nhanh chóng nộp tờ khai thay đổi người phụ thuộc bảo hiểm y tế lên Văn phòng Niên kim.",
+      "suggested_en": "Following the onboarding of new employees, the HR and General Affairs Department promptly submitted the notification of change in health insurance dependents to the pension office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'健康保険を適正に処理いたしました' is a mechanical template error; an insurance system itself is not an accounting entry. It should either refer to social insurance procedures or corporate health insurance premium accounting.",
+      "suggested_ja": "従業員の標準報酬月額が改定されたため、健康保険料の控除額を見直しました。",
+      "suggested_vi": "Do mức thù lao tháng tiêu chuẩn của nhân viên được điều chỉnh, chúng tôi đã rà soát lại số tiền trích đóng bảo hiểm y tế.",
+      "suggested_en": "Following the revision of employees' standard monthly remuneration, we reviewed the deduction amounts for health insurance premiums."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'健康保険の計上内容' is conceptually inaccurate in an accounting dialogue; insurance itself is not booked. The conversation should naturally address HR enrollment procedures or health insurance premium deductions/reconciliation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "中途採用者の健康保険の加入手続きは、滞りなく完了していますか。",
+        "vi": "Thủ tục tham gia bảo hiểm y tế cho nhân viên tuyển dụng giữa chừng đã được hoàn tất thuận lợi chưa?",
+        "en": "Have the health insurance enrollment procedures for the mid-career hires been completed without delay?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、年金事務所への資格取得届の提出を終え、保険証の発行を待っている状況です。",
+        "vi": "Vâng, chúng tôi đã hoàn thành việc nộp tờ khai nhận tư cách lên Văn phòng Niên kim và hiện đang chờ cấp thẻ bảo hiểm.",
+        "en": "Yes, we have submitted the qualification acquisition notifications to the pension office and are currently awaiting the issuance of insurance cards."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "meaning_vi incorrectly renders '健康保険' as 'bảo hiểm y tế quốc gia'. In Japanese social security, '健康保険' typically denotes employee/corporate health insurance (chế độ bảo hiểm y tế doanh nghiệp/người lao động), whereas 'bảo hiểm y tế quốc gia' specifically translates '国民健康保険' (Kokumin Kenko Hoken)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2b001e9e41bb150754f6f248114a9a4f811ccb1875111b9fefb0ea2239efc860",
+    "validated_at": "2026-10-01T01:42:54.413328+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000124",
+  "term": "登録番号",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination in both example sentences and dialogue where an alphanumeric tax identifier ('登録番号') was treated as a bookable ledger account balance ('計上内容', '残高'). Collocations are valid, but all contextual usage must be rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "登録番号を記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace collocation for writing/printing the invoice registration number on tax invoices.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "登録番号を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for verifying an invoice registration number.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "登録番号を通知する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate communication notifying business partners of one's qualified invoice issuer registration number.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "登録番号を公表サイトで照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects the real-world procedure of checking the NTA Qualified Invoice Issuer publication site.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Semantic and factual impossibility: an invoice registration number (T-number) is an identification string, not a monetary balance or accounting transaction, so it cannot have '計上内容' or '残高'.",
+      "suggested_ja": "請求書受領時の点検において、記載されている登録番号が国税庁の公表サイトで有効か照会します。",
+      "suggested_vi": "Khi kiểm tra hóa đơn nhận được, chúng tôi tra cứu trên trang web công bố của Cơ quan Thuế Quốc gia xem mã số đăng ký được ghi có hợp lệ hay không.",
+      "suggested_en": "During the inspection upon receiving invoices, we check the National Tax Agency's publication website to verify whether the stated registration number is valid."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Template hallucination: one does not process a '登録番号' in year-end closing per accounting standards; tax registration numbers are checked for input tax deduction eligibility under the Consumption Tax Act.",
+      "suggested_ja": "適格請求書発行事業者として登録を受けたため、取引先に対して速やかに当社の登録番号を通知いたしました。",
+      "suggested_vi": "Vì đã được đăng ký là doanh nghiệp phát hành hóa đơn hợp lệ, chúng tôi đã nhanh chóng thông báo mã số đăng ký của công ty mình tới các đối tác.",
+      "suggested_en": "Having obtained registration as a qualified invoice issuer, we promptly notified our business partners of our registration number."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there are discrepancies in 'accounting entries of the registration number' (登録番号の計上内容), which is conceptually nonsensical for an identification number.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規取引先から受領した請求書ですが、登録番号の有効性は確認できていますか。",
+        "vi": "Về hóa đơn nhận từ đối tác mới, anh đã xác nhận tính hợp lệ của mã số đăng ký chưa?",
+        "en": "Regarding the invoice received from the new vendor, have you confirmed the validity of their registration number?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、国税庁の公表サイトで照会し、適格請求書発行事業者として問題なく登録されていることを確認済みです。",
+        "vi": "Vâng, tôi đã tra cứu trên trang web công bố của Cơ quan Thuế Quốc gia và xác nhận họ đã được đăng ký hợp lệ là đơn vị phát hành hóa đơn.",
+        "en": "Yes, I queried the National Tax Agency's publication site and confirmed they are properly registered as a qualified invoice issuer."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Existing example and dialogue translations carried over nonsensical phrases ('số dư của mã số đăng ký', 'balances for invoice registration number'). Target term definitions are acceptable, but sentence-level translations must be updated."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "16f87b3a155df2aba18817915d5219b380f50e013ef9c35772386d1ca7fa1df7",
+    "validated_at": "2026-10-01T01:39:34.573161+00:00"
+  }
+}

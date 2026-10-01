@@ -1,0 +1,68 @@
+{
+  "entry_id": "jp-pro-trade-000102",
+  "term": "他法令確認",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 are unnatural and semantically incorrect. The term '他法令確認' itself is a procedure, not something to be 'applied for' or to have its 'legality confirmed' directly in the way suggested.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "他法令確認を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "他法令確認を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "他法令確認を申請する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「他法令確認」は手続きそのものであり、申請する対象ではない。申請するのは「輸入許可」や「承認」など。",
+      "suggested_text": "他法令の確認を申請する"
+    },
+    {
+      "index": 3,
+      "text": "他法令確認の適法性を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「他法令確認」は手続きであり、その「適法性」を確認するという表現は不自然。確認するのは「他法令の要件」や「手続きの適切性」など。",
+      "suggested_text": "他法令確認の要件を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "945b66f0f60e34b5633e96208895d31f47619a0278f1a6d68a5c6fead888d0c6",
+    "validated_at": "2026-10-01T01:55:28.955186+00:00"
+  }
+}

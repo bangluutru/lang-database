@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000104",
+  "term": "少額減価償却資産の特例",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations are valid, but both example sentences and the dialogue contain tax domain inaccuracies (improper concept of '地域貢献', incorrect terminology '控除上限額', and fictitious filing document '税理士の確認書' instead of 別表十六).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "少額減価償却資産の特例を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business phrasing when taking advantage of tax incentives.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "少額減価償却資産の特例の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise statutory phrasing in Japanese tax practice (特例の適用を受ける).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "少額減価償却資産の特例を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and frequent collocation in corporate finance and tax planning.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "少額減価償却資産の特例の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate collocation used to specify eligible assets under 300,000 yen.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Conflating '地域貢献' (regional contribution) with the SME instant depreciation tax rule is nonsensical in practice and clearly a templated LLM artifact. Depreciation of office equipment/software has no direct tie to regional contribution.",
+      "suggested_ja": "今期は利益が多く出たため、節税対策として少額減価償却資産の特例を活用し、社内のPCや周辺機器を一括で買い替えました。",
+      "suggested_vi": "Vì kỳ này lợi nhuận tăng cao, chúng tôi đã tận dụng ưu đãi khấu hao ngay tài sản giá trị nhỏ dưới 30 vạn yên như một biện pháp tiết kiệm thuế để thay mới đồng loạt máy tính và thiết bị ngoại vi trong công ty.",
+      "suggested_en": "Since profits were strong this period, we utilized the special tax rule for small-sum depreciable assets as a tax-saving measure to replace internal PCs and peripherals all at once."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The limit for this rule is an aggregate annual ceiling for expensing (年間300万円の損金算入限度額/上限枠), not a '控除上限額' (deduction ceiling), which confuses 損金算入 (expense inclusion) with 所得控除 or 税額控除.",
+      "suggested_ja": "年間300万円の上限枠を事前に確認した上で、少額減価償却資産の特例を適用して什器備品を経理処理しました。",
+      "suggested_vi": "Sau khi kiểm tra kỹ hạn mức 3 triệu yên mỗi năm, chúng tôi đã áp dụng quy định ưu đãi khấu hao ngay tài sản giá trị nhỏ để xử lý hạch toán các trang thiết bị văn phòng.",
+      "suggested_en": "After confirming the annual ceiling of 3 million yen in advance, we applied the special tax rule for small-sum depreciable assets to account for our fixtures and office equipment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'税理士の確認書' is not an official attachment (申告書添付書類) required for this corporate tax election; the statutory attachment is schedule 別表十六(七) (少額減価償却資産の取得価額の損金算入の特例に関する明細書) or a fixed asset ledger schedule.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における少額減価償却資産の特例について、適用要件の確認と明細書の作成は完了していますか。",
+        "vi": "Về ưu đãi khấu hao ngay tài sản giá trị nhỏ trong kỳ quyết toán thuế này, anh đã hoàn tất việc kiểm tra điều kiện áp dụng và lập bảng kê chi tiết chưa?",
+        "en": "Regarding the special tax rule for small-sum depreciable assets in this tax return, have you completed verifying the eligibility criteria and preparing the detailed schedule?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、固定資産台帳の突合を終え、申告書に添付する別表十六の明細書も作成済みです。",
+        "vi": "Vâng, tôi đã đối chiếu xong sổ tài sản cố định và lập xong phụ lục 16 (Bảng kê chi tiết) để đính kèm vào tờ khai quyết toán thuế rồi ạ.",
+        "en": "Yes, I have finished reconciling the fixed asset ledger and prepared Schedule 16 to be attached to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both headword definitions are highly accurate and domain-specific."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c545f838b4bff120a86734c737948c61dddf55918ed8d4d43c514d23700d4f62",
+    "validated_at": "2026-10-01T01:39:16.091116+00:00"
+  }
+}

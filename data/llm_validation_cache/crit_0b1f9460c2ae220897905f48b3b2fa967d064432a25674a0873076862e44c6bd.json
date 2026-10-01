@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000102",
+  "term": "通勤手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input relies heavily on a generic accounting template ('Xの残高を確認する', 'Xの計上内容や残高に差異がないか', '適正な...適正に処理いたしました'), creating factual and stylistic mismatches because 通勤手当 is a payroll expense/allowance rather than a balance-holding balance-sheet account.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通勤手当を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural accounting collocation for recording commuting allowance under personnel expenses or travel expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "通勤手当の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Commuting allowance is an expense/payroll allowance item (P/L) and does not hold an account balance ('残高') like an asset or liability account. It is a templated mismatch.",
+      "suggested_text": "通勤手当の非課税限度額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "通勤手当を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'手当を照合する' is elliptical and unnatural. In payroll and administration, one verifies route applications or pays out the allowance.",
+      "suggested_text": "通勤手当を支給する"
+    },
+    {
+      "index": 3,
+      "text": "通勤手当を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in payroll administration when settling overpayment/underpayment upon employee relocation, retirement, or change in transit passes.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Mentions '通勤手当の残高' (balance of commuting allowance), which is inappropriate for an expense item, reflecting a mechanical template.",
+      "suggested_ja": "給与計算の実務において、通勤手当の非課税限度額を超過した分は課税対象として給与に加算します。",
+      "suggested_vi": "Trong nghiệp vụ tính lương, phần phụ cấp tiền tàu xe đi lại vượt quá hạn mức miễn thuế sẽ được tính vào lương chịu thuế.",
+      "suggested_en": "In payroll operations, any portion of the commuting allowance exceeding the tax-exempt limit is added to salary as taxable income."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive templated phrasing ('適正な...適正に...') and overly generic boilerplate ('適正な会計基準および社内規程に則り...'). Commuting allowance rules are primarily determined by corporate wage regulations and tax law.",
+      "suggested_ja": "在宅勤務の普及に伴い、通勤手当を定期代支給から実費精算方式へ見直す企業が増加しています。",
+      "suggested_vi": "Cùng với sự phổ biến của hình thức làm việc tại nhà, ngày càng nhiều doanh nghiệp chuyển đổi phụ cấp tiền tàu xe từ hình thức chi trả theo vé tháng sang hình thức thanh toán theo chi phí thực tế phát sinh.",
+      "suggested_en": "With the spread of remote work, an increasing number of companies are shifting commuting allowance from monthly transit pass coverage to actual expense reimbursement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange sounds like a generic template copy-pasted across accounting terms. 'すべて適正に整合している' is unnatural Japanese, and treating 通勤手当 merely as ledger-to-voucher reconciliation misses real-world HR/accounting dialogue context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月から転勤する社員の通勤手当について、申請経路の確認は完了していますか。",
+        "vi": "Về phụ cấp tiền tàu xe đi lại cho nhân viên chuyển công tác từ tháng sau, anh đã hoàn tất việc kiểm tra lộ trình đăng ký chưa?",
+        "en": "Regarding the commuting allowance for the employee transferring next month, have you finished verifying their applied route?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、最も経済的かつ合理的な経路であることを確認し、非課税枠内での支給手続きを進めています。",
+        "vi": "Vâng, tôi đã xác nhận đó là lộ trình kinh tế và hợp lý nhất, đồng thời đang tiến hành thủ tục chi trả trong hạn mức miễn thuế.",
+        "en": "Yes, I confirmed it is the most economical and reasonable route and am processing the payment within the tax-exempt limit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7bc2c0983f358bc9d63c9bfa512cb041691bb653f89296d0da9e483ba6894ce5",
+    "validated_at": "2026-10-01T01:42:40.838099+00:00"
+  }
+}

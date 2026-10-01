@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000106",
+  "term": "固定負債合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「固定負債合計」は計算・集計された行項目（合計科目）であるにもかかわらず、「計上する」「精算する」「処理する」といった個別の取引・仕訳に用いる述語が不適切に適用されており、実務日本語としてテンプレート感が強いため全面的なリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定負債合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「固定負債合計」は貸借対照表上の集計項目（小計行）であり、個別の仕訳や取引のように「計上する」の目的語にはできません。",
+      "suggested_text": "固定負債合計を算出する"
+    },
+    {
+      "index": 1,
+      "text": "固定負債合計の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "財務諸表や試算表のレビューにおいて、集計値としての残高を確認する表現として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "固定負債合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "内訳科目や前期比較、試算表との突合業務において実務上使用されます。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "固定負債合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「精算する」は立替金や仮払金、諸費用の決済に用いる述語であり、負債の集計項目である「固定負債合計」に対して用いるのは実務上不自然です。",
+      "suggested_text": "固定負債合計の内訳を精査する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "集計項目である合計値に対して「計上内容」とする表現は会計実務として不自然です。「内訳」や「金額」とするのが適切です。",
+      "suggested_ja": "決算整理において、固定負債合計の金額およびその内訳に誤りがないか精査します。",
+      "suggested_vi": "Trong quá trình điều chỉnh quyết toán, chúng tôi sẽ kiểm tra kỹ lưỡng xem số tiền tổng nợ dài hạn và các khoản mục chi tiết của nó có sai sót hay không.",
+      "suggested_en": "During closing adjustments, we carefully examine whether there are any errors in the amount of total non-current liabilities and its breakdown."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「固定負債合計を適正に処理いたしました」はAI生成特有の定型句であり、実務上合計項目を「処理する」とは言いません。実際の会計事象に即した文脈に改める必要があります。",
+      "suggested_ja": "社債の繰上償還に伴い、当期末における固定負債合計は前期比で大幅に減少しました。",
+      "suggested_vi": "Do mua lại trái phiếu trước hạn, tổng nợ dài hạn vào cuối kỳ này đã giảm đáng kể so với kỳ trước.",
+      "suggested_en": "Due to the early redemption of corporate bonds, total non-current liabilities at the end of the current period decreased significantly compared to the previous period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「固定負債合計の計上内容」は集計項目に対する述語として不自然であり、Bの「すべて適正に整合している」も不自然な重複表現です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の試算表で、固定負債合計の推移や内訳に異常な増減はありませんか。",
+        "vi": "Trên bảng cân đối thử tháng này, có biến động bất thường nào về xu hướng hoặc chi tiết của tổng nợ dài hạn không?",
+        "en": "Are there any unusual fluctuations in the trend or breakdown of total non-current liabilities on this month's trial balance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "長期借入金の返済スケジュール通りに推移しており、内訳の整合性も確認済みです。",
+        "vi": "Các khoản vẫn diễn biến theo đúng lịch trình trả nợ vay dài hạn, và tính chuẩn xác của các khoản mục chi tiết cũng đã được đối chiếu xác nhận.",
+        "en": "Everything is progressing according to the long-term debt repayment schedule, and we have confirmed the consistency of the breakdown."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "76cebfb97b4f27a1df7f27df6330e7b8fbac81806c1bec51ddd3def8b936b331",
+    "validated_at": "2026-10-01T01:35:32.464097+00:00"
+  }
+}

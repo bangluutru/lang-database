@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000004",
+  "term": "CFR",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations and examples are excellent. However, the dialogue lacks natural conversational flow and logical connection between the question and answer, requiring a rewrite to improve authenticity and educational value.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "CFRの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural expression for contracting under specific Incoterms.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "CFRの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrase for trading at a specific Incoterm price.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "CFRにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural way to describe arranging cost allocation under CFR.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "CFRにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriate and natural for confirming risk transfer point in CFR.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible business communication. The Japanese is natural and the translations are accurate.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic business context and natural Japanese expression. Translations are correct.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about 'CFR arrangement status' for a customs clearance case. Speaker B responds with actions taken for customs brokers and forwarders, and document checks for import declaration. While related to the overall process, the direct link between 'CFR arrangement status' and B's specific actions is weak. CFR defines cost and risk transfer up to the port of destination, not directly the customs clearance process itself, which happens after arrival. The response doesn't directly address the 'CFR arrangement' but rather the subsequent customs procedures. It feels like a non-sequitur or a misunderstanding of the question's focus.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、CFR条件での船積手配は滞りなく進んでいますでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, việc sắp xếp vận chuyển theo điều kiện CFR có đang diễn ra suôn sẻ không?",
+        "en": "Regarding the shipment scheduled for customs clearance today, are the shipping arrangements under CFR terms proceeding smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、船積は完了しており、船荷証券も発行済みです。現在、通関業者と乙仲への連絡を済ませ、輸入申告の準備を進めております。",
+        "vi": "Vâng, việc xếp hàng đã hoàn tất và vận đơn đã được phát hành. Hiện tại, chúng tôi đã liên hệ với công ty thông quan và đại lý giao nhận, đang tiến hành chuẩn bị khai báo nhập khẩu.",
+        "en": "Yes, the shipment has been completed, and the bill of lading has been issued. We have now contacted the customs broker and forwarder, and are proceeding with preparations for the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3f9e6293f0f7c8c50f787dcb30fdd7ec605eafbbe858a3750555d168431404f1",
+    "validated_at": "2026-10-01T01:53:43.234414+00:00"
+  }
+}

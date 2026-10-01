@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000101",
+  "term": "役員退職慰労引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 exhibit semantic mismatches ('照合する' and '精算する' do not apply to provisions), and the examples/dialogue employ a generic voucher-reconciliation template that conflicts with the actual accounting mechanics of director retirement provisions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "役員退職慰労引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, natural accounting collocation for booking a provision for directors' retirement benefits.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "役員退職慰労引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression when checking general ledger balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "役員退職慰労引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A provision itself is an estimated liability account, not a document or external statement directly compared. One reconciles the schedule or ledger balance (残高を照合する), or more characteristically, draws down the provision upon retirement (取り崩す).",
+      "suggested_text": "役員退職慰労引当金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "役員退職慰労引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算する (settle/reimburse) applies to advances, travel expenses, or cleared balances (仮払金, 立替金), not to an accounting provision.",
+      "suggested_text": "役員退職慰労引当金繰入額を計算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Executive retirement benefits are calculated periodically based on internal officer regulations, not adjusted/verified monthly via routine voucher reconciliation (帳簿照合). The sentence is a generic robotic template.",
+      "suggested_ja": "株主総会における役員退任の決議を受け、役員退職慰労引当金を取り崩して退職慰労金を支給しました。",
+      "suggested_vi": "Căn cứ theo nghị quyết miễn nhiệm thành viên ban điều hành tại Đại hội đồng cổ đông, chúng tôi đã hoàn nhập dự phòng trợ cấp thôi việc ban điều hành để chi trả tiền trợ cấp thôi việc.",
+      "suggested_en": "Following the resolution on director retirements at the general meeting of shareholders, we reversed the provision for directors' retirement benefits and paid the retirement benefits."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and unnatural phrasing ('適正な会計基準...適正に処理いたしました') and vague accounting usage ('適正に処理いたしました'). Real financial reports specify whether an addition or reversal was recognized based on internal regulations.",
+      "suggested_ja": "役員退職慰労金規程に基づき、期末における要支給額を算定のうえ役員退職慰労引当金を計上いたしました。",
+      "suggested_vi": "Dựa trên quy chế trợ cấp thôi việc ban điều hành, chúng tôi đã tính toán số tiền phải chi trả tại thời điểm cuối kỳ và trích lập dự phòng trợ cấp thôi việc cho ban điều hành.",
+      "suggested_en": "Based on the internal rules for officers' retirement benefits, we calculated the required amount payable at the fiscal year-end and recorded the provision for directors' retirement benefits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The exchange uses a generic template ('証憑書類と補助元帳を照合済み'). Directors' retirement provisions are determined by internal board regulations/tenure formulas, not verified against incoming vouchers (証憑書類) in monthly closings.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "期末決算に向けて、役員退職慰労引当金の見積計算は完了していますか。",
+        "vi": "Hướng tới kỳ quyết toán cuối năm, anh đã hoàn thành việc tính toán ước tính dự phòng trợ cấp thôi việc cho ban điều hành chưa?",
+        "en": "Have we completed the estimated calculation for the provision for directors' retirement benefits ahead of the year-end closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、役員退職慰労金規程に沿って期末要支給額を試算し、繰入額を確定させました。",
+        "vi": "Vâng, tôi đã tạm tính số tiền phải chi trả cuối kỳ theo quy chế trợ cấp thôi việc ban điều hành và chốt số tiền trích lập rồi.",
+        "en": "Yes, I calculated the required amount payable at the term end in accordance with the officer retirement regulations and finalized the provision addition."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d2c5aad541616a496aa538edeedcf2f9671e9065fdccc972fc336c7bbad2b937",
+    "validated_at": "2026-10-01T01:35:22.930507+00:00"
+  }
+}

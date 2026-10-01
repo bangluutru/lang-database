@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000096",
+  "term": "流動負債合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「流動負債合計」は個別仕訳の勘定科目ではなくB/S上の集計区分小計であるにもかかわらず、「計上する」「精算する」「計上内容」「適正に処理する」など、個別仕訳・勘定科目の動詞を無理に当てはめた機械的テンプレート文が散見されるため全面的な書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "流動負債合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「流動負債合計」は貸借対照表上の集計区分・小計額であり、個別に仕訳・計上（認識）する勘定科目ではないため「計上する」とは言いません。",
+      "suggested_text": "流動負債合計を算出する"
+    },
+    {
+      "index": 1,
+      "text": "流動負債合計の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "集計項目に対して「残高」を重ねる表現は不自然です。「金額を確認する」または「推移を把握する」が自然です。",
+      "suggested_text": "流動負債合計の金額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "流動負債合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "試算表と貸借対照表、あるいはシステム集計値と突合する実務表現として成立します。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "流動負債合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "流動負債の合計値そのものを「精算」することは会計実務上あり得ません（個別の未払金や経費等を精算します）。",
+      "suggested_text": "流動負債合計を貸借対照表に表示する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「流動負債合計の計上内容」という表現は、集計ラインに対して仕訳計上を当てはめており会計実務上不自然です。",
+      "suggested_ja": "月次決算の分析において、流動負債合計が前月比で大幅に増加した要因を精査します。",
+      "suggested_vi": "Trong phân tích quyết toán tháng, chúng tôi kiểm tra kỹ lưỡng nguyên nhân khiến tổng nợ ngắn hạn tăng mạnh so với tháng trước.",
+      "suggested_en": "In the monthly closing analysis, we will closely examine the factors behind the significant month-on-month increase in total current liabilities."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「流動負債合計を適正に処理いたしました」は機械的テンプレート文であり、合計値を処理するという日本語言及は不自然です。",
+      "suggested_ja": "適正な会計基準に則り、貸借対照表における流動負債合計および固定負債の区分表示を確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán thích hợp, chúng tôi đã rà soát cách phân loại và trình bày tổng nợ ngắn hạn cũng như nợ dài hạn trên bảng cân đối kế toán.",
+      "suggested_en": "In accordance with proper accounting standards, we confirmed the classification and presentation of total current liabilities and non-current liabilities on the balance sheet."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "質問の「流動負債合計の計上内容に差異は発生していませんか」は集計値と個別仕訳が混同されており不自然です。合計値の増減要因を尋ねる実務会話に改めるべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次試算表で、流動負債合計が前期末比で急増していますが、主な要因は何でしょうか。",
+        "vi": "Trên bảng cân đối thử tháng này, tổng nợ ngắn hạn tăng đột biến so với cuối kỳ trước, nguyên nhân chính là gì vậy?",
+        "en": "On this month's trial balance, total current liabilities surged compared to the end of the previous period. What is the main cause?"
+      },
+      {
+        "speaker": "B",
+        "ja": "運転資金確保のための短期借入金の実行と、仕入増加に伴う買掛金の増加が主な要因です。",
+        "vi": "Nguyên nhân chính là việc giải ngân khoản vay ngắn hạn để bổ sung vốn lưu động và các khoản phải trả người bán tăng do tăng lượng hàng mua vào.",
+        "en": "The main drivers are the drawdown of short-term borrowings to secure working capital and an increase in accounts payable resulting from higher purchases."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a93d0de8bb99a7a9a4d21997c7a24fa40d9f5672fa7be69432657f1c87c5b3e2",
+    "validated_at": "2026-10-01T01:35:20.007613+00:00"
+  }
+}

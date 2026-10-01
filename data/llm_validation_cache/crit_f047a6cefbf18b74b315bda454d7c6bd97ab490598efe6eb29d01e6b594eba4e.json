@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000051",
+  "term": "内部通報制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and term translations are good, both example sentences and the dialogue suffer from severe mechanical template-hallucination errors, treating a corporate compliance system ('内部通報制度') as an accounting ledger balance subjected to month-end bookkeeping reconciliation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "内部通報制度を整備する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly natural compliance collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "内部通報制度を運用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/compliance collocation for running a whistleblower system.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "内部通報制度を通じて通報を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and idiomatic corporate governance expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "内部通報制度を周知徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Very common business expression regarding compliance awareness.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal semantic mismatch: '内部通報制度' (whistleblower system) is a compliance governance framework, not an accounting account with ledger balances or booked amounts ('計上内容や残高').",
+      "suggested_ja": "コンプライアンス強化の一環として、外部窓口を設置した内部通報制度の実効性を定期的に評価しています。",
+      "suggested_vi": "Như một phần trong việc tăng cường tuân thủ, chúng tôi định kỳ đánh giá tính hiệu quả của cơ chế tố giác nội bộ có thiết lập cổng tiếp nhận bên ngoài.",
+      "suggested_en": "As part of strengthening compliance, we periodically evaluate the effectiveness of our whistleblower system with an external contact point."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error: '内部通報制度を適正に処理いたしました' treats an administrative/compliance system as an accounting item processed during financial closing.",
+      "suggested_ja": "改正公益通報者保護法に則り、通報者の秘匿性を担保した内部通報制度を適切に運用しております。",
+      "suggested_vi": "Tuân thủ Luật Bảo vệ Người tố giác vì lợi ích công cộng sửa đổi, chúng tôi vận hành đúng quy định cơ chế tố giác nội bộ nhằm bảo đảm tính bảo mật cho người tố giác.",
+      "suggested_en": "In accordance with the amended Whistleblower Protection Act, we properly operate a whistleblower system that ensures whistleblower confidentiality."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe hallucination/slot-fill template error. Speaker A asks about booking discrepancies ('計上内容に差異') of a whistleblower system, and Speaker B talks about reconciling subsidiary ledgers ('証憑書類と補助元帳'). Whistleblower systems do not exist on accounting ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当社の内部通報制度について、外部窓口の利用状況や通報者のプライバシー保護体制は十分でしょうか。",
+        "vi": "Về cơ chế tố giác nội bộ của công ty chúng ta, tình hình sử dụng cổng tiếp nhận bên ngoài và hệ thống bảo vệ quyền riêng tư của người tố giác đã thỏa đáng chưa?",
+        "en": "Regarding our company's whistleblower system, are the utilization of the external contact point and the whistleblower privacy protection framework adequate?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、独立した弁護士窓口を設置しており、通報者の秘匿性が厳格に担保されていることを確認しております。",
+        "vi": "Vâng, chúng ta đã thiết lập một cổng tiếp nhận luật sư độc lập và đã xác nhận rằng tính bảo mật danh tính của người tố giác được bảo đảm nghiêm ngặt.",
+        "en": "Yes, we have established an independent attorney contact point and confirmed that whistleblower confidentiality is strictly safeguarded."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level definitions are accurate and standard."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6b33880ebf56428ed6fb60b801e107093e1d2234e87cbfd569b43dcedae86557",
+    "validated_at": "2026-10-01T01:41:50.312029+00:00"
+  }
+}

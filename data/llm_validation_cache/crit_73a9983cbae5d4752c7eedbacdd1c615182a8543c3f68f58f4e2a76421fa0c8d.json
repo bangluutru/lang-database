@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000131",
+  "term": "特定期間",
+  "overall_decision": "rewrite",
+  "summary_reason": "消費税法上の重要概念である「特定期間」を単なる汎用的な会計期間と誤解した機械的テンプレート文が生成されており、実務表現およびコロケーションの根本的な修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特定期間を判定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "消費税法上の「特定期間」は法定の期間であり、期間自体を判定するのではなく「特定期間の課税売上高（または給与等支払額）に基づき納税義務を判定する」のが正確です。",
+      "suggested_text": "特定期間による納税義務の判定"
+    },
+    {
+      "index": 1,
+      "text": "特定期間を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務では期間そのものよりも、免税事業者判定に必要な「特定期間の課税売上高」や「給与等支払額」を確認対象とします。",
+      "suggested_text": "特定期間の課税売上高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "特定期間を設定する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "消費税法における特定期間（前事業年度開始以後6ヶ月等）は税法上定められており、企業が任意に「設定する」ものではありません。",
+      "suggested_text": "特定期間における給与等支払額"
+    },
+    {
+      "index": 3,
+      "text": "特定期間を基準とする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "納税義務の判定において特定期間を基準とするという文脈で自然に使用されます。",
+      "suggested_text": "特定期間を基準とする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "特定期間は消費税の納税義務免除の特例判定に用いる法定期間であり、月次決算の帳簿照合で「特定期間の計上内容や残高の差異を精査する」という実務表現は税務・会計上完全に不自然です。",
+      "suggested_ja": "消費税の納税義務の有無を判定するため、特定期間における課税売上高および給与等支払額を精査した。",
+      "suggested_vi": "Để xác định có thuộc đối tượng nộp thuế tiêu thụ hay không, chúng tôi đã rà soát kỹ doanh thu chịu thuế và số tiền chi trả tiền lương trong kỳ xác định nghĩa vụ thuế (6 tháng đầu năm trước).",
+      "suggested_en": "To determine consumption tax liability, we examined the taxable sales and payroll amounts during the specified period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「特定期間を適正に処理いたしました」は述語との結びつきが破綻しており、汎用テンプレートを流用した不自然な日本語です（期間は処理する対象ではありません）。",
+      "suggested_ja": "設立2期目である当社の消費税納税義務について、前期の特定期間の実績に基づき判定を行いました。",
+      "suggested_vi": "Về nghĩa vụ nộp thuế tiêu thụ của công ty chúng tôi trong kỳ thứ hai sau thành lập, chúng tôi đã tiến hành xác định dựa trên kết quả thực tế của kỳ tính thuế bổ sung (6 tháng đầu năm trước).",
+      "suggested_en": "Regarding our company's consumption tax liability for the second fiscal year, we made the determination based on performance during the specified period of the previous year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「特定期間の計上内容に差異」という質問自体が消費税法の「特定期間」の概念と乖離しており、実務上の会話として成立していません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期の消費税の免税事業者判定ですが、特定期間の課税売上高と給与支払額の集計は終わりましたか。",
+        "vi": "Về việc xác định tư cách doanh nghiệp miễn thuế tiêu thụ cho kỳ tới, anh đã tổng hợp xong doanh thu chịu thuế và tiền lương chi trả trong kỳ xác định nghĩa vụ thuế chưa?",
+        "en": "Regarding the tax-exempt status determination for next term's consumption tax, have you finished calculating the taxable sales and payroll for the specified period?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、特定期間の課税売上高は1,000万円を超えていますが、給与等支払額は下回っているため、免税事業者が維持できる見込みです。",
+        "vi": "Vâng, doanh thu chịu thuế trong kỳ xác định nghĩa vụ thuế vượt quá 10 triệu yên, nhưng tiền lương chi trả lại thấp hơn mức đó, nên dự kiến công ty vẫn duy trì được tư cách miễn thuế.",
+        "en": "Yes, while taxable sales for the specified period exceeded 10 million yen, the payroll amount was below the threshold, so we expect to maintain our tax-exempt enterprise status."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳の「kỳ tính thuế bổ sung」は追加課税期間と誤認されやすく、消費税納税義務判定のための法定期間（kỳ xác định nghĩa vụ thuế tiêu thụ / 6 tháng đầu năm trước）という文脈を正確に反映させる必要があります。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a24b19ea445d2155c43e185d43fae03578cb1a953246697cf30e6066d922ccbb",
+    "validated_at": "2026-10-01T01:39:45.803057+00:00"
+  }
+}

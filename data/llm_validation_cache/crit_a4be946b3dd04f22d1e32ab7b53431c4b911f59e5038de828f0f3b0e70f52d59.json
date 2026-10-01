@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-accounting-000007",
+  "term": "個別財務諸表",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 suffered from unnatural translationese ('公認会計士の厳格な監査'), and the dialogue contained a domain factual mismatch by applying consolidated concepts (cash flow factors and segment divisions) to non-consolidated financial statements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "個別財務諸表を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for preparing non-consolidated financial statements."
+    },
+    {
+      "index": 1,
+      "text": "個別財務諸表を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation regarding statutory and timely disclosure."
+    },
+    {
+      "index": 2,
+      "text": "個別財務諸表を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legally accurate under the Companies Act regarding board/shareholder approval of non-consolidated financial statements."
+    },
+    {
+      "index": 3,
+      "text": "個別財務諸表を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard analytical phrase used in financial analysis and auditing."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Phrasing like '公認会計士の厳格な監査' is unnatural translationese. In Japanese corporate governance and statutory reporting, statutory audits are attributed to '会計監査人' or '監査法人', and dramatic qualifiers like '厳格な' are not used in professional reporting.",
+      "suggested_ja": "会計監査人による監査を経て、取締役会にて当期の個別財務諸表が正式に承認されました。",
+      "suggested_vi": "Sau khi hoàn thành việc kiểm toán bởi đơn vị kiểm toán độc lập, hội đồng quản trị đã chính thức phê duyệt báo cáo tài chính riêng lẻ kỳ này.",
+      "suggested_en": "Following the statutory audit by the independent accounting auditor, the board of directors officially approved the non-consolidated financial statements for the current period."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural phrasing for corporate disclosure preparations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese accounting practice, 個別財務諸表 (non-consolidated statements) does not include a Cash Flow Statement or segment reporting ('各区分'). Attributing '各区分' (segment reporting) and 'キャッシュ増減要因' (cash flow analysis) directly to 個別財務諸表 conflates consolidated with non-consolidated reporting conventions. The dialogue should focus on key accounts (主要勘定科目) and period-over-period variance analysis.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の個別財務諸表について、主要な勘定科目の増減分析と開示数値の突合は完了しましたか。",
+        "vi": "Về báo cáo tài chính riêng lẻ kỳ này, anh/chị đã hoàn tất việc phân tích biến động các khoản mục trọng yếu và đối chiếu số liệu công bố chưa?",
+        "en": "Regarding this term's non-consolidated financial statements, have you completed the variance analysis of key accounts and the reconciliation of disclosed figures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、前年同期比の差異要因および引当金の計上根拠の確認を終え、取締役会への報告資料を整えました。",
+        "vi": "Vâng, tôi đã hoàn tất việc xác minh nguyên nhân chênh lệch so với cùng kỳ năm trước cũng như căn cứ trích lập dự phòng, và đã chuẩn bị xong tài liệu báo cáo cho hội đồng quản trị.",
+        "en": "Yes, I have finished reviewing the factors behind year-on-year variances and the basis for recording provisions, and prepared the reporting materials for the board of directors."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings are accurate and professionally aligned with standard accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a95f47bc7fbbf6fccb3112552d03c7f82ed9ecfeadad67d9be2d13360a86edef",
+    "validated_at": "2026-10-01T01:32:58.537324+00:00"
+  }
+}

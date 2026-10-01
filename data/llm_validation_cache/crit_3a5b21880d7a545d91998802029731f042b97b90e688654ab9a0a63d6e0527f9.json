@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-tax-000023",
+  "term": "利子所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal tax law and accounting domain errors: (1) Interest income (利子所得) under the Income Tax Act strictly disallows deduction of necessary expenses; (2) Interest income is subject to separate taxation, not comprehensive taxation (総合課税); (3) '利子所得' is an individual tax term, making its use in corporate monthly closing (月次決算) fundamentally incorrect.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "利子所得を算出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "所得税法上、利子所得は収入金額がそのまま所得金額となる（必要経費の控除が認められない）ため、「算出する」という表現は実務上不自然。",
+      "suggested_text": "利子所得を申告する"
+    },
+    {
+      "index": 1,
+      "text": "利子所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "所得税法上の所得区分（10種類）の分類業務として極めて自然で実務的。"
+    },
+    {
+      "index": 2,
+      "text": "利子所得を合算する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "現行の日本の所得税法において利子所得は源泉分離課税または申告分離課税であり、他の所得と総合課税で合算することは原則としてないため誤導を招く。",
+      "suggested_text": "利子所得を源泉分離課税とする"
+    },
+    {
+      "index": 3,
+      "text": "利子所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "特定公社債等の利子所得で申告分離課税を選択する場合や損益通算を行う実務文脈において自然。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "所得税法第23条第2項により利子所得には必要経費の控除が一切認められておらず（収入金額＝利子所得の金額）、「必要経費を精査し、利子所得の金額を算出」とするのは税法上明確な事実誤認。",
+      "suggested_ja": "国内の預貯金から生じる利子については源泉分離課税が適用されるため、原則として確定申告において利子所得を申告する必要はありません。",
+      "suggested_vi": "Vì thuế khấu trừ riêng tại nguồn được áp dụng đối với tiền lãi phát sinh từ tiền gửi tiết kiệm trong nước, nên về nguyên tắc không cần phải kê khai thu nhập từ tiền lãi trên tờ khai thuế quyết toán.",
+      "suggested_en": "Since separate withholding taxation applies to interest arising from domestic bank deposits, as a general rule, there is no need to declare interest income on the final tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "現行税制において利子所得は総合課税の対象外（源泉分離課税または申告分離課税）であり、「総合課税の対象となる利子所得を他の所得と合算して」という記述は税制実務に反する。",
+      "suggested_ja": "特定公社債の利子所得について申告分離課税を選択し、上場株式等の譲渡損失との損益通算を行いました。",
+      "suggested_vi": "Chúng tôi đã chọn phương thức đánh thuế riêng biệt theo kê khai đối với thu nhập từ tiền lãi của trái phiếu công và doanh nghiệp cụ thể, đồng thời thực hiện bù trừ lãi lỗ với khoản lỗ từ việc chuyển nhượng cổ phiếu niêm yết.",
+      "suggested_en": "We opted for separate self-assessment taxation on interest income from specified public and corporate bonds, performing a profit and loss aggregation against capital losses from listed shares."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「利子所得」は個人の所得税法上の概念であり、企業の「月次決算」や「補助元帳」で処理される勘定科目は「受取利息」（営業外収益）である。企業会計と個人所得税の用語が混同されており実務上あり得ない会話となっている。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "個人口座で受け取った預金利息についても、確定申告で利子所得として申告する必要がありますか。",
+        "vi": "Tiền lãi tiết kiệm nhận được trong tài khoản cá nhân có cần phải kê khai là thu nhập từ tiền lãi trong kỳ quyết toán thuế không?",
+        "en": "Do I need to declare the bank interest received in my personal account as interest income on my tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "国内の銀行預金の利子は源泉分離課税によって納税が完結しているため、確定申告書への記載は不要です。",
+        "vi": "Tiền lãi tiền gửi ngân hàng trong nước đã hoàn thành nghĩa vụ nộp thuế thông qua hình thức thuế khấu trừ riêng tại nguồn, nên không cần ghi vào tờ khai quyết toán thuế.",
+        "en": "Taxation on domestic bank deposit interest is finalized through separate withholding taxation, so it does not need to be entered on your tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The translation texts accurately translated the Japanese input, but the original Japanese sentences contained critical tax law and corporate accounting errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "72ba87f6d901857236c5f573e4e7ff192a59ca7fc2c5b91734ded4e1118c3afe",
+    "validated_at": "2026-10-01T01:37:52.527323+00:00"
+  }
+}

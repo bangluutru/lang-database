@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000061",
+  "term": "税関",
+  "overall_decision": "reject",
+  "summary_reason": "The core term '税関' (Customs) is consistently and fundamentally misused throughout the collocations, example sentences, and dialogue. It is treated as a corporate deliberative body or meeting rather than a government agency. This indicates a severe misunderstanding of the term's semantic domain and function, making the entire learning object unsuitable for teaching.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税関を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税関 (Customs) is an organization, not an event or meeting that can be 'held' (開催する). This is a fundamental semantic mismatch.",
+      "suggested_text": "税関に申告する"
+    },
+    {
+      "index": 1,
+      "text": "税関で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "決議する (to resolve/pass a resolution) is an action taken by a deliberative body (e.g., a board meeting, shareholders' meeting), not by a government agency like Customs. Customs enforces regulations, it doesn't 'resolve' internal proposals in this context.",
+      "suggested_text": "税関で検査を受ける"
+    },
+    {
+      "index": 2,
+      "text": "税関に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to report to Customs, e.g., for import/export declarations.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "税関へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to submit notifications/documents to Customs.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence incorrectly uses '税関' (Customs) as if it were a corporate meeting or deliberative body. Customs is a government agency, not a meeting that a company 'convenes' to 'resolve critical proposals'. This is a severe factual and semantic error.",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時株主総会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp cổ đông bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary shareholders' meeting will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, this sentence misuses '税関' as a corporate decision-making body where management policies and budgets are approved. This is factually incorrect and semantically incompatible with the function of Customs.",
+      "suggested_ja": "取締役会において今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại cuộc họp hội đồng quản trị, phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At the board meeting, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'preparation status of Customs' (税関の準備状況). This phrasing is nonsensical as Customs is an organization, not something a company prepares for a meeting. Speaker B's response about 'finalizing content' and 'obtaining prior approval' suggests they are talking about a corporate meeting, not an interaction with Customs. The dialogue is completely disconnected from the actual meaning of '税関'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の輸入貨物について、税関への申告準備は順調に進んでいますか。",
+        "vi": "Về lô hàng nhập khẩu tuần tới, việc chuẩn bị khai báo hải quan có tiến triển tốt không?",
+        "en": "Regarding next week's import shipment, are the preparations for customs declaration proceeding smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、必要な書類は全て揃い、内容の最終確認も終えましたので、本日中に税関へ提出の手配を行います。",
+        "vi": "Vâng, tất cả các tài liệu cần thiết đã được chuẩn bị đầy đủ và việc xác nhận cuối cùng về nội dung cũng đã hoàn tất, vì vậy chúng tôi sẽ sắp xếp nộp cho hải quan trong hôm nay.",
+        "en": "Yes, all necessary documents are complete, and the final content check has been done, so we will arrange to submit them to Customs today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for 'meaning_vi' and 'meaning_en' are acceptable for the term itself. However, the translations within the example sentences and dialogue are problematic because the original Japanese sentences themselves are fundamentally flawed in their use of '税関'. They translate the incorrect Japanese usage directly, leading to nonsensical English/Vietnamese. For instance, 'an extraordinary meeting of the customs' or 'At the customs, this term's management policy...' are unnatural and incorrect in English, reflecting the Japanese error."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ebb182a6c45065a18b97cad3012c446db9c4d871d1883c8cbddb72a0bb248c56",
+    "validated_at": "2026-10-01T01:54:42.375828+00:00"
+  }
+}

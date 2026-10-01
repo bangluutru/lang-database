@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-tax-000083",
+  "term": "認定NPO法人等寄附金特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences are natural and technically sound, but the workplace dialogue contained a domain factual error by conflating individual income tax filing (確定申告) with corporate financial closing returns (決算申告) and mentioning non-standard documentation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "認定NPO法人等寄附金特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural phrasing in tax practice when applying this special deduction/credit."
+    },
+    {
+      "index": 1,
+      "text": "認定NPO法人等寄附金特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation representing receiving or benefiting from the tax credit."
+    },
+    {
+      "index": 2,
+      "text": "認定NPO法人等寄附金特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage; the tax credit has statutory caps that require calculation."
+    },
+    {
+      "index": 3,
+      "text": "認定NPO法人等寄附金特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and tax expression for fulfilling statutory requirements."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear, grammatically correct, and natural Japanese used in tax filing context."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing regarding attaching certified donation certificates and relevant documents to the tax return."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「認定NPO法人等寄附金特別控除」is an individual income tax measure (所得税の税額控除 under 租税特別措置法第41条の18の3). Using 「決算申告」 erroneously implies a corporate tax return (法人税申告), where donations to certified NPOs are instead handled as deductible expenses (損金算入限度額の特例). Additionally, the required statutory attachment is the donation receipt (寄附金受領証明書), not a 「税理士の確認書」.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における認定NPO法人等寄附金特別控除の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán và hồ sơ nộp cho khoản khấu trừ đặc biệt đối với tiền quyên góp cho tổ chức NPO được công nhận trong kỳ quyết toán thuế này chưa?",
+        "en": "Have you sorted out the calculation basis and submission documents for the special tax credit for donations to certified NPOs in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、NPO法人から発行された寄附金受領証明書を揃えましたので、申告書添付書類として提出可能です。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ giấy chứng nhận tiếp nhận tiền quyên góp do tổ chức NPO cấp, nên có thể nộp kèm theo tờ khai thuế.",
+        "en": "Yes, we have collected the donation receipts issued by the certified NPO, so they are ready to be attached to the return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations correctly represent the term, distinguishing it as a special deduction/credit."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "10458a03e27798771c2843cc2f18abe868bff0f853045cf6b136a642b6b57f7b",
+    "validated_at": "2026-10-01T01:38:50.640721+00:00"
+  }
+}

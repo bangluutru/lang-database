@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000089",
+  "term": "法人事業税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and dialogue are solid, but Example 1 contains an unnatural predicate pairing ('適用税率を算出'), and Example 2 contains a Vietnamese typographical duplication ('thuế thuế').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法人事業税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise tax compliance terminology.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "法人事業税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax payment collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "法人事業税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace phrasing, though 算定する/計上する is also used.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "法人事業税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Proper statutory and business tax expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "In Japanese tax practice, tax rates (適用税率) are determined by local tax law/ordinances and 'confirmed' (確認・適用), not calculated/derived (算出). Pairing both 課税標準 and 適用税率 with 算出 is unnatural.",
+      "suggested_ja": "課税標準を正しく算定し、適用税率を確認の上、納期限までに法人事業税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi xác định chính xác thu nhập chịu thuế và kiểm tra thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế kinh doanh doanh nghiệp trước hạn.",
+      "suggested_en": "Having accurately calculated the tax base and verified the applicable tax rate, we completed the payment procedure for corporate enterprise tax by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation contains an obvious typographical error ('thuế thuế kinh doanh doanh nghiệp').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における法人事業税の負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã ước tính tác động đến số thuế kinh doanh doanh nghiệp phải chịu trong kỳ này.",
+      "suggested_en": "Based on the tax reform details, we estimated the impact on our corporate enterprise tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Contextually sound accounting review dialogue between supervisor and staff reconciling monthly ledger balances.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1 has a duplicated word ('thuế thuế') in Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fd93269d04c737ed9c8d2d77555299f16a1b74e4c55e8050cf9fd99513aefd95",
+    "validated_at": "2026-10-01T01:38:54.789983+00:00"
+  }
+}

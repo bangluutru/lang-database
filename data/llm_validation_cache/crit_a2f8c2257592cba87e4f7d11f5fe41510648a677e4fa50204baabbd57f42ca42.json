@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000106",
+  "term": "繰越欠損金",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションにおける税務概念の誤謬（繰戻し還付と繰越欠損金の混同）および同語反復（繰越欠損金を繰り越す）、例文1のベトナム語重複誤植があるため、該当箇所の差し替えが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰越欠損金を繰り越す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「繰越」と「繰り越す」の語幹が重複しており、同語反復（トートロジー）で不自然。通常は「欠損金を繰り越す」または「繰越欠損金を引き継ぐ／利用する」と表現する。",
+      "suggested_text": "繰越欠損金を引き継ぐ"
+    },
+    {
+      "index": 1,
+      "text": "繰越欠損金を控除する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法人税法上の所得計算における極めて標準的かつ正確な連語。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "繰越欠損金に充当する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「繰越欠損金に充当する」は目的語と格助詞の使い方が曖昧。税務・会計では「利益を欠損金の補填に充当する」とするか、「繰越欠損金を損金に算入する」とするのが自然。",
+      "suggested_text": "繰越欠損金を損金算入する"
+    },
+    {
+      "index": 3,
+      "text": "繰越欠損金の還付を請求する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "税務上の重大な概念混同。還付請求が認められるのは前期以前に遡る「繰戻し（欠損金の繰戻しによる還付）」であり、将来へ繰り越す「繰越欠損金」に対して還付請求を行うことは制度上矛盾する。",
+      "suggested_text": "繰越欠損金の残高を管理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本語文は自然だが、ベトナム語訳冒頭に「khoản khoản lỗ」と不要な重複誤植（typo）があるため修正が必要。",
+      "suggested_ja": "過去に発生した繰越欠損金を今期の課税所得から控除し、法人税の納付額を適正に圧縮しました。",
+      "suggested_vi": "Chúng tôi đã khấu trừ khoản lỗ tính thuế được chuyển sang các năm sau phát sinh từ các năm trước vào thu nhập chịu thuế kỳ này, giảm hợp lý số thuế thu nhập doanh nghiệp phải nộp.",
+      "suggested_en": "We deducted the loss carried forward incurred in prior years against current taxable income, appropriately reducing the corporate tax liability."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "大企業等の控除限度額（損金算入限度額）や繰越期間管理の実務を的確に反映した自然な文。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算申告の添付書類確認として自然な会話の流れであり、ビジネス文脈として違和感がない。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "例文1のベトナム語訳に「khoản khoản」という明らかな重複の不備がある。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "63a2de2e7a1d5b5359b14b4cfdf3b69ae573e7e57108a6e1cfaa6bf7b7d3af23",
+    "validated_at": "2026-10-01T01:39:15.136782+00:00"
+  }
+}

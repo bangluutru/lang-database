@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000059",
+  "term": "商標権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 contains awkward phrasing ('発生した資産価値') and requires a minor rewrite to align with native M&A and accounting Japanese ('取得した無形資産'). Collocations and dialogue are solid.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "商標権を無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation under Japanese GAAP and corporate accounting practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "商標権を償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting terminology for amortizing intangible fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "商標権の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting collocation for applying impairment accounting to trademark rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "商標権の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and valuation terminology, especially in M&A / PPA contexts.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発生した資産価値を精査し」 is unnatural in Japanese accounting context. In business transfers (事業譲受), identifiable intangible assets are acquired (取得・承継した資産) rather than 'occurring' (発生した).",
+      "suggested_ja": "事業譲受に伴い取得した無形資産を精査し、無形固定資産として商標権を計上しました。",
+      "suggested_vi": "Rà soát kỹ các tài sản vô hình thu được từ việc nhận chuyển nhượng kinh doanh, chúng tôi đã ghi nhận quyền nhãn hiệu vào tài sản cố định vô hình.",
+      "suggested_en": "Having carefully examined the intangible assets acquired through the business transfer, we recognized trademark rights as an intangible fixed asset."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects Japanese GAAP concept of '規則的な償却' (systematic amortization) and impairment consideration.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logical business exchange between accounting staff regarding the fixed asset ledger and amortization method for newly acquired trademark rights.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "68b1c298308549395ad00edd654e1412f436bf1cdc1c1ab85ddd3dd80a092719",
+    "validated_at": "2026-10-01T01:34:43.967802+00:00"
+  }
+}

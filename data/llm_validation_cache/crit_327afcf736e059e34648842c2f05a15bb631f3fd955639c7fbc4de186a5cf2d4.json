@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000015",
+  "term": "流動比率",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe financial domain errors in both example sentences: conflated short-term liquidity (流動性・安全性) with operational efficiency (経営効率), divisional reporting, profitability (収益性), and capital efficiency (資本効率).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "流動比率を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for calculating current ratio.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "流動比率を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business expression indicating the improvement of short-term liquidity.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "流動比率を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Valid analytical expression in corporate financial health assessment.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "流動比率の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate collocation used when establishing financial stability benchmarks.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Domain factual error: 流動比率 measures short-term liquidity/solvency (財務の安全性・短期支払能力), not operational efficiency (経営効率). Furthermore, current ratios are calculated on balance sheets (BS), which are typically managed at the corporate/entity level, not separately monitored by individual operational departments (各事業部門).",
+      "suggested_ja": "短期的な支払能力と財務の安全性を確保するため、財務部では流動比率の推移を月次でモニタリングしています。",
+      "suggested_vi": "Để đảm bảo khả năng thanh toán ngắn hạn và sự an toàn tài chính, phòng tài chính theo dõi biến động của tỷ số thanh toán hiện hành hàng tháng.",
+      "suggested_en": "To ensure short-term solvency and financial stability, the finance department monitors changes in the current ratio on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Domain factual error: Current ratio indicates liquidity, not profitability (収益性) or capital efficiency (資本効率). In fact, an excessively high current ratio can indicate idle cash or excessive inventory, which directly impairs capital efficiency (ROE/ROIC). Confusing liquidity with profitability/efficiency is a critical accounting error.",
+      "suggested_ja": "当期の流動比率は目安となる150%を上回り、短期的な債務に対する十分な支払能力が確認されました。",
+      "suggested_vi": "Tỷ số thanh toán hiện hành kỳ này đã vượt mức chuẩn 150%, xác nhận khả năng thanh toán đầy đủ đối với các khoản nợ ngắn hạn.",
+      "suggested_en": "The current ratio for this period exceeded the benchmark of 150%, confirming adequate solvency for short-term obligations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange is overly generic and lacks the concrete financial rationale typical of corporate reporting. In practice, liquidity discussion involves specific drivers such as short-term debt repayment or cash collections.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当四半期の財務安全性について、流動比率の推移はいかがですか。",
+        "vi": "Về mức độ an toàn tài chính của quý này, diễn biến của tỷ số thanh toán hiện hành như thế nào rồi?",
+        "en": "Regarding financial stability for this quarter, what is the trend of our current ratio?"
+      },
+      {
+        "speaker": "B",
+        "ja": "短期借入金の返済が進んだことで流動負債が減少し、流動比率は前期比で15ポイント改善しました。",
+        "vi": "Nhờ tiến hành hoàn trả nợ vay ngắn hạn nên nợ ngắn hạn đã giảm, giúp tỷ số thanh toán hiện hành cải thiện 15 điểm phần trăm so với kỳ trước.",
+        "en": "Due to progress in paying down short-term debt, current liabilities decreased, improving our current ratio by 15 percentage points compared to the previous quarter."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese examples, the phrasing 'Chỉ số tỷ số thanh toán hiện hành' is redundant ('chỉ số tỷ số'); use 'tỷ số thanh toán hiện hành' or 'tỷ lệ thanh toán hiện hành'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2081bc918c8f5844789e23b203856c91054be5ca4dca14b730f632ecfcd6a26a",
+    "validated_at": "2026-10-01T01:33:10.757199+00:00"
+  }
+}

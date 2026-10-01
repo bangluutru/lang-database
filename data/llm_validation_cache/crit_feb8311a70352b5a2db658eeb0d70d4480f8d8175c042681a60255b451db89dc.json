@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-trade-000137",
+  "term": "TTM",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core misunderstanding of TTM as an internal, controllable performance metric rather than an external, published exchange rate permeates all sections (collocations, examples, dialogue). This leads to unnatural and factually incorrect Japanese expressions and scenarios. The translations are also overly literal and verbose.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "TTMを算出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "TTM (Telegraphic Transfer Middle rate) is a published rate, not something a company 'calculates' in the sense of deriving it from internal data. It's provided by banks.",
+      "suggested_text": "TTMを参照する"
+    },
+    {
+      "index": 1,
+      "text": "TTMを改善する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "TTM is an exchange rate, not an internal metric that a company can 'improve' through its operations. A company might aim to improve its foreign exchange management, but not the TTM itself.",
+      "suggested_text": "為替リスクを改善する"
+    },
+    {
+      "index": 2,
+      "text": "TTMを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Analyzing trends or impacts of TTM is a natural business activity."
+    },
+    {
+      "index": 3,
+      "text": "TTMの目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company cannot set a target value for the TTM itself, as it's an external market rate. They might set targets for their foreign exchange exposure or hedging effectiveness, but not the TTM.",
+      "suggested_text": "為替レートの目標値を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The premise that a company monitors TTM metrics monthly for operational efficiency improvement is flawed. TTM is an external exchange rate, not an internal operational metric. Companies monitor their foreign exchange exposure or hedging results, not the TTM itself as a performance indicator.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で為替リスクの状況を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi tình hình rủi ro tỷ giá hối đoái hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors foreign exchange risk on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, a company's TTM cannot 'exceed a target value' to confirm improved profitability and capital efficiency. These are internal performance indicators, while TTM is an external rate. The sentence implies TTM is a performance metric that can be directly influenced and targeted by the company.",
+      "suggested_ja": "当期の収益性と資本効率は目標値を上回り、為替変動の影響を適切に管理できたことが確認されました。",
+      "suggested_vi": "Khả năng sinh lời và hiệu quả sử dụng vốn kỳ này đã vượt giá trị mục tiêu, xác nhận rằng ảnh hưởng của biến động tỷ giá hối đoái đã được quản lý một cách thích hợp.",
+      "suggested_en": "This term's profitability and capital efficiency exceeded target values, confirming that the impact of exchange rate fluctuations was appropriately managed."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats TTM as an internal financial performance metric that can show 'progress towards improvement targets' and be part of 'financial analysis' in the same way as profitability or capital efficiency. TTM is an external rate. Speaker B's response about 'steady improvement trend' and 'achieving year-end management goals' is inappropriate for TTM.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析において、為替変動が業績に与える影響についてはいかがですか。",
+        "vi": "Trong phân tích tài chính kỳ này, ảnh hưởng của biến động tỷ giá hối đoái đến kết quả kinh doanh như thế nào?",
+        "en": "In this term's financial analysis, what about the impact of exchange rate fluctuations on our performance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前四半期と比較して為替リスクのヘッジが奏功し、期末の経営目標達成に貢献できる見通しです。",
+        "vi": "So với quý trước, việc phòng ngừa rủi ro tỷ giá hối đoái đã thành công, và chúng tôi dự kiến sẽ đóng góp vào việc đạt được mục tiêu quản lý cuối kỳ.",
+        "en": "Compared to the previous quarter, our foreign exchange risk hedging has been successful, and we expect to contribute to achieving our year-end management goals."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for 'TTM' in the meaning and examples are overly literal and verbose, translating the full 'Telegraphic Transfer Middle rate' every time. In professional contexts, 'TTM' is often used as is, or simply referred to as 'tỷ giá trung bình' or 'middle rate' once defined. The current translations are clunky and unnatural. Also, the original meaning_vi 'tỷ giá trung bình chuẩn hàng ngày của ngân hàng' is not a standard, concise translation for TTM. It should be 'Tỷ giá chuyển khoản điện tử trung bình' or simply 'Tỷ giá TTM'."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fdfb74fcb4826545787c2300ff93be112a79d95e3015ced859495612faf5f6b7",
+    "validated_at": "2026-10-01T01:56:21.913861+00:00"
+  }
+}

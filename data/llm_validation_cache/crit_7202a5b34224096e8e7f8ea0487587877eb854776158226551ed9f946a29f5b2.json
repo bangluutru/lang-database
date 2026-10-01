@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000177",
+  "term": "法人税等",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains severe domain factual misunderstandings: income tax calculation was described as reconciling source vouchers against subsidiary ledgers, which is technically impossible in corporate accounting. Sentences and collocations rely heavily on generic, stilted AI templates.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法人税等を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting phrasing for recording corporate income taxes in P&L.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "法人税等の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "法人税等 is a P&L expense item; '残高' (balance) naturally attaches to balance sheet liability items like 未払法人税等. For the expense item, 金額 or 計上額 is used.",
+      "suggested_text": "未払法人税等の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "法人税等を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Templated predicate; one does not 'collate/reconcile' the tax category directly, but rather calculates or estimates it (算定する・見積もる).",
+      "suggested_text": "法人税等を算定する"
+    },
+    {
+      "index": 3,
+      "text": "法人税等を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Corporations do not '精算する' (settle/reimburse) 法人税等; they estimate, file, and pay it (見積計上する, 申告・納付する).",
+      "suggested_text": "法人税等を見積計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Uses a generic AI template ('...帳簿照合において、[語]の計上内容や残高に差異がないか精査します'). In practice, corporate tax is calculated based on taxable income, not verified through routine monthly ledger balance reconciliations.",
+      "suggested_ja": "四半期決算に伴い、税引前当期純利益をもとに法人税等の見積額を算定してください。",
+      "suggested_vi": "Cùng với kỳ quyết toán quý, xin vui lòng tính toán số tiền ước tính của chi phí thuế thu nhập doanh nghiệp dựa trên lợi nhuận trước thuế.",
+      "suggested_en": "In line with the quarterly closing, please estimate the income taxes based on income before income taxes."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Suffers from tautological and robotic AI drafting ('適正な会計基準...適正に処理いたしました'). Real accounting reports refer specifically to tax effect accounting or statutory tax rates.",
+      "suggested_ja": "税効果会計の適用に伴い、法人税等および法人税等調整額の内訳を損益計算書に注記しました。",
+      "suggested_vi": "Cùng với việc áp dụng kế toán thuế hoãn lại, chúng tôi đã thuyết minh chi tiết chi phí thuế thu nhập doanh nghiệp và chi phí thuế thu nhập hoãn lại trên báo cáo kết quả hoạt động kinh doanh.",
+      "suggested_en": "Following the application of tax effect accounting, we footnoted the breakdown of income taxes and deferred income taxes in the income statement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Corporate income tax (法人税等) is computed via tax adjustments (別表加算・減算) from pretax earnings, not verified by cross-checking source vouchers (証憑書類) against subsidiary ledgers (補助元帳). Furthermore, '適正に整合している' is unnatural Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "中間決算における法人税等の見積もり計算は完了しましたか。",
+        "vi": "Anh/chị đã hoàn tất việc tính toán ước tính chi phí thuế thu nhập doanh nghiệp cho kỳ quyết toán giữa niên độ chưa?",
+        "en": "Have you completed the estimate calculation for income taxes for the interim closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税務調整項目を反映した上で顧問税理士のレビューも完了しております。",
+        "vi": "Vâng, sau khi phản ánh các khoản điều chỉnh thuế, chúng tôi cũng đã hoàn thành việc rà soát với chuyên gia tư vấn thuế.",
+        "en": "Yes, after reflecting tax adjustment items, the review with our tax accountant has also been completed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8f69cd2ebc78af905048d78d1f6dc60b2f0447363a32db1fed3eeb6561790ea0",
+    "validated_at": "2026-10-01T01:36:51.962669+00:00"
+  }
+}

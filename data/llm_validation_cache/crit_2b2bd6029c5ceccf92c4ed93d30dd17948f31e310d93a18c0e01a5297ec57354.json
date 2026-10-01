@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000072",
+  "term": "契約不適合責任",
+  "overall_decision": "rewrite",
+  "summary_reason": "法概念である「責任（liability）」と、契約上の記載である「条項（clause）」の混同がコロケーション・例文・対話全体に見られます。「責任に違反する」「責任を設ける」といった不自然な述語結合を修正し、法務実務に即した自然な表現に改訂する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約不適合責任を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「責任」を直接「設ける」とは言わず、契約実務では「契約不適合責任条項を設ける」または「契約不適合責任を負う／追及する」と表現します。",
+      "suggested_text": "契約不適合責任を負う"
+    },
+    {
+      "index": 1,
+      "text": "契約不適合責任に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "責任は「果たす」「負う」「追及する」ものであり、「責任に違反する」という語結合は法務・ビジネス日本語として誤用です（違反するのは「契約義務」）。",
+      "suggested_text": "契約不適合責任を追及する"
+    },
+    {
+      "index": 2,
+      "text": "契約不適合責任を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "適用対象は「規定」や「条項」であり、責任そのものを適用するとは通常言いません。「免責する」または「条項を適用する」が自然です。",
+      "suggested_text": "契約不適合責任を免責する"
+    },
+    {
+      "index": 3,
+      "text": "契約不適合責任を精査する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "精査するのは「責任条項（文言・リスク）」です。単体でコロケーションとするなら「契約不適合責任を問う」等の基本形が適切です。",
+      "suggested_text": "契約不適合責任を問う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「明確な契約不適合責任を設けました」という表現は「責任」と「設ける」の述語不整合があり、不自然です。「条項を定めた」または「特約を設けた」とすべきです。",
+      "suggested_ja": "予期せぬ紛争を未然に防止するため、契約書内に契約不適合責任に関する明確な特約を設けました。",
+      "suggested_vi": "Để ngăn ngừa các tranh chấp bất ngờ từ trước, chúng tôi đã đưa vào hợp đồng một điều khoản đặc biệt rất rõ ràng về trách nhiệm đối với sự không phù hợp của hợp đồng.",
+      "suggested_en": "To prevent unexpected disputes beforehand, we established an explicit special clause regarding liability for contractual non-conformity within the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「契約不適合責任の文言」は「条項」が脱落しており法務実務文面としてやや粗削りです。「契約不適合責任条項の文言」とするのがプロフェッショナルです。",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された契約不適合責任条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ của điều khoản trách nhiệm do không phù hợp với hợp đồng do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the contractual non-conformity clause proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「契約不適合責任の修正案」は「条項」が抜けており不自然です。法務実務会話として「契約不適合責任に関する条項の修正案」と整える必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた契約不適合責任条項の修正案ですが、確認は済みましたか。",
+        "vi": "Về bản sửa đổi điều khoản trách nhiệm do không phù hợp với hợp đồng do phòng pháp chế bên đối tác gửi lại, anh đã kiểm tra xong chưa?",
+        "en": "Have you finished reviewing the revised draft of the contractual non-conformity clause returned by the counterparty's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、損害賠償条項を含めてリスクがないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xác nhận rằng không có rủi ro nào bao gồm cả điều khoản bồi thường thiệt hại, nên chúng ta có thể tiến hành thủ tục ký kết.",
+        "en": "Yes, I confirmed that there are no risks including the liquidated damages clause, so we can proceed with the signing process as is."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳の「do giao hàng không đúng thỏa thuận hợp đồng」は売買の目的物引渡し（giao hàng）のみに偏っており、民法上の「契約不適合責任（contractual non-conformity）」全般（目的物の種類・品質・数量の不適合）を表すには「trách nhiệm do không phù hợp với hợp đồng」が法的に正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "98d145776d34bebf68fdad300953f7e911ede0385998bcbebe44d101b6f8de3b",
+    "validated_at": "2026-10-01T01:42:10.996368+00:00"
+  }
+}

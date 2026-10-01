@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000155",
+  "term": "水道光熱費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input relies heavily on generic, interchangeable AI templates ('適正な会計基準...適正に処理', '適正に整合している') that fail to reflect the authentic accounting context of utilities expenses (accruals, meter cutoffs, tariff fluctuations). Collocations 2 and 3 and both examples need replacement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "水道光熱費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly natural accounting collocation for booking utilities expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "水道光熱費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end reporting when verifying trial balance or general ledger totals for the account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "水道光熱費を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese accounting practice, one reconciles invoices with entries (請求書と帳簿を照合する) rather than using the expense account itself as the direct object of 照合する.",
+      "suggested_text": "水道光熱費を按分する"
+    },
+    {
+      "index": 3,
+      "text": "水道光熱費を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Utilities are recurring corporate operating expenses paid via direct debit or bank transfer, rarely an object of '精算' (settlement/reimbursement) in standard corporate accounting.",
+      "suggested_text": "水道光熱費を未払計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly templated boilerplate. For an expense item (P&L), checking whether unbilled utility amounts require accrual due to meter-reading date cutoffs is far more authentic and practically educational.",
+      "suggested_ja": "検針日と決算期のズレを考慮し、当月分の水道光熱費に見越計上漏れがないか確認してください。",
+      "suggested_vi": "Hãy kiểm tra xem có bỏ sót hạch toán chi phí trích trước cho chi phí điện nước kỳ này không, có tính đến sự chênh lệch giữa ngày ghi chỉ số và ngày khóa sổ.",
+      "suggested_en": "Please check whether there are any omissions in accrued utilities expenses for the current month, taking into account the cutoff lag between meter-reading dates and the closing period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Robotic template containing tautological phrasing ('適正な会計基準...適正に処理いたしました'). Real businesses do not issue closing statements stating they 'properly processed utilities in accordance with proper standards.'",
+      "suggested_ja": "工場稼働率の上昇および電気料金の値上げに伴い、当四半期の水道光熱費は前年同期比で20％増加しました。",
+      "suggested_vi": "Do tỷ lệ vận hành nhà máy tăng cùng với việc tăng giá điện, chi phí điện nước trong quý này đã tăng 20% so với cùng kỳ năm ngoái.",
+      "suggested_en": "Due to higher factory operating rates and rising electricity tariffs, utilities expenses for this quarter increased by 20% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrases like '適正に整合している' are unnatural Japanese produced by mechanical generation. A realistic workplace dialogue about utilities focuses on budget variance, seasonal spikes, or accrual reconciliations.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、水道光熱費が予算を大幅に超過しているようですが、要因は把握できていますか。",
+        "vi": "Trong kỳ quyết toán tháng này, chi phí điện nước dường như đã vượt ngân sách đáng kể, anh/chị đã nắm được nguyên nhân chưa?",
+        "en": "In this month's closing, utilities expenses seem to have exceeded the budget significantly; do you know what caused it?"
+      },
+      {
+        "speaker": "B",
+        "ja": "夏季の猛暑による空調稼働率の上昇が主因です。電力会社からの請求明細とも照合済みです。",
+        "vi": "Nguyên nhân chính là do tỷ lệ hoạt động của hệ thống điều hòa tăng cao vì nắng nóng mùa hè. Tôi cũng đã đối chiếu xong với bảng kê chi tiết từ công ty điện lực rồi.",
+        "en": "The main factor is the increased use of air conditioning due to the summer heat wave. I have already reconciled it with the itemized bill from the electric company."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions of the headword are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "33097192820432540dbf31f2c0de8241aa0f93bdef470e70ca83cd744d1894d5",
+    "validated_at": "2026-10-01T01:37:50.539540+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000155",
+  "term": "販売促進",
+  "overall_decision": "rewrite",
+  "summary_reason": "「販売促進」の語義が誤解されており、本来の「顧客への働きかけ」という意味合いで使われていないため、コロケーション、例文、対話の全てにおいて不自然な表現が散見される。特に、社内連携や業務改善の文脈で「販売促進」が使われている点が大きな問題。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "販売促進を徹底する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「販売促進」は活動や施策を指すため、「徹底する」の対象としては不自然。活動の実施や強化を徹底するなら自然。",
+      "suggested_text": "販売促進策を徹底する / 販売促進活動を徹底する"
+    },
+    {
+      "index": 1,
+      "text": "販売促進を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "販売促進を習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「販売促進」は個人の行動や習慣ではなく、企業活動や戦略を指すため、「習慣づける」の対象としては不自然。販売促進活動の実施を習慣づける、ならあり得る。",
+      "suggested_text": "販売促進活動の実施を習慣づける"
+    },
+    {
+      "index": 3,
+      "text": "販売促進の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「販売促進」は顧客への働きかけを指すため、「関係部署への事前の販売促進」という使い方は不自然。部署内での情報共有や連携強化を指すなら「連携強化」や「情報共有」が適切。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との事前の連携強化を徹底しています。",
+      "suggested_vi": "Nhằm thúc đẩy dự án diễn ra trôi chảy, chúng tôi triệt để tăng cường phối hợp trước với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we thoroughly strengthen prior collaboration with relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「販売促進」は顧客への活動であり、業務トラブル防止のための「迅速な販売促進の習慣付け」という文脈は不自然。業務上の迅速な対応や情報共有の習慣付けであれば自然。",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、迅速な情報共有の習慣付けが職場全体で求められます。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh trong công việc, việc tạo thói quen chia sẻ thông tin nhanh chóng là rất cần thiết trong toàn cơ quan.",
+      "suggested_en": "To prevent operational issues beforehand, establishing a habit of prompt information sharing is required across the workplace."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker Aの「販売促進の徹底状況」という問いに対し、Speaker Bが「情報共有の重要性を再認識し、迅速な対応が習慣化されてきている」と答えており、「販売促進」という言葉が使われていないため、会話の繋がりが不自然。また、Aの質問自体も「販売促進」の文脈では不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の販売促進策について、何か課題は生じていませんか。",
+        "vi": "Về các biện pháp xúc tiến bán hàng trong quý này, có vấn đề nào phát sinh không?",
+        "en": "Regarding this quarter's sales promotion measures, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧客からのフィードバックを全メンバーで共有し、迅速な改善対応が習慣化されてきています。",
+        "vi": "Vâng, chúng tôi đã chia sẻ phản hồi từ khách hàng với tất cả thành viên và việc phản ứng cải thiện nhanh chóng đang dần trở thành thói quen.",
+        "en": "Yes, we have shared customer feedback with all members, and prompt improvement actions are becoming a habit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9709cf326f7b2fb68b97041fed32dea260d3b7d7009d6f0a15dc8b44b9008ad0",
+    "validated_at": "2026-10-01T01:52:51.385857+00:00"
+  }
+}

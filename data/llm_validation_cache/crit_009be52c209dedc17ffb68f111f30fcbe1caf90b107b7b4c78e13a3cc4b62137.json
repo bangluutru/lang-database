@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000142",
+  "term": "成約",
+  "overall_decision": "rewrite",
+  "summary_reason": "「成約」という言葉の使い方が全体的に不自然。「成約」は「契約が成立すること」という事実や状態を指すため、「成約を締結する」「成約を更新する」「成約を解除する」「成約の条項」といった表現は日本語として誤りまたは非常に不自然。これらは通常「契約」という言葉を使って表現されるべき。例文や対話もこの誤用に基づいているため、全面的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "成約を締結する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「成約」は「契約が成立すること」を意味するため、「成約を締結する」は「契約が成立することを締結する」となり、意味が重複し不自然。通常は「契約を締結する」または「成約に至る」と表現する。",
+      "suggested_text": "成約に至る"
+    },
+    {
+      "index": 1,
+      "text": "成約を更新する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「成約」は契約が成立した状態を指すため、それを「更新する」という表現は不自然。更新するのは「契約」そのものであり、「成約」ではない。",
+      "suggested_text": "契約を更新する"
+    },
+    {
+      "index": 2,
+      "text": "成約を解除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「成約」は契約が成立した状態を指すため、それを「解除する」という表現は不自然。解除するのは「契約」そのものであり、「成約」ではない。",
+      "suggested_text": "契約を解除する"
+    },
+    {
+      "index": 3,
+      "text": "成約の条項を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「成約」は契約が成立した事実や状態を指すため、「成約の条項」という表現は不自然。条項があるのは「契約書」や「契約」そのもの。",
+      "suggested_text": "契約の条項を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「成約を締結する」が不自然。また、「基本合意に達したため、来週成約を正式に締結いたします」という流れも、基本合意の後に「成約」という言葉を使うのはやや冗長で、通常は「契約を締結する」と表現する。",
+      "suggested_ja": "取引先と基本合意に達したため、来週正式に契約を締結いたします。",
+      "suggested_vi": "Do đã đạt được thỏa thuận cơ bản với đối tác, tuần tới chúng tôi sẽ chính thức ký kết hợp đồng.",
+      "suggested_en": "Having reached a basic agreement with the partner, we will officially execute the contract next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「成約の条項」という表現が不自然。条項は「契約書」や「契約」に存在する。",
+      "suggested_ja": "法務部門と連携し、契約書に法的リスクが含まれていないか事前に精査しました。",
+      "suggested_vi": "Phối hợp với bộ phận pháp chế, chúng tôi đã rà soát kỹ trước xem hợp đồng có rủi ro pháp lý nào không.",
+      "suggested_en": "In coordination with the legal department, we thoroughly reviewed the contract in advance for any legal risks."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「成約の修正案」という表現が不自然。「成約」は契約が成立すること自体を指すため、その「修正案」という言い方は一般的ではない。通常は「契約書の修正案」や「契約案の修正」などと言う。Bの返答も「成約」という言葉に引きずられている。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた契約書の修正案ですが、確認は済みましたか。",
+        "vi": "Bản sửa đổi hợp đồng từ bộ phận pháp chế đối tác đã về rồi, anh đã xác nhận xong chưa?",
+        "en": "The revised contract draft from the counterparty's legal department is back. Have you reviewed it?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、損害賠償条項を含めてリスクがないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xác nhận không có rủi ro nào, kể cả điều khoản bồi thường thiệt hại, nên có thể tiến hành thủ tục ký kết.",
+        "en": "Yes, I've confirmed there are no risks, including the indemnity clause, so we can proceed with the signing process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "「成約」の訳語が「giao dịch thành công / chốt đơn thành công」や「closing a contract / successful deal」と、日本語の「成約」が持つ「契約が成立すること」というニュアンスと乖離している。特にベトナム語の「chốt đơn thành công」は「注文が確定する」というニュアンスが強く、ビジネス契約の「成約」とは少し異なる。英語も「closing a contract」は良いが、「successful deal」はややカジュアルで、文脈によっては不適切。また、例文中の訳も日本語の不自然な表現をそのまま訳しているため、全体的に再検討が必要。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "706eff420fbf830c0928588a3e64d3b10bafb3d743c72c2ddb4e53e73d9fcacd",
+    "validated_at": "2026-10-01T01:52:49.480353+00:00"
+  }
+}

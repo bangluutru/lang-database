@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000125",
+  "term": "遅刻",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template hallucination: the generator treated '遅刻' (attendance tardiness) as an accounting ledger entry with financial balances and financial closing reconciliations. Must be rewritten completely into realistic HR/attendance workplace contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "遅刻を報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace expression for reporting tardiness.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "遅刻を管理する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in human resources and attendance management.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "遅刻を記録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression regarding attendance logs.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "遅刻の減給の対象となる",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Awkward particle usage; '遅刻による減給の対象となる' or '遅刻が減給の対象となる' is natural.",
+      "suggested_text": "遅刻による減給の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Catastrophic semantic mismatch. Tardiness (遅刻) is an HR/attendance issue and cannot be booked as an accounting entry (計上) or have a balance (残高) on a ledger.",
+      "suggested_ja": "電車の遅延により遅刻する場合は、速やかに上司へ連絡し、遅延証明書を提出してください。",
+      "suggested_vi": "Nếu đi làm muộn do tàu chậm, hãy nhanh chóng báo cho cấp trên và nộp giấy chứng nhận tàu trễ.",
+      "suggested_en": "If you are going to be late due to a train delay, please notify your supervisor promptly and submit a delay certificate."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Absurd templated generation. Financial accounting standards (会計基準) and financial year-end closing (決算) do not apply to employee tardiness.",
+      "suggested_ja": "就業規則に則り、月間の遅刻回数が規定の上限を超えた社員に対して人事面談を実施しました。",
+      "suggested_vi": "Tuân thủ quy chế làm việc, chúng tôi đã tiến hành phỏng vấn nhân sự đối với nhân viên có số lần đi muộn trong tháng vượt quá giới hạn quy định.",
+      "suggested_en": "In accordance with work regulations, we conducted an HR interview with an employee whose monthly tardiness exceeded the prescribed limit."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Nonsensical hallucination forcing financial accounting terminology (月次決算, 計上内容, 補助元帳) onto tardiness (遅刻).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "山田さん、今月の勤怠実績を確認したところ、無断遅刻が2件記録されていますが、報告は受けていますか。",
+        "vi": "Yamada này, khi kiểm tra dữ liệu chấm công tháng này, tôi thấy có 2 lần đi muộn không phép, anh đã nhận được báo cáo chưa?",
+        "en": "Yamada-san, reviewing this month's attendance records, I see two unexcused instances of tardiness. Did you receive a report about them?"
+      },
+      {
+        "speaker": "B",
+        "ja": "失礼いたしました。本人からの事情聴取が完了しており、本日中に修正申請を提出させます。",
+        "vi": "Xin lỗi anh. Tôi đã hoàn tất việc trao đổi lý do với đương sự và sẽ yêu cầu họ nộp đơn xin điều chỉnh ngay trong ngày hôm nay.",
+        "en": "My apologies. I have finished questioning the employee, and I will have them submit a correction request by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "37e19dcae11aaca697787d58f7ccdbaf4be2ce258b605aa409de91400de34989",
+    "validated_at": "2026-10-01T01:43:05.780864+00:00"
+  }
+}

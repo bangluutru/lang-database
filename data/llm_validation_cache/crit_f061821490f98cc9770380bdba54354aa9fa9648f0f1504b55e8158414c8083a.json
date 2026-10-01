@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000135",
+  "term": "TTB",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the misunderstanding of TTB as a metric that a company can directly 'improve' or 'set targets' for, rather than an external market rate whose trends impact the company. This leads to unnatural collocations, example sentences, and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "TTBを算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "TTBを改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "TTBは市場レートであり、企業が直接「改善する」ものではない。TTBを指標として経営努力を「改善する」ことはできるが、TTB自体を改善するという表現は不自然。",
+      "suggested_text": "TTBを指標として経営努力を改善する"
+    },
+    {
+      "index": 2,
+      "text": "TTBを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "TTBの目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "TTBは市場レートであり、企業が目標値を設定するものではない。TTBを前提とした目標設定はあり得るが、TTB自体に目標値を設定するとは言わない。",
+      "suggested_text": "TTBを前提とした目標値を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "TTBは市場レートであり、企業が「モニタリング」する対象としては不自然。為替リスク管理の一環としてTTBの動向を「注視する」や「把握する」は自然だが、TTBの「数値」を「モニタリング」するとは言わない。また、TTBは「指標」ではあるが、それ自体が経営効率の改善に直接結びつく「数値」として月次でモニタリングされる対象としては不自然。",
+      "suggested_ja": "経営効率の改善に向け、各事業部門でTTBの動向を月次で注視し、為替リスク管理に役立てています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi sát sao diễn biến tỷ giá ngân hàng mua vào ngoại tệ (TTB) hàng tháng để phục vụ công tác quản lý rủi ro tỷ giá.",
+      "suggested_en": "Towards improving operational efficiency, each business division closely monitors the trends of the telegraphic transfer buying rate (TTB) on a monthly basis to aid in foreign exchange risk management."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "TTBは市場レートであり、企業が「目標値を上回る」ものではない。TTBの変動が収益に影響を与えることはあるが、TTB自体が企業の努力によって「目標値を上回る」という表現は不自然。また、TTBが直接「収益性」や「資本効率」の向上を「確認」する指標として使われることは稀。",
+      "suggested_ja": "当期はTTBの有利な推移により、収益性と資本効率の向上が確認されました。",
+      "suggested_vi": "Trong kỳ này, nhờ diễn biến tỷ giá ngân hàng mua vào ngoại tệ (TTB) thuận lợi, khả năng sinh lời và hiệu quả sử dụng vốn đã được xác nhận là cải thiện.",
+      "suggested_en": "This term, due to favorable movements in the telegraphic transfer buying rate (TTB), an improvement in profitability and capital efficiency was confirmed."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "TTBは市場レートであり、企業が「改善目標」を設定する対象ではないため、Aの発言が不自然。Bの返答も、TTBが「改善傾向」を示すという表現が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析において、TTBの推移が当社の収益に与える影響について、どのような見解をお持ちですか。",
+        "vi": "Trong phân tích tài chính kỳ này, ông/bà có nhận định gì về ảnh hưởng của diễn biến tỷ giá ngân hàng mua vào ngoại tệ (TTB) đến lợi nhuận của công ty chúng ta?",
+        "en": "In this term's financial analysis, what is your view on the impact of TTB trends on our company's profitability?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前四半期と比較してTTBが有利に推移しており、期末の収益目標達成に貢献する見通しです。",
+        "vi": "So với quý trước, TTB đang diễn biến thuận lợi, dự kiến sẽ đóng góp vào việc đạt được mục tiêu lợi nhuận cuối kỳ.",
+        "en": "Compared to the previous quarter, TTB has moved favorably, and is expected to contribute to achieving our year-end profit targets."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d45763b6c83a67bcb50598c3cd5a15752ec80e605b1bc7610878e639c81f0cc2",
+    "validated_at": "2026-10-01T01:56:18.993409+00:00"
+  }
+}

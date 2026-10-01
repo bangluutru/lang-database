@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000140",
+  "term": "給料手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatch in collocation 3 (給料手当を精算する), unnatural direct object pairing in collocation 2, repetitive phrasing in Example 1 ('適正な...適正に'), and stilted phrasing in the dialogue response ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "給料手当を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing payroll/allowance expenses.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "給料手当の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end closing when reviewing trial balance (試算表) account balances.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "給料手当を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Using '給料手当' alone as the direct object of '照合する' is unnatural; in practice, one reconciles the recorded amount with payroll records.",
+      "suggested_text": "給料手当の金額を給与台帳と照合する"
+    },
+    {
+      "index": 3,
+      "text": "給料手当を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reimbursements (経費・旅費) or advances (仮払金), never to salary and allowance expense accounts. Salaries are accrued, allocated, or paid.",
+      "suggested_text": "給料手当を販売費及び一般管理費に配賦する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural accounting context of month-end reconciliation between payroll data and general ledger.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains stylistic flaws: unnatural phrase '適正な会計基準' (standards are not modified by '適正な') and redundant repetition of '適正' ('適正な...適正に処理いたしました').",
+      "suggested_ja": "社内規程および企業会計基準に基づき、当期の決算において給料手当を適切に処理いたしました。",
+      "suggested_vi": "Căn cứ theo quy chế nội bộ và chuẩn mực kế toán doanh nghiệp, chúng tôi đã xử lý thỏa đáng khoản mục tiền lương và phụ cấp trong quyết toán kỳ này.",
+      "suggested_en": "In accordance with internal regulations and business accounting standards, we properly processed salaries and allowances in this period's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合していることを確認いたしました' is tautological and awkward business Japanese. '不一致がないことを確認いたしました' or '数値が一致していることを確認いたしました' is authentic.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、給料手当の計上額に給与台帳との差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền hạch toán lương và phụ cấp có chênh lệch so với bảng lương không?",
+        "en": "In this month's closing, are there any discrepancies between the recorded salaries and allowances and the payroll ledger?"
+      },
+      {
+        "speaker": "B",
+        "ja": "給料計算データと総勘定元帳を照合済みで、数値の一致を確認しております。",
+        "vi": "Chúng tôi đã đối chiếu dữ liệu tính lương với sổ cái và xác nhận các số liệu đều khớp.",
+        "en": "We have already reconciled the payroll calculation data with the general ledger and confirmed the figures match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bd3bd376dd1990bcae6771ab4ac4da22f76670a4b656f24ae0ce99c670a1259b",
+    "validated_at": "2026-10-01T01:36:11.845585+00:00"
+  }
+}

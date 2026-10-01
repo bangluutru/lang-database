@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000028",
+  "term": "退職所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains critical domain factual errors under the Income Tax Act: retirement income does not have 'necessary expenses' (必要経費) and is legally subject to separate taxation (分離課税), never aggregate taxation (総合課税). Additionally, the dialogue incorrectly treats an individual tax classification as a corporate monthly ledger booking item.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "退職所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for calculating taxable retirement income after deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "退職所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate tax classification terminology under the Income Tax Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "退職所得を合算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese tax law, retirement income is subject to separate taxation (分離課税) and is not aggregated (合算) with other ordinary incomes. A better, authentic collocation would focus on retirement income deduction.",
+      "suggested_text": "退職所得控除を適用する"
+    },
+    {
+      "index": 3,
+      "text": "退職所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard procedural action when an employee does not submit the withholding declaration or needs tax settlement.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Retirement income (退職所得) does not have 'necessary expenses' (必要経費); it uses a statutory deduction based on service years (退職所得控除). Applying '各種収入金額および必要経費を精査し' is a copy-paste template error incompatible with Japanese tax law.",
+      "suggested_ja": "勤続年数に応じた退職所得控除額を適用し、退職所得の金額および源泉徴収税額を適正に算出しました。",
+      "suggested_vi": "Chúng tôi đã áp dụng mức khấu trừ thu nhập thôi việc tương ứng với số năm công tác và tính toán chính xác số tiền thu nhập từ trợ cấp thôi việc cũng như số thuế khấu trừ tại nguồn.",
+      "suggested_en": "By applying the retirement income deduction corresponding to the years of service, we properly calculated the amount of retirement income and the withholding tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major tax error: Retirement income is subject to separate taxation (申告分離課税 / 源泉分離課税) under Article 22 & 122 of the Income Tax Act, never comprehensive aggregate taxation (総合課税). Stating '総合課税の対象となる退職所得を他の所得と合算して' is legally false.",
+      "suggested_ja": "退職所得は他の所得と合算されない分離課税の対象となるため、税額計算を区分して行いました。",
+      "suggested_vi": "Vì thu nhập từ trợ cấp thôi việc / hưu trí thuộc đối tượng chịu thuế riêng biệt chứ không cộng gộp với các khoản thu nhập khác, chúng tôi đã tách biệt việc tính toán số tiền thuế.",
+      "suggested_en": "Since retirement income is subject to separate taxation and is not aggregated with other income, we computed the tax amount separately."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In corporate accounting (月次決算), companies record '退職金' (severance payment) or '退職所得に係る源泉徴収税額' (withholding tax on retirement income), not '退職所得' itself as an accounting entry. An enterprise does not book an individual's tax income class on a ledger.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の退任に伴う退職金について、退職所得の源泉徴収税額の計算と控除の適用は確認できていますか。",
+        "vi": "Về khoản trợ cấp thôi việc do thôi giữ chức vụ của thành viên ban điều hành, anh/chị đã kiểm tra việc tính số thuế khấu trừ tại nguồn từ thu nhập thôi việc và việc áp dụng giảm trừ chưa?",
+        "en": "Regarding the retirement allowance for the retiring director, have you verified the calculation of withholding tax on the retirement income and the application of deductions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、退職所得の受給に関する申告書と照合し、源泉所得税額の計算に誤りがないことを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu với tờ khai nhận thu nhập thôi việc và xác nhận rằng việc tính số thuế thu nhập khấu trừ tại nguồn không có sai sót.",
+        "en": "Yes, I have cross-checked with the Declaration Concerning Receipt of Retirement Income and confirmed that the withholding income tax calculation is accurate."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base headword translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2d3acbd3a85485f39a5e686c83d376e3958c26ce199bb0fda5ff0a31bb6892f0",
+    "validated_at": "2026-10-01T01:37:46.695828+00:00"
+  }
+}

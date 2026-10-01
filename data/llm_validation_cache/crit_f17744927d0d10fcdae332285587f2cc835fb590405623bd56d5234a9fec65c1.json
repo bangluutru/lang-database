@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000126",
+  "term": "みなし仕入率",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic category mismatch: the model treated a statutory percentage rate ('みなし仕入率') as if it were a journal entry account with book balances and entries to reconcile. Examples and dialogue must be rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "みなし仕入率を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard usage in Japanese consumption tax simplified taxation (簡易課税制度).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "みなし仕入率を乗じる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard mathematical/accounting verb used when computing deemed input tax from taxable sales.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "みなし仕入率を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common when confirming business category classification (第1種〜第6種事業) and corresponding rate.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "みなし仕入率を改定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The deemed purchase rate is statutory under the Consumption Tax Act; taxpayers do not revise it. 'みなし仕入率を判定する' (determining the deemed purchase rate according to business classification) is far more practical.",
+      "suggested_text": "みなし仕入率を判定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A statutory tax rate (percentage) cannot have '計上内容' (booked entries) or a '残高' (balance sheet balance). This is a severe templated mismatch.",
+      "suggested_ja": "簡易課税制度を選択しているため、事業区分に応じたみなし仕入率を用いて仕入控除税額を計算します。",
+      "suggested_vi": "Vì áp dụng phương pháp tính thuế khoán giản lược (簡易課税), chúng tôi tính số thuế đầu vào được khấu trừ bằng tỷ lệ khấu trừ thuế khoán theo ngành nghề tương ứng.",
+      "suggested_en": "Since we have elected the simplified tax system, we calculate the input tax credit using the deemed purchase rate corresponding to our business category."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "One does not 'process' (処理いたしました) a percentage rate under internal accounting standards; one applies it to calculate consumption tax liability under the simplified tax system.",
+      "suggested_ja": "当社は卸売業と小売業を兼業しているため、それぞれの売上高に応じて適用するみなし仕入率を按分して計算しました。",
+      "suggested_vi": "Do công ty vừa bán buôn vừa bán lẻ, chúng tôi đã tính toán bằng cách phân bổ các tỷ lệ khấu trừ thuế khoán tương ứng với doanh thu của từng mảng.",
+      "suggested_en": "Because we operate both wholesale and retail businesses, we calculated the tax liability by proportionally allocating the applicable deemed purchase rates based on sales in each segment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there is a variance in the 'booked entries of the deemed purchase rate' (みなし仕入率の計上内容に差異), which is nonsensical for a statutory percentage rate.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規事業の売上について、適用するみなし仕入率の事業区分は確認できましたか。",
+        "vi": "Về doanh thu của mảng kinh doanh mới, anh đã xác nhận được phân loại ngành nghề để áp dụng tỷ lệ khấu trừ thuế khoán chưa?",
+        "en": "Have you confirmed the business classification for the applicable deemed purchase rate regarding the new business revenue?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税理士とも協議の上、第5種事業の50%を適用することで確定いたしました。",
+        "vi": "Vâng, sau khi trao đổi với chuyên viên tư vấn thuế, chúng tôi đã chốt áp dụng mức 50% của ngành nghề loại 5.",
+        "en": "Yes, after consulting with our licensed tax accountant, we confirmed that we will apply the 50% rate for Category 5 business."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "886a8087332bc2d42f70b08d7ac6af3ab61bf1376235a8e6e26a4b64748b1356",
+    "validated_at": "2026-10-01T01:39:37.953073+00:00"
+  }
+}

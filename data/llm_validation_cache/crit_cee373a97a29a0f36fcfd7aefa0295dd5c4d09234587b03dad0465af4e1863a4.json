@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000107",
+  "term": "取消不能信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how an Irrevocable Letter of Credit (L/C) is treated in accounting. An L/C itself is not 'booked' or 'entered' as an accounting item with a 'balance' in the same way as a receivable or payable. It is a financial instrument that guarantees payment for a transaction, and it's the underlying transaction (e.g., sale, purchase) that gets accounted for. The examples and dialogue incorrectly treat the L/C as an accounting entry itself, leading to unnatural and semantically incorrect Japanese expressions. The suggested rewrites clarify this distinction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "取消不能信用状を開設する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "取消不能信用状を決済する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "取消不能信用状を提示する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "取消不能信用状の不一致を解消する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "信用状は会計上の『計上』対象ではありません。残高という表現も不自然です。信用状は契約であり、債権債務の発生源ですが、それ自体が帳簿に計上される勘定科目ではありません。信用状に基づく取引（売掛金、買掛金など）が計上されます。",
+      "suggested_ja": "月末の帳簿照合において、取消不能信用状に関連する債権債務の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của các khoản phải thu/phải trả liên quan đến thư tín dụng không thể hủy ngang hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for receivables/payables related to the irrevocable letter of credit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "信用状自体を『処理する』という表現は不自然です。信用状は取引を保証する手段であり、会計処理の対象となるのは信用状に基づく取引です。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において取消不能信用状に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến thư tín dụng không thể hủy ngang trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the irrevocable letter of credit in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "信用状は会計上の『計上』対象ではないため、その内容に差異が発生するという質問は不適切です。信用状に基づく取引の計上内容について問うべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、取消不能信用状に関連する取引の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán các giao dịch liên quan đến thư tín dụng không thể hủy ngang không?",
+        "en": "In this month's financial closing, are there any discrepancies in the entries for transactions related to the irrevocable letter of credit?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9ebac1ac8b1e380cbc8ca893fccc4498f71f97c38259acef894e2daaa7736459",
+    "validated_at": "2026-10-01T01:55:38.066434+00:00"
+  }
+}

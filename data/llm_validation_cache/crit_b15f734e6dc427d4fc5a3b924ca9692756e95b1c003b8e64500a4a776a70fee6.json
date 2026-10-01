@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000119",
+  "term": "住民税特別徴収",
+  "overall_decision": "rewrite",
+  "summary_reason": "住民税特別徴収（給与天引き・納入義務）が「ふるさと納税」および「法人税の決算申告」と混同されており、コロケーション・例文・対話のすべてにおいて実務上致命的な事実誤認が生じています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "住民税特別徴収を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "住民税特別徴収は法定義務または納付手続であり、任意サービスのように「利用する」とは言いません。",
+      "suggested_text": "住民税特別徴収に切り替える"
+    },
+    {
+      "index": 1,
+      "text": "住民税特別徴収の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "特別徴収は給与支払者（企業）が実施する義務であり、特例や優遇措置のように「適用を受ける」とは表現しません。",
+      "suggested_text": "住民税特別徴収を実施する"
+    },
+    {
+      "index": 2,
+      "text": "住民税特別徴収を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税制上の優遇措置や任意の制度ではないため、「活用する」という述語は完全に不自然です。",
+      "suggested_text": "住民税特別徴収税額通知書"
+    },
+    {
+      "index": 3,
+      "text": "住民税特別徴収の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "「給与所得者は原則として住民税特別徴収の対象となる」など、実務で頻繁に用いられる自然なコロケーションです。",
+      "suggested_text": "住民税特別徴収の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "住民税特別徴収は単なる給与天引き・納入代行制度であり、「節税」や「地域貢献」とは無関係です。「ふるさと納税」と混同された重大な事実誤認です。",
+      "suggested_ja": "従業員の入社に伴い、住民税の納付方法を普通徴収から特別徴収へと切り替える手続きを行いました。",
+      "suggested_vi": "Do có nhân viên mới gia nhập, chúng tôi đã tiến hành thủ tục chuyển đổi phương thức nộp thuế cư trú từ nộp trực tiếp cá nhân sang trừ vào lương hàng tháng.",
+      "suggested_en": "Following the onboarding of a new employee, we processed the paperwork to switch their resident tax payment method from ordinary collection to special collection."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を試算」もふるさと納税の概念です。企業は自治体から通知された税額をそのまま天引きするのみであり、特別徴収に控除上限額の試算は存在しません。",
+      "suggested_ja": "毎年5月に各自治体から届く特別徴収税額決定通知書に基づき、6月支給分の給与から天引き額を改定します。",
+      "suggested_vi": "Dựa trên Thông báo quyết định mức thuế thu đặc biệt do các chính quyền địa phương gửi về vào tháng 5 hàng năm, chúng tôi sẽ điều chỉnh số tiền khấu trừ vào kỳ lương tháng 6.",
+      "suggested_en": "Based on the notice of special collection tax amounts sent from local municipalities every May, we revise the deduction amounts starting from the June payroll."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "住民税特別徴収は給与計算・源泉納入の実務であり、法人の「決算申告」の添付書類や計算根拠として提出するものではありません。税理士の確認書を添付するというやり取りも実務上あり得ません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "自治体から届いた住民税特別徴収税額通知書の内容は、給与システムへ反映済みですか。",
+        "vi": "Nội dung từ Thông báo quyết định mức thuế cư trú trừ qua lương do chính quyền địa phương gửi về đã được cập nhật vào hệ thống tính lương chưa?",
+        "en": "Has the information from the resident tax special collection notices received from the municipalities been updated in the payroll system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、全社員分の税額入力を終えましたので、6月支給分の給与天引きから切り替わります。",
+        "vi": "Vâng, tôi đã hoàn tất việc nhập số tiền thuế của toàn bộ nhân viên, nên việc trừ lương sẽ bắt đầu áp dụng từ kỳ lương tháng 6.",
+        "en": "Yes, I have finished inputting the tax amounts for all employees, so the updated deductions will take effect from the June payroll."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語の意味自体は通じていますが、実務文脈（ふるさと納税との混同防止）を明確にするため「thuế cư trú trừ tại nguồn từ lương」等の補足を推奨します。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6a7db6f4323ffbae6335aa2eaa50d6e44541b9c82c5b98a70bc77ed969794e58",
+    "validated_at": "2026-10-01T01:42:59.737658+00:00"
+  }
+}

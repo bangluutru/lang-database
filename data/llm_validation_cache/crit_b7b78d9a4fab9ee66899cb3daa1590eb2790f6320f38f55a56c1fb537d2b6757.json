@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000086",
+  "term": "差額関税",
+  "overall_decision": "rewrite",
+  "summary_reason": "差額関税の会計処理に関する理解に根本的な誤りがあり、例文と対話が不自然かつ不正確です。ベトナム語訳も特定の品目に限定されており、修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "差額関税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "差額関税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "差額関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "差額関税の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "差額関税は会計上の『計上内容』や『残高』として扱うものではなく、輸入時に課される関税の一種です。帳簿照合の対象にはなり得ません。",
+      "suggested_ja": "輸入申告書と納税証明書を照合し、差額関税の適用が適切であったか精査します。",
+      "suggested_vi": "Chúng tôi đối chiếu tờ khai nhập khẩu và chứng từ nộp thuế để kiểm tra kỹ lưỡng xem việc áp dụng thuế chênh lệch có phù hợp không.",
+      "suggested_en": "We reconcile import declarations and tax payment certificates to carefully examine whether the differential tariff was appropriately applied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "差額関税は輸入時に一度限り課されるものであり、会計上の『処理』という表現は不自然です。また、『決算において』という文脈も不適切です。",
+      "suggested_ja": "当期の輸入取引において、適用される差額関税を適正に算出し、納付いたしました。",
+      "suggested_vi": "Trong các giao dịch nhập khẩu của kỳ này, chúng tôi đã tính toán và nộp thuế chênh lệch áp dụng một cách chính xác.",
+      "suggested_en": "For import transactions during this period, we appropriately calculated and paid the applicable differential tariffs."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "差額関税は会計上の『計上内容』や『差異』として月次決算で確認するものではありません。輸入時に発生し、納税されるものです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入貨物について、差額関税の計算に誤りはありませんでしたか。",
+        "vi": "Về hàng hóa nhập khẩu tháng này, có sai sót nào trong việc tính toán thuế chênh lệch không?",
+        "en": "Regarding this month's imported goods, were there any errors in the calculation of differential tariffs?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、輸入申告書と税関からの通知書を照合し、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu tờ khai nhập khẩu và thông báo từ hải quan, xác nhận rằng tất cả đã được xử lý đúng quy định.",
+        "en": "Yes, I have reconciled the import declarations with the customs notices and confirmed that everything has been processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の『thuế chênh lệch giá bảo hộ thịt lợn』は『豚肉保護のための価格差関税』という意味になり、特定の品目に限定された関税を指すため、一般的な『差額関税』の翻訳として不適切です。単に『thuế chênh lệch』が適切です。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e14d621a4ae1a2a30ead42fa329d97a0a88c0b7f8aa3366840d80e97b8e6013f",
+    "validated_at": "2026-10-01T01:55:12.044033+00:00"
+  }
+}

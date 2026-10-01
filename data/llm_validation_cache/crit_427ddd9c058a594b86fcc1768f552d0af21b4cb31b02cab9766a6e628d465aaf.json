@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000105",
+  "term": "一括償却資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual errors: the synthetic generator treated '一括償却資産' as generic depreciable capital machinery with statutory useful life, violating Japanese Corporation Tax Act rules (under 200,000 JPY limit and fixed 3-year equal amortization).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "一括償却資産を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and accounting expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "一括償却資産を減価償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically acceptable, though '3年均等償却する' is much more precise in tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "一括償却資産を固定資産台帳に計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocation mismatch: assets are '計上' onto the balance sheet (貸借対照表に計上する) or '記載/登録' into the ledger (台帳に記載する・登録する). '台帳に計上する' is improper Japanese.",
+      "suggested_text": "一括償却資産を固定資産台帳に登録する"
+    },
+    {
+      "index": 3,
+      "text": "一括償却資産の耐用年数",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factual tax error: Lump-sum depreciable assets (under 200,000 yen) by legal definition disregard statutory useful life (法定耐用年数) and must be amortized evenly over exactly 3 years.",
+      "suggested_text": "一括償却資産の3年均等償却"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Absurd context: '一括償却資産' applies only to small-value assets costing between 100,000 and 200,000 yen (e.g., standard PC, office furniture). Describing them as '最新鋭の一括償却資産を導入して生産ラインの合理化を図る' (introducing state-of-the-art lump-sum assets to streamline a production line) is completely detached from corporate reality.",
+      "suggested_ja": "取得価額が20万円未満の事務用パソコンについては、一括償却資産として3年間で均等償却することにしました。",
+      "suggested_vi": "Đối với máy tính văn phòng có giá trị mua dưới 200.000 yên, chúng tôi quyết định ghi nhận là tài sản phân bổ đều trong 3 năm.",
+      "suggested_en": "For office PCs with an acquisition cost under 200,000 yen, we decided to treat them as lump-sum depreciable assets and amortize them evenly over three years."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Tax law factual error: '法定耐用年数に基づき' directly contradicts the fundamental legal definition of 一括償却資産, which completely ignores statutory useful lives in favor of flat 36-month equal amortization.",
+      "suggested_ja": "税務上の特例を適用し、当期に取得した一括償却資産を3年均等償却により損金算入しました。",
+      "suggested_vi": "Áp dụng quy định đặc thù về thuế, chúng tôi đã đưa tài sản khấu hao gộp mua trong kỳ này vào chi phí hợp lý bằng phương pháp phân bổ đều trong 3 năm.",
+      "suggested_en": "Applying the tax special provision, we recorded lump-sum depreciable assets acquired during this term as deductible expenses using three-year equal amortization."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B states '耐用年数と償却方法を税法および会計基準に照らして設定し', which is factually incorrect for 一括償却資産 because useful life and amortization method are non-configurable (fixed to 3-year straight-line by the Corporation Tax Act).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期購入した15万円のサーバー機器ですが、少額減価償却資産と一括償却資産のどちらで処理しますか。",
+        "vi": "Thiết bị máy chủ 150.000 yên mua trong kỳ này chúng ta sẽ xử lý theo diện tài sản khấu hao giá trị nhỏ hay tài sản phân bổ đều trong 3 năm?",
+        "en": "Regarding the 150,000 yen server equipment purchased this term, should we treat it as a small-sum depreciable asset or a lump-sum depreciable asset?"
+      },
+      {
+        "speaker": "B",
+        "ja": "償却資産税の課税対象外となるメリットを考慮して、一括償却資産として3年均等償却で処理しましょう。",
+        "vi": "Xem xét lợi thế không bị tính thuế tài sản cố định, chúng ta hãy xử lý nó như tài sản khấu hao gộp và phân bổ đều trong 3 năm.",
+        "en": "Considering the advantage of being exempt from depreciable assets tax, let's treat it as a lump-sum depreciable asset with three-year equal amortization."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations are acceptable, though Vietnamese could also use 'tài sản khấu hao gộp (phân bổ 3 năm)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f091b0fc2e803fe5759aa0b6001d29a533cde3f11134f9e218926ae4a5c5d54a",
+    "validated_at": "2026-10-01T01:39:15.438935+00:00"
+  }
+}

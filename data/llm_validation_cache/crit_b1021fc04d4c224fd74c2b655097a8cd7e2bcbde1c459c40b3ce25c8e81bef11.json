@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000136",
+  "term": "完成工事総利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "損益計算書の利益項目（P/L）である「完成工事総利益」に対し、B/S科目用の機械的テンプレート（残高確認、証憑書類との照合、精算）がそのまま流し込まれており、建設業会計の実務実態と著しく乖離しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "完成工事総利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "「利益を計上する」という表現自体は財務報告や決算実務で一般的に用いられます。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "完成工事総利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "完成工事総利益は損益計算書（P/L）の差引利益概念（売上総利益相当）であり、B/S科目のような「残高（残高管理）」という概念とは馴染みません。",
+      "suggested_text": "完成工事総利益率を分析する"
+    },
+    {
+      "index": 2,
+      "text": "完成工事総利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "差引利益そのものを「照合する」とは言いません。原価台帳や完成工事高の照合の結果として利益を「算出・把握・検証」します。",
+      "suggested_text": "完成工事総利益を算出する"
+    },
+    {
+      "index": 3,
+      "text": "完成工事総利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は経費や立替金、未決済勘定に対して用いる述語であり、損益の利益額を精算することは会計実務上あり得ません。",
+      "suggested_text": "完成工事総利益を確保する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "完成工事総利益に対して「残高に差異がないか」とするのはP/L項目とB/S残高勘定の混同であり、機械的テンプレートの典型例です。工事別の利益管理や粗利益率のブレを精査する文脈に改めるべきです。",
+      "suggested_ja": "月次決算において、各工区の完成工事高と工事原価を突合し、完成工事総利益が予算通りに確保できているか精査します。",
+      "suggested_vi": "Trong kỳ quyết toán tháng, chúng tôi đối chiếu doanh thu công trình hoàn thành và giá thành công trình của từng khu vực thi công để kiểm tra kỹ lưỡng xem lợi nhuận gộp công trình xây dựng có đạt như dự toán hay không.",
+      "suggested_en": "During monthly closing, we reconcile completed contract revenue against construction costs for each project section to carefully verify whether gross profit on completed construction contracts is secured as budgeted."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準および社内規程に則り、当期の決算において〜を適正に処理いたしました」という定型テンプレ文であり、実務的な文脈（進行基準や原価回収基準、工事損失引当金等の影響）が希薄です。",
+      "suggested_ja": "資材価格の高騰に伴い工事原価が膨らんだため、当期の完成工事総利益は当初予想を大幅に下回る見込みです。",
+      "suggested_vi": "Do chi phí vật liệu tăng cao khiến giá thành công trình đội lên, lợi nhuận gộp công trình xây dựng kỳ này dự kiến sẽ giảm đáng kể so với ước tính ban đầu.",
+      "suggested_en": "Due to surging material costs inflating construction costs, gross profit on completed construction contracts for this period is expected to fall substantially below initial forecasts."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "完成工事総利益は差引利益であるため、単独で「証憑書類と補助元帳を照合して整合させる」対象ではありません（証憑照合の対象は完成工事高の請求書や工事原価の納品書・外注費請求書等です）。建設業の現場管理・決算実務として自然な会話に改める必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "大型プロジェクトの進捗に伴い、今期の完成工事総利益の着地見込みはどうなっていますか。",
+        "vi": "Theo tiến độ của dự án quy mô lớn, dự kiến kết quả lợi nhuận gộp công trình xây dựng kỳ này đang ra sao rồi?",
+        "en": "With the progress of the large-scale project, what is the landing forecast for gross profit on completed construction contracts this period?"
+      },
+      {
+        "speaker": "B",
+        "ja": "追加追加工事の承認が下りたため、完成工事総利益率は計画通りの15パーセント程度を確保できる見通しです。",
+        "vi": "Do đã được phê duyệt các hạng mục thi công bổ sung, chúng tôi dự kiến có thể duy trì tỷ suất lợi nhuận gộp công trình xây dựng ở mức khoảng 15% đúng như kế hoạch.",
+        "en": "Since the additional work has been approved, we project that we can maintain a gross profit margin on completed construction contracts of around 15% as planned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（意味）自体は的確に業界標準訳が当てられています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7bfa4025627b64b8ec9fbb0f59a15d27ab15f6757f1b9bd03e5a37c031cf02af",
+    "validated_at": "2026-10-01T01:36:06.361712+00:00"
+  }
+}

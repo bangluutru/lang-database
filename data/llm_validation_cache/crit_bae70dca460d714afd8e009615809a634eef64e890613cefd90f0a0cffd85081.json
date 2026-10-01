@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000107",
+  "term": "裁量労働制",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations and term translations are acceptable, the example sentences and workplace dialogue exhibit severe hallucinated templating, treating a legal labor framework (裁量労働制) as an accounting ledger balance subject to month-end financial closing reconciliation. Total rewrite of examples and dialogue is required.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "裁量労働制を導入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly natural corporate and HR collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "裁量労働制を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and precise usage for applying the scheme to eligible employees.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "裁量労働制に関する労使協定を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate legal and corporate compliance terminology under the Labor Standards Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "裁量労働制の運用を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional business phrase.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '裁量労働制' is a legal labor tracking scheme, not an accounting account or balance. It cannot have '計上内容' (booked entries) or '残高' (ledger balances). This is an erroneous slot-in of an HR term into an accounting template.",
+      "suggested_ja": "企画業務型裁量労働制を導入するため、労使委員会を設置して決議を行い、労働基準監督署へ届け出ました。",
+      "suggested_vi": "Để áp dụng chế độ lao động tự quyết đối với công việc hoạch định, chúng tôi đã thành lập ủy ban người lao động - người sử dụng lao động để thông qua nghị quyết và nộp báo cáo lên Cơ quan Thanh tra Tiêu chuẩn Lao động.",
+      "suggested_en": "To implement the discretionary work system for planning work, we established a labor-management committee, passed a resolution, and submitted the notification to the Labor Standards Inspection Office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain contradiction: '裁量労働制' is governed by labor regulations and internal work rules, not by accounting standards (会計基準) or financial closing adjustments (当期の決算において処理).",
+      "suggested_ja": "適正な労務管理を徹底するため、裁量労働制の対象社員に対しても健康確保措置や深夜労働の割増賃金支払いを適正に実施しています。",
+      "suggested_vi": "Để thực hiện triệt để công tác quản lý lao động đúng quy định, chúng tôi áp dụng đầy đủ các biện pháp đảm bảo sức khỏe cũng như chi trả phụ cấp làm đêm cho nhân viên thuộc diện áp dụng chế độ lao động tự quyết.",
+      "suggested_en": "To ensure thorough labor management compliance, we properly implement health management measures and pay late-night wage premiums even for employees under the discretionary work system."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Complete domain mismatch: Speaker A asks about '裁量労働制の計上内容に差異' in month-end closing, and Speaker B talks about subsidiary ledgers. Discretionary working hours are an HR/labor matter, not a month-end ledger reconciliation balance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期から開発部門に裁量労働制を適用したいのですが、労使協定の更新手続きは順調ですか。",
+        "vi": "Chúng tôi muốn áp dụng chế độ lao động tự quyết cho bộ phận phát triển từ kỳ tới, thủ tục gia hạn thỏa ước lao động tiến triển thuận lợi chứ?",
+        "en": "We would like to apply the discretionary work system to the R&D department starting next term; is the renewal process for the labor-management agreement going smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、従業員代表との事前協議は完了しており、来週所轄の労働基準監督署へ届出を提出する予定です。",
+        "vi": "Vâng, chúng tôi đã hoàn tất thỏa thuận trước với đại diện người lao động và dự kiến sẽ nộp hồ sơ lên Cơ quan Thanh tra Tiêu chuẩn Lao động vào tuần tới.",
+        "en": "Yes, preliminary consultations with employee representatives are complete, and we plan to submit the notification to the local Labor Standards Inspection Office next week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term translations are acceptable, but the example/dialogue translations inherited the severe factual accounting errors from the source."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "87eca29fb933d8eeab439ff60cedddd5d1e6d1ada447f27643f66b9733cd5856",
+    "validated_at": "2026-10-01T01:42:44.848053+00:00"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "entry_id": "jp-pro-business-000136",
+  "term": "プレゼンテーション",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple instances of unnatural collocations and a disconnected dialogue turn necessitate a rewrite to ensure authenticity and naturalness for professional learners.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "プレゼンテーションを徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '徹底する' (to thoroughly implement/ensure) does not naturally collocate directly with 'プレゼンテーション' (presentation) as the object. It's more natural to apply it to the *act* or *quality* of the presentation, e.g., 'プレゼンテーションの実施を徹底する' (to ensure the thorough implementation of presentations) or '徹底したプレゼンテーションを行う' (to conduct thorough presentations).",
+      "suggested_text": "プレゼンテーションの実施を徹底する"
+    },
+    {
+      "index": 1,
+      "text": "プレゼンテーションを行う",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "プレゼンテーションを習慣づける",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "プレゼンテーションの重要性を共有する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase 'プレゼンテーションを徹底する' is unnatural. While understandable, it's not the most idiomatic way to express ensuring thorough presentations. It should be rephrased to apply '徹底する' to the *implementation* or *quality* of the presentation.",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署への事前のプレゼンテーション実施を徹底しています。",
+      "suggested_vi": "Để thúc đẩy dự án diễn ra suôn sẻ, chúng tôi triệt để đảm bảo việc thực hiện thuyết trình trước với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we thoroughly ensure the implementation of prior presentations to relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address Speaker A's question about '課題' (issues) regarding 'プレゼンテーションの徹底状況' (the thoroughness/implementation status of presentations). Speaker B shifts to general '情報共有の重要性' and '迅速な対応', which, while related, avoids the specific inquiry about challenges in presentation thoroughness.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内におけるプレゼンテーションの実施状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình thực hiện thuyết trình trong nội bộ phòng ban, có phát sinh vấn đề gì không?",
+        "en": "Regarding the status of presentation implementation within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、以前は準備不足や情報共有の遅れが課題でしたが、最近は全メンバーでプレゼンテーションの重要性を再認識し、迅速かつ丁寧な実施が習慣化されてきています。",
+        "vi": "Vâng, trước đây việc chuẩn bị chưa đầy đủ và chậm trễ trong chia sẻ thông tin là những vấn đề, nhưng gần đây tất cả thành viên đã nhận thức lại tầm quan trọng của việc thuyết trình, và việc thực hiện nhanh chóng, cẩn thận đang dần trở thành thói quen.",
+        "en": "Yes, previously insufficient preparation and delayed information sharing were issues, but recently all members have re-recognized the importance of presentations, and prompt and careful execution is becoming habitual."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d417a43633e8e850674bc0d841de7561faea59c89bddee2460f36523fd407ca7",
+    "validated_at": "2026-10-01T01:50:30.751349+00:00"
+  }
+}

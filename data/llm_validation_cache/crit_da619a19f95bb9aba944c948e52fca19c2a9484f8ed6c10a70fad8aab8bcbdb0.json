@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-trade-000069",
+  "term": "関税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Dialogue contains an unnatural expression regarding '関税の計上内容' and its verification in a monthly closing context. The suggested rewrite addresses this by using more natural and contextually appropriate language for accounting for customs duties.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関税を申告する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "関税を納付する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "関税を計算する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "関税が課される",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "「関税の計上内容」という表現は不自然。関税は費用として計上されるが、その「内容」に差異が生じるという言い方は一般的ではない。また、月次決算で関税の計上内容を細かく確認することは稀。通常は、輸入取引全体の仕訳や、関税の支払い状況を確認する。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、輸入取引に係る関税の計上に問題はありませんでしたか。",
+        "vi": "Trong báo cáo tài chính hàng tháng của tháng này, có vấn đề gì với việc hạch toán thuế quan liên quan đến các giao dịch nhập khẩu không?",
+        "en": "In this month's monthly closing, were there any issues with the accounting of customs duties related to import transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、輸入申告書と支払記録を照合し、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu tờ khai nhập khẩu và hồ sơ thanh toán, và xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, I have reconciled the import declarations and payment records, and confirmed that everything has been processed appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b7e31f6a640a568d1a31815e923887e98827dfcb06730a7d43744e58bee171de",
+    "validated_at": "2026-10-01T01:54:48.875429+00:00"
+  }
+}

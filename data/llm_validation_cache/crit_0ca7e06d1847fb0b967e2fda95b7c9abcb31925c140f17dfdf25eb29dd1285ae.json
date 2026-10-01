@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000086",
+  "term": "違約金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input treated '違約金' as a standard monthly reconcilable ledger account with a balance, demonstrating an AI template hallucination. Collocations, examples, and dialogue must be rewritten to reflect genuine commercial and legal scenarios (such as cancellation claims and one-off expense booking).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "違約金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting action where penalties incurred or received are booked as non-operating or extraordinary items.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "違約金の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "違約金 is a transaction-specific P&L item (income or expense) arising from a breach of contract, not an ongoing balance sheet account that carries a regular balance (残高).",
+      "suggested_text": "違約金を請求する"
+    },
+    {
+      "index": 2,
+      "text": "違約金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Collocating 違約金 directly with 照合する is unnatural; one collates contracts, clauses, or calculation bases, rather than 'reconciling a penalty'.",
+      "suggested_text": "違約金が発生する"
+    },
+    {
+      "index": 3,
+      "text": "違約金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, '精算する' (settling an expense/advance) is awkward for penalties; '支払う' (pay) or '差し引く' (deduct) is standard in corporate practice.",
+      "suggested_text": "違約金を支払う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Uses a generic template ('月末の帳簿照合において...残高に差異がないか'). 違約金 is an ad-hoc extraordinary event, not a routine monthly account with reconcilable ledger balances.",
+      "suggested_ja": "納期遅延に伴い発生した違約金について、法務部と協議の上、今期の営業外費用として計上しました。",
+      "suggested_vi": "Về khoản tiền phạt vi phạm hợp đồng phát sinh do chậm tiến độ giao hàng, sau khi thảo luận với phòng pháp chế, chúng tôi đã hạch toán vào chi phí ngoài hoạt động kinh doanh của kỳ này.",
+      "suggested_en": "Regarding the penalty for breach of contract incurred due to delivery delays, we booked it as non-operating expenses for this term following consultations with the legal department."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical robotic sentence featuring repetitive phrasing ('適正な...適正に') that lacks authentic corporate context.",
+      "suggested_ja": "契約条項に基づき、中途解約に伴う違約金50万円を取引先に請求いたしました。",
+      "suggested_vi": "Căn cứ vào điều khoản hợp đồng, chúng tôi đã yêu cầu đối tác thanh toán khoản tiền phạt vi phạm hợp đồng trị giá 500.000 yên do hủy bỏ hợp đồng giữa chừng.",
+      "suggested_en": "Pursuant to the contract terms, we billed the business partner 500,000 yen as a penalty for breach of contract due to mid-term cancellation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Breach penalties are event-driven occurrences rather than routine monthly ledger items subject to standard subledger variance checks. Additionally, 'すべて適正に整合している' is unnatural Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の中途解約に伴う違約金の請求書について、法務部の確認は取れましたか。",
+        "vi": "Về hóa đơn đòi tiền phạt vi phạm hợp đồng do hủy hợp đồng giữa chừng hôm trước, anh đã có xác nhận từ phòng pháp chế chưa?",
+        "en": "Regarding the invoice for the contract breach penalty due to the recent mid-term cancellation, have you obtained confirmation from the legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、契約書の上限条項と照合し、金額に問題ないとの回答を得たので経理に回送しました。",
+        "vi": "Vâng, sau khi đối chiếu với điều khoản giới hạn trong hợp đồng và nhận được phản hồi là số tiền không có vấn đề gì, tôi đã chuyển tiếp cho bên kế toán.",
+        "en": "Yes, after checking against the cap clause in the contract and confirming the amount is fine, I forwarded it to accounting."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations 'tiền phạt vi phạm hợp đồng' and 'Penalty for breach of contract' are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "768ce355be968a6c6d0dedc24d2b13ea5bae25a9f1b09713d4fb79ff5adc75e2",
+    "validated_at": "2026-10-01T01:42:25.373781+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000029",
+  "term": "掛け売り",
+  "overall_decision": "rewrite",
+  "summary_reason": "「掛け売り」（Credit sales）を「声掛け」や「報連相」などの社内コミュニケーション用語と混同したテンプレート流用が発生しており、例文・会話文・コロケーションの大部分が業務上致命的な意味破綻を起こしています。商取引・会計実務に即した内容へ全面差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "掛け売りを徹底する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「掛け売り」（掛売取引）は決済・販売形態の一種であり、「徹底する」という規範遵守の述語とは意味的に結合しません。生成テンプレートの誤用です。",
+      "suggested_text": "掛け売り方式を採用する"
+    },
+    {
+      "index": 1,
+      "text": "掛け売りを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "商取引において「掛け売りを行う」は極めて自然で頻出の表現です。",
+      "suggested_text": "掛け売りを行う"
+    },
+    {
+      "index": 2,
+      "text": "掛け売りを習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "掛け売りは商慣行・契約条件であり、個人のマナーや日常行動のように「習慣づける」対象ではありません。「声掛け」や「報連相」のテンプレートが混入しています。",
+      "suggested_text": "掛け売りと現金売り"
+    },
+    {
+      "index": 3,
+      "text": "掛け売りの重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "販売形態である掛け売りに「重要性を共有する」は実務上不自然です。信用リスクの文脈でのコロケーションが適切です。",
+      "suggested_text": "掛け売りの与信限度額"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「関係部署への事前の掛け売り」という表現は致命的な意味破綻です。「根回し」や「事前調整」と混同されたテンプレートの流用であり、商取引の文脈を完全に逸脱しています。",
+      "suggested_ja": "BtoB取引では掛け売りが一般的ですが、未回収リスクを回避するため事前の与信審査が不可欠です。",
+      "suggested_vi": "Trong giao dịch B2B, bán chịu là hình thức phổ biến, nhưng việc thẩm định tín dụng trước là không thể thiếu để tránh rủi ro nợ khó đòi.",
+      "suggested_en": "While selling on account is standard in B2B transactions, prior credit screening is essential to avoid the risk of uncollectible receivables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「迅速な掛け売りの習慣付け」は意味不明です。業務トラブル防止と掛け売り（代金後払い販売）は何の因果関係もなく、「報連相」や「声掛け」のテンプレート誤用です。",
+      "suggested_ja": "新規の取引先に対しては原則として前受金で対応し、取引実績を重ねた上で掛け売りへ移行します。",
+      "suggested_vi": "Đối với đối tác mới, về nguyên tắc chúng tôi áp dụng thanh toán trả trước, và sau khi đã tích lũy lịch sử giao dịch mới chuyển sang hình thức bán chịu.",
+      "suggested_en": "As a rule, we require advance payments for new clients and only transition to selling on credit after establishing a proven transaction track record."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aが「部署内における掛け売りの徹底状況」と尋ね、Bが「情報共有の重要性」「迅速な対応が習慣化」と答えており、「掛け売り」を「情報共有・声掛け」と完全に混同した破綻した対話です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規取引先のA社から掛け売りでの取引を希望されているのですが、審査はいかがでしょうか。",
+        "vi": "Khách hàng mới là công ty A đang mong muốn giao dịch theo hình thức bán chịu, việc thẩm định thế nào rồi ạ?",
+        "en": "Our new client, Company A, has requested to purchase on credit. How did the credit assessment go?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直近の決算書を確認したところ財務状況は良好でしたので、限度額300万円の掛け売りで承認しました。",
+        "vi": "Sau khi kiểm tra báo cáo tài chính gần nhất, tình hình tài chính của họ rất tốt nên tôi đã phê duyệt hạn mức bán chịu là 3 triệu yên.",
+        "en": "Their recent financial statements showed healthy figures, so I approved selling on credit with a credit limit of 3 million yen."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の訳語（Credit sales / bán chịu）は正確ですが、例文・会話文の日本語が破綻していたため連動して訳文も文脈不整合を起こしていました。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "78ac6d3eeef36abe1e05f607241ddb73014b5a39c2693ca8ebee658dd8228899",
+    "validated_at": "2026-10-01T01:41:29.383152+00:00"
+  }
+}

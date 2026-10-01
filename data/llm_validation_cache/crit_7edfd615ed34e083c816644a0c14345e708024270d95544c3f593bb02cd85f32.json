@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000063",
+  "term": "地震保険料控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue exhibits a severe factual domain error by confusing corporate fiscal year-end tax filing (決算申告) with individual income tax deduction (地震保険料控除). Example 0 also suffers from artificial template bloating.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地震保険料控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and accurate collocation in tax compliance and payroll (year-end adjustment).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "地震保険料控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used phrasing indicating qualification for or receiving the deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "地震保険料控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate collocation referring to calculating the statutory deduction cap (up to 50,000 JPY for income tax).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "地震保険料控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax phrase regarding meeting eligibility requirements under the Income Tax Act.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Using '法定要件を慎重に確認した上で' (after carefully verifying statutory requirements) for a routine personal tax deduction item verified via an insurer's slip is excessively inflated LLM template phrasing. In corporate practice (HR/payroll), this deduction is predominantly handled during year-end tax adjustments (年末調整).",
+      "suggested_ja": "年末調整において地震保険料控除を適用するため、従業員から提出された保険料控除証明書の内容を確認した。",
+      "suggested_vi": "Để áp dụng khoản giảm trừ phí bảo hiểm động đất trong kỳ quyết toán thuế cuối năm, chúng tôi đã kiểm tra nội dung giấy chứng nhận giảm trừ phí bảo hiểm do nhân viên nộp.",
+      "suggested_en": "In order to apply the deduction for earthquake insurance premiums in the year-end tax adjustment, we verified the certificates of insurance premium deduction submitted by employees."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound sentence describing the attachment of documentation to claim the deduction.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical tax domain error: '決算申告' refers to corporate tax returns (法人税申告). Corporations cannot claim '地震保険料控除' (which is strictly an individual income tax/resident tax deduction under 所得税法). Corporate insurance is booked as an expense (損金算入). In an enterprise context, this term belongs to HR/payroll during '年末調整' (Year-end adjustment), or to tax accountants preparing individual returns.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員の年末調整における地震保険料控除の申告書と証明書はすべて回収できましたか。",
+        "vi": "Anh/chị đã thu thập đủ tờ khai và chứng từ giảm trừ phí bảo hiểm động đất trong kỳ quyết toán thuế cuối năm của nhân viên chưa?",
+        "en": "Have you collected all the declarations and certificates for the earthquake insurance premium deduction for the employees' year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、全社員分の控除証明書を突合し、控除額の計算およびデータ入力を完了しました。",
+        "vi": "Vâng, tôi đã đối chiếu giấy chứng nhận giảm trừ của toàn bộ nhân viên và hoàn tất việc tính mức giảm trừ cũng như nhập dữ liệu rồi.",
+        "en": "Yes, I have cross-checked the deduction certificates for all employees and completed the deduction calculations and data entry."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both Vietnamese and English term translations are accurate and standard."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6a2d4050e24e371b3319eeb38b194c048bf16c6cba58a3158e08896c470edad6",
+    "validated_at": "2026-10-01T01:38:32.334640+00:00"
+  }
+}

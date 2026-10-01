@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-tax-000070",
+  "term": "所得金額調整控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain factual error in the dialogue: '決算申告' (corporate tax return) was conflated with '所得金額調整控除' (exclusively individual income tax/year-end adjustment). Furthermore, Collocation 2 ('上限額を計算する') and Example 0 ('今年度の確定申告') required rectification to conform with statutory reality and individual income tax terminology ('年分' / '年末調整').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "所得金額調整控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional predicate combination in individual income tax and year-end tax adjustment practice."
+    },
+    {
+      "index": 1,
+      "text": "所得金額調整控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing from the taxpayer's perspective."
+    },
+    {
+      "index": 2,
+      "text": "所得金額調整控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The deduction cap (maximum 150,000 yen or 100,000 yen) is statutorily fixed by the Income Tax Act; practitioners calculate the deduction amount ('控除額を計算する'), not the statutory ceiling itself.",
+      "suggested_text": "所得金額調整控除の控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "所得金額調整控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard tax compliance phrase regarding eligibility conditions."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Individual income tax (所得税) in Japan is assessed on a calendar-year basis ('年分'), not on a fiscal-year basis ('年度'). Using '今年度の確定申告' is technically inaccurate for individual income tax, and in a corporate setting this deduction is predominantly handled during year-end tax adjustment (年末調整).",
+      "suggested_ja": "要件を慎重に確認した上で、今年分の年末調整において所得金額調整控除を適用しました。",
+      "suggested_vi": "Sau khi đối chiếu kỹ lưỡng các điều kiện, chúng tôi đã áp dụng khoản khấu trừ điều chỉnh số tiền thu nhập trong kỳ quyết toán thuế cuối năm nay.",
+      "suggested_en": "After carefully checking the requirements, we applied the income amount adjustment deduction in this year's year-end tax adjustment."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural sentence describing the procedural attachment of relevant proof (e.g., disability certificate, family status proof) to the tax declaration."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'決算申告' denotes corporate tax filing (法人税申告). '所得金額調整控除' is exclusively an individual income tax (所得税) deduction (e.g., dual pension/salary earners or dependents with disabilities/under 23). Conflating corporate settlement ('決算申告') with this deduction is a severe domain error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員および従業員の年末調整における所得金額調整控除の申告書と確認書類は揃いましたか。",
+        "vi": "Tờ khai và chứng từ xác nhận đối với khoản khấu trừ điều chỉnh số tiền thu nhập trong kỳ quyết toán thuế cuối năm của ban giám đốc và nhân viên đã được tập hợp đủ chưa?",
+        "en": "Have you gathered all the declaration forms and supporting documents for the income amount adjustment deduction for executives and employees in the year-end adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、扶養要件と給与等の収入金額の突合を終え、顧問税理士への提出準備が完了しております。",
+        "vi": "Vâng, chúng tôi đã đối chiếu xong điều kiện người phụ thuộc và mức thu nhập từ tiền lương, và đã sẵn sàng nộp cho thuế lý cố vấn.",
+        "en": "Yes, we have finished cross-checking dependent criteria against salary income, and everything is ready for submission to our tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "English and Vietnamese terms adequately convey the technical tax concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "859b5c33e69c6ba7b8195b4a9a9fec0bb98d91ea25034dcb1e63eb500c858076",
+    "validated_at": "2026-10-01T01:38:41.092986+00:00"
+  }
+}

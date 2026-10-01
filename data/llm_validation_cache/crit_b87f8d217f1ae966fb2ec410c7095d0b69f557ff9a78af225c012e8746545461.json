@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000172",
+  "term": "バリュエーション",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the unnatural application of accounting terms like '計上内容' and '残高' to 'バリュエーション'. While 'バリュエーション' is a valid term, its usage in the examples and dialogue suggests a misunderstanding of how valuation results are treated in accounting entries. The collocations are fine, but the examples and dialogue need significant revision to reflect natural and correct accounting terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "バリュエーションを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "バリュエーションを完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "バリュエーションの手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "バリュエーションを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "バリュエーション (valuation) is a process or a result of that process (e.g., a valuation report or a value itself), not an accounting entry that has a '計上内容' (content of booking) or '残高' (balance) in the same way as an asset or liability. You 'perform' a valuation, or 'record' the *result* of a valuation, but not the valuation itself as an accounting item with a balance. The phrasing 'バリュエーションの計上内容や残高' is unnatural in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、バリュエーションの結果が適切に反映されているか、また関連する会計処理に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem kết quả định giá đã được phản ánh đúng cách chưa và liệu có sự khác biệt nào trong các bút toán kế toán liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether the valuation results are appropriately reflected and if there are any discrepancies in related accounting treatments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'バリュエーションを適正に処理いたしました' is unnatural. You 'perform' a valuation, or 'reflect' its results, but not 'process' the valuation itself as an accounting item. The term '処理' is typically used for transactions or specific accounting entries, not the valuation process itself in this context.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてバリュエーションを適切に実施し、その結果を反映いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện định giá một cách phù hợp và phản ánh kết quả đó trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly conducted the valuation and reflected its results in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question 'バリュエーションの計上内容に差異は発生していませんか' is unnatural for the same reasons as the example sentences. Valuations don't have '計上内容' in this context. Speaker B's response is also somewhat generic and doesn't directly address a natural question about valuation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、バリュエーションの結果が適切に会計に反映されているか確認しましたか？",
+        "vi": "Trong quyết toán hàng tháng này, anh/chị đã xác nhận xem kết quả định giá đã được phản ánh chính xác vào sổ sách kế toán chưa?",
+        "en": "For this month's closing, have you confirmed that the valuation results are appropriately reflected in the accounting records?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑書類と補助元帳を照合し、すべて適切に反映されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu các chứng từ liên quan và sổ cái phụ, xác nhận rằng tất cả đã được phản ánh một cách chính xác.",
+        "en": "Yes, I have reconciled the relevant supporting documents with the subsidiary ledgers and confirmed that everything is appropriately reflected."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "31b45413622a3c4bb84daf01ca42912e9a6fbb88cfbc8af71b6fe542131e4678",
+    "validated_at": "2026-10-01T01:53:11.417215+00:00"
+  }
+}

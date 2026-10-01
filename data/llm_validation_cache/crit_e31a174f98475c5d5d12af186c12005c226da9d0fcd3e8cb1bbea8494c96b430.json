@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000060",
+  "term": "社会保険料控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain inaccuracies: 社会保険料控除 is a full deduction (全額控除) without an upper limit, making '上限額を計算する' factually invalid. More critically, the dialogue mistakenly applies an individual income tax deduction to a corporate tax return (決算申告) and invents non-standard filing requirements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "社会保険料控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax phrasing for applying this deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "社会保険料控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, widely used expression in tax procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "社会保険料控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factually incorrect under Japanese Income Tax Law. Unlike life insurance deductions, 社会保険料控除 is a full deduction (全額控除) and has no statutory cap (上限額/限度額).",
+      "suggested_text": "社会保険料控除の対象額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "社会保険料控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound in the context of an individual's final tax return (確定申告).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate reflection of actual administrative filing requirements (attaching deduction certificates).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical tax law error: '社会保険料控除' is an individual income deduction (所得控除) for personal income tax/year-end adjustment, whereas '決算申告' refers to corporate tax filing (where corporate social insurance contributions are recorded as '法定福利費', an expense/損金, not an income deduction). Furthermore, the required attachment is a certificate of payment (控除証明書), not a '税理士の確認書'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整における従業員の社会保険料控除申告書と控除証明書は回収できましたか。",
+        "vi": "Anh/chị đã thu thập đủ tờ khai khấu trừ bảo hiểm xã hội và giấy chứng nhận khấu trừ của nhân viên trong đợt quyết toán thuế cuối năm chưa?",
+        "en": "Have you collected the employees' social insurance deduction declarations and deduction certificates for the year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、国民年金保険料の控除証明書などを含め、全員分の確認が完了しました。",
+        "vi": "Vâng, tôi đã hoàn tất việc kiểm tra cho tất cả mọi người, bao gồm cả giấy chứng nhận khấu trừ tiền đóng bảo hiểm lương hưu quốc dân.",
+        "en": "Yes, I have finished checking everyone's documents, including the deduction certificates for National Pension premiums."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "066191f1a0c2f3b749543e48a67406d7a7753e67ace22b23b13e6f06f8b50155",
+    "validated_at": "2026-10-01T01:38:28.068712+00:00"
+  }
+}

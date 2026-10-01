@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000188",
+  "term": "安全保障貿易管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '安全保障貿易管理' as an accounting entry or balance. It is a system/process, not a financial item to be '計上' (booked/entered) or to have a '残高' (balance). This semantic mismatch permeates the examples and dialogue, making them unnatural and factually incorrect from an accounting perspective.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "安全保障貿易管理を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "安全保障貿易管理を運用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "安全保障貿易管理の社内規程を整備する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "安全保障貿易管理の説明会を開催する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「安全保障貿易管理」は会計上の「計上内容」や「残高」を持つものではない。これは制度やプロセスであり、会計項目ではない。",
+      "suggested_ja": "月末の帳簿照合において、安全保障貿易管理に関連する取引が適切に処理され、記録されているか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem các giao dịch liên quan đến quản lý ngoại thương phục vụ an ninh quốc gia đã được xử lý và ghi nhận một cách thích hợp hay chưa.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether transactions related to security export control have been properly processed and recorded."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「安全保障貿易管理」は会計処理の対象となる「もの」ではない。制度やプロセスを「処理する」という表現は不自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において安全保障貿易管理に関する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến quản lý ngoại thương phục vụ an ninh quốc gia trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to security export control in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「安全保障貿易管理」は会計上の「計上内容」を持つものではないため、この質問は不適切。会計項目ではない制度やプロセスに対して差異を問うのは不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、安全保障貿易管理に関連する取引に不適切な処理はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có giao dịch nào liên quan đến quản lý ngoại thương phục vụ an ninh quốc gia bị xử lý không đúng quy định không?",
+        "en": "In this month's monthly closing, were there any improper treatments of transactions related to security export control?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đã được xử lý đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything has been processed properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d824cdbfb6c06b29fd0c025ce795c36f75fc30ea3888ba21f464a55c27b483e5",
+    "validated_at": "2026-10-01T01:57:17.712870+00:00"
+  }
+}

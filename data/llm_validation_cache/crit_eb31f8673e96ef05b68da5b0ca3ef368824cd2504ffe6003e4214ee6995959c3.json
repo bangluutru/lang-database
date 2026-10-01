@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000010",
+  "term": "領収書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 2 uses an unnatural predicate (発送する instead of 発行/送付する). Example 1 and the dialogue suffer from severe domain/factual absurdities where '領収書' was blindly inserted into templates meant for board meeting convocation notices or proposal drafts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "領収書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and colloquially sound, though 発行する is more frequent in practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "領収書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace expression widely used in expense reimbursements (経費精算).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "領収書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Documents like receipts, invoices, and certificates are typically '送付する' or '発行する', not '発送する' (which implies shipping physical merchandise or bulk mail).",
+      "suggested_text": "領収書を発行する"
+    },
+    {
+      "index": 3,
+      "text": "領収書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Formal and natural business phrasing for receiving a receipt.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe corporate and legal mismatch. A company dispatches convocation notices (招集通知) or financial reports ahead of a board or shareholders' meeting under statutory deadlines, never a 'receipt' (領収書). This is an obvious hallucinated template collision.",
+      "suggested_ja": "経費精算を行う際は、支払日および但し書きが明記された領収書を必ず添付してください。",
+      "suggested_vi": "Khi quyết toán chi phí, vui lòng đính kèm biên lai ghi rõ ngày thanh toán và nội dung chi tiền.",
+      "suggested_en": "When submitting expense reimbursements, please be sure to attach a receipt clearly stating the payment date and description."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate business phrasing regarding compliance, internal controls, and document retention rules.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "A receipt (領収書) is a transactional voucher of payment; it is never 'polished/drafted' (推敲) nor submitted for executive pre-approval before being dispatched for an upcoming meeting. This dialogue is an artificial template meant for proposals or minutes.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の出張旅費の精算をしたいのですが、領収書の宛名は会社名にする必要がありますか。",
+        "vi": "Tôi muốn thanh toán công tác phí đợt trước, tên người nhận trên biên lai có bắt buộc phải là tên công ty không?",
+        "en": "I'd like to settle the travel expenses from the recent business trip; does the receipt need to be addressed to the company name?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税務監査上の要件となりますので、必ず社名入りの領収書を経理部へ提出してください。",
+        "vi": "Vâng, vì đây là yêu cầu trong kiểm toán thuế nên anh/chị nhất định phải nộp biên lai có tên công ty cho phòng kế toán.",
+        "en": "Yes, as it is a tax audit requirement, please make sure to submit a receipt issued to our company name to the accounting department."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings are accurate; example 1 failure was due to the source Japanese sentence rather than translation quality."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eebaa3a5e6c56be28e7f7322b646a0be78b0bf9f8566b7d824690d2de29a6cf4",
+    "validated_at": "2026-10-01T01:41:05.152456+00:00"
+  }
+}

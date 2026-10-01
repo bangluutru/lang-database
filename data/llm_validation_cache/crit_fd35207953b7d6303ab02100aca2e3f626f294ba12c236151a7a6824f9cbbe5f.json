@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000076",
+  "term": "準拠法",
+  "overall_decision": "rewrite",
+  "summary_reason": "法概念である「準拠法」と契約上の規定である「準拠法条項」の混同が見られ、コロケーション（準拠法を設ける・違反する）や例文・対話において実務上不自然な表現が含まれているため、全面的な書き直しを求めます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "準拠法を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "準拠法そのものは法体系であり「設ける」とは言いません。条項であれば「設ける」と言えますが、準拠法に対しては「定める」「指定する」が適切です。",
+      "suggested_text": "準拠法を定める"
+    },
+    {
+      "index": 1,
+      "text": "準拠法に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "違反する対象は「法令」や「契約条項」であり、契約の準拠基準を指定する概念である「準拠法」に違反するという言い方は実務上不自然です。",
+      "suggested_text": "準拠法を選択する"
+    },
+    {
+      "index": 2,
+      "text": "準拠法を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "契約関係や係争事項に特定の法体系を適用するという実務上極めて標準的なコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "準拠法を精査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "クロスボーダー契約等において指定された準拠法が自社に及ぼす影響を精査する文脈で自然に使用されます。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「明確な準拠法を設けました」は語法として不自然です（「準拠法を定めた」あるいは「準拠法条項を設けた」とすべき）。また「予期せぬ紛争を未然に防止」も同義語の重複（冗長）感があります。",
+      "suggested_ja": "将来の法的紛争に備え、契約書において日本法を準拠法と明確に定めました。",
+      "suggested_vi": "Để chuẩn bị cho các tranh chấp pháp lý trong tương lai, chúng tôi đã quy định rõ ràng trong hợp đồng rằng luật áp dụng điều chỉnh hợp đồng là luật Nhật Bản.",
+      "suggested_en": "To prepare for future legal disputes, we clearly stipulated Japanese law as the governing law in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「準拠法の文言」と書くと準拠法という法律自体の条文と混同されやすく、契約実務では「準拠法条項の文言」と表現するのが正確です。",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された準拠法条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ trong điều khoản luật áp dụng do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the governing law clause proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aが「準拠法の修正案」を尋ねているのに対し、Bが唐突に「損害賠償条項を含めて」と脈絡なく別の主要条項を持ち出しており、対話の論理的整合性が低いです。また「準拠法条項」とする方が法務実務として自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた準拠法条項の修正案ですが、確認は済みましたか。",
+        "vi": "Về bản sửa đổi điều khoản luật áp dụng do bộ phận pháp chế bên đối tác gửi lại, anh đã kiểm tra xong chưa?",
+        "en": "Have you finished reviewing the revised draft of the governing law clause returned by the other party's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、シンガポール法への変更に伴う法的リスクを弁護士と検討し、特に問題ないことを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã xem xét rủi ro pháp lý với luật sư khi chuyển sang luật Singapore và xác nhận không có vấn đề gì đáng ngại.",
+        "en": "Yes, we reviewed the legal risks of changing to Singapore law with our attorney and confirmed there are no particular issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "元の英語・ベトナム語訳ともに語義としては正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c4ba1329840defc023dd126ff788f4fd36b3f34ccbf74a39664fb6c4b0ebf848",
+    "validated_at": "2026-10-01T01:42:15.135624+00:00"
+  }
+}

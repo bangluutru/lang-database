@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000120",
+  "term": "仕入税額控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains domain factual errors regarding Japanese consumption tax procedures (invoices for input tax credits are legally retained rather than attached to the tax return) and an unnatural collocation regarding deduction ceilings.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仕入税額控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise business and tax phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仕入税額控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate legal and practical terminology reflecting 消費税法第30条.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仕入税額控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Consumption tax does not feature an 'upper limit' (上限額) concept for input tax deductions; rather, one calculates the deductible amount itself (控除税額 / 控除対象仕入税額).",
+      "suggested_text": "仕入税額控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "仕入税額控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, standard corporate tax terminology.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural report style for a tax filing context.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese Consumption Tax law, qualified invoices and books required for input tax credit must be retained (保存義務), not attached to the tax return (申告書に添付). Claiming they are attached to the tax return is factually incorrect.",
+      "suggested_ja": "仕入税額控除の適用を受けるため、インボイス制度の要件を満たす適格請求書を適切に保存しています。",
+      "suggested_vi": "Để được áp dụng khấu trừ thuế tiêu dùng đầu vào, chúng tôi lưu trữ đúng quy định các hóa đơn đủ điều kiện đáp ứng yêu cầu của hệ thống hóa đơn.",
+      "suggested_en": "In order to qualify for the purchase tax credit, we properly preserve qualified invoices that satisfy invoice system requirements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese consumption tax filings, supporting documents for purchase tax credits are maintained internally rather than submitted as tax return attachments. In addition, '税理士の確認書' is awkward phrasing for tax filing schedules or advisor review.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における仕入税額控除の計算根拠と請求書の保存状況は確認できましたか。",
+        "vi": "Anh đã kiểm tra được căn cứ tính toán khấu trừ thuế tiêu dùng đầu vào và tình trạng lưu trữ hóa đơn cho kỳ quyết toán này chưa?",
+        "en": "Have you verified the calculation basis for the purchase tax credit and the invoice retention status for this fiscal closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、区分経理の集計表を揃え、顧問税理士によるレビューも完了しております。",
+        "vi": "Vâng, tôi đã tổng hợp bảng kê phân loại hạch toán và việc rà soát từ thuế lý tư vấn cũng đã hoàn tất.",
+        "en": "Yes, I have prepared the categorized accounting summary sheets, and the review by our tax accountant is also complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b8de9e0560a11644fd8532e0d9a013970cff1d6f39e64645d16ffb9a1cac9876",
+    "validated_at": "2026-10-01T01:39:36.846763+00:00"
+  }
+}

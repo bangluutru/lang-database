@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000172",
+  "term": "経常利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, both example sentences, and the dialogue mistakenly treat 経常利益 (an aggregate income statement subtotal) as a transactional balance sheet account that possesses ledger balances and requires voucher reconciliation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "経常利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used when reporting or posting ordinary income in financial results.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "経常利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "経常利益 is a calculated profit metric on the income statement (P/L), not a balance sheet ledger account that carries a balance (残高).",
+      "suggested_text": "経常利益の進捗を確認する"
+    },
+    {
+      "index": 2,
+      "text": "経常利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する is used for vouchers, ledgers, or specific account balances, not aggregate profit metrics like 経常利益.",
+      "suggested_text": "経常利益を確保する"
+    },
+    {
+      "index": 3,
+      "text": "経常利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算する denotes expense settlement or liquidation; it cannot be semantically paired with 経常利益.",
+      "suggested_text": "経常利益を試算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "経常利益 does not have a balance (残高) checked during ledger reconciliation; it is calculated from operating profit plus/minus non-operating items.",
+      "suggested_ja": "為替差損の影響により、当期の経常利益は期初予想を大幅に下回る見込みです。",
+      "suggested_vi": "Do ảnh hưởng của lỗ tỷ giá hối đoái, lợi nhuận thường xuyên kỳ này dự kiến sẽ thấp hơn đáng kể so với dự báo đầu kỳ.",
+      "suggested_en": "Due to the impact of foreign exchange losses, ordinary profit for the current term is expected to fall significantly below the initial forecast."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "利益を適正に処理いたしました is an artificial AI template. Profit metrics are achieved, budgeted, analyzed, or booked, not 'processed'.",
+      "suggested_ja": "営業外費用の削減に努めた結果、第3四半期の経常利益は前年同期比で15%増加しました。",
+      "suggested_vi": "Nhờ nỗ lực cắt giảm chi phí ngoài hoạt động kinh doanh, lợi nhuận thường xuyên trong quý 3 đã tăng 15% so với cùng kỳ năm ngoái.",
+      "suggested_en": "As a result of efforts to reduce non-operating expenses, ordinary income in the third quarter increased by 15% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "経常利益 is an aggregate P/L line item, not an account verified directly against vouchers (証憑) and sub-ledgers (補助元帳).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、経常利益が予算を下回っている要因は何でしょうか。",
+        "vi": "Về kết quả quyết toán tháng này, đâu là nguyên nhân khiến lợi nhuận thường xuyên thấp hơn dự toán vậy?",
+        "en": "Regarding this month's monthly closing, what is the cause of ordinary profit falling below budget?"
+      },
+      {
+        "speaker": "B",
+        "ja": "急激な円安に伴い、営業外費用として多額の為替差損が発生したためです。",
+        "vi": "Dạ là do đồng Yên mất giá nhanh chóng dẫn đến phát sinh khoản lỗ chênh lệch tỷ giá lớn dưới dạng chi phí ngoài hoạt động kinh doanh ạ.",
+        "en": "It is because a large foreign exchange loss occurred as a non-operating expense following the sharp depreciation of the yen."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese 'lợi nhuận thường niên' confuses recurring (経常) with annual (thường niên). The proper accounting term is 'lợi nhuận thường xuyên'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2944b123c8f7807cae9d1d5d17659de5a740ac168fa1c7e6e2a3a845639f8577",
+    "validated_at": "2026-10-01T01:36:43.669146+00:00"
+  }
+}

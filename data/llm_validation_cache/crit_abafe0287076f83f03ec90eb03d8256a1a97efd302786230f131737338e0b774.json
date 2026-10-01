@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000063",
+  "term": "通関士",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations and some examples are acceptable, the first example sentence is slightly unnatural, and the dialogue is disconnected and fails to naturally integrate the target term. The translations are generally good.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通関士を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "通関士に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "通関士に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "通関士の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '新任通関士が正式に選任されました' is grammatically correct but sounds somewhat redundant and unnatural in a corporate context. '選任' already implies 'officially appointed'. Also, '定時株主総会の決議を経て' is a bit formal for just appointing a customs specialist, who is typically an employee or a contracted professional, not a board member.",
+      "suggested_ja": "当社の新任通関士が選任されました。",
+      "suggested_vi": "Chuyên viên khai báo hải quan có chứng chỉ quốc gia (Tsukanshi) mới của công ty chúng tôi đã được bổ nhiệm.",
+      "suggested_en": "Our new registered customs specialist has been appointed."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'preparation status' of the customs specialist for a meeting. Speaker B's response about 'finalizing content' and 'obtaining executive approval' for 'dispatching' something does not logically follow. It sounds like B is talking about a document or report, not the customs specialist's readiness for a meeting. The target term '通関士' is not naturally integrated into the dialogue.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の会議で、通関士の方から輸入規制について説明していただく件、準備状況はいかがですか？",
+        "vi": "Về việc chuyên viên khai báo hải quan sẽ giải thích về quy định nhập khẩu tại cuộc họp tuần tới, tình hình chuẩn bị thế nào rồi?",
+        "en": "Regarding the customs specialist's explanation on import regulations at next week's meeting, how are the preparations coming along?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、資料の最終確認も終わり、説明内容についても通関士と打ち合わせ済みです。問題なく進められます。",
+        "vi": "Vâng, tài liệu đã được kiểm tra lần cuối và nội dung giải thích cũng đã được trao đổi với chuyên viên khai báo hải quan. Chúng ta có thể tiến hành mà không có vấn đề gì.",
+        "en": "Yes, the materials have been finalized, and the explanation content has been discussed with the customs specialist. We can proceed without any issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1a9ed3b4c6553a9bb3ac715dd46562dca32b6a8b42136a1c2ebd779a7c07fbf9",
+    "validated_at": "2026-10-01T01:54:44.306992+00:00"
+  }
+}

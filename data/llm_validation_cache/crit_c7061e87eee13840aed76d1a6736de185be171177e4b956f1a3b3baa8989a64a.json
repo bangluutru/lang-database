@@ -1,0 +1,85 @@
+{
+  "entry_id": "jp-pro-accounting-000065",
+  "term": "長期貸付金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatch in collocation 3 ('精算する' cannot govern loans), mechanical boilerplate in example 1, and stilted unnatural turns in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "長期貸付金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing long-term loans receivable."
+    },
+    {
+      "index": 1,
+      "text": "長期貸付金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard procedure in balance sheet audits and reconciliation."
+    },
+    {
+      "index": 2,
+      "text": "長期貸付金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An asset account entity is rarely reconciled directly without specifying '残高' (balance) or '明細' (schedule). Furthermore, reclassification to current assets under the one-year rule is a far more vital domain collocation.",
+      "suggested_text": "長期貸付金を1年内回収予定分に振り替える"
+    },
+    {
+      "index": 3,
+      "text": "長期貸付金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Loans (貸付金) are collected (回収する) or repaid (弁済・返済を受ける), not '精算する' (cleared/reimbursed, which applies to expense advances or temporary payments).",
+      "suggested_text": "長期貸付金を回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable description of monthly closing verification procedures between ledgers and balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly redundant and vacuous boilerplate ('適正な会計基準...適正に処理いたしました'). A professional accounting sentence should address real treatment, such as the one-year rule reclassification or loan loss allowance.",
+      "suggested_ja": "期末決算において、長期貸付金のうち1年以内に回収期限が到来する部分を流動資産へ振り替えました。",
+      "suggested_vi": "Trong quyết toán cuối kỳ, chúng tôi đã chuyển phần khoản cho vay dài hạn có hạn thu hồi trong vòng một năm sang tài sản lưu động.",
+      "suggested_en": "In the fiscal year-end closing, we reclassified the portion of long-term loans receivable due within one year to current assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異' and '適正に整合している' are stiff and mechanically generated. In actual practice, accountants verify balance agreement ('残高の一致') between the auxiliary ledger and loan agreements/confirmations.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "関係会社に対する長期貸付金の残高について、先方との残高確認書と一致していますか。",
+        "vi": "Về số dư khoản cho vay dài hạn đối với công ty liên kết, nó có khớp với thư xác nhận số dư từ phía đối tác không?",
+        "en": "Regarding the balance of long-term loans to affiliates, does it match the balance confirmation received from them?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、補助元帳と返済予定表を照合し、利息計算を含め差異のないことを確認済みです。",
+        "vi": "Vâng, tôi đã đối chiếu sổ phụ với bảng kế hoạch trả nợ và xác nhận không có chênh lệch, bao gồm cả phần tính lãi.",
+        "en": "Yes, I have cross-checked the subsidiary ledger with the repayment schedule and confirmed there are no discrepancies, including interest calculations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base term translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9fcb77d4ec46bac59f380bfd995f4c8fc8c9cf92959684d307b09c9b61c72862",
+    "validated_at": "2026-10-01T01:34:44.935360+00:00"
+  }
+}

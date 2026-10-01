@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000078",
+  "term": "研究開発税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences suffer from unnatural/tautological phrasing ('税制の制度', '税制の手続き') and factual domain misalignment (attributing '地域貢献' to R&D tax credits). Collocations and dialogue are solid.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "研究開発税制を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "研究開発税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise legal/tax terminology in corporate filings.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "研究開発税制を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, widely used in corporate management and tax planning discussions.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "研究開発税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression describing eligibility for the tax scheme.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "1. '研究開発税制の制度' is redundant tautology (税制 already means 'tax system/scheme'). 2. R&D tax incentives incentivize innovation and capital expenditure, not '地域貢献' (regional contribution; that confuses it with regional revitalization tax schemes). 3. The Vietnamese translation contains an accidental duplication ('chính sách chính sách').",
+      "suggested_ja": "イノベーション推進と税負担軽減の観点から、対象となる試験研究費を精査し、研究開発税制を活用しました。",
+      "suggested_vi": "Dưới góc độ thúc đẩy đổi mới sáng tạo và giảm bớt gánh nặng thuế, chúng tôi đã rà soát kỹ các chi phí nghiên cứu thử nghiệm đủ điều kiện để áp dụng chính sách ưu đãi thuế cho hoạt động R&D.",
+      "suggested_en": "From the perspectives of driving innovation and reducing the tax burden, we scrutinized eligible R&D expenditures to take advantage of the R&D tax credit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'研究開発税制の手続きを進めました' is structurally awkward; in Japanese corporate tax practice, one says '適用手続き' or '適用申請の準備'. In addition, the English translation omits 'procedures' altogether.",
+      "suggested_ja": "今年度の法人税額控除の上限を試算した上で、研究開発税制の適用に向けた書類準備を進めました。",
+      "suggested_vi": "Sau khi tính toán thử mức trần khấu trừ thuế thu nhập doanh nghiệp năm nay, chúng tôi đã tiến hành chuẩn bị hồ sơ để áp dụng chính sách ưu đãi thuế cho hoạt động R&D.",
+      "suggested_en": "After estimating the corporate tax credit ceiling for this fiscal year, we proceeded with document preparation for applying the R&D tax credit."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B is practical, coherent, and reflects realistic corporate tax filing workflows.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning and example 0 contain repeated duplicate tokens ('chính sách chính sách'), which need cleanup."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "14ab44398731818f3c65515dc4ce15086c7a6a52e578e2d0c63619b3a2bd6263",
+    "validated_at": "2026-10-01T01:38:44.671216+00:00"
+  }
+}

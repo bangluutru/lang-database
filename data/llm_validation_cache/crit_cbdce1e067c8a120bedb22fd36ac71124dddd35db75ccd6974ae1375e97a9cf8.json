@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000115",
+  "term": "利益準備金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The content suffers from generic AI hallucination and severe domain inaccuracies: treating 利益準備金 (statutory retained earnings reserve under Japan's Companies Act) as a routine monthly operational expense account subject to '精算' and month-end ledger reconciliation, rather than a corporate-law mandated equity reserve tied to dividends.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "利益準備金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Under Japanese corporate law and accounting practice, 利益準備金 is statutory retained earnings set aside upon dividend payout; the standard and legally accurate predicate is 積み立てる (to reserve/accumulate), not simply 計上する.",
+      "suggested_text": "利益準備金を積み立てる"
+    },
+    {
+      "index": 1,
+      "text": "利益準備金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for checking the equity reserve balance on the balance sheet.",
+      "suggested_text": "利益準備金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "利益準備金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An equity item itself is not directly 'reconciled' (照合する); either its balance (残高) is reconciled, or in legal context, it is incorporated into capital (資本に組み入れる) or reduced (取り崩す).",
+      "suggested_text": "利益準備金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "利益準備金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Fatal domain mismatch. 利益準備金 is a permanent equity item (株主資本), never an unsettled advance or expense account subject to '精算' (settlement/liquidation).",
+      "suggested_text": "利益準備金を資本金に組み入れる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "利益準備金 is not a monthly transactional account reviewed during routine month-end reconciliation. It is strictly accumulated when dividends of surplus are paid out under Article 445 of the Companies Act.",
+      "suggested_ja": "会社法の規定に基づき、剰余金の配当に伴って配当額の10分の1を利益準備金として積み立てました。",
+      "suggested_vi": "Căn cứ theo quy định của Luật Doanh nghiệp, cùng với việc chi trả cổ tức từ thặng dư, chúng tôi đã trích lập 1/10 số tiền cổ tức vào quỹ dự trữ lợi nhuận pháp định.",
+      "suggested_en": "In accordance with the Companies Act, one-tenth of the dividend payout was set aside as legal retained earnings upon the distribution of surplus."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a vacuous AI template ('適正な...適正に処理いたしました') lacking practical business meaning. A professional example should illustrate the statutory cap (capital reserve + legal retained earnings reaching 1/4 of stated capital) or shareholder resolution.",
+      "suggested_ja": "資本準備金と利益準備金の合計額が資本金の4分の1に達しているため、今回の配当では積み立てを行いません。",
+      "suggested_vi": "Vì tổng số vốn dự trữ và quỹ dự trữ lợi nhuận pháp định đã đạt 1/4 vốn điều lệ, nên đợt chi trả cổ tức lần này chúng tôi không thực hiện trích lập bổ sung.",
+      "suggested_en": "Since the total of additional paid-in capital and legal retained earnings has reached one-fourth of stated capital, no additional accumulation is required for this dividend."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking whether discrepancies occurred in 利益準備金 during monthly closing is factually unnatural; it is not verified against '証憑書類と補助元帳' in routine monthly bookkeeping. A realistic conversation involves dividend calculation and statutory reserve allocation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "株主総会で中間配当が決議されましたが、利益準備金の積立要否は確認できていますか。",
+        "vi": "Đại hội đồng cổ đông đã thông qua việc chi trả cổ tức giữa kỳ, anh/chị đã kiểm tra xem có cần trích lập quỹ dự trữ lợi nhuận pháp định hay chưa?",
+        "en": "Interim dividends were approved at the shareholders' meeting. Have you confirmed whether we are required to set aside legal retained earnings?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。準備金合計額が資本金の4分の1に達していないため、所定の積立額を計算のうえ計上いたします。",
+        "vi": "Vâng. Do tổng mức dự trữ chưa đạt một phần tư vốn điều lệ, tôi sẽ tính toán và hạch toán số tiền cần trích lập theo quy định.",
+        "en": "Yes. Since the total reserves have not reached one-fourth of stated capital, I will calculate and book the prescribed reserve amount."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both translations are accurate accounting designations for the term."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bda82fddf0332df417349532ffc74f39817c0a63e1bc784d223beb0328f6a4ff",
+    "validated_at": "2026-10-01T01:35:40.711891+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000091",
+  "term": "就業規則",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template slot-in failure: '就業規則' (work rules) was mechanically inserted into sentence templates meant for convocation notices/general meeting documents ('発送する', '株主総会を円滑に進行するため'). Collocations and examples must be rebuilt around authentic labor law and HR compliance concepts (改定, 周知, 労基署への届出).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "就業規則を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard labor law and HR terminology (Labor Standards Act Art. 89).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "就業規則を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common expression referring to filing work rules with the Labor Standards Inspection Office (労基署).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "就業規則を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Employment regulations are not dispatched/mailed out like convocation notices or shipments; companies revise (改定する) or promulgate/disclose (周知する) them.",
+      "suggested_text": "就業規則を改定する"
+    },
+    {
+      "index": 3,
+      "text": "就業規則を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Work rules are established and promulgated internally, not routinely spoken of as 'received' (受領する). Promulgating (周知する) is the core legal obligation.",
+      "suggested_text": "就業規則を周知する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Blatant mechanical slot-in error: Employment regulations (就業規則) are never dispatched to attendees to run a shareholders' or board meeting. That describes convocation notices (招集通知).",
+      "suggested_ja": "法改正に伴い就業規則を改定し、所轄の労働基準監督署へ遅滞なく届け出た。",
+      "suggested_vi": "Do có sửa đổi luật, chúng tôi đã sửa đổi nội quy lao động và nộp cho Phòng Tiêu chuẩn Lao động có thẩm quyền không chậm trễ.",
+      "suggested_en": "Following legal revisions, we amended the employment regulations and filed them with the competent Labor Standards Inspection Office without delay."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "A company does not simply 'archive received work rules' as an internal control proof; the legal and practical duty is making them readily accessible to all employees (周知義務).",
+      "suggested_ja": "就業規則は社内ポータルサイトに常時掲示し、全従業員が閲覧できるよう周知を徹底している。",
+      "suggested_vi": "Nội quy lao động luôn được đăng tải trên cổng thông tin nội bộ công ty để đảm bảo toàn thể nhân viên đều có thể tiếp cận và nắm rõ.",
+      "suggested_en": "The work rules are constantly posted on the company intranet to ensure all employees are fully informed and able to review them."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Templated dialogue: Employment regulations are submitted to labor inspection authorities or announced to staff, not 'dispatched' (発送) for next week's meeting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "育児介護休業法の改正に伴う、就業規則の見直し状況はいかがですか。",
+        "vi": "Tình hình rà soát nội quy lao động theo Luật Nghỉ phép Chăm sóc Con nhỏ và Gia đình sửa đổi đến đâu rồi?",
+        "en": "How is the review of our work rules progressing following the amendments to the Child Care and Family Care Leave Act?"
+      },
+      {
+        "speaker": "B",
+        "ja": "労使協議および役員会の承認が完了しましたので、今週中に行政への届出と全社周知を行います。",
+        "vi": "Sau khi hoàn tất thỏa thuận công đoàn - doanh nghiệp và được hội đồng quản trị phê duyệt, chúng tôi sẽ nộp cho cơ quan chức năng và thông báo toàn công ty trong tuần này.",
+        "en": "Consultation with labor representatives and board approval are complete, so we will file them with the authorities and disseminate them company-wide this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e680bf23aaebb49e15d3bc8a4d74df7f7fbae38ec0f8b1069fe3c4fa99a8b425",
+    "validated_at": "2026-10-01T01:42:26.737933+00:00"
+  }
+}

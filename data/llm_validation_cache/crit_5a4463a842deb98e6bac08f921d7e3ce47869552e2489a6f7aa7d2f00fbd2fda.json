@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000191",
+  "term": "朝礼",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations are natural, example sentences and dialogue exhibit unnatural phrasing and conversational disconnect, requiring significant rewrites for authenticity in a professional context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "朝礼を徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "朝礼を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "朝礼を習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "朝礼の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '事前の朝礼を徹底しています' is unnatural. '事前の朝礼' is not a common or natural collocation. If the intent is to conduct morning meetings thoroughly, '朝礼を徹底しています' is sufficient. If it means conducting morning meetings *before* something, it needs to be rephrased.",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との朝礼を徹底しています。",
+      "suggested_vi": "Nhằm thúc đẩy dự án diễn ra trôi chảy, chúng tôi triệt để thực hiện cuộc họp giao ban đầu giờ sáng với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we thoroughly conduct morning meetings with relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrasing '迅速な朝礼の習慣付けが職場全体で求められます' is a bit clunky. '迅速な朝礼' is not a standard concept; morning meetings are typically brief by nature. The '習慣付けが求められます' part is also slightly stiff. A more natural expression would be to make it a habit or to encourage it.",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、職場全体で朝礼を迅速に行う習慣を身につけることが求められます。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh trong công việc, việc toàn bộ nơi làm việc hình thành thói quen tổ chức cuộc họp giao ban đầu giờ sáng một cách nhanh chóng là rất cần thiết.",
+      "suggested_en": "To prevent operational issues beforehand, it is required for the entire workplace to establish a habit of conducting prompt morning meetings."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the '課題' (issues/challenges) raised by Speaker A. While it talks about positive outcomes, it doesn't acknowledge or respond to the potential challenges. It sounds like a prepared statement rather than a natural conversation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内における朝礼の徹底状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình thực hiện triệt để cuộc họp giao ban đầu giờ sáng trong phòng ban, có phát sinh vấn đề gì không?",
+        "en": "Regarding the thorough implementation of morning meetings within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "当初は参加意識の低さという課題がありましたが、今では全メンバーが情報共有の重要性を再認識し、迅速な対応が習慣化されてきています。",
+        "vi": "Ban đầu có vấn đề về ý thức tham gia thấp, nhưng giờ đây tất cả thành viên đã nhận thức lại tầm quan trọng của việc chia sẻ thông tin và việc phản ứng nhanh chóng đang dần trở thành thói quen.",
+        "en": "Initially, there was an issue with low participation, but now all members have re-recognized the importance of information sharing, and prompt responses are becoming habitual."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "113742f3b2a06348193c23cdbbf258f3a1121b04b037da7186f5185fdfbe63ff",
+    "validated_at": "2026-10-01T01:53:32.520750+00:00"
+  }
+}

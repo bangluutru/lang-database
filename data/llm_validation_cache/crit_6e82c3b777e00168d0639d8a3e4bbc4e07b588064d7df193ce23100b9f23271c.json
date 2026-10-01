@@ -1,0 +1,73 @@
+{
+  "entry_id": "jp-pro-trade-000077",
+  "term": "税関検査",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural or semantically mismatched, and the dialogue flow needs improvement for better conversational continuity.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税関検査を行う",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "税関検査を完了する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "税関検査を申請する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You don't 'apply for' a customs inspection in the sense of requesting it for yourself. Customs conducts the inspection. If it means applying for a specific procedure related to customs inspection, it needs clarification or a different verb.",
+      "suggested_text": "税関検査の申請を行う (if referring to a specific procedure like a pre-inspection application, but still awkward), or 税関検査を受ける (to undergo inspection)"
+    },
+    {
+      "index": 3,
+      "text": "税関検査の適法性を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically possible, '適法性を確認する' (confirm legality) is not a natural collocation with '税関検査' in a typical business context. One might confirm the legality of the *procedure* or *results*, but not the inspection itself as an object.",
+      "suggested_text": "税関検査の手続きの適法性を確認する (confirm legality of the customs inspection procedure)"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the '手配状況' (arrangement status) of the customs inspection. It lists actions taken (contacting agents, document check, import declaration) but doesn't explicitly state the status of the inspection itself (e.g., '手配済みです' or 'これから手配します'). The flow is slightly off.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、税関検査の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp kiểm tra hải quan thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the customs inspection arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲への連絡は済んでおり、書類確認も完了し、税関検査の手配も完了しております。現在、輸入申告に入っております。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, việc kiểm tra chứng từ cũng đã hoàn tất, và việc sắp xếp kiểm tra hải quan cũng đã hoàn tất. Hiện tại, chúng tôi đang tiến hành khai báo nhập khẩu.",
+        "en": "We have contacted the customs broker and forwarding agent, document verification is complete, and customs inspection arrangements have also been finalized. We are currently proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "36406a6e9998d80287425320272b8a6bdc695589f9f7a29c62ae51ee4e47d15c",
+    "validated_at": "2026-10-01T01:54:56.902237+00:00"
+  }
+}

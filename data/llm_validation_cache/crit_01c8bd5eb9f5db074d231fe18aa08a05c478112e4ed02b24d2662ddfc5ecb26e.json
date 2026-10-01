@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000094",
+  "term": "損金算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション4件中3件に「算入の重複」「加算との混同」といった致命的な破綻があり、例文にも「損金算入の算入漏れ」という重言が見られる。実務でそのまま使えない機械的テンプレート表現が含まれるため、全面的リライトが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損金算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「算入」が重複しており日本語として不自然かつ破綻している。「損金に算入する」または「損金算入が認められる」とするべき。",
+      "suggested_text": "損金に算入する"
+    },
+    {
+      "index": 1,
+      "text": "損金算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "助詞と語彙の組み合わせが不自然。税務実務上は「損金不算入とする」または「損金算入を否認する」と表現する。",
+      "suggested_text": "損金不算入とする"
+    },
+    {
+      "index": 2,
+      "text": "損金算入の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "申告調整（別表四の加算・減算処理）の実務において自然に通用する表現である。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "損金算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税務申告において損金算入は通常「減算」項目であり、「損金算入に加算する」という表現は税務上の概念および日本語コロケーションとして破綻している。",
+      "suggested_text": "損金算入限度額を計算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「損金算入を適切に処理しました」は構文的に座りが悪く、「別表四において損金算入（減算）の申告調整を行いました」などとする方が実務上極めて自然。またベトナム語訳が述語句をそのまま名詞枠に埋め込んでおり不自然。",
+      "suggested_ja": "会計上の費用と税務上の取扱いの差異を調整するため、別表四において損金算入の申告調整を行いました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa chi phí kế toán và quy định thuế, chúng tôi đã thực hiện điều chỉnh tính vào chi phí được trừ trên Phụ lục 4.",
+      "suggested_en": "To reconcile the difference between book expenses and tax treatment, we made a tax return adjustment for deduction in Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「損金算入の算入漏れ」は語の重複（重言）であり稚拙。「損金の算入漏れ」または「損金算入の漏れ」と表現するべき。ベトナム語訳も不自然な直訳が混入している。",
+      "suggested_ja": "税務調査における指摘を防止するため、過年度の取引を検証し損金の算入漏れがないか確認しました。",
+      "suggested_vi": "Để phòng tránh việc bị cơ quan thuế truy thu khi thanh tra, chúng tôi đã rà soát các giao dịch của các niên độ trước nhằm kiểm tra xem có sót khoản nào chưa được tính vào chi phí hợp lý hay không.",
+      "suggested_en": "To prevent issues during a tax audit, we reviewed prior-year transactions to ensure no deductible expenses were omitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「損金算入の計算根拠」は単体名詞として不自然（「損金算入項目の計算根拠」や「交際費等の損金算入限度額の計算」が自然）。また「税理士の確認書」は一般的な税務申告の添付書類としてやや不自然（税理士法第33条の2の「書面添付」等を意図しているなら表現を具体化すべき）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における損金算入項目の根拠資料と計算書は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong tài liệu căn cứ và bảng tính cho các khoản mục tính vào chi phí được trừ trong kỳ quyết toán thuế này chưa?",
+        "en": "Have you organized the supporting documentation and calculation sheets for the deductible expense items in this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧問税理士のレビューを受けた上で、別表添付用の計算明細一式を揃えております。",
+        "vi": "Vâng, sau khi được thuế lý tư vấn xem xét, tôi đã chuẩn bị đầy đủ bộ chi tiết tính toán để đính kèm phụ lục tờ khai rồi ạ.",
+        "en": "Yes, after having them reviewed by our tax accountant, I have prepared the complete set of calculation schedules to attach to the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の定義「được chấp nhận trừ vào chi phí hợp lý」が動詞句・受動表現になっており、例文や名詞スロットに代入した際に文法破綻の原因となっている。名詞概念として「việc tính vào chi phí được trừ」または「chi phí được trừ (thuế TNDN)」と再定義すべき。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "639ac7b6cf4affb4ed5dda3493fd242a88c3e0b2a64fdc0bfd7a37f98b10c8b8",
+    "validated_at": "2026-10-01T01:39:03.292173+00:00"
+  }
+}

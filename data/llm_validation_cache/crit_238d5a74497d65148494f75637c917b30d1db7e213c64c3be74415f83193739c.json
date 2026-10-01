@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000011",
+  "term": "総資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "「総資産」が集計値（ストック概念）であるにもかかわらず、仕訳入力する個別勘定科目（仮払金や売掛金等）のテンプレートに機械的に当てはめられており、会計実務上極めて不自然なコロケーション・例文・対話となっているため全面差し替えが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総資産を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "総資産は個別勘定科目の合算結果（集計概念）であり、個別に仕訳・計上する対象ではないため不自然。",
+      "suggested_text": "総資産を圧縮する"
+    },
+    {
+      "index": 1,
+      "text": "総資産の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "総資産自体が集計残高を指すため「総資産の残高」は重複感があり不自然。「総資産額を確認する」または「総資産の推移を分析する」が自然。",
+      "suggested_text": "総資産額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "総資産を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "照合（突合）は元帳や証憑、預金残高などの個別勘定に対して行う作業であり、集計概念である総資産全体を照合する表現は実務上使われない。",
+      "suggested_text": "総資産利益率を算出する"
+    },
+    {
+      "index": 3,
+      "text": "総資産を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "総資産は旅費交通費や仮払金のように「精算」する対象ではない。明らかな意味的・実務的誤用。",
+      "suggested_text": "総資産回転率を改善する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "総資産は各勘定の合計値であり、「計上内容の差異を帳簿照合で精査する」という実務プロセスは存在しない。個別の勘定科目を当てはめただけの機械的テンプレート表現。",
+      "suggested_ja": "当期は大型の設備投資を実施したため、総資産が前期末比で約10%増加しました。",
+      "suggested_vi": "Trong kỳ này, do thực hiện đầu tư trang thiết bị quy mô lớn nên tổng tài sản đã tăng khoảng 10% so với cuối kỳ trước.",
+      "suggested_en": "Due to major capital investments this term, total assets increased by approximately 10% compared to the end of the previous period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「総資産を適正に処理いたしました」は会計実務として意味をなさない形骸化した定型文。ROA改善や資産圧縮などの文脈で教えるべき。",
+      "suggested_ja": "資本効率の向上を図るため、遊休資産を売却して総資産を圧縮する方針です。",
+      "suggested_vi": "Để nâng cao hiệu quả sử dụng vốn, chúng tôi có chủ trương bán các tài sản nhàn rỗi nhằm thu gọn quy mô tổng tài sản.",
+      "suggested_en": "To improve capital efficiency, we plan to reduce total assets by divesting idle assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「総資産の計上内容」を「証憑書類と補助元帳で照合する」というやり取りは、会計実務として不適切（証憑との突合は個別仕訳・科目単位で行う）。財務分析や決算報告の文脈に修正が必要。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算短信案ですが、総資産の急増要因について補足説明を加えていただけますか。",
+        "vi": "Về bản dự thảo tóm tắt báo cáo tài chính kỳ này, anh có thể bổ sung giải trình về nguyên nhân tổng tài sản tăng đột biến được không?",
+        "en": "Regarding the draft financial summary for this term, could you add supplementary explanations for the sharp increase in total assets?"
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。第3四半期に行った新工場建設に伴う有形固定資産の増加分を中心に記載を追記します。",
+        "vi": "Tôi hiểu rồi. Tôi sẽ bổ sung phần diễn giải, trọng tâm là sự gia tăng của tài sản cố định hữu hình phát sinh từ việc xây dựng nhà máy mới trong quý 3.",
+        "en": "Understood. I will supplement the notes, focusing on the increase in tangible fixed assets associated with the new factory construction in the third quarter."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の翻訳（Total assets / tổng tài sản）は正確だが、例文・連語の機械的破綻に伴い差し替えが必要。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8ec84198f5ccc60a753a72c7fc0be11305b2b82ec406f03df696cc67c1d39680",
+    "validated_at": "2026-10-01T01:33:00.808138+00:00"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-accounting-000004",
+  "term": "株主資本等変動計算書",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term, collocations, and example sentences are excellent, but Dialogue Turn B contains a domain factual error by attributing cash flow analysis to the Statement of Changes in Equity.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "株主資本等変動計算書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for preparing the statement of changes in equity."
+    },
+    {
+      "index": 1,
+      "text": "株主資本等変動計算書を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate disclosure terminology."
+    },
+    {
+      "index": 2,
+      "text": "株主資本等変動計算書を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate governance action by the board of directors / AGM."
+    },
+    {
+      "index": 3,
+      "text": "株主資本等変動計算書を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and common in financial analysis."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate procedure reflecting board approval of statutory financial statements following audit."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic reporting language regarding verification between note disclosures and financial statement figures."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B mentions verifying '主要なキャッシュ増減要因' (key cash fluctuation factors) in response to a question about the '株主資本等変動計算書' (Statement of Changes in Equity). Cash fluctuations pertain to the Statement of Cash Flows (キャッシュ・フロー計算書); equity changes pertain to net income, dividends, and treasury stock movements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の株主資本等変動計算書について、各区分の増減分析と開示数値の確認は完了しましたか。",
+        "vi": "Về báo cáo biến động vốn chủ sở hữu kỳ này, việc phân tích tăng giảm từng khoản mục và đối chiếu số liệu công bố đã hoàn tất chưa?",
+        "en": "Regarding this term's statement of changes in equity, have the fluctuation analyses for each category and the verification of disclosure figures been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、前期比較および純資産項目の主要な変動要因の検証を終え、取締役会への報告資料を整えました。",
+        "vi": "Vâng, chúng tôi đã hoàn thành việc so sánh với kỳ trước cũng như kiểm tra các nguyên nhân biến động chính của các khoản mục vốn chủ sở hữu, và đã chuẩn bị xong tài liệu báo cáo cho hội đồng quản trị.",
+        "en": "Yes, we have finished comparing with the prior period and verifying the primary drivers of changes in equity items, and the reporting materials for the board of directors are ready."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese terms accurately represent the official financial statement designation."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "cc7dc2ceb49de6a1a379539951b7dc74d0538a1d4e2ba91d68e328dbc7b1821a",
+    "validated_at": "2026-10-01T01:32:47.924817+00:00"
+  }
+}

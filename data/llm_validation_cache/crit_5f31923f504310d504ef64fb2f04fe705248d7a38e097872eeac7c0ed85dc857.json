@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000115",
+  "term": "買取銀行",
+  "overall_decision": "reject",
+  "summary_reason": "The core understanding of '買取銀行' (Negotiating Bank) is fundamentally incorrect throughout the collocations, examples, and dialogue. The term is consistently misused as an internal corporate body or event rather than its actual role in trade finance as a bank that negotiates documents under a letter of credit. This requires a complete overhaul of the content.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "買取銀行を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A bank is an organization, not an event that can be 'held'. This is a fundamental semantic mismatch.",
+      "suggested_text": "買取銀行に依頼する"
+    },
+    {
+      "index": 1,
+      "text": "買取銀行で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A negotiating bank does not 'resolve' or 'decide' on internal company matters like resolutions. Its role is to negotiate documents.",
+      "suggested_text": "買取銀行と交渉する"
+    },
+    {
+      "index": 2,
+      "text": "買取銀行に報告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Companies do not typically 'report' internal business decisions to a negotiating bank in this context. They provide documents or information relevant to the negotiation.",
+      "suggested_text": "買取銀行に書類を提出する"
+    },
+    {
+      "index": 3,
+      "text": "買取銀行へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "While '提出する' (submit) is plausible, '届出書' (notification/report form) is too generic and doesn't fit the specific function of a negotiating bank. More specific documents are submitted.",
+      "suggested_text": "買取銀行に船積書類を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence incorrectly implies that a '買取銀行' (negotiating bank) is an internal body that holds meetings and resolves important proposals. This is a fundamental misunderstanding of the bank's role in trade finance.",
+      "suggested_ja": "輸出者は、信用状の条件に従って船積書類を準備し、買取銀行に提示する運びとなりました。",
+      "suggested_vi": "Người xuất khẩu đã chuẩn bị các chứng từ vận chuyển theo các điều khoản của thư tín dụng và sẽ trình chúng cho ngân hàng chiết khấu thanh toán chứng từ (Negotiating Bank).",
+      "suggested_en": "The exporter has prepared the shipping documents in accordance with the terms of the letter of credit and will present them to the negotiating bank."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, this sentence misrepresents the function of a negotiating bank. It does not approve management policies or budget allocations.",
+      "suggested_ja": "買取銀行は、提示された船積書類が信用状の条件と一致していることを確認し、輸出者への支払いを承認しました。",
+      "suggested_vi": "Ngân hàng chiết khấu thanh toán chứng từ (Negotiating Bank) đã xác nhận rằng các chứng từ vận chuyển được xuất trình phù hợp với các điều khoản của thư tín dụng và đã phê duyệt thanh toán cho nhà xuất khẩu.",
+      "suggested_en": "The negotiating bank confirmed that the presented shipping documents were in conformity with the terms of the letter of credit and approved payment to the exporter."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats '買取銀行' as an internal meeting or document that needs 'preparation' and 'prior approval from executives'. This reflects a misunderstanding of the term's meaning and function.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "信用状に基づく輸出取引について、買取銀行への書類提示の準備状況はどうなっていますか。",
+        "vi": "Về giao dịch xuất khẩu dựa trên thư tín dụng, tình hình chuẩn bị chứng từ để xuất trình cho ngân hàng chiết khấu thanh toán chứng từ (Negotiating Bank) thế nào rồi?"
+      },
+      {
+        "speaker": "B",
+        "ja": "船積書類の最終確認を終え、本日中に買取銀行へ提示する手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc kiểm tra cuối cùng các chứng từ vận chuyển và sẽ sắp xếp để xuất trình chúng cho ngân hàng chiết khấu thanh toán chứng từ (Negotiating Bank) trong ngày hôm nay."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1f64f963e7cb043bf33deeffae5680b8c1282f0ed0722cff040afa0cd44e6948",
+    "validated_at": "2026-10-01T01:55:50.766816+00:00"
+  }
+}

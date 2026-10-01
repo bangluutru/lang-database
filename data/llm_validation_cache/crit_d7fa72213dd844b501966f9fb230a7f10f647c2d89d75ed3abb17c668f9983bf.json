@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000195",
+  "term": "監査法人",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 violates the accounting dual-responsibility principle by attributing the preparation of financial statements to the auditor's assurance scope, and Vietnamese translation in Example 1 uses an awkward passive register.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "監査法人を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and accounting collocation used in corporate governance and AGM agendas under the Companies Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "監査法人の監査を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business Japanese phrasing for undergoing an audit by an audit firm.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "監査法人と監査契約を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic legal and corporate accounting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "監査法人に事前相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Routine operational collocation in corporate finance and accounting divisions when handling complex accounting treatments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under auditing standards and the dual-responsibility principle (二重責任の原則), management is responsible for the preparation of financial statements (作成責任), while the auditor is responsible for ensuring the reliability/fairness of those statements (適正性・信頼性の担保・意見表明). Stating that the audit firm ensures '作成' is technically inaccurate in an accounting context.",
+      "suggested_ja": "独立した立場から財務諸表の適正性および信頼性を担保するため、株主総会において新たな監査法人を選任しました。",
+      "suggested_vi": "Để bảo đảm tính trung thực và độ tin cậy của báo cáo tài chính từ góc độ độc lập, chúng tôi đã bổ nhiệm công ty kiểm toán độc lập mới tại đại hội đồng cổ đông.",
+      "suggested_en": "To ensure the fairness and reliability of our financial statements from an independent perspective, we appointed a new audit firm at the general meeting of shareholders."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects real-world year-end closing processes where accounting policies and internal controls are reviewed.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Natural, professional exchange between corporate accounting staff regarding preparation for the fiscal year-end audit.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Example 1, 'chịu sự kiểm toán' carries an unnaturally passive and negative connotation in business Vietnamese; 'đã trải qua đợt kiểm toán' or 'đã tiếp nhận kiểm toán' is preferred."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f32c5e62f7424a51c3588f3e7fc7718666ce62cfbd94ae8ad1c8f538a215cac8",
+    "validated_at": "2026-10-01T01:31:45.648286+00:00"
+  }
+}

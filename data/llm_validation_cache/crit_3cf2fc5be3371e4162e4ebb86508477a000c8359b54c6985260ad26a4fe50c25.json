@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000032",
+  "term": "雑所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain error in the dialogue: '雑所得' is strictly an individual income tax category under the Income Tax Act, yet the dialogue erroneously placed it into a corporate monthly closing (月次決算) and subsidiary ledger context. Collocations and examples are strong, but the dialogue and Vietnamese headword translation must be corrected.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雑所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and common phrase in personal income tax calculation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雑所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic tax practice term, often used when determining whether side income is classified as business income (事業所得) or miscellaneous income (雑所得).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "雑所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology for aggregate taxation (総合課税) under the Income Tax Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "雑所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Completely natural procedural expression in Japanese tax filing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, formal, and factually correct regarding individual final tax returns.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate tax legal terminology accurately describing the aggregation of miscellaneous income under comprehensive taxation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「雑所得」は所得税法における個人の所得区分（10区分の1つ）であり、法人の「月次決算」や「補助元帳」で計上・照合するものではありません。これは法人会計の「雑収入」と個人の「雑所得」を混同した機械的テンプレート作文です。税理士と担当者、あるいは確定申告実務における会話に差し替える必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の確定申告の件ですが、執筆料や暗号資産の売却益は雑所得として区分してよろしいでしょうか。",
+        "vi": "Về việc quyết toán thuế thu nhập của thành viên ban giám đốc, tiền nhuận bút và lợi nhuận bán tài sản mã hóa phân loại vào thu nhập khác (thu nhập vãng lai) có đúng không?",
+        "en": "Regarding the director's final tax return, should we classify the writing fees and crypto asset gains as miscellaneous income?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。事業としての実質を伴わない副次的な収入ですので、雑所得として申告書を作成してください。",
+        "vi": "Vâng. Do đó là thu nhập phụ không mang bản chất hoạt động kinh doanh độc lập, xin hãy lập tờ khai theo diện thu nhập khác.",
+        "en": "Yes. Since they are secondary earnings not constituting a substantive business enterprise, please prepare the return under miscellaneous income."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese tax terminology (Luật thuế TNCN), '雑所得' should be rendered as 'thu nhập khác' or 'thu nhập vãng lai' rather than the word-by-word calque 'thu nhập hỗn hợp khác'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e1570153f5861096ea2daac2c61469e212fab6424b1861a94ddb8361cc417681",
+    "validated_at": "2026-10-01T01:37:59.736330+00:00"
+  }
+}

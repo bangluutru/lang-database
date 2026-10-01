@@ -1,0 +1,85 @@
+{
+  "entry_id": "jp-pro-trade-000178",
+  "term": "環太平洋パートナーシップ協定",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences contain semantic mismatches regarding the nature of CPTPP as a multilateral agreement. The dialogue also suffers from a disconnected turn and an unnatural premise for a corporate setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "環太平洋パートナーシップ協定を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "環太平洋パートナーシップ協定を更新する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "国際協定は通常「更新する」ではなく「再交渉する」や「改定する」が使われる。CPTPPは多国間協定であり、個別の国が「更新する」という表現は不自然。",
+      "suggested_text": "環太平洋パートナーシップ協定を再交渉する"
+    },
+    {
+      "index": 2,
+      "text": "環太平洋パートナーシップ協定を解除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "国際協定の場合、「解除する」は一般的ではない。「脱退する」や「破棄する」がより適切。",
+      "suggested_text": "環太平洋パートナーシップ協定から脱退する"
+    },
+    {
+      "index": 3,
+      "text": "環太平洋パートナーシップ協定の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "CPTPPは多国間協定であり、特定の「取引先」と「基本合意に達した」から「締結する」という文脈は不自然。CPTPPは国家間で締結されるものであり、企業間の取引で直接「CPTPPを締結する」とは言わない。",
+      "suggested_ja": "CPTPPの恩恵を受けるため、来週、関連する国内法整備について最終確認を行います。",
+      "suggested_vi": "Để hưởng lợi từ CPTPP, tuần tới chúng tôi sẽ tiến hành xác nhận cuối cùng về việc hoàn thiện luật pháp trong nước liên quan.",
+      "suggested_en": "To benefit from the CPTPP, we will finalize the review of related domestic legal frameworks next week."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの発言はCPTPPの修正案について尋ねているが、Bの返答は「損害賠償条項を含めてリスクがないことを確認した」と、CPTPPという多国間協定の修正案としては具体的な内容が不明瞭で、企業間の契約書のような応答になっている。CPTPPの修正案を企業が確認する状況が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "CPTPP発効に伴う国内法改正案について、法務部からの確認は済みましたか。",
+        "vi": "Về dự thảo sửa đổi luật pháp trong nước liên quan đến việc CPTPP có hiệu lực, bộ phận pháp chế đã xác nhận xong chưa?",
+        "en": "Regarding the draft amendments to domestic laws following the CPTPP's entry into force, has the legal department completed its review?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する損害賠償条項を含め、法的リスクがないことを確認いたしましたので、このまま政府への意見提出手続きに進めます。",
+        "vi": "Vâng, chúng tôi đã xác nhận không có rủi ro pháp lý nào, bao gồm cả các điều khoản bồi thường thiệt hại liên quan, nên chúng tôi sẽ tiếp tục quy trình gửi ý kiến lên chính phủ.",
+        "en": "Yes, we have confirmed there are no legal risks, including the relevant indemnity clauses, so we will proceed with the process of submitting our opinions to the government."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e0bd73d26d29b4735472ecb860ec60fca45796674302cad72e12624db175c125",
+    "validated_at": "2026-10-01T01:57:07.437790+00:00"
+  }
+}

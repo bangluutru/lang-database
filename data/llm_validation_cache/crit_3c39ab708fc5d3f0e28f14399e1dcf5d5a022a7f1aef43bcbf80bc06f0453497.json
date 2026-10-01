@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000161",
+  "term": "研究開発費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 exhibit mechanical predicate mismatch ('照合する', '精算する'), Example 1 contains unnatural tautology ('適正な...適正に'), and Dialogue turn B employs redundant phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "研究開発費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing R&D expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "研究開発費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used in general ledger review and monthly trial balance verification.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "研究開発費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates vouchers, invoices, or budget vs. actuals rather than the abstract expense account directly.",
+      "suggested_text": "研究開発費を予算計上する"
+    },
+    {
+      "index": 3,
+      "text": "研究開発費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, expense claims, or travel expenses (仮払金・立替金), not aggregate financial statement expense accounts.",
+      "suggested_text": "研究開発費を費用処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable description of month-end expense verification and subledger reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Rhetorically redundant repeating '適正な' twice, and vague about J-GAAP accounting rules where R&D must be expensed when incurred (発生時費用処理).",
+      "suggested_ja": "会計基準および社内規程に則り、当期に発生した研究開発費はすべて販売費及び一般管理費として処理いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán và quy chế nội bộ, toàn bộ chi phí nghiên cứu và phát triển (R&D) phát sinh trong kỳ này đã được hạch toán vào chi phí bán hàng và quản lý doanh nghiệp.",
+      "suggested_en": "In accordance with accounting standards and internal rules, all research and development expenses incurred during the current period were recognized as selling, general, and administrative expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合していることを確認いたしました' is unnaturally redundant Japanese; professionals say '整合性を確認いたしました' or '一致していることを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、研究開発費の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung ghi nhận chi phí nghiên cứu và phát triển (R&D) có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the recorded research and development expenses for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ cái phụ và xác nhận mọi thứ đều khớp hoàn toàn.",
+        "en": "I have reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base translations for the term are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "64a60d647f933518cc9e2511fd20d772254f5d020d33e40258662d3851728944",
+    "validated_at": "2026-10-01T01:36:31.642782+00:00"
+  }
+}

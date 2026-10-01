@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000158",
+  "term": "フリータイム",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure conversational continuity and direct relevance of Speaker B's response to Speaker A's question regarding 'フリータイムの手配状況'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "フリータイムの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in trade contracts."
+    },
+    {
+      "index": 1,
+      "text": "フリータイムの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in trade pricing."
+    },
+    {
+      "index": 2,
+      "text": "フリータイムにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for cost allocation."
+    },
+    {
+      "index": 3,
+      "text": "フリータイムにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression for risk transfer in trade."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document, factually correct."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document, factually correct."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the 'フリータイムの手配状況' (arrangement status of free time). It describes the general customs clearance process, not the specific free time arrangements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、フリータイムの手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp thời gian miễn phí lưu bãi và lưu vỏ container thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the free time arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、フリータイムについては船会社と交渉し、〇月〇日まで延長することで合意しております。通関業者と乙仲にもその旨を伝達済みです。",
+        "vi": "Vâng, về thời gian miễn phí lưu bãi và lưu vỏ container, chúng tôi đã đàm phán với hãng tàu và đã thống nhất gia hạn đến ngày XX tháng YY. Chúng tôi cũng đã thông báo nội dung này cho công ty thông quan và đại lý vận chuyển.",
+        "en": "Yes, regarding the free time, we have negotiated with the shipping company and agreed to extend it until [Date]. We have also informed the customs broker and forwarder of this."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "97f377a157200740f41857d4def44b7250fdbd2a5843a5455e2d61909851e216",
+    "validated_at": "2026-10-01T01:56:42.388653+00:00"
+  }
+}

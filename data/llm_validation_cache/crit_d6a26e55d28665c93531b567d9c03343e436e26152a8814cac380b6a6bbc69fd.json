@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000133",
+  "term": "アポイントメント",
+  "overall_decision": "rewrite",
+  "summary_reason": "The generated object consists almost entirely of artificial formulaic templates ('〜を徹底する', '〜の習慣付け', '〜の重要性を共有する') combined awkwardly with 'アポイントメント', failing completely to reflect authentic corporate usage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "アポイントメントを徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An appointment is scheduled or secured, not 'enforced/thoroughly implemented'. Natural predicates are 取る, 取り付ける, or 設定する.",
+      "suggested_text": "アポイントメントを取る"
+    },
+    {
+      "index": 1,
+      "text": "アポイントメントを行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically decipherable, 'アポイントメントを行う' is rarely used in business. The standard expression is 'アポイントメントを取り付ける' or 'アポイントメントを設定する'.",
+      "suggested_text": "アポイントメントを取り付ける"
+    },
+    {
+      "index": 2,
+      "text": "アポイントメントを習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Templated and awkward phrasing. One does not 'habituate an appointment'.",
+      "suggested_text": "アポイントメントを確定する"
+    },
+    {
+      "index": 3,
+      "text": "アポイントメントの重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic modular filler expression that does not teach authentic business collocations.",
+      "suggested_text": "アポイントメントを変更する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'事前のアポイントメントを徹底しています' sounds artificial and templated. Internal department coordination is typically described as '事前にアポイントを取る' or '事前に日程調整を行う'.",
+      "suggested_ja": "新規開拓営業では、訪問前に先方の担当者とアポイントメントを取り付けることが最優先されます。",
+      "suggested_vi": "Trong hoạt động phát triển khách hàng mới, việc đặt trước cuộc hẹn với người phụ trách của đối tác là ưu tiên hàng đầu.",
+      "suggested_en": "In outbound sales, securing an appointment with the person in charge prior to visiting is the highest priority."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'迅速なアポイントメントの習慣付け' is illogical and bizarre; appointments are scheduled meetings, not a routine habit that prevents operational trouble.",
+      "suggested_ja": "急な出張が入ったため、来週予定していたクライアントとのアポイントメントを再調整した。",
+      "suggested_vi": "Do có chuyến công tác đột xuất, tôi đã sắp xếp lại cuộc hẹn với khách hàng dự kiến vào tuần tới.",
+      "suggested_en": "Due to an urgent business trip, I rescheduled the appointment with the client planned for next week."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange is an artificial bureaucratic template. A asks about 'the enforcement status of appointments' (meaningless in a real Japanese office), and B answers vaguely about 'information sharing'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "例の新規クライアントとのアポイントメントは取れましたか。",
+        "vi": "Anh đã hẹn được lịch làm việc với khách hàng mới đó chưa?",
+        "en": "Were you able to secure an appointment with that new client?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先方のご都合を伺い、来週火曜日の14時に設定いたしました。",
+        "vi": "Vâng, tôi đã hỏi lịch của họ và chốt vào 14 giờ chiều thứ Ba tuần tới rồi ạ.",
+        "en": "Yes, I checked their availability and scheduled it for next Tuesday at 2:00 PM."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations faithfully reflected the unnatural templated Japanese, resulting in awkward and unnatural phrasing in both English and Vietnamese."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "481b8d05c22c754d0e52fdc0375b8a7fa716446f5acaff04b3021337b562df2a",
+    "validated_at": "2026-10-01T01:43:11.007229+00:00"
+  }
+}

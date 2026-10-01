@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000053",
+  "term": "同居老親等",
+  "overall_decision": "rewrite",
+  "summary_reason": "税法上の扶養控除区分である「同居老親等」に対し、社外取締役や監査法人等の役員就任テンプレートが誤って一律適用されており、全コロケーション・例文・対話が実態と完全に乖離して破綻しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "同居老親等を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「同居老親等」は税法上の扶養控除対象区分（70歳以上の同居の直系尊属）であり、役員のように「選任」することはできません。",
+      "suggested_text": "同居老親等に該当する"
+    },
+    {
+      "index": 1,
+      "text": "同居老親等に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "親族の税法上のステータスであり、役職ではないため「就任」という述語は適用不可能です。",
+      "suggested_text": "同居老親等の扶養控除を受ける"
+    },
+    {
+      "index": 2,
+      "text": "同居老親等に相談する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "「同居老親等」は所得税・年末調整の税務用語であり、日常的な相談相手を指す呼称としては不自然です。",
+      "suggested_text": "同居老親等の要件を満たす"
+    },
+    {
+      "index": 3,
+      "text": "同居老親等の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「同居老親等」に職務は存在しません。役員テンプレートの機械的流用です。",
+      "suggested_text": "同居老親等として申告する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "株主総会決議で「同居老親等」が選任されることはあり得ず、税法および会社法の観点から完全なナンセンスです。",
+      "suggested_ja": "納税者本人または配偶者の直系尊属で常に同居している70歳以上の方は、税法上の「同居老親等」に該当し、扶養控除額が加算されます。",
+      "suggested_vi": "Người thuộc trực hệ trên 70 tuổi của người nộp thuế hoặc vợ/chồng thường xuyên sống chung thuộc diện 'cha mẹ già từ 70 tuổi trở lên sống chung nhà' theo luật thuế và được cộng thêm mức giảm trừ gia cảnh.",
+      "suggested_en": "Direct ascendants of the taxpayer or their spouse aged 70 or older who reside together permanently qualify as 'cohabiting elderly parents, etc.' under tax law and receive an increased dependent deduction."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "業務執行の適法性確保のために「同居老親等」と連絡会を開くという文脈は、監査役等のテンプレートが誤って適用されており完全に破綻しています。",
+      "suggested_ja": "年末調整の際に同居老親等として扶養控除を適用するには、年間所得要件や同居の実態を確認する必要があります。",
+      "suggested_vi": "Để áp dụng mức giảm trừ gia cảnh cho cha mẹ già từ 70 tuổi trở lên sống chung khi điều chỉnh thuế cuối năm, cần xác nhận điều kiện thu nhập hàng năm và tình trạng sống chung thực tế.",
+      "suggested_en": "To apply the dependent deduction for a cohabiting elderly parent during year-end tax adjustment, it is necessary to verify the annual income requirements and actual living arrangements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「同居老親等」を役員承認・発送する文書のように扱っており、語義およびドメインの理解が完全に崩壊しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整の書類を確認しているのですが、この従業員のお父様は同居老親等に該当しますか。",
+        "vi": "Tôi đang kiểm tra giấy tờ điều chỉnh thuế cuối năm, liệu bố của nhân viên này có thuộc diện cha mẹ già từ 70 tuổi trở lên sống chung không?",
+        "en": "I am reviewing the year-end tax adjustment documents; does this employee's father qualify as a cohabiting elderly parent?"
+      },
+      {
+        "speaker": "B",
+        "ja": "70歳以上で同居されていますが、公的年金等の収入が限度額を超えているため、今回は対象外となります。",
+        "vi": "Ông ấy đã trên 70 tuổi và sống cùng nhà, nhưng do thu nhập từ lương hưu công vượt quá mức trần nên lần này không thuộc đối tượng áp dụng.",
+        "en": "He is over 70 and living together, but because his public pension income exceeds the threshold, he is not eligible this time."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語の基本訳語（税法上の定義）自体には致命的な齟齬はないが、文脈例が破綻していたため例文・対話側で修正が必要。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e3d95cba329a51f610c9ce9a023592275a775d64e3347ba123625e243107a0fb",
+    "validated_at": "2026-10-01T01:38:16.533654+00:00"
+  }
+}

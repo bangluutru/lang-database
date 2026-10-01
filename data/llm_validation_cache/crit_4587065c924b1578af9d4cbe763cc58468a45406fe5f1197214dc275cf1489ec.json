@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000094",
+  "term": "保税工場",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the semantic misuse of '保税工場' as an accounting entry or item that can be '計上' or '処理' directly, rather than a facility where goods or transactions are processed. This indicates a fundamental misunderstanding of how the term is used in an accounting/business context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保税工場に搬入する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "保税工場から搬出する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "保税工場で保管する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "保税工場の許可を取得する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "保税工場 is a facility, not an accounting entry. You cannot '計上' (book/record) a facility itself, nor does it have a '残高' (balance). The sentence attempts to treat the facility as an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、保税工場における製品の入出庫記録や在庫残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong hồ sơ nhập xuất kho hoặc số dư hàng tồn kho tại nhà máy gia công sản xuất bảo thuế hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the records of goods inflow/outflow or inventory balances at the bonded manufacturing warehouse."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '保税工場を処理する' (to process a bonded factory) is unnatural. You process transactions, inventory, or customs procedures related to the bonded factory, not the factory itself as an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において保税工場に関連する在庫や取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch và hàng tồn kho liên quan đến nhà máy gia công sản xuất bảo thuế trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed inventory and transactions related to the bonded manufacturing warehouse in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '保税工場の計上内容に差異は発生していませんか' is unnatural because, as explained, a '保税工場' (bonded factory) itself is not an accounting entry ('計上内容') and does not have '差異' (discrepancies) in that context. The question should refer to items or activities within the bonded factory.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、保税工場における在庫の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán hàng tồn kho tại nhà máy gia công sản xuất bảo thuế không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for inventory at the bonded manufacturing warehouse?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0a7b2e1b51e23e6f997a12455ccdae496f03380493ad2d3091da79afb28b963b",
+    "validated_at": "2026-10-01T01:55:20.101996+00:00"
+  }
+}

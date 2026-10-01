@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000130",
+  "term": "基準期間",
+  "overall_decision": "reject",
+  "summary_reason": "税法固有の期間概念である「基準期間」に対し、月次決算の勘定残高照合テンプレート（計上内容・残高照合）を無差別に当てはめており、会計・税務実務上完全に破綻しています。コロケーション・例文・対話すべてを消費税の納税義務判定文脈に全面刷新する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "基準期間を判定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「基準期間」自体を判定するのではなく、基準期間における課税売上高等に基づいて「納税義務の有無を判定する」のが税務上の実務用法です。",
+      "suggested_text": "基準期間の課税売上高を確認する"
+    },
+    {
+      "index": 1,
+      "text": "基準期間を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "消費税の納税義務判定等の前提として、どの事業年度が基準期間に該当するかを確認する文脈で自然に使われます。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "基準期間を設定する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "消費税法上の基準期間（原則として前々事業年度等）は税法規に基づき一義的に定まるものであり、企業が任意に「設定する」ものではありません。",
+      "suggested_text": "基準期間に基づき判定する"
+    },
+    {
+      "index": 3,
+      "text": "基準期間を基準とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「基準」が重複しており同語反復的で極めて不自然です。",
+      "suggested_text": "基準期間における課税売上高"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「基準期間」は主に消費税法上の納税義務判定に用いる前々事業年度等を指す期間概念であり、月次の帳簿照合で「計上内容や残高」が生じる勘定科目や会計実体ではありません。機械的テンプレートの誤適用です。",
+      "suggested_ja": "消費税の納税義務を判定するため、基準期間である前々事業年度の課税売上高を精査してください。",
+      "suggested_vi": "Để xác định nghĩa vụ nộp thuế tiêu thụ, vui lòng kiểm tra kỹ doanh số chịu thuế của kỳ tính thuế căn cứ (niên độ 2 năm trước).",
+      "suggested_en": "Please scrutinize the taxable sales for the base period (the fiscal year two years prior) to determine consumption tax liability."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "期間概念である「基準期間」を目的語として「適正に処理いたしました」とするのは述語との意味的整合性を欠きます。また、基準期間は税法（消費税法）の概念であり、「会計基準に則り処理する」対象ではありません。",
+      "suggested_ja": "当期が消費税の課税事業者に該当するかどうか、基準期間の課税売上高をもとに税務上の確認を行いました。",
+      "suggested_vi": "Chúng tôi đã tiến hành kiểm tra về mặt thuế dựa trên doanh số chịu thuế của kỳ tính thuế căn cứ để xác định xem kỳ này có thuộc diện đối tượng nộp thuế tiêu thụ hay không.",
+      "suggested_en": "We conducted a tax review based on the taxable sales of the base period to verify whether the company constitutes a taxable enterprise for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算において「基準期間の計上内容に差異が発生する」ことは税務・会計の構造上あり得ません。定型テンプレートによる事実誤認です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期の消費税の免税事業者判定に向けて、基準期間の課税売上高の集計は終わっていますか。",
+        "vi": "Để xác định tư cách đối tượng miễn thuế tiêu thụ cho kỳ tới, việc tổng hợp doanh số chịu thuế của kỳ tính thuế căn cứ đã hoàn tất chưa?",
+        "en": "Has the aggregation of taxable sales for the base period been completed to determine our consumption tax exemption status for next term?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、前々事業年度の総勘定元帳を再確認し、基準期間における課税売上高が1,000万円を超えていることを確認いたしました。",
+        "vi": "Vâng, tôi đã kiểm tra lại sổ cái của niên độ 2 năm trước và xác nhận doanh số chịu thuế trong kỳ tính thuế căn cứ đã vượt quá 10 triệu yên.",
+        "en": "Yes, I rechecked the general ledger for the fiscal year two years prior and confirmed that taxable sales in the base period exceeded 10 million yen."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（Base period / kỳ tính thuế căn cứ）自体は税法概念として妥当ですが、例文・会話文側の内容が不成立であったため文全体の再作成が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7f2d661c3de50bc254fe88e3bdc333b05d52d9c3dceb2ad129328d18cd18c520",
+    "validated_at": "2026-10-01T01:39:40.649250+00:00"
+  }
+}

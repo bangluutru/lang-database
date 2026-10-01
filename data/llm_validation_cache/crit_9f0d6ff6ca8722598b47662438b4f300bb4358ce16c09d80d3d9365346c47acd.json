@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000067",
+  "term": "輸入許可",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションと例文、対話に不自然な表現や文脈の齟齬が見られるため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸入許可を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「行う」は一般的な動詞だが、「輸入許可」という行為に対してはより具体的な動詞が自然。例えば「得る」「受ける」など。",
+      "suggested_text": "輸入許可を得る"
+    },
+    {
+      "index": 1,
+      "text": "輸入許可を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「輸入許可」は手続きの結果として「完了する」ものであり、主語が人や組織の場合、「輸入許可の手続きを完了する」が自然。許可そのものを完了するとは言わない。",
+      "suggested_text": "輸入許可の手続きを完了する"
+    },
+    {
+      "index": 2,
+      "text": "輸入許可を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な組み合わせ。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "輸入許可の適法性を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な組み合わせ。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「輸入許可の手続きを完了させました」はやや不自然。「輸入許可を得ました」や「輸入許可が下りました」の方が自然。また、「関係官庁の要件を満たすため」という表現も少し硬い。",
+      "suggested_ja": "税関への本申告に先立ち、関係官庁の要件を満たし、速やかに輸入許可を得ました。",
+      "suggested_vi": "Trước khi khai báo chính thức với hải quan, chúng tôi đã đáp ứng yêu cầu của cơ quan chủ quản và nhanh chóng nhận được giấy phép nhập khẩu.",
+      "suggested_en": "Prior to the formal customs declaration, we fulfilled the requirements of the competent agency and promptly obtained import permission."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「輸入許可の手配状況はいかがでしょうか」はやや硬く、より口語的な表現が望ましい。Speaker Bの「輸入申告に入っております」も、許可が下りていない段階で「輸入申告に入っている」という表現は、文脈によっては誤解を招く可能性がある。許可が下りてから申告に入るのが一般的。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の件ですが、輸入許可はもう下りていますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, giấy phép nhập khẩu đã được cấp chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, has the import permission been granted yet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は済んでおり、書類の確認も完了しましたので、間もなく輸入許可が下りる見込みです。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, việc kiểm tra chứng từ cũng đã hoàn tất, dự kiến giấy phép nhập khẩu sẽ sớm được cấp.",
+        "en": "Yes, we have contacted the customs broker and forwarding agent, and the document verification is complete, so import permission is expected to be granted shortly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の「thông quan nhập khẩu hoàn tất」は「import clearance completed」という意味合いが強く、「輸入許可」という単語そのものの翻訳としては不適切。単に「giấy phép nhập khẩu」が適切。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "844def0e7087c9011e2cc517c091d7f088d0289cdd66b3bad590110a13c260ba",
+    "validated_at": "2026-10-01T01:54:49.888928+00:00"
+  }
+}

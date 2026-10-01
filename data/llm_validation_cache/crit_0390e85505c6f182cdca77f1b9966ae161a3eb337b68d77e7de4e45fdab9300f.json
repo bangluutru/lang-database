@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000091",
+  "term": "保税地域",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding of how '保税地域' (bonded area) is treated in accounting. It is a location, not an asset or liability that can have '計上内容' or '残高' directly. The Japanese expressions are grammatically decipherable but semantically unnatural and incorrect in a professional accounting context. The translations are accurate given the flawed Japanese input, but the underlying Japanese needs correction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保税地域に搬入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "保税地域から搬出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保税地域で保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "保税地域の許可を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "保税地域 (bonded area) is a physical location, not an accounting item that can have '計上内容' (accounting entry details) or '残高' (balance). Goods *in* a bonded area can be accounted for, but not the area itself. This is a fundamental accounting misunderstanding.",
+      "suggested_ja": "月末の帳簿照合において、保税地域に保管されている貨物の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của hàng hóa được lưu giữ trong khu vực bảo thuế hải quan có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for goods stored in the bonded area."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '保税地域を適正に処理する' (to properly process a bonded area) is semantically incorrect. You process *transactions related to* or *goods within* a bonded area, not the area itself as an accounting object. This phrasing suggests the bonded area itself is an item to be accounted for, which it is not.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において保税地域に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến khu vực bảo thuế hải quan trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the bonded area in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same fundamental semantic error as the examples. '保税地域の計上内容' is incorrect. You cannot have accounting entries for a physical location. Speaker B's response is also problematic as it implies '証憑書類と補助元帳を照合' would confirm the '計上内容' of the bonded area itself, which is not how accounting works for such facilities.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、保税地域に保管されている貨物の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán của hàng hóa được lưu giữ trong khu vực bảo thuế hải quan không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for goods stored in the bonded area?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ phụ, và xác nhận rằng tất cả đều khớp đúng cách.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "38459c3f588d70c26243f54a0ac5e437418c0637974103084cc8f495527d1130",
+    "validated_at": "2026-10-01T01:55:18.775333+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000083",
+  "term": "未払金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Terminology and translations are sound, but Example 2 contains unnatural boilerplate phrasing ('適正な会計基準...適正に'), Collocations 2 and 3 require more precise accounting predicates ('明細を照合する', '決済する'), and the dialogue features stilted phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未払金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation used when recognizing non-operating/other liabilities.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "未払金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and frequent in monthly/annual closing workflows.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "未払金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese accounting practice, one reconciles details or balances ('未払金明細を照合する' or '請求書と未払金を照合する'), rather than bare '未払金'.",
+      "suggested_text": "未払金明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "未払金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Payables (未払金) are settled or paid ('決済する' / '支払う'). '精算する' specifically refers to expense reconciliations/adjustments (経費精算・仮払金精算).",
+      "suggested_text": "未払金を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, clear, and accurately represents typical monthly closing operations.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is non-standard Japanese accounting terminology (should be '企業会計基準' or '会計基準'). Additionally, repeating '適正な...適正に' is stylistically poor and represents templated boilerplate.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期の決算において未払金を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã hạch toán đúng quy định khoản phải trả khác trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we properly recognized accounts payable - other in the current period closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural redundancy (pleonasm), and Speaker A's phrasing '計上内容に差異は発生していませんか' lacks a clear comparison baseline. Business discourse typically compares general ledger with subsidiary ledgers or vouchers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未払金の計上漏れや残高の差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, có phát sinh thiếu sót khi hạch toán hay chênh lệch số dư đối với khoản phải trả khác không?",
+        "en": "In this month's closing, are there any omitted entries or balance discrepancies for accounts payable - other?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi thứ đều khớp chính xác mà không có vấn đề gì.",
+        "en": "We have reconciled the source documents with the subsidiary ledger and confirmed that everything matches without issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1701431def2c5911e0a5d93cd288cfe7a53b99baabb262803235a0fff0ba061d",
+    "validated_at": "2026-10-01T01:35:09.764011+00:00"
+  }
+}

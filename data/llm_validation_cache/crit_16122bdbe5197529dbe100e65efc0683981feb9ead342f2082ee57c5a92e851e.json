@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000049",
+  "term": "構築物",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a domain factual error (structures do not possess independent title/ownership records '権利関係', and '棚卸実査' applies to inventory rather than fixed assets). Vietnamese translation in Example 0 also uses an awkward classifier.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "構築物を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and accounting phrasing for asset acquisition.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "構築物を固定資産台帳に登録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting procedure for recognizing fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "構築物を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression indicating ownership of tangible fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "構築物を除却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and technically precise accounting term for asset retirement/disposal.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable Japanese sentence describing asset acquisition, though Vietnamese classifier 'mảnh' in the translation is unnatural.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese law and practice, '構築物' (outdoor structures like fences, paving, silos) are fixtures attached to land and do not have separate real estate titles/deeds (権利関係). Verifying '権利関係' is standard for 土地・建物, not 構築物. Furthermore, physical asset inspection is conventionally termed '固定資産実査' rather than '棚卸実査' (which is specific to inventories).",
+      "suggested_ja": "期末の固定資産実査を実施し、台帳に記載された構築物の現況および稼働状況を確認しました。",
+      "suggested_vi": "Chúng tôi đã tiến hành kiểm kê thực tế tài sản cố định vào cuối kỳ, đối chiếu hiện trạng và tình trạng hoạt động của các vật kiến trúc trên sổ sách.",
+      "suggested_en": "We conducted a fiscal year-end physical audit of fixed assets to verify the actual condition and operational status of structures recorded in the ledger."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Very natural and context-appropriate accounting dialogue regarding fixed asset register logging and depreciation method configuration.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Example 0, the phrase 'mảnh vật kiến trúc' is unnatural in Vietnamese ('mảnh' is for plots of land or pieces/scraps; structures should simply be 'các vật kiến trúc')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "28648801c2781642a884a4a580f482c19f53b6e297ad1150041723e6fa454789",
+    "validated_at": "2026-10-01T01:34:32.423711+00:00"
+  }
+}

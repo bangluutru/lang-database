@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000030",
+  "term": "期日厳守",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains unnatural templated sentences with semantic conflicts (事前の期日厳守, 迅速な期日厳守) and an unidiomatic predicate collocation (期日厳守を行う). The content requires native rewrites before being taught to professional learners.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "期日厳守を徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly standard and idiomatic business collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "期日厳守を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "期日厳守 is a compliance principle/attitude, not an executable discrete action paired with 行う. Natural predicates include 求める, 心がける, or 促す.",
+      "suggested_text": "期日厳守を求める"
+    },
+    {
+      "index": 2,
+      "text": "期日厳守を習慣づける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, pairing 期日厳守 directly with 習慣づける is stilted in corporate contexts; 心がける or 意識する is far more standard.",
+      "suggested_text": "期日厳守を心がける"
+    },
+    {
+      "index": 3,
+      "text": "期日厳守の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly heard in corporate teamwork and management settings.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「事前の期日厳守」 is syntactically unnatural and redundant. Furthermore, 「関係部署への期日厳守を徹底しています」 is awkward phrasing.",
+      "suggested_ja": "プロジェクトを円滑に推進するため、関係部署に対して期日厳守の徹底を求めています。",
+      "suggested_vi": "Để thúc đẩy dự án diễn ra thuận lợi, chúng tôi yêu cầu các phòng ban liên quan triệt để tuân thủ đúng thời hạn.",
+      "suggested_en": "To ensure smooth project progress, we require relevant departments to strictly adhere to deadlines."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「迅速な期日厳守」 is a semantic mismatch; 'promptness' (迅速) does not naturally modify 'deadline compliance' (期日厳守). Modifying it with 習慣付け is also stiff and synthetic.",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、全社を挙げて期日厳守の意識を高める必要があります。",
+      "suggested_vi": "Để ngăn ngừa sự cố trong công việc phát sinh, toàn thể công ty cần nâng cao ý thức tuân thủ đúng thời hạn.",
+      "suggested_en": "To prevent operational issues beforehand, the entire company needs to raise awareness regarding strict adherence to deadlines."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks specifically about challenges regarding deadline compliance (期日厳守の徹底状況), but Speaker B pivots completely to information sharing (情報共有) without directly acknowledging deadline performance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期のプロジェクトにおいて、期日厳守の徹底状況に何か問題は生じていませんか。",
+        "vi": "Trong dự án kỳ này, tình hình triệt để tuân thủ thời hạn có phát sinh vấn đề gì không?",
+        "en": "Are there any issues arising regarding strict adherence to deadlines in this term's project?"
+      },
+      {
+        "speaker": "B",
+        "ja": "現時点では全タスクがスケジュール通りに進んでおり、期日厳守が保たれています。",
+        "vi": "Hiện tại toàn bộ nhiệm vụ đang tiến triển đúng lịch trình và việc đảm bảo đúng hạn vẫn được duy trì.",
+        "en": "At present, all tasks are progressing on schedule, and strict adherence to deadlines is being maintained."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Literal translation artifact: 'nghiêm chỉnh chấp hành đúng thời hạn từ trước' and 'prior strict adherence to deadlines' are unnatural and unintelligible in professional prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "20b4cedd70bf8b5ded8a343dc8c0b64efaec156d5792662d6b973c8f9f3a9932",
+    "validated_at": "2026-10-01T01:41:27.894147+00:00"
+  }
+}

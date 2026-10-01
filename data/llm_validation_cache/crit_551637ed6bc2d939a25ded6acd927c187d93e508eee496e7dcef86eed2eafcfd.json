@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000096",
+  "term": "パートタイマー",
+  "overall_decision": "rewrite",
+  "summary_reason": "役員・監査役向け文書テンプレート（選任、株主総会決議、業務執行の適法性、書類の推敲・発送）に「パートタイマー」を機械的に代入したことによる極めて不自然なハルシネーション・事実誤認が発生しているため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "パートタイマーを選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役員や監査役等の機関設計上の役職に用いる語であり、非正規雇用者であるパートタイマーには「雇い入れる」「採用する」を用いる。",
+      "suggested_text": "パートタイマーを採用する"
+    },
+    {
+      "index": 1,
+      "text": "パートタイマーに就任する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "「就任する」は取締役や会長などの役職・地位に就く際に用いる語であり、パートタイマーに対して用いるのは極めて不自然。",
+      "suggested_text": "パートタイマーとして勤務する"
+    },
+    {
+      "index": 2,
+      "text": "パートタイマーに相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "文法的には成立するが、学習項目の核となる労務管理上の典型的なコロケーションではない。",
+      "suggested_text": "パートタイマーを募集する"
+    },
+    {
+      "index": 3,
+      "text": "パートタイマーの職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "役員や公務員の職務テンプレートをそのまま当てはめたような硬すぎる表現。労務現場の実態に合わない。",
+      "suggested_text": "パートタイマーのシフトを管理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "株主総会決議でパートタイマーを選任することは会社法上あり得ず、役員・監査役向けのテンプレートが流用されている致命的な事実誤認。",
+      "suggested_ja": "繁忙期の業務に対応するため、来月から新たにパートタイマーを3名採用することになりました。",
+      "suggested_vi": "Để đáp ứng khối lượng công việc vào mùa cao điểm, chúng tôi quyết định tuyển dụng thêm 3 nhân viên bán thời gian từ tháng tới.",
+      "suggested_en": "To handle the workload during the busy season, we have decided to hire three new part-time workers starting next month."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性を確保するため…」は監査役等の文脈であり、パートタイマーに対して用いる文脈として完全に破綻している。",
+      "suggested_ja": "当社ではパートタイマーの有給休暇取得率を向上させるため、労務環境の改善を進めています。",
+      "suggested_vi": "Công ty chúng tôi đang tiến hành cải thiện môi trường lao động nhằm nâng cao tỷ lệ sử dụng ngày nghỉ có lương của nhân viên bán thời gian.",
+      "suggested_en": "Our company is improving working conditions to increase the paid leave utilization rate among part-time workers."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aがパートタイマーについて尋ねているのに対し、Bが「内容の最終推敲を終え…発送の手配を行います」と回答しており、書類や報告書向けのテンプレートが混入して文脈が完全に破綻している。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月からの新店舗オープンに向けて、パートタイマーの応募状況はいかがですか。",
+        "vi": "Tình hình ứng tuyển của nhân viên bán thời gian cho việc mở cửa hàng mới vào tháng tới thế nào rồi?",
+        "en": "How is the applicant situation for part-time workers regarding the new store opening next month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "求人広告の反響が良く、すでに定員を超える応募が集まっておりますので、明日から面接を開始します。",
+        "vi": "Phản hồi từ tin tuyển dụng rất tốt và số lượng ứng viên đã vượt chỉ tiêu, nên chúng tôi sẽ bắt đầu phỏng vấn từ ngày mai.",
+        "en": "The response to the job advertisement has been strong, and we have already received more applications than our quota, so we will start interviews tomorrow."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体（part-time worker / nhân viên làm việc bán thời gian）は正確だが、例文・対話文は原文の致命的な誤りをそのまま訳しているため全面差し替えが必要。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "db0b6a810f0b562bc0a4d3d0cf5e8c671fd1be8334518bd1477954a946c82d90",
+    "validated_at": "2026-10-01T01:42:34.197323+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000053",
+  "term": "土地",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal accounting domain error in the dialogue (attributing depreciation and useful life to land, which is non-depreciable), improper collocation ('土地を除却する'), and translation contamination in Vietnamese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "土地を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, natural collocation in business and accounting contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "土地を固定資産台帳に登録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic corporate accounting procedure when recording fixed asset acquisitions.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "土地を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise business phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "土地を除却する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese accounting and tax practice, land (土地) is a non-depreciable asset that cannot be physically scrapped or demolished (除却). Disposal of land is treated as sale (売却) or loss/extinguishment (滅失).",
+      "suggested_text": "土地を売却する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is natural, but the Vietnamese translation awkwardly copies the dictionary slash format 'quyền sử dụng đất / đất đai' directly into the sentence.",
+      "suggested_ja": "事業拡大に向けた拠点開発のため、適正な鑑定評価を経て新たな土地を取得しました。",
+      "suggested_vi": "Để phát triển cơ sở phục vụ mở rộng kinh doanh, chúng tôi đã nhận chuyển nhượng quyền sử dụng đất mới sau khi có kết quả thẩm định giá chuẩn xác.",
+      "suggested_en": "For facility development toward business expansion, we acquired new land following an appropriate appraisal valuation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Combining '棚卸実査' (typically reserved for inventory/inventories) with land is awkward in accounting terminology. For fixed assets like land, '実地確認' or '現物照合' is the standard audit/accounting practice. The Vietnamese translation also suffers from slash contamination.",
+      "suggested_ja": "事業年度末の固定資産実査を実施し、固定資産台帳と土地の権利関係および現況を照合しました。",
+      "suggested_vi": "Tiến hành kiểm kê thực tế tài sản cố định vào cuối năm tài chính, chúng tôi đã đối chiếu sổ tài sản cố định với hồ sơ pháp lý quyền sử dụng đất và hiện trạng thực tế.",
+      "suggested_en": "Conducting a physical audit of fixed assets at fiscal year-end, we reconciled the fixed asset register with the title deeds and physical status of the land."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fatal accounting factual error: Land (土地) is a non-depreciable asset (非減価償却資産) under Japanese GAAP, IFRS, and corporate tax law. It does not have a useful life (耐用年数) or depreciation method (減価償却の計算方法/償却方法). Teaching this conversation would severely misinform learners.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期取得した土地について、固定資産台帳への登録と取得原価の算定は完了していますか。",
+        "vi": "Về mảnh đất mới nhận chuyển nhượng trong kỳ này, anh đã hoàn tất việc vào sổ tài sản cố định và xác định nguyên giá chưa?",
+        "en": "Regarding the land acquired this period, have you completed the entry into the fixed asset register and calculated the acquisition cost?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。購入代価に加えて不動産取得税や登記費用などの付随費用を含め、非償却資産として適正に登録いたしました。",
+        "vi": "Vâng. Tôi đã cộng gộp giá mua cùng các chi phí liên quan như thuế trước bạ và phí đăng ký sang tên, rồi ghi nhận chính xác như một tài sản không trích khấu hao.",
+        "en": "Yes. Including incidental expenses such as real estate acquisition tax and registration fees in addition to the purchase price, I properly recorded it as a non-depreciable asset."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations copy the unedited dictionary headword slash format ('quyền sử dụng đất / đất đai') into running text, resulting in unnatural sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ce60c4434b532203664bd58453aeb3651da86268db7818ab7a1e3fdf8e2ed0b3",
+    "validated_at": "2026-10-01T01:34:36.005185+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000169",
+  "term": "エンジェル投資家",
+  "overall_decision": "rewrite",
+  "summary_reason": "「エンジェル投資家」という言葉の日本語での使われ方や、企業における役割に対する理解が不足している。選任や職務遂行といった表現は、エンジェル投資家の実態と合致しないため、全体的に不自然な表現が多い。特に、例文と対話は、エンジェル投資家の役割を誤解している可能性が高い。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "エンジェル投資家を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "エンジェル投資家は、会社から選任される役職ではない。投資家は投資をする側であり、会社が選任するものではない。",
+      "suggested_text": "エンジェル投資家から出資を受ける"
+    },
+    {
+      "index": 1,
+      "text": "エンジェル投資家に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "エンジェル投資家は役職ではないため、「就任する」という表現は不自然。投資家は「なる」ものであり、「就任する」ものではない。",
+      "suggested_text": "エンジェル投資家になる"
+    },
+    {
+      "index": 2,
+      "text": "エンジェル投資家に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "エンジェル投資家の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "エンジェル投資家は「職務」を遂行する立場ではない。投資活動を行う。",
+      "suggested_text": "エンジェル投資家として活動する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "エンジェル投資家は株主総会で選任される役職ではない。投資家は会社に出資する個人であり、会社が「選任」するものではない。また、「新任エンジェル投資家」という表現も不自然。",
+      "suggested_ja": "当社の事業計画に賛同いただいたエンジェル投資家から、新たな出資を受けることが決定しました。",
+      "suggested_vi": "Chúng tôi đã quyết định nhận khoản đầu tư mới từ một nhà đầu tư thiên thần đã đồng ý với kế hoạch kinh doanh của công ty chúng tôi.",
+      "suggested_en": "We have decided to receive new investment from an angel investor who has agreed with our company's business plan."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性を確保するため」という表現は、エンジェル投資家との関係性において不自然。エンジェル投資家は会社の業務執行を直接監督する立場ではない。また、「報告連絡会」という言葉も一般的ではない。",
+      "suggested_ja": "事業の進捗状況について、エンジェル投資家と定期的に情報交換を行っています。",
+      "suggested_vi": "Chúng tôi thường xuyên trao đổi thông tin với nhà đầu tư thiên thần về tiến độ kinh doanh.",
+      "suggested_en": "We regularly exchange information with our angel investor regarding the progress of our business."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker Aは「エンジェル投資家の準備状況」を尋ねているが、Speaker Bの回答は会議資料の準備状況について述べており、エンジェル投資家自身の準備状況とは直接繋がらない。また、エンジェル投資家が会議に向けて「準備」をするという状況設定自体が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会に向けて、エンジェル投資家への報告資料の準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị tài liệu báo cáo cho nhà đầu tư thiên thần cho cuộc họp hội đồng quản trị tuần tới thế nào rồi?",
+        "en": "What is the status of the preparation of the report materials for the angel investor for next week's board meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終確認を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc rà soát cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final review of the content and have also obtained prior approval from the directors, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6ac63aca2a884bee4b1017ce8dd3f6d215d3d07f5d37d5345b13d2e29153f64b",
+    "validated_at": "2026-10-01T01:53:07.084548+00:00"
+  }
+}

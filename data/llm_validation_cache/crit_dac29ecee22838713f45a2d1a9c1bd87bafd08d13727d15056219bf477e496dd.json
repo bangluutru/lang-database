@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000185",
+  "term": "付加価値基準",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '付加価値基準' (Value Added Rule). It is a trade/customs concept for determining origin, not an accounting item that can be '計上' (booked), have a '残高' (balance), or be '処理' (processed) in financial statements. All examples and the dialogue incorrectly apply accounting terminology to this trade term, making them factually incorrect and unnatural in a business context. The collocations also suffer from this semantic mismatch.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "付加価値基準を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in trade context."
+    },
+    {
+      "index": 1,
+      "text": "付加価値基準を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural to inquire about specific rules or criteria."
+    },
+    {
+      "index": 2,
+      "text": "付加価値基準を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "付加価値基準 (Value Added Rule) is a criterion, not something to be paid (納付する). One pays tax or duty, not the rule itself.",
+      "suggested_text": "付加価値税を納付する (if referring to VAT payment) or 基準に従って関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "付加価値基準の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "付加価値基準 itself is a classification rule; it doesn't have a 'classification' to confirm. Perhaps '基準の適用分類' or '品目の分類' would be more appropriate.",
+      "suggested_text": "付加価値基準に基づく品目の分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "付加価値基準 (Value Added Rule) is a rule for determining origin in trade, not an accounting entry or balance. It cannot be '計上' (booked) or have a '残高' (balance). This sentence confuses trade rules with accounting concepts.",
+      "suggested_ja": "月末の原産地証明書照合において、付加価値基準の適用が適切に行われているか精査します。",
+      "suggested_vi": "Khi đối chiếu chứng từ xuất xứ cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem việc áp dụng tiêu chí tỷ lệ giá trị gia tăng nội địa có được thực hiện đúng cách không.",
+      "suggested_en": "During month-end origin certificate reconciliation, we carefully examine whether the Value Added Rule has been applied appropriately."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 付加価値基準 is a trade rule, not something 'processed' in closing entries according to accounting standards. This sentence incorrectly applies accounting terminology to a trade concept.",
+      "suggested_ja": "適正な貿易協定および社内規程に則り、当期の輸出入において付加価値基準を適正に適用いたしました。",
+      "suggested_vi": "Tuân thủ các hiệp định thương mại và quy chế nội bộ thích hợp, chúng tôi đã áp dụng đúng quy định tiêu chí tỷ lệ giá trị gia tăng nội địa trong hoạt động xuất nhập khẩu kỳ này.",
+      "suggested_en": "In accordance with applicable trade agreements and internal rules, we properly applied the Value Added Rule in this term's import/export operations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats 付加価値基準 as an accounting item that can have '計上内容に差異' (discrepancies in entries). This term relates to trade origin rules, not financial accounting entries.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸出取引で、付加価値基準の適用に問題はありませんでしたか。",
+        "vi": "Trong các giao dịch xuất khẩu tháng này, việc áp dụng tiêu chí tỷ lệ giá trị gia tăng nội địa có vấn đề gì không?",
+        "en": "Were there any issues with the application of the Value Added Rule in this month's export transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、すべての輸出貨物について、付加価値基準に基づき原産地規則が適切に満たされていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã xác nhận rằng đối với tất cả các lô hàng xuất khẩu, các quy tắc xuất xứ dựa trên tiêu chí tỷ lệ giá trị gia tăng nội địa đã được tuân thủ một cách thích hợp.",
+        "en": "Yes, we have confirmed that for all export shipments, the rules of origin based on the Value Added Rule have been appropriately met."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "320a29c07c62886a92cb01a19d5da083b46cd4a573070facb38f612039875ec6",
+    "validated_at": "2026-10-01T01:57:16.294701+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000044",
+  "term": "必要経費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain conceptual confusion between Individual Income Tax (必要経費) and Corporate Tax (損金 / 別表四), accompanied by robotic AI-templated phrasings across examples and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "必要経費に算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard statutory tax terminology under the Income Tax Act (所得税法第37条).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "必要経費に不算入とする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax terminology commonly used when disallowing private expenses (家事按分・家事関連費の不算入).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "必要経費の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Vague and unnatural collocation. In tax practice, expenses are accounted for (計上する) or allocated (按分する), rather than '調整を行う'.",
+      "suggested_text": "必要経費として計上する"
+    },
+    {
+      "index": 3,
+      "text": "必要経費に加算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'加算する' is unnatural with 必要経費. In tax computation, expenses are included (算入する) or excluded (除外する/不算入とする).",
+      "suggested_text": "必要経費から除外する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal tax law conceptual mismatch: '必要経費' is an Income Tax Act (所得税法) concept for individuals/sole proprietors, whereas '別表四' (Schedule 4) is exclusively a Corporate Tax Act (法人税法) schedule where the statutory term is '損金' (deductible expenses).",
+      "suggested_ja": "個人事業主の確定申告において、業務遂行上直接必要と認められる支出を青色申告決算書で必要経費に算入しました。",
+      "suggested_vi": "Trong tờ khai quyết toán thuế TNCN của hộ kinh doanh cá thể, chúng tôi đã đưa các khoản chi trực tiếp phục vụ hoạt động kinh doanh vào chi phí hợp lý trên báo cáo quyết toán mẫu xanh.",
+      "suggested_en": "In the sole proprietor's final tax return, expenses recognized as directly necessary for business operations were included in necessary expenses on the blue return financial statement."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'税務調査における指摘を防止するため' is an unnatural, mechanically templated phrase. Native practitioners say '税務調査に備えて' or '税務調査での否認リスクを低減するため'.",
+      "suggested_ja": "税務調査に備えて関連領収書を再点検し、事業関連支出の必要経費への算入漏れがないか確認しました。",
+      "suggested_vi": "Để chuẩn bị cho đợt kiểm tra thuế, chúng tôi đã rà soát lại các hóa đơn liên quan và xác nhận xem có bỏ sót khoản chi nào chưa được tính vào chi phí hợp lý hay không.",
+      "suggested_en": "In preparation for the tax audit, we re-examined the relevant receipts to ensure no omissions in including business-related expenditures as necessary expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'決算申告' refers to corporate tax filing (法人税申告), which uses '損金', not '必要経費'. For individual business tax returns using '必要経費', the standard term is '確定申告'. Furthermore, '税理士の確認書' is an awkward contrivance in Japanese practice (the formal document is '税理士法第33条の2の書面' or simply checking with the advisor).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "確定申告に向けた事業関連支出について、必要経費の按分根拠と領収書の整理は完了しましたか。",
+        "vi": "Về các khoản chi liên quan đến kinh doanh cho kỳ quyết toán thuế, anh đã hoàn tất việc sắp xếp chứng từ hóa đơn và căn cứ phân bổ chi phí hợp lý chưa?",
+        "en": "Regarding business expenses for the tax return, have you completed organizing the receipts and the basis for apportioning necessary expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、家事按分の計算シートと顧問税理士の指導に基づいた確認資料をすべて揃えました。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ bảng tính phân bổ chi phí sinh hoạt - kinh doanh và tài liệu đối chiếu theo hướng dẫn của thuế lý cố vấn.",
+        "en": "Yes, I have prepared all the calculation sheets for private-business expense apportionment and verification documents based on our tax accountant's guidance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base translations for the headword are adequate, but example sentences required correction due to Japanese domain mismatches."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7ea73fc07a425f11e775f602f7f9a861b6ca188fd29e575aec69ff9de7601d6e",
+    "validated_at": "2026-10-01T01:38:17.873361+00:00"
+  }
+}

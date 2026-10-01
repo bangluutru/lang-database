@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000077",
+  "term": "買掛金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains mechanical collocation ('買掛金を精算する' should be '決済する'), stilted tautological phrasing in the dialogue ('適正に整合している'), and template repetition in Example 1 ('適正な...適正に').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "買掛金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and standard accounting collocation for recognizing trade payables.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "買掛金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard operational expression in ledger management and monthly closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "買掛金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage when reconciling vendor statements or purchase receipts against trade payables.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "買掛金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, '精算' is reserved for expense claims (経費精算) or advances (仮払金精算). Trade liabilities such as 買掛金 are '決済する' (settle) or '支払う' (pay).",
+      "suggested_text": "買掛金を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Realistic month-end reconciliation procedure statement commonly found in accounting workflows.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is not standard corporate terminology (the standard phrase is '企業会計基準' or '適用される会計基準'), and the repetition of '適正な...適正に' is mechanically templated and awkward.",
+      "suggested_ja": "適用される企業会計基準および社内規程に基づき、期末における買掛金を適切に計上いたしました。",
+      "suggested_vi": "Căn cứ vào chuẩn mực kế toán doanh nghiệp được áp dụng và quy chế nội bộ, chúng tôi đã hạch toán phù hợp khoản phải trả người bán tại thời điểm cuối kỳ.",
+      "suggested_en": "Based on applicable corporate accounting standards and internal regulations, we have appropriately recorded accounts payable - trade at the end of the term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "In Speaker B, 'すべて適正に整合している' is unnatural and redundant wording in corporate accounting; ledger matching is properly described as '不整合や差異がないことを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、買掛金の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán khoản phải trả người bán có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the recording of trade payables in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書などの証憑と買掛金元帳を照合済みで、差異や計上漏れがないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ như hóa đơn với sổ cái khoản phải trả và xác nhận không có chênh lệch hay sót hạch toán.",
+        "en": "We have reconciled the vouchers, including invoices, with the accounts payable ledger and confirmed there are no discrepancies or omissions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base terms and initial sentences are generally accurate, but example 1 and dialogue require targeted updates to match the refined Japanese expressions."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b1f832d9939331067d37f0f93200ffdc70632de54c19c80ba74d05010fbdc199",
+    "validated_at": "2026-10-01T01:35:00.521711+00:00"
+  }
+}

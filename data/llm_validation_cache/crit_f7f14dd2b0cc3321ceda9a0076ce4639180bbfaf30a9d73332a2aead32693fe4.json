@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000103",
+  "term": "食品衛生法",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue for Speaker B is slightly unnatural and could be improved for better conversational flow and domain-specific accuracy regarding the roles of legal counsel vs. tax accountant for the Food Sanitation Act.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "食品衛生法を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "食品衛生法の規定に基づく",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "食品衛生法の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "食品衛生法の改正内容を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's response is a bit stilted. While technically correct, '顧問弁護士および税理士と条文を精査し、法令上の要件を完全に満たしていることを確認しました' sounds overly formal and slightly unnatural for a typical business conversation. It's more like a report than a direct answer. Also, a tax accountant (税理士) is less likely to be the primary expert for the Food Sanitation Act (食品衛生法) compared to a legal counsel (弁護士).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の取引に関して、食品衛生法の関連規定や最新の法改正への適合状況は確認できていますか。",
+        "vi": "Về giao dịch lần này, chúng ta đã xác nhận tình hình tuân thủ các quy định liên quan của Luật Vệ sinh An toàn Thực phẩm và các sửa đổi luật mới nhất chưa?",
+        "en": "Regarding this transaction, have we confirmed our compliance with the relevant provisions of the Food Sanitation Act and the latest legal revisions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧問弁護士と条文を精査し、法令上の要件を完全に満たしていることを確認済みです。税理士には税務上の影響について確認してもらいました。",
+        "vi": "Vâng, chúng tôi đã cùng luật sư cố vấn xem xét kỹ các điều khoản và xác nhận rằng chúng tôi hoàn toàn đáp ứng các yêu cầu pháp lý. Chúng tôi cũng đã nhờ kế toán thuế xác nhận về các ảnh hưởng về thuế.",
+        "en": "Yes, we have thoroughly reviewed the articles with our legal counsel and confirmed full compliance with legal requirements. We also had our tax accountant confirm the tax implications."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fb28dbb5ef6c53c1497cfb32659086aa5c15bcbe4d450fc2df75a6645e2b946c",
+    "validated_at": "2026-10-01T01:55:35.330213+00:00"
+  }
+}

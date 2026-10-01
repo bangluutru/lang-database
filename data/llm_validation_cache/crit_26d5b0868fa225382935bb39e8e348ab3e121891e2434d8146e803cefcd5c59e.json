@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000142",
+  "term": "適格簡易請求書",
+  "overall_decision": "rewrite",
+  "summary_reason": "適格簡易請求書（簡易インボイス＝小売・飲食・タクシー等のレシート・簡易領収書）という税法上の概念を無視し、招集通知等の汎用テンプレートに用語を機械的に当てはめた結果、業務実態・事実関係が完全に破綻しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "適格簡易請求書を作成する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "日本の消費税法および実務上、適格簡易請求書（レシートや領収書等）は「作成」より「交付する」または「発行する」とコロケーションするのが正確です。",
+      "suggested_text": "適格簡易請求書を交付する"
+    },
+    {
+      "index": 1,
+      "text": "適格簡易請求書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "適格簡易請求書は税務署や取引先に「提出」する文書ではなく、売手側が「交付／発行」し、買手側が「保存／受領」するものです。",
+      "suggested_text": "適格簡易請求書を保存する"
+    },
+    {
+      "index": 2,
+      "text": "適格簡易請求書を発送する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "適格簡易請求書（簡易インボイス）は小売業、飲食店、タクシー等の店頭・現場で手渡し交付されるレシート等が大半であり、「発送する」という表現は実態に合いません。",
+      "suggested_text": "適格簡易請求書を発行する"
+    },
+    {
+      "index": 3,
+      "text": "適格簡易請求書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "経費精算や仕入税額控除の適用を受ける側がレシート・簡易インボイスを受け取る文脈として自然です。",
+      "suggested_text": "適格簡易請求書を受領する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "致命的な事実誤認です。適格簡易請求書（小売・飲食・交通機関等のレシート類）を株主総会や取締役会のために全関係者へ発送することは税務・会社法実務上あり得ません。テンプレートの不自然な流用です。",
+      "suggested_ja": "小売業や飲食業を営む事業者は、不特定多数の顧客に対して通常の適格請求書に代えて適格簡易請求書を交付することができます。",
+      "suggested_vi": "Các doanh nghiệp kinh doanh bán lẻ hoặc ăn uống có thể phát hành hóa đơn giản đơn đạt chuẩn thay cho hóa đơn đạt chuẩn thông thường cho các đối tượng khách hàng không xác định.",
+      "suggested_en": "Businesses operating in retail or restaurant sectors may issue simplified qualified invoices instead of standard qualified invoices to unspecified customers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "文法的には成立していますが、適格簡易請求書の保管目的は「内部統制」というより「仕入税額控除の適用要件を満たすため」が税務上最も典型的かつ自然です。また、ベトナム語訳に補足括弧が直訳混入しています。",
+      "suggested_ja": "出張経費の仕入税額控除を適用するため、タクシー利用時に受領した適格簡易請求書を経理部へ回付した。",
+      "suggested_vi": "Để áp dụng khấu trừ thuế đầu vào cho chi phí công tác, tôi đã chuyển hóa đơn giản đơn đạt chuẩn nhận được khi đi taxi cho phòng kế toán.",
+      "suggested_en": "In order to apply for the purchase tax credit on business travel expenses, I forwarded the simplified qualified invoice received from the taxi ride to the accounting department."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "対話内容が完全に破綻しています。適格簡易請求書（レシート類）について「内容の最終推敲」「役員の事前承認」「会議に向けた本日中の発送」を行う業務実態は存在しません。招集通知や議案資料用の定型文を無批判に当てはめた極めて不自然な創作です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "社員が提出したタクシー代の領収書ですが、適格簡易請求書の記載要件を満たしていますか。",
+        "vi": "Biên lai tiền taxi do nhân viên nộp lên có đáp ứng đủ các nội dung bắt buộc của hóa đơn giản đơn đạt chuẩn không?",
+        "en": "Regarding the taxi receipt submitted by the employee, does it meet the mandatory requirements for a simplified qualified invoice?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、登録番号や取引内容、税率ごとの税込金額が明記されていますので、仕入税額控除の対象として問題ありません。",
+        "vi": "Vâng, mã số đăng ký, nội dung giao dịch và số tiền đã gồm thuế phân theo từng thuế suất đều được ghi rõ, nên đủ điều kiện khấu trừ thuế đầu vào bình thường.",
+        "en": "Yes, the registration number, transaction details, and tax-inclusive amounts broken down by tax rate are clearly stated, so there is no issue using it for purchase tax credit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の例文訳において、単語定義の解説用括弧「(biên lai siêu thị, taxi)」がそのまま例文の文中に機械的に埋め込まれており、自然な翻訳文になっていません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c6d17d1e2225bd3591c99c57efb0268793913b497a2909d17cf65d43485d9705",
+    "validated_at": "2026-10-01T01:39:59.308135+00:00"
+  }
+}

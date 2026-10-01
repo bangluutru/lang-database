@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000184",
+  "term": "e-Tax",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe accounting domain error: Both example sentences and the dialogue mechanically treated 'e-Tax' (an electronic filing portal) as a book balance/accounting journal item ('計上内容', '残高'). Rewrites provide realistic corporate tax filing contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "e-Taxを利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural verb pairing for using the e-Tax system.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "e-Taxを通じて送信する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately describes transmitting tax returns or documents via e-Tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "e-Taxで申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common expression for filing applications/declarations via e-Tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "e-Taxを導入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for adopting or implementing electronic tax filing in an enterprise or tax accounting practice.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "e-Tax is an electronic filing software/portal, not an accounting account or ledger item. 'e-Taxの計上内容や残高' (entries or balances of e-Tax) is a critical semantic and domain hallucination.",
+      "suggested_ja": "法人税の確定申告書は、申告期限までにe-Taxを通じて電子申告を行う予定です。",
+      "suggested_vi": "Tờ khai quyết toán thuế thu nhập doanh nghiệp dự kiến sẽ được nộp điện tử qua e-Tax trước thời hạn nộp hồ sơ.",
+      "suggested_en": "We plan to electronically file the corporate tax return via e-Tax by the filing deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'決算においてe-Taxを適正に処理いたしました' treats an online government IT system as an accounting item to be booked/processed. It represents a mechanical template error.",
+      "suggested_ja": "税制改正に伴い、当社でも申告業務の効率化を図るため、e-Taxによる電子申告へ完全に移行しました。",
+      "suggested_vi": "Cùng với việc cải cách hệ thống thuế, công ty chúng tôi cũng đã chuyển đổi hoàn toàn sang kê khai điện tử qua e-Tax nhằm nâng cao hiệu quả công tác kê khai.",
+      "suggested_en": "In conjunction with tax reforms, our company fully transitioned to electronic filing via e-Tax to streamline filing operations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about 'discrepancies in recorded e-Tax contents' in monthly closing, which is completely nonsensical in real corporate tax and accounting practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の法人税申告書ですが、e-Taxによる送信準備は整いましたか。",
+        "vi": "Về tờ khai thuế thu nhập doanh nghiệp kỳ này, việc chuẩn bị gửi qua e-Tax đã xong chưa?",
+        "en": "Regarding this term's corporate tax return, are we ready to submit it via e-Tax?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、添付書類のPDF化と電子署名の付与が完了しており、本日中に送信可能です。",
+        "vi": "Vâng, việc chuyển các tài liệu đính kèm sang định dạng PDF và gắn chữ ký điện tử đã hoàn tất, chúng ta có thể nộp ngay trong ngày hôm nay.",
+        "en": "Yes, converting attached documents to PDF and adding electronic signatures are complete, so we can submit it today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The term definitions themselves are accurate; however, the generated examples/dialogue contained severe domain hallucinations requiring rewrite."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "75033148c29a11409204237f54cba31cd7587ebecf304c96a59e450b45114949",
+    "validated_at": "2026-10-01T01:40:36.968935+00:00"
+  }
+}

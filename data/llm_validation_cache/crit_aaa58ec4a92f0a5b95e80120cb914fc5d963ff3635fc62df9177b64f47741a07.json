@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000168",
+  "term": "支払利息",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an incorrect verb ('精算する' instead of accrual/payment predicates), Example 2 relies on an unnatural templated repetition ('適正な会計基準...適正に処理'), and Dialogue Turn B suffers from stilted phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "支払利息を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and ubiquitous accounting collocation for booking interest expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "支払利息の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard practice during trial balance reconciliation and period-end close.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "支払利息を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for reconciling interest entries against loan schedules or bank notices.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "支払利息を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '精算する' applies to expense claims or settling advances (e.g., 経費精算, 旅費精算), not interest expenses arising from debt contracts.",
+      "suggested_text": "支払利息を未払計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sound business phrasing describing reconciliation of interest entries and balances during month-end close.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is unnatural Japanese (standards are referred to as 企業会計基準 or 一般に公正妥当と認められた会計基準), and pairing it with '適正に処理いたしました' creates awkward tautological repetition.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期の決算において借入金に係る支払利息を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã hạch toán đúng quy định chi phí lãi vay liên quan đến các khoản vay trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we have properly accrued interest expenses related to borrowings in this fiscal period's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural business Japanese; matching interest expenses specifically involves loan amortization schedules (返済予定表) or bank statements (利息計算書) rather than vague '証憑書類'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、支払利息の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán chi phí lãi vay có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the recorded interest expenses for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "返済予定表と補助元帳を照合済みで、金額に相違がないことを確認しております。",
+        "vi": "Tôi đã đối chiếu lịch trả nợ với sổ phụ rồi, và xác nhận số tiền hoàn toàn khớp, không có sai lệch.",
+        "en": "I have already reconciled the repayment schedule against the subsidiary ledger and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "088e557f91cad3d9c88a2e79566372d63c945444b3b13974f9b2ffc22c7bcdae",
+    "validated_at": "2026-10-01T01:36:41.257963+00:00"
+  }
+}

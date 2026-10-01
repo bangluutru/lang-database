@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000137",
+  "term": "営業収益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Failed on collocation validity ('営業収益を精算する' is semantically invalid) and Vietnamese translation hygiene (gloss leakage into example translations).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "営業収益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording operating revenue.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "営業収益の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end trial balance reviews where ledger balances are checked.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "営業収益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles accounts/documents against each other (e.g., 売上データと照合する), rather than directly using '営業収益' as the sole direct object of 照合する.",
+      "suggested_text": "営業収益を認識する"
+    },
+    {
+      "index": 3,
+      "text": "営業収益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算する applies to advance payments, expenses, or settlements (e.g., 経費・仮受金), never to operating revenue accounts.",
+      "suggested_text": "営業収益の内訳を開示する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation mechanically copied the parenthetical explanation '(ngành dịch vụ / vận tải)' directly into the running prose, creating an unnatural sentence.",
+      "suggested_ja": "月末の帳簿照合において、営業収益の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán và số dư doanh thu kinh doanh có phát sinh chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for operating revenue."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Duplication of '適正' (適正な会計基準...適正に処理いたしました) reveals mechanical templating. The Vietnamese translation also suffers from parenthetical gloss leakage.",
+      "suggested_ja": "適用される会計基準および社内規程に則り、当期の決算において営業収益を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán áp dụng và quy chế nội bộ, chúng tôi đã ghi nhận doanh thu kinh doanh đúng quy định trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal regulations, we properly recognized operating revenue for this fiscal period."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B is practical, natural, and accurately reflects a monthly closing review in an accounting department.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example sentences inappropriately retain domain clarifier '(ngành dịch vụ / vận tải)' verbatim from the term definition, corrupting sentence flow."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "96c2b9c699ec49549a4c2b99be396af12840440cb4495cbbe8b6168697edc882",
+    "validated_at": "2026-10-01T01:36:03.557973+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000080",
+  "term": "仕入債務",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 3 uses '精算する' instead of standard accounting '決済する', and Example 1 exhibits tautological phrasing ('適正な...適正に') and an unnatural collocation ('適正な会計基準').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仕入債務を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing trade payables on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仕入債務の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, widely used in month-end and fiscal year-end reconciliations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仕入債務を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when matching trade payable ledgers against supplier statements or physical invoices.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "仕入債務を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In corporate accounting, trade payables are settled or paid ('決済する' or '支払う'), not '精算する', which refers to expense reimbursements or liquidation settlement.",
+      "suggested_text": "仕入債務を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional usage depicting regular month-end closing and ledger reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Redundant repetition of '適正な' and '適正に' in the same sentence. Accounting standards are referred to as '企業会計基準' or '公正妥当な会計基準', not '適正な会計基準'.",
+      "suggested_ja": "会計基準および社内規程に則り、当期の決算において仕入債務を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã ghi nhận phù hợp các khoản nợ phải trả thương mại trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we have appropriately recognized trade payables in this term's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic month-end closing exchange between accounting staff regarding subledger reconciliation against source documents.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "437803b8de7e8e5ff1fcb0896d8cbfbf820a90721b337cb974287d3768c3674a",
+    "validated_at": "2026-10-01T01:34:57.770861+00:00"
+  }
+}

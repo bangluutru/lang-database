@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000064",
+  "term": "輸出申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations and the dialogue require revision for naturalness and accuracy in a professional Japanese context. One example sentence also has minor unnatural phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "輸出申告を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "輸出申告を申請する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「輸出申告」は行為そのものを指すため、「申請する」とは直接結びつかない。通常は「輸出申告の手続きを申請する」や「輸出許可を申請する」のように使う。",
+      "suggested_text": "輸出申告の手続きを申請する"
+    },
+    {
+      "index": 3,
+      "text": "輸出申告の適法性を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and appropriate in a compliance context."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「本申告に先立ち」は不自然。「税関への申告に先立ち」がより自然。また、「関係官庁の要件を満たすため」と「速やかに手続きを完了させました」の接続がやや不自然。手続き完了が要件を満たすことと直接結びつく表現ではない。",
+      "suggested_ja": "税関への申告に先立ち、関係官庁の要件を満たすべく、速やかに輸出申告の手続きを完了させました。",
+      "suggested_vi": "Trước khi khai báo với hải quan, chúng tôi đã nhanh chóng hoàn thành thủ tục kê khai hải quan xuất khẩu để đáp ứng các yêu cầu của cơ quan có thẩm quyền.",
+      "suggested_en": "Prior to the customs declaration, we promptly completed the export declaration procedures to meet the requirements of the competent authorities."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business communication."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response is not directly addressing the status of '輸出申告の手配状況'. It mentions '輸入申告に入っております' which is a different process. Also, '乙仲' is an outdated term; 'フォワーダー' or '海貨業者'がより一般的。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、輸出申告の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình chuẩn bị kê khai hải quan xuất khẩu thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the export declaration arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者とフォワーダーへの連絡は済んでおり、書類の確認も完了しました。現在、税関への輸出申告手続きを進めております。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và công ty giao nhận, việc kiểm tra chứng từ cũng đã hoàn tất. Hiện tại, chúng tôi đang tiến hành thủ tục kê khai hải quan xuất khẩu với hải quan.",
+        "en": "We have contacted the customs broker and forwarder, and the document verification is complete. We are currently proceeding with the export declaration procedures to customs."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3c55c0e828396de3fd3976c19715a9bfd3687d4df69b582877e22eaf23c5f29c",
+    "validated_at": "2026-10-01T01:54:42.540319+00:00"
+  }
+}

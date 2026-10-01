@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000159",
+  "term": "貸倒引当金繰入",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, examples, and the dialogue exhibit severe templating, semantic confusion between B/S allowance balance and P&L provision expenses, and domain-inaccurate accounting procedures.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貸倒引当金繰入を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking the provision of allowance for doubtful accounts as an expense.",
+      "suggested_text": "貸倒引当金繰入を計上する"
+    },
+    {
+      "index": 1,
+      "text": "貸倒引当金繰入の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「貸倒引当金繰入」is a P&L expense account, which does not carry a balance sheet balance (残高). The balance belongs to the allowance account「貸倒引当金」, while the expense is referred to as 繰入額 or 計上額.",
+      "suggested_text": "貸倒引当金繰入額を算定する"
+    },
+    {
+      "index": 2,
+      "text": "貸倒引当金繰入を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly '照合する' an expense item itself; in accounting practice, one reviews the calculation basis (算定根拠) or verifies the estimated credit risk.",
+      "suggested_text": "貸倒引当金繰入の根拠を確認する"
+    },
+    {
+      "index": 3,
+      "text": "貸倒引当金繰入を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」applies to settling advances, travel expenses, or balance adjustments, not to recognizing valuation allowances/expenses.",
+      "suggested_text": "貸倒引当金繰入を販管費に計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Mentions '貸倒引当金繰入の...残高', which conflates the P&L expense item with the B/S allowance balance. It also displays a templated boilerplate structure.",
+      "suggested_ja": "期末決算にあたり、売掛金の回収懸念を反映して貸倒引当金繰入を計上しました。",
+      "suggested_vi": "Vào kỳ quyết toán cuối niên độ, chúng tôi đã trích lập chi phí dự phòng nợ khó đòi để phản ánh rủi ro thu hồi các khoản phải thu khách hàng.",
+      "suggested_en": "In the fiscal year-end closing, we recognized provision of allowance for doubtful accounts to reflect collection risks on accounts receivable."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Suffers from tautology ('適正な会計基準...適正に処理いたしました') and is an empty generic template lacking real workplace substance.",
+      "suggested_ja": "過年度の貸倒実績率に基づき、一般債権に対する貸倒引当金繰入額を適正に算定いたしました。",
+      "suggested_vi": "Dựa trên tỷ lệ nợ khó đòi thực tế của các năm trước, chúng tôi đã tính toán hợp lý số tiền trích lập dự phòng nợ khó đòi cho các khoản nợ thông thường.",
+      "suggested_en": "Based on historical credit loss rates from prior years, we properly calculated the provision of allowance for doubtful accounts for general receivables."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Allowance provisions are not verified against '証憑書類' (vouchers/receipts) and '補助元帳', but against credit evaluation lists or calculation spreadsheets. The phrase '適正に整合している' is also unnatural Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当期の貸倒引当金繰入の算定根拠について、監査法人から質問は来ていますか。",
+        "vi": "Về căn cứ tính toán chi phí trích lập dự phòng nợ khó đòi kỳ này, bên công ty kiểm toán có câu hỏi nào không?",
+        "en": "Has the audit firm raised any questions regarding the basis for calculating this period's provision of allowance for doubtful accounts?"
+      },
+      {
+        "speaker": "B",
+        "ja": "破綻懸念先に対する個別評価の明細を提出済みで、特に問題なく了承されました。",
+        "vi": "Chúng tôi đã nộp bảng kê đánh giá riêng cho các đối tác có nguy cơ phá sản và đã được họ chấp thuận mà không có vấn đề gì.",
+        "en": "We already submitted the detailed individual assessment for doubtful debtors, and it was accepted without any issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base translations for the term itself are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0a7c516b06c7046a28b2e44353d4aa4cdd0f4a99a6ac21c97873472345802770",
+    "validated_at": "2026-10-01T01:36:29.443742+00:00"
+  }
+}

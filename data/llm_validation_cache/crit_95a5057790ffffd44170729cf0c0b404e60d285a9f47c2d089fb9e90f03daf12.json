@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000101",
+  "term": "事前確定届出給与",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 contains a tax law conceptual error ('限度額' instead of fixed amount determination), Example 1 has awkward stylistic tautology ('事前に...事前確定'), and the dialogue lacks real-world corporate tax verification context as well as bilingual parallel turns.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "事前確定届出給与を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise verb collocation in executive compensation practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "事前確定届出給与として損金算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax accounting phrase for deducting director bonuses under Corporation Tax Act Art. 34.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "事前確定届出給与の届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Fully natural; accurately reflects the mandatory filing process with the tax office.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "事前確定届出給与の限度額を改定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factually inappropriate under Japanese corporate tax law. '限度額' (compensation cap) attaches to total officer remuneration (役員報酬枠), whereas 事前確定届出給与 strictly requires fixing specific dates and exact amounts (所定の時期に確定額), not a cap.",
+      "suggested_text": "事前確定届出給与の定めをする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic corporate resolution and execution phrasing.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence awkwardly repeats '事前' twice ('事前に税務署へ事前確定届出給与...'). In tax practice, it should specify the statutory deadline ('所轄税務署長へ届出期限までに').",
+      "suggested_ja": "法人税法上の損金算入要件を満たすため、届出期限までに所轄税務署へ事前確定届出給与に関する届出書を提出しました。",
+      "suggested_vi": "Để thỏa mãn điều kiện kết chuyển vào chi phí được trừ theo luật thuế thu nhập doanh nghiệp, chúng tôi đã nộp tờ khai về khoản lương thưởng ấn định trước cho cơ quan thuế quản lý trước thời hạn quy định.",
+      "suggested_en": "To meet the statutory deduction requirements under the Corporation Tax Act, we submitted the notification for predetermined compensation to the competent tax office by the statutory deadline."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "By definition, 事前確定届出給与 is a predetermined fixed amount, making '計算根拠' unnatural in year-end filing audits. The true practical checkpoint at tax filing is matching whether actual payments matched notified dates and amounts perfectly (突合). Moreover, missing English and Vietnamese dialogue lines need complete, professional provision.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告に向けて、事前確定届出給与が届出どおりの期日と金額で支給されたか確認資料は揃っていますか。",
+        "vi": "Để chuẩn bị cho kỳ quyết toán thuế này, anh đã chuẩn bị đủ tài liệu xác nhận xem khoản lương thưởng ấn định trước đã được chi trả đúng ngày và đúng số tiền như trong tờ khai chưa?",
+        "en": "In preparation for the corporate tax return, do we have all supporting documents to verify that the predetermined director compensation was paid on the exact date and in the exact amount as filed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、総勘定元帳の支払実績と届出書の控を照合済みですので、損金算入の要件は問題ありません。",
+        "vi": "Vâng, tôi đã đối chiếu thực tế chi trả trên sổ cái chung với bản lưu tờ khai, điều kiện để tính vào chi phí được trừ hoàn toàn đảm bảo.",
+        "en": "Yes, I have cross-checked the actual payment records in the general ledger against our copy of the filed notification, so all requirements for deductible expense treatment are met."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Core term definitions in Vietnamese and English are clear and conceptually accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "067eb4181f5dc39028359f3a396b08b0cb4718ec67a9706c2b72147a440fc067",
+    "validated_at": "2026-10-01T01:39:12.770142+00:00"
+  }
+}

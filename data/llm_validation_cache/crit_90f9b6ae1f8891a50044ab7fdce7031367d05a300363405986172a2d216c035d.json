@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000071",
+  "term": "解除権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain mismatch: A purely legal contractual right (解除権) was force-fitted into hallucinated monthly accounting reconciliation templates (計上, 残高, 決算処理, 補助元帳).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "解除権を行使する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal collocation for exercising the right of contract cancellation/termination.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "解除権を有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise legal phrasing for possessing the right of cancellation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "解除権を放棄する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrase for waiving a right of cancellation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "解除権の有無を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational expression when checking whether contractual grounds for termination exist.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「解除権」 is a legal right to terminate a contract under contract law. It is not an accounting balance sheet item that is booked (計上) or has an account balance (残高). This is a hallucinated mechanical template.",
+      "suggested_ja": "相手方に重大な契約違反が認められたため、法務部と協議の上、契約の解除権を行使することを決定した。",
+      "suggested_vi": "Do đối tác có hành vi vi phạm hợp đồng nghiêm trọng, sau khi thảo luận với bộ phận pháp chế, chúng tôi đã quyết định thực hiện quyền đơn phương chấm dứt hợp đồng.",
+      "suggested_en": "Since a material breach of contract occurred on the counterparty's side, we decided to exercise the right of termination after consulting with the legal department."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "One does not process 「解除権」 under accounting standards during financial closing (決算において解除権を適正に処理いたしました is nonsensical in accounting and legal practice).",
+      "suggested_ja": "業務委託契約書には、相手方が支払いを怠った場合に備えて解除権に関する条項が明記されている。",
+      "suggested_vi": "Trong hợp đồng ủy thác dịch vụ, điều khoản về quyền đơn phương chấm dứt hợp đồng đã được quy định rõ để phòng trường hợp đối tác không thực hiện nghĩa vụ thanh toán.",
+      "suggested_en": "The service agreement clearly specifies a clause regarding the right of termination in the event that the other party defaults on payment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue uses a generic monthly closing template where '解除権' is treated as an accounting ledger balance reconciled against source documents, which is factually absurd.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "納期の遅延が続いていますが、当社側に契約の解除権は発生していますか。",
+        "vi": "Việc giao hàng vẫn tiếp tục chậm trễ, vậy công ty chúng ta đã phát sinh quyền đơn phương chấm dứt hợp đồng chưa?",
+        "en": "The delivery delays are continuing; has the right of termination arisen on our side?"
+      },
+      {
+        "speaker": "B",
+        "ja": "契約書の第15条に基づき、相当の期間を定めて催告した上で是正されなければ、解除権を行使することが可能です。",
+        "vi": "Căn cứ theo Điều 15 của hợp đồng, nếu sau khi đưa ra thời hạn hợp lý để yêu cầu khắc phục mà vẫn không sửa đổi, chúng ta hoàn toàn có thể thực hiện quyền chấm dứt hợp đồng.",
+        "en": "Pursuant to Article 15 of the agreement, if they fail to remedy the situation after being given a reasonable period of notice, we can exercise our right of termination."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9a0a10c29b8fa762e792020d26343ba6a0c348d534d4a4eaa731e212ccce664a",
+    "validated_at": "2026-10-01T01:42:09.408331+00:00"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000113",
+  "term": "開設銀行",
+  "overall_decision": "reject",
+  "summary_reason": "The core understanding of '開設銀行' (Issuing Bank) is fundamentally flawed throughout the collocations, examples, and dialogue. It is consistently treated as an internal corporate decision-making body rather than an external financial institution involved in trade finance. This leads to semantically incompatible predicates, factually incorrect scenarios, and unnatural dialogue. The entire learning object requires a complete overhaul based on a correct understanding of the term's domain and function.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "開設銀行を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "開設銀行 (issuing bank) is an organization, not an event or meeting that can be 'held' (開催する). This predicate is semantically incompatible.",
+      "suggested_text": "開設銀行に依頼する"
+    },
+    {
+      "index": 1,
+      "text": "開設銀行で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "決議する (to resolve/vote on) is an action taken by a decision-making body (e.g., a board, a general meeting), not by an issuing bank itself in this context. The bank facilitates, but doesn't 'resolve' in this manner.",
+      "suggested_text": "開設銀行に確認する"
+    },
+    {
+      "index": 2,
+      "text": "開設銀行に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to report information to an issuing bank, for example, regarding a transaction or a discrepancy."
+    },
+    {
+      "index": 3,
+      "text": "開設銀行へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to submit various forms or notifications to an issuing bank."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence implies that the 'issuing bank' is a decision-making body that holds meetings and resolves important proposals, similar to a company's board or shareholders' meeting. This is a fundamental misunderstanding of the role of an issuing bank in trade finance. An issuing bank issues letters of credit, handles documents, and makes payments, but it does not 'convene' or 'resolve important proposals' in this corporate governance sense.",
+      "suggested_ja": "信用状の発行を依頼するため、来週開設銀行と打ち合わせを行う運びとなりました。",
+      "suggested_vi": "Để yêu cầu phát hành thư tín dụng, chúng tôi sẽ tiến hành họp với ngân hàng phát hành vào tuần tới.",
+      "suggested_en": "To request the issuance of a letter of credit, we will be holding a meeting with the issuing bank next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, this sentence incorrectly portrays the 'issuing bank' as a corporate entity that approves management policies and budget allocations. This is a function of a company's internal governance, not an external bank involved in trade finance.",
+      "suggested_ja": "開設銀行からの信用状発行条件について、今期の経営方針と照らし合わせて検討しました。",
+      "suggested_vi": "Chúng tôi đã xem xét các điều kiện phát hành thư tín dụng từ ngân hàng phát hành, đối chiếu với phương hướng kinh doanh của kỳ này.",
+      "suggested_en": "We reviewed the letter of credit issuance conditions from the issuing bank, comparing them with this term's management policy."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats '開設銀行' as if it were an internal meeting or event that needs 'preparation status' and 'prior approval from executives' for 'content'. This again reflects a misunderstanding of an issuing bank's role. The term is used in a context that doesn't align with its actual function in trade finance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の信用状発行依頼に向けて、開設銀行への提出書類の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho yêu cầu phát hành thư tín dụng vào tuần tới, tình hình chuẩn bị hồ sơ gửi ngân hàng phát hành như thế nào rồi?",
+        "en": "Regarding the request for letter of credit issuance next week, what is the status of the documents to be submitted to the issuing bank?"
+      },
+      {
+        "speaker": "B",
+        "ja": "必要書類の最終確認を終え、上長の承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc kiểm tra cuối cùng các tài liệu cần thiết và cũng đã nhận được sự chấp thuận của cấp trên, vì vậy chúng tôi sẽ sắp xếp gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final check of the necessary documents and obtained approval from our supervisor, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for '開設銀行' consistently includes '(Issuing Bank)' in parentheses, which is redundant and not natural for a professional translation. The term 'ngân hàng phát hành thư tín dụng' is sufficient. The English translation is accurate."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8a567cd2c9b924eaeb74e722114e3de96d98ced4b714096d74742d2f405bb716",
+    "validated_at": "2026-10-01T01:55:48.115166+00:00"
+  }
+}

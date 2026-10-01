@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000097",
+  "term": "業務委託",
+  "overall_decision": "rewrite",
+  "summary_reason": "「業務委託」は委託形態・行為を指す言葉であり、「締結する」「解除する」「条項」等の契約用語と共起させる際は「業務委託契約」とする必要があります。全コロケーションおよび例文において「契約」が脱落しており、不自然な日本語および機械的代入による壊れた翻訳となっています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務委託を締結する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「締結する」の対象は「契約」であるため、「業務委託契約を締結する」とするのが正確です。「業務委託を締結する」は不自然です。",
+      "suggested_text": "業務委託契約を締結する"
+    },
+    {
+      "index": 1,
+      "text": "業務委託を更新する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "契約関係の更新を指す場合、正確には「業務委託契約を更新する」とすべきです。",
+      "suggested_text": "業務委託契約を更新する"
+    },
+    {
+      "index": 2,
+      "text": "業務委託を解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "法的な解除の目的語は「契約」であるため、「業務委託契約を解除する」とするのが適切です。",
+      "suggested_text": "業務委託契約を解除する"
+    },
+    {
+      "index": 3,
+      "text": "業務委託の条項を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「条項」は契約書に属するものなので、「業務委託契約の条項を確認する」とするのが自然です。",
+      "suggested_text": "業務委託契約の条項を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務委託を締結する」は不自然（契約が脱落）。またベトナム語・英語訳に見出し語定義文字列の機械的代入が発生し、ビジネス文として破綻しています。",
+      "suggested_ja": "取引先と基本合意に達したため、来週、業務委託契約を正式に締結いたします。",
+      "suggested_vi": "Do đã đạt được thỏa thuận cơ bản với đối tác, chúng tôi sẽ chính thức ký kết hợp đồng dịch vụ thuê ngoài vào tuần tới.",
+      "suggested_en": "Having reached a basic agreement with the partner, we will officially execute the service agreement next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本語で「業務委託契約の条項」とすべき箇所が「業務委託の条項」と略されており不自然です。また翻訳に定義文が直貼りされています。",
+      "suggested_ja": "法務部門と連携し、業務委託契約の条項に法的リスクが含まれていないか事前に精査しました。",
+      "suggested_vi": "Chúng tôi đã phối hợp với bộ phận pháp chế để rà soát kỹ lưỡng từ trước xem các điều khoản trong hợp đồng dịch vụ thuê ngoài có rủi ro pháp lý nào hay không.",
+      "suggested_en": "In coordination with the legal department, we thoroughly reviewed the clauses of the service agreement in advance to check for any legal risks."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「業務委託の修正案」は不自然であり、実務上は「業務委託契約書の修正案」または「業務委託契約の修正案」と言います。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた業務委託契約書の修正案ですが、確認は済みましたか。",
+        "vi": "Bản sửa đổi hợp đồng dịch vụ thuê ngoài từ bộ phận pháp chế bên đối tác gửi lại, anh đã kiểm tra xong chưa?",
+        "en": "Have you finished reviewing the revised draft of the service agreement returned by the other party's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、損害賠償条項を含めてリスクがないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xác nhận không có rủi ro nào kể cả điều khoản bồi thường thiệt hại, nên chúng ta có thể tiến hành thủ tục ký kết.",
+        "en": "Yes, I confirmed there are no legal risks, including the indemnification clause, so we can proceed with the signing process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語定義「khoán việc / làm việc tự do theo hợp đồng dịch vụ」はフリーランスに偏りすぎており、かつ長すぎるため、例文内で不自然な直貼り翻訳の原因になっています。「ủy thác công việc / thuê ngoài」と簡潔かつ正確に定義すべきです。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "816b5ac6fb729ab73be3d613b1922919ee62c35510316ab7df92e58981e46d11",
+    "validated_at": "2026-10-01T01:42:34.202459+00:00"
+  }
+}

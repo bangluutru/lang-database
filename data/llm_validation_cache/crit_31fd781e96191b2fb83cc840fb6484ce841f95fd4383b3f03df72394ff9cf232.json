@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000111",
+  "term": "産前産後休業",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain hallucination: an HR statutory leave concept was forced into generic accounting closing templates ('計上内容', '残高', '会計基準', '補助元帳'), producing factually absurd Japanese business sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "産前産後休業を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard HR expression for taking statutory maternity leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "産前産後休業を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for applying for maternity leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "産前産後休業を認める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and semantically acceptable in employer HR policy context.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "産前産後休業の期間を延長する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under the Labor Standards Act, maternity leave periods are statutory (6 weeks prior, 8 weeks post) and not typically 'extended' at will like childcare leave (育児休業). '産前産後休業に入る' is far more natural and common.",
+      "suggested_text": "産前産後休業に入る"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Gross domain mismatch. Maternity leave (産前産後休業) is an HR labor-compliance status, not an accounting item with financial balances ('残高') or book entries ('計上内容') to reconcile.",
+      "suggested_ja": "従業員から産前産後休業の申請があったため、社会保険料の免除手続きを進めてください。",
+      "suggested_vi": "Vì có nhân viên nộp đơn xin nghỉ thai sản trước và sau khi sinh, hãy tiến hành thủ tục miễn nộp bảo hiểm xã hội.",
+      "suggested_en": "Since an employee has applied for maternity leave, please proceed with the application for social insurance premium exemption."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Maternity leave is governed by the Labor Standards Act (労働基準法), not accounting standards ('会計基準'), and is not a closing entry item in financial statements ('決算において...処理').",
+      "suggested_ja": "労働基準法に基づき、産前産後休業中の従業員に対する解雇は原則として禁止されています。",
+      "suggested_vi": "Căn cứ theo Luật Tiêu chuẩn Lao động, về nguyên tắc nghiêm cấm việc sa thải nhân viên đang trong thời gian nghỉ thai sản trước và sau khi sinh.",
+      "suggested_en": "Under the Labor Standards Act, dismissal of an employee during maternity leave is, in principle, strictly prohibited."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Completely hallucinatory dialogue. Maternity leave is not booked in monthly accounting closing, nor is it checked against subsidiary ledgers (補助元帳). It should reflect an authentic HR/payroll interaction.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月から産前産後休業に入る田中さんの業務引き継ぎは、順調に進んでいますか。",
+        "vi": "Việc bàn giao công việc của chị Tanaka, người sẽ bắt đầu nghỉ thai sản từ tháng tới, có tiến triển thuận lợi không?",
+        "en": "Is the handover of duties going smoothly for Ms. Tanaka, who will start maternity leave next month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、後任者へのマニュアル共有も含め、今週末までに完了する予定です。",
+        "vi": "Vâng, dự kiến sẽ hoàn thành trước cuối tuần này, bao gồm cả việc chia sẻ tài liệu hướng dẫn cho người tiếp nhận.",
+        "en": "Yes, everything is scheduled to be completed by the end of this week, including sharing documentation with her successor."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The headword definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8f0ac8ed36e1f45a8c9d3781871b04394e1a92c61ffdae858e61b6cf8dabd190",
+    "validated_at": "2026-10-01T01:42:51.268140+00:00"
+  }
+}

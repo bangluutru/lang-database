@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000084",
+  "term": "従量税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the semantic compatibility of '従量税' with accounting-related predicates like '計上内容' and '残高'. While taxes are indeed accounted for, the phrasing used in the examples and dialogue is not natural for how specific duties are typically discussed in a professional Japanese accounting context. The translations are generally good but reflect the unnaturalness of the original Japanese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "従量税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "従量税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "従量税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "従量税の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「従量税の計上内容や残高に差異がないか精査します」という表現は不自然です。従量税は通常、仕訳として計上され、残高を持つものではありません。関税や消費税のように、特定の取引に紐づいて発生し、納付されるものです。会計処理としては「未払従量税」のような勘定科目で計上されることはありますが、単に「従量税の残高」とは言いません。また、「計上内容」という言葉も、税金に対してはあまり使いません。税額の計算や申告内容の確認が適切です。",
+      "suggested_ja": "月末の帳簿照合において、従量税の計算および申告内容に誤りがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem việc tính toán và kê khai thuế tính theo khối lượng hoặc số lượng vật lý có sai sót không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any errors in the calculation and declaration of specific duty."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「従量税を適正に処理いたしました」という表現は、税金に対してはやや不自然です。税金は「処理する」というよりは、「計上する」「納付する」「申告する」といった動詞が適切です。特に「決算において」という文脈では、税額の計上や申告が適切に行われたことを指すのが自然です。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において従量税を適正に計上し、申告いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán và kê khai thuế tính theo khối lượng hoặc số lượng vật lý đúng quy định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly accounted for and declared specific duty in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Aの発言「従量税の計上内容に差異は発生していませんか」は、例1と同様に「従量税の計上内容」という表現が不自然です。税金は「計上」されるものですが、その「内容」に差異があるかという問いかけは、税額の計算や申告内容の正確性を問う方が自然です。Bの回答も、Aの不自然な問いかけにそのまま応じているため、全体として不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、従量税の計算や申告に誤りはありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, việc tính toán và kê khai thuế tính theo khối lượng hoặc số lượng vật lý có sai sót gì không?",
+        "en": "Were there any errors in the calculation or declaration of specific duty during this month's monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, I have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "aba667e42e7eafee9e5c45ca622b4549219a6f99ad53d58790e6b649b6aef938",
+    "validated_at": "2026-10-01T01:55:10.008337+00:00"
+  }
+}

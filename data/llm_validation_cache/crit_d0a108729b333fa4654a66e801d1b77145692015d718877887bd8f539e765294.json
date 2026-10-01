@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000008",
+  "term": "検収書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe contextual and factual hallucinations in Example 0 and the Dialogue, where '検収書' was erroneously treated as a convocation notice or a conference report requiring literary drafting, instead of a B2B delivery/inspection acceptance document.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "検収書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business phrase for drafting an acceptance certificate.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "検収書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression when submitting the acceptance certificate to a client or accounting department.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "検収書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「発送する」 is typically used for physical goods or bulk parcels; business transactional documents like 検収書 naturally take 「発行する」, 「交付する」, or 「送付する」.",
+      "suggested_text": "検収書を発行する"
+    },
+    {
+      "index": 3,
+      "text": "検収書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and sales phrase for receiving an acceptance certificate from a client upon delivery.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A 検収書 (acceptance certificate for delivered goods/services) has nothing to do with statutory deadlines or proceedings of a general shareholders meeting (株主総会) or board of directors meeting (取締役会). This conflates an acceptance document with a convocation notice (招集通知) or board materials.",
+      "suggested_ja": "納品物の検品が完了次第、速やかに検収書を発行し、ベンダーへ送付してください。",
+      "suggested_vi": "Ngay sau khi hoàn tất kiểm tra hàng bàn giao, xin vui lòng nhanh chóng phát hành biên bản nghiệm thu và gửi cho bên cung cấp.",
+      "suggested_en": "As soon as the inspection of delivered items is complete, please promptly issue the acceptance certificate and send it to the vendor."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage in internal controls and audit trail contexts.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "A 検収書 is an accounting/delivery acceptance certificate, not a conference presentation document or proposal requiring '推敲' (literary polishing/drafting) in preparation for a meeting. The scenario is artificial and contextually incorrect.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先月末に納品されたシステムの検収書は、先方から受領できていますか。",
+        "vi": "Biên bản nghiệm thu hệ thống được bàn giao vào cuối tháng trước đã nhận được từ phía đối tác chưa?",
+        "en": "Have we received the acceptance certificate from the client for the system delivered late last month?"
+      },
+      {
+        "speaker": "B",
+        "ja": "動作検証が無事に完了したとの連絡がありましたので、本日中に押印済みの検収書が届く予定です。",
+        "vi": "Bên họ đã thông báo việc kiểm thử vận hành hoàn tất thuận lợi, nên dự kiến trong ngày hôm nay bản nghiệm thu có đóng dấu sẽ được chuyển tới.",
+        "en": "They informed us that operational verification finished successfully, so we expect to receive the stamped acceptance certificate today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8ee7774153aded93cf91b0958cef7bcda2031825e77070f99f6fab8de7aaab8c",
+    "validated_at": "2026-10-01T01:41:06.468264+00:00"
+  }
+}

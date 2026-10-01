@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000077",
+  "term": "管轄裁判所",
+  "overall_decision": "reject",
+  "summary_reason": "単語自体の語義訳以外、すべてのコロケーション・例文・対話文において「管轄裁判所」が「株主総会／取締役会」の定型文に機械的かつ無意味に差し替えられており、法務・ビジネス日本語として完全に破綻しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "管轄裁判所を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「管轄裁判所」は司法機関・裁判所であり、会議体ではないため「開催する」とは共起しません。株主総会等のテンプレート誤適用です。",
+      "suggested_text": "管轄裁判所を合意する"
+    },
+    {
+      "index": 1,
+      "text": "管轄裁判所で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "裁判所は審理や判決・決定を行う機関であり、企業内の「決議」を行う場ではありません。",
+      "suggested_text": "管轄裁判所に提訴する"
+    },
+    {
+      "index": 2,
+      "text": "管轄裁判所に報告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "法的手続きにおいて裁判所に書面等を出す場合は「申立を行う」「訴えを提起する」「提出する」が一般的です。",
+      "suggested_text": "管轄裁判所に申し立てる"
+    },
+    {
+      "index": 3,
+      "text": "管轄裁判所へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "裁判所に対して提出するのは行政手続きの「届出書」ではなく、「訴状」「申立書」などです。",
+      "suggested_text": "管轄裁判所に訴状を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「臨時管轄裁判所を招集する」という表現は存在せず、裁判所を会議体（臨時株主総会など）と混同した致命的な誤謬です。",
+      "suggested_ja": "本契約に関して生じた一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。",
+      "suggested_vi": "Đối với mọi tranh chấp phát sinh từ hợp đồng này, Tòa án nhân dân quận Tokyo sẽ là tòa án có thẩm quyền tài phán độc quyền cho phiên sơ thẩm.",
+      "suggested_en": "Any dispute arising in connection with this Agreement shall be subject to the exclusive jurisdiction of the Tokyo District Court as the court of first instance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "裁判所で「経営方針および予算配分案が可決」されることは法的にあり得ず、株主総会や取締役会の文章の機械的置換です。",
+      "suggested_ja": "契約書締結の際には、万一の訴訟に備えて管轄裁判所の条項を必ず法務部で確認してください。",
+      "suggested_vi": "Khi ký kết hợp đồng, xin vui lòng chắc chắn yêu cầu phòng pháp chế kiểm tra điều khoản tòa án có thẩm quyền để chuẩn bị cho trường hợp kiện tụng ngoài ý muốn.",
+      "suggested_en": "When executing contracts, please ensure the legal department reviews the jurisdiction clause in preparation for potential litigation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "裁判所を「会議に向けて準備する」「発送の手配を行う」対象として扱っており、招集通知等のテンプレート混入による完全な文脈破綻です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規取引先との基本契約書ですが、管轄裁判所の条項で先方から修正要望が出ています。",
+        "vi": "Về hợp đồng nguyên tắc với đối tác mới, phía đối tác có yêu cầu sửa đổi điều khoản tòa án có thẩm quyền.",
+        "en": "Regarding the master agreement with the new client, they have requested a revision to the jurisdiction clause."
+      },
+      {
+        "speaker": "B",
+        "ja": "相手方は自社本社の所在地を希望しているのですね。法務部と相談し、合意管轄の妥協案を検討しましょう。",
+        "vi": "Họ mong muốn đặt tại nơi có trụ sở chính của họ phải không? Hãy thảo luận với phòng pháp chế để cân nhắc phương án thỏa thuận thẩm quyền dung hòa đôi bên.",
+        "en": "They prefer their headquarters' location, right? Let's consult with the legal department and consider a compromise for the agreed jurisdiction."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の語義訳（EN: Court of competent jurisdiction / VI: tòa án có thẩm quyền xét xử tranh chấp）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b9a962fae592cb1c9cde3f9beeb8d02761d8c70b98d62fd8c2fce9c66d8885e7",
+    "validated_at": "2026-10-01T01:42:16.330424+00:00"
+  }
+}

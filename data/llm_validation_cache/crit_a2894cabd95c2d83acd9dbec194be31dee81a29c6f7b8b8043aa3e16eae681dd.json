@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000057",
+  "term": "のれん",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 and collocations are solid, but Example 0 relies on imprecise phrasing regarding how goodwill arises, and Dialogue A commits a basic accounting terminological error by referring to amortization of goodwill as '減価償却' instead of '償却'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "のれんを無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation under J-GAAP and IFRS balance sheet recognition.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "のれんを償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting collocation under Japanese GAAP (ASBJ rules require periodic amortization).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "のれんの減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "High-frequency standard collocation for impairment of goodwill.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "のれんの資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business collocation used in valuation and impairment testing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Phrasing '発生した資産価値を精査し' is vague and technically awkward. In accounting, goodwill arises from the differential between the acquisition cost and net asset fair value (純資産と取得対価の差額).",
+      "suggested_ja": "事業譲受に伴い、受け入れた純資産と取得対価との差額を精査した上で、無形固定資産としてのれんを計上しました。",
+      "suggested_vi": "Cùng với việc nhận chuyển nhượng kinh doanh, sau khi rà soát kỹ phần chênh lệch giữa giá trị tài sản thuần tiếp nhận và giá mua, chúng tôi đã ghi nhận lợi thế thương mại vào tài sản cố định vô hình.",
+      "suggested_en": "Following the business transfer, after examining the difference between the net assets acquired and the acquisition price, we recognized goodwill as an intangible fixed asset."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage of accounting terminology regarding systematic amortization under J-GAAP and impairment review.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A uses '減価償却' for goodwill. In financial accounting, goodwill is an intangible asset subject to '償却' (amortization), not '減価償却' (depreciation, reserved strictly for tangible fixed assets). Using '減価償却' for のれん is an accounting terminological error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期取得したのれんについて、固定資産台帳への登録と償却計算のルール設定は確認済みですか。",
+        "vi": "Về phần lợi thế thương mại phát sinh trong kỳ này, anh đã kiểm tra việc đăng ký vào sổ tài sản cố định và thiết lập quy tắc tính phân bổ chưa?",
+        "en": "Regarding the goodwill acquired this period, have you confirmed the entry in the fixed asset ledger and the setup for amortization calculation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、償却期間と会計・税務上の処理区分を監査法人ともすり合わせの上、適正に登録いたしました。",
+        "vi": "Vâng, sau khi thống nhất thời gian phân bổ và cách phân loại xử lý kế toán/thuế với công ty kiểm toán, tôi đã đăng ký hợp lệ rồi ạ.",
+        "en": "Yes, after aligning the amortization period and accounting/tax treatments with the audit firm, I have properly registered it."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7d4227d4d0c0fd61e716fb07134314554aedee1d296768c6ecef7d358ef393ba",
+    "validated_at": "2026-10-01T01:34:41.165621+00:00"
+  }
+}

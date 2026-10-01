@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000003",
+  "term": "発注書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe hallucination and domain mismatch in Example 1 and Dialogue, conflating a purchase order (発注書) with board meeting materials/convocation notices (招集通知). Requires rewrite of Example 1, Dialogue, and two collocations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "発注書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural business collocation for drafting/preparing a purchase order.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "発注書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A purchase order is issued or sent (発行する/送付する) rather than submitted (提出する), which is typically used for proposals, estimates, or reports.",
+      "suggested_text": "発注書を発行する"
+    },
+    {
+      "index": 2,
+      "text": "発注書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'発送' strongly implies shipping physical parcels/merchandise. For formal business documents like POs, '送付する' or '交付する' is standard.",
+      "suggested_text": "発注書を送付する"
+    },
+    {
+      "index": 3,
+      "text": "発注書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional business collocation used by vendors receiving a PO.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Nonsensical corporate context: statutory deadlines and board/shareholders meetings require convocation notices (招集通知) or board materials (取締役会資料), not a purchase order (発注書).",
+      "suggested_ja": "仕入先への正式な注文手続きとして、確定した見積内容に基づき発注書を送付いたしました。",
+      "suggested_vi": "Để thực hiện thủ tục đặt hàng chính thức với nhà cung cấp, chúng tôi đã gửi đơn đặt hàng (PO) dựa trên báo giá đã chốt.",
+      "suggested_en": "As a formal ordering procedure to the supplier, we sent the purchase order based on the finalized quotation."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately depicts internal controls, audit trails, and document retention practices in a corporate setting.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Artificial and semantically flawed dialogue. Purchase orders are not prepared as materials for an upcoming meeting, nor do they undergo '推敲' (literary polishing/draft refinement).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規システム開発の件、先方への発注書の準備状況はどうなっていますか。",
+        "vi": "Về dự án phát triển hệ thống mới, tình hình chuẩn bị đơn đặt hàng (PO) gửi cho đối tác thế nào rồi?",
+        "en": "Regarding the new system development project, what is the status of preparing the purchase order for the client/vendor?"
+      },
+      {
+        "speaker": "B",
+        "ja": "見積内容との突き合わせが完了し、部長承認も下りましたので、本日中に先方へ送付いたします。",
+        "vi": "Em đã đối chiếu xong với bảng báo giá và trưởng phòng cũng đã phê duyệt, nên em sẽ gửi cho đối tác trong ngày hôm nay ạ.",
+        "en": "I have completed cross-checking it against the quotation and received the department manager's approval, so I will send it to them by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "General translations for terms and valid sentences are accurate; corrections are tied to Japanese sentence rewrites."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f1a0b56329acbbd40ae532a0170144a2cede51d981dda55b5d0ab6fe1759ed9d",
+    "validated_at": "2026-10-01T01:40:59.013708+00:00"
+  }
+}

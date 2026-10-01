@@ -1,0 +1,73 @@
+{
+  "entry_id": "jp-pro-trade-000078",
+  "term": "抜取検査",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural, and the dialogue lacks conversational continuity regarding the specific status of the sample inspection.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "抜取検査を行う",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "抜取検査を完了する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "抜取検査を申請する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "抜取検査は税関が行うものであり、申請者が「申請する」対象ではない。検査の実施を申請するなら「抜取検査の実施を申請する」となるが、通常は「検査を申請する」で十分。",
+      "suggested_text": "抜取検査の実施を申請する"
+    },
+    {
+      "index": 3,
+      "text": "抜取検査の適法性を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「抜取検査の適法性」という表現は不自然。検査自体が法に基づいて行われるため、その「適法性」を確認するという状況は稀。通常は「検査手続きの適法性」や「検査結果の適法性」など、より具体的な対象に対して使われる。",
+      "suggested_text": "抜取検査の手続きの適法性を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the '手配状況' (arrangement status) of the sample inspection. It describes actions taken (contacting customs broker, checking documents, entering import declaration) but doesn't explicitly state the status of the sample inspection itself (e.g., whether it's scheduled, completed, or pending). The connection feels a bit indirect.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、抜取検査の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp kiểm tra mẫu ngẫu nhiên thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the sample inspection arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲には連絡済みで、書類確認も完了し、輸入申告に入っております。抜取検査については、税関からの指示待ちの状況です。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, việc kiểm tra chứng từ cũng đã hoàn tất và đang trong quá trình khai báo nhập khẩu. Về kiểm tra mẫu ngẫu nhiên, chúng tôi đang chờ chỉ thị từ hải quan.",
+        "en": "We have contacted the customs broker and freight forwarder, document verification is complete, and we are proceeding with the import declaration. For the sample inspection, we are currently awaiting instructions from customs."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "16716f0f34f9128f66aa0f3d8fe85ca2d66df4326c4fd6814fe59773538768e8",
+    "validated_at": "2026-10-01T01:55:02.433627+00:00"
+  }
+}

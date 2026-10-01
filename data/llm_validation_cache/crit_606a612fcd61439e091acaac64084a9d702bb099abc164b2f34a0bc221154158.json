@@ -1,0 +1,67 @@
+{
+  "entry_id": "jp-pro-accounting-000050",
+  "term": "機械及び装置",
+  "overall_decision": "rewrite",
+  "summary_reason": "Content is of high quality across examples, dialogue, and translations, but collocation 2 contains an unnatural predicate pairing ('台帳に計上する' instead of '台帳に登録する') requiring amendment.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "機械及び装置を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for acquiring machinery and equipment."
+    },
+    {
+      "index": 1,
+      "text": "機械及び装置を減価償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and appropriate transitive usage of 減価償却する with a tangible fixed asset."
+    },
+    {
+      "index": 2,
+      "text": "機械及び装置を固定資産台帳に計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, '計上する' governs financial statements or account titles (e.g., 資産に計上する), whereas ledgers take '登録する' or '記載する' (固定資産台帳に登録する).",
+      "suggested_text": "機械及び装置を固定資産台帳に登録する"
+    },
+    {
+      "index": 3,
+      "text": "機械及び装置の耐用年数",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology regarding statutory or economic useful life under tax and accounting rules."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural syntax and authentic accounting context; accurately describes capital expenditure registration in the fixed asset register."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Technically precise depiction of fiscal year-end depreciation entry based on statutory useful lives."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic, professional dialogue between corporate accountants; turn-taking and honorific register are impeccable."
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations are accurate, professional, and free of cross-language contamination."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1037be33f3b9392efbe68a2941f4f2593a64e500da37231f1d2a6939d30f28f9",
+    "validated_at": "2026-10-01T01:34:28.558017+00:00"
+  }
+}

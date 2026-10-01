@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000039",
+  "term": "繰越控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe conceptual confusion between the loss entity (繰越欠損金) and the statutory deduction mechanism (繰越控除), resulting in unnatural collocations like '繰越控除を繰り越す/控除する' and a factual tax error conflating carryover with carryback refund.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰越控除を繰り越す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Tautological and unnatural; what is carried forward is the net operating loss (繰越欠損金), not the deduction itself.",
+      "suggested_text": "繰越控除を適用する"
+    },
+    {
+      "index": 1,
+      "text": "繰越控除を控除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Severe tautology (控除を控除する). One applies or receives a deduction (繰越控除を受ける／適用する), or deducts a loss (欠損金を控除する).",
+      "suggested_text": "繰越控除を受ける"
+    },
+    {
+      "index": 2,
+      "text": "繰越控除に充当する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Unnatural predicate pairing. Taxable income or losses can be offset, but '繰越控除に充当する' is not standard tax phrasing.",
+      "suggested_text": "繰越控除の限度額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "繰越控除の還付を請求する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Domain factual error; conflates carryover deduction (繰越控除) with carryback refund (欠損金の繰戻しによる還付). Carryover deducts from future income and does not generate a refund claim.",
+      "suggested_text": "繰越控除の要件を満たす"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Phrasing '過去に発生した繰越控除を...控除し' is semantically incorrect and tautological. The entity incurred in prior years is a loss (繰越欠損金), to which the deduction mechanism (繰越控除) is applied.",
+      "suggested_ja": "過年度に発生した繰越欠損金について繰越控除を適用し、当期の課税所得から控除しました。",
+      "suggested_vi": "Chúng tôi đã áp dụng quy định chuyển lỗ đối với khoản lỗ lũy kế phát sinh từ các kỳ trước để khấu trừ vào thu nhập chịu thuế kỳ này.",
+      "suggested_en": "We applied the tax loss carryforward deduction for losses incurred in prior fiscal years to offset taxable income for the current period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'保有する繰越控除' treats a deduction rule as a tangible asset held by the company. The company holds '繰越欠損金' (carried-forward losses), not '繰越控除'.",
+      "suggested_ja": "税法上の繰越期間を管理し、当期における繰越控除の限度額を算定して申告書別表に記載しました。",
+      "suggested_vi": "Chúng tôi đã quản lý thời hạn chuyển lỗ theo luật thuế, tính toán mức trần khấu trừ chuyển lỗ cho kỳ này và kê khai vào phụ lục tờ khai quyết toán thuế.",
+      "suggested_en": "We managed the statutory carryforward period, calculated the allowable carryover deduction limit for the current period, and reported it in the tax return schedule."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B is practical and natural in corporate tax compliance.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "English 'carryover deduction of loss' and Vietnamese 'khấu trừ chuyển lỗ sang các năm sau' were forced into unnatural templates where 'loss' (entity) and 'deduction' (action) were conflated in collocations and examples."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a54cd04f92b11ccce69cba4d0cb57bba9409c1ce2eb0274ad3c6d07e354367df",
+    "validated_at": "2026-10-01T01:38:00.316622+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000022",
+  "term": "輸入者",
+  "overall_decision": "rewrite",
+  "summary_reason": "「輸入者」という言葉の使われ方が、役職や地位と混同されている箇所が多く、全体的に不自然な表現が目立つ。特にcollocationとexample 1は、ビジネスシーンでの使用を想定すると誤解を招く可能性があるため、大幅な修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸入者を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役職や地位に対して使われることが多く、単なる「輸入者」という役割には不自然。通常は「輸入業者を選定する」など。",
+      "suggested_text": "輸入業者を選定する"
+    },
+    {
+      "index": 1,
+      "text": "輸入者に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任する」は役職や地位に就く際に使う言葉であり、「輸入者」は役職ではないため不自然。",
+      "suggested_text": "輸入者としての役割を担う"
+    },
+    {
+      "index": 2,
+      "text": "輸入者に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    },
+    {
+      "index": 3,
+      "text": "輸入者の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「輸入者」は職務そのものではなく、役割や立場を指すため、「職務を遂行する」と組み合わせるのは不自然。通常は「輸入業務を遂行する」など。",
+      "suggested_text": "輸入業務を遂行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「輸入者」は株主総会で選任されるような役職ではないため、文脈が不自然。この文脈では「役員」や「監査役」などが適切。",
+      "suggested_ja": "定時株主総会の決議を経て、当社の新任役員が正式に選任されました。",
+      "suggested_vi": "Thông qua nghị quyết của đại hội đồng cổ đông thường niên, thành viên hội đồng quản trị mới của công ty chúng tôi đã được bổ nhiệm chính thức.",
+      "suggested_en": "Through the resolution of the annual general shareholders meeting, our new officer was officially appointed."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現で、ビジネスシーンで使われる可能性がある。"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「輸入者の準備状況」についてだが、Bの回答は「内容の最終推敲」や「発送の手配」と、輸入者自身の準備状況ではなく、会議資料の準備状況について答えているように聞こえる。会話の繋がりが不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、輸入者側からの提出資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp dự kiến vào tuần tới, tình hình chuẩn bị tài liệu từ phía nhà nhập khẩu như thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, what is the status of the documents to be submitted by the importer?"
+      },
+      {
+        "speaker": "B",
+        "ja": "提出資料の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng các tài liệu cần nộp và cũng đã nhận được sự chấp thuận trước từ các giám đốc điều hành, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final review of the submission documents and obtained prior approval from the executives, so we will arrange for their dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "83f1c09bfc6a5b371a18939881a3ff353677fe79ffc3619ebe18c5ffe2dab37e",
+    "validated_at": "2026-10-01T01:54:03.190650+00:00"
+  }
+}

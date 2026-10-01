@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000168",
+  "term": "ベンチャーキャピタル",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of the term 'ベンチャーキャピタル' (Venture Capital). It is consistently treated as a 'meeting' or 'event' that can be 'held,' 'convened,' or 'resolved at,' rather than an 'organization' or 'fund.' This leads to unnatural collocations, example sentences, and dialogue. The translations themselves are generally good, but they reflect the errors in the Japanese source.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ベンチャーキャピタルを開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "ベンチャーキャピタル (Venture Capital) は組織や資金を指し、会議のように「開催する」対象ではない。会議を開催するなら「会議を開催する」となる。",
+      "suggested_text": "ベンチャーキャピタルから出資を受ける"
+    },
+    {
+      "index": 1,
+      "text": "ベンチャーキャピタルで決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "ベンチャーキャピタルは組織名であり、その組織内で決議が行われるが、「ベンチャーキャピタルで決議する」という表現は不自然。会議体で決議される。",
+      "suggested_text": "ベンチャーキャピタルが投資を決議する"
+    },
+    {
+      "index": 2,
+      "text": "ベンチャーキャピタルに報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ベンチャーキャピタル（組織）に対して報告することは自然な行為。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "ベンチャーキャピタルへ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ベンチャーキャピタル（組織）に対して届出書を提出することは自然な行為。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「臨時ベンチャーキャピタルを招集する」という表現は不自然。ベンチャーキャピタルは組織であり、会議ではないため招集の対象にならない。招集するのは「会議」や「取締役会」など。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時株主総会を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp cổ đông bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary general meeting of shareholders will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「ベンチャーキャピタルにおいて可決されました」という表現は不自然。可決されるのは会議体（取締役会、株主総会など）であり、ベンチャーキャピタルという組織そのものではない。",
+      "suggested_ja": "ベンチャーキャピタルの投資委員会において、今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại ủy ban đầu tư của quỹ đầu tư mạo hiểm (VC), phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At the venture capital's investment committee, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "「ベンチャーキャピタルの準備状況」という表現が不自然。ベンチャーキャピタルは組織や資金であり、会議のように「準備」する対象ではない。文脈から「ベンチャーキャピタルとの会議」や「ベンチャーキャピタルへの提出資料」の準備状況を指していると推測されるが、直接的な表現ではない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週予定しているベンチャーキャピタルとの面談に向けて、提出資料の準備状況はどうなっていますか。",
+        "vi": "Để chuẩn bị cho cuộc họp với quỹ đầu tư mạo hiểm (VC) vào tuần tới, tình hình chuẩn bị tài liệu nộp như thế nào rồi?",
+        "en": "Regarding the meeting with the venture capital firm scheduled for next week, what is the status of the submission materials?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ tiến hành sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We have completed the final review of the content and obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f32515a7186d329ea95faf8dc670a8b07edf7a22917f6b573d478ed72a74f542",
+    "validated_at": "2026-10-01T01:53:01.249257+00:00"
+  }
+}

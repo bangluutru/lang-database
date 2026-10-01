@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000183",
+  "term": "複式簿記",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input exhibits severe slot-filling artifacts where '複式簿記' (a foundational methodology) was treated like a tangible transaction or account balance ('複式簿記の計上内容や残高', '複式簿記を処理する'). Complete replacement of flawed collocations, examples, and dialogue is required.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "複式簿記を採用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for adopting double-entry bookkeeping.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "複式簿記を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in contexts discussing tax reporting frameworks or small business accounting methods.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "複式簿記を変更する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Corporations do not 'change' double-entry bookkeeping; it is an invariant foundational system, not an accounting policy option that fluctuates.",
+      "suggested_text": "複式簿記により記帳する"
+    },
+    {
+      "index": 3,
+      "text": "複式簿記で経理処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and semantically natural.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'複式簿記の計上内容や残高' is a severe semantic mismatch. Double-entry bookkeeping is a system/methodology, not an account, balance, or journal entry that has balances or discrepancies.",
+      "suggested_ja": "青色申告特別控除の適用を受けるため、すべての取引を複式簿記に基づいて整然と記帳・管理しています。",
+      "suggested_vi": "Để được hưởng mức khấu trừ đặc biệt cho tờ khai thuế xanh (Ao-iro shinkoku), chúng tôi ghi sổ và quản lý ngăn nắp mọi giao dịch dựa trên phương pháp kế toán ghi sổ kép.",
+      "suggested_en": "In order to qualify for the special blue return deduction, we systematically record and manage all transactions based on double-entry bookkeeping."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'複式簿記を適正に処理いたしました' is unnatural templated phrasing; one does not 'process' double-entry bookkeeping.",
+      "suggested_ja": "適正な会計基準および関係法令に則り、すべての日常取引は複式簿記の原則に基づいて適正に処理されています。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và luật định liên quan, mọi giao dịch thường nhật đều được xử lý đúng quy định dựa trên các nguyên tắc kế toán kép.",
+      "suggested_en": "In accordance with relevant accounting standards and regulations, all routine transactions are properly processed based on the principles of double-entry bookkeeping."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'複式簿記の計上内容に差異' in Speaker A is unnatural mechanical substitution. In double-entry bookkeeping, accountants check for debit/credit imbalances (貸借の不一致) or discrepancies between subsidiary and general ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "個人事業主から法人成りした新規クライアントですが、複式簿記による記帳への移行は順調ですか。",
+        "vi": "Khách hàng mới chuyển đổi từ hộ kinh doanh cá thể lên doanh nghiệp, việc chuyển sang ghi sổ theo phương pháp kế toán kép có thuận lợi không?",
+        "en": "Regarding the new client who incorporated from a sole proprietorship, is their transition to double-entry bookkeeping progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、会計ソフトの初期設定と勘定科目の整理が完了し、問題なく仕訳が入力されています。",
+        "vi": "Vâng, việc cài đặt ban đầu trên phần mềm kế toán và chuẩn hóa hệ thống tài khoản đã hoàn tất, các định khoản đang được nhập liệu mà không có vấn đề gì.",
+        "en": "Yes, initial accounting software setup and chart of accounts organization are complete, and journal entries are being recorded without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term definitions are accurate, but examples required complete rewrite due to Japanese source defects."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "146731cee6a88be470c9a99df17bf7f89248770f9432e96bbe9f11f253b5f814",
+    "validated_at": "2026-10-01T01:36:55.645810+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000132",
+  "term": "労務費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, examples, and the dialogue suffer from mechanical cookie-cutter templates that treat 労務費 as a generic balance-sheet account with '残高' or reimbursements ('精算') rather than reflecting authentic cost accounting (原価計算 / 配賦 / 発生額).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "労務費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing labor costs in manufacturing accounts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "労務費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "労務費 (labor costs) is an expense/manufacturing cost account, not a balance sheet item. Cost accounts do not hold a running balance (残高); one examines the incurred amount (発生額) or budget variance (予算差異).",
+      "suggested_text": "労務費の発生額を集計する"
+    },
+    {
+      "index": 2,
+      "text": "労務費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Directly using '労務費を照合する' is unnatural. In cost accounting, one reconciles labor costs against time cards/payrolls (賃金台帳や作業時間と突き合わせる) or checks the breakdown (内訳を照合する).",
+      "suggested_text": "労務費の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "労務費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 (settle/reimburse) applies to expense advances (仮払金, 経費, 旅費交通費), never to labor costs (労務費) in manufacturing accounting. A fundamental cost accounting verb such as 配賦する (allocate) should be taught instead.",
+      "suggested_text": "労務費を配賦する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated. Cost accounts do not have '残高' (balance) to reconcile; manufacturing accounting compares actual labor incurred with work reports and budget/standard costs.",
+      "suggested_ja": "月末の原価計算において、作業日報と賃金台帳を照合し、労務費の発生額に差異がないか精査します。",
+      "suggested_vi": "Trong quá trình tính giá thành cuối tháng, chúng tôi đối chiếu nhật ký công việc với bảng lương để kiểm tra kỹ lưỡng xem có chênh lệch nào trong chi phí nhân công phát sinh hay không.",
+      "suggested_en": "During month-end cost accounting, we cross-check daily work reports against payroll ledgers to carefully examine any variances in incurred labor costs."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains obvious generic templating and lexical redundancy ('適正な...適正に'). It lacks authenticity regarding how labor costs are actually processed (direct vs. indirect labor allocation).",
+      "suggested_ja": "当期の決算にあたり、現場の直接作業時間に基づき、労務費を適正に各製造指図書へ配賦いたしました。",
+      "suggested_vi": "Khi quyết toán kỳ này, dựa trên số giờ làm việc trực tiếp tại hiện trường, chúng tôi đã phân bổ chi phí nhân công một cách hợp lý vào từng lệnh sản xuất.",
+      "suggested_en": "For this term's financial closing, we properly allocated labor costs to individual manufacturing orders based on direct on-site work hours."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question is vague, and Speaker B relies on boilerplate template language ('証憑書類と補助元帳を照合済みで、すべて適正に整合している'). Real workplace dialogue on 労務費 focuses on work hours, payroll discrepancies, or cost allocation variance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の原価計算で、製造現場の労務費に大きな予算差異は出ていませんか。",
+        "vi": "Trong kỳ tính giá thành tháng này, chi phí nhân công tại xưởng sản xuất có phát sinh chênh lệch ngân sách lớn nào không?",
+        "en": "In this month's cost accounting, did any significant budget variance arise in manufacturing labor costs?"
+      },
+      {
+        "speaker": "B",
+        "ja": "残業時間の増加に伴い若干の差異が生じましたが、許容範囲内であることを確認しております。",
+        "vi": "Có phát sinh chênh lệch nhỏ do tăng giờ làm thêm, nhưng tôi đã xác nhận là vẫn nằm trong phạm vi cho phép.",
+        "en": "A slight variance occurred due to an increase in overtime hours, but I have confirmed it remains within acceptable limits."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In accounting, 労務費 encompasses both direct and indirect labor (chi phí nhân công). Limiting it strictly to 'chi phí nhân công trực tiếp' (which is 直接労務費) is technically inaccurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b5bb570b2733f848b561059b6c974e4ddacd1199c89eb95a6543f0622e869eaa",
+    "validated_at": "2026-10-01T01:36:03.584519+00:00"
+  }
+}

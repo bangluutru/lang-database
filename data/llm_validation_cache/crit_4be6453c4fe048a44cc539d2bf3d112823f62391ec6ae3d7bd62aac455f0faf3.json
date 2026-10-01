@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000173",
+  "term": "荷崩れ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across all examples and the dialogue is a fundamental semantic mismatch. '荷崩れ' (cargo collapse) is a physical event, not an accounting item that can be '計上' (booked/recorded) or have a '残高' (balance) directly. While the collocations are natural, the application of the term in accounting contexts within the examples and dialogue is unnatural and semantically incorrect. It forces a physical incident into an accounting framework without proper contextualization (e.g., 'damages due to cargo collapse'). This would be highly confusing and misleading for a professional learning Japanese in an accounting/trade context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "荷崩れを防止する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "荷崩れが発生する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "荷崩れの損害を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "荷崩れに対する対策を講じる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "荷崩れ (cargo collapse) is a physical event, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an entry) or have a '残高' (balance). This sentence attempts to force an accounting context onto a physical incident, which is unnatural and semantically incorrect in a business context.",
+      "suggested_ja": "月末の帳簿照合において、荷崩れによる損害の計上内容や、それに関連する引当金残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán thiệt hại do đổ sụp hàng hóa hoặc số dư dự phòng liên quan có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded damages due to cargo collapse or the related provision balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '荷崩れ' itself cannot be '処理' (processed) in the context of accounting entries. What is processed are the financial implications or damages resulting from the cargo collapse. The current phrasing is semantically awkward and incorrect for accounting.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において荷崩れによる損害を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các thiệt hại do đổ sụp hàng hóa trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the damages resulting from cargo collapse in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same fundamental semantic error as the examples. '荷崩れ' (cargo collapse) cannot have '計上内容' (entry details) in an accounting sense. Speaker A's question is based on a flawed premise, making Speaker B's response, while grammatically structured, irrelevant to the actual nature of '荷崩れ' in an accounting context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、荷崩れによる損害の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán thiệt hại do đổ sụp hàng hóa không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded damages due to cargo collapse?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for 'meaning_vi' and 'meaning_en' are acceptable for the term itself. However, the translations within the example sentences and dialogue are problematic because they directly translate the semantically incorrect Japanese phrases. For instance, 'đổ sụp xô lệch hàng hóa trong thùng container' is a good translation for '荷崩れ', but when it's used in 'nội dung hạch toán hoặc số dư của đổ sụp xô lệch hàng hóa trong thùng container', it becomes unnatural and incorrect in an accounting context. The English translations also suffer from this direct, yet semantically flawed, translation."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3fe8dedae5c7b05c41cc0b78d884cfd3efffd3cf7e1a0bcdc9e8af7d6de7e92e",
+    "validated_at": "2026-10-01T01:57:38.686858+00:00"
+  }
+}

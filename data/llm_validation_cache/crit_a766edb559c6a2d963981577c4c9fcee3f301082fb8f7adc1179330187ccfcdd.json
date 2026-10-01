@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000196",
+  "term": "監査基準",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic hallucination in both example sentences and the dialogue. The regulatory standard '監査基準' was mechanically forced into accounting journal entry templates ('計上内容', '残高', '適正に処理'). Collocations are acceptable, but all contextual sentences require complete rewrites.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "監査基準を遵守する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard professional collocation for adhering to auditing standards.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "監査基準を改定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation referring to the revision of auditing standards by standard setters.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "監査基準に準拠する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Ubiquitous phrasing used in audit reports and accounting documentation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "監査基準を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for reviewing or checking relevant auditing standards.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal semantic mismatch. '監査基準' (auditing standards) represents professional regulatory standards, not a financial account. It cannot possess '計上内容' (booked entries) or '残高' (balances).",
+      "suggested_ja": "公認会計士は、一般に公正妥当と認められる監査基準に準拠して財務諸表監査を実施します。",
+      "suggested_vi": "Các kiểm toán viên công chứng thực hiện kiểm toán báo cáo tài chính tuân theo các chuẩn mực kiểm toán được thừa nhận rộng rãi là hợp lý và công bằng.",
+      "suggested_en": "Certified public accountants conduct audits of financial statements in compliance with generally accepted auditing standards."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Fatal semantic error. '監査基準を適正に処理いたしました' treats an auditing norm as if it were a transactional journal entry to be processed.",
+      "suggested_ja": "監査基準の改定に伴い、当社の監査手続および内部統制評価の手順を見直す必要があります。",
+      "suggested_vi": "Cùng với việc sửa đổi chuẩn mực kiểm toán, chúng ta cần rà soát lại các thủ tục kiểm toán và quy trình đánh giá kiểm soát nội bộ của công ty.",
+      "suggested_en": "In conjunction with the revision of auditing standards, we need to review our company's audit procedures and internal control evaluation processes."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there are discrepancies in 'the recorded contents of auditing standards' (監査基準の計上内容), which is conceptually nonsensical in accounting and auditing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期から改定された監査基準が適用されますが、監査法人との協議は進んでいますか。",
+        "vi": "Chuẩn mực kiểm toán sửa đổi sẽ được áp dụng từ kỳ tới, việc thảo luận với công ty kiểm toán đã tiến hành đến đâu rồi?",
+        "en": "The revised auditing standards will apply starting next fiscal year; how are the discussions with our audit firm progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、新たな基準への対応方針について、担当パートナーと論点整理を行っているところです。",
+        "vi": "Vâng, chúng tôi đang cùng đối tác phụ trách rà soát và làm rõ các vấn đề trọng tâm về phương án đáp ứng chuẩn mực mới.",
+        "en": "Yes, we are currently sorting out key points with the lead partner regarding our policy for addressing the new standards."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "213faca198c513b0d4ee244424f166b81541d1a0f9b0367505bc5cd0df021587",
+    "validated_at": "2026-10-01T01:37:09.087321+00:00"
+  }
+}

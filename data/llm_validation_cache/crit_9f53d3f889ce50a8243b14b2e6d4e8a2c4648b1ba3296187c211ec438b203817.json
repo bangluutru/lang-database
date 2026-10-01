@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000055",
+  "term": "決裁",
+  "overall_decision": "reject",
+  "summary_reason": "Severe hallucination/templating: The administrative approval term '決裁' was inappropriately forced into accounting journal entry/balance sheet templates ('決裁の計上内容や残高に差異がないか', '会計基準に則り決裁を処理').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "決裁を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, '決裁を仰ぐ' (seek approval) or '決裁を求める' is far more authentic and standard business Japanese.",
+      "suggested_text": "決裁を仰ぐ"
+    },
+    {
+      "index": 1,
+      "text": "決裁を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Approval is typically received or granted ('決裁を取る', '決裁が下りる', '決裁を得る') rather than '完了する'.",
+      "suggested_text": "決裁を得る"
+    },
+    {
+      "index": 2,
+      "text": "決裁の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression referring to checking the internal approval workflow.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "決裁を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reviews the approval flow or authority matrix ('決裁ルート／決裁権限を見直す'), not '決裁' itself in isolation.",
+      "suggested_text": "決裁権限を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A managerial approval (決裁) is an administrative workflow action, not an accounting entry or account balance that has '計上内容' or '残高'. This is a severe mechanical template error.",
+      "suggested_ja": "新規システム導入の費用については、取締役会の決裁を得た上で発注手続きを進めてください。",
+      "suggested_vi": "Về chi phí triển khai hệ thống mới, vui lòng xin phê duyệt chính thức từ Hội đồng quản trị rồi mới tiến hành thủ tục đặt hàng.",
+      "suggested_en": "Regarding the costs for the new system implementation, please obtain final approval from the Board of Directors before proceeding with the purchase order."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'決裁' cannot be processed under accounting standards ('会計基準に則り決裁を適正に処理いたしました'). This is completely nonsensical in an accounting context.",
+      "suggested_ja": "社内規程の改定に伴い、部長決裁で処理できる支出限度額が引き上げられました。",
+      "suggested_vi": "Cùng với việc sửa đổi quy chế nội bộ, hạn mức chi tiêu được xử lý theo thẩm quyền phê duyệt của trưởng phòng đã được nâng lên.",
+      "suggested_en": "Following the revision of internal regulations, the expenditure limit that can be approved at the department manager level has been raised."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there is a discrepancy in the booked entries of '決裁' ('決裁の計上内容に差異'), which is nonsensical corporate Japanese. Speaker B answers with balance reconciliation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "例のプロジェクトの見積もりですが、役員決裁はもう下りましたか。",
+        "vi": "Về bảng báo giá của dự án đó, đã có quyết định phê duyệt chính thức của ban giám đốc chưa?",
+        "en": "Regarding the quote for that project, has executive approval been granted yet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先ほど専務の決裁が完了いたしましたので、直ちに契約締結の準備に入ります。",
+        "vi": "Vâng, vừa nãy đã có phê duyệt chính thức từ Giám đốc điều hành, nên chúng tôi sẽ chuẩn bị ký kết hợp đồng ngay lập tức.",
+        "en": "Yes, final approval from the Senior Managing Director was just granted, so we will immediately prepare to execute the contract."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English examples inherited and attempted to translate the fundamentally flawed accounting template sentences, resulting in absurd statements like 'entries or balances for final approval' and 'nội dung hạch toán hoặc số dư của quyết định phê duyệt'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a6159e9abb97d746619bf5c52140a65e76e02e3c573c6392ec5d483a9974e20e",
+    "validated_at": "2026-10-01T01:41:52.636166+00:00"
+  }
+}

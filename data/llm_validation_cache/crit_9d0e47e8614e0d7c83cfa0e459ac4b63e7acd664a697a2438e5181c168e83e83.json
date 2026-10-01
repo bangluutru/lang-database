@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000002",
+  "term": "FOB",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure conversational continuity and direct relevance of Speaker B's response to Speaker A's question regarding FOB arrangements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "FOBの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "FOBの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "FOBにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "FOBにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the 'FOB arrangement status' question. It describes general customs clearance progress, not specifically how FOB terms are being handled or confirmed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、FOBの手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp FOB thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the FOB arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、FOB条件に基づき、船積みは完了しており、通関業者と乙仲には必要書類を全て送付済みです。輸入者側での荷受け準備も確認しております。",
+        "vi": "Vâng, theo điều kiện FOB, việc xếp hàng đã hoàn tất, và chúng tôi đã gửi tất cả các tài liệu cần thiết cho công ty thông quan và đại lý vận chuyển. Chúng tôi cũng đã xác nhận việc chuẩn bị nhận hàng từ phía nhà nhập khẩu.",
+        "en": "Yes, based on FOB terms, the shipment has been completed, and all necessary documents have been sent to the customs broker and forwarder. We have also confirmed the importer's preparations for receiving the goods."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d20277d060888b8aef2b2770e28163e757618d466dddd6b35e700cf4e63977c5",
+    "validated_at": "2026-10-01T01:53:40.302265+00:00"
+  }
+}

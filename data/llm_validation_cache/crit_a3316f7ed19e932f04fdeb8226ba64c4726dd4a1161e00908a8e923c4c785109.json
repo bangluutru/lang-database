@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000196",
+  "term": "更正の請求",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains serious tax domain factual errors regarding the timing and nature of 更正の請求 (confusing it with timely initial returns or filing attachments) and suffers from mechanical glossary-copy translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "更正の請求を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise legal/tax collocation for making a request for correction.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "更正の請求を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「更正の請求」 is a procedural legal act/claim, not the physical or electronic document itself. The transitive verb 「提出する」 naturally pairs with the document 「更正の請求書」.",
+      "suggested_text": "更正の請求書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "更正の請求の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly discussed in tax practice referring to the 5-year statutory period under Article 23 of the General Rules of National Taxes.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "更正の請求の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrasing in corporate tax and accounting departments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major tax factual error: A '更正の請求' cannot occur '法定申告期限内に' upon finalizing accounts. If an error is fixed within the statutory filing window, it is a '訂正申告' (revised return before due date). A '更正の請求' is filed only after a return has been filed (or post-deadline) within 5 years to claim a refund for overpaid taxes.",
+      "suggested_ja": "過年度の申告において税額の過大納付が判明したため、所轄税務署に対して更正の請求を行いました。",
+      "suggested_vi": "Do phát hiện việc nộp thừa số thuế trong tờ khai của các niên độ trước, chúng tôi đã thực hiện yêu cầu điều chỉnh giảm số thuế tại chi cục thuế phụ trách.",
+      "suggested_en": "Upon discovering an overpayment of tax in a prior year's filing, we filed a request for correction with the competent tax office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese and English translations blindly pasted the raw bilingual definition string ('yêu cầu điều chỉnh giảm số thuế / hoàn thuế nộp thừa' and 'request for correction (tax refund claim)') rather than using natural syntactic integration.",
+      "suggested_ja": "顧問税理士の助言を受け、適正な税法解釈に基づき更正の請求書および添付書類を整えました。",
+      "suggested_vi": "Được sự tư vấn của chuyên viên thuế cố vấn, chúng tôi đã chuẩn bị đầy đủ tờ khai yêu cầu điều chỉnh giảm số thuế và hồ sơ đính kèm dựa trên diễn giải luật thuế thích hợp.",
+      "suggested_en": "Following the advice of our advisory tax accountant, we prepared the written request for correction and supporting documents based on proper tax law interpretation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Crucial domain error: A '更正の請求' is an independent refund petition filed for a prior tax year, not an attachment to the current fiscal year's tax return ('今回の決算申告における...申告書添付書類として提出'). This misrepresents core Japanese tax compliance.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "前期の減価償却の計上漏れに伴う更正の請求について、書類の準備は完了しましたか。",
+        "vi": "Về yêu cầu điều chỉnh giảm số thuế do bỏ sót khấu hao của kỳ trước, việc chuẩn bị hồ sơ đã hoàn tất chưa?",
+        "en": "Regarding the request for correction due to the depreciation omission in the previous fiscal year, is the documentation ready?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、計算根拠資料と税理士の意見書を添付し、本日税務署へ更正の請求書を提出できる状態です。",
+        "vi": "Vâng, chúng tôi đã đính kèm tài liệu căn cứ tính toán và văn bản ý kiến của chuyên viên thuế, hôm nay có thể nộp văn bản yêu cầu lên chi cục thuế.",
+        "en": "Yes, with the supporting calculations and the tax accountant's written opinion attached, we are ready to submit the written request for correction to the tax office today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both language translations unprofessionally pasted literal prompt metadata and slash alternatives (e.g. 'yêu cầu điều chỉnh giảm số thuế / hoàn thuế nộp thừa') into running prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fad51fbc306d039924f1011a99760466f11e5731f4456fcdfb60760ef32e4259",
+    "validated_at": "2026-10-01T01:40:54.795813+00:00"
+  }
+}

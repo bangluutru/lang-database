@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000187",
+  "term": "勘定科目",
+  "overall_decision": "rewrite",
+  "summary_reason": "勘定科目（分類項目名）という語の意味論的性質を無視した「計上する」「精算する」「処理する」といった述語の誤用が多発しており、翻訳文にも辞書見出しのスラッシュ混入と文法的不備が見られるため全面的な修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "勘定科目を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "勘定科目 (account title/name) は分類・ラベルであり、計上（金額を帳簿に記録）の直接の目的語にはなりません。「適切な勘定科目で計上する」や「勘定科目を設定する」が自然です。",
+      "suggested_text": "適切な勘定科目で計上する"
+    },
+    {
+      "index": 1,
+      "text": "勘定科目の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で日常的に使われる自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "勘定科目を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合するのは通常「残高」「帳簿」「取引データ」であり、科目名そのものを照合する表現は実務上不自然です。「勘定科目ごとの残高を照合する」または「勘定科目を特定する」とすべきです。",
+      "suggested_text": "勘定科目ごとの残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "勘定科目を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算の対象は「経費」「仮払金」などの金額や実費であり、勘定科目という項目自体を精算することはできません。",
+      "suggested_text": "勘定科目を新設する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本文の「勘定科目の計上内容」はやや不自然（「各勘定科目の内訳」が適切）。またベトナム語訳および英語訳で単語定義の『/』がそのままコピペされ、英文も冠詞欠落で不自然です。",
+      "suggested_ja": "月末の帳簿照合において、各勘定科目の内訳や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch nào trong chi tiết hoặc số dư của các tài khoản kế toán hay không.",
+      "suggested_en": "During the month-end reconciliation, we thoroughly inspect the breakdown and balances of each account title for any discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「勘定科目を適正に処理いたしました」は実務日本語として不自然（科目を処理するのではなく、取引を科目で処理する）。訳文にもスラッシュの混入が見られます。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の取引を適切な勘定科目に振り分けて処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã phân loại và xử lý các giao dịch trong kỳ vào đúng tài khoản kế toán thích hợp.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly allocated and processed this term's transactions under the appropriate account titles."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「勘定科目の計上内容に差異」およびBの「適正に整合している」は実務会話として不自然かつ重言気味のテンプレート表現です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、主要な勘定科目の残高に不自然な差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch bất thường nào trong số dư các tài khoản kế toán chính không?",
+        "en": "Are there any unusual discrepancies in the balances of the major account titles for this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳の残高をすべて照合済みで、問題のないことを確認しております。",
+        "vi": "Chúng tôi đã đối chiếu toàn bộ chứng từ với số dư trên sổ phụ và xác nhận không có vấn đề gì.",
+        "en": "We have reconciled all source documents with the subsidiary ledger balances and confirmed that there are no issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語訳に定義語由来のスラッシュ（tài khoản kế toán / tên danh mục kế toán）がそのまま埋め込まれており、英語訳も可算名詞であるaccount titleが無冠詞単数形で機械的に配置されています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5c17477f668018db5448e22cc83c7c2b3eb2a181c06b9ffd6e901054a64a9a74",
+    "validated_at": "2026-10-01T01:37:00.900053+00:00"
+  }
+}

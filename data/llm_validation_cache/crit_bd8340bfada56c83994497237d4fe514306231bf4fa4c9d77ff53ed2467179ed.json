@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000109",
+  "term": "受取配当等の益金不算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションの大部分（0, 1, 3）が「不算入に算入する」「加算する」などの重大な意味矛盾・税務上の誤りを抱えています。また例文0も配当を「費用」と記述する致命的な会計誤謬があり、抜本的な修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "受取配当等の益金不算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不算入」に「算入する」とするのは自己矛盾であり、実務上全く使われない不自然な表現です。",
+      "suggested_text": "受取配当等の益金不算入を適用する"
+    },
+    {
+      "index": 1,
+      "text": "受取配当等の益金不算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「不算入に不算入とする」は語の重複であり、日本語として破綻しています。",
+      "suggested_text": "受取配当等の益金不算入額を計算する"
+    },
+    {
+      "index": 2,
+      "text": "受取配当等の益金不算入の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務申告（別表四）における申告調整業務を表す表現として自然です。",
+      "suggested_text": "受取配当等の益金不算入の調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "受取配当等の益金不算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "受取配当等の益金不算入は別表四における「減算項目」であり、「加算する」とするのは税務会計上重大な誤りです。",
+      "suggested_text": "別表四で受取配当等の益金不算入として減算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "受取配当金は会計上「営業外収益（収益）」であり、「費用」ではありません。「費用と税務上の取扱いの相違」とするのは会計・税務上の初歩的な事実誤認です。",
+      "suggested_ja": "会計上の収益と税務上の益金の相違を調整するため、別表四において受取配当等の益金不算入の減算処理を適切に行いました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa doanh thu kế toán và ích kim (thu nhập chịu thuế), chúng tôi đã thực hiện giảm trừ hợp lý khoản cổ tức nhận được không tính vào doanh thu chịu thuế trên Bảng phụ lục 4.",
+      "suggested_en": "To reconcile the difference between book revenue and taxable income, we properly processed the deduction for exclusion of dividends received from gross revenue on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「益金不算入の算入漏れ」は語義が矛盾しており不自然です。また益金不算入の適用漏れは納税者の過大申告になるため、「税務調査での指摘」の典型例としては文脈が噛み合いません（税務調査で指摘されるのは過少申告が主）。",
+      "suggested_ja": "過年度の配当受取実績を検証し、受取配当等の益金不算入の適用漏れによる税額の過大納付がないか確認しました。",
+      "suggested_vi": "Chúng tôi đã kiểm tra dữ liệu cổ tức nhận được của các năm trước để xác nhận không bị nộp thừa tiền thuế do bỏ sót áp dụng quy định miễn tính thu nhập chịu thuế đối với cổ tức.",
+      "suggested_en": "We reviewed past dividend income records to verify there was no tax overpayment resulting from failure to apply the exclusion of dividends received from gross revenue."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "法人税申告の実務における確認のやり取りとして自然で破綻がありません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における受取配当等の益金不算入の計算根拠と提出書類は整理できましたか。",
+        "vi": "Cơ sở tính toán và hồ sơ nộp cho khoản loại trừ cổ tức nhận được khỏi thu nhập chịu thuế trong kỳ quyết toán lần này đã được sắp xếp xong chưa?",
+        "en": "Have you organized the calculation basis and submission documents for the exclusion of dividends received from gross revenue for this fiscal filing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、根拠資料と税理士の確認書を揃えましたので、申告書添付書類として提出可能です。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ chứng từ căn cứ và giấy xác nhận của chuyên gia tư vấn thuế, nên đã sẵn sàng để nộp cùng hồ sơ khai thuế.",
+        "en": "Yes, we have compiled the supporting documents and the tax accountant's confirmation sheet, so they are ready to be submitted as tax return attachments."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳で「từ công ty con（子会社からの）」と限定されていますが、日本の法人税法上の受取配当等の益金不算入は子会社株に限らず一般株式等も対象（保有比率に応じた区分）となるため、限定詞を除去した「khoản cổ tức nhận được không tính vào doanh thu chịu thuế」が適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d062ac6d8a026850f706e2b736b9ab6d1a0bdc1817a974698b16df2888030689",
+    "validated_at": "2026-10-01T01:39:22.893210+00:00"
+  }
+}

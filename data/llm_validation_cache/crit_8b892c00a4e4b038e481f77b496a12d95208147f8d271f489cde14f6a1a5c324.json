@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-tax-000188",
+  "term": "再調査の請求",
+  "overall_decision": "rewrite",
+  "summary_reason": "税法上の不服申立手続である「再調査の請求」に対して、無関係な決算・帳簿照合の汎用会計テンプレート（計上、残高、補助元帳照合）が無批判に適用されており、専門教育コンテンツとして致命的な誤謬を含んでいるため全面的に書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "再調査の請求を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "行政不服申立ての手続きであるため、「進める」よりも「行う」や「申し立てる」が法務・税務実務上適切です。",
+      "suggested_text": "再調査の請求を行う"
+    },
+    {
+      "index": 1,
+      "text": "再調査の請求を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「請求を完了する」は不自然です。請求書面を税務署長等に「提出する」と表現するのが実務的です。",
+      "suggested_text": "再調査の請求書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "再調査の請求の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "国税通則法に基づく不服申立手続のフローを確認する文脈として自然です。"
+    },
+    {
+      "index": 3,
+      "text": "再調査の請求を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "申立手続そのものを「見直す」とは言いません。処分の取消しを求めて請求を行うかどうかを「検討する」とします。",
+      "suggested_text": "再調査の請求を検討する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「再調査の請求」は税務署等の処分に対する行政不服申立手続であり、会計勘定や帳簿に「計上」したり「残高」を持ったりする概念ではありません。完全な定型文スワップの誤用です。",
+      "suggested_ja": "税務署からの更正処分に不服があるため、処分通知受領後3か月以内に再調査の請求を行う方向で税理士と協議しています。",
+      "suggested_vi": "Vì không đồng ý với quyết định ấn định thuế của cơ quan thuế, chúng tôi đang thảo luận với chuyên gia tư vấn thuế để khiếu nại yêu cầu xem xét lại trong vòng 3 tháng kể từ ngày nhận thông báo.",
+      "suggested_en": "Since we object to the reassessment from the tax office, we are consulting with our tax accountant to file a request for reinvestigation within three months of receiving the notice."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "再調査の請求は決算整理や会計基準に則って「決算で処理」する対象ではありません。税務争訟手続としての実務文脈に差し替える必要があります。",
+      "suggested_ja": "再調査の請求書を税務署長宛てに提出し、課税処分の根拠となった事実認定の再確認を求めました。",
+      "suggested_vi": "Chúng tôi đã nộp đơn yêu cầu xem xét lại tới Chi cục trưởng Chi cục Thuế và yêu cầu xác minh lại việc xác định sự việc làm căn cứ ra quyết định ấn định thuế.",
+      "suggested_en": "We submitted a written request for reinvestigation to the district tax office director, seeking re-examination of the factual findings underlying the tax assessment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算や補助元帳照合の文脈に「再調査の請求の計上内容」を当てはめており、税務・会計実務として全く成立していません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の税務調査による更正処分について、再調査の請求を行うか審査請求へ直接進むか、顧問税理士の見解はどうなっていますか。",
+        "vi": "Về quyết định ấn định thuế sau đợt thanh tra thuế vừa rồi, ý kiến của chuyên gia tư vấn thuế thế nào về việc nên nộp yêu cầu xem xét lại hay tiến thẳng tới khiếu nại lên Viện Thẩm tra thuế?",
+        "en": "Regarding the reassessment from the recent tax audit, what is our tax advisor's view on whether we should file a request for reinvestigation or proceed directly to a request for examination?"
+      },
+      {
+        "speaker": "B",
+        "ja": "事実誤認の是正が中心となるため、まずは税務署長に対する再調査の請求を申し立てることを推奨されています。",
+        "vi": "Vì trọng tâm là điều chỉnh các sai sót về việc xác định sự việc, chuyên gia khuyến nghị trước tiên nên nộp yêu cầu xem xét lại tới Chi cục trưởng Chi cục Thuế.",
+        "en": "Since the primary focus is correcting factual errors, they recommend filing a request for reinvestigation with the district tax office director first."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語単体の訳語は適切ですが、例文・会話文における誤った会計テンプレート適用に伴い文脈破綻が生じていたため例文側の差し替えが必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d6547f305a7237f4f9d4bef8427ddfa4e5adb5cc8fb0d4d3878e909ff5a6cc98",
+    "validated_at": "2026-10-01T01:40:43.747200+00:00"
+  }
+}

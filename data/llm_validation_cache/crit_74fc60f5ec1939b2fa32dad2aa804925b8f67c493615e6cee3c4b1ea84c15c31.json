@@ -1,0 +1,72 @@
+{
+  "entry_id": "jp-pro-trade-000001",
+  "term": "インコタームズ",
+  "overall_decision": "rewrite",
+  "summary_reason": "While generally understandable, some example sentences and the dialogue lack naturalness and conversational flow for a professional setting. The Japanese in the first example sentence and the dialogue could be more idiomatic and less templated. The dialogue's turns are somewhat disconnected.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "インコタームズの条件で契約する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "インコタームズの建値で取引する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "インコタームズにおける費用負担を取り決める",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "インコタームズにおける危険移転の時点を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The Japanese sentence is grammatically correct but sounds slightly stiff and templated. 'インコタームズ条件を採用しました' is understandable but 'インコタームズ条件としました' or 'インコタームズ条件を適用しました' would be more natural. Also, '運賃と危険負担の範囲を明確にするため' is a bit clunky; '運賃と危険負担の範囲を明確にするべく' or '運賃と危険負担の範囲を明確にするため、インコタームズ条件を適用しました' would flow better. The English translation is also a bit literal and could be improved for naturalness.",
+      "suggested_ja": "今回の海上輸送契約は、運賃と危険負担の範囲を明確にするため、インコタームズ条件を適用しました。",
+      "suggested_vi": "Hợp đồng vận tải biển lần này áp dụng điều kiện Incoterms để làm rõ phạm vi chịu cước phí và rủi ro.",
+      "suggested_en": "This ocean transport contract adopted Incoterms to clarify the division of freight costs and risk transfer."
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' of Incoterms, which is a bit vague. Speaker B's response about contacting customs brokers and forwarders, and document checks, doesn't directly address the 'Incoterms arrangement status' but rather the overall customs clearance process. The connection feels a bit indirect. A more direct question about Incoterms status or a more specific response would improve continuity.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、インコタームズの条件は確定していますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, điều kiện Incoterms đã được xác nhận chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, have the Incoterms conditions been finalized?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、インコタームズはFOBで確定しており、通関業者と乙仲への連絡も済ませ、書類確認後、輸入申告に入っております。",
+        "vi": "Vâng, Incoterms đã được xác nhận là FOB. Chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, và sau khi kiểm tra tài liệu, chúng tôi đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, Incoterms have been confirmed as FOB. We have already contacted the customs broker and forwarder, and after document verification, we are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "edeef6769d4773ecf41fa9f89795aed6f16e52426cd08d9d258799ac6a4b70ce",
+    "validated_at": "2026-10-01T01:53:40.555721+00:00"
+  }
+}

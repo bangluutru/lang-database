@@ -1,0 +1,76 @@
+{
+  "entry_id": "jp-pro-tax-000107",
+  "term": "欠損金の繰戻し還付",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションおよび例文において、「欠損金の繰戻し還付（Carryback refund）」と「欠損金の繰越控除（Loss carryforward deduction）」の制度的定義が完全に混同・破綻しています。税務実務上重大な誤りであるため、全面的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "欠損金の繰戻し還付を繰り越す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「繰戻し還付（前事業年度へ戻して還付を受ける）」と「繰越控除（将来事業年度へ繰り越す）」の概念が完全に混同しており、税務実務上あり得ない表現です。",
+      "suggested_text": "欠損金の繰戻し還付を請求する"
+    },
+    {
+      "index": 1,
+      "text": "欠損金の繰戻し還付を控除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "繰戻し還付は所得から「控除」するものではなく、過年度の納付税額から「還付を受ける」制度です。控除の対象となるのは「繰越欠損金」です。",
+      "suggested_text": "欠損金の繰戻し還付を適用する"
+    },
+    {
+      "index": 2,
+      "text": "欠損金の繰戻し還付に充当する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "還付金を未納税額に充当することはあっても、「繰戻し還付に充当する」というコロケーションは日本語および税務会計として破綻しています。",
+      "suggested_text": "欠損金の繰戻し還付を受ける"
+    },
+    {
+      "index": 3,
+      "text": "欠損金の繰戻し還付の還付を請求する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「還付の還付」と重複表現（重言）になっており不自然です。正しくは「欠損金の繰戻しによる還付を請求する」または「欠損金の繰戻し還付を申請する」です。",
+      "suggested_text": "欠損金の繰戻しによる還付を請求する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "致命的な税法上の概念混同。当期の課税所得から控除するのは「繰越控除」であり、当期欠損金を前期に繰り戻して前期法人税の還付を受ける「繰戻し還付」の定義と正反対です。",
+      "suggested_ja": "当期に生じた青色欠損金について繰戻し還付を請求し、前事業年度に納付した法人税の還付を受けました。",
+      "suggested_vi": "Chúng tôi đã yêu cầu hoàn thuế do chuyển ngược số lỗ phát sinh kỳ này về trước và đã nhận lại số thuế thu nhập doanh nghiệp đã nộp của năm trước.",
+      "suggested_en": "We filed a claim for refund by carryback of the net operating loss incurred in the current period and received a refund of corporate tax paid in the previous fiscal year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「法定の繰越期間」や「控除限度額」は将来へ繰り越す「欠損金の繰越控除」の要素であり、1事業年度前の税額を対象とする繰戻し還付には該当しません。",
+      "suggested_ja": "資本金1億円以下の中小企業者であるため、青色申告書とあわせて欠損金の繰戻しによる還付請求書を税務署に提出しました。",
+      "suggested_vi": "Vì là doanh nghiệp vừa và nhỏ có vốn điều lệ dưới 100 triệu yên, chúng tôi đã nộp đơn yêu cầu hoàn thuế do chuyển lỗ về trước cùng với tờ khai thuế mẫu xanh lên cơ quan thuế.",
+      "suggested_en": "As an SME with capital of 100 million yen or less, we submitted an application for refund by loss carryback to the tax office alongside our blue return."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "meaning_vi là câu giải thích dài dòng ('xin hoàn tiền thuế đã nộp năm trước do năm nay bị lỗ') thay vì một thuật ngữ danh từ chuẩn xác ('hoàn thuế do chuyển lỗ về trước' hoặc 'hoàn thuế bằng cách kết chuyển ngược số lỗ')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0ffbf99c7647f70ad1b9c985b7478de67e65fa32e46d0c82448335934af624b7",
+    "validated_at": "2026-10-01T01:39:15.284780+00:00"
+  }
+}

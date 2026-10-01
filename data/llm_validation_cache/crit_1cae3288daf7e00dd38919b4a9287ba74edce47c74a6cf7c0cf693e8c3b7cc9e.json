@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000170",
+  "term": "国税局",
+  "overall_decision": "reject",
+  "summary_reason": "Total categorical hallucination. The generator slotted '国税局' (Regional Taxation Bureau) directly into a board meeting/general meeting template ('開催する', '招集する', '決議する', '発送する'), resulting in nonsensical and factually absurd sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "国税局を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "国税局 is a government agency (Regional Taxation Bureau), not an event or meeting that can be held (開催). This confuses a government body with a conference or shareholder meeting.",
+      "suggested_text": "国税局の税務調査を受ける"
+    },
+    {
+      "index": 1,
+      "text": "国税局で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A corporate entity does not make resolutions (決議) at a taxation bureau. This is mechanically templated from board or shareholder meeting contexts.",
+      "suggested_text": "国税局と事前照会を行う"
+    },
+    {
+      "index": 2,
+      "text": "国税局に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business/tax collocation indicating reporting required matters to the Regional Taxation Bureau.",
+      "suggested_text": "国税局に報告する"
+    },
+    {
+      "index": 3,
+      "text": "国税局へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural administrative procedure collocation.",
+      "suggested_text": "国税局へ届出書を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Critical template hallucination: treats '国税局' as an extraordinary corporate meeting ('臨時国税局を招集する') rather than a tax authority.",
+      "suggested_ja": "資本金1億円を超える大規模法人に該当するため、管轄の国税局調査部による税務調査が実施されることになりました。",
+      "suggested_vi": "Do là pháp nhân quy mô lớn có vốn điều lệ trên 100 triệu yên, công ty chúng tôi sẽ chịu sự thanh tra thuế từ Phòng Thanh tra thuộc Cục Thuế khu vực có thẩm quyền.",
+      "suggested_en": "As we qualify as a large corporation with capital exceeding 100 million yen, a tax audit by the examination division of the competent Regional Taxation Bureau will be conducted."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Critical template hallucination: claims corporate management policies and budget allocations are voted on and passed ('可決') at a taxation bureau.",
+      "suggested_ja": "組織再編に伴う税務上の適格要件について疑義が生じたため、所轄の国税局に対して文書による事前照会を行いました。",
+      "suggested_vi": "Do phát sinh nghi vấn về điều kiện đáp ứng thuế liên quan đến tái cơ cấu tổ chức, chúng tôi đã gửi văn bản tham vấn trước tới Cục Thuế khu vực có thẩm quyền.",
+      "suggested_en": "Due to uncertainties regarding tax qualification requirements associated with the corporate restructuring, we submitted a formal written advance inquiry to the competent Regional Taxation Bureau."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe category confusion: Speaker A treats '国税局' as a meeting to prepare for, and Speaker B treats it as a document to be drafted, approved, and mailed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週から始まる国税局の税務調査ですが、対象資料の準備状況はいかがでしょうか。",
+        "vi": "Về đợt thanh tra thuế của Cục Thuế khu vực bắt đầu vào tuần tới, tình hình chuẩn bị các tài liệu đối chiếu thế nào rồi?",
+        "en": "Regarding the tax audit by the Regional Taxation Bureau starting next week, how is the preparation of the relevant documents progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直近3期分の総勘定元帳や移転価格関連の契約書は一通り揃え、顧問税理士との最終確認も完了しております。",
+        "vi": "Sổ cái chung của 3 kỳ gần nhất và các hợp đồng liên quan đến giá chuyển nhượng đã được tập hợp đầy đủ, và chúng tôi cũng đã hoàn tất buổi đối chiếu cuối cùng với thuế lý cố vấn.",
+        "en": "We have compiled the general ledgers for the past three fiscal years as well as transfer pricing contracts, and have finalized our review with our tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning contained parenthetical English contamination: 'cục thuế khu vực (Regional Taxation Bureau)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "781b9412a4a79f051a59d9c6126b8e55f238d9b69e9e3c4c760a896e36c13823",
+    "validated_at": "2026-10-01T01:40:24.232378+00:00"
+  }
+}

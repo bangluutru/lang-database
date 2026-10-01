@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000005",
+  "term": "納税義務者",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的な役員・監査系テンプレートの機械的流用（Mad-lib Hallucination）が発生しており、コロケーション・例文・対話のすべてにおいて「納税義務者」という税法上の概念と述語が完全に不整合を起こしています。税務実務に基づいた内容へ全面差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "納税義務者を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "納税義務者（taxpayer）は税法上の法的地位・属性であり、役員や監査人のように選任・任命する対象ではありません。コーポレート・ガバナンス系のテンプレートが誤用されています。",
+      "suggested_text": "納税義務者に該当する"
+    },
+    {
+      "index": 1,
+      "text": "納税義務者に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "納税義務者は職位ではないため「就任する」という述語は成立しません。",
+      "suggested_text": "納税義務者となる"
+    },
+    {
+      "index": 2,
+      "text": "納税義務者に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務上、自社自身が納税義務者であり、相談先は「税理士」や「所轄税務署」です。「納税義務者に相談する」は文脈上不自然です。",
+      "suggested_text": "消費税の納税義務者"
+    },
+    {
+      "index": 3,
+      "text": "納税義務者の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "納税義務は公法上の義務の履行であり、会社法上の「職務（job duties）」ではありません。",
+      "suggested_text": "納税義務者の判定を行う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "株主総会で「納税義務者が選任される」ことは税法・会社法上あり得ません。役員選任テンプレートの機械的な誤置換です。",
+      "suggested_ja": "基準期間における課税売上高が1,000万円を超えたため、当社は翌々事業年度より消費税の納税義務者となります。",
+      "suggested_vi": "Do doanh thu chịu thuế trong kỳ cơ sở vượt quá 10 triệu yên, công ty chúng tôi sẽ trở thành người có nghĩa vụ nộp thuế tiêu thụ từ năm tài chính sau nữa.",
+      "suggested_en": "Because taxable sales in the base period exceeded 10 million yen, our company will become a taxpayer liable for consumption tax starting from the fiscal year after next."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性を確保するため納税義務者と定期的な報告連絡会を開催」は、監査役や内部監査室向けのスロットに当てはめただけの極めて不自然な例文です。",
+      "suggested_ja": "外国法人が日本国内に恒久的施設（PE）を有する場合、原則として法人税の納税義務者として確定申告を行う必要があります。",
+      "suggested_vi": "Trường hợp pháp nhân nước ngoài có cơ sở thường trú (PE) tại Nhật Bản, về nguyên tắc cần phải nộp tờ khai quyết toán thuế với tư cách là người có nghĩa vụ nộp thuế thu nhập doanh nghiệp.",
+      "suggested_en": "If a foreign corporation has a permanent establishment (PE) in Japan, it is generally required to file a final tax return as a corporate taxpayer."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aが「納税義務者の準備状況」と尋ね、Bが「内容の推敲・発送の手配」と答えており、文脈が完全に破綻しています（招集通知や事業報告書の作成テンプレートが混入しています）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "設立1期目の新設子会社ですが、今期から消費税の納税義務者に該当するかどうか確認していただけますか。",
+        "vi": "Đối với công ty con mới thành lập trong kỳ đầu tiên, anh có thể kiểm tra xem công ty có thuộc đối tượng có nghĩa vụ nộp thuế tiêu thụ từ kỳ này hay không?",
+        "en": "Could you check whether our newly established subsidiary in its first fiscal year qualifies as a consumption taxpayer from this period?"
+      },
+      {
+        "speaker": "B",
+        "ja": "承知いたしました。資本金が1,000万円未満ですので原則は免税事業者ですが、特定期間の給与支払額なども含めて判定いたします。",
+        "vi": "Tôi hiểu rồi. Do vốn điều lệ dưới 10 triệu yên nên theo nguyên tắc là doanh nghiệp được miễn thuế, tuy nhiên tôi sẽ thẩm định cụ thể bao gồm cả số tiền chi trả lương trong kỳ chỉ định.",
+        "en": "Understood. Since the capital is under 10 million yen, it is in principle a tax-exempt business, but I will make a formal determination taking into account factors such as payroll amounts during the specified period."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の対訳（Taxpayer / Người có nghĩa vụ nộp thuế）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5a54c3610ec704f0c132c4b2bb35715b58f7bee84bfa85ee03a49edbb8f4ed6e",
+    "validated_at": "2026-10-01T01:37:20.059430+00:00"
+  }
+}

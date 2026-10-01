@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000197",
+  "term": "偽造品対策",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the fundamental misunderstanding and misapplication of accounting terminology ('計上', '残高', '処理') to the concept of '偽造品対策' (anti-counterfeiting measures). '偽造品対策' is a set of procedures or actions, not an accounting item that can be booked or have a balance. The examples and dialogue are therefore unnatural and factually incorrect from an accounting perspective. The translations also incorrectly narrow the scope of the term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "偽造品対策を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "偽造品対策を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "偽造品対策の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "偽造品対策を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "偽造品対策 (anti-counterfeiting measures) is not an accounting entry or balance that can be '計上' (booked) or have a '残高' (balance). This sentence misapplies accounting terminology to a procedural concept.",
+      "suggested_ja": "月末の帳簿照合において、偽造品対策に関連する費用計上や支払いに差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong việc hạch toán chi phí hoặc thanh toán liên quan đến các biện pháp chống hàng giả hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in expense entries or payments related to anti-counterfeiting measures."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, '偽造品対策' cannot be '処理' (processed) in the context of accounting closing entries as if it were a financial transaction or account. It's a set of actions, not an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において偽造品対策にかかった費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí phát sinh từ biện pháp chống hàng giả trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the expenses incurred for anti-counterfeiting measures in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly uses accounting terms '計上内容' (booked content) in relation to '偽造品対策'. Anti-counterfeiting measures are not something that gets 'booked' in accounting. The response also uses '整合している' which is fine for accounting, but the premise is flawed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、偽造品対策関連の費用計上に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong việc hạch toán chi phí liên quan đến các biện pháp chống hàng giả không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the expense entries related to anti-counterfeiting measures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng một cách thích hợp.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, confirming that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The original English and Vietnamese translations for '偽造品対策' include 'Border enforcement' and 'tại cửa khẩu' respectively, which narrows the meaning too much. '偽造品対策' is a broader term for anti-counterfeiting measures, not exclusively border-related. The suggested translations for the examples and dialogue reflect this broader meaning."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fbb9da48b6bf6f4b687529ee76dc49319c72b6641bfd4bd5552113c72802f8e8",
+    "validated_at": "2026-10-01T01:57:28.243738+00:00"
+  }
+}

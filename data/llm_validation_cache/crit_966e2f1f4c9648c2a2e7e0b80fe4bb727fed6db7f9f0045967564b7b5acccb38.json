@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-accounting-000148",
+  "term": "販売促進費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 2 is grammatically incomplete without a specified object of comparison, Example 1 is an unnatural AI template with repetitive phrasing ('適正な...適正に'), and Dialogue turn B uses the stilted pleonasm '適正に整合している'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "販売促進費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing sales promotion expenses."
+    },
+    {
+      "index": 1,
+      "text": "販売促進費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reviewing cumulative expense balances in the general ledger."
+    },
+    {
+      "index": 2,
+      "text": "販売促進費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '照合する' requires an explicit target of comparison (e.g., invoices vs. ledger) or a detailed object such as breakdown or records rather than bare expense name.",
+      "suggested_text": "販売促進費の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "販売促進費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common in corporate environments when settling campaign and promotional advances."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Plausible month-end reconciliation procedure statement."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically repetitive AI boilerplate containing redundant modifiers ('適正な会計基準...適正に処理いたしました') and lacking substantive domain context.",
+      "suggested_ja": "新商品のプロモーションに伴い発生した販売促進費は、発生主義に基づき当期に適切に計上いたしました。",
+      "suggested_vi": "Chi phí xúc tiến bán hàng phát sinh từ hoạt động quảng bá sản phẩm mới đã được ghi nhận phù hợp vào kỳ này theo nguyên tắc kế toán dồn tích.",
+      "suggested_en": "Sales promotion expenses incurred in connection with the new product promotion were properly recognized in the current term on an accrual basis."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is an unnatural pleonasm/AI-ism; standard business Japanese uses '整合性が取れている' or '一致している'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、新商品キャンペーン関連の販売促進費は漏れなく計上されていますか。",
+        "vi": "Trong kỳ quyết toán tháng này, toàn bộ chi phí xúc tiến bán hàng liên quan đến chiến dịch sản phẩm mới đã được ghi nhận đầy đủ chưa?",
+        "en": "In this month's monthly closing, have all sales promotion expenses related to the new product campaign been recorded without omission?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、代理店からの請求書と補助元帳を照合し、すべて一致していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu hóa đơn từ đại lý với sổ phụ và xác nhận mọi thứ đều khớp hoàn toàn.",
+        "en": "Yes, I reconciled the invoices from the agency against the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Accurate and appropriate terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "31eba8e9fd9ea03ffde99b5bbbc31cb04e13e1ccc36030665081a0aaae74d488",
+    "validated_at": "2026-10-01T01:36:19.068853+00:00"
+  }
+}

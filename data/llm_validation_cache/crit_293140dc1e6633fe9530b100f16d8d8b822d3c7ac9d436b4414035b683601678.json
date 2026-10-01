@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000078",
+  "term": "支払手形",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains standard accounting collocation errors ('支払手形を精算する' instead of '決済する'), an empty boilerplate example sentence repeating '適正', and stilted redundant phrasing in the dialogue ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "支払手形を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting entry collocation (booking trade notes payable as a liability).",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "支払手形の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting practice for checking the ledger balance of notes payable.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "支払手形を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly '照合' (reconcile) the note entity itself, but rather the promissory note subledger (手形記入帳) or note balance against bank statements. Alternatively, issuing notes (振り出す) is the most fundamental accounting collocation for 支払手形.",
+      "suggested_text": "支払手形を振り出す"
+    },
+    {
+      "index": 3,
+      "text": "支払手形を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Promissory notes are settled via bank payment upon maturity using the term 決済する, not 精算する (which is reserved for expense reconciliations and travel disbursements).",
+      "suggested_text": "支払手形を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic month-end closing check sentence commonly seen in accounting audit and internal review procedures.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly repetitive and vacuous template formula ('適正な...適正に処理いたしました') lacking pedagogical and practical workplace specificity. Needs a concrete scenario involving maturity dates or reconciliation against the notes ledger.",
+      "suggested_ja": "期日を迎えた支払手形については、当座預金口座から滞りなく決済されたことを確認しました。",
+      "suggested_vi": "Đối với các thương phiếu phải trả đến hạn, chúng tôi đã xác nhận rằng tiền đã được thanh toán suôn sẻ từ tài khoản tiền gửi vãng lai.",
+      "suggested_en": "We confirmed that the notes payable due have been smoothly settled from the current checking account."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase '適正に整合している' is unnatural and redundant in native Japanese business communication when verifying numbers between source documents and subledgers; '完全に一致している' or '差異なく整合している' is standard.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、支払手形の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán thương phiếu phải trả có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the recording of notes payable in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と手形記入帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ gốc với sổ theo dõi thương phiếu và xác nhận rằng tất cả đều khớp, không có vấn đề gì.",
+        "en": "I have reconciled the vouchers with the notes payable register and confirmed that everything matches without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Accurate terminology ('thương phiếu phải trả' and 'Notes payable - trade') preserved."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c733f511a6ef56804a78a4b471d648efd7f3839a78e29bd592de74685612188b",
+    "validated_at": "2026-10-01T01:35:00.985647+00:00"
+  }
+}

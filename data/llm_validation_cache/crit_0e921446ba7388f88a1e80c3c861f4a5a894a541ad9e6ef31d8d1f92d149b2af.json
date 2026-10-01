@@ -1,0 +1,78 @@
+{
+  "entry_id": "jp-pro-business-000134",
+  "term": "ヒアリング",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term 'ヒアリング' is consistently misused in an accounting context across example sentences and dialogue, indicating a fundamental misunderstanding of its application in the specified domain. The Vietnamese translation for the meaning is also overly verbose.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ヒアリングを進める",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "ヒアリングを完了する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "ヒアリングの手順を確認する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "ヒアリングを見直す",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The term 'ヒアリング' (hearing/needs assessment) is a process of information gathering, not an accounting entry ('計上内容') or something that can have a '残高' (balance) in financial records. This usage is a fundamental semantic and domain-specific error.",
+      "suggested_ja": "月末の業務報告において、顧客ヒアリングの進捗状況と主要なフィードバックを報告します。",
+      "suggested_vi": "Trong báo cáo công việc cuối tháng, chúng tôi sẽ báo cáo về tiến độ khảo sát nhu cầu khách hàng và các phản hồi chính.",
+      "suggested_en": "In the month-end business report, we will report on the progress of customer hearings and key feedback."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 'ヒアリング' cannot be '処理' (processed) in '決算' (financial closing) according to '会計基準' (accounting standards). It is a process, not a financial transaction or item.",
+      "suggested_ja": "適正な社内規程に則り、当期の内部監査において関係者へのヒアリングを実施いたしました。",
+      "suggested_vi": "Tuân thủ các quy định nội bộ thích hợp, chúng tôi đã tiến hành phỏng vấn các bên liên quan trong đợt kiểm toán nội bộ kỳ này.",
+      "suggested_en": "In accordance with appropriate internal regulations, we conducted hearings with relevant parties during this term's internal audit."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question incorrectly links 'ヒアリング' to '計上内容' (accounting entry) in '月次決算' (monthly closing), which is a domain-specific factual error. 'ヒアリング' is not an accounting item.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日依頼した顧客ヒアリングの進捗はいかがですか？",
+        "vi": "Tình hình tiến độ khảo sát nhu cầu khách hàng mà tôi đã yêu cầu hôm trước thế nào rồi?",
+        "en": "How is the progress of the customer hearings I requested the other day?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、主要な顧客へのヒアリングは本日中に完了する予定です。",
+        "vi": "Vâng, các cuộc khảo sát với khách hàng chính dự kiến sẽ hoàn thành trong hôm nay.",
+        "en": "Yes, hearings with key clients are scheduled to be completed by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for the meaning ('khảo sát lắng nghe nhu cầu và vấn đề của khách hàng') is overly verbose and descriptive rather than a concise professional term. A more succinct equivalent is needed."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ab3e03affbde8bb3cec51999df3704bf7af03cc049883c34edf87d843df7a489",
+    "validated_at": "2026-10-01T01:50:01.688482+00:00"
+  }
+}

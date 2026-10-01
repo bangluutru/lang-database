@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000126",
+  "term": "早退",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how '早退' (early departure) relates to accounting and financial reporting. '早退' is an HR/attendance record, not a direct accounting entry or balance. The examples and dialogue incorrectly treat it as such, leading to unnatural and semantically incorrect Japanese in an accounting context. The translations are good, but they reflect the flawed Japanese source.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "早退を報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "早退を管理する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation in a business context.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "早退を記録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "早退の減給の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically correct and natural expression in a HR/payroll context.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "早退 is an event/status, not an accounting item that can be '計上' (booked/recorded as an entry) or have a '残高' (balance). This sentence attempts to treat '早退' as an accounting entry, which is fundamentally incorrect in accounting principles. One might '計上' the *cost* associated with early leave (e.g., reduced pay), but not '早退' itself. The concept of '早退の計上内容や残高' is nonsensical.",
+      "suggested_ja": "月末の帳簿照合において、早退による給与計算の差異や未処理がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch hoặc chưa xử lý nào trong việc tính lương do việc về sớm trước giờ quy định không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies or unprocessed items in salary calculations due to early departures."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '早退を適正に処理いたしました' implies '早退' itself is an accounting transaction that needs 'processing' in the financial statements. While the *impact* of early leave (e.g., payroll adjustments) is processed, '早退' as a concept is not directly 'processed' in financial closing entries. It's an HR record, not a financial transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において早退に伴う給与調整を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các điều chỉnh lương liên quan đến việc về sớm trước giờ quy định trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed salary adjustments associated with early departures in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '早退の計上内容に差異は発生していませんか' is based on the incorrect premise that '早退' is an accounting entry with '計上内容' (entry details) that can have '差異' (discrepancies) in a financial closing context. This reflects the same fundamental misunderstanding of accounting principles as the example sentences. Speaker B's response, while grammatically plausible, is disconnected from the flawed premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、早退による給与計算に未処理や誤りはありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng này, có bất kỳ khoản chưa xử lý hoặc sai sót nào trong việc tính lương do việc về sớm trước giờ quy định không?",
+        "en": "In this month's monthly closing, were there any unprocessed items or errors in salary calculations due to early departures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、勤怠記録と給与計算システムを照合し、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu hồ sơ chấm công với hệ thống tính lương và xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, we have reconciled the attendance records with the payroll system and confirmed that everything has been processed appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c49a7403b1f71cc5527c1046f13b3f0f4d6a6c70e1c8797fd7714a0400739768",
+    "validated_at": "2026-10-01T01:52:41.981402+00:00"
+  }
+}

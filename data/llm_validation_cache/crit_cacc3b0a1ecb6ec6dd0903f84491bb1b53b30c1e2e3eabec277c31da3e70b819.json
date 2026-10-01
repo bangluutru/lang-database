@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000183",
+  "term": "原産資格割合",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '原産資格割合' (Regional Value Content - RVC). The provided examples and dialogue consistently treat RVC as an accounting item (like an asset, liability, or expense) that is 'booked,' 'has a balance,' or is 'processed in closing entries' according to accounting standards. In reality, RVC is a trade concept used to determine the origin of goods for preferential tariff treatment, calculated based on production costs and value added, not an accounting entry in financial statements. This leads to semantic mismatches in collocations and factual errors in examples and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "原産資格割合を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in trade context.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "原産資格割合を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in trade context.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "原産資格割合を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "原産資格割合 (RVC) is a percentage or a calculation, not something that is 'paid' (納付する). One might pay customs duties based on RVC, but not the RVC itself.",
+      "suggested_text": "原産資格割合を算出する"
+    },
+    {
+      "index": 3,
+      "text": "原産資格割合の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "原産資格割合 (RVC) itself is not 'classified'. It is a calculated percentage. Perhaps the 'classification of goods' or 'origin criteria' are confirmed, but not the RVC itself.",
+      "suggested_text": "原産資格割合の計算方法を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "原産資格割合 (RVC) is a calculation for determining origin, not an accounting entry (計上内容) or a balance (残高) in the financial statements. It does not appear on a balance sheet or income statement in the way 'accounts' do. The sentence attempts to treat RVC as an accounting item, which is incorrect.",
+      "suggested_ja": "月末の帳簿照合において、原産資格割合の計算に用いたデータや書類に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong dữ liệu hoặc tài liệu được sử dụng để tính toán hàm lượng giá trị khu vực (RVC) hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the data or documents used for calculating regional value content (RVC)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, RVC is not 'processed' (処理する) in closing entries (決算) in the same way financial transactions are. It's a trade-related calculation, not an accounting item that adheres to accounting standards (会計基準) for financial reporting.",
+      "suggested_ja": "適正な貿易協定および社内規程に則り、当期の輸出取引において原産資格割合を適正に算定いたしました。",
+      "suggested_vi": "Tuân thủ các hiệp định thương mại và quy chế nội bộ thích hợp, chúng tôi đã tính toán đúng quy định hàm lượng giá trị khu vực (RVC) trong các giao dịch xuất khẩu kỳ này.",
+      "suggested_en": "In accordance with applicable trade agreements and internal rules, we properly calculated regional value content (RVC) for this term's export transactions."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats 原産資格割合 (RVC) as an accounting entry (計上内容) that would have discrepancies in monthly closing (月次決算). RVC is a trade concept for origin determination, not a financial account. Speaker B's response about '証憑書類と補助元帳を照合' further reinforces the incorrect accounting context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸出取引について、原産資格割合の計算は完了しましたか？",
+        "vi": "Về các giao dịch xuất khẩu tháng này, việc tính toán hàm lượng giá trị khu vực đã hoàn tất chưa?",
+        "en": "Regarding this month's export transactions, has the calculation of regional value content been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連書類と計算シートを照合済みで、すべて適正に算定されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các tài liệu liên quan và bảng tính, xác nhận rằng tất cả đã được tính toán chính xác.",
+        "en": "Yes, we have cross-referenced the relevant documents and calculation sheets, and confirmed that everything has been properly calculated."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "21e8a4cc4f0f68bfef530e35137865a20d088c8c22a5d19d02790a53847891e1",
+    "validated_at": "2026-10-01T01:57:12.192207+00:00"
+  }
+}

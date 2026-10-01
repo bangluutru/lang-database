@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000179",
+  "term": "当期純利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, examples, and the workplace dialogue suffer from domain-factual hallucinations, treating net income (当期純利益, a P/L bottom-line flow) as if it were a balance-sheet asset account with a ledger balance (残高) reconciled to vouchers (証憑照合).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "当期純利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and common in financial reporting (e.g., 当期純利益10億円を計上する).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "当期純利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Net income is a P/L flow metric, not a balance-sheet stock account with a '残高' (balance). '当期純利益の額を確認する' or '当期純利益の推移を確認する' is appropriate.",
+      "suggested_text": "当期純利益の額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "当期純利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Net income is calculated and analyzed against budget/prior year, not directly '照合' (matched/reconciled like invoices or ledgers).",
+      "suggested_text": "当期純利益を予算と比較する"
+    },
+    {
+      "index": 3,
+      "text": "当期純利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expenses/advances, not net profit. Net income is either allocated, carried forward, or distributed.",
+      "suggested_text": "当期純利益を配分する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Treating 当期純利益 as an account with a '残高' (balance) to be checked during routine month-end ledger reconciliation is factually inaccurate in accounting. Also, the translations contain slash separators in running prose.",
+      "suggested_ja": "月次決算の数値を取りまとめた結果、当期純利益は当初の予算を上回る見込みです。",
+      "suggested_vi": "Sau khi tổng hợp số liệu quyết toán tháng, lợi nhuận ròng dự kiến sẽ vượt mức kế hoạch ban đầu.",
+      "suggested_en": "As a result of compiling the monthly financial results, net income is projected to exceed the original budget."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'当期純利益を適正に処理いたしました' is empty corporate boilerplate and unnatural phrasing; profit is booked, finalized, or confirmed.",
+      "suggested_ja": "適正な会計基準に則り決算手続きを進めた結果、当期純利益は前期比で15%の増益となりました。",
+      "suggested_vi": "Sau khi tiến hành các thủ tục quyết toán theo đúng chuẩn mực kế toán, lợi nhuận ròng đã tăng 15% so với kỳ trước.",
+      "suggested_en": "Following closing procedures in accordance with proper accounting standards, net income increased by 15% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Accounting domain error: Net income (P/L bottom line) is not reconciled directly against '証憑書類' (vouchers) and '補助元帳' (subsidiary ledgers). Profit variance is checked against budget or prior forecasts.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の着地見込みですが、当期純利益の予算達成は可能でしょうか。",
+        "vi": "Về dự báo kết quả kỳ này, liệu chúng ta có thể đạt được chỉ tiêu lợi nhuận ròng theo kế hoạch không?",
+        "en": "Regarding the full-year forecast, will we be able to meet our net income budget?"
+      },
+      {
+        "speaker": "B",
+        "ja": "第3四半期までの進捗が順調ですので、計画通りの当期純利益を確保できる見込みです。",
+        "vi": "Tiến độ đến quý 3 vẫn đang rất thuận lợi, nên dự kiến chúng ta sẽ đảm bảo được mức lợi nhuận ròng theo kế hoạch.",
+        "en": "Progress through the third quarter has been steady, so we expect to secure the net income as planned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese translation in Example 0 contains slash-concatenated terms ('lợi nhuận ròng sau thuế / lãi ròng') in running text, which is an unnatural raw glossary dump."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bc7a53b41ab141111f10da7c8965d4bb0b7888cb65204a539134a0815018a6f3",
+    "validated_at": "2026-10-01T01:36:52.723481+00:00"
+  }
+}

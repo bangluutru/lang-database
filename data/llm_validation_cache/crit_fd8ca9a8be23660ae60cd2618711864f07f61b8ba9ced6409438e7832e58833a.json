@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000109",
+  "term": "有給休暇",
+  "overall_decision": "rewrite",
+  "summary_reason": "While all 4 collocations are exemplary, the examples and dialogue suffer from severe mechanical templating: HR leave concepts were unnaturally forced into financial ledger reconciliation formulas (帳簿照合、補助元帳、月次決算で計上). Sentences have been rewritten to reflect authentic Japanese labor management and workplace context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "有給休暇を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, natural collocation in business and HR administration.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "有給休暇を付与する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Statutory legal/HR terminology referring to granting paid leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "有給休暇を消化する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace expression for using up allotted annual leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "有給休暇を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace procedure for requesting paid time off.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical templating. '有給休暇' (paid leave) is an HR/attendance concept measured in days/hours, not a financial line item verified in '帳簿照合' (book reconciliation) with '計上内容' and '残高'.",
+      "suggested_ja": "労働基準法に基づき、年10日以上の有給休暇が付与される従業員に対しては、年5日の取得が義務付けられています。",
+      "suggested_vi": "Căn cứ theo Luật Tiêu chuẩn Lao động, người sử dụng lao động có nghĩa vụ cho người lao động được nghỉ ít nhất 5 ngày đối với những người được cấp từ 10 ngày nghỉ phép năm có hưởng lương trở lên.",
+      "suggested_en": "Under the Labor Standards Act, employers are obligated to ensure that employees granted 10 or more days of paid annual leave take at least 5 days off per year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'決算において有給休暇を適正に処理いたしました' artificially blends financial year-end closing with HR leave. Unless specifying '有給休暇引当金' (accrued paid leave liability), Japanese enterprises do not talk about 'closing entries for paid leave'.",
+      "suggested_ja": "業務の繁忙期を避けて計画的に有給休暇を取得するよう、各部署の所属長に周知徹底を図りました。",
+      "suggested_vi": "Chúng tôi đã phổ biến kỹ lưỡng đến trưởng các bộ phận nhằm khuyến khích nhân viên sắp xếp nghỉ phép năm có hưởng lương theo kế hoạch, tránh các giai đoạn cao điểm của công việc.",
+      "suggested_en": "We thoroughly informed department heads to ensure that employees take paid annual leave in a planned manner, avoiding peak operational periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The conversation artificially superimposes financial accounting jargon ('月次決算', '計上内容', '証憑書類', '補助元帳') onto '有給休暇'. In practice, paid leave is verified via attendance management systems (勤怠管理システム), not ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期の業務スケジュールを調整したいのですが、チーム内の有給休暇の取得状況はどうなっていますか。",
+        "vi": "Tôi muốn điều chỉnh lịch làm việc cho kỳ tới, tình hình sử dụng ngày phép năm có hưởng lương trong nhóm thế nào rồi?",
+        "en": "I'd like to adjust next term's operational schedule; what is the current paid annual leave utilization status within the team?"
+      },
+      {
+        "speaker": "B",
+        "ja": "期末に向けて計画的に消化を進めており、未取得のメンバーには個別に取得を促しているところです。",
+        "vi": "Mọi người đang chủ động sử dụng phép theo kế hoạch trước khi kết thúc kỳ, và tôi cũng đang trực tiếp nhắc nhở các thành viên chưa nghỉ.",
+        "en": "We are systematically taking leave toward the end of the term, and I am currently urging members with remaining days to take their time off."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations ('nghỉ phép năm có hưởng lương' / 'Paid annual leave') are accurate, but the example sentences required overhaul due to domain incoherence."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "31d8fd585bf54907b5fa35c8c488aaf39e0dfc7ed7ff53a22b00da89106a03be",
+    "validated_at": "2026-10-01T01:42:47.489216+00:00"
+  }
+}

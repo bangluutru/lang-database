@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000147",
+  "term": "バルク船",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the unnatural and semantically incorrect application of accounting terms like '計上' and '処理' directly to 'バルク船' (a physical asset) rather than to the financial transactions or accounting treatments related to it. This makes the Japanese sound highly unnatural and potentially misleading in a professional accounting context. The collocations are fine, but the application in sentences is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "バルク船を手配する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in logistics/trade."
+    },
+    {
+      "index": 1,
+      "text": "バルク船をチャーターする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in shipping/trade."
+    },
+    {
+      "index": 2,
+      "text": "バルク船で荷役を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation describing port operations."
+    },
+    {
+      "index": 3,
+      "text": "バルク船の積載能力を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in shipping/logistics planning."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A bulk carrier (バルク船) is a physical asset, not an accounting entry or balance itself. You '計上' (book/record) transactions related to the bulk carrier (e.g., acquisition cost, freight revenue, depreciation), but not the 'バルク船の計上内容や残高'. This phrasing is semantically incorrect in an accounting context. It sounds like the ship itself is an entry or balance.",
+      "suggested_ja": "月末の帳簿照合において、バルク船に関連する取引の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số dư của các giao dịch liên quan đến tàu chở hàng rời không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of transactions related to the bulk carrier."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'バルク船を適正に処理いたしました' implies the bulk carrier itself is an item to be 'processed' in closing entries, which is unnatural. You process the accounting treatment of the bulk carrier (e.g., its acquisition, depreciation, revenue/expense related to its operation), not the ship itself. The phrasing 'バルク船を処理する' is awkward in this context.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてバルク船に関する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện xử lý kế toán liên quan đến tàu chở hàng rời một cách đúng đắn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly performed the accounting treatment related to the bulk carrier in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same semantic issue as the examples. 'バルク船の計上内容に差異は発生していませんか' is unnatural. You don't 'book' a bulk carrier's content; you book transactions related to it. Speaker B's response, while grammatically correct, doesn't fix the underlying semantic problem of Speaker A's question. The premise of the question is flawed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、バルク船の運航費用や収益の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán chi phí vận hành hoặc doanh thu của tàu chở hàng rời không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded operating costs or revenues for the bulk carrier?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, I have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c3065ddf3f62a0a4c7981ad5b0d99024a0b5c3ae58aea25b97394951d8c0534f",
+    "validated_at": "2026-10-01T01:56:31.988393+00:00"
+  }
+}

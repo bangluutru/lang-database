@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000024",
+  "term": "配当所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain factual errors: Example 1 incorrectly mentions '必要経費' (dividend income only permits deduction of '負債利子'), and the dialogue conflates individual income tax ('配当所得') with corporate monthly bookkeeping ('月次決算').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "配当所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and commonly used when calculating dividend income for tax filings.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "配当所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology under the Income Tax Act for classifying income categories.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "配当所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression when aggregating dividend income under comprehensive taxation (総合課税).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "配当所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard administrative expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese Income Tax Law (所得税法第24条), dividend income does not deduct general '必要経費' (necessary expenses). The only deductible item is interest on liabilities incurred to acquire the shares (負債の利子). Claiming that '必要経費' was scrutinized to compute dividend income is legally and conceptually inaccurate.",
+      "suggested_ja": "配当の支払通知書および株式取得に係る負債利子を精査し、確定申告書における配当所得の金額を適正に算出しました。",
+      "suggested_vi": "Sau khi rà soát kỹ thông báo chi trả cổ tức và lãi tiền vay để mua cổ phiếu, chúng tôi đã tính toán chính xác số tiền thu nhập từ cổ tức trên tờ khai thuế.",
+      "suggested_en": "After examining the dividend payment statements and interest on liabilities incurred to acquire the shares, we properly calculated the amount of dividend income on the tax return."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate, legally compliant with J-Tax rules on aggregate taxation (総合課税), and highly natural.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'配当所得' is strictly an individual income tax category (所得税の所得区分). Corporate monthly accounting ('月次決算') books '受取配当金' (Dividends received), not '配当所得'. Confusing individual income tax categories with corporate monthly accounting entries is a serious domain error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "オーナー社長の確定申告において、上場株式の配当所得は申告分離課税と総合課税のどちらを選択しますか。",
+        "vi": "Trong tờ khai thuế thu nhập cá nhân của giám đốc kiêm chủ sở hữu, chúng ta sẽ chọn tính thuế riêng biệt theo diện khai báo hay thuế tổng hợp đối với thu nhập từ cổ tức cổ phiếu niêm yết?",
+        "en": "For the owner-president's final tax return, will we opt for separate self-assessment taxation or comprehensive taxation for the dividend income from listed stocks?"
+      },
+      {
+        "speaker": "B",
+        "ja": "配当控除の適用額と株式の譲渡損失との損益通算を試算した上で、有利な方をクライアントにご提案いたします。",
+        "vi": "Sau khi tính toán thử giữa khoản khấu trừ thuế cổ tức và việc bù trừ lãi lỗ với khoản lỗ chuyển nhượng cổ phiếu, chúng tôi sẽ đề xuất phương án có lợi nhất cho khách hàng.",
+        "en": "After calculating the dividend tax credit against profit-loss aggregation with stock transfer losses, we will propose the more favorable option to the client."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the original text were linguistically faithful, but must be aligned with the rewritten tax-accurate content."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4ed07c69d679624a696538eafdcbff9a652f1e5cada1d7a69a3e63fbc244ac5c",
+    "validated_at": "2026-10-01T01:37:44.463449+00:00"
+  }
+}

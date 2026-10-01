@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000111",
+  "term": "資本剰余金",
+  "overall_decision": "rewrite",
+  "summary_reason": "純資産項目（資本取引）である資本剰余金に対して、流動項目（売掛・買掛・経費精算等）向けの汎用テンプレートをそのまま流用しており、会計実務および語彙の親和性に重大な不自然さがあるため全面書き換えを要求する。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "資本剰余金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "増資や減資等の資本取引において資本剰余金を計上するという表現は会計実務上自然に使われる。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "資本剰余金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "純資産の部における残高確認として実務上妥当なコロケーションである。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "資本剰余金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合の対象は通常「帳簿」「勘定残高」「明細」であり、概念・勘定科目そのものを直接「照合する」とするのは不自然。「資本剰余金の内訳を照合する」または「資本剰余金を取り崩す」が適切。",
+      "suggested_text": "資本剰余金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "資本剰余金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」は経費や立替金、債権債務の決済に用いる述語であり、純資産項目である資本剰余金に適用するのは会計実務上明確な誤り。「配当原資とする」や「資本剰余金に振り替える」が適切。",
+      "suggested_text": "資本剰余金を配当原資とする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "資本剰余金は株式発行や減資等の資本取引でしか変動しないため、売掛金や買掛金のように「月末の帳簿照合において差異がないか精査する」というルーティン業務の文脈に置くのは会計実務の実態にそぐわない。",
+      "suggested_ja": "株主総会の決議に基づき、その他資本剰余金を原資として配当金を支払う処理を行いました。",
+      "suggested_vi": "Căn cứ vào nghị quyết của Đại hội đồng cổ đông, chúng tôi đã thực hiện thủ tục chi trả cổ tức từ nguồn thặng dư vốn cổ phần khác.",
+      "suggested_en": "Based on the resolution of the General Meeting of Shareholders, we processed dividend payments funded by other capital surplus."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜適正に〜」という同語反復があり、機械的テンプレート感が強い。実務的な資本取引（増資や資本準備金への組入等）に即した具体的内容に修正すべきである。",
+      "suggested_ja": "今回の第三者割当増資に伴い、払込金額のうち資本金に組み入れなかった額を資本剰余金として適正に計上いたしました。",
+      "suggested_vi": "Cùng với đợt phát hành cổ phiếu riêng lẻ lần này, phần tiền góp không đưa vào vốn điều lệ đã được ghi nhận thỏa đáng vào thặng dư vốn cổ phần.",
+      "suggested_en": "In connection with this third-party allotment of new shares, the portion of paid-in capital not credited to stated capital was properly recorded as capital surplus."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算で資本剰余金に差異が発生していないかを日常的に問い合わす会話は非現実的。日常取引で動く科目ではなく取締役会や総会決議を伴う資本取引であるため、増資等のイベントに即した会話へ刷新が必要。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の第三者割当増資に関して、資本剰余金への振替処理は完了していますか。",
+        "vi": "Về đợt phát hành tăng vốn riêng lẻ lần này, thủ tục kết chuyển vào thặng dư vốn cổ phần đã hoàn tất chưa?",
+        "en": "Regarding this third-party share allotment, has the transfer entry to capital surplus been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、払込期日に払込総額の2分の1を資本金とし、残額を資本準備金として計上済みです。",
+        "vi": "Vâng, vào ngày thanh toán, chúng tôi đã ghi nhận một nửa tổng số tiền góp vào vốn điều lệ và phần còn lại vào thặng dư vốn cổ phần/quỹ dự trữ vốn rồi.",
+        "en": "Yes, on the payment date, half of the total paid-in amount was credited to stated capital, and the remainder was recorded as capital reserve."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の訳語自体は適正。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a9861a8040717bcbeba12042bc98ace5595dca3f14cb6c9c346826386ed9482a",
+    "validated_at": "2026-10-01T01:35:37.784675+00:00"
+  }
+}

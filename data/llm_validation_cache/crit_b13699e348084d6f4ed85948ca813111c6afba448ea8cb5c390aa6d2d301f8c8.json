@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-business-000083",
+  "term": "守秘義務",
+  "overall_decision": "rewrite",
+  "summary_reason": "法概念としての「守秘義務（obligation）」と、契約上の規定である「守秘義務条項（clause）」や「秘密保持契約（NDA）」が混同されており、コロケーション・例文・対話すべてにおいて述語や修飾関係に不自然さが見られるため、抜本的な修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "守秘義務を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "義務は「設ける」ものではなく「課す」「負う」もの。条項であれば「守秘義務条項を設ける」と言えるが、義務そのものと述語の適合が不自然。",
+      "suggested_text": "守秘義務を課す"
+    },
+    {
+      "index": 1,
+      "text": "守秘義務に違反する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務・法務で極めて頻繁に用いられる極めて自然な連語。"
+    },
+    {
+      "index": 2,
+      "text": "守秘義務を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "義務を「適用する」とは言わない（条項や法律を適用する、あるいは義務を負わせる）。",
+      "suggested_text": "守秘義務を負う"
+    },
+    {
+      "index": 3,
+      "text": "守秘義務を精査する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精査の対象は「条項」「文言」「契約書」であり、義務そのものを精査するとは言わない。",
+      "suggested_text": "守秘義務条項を精査する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "契約書内に「守秘義務を設ける」という表現は語法として不自然。「守秘義務条項を設ける」または「厳格な守秘義務を課す」とすべき。",
+      "suggested_ja": "予期せぬ情報流出や紛争を未然に防ぐため、契約書において相手方に厳格な守秘義務を課しました。",
+      "suggested_vi": "Để ngăn ngừa việc rò rỉ thông tin ngoài ý muốn và tranh chấp từ trước, chúng tôi đã áp đặt nghĩa vụ bảo mật thông tin nghiêm ngặt đối với đối tác trong hợp đồng.",
+      "suggested_en": "To prevent unexpected information leaks and disputes beforehand, we imposed a strict confidentiality obligation on the counterparty in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "文言を修正する対象は「守秘義務条項」または「秘密保持条項」であり、「守秘義務の文言」は契約実務として言葉足らずで不自然。",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された守秘義務条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ của điều khoản nghĩa vụ bảo mật thông tin do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the confidentiality clause proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「守秘義務の修正案」や、それをそのまま「締結手続きに進める」とする表現は、「守秘義務条項（あるいは秘密保持契約・NDA）」と「義務」という概念の混同が生じており不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた契約書の修正案ですが、守秘義務に関する条項の確認は済みましたか。",
+        "vi": "Về bản dự thảo hợp đồng sửa đổi do phòng pháp chế của đối tác gửi lại, anh đã kiểm tra xong các điều khoản liên quan đến nghĩa vụ bảo mật thông tin chưa?",
+        "en": "Regarding the revised contract draft returned by the other party's legal department, have you finished reviewing the clauses concerning the confidentiality obligation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、損害賠償や開示範囲を含めて弊社側に過度な守秘義務が課されていないことを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xác nhận rằng phía chúng ta không bị áp đặt nghĩa vụ bảo mật thông tin quá mức bao gồm cả phạm vi bồi thường thiệt hại và tiết lộ, vì vậy chúng ta có thể tiến hành thủ tục ký kết.",
+        "en": "Yes, I have confirmed that an excessive confidentiality obligation is not imposed on us, including regarding damages and disclosure scope, so we can proceed with the signing process."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations for Vietnamese and English are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6a2dd38d3991a832185a18a65f3611519a84bb8f206d2c80315efb2bf7b0113d",
+    "validated_at": "2026-10-01T01:42:23.562557+00:00"
+  }
+}

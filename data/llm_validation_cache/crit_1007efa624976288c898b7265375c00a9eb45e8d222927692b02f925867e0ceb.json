@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000146",
+  "term": "在来船",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding or misapplication of accounting terminology ('計上', '残高', '処理') when referring to a physical asset like '在来船'. While the collocations are good, the examples and dialogue attempt to force an accounting context onto the term in an unnatural and incorrect way for a native Japanese speaker in a corporate setting. This would be confusing and misleading for a learner.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "在来船を手配する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "在来船をチャーターする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "在来船で荷役を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "在来船の積載能力を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A conventional cargo ship (在来船) is a physical asset, not an accounting entry or balance that can be '計上' (booked/recorded) or have a '残高' (balance) in the context of reconciliation. This sentence misapplies accounting terms to a physical object.",
+      "suggested_ja": "月末の帳簿照合において、在来船の運賃や関連費用の計上内容、未払金残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán cước phí và các chi phí liên quan của tàu chở hàng bách hóa tổng hợp truyền thống, cũng như số dư các khoản phải trả hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded freight charges and related costs for conventional cargo ships, or in the outstanding balances of payables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '在来船を適正に処理いたしました' implies the ship itself is an accounting item being processed, which is incorrect. Accounting 'processes' transactions related to the ship (e.g., freight, depreciation if owned, etc.), not the ship itself as a direct accounting entry in this manner.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において在来船に関連する費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến tàu chở hàng bách hóa tổng hợp truyền thống trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the costs related to conventional cargo ships in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '在来船の計上内容に差異は発生していませんか' suffers from the same semantic mismatch as the example sentences. A physical ship does not have '計上内容' (recorded content/entries) in this direct sense. Speaker B's response, while grammatically correct, is a generic accounting verification that doesn't address the fundamental flaw in A's premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、在来船の運賃や関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán cước phí và các chi phí liên quan đến tàu chở hàng bách hóa tổng hợp truyền thống không?",
+        "en": "In this month's financial closing, are there any discrepancies in the recorded freight charges or related costs for conventional cargo ships?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledger, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "72ebe8a17cc74417869680500e3434ff0766b92f110cb60ae523b006c9f8a1e7",
+    "validated_at": "2026-10-01T01:56:32.465130+00:00"
+  }
+}

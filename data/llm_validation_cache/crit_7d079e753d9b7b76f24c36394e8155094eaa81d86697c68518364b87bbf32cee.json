@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000089",
+  "term": "前受収益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses an inappropriate predicate ('精算する' instead of '売上に振り替える' or '繰り延べる'), Collocation 2 requires a clearer object, and Example 2 is overly templated with redundant phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "前受収益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking unearned/deferred revenue.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "前受収益の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrase used during closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "前受収益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '照合する' naturally takes balances, ledgers, or schedules as its direct object (e.g., 残高を照合する, 契約明細と照合する), rather than the account title itself.",
+      "suggested_text": "前受収益の残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "前受収益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Deferred revenue is not '精算' (settled/cleared like advances or travel expenses); it is amortized or recognized into revenue over service periods.",
+      "suggested_text": "前受収益を売上に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural workplace sentence for month-end reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Redundant and formulaic repetition of '適正' ('適正な会計基準...適正に処理いたしました'). A professional example should demonstrate how deferred revenue operates (e.g., deferring annual service fees to future periods).",
+      "suggested_ja": "当期に受領した年間保守料のうち、翌期に対応する未経過分は前受収益として計上し、次期に繰り延べます。",
+      "suggested_vi": "Trong khoản phí bảo trì hàng năm đã nhận trong kỳ này, phần chưa thực hiện tương ứng với kỳ sau sẽ được hạch toán là doanh thu nhận trước chờ phân bổ và kết chuyển sang kỳ tới.",
+      "suggested_en": "Of the annual maintenance fees received during the current fiscal year, the unexpired portion attributable to the following fiscal year will be recognized as deferred revenue and carried forward."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "While '適正に整合している' is slightly stiff, the exchange is functional, realistic, and logically coherent for internal accounting reporting.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "391caa56d6c53650d56d47f7d8dec17d9df52c8465e3d001009961c7c1b2c4c9",
+    "validated_at": "2026-10-01T01:35:08.950175+00:00"
+  }
+}

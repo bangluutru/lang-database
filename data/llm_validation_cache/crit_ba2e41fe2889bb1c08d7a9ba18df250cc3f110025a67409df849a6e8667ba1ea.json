@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-tax-000027",
+  "term": "給与所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 falsely attributes '必要経費' (necessary expenses) to employment income instead of '給与所得控除', and the dialogue erroneously claims a corporation books '給与所得' during monthly financial closing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "給与所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax calculation expression (income minus statutory employment income deduction)."
+    },
+    {
+      "index": 1,
+      "text": "給与所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax classification terminology distinguishing salary income from business or miscellaneous income."
+    },
+    {
+      "index": 2,
+      "text": "給与所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used in comprehensive taxation (総合課税) or when aggregating multiple income sources."
+    },
+    {
+      "index": 3,
+      "text": "給与所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and standard administrative/procedural expression on tax filings."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese income tax law, 給与所得 does not deduct 必要経費 (necessary expenses); it applies statutory 給与所得控除. Citing 必要経費 for 給与所得 is an accounting/tax error.",
+      "suggested_ja": "源泉徴収票の支払金額から給与所得控除額を差し引き、確定申告書における給与所得の金額を適正に算出しました。",
+      "suggested_vi": "Khấu trừ khoản giảm trừ thu nhập từ tiền lương khỏi tổng số tiền chi trả trên chứng từ khấu trừ thuế, chúng tôi đã tính toán chính xác số tiền thu nhập từ tiền lương trên tờ khai thuế.",
+      "suggested_en": "We properly calculated the amount of employment income on the tax return by subtracting the employment income deduction from the payment amount shown on the withholding tax slip."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately describes comprehensive tax assessment (総合課税) aggregating salary income to establish the tax base under the Income Tax Act."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Corporate monthly closing (月次決算) books payroll expenses (給与手当 / 役員報酬) or withholding liabilities (預り金), never '給与所得' (which is an individual tax classification). This is a domain misuse.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整の計算に向けて、役員および従業員の給与所得の算出状況に誤りはありませんか。",
+        "vi": "Để chuẩn bị cho đợt quyết toán thuế cuối năm, tình hình tính toán thu nhập từ tiền lương của ban giám đốc và nhân viên có phát sinh sai sót nào không?",
+        "en": "In preparation for the year-end tax adjustment, are there any errors in the computation of employment income for executives and employees?"
+      },
+      {
+        "speaker": "B",
+        "ja": "源泉徴収簿および各控除申告書と照合済みで、すべて適正に算出されていることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu kỹ với sổ khấu trừ tại nguồn và các tờ khai khấu trừ, xác nhận mọi số liệu đều được tính toán hợp lệ.",
+        "en": "We have cross-checked against the withholding tax ledgers and deduction declarations, confirming that everything has been computed properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The dictionary translations for the headword are accurate and standard."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9ac6cda98bc96dafec53e9526c776478ca38e9e6e8f502a24a9a77eabcd2724c",
+    "validated_at": "2026-10-01T01:37:48.378716+00:00"
+  }
+}

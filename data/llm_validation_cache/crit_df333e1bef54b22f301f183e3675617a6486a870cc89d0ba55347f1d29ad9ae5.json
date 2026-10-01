@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000066",
+  "term": "雑損控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain error in the dialogue: '決算申告' (corporate tax return) was paired with '雑損控除' (an individual income tax deduction non-existent in corporate taxation). Additionally, collocation index 2 requires replacement because casualty loss deduction does not have an statutory '上限額' (ceiling).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雑損控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard tax phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雑損控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression matching statutory and everyday tax usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "雑損控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Factually inaccurate under Japanese Income Tax Law. Casualty loss deduction (雑損控除) has an income-based floor/deductible threshold (足切り額), but no statutory upper cap (上限額). Practitioners calculate '控除額', not '上限額'.",
+      "suggested_text": "雑損控除の控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "雑損控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, standard collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and natural. While individual income tax strictly uses '年分' rather than '年度', '今年度の確定申告' is widely understood and used.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear, professional, and reflects actual tax filing practice (attaching disaster certificates, repair receipts).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Domain factual error: '決算申告' is terminology strictly reserved for corporate tax returns (法人税申告). Under Japanese tax law, '雑損控除' is an income deduction exclusive to individuals (所得税法第72条). Corporations deduct disaster losses as expenses/losses (損金/災害損失), not as '雑損控除'. In an accounting firm setting, this must refer to '確定申告' or a client's individual return.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "クライアントの確定申告における雑損控除の計算根拠と証明書類は整理できましたか。",
+        "vi": "Anh/chị đã tổng hợp căn cứ tính toán khoản giảm trừ thiệt hại do thiên tai/trộm cắp và chứng từ chứng minh trong hồ sơ quyết toán thuế của khách hàng chưa?",
+        "en": "Have you organized the calculation basis and supporting certificates for the casualty loss deduction in the client's income tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、罹災証明書や修繕費の領収書を揃えましたので、申告書の添付書類として提出可能です。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ giấy xác nhận thiên tai và hóa đơn chi phí sửa chữa rồi, có thể nộp kèm theo tờ khai thuế.",
+        "en": "Yes, I have compiled the disaster certificates and repair receipts, so they are ready to be submitted as attachments to the return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7fc0cd3cb984574f6c3ba3d33916e3bc568e72c9dbfc694e33e9cb08a6f09f83",
+    "validated_at": "2026-10-01T01:38:29.650842+00:00"
+  }
+}

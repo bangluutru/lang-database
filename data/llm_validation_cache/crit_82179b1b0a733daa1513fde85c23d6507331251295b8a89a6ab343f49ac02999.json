@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000134",
+  "term": "フォワードレート",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations are unnatural or semantically incorrect for 'forward rate' in a corporate context. Example sentences contain domain-specific inaccuracies and unnatural phrasing. The dialogue is stilted and lacks natural flow. The Vietnamese translation for the term itself is redundant.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "フォワードレートを算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Calculating a forward rate is a standard operation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "フォワードレートを改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Forward rates are market-driven and cannot be 'improved' by a company. A company can aim to improve its financial position which might lead to better forward rates for its own transactions, but it doesn't 'improve' the rate itself.",
+      "suggested_text": "フォワードレートの条件を改善する"
+    },
+    {
+      "index": 2,
+      "text": "フォワードレートを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Analyzing forward rates is a common financial activity.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "フォワードレートの目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Companies don't set 'target values' for the forward rate itself, as it's a market rate. They might set targets for hedging effectiveness or financial outcomes based on forward rates.",
+      "suggested_text": "フォワードレートを活用した目標を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Monitoring '数値' (numerical value) of a forward rate is redundant and unnatural. It's more common to monitor the rate itself or its trend. Also, '経営効率の改善に向け' is a bit generic. The Vietnamese translation for 'フォワードレートの数値' is also awkward.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門でフォワードレートを月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi tỷ giá kỳ hạn trong tương lai hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors forward rates on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A company's 'forward rate' doesn't 'exceed a target value' in the sense of improving profitability and capital efficiency. Forward rates are market rates used for hedging or speculation. If a company's *hedging strategy* using forward rates was successful, it might lead to improved profitability, but the rate itself isn't a direct measure of internal company performance in this way. The phrasing implies the company 'achieved' a good forward rate, which is not how market rates work.",
+      "suggested_ja": "当期のフォワードレートを活用したヘッジ戦略は目標を上回り、収益性と資本効率の向上に貢献しました。",
+      "suggested_vi": "Chiến lược phòng ngừa rủi ro sử dụng tỷ giá kỳ hạn trong kỳ này đã vượt mục tiêu, góp phần nâng cao khả năng sinh lời và hiệu quả sử dụng vốn.",
+      "suggested_en": "This term's hedging strategy utilizing forward rates exceeded its target, contributing to an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question is a bit clunky and unnatural. 'フォワードレートの推移と改善目標に対する進捗' is verbose. Speaker B's response is also generic and doesn't directly address the 'forward rate' aspect, making it feel disconnected.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析ですが、フォワードレートの動向と、それに対するヘッジ戦略の進捗はいかがでしょうか。",
+        "vi": "Về phân tích tài chính kỳ này, xu hướng tỷ giá kỳ hạn và tiến độ của chiến lược phòng ngừa rủi ro đối với nó như thế nào?",
+        "en": "Regarding this term's financial analysis, what are the trends in forward rates and the progress of our hedging strategy against them?"
+      },
+      {
+        "speaker": "B",
+        "ja": "フォワードレートの変動に対するヘッジは順調に進んでおり、前四半期と比較して着実に改善傾向を示しています。期末の経営目標達成に貢献できる見込みです。",
+        "vi": "Việc phòng ngừa rủi ro đối với biến động tỷ giá kỳ hạn đang tiến triển thuận lợi, cho thấy xu hướng cải thiện ổn định so với quý trước. Chúng tôi dự kiến sẽ đóng góp vào việc đạt được mục tiêu quản lý cuối kỳ.",
+        "en": "Hedging against forward rate fluctuations is progressing smoothly, showing a steady improvement compared to the previous quarter. We expect to contribute to achieving the year-end management targets."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation 'tỷ giá kỳ hạn trong tương lai' for 'フォワードレート' is redundant. 'Tỷ giá kỳ hạn' already implies 'future' or 'forward'. Adding 'trong tương lai' is unnecessary and makes it sound less professional. A simpler 'tỷ giá kỳ hạn' or 'tỷ giá giao ngay kỳ hạn' (if distinguishing from spot) would be better."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5b7326d85f6b1c7211f10d89ed8a00aace116362a74956a3d725657287b7179f",
+    "validated_at": "2026-10-01T01:56:18.430038+00:00"
+  }
+}

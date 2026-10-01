@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000065",
+  "term": "ふるさと納税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain inaccuracy conflating individual 'ふるさと納税' with corporate tax filings ('決算申告'), alongside unnatural collocation ('ふるさと納税の適用を受ける') and mechanical Vietnamese gloss insertion.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ふるさと納税を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business/general expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "ふるさと納税の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "ふるさと納税 is the act/system of donation itself; tax deduction ('寄附金控除') is what receives application ('適用を受ける').",
+      "suggested_text": "ふるさと納税を行う"
+    },
+    {
+      "index": 2,
+      "text": "ふるさと納税を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "ふるさと納税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural when referring to local governments, projects, or return gifts.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Confuses corporate benefit with individual tax planning. A corporation internally announcing ふるさと納税 does not result in the company itself utilizing it for corporate tax reduction unless specifying '企業版ふるさと納税' (corporate version) or employee welfare benefits.",
+      "suggested_ja": "福利厚生および社員の税務リテラシー向上のため、社内研修でふるさと納税の仕組みと控除手続きを周知しました。",
+      "suggested_vi": "Nhằm nâng cao phúc lợi và hiểu biết về thuế cho nhân viên, chúng tôi đã phổ biến cơ chế và thủ tục khấu trừ thuế Furusato Nozei trong buổi đào tạo nội bộ.",
+      "suggested_en": "To improve employee benefits and tax literacy, we explained the mechanism and deduction procedures of the hometown tax donation system during internal training."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural description of calculating donation deduction caps prior to making donations.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese tax law, corporate tax returns ('決算申告') apply '企業版ふるさと納税' (Corporate Hometown Tax), not general 'ふるさと納税' (which applies to individual inhabitants/income tax via 確定申告). Using '決算申告' with plain 'ふるさと納税' is technically incorrect and misleading in corporate practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員個人の確定申告に向けて、ふるさと納税の寄附金受領証明書はすべて揃っていますか。",
+        "vi": "Để chuẩn bị cho kỳ quyết toán thuế thu nhập cá nhân của ban điều hành, toàn bộ chứng từ tiếp nhận quyên góp Furusato Nozei đã được tập hợp đủ chưa?",
+        "en": "Do we have all the donation receipt certificates for hometown tax ready for the executive's individual tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各自治体からの受領証を確認し、控除限度額の計算シートとともに顧問税理士へ共有済みです。",
+        "vi": "Vâng, tôi đã kiểm tra biên nhận từ các địa phương và chuyển cùng bảng tính mức trần khấu trừ cho thuế lý tư vấn rồi.",
+        "en": "Yes, I have verified the receipts from each municipality and shared them, along with the deduction limit calculation sheet, with our tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations mechanically pasted the bracketed dictionary definition '(nhận quà tri ân)' directly into sentence flow, making them stilted and unnatural."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b44f2095c3b65b45cdf3ae052506ff17e5249f7976070ab6a2bb60f8dc53ac83",
+    "validated_at": "2026-10-01T01:38:32.662583+00:00"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "entry_id": "jp-pro-trade-000159",
+  "term": "海上運賃",
+  "overall_decision": "rewrite",
+  "summary_reason": "One collocation was unnatural, and the dialogue lacked conversational continuity, requiring a rewrite to better address the prompt and provide a more natural response.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "海上運賃を支払う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "海上運賃を請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "海上運賃を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "海上運賃の発生を防ぐ",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While grammatically understandable, '発生を防ぐ' is not the most natural or common phrasing for preventing additional charges in a business context. More natural would be '追加発生を抑制する' or '追加発生を避ける'. The original example sentence uses '追加発生を防止しました' which is better.",
+      "suggested_text": "海上運賃の追加発生を抑制する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately reflects a common scenario in international trade. The translations are also accurate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and reflects a common business objective. The translations are accurate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' (手配状況) of ocean freight. Speaker B's response about contacting customs brokers and forwarders, and completing document checks, is a partial answer but doesn't directly address the 'status of arrangement' for the ocean freight itself (e.g., 'booking confirmed', 'vessel scheduled', 'rate secured'). It feels like Speaker B is listing tasks completed for customs clearance rather than the freight arrangement. Also, the term '乙仲' (otsunaka) is an older term for customs broker/forwarder, while '通関業者' (tsūkan gyōsha) is more common and encompasses the role. Using both can be redundant or slightly confusing. The response should more directly address the freight arrangement status.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、海上運賃の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp cước vận tải đường biển thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the ocean freight arrangement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、船会社へのブッキングは完了しており、通関業者には必要書類を共有済みです。輸入申告は本日中に行われる予定です。",
+        "vi": "Vâng, việc đặt chỗ với hãng tàu đã hoàn tất, và chúng tôi đã chia sẻ các tài liệu cần thiết với công ty thông quan. Tờ khai nhập khẩu dự kiến sẽ được nộp trong ngày hôm nay.",
+        "en": "Yes, the booking with the shipping line has been completed, and we've shared the necessary documents with the customs broker. The import declaration is scheduled to be filed today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4352dc3dfd97be5464886f210317d570f11106b9cec3f09ba814e70062f8681c",
+    "validated_at": "2026-10-01T01:56:48.783393+00:00"
+  }
+}

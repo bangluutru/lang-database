@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000090",
+  "term": "益金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal tax domain error in Example 1 (associating 益金 with accounting expenses/費用), unnatural document terminology in Dialogue, imprecise collocation 4, and templated glossary contamination in both English and Vietnamese translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "益金に算入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard Japanese corporate tax terminology for including an item in taxable gross revenue (益金算入).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "益金に不算入とする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard Japanese corporate tax terminology for excluding an item from taxable gross revenue (益金不算入).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "益金の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in business tax discussion, referring to making tax adjustments regarding taxable revenue.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "益金に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese tax accounting (Schedule 4 / 別表四), items are added to income (所得の金額に加算する) via taxable revenue inclusion (益金算入). Adding 'to 益金' is technically imprecise.",
+      "suggested_text": "益金の額を計算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual mismatch in corporate tax: Accounting expenses (会計上の費用) are adjusted under deductible/non-deductible expenses (損金算入/損金不算入), not 益金. 益金 adjusts differences with accounting revenue (収益). Furthermore, the translations mechanically injected dictionary glosses.",
+      "suggested_ja": "受取配当金について会計上の収益と税務上の取扱いの相違を調整するため、別表四において益金不算入の処理を行いました。",
+      "suggested_vi": "Để điều chỉnh sự khác biệt giữa doanh thu kế toán và quy định thuế đối với cổ tức nhận được, chúng tôi đã thực hiện bút toán loại trừ khỏi thu nhập chịu thuế trên Phụ lục 4.",
+      "suggested_en": "To reconcile the difference between book revenue and tax treatment regarding dividend income, we processed an exclusion from taxable revenue on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is decipherable, but the translations contain raw dictionary glossary artifacts ('(theo luật thuế)' in Vietnamese and 'gross revenue / taxable revenue' in English).",
+      "suggested_ja": "税務調査での指摘を防ぐため、過年度の取引を精査し、益金の算入漏れがないか再点検しました。",
+      "suggested_vi": "Để phòng ngừa bị cơ quan thuế truy thu trong đợt thanh tra, chúng tôi đã rà soát lại các giao dịch của các niên độ trước nhằm kiểm tra xem có thiếu sót trong việc tính thu nhập chịu thuế hay không.",
+      "suggested_en": "To prevent issues during a tax audit, we thoroughly reviewed prior-year transactions to ensure no taxable gross revenue had been omitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'税理士の確認書' is an unnatural, contrived document name in Japanese corporate tax filing. In standard tax practice, companies prepare tax schedules (申告書添付書類/別表) and obtain tax agent documentation (税務代理権限証書 or 添付書面). The dialogue also lacks practical context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における受取配当金の益金不算入額の根拠資料は整いましたか。",
+        "vi": "Anh đã chuẩn bị xong hồ sơ căn cứ tính số tiền loại trừ khỏi thu nhập chịu thuế đối với cổ tức nhận được trong kỳ quyết toán thuế này chưa?",
+        "en": "Have you gathered all the supporting documents for the dividend exclusion from taxable revenue for this final tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、配当通知書と別表八（一）の計算明細を揃え、顧問税理士の確認も完了しております。",
+        "vi": "Vâng, tôi đã chuẩn bị đầy đủ thông báo cổ tức cùng bản thuyết minh tính toán Phụ lục 8(1), và thuế lý sĩ cố vấn cũng đã kiểm tra xong rồi ạ.",
+        "en": "Yes, we have compiled the dividend notices and the calculation details on Schedule 8(1), and our tax advisor has already reviewed them."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both language translations suffered from raw dictionary artifact injection (parenthetical explanations and slashes pasted verbatim into natural example sentences)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c80a0c1ef212fc14ad7042e828678782ff7a2b2cf047c1853c0b24b03fa620b7",
+    "validated_at": "2026-10-01T01:39:00.595432+00:00"
+  }
+}

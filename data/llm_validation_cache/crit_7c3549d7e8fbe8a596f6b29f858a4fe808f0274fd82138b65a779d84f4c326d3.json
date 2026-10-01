@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000113",
+  "term": "介護休業",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations are valid, but all example sentences and the workplace dialogue suffer from hallucinated accounting templates being mechanically applied to a statutory HR/labor leave concept.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "介護休業を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly natural HR expression for taking nursing care leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "介護休業を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for applying for nursing care leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "介護休業を認める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for an employer granting/approving family care leave.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "介護休業の期間を延長する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing for extending the duration of care leave within statutory or company limits.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Nursing care leave (介護休業) is an HR/labor status under the Child Care and Caregiver Leave Act; it cannot be booked as an accounting entry (計上内容) nor does it have a ledger balance (残高) reconciled in month-end book closings.",
+      "suggested_ja": "家族の介護が必要となった従業員から、介護休業の取得申請を受理しました。",
+      "suggested_vi": "Chúng tôi đã tiếp nhận đơn xin nghỉ chăm sóc người thân từ một nhân viên có nhu cầu chăm sóc gia đình.",
+      "suggested_en": "We have received an application for nursing care leave from an employee who needs to care for a family member."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Severe template mismatch. Accounting standards (会計基準) and fiscal year-end closings (決算) do not govern or process employee family care leave.",
+      "suggested_ja": "当社では仕事と介護の両立を支援するため、就業規則に則って介護休業の分割取得を認めています。",
+      "suggested_vi": "Nhằm hỗ trợ việc cân bằng giữa công việc và chăm sóc gia đình, công ty chúng tôi cho phép chia nhỏ thời gian nghỉ chăm sóc người thân theo quy chế lao động.",
+      "suggested_en": "To support balancing work and family care, our company permits taking nursing care leave in installments in accordance with our work regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The conversation uses a generic accounting template (checking subsidiary ledgers and vouchers for nursing care leave during monthly closing), which is nonsensical in a real Japanese enterprise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "総務部ですが、来月から介護休業を取得したいという相談が営業部から入っています。",
+        "vi": "Tôi là người của phòng tổng vụ, bên bộ phận kinh doanh vừa có nhân viên trao đổi về nguyện vọng muốn xin nghỉ chăm sóc người thân từ tháng sau.",
+        "en": "This is General Affairs. We received an inquiry from the Sales Department about an employee wishing to take nursing care leave starting next month."
+      },
+      {
+        "speaker": "B",
+        "ja": "了解しました。就業規則と法令の規定に沿って、休業期間や給付金の手続き案内を進めてください。",
+        "vi": "Tôi hiểu rồi. Anh hãy hướng dẫn thủ tục về thời gian nghỉ và trợ cấp theo đúng quy định của pháp luật và quy chế lao động nhé.",
+        "en": "Understood. Please guide them through the leave duration and benefit procedures in accordance with the law and company regulations."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e52b1e65ba068f0fdec5d451b43b5d2defc343c35ef6b6a8c600e980bdaf99e3",
+    "validated_at": "2026-10-01T01:42:49.457089+00:00"
+  }
+}

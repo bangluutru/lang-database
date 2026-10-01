@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000138",
+  "term": "差別化",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term '差別化' (differentiation) is consistently misused in an accounting context throughout the examples and dialogue. It is a business strategy concept and cannot be 'booked', 'processed' in financial statements, or have 'balances' in the way financial items do. This represents a fundamental semantic mismatch and domain factual error.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "差別化を策定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for business strategy.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "差別化を推進する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for business strategy.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "差別化を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for business strategy.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "差別化を実行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for business strategy.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The term '差別化' (differentiation) is a business strategy concept, not an accounting entry or balance. It cannot be '計上' (booked) or have a '残高' (balance). This sentence fundamentally misunderstands the meaning of the term in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、売上や費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của doanh thu và chi phí có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for sales and expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '差別化' is not something that can be '処理' (processed) in closing entries in an accounting sense. It's a strategic concept, not a financial transaction or item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において売上や費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định doanh thu và chi phí trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed sales and expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly uses '差別化' in an accounting context, asking about discrepancies in its '計上内容' (booked content). This is a fundamental misunderstanding of the term's application.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売上や費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán doanh thu và chi phí không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded sales and expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "48bbb25787a9fbc99aaf9d376669decb33d90cbce7f6addadb19f0c7e8f7ef5e",
+    "validated_at": "2026-10-01T01:52:41.463071+00:00"
+  }
+}

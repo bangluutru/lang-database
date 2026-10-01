@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000043",
+  "term": "議決権",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the term and collocations are valid, the example sentences and dialogue erroneously force '議決権' (voting rights) into monthly bookkeeping/reconciliation templates (計上, 残高, 補助元帳) where they make no factual or linguistic sense.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "議決権を行使する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/corporate expression for exercising voting rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "議決権を有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and legal phrasing for holding voting rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "議決権を放棄する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legally and semantically valid expression for waiving voting rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "議決権の有無を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression used when verifying whether shares have voting rights.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Voting rights (議決権) are legal rights, not an accounting account balance or ledger item that can be 'booked' (計上) or reconciled for differences in month-end closing (残高に差異がないか精査). This is an artificial hallucinated accounting template.",
+      "suggested_ja": "株主総会に先立ち、各議案に対する株主の議決権行使状況を集計・確認します。",
+      "suggested_vi": "Trước thềm đại hội đồng cổ đông, chúng tôi tổng hợp và kiểm tra tình hình thực hiện quyền biểu quyết của các cổ đông đối với từng đề án.",
+      "suggested_en": "Prior to the general meeting of shareholders, we tally and verify the status of shareholders' exercise of voting rights for each agenda item."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'当期の決算において議決権を適正に処理いたしました' is completely meaningless in Japanese accounting. Voting rights are not an accounting transaction to be processed (処理する) in financial statements.",
+      "suggested_ja": "当社が保有する議決権比率が過半数を超えたため、同社を新たに連結子会社として取り扱うことになりました。",
+      "suggested_vi": "Do tỷ lệ quyền biểu quyết mà công ty chúng tôi nắm giữ đã vượt quá đa số, công ty đó đã được đưa vào diện công ty con hợp nhất mới.",
+      "suggested_en": "Because our voting rights ratio exceeded a majority, the company has been newly included as a consolidated subsidiary."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Voting rights are not entered in financial vouchers (証憑書類) or subsidiary ledgers (補助元帳) as a monthly closing item (月次決算で議決権の計上内容). The dialogue imposes an irrelevant bookkeeping template onto a corporate governance term.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月の定時株主総会に向けて、議決権行使書の回収状況はいかがですか。",
+        "vi": "Tình hình thu hồi phiếu biểu quyết chuẩn bị cho đại hội đồng cổ đông thường niên tháng tới thế nào rồi?",
+        "en": "How is the collection status of voting forms looking for next month's annual general meeting of shareholders?"
+      },
+      {
+        "speaker": "B",
+        "ja": "現時点で有効回答が過半数を超えており、主要株主の賛否状況も順調に把握できています。",
+        "vi": "Tính đến hiện tại tỷ lệ phản hồi hợp lệ đã vượt quá bán, và chúng tôi cũng đang nắm bắt thuận lợi tình hình tán thành hay phản đối của các cổ đông lớn.",
+        "en": "At this point, valid responses have exceeded a majority, and we are smoothly tracking the approval status among major shareholders."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings are accurate; 'quyền biểu quyết' is standard in Vietnamese corporate law."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6d183e7b8dd0a9024b3b078b75e40cb14f8edd5608703cfafd7502ebefc74855",
+    "validated_at": "2026-10-01T01:41:41.714283+00:00"
+  }
+}

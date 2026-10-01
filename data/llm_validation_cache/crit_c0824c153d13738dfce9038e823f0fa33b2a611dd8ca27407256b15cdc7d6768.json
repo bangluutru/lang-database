@@ -1,0 +1,71 @@
+{
+  "entry_id": "jp-pro-tax-000099",
+  "term": "役員給与",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains redundant phrasing in Example 0, an awkward particle construction in Collocation 1, Companies Act vs. Tax terminology mixing in Collocation 3, and unnatural mechanical phrasing in Vietnamese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "役員給与を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in corporate tax and accounting contexts."
+    },
+    {
+      "index": 1,
+      "text": "役員給与として損金算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The particle 'として' is awkward here. In Japanese tax accounting, the standard collocation uses the direct object '役員給与を損金（に）算入する'.",
+      "suggested_text": "役員給与を損金算入する"
+    },
+    {
+      "index": 2,
+      "text": "役員給与の届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical collocation, referencing notifications filed with the tax office (e.g., 事前確定届出給与に関する届出書)."
+    },
+    {
+      "index": 3,
+      "text": "役員給与の限度額を改定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese corporate practice and Companies Act framework, overall compensation limits resolved at shareholder meetings are termed '役員報酬の限度額', not '役員給与の限度額' (which is tax nomenclature). A more natural tax-focused collocation is '役員給与の額を改定する' or '定期同額給与の額を改定する'.",
+      "suggested_text": "役員給与の額を改定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '役員に対して...役員給与を支給いたしました' creates awkward lexical redundancy ('役員' twice in close proximity). Furthermore, the Vietnamese translation mechanically repeats an unwieldy dictionary definition ('tiền lương thù lao của thành viên ban giám đốc cho lãnh đạo').",
+      "suggested_ja": "定時株主総会の決議に基づき、各役員に対して所定の期日に役員報酬（給与）を支給いたしました。",
+      "suggested_vi": "Căn cứ theo nghị quyết của đại hội đồng cổ đông thường niên, chúng tôi đã chi trả thù lao cho từng thành viên ban lãnh đạo vào đúng ngày quy định.",
+      "suggested_en": "In accordance with the resolution of the annual general meeting of shareholders, we paid executive compensation to each director on the scheduled date."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects corporate tax compliance requirements regarding notification for deductible executive compensation."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Both turns flow logically within an corporate accounting/tax filing workflow, and the target term is used organically."
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese term definition and example 0 suffer from robotic, verbatim stacking ('tiền lương thù lao của thành viên ban giám đốc') instead of natural professional terms like 'tiền lương/thù lao ban giám đốc' or 'thù lao của ban lãnh đạo'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d6d884b8d44da7aeae1a44bd2c98b9d6fb68b475e6a056a33aa9b1fdc477c862",
+    "validated_at": "2026-10-01T01:39:09.837925+00:00"
+  }
+}

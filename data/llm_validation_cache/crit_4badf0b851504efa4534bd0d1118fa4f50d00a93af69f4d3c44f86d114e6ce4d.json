@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000124",
+  "term": "欠勤",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain mismatch and templated hallucination: the generator applied financial closing and balance ledger accounting concepts to '欠勤' (attendance/HR concept). Examples, dialogue, and one collocation require complete replacement with authentic HR/payroll scenarios.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "欠勤を報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business expression for reporting an absence.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "欠勤を管理する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in HR and team management context.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "欠勤を記録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard attendance tracking expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "欠勤の減給の対象となる",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Phrasing is clumsy and redundant. In Japanese labor/payroll management, the established technical term is '欠勤控除' (absence salary deduction).",
+      "suggested_text": "欠勤控除の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'欠勤' (absence from work) is an HR/attendance matter, not an accounting entry or general ledger balance ('欠勤の計上内容や残高' is nonsensical in accounting and business Japanese).",
+      "suggested_ja": "病気や私用による欠勤の場合は、就業規則に従い、始業前までに上長へ連絡してください。",
+      "suggested_vi": "Trong trường hợp nghỉ làm do ốm đau hoặc việc riêng, vui lòng liên hệ với cấp trên trước giờ bắt đầu làm việc theo đúng nội quy lao động.",
+      "suggested_en": "In case of absence due to illness or personal reasons, please notify your supervisor before business hours in accordance with work regulations."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Absences are handled in payroll calculation ('給与計算') or attendance management ('勤怠管理'), not governed by accounting standards ('会計基準') or financial year-end closing ('決算において欠勤を適正に処理'). This is an artificial hallucinated accounting template.",
+      "suggested_ja": "無断欠勤が続く従業員に対しては、就業規則に則って適切な指導および処分を検討する必要があります。",
+      "suggested_vi": "Đối với những nhân viên liên tục vắng mặt không phép, cần xem xét các biện pháp hướng dẫn và xử lý kỷ luật phù hợp theo đúng quy chế làm việc.",
+      "suggested_en": "For employees with consecutive unexcused absences, it is necessary to consider appropriate guidance and disciplinary actions in accordance with workplace regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue forcefully applies financial closing and general ledger terminology ('月次決算', '欠勤の計上内容', '補助元帳') to an attendance status ('欠勤'). A realistic HR/payroll business exchange is required.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算を締める前に、各部署からの欠勤届はすべて回収できていますか。",
+        "vi": "Trước khi chốt tính lương tháng này, chúng ta đã thu thập đầy đủ đơn xin nghỉ làm từ các bộ phận chưa?",
+        "en": "Before closing this month's payroll, have all absence reports from each department been collected?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、勤怠管理システムと照合し、すべて確認済みです。欠勤控除の反映も完了しております。",
+        "vi": "Vâng, tôi đã đối chiếu với hệ thống quản lý chấm công và xác nhận toàn bộ. Việc trừ lương do nghỉ làm cũng đã hoàn tất.",
+        "en": "Yes, I have cross-checked with the attendance management system and confirmed everything. The salary deductions for absences have also been reflected."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "67cff0871b09b56d3489dd3e8f9efacb12d92981e2d0e27bb61effa23b4d47ea",
+    "validated_at": "2026-10-01T01:43:05.407003+00:00"
+  }
+}

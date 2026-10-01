@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000019",
+  "term": "普通預金",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション（普通預金を精算する、普通預金を計上する）に意味的ミスマッチがあり、例文や対話も生成AI特有の機械的テンプレ（〜を適正に処理いたしました等）で、経理実務の標準的な残高調整・照合実務を反映していないため全体的な書き直しが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "普通預金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "勘定科目としての「普通預金」を直接の目的語にして「計上する」と言うのは不自然。普通預金は損益項目や引当金のように計上する対象ではなく、「普通預金に振り替える」や「普通預金口座に入金処理する」とするのが自然。",
+      "suggested_text": "普通預金に振り替える"
+    },
+    {
+      "index": 1,
+      "text": "普通預金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で日常的に用いられる極めて自然なコロケーション。",
+      "suggested_text": "普通預金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "普通預金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "預金口座自体を照合するのではなく、「普通預金の残高を照合する」または「通帳と普通預金出納帳を照合する」とするのが実務上正確。",
+      "suggested_text": "普通預金残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "普通預金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算する」の対象は仮払金や立替経費などの清算項目であり、資産である普通預金を精算することは意味論的に誤り。",
+      "suggested_text": "普通預金出納帳を記帳する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「普通預金の計上内容」という表現が不自然。実務では銀行の残高証明書（またはWeb明細）と自社の帳簿残高を突き合わせる「銀行残高調整」の文脈で表現するのが正確。",
+      "suggested_ja": "月末の締め処理において、普通預金の帳簿残高と銀行の残高証明書を照合し、差異がないか精査します。",
+      "suggested_vi": "Trong quy trình chốt sổ cuối tháng, chúng tôi đối chiếu số dư sổ sách của tài khoản tiền gửi thông thường với giấy chứng nhận số dư của ngân hàng để kiểm tra kỹ lưỡng xem có chênh lệch hay không.",
+      "suggested_en": "During month-end closing, we reconcile the book balance of ordinary deposits with the bank balance certificate to carefully examine any discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準および社内規程に則り〜普通預金を適正に処理いたしました」は、どの勘定科目にも機械的に当てはめた無味乾燥なテンプレ文であり、実務的な文脈を欠く。",
+      "suggested_ja": "期末決算に伴い、すべての普通預金口座について銀行残高調整表を作成し、未達取引の洗出しを行いました。",
+      "suggested_vi": "Cùng với việc quyết toán cuối kỳ, chúng tôi đã lập bảng chỉnh hợp số dư ngân hàng cho tất cả các tài khoản tiền gửi thông thường và rà soát các giao dịch chưa khớp.",
+      "suggested_en": "In connection with the fiscal year-end closing, we prepared bank reconciliation statements for all ordinary deposit accounts and identified in-transit transactions."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「普通預金の計上内容に差異」や「すべて適正に整合している」は不自然かつ硬すぎるテンプレ表現。普通預金のチェックであれば、銀行残高（通帳／WEB明細）と預金出納帳（帳簿残高）の突合について話すのが実務的。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、普通預金の帳簿残高と銀行明細に差異は出ていませんか。",
+        "vi": "Trong đợt quyết toán tháng này, số dư sổ sách tiền gửi thông thường và sao kê ngân hàng có bị lệch không?",
+        "en": "Are there any discrepancies between the book balance of ordinary deposits and the bank statement for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通帳の入出金明細と預金出納帳を照合済みで、未達取引もなく完全に一致しております。",
+        "vi": "Tôi đã đối chiếu chi tiết thu chi trên sổ phụ với sổ quỹ tiền gửi, không có giao dịch chưa khớp và hai bên hoàn toàn trùng khớp.",
+        "en": "I have already reconciled the bank statement details with the cash deposit ledger, and with no in-transit items, they match completely."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations for '普通預金' (Ordinary deposits / tiền gửi ngân hàng thông thường) are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f00e8cea776c221cbdb91f3be3dec01ba88ac0c89d2726a7465d70ac2e9e4661",
+    "validated_at": "2026-10-01T01:33:19.349170+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000149",
+  "term": "年末調整",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual error: the generated examples and dialogue conflated internal employee withholding tax adjustment (年末調整, calendar-year based) with corporate tax return filing (期末決算申告). Collocation #1 also pairs 年末調整 directly with 提出する inappropriately.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "年末調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly natural verb collocation for conducting year-end tax adjustments.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "年末調整を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'年末調整' is a process/system, not a physical document to be submitted. One submits '年末調整の書類' (documents) or '申告書'.",
+      "suggested_text": "年末調整の書類を提出する"
+    },
+    {
+      "index": 2,
+      "text": "年末調整の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrase commonly used regarding submission deadlines.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "年末調整の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocation used in corporate HR and payroll departments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual tax error: '年末調整' is executed on a calendar year basis (December salary) for employee withholding tax, completely independent of corporate fiscal year-end ('期末決算'). Furthermore, 年末調整 procedures themselves are conducted internally by the employer, not completed 'against the tax office'.",
+      "suggested_ja": "12月の給与支払いに向けて、全従業員の扶養控除申告書を回収し、年末調整の手続きを進めています。",
+      "suggested_vi": "Để chuẩn bị cho kỳ chi trả lương tháng 12, chúng tôi đang thu thập tờ khai giảm trừ người phụ thuộc của toàn bộ nhân viên và tiến hành thủ tục quyết toán thuế cuối năm.",
+      "suggested_en": "In preparation for the December payroll, we are collecting dependency exemption declarations from all employees and proceeding with year-end tax adjustment procedures."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence relies on a generic artificial boilerplate ('適正な税法解釈に基づき...整えました') that does not reflect realistic operational HR/tax practice regarding employee year-end adjustments.",
+      "suggested_ja": "控除証明書の添付漏れがないか確認した上で、顧問税理士の監修のもと年末調整の税額計算を確定させました。",
+      "suggested_vi": "Sau khi kiểm tra việc đính kèm đầy đủ các chứng từ khấu trừ, chúng tôi đã chốt số tiền tính thuế quyết toán cuối năm dưới sự giám sát của chuyên viên thuế cố vấn.",
+      "suggested_en": "After verifying that all deduction certificates were attached, we finalized the year-end tax adjustment calculation under the supervision of our advisory tax accountant."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe factual error: '年末調整' (individual income tax withholding reconciliation for employees) is not part of '決算申告' (corporate tax return), nor is it submitted as '申告書添付書類' (attachments to corporate tax returns). This confuses individual withholding tax with corporate tax filings.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員から提出された保険料控除申告書と各種証明書の突合は完了しましたか。",
+        "vi": "Việc đối chiếu tờ khai khấu trừ bảo hiểm và các loại chứng từ do nhân viên nộp đã hoàn tất chưa?",
+        "en": "Have you completed cross-checking the insurance deduction declarations and various certificates submitted by employees?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、書類の確認はすべて終わりましたので、これから12月給与での年末調整計算に入ります。",
+        "vi": "Vâng, việc kiểm tra toàn bộ hồ sơ đã xong, bây giờ chúng tôi sẽ bắt đầu tính quyết toán thuế cuối năm vào kỳ lương tháng 12.",
+        "en": "Yes, document verification is complete, so we are now moving on to the year-end tax adjustment calculation for the December payroll."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The term-level translations 'Year-end tax adjustment' and 'quyết toán thuế cuối năm tại nơi làm việc' accurately capture the concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "860a8f065e90fe6f2725ba9760703bed871c76de13689df92bde1946c593bcea",
+    "validated_at": "2026-10-01T01:39:53.870937+00:00"
+  }
+}

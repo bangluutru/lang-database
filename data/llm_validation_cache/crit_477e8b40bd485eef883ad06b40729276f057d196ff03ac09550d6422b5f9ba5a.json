@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000129",
+  "term": "整理解雇",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain and collocation hallucinations: the generator mechanically treated '整理解雇' (an HR/labor legal procedure) as an accounting account item with balances and general ledger reconciliation entries.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "整理解雇を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in HR and business management context.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "整理解雇を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Dismissal is typically executed, implemented, or avoided rather than simply 'completed' as a routine task; '整理解雇に踏み切る' or '整理解雇を実施する' is much more natural.",
+      "suggested_text": "整理解雇に踏み切る"
+    },
+    {
+      "index": 2,
+      "text": "整理解雇の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate expression regarding checking the four legal requirements/due procedure for redundancy dismissal.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "整理解雇を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese labor management, companies strive to avoid redundancy dismissals ('整理解雇を回避する') or set the selection criteria ('整理解雇の要件を満たす'). '見直す' is vague and atypical.",
+      "suggested_text": "整理解雇を回避する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '整理解雇' is an employment termination procedure, not an accounting ledger item that has a '残高' (balance) or '計上内容' (booked entry).",
+      "suggested_ja": "整理解雇を実施するにあたっては、人員削減の必要性や解雇回避努力など、法的な4要件を満たしているかを慎重に検討する必要があります。",
+      "suggested_vi": "Khi tiến hành sa thải cắt giảm nhân sự do suy thoái kinh tế, cần phải xem xét cẩn trọng xem có đáp ứng đủ 4 điều kiện pháp lý như tính cần thiết của việc cắt giảm nhân sự và nỗ lực tránh sa thải hay không.",
+      "suggested_en": "When implementing redundancy dismissals, it is necessary to carefully examine whether the four legal criteria—such as the necessity of workforce reduction and efforts to avoid dismissal—are satisfied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'整理解雇' cannot be accounted for in financial closing ('決算において整理解雇を適正に処理いたしました' makes no sense in financial accounting; one would account for 特別割増退職金 or 事業構造改善引当金).",
+      "suggested_ja": "経営陣は事業再生計画の一環として整理解雇に踏み切る前に、希望退職者の募集や配置転換などの代替策を尽くしました。",
+      "suggested_vi": "Ban lãnh đạo đã thực hiện triệt để các biện pháp thay thế như tuyển người tự nguyện nghỉ việc hoặc điều chuyển nhân sự trước khi quyết định sa thải cắt giảm nhân sự như một phần của kế hoạch tái cơ cấu kinh doanh.",
+      "suggested_en": "As part of the business revitalization plan, the management exhausted alternative measures such as soliciting voluntary retirements and reassignments before resorting to redundancy dismissals."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Gross hallucination due to applying a mechanical accounting template ('整理解雇の計上内容に差異は発生していませんか', '補助元帳を照合済み'). Layoffs do not appear in subsidiary ledgers as a line item.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "業績不振に伴う整理解雇の実施について、労働組合との事前協議は進んでいますか。",
+        "vi": "Về việc tiến hành sa thải cắt giảm nhân sự do kết quả kinh doanh sa sút, quá trình thảo luận trước với công đoàn có đang tiến triển không?",
+        "en": "Regarding the execution of redundancy dismissals due to poor business performance, are prior consultations with the labor union progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、解雇回避の努力義務を果たした経緯を丁寧に説明し、理解を得られるよう協議を重ねています。",
+        "vi": "Vâng, chúng tôi đang giải thích kỹ lưỡng về quá trình đã nỗ lực hết mình để tránh sa thải và liên tục đàm phán để nhận được sự thấu hiểu từ họ.",
+        "en": "Yes, we are thoroughly explaining the background of our efforts to avoid dismissals and holding repeated consultations to seek their understanding."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Definitions for the headword are accurate; the errors are in the generated sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d87bdda6ed1eeea274b31e39e9c7838f7d701e662cb377df52c67a702341c3e6",
+    "validated_at": "2026-10-01T01:43:10.764358+00:00"
+  }
+}

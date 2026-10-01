@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000003",
+  "term": "CIF",
+  "overall_decision": "pass",
+  "summary_reason": "Collocations and examples are natural and accurate. Dialogue requires minor adjustment for better conversational flow and directness in response.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "CIFの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "CIFの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "CIFにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "CIFにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about CIF arrangement status, but Speaker B's response about customs broker and forwarder contact, document confirmation, and import declaration doesn't directly address the 'CIF arrangement status' in a natural flow. It sounds like a general update on customs procedures rather than specific to CIF arrangements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、CIFの手配状況はいかがでしょうか。特に保険の手配は完了していますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp CIF thế nào rồi? Đặc biệt, việc sắp xếp bảo hiểm đã hoàn tất chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the CIF arrangements? Specifically, has the insurance arrangement been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、保険の手配を含め、CIF条件に基づく全ての準備は整っております。通関業者と乙仲への連絡も済ませ、書類確認後、輸入申告に入っております。",
+        "vi": "Vâng, mọi công tác chuẩn bị theo điều kiện CIF, bao gồm cả việc sắp xếp bảo hiểm, đã hoàn tất. Chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, và sau khi kiểm tra tài liệu, chúng tôi đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, all preparations under CIF terms, including insurance arrangements, are complete. We have contacted the customs broker and forwarder, and after document verification, we are proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "43cc5db879d6353e32ee888bc0193494f11f648cb84ebc2f86f6c28b3d6928fa",
+    "validated_at": "2026-10-01T01:53:41.324059+00:00"
+  }
+}

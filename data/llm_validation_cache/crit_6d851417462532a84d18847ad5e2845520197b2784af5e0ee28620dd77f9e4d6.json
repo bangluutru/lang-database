@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000118",
+  "term": "労災保険",
+  "overall_decision": "rewrite",
+  "summary_reason": "The learning object exhibits obvious mechanical templating where generic accounting formulas ('[Term]の計上内容や残高に差異がないか') were applied without domain knowledge of labor law, resulting in factually incorrect collocations ('労災保険の資格を取得する') and unnatural workplace dialogues.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "労災保険に加入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used when a company or sole proprietor enrolls in workers' accident compensation insurance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "労災保険の保険料を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound, though in practice it is often bundled as 労働保険料.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "労災保険の手続きを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common general phrase referring to filing claims or initial establishment procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "労災保険の資格を取得する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually incorrect under Japanese labor law. Unlike 雇用保険 or 健康保険 where individuals acquire qualification (被保険者資格取得), 労災保険 automatically covers all eligible workers at an insured establishment without individual qualification acquisition.",
+      "suggested_text": "労災保険の給付を請求する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated accounting sentence. '労災保険の残高' is unnatural in Japanese accounting practice; premium payments are booked under 法定福利費 and settled via annual labor insurance declarations (労働保険の年度更新), not tracked as a standalone ledger balance named '労災保険'.",
+      "suggested_ja": "従業員の通勤災害に関して、所轄の労働基準監督署へ労災保険の給付請求書を提出しました。",
+      "suggested_vi": "Về tai nạn đi lại của nhân viên, chúng tôi đã nộp đơn yêu cầu chi trả bảo hiểm tai nạn lao động lên cơ quan thanh tra tiêu chuẩn lao động có thẩm quyền.",
+      "suggested_en": "Regarding the employee's commuting accident, we submitted the workers' accident compensation insurance claim form to the relevant Labor Standards Inspection Office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Templated sentence. In corporate settlement, one does not say '当期の決算において労災保険を適正に処理いたしました'. It should refer to '労働保険料（法定福利費）の概算・確定処理'.",
+      "suggested_ja": "労災保険料は全額会社負担となるため、決算時に法定福利費として正しく費用計上されているか確認します。",
+      "suggested_vi": "Vì phí bảo hiểm tai nạn lao động do công ty chi trả toàn bộ, nên chúng tôi sẽ kiểm tra xem chi phí này đã được hạch toán chính xác vào chi phí phúc lợi theo luật định trong kỳ quyết toán hay chưa.",
+      "suggested_en": "Since workers' accident compensation insurance premiums are paid entirely by the company, we verify that they are correctly recorded as statutory welfare expenses at the fiscal year-end closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The conversation uses a generic accounting template that is inappropriate for 労災保険. In real workplaces, conversations about 労災保険 focus on claims for workplace injuries or annual labor insurance filings (年度更新).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "倉庫で負傷した従業員の労災保険の手続きは、どこまで進んでいますか。",
+        "vi": "Thủ tục bảo hiểm tai nạn lao động cho nhân viên bị thương ở nhà kho đã tiến hành đến đâu rồi?",
+        "en": "How far along is the workers' accident compensation insurance procedure for the employee injured in the warehouse?"
+      },
+      {
+        "speaker": "B",
+        "ja": "医師の診断書を受領しましたので、本日中に労働基準監督署へ請求書類を提出いたします。",
+        "vi": "Chúng tôi đã nhận được giấy chứng nhận y tế của bác sĩ, nên sẽ nộp hồ sơ yêu cầu bồi thường lên cơ quan thanh tra tiêu chuẩn lao động trong ngày hôm nay.",
+        "en": "We received the medical certificate from the doctor, so we will submit the claim documents to the Labor Standards Inspection Office by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In the original examples, the parenthetical definition '(do công ty đóng 100%)' was mechanically pasted into the middle of running sentences, resulting in awkward and unnatural Vietnamese business phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "29bda1664d141fbf66d8c24781fe60852d669474787d96e463ec5374d65cd1c4",
+    "validated_at": "2026-10-01T01:42:58.318363+00:00"
+  }
+}

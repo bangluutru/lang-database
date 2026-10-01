@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000017",
+  "term": "中間申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains critical domain factual errors: Example 1 conflates year-end closing (期末決算) with interim tax filing (中間申告), and the dialogue uses the contradictory phrase '決算申告における中間申告'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "中間申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in corporate tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "中間申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "中間申告 refers to the act or system of filing. One submits the return form ('中間申告書を提出する') or conducts the filing ('中間申告を行う').",
+      "suggested_text": "中間申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "中間申告の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax phrase (statutory filing deadline).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "中間申告の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural administrative expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factual contradiction in corporate tax: '中間申告' (interim return) is performed mid-year, not upon '期末決算の確定' (year-end financial close, which triggers 確定申告).",
+      "suggested_ja": "事業年度開始の日から6カ月が経過したため、所轄税務署に対して法定申告期限内に法人税の中間申告を行いました。",
+      "suggested_vi": "Do đã qua 6 tháng kể từ ngày bắt đầu năm tài chính, chúng tôi đã thực hiện kê khai thuế thu nhập doanh nghiệp tạm nộp giữa kỳ tại chi cục thuế phụ trách trong thời hạn luật định.",
+      "suggested_en": "As six months have elapsed from the start of the fiscal year, we filed the corporate interim tax return with the competent tax office within the statutory filing deadline."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing concerning document preparation under tax advisor guidance.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'決算申告における中間申告' is conceptually confused; 中間申告 (interim filing) is distinct from 決算申告 (final year-end tax filing), typically determined either by 前期実績 (prior year actuals) or 仮決算 (interim provisional closing).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の中間申告についてですが、前期実績による予定申告と仮決算のどちらで進めますか。",
+        "vi": "Về việc kê khai thuế giữa kỳ lần này, chúng ta sẽ thực hiện theo phương thức tạm nộp dựa trên số liệu năm trước hay quyết toán tạm thời?",
+        "en": "Regarding this period's interim tax filing, shall we proceed based on prior-year actuals or by provisional closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "業績が前年比で大幅に落ち込んでいるため、仮決算に基づく中間申告で税額を抑える方針で税理士と調整しています。",
+        "vi": "Do kết quả kinh doanh sụt giảm mạnh so với năm trước, chúng tôi đang thống nhất với bên thuế áp dụng kê khai giữa kỳ dựa trên quyết toán tạm thời để giảm số thuế phải nộp.",
+        "en": "Because business performance has dropped significantly year-on-year, we are coordinating with our tax accountant to file an interim return based on provisional closing to curb the tax liability."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Meanings are accurate; terminology in Vietnamese ('kê khai thuế tạm nộp giữa niên độ') and English ('Interim tax return') accurately reflects the tax concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0f48b665e377ecb27b1b171695f8377f19179be45ccc5d9a3270c947c58d3add",
+    "validated_at": "2026-10-01T01:37:31.220434+00:00"
+  }
+}

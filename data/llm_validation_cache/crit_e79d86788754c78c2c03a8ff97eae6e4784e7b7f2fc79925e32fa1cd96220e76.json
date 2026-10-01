@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000130",
+  "term": "円高",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the unnatural and semantically incorrect usage of '円高の計上内容' and '円高を処理する'. '円高' refers to a market condition, not an accounting entry or an item to be processed directly. The examples and dialogue need to be rephrased to refer to the accounting impact of a strong yen, such as foreign exchange gains/losses or revaluation differences of foreign currency denominated assets/liabilities.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "円高に対応する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "円高が進行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "円高の影響を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "円高リスクをヘッジする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「円高の計上内容や残高」という表現は不自然。「円高」は市場の状況であり、それ自体を「計上」したり「残高」を持ったりするものではない。為替差損益や外貨建資産・負債の評価差額などを指すのが適切。",
+      "suggested_ja": "月末の帳簿照合において、為替差損益の計上内容や外貨建残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong các khoản mục hạch toán lãi lỗ tỷ giá hối đoái hoặc số dư ngoại tệ hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries for foreign exchange gains/losses or foreign currency balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「円高を適正に処理いたしました」という表現は不自然。「円高」は市場の状況であり、それ自体を「処理」するものではない。円高によって生じる会計上の影響（為替差損益など）を処理すると言うべき。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において円高による為替差損益を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các khoản lãi lỗ tỷ giá hối đoái phát sinh do đồng Yên tăng giá trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the foreign exchange gains/losses resulting from the strong yen in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「円高の計上内容に差異は発生していませんか」は、Example 1と同様に「円高」を直接「計上内容」と結びつける点で不自然。為替差損益や外貨建取引の会計処理について尋ねるべき。Speaker Bの回答は、Aの質問が不自然なため、文脈がややずれている。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、円高による為替差損益の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong các khoản mục hạch toán lãi lỗ tỷ giá hối đoái do đồng Yên tăng giá không?",
+        "en": "In this month's financial closing, are there any discrepancies in the recorded foreign exchange gains/losses due to the strong yen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、為替差損益の計上はすべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả các khoản hạch toán lãi lỗ tỷ giá hối đoái đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledgers, and confirmed that all foreign exchange gains/losses entries are properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d0b07661a58129120a7a444c00f0e7f2030c56fd5e6713e152d2fd4ebb96dd05",
+    "validated_at": "2026-10-01T01:56:12.371874+00:00"
+  }
+}

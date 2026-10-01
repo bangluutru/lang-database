@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000121",
+  "term": "新株予約権",
+  "overall_decision": "rewrite",
+  "summary_reason": "The content relies on generic transactional accounting templates (e.g. '精算する', monthly discrepancy checks, empty '適正な' boilerplate) that do not fit the legal and financial reality of equity-based share acquisition rights (新株予約権).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "新株予約権を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used legitimately when recognizing share acquisition rights/stock options in the net assets section (純資産の部) under J-GAAP.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "新株予約権の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in audit and financial reporting when confirming the carrying amount or unit count of outstanding rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "新株予約権を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly '照合する' (reconcile) rights themselves; in practice, one refers to issuing, exercising, or checking the registry (原簿と照合する).",
+      "suggested_text": "新株予約権を行使する"
+    },
+    {
+      "index": 3,
+      "text": "新株予約権を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to monetary advances, travel expenses, or settled balances, not equity warrants or options. Standard verbs are 消却する (cancel), 失効する (lapse), or 戻入益を計上する.",
+      "suggested_text": "新株予約権を消却する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "新株予約権 is an equity instrument tied to discrete corporate actions (issuance, vesting, exercise, expiry), not a routine monthly reconciliation item like AP/AR where discrepancies are scrubbed at month-end.",
+      "suggested_ja": "ストックオプションとして付与した新株予約権について、公正価値の算定結果に基づき費用計上を行いました。",
+      "suggested_vi": "Đối với quyền chọn mua cổ phiếu phát hành mới được cấp dưới dạng quyền chọn cổ phiếu, chúng tôi đã hạch toán chi phí dựa trên kết quả tính toán giá trị hợp lý.",
+      "suggested_en": "We recorded expenses for the share acquisition rights granted as stock options, based on the fair value valuation results."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Tautological and empty template phrasing: '適正な...適正に処理いたしました' lacks specific accounting substance and repeats '適正' awkwardly.",
+      "suggested_ja": "権利行使期間の満了に伴い、未行使の新株予約権について戻入益の計上処理を行いました。",
+      "suggested_vi": "Do đã hết thời hạn thực hiện quyền, chúng tôi đã tiến hành hạch toán thu nhập do hoàn nhập đối với các quyền chọn mua cổ phiếu chưa được thực hiện.",
+      "suggested_en": "Upon the expiration of the exercise period, we recorded a gain on reversal for the unexercised share acquisition rights."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Treating 新株予約権 as an operational monthly ledger discrepancy checked against vouchers ('証憑書類と補助元帳') is a generic placeholder template out of sync with real accounting operations for equity rights.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員および従業員から提出された新株予約権の行使請求について、払込状況の確認は完了していますか。",
+        "vi": "Về yêu cầu thực hiện quyền chọn mua cổ phiếu mới do các giám đốc và nhân viên nộp, anh/chị đã hoàn tất việc xác nhận tình trạng thanh toán chưa?",
+        "en": "Have you completed verifying the payment status for the requests to exercise share acquisition rights submitted by directors and employees?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、払込期日までに全額の着金を確認し、資本金および資本準備金への組入処理を進めております。",
+        "vi": "Vâng, chúng tôi đã xác nhận toàn bộ số tiền đã vào tài khoản trước ngày nộp tiền và đang tiến hành hạch toán kết chuyển vào vốn điều lệ và thặng dư vốn cổ phần.",
+        "en": "Yes, we confirmed receipt of all funds by the payment due date and are currently proceeding with the transfer entries to capital stock and legal capital surplus."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English ('Share acquisition rights') and Vietnamese ('quyền chọn mua cổ phiếu phát hành mới') are standard terms."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4495a3d86e12ab719ca96f38a0cf049206a33d24b969d16a219ab7e0f4cacf36",
+    "validated_at": "2026-10-01T01:35:51.819101+00:00"
+  }
+}

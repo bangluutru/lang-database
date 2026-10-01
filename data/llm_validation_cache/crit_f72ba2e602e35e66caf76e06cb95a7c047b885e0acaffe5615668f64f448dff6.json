@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000154",
+  "term": "納期の特例",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain hallucination in both example sentences and dialogue, where '納期の特例' (semiannual withholding tax remittance scheme) was conflated with 'ふるさと納税' (donation deduction ceilings/regional contribution) and '決算申告' (corporate tax return filings).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "納期の特例を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "納期の特例の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and practical tax phrasing (適用を受ける).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "納期の特例を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing regarding utilizing the administrative scheme.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "納期の特例の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for eligibility under the tax provision.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe factual error. '納期の特例' (special exception for withholding tax payment schedule) has nothing to do with '節税' (tax reduction) or '地域貢献' (regional contribution); this sentence was incorrectly templated from 'ふるさと納税'.",
+      "suggested_ja": "給与計算業務の負担軽減を図るため、税務署へ申請書を提出して源泉所得税の納期の特例の適用を受けました。",
+      "suggested_vi": "Để giảm bớt gánh nặng nghiệp vụ tính lương, chúng tôi đã nộp đơn lên cơ quan thuế để áp dụng chế độ đặc cách về thời hạn nộp thuế thu nhập khấu trừ tại nguồn.",
+      "suggested_en": "To reduce the administrative burden of payroll processing, we submitted an application to the tax office to apply the special exception for the due date of withholding income tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe factual error. '控除上限額を試算する' (calculating deduction ceilings) applies to donations/hometown tax, not to '納期の特例', which simply changes withholding tax remittance frequency from monthly to semi-annually for small offices.",
+      "suggested_ja": "従業員数が常時10人未満となったため、源泉所得税に関する納期の特例の承認申請手続きを進めました。",
+      "suggested_vi": "Vì số lượng nhân viên thường xuyên dưới 10 người, chúng tôi đã tiến hành thủ tục xin phê duyệt chế độ đặc cách về thời hạn nộp thuế thu nhập khấu trừ tại nguồn.",
+      "suggested_en": "Since our regular employee count is fewer than ten, we proceeded with the application for approval of the special exception for the due date of withholding income tax."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'納期の特例' is not part of annual corporate tax settlement filing ('決算申告'). It is a payroll withholding tax administrative procedure requiring an independent application to the tax office.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月から従業員が10名未満になったので、源泉所得税の納期の特例を申請しませんか。",
+        "vi": "Từ tháng này số nhân viên đã dưới 10 người, chúng ta có nên làm đơn xin áp dụng chế độ đặc cách nộp thuế thu nhập khấu trừ tại nguồn không?",
+        "en": "Since our headcount dropped below ten employees starting this month, shall we apply for the special exception for the due date of withholding income tax?"
+      },
+      {
+        "speaker": "B",
+        "ja": "そうですね。承認されれば毎月の納付事務が年2回にまとまり、業務効率化になりますね。",
+        "vi": "Ý kiến hay đó. Nếu được phê duyệt, công việc nộp thuế hàng tháng sẽ gom lại còn 2 lần mỗi năm, giúp tối ưu hóa nghiệp vụ.",
+        "en": "Good idea. If approved, the monthly remittance procedure will be consolidated into twice a year, improving our operational efficiency."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Headword translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bb1e0328461f59d993f9801e93e31dc83ca6188914b8c90ca0e90afcb681ec51",
+    "validated_at": "2026-10-01T01:40:05.453258+00:00"
+  }
+}

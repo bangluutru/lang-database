@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000193",
+  "term": "継続企業の前提",
+  "overall_decision": "rewrite",
+  "summary_reason": "会計公準である『継続企業の前提』を勘定科目や仕訳残高と混同した機械的テンプレート文が生成されており、実務上あり得ない文章です。コロケーションの一部および例文・会話を全面的に再構築する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "継続企業の前提を遵守する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「前提」（仮定・公準）は「遵守する」対象ではなく、適用・評価・検討する対象です。",
+      "suggested_text": "継続企業の前提に疑義が生じる"
+    },
+    {
+      "index": 1,
+      "text": "継続企業の前提を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "経営者や監査人がゴーイング・コンサーンを検討・評価する標準的な会計実務表現です。",
+      "suggested_text": "継続企業の前提を評価する"
+    },
+    {
+      "index": 2,
+      "text": "継続企業の前提を前提とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「前提を前提とする」は同語反復で不自然です。通常は「継続企業を前提とする」または「継続企業の前提が成立する」と表現します。",
+      "suggested_text": "継続企業の前提に重要な不確実性が認められる"
+    },
+    {
+      "index": 3,
+      "text": "継続企業の前提に関する注記を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "開示実務（有価証券報告書や決算短信）で極めて頻出する正確な表現です。",
+      "suggested_text": "継続企業の前提に関する注記を開示する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "継続企業の前提（ゴーイング・コンサーン）は会計公準・概念であり、勘定科目ではないため「計上内容や残高」は存在しません。致命的な会計上の誤りです。",
+      "suggested_ja": "当期において重要な営業損失を計上したため、継続企業の前提に重要な不確実性が生じていないか慎重に評価する必要があります。",
+      "suggested_vi": "Do đã ghi nhận khoản lỗ kinh doanh trọng yếu trong kỳ này, chúng tôi cần đánh giá cẩn trọng xem có phát sinh yếu tố không chắc chắn trọng yếu liên quan đến giả định hoạt động liên tục hay không.",
+      "suggested_en": "Due to recording a significant operating loss this term, we must carefully assess whether a material uncertainty related to the going concern assumption has arisen."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "継続企業の前提は仕訳・処理する対象（「適正に処理いたしました」）ではありません。検討・開示の要否を判断する概念です。",
+      "suggested_ja": "監査法人との協議の結果、資金繰り改善計画の合理性が認められ、継続企業の前提に関する注記の記載は不要と判断されました。",
+      "suggested_vi": "Kết quả thảo luận với công ty kiểm toán cho thấy tính hợp lý của kế hoạch cải thiện dòng tiền đã được chấp thuận, và kết luận không cần thuyết minh về giả định hoạt động liên tục.",
+      "suggested_en": "As a result of discussions with the audit firm, the rationality of our cash flow improvement plan was recognized, and it was determined that a note on the going concern assumption is not required."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「継続企業の前提の計上内容に差異」という問いかけ自体が会計上破綻しており、それに対して「補助元帳を照合」と答えるのも完全に不整合です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、継続企業の前提に関する重要な不確実性の注記は必要になりそうでしょうか。",
+        "vi": "Trong quyết toán kỳ này, liệu chúng ta có cần phải ghi chú về yếu tố không chắc chắn trọng yếu liên quan đến giả định hoạt động liên tục không?",
+        "en": "In this term's closing, do you think we will need to include a note regarding material uncertainty related to the going concern assumption?"
+      },
+      {
+        "speaker": "B",
+        "ja": "追加融資の合意が得られたため解消の見込みですが、念のため監査法人に前提評価の資料を提示して最終判断を仰ぎます。",
+        "vi": "Do đã đạt được thỏa thuận về khoản vay bổ sung nên dự kiến rủi ro sẽ được giải tỏa, tuy nhiên để chắc chắn, chúng tôi sẽ trình tài liệu đánh giá giả định này cho công ty kiểm toán để xin ý kiến quyết định cuối cùng.",
+        "en": "Since an agreement on additional financing was secured, it is expected to be resolved; however, to be certain, we will present our assessment documents to the audit firm for their final judgment."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "原文の日本語が機械的テンプレートによる会計事実誤認（計上内容や残高の照合）を起こしているため、訳文も非現実的な内容になっていました。修正案に沿った再翻訳が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5036675f3dea503cef1cfd987fab63281dceaa07eae9ec88814761a70622ce69",
+    "validated_at": "2026-10-01T01:37:07.351490+00:00"
+  }
+}

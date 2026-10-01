@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000012",
+  "term": "標準税率",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object suffered from severe generic template pollution ('標準税率の計上内容や残高', '標準税率を処理する'), treating an abstract statutory tax percentage as if it were a balance-sheet general ledger account. Collocation 3, both examples, and the dialogue require rewriting to reflect genuine tax accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "標準税率を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in tax accounting."
+    },
+    {
+      "index": 1,
+      "text": "標準税率を乗じる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard mathematical/tax calculation phrasing (multiplying taxable amount by the standard tax rate)."
+    },
+    {
+      "index": 2,
+      "text": "標準税率を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase when verifying applicable tax rates on invoices."
+    },
+    {
+      "index": 3,
+      "text": "標準税率を改定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Tax rates are enacted by statutory law; private enterprises do not revise statutory rates. More relevant corporate collocations are '標準税率の対象品目' or '標準税率で計算する'.",
+      "suggested_text": "標準税率で計算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A tax rate (税率, percentage) cannot possess an accounting balance (残高) nor be booked directly (標準税率の計上内容). This is an unnatural generic template. The subject must be standard tax-rated transactions or the resulting consumption tax amount.",
+      "suggested_ja": "インボイス制度の導入に伴い、受取請求書に記載された税率が軽減税率か標準税率かを厳密に確認しています。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ hóa đơn hợp lệ (Invoice System), chúng tôi kiểm tra chặt chẽ xem thuế suất ghi trên hóa đơn nhận được là thuế suất ưu đãi hay thuế suất tiêu chuẩn.",
+      "suggested_en": "Following the introduction of the qualified invoice system, we strictly verify whether the tax rate indicated on received invoices is the reduced tax rate or the standard tax rate."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "One cannot 'process a tax rate' ('標準税率を適正に処理いたしました'). This is a mechanical filler sentence devoid of authentic business usage.",
+      "suggested_ja": "社内システムの改修により、標準税率10%と軽減税率8%の売上取引を自動で区分して集計できるようになりました。",
+      "suggested_vi": "Nhờ nâng cấp hệ thống nội bộ, các giao dịch doanh thu chịu thuế suất tiêu chuẩn 10% và thuế suất ưu đãi 8% đã có thể được tự động phân loại và tổng hợp.",
+      "suggested_en": "Thanks to internal system updates, sales transactions subject to the 10% standard tax rate and the 8% reduced tax rate can now be automatically categorized and aggregated."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'標準税率の計上内容' is unnatural accounting terminology because a tax rate itself is not an accounting entry. The question should target区分経理 (tax-categorized accounting) or rate discrepancies.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "飲食料品以外の仕入について、すべて標準税率の10%が正しく適用されているか確認してもらえますか。",
+        "vi": "Bạn có thể kiểm tra giúp tôi xem các khoản mua vào ngoài thực phẩm, đồ uống đã được áp dụng đúng thuế suất tiêu chuẩn 10% hay chưa?",
+        "en": "Could you check whether the 10% standard tax rate has been correctly applied to all purchases other than food and beverages?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、受取インボイスの登録番号と適用税率を照合し、本日中に確認を完了させます。",
+        "vi": "Vâng, tôi sẽ đối chiếu mã số đăng ký và thuế suất áp dụng trên hóa đơn nhận được, và hoàn tất việc kiểm tra trong ngày hôm nay.",
+        "en": "Certainly. I will reconcile the registration numbers and applied tax rates on the received invoices and complete the review by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations faithfully rendered the nonsensical Japanese template ('balances for standard tax rate' / 'số dư của thuế suất tiêu chuẩn'). Once the Japanese sentences are rewritten to sound natural, the translations must be aligned."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3f33806c5852e7f38449251d4a0b30c6b9443f32197552a0749802d81fb41620",
+    "validated_at": "2026-10-01T01:37:28.428109+00:00"
+  }
+}

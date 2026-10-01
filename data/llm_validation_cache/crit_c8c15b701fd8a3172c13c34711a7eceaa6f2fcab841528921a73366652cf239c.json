@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000048",
+  "term": "建物附属設備",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation #2 exhibits a predicate clash ('台帳に計上する' instead of '台帳に登録する'), and Example #1 commits a factual accounting classification error by associating building fixtures ('建物附属設備') with production line streamlining ('生産ラインの合理化').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "建物附属設備を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for acquiring depreciable assets.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "建物附属設備を減価償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural predicate usage for depreciating tangible fixed assets.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "建物附属設備を固定資産台帳に計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Assets are recorded/registered in a ledger (台帳に登録する・登載する) or booked in financial statements (資産計上する). '台帳に計上する' combines ledger registration with financial statement booking awkwardly.",
+      "suggested_text": "建物附属設備を固定資産台帳に登録する"
+    },
+    {
+      "index": 3,
+      "text": "建物附属設備の耐用年数",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax and accounting term regarding statutory useful life.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Domain mismatch: '建物附属設備' refers to building fixtures and systems (HVAC, plumbing, electrical, elevators). Streamlining a production line ('生産ラインの合理化') is achieved by acquiring '機械及び装置' (machinery and equipment), not building facilities.",
+      "suggested_ja": "オフィスの省エネルギー化と労働環境の改善を図るため、最新鋭の空調などの建物附属設備を導入し、固定資産台帳に登録しました。",
+      "suggested_vi": "Nhằm tiết kiệm năng lượng cho văn phòng và cải thiện môi trường làm việc, chúng tôi đã đưa vào sử dụng thiết bị gắn liền với nhà cửa tối tân như hệ thống điều hòa và đăng ký vào sổ tài sản cố định.",
+      "suggested_en": "To improve office energy efficiency and the work environment, we installed state-of-the-art building facilities such as HVAC systems and recorded them in the fixed asset register."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural corporate accounting expression for calculating depreciation based on statutory useful lives.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logical dialogue flow between accounting team members discussing asset ledger entry and statutory depreciation rules.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f7df75b5c75e0d57504ec6efbf144ea303763751209550a7dca8775f0c63b9e4",
+    "validated_at": "2026-10-01T01:34:31.120339+00:00"
+  }
+}

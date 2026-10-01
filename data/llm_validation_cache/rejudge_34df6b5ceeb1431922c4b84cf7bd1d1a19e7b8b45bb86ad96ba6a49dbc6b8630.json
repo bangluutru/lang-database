@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "The Japanese text, collocations, accounting terminology, and English translations are highly natural, accurate, and pedagogically sound. However, the Vietnamese translation contains a recurring error translating 繰延資産 as 'tài sản hoàn lại'.",
+  "issues": [
+    {
+      "component": "translations",
+      "code": "TRANSLATION_ERROR",
+      "detail": "Vietnamese translation renders '繰延資産' (deferred assets) as 'tài sản hoàn lại' (refundable assets) instead of 'chi phí trả trước dài hạn / chi phí chờ phân bổ' or 'tài sản hoãn lại'."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "1f2cb6d8d7b92eb99c5db0d2e509e87a6997b6d1a0f9c2a8435735e0e411dc0f",
+    "validated_at": "2026-10-01T01:35:00.049028+00:00"
+  }
+}

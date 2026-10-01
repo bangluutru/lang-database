@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000156",
+  "term": "支払手数料",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple components show evidence of template-generated artifacts: collocation predicates that do not natively attach to account names ('精算する'), duplicate tautological Japanese ('適正な...適正に', '適正に整合している'), and raw dictionary glosses embedded in Vietnamese translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "支払手数料を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking commission or fee expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "支払手数料の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reviewing GL or trial balance balances during closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "支払手数料を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An account title itself is not directly collated; rather, its details or voucher amounts are collated against statements.",
+      "suggested_text": "支払手数料の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "支払手数料を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Expenses are settled as '経費を精算する' or '立替金を精算する'; the account title '支払手数料' does not take '精算する' as a natural predicate.",
+      "suggested_text": "支払手数料として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is acceptable, but the Vietnamese translation copies the raw dictionary gloss with a slash ('phí dịch vụ thanh toán / hoa hồng phải trả'), which is unnatural in running prose.",
+      "suggested_ja": "月末の帳簿照合において、支払手数料の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán và số dư chi phí hoa hồng, phí dịch vụ có phát sinh chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for commission expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavily templated and stylistically redundant ('適正な...適正に'). Lacks contextual authenticity typical of actual financial reporting.",
+      "suggested_ja": "不動産売買仲介や業務委託に伴う支払手数料は、契約内容に基づいて当期の費用として適正に計上されています。",
+      "suggested_vi": "Chi phí hoa hồng môi giới phát sinh từ giao dịch bất động sản và ủy thác nghiệp vụ đã được hạch toán thỏa đáng vào chi phí kỳ này căn cứ theo hợp đồng.",
+      "suggested_en": "Commission fees incurred for real estate brokerage and outsourced operations have been properly recognized as expenses for the current period based on contractual terms."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is awkward and redundant in Japanese corporate speech ('整合している' alone or '突合が取れている' is standard). Speaker A's prompt also lacks clear reference points for the discrepancy.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、銀行の引落手数料と支払手数料の計上額に差異は出ていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có chênh lệch nào giữa phí ngân hàng đã trích nợ và chi phí hoa hồng/dịch vụ đã hạch toán không?",
+        "en": "In this month's closing, are there any discrepancies between the deducted bank charges and the recorded commission expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "銀行明細と補助元帳を突合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sao kê ngân hàng với sổ phụ và xác nhận mọi khoản mục đều khớp hoàn toàn.",
+        "en": "I have reconciled the bank statements with the subsidiary ledger and confirmed that all figures match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation in Example 0 and the base definition mechanically pastes a slash-separated dictionary string into flowing prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "57706918bb610023b156640142c12e9b19a2509b1f84dfab2a0495c500fc6166",
+    "validated_at": "2026-10-01T01:36:28.924746+00:00"
+  }
+}

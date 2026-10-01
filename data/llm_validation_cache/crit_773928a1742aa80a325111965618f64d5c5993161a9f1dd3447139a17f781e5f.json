@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000132",
+  "term": "免税事業者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a major factual tax law misconception in collocation #2 ('免税事業者の登録を受ける' does not exist in Japanese tax law) and awkward predicate-object collocations in example sentences ('売上高を判定し', '免税事業者の登録状況').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "免税事業者に該当する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and practical business phrasing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "免税事業者を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Grammatically unnatural to treat the person/entity as the direct object of 判定する; the status or classification is judged (免税事業者に該当するか判定する / 納税義務を判定する).",
+      "suggested_text": "免税事業者からの仕入れ"
+    },
+    {
+      "index": 2,
+      "text": "免税事業者の登録を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Critical tax law error: there is no registration system to become a tax-exempt business. Registration exists solely for becoming a qualified invoice issuer (適格請求書発行事業者), which renders one a taxable entity.",
+      "suggested_text": "免税事業者を選択する"
+    },
+    {
+      "index": 3,
+      "text": "免税事業者の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate tax practice regarding base period thresholds.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「売上高を判定し」 is unnatural Japanese. Sales amounts are calculated (算定する) or verified (確認する), and based on that figure, status is judged.",
+      "suggested_ja": "消費税法上の基準期間における課税売上高を算定した結果、自社が免税事業者に該当することを確認しました。",
+      "suggested_vi": "Sau khi tính toán doanh thu chịu thuế trong kỳ tính thuế căn cứ theo luật thuế tiêu dùng, chúng tôi đã xác nhận công ty mình thuộc diện doanh nghiệp được miễn nghĩa vụ nộp thuế tiêu dùng.",
+      "suggested_en": "Upon calculating taxable sales for the base period under the Consumption Tax Act, we confirmed that our company qualifies as a tax-exempt business operator."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「免税事業者であるかどうかの登録状況」 incorrectly suggests an official registry for tax-exempt operators. Businesses investigate whether partners are registered as qualified invoice issuers or remain tax-exempt.",
+      "suggested_ja": "インボイス制度の導入に伴い、主要な取引先が免税事業者であるかどうか、適格請求書発行事業者の登録状況を調査しました。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ hóa đơn hợp lệ (invoice), chúng tôi đã khảo sát tình trạng đăng ký đơn vị phát hành hóa đơn hợp lệ của các đối tác chính để xác định liệu họ có phải là doanh nghiệp được miễn nghĩa vụ nộp thuế hay không.",
+      "suggested_en": "Following the introduction of the qualified invoice system, we checked the invoice issuer registration status of key business partners to determine whether they remain tax-exempt business operators."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Authentic dialogue reflecting practical procurement procedures under Japan's invoice system.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0a3536bd87b16d3883351e68a80f88003005c6a0916f2eb164f93afff72fe85e",
+    "validated_at": "2026-10-01T01:39:45.735720+00:00"
+  }
+}

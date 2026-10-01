@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000033",
+  "term": "総合課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain errors: the input confusingly merged 総合課税 (individual income aggregate progressive taxation) with corporate tax filings (決算申告) and hometown tax donation incentives (地域貢献・控除上限額).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総合課税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「利用する」 is inappropriate for a statutory taxation scheme. In tax practice, taxpayers choose or elect comprehensive taxation.",
+      "suggested_text": "総合課税を選択する"
+    },
+    {
+      "index": 1,
+      "text": "総合課税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise tax terminology.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "総合課税を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「活用する」 sounds like a promotional buzzword. A tax method is applied, reported under, or calculated by.",
+      "suggested_text": "総合課税で確定申告を行う"
+    },
+    {
+      "index": 3,
+      "text": "総合課税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and tax expression indicating an income category subject to comprehensive taxation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Hallucinatory template confusing comprehensive income taxation (所得税の総合課税) with hometown tax donations (ふるさと納税) or regional contributions. Comprehensive taxation aggregates various personal incomes (salary, real estate, dividends, etc.) under progressive rates, and has nothing to do with 'regional contribution'.",
+      "suggested_ja": "配当所得について申告不要制度ではなく総合課税を選択し、配当控除の適用を受けることにしました。",
+      "suggested_vi": "Đối với thu nhập từ cổ tức, tôi đã quyết định chọn chế độ tính thuế lũy tiến tổng hợp thay vì chế độ miễn kê khai để được hưởng khấu trừ cổ tức.",
+      "suggested_en": "Regarding dividend income, we decided to opt for comprehensive taxation instead of the non-declaration system to apply the dividend tax credit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The phrase '控除上限額を試算' conflates 総合課税 with donation ceiling calculations (ふるさと納税). In real tax practice, taxpayers simulate whether comprehensive taxation (総合課税) or separate taxation (申告分離課税) yields a lower total tax liability.",
+      "suggested_ja": "株式の配当金について総合課税と申告分離課税の税額を試算した結果、総合課税の方が有利であることが判明しました。",
+      "suggested_vi": "Sau khi tính toán thử số tiền thuế từ cổ tức cổ phiếu giữa phương pháp tính thuế tổng hợp và tính thuế riêng rẽ theo tờ khai, kết quả cho thấy phương pháp tính thuế tổng hợp có lợi hơn.",
+      "suggested_en": "After simulating the tax amounts on stock dividends under comprehensive taxation versus separate self-assessment taxation, comprehensive taxation proved to be more advantageous."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Major tax domain contradiction: '決算申告' refers to corporate tax return filings (法人税申告), whereas '総合課税' (vs. 分離課税) is an individual income tax (所得税) framework under Japanese tax law. Corporations do not file under 総合課税.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員報酬以外の不動産所得と配当所得について、総合課税で確定申告を行う方針でよろしいですか。",
+        "vi": "Đối với thu nhập từ bất động sản và cổ tức ngoài thù lao ban giám đốc, chúng ta chốt phương án kê khai quyết toán thuế theo chế độ tính thuế lũy tiến tổng hợp chứ ạ?",
+        "en": "Regarding the real estate and dividend income besides executive remuneration, are we aligned on filing the final tax return under comprehensive taxation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧問税理士による税額シミュレーションでも、総合課税を選択した方が税負担を抑えられるとの見解でした。",
+        "vi": "Vâng, kết quả mô phỏng số thuế từ chuyên gia thuế cố vấn cũng cho thấy việc chọn tính thuế tổng hợp sẽ giảm bớt được gánh nặng thuế.",
+        "en": "Yes, the tax simulation by our advisory tax accountant also indicated that choosing comprehensive taxation minimizes the tax burden."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The core terminology translations ('Comprehensive taxation' / 'chế độ tính thuế lũy tiến tổng hợp') are accurate, but the example/dialogue contents were factually corrupted."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ab224224eb6a6cd28e116edb51323391b176f4b4281d6e2eaf69fb00145e1f61",
+    "validated_at": "2026-10-01T01:37:58.169959+00:00"
+  }
+}

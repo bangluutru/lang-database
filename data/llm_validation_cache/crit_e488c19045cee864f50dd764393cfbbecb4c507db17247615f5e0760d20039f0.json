@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000037",
+  "term": "合計所得金額",
+  "overall_decision": "rewrite",
+  "summary_reason": "法人税概念（別表四、決算申告、費用・税務調整）と所得税・住民税概念（合計所得金額）が混同された重大な事実誤認（DOMAIN_FACTUAL_ERROR）および不自然な述語結合が多数存在します。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "合計所得金額に算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「合計所得金額」は所得税・住民税において各所得金額を合算した判定用の総額概念（繰越控除前）であり、個別の項目を「〜に算入する」とは言いません（個別の損益は「総収入金額」や「必要経費」に算入します）。",
+      "suggested_text": "合計所得金額を計算する"
+    },
+    {
+      "index": 1,
+      "text": "合計所得金額に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税務実務上、不算入の対象となるのは「益金／損金」（法人税）または「総収入金額／必要経費」（所得税）であり、「合計所得金額に不算入とする」という表現は用いられません。",
+      "suggested_text": "合計所得金額を見積もる"
+    },
+    {
+      "index": 2,
+      "text": "合計所得金額の調整を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "合計所得金額は各種所得の計算結果を合算した機械的な集計値・基準値であるため、「調整を行う」という使われ方は不自然です。各種控除の適用要件などの「判定」に用いるのが標準的です。",
+      "suggested_text": "合計所得金額を判定する"
+    },
+    {
+      "index": 3,
+      "text": "合計所得金額に加算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税務申告において「合計所得金額に加算する」という言い方はせず、所得区分ごとの収入や所得を合算します。",
+      "suggested_text": "合計所得金額が基準を超える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "致命的な税務知識の混同があります。「別表四（所得の金額の計算に関する明細書）」は法人税申告書の様式ですが、「合計所得金額」は所得税・地方税法上の個人所得（基礎控除や配偶者控除等の判定基準）の概念であり、法人税申告の別表四で処理する対象ではありません。",
+      "suggested_ja": "配偶者控除および基礎控除の適用判定を行うため、納税者本人の合計所得金額の見積額を算定しました。",
+      "suggested_vi": "Để xác định điều kiện áp dụng giảm trừ gia cảnh cho người phối ngẫu và giảm trừ bản thân, chúng tôi đã tính toán số tiền tổng thu nhập ước tính của người nộp thuế.",
+      "suggested_en": "We estimated the taxpayer's gross total income amount to determine eligibility for the spousal deduction and basic deduction."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「合計所得金額の算入漏れ」という表現は税法実務上不自然です。通常は「売上・収入の計上漏れ」または「申告所得の計上漏れ」と表現します。",
+      "suggested_ja": "住宅ローン控除等の適用要件を満たすかどうか、過年度の合計所得金額が上限値を超えていないか確認しました。",
+      "suggested_vi": "Chúng tôi đã kiểm tra xem tổng thu nhập các năm trước có vượt mức trần hay không để đảm bảo đáp ứng các điều kiện khấu trừ thuế khoản vay mua nhà.",
+      "suggested_en": "We confirmed whether prior-year gross total income amounts exceeded the threshold to verify eligibility for the housing loan tax deduction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「決算申告」は通常法人の決算・確定申告を指しますが、「合計所得金額」は所得税（個人の確定申告や年末調整）の控除判定に用いる概念であり、用語の適用領域が矛盾しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員個人の確定申告にあたり、配偶者控除の適用可否を判定するための合計所得金額は算出できましたか。",
+        "vi": "Trong việc lập tờ khai thuế thu nhập cá nhân của giám đốc, bạn đã tính toán xong tổng thu nhập để xác định khả năng áp dụng giảm trừ người phối ngẫu chưa?",
+        "en": "For the executive's individual tax return, have you calculated the gross total income amount to determine eligibility for the spousal deduction?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、給与所得と不動産所得を合算して合計所得金額を確定させ、控除要件を満たすことを確認しました。",
+        "vi": "Vâng, tôi đã tổng hợp thu nhập từ tiền lương và thu nhập từ bất động sản để chốt tổng thu nhập, đồng thời xác nhận đáp ứng đủ điều kiện giảm trừ.",
+        "en": "Yes, I aggregated employment and real estate income to finalize the gross total income amount and confirmed that it satisfies the deduction requirements."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳の「hợp nhất」（連結）は企業グループの連結決算（consolidation）を連想させ誤解を生むため、「tổng số tiền thu nhập trước khi trừ chuyển lỗ」等、所得税の各種所得の合算であることを明確にすべきです。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bc3eb338caf8c931eea9f13f1149338636edf1b4bf6ab078b20b5fb34a70f2bb",
+    "validated_at": "2026-10-01T01:38:04.249796+00:00"
+  }
+}

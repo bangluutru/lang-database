@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000123",
+  "term": "適格請求書発行事業者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Identified a substantive tax law factual error in Example 1 confusing base-period taxable sales (課税事業者判定) with invoice issuer registration (適格請求書発行事業者登録), along with an unnatural collocation predicate in Collocation 1 and awkward syntax in the dialogue response.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "適格請求書発行事業者に該当する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and standard expression in corporate tax compliance to describe whether an entity qualifies or falls under this category.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "適格請求書発行事業者を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The entity itself ('事業者') is not judged/determined directly; rather, its qualification status ('該当性') or registration status is judged, or an action like application ('登録申請を行う') is performed.",
+      "suggested_text": "適格請求書発行事業者の該当性を判定する"
+    },
+    {
+      "index": 2,
+      "text": "適格請求書発行事業者の登録を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Direct statutory phrasing from Article 57-2 of the Japanese Consumption Tax Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "適格請求書発行事業者の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax legal terminology.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Taxable sales in the base period determine whether a business is a taxable business (課税事業者), not whether it is a registered qualified invoice issuer (適格請求書発行事業者), which strictly requires an application to and registration by the competent tax office.",
+      "suggested_ja": "適格請求書発行事業者の登録を受けるため、所轄税務署長に対して速やかに登録申請書を提出しました。",
+      "suggested_vi": "Để được công nhận là doanh nghiệp phát hành hóa đơn đạt chuẩn, chúng tôi đã nhanh chóng nộp đơn đăng ký lên chi cục thuế quản lý trực tiếp.",
+      "suggested_en": "In order to become a registered qualified invoice issuer, we promptly submitted an application for registration to the competent district tax office."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate reflection of actual business practices post-October 2023 invoice system introduction.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase '登録番号および適格請求書発行事業者の公表サイトにてステータスを確認済みです' is syntactically awkward ('登録番号および...サイトにて確認'). In practice, one checks the registration number against the National Tax Agency's official search site.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規取引先の選定にあたり、先方が適格請求書発行事業者に該当するかどうかの確認は取れていますか。",
+        "vi": "Trong việc lựa chọn đối tác mới, anh/chị đã xác nhận được đối tác có thuộc diện doanh nghiệp phát hành hóa đơn đạt chuẩn hay chưa?",
+        "en": "In selecting the new vendor, have we confirmed whether they are a registered qualified invoice issuer?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先方から受領した登録番号をもとに、国税庁の公表サイトで有効な事業者であることを確認済みです。",
+        "vi": "Vâng, dựa trên mã số đăng ký nhận được từ đối tác, tôi đã kiểm tra trên trang thông tin công khai của Tổng cục Thuế và xác nhận họ là doanh nghiệp hợp lệ.",
+        "en": "Yes, based on the registration number received from them, I have verified their active status on the National Tax Agency publication website."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "In example 1, the English translation omits an article/pluralization ('registered qualified invoice issuer' should be 'a registered qualified invoice issuer')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "287de228147238b2c80d1b1cb412ab491285b1da2debac884872dc864eb4df3c",
+    "validated_at": "2026-10-01T01:39:35.917646+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000061",
+  "term": "小規模企業共済等掛金控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain error in the dialogue: applied an individual income tax deduction (所得控除) to a corporate tax filing (決算申告). Additionally, the Vietnamese translation inaccurately reduced the statutory category strictly to iDeCo.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "小規模企業共済等掛金控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural phrasing in tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "小規模企業共済等掛金控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for receiving or qualifying for this tax deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "小規模企業共済等掛金控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation when calculating statutory contribution limits (e.g., iDeCo caps).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "小規模企業共済等掛金控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage regarding statutory qualification requirements.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural Japanese sentence for individual tax filing (確定申告).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard administrative context for attaching proof documents to a tax return.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "小規模企業共済等掛金控除 is strictly an individual income tax deduction (所得控除) for individuals (applied in personal 確定申告 or 年末調整). Referring to it under 決算申告 (corporate tax return) is a fundamental tax domain error. Furthermore, required documentation is a 払込証明書 (certificate of payment from SMRJ or NPFA), not a 税理士の確認書.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の年末調整における小規模企業共済等掛金控除の証明書類は回収できていますか。",
+        "vi": "Anh/chị đã thu thập đủ chứng từ giảm trừ phí đóng quỹ tương hỗ doanh nghiệp nhỏ (bao gồm cả iDeCo) cho đợt quyết toán thuế cuối năm của ban giám đốc chưa?",
+        "en": "Have we collected the supporting certificates for the deduction for small enterprise mutual aid premiums for the executives' year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、中小機構とiDeCoの掛金払込証明書が揃いましたので、控除額の計算を進めます。",
+        "vi": "Vâng, chúng tôi đã nhận đủ giấy chứng nhận đóng tiền từ SMRJ và iDeCo, nên sẽ tiến hành tính toán số tiền giảm trừ ngay.",
+        "en": "Yes, we have gathered the premium payment certificates from both SMRJ and iDeCo, so we will proceed with calculating the deduction amounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation in meaning_vi and examples unilaterally equates the entire term to 'iDeCo' (quỹ hưu trí tự nguyện), completely omitting the primary statutory element: 'tiền đóng quỹ tương hỗ doanh nghiệp nhỏ' (Small Enterprise Mutual Aid / 小規模企業共済)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2453d41136b055aac733e112eec95e2b52d3501bfc9282b0b5c0d62c060fb4d1",
+    "validated_at": "2026-10-01T01:38:27.279498+00:00"
+  }
+}

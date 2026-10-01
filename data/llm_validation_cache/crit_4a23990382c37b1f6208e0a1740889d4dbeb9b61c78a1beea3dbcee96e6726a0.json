@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000070",
+  "term": "繰延資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Key collocations lacked domain-essential operations ('償却' instead of inappropriate predicates '照合する' and '精算する'), Example 2 was an empty rhetorical template, and Dialogue Turn B used unnatural collocations ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰延資産を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing/capitalizing deferred assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "繰延資産の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when checking trial balance or ledger balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "繰延資産を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles vouchers or ledger balances ('残高を照合する'), but pairing the asset itself with '照合する' is unnatural. The most fundamental accounting action for deferred assets is amortization ('償却').",
+      "suggested_text": "繰延資産を償却する"
+    },
+    {
+      "index": 3,
+      "text": "繰延資産を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Deferred assets are not '精算' (settled/cleared like advances or travel expenses); they are amortized ('償却する') or written off/derecognized.",
+      "suggested_text": "繰延資産の未償却残高"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and feasible in month-end internal controls, though slightly broad.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stilted template redundancy with '適正な...' and '適正に処理いたしました'. It lacks concrete professional accounting substance regarding what was actually done (e.g., capitalization, amortization period).",
+      "suggested_ja": "会社法および会計基準に則り、支出した創立費を繰延資産として計上し、5年間で均等償却することといたしました。",
+      "suggested_vi": "Tuân thủ Luật Doanh nghiệp và các chuẩn mực kế toán, chúng tôi đã ghi nhận chi phí thành lập phát sinh vào chi phí hoãn lại (chi phí trả trước dài hạn) và tiến hành phân bổ đều trong vòng 5 năm.",
+      "suggested_en": "In accordance with the Companies Act and accounting standards, we capitalized the incurred incorporation expenses as deferred assets and decided to amortize them straight-line over five years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合していることを確認いたしました' is tautological and awkward Japanese ('整合' does not collocate naturally with '適正に'). '一致していることを確認いたしました' is the authentic business formulation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、繰延資産の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí trả trước dài hạn có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the deferred asset entries for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ cái phụ rồi, xác nhận mọi thứ đều khớp hoàn toàn và không có vấn đề gì.",
+        "en": "I have already reconciled the supporting vouchers with the subsidiary ledger and confirmed that everything matches without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English ('Deferred assets') and Vietnamese ('chi phí trả trước dài hạn chờ phân bổ') are standard accounting equivalents."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3a3256e1ab65d7d5bde067ec7a3632ab56653c19a580bca1fcf34234bba62b90",
+    "validated_at": "2026-10-01T01:34:50.887468+00:00"
+  }
+}

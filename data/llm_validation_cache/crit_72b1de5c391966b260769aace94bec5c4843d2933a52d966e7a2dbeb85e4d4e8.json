@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000089",
+  "term": "電子署名",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文および対話文において、「電子署名」を勘定科目や計上項目と誤認した極めて不自然な会計テンプレート文が使用されており、致命的な事実誤認と意味的破綻（SEMANTIC_MISMATCH / DOMAIN_FACTUAL_ERROR）が生じているため全面的に差し替える必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電子署名を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「電子署名を進める」はやや漠然としており、業務では「付与する」「導入する」「取り交わす」などが自然です。",
+      "suggested_text": "電子署名を付与する"
+    },
+    {
+      "index": 1,
+      "text": "電子署名を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "契約締結フロー等で電子署名の手続きを終える文脈として実用性があります。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "電子署名の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内マニュアルや取引先との契約実務において自然に使われる表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "電子署名を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "署名自体を見直すというより、運用体制やツールの見直しを指すのが自然です。",
+      "suggested_text": "電子署名の運用を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "電子署名は契約締結・認証手段であり、帳簿照合で「計上内容や残高」が発生することは会計・実務上あり得ません。機械的なテンプレート流用による重大な破綻です。",
+      "suggested_ja": "契約書の電子署名が完了次第、速やかに法務部および総務部へ共有してください。",
+      "suggested_vi": "Ngay sau khi hoàn tất ký chữ ký điện tử vào hợp đồng, vui lòng chia sẻ nhanh chóng cho phòng Pháp chế và phòng Tổng vụ.",
+      "suggested_en": "As soon as the electronic signature on the contract is completed, please promptly share it with the Legal and General Affairs Departments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "電子署名は会計基準に則って決算で「処理」する勘定科目や会計取引ではありません。事実誤認です。",
+      "suggested_ja": "社内規程に則り、一定金額以上の契約締結時には代表権者の電子署名を付与することになっています。",
+      "suggested_vi": "Theo quy chế nội bộ, khi ký kết hợp đồng từ một giá trị nhất định trở lên, bắt buộc phải có chữ ký điện tử của người đại diện theo pháp luật.",
+      "suggested_en": "In accordance with internal regulations, the representative's electronic signature must be affixed when executing contracts above a certain amount."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "電子署名を月次決算で「計上」し「補助元帳と照合」するという設定は会計実務上完全に破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方に送付した業務委託契約書ですが、先方の電子署名はもう完了していますか。",
+        "vi": "Hợp đồng ủy thác dịch vụ đã gửi cho đối tác thì đối tác đã hoàn tất ký chữ ký điện tử chưa?",
+        "en": "Regarding the service agreement sent to the client, have they completed the electronic signature yet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先ほど先方代表者の電子署名が完了した旨の通知を確認いたしました。",
+        "vi": "Vâng, tôi vừa xác nhận được thông báo rằng người đại diện của đối tác đã hoàn tất việc ký chữ ký điện tử.",
+        "en": "Yes, I just confirmed the notification that the client's representative has completed the electronic signature."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳自体（chữ ký điện tử / Electronic signature）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "13a84523bb8e66b859dfdb2652c6c626307f0fb6371c7ffa6f3dd0fd1c3927c1",
+    "validated_at": "2026-10-01T01:42:24.753977+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000002",
+  "term": "損益計算書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences are natural and technically accurate, but the dialogue contains a conceptual domain mismatch where cash flow analysis (キャッシュ増減要因) is conflated with income statement review (損益計算書).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "損益計算書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for preparing/drafting an income statement.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "損益計算書を開示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate governance and financial disclosure collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "損益計算書を承認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate corporate procedure denoting board or general meeting approval of financial statements.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "損益計算書を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard financial analysis expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and factually aligned with Japanese corporate statutory reporting procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic enterprise IR/accounting wording regarding reconciliation between disclosure notes and financial figures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks specifically about the income statement (損益計算書), but Speaker B responds with 'キャッシュ増減要因' (cash fluctuation factors), which conceptually belongs to the Cash Flow Statement (キャッシュ・フロー計算書). In an income statement review, the analysis centers on profit/loss factors (利益増減要因) or revenue/expense items.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の損益計算書について、各区分の増減分析と開示数値の確認は完了しましたか。",
+        "vi": "Về báo cáo kết quả hoạt động kinh doanh kỳ này, việc phân tích biến động từng chỉ mục và đối chiếu số liệu công bố đã hoàn tất chưa?",
+        "en": "Regarding this term's income statement, have the variance analysis for each section and the verification of disclosure figures been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、前年同期比較および主要な利益増減要因の検証を終え、取締役会への報告資料を取りまとめました。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc so sánh với cùng kỳ năm trước cũng như kiểm tra các nguyên nhân biến động lợi nhuận chủ yếu, và đã tổng hợp xong tài liệu báo cáo hội đồng quản trị.",
+        "en": "Yes, we have finished the year-on-year comparison and the verification of key profit variance drivers, and prepared the reporting materials for the board of directors."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations accurately render the standard terminology of 損益計算書."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "84e198ff0d2ff1216a144658d9c8139715da63d6f9c3418b52f7730f56d0a380",
+    "validated_at": "2026-10-01T01:32:48.620450+00:00"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000155",
+  "term": "ドライコンテナ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the unnatural application of accounting terminology ('計上', '残高', '処理') to a physical logistics item ('ドライコンテナ'). This creates semantically incompatible phrases and examples that would not be used in a real Japanese business context. The dialogue also suffers from this issue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ドライコンテナを手配する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "ドライコンテナに積み込む",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "ドライコンテナの温度を管理する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Dry containers typically do not require temperature management. This phrase is more applicable to reefer containers.",
+      "suggested_text": "ドライコンテナを輸送する"
+    },
+    {
+      "index": 3,
+      "text": "ドライコンテナを返却する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "It is unnatural to 'account for' or have a 'balance' for a physical dry container in accounting. Containers are assets, but not typically 'accounted for' in this manner in monthly book reconciliation for discrepancies in 'entries or balances'. This phrasing is more suited for financial accounts or inventory values, not the physical container itself.",
+      "suggested_ja": "月末の棚卸において、ドライコンテナの在庫数や状態に差異がないか精査します。",
+      "suggested_vi": "Khi kiểm kê cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem số lượng hoặc tình trạng tồn kho của container chở hàng khô có chênh lệch không.",
+      "suggested_en": "During month-end inventory, we carefully examine whether there are discrepancies in the quantity or condition of dry containers in stock."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'processing a dry container' in closing entries is unnatural. You process the *cost* of using or acquiring containers, or their depreciation, but not the container itself as an accounting entry in this way.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてドライコンテナ関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến container chở hàng khô trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed dry container-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The dialogue uses accounting terms ('計上内容', '差異') in an unnatural context for a physical object like a dry container. It sounds like a direct translation of an accounting concept applied to an inappropriate noun. Speaker B's response is also too formal and generic for a simple check.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次報告で、ドライコンテナの利用状況に問題はありませんでしたか。",
+        "vi": "Trong báo cáo hàng tháng này, tình hình sử dụng container chở hàng khô có vấn đề gì không?",
+        "en": "Were there any issues with the dry container usage in this month's report?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、特に問題はなく、すべて計画通りに手配・運用されています。",
+        "vi": "Vâng, không có vấn đề gì đặc biệt, tất cả đều được sắp xếp và vận hành theo đúng kế hoạch.",
+        "en": "No, there were no particular issues, and everything has been arranged and operated as planned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9e9af3415a2e05301860422e518fdb885a1b13fa7d8ca38b21cf81ce1cef3ae8",
+    "validated_at": "2026-10-01T01:56:43.896344+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000180",
+  "term": "日欧EPA",
+  "overall_decision": "rewrite",
+  "summary_reason": "Some collocations are unnatural for a major international treaty like an EPA, requiring revision for semantic accuracy and natural usage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "日欧EPAを締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for agreements.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "日欧EPAを更新する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "EPA is a treaty, not a contract that is 'renewed' in the typical sense. It might be amended or renegotiated, but '更新する' is unnatural.",
+      "suggested_text": "日欧EPAを見直す"
+    },
+    {
+      "index": 2,
+      "text": "日欧EPAを解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "While technically possible to withdraw from a treaty, '解除する' is more commonly used for contracts or agreements with a termination clause. For a major international treaty like an EPA, terms like '脱退する' (withdraw) or '破棄する' (abrogate/denounce) are more appropriate, though less common in general business context.",
+      "suggested_text": "日欧EPAから脱退する"
+    },
+    {
+      "index": 3,
+      "text": "日欧EPAの条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible business communication. The use of '基本合意に達したため' as a precursor to '締結' is natural.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a plausible business communication. The coordination with the legal department for risk assessment is natural.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue flows naturally and the response is logical. The term is introduced organically.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "27c7aa6a2c9ecd81048c0f5ef0c9c073c873706b8948cb9c1143f7375ae9ce97",
+    "validated_at": "2026-10-01T01:57:06.513277+00:00"
+  }
+}

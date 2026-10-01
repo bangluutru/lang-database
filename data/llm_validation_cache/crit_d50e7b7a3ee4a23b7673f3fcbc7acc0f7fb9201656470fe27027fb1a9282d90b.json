@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000131",
+  "term": "材料費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains unnatural predicates ('材料費を精算する' is semantically incorrect for raw material costs), repetitive boilerplate templating in Example 1 ('適正な...適正に'), and unnatural phrasing in Dialogue B ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "材料費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking material costs.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "材料費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end trial balance checks, though '内訳' or '発生額' is also common.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "材料費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates records, ledgers, or purchase orders against data ('受払簿と照合する', '材料費の明細を照合する'), or calculates/allocates material costs ('材料費を計算する', '材料費を配賦する').",
+      "suggested_text": "材料費を配賦する"
+    },
+    {
+      "index": 3,
+      "text": "材料費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算' applies to advance expenses, travel expenses, or accounts between parties. Direct manufacturing material costs are not '精算'-ed; they are purchased, consumed, and calculated.",
+      "suggested_text": "材料費を計算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard month-end closing check in cost accounting.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Heavy, hollow templating with repetitive wording ('適正な会計基準...適正に処理いたしました'). Real accounting Japanese refers to '会計基準および社内規程に則り' and describes actual variance, valuation, or allocation.",
+      "suggested_ja": "会計基準および原価計算規程に則り、当期の決算における材料費の払出単価を適正に算定いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán và quy chế tính giá thành, chúng tôi đã xác định chính xác đơn giá xuất kho chi phí nguyên vật liệu trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with accounting standards and cost accounting regulations, we accurately calculated the issue unit price for material costs in this fiscal closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is awkward and redundant phrasing. Native business Japanese uses '整合性が取れている' or '差異がないことを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、材料費の計上額に予算との差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền chi phí nguyên vật liệu ghi nhận có phát sinh chênh lệch so với ngân sách không?",
+        "en": "In this month's monthly closing, are there any variances between recorded material costs and the budget?"
+      },
+      {
+        "speaker": "B",
+        "ja": "出庫伝票と補助元帳を照合済みで、目立った差異なく整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu phiếu xuất kho với sổ phụ và xác nhận số liệu khớp đúng, không có chênh lệch đáng kể.",
+        "en": "We have reconciled the issue slips with the subsidiary ledger and confirmed they align without notable variances."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "89849e903f0295cd21e31c74e3a15b7e87cf5adacd69010d7cd4f711f275b52a",
+    "validated_at": "2026-10-01T01:35:59.135295+00:00"
+  }
+}

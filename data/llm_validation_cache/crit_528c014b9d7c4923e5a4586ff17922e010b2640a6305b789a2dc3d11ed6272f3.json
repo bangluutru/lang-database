@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000097",
+  "term": "固定負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "固定負債は貸借対照表の大区分項目であるため、「精算する」「照合する」などの動詞との組み合わせに不自然さが見られます。また、例文・会話文が具体性に欠ける機械的テンプレート（「適正に整合」等の不自然な表現を含む）であるため、実務で最重要となる「1年内振替」を軸とした表現へのリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定負債を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「固定負債」は貸借対照表の表示区分（大区分）であり、個別の勘定科目ではないため、「〜を計上する」よりも「固定負債に計上する（分類する）」とするのが自然です。",
+      "suggested_text": "固定負債に計上する"
+    },
+    {
+      "index": 1,
+      "text": "固定負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務上、期末や月次で長期借入金や社債等の残高確認を行う際に頻出する自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "固定負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "負債そのものを照合するのではなく、負債の「残高」や「明細」を照合するのが正確な会計実務コロケーションです。",
+      "suggested_text": "固定負債の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "固定負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "固定負債（長期借入金や退職給付引当金等）に対して「精算する」という動詞は用いません。通常は「返済する」「償還する」または「流動負債へ振り替える」を用います。",
+      "suggested_text": "固定負債から流動負債へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "月次・期末照合作業における文脈として文法・意味ともに成立しており、実務表現として許容範囲です。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準...適正に処理いたしました」と「適正」が重複しており、中身のない汎用テンプレート文担っています。ワン・イヤー・ルールに基づく流動負債への振替など、固定負債特有の実務に即した文に改修すべきです。",
+      "suggested_ja": "1年以内に返済期日が到来する長期借入金については、固定負債から流動負債への振替処理を行いました。",
+      "suggested_vi": "Đối với các khoản vay dài hạn đến hạn thanh toán trong vòng một năm, chúng tôi đã thực hiện bút toán kết chuyển từ nợ dài hạn sang nợ ngắn hạn.",
+      "suggested_en": "For long-term borrowings due within one year, we performed a reclassification entry from non-current liabilities to current liabilities."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bの「適正に整合している」という日本語表現は不自然な重言（重複表現）です。「整合している」「差異がない」とするのが自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、固定負債から流動負債への振替処理は完了していますか。",
+        "vi": "Trong đợt quyết toán kỳ này, việc kết chuyển từ nợ dài hạn sang nợ ngắn hạn đã hoàn thành chưa?",
+        "en": "Has the reclassification from non-current liabilities to current liabilities been completed for this fiscal closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、返済予定表と照合の上、1年内返済予定長期借入金への振替を完了しております。",
+        "vi": "Vâng, chúng tôi đã đối chiếu với lịch trả nợ và hoàn tất việc kết chuyển sang các khoản nợ dài hạn đến hạn trả trong vòng một năm.",
+        "en": "Yes, after reconciling with the repayment schedule, we completed the transfer to current portion of long-term borrowings."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "「固定負債」に対する Non-current liabilities および nợ dài hạn は正確な公定訳語です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c84b24925a749d9f1ff8cbb29f3f54bd18589f14565cb5535cb503819fcf186e",
+    "validated_at": "2026-10-01T01:35:20.425520+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000145",
+  "term": "旅費交通費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 2 requires a more specific object ('明細を照合する'), Example 1 suffers from repetitive LLM-template phrasing ('適正な会計基準...適正に処理'), and Dialogue Turn B needs to remove the pleonastic '適正に整合している'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "旅費交通費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recording travel and transportation expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "旅費交通費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural operational phrase when checking the ledger balance of the travel expense account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "旅費交通費を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reconciles specific breakdowns, vouchers, or ledger amounts (明細, 伝票, 計上額) rather than the abstract account title directly.",
+      "suggested_text": "旅費交通費の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "旅費交通費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Ubiquitous and authentic corporate phrase referring to settling/reimbursing travel expenses.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Realistic month-end reconciliation context; grammar and domain phrasing are natural.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is not standard Japanese accounting terminology (standard is 一般に公正妥当と認められる会計基準 or simply 会計基準), and paired with '適正に処理いたしました' it creates an artificial, repetitive LLM templating pattern.",
+      "suggested_ja": "社内旅費規程および会計基準に則り、当期の決算において旅費交通費を適切に処理いたしました。",
+      "suggested_vi": "Tuân thủ quy chế công tác phí nội bộ và chuẩn mực kế toán, chúng tôi đã xử lý thỏa đáng chi phí đi lại và công tác trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with internal travel expense regulations and accounting standards, we have properly processed travel and transportation expenses in this term's settlement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is pleonastic and unnatural in Japanese business communication; '差異はなく整合している' or simply '整合していることを確認いたしました' is native usage.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、旅費交通費の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí đi lại và công tác có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the travel and transportation expense entries for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、差異はなく整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ, xác nhận không có chênh lệch và mọi thứ đều khớp.",
+        "en": "I have already reconciled the supporting vouchers with the subsidiary ledger and confirmed that there are no discrepancies and everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1f49df61956f01d81b06f7d39f8c0d29eac95e9d203e3b8c4129953ba05cb274",
+    "validated_at": "2026-10-01T01:36:15.695520+00:00"
+  }
+}

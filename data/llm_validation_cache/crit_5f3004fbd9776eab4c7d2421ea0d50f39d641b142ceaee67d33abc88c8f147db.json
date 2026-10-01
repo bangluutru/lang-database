@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000084",
+  "term": "未払費用",
+  "overall_decision": "rewrite",
+  "summary_reason": "Identified accounting predicate mismatches ('未払費用を精算する'), stylistically repetitive templated sentences ('適正な...適正に'), unnatural dialogue phrasing ('適正に整合している'), and raw slash-delimited dictionary definitions in Vietnamese translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未払費用を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording accrued expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "未払費用の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and accurate expression in reconciliation and closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "未払費用を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Accrued expenses are typically substantiated by reconciling their breakdown/ledger with contracts/timesheets rather than directly '照合する'. More authentic accounting collocations include reconciling the breakdown or reversing the accrual.",
+      "suggested_text": "未払費用の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "未払費用を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances/expense expense claims (仮払金・経費). Accrued expenses are an accrual liability account, typically settled (支払う), reversed (洗い替える/振戻しを行う), or resolved.",
+      "suggested_text": "未払費用を洗い替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation copies the slash-separated dictionary definition ('chi phí phải trả / chi phí dồn tích') directly into running prose, resulting in an unnatural sentence.",
+      "suggested_ja": "月末の帳簿照合において、未払費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Trong quá trình đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán và số dư chi phí phải trả có phát sinh chênh lệch hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for accrued expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains redundant template phrasing ('適正な...適正に処理いたしました') and lacks domain specificity. In accounting, accrued expenses are booked based on the accrual basis of accounting.",
+      "suggested_ja": "発生主義の原則および社内規程に則り、当期に帰属する費用について未払費用を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ nguyên tắc kế toán dồn tích và quy chế nội bộ, chúng tôi đã trích trước chi phí phải trả một cách hợp lý cho các khoản chi phí thuộc về kỳ này.",
+      "suggested_en": "In accordance with the accrual principle and internal regulations, we properly recognized accrued expenses for costs attributable to the current fiscal term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合していることを確認いたしました' is tautological and awkward business Japanese ('整合している' or '一致している' suffices).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未払費用の残高に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư chi phí phải trả có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies in the balance of accrued expenses for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận tất cả các số liệu đều khớp.",
+        "en": "We have already reconciled the supporting vouchers with the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations suffer from dictionary glossary leaking (using 'chi phí phải trả / chi phí dồn tích' with slash in actual running sentences)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "378efce077d161f6b36679bee29423f283902772137f2580216f1156a2bd5574",
+    "validated_at": "2026-10-01T01:35:07.588817+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000001",
+  "term": "見積書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains an egregious factual hallucination conflating a commercial quotation with statutory shareholder convocation notices, and the dialogue and collocation #2 use stilted phrasing ('発送', '推敲').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "見積書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard collocation in corporate and accounting contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "見積書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business usage when submitting an estimate to a client or internal approver.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "見積書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「発送する」 is primarily used for shipping goods or mass-mailing physical notices; commercial documents like quotations are typically 「送付する」 or 「発行する」.",
+      "suggested_text": "見積書を送付する"
+    },
+    {
+      "index": 3,
+      "text": "見積書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Formal and appropriate in procurement, audit, and internal control contexts.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Mailing a quotation (見積書) within a statutory deadline for a shareholders' meeting or board meeting is factually nonsensical. This is an artifact of templated text intended for convocation notices (招集通知).",
+      "suggested_ja": "クライアントからの要望に基づき、システム導入費用の見積書を作成して送付いたしました。",
+      "suggested_vi": "Dựa trên yêu cầu từ khách hàng, chúng tôi đã lập và gửi bản báo giá chi phí triển khai hệ thống.",
+      "suggested_en": "Based on the client's request, we prepared and sent the quotation for the system implementation costs."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage illustrating internal control and audit trail requirements for procurement documents.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Using 「推敲」 (literary polishing) and 「発送」 for an estimate is stilted and unnatural. Real business dialogues revolve around client requests, cost calculations, review/approval, and sending (送付).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "A社から依頼されていた改修工事の見積書は、もう準備できましたか。",
+        "vi": "Bản báo giá cho công trình cải tạo mà công ty A yêu cầu đã chuẩn bị xong chưa?",
+        "en": "Is the quotation for the renovation work requested by Company A ready yet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、部長の承認をいただきましたので、本日中に先方へメールで送付いたします。",
+        "vi": "Vâng, tôi đã nhận được phê duyệt của trưởng phòng nên sẽ gửi qua email cho phía đối tác trong ngày hôm nay.",
+        "en": "Yes, I have received the department manager's approval, so I will send it to them by email today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions and passing example translations are accurate, but the rewritten elements required native, context-appropriate translations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d7006d76a6e30461f6181ced06bbf337672cd25f306a020df04f0a682d9634ac",
+    "validated_at": "2026-10-01T01:40:57.597574+00:00"
+  }
+}

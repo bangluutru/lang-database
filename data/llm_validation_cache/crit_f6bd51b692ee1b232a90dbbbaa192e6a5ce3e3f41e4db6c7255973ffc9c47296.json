@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000067",
+  "term": "敷金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a mechanically templated example sentence and dialogue devoid of authentic business context, alongside an unnatural collocation ('敷金を照合する'). Rewrites are required to reflect realistic accounting workflows such as leasehold payment, refund, and restoration deduction.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "敷金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and accurate accounting expression for booking leasehold deposits as an asset.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "敷金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for verifying balance sheet balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "敷金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not reconcile the deposit entity itself ('敷金を照合する'), but rather lease deposit balances ('敷金残高を照合する') or pays a deposit ('敷金を差し入れる'). '敷金を差し入れる' is standard corporate/accounting terminology.",
+      "suggested_text": "敷金を差し入れる"
+    },
+    {
+      "index": 3,
+      "text": "敷金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural for settling leasehold deposits upon contract termination or renewal.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and passable for a monthly reconciliation context, although monthly variations in leasehold deposits are infrequent.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a hollow, generic boilerplate template ('適正な会計基準および社内規程に則り...') with zero domain-specific substance. It fails the educational test of practical workplace Japanese.",
+      "suggested_ja": "新オフィスの賃貸借契約締結に伴い差し入れた敷金は、投資その他の資産に計上してください。",
+      "suggested_vi": "Khoản tiền đặt cọc đã nộp theo hợp đồng thuê văn phòng mới cần được hạch toán vào mục đầu tư và tài sản khác.",
+      "suggested_en": "Please record the leasehold deposit paid upon signing the new office lease agreement under investments and other assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange sounds like a mechanical template. In real operations, leasehold deposits are discussed during office relocations, lease terminations, or restoration deductions, not routine monthly discrepancies. Furthermore, '適正に整合している' is unnatural and redundant corporate jargon.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "旧オフィスの解約に伴い、敷金の返還手続きと原状回復費用の精算はどうなっていますか。",
+        "vi": "Liên quan đến việc chấm dứt hợp đồng văn phòng cũ, thủ tục hoàn lại tiền cọc và quyết toán chi phí hoàn trả mặt bằng hiện thế nào rồi?",
+        "en": "Regarding the cancellation of the old office lease, what is the status of the deposit refund procedure and the restoration fee settlement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "オーナー側から精算書を受領しましたので、敷金返還額の確認が取れ次第、仕訳処理を行います。",
+        "vi": "Tôi đã nhận được bảng quyết toán từ phía chủ nhà, ngay khi xác nhận xong số tiền cọc được hoàn lại, tôi sẽ tiến hành định khoản.",
+        "en": "We received the settlement statement from the landlord, and as soon as we confirm the refund amount, we will process the journal entry."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the provided candidate text, though Vietnamese 'tiền đặt cọc thuê trụ sở' is slightly narrow compared to general 'tiền đặt cọc thuê văn phòng/mặt bằng' (acceptable)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9db7eed0f9473b5c2230effeb92cc32979badec9d0afbfd0aeacaefd8c4755dd",
+    "validated_at": "2026-10-01T01:34:47.936930+00:00"
+  }
+}

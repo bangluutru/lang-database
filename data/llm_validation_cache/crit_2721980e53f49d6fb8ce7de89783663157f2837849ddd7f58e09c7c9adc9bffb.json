@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000136",
+  "term": "税込経理方式",
+  "overall_decision": "rewrite",
+  "summary_reason": "Both example sentences and the dialogue suffered from template-generated semantic errors ('方式の残高', '方式を処理する', and artificial questioning) that do not reflect genuine Japanese corporate accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税込経理方式を採用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate accounting terminology when adopting the tax-inclusive accounting method.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "税込経理方式を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and common collocation for applying this method to tax/accounting treatments.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "税込経理方式を変更する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used when switching between tax-inclusive and tax-exclusive accounting methods.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "税込経理方式で経理処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational description of bookkeeping using the tax-inclusive method.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An accounting method (方式) cannot have a 'balance' (残高). '税込経理方式の残高' is semantically invalid in bookkeeping.",
+      "suggested_ja": "当社では税込経理方式を採用しているため、決算時に納付すべき消費税額を未払消費税等として計上します。",
+      "suggested_vi": "Vì công ty chúng tôi áp dụng phương pháp hạch toán bao gồm thuế, nên vào thời điểm quyết toán, số thuế tiêu thụ phải nộp sẽ được hạch toán vào khoản thuế tiêu thụ chưa nộp.",
+      "suggested_en": "Since our company adopts the tax-inclusive accounting method, the consumption tax payable is recorded as accrued consumption taxes at year-end closing."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'方式を適正に処理いたしました' is grammatically awkward; transactions are processed *according to* a method ('方式により処理する'), not the method itself being processed. Furthermore, '適正な' and '適正に' are redundant in the same sentence.",
+      "suggested_ja": "中小企業の会計指針に則り、当期の消費税等の処理については税込経理方式を適用いたしました。",
+      "suggested_vi": "Tuân thủ theo hướng dẫn kế toán cho doanh nghiệp vừa và nhỏ, chúng tôi đã áp dụng phương pháp hạch toán bao gồm thuế cho việc xử lý thuế tiêu thụ kỳ này.",
+      "suggested_en": "In accordance with accounting guidelines for SMEs, we applied the tax-inclusive accounting method for consumption tax processing in the current fiscal period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '税込経理方式の計上内容に差異は発生していませんか' is a synthetic template question that no accountant would ask. A realistic discussion touches on tax burdens, method comparison, or year-end adjustment procedures.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当社は免税事業者から課税事業者に転換しましたが、税込経理方式のまま継続しても問題ありませんか。",
+        "vi": "Công ty chúng ta đã chuyển từ đối tượng miễn thuế sang nộp thuế, liệu tiếp tục duy trì phương pháp hạch toán bao gồm thuế thì có vấn đề gì không?",
+        "en": "Our company has transitioned from a tax-exempt entity to a taxable enterprise; is there any issue with continuing to use the tax-inclusive accounting method?"
+      },
+      {
+        "speaker": "B",
+        "ja": "税法上は税込経理方式の継続も認められますが、損益の適切な把握のため税抜経理方式への変更も検討すべきかと思います。",
+        "vi": "Theo luật thuế thì việc tiếp tục phương pháp gộp thuế vẫn được chấp nhận, nhưng tôi nghĩ chúng ta cũng nên cân nhắc chuyển sang phương pháp bóc tách thuế để nắm bắt lãi lỗ chính xác hơn.",
+        "en": "Under tax law, continuing with the tax-inclusive method is permissible, but I believe we should also consider switching to the tax-exclusive method to accurately capture profit and loss."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the term are acceptable, though 'phương pháp hạch toán bao gồm thuế' is slightly more standard in Vietnamese tax practice than adding 'gộp chung'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "64a66a6551e1d0e68a2467dde1427aa8e28244cf1eb9f64a780d8707bf935fc9",
+    "validated_at": "2026-10-01T01:39:49.444210+00:00"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "decision": "rewrite",
+  "reason": "The collocations are unnatural and the examples do not use the target term. The dialogue and translations are acceptable, but the core components for teaching the term are flawed.",
+  "issues": [
+    {
+      "component": "collocations",
+      "code": "UNNATURAL_PREDICATE",
+      "detail": "The predicates for collocations are unnatural. '競合他社の動向を決議する' and '競合他社を報告する' are not natural Japanese expressions. '競合他社に関する届出書を提出する' is also unnatural; one would submit a notification *about* something, not *to* a competitor."
+    },
+    {
+      "component": "examples",
+      "code": "NATURAL",
+      "detail": "The provided examples do not contain the term '競合他社', making them irrelevant to the learning object."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "d1ad91dbecbea4b13f3cb8a53aa6e6bfbe25f50a513cdf8b21391e5c8adeb3b0",
+    "validated_at": "2026-10-01T01:52:46.556464+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000156",
+  "term": "キャンペーン",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a semantic mismatch in how 'キャンペーン' is used in an accounting context. 'キャンペーン' refers to the marketing activity itself, not an accounting item that can be '計上' or have a '残高'. The examples and dialogue need to refer to 'キャンペーン関連費用' (campaign-related expenses) or 'キャンペーンによる売上' (sales from campaigns) to be natural and correct in a business accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "キャンペーンを実施する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 1,
+      "text": "キャンペーンを企画する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 2,
+      "text": "キャンペーンの効果を検証する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 3,
+      "text": "キャンペーンを展開する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "キャンペーン (marketing campaign) is an activity, not an accounting entry or balance. You cannot '計上' (book/record) a campaign itself, nor does it have a '残高' (balance). You would book the *costs* or *revenue* related to a campaign.",
+      "suggested_ja": "月末の帳簿照合において、キャンペーン関連費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của các chi phí liên quan đến chiến dịch khuyến mại truyền thông có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for marketing campaign-related expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'キャンペーンを処理する' (to process a campaign) in an accounting context is unnatural. You process the *accounting entries* or *costs* related to a campaign, not the campaign itself.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてキャンペーン関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến chiến dịch khuyến mại truyền thông trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed marketing campaign-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same semantic mismatch as the examples. 'キャンペーンの計上内容' is unnatural. One would refer to the '費用' (expenses) or '売上' (sales) related to a campaign.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、キャンペーン関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán chi phí liên quan đến chiến dịch khuyến mại không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for campaign-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9665a1dc8277cedd85e453a866eb4782c5c2981af8f2b9a8dd0c8f5f16672dbf",
+    "validated_at": "2026-10-01T01:52:51.826943+00:00"
+  }
+}

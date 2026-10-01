@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000163",
+  "term": "ターミナルハンドリングチャージ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations and example sentences are natural and accurate. However, the dialogue lacks conversational continuity, as Speaker B's response does not directly address Speaker A's specific inquiry about the 'arrangement status' of the charge, making it feel disconnected.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ターミナルハンドリングチャージを支払う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "ターミナルハンドリングチャージを請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "ターミナルハンドリングチャージを算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "ターミナルハンドリングチャージの発生を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately reflects a common scenario in international trade. The translations are also accurate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately reflects a common business objective in logistics. The translations are also accurate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' (手配状況) of THC, implying whether it has been paid or is being processed. Speaker B's response about contacting customs brokers and forwarders, and completing document checks for import declaration, does not directly answer the 'arrangement status' of the charge itself. It describes the general customs clearance process, not specifically the handling of the THC payment or its status. The connection is weak and indirect.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、ターミナルハンドリングチャージの支払いは完了していますでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, phí nâng hạ và bốc dỡ tại bến cảng (THC) đã được thanh toán xong chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, has the Terminal Handling Charge (THC) been paid?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、すでに支払い手続きは完了しており、通関業者と乙仲にはその旨を伝達済みです。現在、輸入申告の最終確認に入っております。",
+        "vi": "Vâng, thủ tục thanh toán đã hoàn tất, và chúng tôi đã thông báo cho công ty thông quan và đại lý vận chuyển. Hiện tại, chúng tôi đang trong giai đoạn kiểm tra cuối cùng cho tờ khai nhập khẩu.",
+        "en": "Yes, the payment process has already been completed, and we have informed the customs broker and forwarder. We are currently in the final confirmation stage for the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dd8af21833413d9f94699aead39abe4df53b3d98a0abf0c9d8e0dc95780deee9",
+    "validated_at": "2026-10-01T01:56:49.258433+00:00"
+  }
+}

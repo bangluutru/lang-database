@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000057",
+  "term": "送り状価格",
+  "overall_decision": "rewrite",
+  "summary_reason": "While understandable, several collocations, example sentences, and the dialogue exhibit unnatural or overly formal phrasing that would not be typical in a Japanese corporate setting. The concept itself is valid, but the presentation needs refinement for naturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "送り状価格を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Calculating invoice price is a natural action."
+    },
+    {
+      "index": 1,
+      "text": "送り状価格を改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "You improve 'profitability' or 'efficiency', not directly 'invoice price'. Invoice price is a metric, not something you 'improve' in itself. You might 'optimize' or 'adjust' it.",
+      "suggested_text": "送り状価格を最適化する"
+    },
+    {
+      "index": 2,
+      "text": "送り状価格を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Analyzing invoice price is a natural action."
+    },
+    {
+      "index": 3,
+      "text": "送り状価格の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Setting a target value for invoice price is natural."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '送り状価格の数値' is redundant and unnatural. '送り状価格' itself is a numerical value. Also, 'モニタリングしています' is a bit stiff for a general business context; '把握しています' or '確認しています' might be more natural depending on the nuance.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で送り状価格を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi trị giá ghi trên hóa đơn thương mại hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors invoice value / invoice price on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Similar to the first example, '送り状価格は目標値を上回り' is slightly unnatural. While understandable, it's more common to say '送り状価格が目標値を上回った' or '送り状価格が目標を達成した'. The current phrasing feels a bit like a direct translation. Also, '確認されました' is a bit passive and formal for a direct statement of achievement.",
+      "suggested_ja": "当期の送り状価格は目標値を上回り、収益性と資本効率の向上が確認できました。",
+      "suggested_vi": "Trị giá ghi trên hóa đơn thương mại kỳ này đã vượt giá trị mục tiêu, xác nhận khả năng sinh lời và hiệu quả sử dụng vốn đã được nâng cao.",
+      "suggested_en": "This term's invoice value / invoice price exceeded the target value, confirming an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question is overly formal and verbose for a typical business conversation. '今期の財務分析において' is a bit clunky. '送り状価格の推移と改善目標に対する進捗はいかがですか' is grammatically correct but sounds like it's read from a script. Speaker B's response is okay but could be more direct.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析ですが、送り状価格の推移と改善目標への進捗はどうなっていますか？",
+        "vi": "Về phân tích tài chính kỳ này, diễn biến trị giá ghi trên hóa đơn thương mại và tiến độ đạt mục tiêu cải thiện thế nào rồi?",
+        "en": "Regarding this term's financial analysis, what's the trend in invoice value and progress towards improvement targets?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前四半期と比較して着実に改善傾向にあり、期末の経営目標は達成できる見込みです。",
+        "vi": "So với quý trước, chúng tôi đang cho thấy xu hướng cải thiện ổn định và dự kiến sẽ đạt được mục tiêu kinh doanh cuối kỳ.",
+        "en": "Compared to the previous quarter, we're showing a steady improvement trend, and we expect to achieve our year-end business targets."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ae548c71fe4a939d885300282847545287c19c6c647ee23d3e6d5fd2daae0457",
+    "validated_at": "2026-10-01T01:54:37.684107+00:00"
+  }
+}

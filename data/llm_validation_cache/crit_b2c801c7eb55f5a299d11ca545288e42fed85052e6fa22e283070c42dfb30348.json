@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000176",
+  "term": "税引前当期純利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe accounting domain errors: The candidate treated '税引前当期純利益' (a P&L profit indicator) as if it were a ledger account with balances (残高) requiring voucher reconciliation (照合・精算). Collocations, examples, and dialogue must all be rewritten around profit calculation, extraordinary item impact, and forecast variance analysis.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税引前当期純利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in financial statements and earning reports (e.g., 特別損失を反映した税引前当期純利益を計上する).",
+      "suggested_text": "税引前当期純利益を計上する"
+    },
+    {
+      "index": 1,
+      "text": "税引前当期純利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Profit before income taxes is a P&L subtotal/flow figure, not a ledger account with a balance (残高).",
+      "suggested_text": "税引前当期純利益を算出する"
+    },
+    {
+      "index": 2,
+      "text": "税引前当期純利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles accounts or documents, not a calculated profit tier. Analyzing variance or trends is appropriate.",
+      "suggested_text": "税引前当期純利益の増減要因を分析する"
+    },
+    {
+      "index": 3,
+      "text": "税引前当期純利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to clearing advances or settling expenses, never to net profit before taxes.",
+      "suggested_text": "税引前当期純利益を確保する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A P&L profit subtotal does not have '残高' (balance) verified in month-end ledger reconciliation. This is an unnatural hallucinated template.",
+      "suggested_ja": "有価証券売却益などの特別利益を反映した結果、税引前当期純利益は前年同期比で15%増加しました。",
+      "suggested_vi": "Kết quả sau khi phản ánh các khoản lợi nhuận bất thường như lãi bán chứng khoán, lợi nhuận kế toán trước thuế đã tăng 15% so với cùng kỳ năm trước.",
+      "suggested_en": "Reflecting extraordinary income such as gains on sales of investment securities, profit before income taxes increased by 15% year-on-year."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'税引前当期純利益を適正に処理いたしました' is empty bureaucratic template language. Profits are calculated, reported, or secured, not 'processed'.",
+      "suggested_ja": "固定資産の減損損失を計上したため、税引前当期純利益は期初計画を大幅に下回る見込みです。",
+      "suggested_vi": "Do ghi nhận lỗ tổn thất tài sản cố định, lợi nhuận kế toán trước thuế dự kiến sẽ thấp hơn đáng kể so với kế hoạch đầu kỳ.",
+      "suggested_en": "Due to recording an impairment loss on fixed assets, profit before income taxes is expected to fall significantly below the initial budget."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about discrepancies in EBT entries, and Speaker B talks about matching vouchers with subsidiary ledgers. EBT is calculated from operating profit plus/minus non-operating and extraordinary items; it is not reconciled directly against vouchers and subsidiary ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "第3四半期の決算短信に向けて、税引前当期純利益の着地見込みはどうなっていますか。",
+        "vi": "Hướng tới báo cáo tóm tắt tài chính quý 3, ước tính kết quả lợi nhuận kế toán trước thuế hiện như thế nào rồi?",
+        "en": "Looking ahead to the Q3 financial summary, what is the outlook for profit before income taxes?"
+      },
+      {
+        "speaker": "B",
+        "ja": "営業外費用の増加を為替差益で相殺できたため、通期予想に対して80%の進捗率を維持しております。",
+        "vi": "Do đã bù đắp được chi phí ngoài hoạt động tăng bằng lãi chênh lệch tỷ giá, chúng ta vẫn duy trì tỷ lệ hoàn thành 80% so với dự báo cả năm.",
+        "en": "Since the increase in non-operating expenses was offset by foreign exchange gains, we are maintaining an 80% progress rate against the full-year forecast."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term translations are correct; only the generated sentences and collocations suffered from severe accounting concept misuse."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3440f06d99ff3f73fd4c08e25a5ee32a39c10d733dd41dcee7248b7be8c941c9",
+    "validated_at": "2026-10-01T01:36:56.350163+00:00"
+  }
+}

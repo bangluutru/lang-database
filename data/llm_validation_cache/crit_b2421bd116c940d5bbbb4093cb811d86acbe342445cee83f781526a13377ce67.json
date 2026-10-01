@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000085",
+  "term": "混合税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the misunderstanding of '混合税' as a typical accounting entry rather than a customs duty. This leads to unnatural collocations and scenarios in examples and dialogue. The concept of '計上内容' and '残高' for a customs duty is inappropriate. The suggested rewrites aim to align the usage with the actual nature of compound duty in a trade and accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "混合税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "混合税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "混合税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "混合税の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "混合税 (compound duty) is a customs tariff, not an accounting entry that would have '計上内容' (accounting entry details) or '残高' (balance). It's paid upon import, not '計上' in the same way as a typical expense or revenue item. The concept of '帳簿照合' (book reconciliation) for '混合税' in this context is unnatural.",
+      "suggested_ja": "輸入申告書と納税証明書を照合し、混合税の納付額に差異がないか精査します。",
+      "suggested_vi": "Đối chiếu tờ khai nhập khẩu và chứng từ nộp thuế, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong số tiền thuế hỗn hợp đã nộp hay không.",
+      "suggested_en": "We reconcile the import declaration and tax payment certificate to carefully examine whether there are any discrepancies in the amount of compound duty paid."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "While grammatically correct, '混合税を適正に処理いたしました' sounds somewhat generic and templated. '処理' is too broad for a specific tax. It's more natural to refer to its payment or accounting treatment in a more specific way.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において混合税の計上および納付を適切に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán và nộp thuế hỗn hợp một cách thích đáng trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately accounted for and paid the compound duty in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question about '混合税の計上内容に差異' is problematic for the same reason as example 0. Compound duty is a customs duty, not an accounting entry that would typically have '計上内容' or '差異' in the context of monthly closing in this manner. Speaker B's response is also generic and doesn't directly address a customs duty issue.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入貨物について、混合税の納付額に問題はありませんでしたか？",
+        "vi": "Về hàng hóa nhập khẩu tháng này, số tiền thuế hỗn hợp đã nộp có vấn đề gì không?",
+        "en": "Regarding this month's imported goods, were there any issues with the amount of compound duty paid?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、輸入申告書と納税証明書を照合し、すべて適正に納付されていることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu tờ khai nhập khẩu và chứng từ nộp thuế, xác nhận rằng tất cả đã được nộp đúng quy định.",
+        "en": "Yes, I have reconciled the import declarations and tax payment certificates, confirming that all payments were made properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5c02286fd4b8a6e01e8541b33d73177651a3a84319bb779c84fddc1cfe7f96b5",
+    "validated_at": "2026-10-01T01:55:12.386061+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000025",
+  "term": "不動産所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue mistakenly frames '不動産所得' (an individual tax category) as an accounting entry booked in a monthly corporate close ('月次決算で計上'), and the Vietnamese term translation conflates rental income with real estate business trading.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不動産所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard tax accounting phrasing for calculating real estate income.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "不動産所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate tax classification terminology distinguishing from business income (事業所得) or capital gains (譲渡所得).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "不動産所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing under the aggregate taxation regime (総合課税).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "不動産所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic practical tax return preparation phrasing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting/tax phrasing adhering to National Tax Agency procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Technically correct application of aggregate taxation under the Japanese Income Tax Act.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Under Japanese tax law, '不動産所得' is strictly an individual income tax category (所得税) primarily derived from leasing real property. It is not an accounting entry booked in monthly corporate closing ('月次決算で不動産所得の計上内容'). Bookkeeping records revenues like '賃貸料収入' or '不動産収入', while '不動産所得' is calculated for annual tax filing (確定申告).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "オーナー様の確定申告に向けて、不動産所得の計算や必要経費の集計状況はいかがですか。",
+        "vi": "Tình hình tính toán thu nhập từ bất động sản và tổng hợp chi phí cần thiết cho kỳ quyết toán thuế của chủ sở hữu thế nào rồi?",
+        "en": "How is the progress on calculating the real estate income and aggregating deductible expenses for the owner's tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "賃貸借契約書や修繕費の領収書と補助元帳を照合済みで、順調に進んでおります。",
+        "vi": "Chúng tôi đã đối chiếu hợp đồng thuê và biên lai chi phí sửa chữa với sổ cái phụ, mọi việc đang diễn ra thuận lợi.",
+        "en": "We have reconciled the lease agreements and repair receipts with the subsidiary ledgers, and everything is progressing smoothly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Japanese tax law, '不動産所得' specifically refers to income from leasing real property (cho thuê bất động sản), whereas 'thu nhập từ kinh doanh bất động sản' implies real estate business/trading (which falls under 事業所得 or 譲渡所得)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b9d0d75ecf0789e37d2ad7c7b5850e13dfcf0f3b4ba8fd373aaa32053ba108a5",
+    "validated_at": "2026-10-01T01:37:45.311708+00:00"
+  }
+}

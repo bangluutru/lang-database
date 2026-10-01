@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000030",
+  "term": "プロフォーマインボイス",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core examples and dialogue incorrectly apply the term 'プロフォーマインボイス' to contexts (shareholder meetings, internal control evidence) where it is not used. The term is specific to international trade and customs. The collocations themselves are fine, but the usage in context is fundamentally flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "プロフォーマインボイスを作成する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "プロフォーマインボイスを提出する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "プロフォーマインボイスを発送する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "プロフォーマインボイスを受領する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Proforma invoices are used in international trade for customs and payment, not for shareholder or board meetings. The context is completely incorrect.",
+      "suggested_ja": "輸出取引の準備として、税関手続きに必要なプロフォーマインボイスを取引先に発送いたしました。",
+      "suggested_vi": "Để chuẩn bị cho giao dịch xuất khẩu, chúng tôi đã gửi hóa đơn chiếu lệ (Proforma Invoice) cần thiết cho thủ tục hải quan đến đối tác kinh doanh.",
+      "suggested_en": "In preparation for the export transaction, we dispatched the proforma invoice, which is necessary for customs procedures, to our business partner."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "While proforma invoices are important, archiving them as 'evidence of internal control and compliance' in this general sense is an overstatement and misrepresents their primary function in trade. They are typically archived as part of transaction records, not specifically for internal control/compliance in the way, for example, a financial audit report would be.",
+      "suggested_ja": "輸入通関手続きのため、取引先から受領したプロフォーマインボイスを関係部署で確認し、適切に保管しています。",
+      "suggested_vi": "Để làm thủ tục thông quan nhập khẩu, bộ phận liên quan đã kiểm tra và lưu trữ hóa đơn chiếu lệ (Proforma Invoice) nhận được từ đối tác kinh doanh một cách thích hợp.",
+      "suggested_en": "For import customs procedures, the relevant department has confirmed and appropriately stored the proforma invoice received from our business partner."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue implies a proforma invoice is prepared for a 'meeting', which is incorrect. Proforma invoices are for trade transactions.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の輸出船積みに向けて、プロフォーマインボイスの準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị hóa đơn chiếu lệ (Proforma Invoice) cho chuyến hàng xuất khẩu tuần tới thế nào rồi?",
+        "en": "How is the preparation of the proforma invoice for next week's export shipment coming along?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終確認を終え、上長の承認も得られましたので、本日中に取引先へ発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc xác nhận nội dung cuối cùng và nhận được sự chấp thuận của cấp trên, vì vậy chúng tôi sẽ sắp xếp gửi cho đối tác kinh doanh trong hôm nay.",
+        "en": "We have completed the final content review and obtained supervisor approval, so we will arrange to dispatch it to the client today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ca985dc8fcac51fbd54cc200b5f754740063f3991861b667df96e7943312e5de",
+    "validated_at": "2026-10-01T01:54:09.988036+00:00"
+  }
+}

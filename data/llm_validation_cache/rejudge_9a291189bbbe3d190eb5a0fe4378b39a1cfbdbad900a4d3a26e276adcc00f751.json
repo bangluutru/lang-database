@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "Examples, dialogue, and translations are of professional quality and realistic for corporate accounting/audit. However, '法人税等調整額を取り崩す' confuses a P&L adjustment account with a balance sheet asset/reserve and should be corrected.",
+  "issues": [
+    {
+      "component": "collocations",
+      "code": "UNNATURAL_PREDICATE",
+      "detail": "「法人税等調整額を取り崩す」 is technically unnatural. As a P&L line item (income statement account), 法人税等調整額 is not '取り崩す' (which applies to balance sheet accounts like 繰延税金資産 or 引当金). Consider replacing it with 「法人税等調整額を戻し入れる」 or 「法人税等調整額を損益計算書に反映する」."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "48caef126c49f02d455e4dfff702c9a96aff5c4c620b376cce2ec84d88eb46b0",
+    "validated_at": "2026-10-01T01:37:02.404904+00:00"
+  }
+}

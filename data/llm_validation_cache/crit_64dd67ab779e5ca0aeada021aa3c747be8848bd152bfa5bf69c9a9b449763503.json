@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-tax-000084",
+  "term": "住宅耐震改修特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and examples are natural, but the dialogue contains factual tax-domain inaccuracies ('決算申告' instead of individual '確定申告', and non-existent '税理士の確認書' instead of the statutory '住宅耐震改修証明書').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "住宅耐震改修特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional phrasing for applying a tax credit."
+    },
+    {
+      "index": 1,
+      "text": "住宅耐震改修特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common business and tax phrasing for receiving/benefiting from the deduction."
+    },
+    {
+      "index": 2,
+      "text": "住宅耐震改修特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when computing the deduction cap under Special Taxation Measures."
+    },
+    {
+      "index": 3,
+      "text": "住宅耐震改修特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Idiomatic legal/tax collocation for satisfying statutory requirements."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural Japanese usage in the context of an individual income tax return."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional sentence describing document attachment for tax filing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "住宅耐震改修特別控除 is an individual income tax credit (所得税の税額控除), so using '決算申告' (which signifies corporate financial closing/corporate tax filing) is technically inaccurate. Furthermore, the statutory required attachment is a '住宅耐震改修証明書' (certified by an architect or municipality), not a '税理士の確認書'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の所得税の確定申告における住宅耐震改修特別控除の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán và hồ sơ nộp cho khoản khấu trừ thuế đặc biệt về gia cố chống động đất cho nhà ở trong kỳ quyết toán thuế thu nhập lần này chưa?",
+        "en": "Have you compiled the calculation basis and submission documents for the special tax credit for seismic retrofitting of housing for this income tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、工事請負契約書や建築士が発行した住宅耐震改修証明書を揃えましたので、申告書への添付準備は完了しています。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ hợp đồng thi công và giấy chứng nhận gia cố chống động đất do kiến trúc sư cấp, nên việc chuẩn bị đính kèm vào tờ khai đã hoàn tất.",
+        "en": "Yes, we have gathered the construction contract and the seismic retrofit certificate issued by the architect, so preparation to attach them to the tax return is complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations accurately convey the tax concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2c700a90f5d9ff6c0086495a95a7e7c335e296b55590e75c9d5f11eb08fc0ffc",
+    "validated_at": "2026-10-01T01:38:52.754864+00:00"
+  }
+}

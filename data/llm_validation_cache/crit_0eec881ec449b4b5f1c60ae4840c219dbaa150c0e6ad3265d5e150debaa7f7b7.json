@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000040",
+  "term": "定時株主総会",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and headword translations are sound, the examples and dialogue suffer from severe semantic template hallucination, treating a corporate shareholder meeting as a financial balance/ledger entry to be reconciled during monthly closing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定時株主総会を招集する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and business terminology under the Companies Act for convening an AGM.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "定時株主総会を開催する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, widely used expression for holding an AGM.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定時株主総会で決議する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate governance phrasing for adopting resolutions at an AGM.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "定時株主総会の議事録を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate legal compliance task under Japanese corporate law.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A shareholder meeting ('定時株主総会') is a corporate governance organ/event, not an accounting account or balance. It cannot have '計上内容' (booked entries) or '残高' (ledger balance). This is a robotic template hallucination.",
+      "suggested_ja": "当社は来月下旬に開催予定の定時株主総会に向けて、招集通知および事業報告の作成を進めています。",
+      "suggested_vi": "Công ty chúng tôi đang tiến hành soạn thảo thông báo triệu tập và báo cáo kinh doanh để chuẩn bị cho Đại hội đồng cổ đông thường niên dự kiến tổ chức vào cuối tháng tới.",
+      "suggested_en": "Our company is preparing the convocation notice and business report for the Annual General Meeting of Shareholders scheduled for late next month."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'定時株主総会を適正に処理いたしました' treats an AGM as if it were a bookkeeping entry processed under accounting standards. An AGM approves the financial statements; it is not itself processed into closing entries.",
+      "suggested_ja": "当期の計算書類および剰余金の配当議案は、本日の定時株主総会において原案どおり承認可決されました。",
+      "suggested_vi": "Báo cáo tài chính kỳ này và phương án phân phối lợi nhuận đã được thông qua theo đúng tờ trình ban đầu tại Đại hội đồng cổ đông thường niên diễn ra hôm nay.",
+      "suggested_en": "The financial statements for the current term and the proposal for dividend distribution of retained earnings were approved as originally proposed at today's Annual General Meeting of Shareholders."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks whether there is a discrepancy in the 'booked entries' of the AGM during monthly closing, and Speaker B talks about reconciling subsidiary ledgers. This is a severe accounting-domain absurdity.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月開催予定の定時株主総会の招集通知ですが、監査役による監査報告書の受領状況はいかがでしょうか。",
+        "vi": "Về thông báo triệu tập Đại hội đồng cổ đông thường niên dự kiến diễn ra vào tháng tới, tình hình tiếp nhận báo cáo kiểm toán từ Ban kiểm soát thế nào rồi?",
+        "en": "Regarding the notice of convocation for next month's AGM, what is the status of receiving the audit report from the corporate auditors?"
+      },
+      {
+        "speaker": "B",
+        "ja": "本日無事に受領いたしましたので、予定通り来週早々に発送手続きへ入れます。",
+        "vi": "Hôm nay chúng tôi đã nhận được đầy đủ, vì vậy đầu tuần tới có thể tiến hành thủ tục gửi đi theo đúng kế hoạch.",
+        "en": "We received it today without issue, so we can proceed with mailing procedures early next week as scheduled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term definitions are accurate, but the example/dialogue translations inherited nonsensical domain errors from the Japanese source text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fa8c80249db0ddd5128d9f65d0339825b0d6d72cfd3014b68ca70f2a8a12c2a1",
+    "validated_at": "2026-10-01T01:41:38.478542+00:00"
+  }
+}

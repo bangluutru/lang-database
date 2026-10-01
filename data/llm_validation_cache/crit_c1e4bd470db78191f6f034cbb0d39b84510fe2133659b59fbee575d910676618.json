@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000068",
+  "term": "公的年金等控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "The object contains a severe tax domain error: assigning an individual tax deduction (公的年金等控除) to a corporate tax closing return (決算申告) in the dialogue, along with factual inaccuracies regarding tax filing mechanics in the collocations and examples.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "公的年金等控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax phrasing used when applying the public pension deduction in individual income tax calculations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "公的年金等控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural colloquial/written expression for taxpayers benefiting from this statutory deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "公的年金等控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The ceiling (上限額) is explicitly fixed by tax law (e.g., 1,955,000 JPY or adjusted based on other income), not something individually calculated. Practitioners calculate the deduction amount itself (控除額).",
+      "suggested_text": "公的年金等控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "公的年金等控除の要件を満たす",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "公的年金等控除 applies automatically as a statutory formula against miscellaneous income from public pensions. It is not an elective tax credit/deduction requiring specific eligibility tests (要件を満たす).",
+      "suggested_text": "公的年金等控除の改正内容を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriately frames the term in the context of an individual income tax return (確定申告).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax practice, 公的年金等控除 is calculated mechanically based on public pension withholding slips; there is no procedure where a taxpayer attaches separate supporting documents specifically to qualify for this deduction.",
+      "suggested_ja": "公的年金等の収入金額および他の所得金額に応じて、公的年金等控除の適用額を再計算した。",
+      "suggested_vi": "Chúng tôi đã tính toán lại mức giảm trừ thu nhập tiền lương hưu công áp dụng căn cứ theo thu nhập từ lương hưu công và các khoản thu nhập khác.",
+      "suggested_en": "We recalculated the applicable deduction for public pensions based on the public pension income amount and other income levels."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical tax domain error: '決算申告' refers to corporate tax filing (法人税申告), but 公的年金等控除 is exclusively an individual income tax (所得税) deduction. Corporations cannot have or claim public pension deductions. Furthermore, attaching a '税理士の確認書' is completely contrived.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の確定申告において、公的年金等控除の計算に年金以外の合計所得金額は反映されていますか。",
+        "vi": "Trong tờ khai quyết toán thuế thu nhập của giám đốc, việc tính toán khoản giảm trừ lương hưu công đã phản ánh tổng thu nhập ngoài lương hưu chưa?",
+        "en": "In the director's individual tax return, has the total income other than pension been reflected in the calculation of the public pension deduction?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、給与所得および不動産所得を合算した上で、控除限度額を正しく適用しております。",
+        "vi": "Vâng, sau khi cộng gộp thu nhập từ tiền lương và thu nhập từ bất động sản, chúng tôi đã áp dụng chính xác mức giảm trừ theo quy định.",
+        "en": "Yes, after aggregating employment income and real estate income, we have correctly applied the deduction limit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3e20bce92f61672152ec5aeae69dda289cdcac3bbfd875b547cebbf0e9fafffd",
+    "validated_at": "2026-10-01T01:38:32.804028+00:00"
+  }
+}

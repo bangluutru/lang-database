@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-tax-000009",
+  "term": "不課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "単語の定義自体は正確ですが、例文および会話文が汎用の決算照合テンプレートに「不課税」を無理やり代入して作成されており、「不課税の残高」といった税務実務上あり得ない概念の破綻が生じています。消費税法上の課税区分判定・コード区分実務に即した文脈への全面差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "不課税を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「不課税」は性質・税区分を表す名詞であるため、「不課税を判定する」と直接目的語にするのはやや不自然です。「不課税取引と判定する」または「不課税の判定を行う」が実務上自然です。",
+      "suggested_text": "不課税取引と判定する"
+    },
+    {
+      "index": 1,
+      "text": "不課税に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "消費税コードや会計仕訳において取引を不課税区分に振り分ける実務定型表現として自然です。"
+    },
+    {
+      "index": 2,
+      "text": "不課税を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "単体で「不課税を確認する」とすると目的語が唐突です。「不課税区分を確認する」または「不課税取引であることを確認する」とする必要があります。",
+      "suggested_text": "不課税区分を確認する"
+    },
+    {
+      "index": 3,
+      "text": "不課税として処理する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "消費税の税務処理において頻出する極めて自然な表現です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "不課税は消費税法上の取引区分（対価性のない取引等）であり、勘定科目のような「残高（balance）」は存在しません。汎用的な財務諸表照合テンプレートに当てはめたことによる明白なドメインエラーです。",
+      "suggested_ja": "消費税の確定申告に向けて、海外取引や寄付金などが不課税取引として正しく区分されているか精査します。",
+      "suggested_vi": "Để chuẩn bị cho việc quyết toán thuế tiêu dùng, chúng tôi kiểm tra kỹ lưỡng xem các giao dịch ở nước ngoài hoặc tiền quyên góp có được phân loại chính xác là giao dịch không thuộc đối tượng chịu thuế hay không.",
+      "suggested_en": "In preparation for the consumption tax return, we carefully examine whether overseas transactions, donations, and other items are correctly categorized as out-of-scope transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「不課税を適正に処理いたしました」と区分名を直接名詞目的語として処理する言い回しは不自然です。また課税区分判定は会計基準ではなく主に消費税法規に準拠します。",
+      "suggested_ja": "消費税法および社内規程に基づき、受取配当金や慶弔費について不課税取引として適正に会計処理いたしました。",
+      "suggested_vi": "Căn cứ theo Luật thuế tiêu dùng và quy chế nội bộ, chúng tôi đã xử lý kế toán đúng quy định đối với cổ tức nhận được và chi phí hiếu hỉ dưới dạng giao dịch không thuộc đối tượng chịu thuế.",
+      "suggested_en": "In accordance with the Consumption Tax Act and internal regulations, we properly processed dividend income and congratulatory/condolence payments as out-of-scope transactions."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「不課税の計上内容に差異は発生していませんか」は機械生成テンプレート特有の不自然な日本語です。消費税実務では、課税対象外（不課税）取引の判定誤りや税区分コードの登録漏れを確認する会話が交わされます。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次処理で、海外子会社からの受取配当金が不課税として正しく登録されているか確認していただけますか。",
+        "vi": "Trong đợt xử lý số liệu tháng này, anh/chị kiểm tra giúp tôi xem khoản cổ tức nhận được từ công ty con ở nước ngoài đã được hạch toán chính xác là không thuộc đối tượng chịu thuế chưa nhé.",
+        "en": "Could you please check whether the dividends received from the overseas subsidiary are correctly recorded as out-of-scope in this month's processing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑と消費税区分コードを照合済みで、不課税取引として適正に処理されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với mã phân loại thuế tiêu dùng và xác nhận rằng khoản này đã được xử lý đúng quy định là giao dịch không thuộc đối tượng chịu thuế.",
+        "en": "I have already cross-checked the vouchers with the consumption tax classification codes and confirmed that it is properly treated as an out-of-scope transaction."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語レベルの対訳（Out of scope of taxation / không thuộc đối tượng chịu thuế）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a3b297c70897ea873a66b42fc2a4a4a5996a3e1d1e0be5301981e6ea8429e3b5",
+    "validated_at": "2026-10-01T01:37:27.997113+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000011",
+  "term": "前金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate forces '前金' (a commercial term for advance money) into rigid formal accounting ledger templates (where '前払金' or '前受金' belong), features clunky and pleonastic expressions ('適正に整合している'), and contains raw glossary slashes inside the example translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "前金を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In formal accounting, the account title is 前払金 (advance payment to vendors) or 前受金 (advances received from customers). While 前金 is widely used in business, natural collocations focus on payment/receipt (前金で支払う, 前金を受け取る) or application against invoices (前金を充当する).",
+      "suggested_text": "前金で支払う"
+    },
+    {
+      "index": 1,
+      "text": "前金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in practical business management of advance payment balances, although 前払金残高 is more formal in pure accounting.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "前金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Money/advances themselves are not directly the object of 照合する; one reconciles payment records against orders/invoices (前金の入金・支払履歴を照合する) or applies them (前金を充当する).",
+      "suggested_text": "前金を充当する"
+    },
+    {
+      "index": 3,
+      "text": "前金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard for settling advance payments upon project/delivery completion.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The sentence is mechanically templated, and both the Vietnamese and English translations contain raw glossary definition slashes ('tiền thanh toán trước / tiền trả trước', 'advance payment / upfront payment').",
+      "suggested_ja": "新規取引先との契約に基づき、発注時に前金として代金の30%を支払いました。",
+      "suggested_vi": "Căn cứ theo hợp đồng với đối tác mới, chúng tôi đã thanh toán trước 30% giá trị đơn hàng khi đặt hàng.",
+      "suggested_en": "In accordance with the contract with the new vendor, we paid 30% of the purchase price as an advance payment upon placing the order."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Highly artificial corporate boilerplate with repetitive wording ('適正な...適正に'). Translation also suffers from dictionary slash-leakage.",
+      "suggested_ja": "納品が完了したため、受領済みの前金を最終請求額と相殺して精算してください。",
+      "suggested_vi": "Vì hàng đã được giao xong, vui lòng cấn trừ khoản tiền nhận trước này vào hóa đơn cuối cùng để thanh toán dứt điểm.",
+      "suggested_en": "Since delivery has been completed, please offset the advance payment received against the final invoice amount for settlement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合している' is pleonastic and unnatural in native business Japanese. Furthermore, dialogue treats '前金' as a formal ledger account rather than the standard term 前払金/前受金.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "A社への発注分ですが、契約条件通りに前金の振込は完了していますか。",
+        "vi": "Về đơn hàng cho công ty A, việc chuyển khoản tiền trả trước đã hoàn tất theo đúng điều khoản hợp đồng chưa?",
+        "en": "Regarding the order to Company A, has the advance payment been transferred as specified in the contract terms?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先週末に経理部にて送金処理を済ませ、先方からも着金の連絡をいただいております。",
+        "vi": "Vâng, phòng kế toán đã hoàn tất thủ tục chuyển tiền vào cuối tuần trước và phía đối tác cũng đã xác nhận nhận được tiền rồi ạ.",
+        "en": "Yes, the accounting department completed the transfer late last week, and the vendor has already confirmed receipt of funds."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations in examples copy-pasted the dictionary entry strings containing slashes ('/'). Both must be rewritten into fluent, context-appropriate phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d477d3719b5d8b9e8fdd766c2b1caa5427c807de063c79d012402217fb2228bf",
+    "validated_at": "2026-10-01T01:41:06.429274+00:00"
+  }
+}

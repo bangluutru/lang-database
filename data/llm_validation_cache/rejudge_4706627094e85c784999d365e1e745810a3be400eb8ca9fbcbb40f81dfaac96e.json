@@ -1,0 +1,22 @@
+{
+  "decision": "rewrite",
+  "reason": "The example sentences are entirely off-topic, discussing corporate governance instead of customs. Additionally, the Vietnamese meaning incorrectly specifies 'Japan' for a general term.",
+  "issues": [
+    {
+      "component": "examples",
+      "code": "NATURAL",
+      "detail": "The example sentences are completely unrelated to the term '税関' (Customs). They discuss shareholder meetings and board meetings, which are irrelevant."
+    },
+    {
+      "component": "translations",
+      "code": "TRANSLATION_ERROR",
+      "detail": "The Vietnamese translation for 'meaning_vi' is 'Cơ quan Hải quan Nhật Bản' which specifically mentions 'Japan'. The term '税関' is general and not limited to Japan. It should be 'Cơ quan Hải quan' or 'Hải quan'."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "78c818b2218c52fd4588b20910caec41f35f11b110befe7fc2d5863a000fc68a",
+    "validated_at": "2026-10-01T01:54:44.628489+00:00"
+  }
+}

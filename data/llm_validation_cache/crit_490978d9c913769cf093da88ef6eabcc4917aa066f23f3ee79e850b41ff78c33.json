@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-tax-000085",
+  "term": "バリアフリー改修特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term, collocations, and example sentences are sound, but the workplace dialogue contained critical domain errors confusing corporate tax filing (決算申告) with individual income tax (確定申告) and citing an inaccurate statutory document ('税理士の確認書' instead of '増改築等工事証明書'). Dialogue requires replacement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "バリアフリー改修特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural tax accounting collocation."
+    },
+    {
+      "index": 1,
+      "text": "バリアフリー改修特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural legal/tax phrasing matching statutory usage (控除を受ける)."
+    },
+    {
+      "index": 2,
+      "text": "バリアフリー改修特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocation in tax calculation."
+    },
+    {
+      "index": 3,
+      "text": "バリアフリー改修特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard statutory compliance phrasing."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and factually sound description of applying the deduction in an individual tax return."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural administrative and procedural Japanese sentence."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Two domain factual errors: 1) '決算申告' is exclusively used for corporate tax returns (法人税申告), whereas バリアフリー改修特別控除 is an individual income tax credit (所得税の住宅特定改修特別税額控除); it must be '確定申告'. 2) The statutory attachment is not '税理士の確認書', but '増改築等工事証明書' (Certificate of Renovation Work issued by an architect or inspection agency).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "お客様の確定申告におけるバリアフリー改修特別控除の計算明細と必要書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong bảng kê tính toán và các hồ sơ cần thiết cho khoản khấu trừ thuế đặc biệt cải tạo nhà barrier-free trong hồ sơ quyết toán thuế thu nhập cá nhân của khách hàng chưa?",
+        "en": "Have you organized the calculation breakdown and required documents for the client's special tax credit for barrier-free renovation in their final tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、工事請負契約書に加えて建築士が発行した増改築等工事証明書も揃いましたので、申告書への添付準備は完了しています。",
+        "vi": "Vâng, cùng với hợp đồng thi công, chúng tôi cũng đã thu thập đầy đủ Giấy chứng nhận công trình cải tạo do kiến trúc sư phát hành, nên việc chuẩn bị đính kèm vào tờ khai đã hoàn tất.",
+        "en": "Yes, along with the construction contract, we have gathered the Certificate of Renovation Work issued by the architect, so the preparations for attaching them to the tax return are complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations accurately convey the legal and practical meaning of the term."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "42b2806d36511c214f2a1917869a81122b8448b5b1b840982f698bffb849b822",
+    "validated_at": "2026-10-01T01:38:53.454397+00:00"
+  }
+}

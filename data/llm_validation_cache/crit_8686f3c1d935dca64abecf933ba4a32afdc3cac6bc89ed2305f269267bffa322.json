@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000162",
+  "term": "通貨変動サーチャージ",
+  "overall_decision": "rewrite",
+  "summary_reason": "One example sentence contains a factual error regarding the nature of CAF. The dialogue exhibits a disconnect between Speaker A's question and Speaker B's response, making it unnatural.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通貨変動サーチャージを支払う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "通貨変動サーチャージを請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "通貨変動サーチャージを算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "通貨変動サーチャージの発生を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Currency Adjustment Factor (CAF) is related to currency fluctuations, not exceeding free time for container pickup. The example sentence describes demurrage or detention charges, not CAF.",
+      "suggested_ja": "為替レートの変動が大きかったため、船社より通貨変動サーチャージが請求されました。",
+      "suggested_vi": "Do biến động tỷ giá hối đoái lớn, hãng tàu đã phát hóa đơn phụ phí biến động tỷ giá tiền tệ (CAF).",
+      "suggested_en": "Due to significant exchange rate fluctuations, the shipping line invoiced a currency adjustment factor (CAF)."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' (手配状況) of CAF, implying an action to be taken regarding CAF itself. Speaker B's response about contacting customs brokers and forwarders and completing import declaration doesn't directly address the 'arrangement status' of CAF. CAF is a charge, not something that is 'arranged' in the same way as customs clearance or contacting parties. The question and answer are disconnected.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、通貨変動サーチャージの金額は確定しましたか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, số tiền phụ phí biến động tỷ giá tiền tệ đã được xác định chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, has the amount for the currency adjustment factor been finalized?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、船社から最終的な請求書が届き、金額が確定しました。通関業者と乙仲には既に連絡済みで、輸入申告も進めています。",
+        "vi": "Vâng, chúng tôi đã nhận được hóa đơn cuối cùng từ hãng tàu và số tiền đã được xác định. Chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, và đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, we have received the final invoice from the shipping line, and the amount has been finalized. We have already contacted the customs broker and forwarder, and the import declaration is in progress."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0fbdb29ccfd437c6621611e324a2eb4bd75456f46345bea797cea97ef5b763cd",
+    "validated_at": "2026-10-01T01:56:50.412734+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000178",
+  "term": "業務引き継ぎ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how '業務引き継ぎ' (handover of duties) relates to accounting concepts like '計上' (booking/recording entries) and '残高' (balance). '業務引き継ぎ' is a process, not an accounting item itself. While the term is valid, its application in the provided examples and dialogue within an accounting context is semantically incorrect and unnatural for a professional Japanese setting. The collocations are generally fine, but the examples and dialogue require significant revision to reflect accurate accounting practices and natural Japanese usage.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務引き継ぎを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "業務引き継ぎを完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "業務引き継ぎの手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "業務引き継ぎを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "業務引き継ぎ is an action/process, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an entry) or have a '残高' (balance). The sentence attempts to treat the process itself as an accounting item, which is fundamentally incorrect in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、業務引き継ぎに伴う未処理事項や未精算金に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong các mục chưa xử lý hoặc các khoản chưa thanh toán liên quan đến việc bàn giao công việc hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in outstanding matters or unsettled payments associated with the handover of duties."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 業務引き継ぎ is a process, not something that is '処理' (processed) as an accounting item in '決算' (closing entries). You process *items related to* the handover, not the handover itself as an accounting entry. The phrasing '業務引き継ぎを適正に処理いたしました' implies the handover itself is an accounting transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において業務引き継ぎに関連する未処理事項を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các vấn đề chưa giải quyết liên quan đến việc bàn giao công việc trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed outstanding matters related to the handover of duties in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue suffers from the same fundamental accounting misunderstanding as the examples. '業務引き継ぎの計上内容' is not a valid accounting concept. Speaker A's question is based on a flawed premise, and Speaker B's response, while grammatically correct, is in a context that doesn't make sense for '業務引き継ぎ' in accounting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、業務引き継ぎに伴う未精算金や未処理の取引に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong các khoản chưa thanh toán hoặc giao dịch chưa xử lý liên quan đến việc bàn giao công việc không?",
+        "en": "In this month's financial closing, are there any discrepancies in unsettled payments or unprocessed transactions related to the handover of duties?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, after cross-referencing the supporting documents and subsidiary ledgers, we have confirmed that everything is properly reconciled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for 'meaning_vi' and 'meaning_en' are acceptable as general definitions. However, the translations within the examples and dialogue inherit the semantic errors of the Japanese sentences. The suggested rewrites for examples and dialogue will necessitate corresponding changes in their translations to maintain accuracy and naturalness."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "32a02270636650f90c5ae51f87b54d0efdd2941d68e675846f1a992092bc52fd",
+    "validated_at": "2026-10-01T01:53:16.702718+00:00"
+  }
+}

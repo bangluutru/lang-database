@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000024",
+  "term": "貿易条件",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences contain unnatural and redundant expressions. The dialogue lacks natural flow and the question/answer are disconnected. Translations need refinement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貿易条件の条件で契約する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「貿易条件の条件」は冗長で不自然。通常は「貿易条件で契約する」または「特定の貿易条件を契約に盛り込む」などと表現する。",
+      "suggested_text": "貿易条件で契約する"
+    },
+    {
+      "index": 1,
+      "text": "貿易条件の建値で取引する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「貿易条件の建値」という表現は一般的ではない。「建値」は価格の提示方法を指し、貿易条件そのものではない。通常は「特定の貿易条件に基づいた建値で取引する」または「貿易条件を定めた上で取引する」など。",
+      "suggested_text": "貿易条件を定めて取引する"
+    },
+    {
+      "index": 2,
+      "text": "貿易条件における費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "貿易条件における危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「貿易条件条件を採用しました」は冗長で不自然。「貿易条件を採用しました」または「特定の貿易条件を適用しました」が自然。",
+      "suggested_ja": "今回の海上輸送契約は、運賃と危険負担の範囲を明確にするため、特定の貿易条件を採用しました。",
+      "suggested_vi": "Hợp đồng vận tải biển lần này áp dụng các điều kiện giao dịch thương mại quốc tế cụ thể để làm rõ phạm vi chịu cước phí và rủi ro.",
+      "suggested_en": "This ocean transport contract adopted specific trade terms to clarify the division of freight costs and risk transfer."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「貿易条件建値での取引」は不自然。「貿易条件に基づいた取引」や「特定の貿易条件での取引」が適切。",
+      "suggested_ja": "特定の貿易条件に基づいた取引により、仕向港での荷揚げ費用と輸入関税は輸入者側で負担します。",
+      "suggested_vi": "Dựa trên giao dịch theo các điều kiện thương mại cụ thể, chi phí dỡ hàng tại cảng đích và thuế nhập khẩu do bên nhập khẩu chịu.",
+      "suggested_en": "Based on transactions under specific trade terms, unloading costs at the port of destination and import duties are borne by the importer."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「貿易条件の手配状況はいかがでしょうか」は、文脈が不明瞭で不自然。「貿易条件」は手配するものではなく、取り決めるもの。また、Bの回答がAの質問に直接的に答えていない。通関業者や乙仲への連絡は「貿易条件」の手配状況とは異なる。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、インコタームズ（貿易条件）の確認はできていますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, đã xác nhận Incoterms (điều kiện giao dịch thương mại) chưa?",
+        "en": "Regarding the shipment scheduled for customs clearance today, have the Incoterms (trade terms) been confirmed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、FOB条件であることを確認済みです。通関業者と乙仲への連絡も済ませており、書類の確認も完了して輸入申告に入っております。",
+        "vi": "Vâng, đã xác nhận là điều kiện FOB. Tôi cũng đã liên hệ với công ty thông quan và đại lý vận chuyển, hoàn tất kiểm tra hồ sơ và đang tiến hành khai báo nhập khẩu.",
+        "en": "Yes, it's confirmed to be FOB terms. I've already contacted the customs broker and forwarding agent, completed document checks, and we're now proceeding with the import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Vietnamese translation for 'meaning_vi' is too long and not a direct equivalent. English translation for 'meaning_en' is good but could be more precise. Example sentences' translations need to be updated to reflect suggested Japanese changes and improve naturalness."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "aacf51b42811354028ee2a2d55fcbeb73be623c02e507c29c5482ee8c0b29fca",
+    "validated_at": "2026-10-01T01:54:06.520072+00:00"
+  }
+}

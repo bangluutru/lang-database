@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-trade-000154",
+  "term": "リーファーコンテナ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the unnatural application of accounting terms like '計上内容', '残高', and '処理する' directly to a physical asset like 'リーファーコンテナ'. While containers are assets that are accounted for, the phrasing makes it sound as if the container itself is the accounting entry or balance, which is semantically incorrect and unnatural in professional Japanese accounting discourse. The suggested rewrites clarify that the accounting *treatment* or *records related to* the container are being discussed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "リーファーコンテナを手配する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "リーファーコンテナに積み込む",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "リーファーコンテナの温度を管理する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "リーファーコンテナを返却する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "リーファーコンテナの計上内容や残高に差異がないか精査します is unnatural. Containers are physical assets, not accounting entries or balances in the same way cash or receivables are. While they might be recorded as assets, the phrasing '計上内容や残高' is typically used for financial accounts, not physical items themselves. It sounds like the container *is* the accounting entry. A more natural phrasing would refer to the accounting records *related to* the container.",
+      "suggested_ja": "月末の帳簿照合において、リーファーコンテナに関する会計処理や資産残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong việc hạch toán hoặc số dư tài sản liên quan đến container bảo ôn có máy làm lạnh (Reefer Container) hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the accounting treatment or asset balances related to reefer containers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "リーファーコンテナを適正に処理いたしました is unnatural. '処理する' in an accounting context usually refers to processing transactions or data, not physical assets directly. While assets are 'processed' in terms of depreciation, valuation, etc., the phrasing 'リーファーコンテナを適正に処理いたしました' sounds like the container itself was handled, not its accounting implications. It should refer to the accounting entries or records related to the container.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてリーファーコンテナの会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện việc hạch toán container bảo ôn có máy làm lạnh (Reefer Container) một cách đúng đắn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly performed the accounting treatment for reefer containers in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's 'リーファーコンテナの計上内容に差異は発生していませんか' suffers from the same semantic issue as the example sentences. It implies the container itself is an accounting entry. Speaker B's response is fine if A's question were rephrased to refer to the accounting records *of* the container.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、リーファーコンテナに関する会計処理に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong việc hạch toán liên quan đến container bảo ôn có máy làm lạnh (Reefer Container) không?",
+        "en": "In this month's financial closing, are there any discrepancies in the accounting treatment related to reefer containers?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a11dc54793baefa9ecab9e009420eaef4012d4c45389b987cac626a93eedf0aa",
+    "validated_at": "2026-10-01T01:56:43.255064+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000022",
+  "term": "受取手形",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an unnatural collocation ('受取手形を精算する'), an empty boilerplate template sentence with stylistic redundancy, and slightly unnatural phrasing in the dialogue response.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "受取手形を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recognizing notes receivable.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "受取手形の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard operational and audit phrase for verifying notes receivable balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "受取手形を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase for reconciling physical notes with the ledger.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "受取手形を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "手形 is not typically '精算' (settled/cleared as an expense). Authentic accounting predicates for commercial bills are 決済する (settle upon maturity), 回収する (collect), 割り引く (discount), or 裏書譲渡する (endorse/transfer).",
+      "suggested_text": "受取手形を決済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business context describing month-end reconciliation of notes receivable.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical boilerplate sentence with tautological phrasing ('適正な会計基準...適正に処理いたしました') that lacks concrete domain substance regarding bills (such as maturity, discounting, or note ledger reconciliation).",
+      "suggested_ja": "期日を迎えた受取手形については、取引銀行を通じて滞りなく決済および入金処理が完了しました。",
+      "suggested_vi": "Đối với các thương phiếu phải thu đã đến hạn, thủ tục thanh toán và ghi nhận tiền vào tài khoản thông qua ngân hàng giao dịch đã hoàn tất suôn sẻ.",
+      "suggested_en": "For the notes receivable that reached maturity, settlement and crediting were completed without issue through our transaction bank."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is redundant and unnatural Japanese in corporate accounting. In reconciliation dialogue, native accountants say '残高の一致を確認いたしました' or '差異なく一致しております'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、受取手形勘定と手形記入帳の残高に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư giữa tài khoản thương phiếu phải thu và sổ chi tiết thương phiếu có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies between the notes receivable account and the notes ledger in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "実査および補助元帳との照合を完了しており、差異なく一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã hoàn thành kiểm kê thực tế và đối chiếu với sổ phụ, xác nhận các số liệu đều khớp hoàn toàn không có chênh lệch.",
+        "en": "We have completed the physical count and reconciled with the subsidiary ledger, confirming that all balances match with zero discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Terminology is accurate in both Vietnamese (thương phiếu phải thu) and English (Notes receivable - trade)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f4f9c7fd9ae1cf428e790f768144ae97cd11e978c4c6f5bed35ab3877a635a1e",
+    "validated_at": "2026-10-01T01:33:25.402228+00:00"
+  }
+}

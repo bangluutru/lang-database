@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000176",
+  "term": "デジタルトランスフォーメーション",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'デジタルトランスフォーメーション' as an accounting item. DX is a strategy/process, not something that is '計上' (booked) or has a '残高' (balance) in financial statements. All examples and the dialogue are built on this incorrect premise, leading to unnatural and factually incorrect accounting scenarios. The collocations themselves are generally fine, but their application in the examples and dialogue is flawed. The translations accurately reflect the flawed Japanese, so they also need to be rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "デジタルトランスフォーメーションを推進する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "デジタルトランスフォーメーションを策定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for strategy/plan formulation."
+    },
+    {
+      "index": 2,
+      "text": "デジタルトランスフォーメーションを導入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for implementing a system or concept."
+    },
+    {
+      "index": 3,
+      "text": "デジタルトランスフォーメーションを加速させる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Digital Transformation (DX) is a strategy or process, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an accounting item) or have a '残高' (balance). This is a fundamental misunderstanding of accounting principles and the nature of DX.",
+      "suggested_ja": "月末の帳簿照合において、デジタルトランスフォーメーション関連費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của các chi phí liên quan đến chuyển đổi số doanh nghiệp (DX) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of digital transformation-related expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, DX itself is not something that is 'processed' (処理する) as an accounting item in closing entries. What is processed are the costs or investments related to DX. The original sentence implies DX is an account or transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてデジタルトランスフォーメーション関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến chuyển đổi số doanh nghiệp (DX) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed digital transformation-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The premise of the dialogue is flawed. 'デジタルトランスフォーメーションの計上内容' (entries for digital transformation) is not a valid accounting concept. DX is a strategic initiative, not a direct accounting item that would have 'entries' or 'discrepancies' in a monthly closing. Speaker B's response about '証憑書類と補助元帳を照合' is appropriate for accounting entries, but the object of the check (DX itself) is incorrect.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、デジタルトランスフォーメーション関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong các khoản mục chi phí liên quan đến chuyển đổi số doanh nghiệp (DX) không?",
+        "en": "In this month's financial closing, are there any discrepancies in the recorded digital transformation-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The original Japanese sentences contain fundamental accounting errors regarding 'デジタルトランスフォーメーション' as an accounting entry. The translations accurately reflect these errors. Therefore, the translations must be rewritten to reflect the corrected Japanese sentences."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "49ea9a9d7f6bf1d63027225bc691073a525d185649903650cf0751921a07531b",
+    "validated_at": "2026-10-01T01:53:10.904031+00:00"
+  }
+}

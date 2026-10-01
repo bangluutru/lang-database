@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000034",
+  "term": "前渡金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Core accounting term and definitions are accurate, but Example 2 contains unnatural templating ('適正な会計基準...適正に処理') and Dialogue contains stilted expressions ('適正に整合している'). Collocation 2 also benefits from being upgraded to the domain-essential '前渡金を振り替える'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "前渡金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing advance payments.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "前渡金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for checking advance payment account balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "前渡金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly reconcile the account itself without specifying balance/details ('残高/明細を照合する'). For 前渡金, the essential operational predicate is reclassifying/clearing it upon receipt of goods/services ('前渡金を振り替える').",
+      "suggested_text": "前渡金を振り替える"
+    },
+    {
+      "index": 3,
+      "text": "前渡金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural workplace collocation for settling advance payments.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and contextually sound description of month-end closing check, matching accounting procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Artificial AI templating: '適正な会計基準' is unnatural (Japanese accounting standard terminology is '企業会計基準' or '公正妥当と認められた会計基準', not '適正な'), and '適正な' is redundantly repeated in '適正に処理いたしました'.",
+      "suggested_ja": "納品完了に伴い、会計基準および社内規程に則って前渡金を買掛金および費用勘定へ振り替えました。",
+      "suggested_vi": "Cùng với việc hoàn tất giao hàng, chúng tôi đã kết chuyển tiền ứng trước cho người bán sang tài khoản phải trả người bán và tài khoản chi phí theo đúng chuẩn mực kế toán và quy chế nội bộ.",
+      "suggested_en": "Upon completion of delivery, advances paid were reclassified to accounts payable and expense accounts in accordance with accounting standards and internal regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異' lacks a comparator, and '適正に整合している' is unnatural/pleonastic corporate Japanese (standard usage is '整合性が取れている' or '一致している').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、前渡金の総勘定元帳と補助元帳の残高に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư giữa sổ cái và sổ phụ của khoản tiền ứng trước cho người bán có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies between the general ledger and subsidiary ledger balances for advances paid in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書等の証憑書類と突き合わせ済みで、すべて一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu xong với các chứng từ như hóa đơn và xác nhận tất cả đều khớp.",
+        "en": "We have already reconciled them against vouchers such as invoices and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b8232315fcf3a0d51cd5c659033a65542a6bd213e55130a830a1d144c7b3b560",
+    "validated_at": "2026-10-01T01:34:18.920491+00:00"
+  }
+}

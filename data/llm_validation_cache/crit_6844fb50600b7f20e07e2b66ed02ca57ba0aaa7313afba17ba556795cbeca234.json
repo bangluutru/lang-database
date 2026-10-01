@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000194",
+  "term": "内部統制",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are textbook perfect, both example sentences and the dialogue suffer from a critical domain error: treating '内部統制' (internal control) as if it were a journal entry or ledger balance subject to booking ('計上') and reconciliation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "内部統制を構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and audit expression referring to establishing internal control systems.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "内部統制を運用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and widely used in J-SOX and internal audit contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "内部統制を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional term relating to management assessment and audit evaluation under financial regulations.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "内部統制を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing for remediating internal control deficiencies.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe conceptual error. '内部統制' (internal control) is an organizational governance framework, not an account title or balance sheet item. It cannot have '計上内容' (booked entries) or '残高' (balance).",
+      "suggested_ja": "財務報告の信頼性を確保するため、内部統制の整備状況および運用状況を定期的に評価しています。",
+      "suggested_vi": "Để đảm bảo độ tin cậy của báo cáo tài chính, chúng tôi định kỳ đánh giá tình trạng thiết lập và vận hành của hệ thống kiểm soát nội bộ.",
+      "suggested_en": "To ensure the reliability of financial reporting, we regularly assess the design and operating effectiveness of our internal controls."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe conceptual error. Internal control is a governance/audit mechanism, not a financial entry that can be '処理いたしました' (processed/booked) in closing entries.",
+      "suggested_ja": "金融商品取引法に基づき、当期の決算に合わせて内部統制報告書を作成・提出いたしました。",
+      "suggested_vi": "Căn cứ theo Luật Công cụ Tài chính và Sàn giao dịch, chúng tôi đã lập và nộp Báo cáo kiểm soát nội bộ cùng với kỳ quyết toán tài chính kỳ này.",
+      "suggested_en": "In accordance with the Financial Instruments and Exchange Act, we prepared and submitted the Internal Control Report in conjunction with this fiscal year's financial close."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question '内部統制の計上内容に差異は発生していませんか' is fundamentally nonsensical in accounting. Internal control cannot be booked or yield ledger discrepancies.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "期末監査に向けて、内部統制の評価手続きおよび不備の是正状況はいかがでしょうか。",
+        "vi": "Chuẩn bị cho đợt kiểm toán cuối kỳ, thủ tục đánh giá kiểm soát nội bộ và tình hình khắc phục các khiếm khuyết tiến hành đến đâu rồi?",
+        "en": "With the year-end audit approaching, how are the internal control evaluation procedures and the remediation of deficiencies progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "各部門でのキーコントロールの検証を完了しており、識別された軽微な不備についてもすでに対応済みです。",
+        "vi": "Chúng tôi đã hoàn thành kiểm tra các kiểm soát trọng yếu tại từng bộ phận, và các khiếm khuyết nhỏ được ghi nhận cũng đã được xử lý xong.",
+        "en": "We have completed testing of key controls across all departments, and the minor deficiencies identified have already been addressed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base term translations for '内部統制' are accurate in both languages."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6118294bb6d391414548e6d879d73f76309ed0e5733e1e963d3e5e8a815fab92",
+    "validated_at": "2026-10-01T01:37:05.929586+00:00"
+  }
+}

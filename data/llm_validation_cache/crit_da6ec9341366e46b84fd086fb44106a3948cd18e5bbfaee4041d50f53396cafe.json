@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000133",
+  "term": "スポットレート",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'スポットレート' as an internal, controllable metric rather than an external market price. This leads to unnatural collocations, example sentences, and dialogue where the term is treated like a performance indicator that can be 'improved' or have 'target values' in a way that doesn't align with financial reality. The concept needs to be reframed around managing exposure to spot rates or achieving favorable spot rates, rather than directly 'improving' them.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "スポットレートを算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Calculating a spot rate is a natural and common action in finance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "スポットレートを改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A spot rate is a market-determined value; it cannot be 'improved' by an individual or company in the same way a performance metric can. One might aim for a better spot rate, but not 'improve' it directly.",
+      "suggested_text": "有利なスポットレートを獲得する"
+    },
+    {
+      "index": 2,
+      "text": "スポットレートを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Analyzing spot rates is a standard financial activity.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "スポットレートの目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While one might have a target for a transaction's spot rate, setting a 'target value' for the spot rate itself (as if it's an internal KPI) is unnatural. Spot rates are external market prices.",
+      "suggested_text": "スポットレートの目標水準を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Monitoring 'spot rate metrics' (スポットレートの数値) monthly for operational efficiency is an awkward phrasing. Spot rates are external market prices, not internal performance metrics in this context. The connection to '経営効率の改善' is tenuous and forced.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で為替リスク管理の一環としてスポットレートの動向を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi xu hướng tỷ giá giao ngay hàng tháng như một phần của quản lý rủi ro tỷ giá.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors spot rate trends on a monthly basis as part of foreign exchange risk management."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '当期のスポットレートは目標値を上回り' is unnatural. Spot rates are market prices, not internal targets that can be 'exceeded' in a performance review sense. The connection to '収益性と資本効率の向上' is also forced; while favorable spot rates can contribute, the phrasing implies the spot rate itself is a direct measure of these, which it is not.",
+      "suggested_ja": "当期は有利なスポットレートで取引を実行できたため、収益性と資本効率の向上に貢献しました。",
+      "suggested_vi": "Trong kỳ này, chúng tôi đã thực hiện các giao dịch với tỷ giá giao ngay thuận lợi, góp phần nâng cao khả năng sinh lời và hiệu quả sử dụng vốn.",
+      "suggested_en": "This term, we were able to execute transactions at favorable spot rates, contributing to an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question 'スポットレートの推移と改善目標に対する進捗はいかがですか' is unnatural. Spot rates are market rates, not something a company 'improves' or sets 'improvement targets' for in this manner. Speaker B's response about '改善傾向' is also problematic for the same reason. The dialogue treats spot rates like an internal KPI.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の財務分析において、為替変動リスクに対するヘッジ戦略と、その結果としてのスポットレートの適用状況についてご報告いただけますか。",
+        "vi": "Trong phân tích tài chính kỳ này, bạn có thể báo cáo về chiến lược phòng ngừa rủi ro biến động tỷ giá và tình hình áp dụng tỷ giá giao ngay do đó không?",
+        "en": "In this term's financial analysis, could you report on our hedging strategy against foreign exchange fluctuation risk and the resulting application of spot rates?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。前四半期と比較して、より有利なスポットレートでの取引を確保できており、期末の収益目標達成に貢献できる見通しです。",
+        "vi": "Vâng. So với quý trước, chúng tôi đã đảm bảo được các giao dịch với tỷ giá giao ngay thuận lợi hơn, và dự kiến sẽ đóng góp vào việc đạt được mục tiêu lợi nhuận cuối kỳ.",
+        "en": "Yes. Compared to the previous quarter, we have secured transactions at more favorable spot rates, and we expect this to contribute to achieving our year-end profit targets."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f7c4f8d122b5e186661fe3b821adc94345b55a0191b919d7de46f9c82834d590",
+    "validated_at": "2026-10-01T01:56:16.778533+00:00"
+  }
+}

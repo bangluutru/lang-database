@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000109",
+  "term": "株主資本",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なスロット充填型AI生成テキストであり、貸借対照表の純資産区分である『株主資本』に対して『精算する』『計上内容を補助元帳と照合する』といった流動資産・負債向けの不適切な述語やシチュエーションが適用されているため、実務教育用として全面改稿が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "株主資本を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "株主資本は貸借対照表の純資産の部を構成する区分概念であり、費用や個別の勘定科目のように直接「計上する」という表現は実務上不自然。",
+      "suggested_text": "株主資本を増強する"
+    },
+    {
+      "index": 1,
+      "text": "株主資本の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "期末や月次の試算表で株主資本合計残高を確認する表現として文法・実務ともに成立する。",
+      "suggested_text": "株主資本の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "株主資本を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合の対象は「株主資本等変動計算書」や「残高・内訳」であり、資本概念そのものを直接照合する表現はコロケーションとしてぎこちない。",
+      "suggested_text": "株主資本の部を構成する"
+    },
+    {
+      "index": 3,
+      "text": "株主資本を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は経費や債権債務の決済に用いる語であり、株主資本に対して用いるのは会計上完全に誤り。",
+      "suggested_text": "株主資本比率を改善する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "月次の帳簿照合で株主資本の「計上内容」の差異を精査するという設定は、定常的な取引が発生しない資本項目において極めて機械的かつ実務慣行から乖離している。",
+      "suggested_ja": "当期の純利益が確定したため、株主資本等変動計算書の作成に向けて株主資本の各内訳と期末残高を精査します。",
+      "suggested_vi": "Vì lợi nhuận ròng kỳ này đã được xác định, chúng tôi sẽ rà soát kỹ lưỡng từng khoản mục chi tiết và số dư cuối kỳ của vốn cổ đông để lập báo cáo biến động vốn chủ sở hữu.",
+      "suggested_en": "Now that current net income is finalized, we will closely examine the breakdown and closing balance of shareholders' equity to prepare the statement of changes in net assets."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「株主資本を適正に処理いたしました」は中身がなくテンプレート的。配当や自己株式取得など具体的な資本取引の文脈を反映すべき。",
+      "suggested_ja": "剰余金の配当および自己株式の消却に伴い、当期決算において株主資本の各勘定科目を適正に振り替えました。",
+      "suggested_vi": "Cùng với việc chia cổ tức từ lợi nhuận giữ lại và hủy cổ phiếu quỹ, chúng tôi đã kết chuyển thỏa đáng các tài khoản vốn cổ đông trong quyết toán kỳ này.",
+      "suggested_en": "Following the distribution of dividends from surplus and the retirement of treasury shares, we properly reclassified the respective shareholders' equity accounts in this fiscal year's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「月次決算で株主資本の計上内容に差異」「証憑書類と補助元帳を照合」というやり取りは、売掛金や経費勘定の定型文を無批判に当てはめた不自然な会計対話である。資本取引は取締役会決議や登記等に基づくため、補助元帳照合の文脈は不適当。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "第三者割当増資の払込が完了しましたが、株主資本等変動計算書への反映状況はいかがですか。",
+        "vi": "Khoản thanh toán đợt phát hành cổ phiếu riêng lẻ đã hoàn tất, tình hình phản ánh vào báo cáo biến động vốn chủ sở hữu như thế nào rồi?",
+        "en": "Payment for the third-party allotment has been completed. What is the status of reflecting it in the statement of changes in net assets?"
+      },
+      {
+        "speaker": "B",
+        "ja": "払込証明書および登記書類と照合のうえ、資本金および資本準備金への計上処理を滞りなく完了いたしました。",
+        "vi": "Sau khi đối chiếu với giấy chứng nhận nộp tiền và hồ sơ đăng ký kinh doanh, tôi đã hoàn tất thủ tục hạch toán vào vốn điều lệ và thặng dư vốn cổ phần mà không gặp trở ngại nào.",
+        "en": "Following reconciliation with the payment certificate and registration documents, we smoothly recorded the entries into capital stock and legal capital surplus."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "例文・対話の日本語文が実務上不自然なテンプレート文型であるため、抜本的な差し替えに伴い翻訳も全面的に修正が必要。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c99bbc0d37f3f1a21736a8c3fb30e4679643da6e44516b2b6bfc0873e2b65715",
+    "validated_at": "2026-10-01T01:35:37.516959+00:00"
+  }
+}

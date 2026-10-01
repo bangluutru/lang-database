@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-trade-000127",
+  "term": "手形引受",
+  "overall_decision": "rewrite",
+  "summary_reason": "「手形引受」という行為と、それに関連する会計処理や勘定科目を混同している箇所が多く、全体的に不自然な表現が目立つ。特に「手形引受」を直接目的語とする動詞の選択や、残高の有無に関する記述に問題がある。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形引受を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、「手形引受」という行為に対しては不自然。",
+      "suggested_text": "手形引受を行う"
+    },
+    {
+      "index": 1,
+      "text": "手形引受を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形引受」は行為であり、決済の対象は「手形」そのもの。手形引受自体を決済するとは言わない。",
+      "suggested_text": "手形引受手形を決済する"
+    },
+    {
+      "index": 2,
+      "text": "手形引受を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形引受」は行為であり、提示の対象は「手形」そのもの。手形引受自体を提示するとは言わない。",
+      "suggested_text": "手形引受手形を提示する"
+    },
+    {
+      "index": 3,
+      "text": "手形引受の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形引受の不一致」という表現が不自然。不一致が生じるのは「手形引受の記録」や「手形引受の内容」など。",
+      "suggested_text": "手形引受の記録の不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「手形引受の計上内容や残高」という表現が不自然。「手形引受」は行為であり、それ自体に「残高」はない。残高があるのは「手形引受勘定」など。また、「計上内容」も「手形引受」に直接かかるのは不自然。",
+      "suggested_ja": "月末の帳簿照合において、手形引受勘定の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của tài khoản chấp nhận thanh toán hối phiếu kỳ hạn có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for the bill acceptance account."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「手形引受を適正に処理いたしました」という表現が不自然。「手形引受」は行為であり、処理の対象は「手形引受に関する会計処理」や「手形引受手形」など。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において手形引受に関する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình kế toán liên quan đến chấp nhận thanh toán hối phiếu kỳ hạn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the accounting entries related to acceptance of bill of exchange in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker Aの「手形引受の計上内容に差異は発生していませんか」が不自然。計上内容に差異が発生するというよりは、計上内容に差異がないかを確認する、という文脈が自然。また、Speaker Bの返答もやや硬い。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、手形引受勘定の計上内容に差異はありませんでしたか？",
+        "vi": "Trong quyết toán hàng tháng này, không có sự khác biệt nào trong nội dung hạch toán của tài khoản chấp nhận thanh toán hối phiếu kỳ hạn phải không?",
+        "en": "In this month's monthly closing, were there no discrepancies in the entries for the bill acceptance account?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適切に整合していることを確認済みです。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a9e07868efa160aec93026703f2a7969141ebeba4916be85a4439f1efe2294ce",
+    "validated_at": "2026-10-01T01:56:07.883045+00:00"
+  }
+}

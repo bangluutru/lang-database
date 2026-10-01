@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000127",
+  "term": "課税売上割合",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain hallucination: the model treated '課税売上割合' (Japanese consumption tax taxable sales ratio for input tax credits) as an operational profitability KPI to be improved, monitored by divisions, and targeted for capital efficiency.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税売上割合を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax compliance collocation for computing the taxable sales ratio.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "課税売上割合を改善する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Taxable sales ratio is a tax calculation metric under Japanese Consumption Tax Law, not an operational KPI that business units 'improve' (改善する).",
+      "suggested_text": "課税売上割合が95％未満となる"
+    },
+    {
+      "index": 2,
+      "text": "課税売上割合を分析する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Tax professionals calculate, track, or verify the taxable sales ratio rather than conduct business analysis on it.",
+      "suggested_text": "課税売上割合を算定する"
+    },
+    {
+      "index": 3,
+      "text": "課税売上割合の目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Companies do not set management target values (目標値) for consumption tax sales ratios.",
+      "suggested_text": "課税売上割合の著しい変動"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fundamental domain error. 課税売上割合 is a consumption tax metric determining input tax deduction limits (仕入税額控除), not a metric for 'improving operational efficiency' (経営効率の改善) monitored across business divisions.",
+      "suggested_ja": "当期は課税売上割合が95％未満となったため、個別対応方式または一括比例配分方式により仕入控除税額を計算する必要があります。",
+      "suggested_vi": "Kỳ này do tỷ lệ doanh số chịu thuế giảm xuống dưới 95%, nên cần tính số thuế đầu vào được khấu trừ theo phương pháp đối ứng riêng lẻ hoặc phương pháp phân bổ tỷ lệ gộp.",
+      "suggested_en": "Since the taxable sales ratio fell below 95% this fiscal year, we need to calculate the deductible input tax amount using either the individual identification method or the proportional allocation method."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Taxable sales ratio has no correlation with 'profitability and capital efficiency' (収益性と資本効率の向上); treating it as an operational performance KPI is a hallucination.",
+      "suggested_ja": "固定資産の売却に伴い非課税売上が急増したため、課税売上割合が前期から大幅に低下しました。",
+      "suggested_vi": "Do doanh số không chịu thuế tăng đột biến liên quan đến việc bán tài sản cố định, tỷ lệ doanh số chịu thuế đã giảm mạnh so với kỳ trước.",
+      "suggested_en": "Due to a sharp increase in non-taxable sales associated with the sale of fixed assets, the taxable sales ratio dropped significantly compared to the previous period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The conversation incorrectly frames 課税売上割合 as a financial analysis metric tied to quarterly improvement targets and managerial goals.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の消費税申告ですが、課税売上割合の見通しはどのようになっていますか。",
+        "vi": "Về việc kê khai thuế tiêu dùng kỳ này, dự báo về tỷ lệ doanh số chịu thuế như thế nào rồi?",
+        "en": "Regarding this term's consumption tax filing, what is the projection for our taxable sales ratio?"
+      },
+      {
+        "speaker": "B",
+        "ja": "有価証券の譲渡があったため、課税売上割合が95％を割り込み、全額控除が適用できない見込みです。",
+        "vi": "Do có phát sinh chuyển nhượng chứng khoán, dự kiến tỷ lệ doanh số chịu thuế sẽ giảm xuống dưới 95% và không thể áp dụng khấu trừ toàn bộ.",
+        "en": "Due to the transfer of marketable securities, the taxable sales ratio is expected to fall below 95%, meaning full deduction cannot be applied."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term definitions are acceptable, though the underlying content suffered from domain hallucination."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ec5eca2750fc5ee9326433069da1606782cd5c3119d6b756a128c3c49ef547cc",
+    "validated_at": "2026-10-01T01:39:38.608887+00:00"
+  }
+}

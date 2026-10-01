@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000117",
+  "term": "雇用保険",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations are natural, but both example sentences and the dialogue suffer from mechanical AI accounting templates where the insurance scheme '雇用保険' is erroneously treated as an accounting ledger balance ('計上内容', '残高') rather than '雇用保険料' or being placed in realistic HR/labor administration contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雇用保険に加入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural workplace collocation for enrolling in employment insurance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雇用保険の保険料を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, though '雇用保険料を納付する' is more concise; this form is also fully acceptable.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "雇用保険の手続きを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common HR/administrative phrasing for carrying out employment insurance procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "雇用保険の資格を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard administrative term (commonly short for 雇用保険の被保険者資格を取得する).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In accounting, one does not book or reconcile '雇用保険' (the insurance scheme itself), but rather '雇用保険料' (as 預り金 for employee deduction, or 法定福利費 for company share). Treating 雇用保険 as an account balance/entry is a templated semantic category mistake.",
+      "suggested_ja": "給与計算後の帳簿照合において、雇用保険料の控除額や預り金残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách sau khi tính lương, chúng tôi kiểm tra kỹ lưỡng xem số tiền khấu trừ phí bảo hiểm thất nghiệp và số dư tài khoản tạm giữ có chênh lệch không.",
+      "suggested_en": "During book reconciliation following payroll calculation, we carefully examine whether there are discrepancies in employment insurance deductions or withheld deposit balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a rigid, mechanically templated closing sentence ('適正な会計基準および社内規程に則り... [TERM]を適正に処理いたしました'). For 雇用保険, typical enterprise contexts are payroll deduction, labor insurance filings (労働保険年度更新), or new hire enrollment.",
+      "suggested_ja": "新入社員の入社に伴い、速やかにハローワークで雇用保険の被保険者資格取得届を提出しました。",
+      "suggested_vi": "Cùng với việc tiếp nhận nhân viên mới, chúng tôi đã nhanh chóng nộp tờ khai đăng ký tư cách người tham gia bảo hiểm thất nghiệp tại Hello Work.",
+      "suggested_en": "Following the onboarding of new employees, we promptly submitted the application for acquiring employment insurance insured status to Hello Work."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about '雇用保険の計上内容' in monthly closing, which reflects an awkward template applied indiscriminately. In practice, HR and accounting verify payroll deductions ('雇用保険料の控除額') or enrollment procedures for eligible staff.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月中途入社したパートタイマーの方々について、雇用保険の加入要件は満たしていますか。",
+        "vi": "Đối với các nhân viên bán thời gian vào làm giữa tháng này, họ có đáp ứng đủ điều kiện tham gia bảo hiểm thất nghiệp không?",
+        "en": "Do the part-time workers who joined mid-month satisfy the eligibility requirements for employment insurance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "週所定労働時間が20時間以上かつ31日以上の雇用見込みがあるため、全員加入手続きを進めております。",
+        "vi": "Vì họ có số giờ làm việc quy định từ 20 giờ/tuần trở lên và dự kiến làm việc từ 31 ngày trở lên, nên chúng tôi đang tiến hành thủ tục tham gia cho tất cả.",
+        "en": "Since their scheduled weekly working hours exceed 20 hours and they are expected to be employed for 31 days or more, we are proceeding with enrollment procedures for all of them."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "09bb1029bb18a9430d236a938c5e774274ab1f419a0036964ba573df5f7d75e8",
+    "validated_at": "2026-10-01T01:42:54.931523+00:00"
+  }
+}

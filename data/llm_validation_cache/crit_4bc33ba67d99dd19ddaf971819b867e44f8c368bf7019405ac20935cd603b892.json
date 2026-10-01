@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000139",
+  "term": "輸入消費税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and workplace dialogue are excellent and natural. However, Example 1 suffered from a critical Vietnamese mistranslation of tax base (課税標準), and Example 2 was a mechanical, domain-clunky template sentence that should be replaced with an authentic import customs/accounting scenario (e.g., matching import permits to input tax credit).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸入消費税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and common collocation in customs clearance and tax filing.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "輸入消費税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax compliance phrase for settling import VAT upon customs clearance.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "輸入消費税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting and customs calculation expression.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "輸入消費税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Precise legal and tax terminology for the imposition of import consumption tax.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese translation incorrectly translates '課税標準' (tax base / customs value) as 'thu nhập chịu thuế' (taxable income), which is a serious accounting/tax mistranslation.",
+      "suggested_ja": "課税標準および適用税率を正確に算出し、納期限までに輸入消費税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác giá tính thuế và thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế tiêu dùng hàng nhập khẩu trước thời hạn.",
+      "suggested_en": "Having accurately calculated the tax base and applicable tax rate, we completed the payment procedures for the import consumption tax by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The Japanese sentence is a generic robotic template ('税制改正...税負担額への影響を試算'). In standard corporate practice, import consumption tax is an input VAT creditable against output VAT (仕入税額控除), rather than an outright corporate tax burden. Furthermore, the Vietnamese contains a typographical stutter ('số tiền thuế thuế tiêu dùng').",
+      "suggested_ja": "輸入許可書に記載された輸入消費税額を確認し、仮払消費税として仕入税額控除の対象に計上しました。",
+      "suggested_vi": "Chúng tôi đã đối chiếu số tiền thuế tiêu dùng hàng nhập khẩu ghi trên tờ khai thông quan và hạch toán vào thuế đầu vào được khấu trừ.",
+      "suggested_en": "We verified the import consumption tax amount stated on the import permit and recorded it as suspense consumption tax eligible for input tax credit."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue reflects a very authentic month-end closing check reconciling customs documents (import permits/vouchers) with subsidiary ledgers.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1 contained a domain terminology error ('thu nhập chịu thuế' instead of 'giá tính thuế/cơ sở tính thuế'), and Example 2 had a duplicate word typo ('thuế thuế tiêu dùng')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1d48c096d3980b02520ad6605c6edcbe35f59a7701b9e80200d08a7261bfe029",
+    "validated_at": "2026-10-01T01:39:51.874106+00:00"
+  }
+}

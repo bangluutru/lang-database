@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000166",
+  "term": "税務調査",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain errors: the input hallucinated that '税務調査' (tax audit) is an accounting transaction that can be booked ('計上内容'), reconciled against monthly ledger balances ('残高'), and processed in closing entries. All examples, collocations, and the dialogue require complete replacement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税務調査を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "For a corporate taxpayer, a tax audit is conducted by the tax office; the company receives or responds to it rather than proactively 'advancing' it.",
+      "suggested_text": "税務調査に対応する"
+    },
+    {
+      "index": 1,
+      "text": "税務調査を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "From the taxpayer perspective, natural expressions are '税務調査を受ける' or '税務調査が終了する'.",
+      "suggested_text": "税務調査を受ける"
+    },
+    {
+      "index": 2,
+      "text": "税務調査の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable expression when preparing for procedural steps during a tax audit.",
+      "suggested_text": "税務調査の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "税務調査を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company cannot 'review/reconsider' a tax audit itself; it can only review its audit preparedness or response procedures.",
+      "suggested_text": "税務調査への対応体制を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '税務調査' (tax audit) is an administrative procedure by tax authorities, not an accounting transaction with book entries ('計上内容') or an account balance ('残高').",
+      "suggested_ja": "税務調査に備えて、過去3期分の総勘定元帳と関連する契約書および領収書を精査します。",
+      "suggested_vi": "Để chuẩn bị cho đợt thanh tra thuế, chúng tôi kiểm tra kỹ lưỡng sổ cái chung cùng các hợp đồng và hóa đơn chứng từ liên quan trong 3 kỳ gần nhất.",
+      "suggested_en": "In preparation for the tax audit, we will thoroughly review the general ledgers, contracts, and relevant receipts for the past three fiscal periods."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A tax audit cannot be 'processed in the fiscal term-end closing' ('決算において税務調査を適正に処理いたしました'). Only post-audit adjustments or additional taxes (追徴税額) are recorded.",
+      "suggested_ja": "先月実施された税務調査での指摘事項に基づき、修正申告書を所轄税務署へ提出いたしました。",
+      "suggested_vi": "Dựa trên các vấn đề được chỉ ra trong đợt thanh tra thuế tiến hành tháng trước, chúng tôi đã nộp tờ khai bổ sung điều chỉnh lên cơ quan thuế phụ trách.",
+      "suggested_en": "Based on the findings from the tax audit conducted last month, we submitted an amended tax return to the competent tax office."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about discrepancies in 'entries of the tax audit' ('税務調査の計上内容'), which is accounting nonsense produced by generic fill-in-the-blank generation. Speaker B provides an irrelevant templated response.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週から国税局による税務調査が入る予定ですが、事前準備は進んでいますか。",
+        "vi": "Tuần tới Cục Thuế Quốc gia sẽ bắt đầu đợt thanh tra thuế, công tác chuẩn bị trước đã tiến hành đến đâu rồi?",
+        "en": "The tax audit by the Regional Taxation Bureau is scheduled to start next week; how is the advance preparation coming along?"
+      },
+      {
+        "speaker": "B",
+        "ja": "対象年度の帳簿および証憑類の整理はすでに完了し、税理士とも事前打ち合わせを済ませております。",
+        "vi": "Hồ sơ sổ sách và chứng từ của các năm mục tiêu đã được sắp xếp xong, và chúng tôi cũng đã họp trước với kế toán thuế.",
+        "en": "We have finished organizing the books and supporting documents for the target fiscal years and have already held a preparatory briefing with our tax accountant."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations ('Tax audit / Tax inspection' and 'thanh tra thuế / kiểm tra thuế') are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1daa42aa36a7abc7f94df7e0e5cb32c0f0789d86b9d01536fc6b9153e1547a34",
+    "validated_at": "2026-10-01T01:40:17.150105+00:00"
+  }
+}

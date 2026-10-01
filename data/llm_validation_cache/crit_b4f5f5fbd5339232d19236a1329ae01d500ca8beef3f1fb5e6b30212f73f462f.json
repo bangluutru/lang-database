@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000008",
+  "term": "CIP",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and examples are good. However, the dialogue needs rewriting due to a lack of logical flow and a somewhat narrow response from Speaker B, which doesn't fully address Speaker A's question about the overall CIP arrangement status. The use of '乙仲' is also slightly outdated.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "CIPの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural expression for contracting under specific terms.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "CIPの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural expression for trading at a specific price basis.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "CIPにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural expression for arranging cost allocation under CIP.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "CIPにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural expression for confirming the point of risk transfer under CIP.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately reflects business communication regarding Incoterms. The translations are also accurate.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and accurately describes cost responsibilities under CIP. The translations are also accurate.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' (手配状況) of CIP, which implies the overall process. Speaker B's response focuses only on customs clearance (通関) and related parties (通関業者と乙仲), which is a part of the CIP process but doesn't fully address the '手配状況' of CIP itself (e.g., insurance, main carriage). The response is too narrow and doesn't logically follow the broader question about CIP arrangements. Also, '乙仲' is a somewhat dated term; 'フォワーダー' or '国際輸送業者' is more common in modern business.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、CIPの手配状況はいかがでしょうか。特に、運送と保険の手配は順調に進んでいますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp CIP thế nào rồi? Đặc biệt, việc sắp xếp vận chuyển và bảo hiểm có đang tiến triển thuận lợi không?",
+        "en": "Regarding the shipment scheduled for customs clearance today, how are the CIP arrangements progressing? Specifically, are the shipping and insurance arrangements proceeding smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、運送業者と保険会社への連絡は完了しており、書類の確認も終えて輸入申告に入っております。通関後の国内配送についても手配済みです。",
+        "vi": "Vâng, việc liên hệ với công ty vận chuyển và công ty bảo hiểm đã hoàn tất, chúng tôi cũng đã kiểm tra xong chứng từ và đang tiến hành khai báo nhập khẩu. Việc giao hàng nội địa sau thông quan cũng đã được sắp xếp.",
+        "en": "Yes, communication with the carrier and insurance company is complete, and we have finished checking the documents and are proceeding with the import declaration. Domestic delivery after customs clearance has also been arranged."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9c68b13958a0db59098696d1944f1921fe422e0d546b9b16320b5618e5b748cd",
+    "validated_at": "2026-10-01T01:53:49.696185+00:00"
+  }
+}

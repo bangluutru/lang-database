@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000149",
+  "term": "交際費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate suffers from generic LLM template patterns: tautological repetition ('適正な...適正に'), incomplete comparison targets ('残高に差異がないか'), and slightly stilted phrasing ('交際費を照合する', '適正に整合している'). Grounding them in real corporate tax and voucher reconciliation practices elevates the learning value significantly.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "交際費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording entertainment expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "交際費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in month-end closing procedures when reviewing ledger balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "交際費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An expense account itself is not directly reconciled; one reconciles the underlying breakdown or vouchers against the ledger (交際費の明細を照合する), or calculates non-deductible tax limits (交際費の損金不算入額を計算する).",
+      "suggested_text": "交際費の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "交際費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Extremely common in daily business for reimbursing/settling entertainment expenses.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'残高に差異がないか' is grammatically loose because '差異' requires two comparison points (e.g., budget vs. actual, or ledger vs. receipts). Specifying the comparison target makes it sound authentic.",
+      "suggested_ja": "月末の決算整理において、交際費の計上内容と提出された領収書に差異がないか精査します。",
+      "suggested_vi": "Trong quá trình đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán chi phí tiếp khách và đối ngoại có chênh lệch so với hóa đơn đã nộp hay không.",
+      "suggested_en": "During month-end closing reconciliation, we carefully examine whether there are discrepancies between the recorded entertainment expenses and the submitted receipts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive artificial phrasing ('適正な会計基準...適正に処理いたしました'). Real accounting reports would cite tax rules (税法/損金算入限度額) or corporate regulations without tautological '適正'.",
+      "suggested_ja": "税法および社内規程に則り、当期の決算において交際費の損金不算入額を適切に算入・処理いたしました。",
+      "suggested_vi": "Tuân thủ luật thuế và quy chế nội bộ, chúng tôi đã tính toán và xử lý phù hợp khoản chi phí tiếp khách không được trừ khi tính thuế trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with tax laws and internal regulations, we properly calculated and handled the non-deductible entertainment expenses in this period's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is awkward and redundant phrasing. In natural Japanese workplace dialogue, accountants say 'すべて一致していることを確認いたしました' or '差異なく整合していることを確認いたしました'. Also, Speaker A asking simply '差異は発生していませんか' without context is unnatural.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、交際費の申請額と総勘定元帳の間に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch giữa số tiền đề nghị chi phí tiếp khách và sổ cái không?",
+        "en": "In this month's closing, are there any discrepancies between requested entertainment expenses and the general ledger?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi thứ đều khớp chính xác không có vấn đề gì.",
+        "en": "We have reconciled the supporting vouchers with the subsidiary ledger and confirmed that everything matches without any issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Existing translations accurately match the input Japanese, though the Japanese source needs professional polishing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1f7d84e96789ce13ea908647c4a3b8369180ba3f671a854d99a5396c4464305c",
+    "validated_at": "2026-10-01T01:36:20.931132+00:00"
+  }
+}

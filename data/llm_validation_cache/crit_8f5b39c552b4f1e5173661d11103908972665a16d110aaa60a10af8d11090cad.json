@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000118",
+  "term": "為替手形",
+  "overall_decision": "rewrite",
+  "summary_reason": "「為替手形」という専門用語の会計処理に関する表現が全体的に不自然で、会計実務に即していません。特に「計上内容」や「処理」といった言葉の使い方が適切ではありません。専門用語の自然なコロケーションと文脈を再検討する必要があります。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "為替手形を開設する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "為替手形は開設するものではなく、振り出す（発行する）ものです。口座を開設する、といった表現と混同している可能性があります。",
+      "suggested_text": "為替手形を振り出す"
+    },
+    {
+      "index": 1,
+      "text": "為替手形を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "為替手形を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "為替手形の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「為替手形の計上内容や残高に差異がないか精査します」という表現は、会計実務において不自然です。為替手形は「計上」するものではなく、受取手形や支払手形として「計上」されます。また、「残高」という言葉の使い方も不自然です。",
+      "suggested_ja": "月末の帳簿照合において、受取手形勘定や支払手形勘定に計上された為替手形の内容と残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào về nội dung và số dư của hối phiếu thương mại được hạch toán vào tài khoản phải thu hoặc phải trả hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the details and balances of bills of exchange recorded in accounts receivable or accounts payable."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「為替手形を適正に処理いたしました」という表現は、文脈が不明瞭で、具体性に欠けます。為替手形は「処理する」というよりは、その発生、受取、支払、割引などの具体的な会計処理が行われます。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において為替手形に関する取引を適切に会計処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý kế toán các giao dịch liên quan đến hối phiếu thương mại một cách thích hợp trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately accounted for transactions related to bills of exchange in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「為替手形の計上内容に差異は発生していませんか」は、例示文と同様に「為替手形の計上内容」という表現が不自然です。Bの回答も、やや硬い印象を与えます。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、為替手形に関する受取手形勘定や支払手形勘定に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong các tài khoản phải thu hoặc phải trả liên quan đến hối phiếu thương mại không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounts receivable or accounts payable related to bills of exchange?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents with the subsidiary ledger, we confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "47482696df87f49e2e9662b5aaa44803523f1882dd4e443171bde2fde15999e9",
+    "validated_at": "2026-10-01T01:55:56.187770+00:00"
+  }
+}

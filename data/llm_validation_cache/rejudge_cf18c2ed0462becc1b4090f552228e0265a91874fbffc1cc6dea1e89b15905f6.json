@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "Collocations and examples are natural and accurate, but the dialogue contains a domain-level contradiction: withholding under 源泉分離課税 is not eligible for tax deduction/credit (控除対象). The dialogue should be rewritten to reflect either individual tax treatment (課税関係の終了/申告不要) or the distinction between 分離課税 and 控除/総合課税.",
+  "issues": [
+    {
+      "component": "dialogue",
+      "code": "UNNATURAL_PREDICATE",
+      "detail": "Under Japanese tax law, 源泉分離課税 by definition concludes taxation upon withholding and cannot be credited (控除対象). Combining 源泉分離課税 with 控除対象の源泉所得税額を計上 conflates individual separate withholding with corporate withholding tax credits (所得税額控除)."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "d8c9c31bae98f5b80119a7c5a82c4581e8b445b2c2f4e393b103dc5d22b7cd0d",
+    "validated_at": "2026-10-01T01:38:08.138405+00:00"
+  }
+}

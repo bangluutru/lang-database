@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000199",
+  "term": "サプライチェーン",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental semantic mismatch and domain factual error regarding how 'supply chain' is treated in an accounting context. A supply chain is a process/network, not an account or entry that can be 'booked' or have a 'balance' in financial statements. The translations also reflect this misunderstanding and add an unnecessary 'global' modifier.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "サプライチェーンを最適化する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "サプライチェーンを構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "サプライチェーンを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "サプライチェーンの寸断を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation, especially in recent years."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A supply chain is a network, not an accounting entry or balance. It cannot be '計上' (booked/recorded) or have a '残高' (balance) in the context of financial accounting. This is a fundamental misunderstanding of accounting principles and the term 'supply chain'.",
+      "suggested_ja": "月末の帳簿照合において、サプライチェーン関連の取引において計上漏れや誤りがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có thiếu sót hoặc sai sót trong việc hạch toán các giao dịch liên quan đến chuỗi cung ứng hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any omissions or errors in the accounting entries related to supply chain transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'サプライチェーンを適正に処理する' (properly process supply chain) is semantically incorrect in an accounting context. You process transactions or accounts, not the supply chain itself as an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてサプライチェーン関連の取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến chuỗi cung ứng trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed supply chain-related transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question 'サプライチェーンの計上内容に差異は発生していませんか' is based on the same fundamental accounting misunderstanding as the example sentences. A supply chain is not an item that has '計上内容' (accounting entries) or '差異' (discrepancies) in a financial ledger.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、サプライチェーン関連の取引に計上漏れや誤りはありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng này, có thiếu sót hoặc sai sót nào trong việc hạch toán các giao dịch liên quan đến chuỗi cung ứng không?",
+        "en": "In this month's monthly closing, were there any omissions or errors in the accounting entries for supply chain-related transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese translation 'chuỗi cung ứng toàn cầu' for 'supply chain' is too specific. 'Supply chain' itself does not inherently mean 'global supply chain'. The English translation for the examples and dialogue also suffers from the same semantic mismatch as the Japanese, attempting to translate the incorrect accounting usage."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3c3f6426bf7e76eb6081646bd1aa7f2829a04f3b908757c6e3b4304b7c7773ad",
+    "validated_at": "2026-10-01T01:58:08.609569+00:00"
+  }
+}

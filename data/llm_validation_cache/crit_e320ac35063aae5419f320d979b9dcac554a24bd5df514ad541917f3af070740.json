@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000170",
+  "term": "為替差益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations misuse predicates for a P&L item ('残高', '精算する'), and the example sentences/dialogue rely on generic templated filler rather than authentic accounting practice (foreign currency revaluation, rate fluctuations).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "為替差益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting phrasing (booking foreign exchange gains).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "為替差益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As a P&L (non-operating income) item, '発生額' or '計上額' is standard terminology rather than '残高' (balance sheet balance).",
+      "suggested_text": "為替差益の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "為替差益を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reconciles accounts or figures against source documents, not the profit gain entity itself directly in this manner.",
+      "suggested_text": "為替差益を認識する"
+    },
+    {
+      "index": 3,
+      "text": "為替差益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Transactions or claims/debts are settled (精算する), not foreign exchange gains.",
+      "suggested_text": "為替差益が発生する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Treating a P&L item as having a balance ('残高') alongside generic boilerplate phrasing makes this sound like a synthetic template.",
+      "suggested_ja": "期末の為替レートによる換算替えを行い、外貨建売掛金に係る為替差益を営業外収益に計上しました。",
+      "suggested_vi": "Chúng tôi đã thực hiện quy đổi lại theo tỷ giá cuối kỳ và hạch toán khoản lãi chênh lệch tỷ giá liên quan đến phải thu khách hàng bằng ngoại tệ vào doanh thu tài chính (thu nhập ngoài hoạt động kinh doanh).",
+      "suggested_en": "We revalued receivables denominated in foreign currencies at the period-end exchange rate and recognized the foreign exchange gains as non-operating income."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetition of '適正な' and '適正に' is stylistically poor and vacuous boilerplate without educational value regarding exchange gains.",
+      "suggested_ja": "急激な円安の進行に伴い、当期は多額の為替差益が発生する見込みです。",
+      "suggested_vi": "Do đồng Yên giảm giá nhanh chóng, dự kiến kỳ này sẽ phát sinh một khoản lãi chênh lệch tỷ giá hối đoái đáng kể.",
+      "suggested_en": "Due to the rapid depreciation of the yen, substantial foreign exchange gains are expected to occur this term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural Japanese syntax. The conversation should reflect practical exchange rate evaluation or month-end foreign currency revaluation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、外貨建預金の評価替えに伴う為替差益は正しく反映されていますか。",
+        "vi": "Trong quyết toán tháng này, lãi chênh lệch tỷ giá do đánh giá lại tiền gửi ngoại tệ đã được phản ánh chính xác chưa?",
+        "en": "In this month's closing, have the foreign exchange gains resulting from the revaluation of foreign currency deposits been accurately reflected?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、月末のTTMレートで再評価を行い、試算表の数値と整合していることを確認済みです。",
+        "vi": "Vâng, tôi đã đánh giá lại theo tỷ giá TTM cuối tháng và xác nhận số liệu khớp với bảng cân đối thử.",
+        "en": "Yes, we revalued them using the month-end TTM rate and confirmed that the figures reconcile with the trial balance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d4303567f9e4321925adbf432110996582540da186281c886e4b1225ea27a7b3",
+    "validated_at": "2026-10-01T01:36:41.404239+00:00"
+  }
+}

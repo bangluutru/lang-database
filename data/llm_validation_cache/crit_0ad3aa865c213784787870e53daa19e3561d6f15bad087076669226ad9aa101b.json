@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000017",
+  "term": "納期",
+  "overall_decision": "rewrite",
+  "summary_reason": "The entire item is an uncurated template injection of '納期' into a generic legal/contract-clause slot, producing unnatural collocations (納期に違反する, 納期を適用する), awkward phrasing (納期の文言), and slash-contaminated translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "納期を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, '設ける' is typically used with '期限' or '猶予'. For '納期', native business Japanese overwhelmingly prefers '納期を設定する' or '納期を定める'.",
+      "suggested_text": "納期を設定する"
+    },
+    {
+      "index": 1,
+      "text": "納期に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'違反する' takes rules, laws, or contracts as objects (e.g., 契約に違反する). For deadlines/delivery dates, Japanese uses '納期に遅れる', '納期を過ぎる', or '納期を守らない' (noun: 納期遅延).",
+      "suggested_text": "納期を守る"
+    },
+    {
+      "index": 2,
+      "text": "納期を適用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'適用する' applies to rules, legal provisions, or tax rates, not deadlines or delivery dates. Standard business collocations are '納期を短縮する' or '納期を延期する'.",
+      "suggested_text": "納期を調整する"
+    },
+    {
+      "index": 3,
+      "text": "納期を精査する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精査する' is used for detailed calculations, contracts, or estimates (見積もり). Deadlines are checked, confirmed, or reviewed ('納期を確認する' or '納期を検討する').",
+      "suggested_text": "納期を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically slotted into a generic contract template ('...契約書内に明確な[TERM]を設けました'). For a delivery date, '納期を定める' or '納期条項を設ける' is required. Furthermore, translations contain raw dictionary slash copy-paste ('thời hạn bàn giao / hạn giao hàng').",
+      "suggested_ja": "トラブルを未然に防ぐため、契約書上で具体的な納期を明確に定めておく必要があります。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh tranh chấp, chúng ta cần quy định rõ thời hạn giao hàng cụ thể trong hợp đồng.",
+      "suggested_en": "To prevent disputes in advance, we need to clearly specify a concrete delivery date in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically generated sentence treating '納期' as text/wording ('納期の文言'). One would say '納期条項の文言' (the wording of the delivery clause) or talk about the delivery date itself. The translation also awkwardly dumps slash options.",
+      "suggested_ja": "資材の調達遅延に伴い、当初予定していた納期を2週間延長していただくよう顧客に打診しました。",
+      "suggested_vi": "Do việc thu mua nguyên vật liệu bị chậm trễ, chúng tôi đã trao đổi với khách hàng để xin lùi hạn giao hàng dự kiến ban đầu thêm hai tuần.",
+      "suggested_en": "Due to delays in material procurement, we approached the client to request a two-week extension on the initially scheduled delivery date."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The dialogue suffers from robotic template-injection ('納期の修正案' where the term is forced into a generic legal review dialogue). While '納期条項' can be reviewed, in business '納期' naturally concerns production, project management, and customer delivery scheduling.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "クライアントから要望のあった短縮納期ですが、製造ラインの調整はつきそうですか。",
+        "vi": "Về yêu cầu rút ngắn thời hạn giao hàng từ phía khách hàng, liệu dây chuyền sản xuất có sắp xếp kịp không?",
+        "en": "Regarding the shortened delivery schedule requested by the client, do you think we can adjust the production line in time?"
+      },
+      {
+        "speaker": "B",
+        "ja": "部材の追加手配が完了しましたので、ご希望の納期通りに納品可能です。",
+        "vi": "Chúng tôi đã hoàn tất việc sắp xếp vật tư bổ sung, nên có thể bàn giao đúng thời hạn như họ mong muốn.",
+        "en": "We have completed additional procurement for the components, so we will be able to deliver on schedule as requested."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both English and Vietnamese translations mechanically copied definition slash artifacts ('delivery date / deadline', 'thời hạn bàn giao / hạn giao hàng') directly into sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d779342b119a16f21fa817c995b1d28db7327be7dd9b06091df52517e5f1d065",
+    "validated_at": "2026-10-01T01:41:17.999327+00:00"
+  }
+}

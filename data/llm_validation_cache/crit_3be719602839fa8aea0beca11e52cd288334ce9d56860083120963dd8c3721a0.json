@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000021",
+  "term": "所得税",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations are solid, the examples and dialogue suffer from mechanical templating: '適用税率を算出する' is unnatural tax wording, Example 2 has a Vietnamese typo ('thuế thuế'), and the dialogue confuses corporate monthly closing accounting with personal/withholding income tax practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "所得税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax collocation for filing an income tax return.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "所得税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax collocation for paying income tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "所得税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation for calculating income tax liability.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "所得税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard passive collocation for tax imposition.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The collocation '適用税率を算出する' (calculating the applicable tax rate) is unnatural in Japanese tax practice; statutory tax rates are applied (適用する/乗じる), not calculated (算出する).",
+      "suggested_ja": "課税標準額を正確に算出して所定の税率を適用し、納期限までに所得税の納付手続きを完了しました。",
+      "suggested_vi": "Chúng tôi đã tính toán chính xác thu nhập chịu thuế, áp dụng mức thuế suất quy định và hoàn tất thủ tục nộp thuế thu nhập cá nhân (TNCN) trước thời hạn.",
+      "suggested_en": "We accurately calculated the taxable base amount, applied the prescribed tax rate, and completed the income tax payment procedures by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is a robotic template swap of a corporate tax sentence ('当期における所得税の税負担額' is ambiguous in corporate settings where corporations pay 法人税). Additionally, the Vietnamese translation contains a duplicated typo ('thuế thuế').",
+      "suggested_ja": "税制改正の内容を踏まえ、役員報酬の見直しに伴う所得税への影響額を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung cải cách thuế, chúng tôi đã tính thử mức độ ảnh hưởng đến thuế thu nhập cá nhân (TNCN) sau khi điều chỉnh thù lao của ban điều hành.",
+      "suggested_en": "Based on the tax reform details, we estimated the impact on income tax resulting from the revision of executive compensation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese corporate monthly closing (月次決算), corporations do not incur '所得税' on their own income (they incur 法人税); they only process withholding income tax (源泉所得税 / 預り金) for payroll or professional fees. Referring simply to '所得税の計上内容' in corporate monthly closing sounds ungrounded and amateurish.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算において、源泉徴収した所得税の控除額に差異は発生していませんか。",
+        "vi": "Trong kỳ tính lương tháng này, có phát sinh chênh lệch nào đối với khoản khấu trừ thuế thu nhập cá nhân (TNCN) trích tại nguồn không?",
+        "en": "Are there any discrepancies in the withheld income tax deduction amounts for this month's payroll?"
+      },
+      {
+        "speaker": "B",
+        "ja": "賃金台帳と預り金の補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ lương với sổ cái phụ tài khoản tiền tạm giữ và xác nhận mọi số liệu đều khớp đúng hợp lệ.",
+        "en": "I have reconciled the payroll register with the withholding deposit subsidiary ledger and confirmed that everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1's Vietnamese translation is acceptable, but Example 2 contains a blatant typographical error ('số tiền thuế thuế thu nhập cá nhân')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c381993c2d60a2f1a29b21417ccf82a2b77871e5e64bfd72fd2a3c0088fdba87",
+    "validated_at": "2026-10-01T01:37:47.702026+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000002",
+  "term": "地方税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 pairs an unnatural predicate with tax rate ('適用税率を算出する'), Example 1 has a Vietnamese typographical error, and the dialogue employs stilted, templated phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地方税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax filing expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "地方税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and accurate collocation for tax payment.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "地方税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate accounting expression for calculating local taxes.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "地方税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard passive construction regarding tax imposition.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適用税率を算出する」は不自然。税率は法令・自治体条例で定められており、納税者が「算出」するものではなく「確認」または「適用」する対象である。課税標準額を算定した上で税率を適用するのが税務上の正確な表現。",
+      "suggested_ja": "課税標準額を正確に算定した上で適用税率を確認し、納期限までに地方税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác số tiền chịu thuế và xác nhận thuế suất áp dụng, chúng tôi đã hoàn tất thủ tục nộp thuế địa phương trước thời hạn.",
+      "suggested_en": "After accurately calculating the tax base and verifying the applicable tax rate, we completed the local tax payment procedures by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is natural, but the Vietnamese translation contains an obvious duplicate word typo ('thuế thuế địa phương').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における地方税の税負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ nội dung cải cách thuế, chúng tôi đã ước tính tác động đối với gánh nặng thuế địa phương trong kỳ này.",
+      "suggested_en": "In light of the tax reform, we have estimated its impact on our local tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase「適正に整合している」is redundant and unnatural AI-generated phrasing (combining 適正に処理されている and 整合している). In Japanese accounting practice, one says「不整合がないことを確認いたしました」or「金額が一致していることを確認いたしました」.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、地方税の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong việc hạch toán thuế địa phương không?",
+        "en": "Are there any discrepancies in the local tax accruals for this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi số liệu đều khớp, không có chênh lệch.",
+        "en": "We have already reconciled the supporting documents with the subsidiary ledger and confirmed that all amounts match without discrepancy."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translation for Example 1 contains duplicated words ('thuế thuế địa phương')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9cc83af9c1fd94ae24d632c2fd49d540a03861b03a84e7e4b739dc365d53929f",
+    "validated_at": "2026-10-01T01:37:20.476837+00:00"
+  }
+}

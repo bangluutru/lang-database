@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000125",
+  "term": "売上原価",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains semantically mismatched collocations ('売上原価を精算する'), awkward repetitious phrasing in Example 2 ('適正な会計基準...適正に処理'), and unnatural phrasing in Dialogue ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売上原価を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recognizing cost of sales.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売上原価の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in monthly closing procedures when reviewing trial balance figures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "売上原価を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly reconcile 'cost of sales' as a standalone entity; one reconciles inventory subledgers, purchases, or accounts for COGS. '売上原価の内訳を照合する' or '売上原価を算定する' is standard.",
+      "suggested_text": "売上原価を算定する"
+    },
+    {
+      "index": 3,
+      "text": "売上原価を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算' applies to expense reimbursements, advance payments, or clearing balances, not calculating or booking cost of sales.",
+      "suggested_text": "売上原価率を分析する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Plausible month-end closing check context, though slightly templated.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Awkward and repetitive phrasing: '適正な会計基準' is not standard accounting terminology (standard is 企業会計基準 or 適用される会計基準), and repeating '適正な...適正に' is stylistically poor and empty of meaningful business context.",
+      "suggested_ja": "期末の棚卸結果を反映させ、当期の売上原価を正確に算定いたしました。",
+      "suggested_vi": "Chúng tôi đã phản ánh kết quả kiểm kê cuối kỳ và tính toán chính xác giá vốn hàng bán trong kỳ này.",
+      "suggested_en": "We reflected the year-end inventory count results and accurately calculated the cost of sales for this period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural Japanese (correct business usage is 整合性が取れている or 一致している). The dialogue also feels overly generic and mechanic.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売上原価の計上額に想定外の乖離はありませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền hạch toán giá vốn hàng bán có khoản chênh lệch nào ngoài dự kiến không?",
+        "en": "Are there any unexpected variances in the recorded cost of sales for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "棚卸受払表と総勘定元帳を照合し、すべて整合性が取れていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu bảng xuất nhập tồn với sổ cái, và xác nhận mọi thứ hoàn toàn khớp nhau.",
+        "en": "I reconciled the inventory ledger with the general ledger and confirmed that everything is consistent."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the provided source text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "29da0713a78e1514bf3cc9e7474b39a74b4609d4fa2030750a1dec4564a24a3c",
+    "validated_at": "2026-10-01T01:35:53.020636+00:00"
+  }
+}

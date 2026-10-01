@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000153",
+  "term": "協業",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationsとExample Sentence、Dialogueに不自然な表現や接続が見られたため、全体的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "協業を徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「徹底する」は「協業」という行為そのものに対して使うのは不自然。協業の『内容』や『方法』を徹底する、という文脈ならあり得るが、単体では不自然。",
+      "suggested_text": "協業を強化する"
+    },
+    {
+      "index": 1,
+      "text": "協業を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "協業を習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "協業の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「事前の協業を徹底しています」が不自然。「協業」は行為そのものを指すため、「徹底する」の対象としては不適切。また、「関係部署への」という助詞も不自然。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との連携を強化しています。",
+      "suggested_vi": "Để thúc đẩy dự án diễn ra suôn sẻ, chúng tôi đang tăng cường hợp tác với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we are strengthening collaboration with relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現で、ビジネス文書として適切。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問が「協業の徹底状況」についてであるのに対し、Bの回答が「情報共有の重要性を再認識し、迅速な対応が習慣化されてきている」と、質問の意図と完全に一致していない。協業の『徹底状況』に対する具体的な回答になっていない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内における協業の状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình hợp tác trong nội bộ phòng ban, có vấn đề nào phát sinh không?",
+        "en": "Regarding the status of collaboration within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、当初は情報共有に課題がありましたが、現在は全メンバーでその重要性を再認識し、迅速な協業が習慣化されてきています。",
+        "vi": "Vâng, ban đầu có vấn đề về chia sẻ thông tin, nhưng hiện tại tất cả thành viên đã nhận thức lại tầm quan trọng của nó và việc hợp tác nhanh chóng đang dần trở thành thói quen.",
+        "en": "Yes, initially there were challenges with information sharing, but now all members have re-recognized its importance, and prompt collaboration is becoming a habit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語の「hợp tác kinh doanh cùng có lợi」は「協業」のニュアンスをやや限定しすぎている。「cùng có lợi」は「win-win」の意味合いが強く、協業の全てがそうとは限らないため。英語の「business collaboration / partnership」は自然だが、例の日本語の修正に伴い、翻訳も修正が必要。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a31cdfebdf4802b7ec9d46dd3553741f96cb0298ecd2f5e3da0e23421f793d29",
+    "validated_at": "2026-10-01T01:52:51.052045+00:00"
+  }
+}

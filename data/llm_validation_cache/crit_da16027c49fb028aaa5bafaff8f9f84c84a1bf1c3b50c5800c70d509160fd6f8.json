@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000143",
+  "term": "失注",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the misunderstanding of '失注' as an accounting entry or balance. '失注' represents a lost sales opportunity, not a direct accounting item that can be '計上' (booked/recorded) or have a '残高' (balance) in the traditional accounting sense. The examples and dialogue incorrectly place '失注' within accounting reconciliation and processing contexts, making them unnatural and factually incorrect from an accounting perspective.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "失注を防ぐ",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "失注の要因を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "失注を報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "失注を挽回する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「失注」は会計上の勘定科目や残高として計上されるものではない。売上機会の損失であり、直接的に帳簿に計上されるものではないため、会計処理の文脈で「計上内容や残高」という表現は不自然。",
+      "suggested_ja": "月末の帳簿照合において、失注による売上機会損失が適切に評価・記録されているか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem tổn thất cơ hội doanh thu do trượt đơn hàng có được đánh giá và ghi nhận một cách thích hợp hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether the lost sales opportunities due to lost orders are appropriately evaluated and recorded."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「失注」は会計基準や社内規程に則って「処理」する対象ではない。売上機会の損失であり、会計上の直接的な処理対象ではない。会計処理の文脈で「失注を適正に処理いたしました」は不自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において失注による影響を適切に評価・開示いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã đánh giá và công bố một cách thích hợp ảnh hưởng của việc trượt đơn hàng trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately evaluated and disclosed the impact of lost orders in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「失注の計上内容に差異」という表現が、会計処理の文脈で不自然。「失注」は売上機会の損失であり、直接的に会計帳簿に「計上」されるものではないため、差異の有無を問うのは適切ではない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、失注による売上機会損失の評価に問題はありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, việc đánh giá tổn thất cơ hội doanh thu do trượt đơn hàng có vấn đề gì không?",
+        "en": "In this month's monthly closing, were there any issues with the evaluation of lost sales opportunities due to lost orders?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連資料を照合し、すべて適切に評価・記録されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu các tài liệu liên quan và xác nhận rằng tất cả đều được đánh giá và ghi nhận một cách thích hợp.",
+        "en": "Yes, we have reconciled the relevant documents and confirmed that everything has been appropriately evaluated and recorded."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5098be5444069a07503825b6aa505b3095defed3e39e0008b3a7fa5e054ef7ae",
+    "validated_at": "2026-10-01T01:52:50.230945+00:00"
+  }
+}

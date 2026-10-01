@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000175",
+  "term": "業務効率化",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '業務効率化' as an accounting item. It is a process or initiative, not something that can be '計上' (booked/entered) or have '残高' (balance) in financial statements. This leads to semantic mismatches in examples and dialogue, making them unnatural and factually incorrect in an accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務効率化を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "業務効率化を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "業務効率化の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "業務効率化を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "業務効率化 is a concept/process, not an accounting entry or balance. It cannot be 計上 or have 残高. The sentence attempts to treat it as an account item.",
+      "suggested_ja": "月末の帳簿照合において、業務効率化によって削減されたコストや、それに関連する計上内容に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong chi phí được cắt giảm nhờ tối ưu hóa hiệu suất công việc hoặc các khoản mục kế toán liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in costs reduced by operational efficiency or related accounting entries."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "業務効率化 cannot be 'processed' (処理) in closing entries (決算) in the same way an asset or liability is. It's a strategic initiative, not a financial transaction to be accounted for directly.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において業務効率化による財務的影響を適切に評価し、開示いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã đánh giá và công bố một cách thích đáng các tác động tài chính từ việc tối ưu hóa hiệu suất công việc trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately evaluated and disclosed the financial impact of operational efficiency in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Similar to the examples, 業務効率化 cannot have 計上内容. The dialogue incorrectly treats it as an accounting item that can be 'entered' and checked for discrepancies.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、業務効率化の取り組みによるコスト削減効果について、計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong các khoản mục kế toán liên quan đến hiệu quả giảm chi phí từ các sáng kiến tối ưu hóa hiệu suất công việc không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries related to the cost reduction effects from our operational efficiency initiatives?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、コスト削減効果に関するすべての計上は適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả các khoản mục kế toán liên quan đến hiệu quả giảm chi phí đều khớp đúng.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that all entries related to cost reduction effects are properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8e1a4e446cab702f8667442b004f2aae56b485ff1dfef4978f6e10df03899ead",
+    "validated_at": "2026-10-01T01:53:09.997026+00:00"
+  }
+}

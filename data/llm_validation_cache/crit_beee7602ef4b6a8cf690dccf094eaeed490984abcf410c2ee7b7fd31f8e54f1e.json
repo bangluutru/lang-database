@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000191",
+  "term": "租税条約",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain hallucination. The generator mechanically treated '租税条約' (bilateral international tax treaty) as an ordinary private commercial agreement negotiated between private corporate counterparties (claiming companies 'conclude', 'amend', and add 'damages clauses' to a tax treaty). Entire examples and dialogue require immediate rewrite to reflect real corporate cross-border tax practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "租税条約を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically and factually natural between sovereign states, though in corporate practice businesses utilize rather than execute them.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "租税条約を更新する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Treaties are amended or revised (改定する・改正する), not 'renewed' (更新する) like private commercial contracts.",
+      "suggested_text": "租税条約を改定する"
+    },
+    {
+      "index": 2,
+      "text": "租税条約を解除する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'解除する' applies to private contracts. Treaties between states are terminated or denounced (破棄する・失効させる). In a corporate learning context, '租税条約の適用を受ける' is far more practical.",
+      "suggested_text": "租税条約の適用を受ける"
+    },
+    {
+      "index": 3,
+      "text": "租税条約の条項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reviewing treaty clauses for withholding tax rates or permanent establishment rules.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Catastrophic error: A private corporation cannot conclude a '租税条約' (bilateral tax treaty) with a business partner ('取引先'). This reflects blind templating from private contract terms.",
+      "suggested_ja": "海外子会社からの配当金について租税条約の適用を受けるため、所轄税務署に届出書を提出いたしました。",
+      "suggested_vi": "Chúng tôi đã nộp hồ sơ thông báo lên cơ quan thuế có thẩm quyền để được áp dụng hiệp định tránh đánh thuế hai lần đối với tiền cổ tức từ công ty con ở nước ngoài.",
+      "suggested_en": "We submitted a notification to the competent tax office to apply the tax treaty to dividends from our overseas subsidiary."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Reviewing a tax treaty for 'legal risks' and negotiating clauses like a vendor contract is factually absurd. Tax treaties are checked by tax/accounting departments for withholding rates and permanent establishment (PE) risks.",
+      "suggested_ja": "海外取引先へのロイヤルティ支払いにあたり、租税条約に基づき源泉徴収税率の減免が適用できるか税理士と精査しました。",
+      "suggested_vi": "Khi thanh toán tiền bản quyền cho đối tác nước ngoài, chúng tôi đã rà soát kỹ cùng chuyên gia thuế xem có thể áp dụng giảm miễn thuế suất khấu trừ tại nguồn theo hiệp định thuế hay không.",
+      "suggested_en": "Upon paying royalties to our overseas business partner, we closely reviewed with our tax accountant whether a reduction or exemption of the withholding tax rate could be applied under the tax treaty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Total domain failure. Tax treaties are bilateral treaties between governments, not commercial contracts that counterparty legal teams amend with damages clauses ('損害賠償条項'). This is a severe mechanical hallucination.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "米国の取引先からロイヤルティの支払いを受けますが、租税条約に関する届出書の提出は完了していますか。",
+        "vi": "Chúng ta sắp nhận tiền bản quyền từ đối tác Mỹ, thủ tục nộp thông báo áp dụng hiệp định thuế đã hoàn tất chưa?",
+        "en": "We are receiving royalty payments from our US partner; have you finished submitting the notification for the tax treaty?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、現地の様式も含めて提出済みですので、限度税率の軽減措置が適用される予定です。",
+        "vi": "Vâng, tôi đã nộp đầy đủ cả biểu mẫu của phía địa phương, dự kiến sẽ được áp dụng mức thuế suất ưu đãi theo hiệp định.",
+        "en": "Yes, everything including the local forms has been filed, so the reduced treaty withholding rate is set to apply."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated definition translations are accurate; the catastrophic errors lie entirely in contextual generation (treating a state treaty as a company agreement)."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4ab8af4569cb54494f0e3d3451333b10327bf4dadc0c835e6ce57ceab07c4829",
+    "validated_at": "2026-10-01T01:40:52.744045+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000186",
+  "term": "税理士",
+  "overall_decision": "rewrite",
+  "summary_reason": "会社法上の機関（会計監査人・役員）と税理士の混同による事実誤認（株主総会決議での税理士選任など）や、対話文における文脈の完全な破綻（推敲・発送テンプレートの誤適用）が見られるため、全面的に差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税理士を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任」は会社法上の役員（取締役・監査役）や会計監査人などに用いる法的手続きの用語であり、外部専門家である税理士に対しては「顧問契約を結ぶ」「依頼する」「起用する」などを用いるのが自然です。",
+      "suggested_text": "税理士と顧問契約を締結する"
+    },
+    {
+      "index": 1,
+      "text": "税理士に就任する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "税理士は国家資格・職業名であり役職ではないため、「〜に就任する」という述語との共起は極めて不自然です（「顧問税理士を委嘱する」「税理士として登録する」などが適切）。",
+      "suggested_text": "税理士に申告業務を委任する"
+    },
+    {
+      "index": 2,
+      "text": "税理士に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務相談などの実務において最も頻出する自然な共起表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "税理士の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税理士法上の職務遂行や倫理規定などのコンテキストで文法・実務上成立する表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会社法上、株主総会の決議で選任されるのは役員（取締役・監査役等）および会計監査人（公認会計士／監査法人）です。税理士は株主総会決議で選任される法定機関ではないため、会社法・税務実務上の重大な事実誤認です。",
+      "suggested_ja": "法人税の確定申告に向けて、顧問税理士と税務調整項目の確認を進めています。",
+      "suggested_vi": "Chúng tôi đang tiến hành rà soát các hạng mục điều chỉnh thuế với chuyên viên đại lý thuế cố vấn để chuẩn bị cho việc quyết toán thuế thu nhập doanh nghiệp.",
+      "suggested_en": "We are reviewing the tax adjustment items with our advisory tax accountant in preparation for filing the corporate tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「業務執行の適法性を確保する」は監査役等の職務文脈であり、税理士との連携としては「税務リスクの低減」「適正な税務申告の担保」などが適切です。文脈が他役職のテンプレートの流用になっています。",
+      "suggested_ja": "税務調査への対応および税務リスクの低減のため、定期的に顧問税理士のアドバイスを受けています。",
+      "suggested_vi": "Để ứng phó với thanh tra thuế và giảm thiểu rủi ro về thuế, chúng tôi định kỳ nhận tư vấn từ chuyên viên đại lý thuế cố vấn.",
+      "suggested_en": "We regularly seek advice from our advisory tax accountant to handle tax audits and minimize tax risks."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aが「税理士の準備状況」を尋ねているのに対し、Bが「内容の推敲・役員承認・発送の手配」と答えており、文脈が完全に破綻しています（会議資料の発送テンプレートと混線）。会話として成立していません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算期の税務申告について、顧問税理士との打ち合わせ日程は決まりましたか。",
+        "vi": "Về việc kê khai thuế kỳ quyết toán, đã ấn định được ngày họp với chuyên viên đại lý thuế cố vấn chưa?",
+        "en": "Regarding the tax filing for the fiscal year-end, has the meeting schedule with our advisory tax accountant been finalized?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、必要書類の一次チェックが完了次第、来週木曜日に来社いただく予定です。",
+        "vi": "Vâng, ngay sau khi hoàn thành đợt kiểm tra sơ bộ các chứng từ cần thiết, ông ấy dự kiến sẽ đến công ty chúng ta vào thứ Năm tuần sau.",
+        "en": "Yes, as soon as the preliminary check of the required documents is completed, they are scheduled to visit our office next Thursday."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳で「(Zairishi)」という不要なルビ的表記が混入しており、また「chuyên viên tư vấn và đại lý thuế có chứng chỉ quốc gia」は冗長すぎます。実務的には「chuyên viên đại lý thuế」または「chuyên gia tư vấn thuế được cấp phép」が自然です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f0184b41df2cdfcd1fbd7753431954b515e9fb55ed24c60c21dc9363b53bb744",
+    "validated_at": "2026-10-01T01:40:46.978542+00:00"
+  }
+}

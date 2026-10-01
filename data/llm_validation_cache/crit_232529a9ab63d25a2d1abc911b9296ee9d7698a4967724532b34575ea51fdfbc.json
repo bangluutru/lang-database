@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000105",
+  "term": "リース債務",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 display semantic and predicate mismatches ('精算する' is inapplicable to lease debts). Example 2 suffers from generic AI templating with repetitive '適正', and Dialogue turn B uses the unnatural phrase '適正に整合している'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "リース債務を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing lease liabilities.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "リース債務の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural phrasing in audit and monthly closing routines.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "リース債務を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles account balances or schedules against ledgers, not the liability itself directly without '残高' or '台帳'.",
+      "suggested_text": "リース債務残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "リース債務を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to expenses, advances, or petty cash. Lease obligations are repaid (返済する) or written down/settled via payment (支払う / 取り崩す).",
+      "suggested_text": "リース債務を返済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, practical closing procedure sentence with accurate accounting terminology.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted use of '適正な' ('適正な会計基準...適正に処理いたしました'). In professional accounting, standards are referred to as '関連する会計基準' or simply '会計基準'.",
+      "suggested_ja": "会計基準および社内規程に則り、ファイナンス・リース取引に係るリース債務を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã hạch toán phù hợp nợ thuê tài chính liên quan đến giao dịch thuê tài chính.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we properly recognized lease obligations related to finance lease transactions."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is an unnatural pleonasm (整合 already denotes consistency/agreement). Speaker B should use standard professional phrasing like '不整合がないことを確認いたしました' or '整合していることを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、リース債務の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán nợ thuê tài chính có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the lease obligation entries for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、差異なく整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ và xác nhận mọi thứ hoàn toàn khớp, không có chênh lệch.",
+        "en": "I have reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches without discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b8c32ba2df5c5a63f2c341e81b1bd1dc24d1389f98463e96d3ae5cad5e3d0e1f",
+    "validated_at": "2026-10-01T01:35:30.003376+00:00"
+  }
+}

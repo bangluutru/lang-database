@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000175",
+  "term": "延滞税",
+  "overall_decision": "rewrite",
+  "summary_reason": "延滞税が「法定納期限を過ぎてから発生する附帯税（ペナルティ）」であるという基本定義に反し、「納期限までに延滞税を納付した」「延滞税を申告する」といった致命的な事実誤認・論理矛盾が含まれています。また翻訳文への注釈混入も見られます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "延滞税を申告する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "延滞税（附帯税）は申告するものではなく、納期限遅延に伴い自動的に課される、あるいは本税の修正申告等に伴って納付・発生するものです。「延滞税を申告する」は税務実務上あり得ません。",
+      "suggested_text": "延滞税が発生する"
+    },
+    {
+      "index": 1,
+      "text": "延滞税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然かつ実務で頻出するコロケーションです。"
+    },
+    {
+      "index": 2,
+      "text": "延滞税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "遅延日数や法定利率に応じた延滞税額の計算として自然です。"
+    },
+    {
+      "index": 3,
+      "text": "延滞税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税法上、ペナルティとして賦課される表現として適切です。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「納期限までに延滞税の納付手続きを完了しました」は致命的な論理矛盾です。延滞税は納期限を過ぎた後に発生する附帯税であるため、納期限までに納付することは原理上不可能です。テンプレートの誤用です。",
+      "suggested_ja": "修正申告書の提出に伴い、本税とあわせて延滞税を速やかに納付しました。",
+      "suggested_vi": "Cùng với việc nộp tờ khai điều chỉnh, chúng tôi đã nhanh chóng nộp tiền phạt chậm nộp cùng với số tiền thuế gốc.",
+      "suggested_en": "Following the submission of the amended tax return, we promptly paid the delinquent tax along with the principal tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "延滞税は納付遅延に対する附帯税・ペナルティであり、通常の税制改正で「当期の税負担額への影響を試算する」ような計画的税目ではありません。典型的な機械的テンプレート文です。修正申告や追徴課税に伴う試算文に改めるべきです。",
+      "suggested_ja": "税務調査による修正申告に伴い、追加の本税に加えて発生する延滞税の概算額を試算いたしました。",
+      "suggested_vi": "Liên quan đến việc nộp tờ khai điều chỉnh sau đợt thanh tra thuế, chúng tôi đã tính toán số tiền phạt chậm nộp ước tính phát sinh bên cạnh số thuế gốc bổ sung.",
+      "suggested_en": "Following the amended return prompted by the tax audit, we calculated the estimated delinquent tax arising in addition to the supplementary principal tax."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "毎月の月次決算で延滞税の計上差異を補助元帳と照合するというシチュエーションは実務上極めて不自然です。延滞税は日常業務ではなく、納付遅延や税務調査、修正申告時にスポットで発生し、税法上「損金不算入」として処理される性質のものです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日納付した修正申告分の延滞税ですが、会計処理はどの科目で計上されていますか。",
+        "vi": "Khoản tiền phạt chậm nộp thuế của phần khai điều chỉnh đã nộp hôm trước được hạch toán vào tài khoản nào vậy?",
+        "en": "Regarding the delinquent tax paid the other day for the amended return, which account was it recorded under?"
+      },
+      {
+        "speaker": "B",
+        "ja": "租税公課として費用計上した上で、税務申告書上は損金不算入として加算調整を行っています。",
+        "vi": "Khoản đó đã được ghi nhận vào chi phí thuế và lệ phí, đồng thời được điều chỉnh tăng (không được trừ khi tính thuế) trên tờ khai quyết toán thuế TNDN.",
+        "en": "It has been expensed under taxes and dues, and adjusted as a non-deductible expense on the tax return."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "既存の例文訳において、単語定義の解説注釈文（「tương đương lãi suất chậm trả」や「/ interest tax」）がそのまま例文の文中に混入しており、翻訳として極めて不自然です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c9be771a63cd4ebc27308d45af5614dcc420880509fd5458d2f3564e9f1f9492",
+    "validated_at": "2026-10-01T01:40:30.992976+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000091",
+  "term": "賞与引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 exhibit semantic mismatches with accounting verbs (provisions are 取り崩す/戻し入れる, not 精算する), Example 1 suffers from repetitive templating, and the Dialogue mistakenly cites '証憑書類' for an estimated accrual item.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "賞与引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing bonus provision.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "賞与引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business phrasing for verifying the account balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "賞与引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates records or subledgers against calculations, not the provision itself. A fundamental accounting pairing with 計上 is '取り崩す' (draw down/reverse upon payment) or '算定する'.",
+      "suggested_text": "賞与引当金を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "賞与引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to expenses or advances (経費・仮払金), never to an estimated liability/provision account. In accounting, when actual bonuses are paid, the provision is drawn down or reversed (戻し入れる).",
+      "suggested_text": "賞与引当金を戻し入れる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and realistic for month-end reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains stylistic redundancy ('適正な...適正に処理いたしました') and vague corporate filler. In accounting reporting, specifying the basis of calculation (支給見込額に基づき計上) is far more authentic.",
+      "suggested_ja": "社内規程および支給見込額に基づき、当期末において賞与引当金を適切に計上いたしました。",
+      "suggested_vi": "Dựa trên quy chế nội bộ và số tiền dự kiến chi trả, chúng tôi đã trích lập dự phòng tiền thưởng nhân viên một cách phù hợp vào thời điểm cuối kỳ này.",
+      "suggested_en": "Based on internal regulations and projected payment amounts, we have properly recognized the provision for bonuses at the end of this fiscal period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "賞与引当金 is an estimate (見積項目); its audit trail relies on calculation schedules (算定根拠・計算シート), not typical transactional vouchers (証憑書類). Also '計上内容に差異' lacks context on what is being compared.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算における賞与引当金の計上額は、算定シート通りになっていますか。",
+        "vi": "Số tiền trích lập dự phòng tiền thưởng trong kỳ quyết toán tháng này đã khớp với bảng tính toán chưa?",
+        "en": "Does the accrued provision for bonuses in this month's closing match the calculation sheet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、在籍人数と支給見込額のデータを反映し、総勘定元帳の残高と一致していることを確認済みです。",
+        "vi": "Vâng, chúng tôi đã cập nhật dữ liệu về số lượng nhân sự và dự kiến chi trả, đồng thời xác nhận đã khớp với số dư trên sổ cái chung.",
+        "en": "Yes, we reflected the employee headcount and projected payout data, and confirmed it reconciles with the general ledger balance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both meaning fields accurately convey the target concept."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2e0fadcc90ea9d6167d8ab0df56c118c540cb11c64546e44ea9a7aa4c4b9bdb7",
+    "validated_at": "2026-10-01T01:35:11.041726+00:00"
+  }
+}

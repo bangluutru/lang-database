@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000086",
+  "term": "法人税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations are fully acceptable, but Example 0 contains a tax terminology mismatch ('適用税率を算出'), Example 1 contains lexical redundancy in Japanese plus a typo in Vietnamese ('thuế thuế'), and the Dialogue displays a synthetic, factually inapplicable response (matching vouchers for monthly tax accruals).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法人税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, correct collocation in corporate tax compliance.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "法人税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, authentic terminology for paying corporate tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "法人税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in practical workplace communication, though 法人税額を算定する is more formal.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "法人税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate passive construction regarding corporate tax liability.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax law, one does not calculate tax rates ('適用税率を算出する'). Tax rates are statutory and applied ('税率を適用する'), while taxable income/tax base is calculated ('課税所得/課税標準を算出・算定する').",
+      "suggested_ja": "課税標準を正確に算定した上で税額を確定し、納期限までに法人税の納付手続きを完了しました。",
+      "suggested_vi": "Sau khi tính toán chính xác thu nhập chịu thuế và xác định số thuế, chúng tôi đã hoàn tất thủ tục nộp thuế thu nhập doanh nghiệp (TNDN) trước thời hạn.",
+      "suggested_en": "After accurately calculating the tax base and determining the tax amount, we completed the payment procedure for corporate income tax by the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'法人税の税負担額' contains awkward lexical redundancy ('税' repeated in close succession). Standard Japanese accounting phrasing is '法人税負担額' or '実効税率および税負担額への影響'. Additionally, the Vietnamese translation contains an accidental duplicate token ('thuế thuế').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における法人税等の負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ vào nội dung sửa đổi luật thuế, chúng tôi đã tính thử tác động đối với gánh nặng thuế thu nhập doanh nghiệp (TNDN) trong kỳ này.",
+      "suggested_en": "Based on the tax reform amendments, we estimated the impact on our corporate income tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In monthly closing (月次決算), corporate tax is recognized via provision/estimation ('法人税等見積計上') against pre-tax profit. Speaker B's response claiming reconciliation of '証憑書類' (source vouchers) against '補助元帳' (subsidiary ledger) is a generic templated response that makes no domain sense for monthly corporate tax accruals.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算において、法人税等の見積計上額に異常な差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch bất thường nào trong số tiền ước tính thuế TNDN không?",
+        "en": "In this month's monthly closing, are there any abnormal variances in the estimated corporate tax accrual?"
+      },
+      {
+        "speaker": "B",
+        "ja": "税引前利益に基づき見積実効税率で試算しており、計画値との整合性を確認済みです。",
+        "vi": "Chúng tôi đã tính toán dựa trên lợi nhuận trước thuế theo thuế suất hiệu dụng ước tính và đã đối chiếu khớp với kế hoạch.",
+        "en": "We calculated it based on pre-tax income using the estimated effective tax rate, and have verified consistency with the budget."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Example 1 in Vietnamese contains a duplicate word error ('số tiền thuế thuế thu nhập doanh nghiệp')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7a9e830fb20a5ecb7321b3bab38afce0bc985bcf4bca105d3ff0e0bf90b8422c",
+    "validated_at": "2026-10-01T01:38:57.644866+00:00"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-business-000019",
+  "term": "催告書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe conceptual hallucination: the input sentences and dialogue conflate 催告書 (formal demand notice for debt/default) with 招集通知 (notice of convocation for corporate meetings). Both examples, dialogue, and one collocation required complete rewrites to align with genuine Japanese legal and accounting practices.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "催告書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard collocation for drafting a formal demand notice."
+    },
+    {
+      "index": 1,
+      "text": "催告書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A 催告書 is a formal demand letter sent to an obligor or defaulting party, not submitted (提出) to an authority. Typical predicates are 送付する or 発送する.",
+      "suggested_text": "催告書を送付する"
+    },
+    {
+      "index": 2,
+      "text": "催告書を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to dispatching the demand letter (typically via certified mail)."
+    },
+    {
+      "index": 3,
+      "text": "催告書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to receiving a formal demand notice from a creditor or counterparty."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A 催告書 is a formal demand/dunning notice for default or non-payment. Using it in the context of preparing for a general shareholders' meeting or board meeting is factually incorrect (conflated with 招集通知).",
+      "suggested_ja": "度重なる督促にもかかわらず売掛金の入金が確認できないため、内容証明郵便にて催告書を発送いたしました。",
+      "suggested_vi": "Do các khoản nợ phải thu vẫn chưa được thanh toán dù đã nhiều lần nhắc nhở, chúng tôi đã gửi thư cảnh cáo đòi nợ qua bưu điện có chứng nhận nội dung.",
+      "suggested_en": "As the accounts receivable remain unpaid despite repeated reminders, we dispatched a formal demand notice via contents-certified mail."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated compliance sentence. Receiving a 催告書 triggers urgent legal and credit risk escalation rather than routine filing.",
+      "suggested_ja": "取引先から催告書を受領した場合は、直ちに法務部および経理部へ共有し、事実関係の確認を行ってください。",
+      "suggested_vi": "Trường hợp nhận được thư cảnh cáo đòi nợ từ đối tác, vui lòng chia sẻ ngay với bộ phận pháp chế và bộ phận kế toán để tiến hành xác minh sự việc.",
+      "suggested_en": "If a formal demand notice is received from a business partner, please promptly share it with the Legal and Accounting departments to verify the facts."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A talks about preparing a 催告書 for 'next week's meeting', which conflates a legal dunning letter with meeting notices (招集通知) or materials (会議資料).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "長期未払いとなっている取引先への催告書ですが、法務部の確認は完了しましたか。",
+        "vi": "Về thư cảnh cáo đòi nợ gửi đối tác đang nợ đọng kéo dài, bộ phận pháp chế đã kiểm tra xong chưa?",
+        "en": "Regarding the formal demand letter to the long-overdue client, has the legal review been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、文面の最終確認と役員決裁が完了しましたので、本日付で内容証明郵便にて発送いたします。",
+        "vi": "Vâng, việc rà soát nội dung lần cuối và phê duyệt của ban lãnh đạo đã hoàn tất, nên chúng tôi sẽ gửi bằng thư chứng nhận nội dung trong ngày hôm nay.",
+        "en": "Yes, the final review of the wording and executive approval are complete, so we will send it today via contents-certified mail."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations accurately reflect the legal/business meaning of 催告書."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4c648f1cf46da8ac2b21a290174910fd7c8f12352aaa1b37b2de6fa6c0b5d650",
+    "validated_at": "2026-10-01T01:41:20.666955+00:00"
+  }
+}

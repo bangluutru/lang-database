@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000080",
+  "term": "特許権",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and workplace dialogue are exemplary, both example sentences contain linguistic awkwardness and domain accounting inaccuracies (namely treating mandatory amortization as conditional on future profitability) that require revision.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特許権を無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and accurate accounting collocation for capitalizing patent rights as intangible fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "特許権を償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting terminology for amortizing intangible assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "特許権の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting phrasing for recognizing impairment losses on patent rights.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "特許権の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic corporate and valuation expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発生した資産価値を精査し」is an awkward collocation. In business transfers and PPA (purchase price allocation), one evaluates acquired assets (取得資産) or identifies intangible assets (無形資産を識別・評価), rather than evaluating 'generated asset value'.",
+      "suggested_ja": "事業譲受に伴い取得した資産を精査し、無形固定資産として特許権を計上しました。",
+      "suggested_vi": "Rà soát kỹ các tài sản tiếp nhận từ việc chuyển nhượng kinh doanh, chúng tôi đã ghi nhận quyền sáng chế vào tài sản cố định vô hình.",
+      "suggested_en": "Carefully reviewing the assets acquired through the business transfer, we recorded the patent rights as intangible fixed assets."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese accounting standards, patent rights are subject to mandatory regular amortization (規則的な償却). One does not evaluate the 'need' (要否) for amortization based on future profitability; future profitability determines the need for impairment testing (減損処理の要否).",
+      "suggested_ja": "特許権の将来の収益性を慎重に見極め、減損損失の計上の要否を検討しました。",
+      "suggested_vi": "Đánh giá thận trọng khả năng sinh lời trong tương lai của quyền sáng chế, chúng tôi đã xem xét sự cần thiết của việc ghi nhận tổn thất do giảm giá trị tài sản.",
+      "suggested_en": "Carefully evaluating the future profitability of the patent rights, we assessed the necessity of recognizing an impairment loss."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Natural, logical conversational continuity between corporate accounting/tax staff regarding fixed asset register entry and amortization methods under tax and accounting standards.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations convey the intended meanings well, though 'quyền sáng chế' is preferred over 'quyền sáng chế độc quyền' for technical conciseness."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4d62906d57267d52be989f2c2531b7a1b2396ec92658fd39f03d6cc18c9e6518",
+    "validated_at": "2026-10-01T01:42:19.247394+00:00"
+  }
+}

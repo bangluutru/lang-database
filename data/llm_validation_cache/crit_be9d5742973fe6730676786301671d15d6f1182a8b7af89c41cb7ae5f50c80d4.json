@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000019",
+  "term": "還付申告",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 1 requires adjustment from '還付申告を提出する' to '還付申告書を提出する' to maintain exact tax document register; examples and dialogue are authentic and acceptable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "還付申告を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard tax collocation for executing a tax refund filing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "還付申告を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「申告」は手続・行為を指すため、述語「提出する」の目的語には文書である「申告書」を充てるのが正確。「還付申告書を提出する」とするのが税務実務上適切。",
+      "suggested_text": "還付申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "還付申告の期限",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax term referring to the statutory deadline for claiming refunds.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "還付申告の手続きを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational expression in corporate accounting workflows.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sound corporate tax practice context where corporate tax refund procedures are completed within the statutory period upon account closing.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic context involving consultation with an external tax advisor (komon zeirishi) to prepare return documentation under proper tax law interpretations.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Contextually coherent workplace dialogue between accounting personnel regarding verification documents and tax accountant sign-off.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese convey the precise tax domain meaning without awkward calques."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "cabb821eacb198460c7e3eac880995f58365657fc47f8cae6ee476496a91baf9",
+    "validated_at": "2026-10-01T01:37:35.167805+00:00"
+  }
+}

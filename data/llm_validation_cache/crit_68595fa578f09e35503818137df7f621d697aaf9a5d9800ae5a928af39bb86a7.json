@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000033",
+  "term": "前払費用",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 confuse prepaid expense accounting mechanics with expense settlement (精算), Example 1 exhibits tautological template phrasing ('適正な...適正に'), and Dialogue B uses stilted phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "前払費用を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recognizing prepaid expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "前払費用の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational collocation used during reconciliation and closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "前払費用を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles accounts/ledgers (補助元帳や明細と照合する), but the most characteristic accounting action for 前払費用 is periodic transfer to expenses (費用に振り替える).",
+      "suggested_text": "前払費用を費用に振り替える"
+    },
+    {
+      "index": 3,
+      "text": "前払費用を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Confuses 前払費用 (prepaid expenses) with 仮払金 (temporary advances/petty cash). Prepaid expenses are amortized/transferred (取り崩す/振り替える), not settled (精算する).",
+      "suggested_text": "前払費用を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and grammatically sound sentence representing month-end closing procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Templated and repetitive phrasing ('適正な...' followed by '適正に処理いたしました'). Real accounting context requires concrete actions such as monthly amortization or transfer to expenses.",
+      "suggested_ja": "社内規程に則り、年払いの保険料について当期経過分を前払費用から費用へ適正に振り替えました。",
+      "suggested_vi": "Tuân thủ quy chế nội bộ, chúng tôi đã kết chuyển hợp lý phần phí bảo hiểm trả theo năm đã phát sinh trong kỳ từ chi phí trả trước sang chi phí.",
+      "suggested_en": "In accordance with internal rules, we properly transferred the incurred portion of annual insurance premiums from prepaid expenses to current expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is an unnatural tautology in Japanese business dialogue; '不整合はなく一致している' or '問題なく一致している' is natural native usage.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、前払費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán chi phí trả trước có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the prepaid expense entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "契約書および請求書と補助元帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu hợp đồng, hóa đơn với sổ cái phụ, và xác nhận tất cả đều khớp mà không có vấn đề gì.",
+        "en": "We have reconciled the contracts and invoices against the subsidiary ledger and confirmed that everything matches without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "55d1436eb3e94a2a653fda0c121d63b12b4d9b657b89d43a10b279e65297569a",
+    "validated_at": "2026-10-01T01:34:17.857035+00:00"
+  }
+}

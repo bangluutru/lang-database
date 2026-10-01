@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000122",
+  "term": "電信送金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences contain unnatural predicates and semantic mismatches regarding '電信送金' as an accounting entry or entity rather than a transaction method. Dialogue also needs more natural phrasing.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "電信送金を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、電信送金という行為には不自然。電信送金は「行う」「手配する」など。",
+      "suggested_text": "電信送金を行う"
+    },
+    {
+      "index": 1,
+      "text": "電信送金を決済する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「決済する」は取引や債務に対して使う動詞であり、電信送金自体を決済するとは言わない。電信送金は決済手段の一つ。",
+      "suggested_text": "電信送金で決済する"
+    },
+    {
+      "index": 2,
+      "text": "電信送金を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「提示する」は書類や証拠に対して使う動詞であり、電信送金という行為には不自然。電信送金の「控え」や「証拠」を提示するなら自然。",
+      "suggested_text": "電信送金の控えを提示する"
+    },
+    {
+      "index": 3,
+      "text": "電信送金の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「電信送金の計上内容や残高に差異がないか精査します」は、電信送金自体に「残高」があるかのような表現で不自然。電信送金は取引であり、残高を持つのは勘定科目。",
+      "suggested_ja": "月末の帳簿照合において、電信送金に関連する勘定科目の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số dư của các tài khoản liên quan đến chuyển tiền bằng điện tín quốc tế qua mạng SWIFT hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for accounts related to telegraphic transfer (T/T)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「電信送金を適正に処理いたしました」は、電信送金という行為自体を処理するという点で不自然。電信送金「による取引」や「関連する会計処理」を処理する、が自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において電信送金に関連する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình xử lý kế toán liên quan đến chuyển tiền bằng điện tín quốc tế qua mạng SWIFT trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the accounting entries related to telegraphic transfer (T/T) in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「電信送金の計上内容に差異は発生していませんか」は、電信送金自体に計上内容があるかのような表現で不自然。Bの回答もやや硬い。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、電信送金に関する会計処理に何か差異はありましたか。",
+        "vi": "Trong quyết toán hàng tháng này, có bất kỳ sự chênh lệch nào trong việc xử lý kế toán liên quan đến chuyển tiền bằng điện tín không?",
+        "en": "Were there any discrepancies in the accounting treatment for telegraphic transfers in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, after reconciling the supporting documents with the subsidiary ledger, we confirmed that everything was processed correctly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1ef061c53c66412affe73a022c4fba2c6b70b22572b1297484b4bbb894e6a1eb",
+    "validated_at": "2026-10-01T01:55:59.878434+00:00"
+  }
+}

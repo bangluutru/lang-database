@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000173",
+  "term": "特別利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple templated collocations ('残高を確認する', '照合する', '精算する' for a P&L line item), unnatural boilerplate examples lacking episodic accounting context, stilted dialogue turns, and inaccurate Vietnamese translation containing 'bất khả kháng'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特別利益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing extraordinary income.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "特別利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "特別利益 is a temporary P&L classification rather than an ongoing balance-sheet account; native practitioners refer to its breakdown (内訳) or occurrence amount (発生額) rather than '残高'.",
+      "suggested_text": "特別利益の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "特別利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not reconcile an aggregate P&L category directly ('特別利益を照合する'); one verifies underlying documents against entries.",
+      "suggested_text": "特別利益を開示する"
+    },
+    {
+      "index": 3,
+      "text": "特別利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Income items cannot be 'settled' or 'reimbursed' (精算する). 精算 applies to advances, expenses, or accounts payable/receivable.",
+      "suggested_text": "特別利益として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Templated sentence applying generic reconciliation phrasing to an extraordinary P&L item. Extraordinary items arise from distinct episodic events (e.g., asset sales, subsidiary divestitures) and are reviewed with supporting board approvals and contracts, not month-end balance discrepancies.",
+      "suggested_ja": "固定資産の売却に伴い生じた売却益については、今期の決算において特別利益として計上いたします。",
+      "suggested_vi": "Khoản lãi phát sinh từ việc thanh lý tài sản cố định sẽ được ghi nhận là thu nhập bất thường (hoặc thu nhập khác) trong kỳ quyết toán này.",
+      "suggested_en": "The gain arising from the sale of fixed assets will be recognized as extraordinary income in this fiscal period's closing."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted corporate boilerplate ('適正な...適正に'). Needs to reflect authentic accounting discourse.",
+      "suggested_ja": "会計基準および社内規程に則り、投資有価証券売却益を特別利益に適切に振り替えました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã kết chuyển khoản lãi bán chứng khoán đầu tư vào thu nhập bất thường một cách phù hợp.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we properly transferred the gain on sales of investment securities to extraordinary income."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Asking if 'differences occurred in the recorded content of extraordinary income' is awkward Japanese, and Speaker B's '適正に整合している' is unnatural tautology.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算で計上予定の特別利益について、取締役会の承認資料および契約書との突合は完了していますか。",
+        "vi": "Về khoản thu nhập bất thường dự kiến ghi nhận trong đợt quyết toán kỳ này, anh đã đối chiếu xong với tài liệu phê duyệt của Hội đồng quản trị và hợp đồng chưa?",
+        "en": "Regarding the extraordinary income scheduled to be recognized in this closing, have you completed the cross-check against the board approval documents and contracts?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する証憑類との照合を終えており、監査法人への説明準備も整っております。",
+        "vi": "Vâng, tôi đã đối chiếu xong với các chứng từ liên quan và công tác chuẩn bị giải trình với công ty kiểm toán cũng đã sẵn sàng.",
+        "en": "Yes, I have finished cross-checking against the relevant supporting vouchers and we are ready to explain it to the audit firm."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "'bất khả kháng' refers to force majeure and is factually incorrect as a translation for extraordinary income (特別利益); in Vietnamese accounting, it is 'thu nhập bất thường' or 'thu nhập khác'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "51b33780dc2d515d74a950496e5ccb32608ec6dc10f484df86cdca099eafc4c8",
+    "validated_at": "2026-10-01T01:36:44.830562+00:00"
+  }
+}

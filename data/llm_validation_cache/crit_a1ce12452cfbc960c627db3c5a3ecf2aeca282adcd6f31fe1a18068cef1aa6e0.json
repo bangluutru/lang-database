@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000115",
+  "term": "確定申告書等作成コーナー",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain hallucinations in examples and dialogue where a tax filing web portal was forced into generic accounting ledger/closing templates ('計上内容', '残高'). Collocations are fully valid.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "確定申告書等作成コーナーを利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural predicate for using the NTA tax return preparation web portal.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "確定申告書等作成コーナーに入力する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for inputting income/deduction figures into the portal.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "確定申告書等作成コーナーで作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for preparing tax returns on the portal.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "確定申告書等作成コーナーから送信する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression for directly transmitting e-Tax data from the preparation portal.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'確定申告書等作成コーナー' is the NTA's online tax filing system; it cannot have accounting entries ('計上内容') or balance sheet balances ('残高') in monthly book reconciliation.",
+      "suggested_ja": "国税庁の確定申告書等作成コーナーを利用すれば、画面の案内に沿って金額を入力するだけで申告書を作成できます。",
+      "suggested_vi": "Nếu sử dụng Cổng tạo tờ khai quyết toán thuế của Cơ quan Thuế Quốc gia, bạn chỉ cần nhập số tiền theo hướng dẫn trên màn hình là có thể lập tờ khai.",
+      "suggested_en": "By using the National Tax Agency's online tax return preparation system, you can prepare your return simply by entering amounts according to on-screen guidance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A software portal cannot be 'processed' ('適正に処理いたしました') as a financial closing journal entry under accounting standards.",
+      "suggested_ja": "個人事業主の確定申告業務を効率化するため、確定申告書等作成コーナーからe-Taxによる電子送信を行いました。",
+      "suggested_vi": "Nhằm nâng cao hiệu quả công tác quyết toán thuế cho hộ kinh doanh cá thể, chúng tôi đã nộp điện tử qua e-Tax từ Cổng tạo tờ khai quyết toán thuế.",
+      "suggested_en": "To streamline the tax filing process for sole proprietors, we submitted the return electronically via e-Tax through the online tax return preparation system."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Treats an NTA web portal as a balance sheet line item audited against subsidiary ledgers in monthly closing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の個人確定申告の準備ですが、確定申告書等作成コーナーでのデータ入力は完了しましたか。",
+        "vi": "Về việc chuẩn bị quyết toán thuế thu nhập cá nhân của giám đốc, bạn đã hoàn tất nhập dữ liệu trên Cổng tạo tờ khai quyết toán thuế chưa?",
+        "en": "Regarding the preparation for the director's individual tax return, have you finished entering the data on the online tax return preparation system?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、源泉徴収票や各種控除証明書をもとに入力を済ませ、すでに控除額の整合性も確認済みです。",
+        "vi": "Vâng, tôi đã hoàn tất việc nhập liệu dựa trên chứng từ khấu trừ thuế và các giấy chứng nhận giảm trừ, đồng thời đã kiểm tra tính nhất quán của các khoản khấu trừ rồi ạ.",
+        "en": "Yes, I have finished the input based on the withholding tax slips and deduction certificates, and I have already verified the consistency of the deductions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations accurately convey the concept of the NTA tax filing portal."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "25348b03e09233f703742257b57daace417298825be1b2b27a8364b13664350c",
+    "validated_at": "2026-10-01T01:39:24.844314+00:00"
+  }
+}

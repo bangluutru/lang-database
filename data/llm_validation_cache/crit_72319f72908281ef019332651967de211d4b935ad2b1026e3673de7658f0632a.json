@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000143",
+  "term": "法定福利費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations conflate P/L expense accounts with B/S balances or reimbursements ('残高', '精算する'), Example 2 suffers from awkward repetition of '適正', and Dialogue turn B uses stilted phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法定福利費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking statutory welfare expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "法定福利費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As a P/L expense account, 法定福利費 is typically referred to by its incurred/accrued amount (計上額・発生額) rather than a balance (残高), which belongs to B/S accounts.",
+      "suggested_text": "法定福利費の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "法定福利費を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Directly matching the expense account itself sounds slightly truncated; accounting professionals match the detailed breakdown (内訳) or voucher against the payment notice (納入告知書).",
+      "suggested_text": "法定福利費の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "法定福利費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One does not 'settle/reimburse' (精算する) an expense account like statutory welfare expenses; common actions are company contribution/bearing (負担する) or calculation (算定・算出する).",
+      "suggested_text": "法定福利費を会社負担する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Treating 法定福利費 as having a '残高' (balance) to compare in a monthly check is imprecise for P/L expense analysis; focusing on actual accruals versus calculation bases (社会保険料納入告知書等) is authentic.",
+      "suggested_ja": "月末の帳簿照合において、法定福利費の計上額と社会保険料の納入告知額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch giữa số tiền trích chi phí bảo hiểm bắt buộc và số tiền trên thông báo nộp bảo hiểm xã hội hay không.",
+      "suggested_en": "During month-end reconciliation, we carefully verify whether there are any discrepancies between recorded statutory welfare expenses and social insurance payment notices."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Redundant and unnatural repetition of '適正な' and '適正に' in the same sentence makes it sound like an unrefined machine-generated template.",
+      "suggested_ja": "会計基準および社内規程に則り、当期決算における法定福利費を適切に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã hạch toán phù hợp chi phí bảo hiểm bắt buộc theo luật định trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we properly recognized statutory welfare expenses in this term's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is awkward and pleonastic in Japanese business communication; '差異はなく一致している' or '問題なく整合している' is natural.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、法定福利費の計上額に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số trích chi phí bảo hiểm bắt buộc có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the recorded statutory welfare expenses for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "納入告知書と総勘定元帳を照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu thông báo nộp tiền với sổ cái, và xác nhận các số liệu hoàn toàn khớp nhau không có chênh lệch.",
+        "en": "I have reconciled the payment notice with the general ledger and confirmed that they match without any discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions are professional and accurate, though 'Statutory welfare expenses' is slightly more prevalent in corporate accounting than 'Legal welfare expenses'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8e039144abb9719df62cd0c11b667c98e61b52913eab66c1906c427940ea0170",
+    "validated_at": "2026-10-01T01:36:14.022533+00:00"
+  }
+}

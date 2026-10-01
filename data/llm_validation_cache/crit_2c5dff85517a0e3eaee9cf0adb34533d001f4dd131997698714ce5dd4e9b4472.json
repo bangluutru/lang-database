@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000014",
+  "term": "締日",
+  "overall_decision": "rewrite",
+  "summary_reason": "全体的に抽象的テンプレートに名詞『締日』を無理に当てはめたことによる深刻な意味的・文法的不整合（コロケーション崩壊、破綻した例文、会話の不成立、翻訳への辞書見出し直埋め込み）が発生しています。実務に即した表現へ全面的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "締日を徹底する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「締日」は日付（期日）であり、行動や規則ではないため、「徹底する」と直接結びつけるのは不自然です。「締日を守る」または「締日の遵守を徹底する」とすべきです。",
+      "suggested_text": "締日を守る"
+    },
+    {
+      "index": 1,
+      "text": "締日を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "日付そのものを「行う」という動詞で受けることはできません。締め処理を行う場合は「締め処理を行う」あるいは日付を定める場合は「締日を設定する」とします。",
+      "suggested_text": "締日を設定する"
+    },
+    {
+      "index": 2,
+      "text": "締日を習慣づける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "日付・期限を「習慣づける」というコロケーションは日本語として成立しません。機械的なスロット充填による不自然な表現です。",
+      "suggested_text": "締日までに処理する"
+    },
+    {
+      "index": 3,
+      "text": "締日の重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "文法的には解釈可能ですが、ビジネスの実務用語としては空虚なテンプレート表現です。「締日を前倒しする」「締日を周知する」などが実務的です。",
+      "suggested_text": "締日を周知する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「関係部署への事前の締日を徹底しています」は日本語として完全に破綻しています（締日は日付であり、事前に徹底する対象ではありません）。",
+      "suggested_ja": "請求書の処理遅延を防ぐため、経理部では取引先ごとの締日を厳格に管理しています。",
+      "suggested_vi": "Để tránh chậm trễ trong việc xử lý hóa đơn, phòng kế toán quản lý nghiêm ngặt ngày chốt công nợ của từng đối tác.",
+      "suggested_en": "To prevent delays in invoice processing, the accounting department strictly manages the closing dates for each client."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「迅速な締日の習慣付け」は意味をなさない機械的テンプレート生成文です。また翻訳も訳語スラッシュがそのまま文中に埋め込まれており破綻しています。",
+      "suggested_ja": "経費精算は毎月25日が締日となっておりますので、期日までに申請書を提出してください。",
+      "suggested_vi": "Hạn chốt thanh toán chi phí là ngày 25 hàng tháng, vì vậy vui lòng nộp đơn đề nghị trước thời hạn.",
+      "suggested_en": "The cut-off date for expense reimbursements is the 25th of every month, so please submit your claims by the deadline."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「締日の徹底状況」は不自然であり、Bの回答は「締日」に一切触れず汎用テンプレート文言を返しており対話として噛み合っていません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "月末の締日に向けた売上データの集計作業は、順調に進んでいますか。",
+        "vi": "Công tác tổng hợp số liệu doanh thu cho đợt chốt sổ cuối tháng có đang diễn ra thuận lợi không?",
+        "en": "Is the tallying of sales data for the month-end cut-off date progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各営業所からの報告がすでに揃っているため、締日当日の午前中には完了する見込みです。",
+        "vi": "Vâng, báo cáo từ các văn phòng kinh doanh đều đã tập hợp đủ, dự kiến sẽ hoàn tất vào sáng ngày chốt sổ.",
+        "en": "Yes, reports from all sales branches are already in, so we expect to complete it on the morning of the cut-off date."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "例文の英訳・ベトナム語訳において、辞書見出しの選択肢（スラッシュ表記）が文中に直接埋め込まれ、構文が崩壊していました。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c9974c96664d182694556f554101adf7b159b54ea815f204212f2da74d780e18",
+    "validated_at": "2026-10-01T01:41:09.404423+00:00"
+  }
+}

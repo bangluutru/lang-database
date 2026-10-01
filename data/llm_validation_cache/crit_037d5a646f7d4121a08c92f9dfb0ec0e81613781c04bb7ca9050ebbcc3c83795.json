@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000154",
+  "term": "地代家賃",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an unnatural collocation (地代家賃を精算する), an overly templated example with redundant wording (適正な...適正に...), and unnatural dialogue phrasing (適正に整合している).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地代家賃を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking rent expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "地代家賃の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing during monthly trial balance checks.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "地代家賃を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Directly using 照合する on the account name sounds elliptical; one reconciles the contract, invoice, or breakdown of the rent expenses.",
+      "suggested_text": "地代家賃の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "地代家賃を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Fixed contractual rent is paid, accrued, or apportioned, not 'settled/reimbursed' (精算) like travel expenses or petty cash.",
+      "suggested_text": "地代家賃を按分する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, realistic sentence for monthly book closing and reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic template filler repeating '適正な' and '適正に' without informative accounting substance.",
+      "suggested_ja": "翌月分の事務所家賃を当月末に前払いしたため、地代家賃ではなく前払費用として処理しました。",
+      "suggested_vi": "Vì tiền thuê văn phòng của tháng sau đã được trả trước vào cuối tháng này, chúng tôi đã xử lý vào tài khoản chi phí trả trước thay vì chi phí thuê đất và mặt bằng.",
+      "suggested_en": "Because next month's office rent was paid at the end of the current month, it was recorded as prepaid expenses rather than rent expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The expression '適正に整合している' in Speaker B's response is redundant and unnatural business Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、地代家賃の計上額に契約書との差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền hạch toán chi phí thuê đất và mặt bằng có phát sinh chênh lệch so với hợp đồng không?",
+        "en": "Are there any discrepancies between the recorded rent expenses and the lease contracts in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "賃貸借契約書および請求書と補助元帳を照合し、すべて金額が一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu sổ phụ với hợp đồng thuê và hóa đơn, và xác nhận mọi khoản tiền đều hoàn toàn khớp.",
+        "en": "I cross-checked the subsidiary ledger against the lease agreements and invoices, and confirmed that all amounts match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Translating 家賃 specifically as 'thuê nhà xưởng' (factory/workshop) is overly restrictive; 'thuê mặt bằng/văn phòng' or general 'thuê nhà đất' is more accurate for general accounting."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "02ef5bdaa6e54d55ea30f4954f76f6e53a0b5c4be0cec29d948c63afe2617b2a",
+    "validated_at": "2026-10-01T01:36:27.983299+00:00"
+  }
+}

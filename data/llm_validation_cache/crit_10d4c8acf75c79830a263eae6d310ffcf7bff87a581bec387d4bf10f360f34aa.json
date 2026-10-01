@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000182",
+  "term": "自己資本当期純利益率",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a critical accounting domain error (ROE cannot be attributed or monitored at the operating division level, as equity belongs to the legal entity/group level), requiring a rewrite to '全社ベース'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自己資本当期純利益率を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for computing ROE.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "自己資本当期純利益率を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business expression for improving capital efficiency/ROE.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "自己資本当期純利益率を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage in financial statement analysis.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "自己資本当期純利益率の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in corporate governance, mid-term plans, and IR releases.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In managerial accounting and corporate finance, ROE (自己資本当期純利益率) is a company-wide or consolidated balance sheet metric; internal operating divisions (各事業部門) do not hold equity (自己資本) and cannot monitor ROE division by division. It should be monitored at the company-wide (全社) or group level.",
+      "suggested_ja": "経営効率の改善に向け、全社ベースで自己資本当期純利益率の推移を月次でモニタリングしています。",
+      "suggested_vi": "Nhằm cải thiện hiệu quả quản lý, chúng tôi đang theo dõi biến động tỷ suất sinh lời trên vốn chủ sở hữu (ROE) hàng tháng trên quy mô toàn công ty.",
+      "suggested_en": "To improve management efficiency, we monitor trends in return on equity (ROE) on a company-wide basis each month."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting terminology and natural business Japanese describing fiscal performance.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Contextually appropriate formal spoken Japanese in a management review or FP&A report context.",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "Acronym 'ROE' was improperly lowercased as '(roe)' in example translations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "71a3143f8893fe599ba002fe3674407e3b805d62e30c341b9bd93370bb2297ff",
+    "validated_at": "2026-10-01T01:36:53.339499+00:00"
+  }
+}

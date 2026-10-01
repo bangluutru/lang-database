@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000062",
+  "term": "通関業者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations, example sentences, and dialogue all exhibit significant unnaturalness and semantic mismatches regarding the role and actions of a 'customs broker'. The core issue is treating '通関業者' as an internal corporate entity or a meeting rather than an external service provider. This requires a fundamental rewrite of most elements.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通関業者を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「開催する」は会議やイベントに対して使う動詞であり、組織である「通関業者」には適用できない。通関業者を「招集する」という表現も不自然。",
+      "suggested_text": "通関業者を選定する"
+    },
+    {
+      "index": 1,
+      "text": "通関業者で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「決議する」は会議体や組織の意思決定行為であり、通関業者という「業者」そのものが決議を行う主体としては不自然。通関業者『との』会議で決議する、ならあり得る。",
+      "suggested_text": "通関業者と契約する"
+    },
+    {
+      "index": 2,
+      "text": "通関業者に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "通関業務に関する事項を通関業者に報告することは自然。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "通関業者へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "通関業務に必要な書類を通関業者に提出することは自然。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「通関業者を招集する」という表現が不自然。通関業者は会議の主体ではなく、サービスを提供する側である。会議を招集するのは企業側。",
+      "suggested_ja": "重要議案の決議を行うため、来週、通関業者との打ち合わせを招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp với đại lý làm thủ tục hải quan.",
+      "suggested_en": "To resolve critical proposals, a meeting with the customs broker will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「通関業者において今期の経営方針および予算配分案が原案通り可決されました」は、通関業者が自社の経営方針を決議したように読めるが、文脈上、依頼主企業が通関業者に何かを承認させたかのように誤解を招く。また、通関業者が「経営方針」や「予算配分案」を「可決」するという表現は、一般的なビジネスシーンでは不自然。",
+      "suggested_ja": "通関業者との協議の結果、今期の通関業務に関する方針および予算配分案が原案通り承認されました。",
+      "suggested_vi": "Kết quả thảo luận với đại lý làm thủ tục hải quan, phương hướng và phương án phân bổ ngân sách liên quan đến nghiệp vụ thông quan kỳ này đã được phê duyệt như đề xuất ban đầu.",
+      "suggested_en": "Following discussions with the customs broker, this term's policy and budget allocation proposal for customs operations were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker Aは「通関業者の準備状況」を尋ねているが、Speaker Bの回答は「内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います」と、まるで自社が何かを準備しているかのような回答になっている。通関業者の準備状況を尋ねているのに、自社の状況を答えるのは会話として不自然。また、「通関業者」が会議の準備をするという前提自体が不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の通関手続きに向けて、通関業者との連携状況はどうなっていますか。",
+        "vi": "Tình hình phối hợp với đại lý làm thủ tục hải quan cho thủ tục thông quan tuần tới như thế nào rồi?",
+        "en": "What's the status of coordination with the customs broker for next week's customs procedures?"
+      },
+      {
+        "speaker": "B",
+        "ja": "必要な書類は全て通関業者に提出済みで、先方からは問題なく手続きを進められるとの連絡を受けております。",
+        "vi": "Chúng tôi đã nộp tất cả các tài liệu cần thiết cho đại lý làm thủ tục hải quan, và họ đã thông báo rằng thủ tục có thể được tiến hành mà không có vấn đề gì.",
+        "en": "All necessary documents have been submitted to the customs broker, and we've been informed by them that the procedures can proceed without issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8d25c690cb899993be557685d1602a94c522ba6d637a0fdcf62674e57f406563",
+    "validated_at": "2026-10-01T01:54:41.600314+00:00"
+  }
+}

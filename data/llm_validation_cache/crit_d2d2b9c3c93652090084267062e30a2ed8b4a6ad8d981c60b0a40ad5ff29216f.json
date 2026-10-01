@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000078",
+  "term": "知的財産権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 0 contains stilted unnatural phrasing (「発生した資産価値」) and uncapitalized acronyms in English, requiring a minor rewrite to meet native professional corporate standards.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "知的財産権を無形固定資産として計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation when capitalizing acquired intellectual property as an intangible fixed asset.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "知的財産権を償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting predicate for amortizing intangible fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "知的財産権の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing impairment losses on intellectual property.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "知的財産権の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business/financial terminology used in valuation and purchase price allocation (PPA).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発生した資産価値」 is unnatural Japanese phrasing. In M&A and business transfer contexts, assets are acquired (取得) or succeeded (承継), and their fair value is evaluated/assessed (評価・精査). Asset value itself does not 'occur' (発生する). Additionally, 'ipr' is improperly lowercased in the English translation.",
+      "suggested_ja": "事業譲受に伴い取得した資産の適正価値を精査し、無形固定資産として知的財産権を計上しました。",
+      "suggested_vi": "Sau khi rà soát kỹ lưỡng giá trị hợp lý của các tài sản tiếp nhận từ việc nhận chuyển nhượng kinh doanh, chúng tôi đã ghi nhận quyền sở hữu trí tuệ vào tài sản cố định vô hình.",
+      "suggested_en": "After scrutinizing the fair value of the assets acquired through the business transfer, we recognized intellectual property rights (IPR) as intangible fixed assets."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional sentence reflecting Japanese GAAP requirements regarding systematic amortization (規則的な償却) and impairment testing for intangibles.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic corporate interaction between finance/accounting staff. The usage of 減価償却 in reference to fixed asset ledgers aligns with Corporation Tax Act classifications (無形減価償却資産), and Speaker B responds logically and appropriately.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "The acronym '(ipr)' in English examples 0 and 1 should be capitalized as '(IPR)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8c9c2550eae4c43efa890d6ec1e787ca8aa13b9e40f22cab2db55aa2da10a822",
+    "validated_at": "2026-10-01T01:42:17.409087+00:00"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000151",
+  "term": "支払調書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains tax domain inaccuracies ('所轄官庁' instead of '所轄税務署'), unnatural collocation nuance ('保管' vs. statutory '保存'), and mechanical verbatim insertion of dictionary definition strings with slashes into English and Vietnamese example sentences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "支払調書を交付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax phrasing referring to issuing/delivering a payment record to a payee."
+    },
+    {
+      "index": 1,
+      "text": "支払調書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic collocation for submitting statutory records to the competent tax office."
+    },
+    {
+      "index": 2,
+      "text": "支払調書を保管する",
+      "decision": "rewrite",
+      "reason_code": "NATURAL_PREDICATE",
+      "reason": "While understandable, statutory document retention in Japanese tax compliance standardly uses '保存する' rather than physical '保管する'.",
+      "suggested_text": "支払調書を保存する"
+    },
+    {
+      "index": 3,
+      "text": "支払調書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and precise expression used during internal tax compliance reviews."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "支払調書 is submitted specifically to the tax office (所轄税務署), never vaguely referred to as '所轄官庁' in corporate tax practice. Furthermore, the phrasing '手続きを遂行するため' is overly generic and mechanical, and both English/Vietnamese translations literally copy-paste the definition string.",
+      "suggested_ja": "所得税法に基づき、外部専門家への報酬に係る支払調書を作成し、所轄税務署へ期限内に提出しました。",
+      "suggested_vi": "Căn cứ theo Luật Thuế thu nhập, chúng tôi đã lập bảng kê thanh toán thù lao cho các chuyên gia bên ngoài và nộp đúng hạn cho chi cục thuế quản lý.",
+      "suggested_en": "In accordance with the Income Tax Act, we prepared the statutory payment records for external expert remuneration and submitted them to the competent tax office before the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is serviceable though slightly templated ('保管しています' should preferably be '保存しています'), but the translations insert raw glossary strings ('payment record / payment statement' and the multi-word Vietnamese definition).",
+      "suggested_ja": "税務調査に備え、税務署へ提出した支払調書の控えは法定保存期間に従って適切に保存しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế, các bản lưu chứng từ thanh toán đã nộp cho chi cục thuế đều được lưu trữ cẩn thận theo thời hạn luật định.",
+      "suggested_en": "In preparation for tax audits, retained copies of the payment records submitted to the tax office are properly stored in accordance with statutory retention periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Japanese corporate accountants refer to the destination as '税務署', not '所轄官庁'. The exchange also sounds artificially stiff and robotic rather than authentic office communication.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署に提出する支払調書と合計表の作成は、順調に進んでいますか。",
+        "vi": "Việc lập bảng kê thanh toán và bảng tổng hợp nộp cho chi cục thuế có đang tiến triển thuận lợi không?",
+        "en": "Is the preparation of the payment records and statutory summary report for the tax office progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい。外部講師や弁護士への報酬分の記載漏れがないか最終確認を終えており、期限内に提出可能です。",
+        "vi": "Vâng. Chúng tôi đã hoàn tất việc rà soát để đảm bảo không bỏ sót thù lao trả cho giảng viên và luật sư bên ngoài, và sẽ nộp đúng hạn.",
+        "en": "Yes. We have completed the final check to ensure no omissions in remuneration for external lecturers and lawyers, and we will be able to file before the deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both languages mechanically injected the full glossary dictionary entry (e.g. 'payment record / payment statement' with slashes, and overly verbose explanatory phrase in Vietnamese) into example sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1f3cce6dd3e22e08c86e4da81cf11f71384f86dd79e4de0dba7d424691f2888b",
+    "validated_at": "2026-10-01T01:40:04.774241+00:00"
+  }
+}

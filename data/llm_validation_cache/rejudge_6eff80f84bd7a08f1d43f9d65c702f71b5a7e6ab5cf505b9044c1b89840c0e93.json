@@ -1,0 +1,27 @@
+{
+  "decision": "rewrite",
+  "reason": "The term 'クロージング' is correctly defined as 'Closing a deal', but all provided examples and dialogue are about '決算' (financial closing), not 'deal closing'. This is a fundamental mismatch that renders the learning object misleading for the intended term. The content needs to be rewritten to reflect 'deal closing'.",
+  "issues": [
+    {
+      "component": "examples",
+      "code": "TRANSLATION_ERROR",
+      "detail": "The examples provided are for '決算' (financial closing) not 'クロージング' (deal closing). The English and Vietnamese translations are accurate for '決算' but not for the intended term 'クロージング'."
+    },
+    {
+      "component": "dialogue",
+      "code": "TRANSLATION_ERROR",
+      "detail": "Similar to examples, the dialogue is about '月次決算' (monthly financial closing) and not 'クロージング' (deal closing). The translations reflect '決算' accurately."
+    },
+    {
+      "component": "translations",
+      "code": "TRANSLATION_ERROR",
+      "detail": "The term 'クロージング' in the context of 'business' and 'procedure' typically refers to 'closing a deal' or 'sales closing'. The provided examples and dialogue, however, are about 'financial closing' (決算). This creates a significant mismatch between the term's intended meaning and its usage in the provided content."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "50e99ebdf6677425a079ab589fec8425279915b77511f265e1dcdb20d4b2d7f2",
+    "validated_at": "2026-10-01T01:52:47.038544+00:00"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000035",
+  "term": "船積指図書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Dialogue needs revision for better conversational flow and directness in addressing the specific document's status.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "船積指図書を発行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "船積指図書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "船積指図書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "船積指図書を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of the '船積指図書' as inquired by Speaker A. While related to customs, it skips the specific document's status.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、船積指図書の手配状況はいかがでしょうか。",
+        "vi": "Về trường hợp dự kiến thông quan hôm nay, tình hình chuẩn bị chỉ dẫn giao hàng cho hãng tàu (S/O) thế nào rồi?",
+        "en": "Regarding the case scheduled for customs clearance today, what is the status of the shipping order (S/O) arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "船積指図書は先ほど通関業者へ提出が完了し、現在、通関業者と乙仲にて書類の確認を進めております。間もなく輸入申告に入れるかと存じます。",
+        "vi": "Chỉ dẫn giao hàng cho hãng tàu (S/O) đã được nộp cho đại lý hải quan lúc nãy, và hiện tại đại lý hải quan cùng công ty môi giới đang tiến hành kiểm tra hồ sơ. Tôi nghĩ rằng chúng ta sẽ sớm có thể khai báo nhập khẩu.",
+        "en": "The shipping order (S/O) was submitted to the customs broker a moment ago, and the customs broker and forwarder are currently reviewing the documents. I believe we will be able to proceed with the import declaration shortly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "411e2db7ff13bc2ef30388164a6b32729711051722f891310162db8157b75bf0",
+    "validated_at": "2026-10-01T01:54:13.167218+00:00"
+  }
+}

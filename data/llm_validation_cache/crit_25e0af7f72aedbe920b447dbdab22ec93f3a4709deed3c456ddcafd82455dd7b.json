@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000165",
+  "term": "営業損失",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object misclassifies '営業損失' as a balance-bearing ledger account subject to voucher reconciliation and settlement, resulting in factually unnatural accounting Japanese across collocations, examples, and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "営業損失を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting expression for recording/posting an operating loss.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "営業損失の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Operating loss is a P/L performance line item (calculation result), not a balance sheet account with an ongoing balance (残高).",
+      "suggested_text": "営業損失に転落する"
+    },
+    {
+      "index": 2,
+      "text": "営業損失を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not reconcile (照合する) an operating loss; it is an aggregated figure (Operating Profit < 0).",
+      "suggested_text": "営業損失を圧縮する"
+    },
+    {
+      "index": 3,
+      "text": "営業損失を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Operating loss cannot be 'settled' or 'cleared' (精算する) like travel expenses or petty cash.",
+      "suggested_text": "営業損失を見込む"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Operating loss does not have a 'ledger balance' (残高) verified during month-end book reconciliation. This reflects synthetic templating inappropriate for P/L line items.",
+      "suggested_ja": "主力の海外事業における販売不振が響き、当期は多額の営業損失を計上する見通しです。",
+      "suggested_vi": "Do tình hình bán hàng ảm đạm ở mảng kinh doanh cốt lõi tại nước ngoài, dự kiến kỳ này chúng tôi sẽ ghi nhận khoản lỗ thuần từ hoạt động kinh doanh lớn.",
+      "suggested_en": "Due to sluggish sales in our core overseas business, we project posting a substantial operating loss for this fiscal period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Operating loss is a business result, not an accounting voucher/suspense account to be 'processed' (適正に処理いたしました).",
+      "suggested_ja": "売上高の急減に伴い販管費を吸収できず、今期は3期ぶりに営業損失へ転落しました。",
+      "suggested_vi": "Do doanh thu sụt giảm mạnh không bù đắp được chi phí bán hàng và quản lý doanh nghiệp, công ty đã rơi vào tình trạng lỗ hoạt động kinh doanh lần đầu tiên sau 3 kỳ.",
+      "suggested_en": "Unable to absorb SG&A expenses amid a sharp decline in sales, we slipped into an operating loss this term for the first time in three fiscal periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Operating loss is not tracked in a subsidiary ledger (補助元帳) against vouchers (証憑書類). It is a calculated subtotal on the income statement.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、着地は営業損失になってしまいそうでしょうか。",
+        "vi": "Về quyết toán tháng này, liệu kết quả cuối cùng có nguy cơ rơi vào lỗ thuần hoạt động kinh doanh không?",
+        "en": "Regarding this month's monthly closing, does it look like we will end up with an operating loss?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、原材料費の高騰に加え販管費が増加したため、若干の営業損失を計上する見込みです。",
+        "vi": "Vâng, do chi phí nguyên vật liệu tăng cao cộng với chi phí bán hàng và quản lý tăng, dự kiến chúng ta sẽ ghi nhận một khoản lỗ hoạt động kinh doanh nhỏ.",
+        "en": "Yes, due to soaring raw material costs and increased SG&A expenses, we expect to record a slight operating loss."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions are correct, but example/dialogue sentences required rewriting due to accounting domain errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "420865879e109b41998450e9e9842ac928e5dc2be940bcc25340d36b8dc86a11",
+    "validated_at": "2026-10-01T01:36:41.745006+00:00"
+  }
+}

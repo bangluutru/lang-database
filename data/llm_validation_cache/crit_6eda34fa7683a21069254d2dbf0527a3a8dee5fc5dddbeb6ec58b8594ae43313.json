@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000026",
+  "term": "事業所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and legal concepts are solid, Example 0 contains imprecise tax terminology ('各種収入金額' instead of statutory '総収入金額'), and the Dialogue contains a serious domain error treating individual income tax '事業所得' as a monthly corporate accounting accrual item.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "事業所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard tax accounting phrasing (calculating net business income).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "事業所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic collocation frequently used when classifying income (e.g., distinguishing business income from miscellaneous or employment income).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "事業所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate tax terminology describing the aggregation of business income under comprehensive taxation (総合課税).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "事業所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard administrative tax phrase for entering business income on the tax return.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "In Japanese income tax terminology, the statutory and natural term is '総収入金額' (gross revenue/receipts) rather than '各種収入金額'. Furthermore, '確定申告書において...算出しました' is unnatural syntax; income is calculated prior to or for the tax filing ('確定申告に向けて' or '確定申告書に記載する事業所得の金額を適正に算出しました').",
+      "suggested_ja": "総収入金額および必要経費を精査し、確定申告に向けて事業所得の金額を適正に算出しました。",
+      "suggested_vi": "Rà soát kỹ tổng doanh thu và các khoản chi phí cần thiết, chúng tôi đã tính toán chính xác số tiền thu nhập từ hoạt động sản xuất kinh doanh để chuẩn bị cho việc quyết toán thuế.",
+      "suggested_en": "After thoroughly examining gross receipts and necessary expenses, we accurately calculated the amount of business income for the final tax return."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Factually and legally flawless description of comprehensive taxation (総合課税) under the Japanese Income Tax Act.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Domain and semantic mismatch: '事業所得' (business income) is an individual income tax classification (所得税法上の所得区分) calculated annually (gross receipts minus expenses). It is neither a corporate ledger line item nor an account title booked ('計上') during corporate monthly closing ('月次決算'). The dialogue conflates corporate bookkeeping with individual tax returns.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "個人事業主であるクライアントの確定申告ですが、事業所得と雑所得の区分に問題はありませんか。",
+        "vi": "Về hồ sơ quyết toán thuế của khách hàng là hộ kinh doanh cá thể, việc phân loại giữa thu nhập kinh doanh và thu nhập vãng lai có vấn đề gì không?",
+        "en": "Regarding the tax return for our sole proprietor client, are there any issues with distinguishing between business income and miscellaneous income?"
+      },
+      {
+        "speaker": "B",
+        "ja": "業務実態および帳簿の保存状況を通達に照らして精査し、適正に事業所得として処理しております。",
+        "vi": "Chúng tôi đã đối chiếu tình hình hoạt động thực tế và việc lưu trữ sổ sách kế toán với thông tư hướng dẫn, và đã xử lý chính xác như khoản thu nhập từ hoạt động kinh doanh.",
+        "en": "We scrutinized the actual business operations and record-keeping status against the tax directives and have properly treated it as business income."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a7f4307573902b0d9a6ad1e1a6269b3d0a34944061af3a5943e0aa4347e267d1",
+    "validated_at": "2026-10-01T01:37:47.204053+00:00"
+  }
+}

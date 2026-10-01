@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000108",
+  "term": "確認信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is a fundamental misunderstanding or misapplication of how '確認信用状' (Confirmed L/C) is treated in accounting. It is a financial instrument and a contingent liability/asset, not a direct accounting entry with a 'balance' or 'recorded content' in the way a receivable or payable is. The Japanese phrasing reflects this semantic mismatch, making the sentences unnatural and potentially misleading in a professional accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "確認信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for L/C."
+    },
+    {
+      "index": 1,
+      "text": "確認信用状を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for L/C."
+    },
+    {
+      "index": 2,
+      "text": "確認信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for L/C."
+    },
+    {
+      "index": 3,
+      "text": "確認信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for L/C discrepancies."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "確認信用状 (Confirmed L/C) is a financial instrument, not an accounting entry that can be '計上' (booked/recorded) or have a '残高' (balance) in the same way as a receivable/payable. While its value might be reflected in financial statements, the phrasing '確認信用状の計上内容や残高' is unnatural and semantically incorrect in an accounting context. The L/C itself is a commitment, not an asset/liability with a direct 'balance' on the books.",
+      "suggested_ja": "月末の帳簿照合において、確認信用状に関連する債権債務の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của các khoản phải thu/phải trả liên quan đến thư tín dụng được bảo lãnh xác nhận (Confirmed L/C) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of receivables/payables related to the confirmed letter of credit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to example 0, '確認信用状を適正に処理する' is vague and unnatural. An L/C is a method of payment/guarantee, not something directly 'processed' as an accounting item in closing entries. What is processed are the transactions (e.g., sales, purchases) that the L/C facilitates, or the contingent liabilities/assets related to it. The L/C itself is not an accounting 'item' to be processed in this manner.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において確認信用状に関連する取引を適正に会計処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý kế toán đúng quy định các giao dịch liên quan đến thư tín dụng được bảo lãnh xác nhận (Confirmed L/C) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly accounted for transactions related to the confirmed letter of credit in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '確認信用状の計上内容に差異は発生していませんか' suffers from the same semantic issue as the example sentences. A Confirmed L/C itself does not have '計上内容' (recorded content) in the direct sense of an accounting entry. Speaker B's response is also somewhat generic and doesn't fully address the unnatural premise of A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、確認信用状に関連する債権債務の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán các khoản phải thu/phải trả liên quan đến thư tín dụng được bảo lãnh xác nhận không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the recorded content of receivables/payables related to the confirmed letter of credit?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、関連するすべての計上は適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả các khoản hạch toán liên quan đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that all related entries are properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ada65afed7f9f25948478659778213af98ef502460ee9227b0230e0509984892",
+    "validated_at": "2026-10-01T01:55:39.229191+00:00"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-tax-000122",
+  "term": "インボイス制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate card suffered from severe template contamination and domain inaccuracies, mistakenly applying donation tax deduction concepts ('地域貢献', '控除上限額') to a corporate consumption tax compliance regime.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "インボイス制度を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The invoice system (適格請求書等保存方式) is a statutory tax compliance framework, not an optional service or utility to 'use' (利用する).",
+      "suggested_text": "インボイス制度に対応する"
+    },
+    {
+      "index": 1,
+      "text": "インボイス制度の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxpayers register as qualified invoice issuers (適格請求書発行事業者として登録を受ける) rather than 'receiving application of the invoice system'.",
+      "suggested_text": "適格請求書発行事業者に登録する"
+    },
+    {
+      "index": 2,
+      "text": "インボイス制度を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The invoice system is a mandatory tax compliance regulation, not an incentive, subsidy, or perk that one 'leverages' (活用する).",
+      "suggested_text": "インボイス制度の経過措置を適用する"
+    },
+    {
+      "index": 3,
+      "text": "インボイス制度の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression indicating that a business or transaction falls under the scope of the invoice system."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination/template contamination from 'Furusato Nozei' (節税および地域貢献, 制度を活用). The invoice system has nothing to do with regional contribution or tax savings; it also contains the tautological phrase '制度の制度'.",
+      "suggested_ja": "インボイス制度の導入に伴い、主要な取引先が適格請求書発行事業者に登録済みであるかの確認を進めています。",
+      "suggested_vi": "Cùng với việc áp dụng hệ thống hóa đơn đạt chuẩn (Invoice System), chúng tôi đang tiến hành xác nhận xem các đối tác chính đã đăng ký là đơn vị phát hành hóa đơn đạt chuẩn hay chưa.",
+      "suggested_en": "Following the implementation of the invoice system, we are currently checking whether our key business partners have registered as qualified invoice issuers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Another hallucinated template from personal tax deductions ('控除上限額を事前に試算'). The invoice system governs consumption tax purchase tax credits (仕入税額控除) and transitional measures (経過措置), not deduction ceilings.",
+      "suggested_ja": "免税事業者からの仕入れについては、インボイス制度の経過措置を適用して仕入税額控除の計算を行いました。",
+      "suggested_vi": "Đối với các khoản mua hàng từ doanh nghiệp được miễn thuế, chúng tôi đã áp dụng biện pháp chuyển tiếp của hệ thống hóa đơn đạt chuẩn để tính toán khấu trừ thuế đầu vào.",
+      "suggested_en": "For purchases from tax-exempt businesses, we calculated the purchase tax credit by applying the transitional measures under the invoice system."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'インボイス制度の計算根拠' and '税理士の確認書' are artificial and inaccurate in Japanese tax accounting contexts. Inquiries around invoice system implementation focus on ERP system readiness, invoice formatting, and vendor registration numbers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "インボイス制度の開始に向けて、請求書フォーマットの改訂と取引先の登録番号の確認状況はいかがですか。",
+        "vi": "Để chuẩn bị cho hệ thống hóa đơn đạt chuẩn sắp tới, tình hình sửa đổi mẫu hóa đơn và xác nhận mã số đăng ký của đối tác thế nào rồi?",
+        "en": "Ahead of the invoice system launch, how is the progress on revising our invoice format and verifying our vendors' registration numbers?"
+      },
+      {
+        "speaker": "B",
+        "ja": "基幹システムの改修は完了し、未確認の取引先への登録番号のヒアリングも今週中に完了する見込みです。",
+        "vi": "Hệ thống ERP cốt lõi đã được nâng cấp xong, và việc rà soát mã số đăng ký từ các đối tác còn lại dự kiến sẽ hoàn thành trong tuần này.",
+        "en": "The ERP core system updates are complete, and we expect to finish collecting registration numbers from the remaining vendors within this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "'Qualified Invoice System' is the official and precise English terminology used by the National Tax Agency (NTA), rather than the ambiguous 'Invoice system'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "557956ff15142621889c1aacd088f3b0b322b4b363adf4c463a3a2fecd9bb2da",
+    "validated_at": "2026-10-01T01:39:40.894582+00:00"
+  }
+}

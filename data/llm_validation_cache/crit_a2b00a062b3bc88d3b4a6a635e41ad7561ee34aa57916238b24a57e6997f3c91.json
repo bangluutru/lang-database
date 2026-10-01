@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000090",
+  "term": "緊急関税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the misunderstanding of how '緊急関税' (safeguard duty) is treated in accounting. It is a payment/expense, not an account item that is '計上' or has a '残高' in the way implied. The collocations are fine, but the application in sentences and dialogue is flawed due to this semantic mismatch with accounting terminology.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "緊急関税を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for applying tariffs."
+    },
+    {
+      "index": 1,
+      "text": "緊急関税を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common to inquire about tariffs."
+    },
+    {
+      "index": 2,
+      "text": "緊急関税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage for paying tariffs."
+    },
+    {
+      "index": 3,
+      "text": "緊急関税の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common to confirm tariff classifications."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "緊急関税 is a type of duty, not an accounting entry or balance that can be '計上' (booked) or have a '残高' (balance) in the context of '帳簿照合'. Duties are paid, not 'booked' in this manner. The sentence implies it's an account item, which it isn't directly.",
+      "suggested_ja": "月末の帳簿照合において、緊急関税の納付状況や関連費用の計上内容に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong tình hình nộp thuế tự vệ khẩn cấp hoặc nội dung hạch toán các chi phí liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the payment status of safeguard duties or the entries for related expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 緊急関税 is a duty, not something that is '処理' (processed) as an accounting item in '決算' (closing entries) in this direct way. You process the payment or the expense related to it, not the duty itself as an accounting object.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において緊急関税の支払いおよび関連費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định việc thanh toán thuế tự vệ khẩn cấp và các chi phí liên quan trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the payment of safeguard duties and related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue uses '緊急関税の計上内容に差異は発生していませんか' which suffers from the same semantic mismatch as the example sentences. 緊急関税 itself is not '計上' (booked) as an item with '差異' (discrepancies) in this context. It's a duty that is paid, and its payment or related expenses are accounted for.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、緊急関税の支払い状況や関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong tình hình thanh toán thuế tự vệ khẩn cấp hoặc nội dung hạch toán các chi phí liên quan không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the payment status of safeguard duties or the entries for related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e79ee4c977b41a5db61eebfc9b37b36c7ed79b8de51a5b60dff5fc18dff92987",
+    "validated_at": "2026-10-01T01:55:17.783193+00:00"
+  }
+}

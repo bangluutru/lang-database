@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000117",
+  "term": "地方消費税",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations and dialogue are solid, Example 0 contains a domain inaccuracy regarding the filing/calculation structure of local consumption tax as well as a Vietnamese mistranslation of '課税標準', and Example 1 contains an unvetted Vietnamese duplication typo ('thuế thuế').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "地方消費税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and tax compliance collocation; local consumption tax is declared alongside national consumption tax.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "地方消費税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage for tax payment.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "地方消費税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational expression when calculating tax liabilities.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "地方消費税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard statutory and commercial passive phrasing for tax imposition.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax practice, taxpayers do not independently file/pay '地方消費税' separate from national consumption tax; they are filed jointly as '消費税及び地方消費税'. Furthermore, the tax base (課税標準) for local consumption tax is legally the national consumption tax amount itself, not gross sales. Additionally, the Vietnamese translation mistakenly translates 課税標準 as 'thu nhập chịu thuế' (taxable income), which belongs to corporate/income tax.",
+      "suggested_ja": "消費税額を基礎として地方消費税額を算定し、消費税及び地方消費税の確定申告書を期日通りに提出しました。",
+      "suggested_vi": "Chúng tôi đã tính toán thuế tiêu dùng địa phương trên cơ sở số thuế tiêu dùng quốc gia và nộp tờ khai quyết toán thuế tiêu dùng cùng thuế tiêu dùng địa phương đúng hạn.",
+      "suggested_en": "We calculated the local consumption tax amount based on the national consumption tax and filed the final return for consumption tax and local consumption tax on schedule."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but the Vietnamese translation contains a glaring duplicate word typo ('thuế thuế tiêu dùng địa phương'). The phrasing in Japanese can also be tightened to sound more natural in corporate tax practice.",
+      "suggested_ja": "税制改正に伴う税率変更を踏まえ、当期における地方消費税を含めた税負担への影響額を試算いたしました。",
+      "suggested_vi": "Căn cứ vào việc thay đổi thuế suất theo cải cách thuế, chúng tôi đã ước tính mức độ tác động đến gánh nặng thuế, bao gồm cả thuế tiêu dùng địa phương trong kỳ này.",
+      "suggested_en": "Taking into account the tax rate changes under the tax reform, we estimated the impact on our tax burden, including local consumption tax, for this period."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B is professional, logically coherent, and reflects standard monthly closing procedures regarding reconciliation of ledger balances and tax sub-accounts.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example 0 has a conceptual mistranslation ('thu nhập chịu thuế' instead of 'cơ sở tính thuế / giá tính thuế') and example 1 contains a duplicated word typo ('thuế thuế')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "687478f9889c803150fbd2036a6c6b365b914e3df9b70dbcebc6dc5f86995869",
+    "validated_at": "2026-10-01T01:39:29.027758+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000074",
+  "term": "固定資産売却益",
+  "overall_decision": "rewrite",
+  "summary_reason": "3 out of 4 collocations use unnatural predicates for a P&L extraordinary income account (残高, 照合, 精算). The example sentences and dialogue follow generic mechanical templates that treat an episodic gain account as a recurring balance sheet item.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定資産売却益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording a gain on sale of fixed assets.",
+      "suggested_text": "固定資産売却益を計上する"
+    },
+    {
+      "index": 1,
+      "text": "固定資産売却益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Gain on sale of non-current assets is a transaction-specific P&L (usually extraordinary income) item rather than an ongoing balance account. Referring to its '残高' is unnatural and templated.",
+      "suggested_text": "固定資産売却益を算出する"
+    },
+    {
+      "index": 2,
+      "text": "固定資産売却益を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One collates or reconciles contracts, vouchers, or ledger amounts, but taking the gain itself as the direct object of 照合する is unnatural.",
+      "suggested_text": "固定資産売却益を特別利益に計上する"
+    },
+    {
+      "index": 3,
+      "text": "固定資産売却益を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Income/gain items cannot be '精算' (settled/cleared/reimbursed). This predicate applies to advances, expenses, or clearing accounts.",
+      "suggested_text": "固定資産売却益の税務調整を行う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Gain on sale of non-current assets is an episodic gain arising from discrete disposal events, not a recurring balance item monitored for '残高の差異' like cash or receivables. The sentence reflects a mechanical template.",
+      "suggested_ja": "旧本社の土地売却に伴い発生した固定資産売却益について、売買契約書および譲渡原価と照合の上、特別利益として計上しました。",
+      "suggested_vi": "Đối với khoản lãi do bán tài sản cố định phát sinh từ việc bán khu đất trụ sở cũ, chúng tôi đã đối chiếu với hợp đồng mua bán và giá vốn chuyển nhượng trước khi hạch toán vào thu nhập bất thường.",
+      "suggested_en": "Regarding the gain on sale of non-current assets arising from the sale of the former head office land, we recorded it as extraordinary income after reconciling it with the sales contract and transfer costs."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive artificial phrasing ('適正な会計基準...適正に処理いたしました') and lacks practical business specificity.",
+      "suggested_ja": "遊休設備の売却価額から帳簿価額および売却諸費用を控除し、当期の固定資産売却益を算定いたしました。",
+      "suggested_vi": "Chúng tôi đã trừ đi giá trị còn lại trên sổ sách cùng các chi phí thanh lý khỏi giá bán của thiết bị nhàn rỗi để tính toán khoản lãi do bán tài sản cố định trong kỳ này.",
+      "suggested_en": "We calculated the gain on sale of non-current assets for the current term by deducting the book value and disposal expenses from the selling price of the idle equipment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Questioning whether '差異が発生していないか' for an episodic gain sounds like an inventory/cash reconciliation template. Speaker B's phrase 'すべて適正に整合している' is also unnatural/redundant corporate Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先月売却した工場の機械設備について、固定資産売却益の計上額に誤りはありませんか。",
+        "vi": "Về máy móc thiết bị nhà xưởng đã bán hồi tháng trước, số tiền hạch toán khoản lãi do bán tài sản cố định có sai sót gì không?",
+        "en": "Regarding the factory machinery sold last month, is there any error in the recorded gain on sale of non-current assets?"
+      },
+      {
+        "speaker": "B",
+        "ja": "売却契約書および固定資産台帳の帳簿価額と突き合わせを行い、正確に計上されていることを確認済みです。",
+        "vi": "Tôi đã đối chiếu với hợp đồng mua bán và giá trị còn lại trên sổ tài sản cố định, đồng thời xác nhận rằng khoản này đã được hạch toán chính xác.",
+        "en": "I have cross-checked it against the sales agreement and the carrying value on the fixed asset register, confirming that it has been accurately recorded."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term definitions in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a952df7ac74a470feface359597dc060cde6e35ff92c7ba1954381928b1c1935",
+    "validated_at": "2026-10-01T01:34:56.693872+00:00"
+  }
+}

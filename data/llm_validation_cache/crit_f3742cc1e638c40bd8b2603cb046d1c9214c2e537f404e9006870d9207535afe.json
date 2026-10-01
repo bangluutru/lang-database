@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000108",
+  "term": "純資産の部",
+  "overall_decision": "rewrite",
+  "summary_reason": "「純資産の部」という財務諸表の区分名（セクション）に対して、「計上する」「精算する」「処理する」といった不適切な述語が結合された定型生成文が多く、実務の会計会話・文書として不自然なため全面的なリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "純資産の部を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「純資産の部」は貸借対照表の区分名（セクション）であり、計上する直接の対象（目的語）にはなりません。「純資産の部に計上する」または「純資産の部に表示する」とする必要があります。",
+      "suggested_text": "純資産の部に計上する"
+    },
+    {
+      "index": 1,
+      "text": "純資産の部の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "純資産の部に属する各勘定科目や合計残高を確認するという意味で実務上通用します。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "純資産の部を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "区分名全体を直接照合する表現は不自然です。「株主資本等変動計算書と照合する」や「純資産の部の内訳を照合する」が適切です。",
+      "suggested_text": "純資産の部の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "純資産の部を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は仮払金や経費等の決済・清算に用いる動詞であり、貸借対照表の資本セクションである「純資産の部」には決して使いません。",
+      "suggested_text": "純資産の部の増減を把握する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「純資産の部の計上内容」という言い回しは機械的で実務上不自然です。実務では株主資本等変動計算書との整合性や科目ごとの内訳確認を指します。",
+      "suggested_ja": "月次決算の締め作業において、純資産の部の各科目について異動内容や残高に差異がないか精査します。",
+      "suggested_vi": "Trong công tác khóa sổ quyết toán tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung biến động và số dư của từng tài khoản trong phần vốn chủ sở hữu (tài sản thuần) có chênh lệch không.",
+      "suggested_en": "During the monthly closing procedures, we carefully examine whether there are any discrepancies in transaction movements or balances for each account in the net assets section."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「純資産の部を適正に処理いたしました」はテンプレート的で意味が破綻しています（区分そのものを処理するとは言わない）。配当金や自己株式取得などの取引事象を処理するのが実務です。",
+      "suggested_ja": "適正な会計基準に則り、当期の決算において剰余金の配当など純資産の部に関わる取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến phần vốn chủ sở hữu như chia cổ tức trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards, we properly processed transactions relating to the net assets section, such as dividend payments, in this term's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの「純資産の部の計上内容に差異は発生していませんか」およびBの「証憑書類と補助元帳を照合済みで、すべて適正に整合している」は定型文を無理に組み合わせた不自然な日本語です。純資産項目は月次で頻繁に動かないため、株主資本の異動や期中損益の振替等に焦点を当てた会話が自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、貸借対照表の純資産の部に特異な増減や残高の不整合はありませんか。",
+        "vi": "Trong quyết toán tháng này, phần vốn chủ sở hữu trên bảng cân đối kế toán có biến động bất thường hay mất cân đối số dư nào không?",
+        "en": "In this month's closing, are there any unusual changes or balance inconsistencies in the net assets section of the balance sheet?"
+      },
+      {
+        "speaker": "B",
+        "ja": "当期純利益の振替および配当金の処理を含め、内訳科目と帳簿残高が完全に一致していることを確認済みです。",
+        "vi": "Tôi đã kiểm tra và xác nhận các tài khoản chi tiết khớp hoàn toàn với số dư sổ sách, bao gồm cả việc kết chuyển lợi nhuận ròng kỳ này và xử lý cổ tức.",
+        "en": "I have verified that the detailed accounts and book balances match completely, including the transfer of net income for the period and dividend processing."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "意味の定義としては問題ありません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "55266740093c912bc27b2d43a2d44d6112f95dde17e0c2dadd0750251ff6784e",
+    "validated_at": "2026-10-01T01:35:35.443662+00:00"
+  }
+}

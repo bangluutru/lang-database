@@ -1,0 +1,79 @@
+{
+  "entry_id": "jp-pro-trade-000164",
+  "term": "船積み",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue lacks conversational continuity, as Speaker B's response does not fully address Speaker A's specific inquiry about the 'shipment arrangement status'. While other elements are strong, the dialogue requires revision for naturalness and logical flow.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "船積みを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "船積みが完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "船積みの作業手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "船積み時の安全対策を講じる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business report. Factual correctness is maintained."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business communication. Factual correctness is maintained."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the '船積みの手配状況' (arrangement status of shipment) question. It describes actions taken for customs clearance and communication, but not the actual status of the shipment itself (e.g., when it will happen, if it's confirmed, etc.). The connection between '通関業者と乙仲への連絡' and '船積みの手配状況' is indirect and incomplete.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、船積みの手配状況はいかがでしょうか。",
+        "vi": "Về trường hợp dự kiến thông quan hôm nay, tình hình sắp xếp bốc hàng lên tàu vận tải biển thế nào rồi ạ?",
+        "en": "Regarding the case scheduled for customs clearance today, what is the status of the shipment arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は済んでおり、現在、本船への積載スペースも確保できております。書類確認後、本日午後には船積み作業を開始できる見込みです。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, và hiện tại đã đảm bảo được chỗ xếp hàng trên tàu. Sau khi kiểm tra tài liệu, dự kiến công việc bốc hàng lên tàu sẽ bắt đầu vào chiều nay.",
+        "en": "Yes, we have contacted the customs broker and forwarding agent, and we have secured the loading space on the vessel. After document verification, we expect to commence loading operations this afternoon."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "05fb039e61eeea2ea0479b4241882ea8f60b2a860e2fae010ae0cd78697d2740",
+    "validated_at": "2026-10-01T01:56:49.127081+00:00"
+  }
+}

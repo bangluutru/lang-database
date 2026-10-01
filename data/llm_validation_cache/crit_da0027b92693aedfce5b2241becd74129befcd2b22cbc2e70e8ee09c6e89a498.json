@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-tax-000097",
+  "term": "別表五",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なAIテンプレート汚染が見られます。「別表五を交付する」「発行済みの別表五」という税務申告書に対する根本的な語彙不整合、および「所轄官庁」など税務実務にそぐわない無機質な表現が多用されているため、実務に即した表現へ全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "別表五を交付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "別表五は法人が作成して税務署に提出する申告書明細書であり、第三者に対して「交付する」文書ではありません。交付という動詞は全く適合しません。",
+      "suggested_text": "別表五を作成する"
+    },
+    {
+      "index": 1,
+      "text": "別表五を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法人税申告書の一環として税務署に提出する表現として文法上成立します。"
+    },
+    {
+      "index": 2,
+      "text": "別表五を保管する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務では申告書の「控えを保存する」と言うのが通常であり、単独で「保管する」とするのはやや不自然です。また、実務的な関連用語としては残高の繰り越しや作成が頻出します。",
+      "suggested_text": "別表五の残高を繰り越す"
+    },
+    {
+      "index": 3,
+      "text": "別表五の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "利益積立金額や納税充当金などの記載内容を照合・点検する文脈で自然に使われます。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "法人税申告の実務において提出先は「所轄官庁」ではなく「所轄税務署」と呼ぶのが通常です。また、別表五単体ではなく法人税申告書全体に言及するか、別表五特有の税務調整（利益積立金の計算等）に触れるのが実務的です。",
+      "suggested_ja": "法人税申告にあたり、別表四で留保された所得調整項目を正しく別表五（一）に反映させ、期末利益積立金額を確定させた。",
+      "suggested_vi": "Khi quyết toán thuế thu nhập doanh nghiệp, chúng tôi đã phản ánh chính xác các khoản điều chỉnh giữ lại từ Phụ lục 4 vào Phụ lục 5(1) để xác định số dư lợi nhuận tích lũy cuối kỳ.",
+      "suggested_en": "When preparing the corporate tax return, we accurately reflected the retained adjustment items from Schedule 4 into Schedule 5(1) to determine the ending balance of retained earnings for tax purposes."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「発行済みの別表五」という表現は明確な誤用です。申告書明細書は「発行」されるものではありません。機械的テンプレートの典型例です。",
+      "suggested_ja": "過年度の税務調査に備えるため、税務署へ提出した法人税申告書の控えとともに別表五の検算資料を整理・保管している。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế đối với các năm trước, chúng tôi lưu trữ và sắp xếp các tài liệu kiểm tra đối chiếu Phụ lục 5 cùng với bản sao tờ khai thuế TNDN đã nộp cho cơ quan thuế.",
+      "suggested_en": "In preparation for past-year tax audits, we organize and retain calculation review documents for Schedule 5 alongside copies of the filed corporate tax returns."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "税務実務で提出先を「所轄官庁」と呼ぶのは極めて不自然（通常は「税務署」）であり、「法定記載事項の漏れがないか」も登記簿や契約書向けテンプレートの機械的転用で、税務調整明細の確認実務にそぐいません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の法人税申告ですが、別表四と別表五（一）の税務調整の突合は完了しましたか。",
+        "vi": "Về tờ khai thuế TNDN kỳ này, việc đối chiếu các khoản điều chỉnh thuế giữa Phụ lục 4 và Phụ lục 5(1) đã hoàn tất chưa?",
+        "en": "Regarding this term's corporate tax return, have you finished reconciling the tax adjustments between Schedule 4 and Schedule 5(1)?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、貸借対照表の利益剰余金との残高一致を確認し、別表五の作成はすべて整いました。",
+        "vi": "Vâng, tôi đã xác nhận số dư khớp với lợi nhuận giữ lại trên bảng cân đối kế toán, và Phụ lục 5 đã được hoàn thiện đầy đủ.",
+        "en": "Yes, I confirmed that the balances match the retained earnings on the balance sheet, and Schedule 5 is fully prepared."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語自体の定義翻訳は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7716d40e5dbd05ed822a295d9a5a7c7922d4589020a04849120740deded7ace5",
+    "validated_at": "2026-10-01T01:39:07.929355+00:00"
+  }
+}

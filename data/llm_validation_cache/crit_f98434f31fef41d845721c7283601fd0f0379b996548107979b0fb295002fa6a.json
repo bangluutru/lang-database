@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000037",
+  "term": "常務取締役",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文1における会社法上の選定手続の事実誤認（株主総会で常務を選任とする点）、および対話文における社内指示対象・会話文脈の不自然さがあるため修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "常務取締役を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "取締役会の文脈などで役付取締役を決定する表現として自然に使用される。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "常務取締役に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "役職への着任を表す標準的かつ極めて自然なコロケーション。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "常務取締役に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内コミュニケーションにおいて頻繁に用いられる自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "常務取締役の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "職務・権限の行使を表すフォーマルなビジネス表現として適切。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会社法上、株主総会で選任されるのは「取締役」であり、「常務」等の役付取締役は株主総会後の取締役会において選定・選任されます。株主総会決議のみで新任常務が選任されたとする記述は法務・ビジネス慣行上不正確です。",
+      "suggested_ja": "定時株主総会後の取締役会において、新任の常務取締役が正式に選定されました。",
+      "suggested_vi": "Tại cuộc họp Hội đồng quản trị sau Đại hội đồng cổ đông thường niên, Giám đốc thường trực mới đã chính thức được bổ nhiệm.",
+      "suggested_en": "At the Board of Directors meeting following the annual general meeting of shareholders, the new managing director was officially appointed."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "コーポレートガバナンスおよび業務執行の報告体制を示す実務文として自然で破綻がない。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「常務取締役の準備状況」は、常務本人への報告準備なのか、常務が準備する事項なのかが曖昧で不自然です。また社内会話では通常「常務」と呼び、Bの「役員の事前承認」という返答も常務自身が役員であるため指示対象が曖昧です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会に向けて、常務取締役への事前説明の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị giải trình trước với Giám đốc thường trực cho cuộc họp HĐQT tuần tới thế nào rồi?",
+        "en": "How is the preparation for the preliminary briefing to the managing director going ahead of next week's board meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "説明資料の最終推敲を終えましたので、本日中に常務へご説明資料をお届けし、事前確認を仰ぐ予定です。",
+        "vi": "Chúng tôi đã hoàn thiện bản thảo cuối cùng của tài liệu giải trình, và dự kiến sẽ chuyển tài liệu đến Giám đốc thường trực trong hôm nay để xin ý kiến rà soát trước.",
+        "en": "We have finished the final polish of the briefing materials and plan to deliver them to the managing director today to request a preliminary review."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4da0e8d667b4fe8f25a5bde01eed598c36d7533dc04750a15accb25819ad8779",
+    "validated_at": "2026-10-01T01:41:36.857097+00:00"
+  }
+}

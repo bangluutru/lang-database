@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000031",
+  "term": "取締役会",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the core definition and example sentences are natural, collocation index 3 pairs the board with an unidiomatic object (届出書), and the dialogue suffers from vague, unnatural phrasing that needs sharpening to reflect authentic board secretarial workflow.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "取締役会を開催する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly frequent collocated predicate for convening a board meeting.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "取締役会で決議する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate corporate governance phrasing for adopting a board resolution.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "取締役会に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and legal phrasing for executive reporting to the board.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "取締役会へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A 届出書 (written notification) is typically submitted to administrative authorities or internal HR/General Affairs, not to the Board of Directors. In board operations, agenda items (議案) or materials (資料) are submitted.",
+      "suggested_text": "取締役会に議案を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Polite, authentic corporate wording commonly found in official convocation announcements.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate formal Japanese for reporting board meeting resolutions regarding management policy and budget allocation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A awkwardly stacks '来週開催予定の会議に向けて' and '取締役会の準備状況', creating a redundant and vague structure. Speaker B omits the specific object being polished and dispatched, which should explicitly refer to board materials (取締役会資料) and the notice of convocation (招集通知).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の取締役会に向けて、資料の準備状況はいかがですか。",
+        "vi": "Để chuẩn bị cho cuộc họp HĐQT dự kiến tổ chức vào tuần tới, tình hình tài liệu thế nào rồi?",
+        "en": "How is the preparation of materials coming along for the board of directors meeting scheduled for next week?"
+      },
+      {
+        "speaker": "B",
+        "ja": "議案の最終確認を終え、役員の事前承認も得られましたので、本日中に招集通知とともに送付いたします。",
+        "vi": "Chúng tôi đã hoàn tất việc rà soát lần cuối các đề án và đã có sự phê duyệt trước từ các thành viên HĐQT, nên trong hôm nay sẽ gửi kèm thông báo triệu tập.",
+        "en": "We have finalized the review of the agenda items and obtained prior approval from the directors, so we will send them out today along with the notice of convocation."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c756897a07069bb009f0cbe228d50f4d70139980e831695b4adf9a21251fab61",
+    "validated_at": "2026-10-01T01:41:30.866265+00:00"
+  }
+}

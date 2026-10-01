@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000058",
+  "term": "医療費控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a severe domain factual error in the dialogue (conflating corporate tax closing '決算申告' with individual income tax deduction '医療費控除'), an unnatural collocation ('上限額を計算する'), and an obsolete tax filing procedure in Example 2.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "医療費控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately expresses applying the tax deduction in professional tax practice.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "医療費控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard idiomatic Japanese phrasing for a taxpayer receiving/claiming medical expense deduction.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "医療費控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The ceiling for medical expense deduction is statutorily fixed at 2,000,000 yen under Japanese Income Tax Act, so one does not 'calculate the ceiling' (上限額を計算する); rather, one calculates the deductible amount itself (医療費控除額を計算する).",
+      "suggested_text": "医療費控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "医療費控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax collocation for meeting the statutory criteria for medical expense deduction.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, formal Japanese sentence appropriate for individual tax return filing.",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under current Japanese tax law, medical receipts are no longer attached to tax returns; taxpayers instead prepare and attach the 'Statement of Medical Expenses' (医療費控除の明細書) and retain receipts at home.",
+      "suggested_ja": "医療費控除の適用を受けるため、領収書を集計して医療費控除の明細書を作成しました。",
+      "suggested_vi": "Để được áp dụng khoản giảm trừ chi phí khám chữa bệnh, tôi đã tổng hợp hóa đơn và lập bảng kê giảm trừ chi phí y tế.",
+      "suggested_en": "To claim the deduction for medical expenses, I tallied the medical receipts and prepared the medical expense deduction statement."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Major domain contradiction: '決算申告' denotes corporate tax filing (法人税申告), but '医療費控除' is strictly an individual income tax deduction (所得税の所得控除). Furthermore, '税理士の確認書' is not a statutory or standard attachment for claiming medical deductions.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "社長の個人の確定申告ですが、医療費控除の明細書と領収書の集計は完了しましたか。",
+        "vi": "Về tờ khai quyết toán thuế thu nhập cá nhân của giám đốc, anh đã hoàn thành việc tổng hợp hóa đơn và bảng kê giảm trừ chi phí khám chữa bệnh chưa?",
+        "en": "Regarding the president's individual tax return, have you finished tallying the receipts and preparing the medical expense deduction statement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、補填された保険金を差し引いた上で医療費控除額を計算し、明細書も作成済みです。",
+        "vi": "Vâng, tôi đã trừ các khoản tiền bảo hiểm bồi thường, tính xong số tiền giảm trừ y tế và lập bảng kê chi tiết rồi ạ.",
+        "en": "Yes, I subtracted the insurance reimbursements, calculated the medical expense deduction amount, and prepared the statement."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Terminology and translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a3628a165eb9469f010072434a31e010408869177712a4b274f91b1b6c9e2746",
+    "validated_at": "2026-10-01T01:38:31.337014+00:00"
+  }
+}

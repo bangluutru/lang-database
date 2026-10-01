@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000128",
+  "term": "期末商品棚卸高",
+  "overall_decision": "rewrite",
+  "summary_reason": "「期末商品棚卸高の残高」という重言や、「棚卸高を精算する」といった述語の誤用が目立ちます。また例文・対話も具体性に乏しい機械的テンプレート文となっているため、実務で使われる棚卸減耗・低価法・実地棚卸照合の文脈へ全面的にリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "期末商品棚卸高を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "標準的な決算整理仕訳および財務諸表作成時の定型コロケーションです。",
+      "suggested_text": "期末商品棚卸高を計上する"
+    },
+    {
+      "index": 1,
+      "text": "期末商品棚卸高の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「〜高」自体が金額・残高を表すため、「棚卸高の残高」という表現は重言（意味の重複）で不自然です。「期末商品棚卸高を確定する」または「商品の期末残高を確認する」と表現すべきです。",
+      "suggested_text": "期末商品棚卸高を確定する"
+    },
+    {
+      "index": 2,
+      "text": "期末商品棚卸高を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "金額単体を直接照合するのではなく、実地棚卸結果（数量・実地高）と帳簿残高を照合して期末棚卸高を導き出すため、「実地棚卸結果と照合する」や「期末商品棚卸高を算定する」が自然です。",
+      "suggested_text": "期末商品棚卸高を算定する"
+    },
+    {
+      "index": 3,
+      "text": "期末商品棚卸高を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は立替経費や金銭債務を過不足なく決済する行為であり、棚卸高の科目・金額に対して使う述語として不自然です。「評価する」または「売上原価に振り替える」が適切です。",
+      "suggested_text": "期末商品棚卸高を評価する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「期末」という概念と「月末」の対比がやや曖昧である上、「棚卸高の...残高」という重言を含み、機械的テンプレートの典型文となっています。実地棚卸と帳簿の突合から期末棚卸高を確定する実務的な文脈に修正すべきです。",
+      "suggested_ja": "実地棚卸の結果と帳簿データを照合し、棚卸減耗損を反映した上で期末商品棚卸高を確定させます。",
+      "suggested_vi": "Chúng tôi đối chiếu kết quả kiểm kê thực tế với dữ liệu sổ sách, phản ánh khoản hao hụt tồn kho rồi mới chốt giá trị hàng tồn kho cuối kỳ.",
+      "suggested_en": "We reconcile physical inventory count results with book data and finalize the ending merchandise inventory after reflecting inventory shrinkage."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準...適正に処理いたしました」と「適正」が重複しており、文面が空疎な定型文です。低価法による評価損計上など、企業会計基準（棚卸資産の評価基準）に即した具体的で実務的な内容脈にする必要があります。",
+      "suggested_ja": "期末商品棚卸高の評価にあたっては低価法を適用し、収益性の低下した商品について評価損を計上しました。",
+      "suggested_vi": "Khi đánh giá giá trị hàng tồn kho cuối kỳ, chúng tôi đã áp dụng phương pháp giá thấp hơn giữa giá gốc và giá trị thuần có thể thực hiện được (LCM), đồng thời trích lập dự phòng giảm giá đối với hàng hóa bị suy giảm khả năng sinh lời.",
+      "suggested_en": "In valuing ending merchandise inventory, we applied the lower of cost or market method and recorded valuation losses on goods with diminished profitability."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "月次決算で「期末商品棚卸高」と呼ぶことへの違和感に加え、回答の「すべて適正に整合していることを確認いたしました」という日本語が硬く不自然です。実務の会話として自然な棚卸原票照合のやり取りに改めるべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算処理にあたり、実地棚卸の結果と帳簿上の期末商品棚卸高に差異は生じていませんか。",
+        "vi": "Trong quá trình xử lý quyết toán, có phát sinh chênh lệch giữa kết quả kiểm kê thực tế và giá trị hàng tồn kho cuối kỳ trên sổ sách không?",
+        "en": "In processing the financial closing, are there any discrepancies between the physical inventory count results and the book ending merchandise inventory?"
+      },
+      {
+        "speaker": "B",
+        "ja": "棚卸原票と在庫管理システムを照合しましたが、重大な差異はなく正常に一致しております。",
+        "vi": "Chúng tôi đã đối chiếu phiếu kiểm kê với hệ thống quản lý kho; không có chênh lệch trọng yếu nào và tất cả đều khớp đúng chuẩn.",
+        "en": "We reconciled the physical inventory count sheets with the inventory management system; there were no material discrepancies, and they matched properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（meaning_vi, meaning_en）自体は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fa9a0beb641a934a800280362f2031e75f2f647690a0698685f413631a983665",
+    "validated_at": "2026-10-01T01:35:58.274442+00:00"
+  }
+}

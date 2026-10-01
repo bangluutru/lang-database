@@ -29,8 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 CACHE_DIR = BASE_DIR / "data" / "validation_cache"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-PROMPT_VERSION = "v1.1.0a-critic-resolver"
-MODEL_IDENTIFIER = "independent-linguistic-judge-2.0"
+PROMPT_VERSION = "v1.1.0b-deterministic-rules"
+MODEL_IDENTIFIER = "deterministic-rule-validator-v1.1"
 
 # Regular expression to detect Vietnamese characters / diacritics in English strings
 VIETNAMESE_DIACRITICS_RE = re.compile(
@@ -52,6 +52,12 @@ ENGLISH_RAW_PATTERNS = [
 
 # Explicit semantic incompatibility matrix: (Entity Class / Term, Invalid Predicate)
 SEMANTIC_COLLISION_RULES = [
+    # Professional service firms / audit firms cannot be booked as accounts, settled, or have account balances
+    ({"professional_service_firm", "audit_firm", "監査法人", "会計事務所", "税理士法人"}, {"計上する", "残高", "精算する", "照合する", "減価償却する", "回収する"}, "COLLOCATION_SEMANTIC_MISMATCH", "Professional service firm is an external legal organization, not a nominal or real ledger account."),
+    
+    # Financial statements cannot be booked as accounts
+    ({"financial_statement", "キャッシュ・フロー計算書", "貸借対照表", "損益計算書", "株主資本等変動計算書"}, {"計上する", "精算する", "減価償却する", "回収する"}, "COLLOCATION_SEMANTIC_MISMATCH", "Financial statement is a reporting disclosure document, not a ledger booking account."),
+
     # Tax schemes cannot be "submitted" or "settled" like physical documents/accounts
     ({"tax_scheme", "ふるさと納税", "インボイス制度", "電子帳簿保存法"}, {"提出する", "精算する", "計上する", "残高", "回収する"}, "COLLOCATION_SEMANTIC_MISMATCH", "Tax scheme is a statutory regime, not a physical form or ledger account."),
     

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000015",
+  "term": "支払期日",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic mismatches in 3 out of 4 collocations (e.g., '支払期日に違反する', '支払期日を精査する'), robotic slash-delimited glossary concatenation in English example sentences, and conversational disconnect in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "支払期日を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, contracts and business practices typically use '支払期日を定める' or '支払期日を設定する' rather than '設ける'.",
+      "suggested_text": "支払期日を定める"
+    },
+    {
+      "index": 1,
+      "text": "支払期日に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'違反する' takes rules, agreements, or laws as its object/target (e.g., 契約違反). A date cannot be 'violated'; one fails to meet it ('支払期日を過ぎる', '支払期日を徒過する') or fails to pay ('支払期日に遅延する').",
+      "suggested_text": "支払期日を守る"
+    },
+    {
+      "index": 2,
+      "text": "支払期日を適用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'適用する' applies to rules, discount rates, or general terms ('支払条件を適用する'), not directly to a specific calendar deadline.",
+      "suggested_text": "支払期日を延期する"
+    },
+    {
+      "index": 3,
+      "text": "支払期日を精査する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精査する' implies in-depth scrutiny of complex data or clauses. A due date is a straightforward calendar date or formula, typically checked ('確認する') or verified rather than scrutinized.",
+      "suggested_text": "支払期日を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "In Japanese, '支払期日を定める' is far more standard in contract drafting than '設ける'. Additionally, the English translation mechanically copied the slash-delimited definition string ('explicit due date / payment deadline').",
+      "suggested_ja": "取引先とのトラブルを未然に防ぐため、契約書に明確な支払期日を定めました。",
+      "suggested_vi": "Để phòng ngừa tranh chấp với đối tác, chúng tôi đã quy định rõ ngày đến hạn thanh toán trong hợp đồng.",
+      "suggested_en": "To prevent disputes with the counterparty, we stipulated a clear payment due date in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "'支払期日の文言' is slightly unnatural ('支払期日に関する条項' or '支払条件' is standard). Furthermore, the English translation mechanically repeats the literal slash definition ('due date / payment deadline').",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された支払期日に関する条項を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần điều khoản về ngày đến hạn thanh toán do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the clause regarding the payment due date proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A specifically asks about the payment due date revision, but Speaker B suddenly brings up '損害賠償条項' (damages clause) without mentioning delayed damages or tying it back clearly. Furthermore, '締結手続きに進めます' has an unnatural case particle (should be '進めます' with an object or '進みます').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた支払期日の修正案ですが、社内確認は済みましたか。",
+        "vi": "Về bản sửa đổi ngày đến hạn thanh toán mà phòng pháp chế của đối tác gửi lại, bên mình đã xác nhận xong nội bộ chưa?",
+        "en": "Regarding the proposed revision to the payment due date returned by the other party's legal department, has internal review been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、資金繰り上のリスクがないことを財務部と確認いたしましたので、この内容で進めて問題ありません。",
+        "vi": "Vâng, chúng tôi đã xác nhận với phòng tài chính rằng không có rủi ro về dòng tiền, nên tiến hành theo nội dung này là hoàn toàn ổn thỏa.",
+        "en": "Yes, we confirmed with the finance department that there are no cash flow risks, so we can proceed with this proposal."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translations in examples mechanically concatenated the raw glossary slash string ('due date / payment deadline') into the sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a5517645ca45a0435d57d009a4f4d262392e90325b89ef472d0b6d0c638cf735",
+    "validated_at": "2026-10-01T01:41:12.313680+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000110",
+  "term": "回転信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the misunderstanding of how a Revolving L/C is 'accounted for' or 'processed' in Japanese accounting context. It's an off-balance sheet commitment, not an item with '計上内容' or '残高' in the same way as a typical asset/liability. The Vietnamese translation for the term itself is also unnatural.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "回転信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for establishing an L/C.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "回転信用状を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for settling an L/C.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "回転信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for presenting documents under an L/C.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "回転信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard collocation for resolving discrepancies in L/C documents.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "回転信用状の計上内容や残高に差異がないか精査します is unnatural. L/C itself is not 'booked' or 'accounted for' in the same way as a transaction or asset/liability. It's an off-balance sheet item until drawn upon. The phrase '計上内容' is particularly awkward here. One might check the status or usage of an L/C, but not its '計上内容' or '残高' in this context.",
+      "suggested_ja": "月末の帳簿照合において、回転信用状の利用状況や関連する債権債務に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong tình hình sử dụng thư tín dụng tuần hoàn hoặc các khoản phải thu/phải trả liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the utilization status of the revolving letter of credit or related receivables/payables."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "回転信用状を適正に処理いたしました is unnatural. An L/C is a financial instrument, not something that is 'processed' in closing entries in the same way as transactions. While its impact on transactions (e.g., import/export) is accounted for, the L/C itself is not 'processed' in the closing entries. It's an off-balance sheet commitment.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において回転信用状に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến thư tín dụng tuần hoàn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the revolving letter of credit in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's '回転信用状の計上内容に差異は発生していませんか' is unnatural for the same reasons as the example sentences. L/C itself is not 'booked' in a way that would have '計上内容'. Speaker B's response is also somewhat generic and doesn't directly address the specific (and flawed) premise of A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、回転信用状の利用状況や関連する取引に問題はありませんでしたか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, tình hình sử dụng thư tín dụng tuần hoàn và các giao dịch liên quan có vấn đề gì không?",
+        "en": "Were there any issues with the utilization of the revolving letter of credit or related transactions in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều được xử lý đúng quy định.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we confirmed that everything has been properly processed."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation 'thư tín dụng tuần hoàn tái sinh số tiền (Revolving L/C)' is overly literal and clunky. 'Thư tín dụng tuần hoàn' is the standard and sufficient term. 'Tái sinh số tiền' is redundant and not commonly used in Vietnamese finance."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5f5d150d601aca77071e55ff45b26a88eaee8e972169899489a1470021184c87",
+    "validated_at": "2026-10-01T01:55:40.241723+00:00"
+  }
+}

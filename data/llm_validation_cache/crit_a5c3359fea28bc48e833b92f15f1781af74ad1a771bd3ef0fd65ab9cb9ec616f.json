@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-tax-000178",
+  "term": "重加算税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual errors throughout: heavy additional tax (重加算税) was treated as a routine self-assessed monthly corporate tax rather than an administrative penalty for deliberate concealment or fraud resulting from tax audits.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "重加算税を申告する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "重加算税 is an administrative penalty tax imposed by the tax authorities (賦課課税方式) for concealment or disguise of facts (仮装・隠蔽); taxpayers do not declare or self-assess it (申告納税方式).",
+      "suggested_text": "重加算税を追徴される"
+    },
+    {
+      "index": 1,
+      "text": "重加算税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to paying the penalty tax following an assessment by tax authorities."
+    },
+    {
+      "index": 2,
+      "text": "重加算税を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While estimating penalty amounts occurs, in corporate practice the primary collocations focus on whether an act falls under heavy additional tax or avoiding/being subjected to it.",
+      "suggested_text": "重加算税の対象となる"
+    },
+    {
+      "index": 3,
+      "text": "重加算税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly natural legal and accounting collocation describing the imposition of heavy additional tax."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Heavy additional tax is a fraud/concealment penalty resulting from tax audit findings, not a regular tax where a taxpayer calculates tax base and applies rates in ordinary compliance.",
+      "suggested_ja": "税務調査において売上の隠蔽と判断された場合、本税に加えて重加算税が課されるリスクがあります。",
+      "suggested_vi": "Nếu bị cơ quan thuế xác định là che giấu doanh thu trong đợt thanh tra thuế, có nguy cơ sẽ bị phạt thêm tiền thuế gian lận nặng (trọng gia toán thuế) cùng với tiền thuế gốc.",
+      "suggested_en": "If the tax audit determines that revenue was concealed, there is a risk that heavy additional tax (fraud penalty) will be imposed on top of the principal tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Corporate tax departments do not budget or model future tax burdens of fraud penalties based on annual tax reform.",
+      "suggested_ja": "調査官からの指摘事項について、仮装隠蔽の意図はなかったとして重加算税の賦課決定に対し異議申し立てを検討しています。",
+      "suggested_vi": "Đối với các vấn đề mà thanh tra thuế chỉ ra, chúng tôi đang xem xét khiếu nại quyết định áp thuế gian lận nặng với lập luận rằng công ty không hề có ý định ngụy tạo hay che giấu.",
+      "suggested_en": "Regarding the points raised by the tax auditor, we are considering an appeal against the assessment of heavy additional tax, asserting that there was no intention of concealment or falsification."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Heavy additional tax is an extraordinary penalty from tax audits, not a routine monthly closing item reconciled against vouchers and subledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の税務調査で指摘された期ずれの件、重加算税が課される可能性はあるでしょうか。",
+        "vi": "Về vấn đề ghi nhận sai kỳ bị chỉ ra trong đợt kiểm tra thuế vừa rồi, liệu có khả năng bị phạt thuế gian lận nặng không?",
+        "en": "Regarding the timing discrepancy pointed out in the recent tax audit, is there any possibility that heavy additional tax will be imposed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "単なる事務的過誤であり隠蔽の意図はないため、過少申告加算税にとどまる見込みです。",
+        "vi": "Đó chỉ là sai sót hành chính thuần túy và không có ý định che giấu, nên dự kiến sẽ chỉ dừng lại ở mức phạt kê khai thiếu.",
+        "en": "Since it was merely an administrative error without any intention of concealment, it is expected to remain limited to understatement penalty tax."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations mechanically inserted the gloss 'tiền phạt gian lận thuế đặc biệt nặng (35-40%)' verbatim into sentences, producing ungrammatical phrasing like 'tiền thuế tiền phạt...'"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fc998c02406d221054a7c5c4394d62eff62e757b01c5d8f2394815b908109e85",
+    "validated_at": "2026-10-01T01:40:34.194139+00:00"
+  }
+}

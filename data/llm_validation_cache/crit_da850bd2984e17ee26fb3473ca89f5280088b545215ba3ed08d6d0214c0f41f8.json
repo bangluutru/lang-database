@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000073",
+  "term": "固定資産除却損",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting semantics ('残高を確認する', '精算する'), and the example sentences and dialogue exhibit mechanical template patterns that lack real corporate accounting substance.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定資産除却損を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking a loss on retirement of fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "固定資産除却損の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As an extraordinary loss (特別損失) item on the P&L, referring to its '残高' (balance) is unnatural template jargon; accounting professionals refer to '計上額' (recorded amount) or '発生額'.",
+      "suggested_text": "固定資産除却損の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "固定資産除却損を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Loss accounts are not directly reconciled as the grammatical object; one reconciles the disposal request forms or ledger with the recorded loss.",
+      "suggested_text": "固定資産除却損を特別損失に計上する"
+    },
+    {
+      "index": 3,
+      "text": "固定資産除却損を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 (settlement/liquidation/expense reimbursement) cannot semantically take an asset retirement loss as its direct object.",
+      "suggested_text": "固定資産除却損が発生する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'固定資産除却損の計上内容や残高に差異がないか' is an artificial template expression. A loss account does not hold a month-end balance discrepancy like an asset or liability account; practitioners verify whether retired assets were removed from the ledger and booked without omission.",
+      "suggested_ja": "老朽化した製造設備の廃棄に伴い、当期において固定資産除却損を特別損失として計上しました。",
+      "suggested_vi": "Do việc thanh lý hủy bỏ thiết bị sản xuất đã xuống cấp, chúng tôi đã ghi nhận khoản lỗ do hủy bỏ tài sản cố định vào chi phí bất thường (lỗ khác) trong kỳ này.",
+      "suggested_en": "Following the disposal of obsolete manufacturing equipment, we recorded a loss on retirement of non-current assets as an extraordinary loss in the current term."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence is tautological and robotic ('適正な会計基準...適正に処理いたしました'). Real enterprise documents reference specific retirement approvals, disposal certificates, and ledger write-offs.",
+      "suggested_ja": "固定資産台帳と廃棄証明書を突合し、固定資産除却損の計上漏れがないか確認してください。",
+      "suggested_vi": "Vui lòng đối chiếu sổ tài sản cố định với biên bản/chứng nhận tiêu hủy để kiểm tra xem có bỏ sót việc hạch toán lỗ do hủy bỏ tài sản cố định hay không.",
+      "suggested_en": "Please cross-check the fixed asset register against the disposal certificates to ensure no omission in recording losses on retirement of non-current assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'計上内容に差異は発生していませんか' is unnatural phrasing for a loss account, and '適正に整合している' is redundant business Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本社工場のライン解体に伴う固定資産除却損は、今月の月次決算に反映されていますか。",
+        "vi": "Khoản lỗ do hủy bỏ tài sản cố định phát sinh từ việc tháo dỡ dây chuyền tại nhà máy trụ sở chính đã được phản ánh vào kỳ quyết toán tháng này chưa?",
+        "en": "Has the loss on retirement of non-current assets from dismantling the main factory line been reflected in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、廃棄証明書の受領が完了し、固定資産台帳からの除却処理および損失の計上を済ませております。",
+        "vi": "Vâng, chúng tôi đã nhận đủ biên bản tiêu hủy và hoàn tất việc ghi giảm trên sổ tài sản cố định cũng như hạch toán khoản lỗ.",
+        "en": "Yes, we have received all disposal certificates and completed both the derecognition from the fixed asset register and the booking of the loss."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese are technically correct."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7ed4f0474d9d45011420a3a450d14a10622c7ff9527bf703401cf347a89c4b0f",
+    "validated_at": "2026-10-01T01:34:57.340620+00:00"
+  }
+}

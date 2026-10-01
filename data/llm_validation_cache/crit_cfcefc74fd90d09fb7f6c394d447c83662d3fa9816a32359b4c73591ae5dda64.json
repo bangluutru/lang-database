@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000094",
+  "term": "返金負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 use unnatural predicates for an estimated liability account, Example 2 is an empty robotic template, and the dialogue uses awkward tautology while neglecting the actual estimation nature of refund liabilities.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "返金負債を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation used in revenue recognition (収益認識基準) when recognizing liabilities for expected returns or refunds.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "返金負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for reviewing account balance during closing periods.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "返金負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The verb '照合する' applies to data, ledgers, or balances (照合対象), not directly to a liability category. In practice, refund liabilities are estimated based on return rates.",
+      "suggested_text": "返金負債を見積もる"
+    },
+    {
+      "index": 3,
+      "text": "返金負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In corporate accounting, liabilities of this nature are reversed/drawn down (取り崩す) as actual returns/refunds occur, rather than '精算する'.",
+      "suggested_text": "返金負債を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear and grammatically natural, representing a typical month-end internal check.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Redundant and mechanical phrasing with repetitive use of '適正な' and '適正に'. It lacks domain specificity regarding how refund liabilities are actually accounted for under ASBJ Statement No. 29.",
+      "suggested_ja": "収益認識会計基準に基づき、過去の返品実績率を勘案して期末の返金負債を計上しました。",
+      "suggested_vi": "Dựa trên chuẩn mực kế toán ghi nhận doanh thu, chúng tôi đã trích lập nghĩa vụ hoàn trả tiền hàng cuối kỳ có tính đến tỷ lệ hàng trả lại trong quá khứ.",
+      "suggested_en": "Based on the revenue recognition accounting standard, we recorded refund liabilities at the end of the period taking into account historical return rates."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural and pleonastic in business Japanese. Furthermore, refund liability is an estimated figure based on expected customer returns, so matching evidence against subsidiary ledgers alone does not reflect practical workflow.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "当四半期の決算にあたり、返金負債の見積り計算に問題はありませんか。",
+        "vi": "Trong kỳ quyết toán quý này, việc tính toán ước tính nghĩa vụ hoàn trả tiền hàng có vấn đề gì không?",
+        "en": "For this quarter's financial closing, are there any issues with the estimated calculation of refund liabilities?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直近の返品実績率を反映させて再計算しており、監査対応上も問題ありません。",
+        "vi": "Chúng tôi đã tính toán lại phản ánh tỷ lệ hàng trả lại thực tế gần đây nhất, nên không có vấn đề gì đối với việc kiểm toán.",
+        "en": "We recalculated it reflecting the latest actual return rates, so there will be no issues for audit review."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both Vietnamese and English term definitions accurately convey the accounting concept under IFRS 15 / ASBJ No. 29."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "399a5827f0d7c54a169dec1587d23e832af97138462d99b6960520b94634c9a5",
+    "validated_at": "2026-10-01T01:35:19.838666+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000144",
+  "term": "アフターサービス",
+  "overall_decision": "rewrite",
+  "summary_reason": "Significant domain-specific factual errors in accounting terminology within example sentences and dialogue, leading to unnatural and incorrect expressions. One collocation is slightly unnatural, and the Vietnamese translation is redundant. The object requires substantial revision to be suitable for professional learning.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "アフターサービスを提供する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "アフターサービスを充実させる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "アフターサービスで対応する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The predicate '対応する' implies responding to an issue *using* the service, rather than being a direct action performed *on* or *by* the service itself. It feels incomplete as a standalone collocation for the term 'アフターサービス'. A more direct verb for the service itself would be '行う'.",
+      "suggested_text": "アフターサービスを行う"
+    },
+    {
+      "index": 3,
+      "text": "アフターサービスの契約を締結する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'アフターサービスの残高' is an incorrect accounting concept. After-sales service itself does not have a balance; related accounts (e.g., provision for after-sales service, deferred revenue) would. '計上内容' is also too vague in this context.",
+      "suggested_ja": "月末の帳簿照合において、アフターサービス関連費用の計上内容や引当金の残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch nào trong nội dung hạch toán chi phí liên quan đến dịch vụ hậu mãi hoặc số dư của khoản dự phòng không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the accounting entries for after-sales service-related expenses or the balance of the provision."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'アフターサービスを処理する' is an incorrect accounting expression. One processes the *costs*, *revenues*, or *provisions* related to after-sales service, not the service itself, in closing entries.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてアフターサービス関連費用を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán đúng quy định các chi phí liên quan đến dịch vụ hậu mãi trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly recorded after-sales service-related expenses in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A's question uses the imprecise and potentially incorrect accounting term 'アフターサービスの計上内容', similar to the issues in the example sentences. It should refer to specific accounts or items related to after-sales service. Speaker B's response is natural given a valid question, but the entire turn needs to be rewritten for consistency.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、アフターサービス関連費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán chi phí liên quan đến dịch vụ hậu mãi không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries for after-sales service-related expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation 'dịch vụ hậu mãi sau bán hàng' is redundant. 'Dịch vụ hậu mãi' already means after-sales service, making 'sau bán hàng' superfluous."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "76fe25b2b2abffd6f80b59e3f311560bb54aa3cc7d1a7623a07084c8478ddeea",
+    "validated_at": "2026-10-01T01:50:55.155723+00:00"
+  }
+}

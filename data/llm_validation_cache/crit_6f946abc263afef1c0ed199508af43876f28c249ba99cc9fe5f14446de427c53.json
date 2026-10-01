@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000017",
+  "term": "小口現金",
+  "overall_decision": "rewrite",
+  "summary_reason": "典型的なAIテンプレート文（『適正な会計基準に則り〜適正に処理』）およびベトナム語翻訳の生データ混入が見受けられます。実務即応性を高めるため、小口現金特有の『実査』『補充』『現金過不足』を反映した表現への刷新が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "小口現金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「小口現金」自体を計上するとは言わず、小口現金から支払われた費用を計上するか、小口現金を「補充する」「管理する」「実査する」と表現するのが実務的です。",
+      "suggested_text": "小口現金を補充する"
+    },
+    {
+      "index": 1,
+      "text": "小口現金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務で極めて頻繁に使われる自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "小口現金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "対象物そのものを照合するのではなく、「帳簿残高と実際有高を照合する」または現金を数えて確かめる「実査する」が正確です。",
+      "suggested_text": "小口現金を実査する"
+    },
+    {
+      "index": 3,
+      "text": "小口現金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "立替金の精算やインプレスト・システムにおける定期精算などで広く使われる自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "ベトナム語訳に用語定義のスラッシュ（quỹ tiền mặt nhỏ / tiền tiêu vặt văn phòng）がそのまま混入しており不自然です。また「計上内容や残高」という表現も実務では「出納帳と実際有高」とする方が正確です。",
+      "suggested_ja": "月末の締め処理において、小口現金の出納帳残高と金庫内の実際有高を照合し、過不足がないか精査します。",
+      "suggested_vi": "Trong đợt khóa sổ cuối tháng, chúng tôi đối chiếu số dư sổ quỹ tiền mặt nhỏ với số tiền thực tế trong két để kiểm tra kỹ lưỡng xem có thừa thiếu hay không.",
+      "suggested_en": "During month-end closing, we reconcile the petty cash ledger balance with the actual physical cash on hand to thoroughly check for discrepancies."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準および社内規程に則り、当期の決算において〜を適正に処理いたしました」は中身のない汎用テンプレート文であり、小口現金の教育例文として不適切です。",
+      "suggested_ja": "当月分の経費精算領収書を取りまとめ、インプレスト・システムに基づき小口現金の手許資金を補充いたしました。",
+      "suggested_vi": "Chúng tôi đã tổng hợp các hóa đơn thanh toán chi phí trong tháng và bổ sung quỹ tiền mặt nhỏ theo hệ thống định mức tạm ứng.",
+      "suggested_en": "We collected the expense settlement receipts for the month and replenished the petty cash fund in accordance with the imprest system."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "「小口現金の計上内容に差異は発生していませんか」「すべて適正に整合している」は実務会話として不自然でぎこちないです。現金実査における「現金過不足」の有無を尋ね、領収書と出納帳の確認状況を答える形がリアルです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、小口現金の帳簿残高と手許有高に差異は出ていませんか。",
+        "vi": "Trong đợt quyết toán tháng này, có chênh lệch nào giữa số dư sổ sách và số tiền mặt nhỏ thực tế tại quỹ không?",
+        "en": "Regarding this month's closing, are there any discrepancies between the petty cash book balance and the cash on hand?"
+      },
+      {
+        "speaker": "B",
+        "ja": "領収書と出納帳をすべて照合し、現金過不足なく一致していることを確認済みです。",
+        "vi": "Tôi đã đối chiếu toàn bộ hóa đơn với sổ quỹ và xác nhận số liệu hoàn toàn khớp, không có chênh lệch thừa thiếu.",
+        "en": "I have reconciled all receipts with the cash journal and confirmed that the figures match with no cash overage or shortage."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳において、見出し語の別名表記スラッシュ（/）が例文中にそのままコピーされており、自然な文になっていませんでした。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7f38d73368001e4a114c299e6a00cc229aad74b06cf414f426e58dfb01327ab8",
+    "validated_at": "2026-10-01T01:33:15.652490+00:00"
+  }
+}

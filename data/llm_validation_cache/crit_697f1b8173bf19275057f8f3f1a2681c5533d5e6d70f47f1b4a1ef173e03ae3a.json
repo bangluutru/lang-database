@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000191",
+  "term": "会計方針",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template collision: the examples and dialogue mistakenly treat '会計方針' (accounting policy) as an account title with balances and journal entries (残高/計上内容). Examples and dialogue must be rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "会計方針を決定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional business usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "会計方針を変更する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting term (e.g., 会計方針の変更 under ASBJ standards).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "会計方針を注記する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard usage referring to disclosing significant accounting policies in financial statement notes.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "会計方針を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression in accounting practice.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A policy (会計方針) is a set of accounting principles and rules, not an account line item. It cannot possess balances (残高) or recorded journal entries (計上内容).",
+      "suggested_ja": "当期より棚卸資産の評価方法に係る会計方針を変更したため、財務諸表にその旨を注記しました。",
+      "suggested_vi": "Do thay đổi chính sách kế toán liên quan đến phương pháp đánh giá hàng tồn kho từ kỳ này, chúng tôi đã thuyết minh nội dung đó trong báo cáo tài chính.",
+      "suggested_en": "Since we changed our accounting policy regarding the valuation method of inventories starting this period, we disclosed this in the notes to the financial statements."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'会計方針を処理いたしました' is an unnatural predicate pairing. Policies are adopted, applied, or changed, not 'processed' (処理する).",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において適切な会計方針を適用いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã áp dụng chính sách kế toán phù hợp trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with relevant accounting standards and internal regulations, we applied appropriate accounting policies for this fiscal year's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if there are discrepancies in 'entries for accounting policies' (会計方針の計上内容に差異) is conceptually incorrect and mechanically templated. Accounting policies deal with adoption, consistency, and changes across periods.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期から減価償却方法の会計方針を変更する件、監査法人との事前協議は進んでいますか。",
+        "vi": "Về việc thay đổi chính sách kế toán cho phương pháp khấu hao từ kỳ tới, việc thảo luận trước với công ty kiểm toán đã tiến hành đến đâu rồi?",
+        "en": "Regarding the change in accounting policy for the depreciation method starting next period, how are preliminary discussions with the audit firm progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、変更理由の妥当性について論点を整理し、すでに監査チームへの説明を終えたところです。",
+        "vi": "Vâng, chúng tôi đã tổng hợp các luận điểm về tính thỏa đáng của lý do thay đổi và vừa hoàn tất việc giải trình với đội ngũ kiểm toán.",
+        "en": "Yes, we organized the key issues regarding the validity of the change and have already completed our explanation to the audit team."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "'chính sách kế toán áp dụng' unnecessarily restricts the generic term '会計方針'; 'chính sách kế toán' is the accurate standard equivalent."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d48394c56a39957fac78e56372b93d85be4df9728e07d0f0bc18229921da66dc",
+    "validated_at": "2026-10-01T01:37:03.526273+00:00"
+  }
+}

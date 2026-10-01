@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000098",
+  "term": "長期借入金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an incorrect predicate collocation ('借入金を精算する'), a vacuous and redundant example sentence, and overly templated dialogue lacking authentic accounting domain practices such as the one-year rule.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "長期借入金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation used when recognizing long-term borrowings on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "長期借入金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, widely used workplace expression for confirming account balance against bank certificates or general ledger.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "長期借入金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles the balance or schedule of borrowings rather than the liability itself.",
+      "suggested_text": "長期借入金の残高を照合する"
+    },
+    {
+      "index": 3,
+      "text": "長期借入金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Borrowings (借入金) are repaid (返済する・弁済する), not settled like expenses or advances (精算する).",
+      "suggested_text": "長期借入金を返済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and plausible for monthly closing reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Vacuous and repetitive template expression ('適正な会計基準...適正に処理いたしました') lacking substantive accounting context.",
+      "suggested_ja": "決算手続において、返済期日が1年以内に到来する長期借入金を流動負債へ振り替えました。",
+      "suggested_vi": "Trong thủ tục quyết toán, chúng tôi đã kết chuyển các khoản vay dài hạn có thời hạn trả nợ trong vòng 1 năm sang nợ ngắn hạn.",
+      "suggested_en": "During closing procedures, long-term borrowings maturing within one year were reclassified to current liabilities."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange relies on mechanical, generic template language ('適正に整合している') rather than realistic accounting dialogue referencing bank repayment schedules or one-year rule reclassifications.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算で、長期借入金のうち1年以内に返済期限が到来する分の振替処理は済んでいますか。",
+        "vi": "Trong kỳ quyết toán này, khoản mục nợ vay dài hạn đến hạn thanh toán trong vòng 1 năm đã được xử lý kết chuyển chưa?",
+        "en": "For this term's closing, has the reclassification for long-term borrowings maturing within one year been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、金融機関ごとの返済予定表と照合の上、1年内返済予定長期借入金への振替を完了しております。",
+        "vi": "Vâng, sau khi đối chiếu với lịch trả nợ của từng tổ chức tín dụng, chúng tôi đã hoàn tất việc kết chuyển sang mục nợ dài hạn đến hạn trả.",
+        "en": "Yes, after reconciling with the repayment schedule of each financial institution, we have completed the reclassification to the current portion of long-term borrowings."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese gloss 'khoản vay ngân hàng dài hạn' inappropriately restricts long-term borrowings solely to bank loans, excluding debt from affiliated entities or shareholders; 'khoản vay dài hạn' is more precise."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "55b2098554858a887b0813d076bbaa22bb68cb0e2b579881b6ebf48363663a69",
+    "validated_at": "2026-10-01T01:35:28.532496+00:00"
+  }
+}

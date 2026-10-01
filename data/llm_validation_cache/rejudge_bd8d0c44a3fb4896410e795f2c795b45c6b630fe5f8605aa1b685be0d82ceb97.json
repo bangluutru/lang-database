@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "Japanese text across collocations, examples, and dialogue is highly authentic and idiomatic business Japanese. However, dialogue translations contain raw vocabulary gloss artifacts that require clean rewriting.",
+  "issues": [
+    {
+      "component": "translations",
+      "code": "TRANSLATION_ERROR",
+      "detail": "Dialogue A translations in both English and Vietnamese contain raw copy-pasted gloss strings with slashes ('individual contract / purchase agreement') instead of natural contextual phrasing."
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "93cc37a5a5979015b3ad6454184e9a5b4fd437431349f2fda69b51a2b50aedb2",
+    "validated_at": "2026-10-01T01:41:31.036261+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000068",
+  "term": "保証金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an unnatural collocation ('保証金を照合する'), a vacuous templated example with inaccurate accounting terminology ('適正な会計基準'), and a stilted dialogue lacking realistic workplace context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保証金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural accounting action for booking security deposits.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "保証金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard verification procedure for balance sheet accounts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保証金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'照合する' (reconcile/cross-check) takes ledgers, balances, or vouchers as direct objects, not the monetary asset itself. Alternatively, '差し入れる' or '返還する' are far more characteristic predicates.",
+      "suggested_text": "保証金を差し入れる"
+    },
+    {
+      "index": 3,
+      "text": "保証金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common business expression when settling/refunding security deposits upon contract termination.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and plausible for month-end reconciliation procedures.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is not standard Japanese accounting terminology (the proper legal/formal phrasing is '一般に公正妥当と認められる企業会計の基準'), and repeating '適正な...適正に' is stylistically poor and vacuous.",
+      "suggested_ja": "オフィスの賃貸借契約締結に伴い、敷金および保証金を資産として適正に計上しました。",
+      "suggested_vi": "Cùng với việc ký kết hợp đồng thuê văn phòng, chúng tôi đã hạch toán đúng quy định tiền đặt cọc và tiền ký quỹ bảo đảm vào phần tài sản.",
+      "suggested_en": "Upon concluding the office lease agreement, we properly recorded the security deposit as an asset."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural repetitive jargon. Furthermore, treating '保証金' as a routine item frequently showing monthly variance lacks practical accounting context; security deposits are typically discussed around contract inception, renewal, or termination.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新オフィス移転に伴う差入保証金の処理は完了していますか。",
+        "vi": "Khoản tiền ký quỹ bảo đảm chi ra do chuyển văn phòng mới đã hoàn tất xử lý chưa?",
+        "en": "Has the security deposit paid for the new office relocation been fully processed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、賃貸借契約書と出金伝票を照合し、固定資産の投資その他の資産として計上済みです。",
+        "vi": "Vâng, tôi đã đối chiếu hợp đồng thuê nhà với chứng từ chi và hạch toán vào mục các khoản đầu tư và tài sản khác thuộc tài sản cố định rồi.",
+        "en": "Yes, I verified the lease agreement against the payment voucher and recorded it under investments and other assets."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Core translations accurately convey the business meaning."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "183b20ca8ef9f07c6fbaeeac35f84d11b74bbce9459b5e9e88cb4e8d41e54b5c",
+    "validated_at": "2026-10-01T01:34:48.594162+00:00"
+  }
+}

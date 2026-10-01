@@ -1,0 +1,60 @@
+{
+  "entry_id": "jp-pro-business-000130",
+  "term": "退職金",
+  "overall_decision": "rewrite",
+  "summary_reason": "The use of `残高` with `退職金` is imprecise for a professional accounting context; it should refer to the liability account (`退職給付引当金`). This impacts one collocation and one example sentence, requiring their revision and subsequent translation updates.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "退職金を計上する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "退職金の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "`残高` (balance) is typically associated with an account or liability, not the payment itself. For accounting precision, `退職給付引当金` (provision for retirement benefits) or `退職金債務` (retirement benefit obligation) would be more appropriate with `残高`.",
+      "suggested_text": "退職給付引当金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "退職金を照合する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "退職金を精算する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the collocation issue, `退職金の残高` is imprecise in an accounting context. It should refer to the balance of the liability account, `退職給付引当金`.",
+      "suggested_ja": "月末の帳簿照合において、退職給付引当金の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của khoản dự phòng trợ cấp thôi việc có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for the provision for retirement benefits."
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The translations for Example 0 need to be updated to reflect the suggested Japanese rewrite, specifically changing 'retirement allowance' to 'provision for retirement benefits' or equivalent."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "76603d49d2583bc856fbf6e4f8561cf03b2954bf6e33e0196897e26bd320d7b8",
+    "validated_at": "2026-10-01T01:49:57.280614+00:00"
+  }
+}

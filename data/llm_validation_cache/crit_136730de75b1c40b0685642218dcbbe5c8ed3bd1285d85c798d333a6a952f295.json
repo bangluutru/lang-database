@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000086",
+  "term": "未払消費税等",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 2 is unnatural as a standalone predicate ('照合する' should be '納付する'), Example 1 suffers from templated tautology ('適正な...適正に...'), and the dialogue contains an unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未払消費税等を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing consumption taxes payable at closing.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "未払消費税等の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and frequent audit/reconciliation procedure.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "未払消費税等を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One collates/reconciles balances ('残高を照合する') or returns ('申告書と照合する'), but pairing the liability account directly with '照合する' is vague. '未払消費税等を納付する' (pay consumption taxes payable) is far more canonical and essential for learners.",
+      "suggested_text": "未払消費税等を納付する"
+    },
+    {
+      "index": 3,
+      "text": "未払消費税等を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard terminology for settling temporary tax accounts into payable/receivable balances.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Realistic month-end closing and internal controls review task.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence exhibits repetitive templated phrasing ('適正な会計基準' ... '適正に処理いたしました'). In business Japanese, '企業会計基準' or '会計方針' is used instead of '適正な会計基準', and the duplicate '適正' makes it sound artificial.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期末において仮受消費税と仮払消費税を相殺し、未払消費税等を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã bù trừ thuế tiêu dùng đầu ra với thuế tiêu dùng đầu vào và hạch toán đúng thuế tiêu dùng phải nộp vào cuối kỳ này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal rules, we offset suspense consumption taxes received against paid and properly recognized consumption taxes payable at the end of the term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' in Speaker B's response is an awkward and redundant collocation ('適正に' + '整合'). In accounting operations, speakers naturally state that there are no discrepancies ('差異はございません' / '一致しております').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未払消費税等の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán thuế tiêu dùng phải nộp có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies in the consumption taxes payable entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "課税売上・仕入の証憑と補助元帳を照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ mua/bán chịu thuế với sổ phụ, và xác nhận số liệu đã khớp hoàn toàn không có chênh lệch.",
+        "en": "We have reconciled the taxable sales and purchase vouchers against the subsidiary ledger and confirmed that they match without any discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "22e05aae52694f13db2fdcbc5a16708eb068c0bf7ca92659bdcca9196248c3f7",
+    "validated_at": "2026-10-01T01:35:08.121384+00:00"
+  }
+}

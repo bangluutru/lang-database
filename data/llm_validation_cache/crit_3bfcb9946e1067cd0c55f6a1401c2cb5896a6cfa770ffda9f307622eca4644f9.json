@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000187",
+  "term": "税務代理",
+  "overall_decision": "rewrite",
+  "summary_reason": "「税務代理（税理士業務としての代理権限）」という法概念を、AIが「仕訳・残高・計上対象の会計科目」と混同して機械的テンプレートに流し込んでおり、実務教育コンテンツとして致命的な欠陥を抱えています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税務代理を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「税務代理」は税理士法上の独占業務（代理行為の資格・権限）であり、単に「進める」とは言いません。「税務代理を委任する」や「税務代理を依頼する」が自然です。",
+      "suggested_text": "税務代理を委任する"
+    },
+    {
+      "index": 1,
+      "text": "税務代理を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "業務権限や委任関係を指すため、「税務代理を完了する」は不自然です。「税務代理権限証書を提出する」などが実務上適切です。",
+      "suggested_text": "税務代理権限証書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "税務代理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "手続きフローの確認という意味で文法・実務上許容されますが、より専門的には「税務代理の範囲を確認する」が好まれます。",
+      "suggested_text": "税務代理の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "税務代理を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「税務代理」自体を見直すという表現は曖昧で不自然です。「税務代理の委任範囲を見直す」または「顧問税理士による税務代理契約を見直す」とすべきです。",
+      "suggested_text": "税務代理の委任範囲を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「税務代理」は税理士が行う代理行為・法的位置づけであり、勘定科目や会計取引ではないため「計上内容」や「残高」は存在せず、致命的な事実誤認・テンプレート混入です。",
+      "suggested_ja": "税務調査の通知を受けたため、顧問税理士に税務代理を委任し、調査への立会いを依頼した。",
+      "suggested_vi": "Vì nhận được thông báo thanh tra thuế, chúng tôi đã ủy nhiệm đại diện thuế cho thuế lý sĩ cố vấn và yêu cầu tham gia chứng kiến buổi thanh tra.",
+      "suggested_en": "Upon receiving a tax audit notice, we delegated tax representation to our tax accountant and requested their presence during the audit."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「税務代理を適正に処理いたしました」は会計用語と混同された破綻表現です。税務代理は会計決算で計上・処理する対象ではありません。",
+      "suggested_ja": "法人税の確定申告にあたり、税理士法に基づき税務代理権限証書を添付して電子申告を行った。",
+      "suggested_vi": "Khi nộp tờ khai quyết toán thuế thu nhập doanh nghiệp, chúng tôi đã thực hiện nộp tờ khai điện tử đính kèm giấy chứng nhận ủy quyền đại diện thuế theo Luật Thuế lý sĩ.",
+      "suggested_en": "For the corporate tax return filing, we filed electronically attaching the certificate of tax representation authority in accordance with the Certified Public Tax Accountant Act."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "税務代理を月次決算の「計上内容」や「補助元帳の照合」の対象として扱っており、会計・税務実務上完全に破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月の税務調査について、顧問税理士への税務代理の委任手続きは完了していますか。",
+        "vi": "Về cuộc thanh tra thuế vào tháng tới, thủ tục ủy quyền đại diện thuế cho thuế lý sĩ cố vấn đã hoàn tất chưa?",
+        "en": "Regarding next month's tax audit, have we completed the procedures to delegate tax representation to our external tax accountant?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、税務代理権限証書の作成と社内決裁は完了しており、所轄税務署へ提出済みです。",
+        "vi": "Vâng, việc lập giấy chứng nhận ủy quyền đại diện thuế và phê duyệt nội bộ đã hoàn tất, chúng tôi cũng đã nộp lên chi cục thuế quản lý rồi.",
+        "en": "Yes, the preparation of the certificate of tax representation authority and internal approval are complete, and it has already been submitted to the relevant tax office."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "例文・対話が「税務代理を会計計上する」という誤った前提で作成されているため、訳文も引きずられて不自然かつナンセンスになっています。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d3db962bccad53788b1e87cab5d17649b2d9afda2232bbec84c52b2c7c5a6016",
+    "validated_at": "2026-10-01T01:40:41.831541+00:00"
+  }
+}

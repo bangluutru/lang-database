@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000141",
+  "term": "賞与",
+  "overall_decision": "rewrite",
+  "summary_reason": "3 of 4 collocations exhibit semantic/collocational errors (treating an expense as a balance-sheet balance, or using '精算'). Examples and dialogue are rigidly templated with AI jargon ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "賞与を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when booking bonus expenses or year-end bonuses (決算賞与).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "賞与の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "賞与 is an expense (P/L) account; balance confirmation applies to liabilities like 賞与引当金 (provision) or 未払賞与 (accrued bonuses).",
+      "suggested_text": "賞与引当金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "賞与を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合 applies to lists, calculations, or vouchers, not raw '賞与'.",
+      "suggested_text": "賞与計算結果を照合する"
+    },
+    {
+      "index": 3,
+      "text": "賞与を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, travel expenses, or mutual debts. Bonuses are calculated (計算する) or paid (支給する), never '精算する'.",
+      "suggested_text": "賞与を支給する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic slot-filled template. Speaking of '残高' directly with 賞与 is unnatural; in month-end closes, accountants check provision estimation or payroll disbursement.",
+      "suggested_ja": "当期末における賞与引当金の計上額が、社内規程の算定基準と整合しているかを精査します。",
+      "suggested_vi": "Chúng tôi kiểm tra kỹ lưỡng xem số tiền trích lập dự phòng thưởng vào cuối kỳ này có khớp với tiêu chuẩn tính toán theo quy chế nội bộ hay không.",
+      "suggested_en": "We will carefully examine whether the bonus provision recorded at the end of the current term aligns with the calculation criteria in internal regulations."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Riddled with redundant phrasing ('適正な...適正に') and mechanical slot-filling. Lacks authentic accounting reality.",
+      "suggested_ja": "業績連動賞与の支給確定に伴い、当期決算において未払賞与を計上いたしました。",
+      "suggested_vi": "Cùng với việc xác định mức chi trả tiền thưởng theo hiệu quả kinh doanh, chúng tôi đã trích trước chi phí thưởng phải trả trong quyết toán kỳ này.",
+      "suggested_en": "Following the finalization of the performance-linked bonus payout, we recorded accrued bonuses in this term's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合している' is unnatural tautological AI jargon. B's response should reference realistic bonus accounting documents such as payroll registers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の月次決算で、賞与引当金の計上額に誤りやズレはありませんか。",
+        "vi": "Trong đợt quyết toán tháng này, số tiền trích lập dự phòng thưởng có sai sót hay lệch số liệu gì không?",
+        "en": "Are there any errors or discrepancies in the bonus provision amount recorded for this monthly closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "支給対象者のデータと算定明細を突き合わせ、正しく計上されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu dữ liệu nhân sự được nhận thưởng với bảng chi tiết tính toán và xác nhận số liệu đã được hạch toán chính xác.",
+        "en": "I cross-checked the eligible employee data with the calculation breakdown and confirmed that everything has been correctly recorded."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning contains an unnecessary slash with English 'tiền thưởng định kỳ / bonus' which pollutes the definition and leaks into example translations."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "39946fb152fdbb81aa2aa3a3d0a116257e50924d3f99e523b4ece8482182de6b",
+    "validated_at": "2026-10-01T01:36:11.794434+00:00"
+  }
+}

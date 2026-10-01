@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000120",
+  "term": "繰延ヘッジ損益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a severe accounting domain error in Example 0 (confounding investment securities revaluation with hedge accounting) and grammatical/conceptual flaws in Collocations 2 and 3.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "繰延ヘッジ損益として純資産の部に計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation in Japanese GAAP for recognizing deferred hedge gains/losses under net assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "繰延ヘッジ損益に税効果会計を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting usage; tax effect accounting is routinely applied to deferred gains or losses on hedges.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "繰延ヘッジ損益を洗替処理を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Grammatically incorrect due to double accusative marker '〜を...を行う'. Should be '〜の洗替処理を行う' or '〜を洗替処理する'.",
+      "suggested_text": "繰延ヘッジ損益の洗替処理を行う"
+    },
+    {
+      "index": 3,
+      "text": "繰延ヘッジ損益を期末時価で評価替えする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Accounting conceptual mismatch: What is evaluated at mark-to-market is the underlying derivative instrument (ヘッジ手段), not the resulting equity reserve account (繰延ヘッジ損益). The reserve is recognized or reversed (取崩す/振り替える).",
+      "suggested_text": "ヘッジ対象の損益認識に合わせて繰延ヘッジ損益を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major accounting error: Valuation differences on investment securities (投資有価証券) are recognized as 'その他有価証券評価差額金', not '繰延ヘッジ損益'. Deferred hedge gains/losses strictly arise from hedging instruments (such as derivatives) qualifying for deferred hedge accounting.",
+      "suggested_ja": "為替予約取引について繰延ヘッジ処理を適用し、期末における評価損益を繰延ヘッジ損益として純資産の部に計上しました。",
+      "suggested_vi": "Chúng tôi đã áp dụng phương pháp kế toán phòng ngừa rủi ro hoãn lại đối với giao dịch hợp đồng kỳ hạn tỷ giá và ghi nhận lãi lỗ đánh giá vào cuối kỳ dưới dạng lãi lỗ từ công cụ phòng ngừa rủi ro hoãn lại trong phần vốn chủ sở hữu.",
+      "suggested_en": "We applied deferred hedge accounting to the forward exchange contracts and recorded the valuation gains and losses at the end of the period as deferred gains or losses on hedges in the net assets section."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate professional usage and correct application of tax effect accounting to deferred hedge gains/losses.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between the supervisor and accountant regarding monthly balance reconciliation is coherent and realistic.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions match standard financial reporting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "408bb9f520e932d9ae6a146056204dfdf333fe623f36070e61fa9e1e38a1627c",
+    "validated_at": "2026-10-01T01:35:46.589084+00:00"
+  }
+}

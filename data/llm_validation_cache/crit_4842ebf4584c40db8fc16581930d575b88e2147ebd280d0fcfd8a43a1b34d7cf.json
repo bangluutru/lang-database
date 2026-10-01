@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000080",
+  "term": "特別償却",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文1にAI特有の不自然な文脈結合（社内周知と特別償却の混同）が見られ、例文2では税目・制度用語の混同（特別償却限度額ではなく控除上限額と記載）があるため、実務教育に適した正確な表現への差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特別償却を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「利用する」は税制・会計の実務表現としてやや日常会話的です。実務では「特別償却を適用する」または「選択する」が標準的です。",
+      "suggested_text": "特別償却を適用する"
+    },
+    {
+      "index": 1,
+      "text": "特別償却の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務実務・法令用語として極めて標準的かつ自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "特別償却を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "財務戦略や設備投資の文脈で頻出する自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "特別償却の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "適格資産・要件判定の文脈で広く使われる正確な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "設備投資に伴う税務処理である特別償却に対し、「社内周知を行って制度を活用しました」とする文脈は実務上不自然で、AI生成特有の定型句合成感があります。",
+      "suggested_ja": "最新の省エネ設備を導入したことに伴い、中小企業投資促進税制に基づく特別償却の適用を受けました。",
+      "suggested_vi": "Do đưa vào vận hành thiết bị tiết kiệm năng lượng mới nhất, chúng tôi đã áp dụng chính sách khấu hao đặc biệt theo cơ chế ưu đãi đầu tư cho doanh nghiệp vừa và nhỏ.",
+      "suggested_en": "Following the introduction of state-of-the-art energy-saving equipment, we applied special depreciation under the tax incentive scheme for SMEs."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "特別償却において算定するのは「特別償却限度額」であり、「控除上限額」は税額控除や所得控除の用語であるため、税務実務上不正確です。",
+      "suggested_ja": "特別償却限度額を事前に試算した結果、今期は税額控除ではなく特別償却を選択することにしました。",
+      "suggested_vi": "Sau khi tính toán thử mức trích khấu hao đặc biệt tối đa, chúng tôi đã quyết định chọn khấu hao đặc biệt thay vì khấu trừ thuế cho kỳ này.",
+      "suggested_en": "After calculating the special depreciation limit in advance, we decided to opt for special depreciation rather than a tax credit for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "税務申告において特別償却の添付書類として「税理士の確認書」とするのは不自然です。法人税申告書別表十六の明細書や設備認定書の提出が実務に即しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における特別償却の計算明細書と添付書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong bảng kê tính toán khấu hao đặc biệt và hồ sơ đính kèm cho kỳ quyết toán thuế lần này chưa?",
+        "en": "Have you organized the special depreciation calculation schedules and supporting documents for this tax filing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、取得資産の明細書と税務署指定の別表十六を揃えましたので、いつでも提出可能です。",
+        "vi": "Vâng, tôi đã tập hợp đầy đủ bảng kê tài sản mua vào và Phụ lục 16 theo quy định của cơ quan thuế, sẵn sàng nộp bất cứ lúc nào.",
+        "en": "Yes, I have compiled the asset acquisition details and Schedule 16 required by the tax office, so they are ready for submission at any time."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations accurately reflect the specialized tax concept in both Vietnamese and English."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ec95ae52209ed4ef5318fbfaf71651fbda44eec1e5a24d2a796c9d5db460318f",
+    "validated_at": "2026-10-01T01:38:45.816109+00:00"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-trade-000056",
+  "term": "貨物受領証",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure logical flow and direct response to the question posed by Speaker A. The current Speaker B's response is somewhat tangential.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貨物受領証を発行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 1,
+      "text": "貨物受領証を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 2,
+      "text": "貨物受領証を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    },
+    {
+      "index": 3,
+      "text": "貨物受領証を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business communication. Factual correctness is maintained."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business communication. Factual correctness is maintained."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of the '貨物受領証の手配状況' (arrangement status of the cargo receipt). While related to customs, it jumps to the next step without confirming the receipt itself. The term '乙仲' is also a bit informal for a professional setting, though understandable.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、貨物受領証の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp biên lai tiếp nhận hàng hóa thế nào rồi ạ?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the cargo receipt arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "貨物受領証は先ほど運送会社から受領し、通関業者には既に提出済みです。現在、通関手続きに入っております。",
+        "vi": "Chúng tôi đã nhận biên lai tiếp nhận hàng hóa từ công ty vận chuyển lúc nãy và đã nộp cho đại lý hải quan rồi. Hiện tại, thủ tục thông quan đang được tiến hành.",
+        "en": "We just received the cargo receipt from the carrier and have already submitted it to the customs broker. Customs clearance procedures are currently underway."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c43337508c85415326434bdac4a07d032c334b5a55b301949277578bf6ea3da8",
+    "validated_at": "2026-10-01T01:54:31.624722+00:00"
+  }
+}

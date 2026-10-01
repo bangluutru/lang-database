@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000127",
+  "term": "退職届",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 and Dialogue exhibit severe domain hallucination caused by mechanical templating (treating a resignation letter as a meeting notice dispatched to stakeholders).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "退職届を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard collocation for preparing a resignation letter.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "退職届を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business expression for submitting a resignation letter.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "退職届を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Resignation letters are handed in or submitted to HR/executives; '発送する' (dispatch/ship) is inappropriate and suggests commercial goods or notices.",
+      "suggested_text": "退職届を受理する"
+    },
+    {
+      "index": 3,
+      "text": "退職届を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in corporate/HR document management, though '受理する' is more legally formal.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually absurd. A company does not 'dispatch resignation letters to all stakeholders within statutory deadlines' to facilitate a shareholders or board meeting. Resignation letters are unilateral notifications submitted by individuals.",
+      "suggested_ja": "取締役が辞任するにあたり、法務担当部署に対して所定の退職届が提出されました。",
+      "suggested_vi": "Khi thành viên hội đồng quản trị từ nhiệm, đơn xin thôi việc theo mẫu quy định đã được nộp cho bộ phận pháp chế.",
+      "suggested_en": "Upon the director's resignation, the prescribed letter of resignation was submitted to the legal department."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural corporate HR/compliance statement regarding the archiving of received resignation documents.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Completely unnatural scenario resulting from machine template reuse. Preparing resignation letters, polishing their draft, obtaining executive pre-approval, and dispatching them for an upcoming meeting makes no sense in a corporate context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "営業部の佐藤課長から退職届が提出されたと聞きましたが、手続きの進捗はいかがですか。",
+        "vi": "Tôi nghe nói Trưởng phòng Sato bên bộ phận kinh doanh đã nộp đơn xin nghỉ việc, thủ tục tiến hành đến đâu rồi?",
+        "en": "I heard Section Manager Sato from Sales submitted his resignation letter. How is the process going?"
+      },
+      {
+        "speaker": "B",
+        "ja": "人事部長による受理手続きが完了し、現在は業務の引き継ぎスケジュールの調整に入っています。",
+        "vi": "Thủ tục tiếp nhận của Trưởng phòng Nhân sự đã hoàn tất, hiện chúng tôi đang tiến hành điều chỉnh lịch bàn giao công việc.",
+        "en": "The HR Director has formally accepted it, and we are currently coordinating the schedule for his handover."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level definitions are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "326a4a8f757d7d5ce00d2a78237fa985bf2c9872fa1cebbe96662c050b1a0d5a",
+    "validated_at": "2026-10-01T01:43:06.402928+00:00"
+  }
+}

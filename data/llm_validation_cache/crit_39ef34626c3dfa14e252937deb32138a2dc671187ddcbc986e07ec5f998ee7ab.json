@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000081",
+  "term": "短期借入金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting register (e.g., 精算する applied to borrowings), Example 1 is an unidiomatic hollow template, and the dialogue relies on stilted machine-like phrasing rather than authentic financial closing procedures.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "短期借入金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting usage for recognizing short-term borrowings on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "短期借入金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard operational expression in ledger reconciliation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "短期借入金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Collocating '照合する' directly with the liability account itself is awkward; one reconciles the balance or ledger against external confirmations ('残高を照合する') or pays/procures borrowings.",
+      "suggested_text": "短期借入金を返済する"
+    },
+    {
+      "index": 3,
+      "text": "短期借入金を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精算' is strictly used for clearing advances, expenses, or travel claims (立替金, 仮払金, 経費). Bank loans and borrowings are repaid (返済する) or refinanced (借り換える).",
+      "suggested_text": "短期借入金を借り換える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable description of month-end balance verification, though slightly generic.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Generic boilerplate with tautological phrasing ('適正な会計基準... 適正に処理いたしました'). '適正な会計基準' is unnatural Japanese (standards are 公正妥当, not 適正). The sentence lacks practical accounting substance.",
+      "suggested_ja": "一時的な運転資金の不足に対応するため、メインバンクから短期借入金5,000万円を調達しました。",
+      "suggested_vi": "Để đáp ứng việc thiếu hụt vốn lưu động tạm thời, chúng tôi đã vay ngắn hạn 50 triệu yên từ ngân hàng giao dịch chính.",
+      "suggested_en": "To address a temporary working capital shortage, we procured a 50 million yen short-term borrowing from our lead bank."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange uses unnatural robotic phrasing ('計上内容に差異', '適正に整合している'). In accounting practice, short-term borrowings are specifically reconciled against bank balance certificates (残高証明書).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算ですが、短期借入金について銀行の残高証明書との突合は完了していますか。",
+        "vi": "Về kỳ quyết toán tháng này, việc đối chiếu khoản vay ngắn hạn với giấy chứng nhận số dư của ngân hàng đã hoàn thành chưa?",
+        "en": "Regarding this month's closing, have you completed reconciling the short-term borrowings against the bank balance certificates?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各金融機関の残高証明書と補助元帳を照合し、すべて一致していることを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu sổ phụ với giấy chứng nhận số dư của từng tổ chức tín dụng và xác nhận tất cả đều khớp.",
+        "en": "Yes, I have cross-checked the subsidiary ledgers against the balance certificates from each financial institution and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately convey the target financial concepts."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e8cce209a3e2d2e83fcc2f67c16286dd23ff20f03ae3fa6791c4235c9ce6c6ee",
+    "validated_at": "2026-10-01T01:35:06.807310+00:00"
+  }
+}

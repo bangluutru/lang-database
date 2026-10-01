@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000012",
+  "term": "FAS",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue needs revision to ensure logical conversational flow and direct addressing of the question posed by Speaker A regarding the FAS arrangement status.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "FASの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "FASの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "FASにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "FASにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Sounds like a real business document.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the 'FAS arrangement status' question from Speaker A. It describes actions taken for customs clearance, but not the specific status of the FAS arrangement itself (e.g., whether the goods are alongside the ship, or if the exporter's obligations under FAS are complete).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、FASの手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp FAS thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the FAS arrangement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、FAS条件に基づき、輸出者側での船側への貨物引き渡しは完了しております。現在、通関業者と乙仲への連絡を済ませ、輸入申告の準備を進めております。",
+        "vi": "Vâng, theo điều kiện FAS, việc giao hàng đến mạn tàu từ phía nhà xuất khẩu đã hoàn tất. Hiện tại, chúng tôi đã liên hệ với công ty thông quan và đại lý vận chuyển, đang tiến hành chuẩn bị khai báo nhập khẩu.",
+        "en": "Yes, under FAS terms, the exporter's delivery of goods alongside the vessel has been completed. We have now contacted the customs broker and forwarding agent, and are proceeding with preparations for import declaration."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6646a1fb2c0039f8c8b9c706f07c6290689bb334ae9cf978df750367110f68df",
+    "validated_at": "2026-10-01T01:53:52.096593+00:00"
+  }
+}

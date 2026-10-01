@@ -1,0 +1,80 @@
+{
+  "entry_id": "jp-pro-tax-000049",
+  "term": "配偶者特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and examples are high quality, but the dialogue contains a critical tax domain error by pairing a personal tax deduction (配偶者特別控除) with corporate fiscal closing (決算申告).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "配偶者特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and professional tax phrasing."
+    },
+    {
+      "index": 1,
+      "text": "配偶者特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural predicate commonly used by taxpayers and payroll specialists."
+    },
+    {
+      "index": 2,
+      "text": "配偶者特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression referring to calculating deduction limits based on income brackets."
+    },
+    {
+      "index": 3,
+      "text": "配偶者特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax collocation for meeting eligibility criteria."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Contextually and syntactically sound for individual income tax return procedures."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business/tax documentation phrasing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "配偶者特別控除 is an individual income tax (所得税) deduction, not a corporate tax deduction. Using '決算申告' (corporate financial year-end tax filing) in this context is a severe domain error. In a corporate workplace, this term appears during '年末調整' (year-end payroll adjustment), or in an accounting firm assisting individuals with '所得税の確定申告'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "従業員から提出された年末調整書類の中で、配偶者特別控除の適用要件や配偶者の所得金額の確認は終わりましたか。",
+        "vi": "Trong số các hồ sơ quyết toán thuế cuối năm do nhân viên nộp, bạn đã kiểm tra xong điều kiện áp dụng khoản giảm trừ mở rộng cho vợ/chồng và mức thu nhập của người phối ngẫu chưa?",
+        "en": "Have you finished checking the eligibility criteria for the special exemption for spouse and the spouse's income in the year-end adjustment documents submitted by employees?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、配偶者控除等申告書と収入証明書類の照合を終え、控除額の算出まで完了しております。",
+        "vi": "Vâng, tôi đã đối chiếu xong tờ khai giảm trừ cho người phối ngẫu với chứng từ thu nhập và đã hoàn tất việc tính toán số tiền giảm trừ.",
+        "en": "Yes, I have cross-checked the Application for Exemption for Spouse against income proof documents and completed the calculation of the deduction amount."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese definitions match National Tax Agency standards accurately."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "412e2b80b08c759e14b497a561f0d4de33539c2c9c89fd2f1585bdf6d9a1fa2d",
+    "validated_at": "2026-10-01T01:38:14.341380+00:00"
+  }
+}

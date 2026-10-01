@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000146",
+  "term": "通信費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 relies on hollow, repetitive template phrasing ('適正な...適正に'), one collocation lacks its natural direct object modifier ('明細を照合する'), and Dialogue turn B uses unnatural pleonastic wording ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通信費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/accruing communication expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "通信費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression when reviewing trial balances or general ledger accounts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "通信費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, one reconciles specific breakdowns, invoices, or receipts rather than the abstract expense account directly.",
+      "suggested_text": "通信費の明細を照合する"
+    },
+    {
+      "index": 3,
+      "text": "通信費を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common in corporate practice for reimbursing mobile/internet communication costs.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard month-end reconciliation sentence suitable for accounting learning.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Boilerplate AI phrasing with redundant use of 適正 ('適正な...適正に'). In addition, citing 'proper accounting standards' is disproportionately pretentious for routine communication utility expenses. A realistic workplace context should reflect real SG&A cost drivers.",
+      "suggested_ja": "在宅勤務の導入に伴い、従業員に支給する通信費補助の計上額が前年比で増加しました。",
+      "suggested_vi": "Cùng với việc áp dụng chế độ làm việc tại nhà, số tiền trợ cấp chi phí viễn thông chi trả cho nhân viên đã tăng so với năm trước.",
+      "suggested_en": "Following the introduction of remote work, the recorded amount for employee communication allowances increased compared to the previous year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合している' is unnatural and redundant Japanese. In business accounting, professionals say '差異や計上漏れがない' or simply '一致している'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、通信費の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí viễn thông có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the booked communication expenses for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書と補助元帳を照合済みで、差異や計上漏れがないことを確認いたしました。",
+        "vi": "Tôi đã đối chiếu hóa đơn với sổ cái phụ và xác nhận không có chênh lệch hay sót mục hạch toán nào.",
+        "en": "I have already reconciled the invoices against the subsidiary ledger and confirmed there are no discrepancies or omissions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations are accurate and domain-appropriate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dc3e98e39787e5661ffc13d3f63358252907f3384d9d6a1c264ce4cd59572cd0",
+    "validated_at": "2026-10-01T01:36:15.194615+00:00"
+  }
+}

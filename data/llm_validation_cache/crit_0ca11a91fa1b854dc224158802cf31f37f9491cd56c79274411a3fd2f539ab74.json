@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000022",
+  "term": "返品",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションの目的語・述語の結合力不足（テンプレート感）、会計実務表現（返品の残高等の不自然さ）の甘さ、ならびに訳文への辞書定義の機械的代入が目立ち、プロフェッショナル学習教材としてリライトが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "返品を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「返品」単体に進めるを接続するのは座りが悪く、実務では「返品処理を進める」または「返品手続きを進める」と表現します。",
+      "suggested_text": "返品処理を進める"
+    },
+    {
+      "index": 1,
+      "text": "返品を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務上は行為・手続きの完了を表すため「返品処理を完了する」とするのが自然です。",
+      "suggested_text": "返品処理を完了する"
+    },
+    {
+      "index": 2,
+      "text": "返品の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "業務フローの確認として自然で汎用性が高いコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "返品を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「返品を見直す」では意味が曖昧です。規定や方針を見直す文脈であるため「返品ポリシーを見直す」や「返品特約を見直す」とすべきです。",
+      "suggested_text": "返品条件を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会計実務において「返品の残高」という表現は不自然です（返品自体は勘定科目残高ではなく取引事象。残高を精査するなら引当金や売上戻り高等）。また越訳・英訳で辞書見出し語が機械的に直貼りされています。",
+      "suggested_ja": "月末の帳簿照合において、売上返品の計上内容や関連する伝票に差異がないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi rà soát kỹ lưỡng xem nội dung hạch toán hàng bán bị trả lại và các chứng từ liên quan có phát sinh chênh lệch hay không.",
+      "suggested_en": "During the month-end ledger reconciliation, we carefully examine whether there are discrepancies in sales return entries and related vouchers."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準...適正に処理」と「適正」が重複しており、テンプレート臭が強く文体として拙劣です。会計用語としても「関係諸基準および社内規程に則り」などが一般的です。",
+      "suggested_ja": "会計基準および社内規程に則り、当期の決算において発生した返品を適切に会計処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ, chúng tôi đã thực hiện hạch toán phù hợp đối với các khoản hàng bán bị trả lại phát sinh trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with accounting standards and internal regulations, we properly accounted for sales returns incurred during this fiscal term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bの「適正に整合していることを確認いたしました」は生成AI特有の重言・不自然な表現です。実務では「不整合や計上漏れがないことを確認いたしました」などと報告します。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、返品の計上内容に差異や計上漏れは発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán hàng bán bị trả lại có phát sinh chênh lệch hay bỏ sót không?",
+        "en": "Are there any discrepancies or omissions in the recording of sales returns for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu xong chứng từ gốc với sổ phụ và xác nhận tất cả đều hoàn toàn khớp nhau.",
+        "en": "I have already reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語訳で辞書見出し『trả lại hàng hóa đã mua』が文脈を無視してそのまま文中に代入されており、文構造が破綻しています。英語でもスラッシュ併記が残っており不自然です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "88c53450dc32cff86a929e0f295cff3e057c89deab1ff673d89fb8d22aef5715",
+    "validated_at": "2026-10-01T01:41:20.355219+00:00"
+  }
+}

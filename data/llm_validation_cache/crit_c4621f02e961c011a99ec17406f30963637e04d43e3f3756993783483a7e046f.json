@@ -1,0 +1,85 @@
+{
+  "entry_id": "jp-pro-accounting-000085",
+  "term": "未払法人税等",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 & 3 used inappropriate predicates ('照合する' without an object of comparison, and '精算する' instead of '納付する/取り崩す'). Example 1 suffered from boilerplate tautological phrasing ('適正な〜適正に'), and Dialogue B used unnatural AI-style phrasing ('適正に整合している'). Revisions provide authentic corporate accounting Japanese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未払法人税等を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly natural accounting collocation for booking income taxes payable."
+    },
+    {
+      "index": 1,
+      "text": "未払法人税等の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression used in monthly/annual closing reconciliations."
+    },
+    {
+      "index": 2,
+      "text": "未払法人税等を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "勘定科目名を直接「照合する」対象にするのは不自然です。「確定申告書と照合する」あるいは納入サイクルの実務に合わせて「未払法人税等を納付する」とするのが適切です。",
+      "suggested_text": "未払法人税等を納付する"
+    },
+    {
+      "index": 3,
+      "text": "未払法人税等を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "負債勘定である未払法人税等に対して「精算する」という動詞は実務上ほとんど用いられません。確定時に納付して取り崩す、または仮払法人税等と相殺・充当するため、「未払法人税等を取り崩す」が自然です。",
+      "suggested_text": "未払法人税等を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "月末の締め処理や監査における残高精査の文脈として実務上自然に通じる表現です。"
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な会計基準」という表現は会計用語として不自然（通常は『企業会計基準』等）であり、「適正な〜適正に処理」と重複したAI特有の空疎なテンプレート構文になっています。実務的な決算仕訳の文脈に改訂すべきです。",
+      "suggested_ja": "当期の税務申告書案に基づき、決算整理仕訳において未払法人税等を見積り計上いたしました。",
+      "suggested_vi": "Căn cứ vào dự thảo tờ khai thuế kỳ này, chúng tôi đã trích lập ước tính thuế thu nhập doanh nghiệp phải nộp trong các bút toán điều chỉnh quyết toán.",
+      "suggested_en": "Based on the draft tax return for the current fiscal term, we recorded the estimated income taxes payable in the adjusting closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bの「すべて適正に整合していることを確認いたしました」という言い回しはAI特有の不自然な日本語です。「不整合がないことを確認いたしました」あるいは「差異なく一致していることを確認いたしました」とするのが自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未払法人税等の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán thuế thu nhập doanh nghiệp phải nộp có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the booked amounts for income taxes payable in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "試算表と税務計算シートを照合済みで、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu bảng cân đối thử với bảng tính thuế và xác nhận tất cả đều khớp, không có chênh lệch.",
+        "en": "I have already reconciled the trial balance with the tax calculation sheet and confirmed that they match without any discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the financial and accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5f339c9fb1e4b9942d373403a85afa5426e9e063d515ad61a6e0be6573d52f3e",
+    "validated_at": "2026-10-01T01:35:09.202589+00:00"
+  }
+}

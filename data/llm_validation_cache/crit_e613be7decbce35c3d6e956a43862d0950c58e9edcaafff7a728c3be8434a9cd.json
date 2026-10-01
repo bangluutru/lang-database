@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000106",
+  "term": "信用状",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue across examples and dialogue is the misunderstanding of how '信用状' (L/C) is treated in accounting. It's a financial instrument/guarantee, not an accounting entry or balance itself. While transactions and obligations related to L/Cs are accounted for, the L/C itself is not '計上' or '残高' in the way implied. This fundamental semantic mismatch makes the sentences unnatural and potentially misleading in a professional accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "信用状を開設する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for opening an L/C."
+    },
+    {
+      "index": 1,
+      "text": "信用状を決済する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for settling an L/C."
+    },
+    {
+      "index": 2,
+      "text": "信用状を提示する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for presenting an L/C."
+    },
+    {
+      "index": 3,
+      "text": "信用状の不一致を解消する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation for resolving discrepancies in an L/C."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "信用状 (L/C) is a payment guarantee instrument, not an accounting entry or balance that is '計上' (booked/recorded) or has a '残高' (balance) in the same way as an asset or liability account. While L/C related fees or obligations might be recorded, the L/C itself is not '計上' or '残高' in this context. The sentence attempts to treat L/C as an account item.",
+      "suggested_ja": "月末の帳簿照合において、信用状関連の取引や債務が適正に処理され、関連勘定残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem các giao dịch và nghĩa vụ liên quan đến thư tín dụng thanh toán quốc tế (L/C) đã được xử lý đúng cách và không có chênh lệch trong số dư tài khoản liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether L/C-related transactions and obligations have been properly processed and if there are any discrepancies in the balances of related accounts."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '信用状を適正に処理いたしました' is awkward. An L/C itself is not 'processed' in the sense of an accounting entry. Rather, the transactions or obligations arising from the L/C are processed. The phrasing implies the L/C document itself is an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において信用状関連の取引を適正に会計処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã hạch toán đúng quy định các giao dịch liên quan đến thư tín dụng thanh toán quốc tế (L/C) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly accounted for L/C-related transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question '信用状の計上内容に差異は発生していませんか' suffers from the same semantic issue as the example sentences. An L/C is not 'booked' or 'recorded' in terms of its 'content' in the same way an accounting entry is. It's an instrument. Speaker B's response is natural given Speaker A's premise, but the premise itself is flawed.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、信用状関連の債務や取引の会計処理に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có phát sinh chênh lệch nào trong việc hạch toán các khoản nợ hoặc giao dịch liên quan đến thư tín dụng thanh toán quốc tế (L/C) không?",
+        "en": "In this month's financial closing, have there been any discrepancies in the accounting treatment of L/C-related liabilities or transactions?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng cách.",
+        "en": "Yes, we have reconciled the supporting documents with the subsidiary ledger and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1a9a5b53a65c2d392603b327dd3990d814f3948d55f00010476da0052f2c490a",
+    "validated_at": "2026-10-01T01:55:38.406863+00:00"
+  }
+}

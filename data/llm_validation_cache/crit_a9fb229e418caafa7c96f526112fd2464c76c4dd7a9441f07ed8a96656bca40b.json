@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000090",
+  "term": "押印",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文および対話において、手続的行為である「押印」に「計上内容」や「残高」といった会計用語を機械的に当てはめた致命的なドメイン誤認が発生しており、全面的な実務的書き直しが不可欠です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "押印を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「押印を進める」は単体では不自然であり、実務では「押印を求める」または「押印手続きを進める」と表現します。",
+      "suggested_text": "押印を求める"
+    },
+    {
+      "index": 1,
+      "text": "押印を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "押印という単一の行為に対して「完了する」はぎこちなく、実務では「押印を済ませる」または「押印を省略する」が多用されます。",
+      "suggested_text": "押印を省略する"
+    },
+    {
+      "index": 2,
+      "text": "押印の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内規程や契約締結業務において極めて自然に使われる表現です。",
+      "suggested_text": "押印の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "押印を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "近年のペーパーレス化や脱ハンコ推進（押印業務の見直し）の実務文脈に合致しています。",
+      "suggested_text": "押印を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「押印」は物理的・手続的行為であり、勘定科目や会計数値ではないため、「計上内容や残高」という概念は会計上絶対に存在し得ません。テンプレートの機械的代入による重大な事実誤認です。",
+      "suggested_ja": "契約書の締結にあたり、法務部門の審査完了後に代表印の押印を申請してください。",
+      "suggested_vi": "Khi ký kết hợp đồng, vui lòng nộp đơn xin đóng dấu đại diện công ty sau khi bộ phận pháp chế hoàn tất việc thẩm định.",
+      "suggested_en": "When executing the agreement, please apply for the affixing of the representative seal after the legal department completes its review."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "決算において「押印を適正に処理いたしました」は会計用語として完全に破綻しています。押印は会計処理の対象ではありません。",
+      "suggested_ja": "業務効率化およびペーパーレス化の一環として、社内稟議における押印手続きを原則廃止といたしました。",
+      "suggested_vi": "Như một phần của việc nâng cao hiệu quả công việc và chuyển đổi không giấy tờ, về nguyên tắc chúng tôi đã bãi bỏ thủ tục đóng dấu trong các tờ trình nội bộ.",
+      "suggested_en": "As part of our efforts to improve operational efficiency and promote a paperless environment, internal approval seal stamping has, in principle, been abolished."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの発言「押印の計上内容に差異」は会計実務上あり得ないナンセンスな表現です。Bの回答もそれに応じた架空の噛み合わないやり取りになっています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方から返送されてきた機密保持契約書ですが、押印漏れはありませんか。",
+        "vi": "Bản thỏa thuận bảo mật thông tin đối tác gửi lại đã kiểm tra xem có bị sót đóng dấu không?",
+        "en": "Regarding the non-disclosure agreement returned by the counterparty, are there any missing seals?"
+      },
+      {
+        "speaker": "B",
+        "ja": "署名捺印欄を確認しましたが、契印も含め適正に押印されていることを確認いたしました。",
+        "vi": "Tôi đã kiểm tra phần chữ ký và con dấu, xác nhận mọi thứ kể cả dấu giáp lai đều đã được đóng đầy đủ, đúng quy định.",
+        "en": "I checked the signature and seal section, and confirmed that everything, including the tally impression, has been properly stamped."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "見出し語自体の英訳および越訳の定義は妥当です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "bd3006d2e4b3aaece4d55f28793e88443b09c9ac96fb0a553fb45fe6e917ae98",
+    "validated_at": "2026-10-01T01:42:30.071663+00:00"
+  }
+}

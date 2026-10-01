@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000088",
+  "term": "預り金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 2 contains unnatural AI-templated redundancy ('適正な会計基準...適正に処理') that should be replaced with a realistic accounting context such as payroll withholding remittance.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "預り金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing deposits received / withholding liabilities.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "預り金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common workplace practice for verifying the balance of deposits received.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "預り金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when reconciling deposits received with source documents.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "預り金を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting term for clearing/settling deposits received.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and natural phrasing for month-end accounting reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically awkward and redundant repetition of '適正' ('適正な会計基準' and '適正に処理いたしました'). In Japanese professional accounting, standard phrasing uses '一般に公正妥当と認められる企業会計の基準' or simply '関連法令および社内規程に則り'.",
+      "suggested_ja": "関連法令および社内規程に則り、従業員から源泉徴収した預り金を適正に納付・処理いたしました。",
+      "suggested_vi": "Tuân thủ các quy định pháp luật liên quan và quy chế nội bộ, chúng tôi đã xử lý và nộp đúng quy định khoản tiền thuế khấu trừ giữ hộ từ người lao động.",
+      "suggested_en": "In accordance with relevant laws and internal regulations, we properly processed and remitted the withholding deposits deducted from employees."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Logically sound and contextually appropriate exchange regarding monthly closing checks.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b1d1afdfcb3d7e52ed2b0e3383d3a8e52ae7930cc3dedbc29a8bc7ecb41d8d50",
+    "validated_at": "2026-10-01T01:35:06.792478+00:00"
+  }
+}

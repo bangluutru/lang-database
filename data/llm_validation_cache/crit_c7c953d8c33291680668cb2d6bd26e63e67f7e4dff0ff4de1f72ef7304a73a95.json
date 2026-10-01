@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000102",
+  "term": "資産除去債務",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object suffered from rigid slot-fill templating unsuited to the nature of Asset Retirement Obligations (ARO), tautological wording ('適正な...適正に'), and unnatural collocation ('精算する' instead of '履行する').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "資産除去債務を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting collocation for recognizing asset retirement obligations.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "資産除去債務の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common in accounting audit and internal balance verification procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "資産除去債務を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles accounts or balances ('残高を照合する'), but pairing the obligation entity directly with '照合する' is a mechanical template pattern. In professional practice, calculating or revising estimates is far more authentic.",
+      "suggested_text": "資産除去債務を見積もる"
+    },
+    {
+      "index": 3,
+      "text": "資産除去債務を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Under ASBJ Statement No. 18, obligations are '履行する' (fulfilled/settled) upon actual removal/restoration, rather than '精算する'.",
+      "suggested_text": "資産除去債務を履行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "ARO is not a monthly transactional volume account subject to routine monthly discrepancy checks; it arises from property acquisition, leasehold restoration terms, or changes in estimates. The sentence exhibits generic monthly closing template padding.",
+      "suggested_ja": "新規本社の賃貸借契約締結に伴い、退去時の原状回復費用を資産除去債務として計上しました。",
+      "suggested_vi": "Cùng với việc ký hợp đồng thuê trụ sở mới, chúng tôi đã ghi nhận chi phí hoàn trả mặt bằng khi chấm dứt hợp đồng vào nghĩa vụ hoàn trả mặt bằng (ARO).",
+      "suggested_en": "In conjunction with signing the lease for the new headquarters, we recognized the restoration costs upon departure as asset retirement obligations."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Tautological and unnatural phrasing ('適正な会計基準...適正に処理いたしました'). Real enterprise documents cite specific accounting standards and address discount rates or estimate adjustments.",
+      "suggested_ja": "店舗の撤退計画の前倒しに伴い、資産除去債務の見積もりを見直し、履行差額を当期に計上しました。",
+      "suggested_vi": "Do đẩy sớm kế hoạch đóng cửa cửa hàng, chúng tôi đã rà soát lại ước tính nghĩa vụ tháo dỡ tài sản và hạch toán chênh lệch quyết toán nghĩa vụ trong kỳ này.",
+      "suggested_en": "Following the accelerated timeline for store closure, we revised our estimate for asset retirement obligations and recognized the settlement difference in the current term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Monthly closing variance check against vouchers is an ungrounded template for ARO. Furthermore, 'すべて適正に整合している' is unnatural business Japanese.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新設拠点の原状回復義務について、資産除去債務の算定根拠は整いましたか。",
+        "vi": "Về nghĩa vụ hoàn trả mặt bằng của cơ sở mới thành lập, căn cứ tính toán nghĩa vụ hoàn trả mặt bằng (ARO) đã chuẩn bị xong chưa?",
+        "en": "Regarding the restoration obligation for the new site, do we have the calculation basis finalized for the asset retirement obligations?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、専門業者の見積書に基づき割引計算を行い、監査法人にも事前相談済みです。",
+        "vi": "Vâng, chúng tôi đã thực hiện tính chiết khấu dựa trên báo giá của đơn vị chuyên môn và cũng đã tham vấn trước với công ty kiểm toán.",
+        "en": "Yes, we calculated the discounted present value based on the specialist contractor's quote and have already consulted in advance with the audit firm."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations excessively pasted the long slash gloss 'nghĩa vụ hoàn trả mặt bằng / tháo dỡ tài sản (ARO)' verbatim into every context instead of using context-appropriate natural phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0369cb6921383a11920b27272104ed5fa8907ff820d15f999a3a157fa7549fd0",
+    "validated_at": "2026-10-01T01:35:24.091987+00:00"
+  }
+}

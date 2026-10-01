@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000066",
+  "term": "売買契約書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an egregious template hallucination in Example 0 (attributing shareholder meeting statutory convocation rules to a sales contract), stilted legal vocabulary in Dialogue ('推敲' / '発送'), and misses the single most fundamental collocation '売買契約書を締結する'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売買契約書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly frequent business and legal collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売買契約書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural when submitting contracts to banks, regulators, or internal review boards, though 締結する is more essential.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "売買契約書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese corporate practice, formal documents and contracts are '送付する' (sent) or '締結する' (executed). '発送する' is typically used for shipping goods, merchandise, or mass direct mail.",
+      "suggested_text": "売買契約書を締結する"
+    },
+    {
+      "index": 3,
+      "text": "売買契約書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural formal expression for receiving an executed contract.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Glaring template mismatch. '法定期限内に全関係者へ発送' and '株主総会を円滑に進行するため' apply to convocation notices (招集通知) under the Companies Act, not a sales contract (売買契約書). Sales contracts have no statutory dispatch deadline to shareholders.",
+      "suggested_ja": "取引先との間で取引基本条件の合意に至ったため、売買契約書の締結手続きを進めています。",
+      "suggested_vi": "Do đã đạt được thỏa thuận về các điều khoản giao dịch cơ bản với đối tác, chúng tôi đang tiến hành thủ tục ký kết hợp đồng mua bán.",
+      "suggested_en": "Having reached an agreement on the basic transaction terms with the client, we are proceeding with the procedures to execute the sales contract."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and valid business sentence regarding internal control, compliance audit trails, and document retention.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'推敲' (polishing/drafting literary prose) is unnatural for legal contracts (legal check / 条項の確認 is expected). Also, '発送の手配' is unnatural for business contracts being prepared for a counterparty meeting next week; '先方への送付' or '製本' is customary.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の調印式に向けて、売買契約書の準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị hợp đồng mua bán cho lễ ký kết vào tuần tới thế nào rồi?",
+        "en": "How is the preparation of the sales contract coming along for next week's signing ceremony?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務部のリーガルチェックを終え、社内決裁も下りましたので、本日中に先方へドラフトを送付いたします。",
+        "vi": "Phòng pháp chế đã hoàn tất việc rà soát pháp lý và nội bộ cũng đã phê duyệt xong, nên trong hôm nay tôi sẽ gửi bản thảo cho phía đối tác.",
+        "en": "The legal department has completed its review and internal approval has been granted, so I will send the draft to the counterparty today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In meaning_vi, 'hợp đồng mua bán hàng hóa' unnecessarily restricts the term to physical goods (hàng hóa), whereas '売買契約書' equally applies to real estate (不動産売買), shares, and general commercial assets. 'Hợp đồng mua bán' is the accurate broader equivalent."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7226a0bf7b71743b793a1f936261d96f54ac3f4c64c478b050bc623b70ea1f63",
+    "validated_at": "2026-10-01T01:42:05.143305+00:00"
+  }
+}

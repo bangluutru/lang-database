@@ -4,6 +4,23 @@ Refined linguistic ontology mapping terms to explicit semantic classes and authe
 Outputs candidate collocations with status="generated" and generation_method="semantic_frame".
 Builder NEVER self-certifies or marks collocations as verified.
 """
+import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+SEMANTIC_AUDIT_FILE = BASE_DIR / "reports" / "semantic_audit_results.json"
+
+AUDITED_SEMANTIC_MAP = {}
+if SEMANTIC_AUDIT_FILE.exists():
+    try:
+        with open(SEMANTIC_AUDIT_FILE, "r", encoding="utf-8") as f:
+            _audit_data = json.load(f)
+            for _r in _audit_data.get("results", []):
+                _aud = _r.get("audit")
+                if _aud:
+                    AUDITED_SEMANTIC_MAP[_aud["term"]] = _aud["suggested_semantic_class"]
+    except Exception:
+        pass
 
 SEMANTIC_PREDICATES = {
     # 1. Tax Schemes & Statutory Frameworks (e.g. ふるさと納税, インボイス制度)
@@ -223,7 +240,63 @@ SEMANTIC_PREDICATES = {
         ("習慣づける", "を", "habitualize business practice"),
         ("重要性を共有する", "の", "share importance of business practice")
     ],
-    # 32. Business Procedures & Accounting Operations (e.g. 棚卸し, 決算処理, 仕訳)
+    # 32. Professional Service Firms (e.g. 監査法人, 税理士法人, 法律事務所)
+    "professional_service_firm": [
+        ("選任する", "を", "appoint professional service firm"),
+        ("監査を受ける", "の", "undergo audit by audit firm"),
+        ("監査契約を締結する", "と", "conclude audit contract with firm"),
+        ("事前相談する", "に", "consult in advance with firm")
+    ],
+    # 33. Statutory Documents & Formal Slips (e.g. 源泉徴収票, 法定調書合計表, 輸出許可書, 輸入許可書)
+    "statutory_document": [
+        ("交付する", "を", "issue statutory slip/document"),
+        ("提出する", "を", "submit statutory tax/customs document"),
+        ("保管する", "を", "retain statutory document for mandatory period"),
+        ("記載事項を確認する", "の", "verify required statutory entries on document")
+    ],
+    # 34. Statutory Laws & Formal Codes (e.g. 租税特別措置法, 食品衛生法, 外為法, 会社法)
+    "statutory_law": [
+        ("遵守する", "を", "comply with statutory law"),
+        ("規定に基づく", "の", "based on provisions of statutory law"),
+        ("適用を受ける", "の", "be subject to provisions of statutory law"),
+        ("改正内容を確認する", "の", "verify statutory amendment details")
+    ],
+    # 35. Taxpayer & Business Categories (e.g. 免税事業者, 課税事業者, 適格請求書発行事業者)
+    "taxpayer_category": [
+        ("該当する", "に", "qualify as / fall under taxpayer category"),
+        ("判定する", "を", "assess taxpayer category applicability"),
+        ("登録を受ける", "の", "obtain registration under category"),
+        ("要件を満たす", "の", "satisfy statutory criteria of category")
+    ],
+    # 36. Audit Opinions & Reports (e.g. 無限定適正意見, 限定付適正意見)
+    "audit_opinion": [
+        ("表明する", "を", "express audit opinion"),
+        ("受領する", "を", "receive audit opinion from auditor"),
+        ("記載する", "を", "state audit opinion in report"),
+        ("付される", "が", "audit opinion is attached")
+    ],
+    # 37. International Cargo & Freight Items (e.g. 外国貨物, 内国貨物, FCL貨物, LCL貨物)
+    "cargo": [
+        ("搬入する", "を", "bring cargo into bonded area"),
+        ("搬出する", "を", "haul cargo out of facility"),
+        ("蔵入れする", "を", "place cargo into bonded warehouse"),
+        ("検査を受ける", "が", "cargo undergoes customs inspection")
+    ],
+    # 38. Trade Regulations & Compliance (e.g. キャッチオール規制, リスト規制, 安全保障貿易管理)
+    "trade_regulation": [
+        ("遵守する", "を", "comply with trade regulation"),
+        ("対象となる", "の", "fall subject to trade regulation"),
+        ("該非判定を行う", "の", "conduct item classification determination under regulation"),
+        ("許可を申請する", "の", "apply for license under trade regulation")
+    ],
+    # 39. Financial Risks & Market Conditions (e.g. 為替リスク, カントリーリスク, 円高, 円安)
+    "financial_risk": [
+        ("ヘッジする", "を", "hedge financial/currency risk"),
+        ("回避する", "を", "avert financial risk"),
+        ("管理する", "を", "manage financial/currency risk"),
+        ("分析する", "を", "analyze financial risk exposure")
+    ],
+    # 40. Business Procedures & Accounting Operations (e.g. 棚卸し, 決算処理, 仕訳)
     "procedure": [
         ("進める", "を", "proceed with procedure"),
         ("完了する", "を", "complete procedure"),
@@ -232,12 +305,105 @@ SEMANTIC_PREDICATES = {
     ]
 }
 
+CLASS_PREDICATE_MAP = {
+    # Leave & Attendance
+    "attendance_status": [("報告する", "を", "report attendance status"), ("管理する", "を", "manage attendance status"), ("記録する", "を", "record attendance status"), ("減給の対象となる", "の", "subject to pay deduction")],
+    "statutory_leave": [("取得する", "を", "take statutory leave"), ("申請する", "を", "apply for statutory leave"), ("認める", "を", "grant statutory leave"), ("期間を延長する", "の", "extend statutory leave period")],
+    "employee_benefit": [("取得する", "を", "take leave/benefit"), ("付与する", "を", "grant employee benefit/leave"), ("消化する", "を", "use up accrued leave"), ("申請する", "を", "apply for employee leave/benefit")],
+    
+    # Social Insurance & Labor
+    "social_insurance": [("加入する", "に", "enroll in social insurance"), ("保険料を納付する", "の", "pay social insurance premiums"), ("手続きを行う", "の", "process social insurance procedures"), ("資格を取得する", "の", "acquire qualification for social insurance")],
+    "social_insurance_scheme": [("適用する", "を", "apply social insurance scheme"), ("加入する", "に", "enroll in social insurance scheme"), ("保険料を算出する", "の", "calculate premiums for social insurance scheme"), ("届出を提出する", "の", "submit statutory filing for scheme")],
+    "statutory_scheme": [("適用する", "を", "apply statutory scheme"), ("手続きを進める", "の", "proceed with scheme procedures"), ("要件を満たす", "の", "satisfy scheme requirements"), ("周知する", "を", "notify employees of statutory scheme")],
+    "labor_scheme": [("導入する", "を", "introduce labor scheme"), ("適用する", "を", "apply labor scheme"), ("労使協定を締結する", "に関する", "conclude labor-management agreement regarding scheme"), ("運用を見直す", "の", "review operation of labor scheme")],
+    
+    # Accounting Methods & Principles
+    "accounting_method": [("採用する", "を", "adopt accounting method"), ("適用する", "を", "apply accounting method"), ("変更する", "を", "change accounting method"), ("経理処理を行う", "で", "perform accounting processing under method")],
+    "accounting_policy": [("決定する", "を", "determine accounting policy"), ("変更する", "を", "change accounting policy"), ("注記する", "を", "disclose accounting policy in notes"), ("適用する", "を", "apply accounting policy")],
+    "accounting_principle": [("遵守する", "を", "adhere to accounting principle"), ("評価する", "を", "evaluate accounting principle compliance"), ("前提とする", "を", "premise on accounting principle"), ("注記を開示する", "に関する", "disclose note regarding accounting principle")],
+    "bookkeeping_concept": [("記入する", "に", "enter on bookkeeping side"), ("照合する", "と", "reconcile debit/credit side"), ("集計する", "を", "aggregate debit/credit totals"), ("確認する", "の", "verify bookkeeping entries")],
+    
+    # Corporate Governance & Meetings
+    "corporate_meeting": [("招集する", "を", "convene corporate meeting"), ("開催する", "を", "hold corporate meeting"), ("決議する", "で", "pass resolution in meeting"), ("議事録を作成する", "の", "prepare minutes of meeting")],
+    "corporate_governance": [("強化する", "を", "strengthen corporate governance"), ("推進する", "を", "promote corporate governance"), ("方針を策定する", "の", "formulate corporate governance policy"), ("体制を構築する", "の", "establish governance framework")],
+    "governance_framework": [("構築する", "を", "establish governance framework"), ("運用する", "を", "operate governance framework"), ("評価する", "を", "evaluate governance framework"), ("改善する", "を", "improve governance framework")],
+    "compliance_system": [("整備する", "を", "establish compliance system"), ("運用する", "を", "operate compliance system"), ("通報を受ける", "を通じて", "receive reports through compliance hotline"), ("周知徹底する", "を", "thoroughly communicate compliance system")],
+    
+    # Legal Obligations & Rights
+    "legal_obligation": [("遵守する", "を", "comply with legal obligation"), ("果たす", "を", "fulfill legal obligation"), ("負う", "を", "bear legal obligation"), ("違反する", "に", "breach legal obligation")],
+    "legal_right": [("行使する", "を", "exercise legal right"), ("有する", "を", "possess legal right"), ("放棄する", "を", "waive legal right"), ("確認する", "の有無を", "confirm existence of legal right")],
+    "legal_concept": [("確認する", "を", "confirm legal concept/status"), ("発生を防ぐ", "の", "prevent occurrence of legal event"), ("通知する", "を", "notify of legal event"), ("責任を追及する", "の", "pursue liability for legal event")],
+    "contractual_relationship": [("明確にする", "を", "clarify contractual relationship"), ("確認する", "を", "confirm contractual relationship"), ("見直す", "を", "review contractual relationship"), ("合意する", "について", "agree on contractual relationship")],
+    
+    # Logistics, Transport, Maritime
+    "transport_means": [("手配する", "を", "arrange transport vessel/vehicle"), ("運航する", "を", "operate transport vessel"), ("積載する", "に", "load onto vessel"), ("入港を確認する", "の", "confirm port arrival of vessel")],
+    "transport_equipment": [("手配する", "を", "arrange transport vessel/equipment"), ("チャーターする", "を", "charter bulk vessel/equipment"), ("荷役を行う", "で", "perform cargo loading on vessel"), ("積載能力を確認する", "の", "verify loading capacity of transport equipment")],
+    "logistics_equipment": [("手配する", "を", "arrange logistics container/equipment"), ("積み込む", "に", "load into container/equipment"), ("温度を管理する", "の", "control temperature of container"), ("返却する", "を", "return container/equipment")],
+    "logistics_location": [("指定する", "を", "designate logistics destination"), ("変更する", "を", "change logistics destination"), ("確認する", "を", "confirm logistics destination"), ("到着する", "に", "arrive at logistics destination")],
+    "logistics_network": [("最適化する", "を", "optimize logistics network/supply chain"), ("構築する", "を", "build supply chain/network"), ("見直す", "を", "review logistics network"), ("寸断を防ぐ", "の", "prevent disruption of supply chain")],
+    "maritime_loss": [("宣言する", "を", "declare general average loss"), ("分担する", "を", "apportion maritime loss"), ("算定する", "を", "calculate maritime loss"), ("補償を請求する", "の", "claim compensation for maritime loss")],
+    "marine_loss": [("発生する", "が", "particular average loss occurs"), ("算定する", "を", "calculate marine loss"), ("保険金を請求する", "の", "claim insurance proceeds for marine loss"), ("調査する", "を", "investigate marine loss incident")],
+    "cargo_incident": [("防止する", "を", "prevent cargo collapse/incident"), ("発生する", "が", "cargo collapse occurs"), ("損害を確認する", "の", "verify damage from cargo incident"), ("対策を講じる", "に対する", "take measures against cargo incident")],
+    "cargo_type": [("手配する", "を", "arrange cargo type (FCL/LCL)"), ("仕分ける", "に", "sort into cargo type"), ("輸送する", "として", "transport as cargo type"), ("運賃を比較する", "の", "compare freight rates by cargo type")],
+    
+    # Markets & Risks
+    "market_condition": [("対応する", "に", "respond to market condition"), ("進行する", "が", "market condition progresses"), ("影響を分析する", "の", "analyze impact of market condition"), ("ヘッジする", "リスクを", "hedge risk against market condition")],
+    "risk": [("回避する", "を", "avert risk"), ("分析する", "を", "analyze risk"), ("管理する", "を", "manage risk"), ("特定する", "を", "identify risk")],
+    "risk_management": [("強化する", "を", "strengthen risk management/security"), ("推進する", "を", "promote risk management"), ("規程を策定する", "の", "formulate risk management rules"), ("監査を実施する", "の", "conduct risk management audit")],
+    
+    # Taxes
+    "tax_rate": [("適用する", "を", "apply tax rate"), ("乗じる", "を", "multiply by applicable tax rate"), ("確認する", "を", "verify applicable tax rate"), ("改定する", "を", "revise tax rate")],
+    "tax_base": [("算出する", "を", "calculate tax base"), ("算定する", "を", "compute tax base"), ("確認する", "を", "verify statutory tax base"), ("控除する", "から", "deduct from tax base")],
+    "tax_period": [("判定する", "を", "determine statutory tax period"), ("確認する", "を", "verify statutory tax period"), ("設定する", "を", "establish tax period"), ("基準とする", "を", "use as statutory base period")],
+    "tax_classification": [("判定する", "を", "determine tax classification"), ("区分する", "に", "classify under tax classification"), ("確認する", "を", "verify tax classification"), ("処理する", "として", "process under tax classification")],
+    "tax_treatment": [("適用する", "を", "apply tax treatment (tax exempt)"), ("判定する", "を", "determine tax treatment applicability"), ("確認する", "を", "verify statutory tax treatment"), ("取り扱う", "として", "treat as tax-exempt")],
+    "tax_identifier": [("記載する", "を", "state tax registration number"), ("確認する", "を", "verify tax registration number"), ("通知する", "を", "notify tax registration number"), ("公表サイトで照会する", "を", "lookup registration number on official site")],
+    "tax_jurisdiction": [("確認する", "を", "verify competent tax jurisdiction"), ("変更する", "を", "change tax jurisdiction location"), ("届け出る", "を", "register tax jurisdiction"), ("所轄とする", "を", "designate competent tax jurisdiction")],
+    "tax_nexus": [("判定する", "の有無を", "determine existence of permanent establishment"), ("確認する", "を", "confirm tax nexus"), ("課税される", "を通じて", "be taxed via permanent establishment"), ("認定される", "と", "be recognized as permanent establishment")],
+    "taxable_transaction": [("区分する", "に", "classify into taxable transaction"), ("集計する", "を", "aggregate taxable transactions"), ("判定する", "を", "assess taxable transaction criteria"), ("計上する", "を", "record taxable transaction")],
+    "taxable_transaction_type": [("判定する", "を", "assess taxable transaction service type"), ("適用する", "を", "apply taxation to cross-border service"), ("申告する", "を", "declare cross-border digital service"), ("確認する", "を", "confirm statutory service category")],
+    "tax_category": [("適用する", "を", "apply withholding tax category"), ("区分する", "に", "classify into tax category"), ("確認する", "を", "verify applicable tax table category"), ("選択する", "を", "select tax withholding column")],
+    "statutory_authority": [("行使する", "を", "exercise statutory inspection authority"), ("受ける", "の調査を", "undergo inquiry by statutory authority"), ("対応する", "に", "respond to statutory inquiry"), ("規定に基づく", "の", "based on provisions of statutory authority")],
+    
+    # Systems & Tools
+    "software_system": [("利用する", "を", "use software system/portal"), ("入力する", "に", "input data into software system"), ("作成する", "で", "prepare returns using tax software"), ("送信する", "から", "submit electronically via software system")],
+    "information_system": [("利用する", "を", "utilize statutory information system"), ("送信する", "を通じて", "transmit tax returns via e-Tax"), ("申請する", "で", "apply through statutory electronic system"), ("導入する", "を", "implement electronic statutory system")],
+    "certification": [("取得する", "を", "obtain privacy/regulatory certification"), ("維持する", "を", "maintain certification compliance"), ("更新する", "を", "renew certification"), ("審査を受ける", "の", "undergo certification review")],
+    
+    # Payroll & Compensation
+    "payroll_allowance": [("支給する", "を", "pay payroll allowance"), ("算出する", "を", "calculate payroll allowance"), ("支給基準を設ける", "の", "establish criteria for payroll allowance"), ("割増賃金を支払う", "として", "pay premium wage as allowance")],
+    "compensation": [("支給する", "を", "pay fixed overtime compensation"), ("改定する", "を", "revise fixed compensation amount"), ("超過分を精算する", "の", "settle excess overtime beyond fixed allowance"), ("就業規則に定める", "を", "stipulate compensation in work regulations")],
+    "employment_type": [("選択する", "を", "select employment type"), ("転換する", "へ", "convert to standard employment type"), ("確認する", "を", "verify employment type conditions"), ("区分する", "で", "categorize by employment type")],
+    
+    # Business & Strategy
+    "business_strategy": [("策定する", "を", "formulate business strategy"), ("推進する", "を", "promote business strategy"), ("見直す", "を", "review business strategy"), ("実行する", "を", "execute business strategy")],
+    "management_strategy": [("推進する", "を", "drive forward management strategy/DX"), ("策定する", "を", "formulate management strategy"), ("導入する", "を", "introduce management transformation"), ("加速させる", "を", "accelerate management strategy")],
+    "business_model": [("構築する", "を", "build business model"), ("展開する", "を", "expand business model"), ("見直す", "を", "review business model"), ("加盟する", "に", "join franchise/business model")],
+    "business_stage": [("迎える", "を", "reach business stage (seed stage)"), ("移行する", "へ", "transition to next business stage"), ("資金調達を行う", "における", "conduct fundraising in seed stage"), ("支援する", "を", "support startup at business stage")],
+    "business_activity": [("推進する", "を", "drive business activity"), ("展開する", "を", "expand market channels"), ("注力する", "に", "focus on channel expansion"), ("支援する", "を", "support business development activity")],
+    "business_event": [("防ぐ", "を", "prevent business event (lost order)"), ("分析する", "の要因を", "analyze cause of lost order/event"), ("報告する", "を", "report business loss/event"), ("挽回する", "を", "recover from lost order")],
+    "market_segment": [("選定する", "を", "select target market segment"), ("分析する", "を", "analyze target market segment"), ("アプローチする", "に", "approach target market segment"), ("開拓する", "を", "develop market segment")],
+    "marketing_activity": [("実施する", "を", "launch marketing campaign"), ("企画する", "を", "plan marketing campaign"), ("効果を検証する", "の", "evaluate effectiveness of marketing campaign"), ("展開する", "を", "deploy marketing campaign")],
+    "service": [("提供する", "を", "provide after-sales service"), ("充実させる", "を", "enhance after-sales service quality"), ("対応する", "で", "respond with after-sales service"), ("契約を締結する", "の", "conclude after-sales service agreement")],
+    
+    # Trade Disputes & Restrictions
+    "trade_dispute": [("激化する", "が", "trade friction/dispute intensifies"), ("回避する", "を", "avert trade dispute"), ("協議する", "について", "negotiate regarding trade friction"), ("影響を調査する", "の", "investigate impact of trade dispute")],
+    "trade_restriction": [("発動する", "を", "impose trade restrictions/sanctions"), ("遵守する", "を", "comply with international economic sanctions"), ("解除する", "を", "lift trade sanctions"), ("対象となる", "の", "fall subject to trade restrictions")],
+    "trade_scheme": [("遵守する", "を", "comply with trade security scheme"), ("運用する", "を", "administer trade control scheme"), ("社内規程を整備する", "の", "establish internal compliance program for scheme"), ("説明会を開催する", "の", "hold explanatory briefing on trade scheme")],
+    "regulatory_standard": [("遵守する", "を", "comply with regulatory/audit standard"), ("改定する", "を", "revise regulatory audit standards"), ("準拠する", "に", "conform to statutory regulatory standards"), ("確認する", "を", "verify compliance with regulatory standard")]
+}
+
+SEMANTIC_PREDICATES.update(CLASS_PREDICATE_MAP)
+
 
 def classify_semantic_type(surface: str, domain: str) -> str:
     """
     Classifies a term into a fine-grained semantic class to guarantee natural collocation
     and prevent template hallucinations.
     """
+    if surface in AUDITED_SEMANTIC_MAP:
+        return AUDITED_SEMANTIC_MAP[surface]
+
     # 1. Tax Schemes & Statutory Frameworks
     if any(k in surface for k in [
         "ふるさと納税", "インボイス制度", "電子帳簿保存法", "賃上げ促進税制", "研究開発税制",

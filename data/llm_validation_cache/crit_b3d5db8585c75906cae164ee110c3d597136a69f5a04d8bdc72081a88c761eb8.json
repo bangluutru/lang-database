@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000169",
+  "term": "税務署",
+  "overall_decision": "rewrite",
+  "summary_reason": "「税務署」という行政機関の単語に対し、株主総会や取締役会向けの文面テンプレート（開催、招集、決議、可決、発送など）が機械的に代入されており、実務上完全に破綻しています。コロケーション半数、例文全件、会話文全件の抜本的書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税務署を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「税務署」は行政機関・公的機関であり、会議ではないため「開催する」という述語は適用できません。総会等のテンプレートの誤適用です。",
+      "suggested_text": "税務署の調査を受ける"
+    },
+    {
+      "index": 1,
+      "text": "税務署で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "税務署は企業の意思決定機関ではないため、企業の議案を「税務署で決議する」ことはあり得ません。",
+      "suggested_text": "税務署に申告書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "税務署に報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "行政庁への報告義務や事前相談などで自然に用いられる実用的な共起表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "税務署へ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務実務において極めて頻出かつ自然なコロケーションです。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「臨時税務署を招集する」という表現は日本語および税務実務として完全に破綻しています（臨時株主総会などのテンプレートを機械的に流用した明白なエラー）。",
+      "suggested_ja": "所轄の税務署へ異動届出書を提出するため、添付書類の準備を進めています。",
+      "suggested_vi": "Chúng tôi đang tiến hành chuẩn bị các tài liệu đính kèm để nộp thông báo thay đổi thông tin lên chi cục thuế quản lý.",
+      "suggested_en": "We are preparing the attached documents to submit the notice of change to the competent tax office."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "税務署で企業の経営方針や予算配分案を決議・可決することは制度上あり得ません。株主総会等の例文の機械的差し替えです。",
+      "suggested_ja": "来週、所轄の税務署による税務調査が実施されるため、過去3期分の帳簿書類を整理しています。",
+      "suggested_vi": "Tuần tới chi cục thuế quản lý sẽ tiến hành thanh tra thuế, nên chúng tôi đang sắp xếp lại sổ sách chứng từ của 3 kỳ trước.",
+      "suggested_en": "Since a tax audit by the local tax office will be conducted next week, we are organizing the books and records for the past three fiscal periods."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「税務署の準備状況」「発送の手配」など、税務署を行政機関ではなく会議体や配布書類と混同した不条理な文脈になっており、ビジネス会話として成立していません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週予定されている税務署の事前調査について、資料の準備状況はいかがですか。",
+        "vi": "Về cuộc kiểm tra trước của chi cục thuế dự kiến diễn ra vào tuần tới, tình hình chuẩn bị tài liệu thế nào rồi?",
+        "en": "Regarding the preliminary audit by the tax office scheduled for next week, how is the preparation of the documents going?"
+      },
+      {
+        "speaker": "B",
+        "ja": "指摘が予想される交際費と寄付金の領収書を整理し、税理士の事前確認も完了いたしました。",
+        "vi": "Tôi đã sắp xếp các hóa đơn chi phí tiếp khách và tiền quyên góp có thể bị chất vấn, và cũng đã hoàn tất việc đối chiếu trước với kế toán thuế.",
+        "en": "I have organized the receipts for entertainment expenses and donations that are likely to be scrutinized, and our tax accountant has completed the advance review."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語訳（意味）としての英語・ベトナム語訳は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "18f22c88ec404a48f93563a289c570e88c1a16989131161d1574d510ff8a24ad",
+    "validated_at": "2026-10-01T01:40:22.402574+00:00"
+  }
+}

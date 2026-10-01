@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000100",
+  "term": "退職給付引当金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 2 and 3 use unnatural/mismatched predicates for an accounting provision, and the examples and dialogue rely on generic templated book-matching boilerplate that violates standard retirement benefit accounting practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "退職給付引当金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing retirement benefit provisions.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "退職給付引当金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when checking trial balances or balance sheet accounts.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "退職給付引当金を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "An allowance account itself is calculated, audited, or reconciled via a calculation sheet, not directly '照合する'. '算定する' is far more authentic.",
+      "suggested_text": "退職給付引当金を算定する"
+    },
+    {
+      "index": 3,
+      "text": "退職給付引当金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to reimbursing advances or settling expense accounts (経費・立替金), never to balance sheet reserve provisions. The proper operational verb is '取り崩す' (draw down upon retirement).",
+      "suggested_text": "退職給付引当金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Retirement benefit provisions are calculated based on actuarial valuations or simplified formula worksheets, not routine monthly voucher cross-checking ('月末の帳簿照合').",
+      "suggested_ja": "期末決算において数理計算結果に基づき、退職給付引当金の要積立額を算定して計上しました。",
+      "suggested_vi": "Trong đợt quyết toán cuối kỳ, chúng tôi đã tính toán và trích lập mức dự phòng trợ cấp thôi việc cần thiết dựa trên kết quả tính toán theo phương pháp toán học thống kê.",
+      "suggested_en": "During the fiscal year-end closing, we calculated and recognized the required provision for retirement benefits based on actuarial valuation results."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Tautological redundancy ('適正な会計基準...適正に処理いたしました') and generic filler phrasing lacking authentic accounting substance.",
+      "suggested_ja": "当期中の従業員の退職に伴い、支給した退職一時金を退職給付引当金から取り崩して処理しました。",
+      "suggested_vi": "Do có nhân viên thôi việc trong kỳ này, chúng tôi đã hoàn nhập số tiền trợ cấp thôi việc chi trả từ khoản dự phòng trợ cấp thôi việc.",
+      "suggested_en": "Following the retirement of employees during the current period, the lump-sum retirement benefits paid were drawn down against the provision for retirement benefits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Retirement benefit provisions do not involve daily transactional vouchers ('証憑書類'). Pairing this valuation account with a generic template about cross-checking vouchers reflects flawed accounting domain reality.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "決算整理における退職給付引当金の洗替処理は完了しましたか。",
+        "vi": "Khoản dự phòng trợ cấp thôi việc trong bút toán điều chỉnh quyết toán đã hoàn tất việc trích lập / hoàn nhập chưa?",
+        "en": "Has the reversal and recalculation process for the provision for retirement benefits in the closing adjustments been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、信託銀行からの数理計算報告書に基づき、当期の要積立額を計上済みです。",
+        "vi": "Vâng, dựa trên báo cáo tính toán hưu trí từ ngân hàng ủy thác, chúng tôi đã hạch toán đầy đủ mức dự phòng cần trích lập cho kỳ này.",
+        "en": "Yes, based on the actuarial report from the trust bank, we have already recognized the required reserve amount for this term."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base translations for the term itself are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "59e6949c9b2e22ecad8758806f6fc8b33cedddf3019237cfead7acd3c1e8ccd2",
+    "validated_at": "2026-10-01T01:35:24.572410+00:00"
+  }
+}

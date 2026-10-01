@@ -1,0 +1,79 @@
+{
+  "entry_id": "jp-pro-trade-000100",
+  "term": "蔵入れ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations and example sentences are natural and appropriate. However, the dialogue needs revision as Speaker B's response is not directly aligned with Speaker A's question regarding the specific '蔵入れ' status, and an outdated term (乙仲) is used. The translations are generally good.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "蔵入れを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "蔵入れを完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "蔵入れを申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation."
+    },
+    {
+      "index": 3,
+      "text": "蔵入れの適法性を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and appropriate for a professional context."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and sounds like a real business communication. The translations are accurate."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "The Japanese sentence is natural and sounds like a real business communication. The translations are accurate."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address the status of '蔵入れの手配状況' (arrangement status for placing cargo into bonded warehouse). While related to customs, it shifts to general customs procedures rather than the specific '蔵入れ' status. The term 乙仲 (otsunaka) is outdated and should be replaced with 港湾運送事業者 (kōwan unsō jigyōsha) or simply 運送業者 (unsō gyōsha) or フォワーダー (forwarder) in modern business context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、蔵入れの手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp thủ tục đưa hàng vào kho bảo thuế thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the bonded warehouse entry arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者とフォワーダーへの連絡は済んでおり、蔵入れに必要な書類の確認も完了しました。現在、蔵入れの申請手続きを進めております。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và forwarder, đồng thời đã hoàn tất việc kiểm tra các chứng từ cần thiết cho thủ tục đưa hàng vào kho bảo thuế. Hiện tại, chúng tôi đang tiến hành nộp đơn xin đưa hàng vào kho bảo thuế.",
+        "en": "We have contacted the customs broker and forwarder, and the necessary documents for bonded warehouse entry have been confirmed. We are currently proceeding with the application for bonded warehouse entry."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "88435d17bbf0b534b092d38766418ab62ab40b9ef7f4315384f07fb7ecd0c481",
+    "validated_at": "2026-10-01T01:55:29.669622+00:00"
+  }
+}

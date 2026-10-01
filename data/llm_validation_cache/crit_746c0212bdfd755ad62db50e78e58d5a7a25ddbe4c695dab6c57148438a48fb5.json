@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000002",
+  "term": "相見積もり",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains a critical domain error (requesting quotes from internal departments instead of external vendors), synthetic boilerplate collocations, and dictionary copy-pasting inside sentence translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "相見積もりを徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in procurement compliance to mandate obtaining multiple vendor estimates.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "相見積もりを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural verb pairing for conducting comparative estimates.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "相見積もりを習慣づける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Habitualization ('習慣づける') is an awkward predicate for commercial procurement; core idiomatic collocations like '取る' or '依頼する' should be taught first.",
+      "suggested_text": "相見積もりを取る"
+    },
+    {
+      "index": 3,
+      "text": "相見積もりの重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "Generic boilerplate that adds little linguistic value. A high-frequency operational collocation is strongly preferred.",
+      "suggested_text": "相見積もりを比較検討する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually incorrect: '相見積もり' is obtained from external suppliers/vendors, never from internal departments ('関係部署への事前の相見積もり'). The translation also awkwardly dumps raw dictionary definitions.",
+      "suggested_ja": "システムの刷新にあたり、適正価格を把握するため、ベンダー3社から相見積もりを取りました。",
+      "suggested_vi": "Khi đổi mới hệ thống, để nắm bắt mức chi phí hợp lý, chúng tôi đã lấy báo giá so sánh từ 3 nhà cung cấp.",
+      "suggested_en": "When upgrading the system, we obtained competitive estimates from three vendors to assess fair market pricing."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Robotic templated text. Competitive estimates are used for cost optimization and vendor governance, not generic 'trouble prevention', and '相見積もりの習慣付け' is artificial.",
+      "suggested_ja": "当社では、一定金額以上の発注を行う場合、原則として相見積もりを取ることが社内規程で義務付けられています。",
+      "suggested_vi": "Tại công ty chúng tôi, quy định nội bộ bắt buộc phải lấy báo giá cạnh tranh đối với các đơn hàng vượt quá một hạn mức nhất định.",
+      "suggested_en": "At our company, company regulations mandate that competitive bids be obtained for orders exceeding a certain threshold."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B gives a generic, evasive platitude ('情報共有の重要性を再認識') without addressing the procurement status or vendor bids asked by Speaker A.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規サーバーの導入にあたり、業者からの相見積もりはもう揃いましたか。",
+        "vi": "Về việc triển khai máy chủ mới, chúng ta đã thu thập đủ báo giá so sánh từ các nhà cung cấp chưa?",
+        "en": "Regarding the deployment of the new server, have all the comparative estimates from the vendors come in?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、主要3社から回収できましたので、費用と納期を比較した一覧表を作成いたします。",
+        "vi": "Vâng, chúng tôi đã nhận được báo giá từ 3 công ty chính, tôi sẽ lập bảng so sánh chi phí và tiến độ giao hàng ngay.",
+        "en": "Yes, we have collected them from the three main vendors, so I will prepare a comparison table covering costs and delivery timelines."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both translations unprofessionally pasted slash-separated dictionary glosses ('chào giá cạnh tranh / so sánh báo giá...', 'competitive bidding / comparative estimate') directly into the prose."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2151dee519b9c5984d2b43a2344ae1b8ff2b2de73026cf9256d7668c886d8b79",
+    "validated_at": "2026-10-01T01:41:00.115805+00:00"
+  }
+}

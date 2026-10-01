@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000076",
+  "term": "流動負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations contain semantic mismatch ('流動負債を精算する' misuses 精算 instead of 返済/決済) and Example 1 contains unnatural phrasing ('適正な会計基準' and repetitive '適正').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "流動負債を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in accounting when recognizing or booking liabilities falling into the current liabilities category.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "流動負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace phrasing in monthly/annual closing and audit routines.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "流動負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reconciles specific breakdowns, vouchers, or balances rather than the entire aggregate category itself.",
+      "suggested_text": "流動負債の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "流動負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精算する' applies to expense claims or advance payments, not category-level liabilities. Liabilities are repaid, settled, or compressed.",
+      "suggested_text": "流動負債を返済する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, professional Japanese representing typical month-end accounting reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is unnatural in Japanese accounting parlance (standard terms are 企業会計基準 or 適用される会計基準), and repeating '適正' twice in one sentence produces a mechanical, generated feel.",
+      "suggested_ja": "企業会計基準および社内規程に則り、当期の決算において流動負債を適正に計上いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán doanh nghiệp và quy chế nội bộ, chúng tôi đã hạch toán đúng quy định nợ ngắn hạn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with corporate accounting standards and internal regulations, we properly recognized current liabilities in this fiscal period's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between Speaker A and Speaker B is logically cohesive, realistic for month-end closing, and employs proper accounting terms (補助元帳, 照合).",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2753fbce28c8b81e886244cbd3d237c408d0599062d282f6a11e8fa56e706d3b",
+    "validated_at": "2026-10-01T01:34:58.108534+00:00"
+  }
+}

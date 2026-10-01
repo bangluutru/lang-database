@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000167",
+  "term": "共同海損",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the semantic application of accounting terms like '計上' and '残高' to '共同海損' itself. While GA has financial implications, it's not an accounting entry or balance in the same way a receivable or payable is. The examples and dialogue need to reflect the accounting of *costs/contributions related to* GA, rather than GA itself being 'booked' or having a 'balance'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "共同海損を宣言する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in maritime law/insurance context.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "共同海損を分担する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in maritime law/insurance context.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "共同海損を算定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in maritime law/insurance context.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "共同海損の補償を請求する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation in maritime law/insurance context.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "共同海損 (General Average) is a principle of maritime law, not an accounting entry or balance that is '計上' (booked) or has a '残高' (balance) in the typical sense. While it involves financial settlement, the phrasing '計上内容や残高に差異がないか精査します' is unnatural for GA itself. It's more about the *costs incurred due to* GA or the *settlement amount*.",
+      "suggested_ja": "月末の帳簿照合において、共同海損の精算額や関連費用の計上内容に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong số tiền thanh toán hoặc các khoản chi phí liên quan đến tổn thất chung trong hàng hải (General Average - GA) đã được hạch toán hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the settlement amount or recorded related expenses for general average (GA)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '共同海損を適正に処理いたしました' is awkward. '共同海損' itself is not 'processed' in accounting; rather, the costs or contributions *related to* GA are accounted for. The phrasing implies GA is an accounting transaction itself.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において共同海損に関連する費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí liên quan đến tổn thất chung trong hàng hải (General Average - GA) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the expenses related to general average (GA) in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question '共同海損の計上内容に差異は発生していませんか' suffers from the same semantic issue as the examples. GA itself is not 'booked' in a way that would have 'discrepancies in entries'. It's about the financial impact or settlement. Speaker B's response is also somewhat generic and doesn't directly address the specific nature of GA in an accounting context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、共同海損の精算に伴う費用計上に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong việc hạch toán chi phí liên quan đến việc thanh toán tổn thất chung trong hàng hải (GA) không?",
+        "en": "In this month's financial closing, are there any discrepancies in the expense entries related to the general average settlement?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、関連費用の計上はすべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả các khoản chi phí liên quan đã được hạch toán đúng cách.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that all related expense entries are properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "640a026e8b3cc094384f0c639bf5091e31a351baae650a74ab7a586d95cfd284",
+    "validated_at": "2026-10-01T01:56:59.221273+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000129",
+  "term": "売上総利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "売上総利益を通常の勘定科目（仕訳入力や元帳残高が存在するもの）と混同したテンプレート生成が行われており、すべてのコロケーションおよび例文・対話において会計実務上の重大な語用・概念エラー（計上する、残高を確認する、精算するなど）が発生しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売上総利益を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "売上総利益（粗利益）は売上高から売上原価を差し引いて算出される中間利益（区分損益）であり、個別の仕訳として直接「計上する」対象ではありません。確保する、算出する、認識するなどの動詞が自然です。",
+      "suggested_text": "売上総利益を確保する"
+    },
+    {
+      "index": 1,
+      "text": "売上総利益の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "売上総利益は損益計算書上の差引計算項目であり、勘定科目としての「残高」を持ちません。残高ではなく金額・数値、あるいは予算対比や前年同期比を確認するのが適切です。",
+      "suggested_text": "売上総利益の推移を分析する"
+    },
+    {
+      "index": 2,
+      "text": "売上総利益を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "売上総利益は帳簿や証憑と直接「照合」する対象ではなく、売上高と売上原価から計算される指標です。比較・検証する対象として表現すべきです。",
+      "suggested_text": "売上総利益を予算と比較する"
+    },
+    {
+      "index": 3,
+      "text": "売上総利益を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は仮払金や立替経費などの清算に用いる動詞であり、利益項目である売上総利益に対して「精算する」と表現することは会計実務上あり得ません。",
+      "suggested_text": "売上総利益率を算出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "売上総利益に「残高」は存在せず、「計上内容や残高に差異がないか精査する」という表現は会計実務の概念として誤りです。原価率の上昇や粗利率の変動要因を分析する文脈に改めるべきです。",
+      "suggested_ja": "原材料価格の高騰を受けて売上総利益が前年同期比で大幅に減少したため、要因を精査しています。",
+      "suggested_vi": "Do chi phí nguyên vật liệu tăng cao, lợi nhuận gộp đã giảm mạnh so với cùng kỳ năm trước, nên chúng tôi đang kiểm tra kỹ lưỡng các nguyên nhân.",
+      "suggested_en": "Gross profit declined significantly compared to the same period last year due to soaring raw material prices, so we are closely examining the factors."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜適正に処理いたしました」と重複した不自然なテンプレート文型言及であり、売上総利益を「処理する」という述語のコロケーションも不適切です。",
+      "suggested_ja": "適切な原価管理の徹底により、当期の決算において目標としていた売上総利益を確保することができました。",
+      "suggested_vi": "Nhờ triệt để quản lý chi phí phù hợp, chúng tôi đã bảo toàn được mức lợi nhuận gộp mục tiêu trong đợt quyết toán kỳ này.",
+      "suggested_en": "Through thorough and proper cost management, we were able to secure our targeted gross profit in this fiscal period's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "売上総利益は証憑書類や補助元帳と直接照合する勘定科目ではありません（それらは売上高や仕入高・棚卸資産で行うもの）。売上総利益（粗利益）の増減や粗利率の達成状況を議論する対話が実務的です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の月次試算表を見ましたが、第3四半期の売上総利益率が目標を下回っている要因は何でしょうか。",
+        "vi": "Tôi đã xem bảng cân đối thử hàng tháng kỳ này, nguyên nhân nào khiến tỷ suất lợi nhuận gộp quý 3 thấp hơn mục tiêu?",
+        "en": "I reviewed this period's monthly trial balance; what is behind the gross profit margin falling below target in the third quarter?"
+      },
+      {
+        "speaker": "B",
+        "ja": "円安に伴う原材料の輸入コスト増加に加え、一部主力製品の値引き販売が影響して粗利益を圧迫いたしました。",
+        "vi": "Ngoài chi phí nhập khẩu nguyên vật liệu tăng do đồng yên giảm giá, việc giảm giá bán một số sản phẩm chủ lực cũng gây áp lực lên lãi gộp.",
+        "en": "In addition to increased import costs for raw materials due to the weaker yen, discounted sales of certain flagship products squeezed our gross margin."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語レベルの英訳（Gross profit）および越訳（lợi nhuận gộp / lãi gộp）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8fcf9449426d7b42457fe147d9553a74af7d03ae111621ea37c55cb95a6533d6",
+    "validated_at": "2026-10-01T01:36:00.558411+00:00"
+  }
+}

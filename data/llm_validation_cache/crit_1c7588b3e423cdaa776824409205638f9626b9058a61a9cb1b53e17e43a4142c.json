@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000106",
+  "term": "固定残業代",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are excellent, the example sentences and dialogue suffer from artificial, generic financial accounting boilerplate ('残高の精査', '証憑書類と補助元帳の照合') that ignores the true labor compliance and payroll operational reality of 固定残業代.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "固定残業代を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard HR and payroll collocation for paying fixed overtime allowances."
+    },
+    {
+      "index": 1,
+      "text": "固定残業代を改定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation used when changing compensation packages or wage structures."
+    },
+    {
+      "index": 2,
+      "text": "固定残業代の超過分を精算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and legally critical under the Labor Standards Act (paying hours worked beyond the fixed allowance)."
+    },
+    {
+      "index": 3,
+      "text": "固定残業代を就業規則に定める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal requirement for validating a fixed overtime scheme."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Fixed overtime pay is a recurring payroll expense, not an account balance subject to balance sheet variance checks ('残高に差異がないか'). This is a generic accounting template mechanically applied to a wage term.",
+      "suggested_ja": "固定残業代として定められた時間分を超過して勤務した従業員に対しては、その差額分を追加支給しなければなりません。",
+      "suggested_vi": "Đối với những nhân viên làm việc vượt quá số giờ được quy định trong khoản tiền làm thêm giờ khoán, công ty bắt buộc phải chi trả thêm phần chênh lệch đó.",
+      "suggested_en": "For employees who work beyond the hours stipulated under the fixed overtime pay system, the difference must be paid additionally."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence repeats '適正な' twice ('適正な会計基準...適正に処理') and misplaces the regulatory driver. Fixed overtime is strictly governed by the Labor Standards Act and employment regulations, not accounting standards ('会計基準').",
+      "suggested_ja": "労使トラブルを防止するため、固定残業代に相当する労働時間数と支給額を労働条件通知書に明記しています。",
+      "suggested_vi": "Để phòng ngừa các tranh chấp lao động, số giờ làm việc và số tiền tương ứng với phụ cấp làm thêm giờ khoán được ghi rõ ràng trong thông báo điều kiện lao động.",
+      "suggested_en": "To prevent labor disputes, the number of working hours and the amount corresponding to the fixed overtime pay are clearly specified in the employment terms notification."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fixed overtime pay does not fluctuate monthly on its own. The actual workplace concern during monthly closing/payroll is checking whether actual working hours exceeded the fixed threshold and whether excess pay was correctly recorded, not cross-checking fixed overtime against an auxiliary ledger.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算で、固定残業代の上限時間を超えた社員への差額支給は反映されていますか。",
+        "vi": "Trong đợt tính lương tháng này, khoản phụ cấp chênh lệch cho những nhân viên vượt quá số giờ trần của phụ cấp làm thêm giờ khoán đã được phản ánh chưa?",
+        "en": "In this month's payroll calculation, has the differential pay for employees who exceeded the fixed overtime limit been reflected?"
+      },
+      {
+        "speaker": "B",
+        "ja": "勤怠データと照合し、対象者5名分の超過手当を漏れなく計上しております。",
+        "vi": "Tôi đã đối chiếu với dữ liệu chấm công và hạch toán đầy đủ phụ cấp làm thêm giờ cho cả 5 người thuộc đối tượng rồi ạ.",
+        "en": "I have cross-checked with the attendance records and confirmed that the excess overtime allowance for all five eligible employees has been recorded without omission."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Original translations faithfully captured the source text, though the Japanese source itself required operational domain grounding."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "07501f19fc7a64643925d9c63e4889e7c6f56a2e9dba1f199c536338bc492929",
+    "validated_at": "2026-10-01T01:42:45.719468+00:00"
+  }
+}

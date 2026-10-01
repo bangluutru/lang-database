@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000047",
+  "term": "建物",
+  "overall_decision": "rewrite",
+  "summary_reason": "While collocations and dialogue are solid, Example 1 incorrectly uses the inventory term '棚卸実査' instead of fixed asset inspection ('固定資産実査'), and Vietnamese translations suffer from unedited dictionary gloss insertion.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "建物を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting and corporate terminology for acquiring a tangible fixed asset.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "建物を固定資産台帳に登録する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic accounting procedure for fixed asset onboarding.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "建物を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and accounting expression for holding real estate assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "建物を除却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Exact statutory accounting and tax term for asset retirement/write-off.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "Japanese is natural, but the Vietnamese translation awkwardly pastes the raw glossary entry with an incorrect classifier ('mảnh nhà cửa / công trình kiến trúc mới'). 'Mảnh' applies to plots of land, not buildings.",
+      "suggested_ja": "事業拡大に向けた拠点開発のため、適正な不動産鑑定評価を経て新たな建物を取得しました。",
+      "suggested_vi": "Để phát triển cơ sở phục vụ mở rộng kinh doanh, chúng tôi đã mua lại tòa nhà mới sau khi trải qua thẩm định giá bất động sản phù hợp.",
+      "suggested_en": "To develop a operational base for business expansion, we acquired a new building following an appropriate real estate appraisal."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese accounting, '棚卸実査' specifically connotes inventory stocktaking (棚卸資産の実地調査). For fixed assets such as buildings, the standard technical term is '固定資産実査' or '実地実査'. Furthermore, the Vietnamese translation directly copies the raw dictionary gloss.",
+      "suggested_ja": "事業年度末の固定資産実査を実施し、固定資産台帳と建物の権利関係および現況を照合しました。",
+      "suggested_vi": "Chúng tôi đã tiến hành kiểm kê thực tế tài sản cố định vào cuối năm tài chính, đối chiếu sổ tài sản cố định với quyền sở hữu và hiện trạng thực tế của công trình.",
+      "suggested_en": "We conducted a fiscal year-end physical inspection of fixed assets and reconciled the fixed asset register with the legal title and actual condition of the buildings."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Realistic, accurate interaction between corporate accountants regarding asset onboarding, useful life determination, and depreciation policy under tax and GAAP regulations.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations suffer from dictionary gloss bleeding ('nhà cửa / công trình kiến trúc' plugged verbatim) and grammatically incorrect numeral-classifier combinations ('mảnh nhà cửa')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "51a41e86585f66e11f310a54833f05b5ac0a709367204ce1504cf252fcf540ed",
+    "validated_at": "2026-10-01T01:34:31.236050+00:00"
+  }
+}

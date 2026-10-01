@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000092",
+  "term": "雇用形態",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic and domain errors: An HR/labor term ('雇用形態') was mechanically slotted into accounting closing templates ('計上内容', '残高', '補助元帳'), producing nonsensical Japanese business sentences that must be completely rewritten.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "雇用形態を選択する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard business Japanese used in HR and onboarding.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "雇用形態へ転換する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The particle 'へ' makes the phrase incomplete or unnatural without a specific target type (e.g., 正社員). '雇用形態を変更する' or '雇用形態を転換する' is much more natural.",
+      "suggested_text": "雇用形態を変更する"
+    },
+    {
+      "index": 2,
+      "text": "雇用形態を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Clear and common expression in workplace labor management.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "雇用形態で区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used in payroll, benefits, and organizational management.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal semantic mismatch: '雇用形態' (employment status/type) is an HR/labor concept and cannot have an accounting balance ('残高') or booking entries ('計上内容'). This is an artificial templated hallucination.",
+      "suggested_ja": "当社では、正社員や契約社員、パートタイマーなど、雇用形態に応じた就業規則と賃金体系を定めています。",
+      "suggested_vi": "Công ty chúng tôi quy định nội quy lao động và hệ thống tiền lương tương ứng theo từng hình thức lao động, chẳng hạn như nhân viên chính thức, nhân viên hợp đồng hay nhân viên bán thời gian.",
+      "suggested_en": "Our company establishes work regulations and wage structures corresponding to each employment type, such as regular, contract, and part-time employees."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain mismatch: '雇用形態' is not an accounting transaction to be processed under accounting standards in financial year-end closing ('決算において雇用形態を適正に処理').",
+      "suggested_ja": "法改正に伴い、同一労働同一賃金の観点から雇用形態による不合理な待遇格差がないか見直しました。",
+      "suggested_vi": "Sau đợt sửa đổi luật, chúng tôi đã rà soát lại để đảm bảo không có sự chênh lệch đãi ngộ bất hợp lý theo hình thức sử dụng lao động dựa trên quan điểm 'công việc bình đẳng, tiền lương bình đẳng'.",
+      "suggested_en": "Following the legal revisions, we reviewed our practices from the perspective of equal pay for equal work to ensure there are no unreasonable disparities in treatment based on employment type."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Absurd business logic: Speaker A asks about booking discrepancies ('計上内容に差異') of an employment status in monthly closing, and Speaker B refers to subledgers and vouchers. HR terminology was erroneously forced into an accounting book-closing dialogue.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期から導入する短時間正社員制度ですが、現行の雇用形態との待遇差について労使協議は進んでいますか。",
+        "vi": "Về chế độ nhân viên chính thức làm việc rút ngắn thời gian dự kiến áp dụng từ kỳ tới, việc đối thoại giữa công đoàn và người sử dụng lao động về chênh lệch đãi ngộ so với các hình thức sử dụng lao động hiện tại đã tiến triển đến đâu rồi?",
+        "en": "Regarding the short-time regular employee system to be introduced next term, how are labor-management consultations progressing concerning the disparity in treatment compared to current employment types?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、各雇用形態の職務要件と評価基準を整理し、合意形成に向けて調整を進めております。",
+        "vi": "Vâng, chúng tôi đã chuẩn hóa các yêu cầu công việc cùng tiêu chí đánh giá cho từng hình thức lao động và đang điều phối để đạt được sự đồng thuận.",
+        "en": "Yes, we have organized the job requirements and evaluation criteria for each employment type and are coordinating to build consensus."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Headword translations are acceptable in HR and labor administration."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "388280471041591559e24211a53d9844787a3e00213f23b92b6fb659bcf44e33",
+    "validated_at": "2026-10-01T01:42:29.129114+00:00"
+  }
+}

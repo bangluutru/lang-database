@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000066",
+  "term": "輸出許可",
+  "overall_decision": "rewrite",
+  "summary_reason": "対話の不自然さとベトナム語訳の不正確さがあるため、全体として修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "輸出許可を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「行う」はやや不自然。より具体的な動詞が望ましい。",
+      "suggested_text": "輸出許可を得る"
+    },
+    {
+      "index": 1,
+      "text": "輸出許可を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "輸出許可を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "輸出許可の適法性を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "ビジネス文書として自然な表現。",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Bの返答がAの質問（輸出許可の手配状況）に直接答えていない。「輸入申告に入っております」は文脈に合わない。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、輸出許可の手配状況はいかがでしょうか。",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình chuẩn bị giấy phép xuất khẩu thế nào rồi?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what's the status of the export permission arrangements?"
+      },
+      {
+        "speaker": "B",
+        "ja": "通関業者と乙仲への連絡は済ませており、書類の確認も完了し、先ほど輸出許可が下りました。",
+        "vi": "Chúng tôi đã liên hệ với công ty thông quan và đại lý vận tải, việc kiểm tra hồ sơ cũng đã hoàn tất, và giấy phép xuất khẩu đã được cấp cách đây ít phút.",
+        "en": "We have contacted the customs broker and freight forwarder, document verification is complete, and export permission was granted just a moment ago."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語の「thông quan xuất khẩu thành công」は「輸出許可」の直接的な意味合いと少し異なる。「thông quan xuất khẩu」で十分であり、「thành công」は不要。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b98d435a96508a2f23ca92bc7cc6e5ecd51b0d92715a23cae87a68a1638229c3",
+    "validated_at": "2026-10-01T01:54:47.219934+00:00"
+  }
+}

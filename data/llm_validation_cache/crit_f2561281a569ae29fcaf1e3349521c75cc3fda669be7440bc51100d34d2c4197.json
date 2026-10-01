@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000196",
+  "term": "原産地表示",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is the fundamental misunderstanding of '原産地表示' as an accounting entry. It is a compliance/operational matter, not a financial transaction that can be '計上' or have a '残高'. The examples and dialogue incorrectly apply accounting terminology to this term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "原産地表示を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for 'proceeding with labeling'.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "原産地表示を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for 'completing labeling'.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "原産地表示の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for 'confirming labeling procedures'.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "原産地表示を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for 'reviewing labeling'.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "原産地表示 (country of origin labeling) is not an accounting entry that can be '計上' (booked) or have a '残高' (balance). These terms are for financial transactions or accounts.",
+      "suggested_ja": "月末の帳簿照合において、原産地表示に関する記録や書類に不備がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có bất kỳ thiếu sót nào trong hồ sơ hoặc tài liệu liên quan đến ghi nhãn nguồn gốc xuất xứ hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any deficiencies in records or documents related to country of origin labeling."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '原産地表示' is not something that is '処理' (processed) in the context of accounting closing entries (決算). It's a compliance or operational task, not a financial transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において原産地表示に関するコンプライアンスが適切に実施されていることを確認いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xác nhận rằng việc tuân thủ ghi nhãn nguồn gốc xuất xứ đã được thực hiện đúng cách trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we confirmed that compliance with country of origin labeling was properly implemented in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The term '原産地表示' is incorrectly used with accounting terms like '計上内容に差異' (discrepancy in booked content). Country of origin labeling is not an accounting entry.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、原産地表示に関するコンプライアンスに問題は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có vấn đề gì phát sinh liên quan đến việc tuân thủ ghi nhãn nguồn gốc xuất xứ không?",
+        "en": "In this month's monthly closing, have there been any issues regarding compliance with country of origin labeling?"
+      },
+      {
+        "speaker": "B",
+        "ja": "関連書類と実物を確認済みで、すべて適正に実施されていることを確認いたしました。",
+        "vi": "Chúng tôi đã kiểm tra các tài liệu liên quan và sản phẩm thực tế, và xác nhận rằng tất cả đã được thực hiện đúng cách.",
+        "en": "We have confirmed the relevant documents and physical products, and verified that everything has been properly implemented."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a059dae76e25d54a22e8bc2623420b9e873518aa7ef5d90a9033336c0f058080",
+    "validated_at": "2026-10-01T01:57:26.089483+00:00"
+  }
+}

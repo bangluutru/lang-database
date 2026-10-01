@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000096",
+  "term": "別表四",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple critical domain and semantic mismatches: tax schedules are not 'issued' (発行) nor 'delivered' (交付), and corporate tax returns are submitted to '所轄税務署', not '所轄官庁'. The examples and dialogue relied on generic templates and required realistic tax accounting adjustments.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "別表四を交付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "別表四 is a tax return schedule prepared and submitted by the taxpayer to the tax authority, not a document or certificate that an entity issues or delivers (交付する) to another party.",
+      "suggested_text": "別表四を作成する"
+    },
+    {
+      "index": 1,
+      "text": "別表四を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural when discussing tax filing schedules.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "別表四を保管する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "Statutory tax accounting documents are legally referred to with 保存 (申告書類の保存), not 保管.",
+      "suggested_text": "別表四の申告調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "別表四の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing during review of tax return figures and items.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "In corporate tax practice, the recipient is specifically '所轄税務署', not the generic '所轄官庁'. Moreover, the schedule is submitted as part of the overall corporate tax return (法人税申告書).",
+      "suggested_ja": "当期の法人税申告に向けて、交際費等の損金不算入額を別表四に正しく反映させました。",
+      "suggested_vi": "Để chuẩn bị cho việc kê khai thuế TNDN kỳ này, chúng tôi đã phản ánh chính xác các khoản chi phí không được trừ như chi phí tiếp khách vào phụ lục số 4.",
+      "suggested_en": "In preparation for this period's corporate tax filing, we correctly reflected non-deductible expenses such as entertainment expenses in Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "別表四 is a tax schedule prepared for income reconciliation, never referred to as '発行済み' (issued). Tax documents are also subject to '保存', not '保管'.",
+      "suggested_ja": "税務調査に備え、過去に申告した別表四と別表五（一）の控を法定期間に従って保存しています。",
+      "suggested_vi": "Để chuẩn bị cho thanh tra thuế, chúng tôi lưu trữ bản sao của phụ lục số 4 và phụ lục số 5(1) đã kê khai trước đây theo đúng thời hạn luật định.",
+      "suggested_en": "In preparation for tax audits, we retain retained copies of previously filed Schedule 4 and Schedule 5(1) in accordance with the statutory retention period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Using '所轄官庁' instead of '税務署' sounds detached from authentic corporate tax practice. The dialogue is overly generic and lacks authentic accounting context such as tax reconciliation items or Schedule 5 tie-outs.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "法人税申告書の別表四について、当期の申告調整項目の洗い出しは終わりましたか。",
+        "vi": "Về phụ lục số 4 trong tờ khai thuế TNDN, anh đã rà soát xong các khoản điều chỉnh thuế kỳ này chưa?",
+        "en": "Regarding Schedule 4 of the corporate tax return, have you finished identifying the tax adjustment items for this period?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、交際費の損金不算入や減価償却超過額の加算減算を含め、別表五との整合性も確認済みです。",
+        "vi": "Vâng, bao gồm các khoản cộng trừ chi phí không được trừ từ tiếp khách và khấu hao vượt mức, tôi cũng đã đối chiếu khớp với phụ lục 5 rồi.",
+        "en": "Yes, including additions and subtractions for non-deductible entertainment and excess depreciation, I have already verified consistency with Schedule 5."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations accurately capture the statutory definition and function of the document."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "41e9e77fc38999f7489bd8ace923f3f3d05ffdd6f0fb55d1927078539b8359e9",
+    "validated_at": "2026-10-01T01:39:03.045750+00:00"
+  }
+}

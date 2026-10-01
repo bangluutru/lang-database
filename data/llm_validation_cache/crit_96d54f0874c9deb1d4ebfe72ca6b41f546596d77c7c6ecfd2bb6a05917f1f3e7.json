@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000162",
+  "term": "業務委託費",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains unnatural predicate pairings ('業務委託費を精算する', '業務委託費を照合する'), tautological/stilted phrasing in Example 1 ('適正な会計基準...適正に処理'), and unnatural wording in Dialogue turn B ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "業務委託費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/accruing outsourcing expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "業務委託費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace phrasing when checking general/subsidiary ledger account balances.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "業務委託費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する typically takes the source document or breakdown as an object (e.g., 請求書と照合する, 内訳を照合する). On its own, '業務委託費を照合する' is slightly unnatural.",
+      "suggested_text": "業務委託費の内訳を照合する"
+    },
+    {
+      "index": 3,
+      "text": "業務委託費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies primarily to advances, travel expenses, or out-of-pocket settlements (旅費交通費・立替金・仮払金). An operational vendor fee is typically '支払う' or '決済する'.",
+      "suggested_text": "業務委託費を支払う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing appropriate for month-end close reporting.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted template phrasing with redundant '適正' ('適正な会計基準' and '適正に処理'). Accounting standards are not termed '適正な会計基準' (usually '会計基準' or '公正妥当と認められる企業会計の基準').",
+      "suggested_ja": "社内規程および会計基準に則り、当期の決算において業務委託費を正しく計上・処理いたしました。",
+      "suggested_vi": "Tuân thủ quy chế nội bộ và các chuẩn mực kế toán, chúng tôi đã ghi nhận và xử lý chính xác chi phí thuê ngoài trong kỳ quyết toán này.",
+      "suggested_en": "In accordance with internal regulations and accounting standards, we have correctly recorded and processed outsourcing expenses in this period's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural Japanese jargon resulting from over-stacking polite adverbs with a verb that already means alignment. '整合していることを確認いたしました' or '差異がないことを確認いたしました' is authentic.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、業務委託費の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí thuê ngoài có phát sinh chênh lệch gì không?",
+        "en": "Are there any discrepancies in the recording of outsourcing expenses in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書等の証憑書類と補助元帳を照合済みで、すべて整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ hóa đơn với sổ cái phụ, và xác nhận mọi thứ đều hoàn toàn khớp.",
+        "en": "I have already reconciled the supporting vouchers, such as invoices, with the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0bc0c4771cc753061a061c21dd671a5b7e708224b95908dfb3694535c631f843",
+    "validated_at": "2026-10-01T01:36:36.049717+00:00"
+  }
+}

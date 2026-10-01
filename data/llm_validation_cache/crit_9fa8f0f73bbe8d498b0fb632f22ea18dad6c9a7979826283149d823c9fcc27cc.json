@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-business-000170",
+  "term": "ピッチデック",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the unnatural use of '発送する' and '受領する' for 'ピッチデック', which is typically a digital document. This leads to awkward collocations and example sentences that do not reflect authentic corporate Japanese usage for this specific term. The examples also misrepresent the typical context and purpose of a pitch deck in a corporate setting, making them feel templated and not genuinely applicable.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ピッチデックを作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 1,
+      "text": "ピッチデックを提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural collocation."
+    },
+    {
+      "index": 2,
+      "text": "ピッチデックを発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While technically understandable, '発送する' (to dispatch/send out) is typically used for physical goods or large volumes of mail. For a pitch deck, which is usually a digital document shared via email or a platform, '送付する' (to send/forward) or '共有する' (to share) would be more natural. '発送' implies a physical package or a mass mailing, which is less common for a pitch deck in a corporate context.",
+      "suggested_text": "ピッチデックを送付する"
+    },
+    {
+      "index": 3,
+      "text": "ピッチデックを受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'受領する' (to receive, often formally or for physical items) is less natural for a digital pitch deck. '受け取る' (to receive) or '受領する' (if it's a formal submission, but still less common than '受け取る' for a digital document) could work, but '確認する' (to confirm receipt/review) or '閲覧する' (to view) might be more appropriate depending on the context. If it's about receiving a submission, '受け取る' is more common.",
+      "suggested_text": "ピッチデックを受け取る"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence uses '発送いたしました' which is unnatural for a pitch deck (typically digital). Also, linking a pitch deck directly to '株主総会や取締役会を円滑に進行するため' is a bit of a stretch. While a pitch deck might be part of materials for such meetings, it's not the primary document for 'smooth proceedings' in the way statutory notices or financial reports are. The phrasing feels forced and not typical of how such information would be conveyed in a Japanese business context. A pitch deck is usually for fundraising or business proposals, not general shareholder/board meeting facilitation.",
+      "suggested_ja": "投資家向け説明会や事業提携の会議を円滑に進めるため、事前にピッチデックを送付いたしました。",
+      "suggested_vi": "Để tạo điều kiện thuận lợi cho các buổi thuyết trình nhà đầu tư và cuộc họp hợp tác kinh doanh, chúng tôi đã gửi trước bộ slide thuyết trình gọi vốn khởi nghiệp.",
+      "suggested_en": "To facilitate smooth investor briefings and business partnership meetings, we sent out the pitch deck in advance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Similar to the previous example, '受領したピッチデックを厳重に保管しています' sounds unnatural. '受領する' for a digital document is awkward. Furthermore, while internal control and compliance are important, archiving a 'pitch deck' as primary evidence for these purposes in such a formal statement feels out of place. Pitch decks are typically dynamic and for external communication/fundraising, not core internal control documentation in the same vein as contracts or financial records. The phrasing is overly formal and misapplies the document's typical role.",
+      "suggested_ja": "投資家から提出されたピッチデックは、情報管理規定に基づき、担当部署にて適切に保管しています。",
+      "suggested_vi": "Bộ slide thuyết trình gọi vốn khởi nghiệp do nhà đầu tư nộp đã được bộ phận phụ trách lưu trữ đúng cách theo quy định quản lý thông tin.",
+      "suggested_en": "The pitch deck submitted by the investor is appropriately stored by the department in charge, in accordance with information management regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question is fine. However, Speaker B's response '本日中に発送の手配を行います' uses '発送' which is unnatural for a pitch deck. '送付の手配を行います' or '送付いたします' would be more natural. The overall flow is okay, but the specific verb choice makes it sound slightly stilted.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、ピッチデックの準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị bộ slide thuyết trình gọi vốn khởi nghiệp cho cuộc họp dự kiến diễn ra vào tuần tới thế nào rồi?",
+        "en": "What's the status of the pitch deck preparation for the meeting scheduled for next week?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に送付の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc, vì vậy chúng tôi sẽ sắp xếp việc gửi đi trong ngày hôm nay.",
+        "en": "We've finished the final content review and received prior approval from the executives, so we'll arrange for it to be sent out today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are generally accurate and professional."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c6b887212844fb95b65f72fdefa8b0f811aabc6113ec0d6c126983ca0aa23c5a",
+    "validated_at": "2026-10-01T01:53:10.841745+00:00"
+  }
+}

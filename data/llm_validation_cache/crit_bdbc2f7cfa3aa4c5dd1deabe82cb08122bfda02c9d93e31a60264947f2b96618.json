@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000095",
+  "term": "契約負債",
+  "overall_decision": "rewrite",
+  "summary_reason": "The Vietnamese definition conflates contract liability (契約負債) with performance obligation (履行義務). Additionally, collocations 2 and 3 use inaccurate verbs ('照合する' directly on the liability, '精算する' instead of derecognition/revenue transfer '取り崩す'/'売上振替'), and Example 2 is repetitive boilerplate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約負債を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing contract liabilities on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "契約負債の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common in month-end closing procedures.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "契約負債を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese accounting practice, you reconcile the balance or ledger records ('契約負債の残高を照合する' or '補助元帳と照合する'), but pairing '照合する' directly with the liability account itself is awkward. Alternatively, pairing with derecognition/revenue transfer ('契約負債を取り崩す') is much more core to this term.",
+      "suggested_text": "契約負債を取り崩す"
+    },
+    {
+      "index": 3,
+      "text": "契約負債を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reimbursements, advances, or settlement of suspense receipts (仮払金・立替金). Under ASBJ Statement No. 29 (Revenue Recognition), contract liabilities are not 'settled/reimbursed' (精算), but rather recognized into revenue as performance obligations are satisfied ('売上へ振り替える' or '収益を認識する').",
+      "suggested_text": "契約負債から売上へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical sentence for month-end reconciliation checks, although the Vietnamese translation requires correction for terminology.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically unnatural and redundant templating ('適正な会計基準...適正に処理いたしました' repeats 適正 twice). It lacks informative accounting context demonstrating how contract liabilities actually behave (e.g., reclassification from prepayments or derecognition upon satisfying performance obligations).",
+      "suggested_ja": "収益認識会計基準に基づき、顧客から受領した前受金を契約負債として計上し、サービスの提供完了に伴い売上へ振り替えました。",
+      "suggested_vi": "Căn cứ theo Chuẩn mực kế toán ghi nhận doanh thu, chúng tôi đã hạch toán số tiền nhận trước từ khách hàng vào nợ phải trả theo hợp đồng và kết chuyển sang doanh thu khi hoàn thành cung cấp dịch vụ.",
+      "suggested_en": "Based on the revenue recognition accounting standards, we recognized customer advances as contract liabilities and transferred them to revenue upon completion of service delivery."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker B's phrase 'すべて適正に整合していることを確認いたしました' is redundant and stilted ('適正に整合' is tautological). Replacing it with natural corporate phrasing improves conversational quality.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、契約負債の計上内容や残高に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán tháng này, nội dung hạch toán và số dư nợ phải trả theo hợp đồng có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the entries or balances of contract liabilities in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "関連する請求書および補助元帳と突き合わせを行い、不整合がないことを確認済みです。",
+        "vi": "Tôi đã đối chiếu với các hóa đơn liên quan và sổ phụ, xác nhận không có điểm bất đồng nào.",
+        "en": "We cross-checked with the relevant invoices and subsidiary ledgers and confirmed there are no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Critical terminology error in Vietnamese: 'nghĩa vụ thực hiện hợp đồng với khách hàng' refers to 'performance obligation' (履行義務), not 'contract liabilities' (契約負債). Under IFRS 15 and Vietnamese accounting terminology, 'contract liability' must be translated as 'Nợ phải trả theo hợp đồng' or 'Nợ phải trả hợp đồng'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6f11dceff7fd129507fcaaa479292c59340ed035d557c6823458e47b4b5aa3cc",
+    "validated_at": "2026-10-01T01:35:20.576637+00:00"
+  }
+}

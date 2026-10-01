@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000059",
+  "term": "セルフメディケーション税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain error in the dialogue treating an individual income tax deduction as a corporate fiscal settlement item ('決算申告'), coupled with templated pleonastic examples. Complete rewrite required to match statutory Japanese income tax rules.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "セルフメディケーション税制を利用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common phrasing among taxpayers and advisors.",
+      "suggested_text": "セルフメディケーション税制を利用する"
+    },
+    {
+      "index": 1,
+      "text": "セルフメディケーション税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise legal/tax terminology for claiming this special medical expense deduction.",
+      "suggested_text": "セルフメディケーション税制の適用を受ける"
+    },
+    {
+      "index": 2,
+      "text": "セルフメディケーション税制を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in personal finance, HR guidance, and tax saving contexts.",
+      "suggested_text": "セルフメディケーション税制を活用する"
+    },
+    {
+      "index": 3,
+      "text": "セルフメディケーション税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrasing when referring to qualified OTC pharmaceutical purchases or eligible individuals.",
+      "suggested_text": "セルフメディケーション税制の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'セルフメディケーション税制の制度' is pleonastic (税制 + 制度), and '地域貢献の観点' is an arbitrary corporate template filler unrelated to OTC medical expense deductions. In corporate HR/payroll, this is introduced under employee health management or year-end adjustment notices.",
+      "suggested_ja": "従業員の健康増進および個人の税負担軽減を支援するため、社内報でセルフメディケーション税制の活用方法を案内した。",
+      "suggested_vi": "Nhằm hỗ trợ nâng cao sức khỏe cho nhân viên và giảm gánh nặng thuế cá nhân, chúng tôi đã hướng dẫn cách tận dụng chế độ thuế tự điều trị y tế (thuốc OTC) trên bản tin nội bộ.",
+      "suggested_en": "To support employee health promotion and reduce individual tax burdens, we provided guidance on utilizing the self-medication tax deduction system in our internal newsletter."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The system is an alternative to standard medical expense deductions (医療費控除) for individual income tax, capped at 88,000 JPY. Sentences should reflect actual tax planning context (choosing between standard medical deduction and OTC deduction).",
+      "suggested_ja": "通常の医療費控除とセルフメディケーション税制のどちらを適用すべきか、対象医薬品の領収書を精査して試算した。",
+      "suggested_vi": "Chúng tôi đã kiểm tra kỹ các hóa đơn thuốc đủ điều kiện và tính toán thử để xem nên áp dụng chính sách giảm trừ chi phí y tế thông thường hay chế độ thuế tự điều trị y tế (thuốc OTC).",
+      "suggested_en": "We scrutinized the receipts for eligible medications and simulated figures to determine whether to claim the standard medical expense deduction or the self-medication tax deduction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe tax domain error. 'セルフメディケーション税制' is strictly an individual income tax deduction (所得税の医療費控除の特例). Corporations cannot claim it in corporate settlement tax returns ('決算申告'). Furthermore, '税理士の確認書' is not a statutory attachment for OTC medical expense deductions.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "確定申告の準備ですが、セルフメディケーション税制と通常の医療費控除のどちらが有利か試算は終わりましたか。",
+        "vi": "Về việc chuẩn bị cho quyết toán thuế thu nhập cá nhân, anh đã tính thử xem việc áp dụng chế độ thuế tự điều trị y tế hay giảm trừ chi phí y tế thông thường có lợi hơn chưa?",
+        "en": "Regarding preparation for the final income tax return, have you finished calculating whether the self-medication tax deduction or the standard medical deduction is more advantageous?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、対象のOTC医薬品の領収書と健診の受診証明書を集計した結果、今回はセルフメディケーション税制を適用した方が控除額が大きくなります。",
+        "vi": "Vâng, sau khi tổng hợp hóa đơn thuốc OTC đủ điều kiện và giấy chứng nhận kiểm tra sức khỏe, khoản khấu trừ sẽ lớn hơn nếu áp dụng chế độ thuế tự điều trị y tế lần này.",
+        "en": "Yes, after tallying the receipts for eligible OTC medications and the health checkup certificates, claiming the self-medication tax deduction yields a higher deduction this year."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example 1 contained duplicate words ('chính sách chính sách'). The terminology is better clarified as 'chế độ thuế tự điều trị y tế (giảm trừ thuế thuốc OTC)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6d0a03baa6d8713a953d25f88d2e4a6dab49a188cf516e90cc7f3ae328b75458",
+    "validated_at": "2026-10-01T01:38:25.481463+00:00"
+  }
+}

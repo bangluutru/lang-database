@@ -1,0 +1,13 @@
+{
+  "term": "みなし仕入率",
+  "current_class": "metric",
+  "decision": "incorrect",
+  "suggested_semantic_class": "tax_rate",
+  "reason": "みなし仕入率は消費税法第37条に基づく簡易課税制度において仕入控除税額を算出するために業種別に法定された適用割合（第1種〜第6種）であり、KPIや財務諸表分析上の指標を表す「metric」ではありません。法定計算率であるため「tax_rate」（または税制に包括するなら「tax_scheme」）が適切です。",
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "semantic_audit_v1",
+    "input_hash": "d124535f963537fa72a97ba263aaa63633d7a03eb497545225057f393e05659d",
+    "validated_at": "2026-10-01T01:20:07.213020+00:00"
+  }
+}

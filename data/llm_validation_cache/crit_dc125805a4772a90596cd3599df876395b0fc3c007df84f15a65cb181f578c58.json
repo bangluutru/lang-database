@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-tax-000006",
+  "term": "課税標準",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are sound, both example sentences and the dialogue suffer from severe domain hallucinations: they treat '課税標準' (tax base) as a general ledger account with accounting entries and balances (計上内容・残高) under accounting standards, rather than as a statutory tax base computed under tax law.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税標準を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, accurate collocation for calculating the tax base."
+    },
+    {
+      "index": 1,
+      "text": "課税標準を算定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legally and technically precise terminology commonly found in Japanese tax law and practice."
+    },
+    {
+      "index": 2,
+      "text": "課税標準を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common practical expression in tax return preparation and auditing."
+    },
+    {
+      "index": 3,
+      "text": "課税標準から控除する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate statutory phrasing when applying deductions to the tax base."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A tax base (課税標準) is a statutory computational figure, not a ledger account with balances (残高) or accounting entries (計上内容).",
+      "suggested_ja": "消費税申告書の作成にあたり、売上台帳をもとに課税標準額を正確に算出します。",
+      "suggested_vi": "Khi lập tờ khai thuế tiêu thụ, chúng tôi tính toán chính xác giá trị tính thuế dựa trên sổ doanh thu.",
+      "suggested_en": "When preparing the consumption tax return, we accurately calculate the tax base amount based on the sales ledger."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Accounting standards (会計基準) govern accounting profit, whereas tax laws govern 課税標準. Stating '会計基準に則り...課税標準を適正に処理いたしました' conflates financial accounting with tax calculation and uses unnatural templated phrasing.",
+      "suggested_ja": "税法に基づき、益金と損金の申告調整を行って課税標準となる所得金額を算定しました。",
+      "suggested_vi": "Căn cứ theo luật thuế, chúng tôi đã điều chỉnh doanh thu tính thuế và chi phí được trừ để xác định thu nhập chịu thuế làm căn cứ tính thuế.",
+      "suggested_en": "In accordance with tax laws, we made tax adjustments to taxable revenue and deductible expenses to determine the taxable income serving as the tax base."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "'課税標準の計上内容' is conceptually incoherent because tax base is derived through tax adjustments rather than booked as ledger line items in monthly financial closings.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "消費税申告に向けた課税標準額の集計状況はいかがですか。",
+        "vi": "Tình hình tổng hợp giá trị tính thuế để chuẩn bị kê khai thuế tiêu thụ thế nào rồi?",
+        "en": "How is the aggregation of the tax base amount coming along for the consumption tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "売上データと税率区分の照合が完了し、課税標準額を確定させたところです。",
+        "vi": "Chúng tôi vừa hoàn tất đối chiếu dữ liệu doanh thu theo từng nhóm thuế suất và đã chốt xong giá trị tính thuế.",
+        "en": "We have finished reconciling sales data by tax rate category and just finalized the tax base amount."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base terms 'Tax base' and 'căn cứ tính thuế / giá trị tính thuế' are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1078885ecd4c9d4220b5a05195fded2adb547c02fa7d6ac968bc7b524e360372",
+    "validated_at": "2026-10-01T01:37:19.550538+00:00"
+  }
+}

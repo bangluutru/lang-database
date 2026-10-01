@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000081",
+  "term": "税額控除限度額",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーション全4件において、「限度額（数値・上限）」と述語（適用する、受ける、上限額を計算する、要件を満たす）の間に著しい意味的・語彙的不整合（重言および主述不一致）が見られ、例文もそれに引きずられて不自然になっているため全面的な修正が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "税額控除限度額を適用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用する」の対象は「税額控除（制度・規定）」であり、「限度額（数値・枠）」そのものを適用する表現は不自然です。",
+      "suggested_text": "税額控除限度額を算定する"
+    },
+    {
+      "index": 1,
+      "text": "税額控除限度額を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「限度額」を受けることはできません（受けるのは「控除の適用」）。述語と目的語が意味的に不整合です。",
+      "suggested_text": "税額控除限度額に達する"
+    },
+    {
+      "index": 2,
+      "text": "税額控除限度額の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「限度額」と「上限額」が重複しており、明らかな同義語重畳（重言）です。",
+      "suggested_text": "税額控除限度額を超過する"
+    },
+    {
+      "index": 3,
+      "text": "税額控除限度額の要件を満たす",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "要件が存在するのは「税額控除（制度）」であり、「限度額（金額）」に対して「要件を満たす」とは言いません。",
+      "suggested_text": "税額控除限度額を使い切る"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「税額控除限度額を適用しました」という述語のコロケーションが不自然です。実務では「限度額まで控除を適用した」「限度額全額を控除した」と表現します。",
+      "suggested_ja": "要件を慎重に確認した上で、今年度の確定申告において税額控除限度額まで全額を控除しました。",
+      "suggested_vi": "Sau khi kiểm tra cẩn thận các điều kiện, chúng tôi đã khấu trừ toàn bộ cho đến mức trần khấu trừ thuế tối đa trong tờ khai quyết toán thuế năm nay.",
+      "suggested_en": "After carefully verifying the requirements, we claimed the full amount up to the maximum allowable tax credit in this fiscal year's tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「税額控除限度額の適用を受ける」は不自然です（「税額控除の適用を受ける」または「限度額の算定根拠を示す」などが自然）。",
+      "suggested_ja": "税額控除限度額の算定根拠を明示するため、明細書を作成して申告書に添付しました。",
+      "suggested_vi": "Để làm rõ căn cứ tính toán mức trần khấu trừ thuế tối đa, chúng tôi đã lập bảng kê chi tiết và đính kèm vào tờ khai.",
+      "suggested_en": "In order to demonstrate the basis for calculating the maximum allowable tax credit, we prepared a schedule and attached it to the tax return."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算申告における税額控除限度額の計算根拠と添付資料の確認という文脈が極めて自然に成立しています。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "79b7c6d861a9ad61302879da6786b71dca123e1b81a4eb46efd48e1bd81aab33",
+    "validated_at": "2026-10-01T01:38:42.645596+00:00"
+  }
+}

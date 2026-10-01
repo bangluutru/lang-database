@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000032",
+  "term": "貯蔵品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an invalid collocation (貯蔵品を精算する), an unnatural AI template example repeating '適正な...適正に', and unnatural phrasing in dialogue turn B ('適正に整合している'). Needs rewriting to reflect authentic accounting operations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "貯蔵品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording unused consumable supplies or stamps as an asset at period end.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "貯蔵品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for verifying the ledger balance of the supplies account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "貯蔵品を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles physical counts with ledger balances (実地棚卸と帳簿を照合する) rather than directly '照合する' the supplies themselves. A more standard, high-frequency professional collocation is 実地棚卸を行う or 費用に振り替える.",
+      "suggested_text": "貯蔵品の実地棚卸を行う"
+    },
+    {
+      "index": 3,
+      "text": "貯蔵品を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, travel expenses (仮払金・経費), or settlement of claims/liabilities, not inventory assets like supplies. When supplies are consumed, they are expensed (費用化する/費用に振り替える).",
+      "suggested_text": "貯蔵品を費用に振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical sentence regarding reconciling book entries and balances at month-end.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "This is a vacuous AI template repeating '適正な...適正に' that lacks accounting reality. For 貯蔵品, unused items like revenue stamps, post cards, or consumables must be inventoried and transferred from expenses to assets at closing.",
+      "suggested_ja": "期末に未使用の切手や印紙などの金券類を実地調査し、費用勘定から貯蔵品へと振り替えました。",
+      "suggested_vi": "Vào cuối kỳ, chúng tôi đã kiểm kê thực tế các loại giấy tờ có giá chưa sử dụng như tem thư, tem lệ phí và kết chuyển từ tài khoản chi phí sang tài khoản vật tư tồn kho.",
+      "suggested_en": "At fiscal year-end, we conducted a physical inspection of unused gift certificates, postage, and revenue stamps, reclassifying them from expense accounts to supplies."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrasing '適正に整合している' is unnatural in business Japanese (should be '整合性が取れている' or '一致している'). Furthermore, the typical operational concern with 貯蔵品 in monthly closing is physical inventory discrepancy versus book ledger.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、貯蔵品の現物と帳簿残高に差異は出ていませんか。",
+        "vi": "Trong đợt quyết toán tháng này, có chênh lệch nào giữa hiện vật và số dư sổ sách của vật tư tồn kho không?",
+        "en": "In this month's monthly closing, are there any discrepancies between the physical count and the book balance of supplies?"
+      },
+      {
+        "speaker": "B",
+        "ja": "実地棚卸の結果と補助元帳を突き合わせましたが、差異なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu kết quả kiểm kê thực tế với sổ phụ, và xác nhận mọi thứ hoàn toàn khớp, không có chênh lệch.",
+        "en": "I cross-checked the physical inventory results against the subsidiary ledger and confirmed that they match without any discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eeda3d63070f6fce7b19f5f375c67aebe7a4f8caabce1d59aea1a194c8929b08",
+    "validated_at": "2026-10-01T01:33:44.475758+00:00"
+  }
+}

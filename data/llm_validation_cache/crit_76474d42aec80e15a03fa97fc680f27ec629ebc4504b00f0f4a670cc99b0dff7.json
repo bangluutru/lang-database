@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000006",
+  "term": "受領書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe template-splicing hallucination: the examples and dialogue mistakenly treat '受領書' (receipt voucher/delivery receipt) as if it were a board meeting convocation notice or executive proposal undergoing drafting and executive review.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "受領書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business collocation for preparing an acknowledgment of receipt.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "受領書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation when submitting receipt slips for internal processing or to a counterparty.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "受領書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Documents like receipts are typically '送付する' or '発行する'; '発送する' is typically reserved for parcels, goods, or mass postal mailings.",
+      "suggested_text": "受領書を送付する"
+    },
+    {
+      "index": 3,
+      "text": "受領書を受領する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Tautological and stylistically awkward phrasing ('受領...受領'). Typically, one uses '受領書を受け取る', '受領書を回収する', or '受領書を発行する'.",
+      "suggested_text": "受領書を回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe corporate governance factual error. Companies dispatch convocation notices (招集通知) or board materials prior to general meetings of shareholders and board meetings, not '受領書' (receipt acknowledgments). This is a hallucinated template blend.",
+      "suggested_ja": "商品の納品完了後、先方の検収印が押された受領書を回収し、経理部へ提出してください。",
+      "suggested_vi": "Sau khi hoàn tất giao hàng, hãy thu lại biên nhận đã được bên đối tác đóng dấu nghiệm thu và nộp cho bộ phận kế toán.",
+      "suggested_en": "Upon completing delivery of the goods, please collect the receipt stamped with the client's inspection seal and submit it to the accounting department."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'受領した受領書' is clumsily repetitive. In internal controls, delivery receipts/acknowledgments are collected from clients upon delivery or received with incoming shipments.",
+      "suggested_ja": "内部統制および取引の証跡として、取引先から回収した受領書は所定の保管期間にわたり厳重に管理されます。",
+      "suggested_vi": "Làm bằng chứng cho kiểm soát nội bộ và giao dịch, biên nhận thu thập từ đối tác được lưu trữ và quản lý nghiêm ngặt trong suốt thời gian bảo quản quy định.",
+      "suggested_en": "As evidence of transactions and internal control, receipts collected from business partners are strictly managed and retained for the prescribed statutory period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Complete contextual absurdity. A '受領書' (proof/acknowledgment of receipt) does not undergo drafting revision ('内容の最終推敲') or executive approval ('役員の事前承認') for an upcoming meeting. The generator mechanically plugged '受領書' into a generic board material preparation template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日納品したサーバー機器一式について、先方からの受領書は届いていますか。",
+        "vi": "Về lô thiết bị máy chủ đã giao hôm trước, biên nhận nhận hàng từ phía đối tác đã về chưa?",
+        "en": "Have we received the delivery receipt from the client for the server equipment delivered the other day?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、先ほど先方の総務担当者様から押印済みの受領書をPDFで受領し、原本も郵送中とのことです。",
+        "vi": "Dạ rồi, lúc nãy tôi đã nhận được bản PDF biên nhận có đóng dấu từ phụ trách tổng vụ của họ, và bản gốc cũng đang được gửi bưu điện.",
+        "en": "Yes, I just received a PDF of the stamped delivery receipt from their general affairs officer, and they mentioned the original is in the mail."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "English translations lazily inserted the raw slash-separated meaning gloss 'receipt of goods / delivery receipt' into full sentences, and Vietnamese reflected the hallucinated AGM board meeting context."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d932fc4e71af24f1cc3779a8386fbda6b575387addb627aa9294911c2c80153d",
+    "validated_at": "2026-10-01T01:41:05.493702+00:00"
+  }
+}

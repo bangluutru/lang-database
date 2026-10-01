@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000088",
+  "term": "法人住民税",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the collocations are solid, both example sentences suffer from awkward phrasing ('適用税率を算出', '税...税負担額') and a translation typo, and the dialogue uses unnatural corporate phrasing ('適正に整合している') with questionable accounting realism for monthly tax accruals.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法人住民税を申告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise tax domain collocation for filing corporate inhabitant tax returns.",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "法人住民税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and common collocation for paying corporate inhabitant tax.",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "法人住民税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Widely used in corporate accounting and tax preparation, though 算定する is also used.",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "法人住民税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate passive legal/tax collocation expressing tax imposition.",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "In Japanese tax practice, tax rates (適用税率) are determined by local tax ordinances and confirmed/applied, not 'calculated' (算出). '課税標準および適用税率を正確に算出し' is unnatural collocation.",
+      "suggested_ja": "課税標準額を正確に算定し、適用税率に基づいて法人住民税の納付手続きを完了しました。",
+      "suggested_vi": "Chúng tôi đã tính toán chính xác số tiền chịu thuế và hoàn tất thủ tục nộp thuế cư trú doanh nghiệp căn cứ theo thuế suất áp dụng trước hạn chót.",
+      "suggested_en": "We accurately calculated the tax base and completed the payment procedures for corporate inhabitant tax based on the applicable tax rate before the due date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "In Japanese, '法人住民税の税負担額' contains redundant repetition of '税'; '法人住民税の負担額' or '法人住民税額' is standard. Furthermore, the Vietnamese translation contains an inadvertent repetition typo ('thuế thuế').",
+      "suggested_ja": "税制改正の内容を踏まえ、当期における法人住民税の負担額への影響を試算いたしました。",
+      "suggested_vi": "Căn cứ nội dung cải cách luật thuế, chúng tôi đã tính thử tác động đối với số tiền thuế cư trú doanh nghiệp phải nộp trong kỳ này.",
+      "suggested_en": "In light of the tax reform, we simulated the impact on the corporate inhabitant tax burden for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is an unnatural, mechanically generated expression in Japanese business communication (usually '整合性が取れている' or '一致している'). Furthermore, in monthly closing (月次決算), corporate inhabitant taxes are usually accrued estimates based on tax computation sheets rather than matched against third-party source documents (証憑書類).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、法人住民税の見積計上額に異常な差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số tiền ước tính thuế cư trú doanh nghiệp đã trích lập có phát sinh chênh lệch bất thường nào không?",
+        "en": "Are there any abnormal variances in the accrued estimate of corporate inhabitant tax in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "税額計算シートと試算表の数値を照合し、問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu số liệu giữa bảng tính thuế và bảng cân đối thử, và xác nhận các số liệu đều khớp nhau thỏa đáng.",
+        "en": "I cross-checked the tax calculation worksheet against the trial balance and confirmed that the numbers reconcile properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example 1 has a duplicated word typo ('thuế thuế')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0210878832bfad63b0fa91979bc52d7deada29d528dbd5a1a9a90797b6d58b16",
+    "validated_at": "2026-10-01T01:38:57.252589+00:00"
+  }
+}

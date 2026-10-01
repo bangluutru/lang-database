@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000073",
+  "term": "配当控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe tax domain error in the dialogue: '配当控除' is exclusively an individual income tax mechanism and does not exist in corporate tax filing ('決算申告'). Collocation 2 also requires adjustment from '上限額' to '控除額' for statutory accuracy.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "配当控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and tax collocation for applying dividend credit.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "配当控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for receiving or claiming the deduction/credit.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "配当控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "配当控除 under Japanese income tax law is calculated based on a fixed rate (e.g., 10% or 5% under 総合課税) rather than having a statutory 'upper limit amount' (上限額). '配当控除額を計算する' or '配当控除の控除額を算出する' is technically accurate.",
+      "suggested_text": "配当控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "配当控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and commonly used in tax advisory and compliance contexts.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and accurate description of applying dividend tax credit in a personal income tax return context.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard administrative phrasing used in tax preparation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In Japanese tax law, '配当控除' (credit for dividends) strictly applies to individual income tax (所得税の確定申告) under aggregate taxation (総合課税). Corporations in their corporate tax return ('決算申告') use '受取配当等の益金不算入' or '所得税額控除'. Using '決算申告における配当控除' is a serious domain error conflating corporate and personal taxation. Furthermore, '税理士の確認書' is awkward phrasing compared to specific documents like '特定口座年間取引報告書' or '支払通知書'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "役員の個人確定申告における配当控除の計算根拠と提出書類は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong căn cứ tính toán và hồ sơ nộp cho khoản khấu trừ thuế cổ tức trong tờ khai thuế TNCN của giám đốc chưa?",
+        "en": "Have you organized the calculation basis and filing documents for the dividend credit on the executive's individual tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、配当金の支払通知書と総合課税を選択した場合の税額試算表を揃えましたので、いつでも確認可能です。",
+        "vi": "Vâng, tôi đã tổng hợp các thông báo chi trả cổ tức và bảng tính thử số thuế khi chọn hình thức tính thuế tổng hợp, sẵn sàng để kiểm tra bất cứ lúc nào.",
+        "en": "Yes, I have compiled the dividend payment notices and the preliminary tax calculation under aggregate taxation, so it is ready for review anytime."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English ('Credit for dividends') and Vietnamese ('khoản khấu trừ thuế cổ tức') are accurate domain translations conforming to official tax terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9b43f9fbaf6f00c5a53c315e29dd12c7882e696f5b49c83a1c8ef7610ab37f25",
+    "validated_at": "2026-10-01T01:38:41.268288+00:00"
+  }
+}

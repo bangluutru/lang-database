@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000075",
+  "term": "政党等寄附金特別控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "The collocations and example sentences are natural and accurate, but the dialogue contains a substantive tax domain error by attributing an individual-only tax credit (政党等寄附金特別控除) to corporate year-end filing (決算申告).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "政党等寄附金特別控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax accounting collocation for applying this special tax credit.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "政党等寄附金特別控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in administrative guidance and tax advisory contexts (often as 適用を受ける).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "政党等寄附金特別控除の上限額を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation regarding calculating the credit cap relative to tax liability.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "政党等寄附金特別控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and compliance phrasing.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and natural; correctly references 確定申告 (individual income tax return).",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects statutory requirements where supporting certificates (寄附金受領証明書) must be attached to the return.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Under Japanese tax law (租税特別措置法第41条の18), 政党等寄附金特別控除 is exclusively an individual income tax credit (所得税の税額控除). It does not apply to corporations, making '決算申告' (corporate year-end filing) factually incorrect. The context should be an individual income tax return (所得税の確定申告) handled by a tax firm or advisory department.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "クライアントの所得税確定申告における政党等寄附金特別控除の明細書と添付書類は確認できましたか。",
+        "vi": "Anh đã kiểm tra bảng kê chi tiết và chứng từ đính kèm cho khoản khấu trừ thuế khi quyên góp cho chính đảng trong tờ khai quyết toán thuế thu nhập cá nhân của khách hàng chưa?",
+        "en": "Have you reviewed the detailed statement and attached documents for the special tax credit for political donations in the client's individual income tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、選挙管理委員会の確認印がある寄附金受領証明書が揃いましたので、控除限度額を再計算した上で提出いたします。",
+        "vi": "Vâng, chúng tôi đã thu thập đủ biên lai nhận tiền quyên góp có dấu xác nhận của Ủy ban Quản lý Bầu cử, nên sẽ tính toán lại mức trần khấu trừ trước khi nộp.",
+        "en": "Yes, we have collected all donation receipts stamped by the Election Administration Commission, so we will recalculate the credit limit before submitting."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f966f7898e6a545d0f3fc8a0678dadb4f7ca97cfa4123864c86e78b637e3a741",
+    "validated_at": "2026-10-01T01:38:41.863825+00:00"
+  }
+}

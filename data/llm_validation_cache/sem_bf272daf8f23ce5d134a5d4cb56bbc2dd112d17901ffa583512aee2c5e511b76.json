@@ -1,0 +1,13 @@
+{
+  "term": "繰越控除",
+  "current_class": "tax_deduction",
+  "decision": "incorrect",
+  "suggested_semantic_class": "tax_loss",
+  "reason": "Under Japanese tax law, 繰越控除 specifically refers to the loss carryforward deduction mechanism (欠損金・純損失の繰越控除). The provided ontology explicitly defines 'tax_loss' as covering loss carryforward and refund of loss carryback, distinguishing it from standard income deductions and tax credits ('tax_deduction').",
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "semantic_audit_v1",
+    "input_hash": "5a790ce487bd386eb97ad9b1a0b353d2d25c6b65fb8628ffebaccd240663cce4",
+    "validated_at": "2026-10-01T01:19:40.574533+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000011",
+  "term": "DDP",
+  "overall_decision": "rewrite",
+  "summary_reason": "One example sentence contains a factual error regarding DDP responsibilities, and the dialogue lacks natural conversational continuity and completeness for the DDP context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "DDPの条件で契約する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 1,
+      "text": "DDPの建値で取引する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "DDPにおける費用負担を取り決める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "DDPにおける危険移転の時点を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "",
+      "suggested_ja": "",
+      "suggested_vi": "",
+      "suggested_en": ""
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under DDP terms, the seller bears all costs and risks, including unloading costs at the port of destination and import duties. The example incorrectly states that the importer bears these costs.",
+      "suggested_ja": "DDP建値での取引に基づき、仕向港での荷揚げ費用と輸入関税は輸出者側で負担します。",
+      "suggested_vi": "Căn cứ giao dịch theo giá DDP, chi phí dỡ hàng tại cảng đích và thuế nhập khẩu do bên xuất khẩu chịu.",
+      "suggested_en": "Based on transactions priced under DDP, unloading costs at the port of destination and import duties are borne by the exporter."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about the 'arrangement status' of DDP, implying the overall process. Speaker B's response focuses only on customs clearance and forwarding agent contact, which is too narrow and doesn't fully address the 'arrangement status' of DDP, which includes delivery to the buyer's premises and duty payment.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本日通関予定の案件ですが、DDPの手配状況はいかがでしょうか。最終的な納品まで問題なく進んでいますか？",
+        "vi": "Về lô hàng dự kiến thông quan hôm nay, tình hình sắp xếp DDP thế nào rồi? Việc giao hàng cuối cùng có tiến triển suôn sẻ không?",
+        "en": "Regarding the shipment scheduled for customs clearance today, what is the status of the DDP arrangements? Is everything progressing smoothly until final delivery?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通関業者と乙仲への連絡は済ませており、書類確認も完了して輸入申告に入っております。関税の支払いも手配済みで、最終的な納品に向けて順調に進んでいます。",
+        "vi": "Vâng, chúng tôi đã liên hệ với công ty thông quan và đại lý giao nhận, việc kiểm tra chứng từ đã hoàn tất và đang trong quá trình khai báo nhập khẩu. Việc thanh toán thuế cũng đã được sắp xếp, và mọi thứ đang tiến triển tốt đẹp cho việc giao hàng cuối cùng.",
+        "en": "Yes, we have contacted the customs broker and forwarding agent, document verification is complete, and we are in the import declaration process. Duty payment has also been arranged, and we are on track for final delivery."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a6d39407768e4c85426d51c1e538f56665f6dde38bab08d9cb7ce92f15d67658",
+    "validated_at": "2026-10-01T01:53:51.601604+00:00"
+  }
+}

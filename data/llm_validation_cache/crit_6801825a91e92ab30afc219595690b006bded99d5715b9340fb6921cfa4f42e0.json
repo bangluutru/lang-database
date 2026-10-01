@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-trade-000149",
+  "term": "LCL貨物",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of how 'LCL貨物' (a physical good/shipping type) interacts with accounting concepts like '計上' and '残高'. The examples and dialogue attempt to treat the cargo itself as an accounting entry, which is semantically incorrect and unnatural in a Japanese business context. The collocations are fine as they describe actions related to the cargo, but the examples and dialogue force an accounting context onto the cargo itself rather than its associated financial transactions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "LCL貨物を手配する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for arranging LCL cargo."
+    },
+    {
+      "index": 1,
+      "text": "LCL貨物に仕分ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for sorting into LCL cargo."
+    },
+    {
+      "index": 2,
+      "text": "LCL貨物として輸送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for transporting as LCL cargo."
+    },
+    {
+      "index": 3,
+      "text": "LCL貨物の運賃を比較する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation for comparing LCL cargo freight charges."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "LCL貨物 is a type of physical cargo, not an accounting entry or balance. It cannot be '計上' (booked/recorded as an accounting entry) or have a '残高' (balance) in an accounting sense. The sentence attempts to apply accounting terms to a physical good, which is a semantic mismatch. The context implies checking physical inventory or shipping records, not accounting ledgers for 'LCL cargo' itself.",
+      "suggested_ja": "月末の帳簿照合において、LCL貨物に関する輸送費や保管料の計上内容、または未払い残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán chi phí vận chuyển hoặc phí lưu kho liên quan đến hàng lẻ đóng ghép chung container (LCL) hoặc số dư chưa thanh toán hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded transportation costs or storage fees related to LCL cargo, or in outstanding balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'LCL貨物を処理する' in an accounting context is unnatural. One 'processes' the costs, revenues, or inventory related to LCL cargo, not the cargo itself as an accounting item. The phrasing 'LCL貨物を適正に処理いたしました' sounds like they processed the physical cargo according to rules, not accounted for it.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてLLCL貨物に関連する費用や収益を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí và doanh thu liên quan đến hàng lẻ đóng ghép chung container (LCL) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the costs and revenues related to LCL cargo in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue suffers from the same semantic mismatch as the examples. 'LCL貨物の計上内容に差異' is not a natural accounting query. One would ask about discrepancies in costs, revenues, or inventory related to LCL cargo, not the cargo itself as an accounting entry. Speaker B's response is also generic and doesn't specifically address the 'LCL cargo' aspect in a meaningful accounting way.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、LCL貨物に関する輸送費や保管料の計上内容に差異は発生していませんか。",
+        "vi": "Trong đợt quyết toán hàng tháng này, có phát sinh chênh lệch nào trong nội dung hạch toán chi phí vận chuyển hoặc phí lưu kho liên quan đến hàng lẻ đóng ghép chung container (LCL) không?",
+        "en": "In this month's monthly closing, have there been any discrepancies in the recorded transportation or storage costs related to LCL cargo?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations are accurate and professional."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "568d3261f6a2ba9762256be7ee70855c363167e1562ac9b6f643cad27b51e040",
+    "validated_at": "2026-10-01T01:56:35.217355+00:00"
+  }
+}

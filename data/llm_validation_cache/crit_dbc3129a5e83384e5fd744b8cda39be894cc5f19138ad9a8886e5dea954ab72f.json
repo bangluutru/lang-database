@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000200",
+  "term": "カントリーリスク",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of 'カントリーリスク' as an accounting item that can be '計上' or have a '残高'. Country risk is a strategic and operational risk, not a financial transaction or balance sheet item. The examples and dialogue reflect this misunderstanding, making them unsuitable for professional learning.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "カントリーリスクを回避する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "カントリーリスクを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "カントリーリスクを管理する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "カントリーリスクを特定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Country risk is not an item that is '計上' (booked/entered) or has a '残高' (balance) in accounting ledgers. It's a qualitative or quantitative assessment, not a financial transaction or account balance.",
+      "suggested_ja": "月末の帳簿照合において、カントリーリスクに関する評価や対応策に漏れがないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có thiếu sót nào trong việc đánh giá hoặc các biện pháp đối phó liên quan đến rủi ro quốc gia không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are any omissions in the assessment or countermeasures related to country risk."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 'カントリーリスクを適正に処理する' in the context of '決算' (closing entries) implies it's an accounting entry, which it is not. Country risk is managed, assessed, and mitigated, but not 'processed' as an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてカントリーリスクへの対応状況を適切に開示いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã công bố tình hình đối phó với rủi ro quốc gia một cách thích hợp trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately disclosed the status of our response to country risk in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats country risk as an accounting entry ('計上内容') that would be reconciled with '証憑書類と補助元帳' (vouchers and sub-ledgers). This is a fundamental misunderstanding of what country risk is in a business context.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次報告で、カントリーリスクの評価に何か変更はありましたか。",
+        "vi": "Trong báo cáo hàng tháng này, có bất kỳ thay đổi nào trong đánh giá rủi ro quốc gia không?",
+        "en": "In this month's monthly report, were there any changes in the country risk assessment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、〇〇国の情勢変化に伴い、一部のプロジェクトでリスク評価を見直しました。詳細は添付資料をご確認ください。",
+        "vi": "Vâng, do sự thay đổi tình hình ở quốc gia XX, chúng tôi đã xem xét lại đánh giá rủi ro cho một số dự án. Vui lòng xem chi tiết trong tài liệu đính kèm.",
+        "en": "Yes, due to changes in the situation in Country XX, we have revised the risk assessment for some projects. Please refer to the attached documents for details."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for the examples and dialogue are accurate given the original Japanese, but the original Japanese itself contains factual errors regarding the nature of 'country risk' in an accounting context. Therefore, the translations would need to be rewritten to reflect the corrected Japanese."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "195dcca737da26028ab943254f86b7779bca8d9122672dfc4e141a3dc43dd5f0",
+    "validated_at": "2026-10-01T01:57:34.126197+00:00"
+  }
+}

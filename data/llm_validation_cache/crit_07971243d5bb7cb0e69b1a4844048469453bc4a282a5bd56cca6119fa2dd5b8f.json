@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000198",
+  "term": "行為計算の否認",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain knowledge error. The AI generated collocations and sentences treating '行為計算の否認' (an anti-tax avoidance enforcement measure by tax authorities) as if it were a voluntary tax deduction/incentive scheme that a company can actively 'utilize'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "行為計算の否認を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「行為計算の否認」は税務当局が租税回避を是正するための対抗規定（法人税法132条等）であり、納税者が優遇措置として「利用」するものではありません。",
+      "suggested_text": "行為計算の否認規定が適用される"
+    },
+    {
+      "index": 1,
+      "text": "行為計算の否認の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "優遇税制の「適用を受ける」のような能動的受給の意味合いで誤用されがちです。税務調査等で受ける不利益処分として表現すべきです。",
+      "suggested_text": "行為計算の否認を受ける"
+    },
+    {
+      "index": 2,
+      "text": "行為計算の否認を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "否認規定は納税者が「活用」できる制度ではなく、税務当局から否認されるリスク要因です。",
+      "suggested_text": "行為計算の否認リスクを検討する"
+    },
+    {
+      "index": 3,
+      "text": "行為計算の否認の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "同族会社等の取引が税務当局による否認の対象となる文脈で頻出する自然な共起表現です。",
+      "suggested_text": "行為計算の否認の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「行為計算の否認」を地域貢献や節税のための優遇税制・控除制度と完全に混同しており、税法上致命的な誤りです。",
+      "suggested_ja": "同族会社間の組織再編にあたっては、税務当局から行為計算の否認を受けないよう、経済的合理性を慎重に検証する必要があります。",
+      "suggested_vi": "Khi tái cơ cấu tổ chức giữa các công ty gia đình, cần phải kiểm chứng cẩn trọng tính hợp lý về mặt kinh tế để tránh bị cơ quan thuế bác bỏ hành vi sắp xếp giao dịch.",
+      "suggested_en": "When restructuring family corporations, it is necessary to carefully verify economic rationality to avoid having transactions disallowed under anti-avoidance rules by the tax authorities."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "控除限度額を試算して能動的に手続きを進めるような制度ではなく、完全なテンプレート誤用です。",
+      "suggested_ja": "実質的な事業目的を欠いた不自然な取引形態は、税務調査において同族会社の行為計算の否認の対象となるリスクがあります。",
+      "suggested_vi": "Hình thức giao dịch bất thường thiếu mục đích kinh doanh thực chất có nguy cơ trở thành đối tượng bị bác bỏ hành vi sắp xếp giao dịch của công ty gia đình trong đợt thanh tra thuế.",
+      "suggested_en": "Unnatural transaction structures lacking substantial business purpose run the risk of falling under the disallowance of acts or calculations of family corporations during tax audits."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "行為計算の否認は申告書に添付して自主提出する書類や計算制度ではありません。組織再編や取引スキームにおける税務否認リスクを顧問税理士と協議する文脈に改める必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "グループ内での資産譲渡スキームですが、税務調査で行為計算の否認を受けるリスクはありませんか。",
+        "vi": "Về phương án chuyển nhượng tài sản trong nội bộ tập đoàn, liệu có rủi ro bị cơ quan thuế bác bỏ giao dịch trong đợt thanh tra không?",
+        "en": "Regarding the intra-group asset transfer scheme, isn't there a risk of it being disallowed by tax authorities under anti-avoidance rules during an audit?"
+      },
+      {
+        "speaker": "B",
+        "ja": "顧問税理士と協議し、単なる租税回避ではなく合理的な事業目的があることを裏付ける資料を準備しています。",
+        "vi": "Chúng tôi đã thảo luận với bên tư vấn thuế và đang chuẩn bị hồ sơ chứng minh mục đích kinh doanh hợp lý chứ không đơn thuần là trốn thuế.",
+        "en": "We consulted with our tax advisor and are preparing documents to substantiate that there is a legitimate business purpose rather than mere tax avoidance."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations (en: Disallowance of acts or calculations of family corporations, vi: bác bỏ hành vi sắp xếp giao dịch nhằm trốn thuế) are fundamentally accurate as legal definitions, although the original examples/collocations distorted the meaning."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3460b410620b978751b0e982d6ba99b10a86b61a7f7cc7dcaaa39650d52d9485",
+    "validated_at": "2026-10-01T01:40:52.961806+00:00"
+  }
+}

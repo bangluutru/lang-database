@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000119",
+  "term": "課税仕入れ",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate suffers from mechanical template reuse and domain-specific factual inaccuracies, including treating a consumption tax category as a general ledger account with a balance ('残高') and attributing it to accounting standards rather than tax law.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税仕入れに区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurately reflects the standard Japanese consumption tax practice of categorizing transactions into taxable purchases.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "課税仕入れを集計する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression used when aggregating taxable purchase figures for tax return preparation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "課税仕入れを判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Directly taking '課税仕入れ' as the direct object of '判定する' is unnatural in professional tax practice; it should evaluate applicability (該非) or category inclusion.",
+      "suggested_text": "課税仕入れの該非を判定する"
+    },
+    {
+      "index": 3,
+      "text": "課税仕入れを計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'課税仕入れ' is a consumption tax law classification rather than an independent general ledger account item. Transactions are booked *as* taxable purchases.",
+      "suggested_text": "課税仕入れとして処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'課税仕入れの残高' is factually unnatural in Japanese tax accounting; taxable purchases do not carry a balance-sheet '残高' (balance), but rather an aggregate amount (集計額/累計額).",
+      "suggested_ja": "月末の税務チェックにおいて、非課税取引が誤って課税仕入れに区分されていないか精査します。",
+      "suggested_vi": "Trong đợt kiểm tra thuế cuối tháng, chúng tôi rà soát kỹ lưỡng xem các giao dịch không chịu thuế có bị phân loại nhầm thành giao dịch mua vào chịu thuế hay không.",
+      "suggested_en": "During the month-end tax review, we carefully check whether non-taxable transactions have been mistakenly classified as taxable purchases."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The sentence is a generic boilerplate with awkward repetition ('適正な...適正に'). Furthermore, '課税仕入れ' is governed by the Consumption Tax Act (消費税法), not accounting standards (会計基準).",
+      "suggested_ja": "消費税の確定申告に向けて、当期に発生した課税仕入れの総額および仕入税額控除の対象額を確定させました。",
+      "suggested_vi": "Để chuẩn bị cho việc quyết toán thuế tiêu dùng, chúng tôi đã xác định tổng số tiền mua vào chịu thuế phát sinh trong kỳ cũng như số thuế được khấu trừ.",
+      "suggested_en": "Ahead of filing the consumption tax return, we finalized the total amount of taxable purchases incurred during the period and the eligible input tax deduction."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question is vague regarding what discrepancy exists, and Speaker B's response contains a redundant tautology ('適正に整合している'). The exchange lacks realistic tax accounting context (such as invoice verification).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の仕訳データについて、課税仕入れの税率区分に誤りはありませんか。",
+        "vi": "Trong dữ liệu định khoản tháng này, việc phân loại thuế suất cho các khoản mua vào chịu thuế có sai sót gì không?",
+        "en": "Are there any errors in the tax rate classification of taxable purchases for this month's journal entries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "適格請求書の記載内容と突合済みで、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu với nội dung trên hóa đơn hợp lệ và xác nhận tất cả đều đã được xử lý đúng quy định.",
+        "en": "I have reconciled them against the qualified invoices and confirmed that everything has been processed properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "'doanh số mua hàng chịu thuế tiêu dùng' is slightly misleading because 'doanh số' refers to sales revenue, not purchases. A more accurate tax translation is 'khoản mua vào chịu thuế (tiêu dùng)' or 'hàng hóa, dịch vụ mua vào chịu thuế'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7bb605a3a318c532c86716a30ff1c72ed7e756db3e3d28a78bbde5584300b655",
+    "validated_at": "2026-10-01T01:39:33.905827+00:00"
+  }
+}

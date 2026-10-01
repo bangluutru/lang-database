@@ -1,0 +1,13 @@
+{
+  "term": "控除対象外消費税額等",
+  "current_class": "tax_deduction",
+  "decision": "incorrect",
+  "suggested_semantic_class": "taxable_income_element",
+  "reason": "控除対象外消費税額等は、仕入税額控除が認められなかった消費税額を指し、税額控除そのもの（tax_deduction）ではありません。法人税法上、損金算入限度額の計算や申告調整（資産計上・繰延消費税額等または当期損金算入）の対象となる税務上の計算要素であるため、taxable_income_elementに分類するのが適切です。",
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "semantic_audit_v1",
+    "input_hash": "50fe88add1d132426c473f2f053cd9d07dbf63314fc4fa06cb1d421cffaa1993",
+    "validated_at": "2026-10-01T01:20:12.145415+00:00"
+  }
+}

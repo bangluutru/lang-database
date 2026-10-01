@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000141",
+  "term": "フォワーダー",
+  "overall_decision": "rewrite",
+  "summary_reason": "The term 'フォワーダー' (freight forwarder) is consistently misused throughout the collocations, examples, and dialogue. It is treated as a meeting or an event rather than an organization. This fundamental semantic misunderstanding makes most of the provided content unnatural and incorrect in a business context. A complete rewrite is needed to reflect the correct usage of 'フォワーダー' as an organization.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "フォワーダーを開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「フォワーダー」は組織名であり、会議やイベントのように「開催する」対象ではない。組織は「設立する」「運営する」など。",
+      "suggested_text": "フォワーダーを選定する"
+    },
+    {
+      "index": 1,
+      "text": "フォワーダーで決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「フォワーダー」は組織名であり、決議を行う主体ではない。決議は会議体や組織の意思決定機関で行われる。",
+      "suggested_text": "フォワーダーと契約を決議する"
+    },
+    {
+      "index": 2,
+      "text": "フォワーダーに報告する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "組織に対して報告することは自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "フォワーダーへ届出書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "組織に対して書類を提出することは自然な表現。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「フォワーダー」は組織名であり、会議体ではないため「招集する」対象ではない。この文脈では「会議」や「株主総会」などが適切。",
+      "suggested_ja": "重要議案の決議を行うため、来週臨時会議を招集する運びとなりました。",
+      "suggested_vi": "Để biểu quyết các nghị quyết quan trọng, tuần sau công ty sẽ tiến hành triệu tập cuộc họp bất thường.",
+      "suggested_en": "To resolve critical proposals, an extraordinary meeting will be convened next week."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「フォワーダー」は組織名であり、会議の場所や主体ではない。会議が行われる場所や会議体を指す言葉が適切。",
+      "suggested_ja": "取締役会において今期の経営方針および予算配分案が原案通り可決されました。",
+      "suggested_vi": "Tại cuộc họp hội đồng quản trị, phương hướng kinh doanh và phương án phân bổ ngân sách kỳ này đã được thông qua như đề xuất ban đầu.",
+      "suggested_en": "At the board meeting, this term's management policy and budget allocation proposal were approved as submitted."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "「フォワーダー」は組織名であり、会議の準備状況を問う対象ではない。この文脈では「会議」や「議題」などが適切。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の会議に向けて、議題の準備状況はどうなっていますか。",
+        "vi": "Tình hình chuẩn bị các nội dung nghị sự cho cuộc họp dự kiến diễn ra vào tuần tới như thế nào rồi?",
+        "en": "Regarding the meeting scheduled for next week, what is the status of the agenda preparation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に発送の手配を行います。",
+        "vi": "Chúng tôi đã hoàn tất việc chỉnh sửa cuối cùng nội dung và cũng đã nhận được sự chấp thuận trước từ các giám đốc điều hành, vì vậy chúng tôi sẽ sắp xếp gửi đi trong ngày hôm nay.",
+        "en": "We have finished the final draft of the content and have also obtained prior approval from the executives, so we will arrange for dispatch today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f6b9269de703419a82adfc75cd9903ca11a7d46b1a8e76fa8b9a51c8c495580a",
+    "validated_at": "2026-10-01T01:56:25.180329+00:00"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-accounting-000200",
+  "term": "意見不表明",
+  "overall_decision": "rewrite",
+  "summary_reason": "会計実務における最重要概念の混同が発生している。意見不表明（Disclaimer of opinion）を適正意見（Clean opinion）と取り違えたテンプレート流し込みにより、例文・対話文が「適正性を担保するために意見不表明を受領した」「問題がないため予定通り意見不表明を受領できる」という致命的な会計事実誤認・論理破綻に陥っている。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "意見不表明を表明する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「不表明（表明しないこと）」を「表明する」とするのは自己矛盾（撞着語法）であり、実務上極めて不自然。「意見不表明とする」が標準的表現。",
+      "suggested_text": "意見不表明とする"
+    },
+    {
+      "index": 1,
+      "text": "意見不表明を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「意見不表明」という行為・判断そのものを直接「受領する」とは言わない。「意見不表明の監査報告書を受領する」または「意見不表明となる」とすべき。",
+      "suggested_text": "意見不表明の監査報告書を受領する"
+    },
+    {
+      "index": 2,
+      "text": "意見不表明を記載する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "意見不表明は記載対象の名詞ではなく結論の状態を指すため、「意見不表明の旨を記載する」とするのが実務上正確。",
+      "suggested_text": "意見不表明の旨を記載する"
+    },
+    {
+      "index": 3,
+      "text": "意見不表明が付される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "監査報告書において意見不表明の処分・判断が下された状態を表す定型的な専門用語コロケーションとして適切。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "致命的な会計事実誤認。「財務諸表が適正に表示されている旨を担保するため」に受領するのは「無限定適正意見」である。意見不表明（Disclaimer of opinion）は監査証拠が入手できず適正性を判断できない場合に監査人が意見を差し控えるものであり、適正性を担保することは絶対にあり得ない。",
+      "suggested_ja": "監査範囲に対する重大な制約があったため、独立監査人より意見不表明の旨が記載された監査報告書を受領いたしました。",
+      "suggested_vi": "Do phạm vi kiểm toán bị giới hạn nghiêm trọng, chúng tôi đã nhận được báo cáo kiểm toán trong đó kiểm toán viên độc lập nêu rõ việc từ chối đưa ra ý kiến.",
+      "suggested_en": "Due to significant limitation on the scope of the audit, we received an audit report stating a disclaimer of opinion from the independent auditor."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "意見不表明は上場企業にとって監理銘柄指定や上場廃止リスクに直結する重大事態であり、ルーチンの開示業務のように「公認会計士による意見不表明を開示しました」と述べるのは文脈・語法ともに不自然。",
+      "suggested_ja": "海外子会社における不正会計疑惑の調査が長引き、十分な監査証拠が得られなかったため、監査報告書において意見不表明が付されることとなりました。",
+      "suggested_vi": "Do cuộc điều tra nghi vấn gian lận kế toán tại công ty con ở nước ngoài kéo dài và không thể thu thập đầy đủ bằng chứng kiểm toán, báo cáo kiểm toán đã bị từ chối đưa ra ý kiến.",
+      "suggested_en": "Because the investigation into suspected accounting irregularities at the overseas subsidiary dragged on and sufficient audit evidence could not be obtained, a disclaimer of opinion was issued in the audit report."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "極めて重大な会計・論理破綻。「重要な指摘事項や未解消の論点はなく、予定通り受領できる」のは「適正意見（無限定適正意見）」である。監査で何の問題もないのに「意見不表明（Disclaimer of opinion）」になることは実務上あり得ず、AIによる機械的テンプレート流し込みの典型例。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "海外子会社の資料提出遅延により、監査人から意見不表明が出されるリスクはありますか。",
+        "vi": "Do việc chậm trễ nộp tài liệu từ công ty con ở nước ngoài, liệu có rủi ro kiểm toán viên sẽ từ chối đưa ra ý kiến không?",
+        "en": "Is there a risk that the auditor will issue a disclaimer of opinion due to delays in document submission from the overseas subsidiary?"
+      },
+      {
+        "speaker": "B",
+        "ja": "監査範囲の制約を理由に意見不表明となるおそれがあるため、至急現地と連携して対応を進めています。",
+        "vi": "Có nguy cơ bị từ chối đưa ra ý kiến do bị giới hạn phạm vi kiểm toán, nên chúng tôi đang khẩn trương phối hợp với phía công ty địa phương để xử lý.",
+        "en": "There is a risk of a disclaimer of opinion due to scope limitation, so we are urgently coordinating with the local office to address it."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "単語としての訳語（Disclaimer of opinion / từ chối đưa ra ý kiến kiểm toán）自体は正しいが、例文・対話文全体のドメイン知識の破綻（適正意見と意見不表明の混同）に起因して文全体の訳文が事実矛盾を起こしている。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "34b5cad93c26ec5bfac203dae9fa38b7363282709ed0f83ee81db8fbcc04c8dc",
+    "validated_at": "2026-10-01T01:37:17.743920+00:00"
+  }
+}

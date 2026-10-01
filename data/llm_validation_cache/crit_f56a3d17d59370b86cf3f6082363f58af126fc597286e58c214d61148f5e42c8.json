@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000114",
+  "term": "グループ通算制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文2件がいずれも別制度（ふるさと納税や個人控除など）の自動生成テンプレートを流用したとみられる重大な事実誤認（「地域貢献」「控除上限額」）および重複表現（「制度の制度」）を含んでおり、法人税制としての信頼性に欠けるため例文の全面差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "グループ通算制度を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "法人税法上の制度に対して「利用する」はやや口語的・日常的すぎます。実務では「導入する」「適用する」または「移行する」が標準的です。",
+      "suggested_text": "グループ通算制度を導入する"
+    },
+    {
+      "index": 1,
+      "text": "グループ通算制度の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務および税法条文に即した極めて自然なコロケーションです。",
+      "suggested_text": ""
+    },
+    {
+      "index": 2,
+      "text": "グループ通算制度を活用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "企業財務・税務戦略の文脈で頻出する自然な表現です。",
+      "suggested_text": ""
+    },
+    {
+      "index": 3,
+      "text": "グループ通算制度の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "適用対象法人（完全子法人など）を論じる際の実務標準フレーズです。",
+      "suggested_text": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "グループ通算制度は100%グループ法人間の損益通算制度であり、「地域貢献」とは何の関係もありません（ふるさと納税等のテンプレート混入）。また「グループ通算制度の制度を活用」と「制度」が重複しており不自然です。",
+      "suggested_ja": "グループ企業間の損益通算による税負担軽減を目的に、当社ではグループ通算制度を導入しました。",
+      "suggested_vi": "Nhằm giảm gánh nặng thuế thông qua việc bù trừ lỗ lãi giữa các công ty trong tập đoàn, công ty chúng tôi đã áp dụng chế độ quyết toán thuế gộp theo tập đoàn.",
+      "suggested_en": "With the objective of reducing the tax burden through offsetting profits and losses among group companies, we introduced the group relief system."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「控除上限額を事前に試算」は寄附金控除等の定型文の流用であり、損益通算や欠損金通算を行うグループ通算制度の実務実態と合致しません。",
+      "suggested_ja": "各連結子会社の損益見通しと税効果への影響を試算した上で、グループ通算制度の適用承認申請手続きを進めました。",
+      "suggested_vi": "Sau khi tính toán thử dự báo lỗ lãi của các công ty con liên kết và ảnh hưởng tới thuế hoãn lại, chúng tôi đã tiến hành thủ tục nộp đơn xin phê duyệt áp dụng chế độ quyết toán thuế gộp theo tập đoàn.",
+      "suggested_en": "After estimating each consolidated subsidiary's profit/loss forecasts and the impact on tax effect accounting, we proceeded with the application process for approval to adopt the group relief system."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "申告期における経理・税務担当者間のやり取りとして論理的整合性があり、自然な会話です。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の訳出（Group relief system / chế độ quyết toán thuế gộp theo tập đoàn）は正確で問題ありません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eb3200466a685759de68a220b9654530d208f088708086b7a5c4e3d4ebc0cb0f",
+    "validated_at": "2026-10-01T01:39:29.252457+00:00"
+  }
+}

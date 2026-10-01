@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000076",
+  "term": "定額減税",
+  "overall_decision": "rewrite",
+  "summary_reason": "「定額減税」の実務的本質（給与源泉徴収・年末調整・確定申告での所得税/住民税控除）を理解せず、法人税の節税策や決算申告用テンプレートを機械的に流用した深刻なドメイン知識エラーが含まれています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "定額減税を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "定額減税は政策的に自動適用・控除される税額控除措置であり、補助金や優遇制度のように主体的に「利用する」とは言いません。",
+      "suggested_text": "定額減税を実施する"
+    },
+    {
+      "index": 1,
+      "text": "定額減税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "納税者側の表現として極めて自然で実務的です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "定額減税を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "定額減税は法令に従って源泉徴収や確定申告で減額されるものであり、企業が戦略的に「活用する」スキームではありません。",
+      "suggested_text": "定額減税を反映する"
+    },
+    {
+      "index": 3,
+      "text": "定額減税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "納税者や扶養親族が対象要件を満たす文脈で頻出する自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "定額減税は所得税・住民税の一律控除措置であり、「節税」や「地域貢献」（ふるさと納税等の混同）のために企業が活用する制度ではありません。根本的な事実誤認および定型文の無理な流用です。ベトナム語訳にも「chính sách chính sách」の重複があります。",
+      "suggested_ja": "6月の給与支払いに向けて、対象となる従業員および扶養親族の定額減税額を算出しました。",
+      "suggested_vi": "Để chuẩn bị cho kỳ chi trả lương tháng 6, chúng tôi đã tính toán số tiền giảm thuế cố định cho nhân viên và người phụ thuộc đủ điều kiện.",
+      "suggested_en": "In preparation for the June payroll, we calculated the fixed-amount tax cut for eligible employees and their dependents."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "定額減税は1人あたり定額（所得税3万円・住民税1万円等）が定められており、「控除上限額を試算して計画的に手続きを進める」という表現は実務実態（源泉徴収事務や年末調整での機械的控除）に合いません。",
+      "suggested_ja": "年末調整において、年間の所得額に基づき定額減税の最終的な控除精算を行いました。",
+      "suggested_vi": "Trong kỳ quyết toán thuế cuối năm, chúng tôi đã thực hiện quyết toán khấu trừ lần cuối đối với khoản giảm thuế cố định dựa trên tổng thu nhập cả năm.",
+      "suggested_en": "During the year-end tax adjustment, we made the final deduction settlement for the fixed-amount tax cut based on annual income."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "定額減税は個人の所得税・住民税に対する措置であり、法人の「決算申告における計算根拠・申告書添付書類」として提出するものではありません。給与計算の実務（月次減税事務）または年末調整の文脈にする必要があります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "6月支給分の給与計算における定額減税の対応準備は順調に進んでいますか。",
+        "vi": "Công tác chuẩn bị khấu trừ thuế định mức cho đợt tính lương tháng 6 có đang tiến triển thuận lợi không?",
+        "en": "Are preparations running smoothly for applying the fixed-amount tax cut to the June payroll?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、扶養親族の確認を終え、給与計算システムへの減税額の反映も完了しております。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc rà soát người phụ thuộc và cập nhật số tiền giảm thuế vào hệ thống tính lương rồi ạ.",
+        "en": "Yes, we have verified the dependents and completed setting the tax reduction amounts in the payroll system."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語例文1において「chính sách chính sách」という単語の重複バグがあり、内容自体も事実誤認に基づいていたため修正が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e84feac68d1401c79b236bbcc6e2b590a81afebacd8210384f6fcc5a5e3ebbfe",
+    "validated_at": "2026-10-01T01:38:44.027629+00:00"
+  }
+}

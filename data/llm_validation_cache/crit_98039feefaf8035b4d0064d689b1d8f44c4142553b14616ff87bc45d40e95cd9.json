@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000033",
+  "term": "代表取締役",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains corporate law inaccuracy regarding the appointment process of a Representative Director (選定 vs 選任), awkward dialogue phrasing, and raw dictionary string dumps in translations.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "代表取締役を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under the Japanese Companies Act (Article 349), representative directors are legally '選定' (selected) by the board of directors, whereas directors generally are '選任' (appointed) by the shareholders' meeting. In formal legal and corporate governance contexts, '代表取締役を選定する' is the accurate term.",
+      "suggested_text": "代表取締役を選定する"
+    },
+    {
+      "index": 1,
+      "text": "代表取締役に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural corporate expression for assuming the post of representative director.",
+      "suggested_text": "代表取締役に就任する"
+    },
+    {
+      "index": 2,
+      "text": "代表取締役に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural workplace Japanese.",
+      "suggested_text": "代表取締役に相談する"
+    },
+    {
+      "index": 3,
+      "text": "代表取締役の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Appropriate high-register business and legal phrasing for executing official duties.",
+      "suggested_text": "代表取締役の職務を遂行する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese corporate law, representative directors of a board-governed company are selected by the Board of Directors following the General Meeting of Shareholders, not directly appointed by shareholder resolution alone. Furthermore, the English and Vietnamese translations mechanically paste the raw dictionary entry with slashes.",
+      "suggested_ja": "定時株主総会直後の取締役会において、新たな代表取締役が選定されました。",
+      "suggested_vi": "Tại cuộc họp Hội đồng quản trị ngay sau Đại hội đồng cổ đông thường niên, Giám đốc đại diện mới đã được bầu chọn.",
+      "suggested_en": "At the Board of Directors meeting immediately following the Annual General Meeting of Shareholders, the new Representative Director was appointed."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is acceptable, but both the Vietnamese and English translations mechanically inject the full raw dictionary string ('Giám đốc đại diện / Tổng giám đốc đại diện theo pháp luật', 'representative director / ceo') instead of fluent, context-appropriate phrasing.",
+      "suggested_ja": "業務執行の適法性を確保するため、監査役は代表取締役と定期的な意見交換会を実施しています。",
+      "suggested_vi": "Nhằm đảm bảo tính hợp pháp trong việc điều hành kinh doanh, các kiểm soát viên tổ chức các buổi trao đổi ý kiến định kỳ với Giám đốc đại diện.",
+      "suggested_en": "To ensure the legality of business execution, the corporate auditors hold regular consultative meetings with the Representative Director."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'代表取締役の準備状況' is awkward Japanese when referring to preparations for a meeting involving the CEO. Speaker B's mention of '発送' (shipping/dispatching) without context (e.g., convocation notice or meeting materials) creates an abrupt and unnatural conversational flow.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会に向けて、代表取締役への事前説明の進捗はいかがですか。",
+        "vi": "Tiến độ báo cáo trước cho Giám đốc đại diện chuẩn bị cho cuộc họp HĐQT tuần tới thế nào rồi?",
+        "en": "How is the progress on the preliminary briefing for the Representative Director ahead of next week's Board of Directors meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "説明資料の最終確認を終え、代表取締役からも了承をいただきましたので、本日中に各役員へ配布いたします。",
+        "vi": "Chúng tôi đã hoàn tất việc rà soát tài liệu giải trình và nhận được sự chấp thuận từ Giám đốc đại diện, nên sẽ phân phát cho các thành viên HĐQT trong ngày hôm nay.",
+        "en": "We have completed the final review of the briefing materials and received approval from the Representative Director, so we will distribute them to all board members today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations in the examples mechanically reused the compound dictionary headword with slashes ('Giám đốc đại diện / Tổng giám đốc...', 'representative director / ceo') rather than natural phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "108804a3ce48337e781f4d324357014bb4091bb9e768e7df76fa12b2b77e69b7",
+    "validated_at": "2026-10-01T01:41:34.548944+00:00"
+  }
+}

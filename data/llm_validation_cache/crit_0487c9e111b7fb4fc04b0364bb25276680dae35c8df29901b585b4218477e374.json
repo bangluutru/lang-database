@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-business-000038",
+  "term": "専務取締役",
+  "overall_decision": "rewrite",
+  "summary_reason": "会社法上の役員選定手続きに関する事実誤認（株主総会で専務を選任としている点）、対話における「専務取締役の準備状況」という不自然な表現、および訳文に辞書定義のスラッシュがそのまま残存している品質欠陥が認められるため。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "専務取締役を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "日本の会社法上、株主総会で選任されるのは「取締役」であり、「専務取締役」等の役職付取締役は取締役会の決議によって「選定」されます。ビジネス実務および法務用語としては「専務取締役に選定する」または「専務取締役に就任する」とするのが正確です。",
+      "suggested_text": "専務取締役に選定する"
+    },
+    {
+      "index": 1,
+      "text": "専務取締役に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "役職への着任を示す極めて一般的かつ自然な共起表現です。"
+    },
+    {
+      "index": 2,
+      "text": "専務取締役に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "社内コミュニケーションにおいて自然に使われる表現です。"
+    },
+    {
+      "index": 3,
+      "text": "専務取締役の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "役員の職務執行に関するビジネス・法務文書として適切なコロケーションです。"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会社法上、株主総会で決議されるのは「取締役の選任」であり、専務などの役職付与は株主総会直後の「取締役会」で行われます。また、英越訳に辞書の対訳スラッシュ（/）がそのまま混入しており学習教材として不適格です。",
+      "suggested_ja": "株主総会終結後の取締役会において、当社の新任専務取締役が正式に選定されました。",
+      "suggested_vi": "Tại cuộc họp Hội đồng quản trị ngay sau Đại hội đồng cổ đông, Phó tổng giám đốc điều hành mới của công ty chúng tôi đã chính thức được bổ nhiệm.",
+      "suggested_en": "At the Board of Directors meeting held after the general shareholders meeting, our new Senior Managing Director was officially appointed."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "日本語の文脈（業務執行の適法性確保）は監査役的でやや違和感がある上、英越訳に定義項目のスラッシュ（/）がそのまま機械的に貼り付けられています。自然な社内統裁の例文に改訂すべきです。",
+      "suggested_ja": "重要案件の意思決定を迅速化するため、専務取締役への事前レクチャーを定期的に行っています。",
+      "suggested_vi": "Để đẩy nhanh việc ra quyết định đối với các dự án trọng điểm, chúng tôi thường xuyên tổ chức các buổi báo cáo tóm tắt trước cho Phó tổng giám đốc điều hành.",
+      "suggested_en": "To expedite decision-making on key issues, we regularly conduct briefing sessions for the Senior Managing Director in advance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "発話Aの「専務取締役の準備状況」は『専務取締役本人を準備する』かのような不自然な日本語です。通常は「専務への事前説明の準備状況」や「専務への報告資料の準備状況」と表現します。発話Bの「発送の手配」も唐突で文脈が繋がっていません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週開催予定の経営会議に向けて、専務への事前説明の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị giải trình trước với Phó tổng giám đốc điều hành cho cuộc họp ban điều hành tuần tới thế nào rồi?",
+        "en": "How is the preparation going for the briefing to the Senior Managing Director ahead of next week's management meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "説明資料の推敲を終え、部長の事前確認も取れましたので、本日午後に専務へご説明する予定です。",
+        "vi": "Tài liệu giải trình đã được hoàn thiện và Trưởng phòng đã xem xét trước, nên dự kiến chiều nay tôi sẽ báo cáo với Phó tổng giám đốc điều hành.",
+        "en": "We have finalized the briefing materials and received prior approval from the department manager, so I plan to brief the Senior Managing Director this afternoon."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "例文の翻訳において、意味欄の複数候補（スラッシュ区切り）がそのままテンプレート的に流し込まれており、自然な単一訳文になっていません。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "627b0cb768d7b79beb50de2410c56d17fbca1e0f189ba3e6028d23199d6ec3f4",
+    "validated_at": "2026-10-01T01:41:39.491004+00:00"
+  }
+}

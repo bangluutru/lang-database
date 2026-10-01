@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000048",
+  "term": "配偶者控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain error in the workplace dialogue conflating corporate tax return filing (決算申告) with individual spousal deduction (配偶者控除). Collocation index 2 also requires adjustment from calculating ceiling to calculating deduction amount.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "配偶者控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and precise tax terminology for applying the spousal deduction.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "配偶者控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression used by individual taxpayers or employees.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "配偶者控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Under Japanese tax law, spousal deduction amounts are fixed tier amounts (e.g., 380,000 yen) dependent on income thresholds, not an adjustable ceiling to calculate. The natural expression is calculating the deduction amount itself.",
+      "suggested_text": "配偶者控除の控除額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "配偶者控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and highly frequent collocation regarding eligibility requirements.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural sentence applicable to personal income tax return filings handled by tax accountants or individual taxpayers.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and realistic for filing individual tax returns with required attachments.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Factual tax error: '決算申告' refers specifically to corporate financial closing and corporate tax returns (法人税申告). Corporations do not have spouses and cannot claim 配偶者控除. In corporate practice, 配偶者控除 is processed during Year-End Tax Adjustment (年末調整) by HR/Payroll or in individual income tax filings.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今年の年末調整における配偶者控除の申告書と添付書類の確認は進んでいますか。",
+        "vi": "Tiến độ kiểm tra tờ khai giảm trừ gia cảnh cho vợ/chồng và chứng từ đính kèm trong đợt quyết toán thuế cuối năm nay thế nào rồi?",
+        "en": "How is the review progressing on the spousal deduction declaration forms and supporting documents for this year's year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、従業員から提出された配偶者の所得要件の確認書類を順次精査しております。",
+        "vi": "Vâng, chúng tôi đang lần lượt rà soát kỹ các chứng từ xác nhận điều kiện thu nhập của vợ/chồng do nhân viên nộp.",
+        "en": "Yes, we are currently reviewing the spouse income verification documents submitted by employees one by one."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations are clear, professional, and faithful to standard tax terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e47a0c99f00b94c4d8caaa06b192e2cef6a3298c602a81dc3a5cd8f485433d71",
+    "validated_at": "2026-10-01T01:38:15.807390+00:00"
+  }
+}

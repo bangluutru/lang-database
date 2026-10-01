@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-business-000177",
+  "term": "テレワーク",
+  "overall_decision": "rewrite",
+  "summary_reason": "CollocationとExample Sentence、Dialogueにおいて、日本語表現の不自然さや会話の不連続性が散見されたため、全体的に修正が必要と判断した。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "テレワークを徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "テレワークを行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "テレワークを習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "テレワークの重要性を共有する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「重要性を共有する」は不自然。通常は「重要性を認識する」や「重要性について共有する」が使われる。",
+      "suggested_text": "テレワークの重要性を認識する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「関係部署への事前のテレワークを徹底しています」という表現が不自然。テレワークは個人が行うものであり、「関係部署へのテレワーク」という言い方はしない。また、「事前のテレワークを徹底する」という表現も意味が不明瞭。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との連携を密にし、テレワークを徹底しています。",
+      "suggested_vi": "Để thúc đẩy dự án diễn ra trôi chảy, chúng tôi tăng cường phối hợp chặt chẽ với các phòng ban liên quan và triệt để thực hiện làm việc từ xa.",
+      "suggested_en": "To facilitate smooth project execution, we are strengthening close collaboration with relevant departments and thoroughly implementing telework."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「迅速なテレワークの習慣付け」という表現が不自然。テレワーク自体を迅速に習慣づけるというよりは、テレワーク環境下での業務遂行を迅速に習慣づける、といった意味合いになるべき。また、「職場全体で求められます」はやや硬すぎる。",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、職場全体でテレワーク環境下での迅速な対応を習慣づける必要があります。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh trong công việc, toàn bộ nơi làm việc cần hình thành thói quen phản ứng nhanh chóng trong môi trường làm việc từ xa.",
+      "suggested_en": "To prevent operational issues beforehand, it is necessary for the entire workplace to establish a habit of prompt response in a telework environment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの質問は「テレワークの徹底状況における課題」について尋ねているが、Bの回答は「情報共有の重要性の再認識」と「迅速な対応の習慣化」であり、直接的な課題解決や現状の課題に対する回答になっていない。テレワークの課題について具体的に答えるべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内におけるテレワークの徹底状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình thực hiện triệt để làm việc từ xa trong phòng ban, có phát sinh vấn đề gì không?",
+        "en": "Regarding the thorough implementation of telework within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、一部のメンバーから情報共有の遅れやコミュニケーション不足が課題として挙がっています。改善策を検討中です。",
+        "vi": "Vâng, một số thành viên đã nêu ra vấn đề về việc chậm trễ trong chia sẻ thông tin và thiếu giao tiếp. Chúng tôi đang xem xét các biện pháp cải thiện.",
+        "en": "Yes, some members have raised issues regarding delays in information sharing and lack of communication. We are currently considering countermeasures."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eac1c85e199079efd319e12333cc42d3a5e3e037e211f9a3ecc91e3ee1b7a3a5",
+    "validated_at": "2026-10-01T01:53:13.519885+00:00"
+  }
+}

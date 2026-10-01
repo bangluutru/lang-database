@@ -1,0 +1,57 @@
+{
+  "entry_id": "jp-pro-trade-000176",
+  "term": "自由貿易協定",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations for '更新する' and '解除する' are unnatural for FTA. '改定する' or '脱退する/破棄する' would be more appropriate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "自由貿易協定を締結する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "自由貿易協定を更新する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "FTAは通常、更新するものではなく、改定するか、新たな協定を締結する。",
+      "suggested_text": "自由貿易協定を改定する"
+    },
+    {
+      "index": 2,
+      "text": "自由貿易協定を解除する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "FTAは「解除する」というより「脱退する」または「破棄する」が自然。",
+      "suggested_text": "自由貿易協定から脱退する"
+    },
+    {
+      "index": 3,
+      "text": "自由貿易協定の条項を確認する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "decision": "pass"
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "d42747abab005c90bef3974118dddd2e6beabcec9978d3694bc6a73667d740c0",
+    "validated_at": "2026-10-01T01:57:00.483544+00:00"
+  }
+}

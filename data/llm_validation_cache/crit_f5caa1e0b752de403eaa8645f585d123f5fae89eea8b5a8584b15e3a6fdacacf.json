@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000132",
+  "term": "商談",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences contain unnatural Japanese expressions, particularly regarding the predicate used with '商談'. The dialogue also lacks natural conversational flow due to a mismatch between the question and answer. Translations reflect these issues, leading to unnatural phrasing in English and Vietnamese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "商談を徹底する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「徹底する」は「商談」という行為そのものには直接適用されず、その内容やプロセスに対して使われることが多い。例えば「情報共有を徹底する」のように、具体的な行動や方針に対して使われる。",
+      "suggested_text": "商談を綿密に行う"
+    },
+    {
+      "index": 1,
+      "text": "商談を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "商談を習慣づける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「商談」は個別の行為であり、それを「習慣づける」という表現は不自然。習慣化されるのは「商談のプロセス」や「商談前の準備」など、より具体的な行動や態度。",
+      "suggested_text": "商談の機会を増やす"
+    },
+    {
+      "index": 3,
+      "text": "商談の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common expression in a business context.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「商談を徹底する」が不自然なため、文全体も不自然。また、「関係部署への事前の商談」という表現も、部署間で行われるのは「協議」や「調整」が一般的で、「商談」は外部との取引交渉を指すことが多い。",
+      "suggested_ja": "円滑なプロジェクト推進を図るため、関係部署との事前協議を綿密に行っています。",
+      "suggested_vi": "Nhằm thúc đẩy dự án diễn ra trôi chảy, chúng tôi đang tiến hành các cuộc thảo luận kỹ lưỡng trước với các phòng ban liên quan.",
+      "suggested_en": "To facilitate smooth project execution, we are conducting thorough prior consultations with relevant departments."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「迅速な商談の習慣付け」が不自然。トラブル防止には「迅速な情報共有」や「迅速な対応」が習慣化されるべきであり、「商談」そのものが習慣化されるという表現は適切ではない。",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、迅速な情報共有と対応が職場全体で習慣化される必要があります。",
+      "suggested_vi": "Để ngăn ngừa rủi ro phát sinh trong công việc, việc chia sẻ thông tin và phản ứng nhanh chóng cần được hình thành thói quen trong toàn cơ quan.",
+      "suggested_en": "To prevent operational issues beforehand, prompt information sharing and response need to be habitualized across the workplace."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker Aの「商談の徹底状況」という問いに対し、Speaker Bが「情報共有の重要性を再認識し、迅速な対応が習慣化されてきている」と答えるのは、直接的な応答になっていない。「商談」と「情報共有」は関連するが、同じではないため、会話のつながりが弱い。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内における商談の進捗管理について、何か課題は生じていませんか。",
+        "vi": "Có vấn đề gì phát sinh trong việc quản lý tiến độ đàm phán thương mại trong phòng ban không?",
+        "en": "Are there any issues arising with the progress management of business negotiations within the department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、商談内容の共有が遅れることが課題でしたが、最近は全メンバーで情報共有の重要性を再認識し、迅速な対応が習慣化されてきています。",
+        "vi": "Vâng, việc chia sẻ nội dung đàm phán bị chậm trễ là một vấn đề, nhưng gần đây tất cả các thành viên đã nhận thức lại tầm quan trọng của việc chia sẻ thông tin và việc phản ứng nhanh chóng đang dần trở thành thói quen.",
+        "en": "Yes, delayed sharing of negotiation details was an issue, but recently all members have re-recognized the importance of information sharing, and prompt responses are becoming habitual."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "「商談を徹底する」や「商談を習慣づける」といった不自然な日本語表現が、そのままベトナム語・英語に直訳されており、結果として不自然な翻訳になっている。特に英語の\"thoroughly conduct prior business negotiation\"や\"establishing a habit of prompt business negotiation\"は不自然。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "09109f15cc3636c750e333335eafeb997f4c98d0bac86f662bbd703e72a03703",
+    "validated_at": "2026-10-01T01:52:41.429438+00:00"
+  }
+}

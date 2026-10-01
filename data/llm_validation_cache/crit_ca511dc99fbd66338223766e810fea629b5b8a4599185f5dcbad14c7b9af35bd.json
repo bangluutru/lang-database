@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000031",
+  "term": "一時所得",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain classification error in dialogue: applying an individual income tax category (一時所得) to corporate monthly closing (月次決算). Additionally, tax statutory formulas in examples misapplied '必要経費' and omitted the required 1/2 aggregation rule.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "一時所得を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard in individual income tax calculation contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "一時所得に区分する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax terminology when classifying taxable income categories under the Income Tax Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "一時所得を合算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable, referring to aggregating income under comprehensive taxation (総合課税).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "一時所得を確定申告書に記載する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Completely natural practical phrasing for preparing individual tax returns.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese Income Tax Act (所得税法第34条), deduction from gross income for 一時所得 is statutorily defined as 'その収入を得るために支出した金額' (expenditures directly incurred to acquire the income), not '必要経費' (which specifically belongs to business, real estate, or miscellaneous income). Teaching '必要経費' for 一時所得 creates conceptual confusion.",
+      "suggested_ja": "満期保険金の総収入金額から支出した保険料および特別控除額を差し引き、一時所得の金額を適正に算出しました。",
+      "suggested_vi": "Khấu trừ số tiền phí bảo hiểm đã chi trả và khoản khấu trừ đặc biệt từ tổng số tiền thu nhập từ bảo hiểm đáo hạn, chúng tôi đã tính toán chính xác số tiền thu nhập bất thường một lần.",
+      "suggested_en": "We properly calculated the amount of temporary income by deducting paid premiums and the special deduction from the gross proceeds of the matured insurance policy."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "In Japanese tax law, 一時所得 is not aggregated in full; statutory calculation mandates aggregating one-half (2分の1) of the net temporary income after the 500,000 yen special deduction. Stating '一時所得を他の所得と合算して' without mentioning the one-half rule is factually misleading for tax professionals.",
+      "suggested_ja": "所得税法上の規定に基づき、一時所得の金額の2分の1を他の所得と合算して総所得金額を計算しました。",
+      "suggested_vi": "Căn cứ vào quy định của Luật Thuế thu nhập cá nhân, chúng tôi cộng gộp một phần hai (1/2) số tiền thu nhập bất thường một lần với các khoản thu nhập khác để tính tổng thu nhập.",
+      "suggested_en": "In accordance with the provisions of the Income Tax Act, we aggregated one-half of the temporary income with other income categories to compute the total income amount."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical tax/accounting conceptual error. '一時所得' (occasional/temporary income) is strictly an individual income tax category (自然人の所得税). Corporations do not generate '一時所得' (corporate windfalls are categorized as 特別利益, 雑収入, etc.), making '今月の月次決算で一時所得の計上' impossible and absurd in a corporate accounting department. The dialogue must be reframed to tax consulting or individual tax return review.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "顧問先の役員様が受け取られた生命保険の一時金ですが、一時所得としての申告準備は進んでいますか。",
+        "vi": "Về khoản tiền bảo hiểm nhân thọ nhận một lần của vị giám đốc công ty khách hàng, việc chuẩn bị kê khai dưới dạng thu nhập bất thường một lần đã tiến triển đến đâu rồi?",
+        "en": "Regarding the lump-sum life insurance payout received by the client's executive, is the preparation for declaring it as temporary income progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、支払調書と既払込保険料の証明書を突合し、特別控除後の課税対象額を算定済みです。",
+        "vi": "Vâng, tôi đã đối chiếu giấy thông báo chi trả với chứng từ phí bảo hiểm đã nộp, và đã tính toán xong số tiền chịu thuế sau khoản khấu trừ đặc biệt.",
+        "en": "Yes, I have cross-checked the payment record against the certificate of premiums paid and already calculated the taxable amount after the special deduction."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "While 'Occasional income' is sometimes used, the official National Tax Agency (NTA) English terminology for 一時所得 is 'Temporary income'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "68cbf214acaf5aa25c755a3f92420566f52a90b65d00d15f3bc3cdf6d36967f4",
+    "validated_at": "2026-10-01T01:37:57.303872+00:00"
+  }
+}

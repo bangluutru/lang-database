@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-accounting-000174",
+  "term": "特別損失",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations and the dialogue treat '特別損失' (a discrete, non-operating P&L item) with templated B/S phrasing ('残高', '照合', '精算'), resulting in unnatural, non-workplace expressions.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "特別損失を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and ubiquitous accounting collocation for recognizing extraordinary losses."
+    },
+    {
+      "index": 1,
+      "text": "特別損失の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As a temporary P&L account representing non-recurring events, '残高' (balance) is unnatural; practitioners refer to '計上額' (amount booked) or '内訳' (breakdown).",
+      "suggested_text": "特別損失の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "特別損失を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One collates/reconciles vouchers or accounts (証憑や明細を照合する), not the financial category itself.",
+      "suggested_text": "特別損失として処理する"
+    },
+    {
+      "index": 3,
+      "text": "特別損失を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Losses cannot be 'settled' or 'reimbursed' (精算する). Extraordinary items are recognized, booked, or disclosed.",
+      "suggested_text": "特別損失を開示する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Routine '月末の帳簿照合' does not typically involve extraordinary losses, and checking the '残高' of an extraordinary loss reflects a templated phrase rather than genuine corporate accounting practice.",
+      "suggested_ja": "固定資産の売却に伴い発生した売却損について、適正な証拠書類に基づき特別損失として計上します。",
+      "suggested_vi": "Đối với khoản lỗ phát sinh do thanh lý tài sản cố định, chúng tôi sẽ hạch toán vào chi phí bất thường dựa trên các chứng từ hợp lệ.",
+      "suggested_en": "Regarding the loss incurred from the sale of fixed assets, we will record it as an extraordinary loss based on proper supporting documentation."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, formal Japanese business sentence commonly found in financial review reports."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Asking if '計上内容に差異は発生していませんか' for an extraordinary loss is stilted and mechanical; extraordinary losses are discrete, specific events (e.g., impairment, natural disaster, asset disposal) requiring review of evidence and board approval, not routine balance discrepancy checks.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期計上を予定している減損損失について、特別損失としての監査法人の合意は得られていますか。",
+        "vi": "Về khoản lỗ giảm giá trị tài sản dự kiến ghi nhận kỳ này, chúng ta đã đạt được sự thống nhất từ công ty kiểm toán để hạch toán vào chi phí bất thường chưa?",
+        "en": "Regarding the impairment loss scheduled to be booked this term, have we obtained the audit firm's agreement to recognize it as an extraordinary loss?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、算定根拠資料の提出を終え、特別損失に含める方針で了承をいただいております。",
+        "vi": "Vâng, chúng tôi đã nộp xong các tài liệu căn cứ tính toán và kiểm toán đã đồng ý với phương án đưa vào chi phí bất thường.",
+        "en": "Yes, we have submitted the supporting calculation documents and received their concurrence to include it under extraordinary losses."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the financial meanings."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fd48b655c48cef7e7fe667785270d07cbd160fe4b0f7beadb94272e0affa94f4",
+    "validated_at": "2026-10-01T01:36:47.876973+00:00"
+  }
+}

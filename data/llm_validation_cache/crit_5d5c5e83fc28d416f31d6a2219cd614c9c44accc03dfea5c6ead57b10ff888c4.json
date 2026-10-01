@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000173",
+  "term": "決定処分",
+  "overall_decision": "rewrite",
+  "summary_reason": "単語の定義自体は正確であるものの、例文・対話・コロケーションの全てが「決定処分」を会計の仕訳科目や帳簿残高と勘違いした機械的テンプレートの産物であり、実務上全く成立していません。全例文および対話の全面書き換えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "決定処分を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「決定処分」は税務署等の行政庁が無申告に対して税額を確定させる行政処分であり、企業が日常業務として「進める」ものではありません。",
+      "suggested_text": "決定処分を受ける"
+    },
+    {
+      "index": 1,
+      "text": "決定処分を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "処分に対して「完了する」という表現は不自然です。処分を行う、あるいは処分を受けるという文脈で使われます。",
+      "suggested_text": "決定処分を下す"
+    },
+    {
+      "index": 2,
+      "text": "決定処分の手順を確認する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "企業の税務実務としては、決定処分に対する不服申立てや取消しを争う文脈で用いられるのが一般的です。",
+      "suggested_text": "決定処分に対する不服申立て"
+    },
+    {
+      "index": 3,
+      "text": "決定処分を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "課税庁側の再検討を指すとしても語法として不自然であり、納税者側からは処分の取消しや効力を争う表現が適切です。",
+      "suggested_text": "決定処分の取消しを求める"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「決定処分の計上内容や残高」という記述は、行政処分を勘定科目や会計残高と混同した致命的なテンプレート的ハレーションです。",
+      "suggested_ja": "申告期限までに申告書を提出しなかったため、税務署から決定処分を受け、追徴税額が確定した。",
+      "suggested_vi": "Do không nộp tờ khai thuế trước thời hạn nên công ty đã nhận quyết định ấn định thuế từ chi cục thuế và số thuế truy thu đã được xác định.",
+      "suggested_en": "Because we failed to file a tax return by the due date, we received a tax determination disposition from the tax office, fixing the amount of additional tax owed."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「当期の決算において決定処分を適正に処理いたしました」は、ペナルティ的な課税行政処分を通常の決算処理プロセスであるかのように誤認した非現実的な文です。",
+      "suggested_ja": "税務署による決定処分の内容に不服がある場合は、処分の通知を受けた日の翌日から起算して3か月以内に再調査の請求を行う必要があります。",
+      "suggested_vi": "Nếu không đồng ý với nội dung quyết định ấn định thuế của cơ quan thuế, cần phải nộp đơn yêu cầu tái điều tra trong vòng 3 tháng kể từ ngày tiếp theo ngày nhận được thông báo quyết định.",
+      "suggested_en": "If you object to the contents of a determination disposition by the tax office, you must request a reinvestigation within three months starting from the day following the date you received notice of the disposition."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "月次決算で決定処分を計上・照合するという設定自体が税務・会計実務上完全に破綻しており、架空の機械的テンプレートの組み合わせになっています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "期限内に申告を完了していなかった子会社に対し、税務署から決定処分が下されたとの連絡がありました。",
+        "vi": "Có thông báo rằng công ty con do không hoàn thành việc nộp tờ khai đúng hạn nên đã bị cơ quan thuế ban hành quyết định ấn định thuế.",
+        "en": "We were informed that the tax office has issued a determination disposition to a subsidiary that failed to file within the deadline."
+      },
+      {
+        "speaker": "B",
+        "ja": "課税標準と算出税額の根拠を至急確認し、不服申立てを行うか直ちに納付するか方針を固めましょう。",
+        "vi": "Hãy nhanh chóng xác minh căn cứ tính thuế và số thuế đã tính, sau đó thống nhất phương hướng khiếu nại hay nộp thuế ngay lập tức.",
+        "en": "Let's immediately verify the tax base and the rationale for the calculated tax, then decide whether to file an objection or pay promptly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語自体の定義訳（国税通則法第25条に基づく無申告時の決定処分）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4076280e9874e2e29c5a08bc7034fcf2621a6f09f2131b7ba9c15d5c64cc036c",
+    "validated_at": "2026-10-01T01:40:30.221407+00:00"
+  }
+}

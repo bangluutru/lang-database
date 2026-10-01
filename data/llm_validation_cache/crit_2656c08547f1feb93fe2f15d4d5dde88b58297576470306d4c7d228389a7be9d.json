@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000084",
+  "term": "契約更新",
+  "overall_decision": "rewrite",
+  "summary_reason": "The examples and dialogue rely on a mechanically forced accounting template where '契約更新' (an administrative/commercial procedure) was nonsensically treated as an accounting line item with ledger balances and journal entries.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約更新を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business collocation for moving contract renewal procedures forward.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "契約更新を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression denoting the completion of a contract renewal.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "契約更新の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business phrasing for reviewing renewal protocols.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "契約更新を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One reviews the contract terms ('更新条件') or reconsider whether to renew ('更新の要否を検討する'), rather than reviewing the renewal itself.",
+      "suggested_text": "契約更新の条件を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'契約更新' (contract renewal) is a legal/administrative event, not an accounting account or journal entry. It cannot have a balance ('残高') or be booked ('計上内容'). This is templated hallucination.",
+      "suggested_ja": "来月末に契約更新を迎える主要取引先に対し、更新条件の提示と意向確認を行います。",
+      "suggested_vi": "Đối với các đối tác lớn sắp đến hạn gia hạn hợp đồng vào cuối tháng tới, chúng tôi sẽ đưa ra các điều kiện gia hạn và xác nhận nguyện vọng của họ.",
+      "suggested_en": "We will present renewal terms and confirm intentions with key clients whose contracts are up for renewal at the end of next month."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Framing '契約更新' as an accounting settlement entry ('会計基準に則り決算において処理') is unnatural. In business and corporate administration, renewal concerns term negotiations, auto-renewal notices, or fee adjustments.",
+      "suggested_ja": "賃貸借契約の契約更新にあたり、更新料の支払い手続きおよび覚書の締結を速やかに進めてください。",
+      "suggested_vi": "Khi gia hạn hợp đồng thuê, xin vui lòng nhanh chóng tiến hành thủ tục thanh toán phí gia hạn và ký kết biên bản ghi nhớ.",
+      "suggested_en": "Regarding the lease contract renewal, please promptly proceed with the renewal fee payment and the execution of the memorandum."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about '計上内容に差異' regarding '契約更新', which makes no sense in real accounting or corporate workflows. Renewal is handled by legal, sales, or procurement, not as an accounting ledger balance reconciliation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "システム保守ベンダーとの契約更新の期限が迫っていますが、進捗はいかがでしょうか。",
+        "vi": "Hạn gia hạn hợp đồng với nhà cung cấp dịch vụ bảo trì hệ thống đang đến gần, tiến độ thế nào rồi?",
+        "en": "The deadline for the contract renewal with the system maintenance vendor is approaching. How is the progress?"
+      },
+      {
+        "speaker": "B",
+        "ja": "先方と保守費用の見直しについて合意が取れましたので、本日中に更新契約書を回覧いたします。",
+        "vi": "Chúng tôi đã đạt được thỏa thuận với đối tác về việc điều chỉnh phí bảo trì, nên tôi sẽ trình ký hợp đồng gia hạn trong ngày hôm nay.",
+        "en": "We reached an agreement with them regarding the revision of maintenance fees, so I will circulate the renewal agreement for approval today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations are correct."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f75d168a3563d5d63387db16168b3a357730db87053534f52ac2ce3410f3344e",
+    "validated_at": "2026-10-01T01:42:21.387749+00:00"
+  }
+}

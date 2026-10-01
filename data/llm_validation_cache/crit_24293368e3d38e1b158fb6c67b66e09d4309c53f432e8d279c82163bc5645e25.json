@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-accounting-000066",
+  "term": "破産更生債権等",
+  "overall_decision": "rewrite",
+  "summary_reason": "The content suffers from generic synthetic templating. '破産更生債権等' is a highly technical balance sheet category requiring realistic accounting context (reclassification from trade receivables upon insolvency and setting bad debt allowances against uncollateralized balances) rather than generic month-end reconciliation boilerplate.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "破産更生債権等を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in accounting practice when recording or recognizing claims in bankruptcy on the balance sheet, though '破産更生債権等に振り替える' is often more specific."
+    },
+    {
+      "index": 1,
+      "text": "破産更生債権等の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard audit/accounting check collocation."
+    },
+    {
+      "index": 2,
+      "text": "破産更生債権等を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles balances or ledger details ('残高を照合する' / '内訳を照合する'), not the claim category itself directly.",
+      "suggested_text": "破産更生債権等に振り替える"
+    },
+    {
+      "index": 3,
+      "text": "破産更生債権等を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' (to settle accounts/expenses) is incorrect for defaulted or bankrupt claims. The standard corporate/accounting actions are writing off ('貸倒償却する') or provisioning ('引当金を計上する').",
+      "suggested_text": "破産更生債権等を貸倒償却する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically templated sentence ('月末の帳簿照合において...'). 破産更生債権等 arises from legal insolvency procedures of specific debtors, not routine month-end discrepancy reconciliation.",
+      "suggested_ja": "取引先の民事再生手続開始の申立てを受け、売掛金全額を破産更生債権等へ振り替えました。",
+      "suggested_vi": "Tiếp nhận đơn yêu cầu mở thủ tục phục hồi dân sự của đối tác, chúng tôi đã chuyển toàn bộ khoản phải thu khách hàng sang nợ phải thu khó đòi bị phá sản / tái cơ cấu.",
+      "suggested_en": "Following the business partner's petition for civil rehabilitation proceedings, we reclassified the entire accounts receivable to claims provable in bankruptcy and reorganization."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Excessively vague AI template repeating '適正な...適正に'. Lacks real accounting substance.",
+      "suggested_ja": "当期に発生した破産更生債権等については、担保処分見込額を控除した残額全額に対し貸倒引当金を計上しました。",
+      "suggested_vi": "Đối với các khoản nợ phải thu khó đòi bị phá sản / tái cơ cấu phát sinh trong kỳ, chúng tôi đã trích lập dự phòng nợ phải thu khó đòi cho toàn bộ số dư sau khi trừ đi giá trị ước tính thu hồi từ xử lý tài sản bảo đảm.",
+      "suggested_en": "For claims provable in bankruptcy that arose during the current fiscal year, an allowance for doubtful accounts was recognized for the entire remaining amount after deducting the estimated recoverable amount from collateral."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The exchange sounds like a generic copy-paste ledger reconciliation dialogue. Real accounting conversations about 破産更生債権等 center on debtor solvency status, collateral valuation, and bad debt provisioning.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "民事再生手続に入ったA社向けの債権ですが、破産更生債権等への振替処理は完了していますか。",
+        "vi": "Về khoản nợ đối với công ty A đã bước vào thủ tục phục hồi dân sự, việc hạch toán kết chuyển sang nợ phải thu khó đòi bị phá sản / tái cơ cấu đã hoàn tất chưa?",
+        "en": "Regarding our claims against Company A, which has entered civil rehabilitation proceedings, has the reclassification to claims provable in bankruptcy been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、破産更生債権等へ振り替えた上で、担保回収見込額を除く全額について貸倒引当金を手当て済みです。",
+        "vi": "Vâng, sau khi kết chuyển sang nợ phá sản / tái cơ cấu, chúng tôi đã trích lập toàn bộ dự phòng nợ khó đòi cho phần số dư ngoài khoản dự kiến thu hồi từ bảo đảm.",
+        "en": "Yes, after reclassifying them to claims provable in bankruptcy, we have already provided an allowance for doubtful accounts for the full balance excluding the estimated recovery from collateral."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base definitions in English and Vietnamese are accurate for financial reporting standards."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "5e54b0a7b41e090cb297d1e2975ce5e1ebd177b85cee4f29551ff2bed707407c",
+    "validated_at": "2026-10-01T01:34:49.209994+00:00"
+  }
+}

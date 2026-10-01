@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000193",
+  "term": "タックスヘイブン対策税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文およびコロケーションにおいて、タックスヘイブン対策税制（規制・合算課税）を優遇税制・税額控除制度と混同したAI定型句（『活用する』『節税および地域貢献』『控除上限額』）が混入しており、国際税務の観点から根本的な書き直しが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "タックスヘイブン対策税制を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "タックスヘイブン対策税制（CFC税制）は租税回避を防止・規制するペナルティ的・合算課税規定であり、企業が優遇税制のように「利用」するものではない。",
+      "suggested_text": "タックスヘイブン対策税制の適用除外要件を検討する"
+    },
+    {
+      "index": 1,
+      "text": "タックスヘイブン対策税制の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法令文や実務解説において『～の適用を受ける』という表現は合算課税対象となる文脈で実際に用いられる。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "タックスヘイブン対策税制を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "規制・合算課税税制であるため、優遇措置のように「活用する」という能動的使途の述語は重大な事実誤認（ドメインエラー）である。",
+      "suggested_text": "タックスヘイブン対策税制への抵触を回避する"
+    },
+    {
+      "index": 3,
+      "text": "タックスヘイブン対策税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "子会社や所得が税制の対象になることを示す標準的かつ極めて自然なコロケーション。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献」「制度を活用」とあるが、タックスヘイブン対策税制は過度な節税・租税回避を防ぐ規制であり、優遇税制やふるさと納税等のテンプレートが混入した致命的な誤り。",
+      "suggested_ja": "シンガポール子会社の設立に際しては、タックスヘイブン対策税制の適用除外要件を満たしているかを慎重に検討する必要がある。",
+      "suggested_vi": "Khi thành lập công ty con tại Singapore, chúng tôi cần xem xét cẩn trọng xem có đáp ứng đủ các điều kiện miễn trừ áp dụng của luật thuế chống thiên đường thuế (CFC) hay không.",
+      "suggested_en": "When establishing a Singapore subsidiary, it is necessary to carefully examine whether it meets the exemption criteria under the anti-tax haven rules (CFC rules)."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "タックスヘイブン対策税制は外国子会社の所得を親会社の所得に合算課税する制度であり、「控除上限額」は存在しない。寄附金控除や税額控除のテンプレート誤認。",
+      "suggested_ja": "現地法人の実体要件が否認された場合、タックスヘイブン対策税制に基づき国内親会社で合算課税されるリスクがあります。",
+      "suggested_vi": "Nếu các yêu cầu về tính hoạt động thực chất của pháp nhân sở tại bị bác bỏ, sẽ có nguy cơ bị tính thuế gộp vào công ty mẹ tại Nhật Bản theo luật thuế chống thiên đường thuế (CFC).",
+      "suggested_en": "If the economic substance requirements of the local subsidiary are rejected, there is a risk of aggregated taxation at the domestic parent company level under the anti-tax haven rules."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "税務申告における合算課税計算の別表添付や根拠資料の準備状況を確認・報告する会話として、実務上極めて自然で専門的にも正確である。",
+    "suggested_turns": []
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語対訳自体は的確にCFCルール（外国子会社合算税制）を表現できている。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "af1758950e6147a37c9e209a910826210bb9c21411c42ca160e805bb6b2c1004",
+    "validated_at": "2026-10-01T01:40:48.856818+00:00"
+  }
+}

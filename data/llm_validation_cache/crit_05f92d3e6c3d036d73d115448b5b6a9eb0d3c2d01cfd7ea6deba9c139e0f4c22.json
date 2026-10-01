@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000098",
+  "term": "試用期間",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain confusion: The candidate mechanically applied generic B2B contract templates ('先方法務部', '損害賠償条項', '相手方から提示された') to '試用期間', which is strictly an employment/labor law concept in Japanese business.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "試用期間を設ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural HR/legal expression for establishing a probationary period.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "試用期間に違反する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A time frame/status (期間) cannot be 'violated' (違反する). One violates work regulations or contract terms during probation, or one extends/completes probation.",
+      "suggested_text": "試用期間を延長する"
+    },
+    {
+      "index": 2,
+      "text": "試用期間を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression referring to applying a probationary period to newly hired personnel.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "試用期間を精査する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not 'scrutinize' (精査する) a probation period itself; authentic business usage pairs with completion, length, or conditions.",
+      "suggested_text": "試用期間が満了する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Templated B2B phrasing applied to HR. In Japanese corporate practice, '試用期間' is specified in employment agreements (雇用契約書) or work regulations (就業規則) with a specific duration (e.g., 3 months).",
+      "suggested_ja": "採用後のミスマッチを防ぐため、雇用契約書に3か月間の試用期間を設けています。",
+      "suggested_vi": "Để phòng ngừa việc không phù hợp sau khi tuyển dụng, chúng tôi quy định thời gian thử việc 3 tháng trong hợp đồng lao động.",
+      "suggested_en": "To prevent mismatches after hiring, we specify a three-month probationary period in the employment contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'試用期間' is strictly an employment concept set by the employer. An employee/candidate is not referred to as '相手方' proposing terms to a company's legal counsel.",
+      "suggested_ja": "就業規則の改定に伴い、顧問弁護士の助言を受けて試用期間に関する解雇事由の条項を見直しました。",
+      "suggested_vi": "Cùng với việc sửa đổi nội quy lao động, chúng tôi đã rà soát lại điều khoản về lý do sa thải trong thời gian thử việc theo tư vấn của luật sư cố vấn.",
+      "suggested_en": "In conjunction with revising the work regulations, we reviewed the provisions regarding dismissal grounds during the probationary period based on advice from our legal counsel."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical domain error: '試用期間' belongs to HR/labor law. Mentioning '先方法務部' (counterparty legal dept) and '損害賠償条項' (strictly restricted under Article 16 of the Labor Standards Act) shows a generic commercial contract template was incorrectly forced onto an HR term.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月で新任マネージャーの試用期間が満了しますが、本採用の評価はいかがですか。",
+        "vi": "Tháng này sẽ kết thúc thời gian thử việc của quản lý mới, việc đánh giá tuyển dụng chính thức thế nào rồi?",
+        "en": "The new manager's probationary period ends this month; how is the evaluation for full employment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "勤務実績・適性ともに問題ありませんので、人事部へ本採用の手続きを進めます。",
+        "vi": "Cả kết quả làm việc lẫn tính phù hợp đều không có vấn đề gì, nên tôi sẽ tiến hành thủ tục tuyển dụng chính thức với phòng nhân sự.",
+        "en": "Both work performance and suitability are sound, so I will proceed with the regular employment procedures with HR."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "English in Example 1 lacked an article ('explicit probationary period'); Vietnamese and English both suffered from the domain mismatch of treating probation as a B2B vendor contract clause."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a16b605507ce4266ff2f6d00bc1c8c3f722a35dd0e1811c611eb0fdc2fb44241",
+    "validated_at": "2026-10-01T01:42:35.482588+00:00"
+  }
+}

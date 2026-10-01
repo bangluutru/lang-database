@@ -1,0 +1,89 @@
+{
+  "entry_id": "jp-pro-accounting-000045",
+  "term": "流動資産合計",
+  "overall_decision": "rewrite",
+  "summary_reason": "「流動資産合計」は財務諸表の集計区分（サブトータル）であるにもかかわらず、「計上する」「精算する」「計上内容」といった個別取引や記帳勘定にしか使えない動詞・名詞と機械的に連結されており、会計実務表現として破綻しています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "流動資産合計を計上する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「流動資産合計」は各勘定科目の集計区分・集計行であり、取引や勘定科目ではないため「計上する」の対象になりません。",
+      "suggested_text": "流動資産合計を算出する"
+    },
+    {
+      "index": 1,
+      "text": "流動資産合計の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「残高」は各勘定科目に用いるのが一般的であり、合計欄に対しては「金額」または「推移」を目的語とするのが自然です。",
+      "suggested_text": "流動資産合計の金額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "流動資産合計を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "試算表と貸借対照表の集計値や内訳合計を突き合わせる実務表現として成立します。"
+    },
+    {
+      "index": 3,
+      "text": "流動資産合計を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "資産の集計区分である「流動資産合計」そのものを「精算する（金銭等の決着をつける）」ことは会計実務上不可能です。",
+      "suggested_text": "流動資産合計の内訳を精査する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "集計値である「流動資産合計」に対して「計上内容」とするコロケーションが不自然です。各科目の計上や内訳残高の照合とする必要があります。",
+      "suggested_ja": "月末の帳簿照合において、流動資産合計の内訳や試算表との金額に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có chênh lệch nào giữa chi tiết tổng tài sản ngắn hạn và số liệu trên bảng cân đối thử hay không.",
+      "suggested_en": "During month-end reconciliation, we carefully examine whether there are discrepancies in the breakdown of total current assets against the trial balance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜適正に処理いたしました」という定型テンプレート文であり、かつ「流動資産合計を処理する」という表現自体が実務上極めて不自然です。",
+      "suggested_ja": "売掛金や棚卸資産の期末評価を見直した結果、当期の流動資産合計は前年同期比で5%増加しました。",
+      "suggested_vi": "Kết quả sau khi đánh giá lại các khoản phải thu và hàng tồn kho cuối kỳ cho thấy tổng tài sản ngắn hạn kỳ này đã tăng 5% so với cùng kỳ năm trước.",
+      "suggested_en": "As a result of reviewing the period-end valuation of accounts receivable and inventories, total current assets for this term increased by 5% year-on-year."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "集計項目である「流動資産合計」の計上内容という表現が不自然であり、また貸借対照表の合計レベルの確認に対して「証憑書類と照合した」と答えるのは監査・経理実務の粒度として噛み合っていません（合計値の確認は前月比増減分析や試算表照合で行われます）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、流動資産合計が前月比で大きく減少していますが、主な要因は何ですか。",
+        "vi": "Trong kỳ quyết toán tháng này, tổng tài sản ngắn hạn giảm mạnh so với tháng trước, nguyên nhân chính là gì vậy?",
+        "en": "In this month's financial close, total current assets decreased significantly compared to last month. What is the primary cause?"
+      },
+      {
+        "speaker": "B",
+        "ja": "大口の買掛金決済に伴い現預金が減少したことと、売掛金の回収が進んだことが主な要因です。",
+        "vi": "Nguyên nhân chủ yếu là do tiền và tương đương tiền giảm sau khi thanh toán khoản phải trả người bán lớn, cùng với việc thu hồi nợ phải thu diễn ra thuận lợi.",
+        "en": "The main factors are a decrease in cash and deposits due to the settlement of large accounts payable, along with progress in collecting receivables."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "単語の基本訳語（Total current assets / tổng tài sản ngắn hạn）は正確です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f9fbb6767dd6ed213f42ebfc38bae3f0c44dd4d713a36387d2ef7072288b48e1",
+    "validated_at": "2026-10-01T01:34:30.441837+00:00"
+  }
+}

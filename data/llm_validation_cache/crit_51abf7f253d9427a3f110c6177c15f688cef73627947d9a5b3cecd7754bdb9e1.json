@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000031",
+  "term": "仕掛品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an invalid accounting collocation (仕掛品を精算する), generic AI template repetition in Example 1, and unnatural phrasing in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "仕掛品を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recording work-in-process assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "仕掛品の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and audit practice for reviewing work-in-process ledger balance.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "仕掛品を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles account balances or matches physical WIP with cost sheets; '仕掛品を棚卸する' or '仕掛品残高を照合する' is far more natural.",
+      "suggested_text": "仕掛品を棚卸する"
+    },
+    {
+      "index": 3,
+      "text": "仕掛品を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reimbursements and advances (e.g. 仮払金), not inventory assets. WIP is transferred to finished goods (製品へ振り替える) or valued (評価する).",
+      "suggested_text": "仕掛品を製品へ振り替える"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic month-end closing context accurately describing reconciliation of WIP entries and balances.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Hallmark AI boilerplate repetition ('適正な会計基準...適正に処理いたしました'). Also '適正な会計基準' is unidiomatic; standard usage is '企業会計基準'. It lacks concrete cost accounting substance.",
+      "suggested_ja": "期末棚卸の実施に伴い、製造現場の進捗率を反映して仕掛品の残高を適正に評価しました。",
+      "suggested_vi": "Cùng với việc kiểm kê cuối kỳ, chúng tôi đã đánh giá chính xác số dư sản phẩm dở dang dựa trên tiến độ thực tế tại xưởng sản xuất.",
+      "suggested_en": "Following the period-end inventory count, we properly valued the work-in-process balance reflecting the progress rate on the shop floor."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is pleonastic and unnatural Japanese. Furthermore, WIP reconciliation typically involves matching cost sheets (原価計算表) or physical inventory with the ledger, rather than generic '証憑書類'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、仕掛品の残高に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư sản phẩm dở dang có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies in the work-in-process balance for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "製造指図書ごとの原価計算表と総勘定元帳を突き合わせ、差異なく整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu bảng tính giá thành theo từng lệnh sản xuất với sổ cái chung và xác nhận các số liệu đều khớp, không có chênh lệch.",
+        "en": "I matched the job cost sheets against the general ledger and confirmed that everything reconciles with no discrepancies."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of core terminology are accurate; rewrites are required for Japanese fluency and technical precision."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fd8494f757e30406263db9fc72e132e44df973727d4713f49aa2aeb8fcb0de28",
+    "validated_at": "2026-10-01T01:33:43.658928+00:00"
+  }
+}

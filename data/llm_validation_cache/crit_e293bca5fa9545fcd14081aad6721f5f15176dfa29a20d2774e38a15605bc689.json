@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000190",
+  "term": "直行直帰",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the term and collocations are generally acceptable, the example sentences and dialogue lack naturalness and authenticity for a professional Japanese context. The translations also suffer from over-specificity and could be improved for conciseness and accuracy.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "直行直帰を徹底する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 1,
+      "text": "直行直帰を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 2,
+      "text": "直行直帰を習慣づける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    },
+    {
+      "index": 3,
+      "text": "直行直帰の重要性を共有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The Japanese sentence is grammatically correct but sounds unnatural and overly formal/stilted for a typical business context. '関係部署への事前の直行直帰を徹底しています' is awkward. '直行直帰' is usually about an individual's work style, not something 'thoroughly conducted with departments'. The Vietnamese and English translations also reflect this awkwardness.",
+      "suggested_ja": "円滑なプロジェクト推進のため、関係部署との連携を密にし、直行直帰の運用を徹底しています。",
+      "suggested_vi": "Để thúc đẩy dự án diễn ra suôn sẻ, chúng tôi tăng cường hợp tác với các phòng ban liên quan và triệt để thực hiện việc đi thẳng đến/về từ địa điểm làm việc.",
+      "suggested_en": "To facilitate smooth project execution, we are strengthening collaboration with relevant departments and thoroughly implementing direct travel to/from client sites."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrasing '迅速な直行直帰の習慣付けが職場全体で求められます' is grammatically acceptable but sounds somewhat forced and less natural than it could be. '迅速な直行直帰' is a bit odd; '直行直帰' itself implies efficiency. The '習慣付け' part is fine, but the overall construction feels a little clunky.",
+      "suggested_ja": "業務上のトラブルを未然に防ぐため、職場全体で直行直帰を適切に運用し、迅速な対応を習慣づける必要があります。",
+      "suggested_vi": "Để ngăn ngừa các sự cố trong công việc, toàn bộ nơi làm việc cần vận dụng việc đi thẳng đến/về từ địa điểm làm việc một cách thích hợp và tạo thói quen phản ứng nhanh chóng.",
+      "suggested_en": "To prevent operational issues, it is necessary for the entire workplace to appropriately implement direct travel to/from client sites and establish a habit of prompt response."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker B's response does not directly address Speaker A's question about '課題' (issues/challenges) regarding the thoroughness of direct travel. Instead, B talks about 're-recognizing the importance of information sharing' and 'habitual quick response,' which is a non-sequitur. It avoids the question about problems.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "部署内における直行直帰の徹底状況について、何か課題は生じていませんか。",
+        "vi": "Về tình hình thực hiện triệt để việc đi thẳng đến/về từ địa điểm làm việc trong phòng ban, có phát sinh vấn đề gì không?",
+        "en": "Regarding the thorough implementation of direct travel to/from client sites within the department, have any issues arisen?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、当初は情報共有の遅れが課題でしたが、現在は全メンバーで重要性を再認識し、報告体制を強化したことで、大きな問題は生じていません。",
+        "vi": "Vâng, ban đầu việc chậm trễ trong chia sẻ thông tin là một vấn đề, nhưng hiện tại, tất cả các thành viên đã nhận thức lại tầm quan trọng và tăng cường hệ thống báo cáo, nên không có vấn đề lớn nào phát sinh.",
+        "en": "Yes, initially, delays in information sharing were an issue, but now, all members have re-recognized its importance and strengthened the reporting system, so no major problems have arisen."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese translation for '直行直帰' as 'đi thẳng đến địa điểm gặp đối tác hoặc về thẳng nhà' is too long and specific. 'Địa điểm gặp đối tác' is not always the case; it could be a branch office or another work site. A more general and concise translation is needed. The English translation 'direct travel to/from client site' also has the same specificity issue. 'Client site' is not always accurate; it could be any work location other than the main office."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e06add6454f478b4fdd3720f3b08b5930f8caadb2029a797e24fabe3f6506a97",
+    "validated_at": "2026-10-01T01:53:31.931005+00:00"
+  }
+}

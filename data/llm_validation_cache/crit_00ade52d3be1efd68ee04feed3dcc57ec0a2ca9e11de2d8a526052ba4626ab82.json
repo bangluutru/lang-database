@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000158",
+  "term": "租税公課",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations contained semantic misfires ('租税公課を精算する'), Example 1 was an empty repetitive template ('適正な...適正に'), and Dialogue B used unnatural redundant phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "租税公課を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking taxes and public charges under SG&A.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "租税公課の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when checking the trial balance or ledger for the taxes and dues expense account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "租税公課を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles the breakdown or supporting documents of the account, not the abstract expense category itself directly as an object of 照合する.",
+      "suggested_text": "租税公課の内訳を確認する"
+    },
+    {
+      "index": 3,
+      "text": "租税公課を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算 applies to advances, travel expenses, or unsettled claims (e.g., 経費精算、立替金精算). Taxes and dues are recognized/paid as expenses, not settled via 精算.",
+      "suggested_text": "租税公課として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable practical accounting usage for month-end balance reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Vacuous template repeating '適正な...適正に処理いたしました'. A high-value corporate accounting sentence should illustrate practical domain rules, such as distinguishing corporate income taxes from SG&A taxes and dues.",
+      "suggested_ja": "固定資産税や印紙税は販管費の租税公課として処理しますが、法人税等は別掲勘定となるため注意してください。",
+      "suggested_vi": "Thuế tài sản cố định và thuế trước bạ/tem được hạch toán vào mục thuế và lệ phí thuộc chi phí quản lý doanh nghiệp, nhưng xin lưu ý rằng thuế thu nhập doanh nghiệp sẽ được trình bày ở khoản mục riêng.",
+      "suggested_en": "Fixed asset taxes and stamp duties are booked under taxes and public charges within SG&A expenses, but please note that corporate income taxes must be presented under a separate account."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The phrase '適正に整合している' in Speaker B's reply is redundant, stilted AI-Japanese. Professional accountants would simply say '問題なく整合している' or '差異はございません'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、租税公課の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, nội dung hạch toán chi phí thuế và lệ phí có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the taxes and public charges entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "納付書の控えと総勘定元帳を照合済みで、金額に不整合はございません。",
+        "vi": "Tôi đã đối chiếu bản lưu giấy nộp tiền với sổ cái, không có bất kỳ sai lệch nào về số tiền.",
+        "en": "I have already reconciled the tax payment receipt copies against the general ledger, and there are no discrepancies in the amounts."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In meaning_vi, narrowing 租税公課 exclusively to 'thuế môn bài' is misleading; it represents 'thuế (ngoài thuế TNDN) và các khoản phí, lệ phí công quyền'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ef8f847eb1b4da5a58ab10a66f30894dc49c1c19952ac6f98231daf420db4252",
+    "validated_at": "2026-10-01T01:36:29.801483+00:00"
+  }
+}

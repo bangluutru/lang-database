@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000049",
+  "term": "内部統制",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic category error: 内部統制 (governance framework) was treated mechanically as an accounting account entry with balances and book entries (計上内容/残高/処理) across all examples and the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "内部統制を構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic standard business collocation for establishing internal control frameworks.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "内部統制を運用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic and standard collocation paired with 整備 (整備・運用).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "内部統制を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard governance/audit terminology (evaluating internal control effectiveness).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "内部統制を改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard phrase referring to remediating deficiencies in internal controls.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "内部統制 (internal control) is a governance framework, not an account line item. It cannot have '計上内容' (booked entries) or '残高' (ledger balance). This is a severe templating hallucination.",
+      "suggested_ja": "財務報告の信頼性を確保するため、全社的な内部統制の有効性を定期的に評価しています。",
+      "suggested_vi": "Để đảm bảo tính tin cậy của báo cáo tài chính, chúng tôi định kỳ đánh giá tính hiệu quả của hệ thống kiểm soát nội bộ trên toàn công ty.",
+      "suggested_en": "To ensure the reliability of financial reporting, we periodically evaluate the effectiveness of company-wide internal controls."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Internal control is not an accounting transaction to be 'processed' (処理いたしました) during financial close.",
+      "suggested_ja": "J-SOX法および金融商品取引法に基づき、当期の決算に係る内部統制報告書を作成いたしました。",
+      "suggested_vi": "Căn cứ theo Đạo luật J-SOX và Luật Công cụ Tài chính và Sàn giao dịch, chúng tôi đã lập báo cáo kiểm soát nội bộ liên quan đến kỳ quyết toán này.",
+      "suggested_en": "In accordance with J-SOX and the Financial Instruments and Exchange Act, we prepared the internal control report for this fiscal term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about '計上内容に差異' for 内部統制, treating a governance framework as a balance sheet item. Speaker B answers with voucher and sub-ledger reconciliations, perpetuating the category error.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "監査法人による期末監査を前に、内部統制の不備に関する改善状況はいかがでしょうか。",
+        "vi": "Trước đợt kiểm toán cuối kỳ của công ty kiểm toán, tình hình khắc phục các khiếm khuyết trong kiểm soát nội bộ thế nào rồi?",
+        "en": "Ahead of the year-end audit by the external audit firm, what is the status of remediation regarding internal control deficiencies?"
+      },
+      {
+        "speaker": "B",
+        "ja": "指摘を受けた承認プロセスの見直しを完了し、現在は適正に運用されていることを確認しております。",
+        "vi": "Chúng tôi đã hoàn tất việc rà soát quy trình phê duyệt bị chỉ ra và xác nhận rằng hiện tại quy trình đang được vận hành đúng quy định.",
+        "en": "We have completed the review of the flagged approval process and confirmed that it is currently operating properly."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Original translations accurately reflected nonsensical source Japanese. Translations must be updated to match rewritten authentic Japanese sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4b32d0a5268625f13925481e05034dfb0e60e4872d8bc0d773ac554fdf5dcfad",
+    "validated_at": "2026-10-01T01:41:47.332149+00:00"
+  }
+}

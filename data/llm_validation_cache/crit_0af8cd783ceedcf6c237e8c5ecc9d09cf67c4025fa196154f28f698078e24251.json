@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000052",
+  "term": "老人扶養親族",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe semantic category hallucination: the generator applied corporate governance officer (e.g., 監査役) templates to a personal income tax dependent classification (老人扶養親族), resulting in completely unviable collocations, examples, and dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "老人扶養親族を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "老人扶養親族 is a tax classification for dependent relatives aged 70 or older, not an officer or director who can be appointed.",
+      "suggested_text": "老人扶養親族に該当する"
+    },
+    {
+      "index": 1,
+      "text": "老人扶養親族に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "An elderly tax dependent is not an official corporate position to be inaugurated or assumed.",
+      "suggested_text": "老人扶養親族として申告する"
+    },
+    {
+      "index": 2,
+      "text": "老人扶養親族に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In professional tax and payroll contexts, the collocation targets deduction eligibility or reporting, not corporate consultation.",
+      "suggested_text": "老人扶養親族の控除額"
+    },
+    {
+      "index": 3,
+      "text": "老人扶養親族の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A tax dependent holds no corporate duties or official job functions to execute.",
+      "suggested_text": "老人扶養親族を控除対象とする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Shareholders' meetings do not appoint elderly tax dependents; this is an absurd mechanical template hallucinating the term as an auditor/director.",
+      "suggested_ja": "70歳以上の父母を扶養している従業員は、年末調整において老人扶養親族としての控除を申告できます。",
+      "suggested_vi": "Nhân viên phụng dưỡng cha mẹ từ 70 tuổi trở lên có thể kê khai khoản giảm trừ cho người phụ thuộc là người cao tuổi trong kỳ quyết toán thuế cuối năm.",
+      "suggested_en": "Employees supporting parents aged 70 or older can claim an elderly dependent deduction during the year-end tax adjustment."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Companies do not hold compliance reporting meetings with elderly dependents; this conflates tax dependents with statutory auditors.",
+      "suggested_ja": "所得税法上、同居している老人扶養親族と同居していない老人扶養親族とでは、適用される控除額が異なります。",
+      "suggested_vi": "Theo Luật thuế thu nhập, mức giảm trừ được áp dụng có sự khác biệt giữa người phụ thuộc cao tuổi sống cùng nhà và không sống cùng nhà.",
+      "suggested_en": "Under the Income Tax Act, the applicable deduction amount differs between cohabiting and non-cohabiting elderly dependents."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The candidate dialogue treats '老人扶養親族' as a written report or meeting agenda being drafted and dispatched, which is completely nonsensical in Japanese tax/HR practice.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "年末調整の書類を確認したのですが、老人扶養親族の控除申告に漏れはありませんか。",
+        "vi": "Tôi đã kiểm tra giấy tờ quyết toán thuế cuối năm, không biết anh/chị có kê khai thiếu người phụ thuộc là người cao tuổi không?",
+        "en": "I checked your year-end adjustment documents; did you perhaps miss declaring any elderly dependents for the deduction?"
+      },
+      {
+        "speaker": "B",
+        "ja": "同居している70歳以上の義母の記載を失念しておりましたので、修正して再提出いたします。",
+        "vi": "Tôi đã quên không ghi mẹ vợ trên 70 tuổi đang sống cùng nhà, tôi sẽ sửa lại và nộp lại ngay.",
+        "en": "I forgot to include my mother-in-law over 70 who lives with us, so I will correct it and resubmit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated definition translations for the headword are accurate; the catastrophic errors occurred exclusively in the downstream sentence generation."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "9cb6ec7ab3104aac69464d9a4877d7eefd8765ebd9fff0088b4cd5171b85e1c5",
+    "validated_at": "2026-10-01T01:38:16.644252+00:00"
+  }
+}

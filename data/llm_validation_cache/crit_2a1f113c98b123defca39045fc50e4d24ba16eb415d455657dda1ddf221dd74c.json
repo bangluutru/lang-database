@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000015",
+  "term": "賦課課税制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "The examples and dialogue display severe domain hallucination: they mechanically reused template text from ふるさと納税 / 寄附金控除 (talking about regional contribution, deduction ceilings, and corporate tax return attachments) for 賦課課税制度 (official assessment taxation), which is completely contrary to tax reality.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "賦課課税制度を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "賦課課税制度 (official assessment taxation system) is a statutory method where tax authorities determine tax liability (e.g., property tax). Taxpayers do not 'utilize' (利用する) it as an elective benefit.",
+      "suggested_text": "賦課課税方式を採用する"
+    },
+    {
+      "index": 1,
+      "text": "賦課課税制度の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxes themselves are subject to the system; taxpayers do not 'receive application' of it like a preferential tax credit.",
+      "suggested_text": "賦課課税制度のもとで課税される"
+    },
+    {
+      "index": 2,
+      "text": "賦課課税制度を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Official assessment is an administrative mechanism of tax levy, not an optional incentive scheme that can be leveraged (活用する).",
+      "suggested_text": "賦課課税制度と申告納税制度を比較する"
+    },
+    {
+      "index": 3,
+      "text": "賦課課税制度の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation referring to specific local taxes or levies falling under the official assessment system.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error and template artifact (confused with ふるさと納税). Official assessment has nothing to do with 'regional contribution' or 'tax savings'. Also contains repetitive phrasing '賦課課税制度の制度'.",
+      "suggested_ja": "日本の税制において、固定資産税や自動車税などは、税務当局が税額を計算して通知する賦課課税制度が採られています。",
+      "suggested_vi": "Trong hệ thống thuế của Nhật Bản, các loại thuế như thuế tài sản cố định và thuế xe cơ giới áp dụng chế độ cơ quan thuế ấn định thuế, theo đó cơ quan thuế sẽ tính toán và thông báo số thuế phải nộp.",
+      "suggested_en": "In the Japanese tax system, taxes such as fixed asset tax and automobile tax adopt the official assessment taxation system, where the tax authorities calculate and notify the tax amount."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error (again templated from donation deduction/ふるさと納税). 賦課課税制度 does not involve taxpayers estimating deduction limits or proceeding with procedures.",
+      "suggested_ja": "申告納税制度とは異なり、賦課課税制度が適用される税目については、納税者自らが税額計算を行って確定申告書を提出する必要はありません。",
+      "suggested_vi": "Khác với chế độ tự khai tự nộp thuế, đối với các sắc thuế áp dụng chế độ cơ quan thuế ấn định thuế, người nộp thuế không cần phải tự tính toán số thuế và nộp tờ khai quyết toán thuế.",
+      "suggested_en": "Unlike the self-assessment taxation system, for tax items governed by the official assessment taxation system, taxpayers are not required to calculate tax amounts and file tax returns themselves."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fundamental contradiction in tax law: 賦課課税制度 means the tax authority assesses and levies the tax directly. Asking for '計算根拠と提出書類' in a '決算申告' (corporate final tax return) conflates it with self-assessment (申告納税制度).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "本社ビルの固定資産税についてですが、納付通知書の内容は確認できましたか。",
+        "vi": "Về thuế tài sản cố định của tòa nhà trụ sở chính, anh đã kiểm tra nội dung giấy báo nộp thuế chưa?",
+        "en": "Regarding the property tax on our headquarters building, have you verified the contents of the tax notice?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、固定資産税は賦課課税制度に基づき自治体側で税額が決定されるため、課税標準額と税額が評価証明書と一致していることを照合済みです。",
+        "vi": "Vâng, vì thuế tài sản cố định do chính quyền địa phương xác định số thuế dựa trên chế độ cơ quan thuế ấn định thuế, nên tôi đã đối chiếu và xác nhận căn cứ tính thuế cùng số thuế khớp với chứng nhận định giá.",
+        "en": "Yes. Since property tax amounts are determined by the local municipality under the official assessment system, I have already cross-checked that the tax base and amount match the valuation certificate."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations 'Official assessment taxation system' and 'chế độ cơ quan thuế ấn định thuế' are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "36b6f2125d1aeafc4dac44cf16c56ee0d8b11c185abda930cf6c1aaf9826c3f6",
+    "validated_at": "2026-10-01T01:37:30.564846+00:00"
+  }
+}

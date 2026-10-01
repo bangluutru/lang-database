@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000041",
+  "term": "臨時株主総会",
+  "overall_decision": "reject",
+  "summary_reason": "Fatal template contamination. The corporate governance term '臨時株主総会' was mechanically slotted into accounting/bookkeeping sentence frames, generating nonsensical claims about 'balances and accounting entries of a shareholder meeting'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "臨時株主総会を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Vague and unnatural predicate for a corporate governance meeting; standard legal and business phrasing uses '招集する' or '開催する'.",
+      "suggested_text": "臨時株主総会を招集する"
+    },
+    {
+      "index": 1,
+      "text": "臨時株主総会を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A shareholders' meeting is not '完了する'; proper legal/corporate verbs are '開催する', '閉会する', or '終結する'.",
+      "suggested_text": "臨時株主総会を開催する"
+    },
+    {
+      "index": 2,
+      "text": "臨時株主総会の手順を確認する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "Too colloquial and imprecise for corporate governance; professional practice refers to convocation procedures ('招集手続き') or submitting agenda items ('付議する').",
+      "suggested_text": "臨時株主総会に付議する"
+    },
+    {
+      "index": 3,
+      "text": "臨時株主総会を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One does not 'review/revise' a shareholders' meeting itself; one resolves matters at the meeting ('決議する').",
+      "suggested_text": "臨時株主総会で決議する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe template hallucination. An extraordinary general meeting of shareholders is a corporate organ/event, not an accounting item with balances ('残高') or book entries ('計上内容') to reconcile.",
+      "suggested_ja": "役員選任の件を審議するため、来月上旬に臨時株主総会を招集する方針を固めました。",
+      "suggested_vi": "Để thảo luận về việc bổ nhiệm ban giám đốc, chúng tôi đã thống nhất chủ trương triệu tập Đại hội đồng cổ đông bất thường vào đầu tháng tới.",
+      "suggested_en": "We have decided on a policy to convene an extraordinary general meeting of shareholders early next month to deliberate on the appointment of directors."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A shareholders' meeting is not an accounting transaction to be processed ('適正に処理いたしました') in periodic financial closing ('決算').",
+      "suggested_ja": "定款変更が必要となったため、取締役会の承認を経て臨時株主総会の開催を決定いたしました。",
+      "suggested_vi": "Do cần sửa đổi điều lệ công ty, chúng tôi đã quyết định tổ chức Đại hội đồng cổ đông bất thường sau khi được Hội đồng quản trị thông qua.",
+      "suggested_en": "As amendments to the articles of incorporation became necessary, we decided to hold an extraordinary general meeting of shareholders following approval by the board of directors."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Critical mechanical template error. The dialogue applies routine accounting reconciliation templates (auxiliary ledgers, vouchers, account discrepancies) to a corporate governance meeting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月の臨時株主総会に向けて、招集通知の発送準備は順調に進んでいますか。",
+        "vi": "Công tác chuẩn bị gửi thông báo triệu tập cho Đại hội đồng cổ đông bất thường vào tháng tới có đang diễn ra thuận lợi không?",
+        "en": "Are preparations for sending out the notice of convocation for next month's extraordinary general meeting of shareholders progressing smoothly?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、法務部門と文案の最終確認を行っており、明日には株主への発送が完了する予定です。",
+        "vi": "Vâng, chúng tôi đang tiến hành rà soát lần cuối bản thảo với bộ phận pháp chế, và dự kiến sẽ hoàn tất việc gửi tới các cổ đông vào ngày mai.",
+        "en": "Yes, we are conducting a final review of the draft with the legal department, and mailing to shareholders is scheduled to be completed tomorrow."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Base term definitions are accurate, but generated content must be rewritten due to extreme domain mismatch."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e1d5d67d4bb4b9f6b9350ece622d47e0415d7598da04b4afe3a209304c3f4cb0",
+    "validated_at": "2026-10-01T01:41:42.519535+00:00"
+  }
+}

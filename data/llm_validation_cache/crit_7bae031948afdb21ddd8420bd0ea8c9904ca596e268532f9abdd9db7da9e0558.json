@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000042",
+  "term": "招集通知",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the target term is essential, multiple collocations and examples exhibit artificial phrasing, loose statutory terminology, and obvious translation artifacts (raw dictionary definition dumps with slashes in Vietnamese).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "招集通知を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and legal phrasing for drafting a notice of convocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "招集通知を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A notice of convocation is issued, dispatched, or disclosed rather than 'submitted' in standard corporate contexts. '招集通知を開示する' (disclose) or '招集通知を送付する' (send) is far more natural.",
+      "suggested_text": "招集通知を開示する"
+    },
+    {
+      "index": 2,
+      "text": "招集通知を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard Companies Act terminology (会社法第299条) for dispatching convocation notices to shareholders.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "招集通知を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression used when a recipient (shareholder, board member, or institutional investor) receives the notice.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The rationale '進行するため' is awkward for dispatching statutory notices, and '全関係者' is overly vague. In addition, the Vietnamese translation mechanically pasted the dictionary entry with a slash ('thư mời họp cổ đông / thông báo triệu tập cuộc họp').",
+      "suggested_ja": "定時株主総会を適法に開催するため、法定期限内に株主へ招集通知を発送いたしました。",
+      "suggested_vi": "Để tổ chức đại hội đồng cổ đông thường niên đúng luật định, chúng tôi đã gửi thông báo triệu tập cuộc họp đến các cổ đông trong thời hạn luật định.",
+      "suggested_en": "To convene the annual general meeting of shareholders lawfully, we dispatched the notice of convocation to shareholders within the statutory deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is somewhat contrived, but worse, the Vietnamese translation directly dumps the raw dictionary definition string with slash. In practice, sending/dispatch evidence (発送控え) is archived for internal control, not merely 'received' notices.",
+      "suggested_ja": "内部統制およびコンプライアンスの観点から、株主宛てに発送した招集通知の控えと発送証明を厳重に保管しています。",
+      "suggested_vi": "Dưới góc độ kiểm soát nội bộ và tuân thủ quy định, chúng tôi lưu trữ nghiêm ngặt bản lưu và bằng chứng gửi thông báo triệu tập họp đã phát đi cho cổ đông.",
+      "suggested_en": "From an internal control and compliance standpoint, we securely retain copies and proof of mailing for convocation notices dispatched to shareholders."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Referring to an upcoming event simply as '会議' when using '招集通知' is unnatural; formal convocation notices apply to statutory bodies such as '株主総会' or '取締役会'. Dispatching next week's meeting notice today would also risk violating Companies Act statutory notice periods if referring to a shareholders' meeting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月開催予定の定時株主総会に向けて、招集通知の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị thông báo triệu tập họp cho đại hội đồng cổ đông thường niên dự kiến diễn ra vào tháng sau thế nào rồi?",
+        "en": "How is the preparation of the notice of convocation coming along for next month's annual general meeting of shareholders?"
+      },
+      {
+        "speaker": "B",
+        "ja": "議案内容の法務確認が完了しましたので、取締役会の承認を経て今週中に発送の手配を行います。",
+        "vi": "Sau khi hoàn tất rà soát pháp lý cho các nội dung nghị quyết, chúng tôi sẽ xin ý kiến phê duyệt của hội đồng quản trị và thu xếp gửi thông báo trong tuần này.",
+        "en": "The legal review of the agenda items is complete, so following board approval, we will arrange for dispatch by the end of this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese translations in both example sentences contain raw dictionary copy-paste artifacts ('thư mời họp cổ đông / thông báo triệu tập cuộc họp')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "35240b8ddecfdbc2f243dd77f612af129ca6369772f910a1136468cc754373e4",
+    "validated_at": "2026-10-01T01:41:44.057375+00:00"
+  }
+}

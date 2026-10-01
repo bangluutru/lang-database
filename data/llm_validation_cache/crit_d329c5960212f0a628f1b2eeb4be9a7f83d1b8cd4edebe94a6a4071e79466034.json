@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000009",
+  "term": "請求書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains an absurd factual mismatch between invoices and shareholder/board meetings, and the dialogue treats an invoice as a polished report rather than an accounting document.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "請求書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural corporate accounting collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "請求書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used when contractors or vendors submit invoices to clients.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "請求書を発送する",
+      "decision": "rewrite",
+      "reason_code": "NATURAL",
+      "reason": "While understandable, '送付する' or '発行する' is significantly more idiomatic in daily B2B accounting practice than '発送する' (which usually connotes shipping physical goods or mass mailings).",
+      "suggested_text": "請求書を発行する"
+    },
+    {
+      "index": 3,
+      "text": "請求書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Precise and standard business collocation for accounts payable.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe corporate governance factual error. Invoices (請求書) are not dispatched to attendees to facilitate shareholder or board meetings; this is a mechanical substitution of '招集通知' (convocation notice).",
+      "suggested_ja": "当月分の取引に関する請求書は、締め日の翌営業日までに取引先へ送付してください。",
+      "suggested_vi": "Vui lòng gửi hóa đơn cho các giao dịch trong tháng này đến đối tác trước ngày làm việc tiếp theo sau ngày chốt sổ.",
+      "suggested_en": "Please send the invoice for this month's transactions to the client by the business day following the closing date."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and natural usage reflecting internal control and statutory document retention requirements.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Invoices are billing documents containing numerical data and payment terms; they are neither prepared specifically for holding internal meetings nor subject to '推敲' (literary drafting/polishing). The dialogue is an ungrounded template.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "月末の締め処理に向けて、A社宛ての請求書の作成状況はいかがですか。",
+        "vi": "Để chuẩn bị cho việc chốt sổ cuối tháng, tình hình lập hóa đơn gửi cho công ty A thế nào rồi?",
+        "en": "Regarding the month-end closing, what is the status of preparing the invoice for Company A?"
+      },
+      {
+        "speaker": "B",
+        "ja": "納品数量と金額の突き合わせが完了しましたので、上席の承認を得て本日中に発行いたします。",
+        "vi": "Tôi đã hoàn tất việc đối chiếu số lượng giao hàng và số tiền, sau khi có phê duyệt của cấp trên sẽ phát hành ngay trong hôm nay.",
+        "en": "I have finished reconciling the delivery quantities and amounts, so I will issue it today once I obtain manager approval."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of the base term are accurate and contextually valid."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f3699f7cc907d8e64f17544475de13cabfb50300b630664a1ec4cc42d576e9f6",
+    "validated_at": "2026-10-01T01:41:05.796927+00:00"
+  }
+}

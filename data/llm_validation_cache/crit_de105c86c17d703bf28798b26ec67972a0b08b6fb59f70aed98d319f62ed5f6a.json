@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000095",
+  "term": "保税展示場",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental semantic mismatch in applying accounting terms like '計上' and '残高' directly to a physical facility like '保税展示場'. While the collocations are good, the examples and dialogue incorrectly treat the facility itself as an accounting item rather than the goods or transactions associated with it. This would be confusing and misleading for a professional learning Japanese in an accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "保税展示場に搬入する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "保税展示場から搬出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "保税展示場で保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "保税展示場の許可を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A bonded exhibition site is a physical location, not an accounting entry or balance. It cannot be '計上' (booked/entered) or have a '残高' (balance) in an accounting sense. The sentence attempts to apply accounting terms to a facility.",
+      "suggested_ja": "月末の帳簿照合において、保税展示場に搬入・搬出された物品の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán hoặc số dư của các mặt hàng đã được nhập/xuất vào/ra trung tâm triển lãm quốc tế bảo thuế hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of goods brought into or taken out of the bonded exhibition site."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, '保税展示場を適正に処理する' is unnatural. You process the *transactions* or *goods* related to the bonded exhibition site, not the site itself, in accounting. The phrasing implies the site itself is an accounting item.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において保税展示場に関連する取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các giao dịch liên quan đến trung tâm triển lãm quốc tế bảo thuế trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed transactions related to the bonded exhibition site in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "The dialogue suffers from the same semantic mismatch as the examples. '保税展示場の計上内容' is not a natural accounting concept. You would refer to the goods or transactions related to it. Speaker B's response is also somewhat generic and doesn't directly address the unnatural premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、保税展示場への搬入・搬出に関する計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự chênh lệch nào trong nội dung hạch toán liên quan đến việc nhập/xuất hàng vào/ra trung tâm triển lãm quốc tế bảo thuế không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the accounting entries related to the goods brought into or taken out of the bonded exhibition site?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we have confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "56463ae047ee56a8cd7099307cf5cd2e6d91887f2e0d442789e3f16b9236e398",
+    "validated_at": "2026-10-01T01:55:26.291153+00:00"
+  }
+}

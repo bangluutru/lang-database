@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000087",
+  "term": "関税割当制度",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of what the '関税割当制度' (Tariff Quota System) is. It's a trade policy mechanism, not an accounting item that can be 'booked,' have a 'balance,' or be 'processed' in financial statements. This misunderstanding permeates the collocations, examples, and dialogue, making them unnatural and factually incorrect from an accounting/trade perspective. The translations themselves are accurate given the flawed Japanese, but the Japanese content needs a complete overhaul to reflect the true nature of the term.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "関税割当制度を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a natural and common collocation for applying a system.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "関税割当制度を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to inquire about a system.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "関税割当制度を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You pay 'customs duties' (関税), not the 'tariff quota system' itself. The system is a framework, not something you pay.",
+      "suggested_text": "関税割当制度に基づく関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "関税割当制度の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The system itself doesn't have a 'classification' in the sense of '分類'. You might confirm the classification of goods under the system, or the categories within the system, but not the system's classification directly.",
+      "suggested_text": "関税割当制度の対象品目分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The Tariff Quota System (TRQ) is a trade policy mechanism, not an accounting entry or balance that would be '計上' (booked/recorded) or have a '残高' (balance) in financial statements. You apply the system to goods, and then pay the resulting customs duties, which are recorded. The system itself is not an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、関税割当制度が適用された輸入貨物に係る関税の計上内容や納付状況に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc tình hình nộp thuế quan đối với hàng hóa nhập khẩu áp dụng chế độ hạn ngạch thuế quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the recorded customs duties or payment status for imported goods to which the tariff quota system was applied."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, the Tariff Quota System itself is not 'processed' in closing entries. The financial impact of applying the system (e.g., lower customs duties paid) would be reflected in the financial statements, but the system itself is not an accounting transaction.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において関税割当制度の適用による関税額を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định số thuế quan phát sinh từ việc áp dụng chế độ hạn ngạch thuế quan trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the customs duty amount resulting from the application of the tariff quota system in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats '関税割当制度' as an accounting item with '計上内容' (recorded content) and '差異' (discrepancy) in monthly closing. As explained in the examples, the system itself is not an accounting entry. Speaker B's response about '証憑書類と補助元帳を照合' (reconciling vouchers and subsidiary ledgers) further reinforces this misunderstanding, as these would relate to actual financial transactions (like customs duty payments), not the system itself.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入業務で、関税割当制度の適用対象となる品目はありましたか。また、その適用は適切に行われましたか。",
+        "vi": "Trong hoạt động nhập khẩu tháng này, có mặt hàng nào thuộc đối tượng áp dụng chế độ hạn ngạch thuế quan không? Và việc áp dụng đó đã được thực hiện đúng cách chưa?",
+        "en": "In this month's import operations, were there any items eligible for the tariff quota system? And was its application carried out appropriately?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、〇〇品目が対象となり、関係書類を確認した結果、すべて適正に適用されていることを確認いたしました。",
+        "vi": "Vâng, mặt hàng XX là đối tượng áp dụng, và sau khi kiểm tra các tài liệu liên quan, chúng tôi đã xác nhận rằng tất cả đã được áp dụng đúng cách.",
+        "en": "Yes, item XX was eligible, and after reviewing the relevant documents, we confirmed that it was all applied appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "3e61cc2163ee4f4f6905355c4f5f2bf7c1f1e1a0263333c023dc6f58ce018031",
+    "validated_at": "2026-10-01T01:55:12.886004+00:00"
+  }
+}

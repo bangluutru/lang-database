@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000035",
+  "term": "未収入金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 3 uses '精算する' instead of standard receivable terminology ('回収する'/'消し込む'). Example 2 suffers from repetitive, templated phrasing ('適正な...適正に'), and Dialogue turn B uses unnatural phrasing ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "未収入金を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking/recording accounts receivable - other.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "未収入金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression used during reconciliations and audits.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "未収入金を照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in audit and bookkeeping context, though '未収入金の明細を照合する' is more precise.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "未収入金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese financial accounting, '精算' is used for expense claims, advances (仮払金), or deposits (立替金). For asset receivables like 未収入金, standard accounting actions are '回収する' (collect) or '消し込む' (reconcile/clear).",
+      "suggested_text": "未収入金を回収する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, clear, and realistic accounting control sentence.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'適正な会計基準' is not standard Japanese business phrasing (the professional standard is '一般に公正妥当と認められる会計基準' or simply '会計基準'). Furthermore, repeating '適正な...適正に' is stylistically redundant and feels machine-templated.",
+      "suggested_ja": "固定資産の売却に伴い発生した未収入金について、会計基準および社内規程に則り適正に計上処理を行いました。",
+      "suggested_vi": "Đối với khoản phải thu khác phát sinh từ việc thanh lý tài sản cố định, chúng tôi đã tiến hành hạch toán đúng theo chuẩn mực kế toán và quy chế nội bộ.",
+      "suggested_en": "Regarding the accounts receivable - other arising from the sale of fixed assets, we properly processed the entries in accordance with accounting standards and internal regulations."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Phrase 'すべて適正に整合している' is unnatural business Japanese (collocationally awkward; '整合性が取れている' or '一致している' is natural). A's question also sounds slightly stilted.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、未収入金の残高と明細に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch giữa số dư và chi tiết khoản phải thu khác không?",
+        "en": "Are there any discrepancies between the balance and sub-ledger details for accounts receivable - other in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, và đã xác nhận mọi thứ đều khớp hoàn toàn không có vấn đề gì.",
+        "en": "I have already reconciled the source documents with the subsidiary ledger and confirmed that everything matches without any issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Existing translations are grammatically and terminologically accurate, but should reflect the improved sentences upon rewrite."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "aa8cfad69a7e6d0940b76e212707ca2fc4cd2af2c13263e0d7e07f83891ba93a",
+    "validated_at": "2026-10-01T01:34:18.917108+00:00"
+  }
+}

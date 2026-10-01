@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000190",
+  "term": "国税不服審判所",
+  "overall_decision": "reject",
+  "summary_reason": "Total failure of semantic and factual grounding. The generation model fundamentally mistook an administrative tribunal (国税不服審判所) for an internal corporate governance meeting (like 株主総会 or 取締役会) across all collocations, examples, and the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "国税不服審判所を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "国税不服審判所 is a permanent administrative dispute resolution agency (tribunal), not a conference or meeting. It cannot be held (開催する).",
+      "suggested_text": "国税不服審判所に審査請求をする"
+    },
+    {
+      "index": 1,
+      "text": "国税不服審判所で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The tribunal renders rulings/determinations (裁決を行う), not internal corporate resolutions (決議する).",
+      "suggested_text": "国税不服審判所の裁決を受ける"
+    },
+    {
+      "index": 2,
+      "text": "国税不服審判所に報告する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxpayers or corporations do not routinely 'report' to the tribunal; they lodge appeals against tax assessment dispositions.",
+      "suggested_text": "国税不服審判所に不服を申し立てる"
+    },
+    {
+      "index": 3,
+      "text": "国税不服審判所へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "One submits a written request for examination (審査請求書), not a generic notification form (届出書), to the National Tax Tribunal.",
+      "suggested_text": "国税不服審判所へ審査請求書を提出する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Gross hallucination. The National Tax Tribunal was mistakenly treated as an extraordinary general meeting of shareholders (臨時株主総会). A government tribunal cannot be 'convened' (招集する) by a company to resolve business proposals.",
+      "suggested_ja": "税務署長による更正処分を不服とし、国税不服審判所に対して審査請求書を提出した。",
+      "suggested_vi": "Không đồng ý với quyết định tái ấn định thuế của Chi cục trưởng Chi cục Thuế, chúng tôi đã nộp đơn yêu cầu thẩm tra lên Viện Tài phán Thuế Quốc gia.",
+      "suggested_en": "Dissatisfied with the reassessment disposition issued by the head of the tax office, we filed a request for examination with the National Tax Tribunal."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Gross hallucination. Corporate management policies and budget allocations are approved at board meetings or shareholder meetings, never at the National Tax Tribunal.",
+      "suggested_ja": "国税不服審判所による裁決により、当社の主張の一部が認められ、課税処分の一部が取り消された。",
+      "suggested_vi": "Theo phán quyết của Viện Tài phán Thuế Quốc gia, một phần lập luận của công ty chúng tôi đã được chấp thuận và một phần quyết định xử lý thuế đã bị hủy bỏ.",
+      "suggested_en": "Following the ruling by the National Tax Tribunal, part of our company's argument was accepted, and part of the taxation disposition was revoked."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Complete contextual confusion. Speaker A treats the National Tax Tribunal as a meeting or material to be prepared, and Speaker B talks about proofreading and mailing it. In reality, it is a government judicial body.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務調査の更正処分について、国税不服審判所への審査請求の準備は進んでいますか。",
+        "vi": "Về quyết định ấn định thuế sau thanh tra thuế, việc chuẩn bị đơn yêu cầu thẩm tra gửi Viện Tài phán Thuế Quốc gia tiến triển thế nào rồi?",
+        "en": "Regarding the reassessment disposition from the tax audit, how are the preparations coming along for filing a request for examination with the National Tax Tribunal?"
+      },
+      {
+        "speaker": "B",
+        "ja": "顧問税理士と弁護士による不服申立理由書の最終確認が完了し、期限内に提出できる見込みです。",
+        "vi": "Việc rà soát cuối cùng văn bản lý do khiếu nại của chuyên gia tư vấn thuế và luật sư đã hoàn tất, dự kiến sẽ nộp kịp trong thời hạn quy định.",
+        "en": "The final review of the statement of reasons for appeal by our tax advisor and legal counsel is complete, and we expect to file it well within the deadline."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The definition translations for the term itself are acceptable, though in Vietnamese 'Viện Tài phán Thuế Quốc gia' or 'Cơ quan Thẩm phán Thuế Quốc gia' is standard legal terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4c6c4924cec9487bcbf35901f354c5623eb684260181ec2fc257c05469d9a3bd",
+    "validated_at": "2026-10-01T01:40:45.330005+00:00"
+  }
+}

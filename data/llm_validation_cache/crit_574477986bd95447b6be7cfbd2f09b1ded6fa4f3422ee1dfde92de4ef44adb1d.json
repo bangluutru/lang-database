@@ -1,0 +1,83 @@
+{
+  "entry_id": "jp-pro-trade-000112",
+  "term": "信用状発行依頼書",
+  "overall_decision": "rewrite",
+  "summary_reason": "The first example sentence contains a significant factual error by linking an L/C application to corporate governance meetings. The dialogue is also unnatural and stilted in its current form, not reflecting how an L/C application would typically be discussed in a business setting.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "信用状発行依頼書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "信用状発行依頼書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "信用状発行依頼書を発送する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "信用状発行依頼書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence incorrectly links '信用状発行依頼書' (Application for Letter of Credit) with '株主総会や取締役会' (shareholders' meeting or board meeting). These two concepts are unrelated in a business context. An L/C application is for international trade transactions, not for corporate governance meetings.",
+      "suggested_ja": "輸出取引を円滑に進めるため、法定期限内に信用状発行依頼書を銀行へ提出いたしました。",
+      "suggested_vi": "Để giao dịch xuất khẩu diễn ra suôn sẻ, chúng tôi đã nộp đơn đề nghị mở thư tín dụng L/C cho ngân hàng trong thời hạn luật định.",
+      "suggested_en": "To facilitate smooth export transactions, we submitted the application for a letter of credit to the bank within the statutory deadline."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Speaker A's question about '会議に向けて、信用状発行依頼書の準備状況' is unnatural. An L/C application is not typically 'prepared for a meeting' in this context. It's a document for a trade transaction. The response from Speaker B is also somewhat generic and doesn't quite fit the context of an L/C application being 'dispatched' after 'final proofreading' and 'executive approval' for a meeting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日依頼した信用状発行依頼書の進捗はいかがですか？",
+        "vi": "Tình hình tiến độ của đơn đề nghị mở thư tín dụng L/C mà tôi đã yêu cầu hôm trước thế nào rồi?",
+        "en": "What's the progress on the application for the letter of credit I requested the other day?"
+      },
+      {
+        "speaker": "B",
+        "ja": "最終確認を終え、本日中に銀行へ提出する手配を進めております。",
+        "vi": "Chúng tôi đã hoàn tất việc xác nhận cuối cùng và đang tiến hành các thủ tục để nộp cho ngân hàng trong hôm nay.",
+        "en": "We've completed the final confirmation and are arranging to submit it to the bank today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0d074cb2d64dd2851158717f61b1e42f6bacdbfb6589fe093af77d9a08ee0fb2",
+    "validated_at": "2026-10-01T01:56:18.465382+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000110",
+  "term": "外形標準課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual errors in collocations and examples: the tax term was treated as an optional tax-saving incentive/donation scheme rather than a mandatory corporate enterprise taxation system on capital and value-added.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "外形標準課税を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "外形標準課税 is a mandatory local corporate tax assessment imposed on corporations exceeding a certain capital threshold; it is an obligation, not an optional incentive or scheme to be 'utilized' (利用する).",
+      "suggested_text": "外形標準課税が適用される"
+    },
+    {
+      "index": 1,
+      "text": "外形標準課税の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal/tax phrasing used when a corporation falls under the scope of size-based business taxation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "外形標準課税を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Companies do not 'leverage/utilize' (活用する) a mandatory tax calculation framework. This stems from a template confusion with tax credit/incentive programs.",
+      "suggested_text": "外形標準課税を計算・申告する"
+    },
+    {
+      "index": 3,
+      "text": "外形標準課税の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic and common in Japanese corporate tax practice (e.g., determining whether a company exceeds the capital threshold).",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually absurd in Japanese corporate tax. 外形標準課税 is an imposed tax scheme based on added value and capital size (frequently taxing even loss-making large firms); it cannot be used for '節税' (tax saving) or '地域貢献' (regional contribution), which appears to be a hallucinated blend with '企業版ふるさと納税'.",
+      "suggested_ja": "資本金が1億円を超える企業は、法人事業税における外形標準課税の適用対象となります。",
+      "suggested_vi": "Các doanh nghiệp có vốn điều lệ trên 100 triệu yên sẽ thuộc đối tượng áp dụng thuế kinh doanh tính theo quy mô doanh nghiệp trong thuế doanh nghiệp địa phương.",
+      "suggested_en": "Corporations with stated capital exceeding 100 million yen are subject to size-based business taxation under the corporate enterprise tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "외形標準課税 calculates value-added factor (付加価値割) and capital factor (資本割). It does not have a '控除上限額' (deduction ceiling), which is a concept borrowed from donation deductions or tax credits.",
+      "suggested_ja": "期末の増資によって資本金等の額が変動するため、外形標準課税の資本割への影響を事前に試算しました。",
+      "suggested_vi": "Do số tiền vốn có biến động do việc tăng vốn vào cuối kỳ, chúng tôi đã tính toán thử trước tác động đối với phần thuế tính theo quy mô vốn của thuế kinh doanh doanh nghiệp.",
+      "suggested_en": "Because the amount of capital would change due to the year-end capital increase, we estimated in advance the impact on the capital factor of the size-based business tax."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between A and B regarding calculation basis and filing attachments for enterprise tax is coherent and realistic in a corporate tax/accounting department setting.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The baseline translations for the term itself are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7194594f26a680318d3b44839e8aa8722f93cfdfc99031e6d491b65233457ff8",
+    "validated_at": "2026-10-01T01:39:21.478902+00:00"
+  }
+}

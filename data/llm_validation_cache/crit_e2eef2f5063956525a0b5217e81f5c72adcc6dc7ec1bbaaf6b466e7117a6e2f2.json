@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000026",
+  "term": "棚卸資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations are semantically mismatched (精算する cannot apply to inventory; 照合する is unnatural predicate), Example 1 is an awkward LLM template with redundant vocabulary ('適正な...適正に'), and the dialogue uses unnatural phrasing ('適正に整合している') while missing realistic accounting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "棚卸資産を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing inventory assets on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "棚卸資産の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural business expression used during monthly/annual closing reconciliations.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "棚卸資産を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly '照合する' the asset itself; one reconciles physical counts with book balances ('実地棚卸結果と帳簿残高を照合する') or conducts physical inspection ('棚卸資産の実査を行う').",
+      "suggested_text": "棚卸資産を評価する"
+    },
+    {
+      "index": 3,
+      "text": "棚卸資産を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expenses, advances, or accounts payable/receivable settlement, never to inventory assets. For inventories, accounting procedures involve valuation or write-downs.",
+      "suggested_text": "棚卸資産を評価減する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Plausible internal accounting review sentence, though slightly generic.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains stylistic redundancy ('適正な会計基準...適正に処理いたしました') and reads like an empty LLM template with zero concrete accounting substance.",
+      "suggested_ja": "期末の実地棚卸に基づき、滞留在庫について棚卸資産評価損を計上しました。",
+      "suggested_vi": "Dựa trên kết quả kiểm kê thực tế cuối kỳ, chúng tôi đã trích lập dự phòng giảm giá hàng tồn kho đối với các mặt hàng tồn đọng lâu ngày.",
+      "suggested_en": "Based on the year-end physical inventory count, we recognized a valuation loss on slow-moving inventory."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural Japanese collocation ('整合性が取れている' is standard). Furthermore, inventory discrepancies are reconciled between inventory subledgers/physical counts and the general ledger, not merely 'vouchers and subsidiary ledger'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、棚卸資産の実地残高と帳簿残高に差異は出ていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư thực tế và số dư sổ sách của hàng tồn kho có phát sinh chênh lệch không?",
+        "en": "Are there any discrepancies between the physical count and the book balance of inventories in this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "現品票と在庫管理システムを照合済みで、目立った棚卸差異は発生しておりません。",
+        "vi": "Chúng tôi đã đối chiếu phiếu thực tế với hệ thống quản lý kho, và không phát sinh chênh lệch kiểm kê đáng kể nào.",
+        "en": "We have reconciled the physical stock tags against the inventory management system, and no significant inventory variances have occurred."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations ('hàng tồn kho' / 'Inventories') are fully accurate and standard in accounting."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "dfd1daade10a0cc7045d798d7d1a447b78b6ccd59cab53551f6e6df3869d8baf",
+    "validated_at": "2026-10-01T01:33:31.485910+00:00"
+  }
+}

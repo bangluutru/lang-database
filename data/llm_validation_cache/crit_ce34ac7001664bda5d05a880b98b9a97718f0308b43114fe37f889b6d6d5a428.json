@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000128",
+  "term": "懲戒解雇",
+  "overall_decision": "rewrite",
+  "summary_reason": "「懲戒解雇」を会計上の「計上内容」や「残高」として扱うという根本的な誤解があるため、コロケーション、例文、対話の全てが不自然で、会計実務に即していない。全体的に大幅な修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "懲戒解雇を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「懲戒解雇」は手続きの結果であり、それ自体を進めるという表現は不自然。手続きを進める、または解雇処分を進める、といった表現が適切。",
+      "suggested_text": "懲戒解雇の手続きを進める"
+    },
+    {
+      "index": 1,
+      "text": "懲戒解雇を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「懲戒解雇」は処分そのものであり、完了する対象としては不自然。懲戒解雇の手続きが完了する、または懲戒解雇処分が確定する、といった表現が適切。",
+      "suggested_text": "懲戒解雇の手続きを完了する"
+    },
+    {
+      "index": 2,
+      "text": "懲戒解雇の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "懲戒解雇を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「懲戒解雇」という処分そのものを見直すというよりは、懲戒解雇の判断や決定を見直す、といった表現がより自然。",
+      "suggested_text": "懲戒解雇の判断を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「懲戒解雇」は会計上の「計上内容」や「残高」を持つものではない。会計処理の対象となるのは、解雇に伴う未払い賃金や退職金、引当金などであり、「懲戒解雇」そのものではない。会計の文脈でこの表現は不適切。",
+      "suggested_ja": "月末の帳簿照合において、懲戒解雇に伴う未払い賃金や退職金の計上内容、および関連する引当金の残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự chênh lệch nào trong nội dung hạch toán tiền lương chưa thanh toán, trợ cấp thôi việc liên quan đến sa thải kỷ luật, và số dư các khoản dự phòng liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries for unpaid wages and severance pay associated with disciplinary dismissal, and the balances of related provisions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「懲戒解雇」そのものを会計処理する、という表現は不自然。懲戒解雇に伴う会計処理（例：退職金、引当金）を適切に行った、という文脈であれば自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において懲戒解雇に伴う会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện đúng quy trình xử lý kế toán liên quan đến sa thải kỷ luật trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the accounting entries related to disciplinary dismissal in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "例示文と同様に、「懲戒解雇」が会計上の「計上内容」を持つという前提が誤り。この会話は会計処理の文脈で不自然。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、懲戒解雇に伴う未払い賃金や退職金の処理に問題はありませんでしたか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, việc xử lý tiền lương chưa thanh toán và trợ cấp thôi việc liên quan đến sa thải kỷ luật có vấn đề gì không?",
+        "en": "In this month's monthly closing, were there any issues with the processing of unpaid wages or severance pay related to disciplinary dismissal?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合済みで、すべて適正に処理されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đã được xử lý đúng cách.",
+        "en": "Yes, we have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything has been processed appropriately."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "931e09818d3cf643b7388ab393152559eb44d594fe54dfcc956b6240e1265940",
+    "validated_at": "2026-10-01T01:52:41.623877+00:00"
+  }
+}

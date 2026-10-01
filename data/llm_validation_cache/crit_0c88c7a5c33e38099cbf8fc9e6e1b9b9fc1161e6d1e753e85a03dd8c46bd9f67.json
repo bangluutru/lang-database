@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000068",
+  "term": "覚書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe corporate/legal factual errors (confusing 覚書 with 招集通知 in Example 0 and treating it as meeting materials in the dialogue), coupled with unnatural collocation predicates (発送/提出) and glossary-dump translation defects.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "覚書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and legal collocation for drafting a memorandum or addendum.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "覚書を提出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "A memorandum (覚書) is an agreement between parties, not an administrative report or application to be 'submitted' (提出). The essential legal collocations are 締結する or 取り交わす.",
+      "suggested_text": "覚書を締結する"
+    },
+    {
+      "index": 2,
+      "text": "覚書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While physical copies can technically be mailed, an agreement document is typically exchanged (取り交わす) or sent for signing (送付する), not simply 'dispatched' (発送).",
+      "suggested_text": "覚書を取り交わす"
+    },
+    {
+      "index": 3,
+      "text": "覚書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in administrative and compliance tracking when receiving signed counterpart copies from a partner.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually incorrect under corporate governance and the Companies Act. Notices of convocation (招集通知) are sent under statutory deadlines for board or shareholder meetings, not a memorandum (覚書). Moreover, translations copy-pasted the glossary slash options into the sentence.",
+      "suggested_ja": "取引基本契約の変更に伴い、新たな取引条件を明文化するため覚書を締結いたしました。",
+      "suggested_vi": "Cùng với việc thay đổi hợp đồng nguyên tắc thương mại, chúng tôi đã ký biên bản thỏa thuận bổ sung nhằm làm rõ các điều kiện giao dịch mới.",
+      "suggested_en": "Following amendments to the master transaction agreement, we executed a memorandum of understanding to formalize the new terms."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is grammatically acceptable, but both English and Vietnamese translations mechanically dumped the entire glossary definition with slashes ('phụ lục thỏa thuận bổ sung / bản ghi nhớ (MOU)') into the sentence body.",
+      "suggested_ja": "内部統制およびコンプライアンスの証跡として、担当部署にて受領した覚書を厳重に保管しています。",
+      "suggested_vi": "Để làm bằng chứng kiểm soát nội bộ và tuân thủ, bộ phận phụ trách lưu trữ cẩn mật các bản ghi nhớ đã tiếp nhận.",
+      "suggested_en": "The department in charge securely archives the received memoranda as audit evidence for internal control and compliance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue treats '覚書' like a meeting handout or notice that is being 'dispatched' (発送の手配) for an upcoming conference, rather than a mutual legal agreement negotiated and executed between corporate counterparties.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "提携先との業務分担に関する覚書の進捗はいかがですか。",
+        "vi": "Tiến độ biên bản ghi nhớ về phân công nghiệp vụ với đối tác liên kết thế nào rồi?",
+        "en": "How is the progress on the memorandum regarding the division of operations with our business partner?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務部のリーガルチェックが完了しましたので、本日中に先方へドラフトを送付し、条文のすり合わせを行います。",
+        "vi": "Phòng Pháp chế đã hoàn tất việc rà soát pháp lý, nên trong ngày hôm nay tôi sẽ gửi bản thảo cho đối tác để thống nhất các điều khoản.",
+        "en": "The legal department has finished its review, so I will send the draft to the counterparty today to align on the terms."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Both languages suffered from mechanical template contamination, outputting glossary definitions with forward slashes into running sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "270595efbd3f9eba88259b3a4a4d8209576e80d045e25f494e3724001564f642",
+    "validated_at": "2026-10-01T01:42:07.567328+00:00"
+  }
+}

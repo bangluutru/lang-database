@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000199",
+  "term": "独立企業間価格",
+  "overall_decision": "reject",
+  "summary_reason": "移転価格税制の専門用語である『独立企業間価格（ALP）』を、一般的な社内経営効率指標（KPI）と取り違えた生成AIテンプレート特有の重大なドメインエラー。例文・対話・コロケーションの大半がビジネス・税務実務上成立しないため全面差し替えが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "独立企業間価格を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "標準的かつ自然なコロケーション（算定する・算出する）。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "独立企業間価格を改善する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "独立企業間価格（ALP）は移転価格税制における課税基準価格であり、経営指標のように「改善する」対象ではない。",
+      "suggested_text": "独立企業間価格を算定する"
+    },
+    {
+      "index": 2,
+      "text": "独立企業間価格を分析する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "価格そのものを単に分析するというより、取引価格が独立企業間価格と整合しているか「検証する」または「ベンチマーク分析を行う」とするのが税務実務上自然。",
+      "suggested_text": "独立企業間価格との整合性を検証する"
+    },
+    {
+      "index": 3,
+      "text": "独立企業間価格の目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "独立企業間価格は比較対象取引等から客観的に導出される基準値（またはレンジ）であり、社内の「目標値」として設定するものではない。",
+      "suggested_text": "独立企業間価格レンジを設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "独立企業間価格は海外子会社等との関連者間取引に対する移転価格税制の概念であり、各事業部門の「経営効率改善のための月次モニタリング指標」ではない。重大な専門領域の誤用。",
+      "suggested_ja": "海外子会社との取引価格が独立企業間価格のレンジ内に収まっているか、税務リスク管理の観点から定期的に検証しています。",
+      "suggested_vi": "Từ góc độ quản lý rủi ro thuế, chúng tôi định kỳ kiểm tra xem giá giao dịch với công ty con ở nước ngoài có nằm trong biên độ giá giao dịch độc lập hay không.",
+      "suggested_en": "From a tax risk management perspective, we regularly verify whether transaction prices with overseas subsidiaries fall within the arm's length price range."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "独立企業間価格が目標値を上回ることで収益性や資本効率が向上するという文脈は、KPI（ROEやROIC等）のテンプレートを機械的に当てはめた致命的な事実誤認。",
+      "suggested_ja": "税務調査において海外子会社への製品販売価格が独立企業間価格と乖離していると指摘され、追徴課税のリスクが生じた。",
+      "suggested_vi": "Trong cuộc thanh tra thuế, cơ quan thuế đã chỉ ra rằng giá bán sản phẩm cho công ty con ở nước ngoài sai lệch so với giá giao dịch độc lập, làm phát sinh nguy cơ bị truy thu thuế.",
+      "suggested_en": "During the tax audit, it was pointed out that the selling price of products to an overseas subsidiary deviated from the arm's length price, creating a risk of additional tax assessment."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "独立企業間価格を四半期財務分析や経営目標のKPIと混同した機械的テンプレートであり、移転価格税務の実務会話として完全に不適格。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "シンガポール子会社へのロイヤルティ料率ですが、独立企業間価格算定のローカルファイル準備は進んでいますか。",
+        "vi": "Về tỷ lệ phí bản quyền cho công ty con ở Singapore, việc chuẩn bị hồ sơ quốc gia (local file) xác định giá giao dịch độc lập đã tiến hành đến đâu rồi?",
+        "en": "Regarding the royalty rate for the Singapore subsidiary, how is the preparation of the local file for arm's length price calculation progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "外部の税務アドバイザーとベンチマーク分析を完了し、現在の取引価格が妥当なレンジ内にあることを確認できました。",
+        "vi": "Chúng tôi đã hoàn thành phân tích đối chuẩn (benchmark) với cố vấn thuế bên ngoài và xác nhận rằng giá giao dịch hiện tại nằm trong biên độ hợp lý.",
+        "en": "We completed the benchmark analysis with our external tax advisor and confirmed that the current transaction price is within a reasonable range."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム語訳で意味解説の文字列（`giá giao dịch độc lập / giá thị trường (Arm's length price)`）が例文中に不自然にそのまま埋め込まれており修正が必要。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "33b9b03a1b88e09ece515fbaa9e272a25d5aeb39c1ef4baca5990887dc688693",
+    "validated_at": "2026-10-01T01:40:54.185801+00:00"
+  }
+}

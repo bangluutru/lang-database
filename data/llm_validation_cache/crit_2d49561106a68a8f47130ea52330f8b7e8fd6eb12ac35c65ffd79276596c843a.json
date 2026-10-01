@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000120",
+  "term": "手形買取",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations, example sentences, and dialogue all contain unnatural Japanese expressions where the predicate or context does not naturally apply to the term '手形買取' as an action/concept, but rather to the financial instruments or outcomes associated with it. The core issue is treating '手形買取' as an entity that can be '計上' or '処理' directly, instead of the accounting entries or financial assets/liabilities resulting from it.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "手形買取を開設する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「開設する」は口座や施設に対して使う動詞であり、「手形買取」という行為に対しては不自然。",
+      "suggested_text": "手形買取を依頼する"
+    },
+    {
+      "index": 1,
+      "text": "手形買取を決済する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形買取」は行為そのものであり、それを「決済する」という表現は不自然。手形そのものを決済する、または買取によって資金を決済するという文脈ならあり得るが、この形では不適切。",
+      "suggested_text": "手形買取で資金を決済する"
+    },
+    {
+      "index": 2,
+      "text": "手形買取を提示する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形買取」という行為を提示するのではなく、手形そのものを提示して買取を依頼する。動詞の対象が不適切。",
+      "suggested_text": "手形買取を申し出る"
+    },
+    {
+      "index": 3,
+      "text": "手形買取の不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「手形買取」という行為自体に不一致が生じるという表現は不自然。手形買取に関する帳簿や記録の不一致であれば自然。",
+      "suggested_text": "手形買取に関する不一致を解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「手形買取の計上内容や残高に差異がないか精査します」は、手形買取という行為そのものに残高があるかのような表現で不自然。手形買取によって生じた債権や負債の残高について言及すべき。",
+      "suggested_ja": "月末の帳簿照合において、手形買取によって生じた債権の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào trong nội dung hạch toán hoặc số dư của các khoản phải thu phát sinh từ chiết khấu hối phiếu xuất khẩu hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances for receivables arising from the negotiation of bills / bill discounting."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「手形買取を適正に処理いたしました」は、手形買取という行為そのものを処理するという点で不自然。手形買取に関する会計処理を適切に行った、という表現が自然。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において手形買取に関する会計処理を適正に行いました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện xử lý kế toán liên quan đến chiết khấu hối phiếu xuất khẩu một cách đúng đắn trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly performed the accounting treatment related to the negotiation of bills / bill discounting in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Aの発言「手形買取の計上内容に差異は発生していませんか」は、例と同様に「手形買取」そのものに計上内容があるかのような表現で不自然。Bの回答もやや硬い。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、手形買取による債権の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán các khoản phải thu từ chiết khấu hối phiếu xuất khẩu không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the entries for receivables from bill negotiation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、すべて適正に整合していることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, tôi đã xác nhận rằng tất cả đều khớp đúng.",
+        "en": "Yes, after cross-referencing the supporting documents and subsidiary ledgers, I confirmed that everything is properly reconciled."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b2aa2773f6175ae08c2a14eb31bf703f28ada48469d335f04d224d5c65144d22",
+    "validated_at": "2026-10-01T01:55:59.880180+00:00"
+  }
+}

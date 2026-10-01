@@ -1,0 +1,82 @@
+{
+  "entry_id": "jp-pro-accounting-000119",
+  "term": "その他有価証券評価差額金",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 2 contains a grammatical particle error ('〜を...を行う'), Collocation 3 confuses the underlying asset with the valuation equity account, and the dialogue uses templated verification procedures unsuited to securities valuation differences.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "その他有価証券評価差額金として純資産の部に計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation precisely describing balance sheet classification under Japanese GAAP."
+    },
+    {
+      "index": 1,
+      "text": "その他有価証券評価差額金に税効果会計を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and standard corporate accounting terminology for deferred tax application to equity valuation."
+    },
+    {
+      "index": 2,
+      "text": "その他有価証券評価差額金を洗替処理を行う",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Grammatical error: double particle pattern '〜を...を行う'. Should be '〜の洗替処理を行う' or '〜を洗替処理する'.",
+      "suggested_text": "その他有価証券評価差額金の洗替処理を行う"
+    },
+    {
+      "index": 3,
+      "text": "その他有価証券評価差額金を期末時価で評価替えする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Category error: The asset (その他有価証券) is revalued at market price, not the valuation difference account (その他有価証券評価差額金) itself.",
+      "suggested_text": "その他有価証券評価差額金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound, factually accurate under ASBJ standards, and natural corporate closing report phrasing."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate treatment of tax effect accounting in Japanese enterprise financial statements."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker B mentions checking '証憑書類と補助元帳' (vouchers and subsidiary ledger), which is a generic AP/expense template inappropriate for valuation differences. Securities valuation differences are verified against market price calculation sheets and custodian statements.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "四半期決算に向けて、その他有価証券評価差額金の算定と税効果の洗い替えは完了していますか。",
+        "vi": "Để chuẩn bị cho quyết toán quý, việc tính toán chênh lệch đánh giá lại chứng khoán sẵn sàng để bán và hoàn nhập thuế hoãn lại đã hoàn tất chưa?",
+        "en": "In preparation for the quarterly closing, have you completed the calculation of valuation difference on available-for-sale securities and the reversal of tax effects?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、期末時価の取得データを基に評価差額を再計算し、総勘定元帳への計上まで確認済みです。",
+        "vi": "Vâng, chúng tôi đã tính toán lại khoản chênh lệch đánh giá dựa trên dữ liệu giá thị trường cuối kỳ và xác nhận việc ghi nhận vào sổ cái chung.",
+        "en": "Yes, we recalculated the valuation difference based on the retrieved period-end market data and confirmed its recording in the general ledger."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese accurately reflect formal accounting terminology."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e62ea77482cb070e4d7d0c394243f7af0f535ace2e178d94d1f870006efe7eeb",
+    "validated_at": "2026-10-01T01:35:46.634143+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000092",
+  "term": "益金算入",
+  "overall_decision": "rewrite",
+  "summary_reason": "コロケーションにおける「重言（算入に算入する）」や概念矛盾（算入に不算入とする）が致命的であることに加え、例文1において会計上の費用と益金算入を紐付ける税法上の事実誤認（費用側の調整は通常損金不算入）が存在するため、抜本的なリライトが必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "益金算入に算入する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「益金算入」自体が「益金に算入すること」を意味するため、「〜に算入する」と重ねるのは重大な同語反復（重言）であり不自然。",
+      "suggested_text": "益金に算入する"
+    },
+    {
+      "index": 1,
+      "text": "益金算入に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「益金算入」と「不算入」が衝突しており、文法・概念ともに破綻している（正しくは「益金不算入とする」）。",
+      "suggested_text": "益金算入項目から除外する"
+    },
+    {
+      "index": 2,
+      "text": "益金算入の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法人税の申告実務において、別表四上の申告調整を行う文脈として自然。",
+      "suggested_text": "益金算入の調整を行う"
+    },
+    {
+      "index": 3,
+      "text": "益金算入に加算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "格助詞「に」と動詞「加算する」の結びつきが不自然。別表四では「益金算入（加算項目）として処理する」あるいは「別表四で加算する」とするのが正確。",
+      "suggested_text": "益金算入として加算する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「会計上の費用」との差異を調整するものは「損金不算入」であり、「益金算入」は会計上の収益に計上されていない収益等を税務上の益金に加算する手続きであるため、法人税法上の概念混同がある。",
+      "suggested_ja": "会計上は収益に計上されていない役員への資産の低額譲渡について、別表四において益金算入の申告調整を行いました。",
+      "suggested_vi": "Đối với việc chuyển nhượng tài sản giá thấp cho giám đốc chưa được ghi nhận doanh thu trên sổ sách kế toán, chúng tôi đã thực hiện điều chỉnh cộng thêm vào doanh thu chịu thuế trên Phụ lục 4.",
+      "suggested_en": "Regarding the transfer of assets to a director at a low price that was not recognized as book revenue, we made a tax return adjustment for inclusion in gross revenue on Schedule 4."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「益金算入の算入漏れ」は「算入」が重複して拙劣。実務では「益金算入漏れ」と簡潔に表現する。",
+      "suggested_ja": "税務調査における指摘を防止するため、過年度の取引を検証し、益金算入漏れがないか確認しました。",
+      "suggested_vi": "Để phòng ngừa việc bị cơ quan thuế truy thu trong thanh tra, chúng tôi đã rà soát lại các giao dịch của các năm trước xem có bị bỏ sót khoản cộng thêm vào doanh thu chịu thuế hay không.",
+      "suggested_en": "To prevent issues during tax audits, we reviewed prior-year transactions to confirm there were no omissions in inclusion in gross revenue."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "法人税申告書に「税理士の確認書」を添付書類として提出するという実務は通常存在せず不自然（税理士法第33条の2に基づく場合は「添付書面」と呼ぶ）。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の確定申告における受贈益の益金算入について、別表四の加算処理と根拠資料の準備は整いましたか。",
+        "vi": "Về khoản kết chuyển cộng thêm vào doanh thu chịu thuế đối với thu nhập từ quà biếu tặng trong quyết toán thuế lần này, việc xử lý điều chỉnh tăng trên Phụ lục 4 và chuẩn bị chứng từ căn cứ đã hoàn tất chưa?",
+        "en": "Regarding the inclusion of gain from donated assets in gross revenue for this tax return, have the addition adjustments on Schedule 4 and supporting documents been prepared?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧問税理士と確認のうえ別表への反映を済ませており、算定根拠資料もすべて揃っています。",
+        "vi": "Vâng, chúng tôi đã đối chiếu với thuế lý cố vấn và phản ánh vào phụ lục tờ khai, toàn bộ tài liệu căn cứ tính toán cũng đã sẵn sàng.",
+        "en": "Yes, we have confirmed with our tax advisor and reflected it on the schedule, and all supporting calculation materials are fully prepared."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both Vietnamese and English term translations accurately capture corporate tax concepts."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fc37355743ec6d190542ead99a19a7f8462cfac3a38724d72eaff3a2a785eef3",
+    "validated_at": "2026-10-01T01:39:00.502297+00:00"
+  }
+}

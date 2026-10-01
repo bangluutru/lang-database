@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000152",
+  "term": "法定調書",
+  "overall_decision": "rewrite",
+  "summary_reason": "税務実務の現場感覚から乖離したテンプレート的表現（「所轄官庁」「発行済みの法定調書」「交付する」）が散見され、提出先（税務署）や実務動詞（提出・保存）の観点で不自然です。また、外国語訳において定義文字列がそのまま複写されたような不自然な構文が見られます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "法定調書を交付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「交付する」は源泉徴収票や支払調書などを相手方（受給者等）へ手渡す・送達する際に使いますが、「法定調書」は税務署に提出する60種の書類の総称であるため、通常は「作成する」「提出する」と組み合わせます。",
+      "suggested_text": "法定調書を作成する"
+    },
+    {
+      "index": 1,
+      "text": "法定調書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "所轄税務署に対して法定調書を提出するという極めて標準的かつ実務に即したコロケーションです。",
+      "suggested_text": "法定調書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "法定調書を保管する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "税法上の書類管理においては「保管」よりも法令で定められた保存義務に基づく「保存する（法定調書の控を保存する）」が実務上最も標準的な表現です。",
+      "suggested_text": "法定調書の控を保存する"
+    },
+    {
+      "index": 3,
+      "text": "法定調書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務申告・調書作成時のチェック作業を表す自然な表現です。",
+      "suggested_text": "法定調書の記載事項を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "税務実務において法定調書の提出先は「所轄官庁」という抽象的な表現ではなく、「所轄税務署（または税務署長）」とするのが真正な表現です。また、ベトナム語訳で用語の定義文がそのまま文中に埋め込まれており不自然です。",
+      "suggested_ja": "法令に基づく適正な手続きを遂行するため、所轄税務署に対して期限内に法定調書および合計表を提出いたしました。",
+      "suggested_vi": "Để thực hiện đúng thủ tục theo luật định, chúng tôi đã nộp các báo cáo thuế bắt buộc (kèm bảng tổng hợp) cho chi cục thuế quản lý đúng thời hạn.",
+      "suggested_en": "In order to carry out proper statutory procedures, we submitted the statutory tax reports along with the summary table to the competent tax office within the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "法定調書は請求書のように「発行」するものではなく作成・提出するものであり、「発行済みの法定調書」は不自然です。提出後の控えを税法上の保存期間に沿って「保存する」とするのが税務実務として正確です。",
+      "suggested_ja": "税務調査や内部監査に備え、提出済みの法定調書の控えを法令で定められた保存期間に従って適切に保存しています。",
+      "suggested_vi": "Để chuẩn bị cho việc thanh tra thuế và kiểm toán nội bộ, chúng tôi lưu trữ thích hợp các bản lưu của báo cáo thuế bắt buộc đã nộp theo đúng thời hạn quy định của pháp luật.",
+      "suggested_en": "In preparation for tax audits and internal audits, we properly retain copies of submitted statutory tax reports in accordance with the statutory retention period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "社内の経理・税務実務の会話で提出先を「所轄官庁」と呼ぶのは極めて不自然であり、「税務署」とすべきです。また、AとBの応答においてより実践的な合計表や電子申告（e-Tax）に絡めた自然な対話に改善すべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署へ提出する法定調書と合計表の作成状況はいかがですか。記載漏れなどの確認は進んでいますか。",
+        "vi": "Tình hình lập các báo cáo thuế bắt buộc và bảng tổng hợp nộp cho cơ quan thuế thế nào rồi? Việc rà soát sai sót hay thiếu sót thông tin đã tiến hành đến đâu rồi?",
+        "en": "How is the preparation of the statutory tax reports and the summary table for the tax office going? Is the review for omissions progressing well?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、マイナンバーや支払金額の突き合わせを終え、e-Taxでの提出準備が整いました。",
+        "vi": "Vâng, chúng tôi đã hoàn tất việc đối chiếu mã số My Number và số tiền chi trả, hiện đã sẵn sàng để nộp qua hệ thống e-Tax.",
+        "en": "Yes, we have finished reconciling My Number data and payment amounts, and we are ready to submit via e-Tax."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "ベトナム語訳において、単語定義（các báo cáo thuế bắt buộc nộp hàng năm theo luật）が例文中にそのまま機械的に埋め込まれており、文としてぎこちないです。英語訳も「competent authority」など官僚的テンプレート訳が目立つため「competent tax office」等への改善が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "b083a319b956cf4596c4c3d830ba8683d8d817947b31feea0e802f8ef8ec0273",
+    "validated_at": "2026-10-01T01:40:06.773873+00:00"
+  }
+}

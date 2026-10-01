@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000061",
+  "term": "契約書",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a major corporate domain error regarding statutory deadlines for shareholder meetings, Collocation 2 uses an unnatural predicate ('発送'), and the Dialogue uses awkward phrasing ('発送の手配' and '推敲') unsuitable for corporate legal/contract workflows.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約書を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural business collocation for drafting a contract.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "契約書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in situations where a contract is submitted to financial institutions, courts, or regulators, though '契約書を締結する' is far more quintessential.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "契約書を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "In Japanese business practices, formal documents like contracts are '送付する' or '郵送する'. '発送する' is typically reserved for parcels, goods, or large-scale promotional mailings.",
+      "suggested_text": "契約書を送付する"
+    },
+    {
+      "index": 3,
+      "text": "契約書を受領する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate and formal expression for receiving an executed contract.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Under Japanese corporate law (Companies Act), statutory deadlines before a shareholders meeting or board meeting apply to notices of convocation (招集通知) or reference materials, not contracts (契約書). Sending contracts to all attendees under a statutory deadline for AGM proceedings is factually bizarre and clearly a generic template artifact.",
+      "suggested_ja": "取引先とのトラブルを未然に防止するため、法務部のレビューを経て正式な契約書を締結いたしました。",
+      "suggested_vi": "Để phòng ngừa rủi ro tranh chấp với đối tác, chúng tôi đã ký kết văn bản hợp đồng chính thức sau khi bộ phận pháp chế rà soát.",
+      "suggested_en": "To prevent disputes with the business partner, we executed the formal contract after a review by the legal department."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural corporate governance context concerning internal controls and audit trails.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Preparing a contract for an upcoming meeting usually involves drafting, legal review, and board approval, not '発送の手配' (arranging dispatch). Furthermore, '内容の推敲' is literary rather than corporate legal parlance (where 'リーガルチェック' or '条文の精査' is used).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会で決議予定の業務提携契約書ですが、準備状況はいかがでしょうか。",
+        "vi": "Tình hình chuẩn bị văn bản hợp đồng hợp tác kinh doanh dự kiến thông qua tại cuộc họp HĐQT tuần tới thế nào rồi?",
+        "en": "How is the preparation going for the business alliance agreement scheduled for resolution at next week's board meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "法務部によるリーガルチェックを終え、先方との条文調整も完了しましたので、本日中に最終版を共有いたします。",
+        "vi": "Bộ phận pháp chế đã rà soát xong và chúng tôi cũng đã thống nhất các điều khoản với đối tác, nên tôi sẽ chia sẻ bản cuối cùng trong hôm nay.",
+        "en": "The legal department has finished its review and we have finalized the clause adjustments with the counterparty, so I will share the final version today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations accurately reflect the provided source terms and sentences, though the source content itself required factual and stylistic corrections."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "28de28cc2e8e5a3bfc9f961db00fd3cb92b2cbbdb198b3b3c2b58ae5ffe4dada",
+    "validated_at": "2026-10-01T01:42:00.085651+00:00"
+  }
+}

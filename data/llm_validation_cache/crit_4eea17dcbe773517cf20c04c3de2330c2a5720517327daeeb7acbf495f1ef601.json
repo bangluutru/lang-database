@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000188",
+  "term": "総勘定元帳",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe accounting domain errors throughout: The candidate treated '総勘定元帳' as a written report or meeting document that is polished ('推敲') and dispatched ('発送') to shareholders and meeting attendees. It must be completely rewritten with realistic accounting contexts (balance reconciliation, external audit submission, statutory retention).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "総勘定元帳を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation (creating/generating a general ledger).",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "総勘定元帳を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in audit and tax inspection contexts (submitting the GL to auditors or tax authorities).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "総勘定元帳を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "総勘定元帳 consists of internal accounting records/electronic data and is not dispatched (発送) like parcels or physical notices. '出力する' (export/print) or '照合する' (reconcile) is far more standard.",
+      "suggested_text": "総勘定元帳を出力する"
+    },
+    {
+      "index": 3,
+      "text": "総勘定元帳を受領する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Enterprises generate and maintain their own GL rather than passively receiving it. In accounting workflows, verifying balances against the ledger is an essential skill.",
+      "suggested_text": "総勘定元帳と照合する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Major corporate law and accounting error: Companies never dispatch a General Ledger (総勘定元帳) to shareholders or board members for a general meeting. A GL contains raw, confidential transactional records. Statutory mailings contain financial statements (計算書類) and convocation notices (招集通知).",
+      "suggested_ja": "税務調査や会計監査に備え、決算確定後は総勘定元帳を速やかに出力し、電子帳簿保存法の要件に沿って保管する必要があります。",
+      "suggested_vi": "Để chuẩn bị cho việc thanh tra thuế và kiểm toán tài chính, sau khi khóa sổ quyết toán cần nhanh chóng xuất sổ cái và lưu trữ theo đúng quy định của Luật lưu trữ sổ sách kế toán điện tử.",
+      "suggested_en": "In preparation for tax inspections and accounting audits, it is necessary to promptly export the general ledger upon finalizing the closing and archive it in compliance with the Electronic Bookkeeping Act."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "A company creates its own GL rather than 'receiving' it ('受領した総勘定元帳'). The statutory obligation under the Companies Act and Corporation Tax Act is retention (保存・保管) of generated accounting books.",
+      "suggested_ja": "月次決算の確定作業において、補助元帳の残高と総勘定元帳の勘定科目残高が一致しているかを検証します。",
+      "suggested_vi": "Trong quy trình hoàn thiện quyết toán tháng, chúng tôi đối chiếu để kiểm tra xem số dư trên các sổ chi tiết có khớp với số dư tài khoản trên sổ cái tổng hợp hay không.",
+      "suggested_en": "During the monthly closing process, we verify whether the subsidiary ledger balances match the account balances in the general ledger."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Complete domain breakdown: Speaker B mentions '推敲' (polishing literary/textual prose) and '発送' (shipping/dispatching) for a General Ledger. A GL is numerical accounting ledger data produced by an ERP/accounting system, not an essay or presentation deck to be polished and mailed out for a meeting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "会計監査人から要請のあった、今期の総勘定元帳データの準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị dữ liệu sổ cái tổng hợp kỳ này theo yêu cầu của kiểm toán viên đến đâu rồi?",
+        "en": "How is the preparation of this term's general ledger data requested by the external auditors coming along?"
+      },
+      {
+        "speaker": "B",
+        "ja": "勘定科目の残高照合が完了しましたので、本日中に監査法人専用のセキュアフォルダへアップロードいたします。",
+        "vi": "Việc đối chiếu số dư các tài khoản đã hoàn tất, nên trong ngày hôm nay tôi sẽ tải lên thư mục bảo mật riêng của công ty kiểm toán.",
+        "en": "We have completed the account balance reconciliations, so I will upload the file to the audit firm's dedicated secure folder by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term translations are correct ('sổ cái' / 'sổ cái tổng hợp các tài khoản' and 'General ledger (GL)'), but the downstream generated sentences contained critical domain errors."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0f462bed9be4db73fb185026de64c2593b2ca1ee1633fd925900b0af26de8057",
+    "validated_at": "2026-10-01T01:37:04.699344+00:00"
+  }
+}

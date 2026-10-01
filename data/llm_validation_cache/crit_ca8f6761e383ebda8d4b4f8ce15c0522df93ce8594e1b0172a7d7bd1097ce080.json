@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-business-000024",
+  "term": "与信管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual errors caused by template hallucination. '与信管理' (credit risk management) was wrongly treated as a balance sheet ledger item subject to booking (計上) and account reconciliation (残高照合). All examples and the dialogue must be completely rewritten to reflect authentic credit risk control workflows.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "与信管理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Used naturally when advancing credit risk management initiatives across an organization."
+    },
+    {
+      "index": 1,
+      "text": "与信管理を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "与信管理 is an ongoing operational framework or risk control function; individual credit checks (与信審査) can be completed, but ongoing credit management is typically 'strengthened' (強化する) or 'strictly enforced' (徹底する).",
+      "suggested_text": "与信管理を強化する"
+    },
+    {
+      "index": 2,
+      "text": "与信管理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase for checking credit risk assessment workflows."
+    },
+    {
+      "index": 3,
+      "text": "与信管理を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business expression for reviewing credit limit policies and procedures."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Egregious accounting mismatch: '与信管理' (credit management) is a risk management process, not an account item or ledger entry. It cannot have '計上内容' (booked entries) or '残高' (balances).",
+      "suggested_ja": "取引先の財務状況悪化に伴い、貸倒リスクを抑えるため与信管理の基準を厳格化しました。",
+      "suggested_vi": "Do tình hình tài chính của đối tác xấu đi, chúng tôi đã thắt chặt tiêu chuẩn quản trị hạn mức tín dụng nhằm giảm thiểu rủi ro nợ xấu.",
+      "suggested_en": "Due to the deterioration in our client's financial position, we tightened our credit management criteria to mitigate bad debt risk."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Templated accounting hallucination: One does not '適正に処理いたしました' (properly process) 与信管理 in financial closing entries.",
+      "suggested_ja": "社内規程に則り、新規取引先の信用調査を実施した上で与信管理台帳へ限度額を登録いたしました。",
+      "suggested_vi": "Tuân thủ quy chế nội bộ, chúng tôi đã thực hiện thẩm tra tín dụng đối tác mới và đăng ký hạn mức vào sổ quản trị tín dụng.",
+      "suggested_en": "In accordance with internal regulations, we conducted a credit check on the new counterparty and registered their credit limit in the credit management ledger."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Speaker A asks about '与信管理の計上内容' (booked entries of credit management), which is nonsensical in corporate finance/accounting. Speaker B mechanically responds about voucher and subledger reconciliation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "A社から大口受注の打診がありましたが、与信管理上の限度額は超過しませんか。",
+        "vi": "Công ty A đã ngỏ lời đặt một đơn hàng lớn, liệu có vượt quá hạn mức tín dụng theo quy chế quản trị rủi ro không?",
+        "en": "Company A approached us with a large order inquiry; will this exceed their limit under our credit management policy?"
+      },
+      {
+        "speaker": "B",
+        "ja": "直近の決算書をもとに信用調査を更新し、一時的な与信限度額の引き上げを申請する予定です。",
+        "vi": "Chúng tôi dự định cập nhật thẩm định tín dụng dựa trên báo cáo tài chính gần nhất và nộp đơn xin nâng hạn mức tín dụng tạm thời.",
+        "en": "We plan to update their credit assessment based on their latest financial statements and apply for a temporary increase in their credit limit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The base Japanese examples and dialogue contained critical accounting fallacies ('booked entries/balances of credit management'), causing the translations to propagate nonsensical concepts."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "25a1bc47ca6968c01066f200cd785cfaa477c2b93a9e6fdb713f361df473b853",
+    "validated_at": "2026-10-01T01:41:20.251666+00:00"
+  }
+}

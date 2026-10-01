@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000185",
+  "term": "マニュアル作成",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental semantic mismatch in the examples and dialogue. 'マニュアル作成' (the act of creating manuals) is treated as an accounting entry or item that can have a 'balance' or 'booked content', which is incorrect. What gets accounted for are the *costs* associated with 'マニュアル作成'. The current usage is unnatural and factually incorrect in an accounting context. The collocations themselves are fine, but their application in the examples and dialogue is flawed.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "マニュアル作成を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "マニュアル作成を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "マニュアル作成の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "マニュアル作成を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The term 'マニュアル作成' refers to the act of creating manuals, not an accounting entry or balance. It cannot have '計上内容' (booked content) or '残高' (balance). This is a fundamental semantic mismatch in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、マニュアル作成に要した費用の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của chi phí biên soạn tài liệu hướng dẫn công việc chuẩn (SOP) có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the booked content or balances of the expenses incurred for creating manuals / SOP development."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'マニュアル作成' itself is not something that is 'processed' in closing entries in the same way an asset or liability is. It's an activity, and what gets processed are the costs associated with it. The phrasing 'マニュアル作成を適正に処理いたしました' is unnatural in an accounting context.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてマニュアル作成に要した費用を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các chi phí phát sinh từ việc biên soạn tài liệu hướng dẫn công việc chuẩn (SOP) trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the expenses incurred for creating manuals / SOP development in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Speaker A's question 'マニュアル作成の計上内容に差異は発生していませんか' is semantically incorrect. 'マニュアル作成' (the act of creating manuals) does not have '計上内容' (booked content) in an accounting sense. It's the costs related to it that would be accounted for. Speaker B's response, while generally about reconciliation, doesn't fix the fundamental flaw in Speaker A's premise.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、マニュアル作成に要した費用の計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán chi phí biên soạn tài liệu hướng dẫn công việc chuẩn (SOP) không?",
+        "en": "In this month's monthly closing, are there any discrepancies in the booked content of the expenses incurred for creating manuals / SOP development?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng quy định.",
+        "en": "I have reconciled the supporting documents and subsidiary ledgers, and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "1b3daf29d52c6d921987570d0dbc22268486f29d0055958fb0501f6c7a6d12ed",
+    "validated_at": "2026-10-01T01:53:22.640515+00:00"
+  }
+}

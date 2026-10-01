@@ -1,0 +1,17 @@
+{
+  "decision": "rewrite",
+  "reason": "コロケーションおよび例文は極めて自然で実務的ですが、対話文において退職給付引当金に対して「洗替処理」を用いている点が会計実務の正確性・自然さに欠けるため、対話文の述語表現の修正（rewrite）を推奨します。",
+  "issues": [
+    {
+      "component": "dialogue",
+      "code": "UNNATURAL_PREDICATE",
+      "detail": "信託銀行の数理計算報告書に基づく退職給付会計（原則法）では差額補充が基本であり、洗替法（洗替処理）は適用されません。会計実務上誤解を招くため、「計上処理」または「見直し・算定処理」への修正が望ましいです。"
+    }
+  ],
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_rejudge_v1",
+    "input_hash": "c601f61ddbbb9939e8ec181c541d300f7cabebeb45374dbd23423000f7156bb5",
+    "validated_at": "2026-10-01T01:35:35.276452+00:00"
+  }
+}

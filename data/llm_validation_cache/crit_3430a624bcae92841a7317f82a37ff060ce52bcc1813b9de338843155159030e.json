@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000171",
+  "term": "質問検査権",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal domain error: '質問検査権' (statutory tax authority of inquiry and inspection) was mechanically forced into accounting month-end closing templates as if it were a ledger account or balance sheet balance.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "質問検査権を行使する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly authentic legal and tax phrasing for tax authorities exercising the right of inquiry and inspection.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "質問検査権の調査を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Tax investigations are conducted 'based on' the right of inquiry and inspection (質問検査権に基づく調査), not '調査 of 質問検査権'.",
+      "suggested_text": "質問検査権に基づく調査を受ける"
+    },
+    {
+      "index": 2,
+      "text": "質問検査権に対応する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate phrasing for responding to/handling statutory tax inquiries.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "質問検査権の規定に基づく",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal phrasing referencing statutory provisions.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe hallucination. '質問検査権' is a legal statutory authority held by tax officials (国税通則法第74条の2等), not an accounting balance sheet item that can have an entry (計上内容) or a balance (残高).",
+      "suggested_ja": "税務調査官による質問検査権の行使に対し、税務部が窓口となって帳簿書類の提示や質問への対応を行いました。",
+      "suggested_vi": "Khi cán bộ thanh tra thuế thực thi quyền chất vấn và kiểm tra, bộ phận thuế đã làm đầu mối để xuất trình sổ sách chứng từ và giải trình các câu hỏi.",
+      "suggested_en": "In response to the tax examiner exercising their right of inquiry and inspection, the tax department served as the point of contact to present books and records and respond to questions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Fatal domain error. '質問検査権' cannot be recorded or processed in financial closing entries (決算において処理する).",
+      "suggested_ja": "国税通則法に定められた質問検査権に基づき、税務当局から過去3期分の取引に関する資料提示を求められました。",
+      "suggested_vi": "Căn cứ vào quyền chất vấn và kiểm tra được quy định trong Luật Quản lý Thuế Quốc gia, cơ quan thuế đã yêu cầu xuất trình tài liệu liên quan đến các giao dịch trong 3 kỳ vừa qua.",
+      "suggested_en": "Based on the right of inquiry and inspection stipulated in the Act on General Rules for National Taxes, the tax authorities requested presentation of materials regarding transactions over the past three fiscal years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Severe domain mismatch. The dialogue treats '質問検査権' as an accounting ledger balance undergoing monthly reconciliation. It should depict corporate handling of a tax audit inquiry.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週から始まる税務調査ですが、調査官の質問検査権の範囲について顧問税理士と確認は済みましたか。",
+        "vi": "Về cuộc thanh tra thuế bắt đầu từ tuần tới, anh đã xác nhận với kế toán thuế cố vấn về phạm vi quyền chất vấn và kiểm tra của thanh tra viên chưa?",
+        "en": "Regarding the tax audit starting next week, have we confirmed the scope of the auditor's right of inquiry and inspection with our tax advisor?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、対象税目と対象事業年度を確認済みですので、求められた資料を速やかに開示できるよう準備しております。",
+        "vi": "Vâng, chúng tôi đã xác nhận các loại thuế và năm tài chính thuộc diện thanh tra, nên đang chuẩn bị để có thể xuất trình tài liệu được yêu cầu một cách nhanh chóng.",
+        "en": "Yes, we have confirmed the applicable tax categories and fiscal years, and we are preparing to promptly disclose the requested materials."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The isolated term definitions are accurate, but the example/dialogue translations inherited nonsensical mechanical templates."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "937875d1fe92757e232224fc344406493fe35b317434ff2b0be843b6c480fb1f",
+    "validated_at": "2026-10-01T01:40:25.158893+00:00"
+  }
+}

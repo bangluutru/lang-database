@@ -1,0 +1,74 @@
+{
+  "entry_id": "jp-pro-trade-000129",
+  "term": "為替レート",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations and example sentences contain unnatural Japanese expressions and predicate choices that do not reflect how a Japanese professional would typically use the term '為替レート'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "為替レートを算出する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "為替レートは市場で決定されるものであり、企業が「算出する」という表現は不自然。企業は「適用する」または「確認する」が適切。",
+      "suggested_text": "為替レートを適用する"
+    },
+    {
+      "index": 1,
+      "text": "為替レートを改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "為替レートは市場の変動によって決まるものであり、企業が「改善する」ことはできない。企業は「為替リスクを改善する」や「為替差損益を改善する」など、為替レートの影響を改善する、という文脈で使うのが自然。",
+      "suggested_text": "為替リスクを改善する"
+    },
+    {
+      "index": 2,
+      "text": "為替レートを分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 3,
+      "text": "為替レートの目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「為替レートの数値」という表現は冗長で不自然。「為替レート」だけで十分。また、「モニタリングしています」はビジネス文書としてはやや口語的。",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で為替レートを月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi tỷ giá hối đoái hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors exchange rates on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「為替レートは目標値を上回り」という表現は、為替レートが企業にとって有利な方向に動いたことを示唆するが、為替レート自体が「目標値を上回る」という表現は一般的ではない。通常は「想定為替レートを上回る円安（または円高）で推移し」のように、具体的な変動方向と影響を述べる。また、「収益性と資本効率の向上が確認されました」はやや硬すぎる。",
+      "suggested_ja": "当期の為替レートは想定を上回る円安で推移し、収益性および資本効率の向上に寄与しました。",
+      "suggested_vi": "Tỷ giá hối đoái trong kỳ này đã diễn biến theo hướng đồng Yên yếu hơn dự kiến, góp phần cải thiện khả năng sinh lời và hiệu quả sử dụng vốn.",
+      "suggested_en": "This term's exchange rate trended weaker than expected, contributing to an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": ""
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": ""
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "813711f33f47daa6251d216a6f30efd4194ad6fc121c2169b12464aaa888b319",
+    "validated_at": "2026-10-01T01:56:08.633843+00:00"
+  }
+}

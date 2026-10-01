@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000030",
+  "term": "原材料",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains an impossible collocation ('原材料を精算する'), a stylistically repetitive and vague boilerplate example sentence, and an unnatural compound predicate ('適正に整合している') in the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "原材料を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting usage for booking raw materials onto the balance sheet or inventory ledger.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "原材料の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard phrase for checking the ending balance of the raw materials account.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "原材料を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One reconciles inventory counts or ledger balances (e.g., 原材料の帳簿残高と実地棚卸高を照合する), not the physical raw material entity directly with '照合する'. A much more fundamental, universally taught accounting collocation is '原材料を払い出す' (issue raw materials) or '原材料を棚卸しする'.",
+      "suggested_text": "原材料を払い出す"
+    },
+    {
+      "index": 3,
+      "text": "原材料を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The verb '精算する' applies to monetary advances, travel expenses, or unsettled cash accounts (仮払金, 経費), never to tangible inventory items like '原材料'.",
+      "suggested_text": "原材料を棚卸しする"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural, clear, and contextually appropriate sentence describing month-end accounting reconciliation.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically repetitive ('適正な会計基準' followed immediately by '適正に処理いたしました') and overly generic. In real corporate accounting, year-end treatment specifies valuation, write-downs, or physical-to-book adjustment rather than vague '原材料を処理いたしました'.",
+      "suggested_ja": "期末棚卸の結果に基づき、原材料の評価損を適正に計上いたしました。",
+      "suggested_vi": "Dựa trên kết quả kiểm kê cuối kỳ, chúng tôi đã trích lập dự phòng giảm giá nguyên vật liệu một cách chuẩn xác.",
+      "suggested_en": "Based on the results of the physical inventory count at period-end, we appropriately recorded the valuation loss on raw materials."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "The expression '適正に整合している' is redundant, unnatural business Japanese ('整合する' already implies alignment/consistency; adding '適正に' is a machine-translation artifact). Native speakers use '問題なく整合している' or '差異はなく整合している'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、原材料の計上内容に差異は発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh chênh lệch nào trong các bút toán nguyên vật liệu không?",
+        "en": "Are there any discrepancies in the raw material entries for this month's financial close?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて問題なく整合していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, và xác nhận mọi thứ đều khớp hoàn toàn, không có vấn đề gì.",
+        "en": "I have already reconciled the supporting documents with the sub-ledger and confirmed that everything matches without any issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Existing translations are grammatically accurate; suggested replacements provided above for rewritten items."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7cba014928d5831c54a23793142b4f96ec9687670e2cf649f374c92763e179c7",
+    "validated_at": "2026-10-01T01:34:20.092776+00:00"
+  }
+}

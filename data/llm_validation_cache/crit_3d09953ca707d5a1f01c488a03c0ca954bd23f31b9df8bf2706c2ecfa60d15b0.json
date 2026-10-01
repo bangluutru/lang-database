@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000163",
+  "term": "丙欄",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain factual errors caused by template hallucination (confusing 丙欄 of the withholding tax table with donation tax credits / Furusato Nozei schemes). Collocations, examples, and dialogue must all be rewritten around authentic payroll withholding tax practices for daily/short-term workers.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "丙欄を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "源泉徴収税額表の区分である「丙欄」は制度として利用するものではなく、適用する（丙欄を適用する・丙欄で計算する）と言います。",
+      "suggested_text": "丙欄を適用する"
+    },
+    {
+      "index": 1,
+      "text": "丙欄の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "源泉徴収義務者である企業側の視点としては、受給側ではなく「丙欄を適用する」または受給者について「丙欄が適用される」とするのが自然です。",
+      "suggested_text": "丙欄が適用される"
+    },
+    {
+      "index": 2,
+      "text": "丙欄を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "丙欄は日雇い・短期雇用者に機械的に適用される税額表区分であり、任意の優遇税制のように「活用する」対象ではありません。",
+      "suggested_text": "日額表の丙欄"
+    },
+    {
+      "index": 3,
+      "text": "丙欄の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "短期アルバイトなどが丙欄の要件に合致する文脈で自然に用いられます。",
+      "suggested_text": "丙欄の対象となる"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献」「社内周知を行って制度を活用」は企業版ふるさと納税などのテンプレート混入であり、源泉徴収区分である丙欄の実務と全く乖離しています。",
+      "suggested_ja": "日雇い労働者や2か月以内の短期雇用スタッフについては、源泉徴収税額表の日額表・丙欄を適用して計算します。",
+      "suggested_vi": "Đối với lao động nhật dụng và nhân viên ngắn hạn dưới 2 tháng, chúng tôi tính thuế bằng cách áp dụng cột C của bảng thuế khấu trừ theo ngày.",
+      "suggested_en": "For daily laborers and short-term staff employed for up to two months, withholding tax is calculated applying Column C of the daily tax table."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を事前に試算」も寄附金控除等の誤ったテンプレート混入です。丙欄は日額給与に応じた法定の源泉徴収税額区分であり、控除上限額の試算手続きなどは存在しません。",
+      "suggested_ja": "当初の雇用契約が2か月を超える見込みとなった場合は、丙欄から甲欄または乙欄へ速やかに切り替える必要があります。",
+      "suggested_vi": "Trong trường hợp hợp đồng tuyển dụng ban đầu dự kiến kéo dài trên 2 tháng, cần nhanh chóng chuyển đổi từ cột C sang cột A hoặc cột B.",
+      "suggested_en": "If the initial employment contract is expected to exceed two months, it is necessary to promptly switch from Column C to either Column A or Column B."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "丙欄は毎月の給与計算・源泉所得税納付に関する事項であり、法人税等の「決算申告書添付書類」として税理士確認書を添付して提出する性質のものではありません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の短期イベントでスポット雇用したスタッフの給与ですが、源泉徴収は丙欄扱いで問題ないでしょうか。",
+        "vi": "Về tiền lương của các nhân viên hỗ trợ ngắn hạn thuê cho sự kiện lần này, xử lý khấu trừ thuế theo cột C có vấn đề gì không?",
+        "en": "Regarding the wages for the spot staff hired for this short-term event, is it fine to treat their withholding under Column C?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、雇用期間が2か月以内で日々雇い入れられる条件を満たしていますので、日額表の丙欄で処理してください。",
+        "vi": "Vâng, vì họ đáp ứng điều kiện tuyển dụng theo ngày với thời gian dưới 2 tháng, xin hãy xử lý theo cột C của bảng thuế theo ngày.",
+        "en": "Yes, since they meet the criteria of being hired on a daily basis for under two months, please process them using Column C of the daily table."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term definitions themselves are correct; the defects are concentrated in the hallucinated template examples and dialogue."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0b96a580e04ee8d14b64cc2cf236b0aec9a1f76ae78cf741e3b0fc87105e3bb8",
+    "validated_at": "2026-10-01T01:40:24.777879+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000181",
+  "term": "1株当たり当期純利益",
+  "overall_decision": "rewrite",
+  "summary_reason": "Example 1 contains a fatal domain error (claiming individual business divisions monitor EPS), collocation 1 uses an awkward predicate ('改善する' instead of '向上させる'), and the dialogue uses unnatural corporate phrasing ('改善目標に対する進捗').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "1株当たり当期純利益を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for computing EPS.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "1株当たり当期純利益を改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While understandable, corporate finance and IR standardly use '向上させる' or '引き上げる' rather than '改善する' when referring to EPS growth.",
+      "suggested_text": "1株当たり当期純利益を向上させる"
+    },
+    {
+      "index": 2,
+      "text": "1株当たり当期純利益を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Commonly used in financial statement analysis.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "1株当たり当期純利益の目標値を設定する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression used in medium-term management plans and IR targets.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Factually impossible in accounting: EPS (1株当たり当期純利益) is calculated on a company-wide or consolidated basis using total outstanding shares. Individual business divisions (各事業部門) do not have their own share counts and cannot monitor EPS monthly.",
+      "suggested_ja": "資本効率の改善に向け、全社レベルで1株当たり当期純利益の推移を四半期ごとにモニタリングしています。",
+      "suggested_vi": "Nhằm cải thiện hiệu quả sử dụng vốn, chúng tôi theo dõi biến động thu nhập trên mỗi cổ phần (EPS) trên quy mô toàn công ty theo từng quý.",
+      "suggested_en": "To improve capital efficiency, we monitor trends in earnings per share (EPS) on a company-wide basis each quarter."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural corporate reporting statement correctly associating EPS with profitability and capital efficiency.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Pairing EPS with '改善目標に対する進捗' is awkward in Japanese IR/finance context; companies track progress against announced forecasts ('公表予想') or management plan targets ('中期経営計画の目標'). Additionally, '改善傾向を示しており' is unnatural for EPS compared to '伸長しており' or '増加基調にあり'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の決算において、1株当たり当期純利益の通期予想に対する進捗状況はいかがですか。",
+        "vi": "Trong kỳ quyết toán này, tiến độ thực hiện thu nhập trên mỗi cổ phần (EPS) so với dự báo cả năm hiện như thế nào rồi?",
+        "en": "Regarding this term's financial results, what is our progress on earnings per share (EPS) against the full-year forecast?"
+      },
+      {
+        "speaker": "B",
+        "ja": "前年同期比で順調に伸長しており、通期の目標値を十分に達成できる見通しです。",
+        "vi": "Chỉ số này đang tăng trưởng thuận lợi so với cùng kỳ năm trước và dự kiến sẽ hoàn toàn đạt được mục tiêu cả năm.",
+        "en": "It has been growing steadily compared to the same period last year, and we anticipate comfortably achieving the full-year target."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translations unprofessionally lowercased 'EPS' as '(eps)'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4e264811a23c18b1d43599102449d13efab41a8faf7503f2d14824f5acd8b5f5",
+    "validated_at": "2026-10-01T01:36:53.673926+00:00"
+  }
+}

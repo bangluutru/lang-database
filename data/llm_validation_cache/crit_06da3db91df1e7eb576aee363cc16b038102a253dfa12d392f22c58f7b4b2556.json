@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-business-000159",
+  "term": "売上目標",
+  "overall_decision": "rewrite",
+  "summary_reason": "Several collocations are unnatural or redundant, and the example sentences contain semantic errors or awkward phrasing in Japanese, which are then reflected in the translations. The core meaning and dialogue are acceptable, but the specific usage examples require revision for professional authenticity.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "売上目標を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "This is a natural and common collocation in business contexts.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "売上目標を改善する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "You don't 'improve' a target directly; you improve performance towards it or revise the target itself. '改善する' is typically used for processes, results, or conditions.",
+      "suggested_text": "売上目標を見直す"
+    },
+    {
+      "index": 2,
+      "text": "売上目標を分析する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "It is natural to analyze sales targets (e.g., their feasibility, impact, or how they were set).",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "売上目標の目標値を設定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The phrase '売上目標の目標値' is redundant. '売上目標' inherently implies a target value. The simpler '売上目標を設定する' is natural.",
+      "suggested_text": "売上目標を設定する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The phrase '売上目標の数値' is slightly redundant and unnatural. '売上目標' itself is a numerical target. The translations also carry this redundancy/awkwardness with slashes and 'metrics'/'chỉ số'.",
+      "suggested_ja": "経営効率の改善に向け、各事業部門で売上目標を月次でモニタリングしています。",
+      "suggested_vi": "Hướng tới cải thiện hiệu quả quản lý, các bộ phận kinh doanh đang theo dõi mục tiêu doanh thu hàng tháng.",
+      "suggested_en": "Towards improving operational efficiency, each business division monitors sales targets on a monthly basis."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The subject '売上目標' (sales target) cannot 'exceed its target value' ('目標値を上回る'). It is the actual sales ('売上高' or '実績') that exceeds the sales target. The translations reflect this semantic error.",
+      "suggested_ja": "当期の売上高は売上目標を上回り、収益性と資本効率の向上が確認されました。",
+      "suggested_vi": "Doanh thu thực tế kỳ này đã vượt mục tiêu doanh thu, xác nhận khả năng sinh lời và hiệu quả sử dụng vốn đã được nâng cao.",
+      "suggested_en": "This term's actual sales exceeded the sales target, confirming an improvement in profitability and capital efficiency."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The dialogue is natural, professional, and maintains good conversational continuity. Speaker B's response logically addresses Speaker A's question.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8f4fa0cf5e97ef343617c2b1459b97fcf7f63ba8e5c24198c985a79d6808136e",
+    "validated_at": "2026-10-01T01:51:30.563852+00:00"
+  }
+}

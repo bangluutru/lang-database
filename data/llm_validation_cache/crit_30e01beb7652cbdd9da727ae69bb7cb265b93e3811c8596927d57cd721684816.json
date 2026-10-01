@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000044",
+  "term": "株主名簿",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains severe factual and linguistic errors: '株主名簿を交付する' and '発行済みの株主名簿' erroneously conflate shares/certificates with statutory registries, and the examples/dialogue rely on generic regulatory submission templates rather than authentic corporate governance practice.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "株主名簿を交付する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Companies do not issue or hand over (交付する) the statutory shareholder registry itself. What is issued to a shareholder upon request is a certificate of registered matters (株主名簿記載事項証明書を交付する). For the registry itself, canonical verbs are 備え置く, 管理する, or 更新する.",
+      "suggested_text": "株主名簿を備え置く"
+    },
+    {
+      "index": 1,
+      "text": "株主名簿を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in contexts such as regulatory license applications or attaching shareholder lists to tax filings.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "株主名簿を保管する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in practical administrative contexts, though '備え置く' is the canonical statutory term under the Companies Act.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "株主名簿の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and accurate business Japanese regarding statutory verification.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Submitting the entire shareholder registry directly to 'competent authorities' without context is a generic AI template that does not reflect standard corporate secretarial practice. The primary workplace use of 株主名簿 relates to fixing voting rights for the general meeting of shareholders (株主総会) as of the record date (基準日) or corporate tax attachments.",
+      "suggested_ja": "定時株主総会の招集手続きに向けて、基準日時点における株主名簿の確定作業を進めております。",
+      "suggested_vi": "Để chuẩn bị cho thủ tục triệu tập đại hội đồng cổ đông thường niên, chúng tôi đang tiến hành công việc chốt danh sách sổ đăng ký cổ đông tại thời điểm ngày chốt quyền.",
+      "suggested_en": "In preparation for convening the annual general meeting of shareholders, we are finalizing the shareholder registry as of the record date."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The expression '発行済みの株主名簿' (issued shareholder registry) is factually and linguistically incorrect. Shares or share certificates are issued (発行), but a statutory register (名簿) is maintained, updated, or retained (作成・管理・備え置き), never 'issued'.",
+      "suggested_ja": "会社法の規定に基づき、最新の株主名簿を本店に常時備え置くとともに、厳重な情報管理を行っています。",
+      "suggested_vi": "Căn cứ theo quy định của Luật Doanh nghiệp, chúng tôi luôn lưu giữ sổ đăng ký cổ đông mới nhất tại trụ sở chính, đồng thời thực hiện quản lý thông tin nghiêm ngặt.",
+      "suggested_en": "In accordance with the Companies Act, we continuously maintain the latest shareholder registry at our head office and strictly manage confidential information."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue relies on the synthetic premise that companies routinely compile and submit shareholder registries to regulatory authorities on an ongoing basis. Real corporate secretarial work centers on share transfers,名義書換 (updating registered names), or AGM record date verification.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先週の株式譲渡に伴う、株主名簿の名義書換手続きは完了しましたか。",
+        "vi": "Thủ tục chuyển tên trên sổ đăng ký cổ đông liên quan đến đợt chuyển nhượng cổ phần tuần trước đã hoàn tất chưa?",
+        "en": "Has the transfer of title in the shareholder registry for last week's share transfer been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、譲受人からの請求書類を確認し、株主名簿の更新と記載事項証明書の交付まで滞りなく完了しております。",
+        "vi": "Vâng, chúng tôi đã kiểm tra hồ sơ yêu cầu từ bên nhận chuyển nhượng, cập nhật sổ đăng ký cổ đông và cấp giấy chứng nhận nội dung đăng ký một cách thuận lợi.",
+        "en": "Yes, we verified the application documents from the transferee, updated the shareholder registry, and issued the certificate of registered matters without delay."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Translations of Example 1 perpetuated the factual error of 'issued shareholder registry' ('sổ đăng ký cổ đông đã phát hành')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "fc3ca2117a13d61c1030cee755aa47f4c9889bc23280ffae8174c93991078d52",
+    "validated_at": "2026-10-01T01:41:48.366498+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000118",
+  "term": "課税売上げ",
+  "overall_decision": "rewrite",
+  "summary_reason": "Contains unnatural collocations ('残高を確認する', '精算する' applied to taxable sales), formulaic robotic example sentences lacking domain specificity, and stilted phrasing in the dialogue ('適正に整合している').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税売上げを計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression in accounting and tax practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "課税売上げの残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Sales are flow (P/L) items, not balance sheet items; '残高' (balance) is unnatural for 課税売上げ. '金額' or '累計額' should be used.",
+      "suggested_text": "課税売上げの金額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "課税売上げを照合する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Decipherable and used when cross-checking tax classifications with sales ledgers, though '課税売上高を集計する' is more frequent.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "課税売上げを精算する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "'精算する' applies to expense claims, advances, or settlement balances, not to gross taxable sales figures.",
+      "suggested_text": "課税売上げを集計する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Using '残高' for sales is a mechanical template artifact; in tax practice, the check focuses on tax classification (税区分) and omission.",
+      "suggested_ja": "月末の帳簿照合において、課税売上げの税区分や計上額に誤りがないか精査します。",
+      "suggested_vi": "Trong đợt đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sai sót nào về phân loại thuế hoặc số tiền ghi nhận của doanh số bán hàng chịu thuế không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are errors in tax classification or recorded amounts for taxable sales."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Redundant repetition of '適正な...適正に' and vague generic template; '課税売上げ' specifically pertains to consumption tax compliance rather than general accounting standards.",
+      "suggested_ja": "消費税法および社内規程に則り、当期の決算において課税売上げを適切に区分処理いたしました。",
+      "suggested_vi": "Tuân thủ Luật Thuế tiêu dùng và quy chế nội bộ, chúng tôi đã phân loại và xử lý phù hợp doanh số bán hàng chịu thuế trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with the Consumption Tax Act and internal regulations, we properly categorized and processed taxable sales in this fiscal year's closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural and tautological in Japanese business communication.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、課税売上げの税区分に誤りや計上漏れは発生していませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, có phát sinh sai sót phân loại thuế hoặc bỏ sót hạch toán doanh số bán hàng chịu thuế không?",
+        "en": "In this month's closing, are there any errors in tax classification or omissions in recording taxable sales?"
+      },
+      {
+        "speaker": "B",
+        "ja": "請求書控えと売上元帳を突合済みで、すべて問題なく計上されていることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu bản sao hóa đơn với sổ cái doanh thu và xác nhận mọi khoản đều được hạch toán thỏa đáng, không có vấn đề gì.",
+        "en": "I have reconciled the invoice copies against the sales ledger and confirmed that everything has been recorded properly without issues."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Translations of headwords are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "697831b72d61e3ed49ba29520d8dc1bf5f0841aafdd6fc890c676e3e4f89aa0e",
+    "validated_at": "2026-10-01T01:39:28.015193+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000133",
+  "term": "外注加工費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate suffers from accounting semantic mismatch (treating an expense account as a balance sheet item with '残高' and '精算'), stilted formulaic phrasing ('適正な...適正に'), and unnatural collocation choices.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "外注加工費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for booking subcontract processing costs.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "外注加工費の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "As an expense/cost of goods manufactured item (製造原価勘定), professionals refer to '発生額' (incurred amount) or '内訳' (breakdown) rather than '残高' (balance sheet balance).",
+      "suggested_text": "外注加工費の内訳を確認する"
+    },
+    {
+      "index": 2,
+      "text": "外注加工費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "The transitive verb '照合する' requires either a counterpart ('AとBを照合する') or refers to physical records/invoices. An expense account itself is not directly 'collated'.",
+      "suggested_text": "外注加工費と検収書を照合する"
+    },
+    {
+      "index": 3,
+      "text": "外注加工費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "'精算する' applies to expense reimbursements (旅費・経費) or temporary advances (仮払金). Vendor manufacturing services are settled via accounts payable (支払う / 決済する) or allocated to manufacturing cost.",
+      "suggested_text": "外注加工費を製造原価に算入する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Referring to '残高' for an expense item sounds mechanically generated from asset/liability templates. Natural accounting communication focuses on accrued amounts vs. invoice discrepancies.",
+      "suggested_ja": "月末の締め処理において、検収データと外注加工費の計上額に差異が生じていないか精査します。",
+      "suggested_vi": "Trong quá trình chốt sổ cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có phát sinh chênh lệch giữa dữ liệu nghiệm thu và số tiền chi phí gia công thuê ngoài đã hạch toán hay không.",
+      "suggested_en": "During month-end closing, we carefully examine whether any discrepancies exist between inspection/acceptance data and recorded outsourcing manufacturing costs."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The repetition of '適正な...' and '適正に処理いたしました' is stilted AI boilerplate devoid of practical corporate context.",
+      "suggested_ja": "製造原価報告書の作成にあたり、外注加工費の進捗度に応じた期末仕掛品への配賦を適正に行いました。",
+      "suggested_vi": "Khi lập báo cáo giá thành sản xuất, chúng tôi đã phân bổ hợp lý chi phí gia công thuê ngoài vào sản phẩm dở dang cuối kỳ theo tiến độ.",
+      "suggested_en": "In preparing the statement of cost of goods manufactured, we properly allocated outsourcing manufacturing costs to ending work-in-progress based on the stage of completion."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'すべて適正に整合していることを確認いたしました' is tautological and awkward corporate jargon. Business speakers state reconciliation completion clearly.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の製造原価ですが、外注加工費の計上漏れや発注金額との差異は発生していませんか。",
+        "vi": "Về giá thành sản xuất tháng này, có phát sinh thiếu sót hạch toán chi phí gia công thuê ngoài hay chênh lệch so với giá trị đơn đặt hàng không?",
+        "en": "Regarding this month's manufacturing costs, are there any unrecorded outsourcing manufacturing costs or variances against purchase order amounts?"
+      },
+      {
+        "speaker": "B",
+        "ja": "納品書と検収データの突合を完了しており、すべて問題なく一致していることを確認済みです。",
+        "vi": "Chúng tôi đã hoàn thành đối chiếu phiếu giao hàng với dữ liệu nghiệm thu và xác nhận mọi thứ đều khớp hoàn toàn, không có vấn đề gì.",
+        "en": "We have completed reconciling the delivery notes with acceptance data and confirmed that everything matches without issue."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "831b1493d07c36a352f0dda4b39277a7fdd8c33e4d5158a0a70a3290242b8ffe",
+    "validated_at": "2026-10-01T01:36:02.061578+00:00"
+  }
+}

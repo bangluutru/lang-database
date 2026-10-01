@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000007",
+  "term": "検収",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input exhibits severe mechanical template substitution errors. 検収 was forced into an accounting entry/balance slot ('検収の残高', '検収の計上内容'), which is unnatural and accounting-inaccurate. Examples and dialogue must reflect authentic business practice (検収基準, 検収書, 動作テスト).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "検収を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard workplace collocation for carrying out inspection and acceptance.",
+      "suggested_text": "検収を進める"
+    },
+    {
+      "index": 1,
+      "text": "検収を完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common business expression signifying completion of inspection and acceptance.",
+      "suggested_text": "検収を完了する"
+    },
+    {
+      "index": 2,
+      "text": "検収の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural operational phrase used when reviewing procedures.",
+      "suggested_text": "検収の手順を確認する"
+    },
+    {
+      "index": 3,
+      "text": "検収を見直す",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "検収 is an operational act or milestone. Native speakers review the criteria (検収基準) or procedure (検収フロー/プロセス), or issue documents (検収書を発行する), rather than '見直す' 検収 directly.",
+      "suggested_text": "検収基準を見直す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "検収 is an act/procedure (inspection and acceptance). It is not an accounting balance sheet item, so '検収の残高' is factually nonsensical in accounting. This is an artifact of a generic automated template.",
+      "suggested_ja": "当社では検収基準を採用しているため、顧客から検収書を受領した日付で売上を計上します。",
+      "suggested_vi": "Vì công ty chúng tôi áp dụng tiêu chuẩn nghiệm thu, nên doanh thu sẽ được ghi nhận vào ngày nhận được biên bản nghiệm thu từ khách hàng.",
+      "suggested_en": "Since our company adopts the inspection and acceptance basis, we recognize revenue on the date we receive the acceptance certificate from the customer."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'決算において検収を適正に処理いたしました' is stilted and unnatural corporate template jargon. In actual business/procurement, acceptance triggers billing or accounts payable booking.",
+      "suggested_ja": "納入物の検収が完了次第、取引先に検収書を交付し、仕入高の計上処理を行ってください。",
+      "suggested_vi": "Ngay sau khi hoàn thành nghiệm thu hàng bàn giao, hãy phát hành biên bản nghiệm thu cho đối tác và thực hiện xử lý hạch toán mua hàng.",
+      "suggested_en": "As soon as the inspection and acceptance of the delivered items is complete, please issue the acceptance certificate to the vendor and proceed with recording the purchase entry."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'検収の計上内容' is robotic template language. Business conversations regarding 検収 focus on whether physical inspection is finished, acceptance sign-offs received, or revenue/costs booked accordingly.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先週納品された基幹システムについて、現場での検収は完了していますか。",
+        "vi": "Hệ thống cốt lõi được bàn giao vào tuần trước đã hoàn tất nghiệm thu tại hiện trường chưa?",
+        "en": "Has the on-site inspection and acceptance been completed for the core system delivered last week?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、動作テストも問題なく終了し、先ほど先方から検収書を受領いたしました。",
+        "vi": "Vâng, việc chạy thử nghiệm đã hoàn tất tốt đẹp và chúng tôi vừa nhận được biên bản nghiệm thu từ phía đối tác.",
+        "en": "Yes, operational testing was completed without issue, and we just received the acceptance certificate from the client."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English candidate translations suffered from copying the repetitive gloss 'nghiệm thu sản phẩm / kiểm tra bàn giao' verbatim into sentence contexts, and the English translated nonsensical accounting phrasing ('entries or balances for inspection and acceptance')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "414bcb15865e07bd75927f8554b66104a81f7e096dad5b9a8fa0df949fd2317f",
+    "validated_at": "2026-10-01T01:41:06.960287+00:00"
+  }
+}

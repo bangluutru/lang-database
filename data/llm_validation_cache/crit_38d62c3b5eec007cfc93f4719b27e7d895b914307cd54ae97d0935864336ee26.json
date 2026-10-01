@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000128",
+  "term": "個別対応法",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文が消費税法における「個別対応法」の実態から著しく乖離しており、地域貢献税制（ふるさと納税等）のテンプレートと混同した重大なドメインエラーを含んでいます。コロケーションおよび例文の全面差し替えが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "個別対応法を利用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "消費税の仕入税額控除の計算方式であるため、「利用する」ではなく「適用する」や「採用する」を用いるのが税務実務上標準的です。",
+      "suggested_text": "個別対応法を適用する"
+    },
+    {
+      "index": 1,
+      "text": "個別対応法の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務実務や法令解説において自然に用いられるコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "個別対応法を活用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "個別対応法は消費税法に基づく計算区分方式であり、優遇制度や補助金のように「活用する」とは言いません。",
+      "suggested_text": "個別対応法により仕入控除税額を計算する"
+    },
+    {
+      "index": 3,
+      "text": "個別対応法の対象となる",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「個別対応法」自体が計算方式であるため、「個別対応法を選択する」または「個別対応法により区分する」とするのが自然です。",
+      "suggested_text": "個別対応法を選択する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "個別対応法は消費税の仕入税額控除の計算方式（課税・非課税・共通の3区分）であり、「地域貢献」とは一切関係がありません。企業版ふるさと納税など別の税制優遇と混同した明らかなハルシネーションです。",
+      "suggested_ja": "当社は課税売上高が5億円を超えているため、消費税の申告において個別対応法を適用して仕入税額控除を計算しました。",
+      "suggested_vi": "Do doanh thu chịu thuế của công ty chúng tôi vượt quá 500 triệu yên, chúng tôi đã áp dụng phương pháp phân loại chi tiết (個別対応法) để tính thuế GTGT đầu vào được khấu trừ khi kê khai thuế tiêu thụ.",
+      "suggested_en": "Since our taxable sales exceeded 500 million yen, we applied the specific identification method to calculate the input consumption tax deduction for our tax return."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額」は寄附金控除や住宅ローン控除等で使われる概念であり、消費税の個別対応法には当てはまりません。また計算方式に対して「手続きを進める」という表現も不自然です。",
+      "suggested_ja": "個別対応法を採用するためには、課税仕入れ等を3つの区分に明確に区分経理しておく必要があります。",
+      "suggested_vi": "Để áp dụng phương pháp phân loại chi tiết, doanh nghiệp cần hạch toán và phân loại rõ ràng các khoản mua vào chịu thuế theo ba nhóm quy định.",
+      "suggested_en": "In order to adopt the specific identification method, it is necessary to clearly segregate and account for taxable purchases into three statutory categories."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算申告における計算根拠と添付書類の確認に関するやり取りとして、実務上成立しており文脈も自然です。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8a7c8fc30716e50db309e898050ccddadc99ff210e02e68224a13b30bb55ef5a",
+    "validated_at": "2026-10-01T01:39:38.885565+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000059",
+  "term": "履歴事項全部証明書",
+  "overall_decision": "rewrite",
+  "summary_reason": "履歴事項全部証明書が法務局から取得・交付を受ける公的証明書であるという法務実務の基本前提が無視され、自社で「作成する」「法定期間保管する」という重大な事実誤認（AIハルシネーション）が含まれているため、全面修正を命じます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "履歴事項全部証明書を交付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「交付する」主体は法務局（登記所）です。企業・ビジネス実務を学ぶ学習者に対しては、企業側の行為である「取得する」または「交付請求する」を教えるのが適切です。",
+      "suggested_text": "履歴事項全部証明書を取得する"
+    },
+    {
+      "index": 1,
+      "text": "履歴事項全部証明書を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "金融機関の口座開設や官公庁への許認可申請などで頻出する極めて自然なコロケーションです。",
+      "suggested_text": "履歴事項全部証明書を提出する"
+    },
+    {
+      "index": 2,
+      "text": "履歴事項全部証明書を保管する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "履歴事項全部証明書は必要に応じて法務局から取得する公的証明書（通常有効期限3ヶ月程度）であり、法定保存文書のように「保管する」対象としてコロケーションを組むのは実務慣行上不自然です。取引先等から提出を求める文脈の「取り付ける」などが自然です。",
+      "suggested_text": "履歴事項全部証明書を取り付ける"
+    },
+    {
+      "index": 3,
+      "text": "履歴事項全部証明書の記載事項を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "代表権や目的、資本金、役員構成などの確認実務で頻出する自然な表現です。",
+      "suggested_text": "履歴事項全部証明書の記載事項を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "官公庁への手続きや許認可申請において履歴事項全部証明書を提出する文脈として自然です。",
+      "suggested_ja": "法令に基づく適正な手続きを遂行するため、所轄官庁に対して期限内に履歴事項全部証明書を提出いたしました。",
+      "suggested_vi": "Để thực hiện đúng thủ tục theo luật định, chúng tôi đã nộp giấy chứng nhận đăng ký doanh nghiệp bản đầy đủ (Toukicho) cho cơ quan có thẩm quyền đúng thời hạn.",
+      "suggested_en": "To execute proper procedures under statutory regulations, we submitted the certificate of all registered historical matters (company registry) to the competent authority within the deadline."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "履歴事項全部証明書は法務局で随時取得する公的証明書であり、帳簿書類や定款のように「法令の保存期間に従って厳重に保管」する性質の法定保管文書ではありません。実務事実と法制度の理解に誤解を与える典型的なテンプレート文章です。",
+      "suggested_ja": "新規取引先との基本契約締結に先立ち、与信審査およびコンプライアンス確認のため、直近3か月以内に発行された履歴事項全部証明書の提出を依頼しました。",
+      "suggested_vi": "Trước khi ký kết hợp đồng nguyên tắc với đối tác mới, chúng tôi đã yêu cầu họ nộp giấy chứng nhận đăng ký doanh nghiệp bản đầy đủ được cấp trong vòng 3 tháng gần nhất để phục vụ thẩm định tín dụng và kiểm tra tuân thủ.",
+      "suggested_en": "Prior to concluding the basic agreement with the new business partner, we requested the submission of a certificate of all registered historical matters issued within the last three months for credit assessment and compliance verification."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "致命的な実務誤認があります。履歴事項全部証明書は法務局が発行する公的証明書であり、企業自身が「作成する」文書ではありません（作成するのは登記申請書等）。自社で作成・記載漏れの点検をするという対話は実務上完全に破綻しています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "法人口座開設の手続きに必要な、発行から3か月以内の履歴事項全部証明書はすでに取得できていますか。",
+        "vi": "Anh/chị đã lấy giấy chứng nhận đăng ký doanh nghiệp bản đầy đủ phát hành trong vòng 3 tháng cần thiết cho thủ tục mở tài khoản công ty chưa?",
+        "en": "Have you already obtained the certificate of all registered historical matters issued within the last three months, which is required for opening the corporate bank account?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、昨日本郷の法務局窓口で原本を取得済みですので、他の必要書類と併せて本日中に金融機関へ提出いたします。",
+        "vi": "Vâng, tôi đã lấy bản gốc tại quầy giao dịch của Cục Pháp vụ Hongo ngày hôm qua, nên tôi sẽ nộp cho ngân hàng trong ngày hôm nay cùng với các tài liệu cần thiết khác.",
+        "en": "Yes, I obtained the original at the Legal Affairs Bureau counter yesterday, so I will submit it to the financial institution within today along with the other required documents."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "語義自体の翻訳は正確ですが、例文および対話の修正に伴い各例文・対話の対訳も修正が必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "98055c9ed372e632e0806866f7b0a6957d509fb077fb827190b2ac65ff745664",
+    "validated_at": "2026-10-01T01:42:01.323890+00:00"
+  }
+}

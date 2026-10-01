@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000034",
+  "term": "社外取締役",
+  "overall_decision": "rewrite",
+  "summary_reason": "The dialogue exhibits a severe semantic disconnect where Speaker A omits the object ('資料') while Speaker B answers regarding document delivery. Example 1 also uses the unnatural compound '報告連絡会' instead of established governance terminology like '意見交換会'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "社外取締役を選任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate governance and Companies Act terminology.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "社外取締役に就任する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and standard expression for assuming the role.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "社外取締役に相談する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically natural, though '社外取締役に助言を求める' is more formal in boardroom contexts; still acceptable.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "社外取締役の職務を遂行する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard formal expression for executing duties of an outside director.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Authentic Japanese corporate disclosure phrasing with accurate governance procedure.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'報告連絡会' is unnatural and colloquial in boardroom governance context. Standard corporate practice uses '意見交換会' or '連絡協議会'. In addition, the English translation has an awkward slash.",
+      "suggested_ja": "業務執行の適法性と透明性を確保するため、社外取締役との定期的な意見交換会を開催しています。",
+      "suggested_vi": "Để đảm bảo tính hợp pháp và minh bạch trong điều hành hoạt động kinh doanh, chúng tôi tổ chức các buổi trao đổi ý kiến định kỳ với thành viên độc lập Hội đồng quản trị.",
+      "suggested_en": "To ensure the legality and transparency of business operations, we hold regular discussion sessions with outside directors."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Speaker A asks about '社外取締役の準備状況' (implying the outside director's personal readiness), but Speaker B replies about drafting and dispatching meeting materials. Speaker A must explicitly say '社外取締役向け資料の準備状況' (preparation of materials for the outside directors).",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来週の取締役会に向けて、社外取締役向け資料の準備状況はいかがですか。",
+        "vi": "Tình hình chuẩn bị tài liệu cho các thành viên độc lập HĐQT trước thềm cuộc họp HĐQT tuần tới thế nào rồi?",
+        "en": "How is the preparation of materials for the outside directors coming along for next week's board meeting?"
+      },
+      {
+        "speaker": "B",
+        "ja": "内容の最終推敲を終え、役員の事前承認も得られましたので、本日中に事前送付の手配を行います。",
+        "vi": "Chúng tôi đã hoàn thiện bản thảo cuối cùng và nhận được phê duyệt trước từ ban điều hành, nên sẽ tiến hành gửi trước ngay trong hôm nay.",
+        "en": "We have completed the final review and obtained prior executive approval, so we will arrange to send them in advance by the end of today."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "English translations in examples mechanically repeated the slash 'outside director / independent director' rather than using clean, professional phrasing."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6e302147c18e01db60708e52aa79ff2b0cbb4be7bf32709cfece6ffb2ffea498",
+    "validated_at": "2026-10-01T01:41:30.837384+00:00"
+  }
+}

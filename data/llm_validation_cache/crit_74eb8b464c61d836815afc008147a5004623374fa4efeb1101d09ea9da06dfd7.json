@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000174",
+  "term": "追徴課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "The input treats 追徴課税 (back tax penalty assessment) as a routine monthly accounting reconciliation workflow, which is factually false and linguistically unnatural across all collocations, examples, and the dialogue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "追徴課税を進める",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "追徴課税 is a tax penalty/assessment imposed by tax authorities. A corporate taxpayer does not 'advance/proceed with' (進める) 追徴課税; the natural predicate is 追徴課税を受ける (receive an additional assessment) or 追徴課税を課される.",
+      "suggested_text": "追徴課税を受ける"
+    },
+    {
+      "index": 1,
+      "text": "追徴課税を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Taxpayers do not 'complete' 追徴課税 itself; they pay the additional tax assessment (追徴税額を納付する / 追徴課税の納付を完了する).",
+      "suggested_text": "追徴課税を納付する"
+    },
+    {
+      "index": 2,
+      "text": "追徴課税の手順を確認する",
+      "decision": "rewrite",
+      "reason_code": "REGISTER_ERROR",
+      "reason": "追徴課税 is an extraordinary sanction resulting from a tax audit, not an internal operational workflow with regular procedures to verify.",
+      "suggested_text": "追徴課税が発生する"
+    },
+    {
+      "index": 3,
+      "text": "追徴課税を見直す",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A company cannot unilaterally 'review/revise' a tax assessment imposed by the tax office; in legal contexts one would contest it (不服申立てを行う) or assess risk (追徴課税のリスクを評価する).",
+      "suggested_text": "追徴課税のリスクがある"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "追徴課税 is a one-off tax audit penalty assessment, not a routine monthly reconciliation item with an ongoing balance (残高) checked at month-end.",
+      "suggested_ja": "税務調査の結果、申告漏れを指摘され、多額の追徴課税を受けることになりました。",
+      "suggested_vi": "Kết quả thanh tra thuế cho thấy có sai sót trong kê khai, khiến chúng tôi phải chịu một khoản phạt và truy thu thuế rất lớn.",
+      "suggested_en": "As a result of the tax audit, undeclared income was identified, resulting in a substantial additional tax assessment."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Templated sentence. In corporate accounting, penalties/additional corporate income taxes are booked under accounts such as 法人税等追徴税額 (or 雑損失 for penalty portions) as extraordinary losses/tax expenses.",
+      "suggested_ja": "税務当局から通知された追徴課税については、当期決算において過年度法人税等として計上しました。",
+      "suggested_vi": "Khoản truy thu thuế do cơ quan thuế thông báo đã được hạch toán vào mục thuế thu nhập doanh nghiệp các năm trước trong kỳ quyết toán này.",
+      "suggested_en": "The additional tax assessment notified by the tax authorities was recorded as prior-period corporate taxes in this fiscal term's financial closing."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if there are discrepancies in '追徴課税' during a routine monthly close is factually nonsensical in accounting. Additional tax arises exclusively from tax audits or amended tax returns.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先日の税務調査で指摘された処理ですが、追徴課税が発生する見込みでしょうか。",
+        "vi": "Về phần xử lý bị cơ quan thuế chỉ ra trong đợt thanh tra vừa rồi, liệu có khả năng phát sinh truy thu thuế không?",
+        "en": "Regarding the issue pointed out during the recent tax audit, do you expect any additional tax assessment to be levied?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、過少申告加算税と延滞税を含め、約300万円の追徴課税が発生する見込みです。",
+        "vi": "Vâng, dự kiến sẽ phát sinh khoảng 3 triệu yên tiền truy thu bao gồm thuế phạt do kê khai thiếu và tiền chậm nộp.",
+        "en": "Yes, we anticipate an additional tax assessment of around 3 million yen, including understatement penalties and delinquency tax."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "rewrite",
+    "reason": "In English tax terminology, 'additional tax assessment' or 'deficiency tax assessment / back taxes' is much more accurate than 'additional tax collection'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c0c1ea79c0a6778390e707bf99c2cb06740a2ce1610acf68b05d6324963ddac7",
+    "validated_at": "2026-10-01T01:40:28.569541+00:00"
+  }
+}

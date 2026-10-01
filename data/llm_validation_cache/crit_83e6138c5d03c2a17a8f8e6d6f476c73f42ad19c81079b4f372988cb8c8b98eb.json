@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000137",
+  "term": "控除対象外消費税額等",
+  "overall_decision": "rewrite",
+  "summary_reason": "助詞の係り受けの破綻（「～に算入する」「～に不算入とする」）、実務実態に即していない抽象的な例文テンプレート、および申告書添付書類に関する制度的誤認を含む対話文が含まれているため、全体的な再生成（リライト）が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "控除対象外消費税額等に算入する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "助詞「に」の係り受けが不自然です。実務では控除対象外消費税額等を「損金に算入する」または「資産の取得原価に算入する」のように目的語として扱います。",
+      "suggested_text": "控除対象外消費税額等を損金に算入する"
+    },
+    {
+      "index": 1,
+      "text": "控除対象外消費税額等に不算入とする",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "助詞および税務用語法として不自然です。「損金不算入とする」の対象が控除対象外消費税額等であるため、「控除対象外消費税額等を損金不算入とする」とすべきです。",
+      "suggested_text": "控除対象外消費税額等を損金不算入とする"
+    },
+    {
+      "index": 2,
+      "text": "控除対象外消費税額等の調整を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "法人税申告における申告調整や決算調整の文脈で自然に使用されます。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "控除対象外消費税額等に加算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "控除対象外消費税額等「に」加算するのではなく、資産の取得価額や別表四の加算項目に「控除対象外消費税額等を加算する」のが正しい実務用法です。",
+      "suggested_text": "控除対象外消費税額等を資産計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適切に処理しました」という表現が機械的・抽象的です。実務上は「損金不算入として加算留保した」や「繰延消費税額等として申告調整を行った」など具体的に記載するのが自然です。",
+      "suggested_ja": "会計上全額費用処理した資産に係る控除対象外消費税額等について、別表四で損金不算入の加算調整を行いました。",
+      "suggested_vi": "Đối với khoản thuế tiêu dùng đầu vào không được khấu trừ phát sinh từ tài sản đã hạch toán toàn bộ vào chi phí kế toán, chúng tôi đã thực hiện điều chỉnh tăng (loại trừ khỏi chi phí được trừ) trên phụ lục số 4 tờ khai quyết toán.",
+      "suggested_en": "Regarding the non-deductible consumption tax on assets expensed for accounting purposes, we made an add-back adjustment on Schedule 4 as a non-deductible expense."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「控除対象外消費税額等の算入漏れ」という表現は曖昧で税務実務になじみません。「資産に係る控除対象外消費税額等の損金算入限度額の計算漏れ」や「課税売上割合の変動に伴う控除対象外消費税額等の処理誤り」のように実体のある文脈が必要です。",
+      "suggested_ja": "課税売上割合が95％未満となったため、資産に係る控除対象外消費税額等の損金算入限度額を改めて精査しました。",
+      "suggested_vi": "Do tỷ lệ doanh thu chịu thuế giảm xuống dưới 95%, chúng tôi đã rà soát lại kỹ lưỡng hạn mức được trừ đối với khoản thuế tiêu dùng đầu vào không được khấu trừ liên quan đến tài sản.",
+      "suggested_en": "Since the taxable sales ratio fell below 95%, we carefully re-examined the deductible limit for non-deductible consumption tax related to assets."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「税理士の確認書を揃えましたので、申告書添付書類として提出可能です」という台詞は日本の税務申告実務として不正確です。申告書の添付書類は税理士法第33条の2に定める「添付書面」や各種内訳書・勘定内訳明細書であり、「確認書」を法定添付書類として税務署に提出する表現は不自然です。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の決算申告における控除対象外消費税額等の計算内訳と別表十六の明細は整理できましたか。",
+        "vi": "Anh/chị đã chuẩn bị xong bảng tính chi tiết khoản thuế tiêu dùng không được khấu trừ và phụ lục 16 cho quyết toán kỳ này chưa?",
+        "en": "Have you finalized the calculation breakdown of non-deductible consumption tax and the Schedule 16 statements for this tax return?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、繰延消費税額等の償却限度額計算を含め、顧問税理士によるレビューも完了しております。",
+        "vi": "Vâng, bao gồm cả việc tính hạn mức khấu hao thuế tiêu dùng hoãn lại, bên cố vấn thuế cũng đã hoàn tất việc rà soát rồi ạ.",
+        "en": "Yes, including the calculation of the amortization limit for deferred consumption tax, the review by our tax advisor is also complete."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "用語の基本訳文（EN: Non-deductible consumption tax / VI: khoản thuế tiêu dùng đầu vào không được khấu trừ）は適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "033e99d13e37f6e7af0e8cfbaf1b06dcacd734166d94e30a4f5967f61c1e967b",
+    "validated_at": "2026-10-01T01:39:52.916101+00:00"
+  }
+}

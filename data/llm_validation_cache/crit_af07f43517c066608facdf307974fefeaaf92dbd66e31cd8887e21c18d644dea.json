@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000114",
+  "term": "通知銀行",
+  "overall_decision": "reject",
+  "summary_reason": "The entire learning object demonstrates a fundamental misunderstanding of the term '通知銀行' (Advising Bank) in trade finance. It is consistently treated as a deliberative body or meeting rather than a financial institution with a specific role in authenticating and transmitting letters of credit. All collocations, examples, and dialogue are based on this incorrect premise and would be misleading to a professional learner.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "通知銀行を開催する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "通知銀行 (Advising Bank) is an entity, not an event or meeting that can be 'held' (開催する). This verb is incorrectly applied.",
+      "suggested_text": "通知銀行に依頼する"
+    },
+    {
+      "index": 1,
+      "text": "通知銀行で決議する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "決議する (to resolve/pass a resolution) is an action taken by a deliberative body (e.g., a board meeting, shareholders' meeting), not by an advising bank itself in this context. An advising bank's role is to advise/authenticate, not to make internal corporate resolutions for another entity.",
+      "suggested_text": "通知銀行に確認する"
+    },
+    {
+      "index": 2,
+      "text": "通知銀行に報告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "While one might 'report to' a bank in some contexts, the primary function of an advising bank in trade finance (L/C) does not typically involve receiving 'reports' in the sense of business updates or resolutions from the applicant. It's more about transmitting/authenticating documents.",
+      "suggested_text": "通知銀行に連絡する"
+    },
+    {
+      "index": 3,
+      "text": "通知銀行へ届出書を提出する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to reporting, submitting a '届出書' (notification/application form) is not a typical interaction with an advising bank in its core function. This sounds like a general bank interaction, not specific to the 'advising bank' role in L/C.",
+      "suggested_text": "通知銀行から通知を受ける"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "The example sentence treats '通知銀行' as a deliberative body that holds meetings and makes resolutions, which is fundamentally incorrect for an 'Advising Bank' in trade finance. An advising bank is a financial institution that advises the beneficiary of a letter of credit, not a corporate meeting or decision-making body for the applicant.",
+      "suggested_ja": "信用状の通知銀行として、当行は受益者への信用状の真正性を確認する役割を担います。",
+      "suggested_vi": "Với tư cách là ngân hàng thông báo thư tín dụng, ngân hàng chúng tôi có vai trò xác nhận tính xác thực của thư tín dụng cho người thụ hưởng.",
+      "suggested_en": "As the advising bank for the letter of credit, our bank is responsible for confirming the authenticity of the letter of credit to the beneficiary."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, this sentence incorrectly portrays '通知銀行' as a venue or entity where management policies and budget allocations are approved. This is a complete misunderstanding of an advising bank's role.",
+      "suggested_ja": "輸出取引において、通知銀行は信用状の内容を正確に受益者に伝達する義務があります。",
+      "suggested_vi": "Trong giao dịch xuất khẩu, ngân hàng thông báo có nghĩa vụ truyền đạt chính xác nội dung thư tín dụng đến người thụ hưởng.",
+      "suggested_en": "In export transactions, the advising bank has the obligation to accurately transmit the contents of the letter of credit to the beneficiary."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly assumes '通知銀行' is a meeting or an internal corporate body that requires 'preparation' and 'prior approval from executives'. This reflects the same fundamental misunderstanding of the term as seen in the examples and collocations.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の輸出取引の信用状について、通知銀行からの連絡はありましたか？",
+        "vi": "Về thư tín dụng cho giao dịch xuất khẩu lần này, đã có thông báo gì từ ngân hàng thông báo chưa?",
+        "en": "Regarding the letter of credit for this export transaction, have we received any communication from the advising bank?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、通知銀行から信用状の真正性が確認された旨の連絡が入りました。これで受益者への通知が可能です。",
+        "vi": "Vâng, chúng tôi đã nhận được thông báo từ ngân hàng thông báo xác nhận tính xác thực của thư tín dụng. Giờ đây có thể thông báo cho người thụ hưởng.",
+        "en": "Yes, we've received confirmation from the advising bank regarding the authenticity of the letter of credit. We can now advise the beneficiary."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "The Vietnamese and English translations for the examples and dialogue are accurate given the incorrect Japanese, but since the Japanese is fundamentally flawed, the translations also need to be rewritten to reflect the correct usage of 'Advising Bank'."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "e09e70c7d6569681724b922cce2cf5422b07b94775db2c291ceb6db0956b5d8a",
+    "validated_at": "2026-10-01T01:55:48.796969+00:00"
+  }
+}

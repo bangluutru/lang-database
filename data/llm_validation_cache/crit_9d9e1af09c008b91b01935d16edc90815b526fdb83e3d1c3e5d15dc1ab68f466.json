@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000104",
+  "term": "深夜手当",
+  "overall_decision": "rewrite",
+  "summary_reason": "The learning object mechanically forces a labor and payroll allowance into an accounting-reconciliation template ('残高', '補助元帳', '会計基準に則り...適正に処理'). This produces domain inaccuracies and stiff, unnatural Japanese. The collocations and examples need realignment with authentic Japanese HR, payroll, and labor compliance contexts.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "深夜手当を支給する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly frequent HR and payroll collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "深夜手当を算出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in payroll processing contexts; 計算する is also common.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "深夜手当の支給基準を設ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural collocation in company work regulations (就業規則) and compensation policies.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "深夜手当として割増賃金を支払う",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Under Japanese labor law, late-night allowance is itself a form of extra wage (割増賃金). Phrasing it as '割増賃金を深夜手当として支払う' or simply '法定の割増率に基づいて深夜手当を支払う' is accurate, whereas the original expression is structurally inverted and awkward.",
+      "suggested_text": "法定の割増率に基づき深夜手当を支払う"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Expense items like '深夜手当' do not have a balance sheet balance (残高). Treating payroll allowances with generic balance-reconciliation templates ('残高に差異がないか') is inaccurate. In actual payroll accounting, companies reconcile time records against payroll registers.",
+      "suggested_ja": "勤怠管理システムの打刻データと給与計算シートを照合し、深夜手当の集計額に相違がないか精査します。",
+      "suggested_vi": "Chúng tôi đối chiếu dữ liệu chấm công trên hệ thống với bảng tính lương để rà soát kỹ xem tổng số tiền phụ cấp ca đêm có chênh lệch hay không.",
+      "suggested_en": "We cross-check clock-in data from the attendance management system against the payroll calculation sheet to thoroughly verify that there are no discrepancies in the aggregated late-night allowance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "The sentence is an artificial template combining '適正な会計基準' and '適正に処理いたしました'. Allowance rates and rules are primarily governed by the Labor Standards Act (労働基準法) and internal wage regulations, not corporate accounting standards. It is far more educational to show actual operational usage.",
+      "suggested_ja": "労働基準法および就業規則に則り、午後10時から午前5時までの勤務時間に対して2割5分以上の深夜手当を支給しています。",
+      "suggested_vi": "Tuân thủ Luật Tiêu chuẩn Lao động và nội quy công ty, chúng tôi chi trả phụ cấp làm đêm từ 25% trở lên cho số giờ làm việc từ 22 giờ đêm đến 5 giờ sáng.",
+      "suggested_en": "In accordance with the Labor Standards Act and internal employment regulations, we pay a late-night allowance of at least 25% premium for hours worked between 10:00 p.m. and 5:00 a.m."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking if there is an accounting discrepancy in '深夜手当の計上内容' and answering with '証憑書類と補助元帳を照合済み' is an unnatural canned formula. Companies do not maintain a standalone subsidiary ledger (補助元帳) solely for late-night allowance, and '適正に整合している' is unnatural business Japanese. Dialogue should reflect realistic interaction between accounting/HR and management.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の給与計算で、深夜手当の集計結果とタイムカードの実績値に差異は出ていませんか。",
+        "vi": "Trong đợt tính lương tháng này, kết quả tổng hợp phụ cấp ca đêm có bị chênh lệch so với dữ liệu thẻ chấm công thực tế không?",
+        "en": "Are there any discrepancies between the aggregated late-night allowance and the actual timecard records in this month's payroll calculation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "全拠点のシフト実績と照合を完了しており、計算漏れや金額の不整合がないことを確認済みです。",
+        "vi": "Tôi đã hoàn tất đối chiếu với lịch ca thực tế của tất cả các chi nhánh và xác nhận không có sai sót hay chênh lệch số tiền nào.",
+        "en": "We have completed reconciliation with actual shift data across all locations and confirmed that there are no omissions or calculation mismatches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example translations repeatedly insert the parenthetical explanation '(22h đến 5h)' into the running text of sentences, which is unnatural for sample sentences."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4f648841cce47d9810393561e312860740b353f224ee92eb2cd83b96fcd8bdf2",
+    "validated_at": "2026-10-01T01:42:46.225534+00:00"
+  }
+}

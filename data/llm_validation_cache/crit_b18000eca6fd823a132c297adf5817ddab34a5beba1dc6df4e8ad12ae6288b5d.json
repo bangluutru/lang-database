@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000008",
+  "term": "非課税",
+  "overall_decision": "rewrite",
+  "summary_reason": "「非課税の残高」や「非課税の計上内容に差異」など、税務属性である『非課税』を勘定科目残高のように扱う致命的な定型句テンプレートエラーが発生しており、実務教育用として不適格です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "非課税を適用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「非課税」は課税区分・性質を表す名詞であり、直接「〜を適用する」とするよりも「非課税措置を適用する」または「非課税扱いとする」と表現するのが自然です。",
+      "suggested_text": "非課税措置を適用する"
+    },
+    {
+      "index": 1,
+      "text": "非課税を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "実務では「課税・非課税を判定する」または「非課税該当性を判定する」と言います。「非課税を判定する」は目的語が不完全で座りが悪いです。",
+      "suggested_text": "課税・非課税を判定する"
+    },
+    {
+      "index": 2,
+      "text": "非課税を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「非課税を確認する」は漠然としすぎており、実務教育用としては取引や売上などの対象を明示した「非課税取引を確認する」が適切です。",
+      "suggested_text": "非課税取引を確認する"
+    },
+    {
+      "index": 3,
+      "text": "非課税として取り扱う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税務・会計実務で極めて頻出する自然かつ標準的なコロケーションです。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「非課税」は勘定科目ではなく課税区分であるため、「非課税の残高」という会計概念は存在せず極めて不自然です。また訳文に辞書定義が直貼りされています。",
+      "suggested_ja": "消費税の確定申告に向けて、該当する売上が非課税取引として正しく区分されているかを精査します。",
+      "suggested_vi": "Để chuẩn bị cho việc quyết toán thuế tiêu dùng, chúng tôi rà soát kỹ lưỡng xem các khoản doanh thu tương ứng đã được phân loại chính xác là giao dịch không chịu thuế hay chưa.",
+      "suggested_en": "Ahead of the consumption tax return filing, we will carefully examine whether the relevant sales are correctly classified as tax-exempt transactions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「非課税を適正に処理いたしました」はテンプレート臭が強く実態を欠きます。どの取引（土地譲渡、住宅家賃等）を非課税として処理したのかを具体化すべきです。",
+      "suggested_ja": "社宅の家賃収入については、消費税法上の非課税取引として適正に会計処理を行いました。",
+      "suggested_vi": "Đối với tiền thu từ việc cho thuê nhà ở cho nhân viên, chúng tôi đã hạch toán kế toán hợp lệ dưới dạng giao dịch không chịu thuế theo Luật Thuế tiêu dùng.",
+      "suggested_en": "Regarding the rental income from company housing, we properly accounted for it as a tax-exempt transaction under the Consumption Tax Act."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Aの発言「非課税の計上内容に差異は発生していませんか」は会計実務上意味不明な機械的テンプレート表現です。課税区分の判定に関する対話に改めるべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の社有地の売却益について、消費税法上は非課税として処理してよろしいでしょうか。",
+        "vi": "Về khoản lợi nhuận từ việc bán đất của công ty lần này, chúng tôi hạch toán là không chịu thuế theo Luật Thuế tiêu dùng có đúng không?",
+        "en": "Regarding the gain on the sale of company-owned land, may we treat it as tax-exempt under the Consumption Tax Act?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、土地の譲渡および貸付けは非課税取引に該当しますので、その方針で処理を進めてください。",
+        "vi": "Vâng, việc chuyển nhượng và cho thuê đất thuộc đối tượng không chịu thuế, vì vậy bạn cứ tiến hành xử lý theo phương án đó.",
+        "en": "Yes, transfers and leases of land qualify as tax-exempt transactions, so please proceed with that treatment."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "例文のベトナム語および英語において、見出し語のスラッシュ付き定義表記（'không chịu thuế / miễn thuế theo luật', 'tax-exempt / non-taxable'）がそのまま文中に挿入されており、機械的で極めて不自然です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "ab775f5b2805f15fae927f63e85dceddb1907fbf3a2482cac2dc1805da388c16",
+    "validated_at": "2026-10-01T01:37:22.870883+00:00"
+  }
+}

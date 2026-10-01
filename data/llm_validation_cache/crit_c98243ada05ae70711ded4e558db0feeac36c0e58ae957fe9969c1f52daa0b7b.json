@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000186",
+  "term": "予実管理",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue lies in the semantic misuse of '予実管理' in several contexts, particularly in relation to '計上内容' and '残高'. '予実管理' is a process of comparison, not an entity that has entries or balances itself. The example sentences and dialogue reflect this misunderstanding, leading to unnatural Japanese expressions. The Vietnamese translation for the term itself is also overly verbose.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "予実管理を進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "予実管理を完了する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "予実管理 is an ongoing process, not a discrete task that is 'completed' in this manner. One might complete a report or a review related to it.",
+      "suggested_text": "予実管理の報告を完了する"
+    },
+    {
+      "index": 2,
+      "text": "予実管理の手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "予実管理を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "予実管理 is a process or system, not an accounting entry or balance. You cannot have '予実管理の計上内容' or '予実管理の残高'. These phrases are semantically incorrect in an accounting context.",
+      "suggested_ja": "月末の帳簿照合において、予実管理の結果と実際の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào giữa kết quả quản lý ngân sách và thực tế với nội dung hạch toán hoặc số dư thực tế hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies between the results of budget vs. actual management and the actual entries or balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「予実管理を適正に処理いたしました」 sounds mechanical and unnatural. While '処理する' can be used, it's more common to say '予実管理を行いました' or '予実管理を実施しました' when referring to the process itself, or '予実管理の結果を適切に反映しました' if referring to the outcome in closing entries.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において予実管理を適切に実施いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện quản lý so sánh giữa ngân sách kế hoạch và thực tế một cách thích hợp trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we appropriately conducted budget vs. actual management in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "SEMANTIC_MISMATCH",
+    "reason": "Similar to the example sentences, '予実管理の計上内容' is semantically incorrect. 予実管理 itself doesn't have '計上内容'. It's the comparison of planned vs. actual figures, which then relate to accounting entries. Speaker B's response is also a bit generic and doesn't directly address the '差異' in '予実管理' but rather the general reconciliation of documents.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、予実管理の結果と実際の計上内容に大きな差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng của tháng này, có sự khác biệt lớn nào giữa kết quả quản lý ngân sách và thực tế với nội dung hạch toán thực tế không?",
+        "en": "In this month's monthly closing, are there any significant discrepancies between the results of budget vs. actual management and the actual entries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、証憑書類と補助元帳を照合した結果、予実管理上の差異は許容範囲内であることを確認いたしました。",
+        "vi": "Vâng, sau khi đối chiếu chứng từ và sổ cái phụ, chúng tôi đã xác nhận rằng sự khác biệt trong quản lý ngân sách và thực tế nằm trong phạm vi cho phép.",
+        "en": "Yes, after reconciling the supporting documents and subsidiary ledgers, we confirmed that the discrepancies in budget vs. actual management are within acceptable limits."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for '予実管理' as 'quản lý so sánh giữa ngân sách kế hoạch và thực tế' is overly long and clunky for a professional term. A more concise and commonly understood term in Vietnamese business/accounting context would be 'quản lý ngân sách và thực tế' or 'quản lý dự toán và thực tế'."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f65c7c2affa69f7011cfb3e6317ff309c661b0f66899ddf39911a15359f2a97a",
+    "validated_at": "2026-10-01T01:53:24.936377+00:00"
+  }
+}

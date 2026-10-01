@@ -1,0 +1,62 @@
+{
+  "entry_id": "jp-pro-business-000182",
+  "term": "秘密保持誓約書",
+  "overall_decision": "rewrite",
+  "summary_reason": "The Vietnamese meaning and example translations are too restrictive, specifically adding 'của nhân viên' (of employees) which is not implied by the Japanese term '秘密保持誓約書' and limits its applicability. One example sentence also has a semantic issue regarding the scope of recipients for such a document in a general meeting context.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "秘密保持誓約書を作成する",
+      "decision": "pass"
+    },
+    {
+      "index": 1,
+      "text": "秘密保持誓約書を提出する",
+      "decision": "pass"
+    },
+    {
+      "index": 2,
+      "text": "秘密保持誓約書を発送する",
+      "decision": "pass"
+    },
+    {
+      "index": 3,
+      "text": "秘密保持誓約書を受領する",
+      "decision": "pass"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "A confidentiality pledge is typically for individuals (employees, consultants) or specific parties involved in sensitive discussions, not 'all parties' of a general shareholders' meeting or board meeting. The concept of 'dispatched to all parties' for a general meeting is unnatural. Also, the Vietnamese translation incorrectly specifies 'của nhân viên' (of employees) which is too narrow.",
+      "suggested_ja": "重要な経営情報を含む株主総会資料の開示に先立ち、一部の株主および役員に対し、秘密保持誓約書を発送いたしました。",
+      "suggested_vi": "Trước khi công bố tài liệu đại hội đồng cổ đông có chứa thông tin quản lý quan trọng, chúng tôi đã gửi bản cam kết bảo mật thông tin cho một số cổ đông và thành viên hội đồng quản trị.",
+      "suggested_en": "Prior to the disclosure of shareholders' meeting materials containing critical management information, we dispatched confidentiality pledges to certain shareholders and board members."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Vietnamese translation again incorrectly specifies 'của nhân viên' (of employees), which is too narrow and not implied by the Japanese. The Japanese sentence is fine.",
+      "suggested_ja": "内部統制およびコンプライアンスの証跡として、担当部署にて受領した秘密保持誓約書を厳重に保管しています。",
+      "suggested_vi": "Làm bằng chứng kiểm soát nội bộ và tuân thủ quy định, bộ phận phụ trách lưu trữ nghiêm ngặt bản cam kết bảo mật thông tin đã nhận.",
+      "suggested_en": "As evidence of internal control and compliance, the department in charge securely archives the received confidentiality pledge / non-disclosure pledge."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass"
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese meaning 'bản cam kết giữ bí mật thông tin của nhân viên' is too restrictive. 'của nhân viên' (of employees) should be removed as a confidentiality pledge is not exclusively for employees. A more general translation is needed."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "6a8fb2a0409a8245b8a708aa67dc86d392708a8cfbf5b9ec4b91c0a1a2386e7f",
+    "validated_at": "2026-10-01T01:53:16.965626+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000025",
+  "term": "有価証券",
+  "overall_decision": "rewrite",
+  "summary_reason": "All 4 collocations are valid. However, meaning_vi contains a semantic narrowing ('chứng khoán ngắn hạn') that corrupts Example 0 into a logical contradiction ('nắm giữ dài hạn chứng khoán ngắn hạn'), and the workplace dialogue contains awkward phrasing ('計上内容に差異', '適正に整合している') requiring practical refinement.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "有価証券を保有する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting/finance collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "有価証券を時価評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting terminology for mark-to-market valuation of securities under ASBJ standards.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "有価証券を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard business and bookkeeping expression for acquisition of securities.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "有価証券の売却益を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard financial accounting phrasing for recognizing gain on sale of securities.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "TRANSLATION_MISMATCH",
+      "reason": "The Japanese sentence is natural, but the Vietnamese translation contains a direct self-contradiction: 'nắm giữ dài hạn chứng khoán ngắn hạn' (holding short-term securities long-term) caused by incorrectly defining 有価証券 solely as 'chứng khoán ngắn hạn'. Furthermore, for long-term policy holdings, Japanese accounting typically distinguishes '投資有価証券' on the B/S, though '有価証券' is acceptable in broad corporate context.",
+      "suggested_ja": "余剰資金の安定的運用と取引先との関係維持を目的として、有価証券を長期保有しています。",
+      "suggested_vi": "Nhằm mục đích quản lý an toàn nguồn vốn nhàn rỗi và duy trì quan hệ với đối tác, chúng tôi nắm giữ dài hạn các khoản chứng khoán.",
+      "suggested_en": "We hold securities on a long-term basis for the purpose of stable management of surplus funds and maintaining relationships with business partners."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural accounting sentence accurately reflecting year-end mark-to-market valuation procedures, though Vietnamese translation should use 'chứng khoán' rather than 'chứng khoán ngắn hạn'.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "In Japanese accounting operations, one asks if there is a discrepancy in balance or valuation ('残高に差異は生じていませんか' or '評価額に差異は~') rather than '計上内容に差異'. In addition, '適正に整合している' is tautological and awkward; natural business Japanese uses '一致していることを確認いたしました'.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、有価証券の帳簿残高に差異は生じていませんか。",
+        "vi": "Trong kỳ quyết toán tháng này, số dư sổ sách của chứng khoán có phát sinh chênh lệch nào không?",
+        "en": "Are there any discrepancies in the book balance of securities for this month's financial closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて一致していることを確認いたしました。",
+        "vi": "Tôi đã đối chiếu chứng từ với sổ phụ rồi, và xác nhận tất cả đều hoàn toàn khớp.",
+        "en": "I have already reconciled the supporting documents with the subsidiary ledger and confirmed that everything matches."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Target meaning_vi is mistakenly translated as 'chứng khoán ngắn hạn' (marketable/short-term securities only), which leads to contradictory Vietnamese translations like 'nắm giữ dài hạn chứng khoán ngắn hạn'. It must be corrected to 'chứng khoán' or 'chứng khoán có giá'."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "987b5288a7fd99e009dd0a851abd906e464187896ae38a5af928017d8638a355",
+    "validated_at": "2026-10-01T01:33:30.519476+00:00"
+  }
+}

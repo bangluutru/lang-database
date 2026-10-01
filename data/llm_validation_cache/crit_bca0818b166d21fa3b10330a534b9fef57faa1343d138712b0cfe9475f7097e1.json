@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000192",
+  "term": "移転価格税制",
+  "overall_decision": "rewrite",
+  "summary_reason": "移転価格税制（国際課税・租税回避防止ルール）を、ふるさと納税等の『優遇税制・寄附金控除』と混同したテンプレート流用が多数発生しており、実務上の重大な事実誤認（致命的エラー）を含んでいます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "移転価格税制を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "移転価格税制は租税回避を防止・是正するための規制的税制であり、優遇税制のように企業が「利用する」ものではありません。",
+      "suggested_text": "移転価格税制に対応する"
+    },
+    {
+      "index": 1,
+      "text": "移転価格税制の適用を受ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「適用を受ける」は恩恵的税制によく使われます。移転価格税制の場合は「適用対象となる」や「課税処分を受ける」とするのが実務上自然です。",
+      "suggested_text": "移転価格税制の適用対象となる"
+    },
+    {
+      "index": 2,
+      "text": "移転価格税制を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "規制・課税枠組みである移転価格税制を「活用する」という表現は税務実務上あり得ません（優遇税制用テンプレートの誤適用）。",
+      "suggested_text": "移転価格税制のリスクを精査する"
+    },
+    {
+      "index": 3,
+      "text": "移転価格税制の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "海外関連者間取引が移転価格税制の対象となる旨を述べる際、実務で頻出する自然なコロケーションです。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "企業版ふるさと納税等の文面が流用されています。移転価格税制は「地域貢献」や「節税のための制度活用」とは全く無関係な国際税務の規制枠組みです。",
+      "suggested_ja": "海外子会社との取引価格が市場実勢と乖離すると、移転価格税制に基づく更正処分を受けるリスクがある。",
+      "suggested_vi": "Nếu giá giao dịch với công ty con ở nước ngoài chệch khỏi giá thị trường thực tế, doanh nghiệp có nguy cơ bị truy thu thuế theo chính sách thuế chống chuyển giá.",
+      "suggested_en": "If transaction prices with overseas subsidiaries diverge from market realities, there is a risk of facing tax reassessment under transfer pricing taxation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を試算して手続きを進める」も寄附金控除系の誤ったテンプレート流用です。移転価格税制に控除上限額は存在しません。",
+      "suggested_ja": "税務調査に備え、国外関連取引における独立企業間価格の算定根拠を文書化し、移転価格税制への対策を講じた。",
+      "suggested_vi": "Để chuẩn bị cho việc thanh tra thuế, chúng tôi đã lập hồ sơ chứng minh căn cứ xác định giá giao dịch độc lập trong các giao dịch liên kết với nước ngoài và triển khai các biện pháp ứng phó với chính sách thuế chống chuyển giá.",
+      "suggested_en": "In preparation for tax audits, we documented the basis for calculating arm's length prices in foreign related-party transactions and implemented measures to comply with transfer pricing taxation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "法人税申告の実務では「別表十七（四）の国外関連者に関する明細書」や「ローカルファイル（独立企業間価格算定文書）」の作成・整備が焦点となります。「税理士の確認書」という表現は実務の実態とズレがあります。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の申告に向けて、海外子会社との取引に係る移転価格税制の文書化作業は進んでいますか。",
+        "vi": "Để chuẩn bị cho kỳ quyết toán thuế kỳ này, tiến độ lập hồ sơ xác định giá chuyển nhượng liên quan đến giao dịch với công ty con ở nước ngoài thế nào rồi?",
+        "en": "Regarding the tax return for this period, how is the documentation work going for transfer pricing taxation on transactions with overseas subsidiaries?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、独立企業間価格の算定資料とローカルファイルの作成は完了しており、税務代理人への確認依頼も済んでいます。",
+        "vi": "Vâng, tài liệu tính toán giá giao dịch độc lập và hồ sơ quốc gia (local file) đã hoàn tất, chúng tôi cũng đã gửi nhờ đại lý thuế kiểm tra xác nhận.",
+        "en": "Yes, the arm's length price calculation materials and the local file are complete, and we have already requested review from our tax agent."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term translations in EN/VI are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "26e680c68ee20b584c3653392a815106522cef3e9c15171f10aacdf2138fc15f",
+    "validated_at": "2026-10-01T01:40:48.165208+00:00"
+  }
+}

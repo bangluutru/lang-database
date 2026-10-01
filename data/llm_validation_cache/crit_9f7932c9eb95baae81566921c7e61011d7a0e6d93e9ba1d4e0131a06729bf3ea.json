@@ -1,0 +1,74 @@
+{
+  "entry_id": "jp-pro-tax-000133",
+  "term": "課税事業者",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocations 1 and 2 exhibit predicate awkwardness and legal domain inaccuracy regarding registration vs election. Both example sentences contain unnatural Japanese phrasing ('課税売上高を判定') and repetitive syntax in Vietnamese.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税事業者に該当する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard tax terminology when determining taxpayer classification."
+    },
+    {
+      "index": 1,
+      "text": "課税事業者を判定する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly make a grammatical direct object of a taxpayer category with 判定する; the correct phrase is '課税事業者の該否を判定する' or '課税事業者に該当するか判定する'.",
+      "suggested_text": "課税事業者の該否を判定する"
+    },
+    {
+      "index": 2,
+      "text": "課税事業者の登録を受ける",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "In Japanese consumption tax law, '登録' (registration) specifically attaches to '適格請求書発行事業者' (Qualified Invoice Issuer). For 課税事業者 itself, status is determined automatically by sales or by filing an election notice ('課税事業者を選択する').",
+      "suggested_text": "課税事業者を選択する"
+    },
+    {
+      "index": 3,
+      "text": "課税事業者の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and accounting expression."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "'課税売上高を判定し' is unnatural Japanese (sales figures are aggregated or verified, not judged). Furthermore, the Vietnamese translation suffers from word duplication ('thuộc diện doanh nghiệp thuộc diện').",
+      "suggested_ja": "基準期間における課税売上高に基づき、自社が消費税の課税事業者に該当するかどうかを判定しました。",
+      "suggested_vi": "Dựa trên doanh thu chịu thuế trong kỳ tính thuế căn cứ, chúng tôi đã xác định doanh nghiệp mình có thuộc diện phải nộp thuế tiêu dùng hay không.",
+      "suggested_en": "Based on taxable sales in the statutory base period, we evaluated whether our company qualifies as a taxable business operator for consumption tax purposes."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'課税事業者であるかどうかの登録状況' conflates general taxable status with invoice issuer registration status. Also, the Vietnamese translation duplicates 'thuộc diện doanh nghiệp thuộc diện'.",
+      "suggested_ja": "インボイス制度への対応に伴い、主要な取引先が課税事業者であるか、また適格請求書発行事業者の登録を完了しているかを調査しました。",
+      "suggested_vi": "Cùng với việc triển khai chế độ hóa đơn hợp lệ, chúng tôi đã rà soát xem các đối tác chính có phải là doanh nghiệp nộp thuế tiêu dùng và đã hoàn tất đăng ký đơn vị phát hành hóa đơn hợp lệ hay chưa.",
+      "suggested_en": "In line with the qualified invoice system, we surveyed our key business partners to confirm whether they are taxable business operators and whether they have registered as qualified invoice issuers."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between checking taxable status and referencing the NTA invoice registration portal is authentic and accurately reflects practical corporate accounting operations in Japan."
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Both original Vietnamese examples contain unintentional repetitive phrasing ('thuộc diện doanh nghiệp thuộc diện')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4ead623b2547dc3a8138e4c6cad15381729e492c87e20b94f87389c8e6b457e5",
+    "validated_at": "2026-10-01T01:39:48.634493+00:00"
+  }
+}

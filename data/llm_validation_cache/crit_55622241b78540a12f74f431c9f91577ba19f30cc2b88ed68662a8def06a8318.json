@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000071",
+  "term": "創立費",
+  "overall_decision": "rewrite",
+  "summary_reason": "創立費 is a one-time corporate formation account/deferred asset, but the examples, collocations, and dialogue applied generic monthly operating expense templates, creating serious accounting and contextual unnaturalness.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "創立費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing organization expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "創立費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing when organization costs are capitalized as deferred assets (繰延資産).",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "創立費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not directly 'collate/reconcile' an expense account directly like this; 償却する (amortize) or 繰延資産に計上する is far more authentic for 創立費.",
+      "suggested_text": "創立費を償却する"
+    },
+    {
+      "index": 3,
+      "text": "創立費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "創立費 is an accounting account (one-time incorporation cost/deferred asset), not an advance payment or travel expense that gets 'settled' (精算).",
+      "suggested_text": "創立費として処理する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "創立費 (organization expenses) only occurs once at incorporation. Checking it as routine monthly reconciliation (月末の帳簿照合) is factually unnatural and reflects a generic mechanical template.",
+      "suggested_ja": "会社設立時に発生した登録免許税や定款認証手数料は、創立費として計上します。",
+      "suggested_vi": "Các khoản thuế trước bạ và phí công chứng điều lệ phát sinh khi thành lập công ty sẽ được hạch toán vào chi phí thành lập doanh nghiệp.",
+      "suggested_en": "Registration license taxes and notary fees incurred upon company incorporation are recorded as organization expenses."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted template ('適正な...適正に処理'). It should reflect actual accounting treatment under J-GAAP (expensed as incurred or capitalized as deferred asset and amortized over 5 years).",
+      "suggested_ja": "設立初年度に繰延資産として計上した創立費は、5年間で均等償却いたします。",
+      "suggested_vi": "Chi phí thành lập doanh nghiệp được ghi nhận là tài sản hoàn lại trong năm đầu thành lập sẽ được phân bổ đều trong vòng 5 năm.",
+      "suggested_en": "Organization expenses capitalized as deferred assets in the initial fiscal year of incorporation will be amortized on a straight-line basis over five years."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Asking about 創立費 in monthly closing as if it is an ongoing recurring cost is unrealistic. The dialogue should focus on the accounting treatment at the time of establishment or its amortization.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "会社設立にかかった諸費用ですが、創立費として繰延資産に計上しますか、それとも支出時の費用処理としますか。",
+        "vi": "Về các khoản chi phí phát sinh khi thành lập công ty, chúng ta sẽ ghi nhận vào tài sản hoàn lại dưới dạng chi phí thành lập doanh nghiệp hay hạch toán vào chi phí ngay khi phát sinh?",
+        "en": "Regarding the costs incurred for establishing the company, should we capitalize them as deferred assets under organization expenses, or expense them as incurred?"
+      },
+      {
+        "speaker": "B",
+        "ja": "今期は創業初期で赤字を抑えたいため、繰延資産に計上し、5年間で均等償却する方針で進めましょう。",
+        "vi": "Kỳ này là giai đoạn đầu khởi nghiệp nên chúng ta muốn hạn chế số lỗ, hãy theo hướng ghi nhận vào tài sản hoàn lại và phân bổ đều trong 5 năm nhé.",
+        "en": "Since this is our initial period and we want to curb our deficit, let's proceed with capitalizing them as deferred assets and amortizing them straight-line over five years."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base translations of the term itself are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "518cd7c37aded75416fdc16922796c03575203da9eaef916facd79ca3c4aee41",
+    "validated_at": "2026-10-01T01:34:53.834649+00:00"
+  }
+}

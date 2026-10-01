@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000070",
+  "term": "甲乙関係",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the term definition and collocations are acceptable, the example sentences and dialogue suffer from severe domain hallucination: an accounting boilerplate template ('計上内容', '残高', '決算において処理') was nonsensically applied to the legal contracting term '甲乙関係'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "甲乙関係を明確にする",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common and natural business/legal phrasing regarding contractual roles and responsibilities."
+    },
+    {
+      "index": 1,
+      "text": "甲乙関係を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in contracting context when verifying the positions and designations of Party A and Party B."
+    },
+    {
+      "index": 2,
+      "text": "甲乙関係を見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural phrasing often used when rethinking vendor-client hierarchies or contract terms toward equal partnership."
+    },
+    {
+      "index": 3,
+      "text": "甲乙関係について合意する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Acceptable in negotiations defining contractual standing and duties."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '甲乙関係' is a legal/contractual relationship term, not a financial item. It cannot have '計上内容' (booked entries) or '残高' (account balances). This is an accounting template mechanically misapplied.",
+      "suggested_ja": "業務委託契約を締結する際は、将来のトラブルを防ぐためにも、契約書上で甲乙関係および双方の権利義務を明確にしておく必要があります。",
+      "suggested_vi": "Khi ký kết hợp đồng ủy thác nghiệp vụ, để ngăn ngừa tranh chấp trong tương lai, cần làm rõ quan hệ Bên A - Bên B cũng như quyền và nghĩa vụ của cả hai bên trên hợp đồng.",
+      "suggested_en": "When executing an outsourcing contract, it is necessary to clearly define the Party A–Party B relationship as well as the rights and obligations of both parties in the contract to prevent future disputes."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "A contractual relationship ('甲乙関係') cannot be '処理する' (accounted for/processed) in financial year-end closing entries ('決算において'). This is a template hallucination.",
+      "suggested_ja": "今回の共同開発プロジェクトは対等なパートナーシップを前提としているため、従来の主従的な甲乙関係を見直し、相互協議を基本とする契約内容に改めました。",
+      "suggested_vi": "Dự án hợp tác phát triển lần này dựa trên tiền đề quan hệ đối tác bình đẳng, vì vậy chúng tôi đã rà soát lại quan hệ Bên A - Bên B mang tính thứ bậc trước đây và sửa đổi nội dung hợp đồng trên cơ sở tham vấn lẫn nhau.",
+      "suggested_en": "Because this joint development project is based on an equal partnership, we re-evaluated the conventional hierarchical Party A–Party B relationship and amended the contract terms to be based on mutual consultation."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Gross domain and semantic error: '甲乙関係の計上内容に差異は発生していませんか' makes no sense in accounting or business Japanese. '甲乙関係' cannot be reconciled against subsidiary ledgers ('補助元帳').",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新規ベンダーとの基本契約書ですが、甲乙関係における責任範囲の記載がやや曖昧に見えます。",
+        "vi": "Về hợp đồng nguyên tắc với nhà cung cấp mới, quy định về phạm vi trách nhiệm trong mối quan hệ Bên A - Bên B có vẻ còn hơi mơ hồ.",
+        "en": "Regarding the master agreement with the new vendor, the description of the scope of liability in the relationship between Party A and Party B seems somewhat ambiguous."
+      },
+      {
+        "speaker": "B",
+        "ja": "ご指摘の通りですね。納品物の検収基準と損害賠償条項について、法務部と相談の上で甲乙双方の義務を再定義します。",
+        "vi": "Đúng như anh/chị nhận xét. Về tiêu chuẩn nghiệm thu sản phẩm bàn giao và điều khoản bồi thường thiệt hại, chúng tôi sẽ tham vấn bộ phận pháp chế để xác định lại nghĩa vụ của cả hai bên.",
+        "en": "You are right. Regarding the acceptance criteria for deliverables and the indemnification clauses, we will consult with the legal department and redefine the obligations of both parties."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The base term translations accurately describe the Party A and Party B relationship."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "17190583e1ed765fded294825291d2e26322155a4906b61ae09a3e9488d378c4",
+    "validated_at": "2026-10-01T01:42:09.392065+00:00"
+  }
+}

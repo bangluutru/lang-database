@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-trade-000076",
+  "term": "統計品目番号",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of the term '統計品目番号' (HS code). It is a customs classification code for goods, not an accounting item to be '計上' (booked) or '処理' (processed) in financial statements or reconciled in ledgers. All examples and the dialogue incorrectly place it within an accounting context, making them factually incorrect and unnatural for a professional setting. The collocations are mostly fine, but the example sentences and dialogue demonstrate a critical domain error.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "統計品目番号を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for applying a code or regulation."
+    },
+    {
+      "index": 1,
+      "text": "統計品目番号を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for inquiring about a code or number."
+    },
+    {
+      "index": 2,
+      "text": "統計品目番号を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "You 'pay' (納付する) taxes or fees, not a statistical code. A statistical code is something you declare or apply, not pay.",
+      "suggested_text": "統計品目番号を申告する"
+    },
+    {
+      "index": 3,
+      "text": "統計品目番号の分類を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage for confirming a classification."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "統計品目番号 (HS code) is used for customs declaration, not for '計上内容' (accounting entries) or '残高' (balances) in month-end book reconciliation. It's a classification code for goods, not an accounting item.",
+      "suggested_ja": "月末の帳簿照合において、仕訳内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in journal entries or balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 統計品目番号 is a customs classification code, not something that is 'processed' (処理する) in '決算' (financial closing) according to accounting standards. It's completely out of context for financial accounting.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算においてすべての取引を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định tất cả các giao dịch trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed all transactions in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly places 統計品目番号 within the context of '月次決算' (monthly financial closing) and '計上内容' (accounting entries). This code is for customs, not internal accounting reconciliation. Speaker B's response about '証憑書類と補助元帳' (vouchers and sub-ledgers) further reinforces the accounting context, making the entire exchange domain-inappropriate for 統計品目番号.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の輸入貨物の統計品目番号は、税関に申告済みですか？",
+        "vi": "Mã thống kê hàng hóa chi tiết cho lô hàng nhập khẩu lần này đã được khai báo với hải quan chưa?",
+        "en": "Has the statistical code for this imported shipment been declared to customs?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、すでに税関のウェブサイトで確認し、正確な番号で申告を完了しております。",
+        "vi": "Vâng, tôi đã kiểm tra trên trang web của hải quan và hoàn tất khai báo với mã số chính xác rồi ạ.",
+        "en": "Yes, I have already confirmed it on the customs website and completed the declaration with the correct number."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "0379a0ea169ddc4efa30c79bb1de89da6ecb3f77b16073d1df90ddddd95e8697",
+    "validated_at": "2026-10-01T01:54:58.329805+00:00"
+  }
+}

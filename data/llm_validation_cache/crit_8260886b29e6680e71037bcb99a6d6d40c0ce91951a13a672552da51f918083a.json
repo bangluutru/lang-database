@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-tax-000113",
+  "term": "租税特別措置法",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文および対話文が、あらゆる法律に使い回された機械的なコンプライアンス定型句（『全社を挙げて遵守』『社内規程を改定』）になっており、減税措置や個別税務要件を定める『租税特別措置法』の実務的実態と乖離しているため、全面的な書き直しを求めます。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "租税特別措置法を遵守する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "租税特別措置法は主に特定の政策目的で減税や特例措置等を認める税法であり、一般的な行動規制・規範ではないため、「遵守する」よりも「要件を満たす」「特例の適用を受ける」とするのが実務上自然です。",
+      "suggested_text": "租税特別措置法の要件を満たす"
+    },
+    {
+      "index": 1,
+      "text": "租税特別措置法の規定に基づく",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "実務の税務申告書や契約書面等で頻繁に用いられる極めて自然なコロケーションです。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "租税特別措置法の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "研究開発税制や設備投資減税などの優遇措置を受ける文脈で最も定型的かつ自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "租税特別措置法の改正内容を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "毎年の税制改正大綱および措置法改正の動向を追う税務・経理実務において標準的な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "租税特別措置法は優遇税制や国外関連者取引等の個別税務処理を定めた法律であり、「全社を挙げて遵守事項を徹底する」ような社内コンプライアンス規範ではありません。AI生成特有の定型句テンプレートであり、実務に合致しません。",
+      "suggested_ja": "研究開発投資に関する減税措置を活用するため、経理部において租税特別措置法上の適用要件を詳細に確認しています。",
+      "suggested_vi": "Để tận dụng chính sách giảm thuế đối với đầu tư nghiên cứu và phát triển, bộ phận kế toán đang kiểm tra chi tiết các điều kiện áp dụng theo Luật Biện pháp Thuế đặc biệt.",
+      "suggested_en": "To take advantage of tax credits for R&D investments, the accounting department is thoroughly reviewing the eligibility requirements under the Act on Special Measures Concerning Taxation."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "租税特別措置法（措置法）の改正によって「社内規程の改定」を行うことは実務上まずありません。税額控除や特別償却等の申告実務に関する法規範であり、助言主体も弁護士単独ではなく顧問税理士が中心となるのが通例です。",
+      "suggested_ja": "税制改正に伴う租税特別措置法の見直しを踏まえ、顧問税理士と協議の上で当期の税額控除の試算を行いました。",
+      "suggested_vi": "Dựa trên việc rà soát Luật Biện pháp Thuế đặc biệt theo đợt sửa đổi luật thuế, chúng tôi đã thảo luận với chuyên gia tư vấn thuế và tiến hành ước tính mức khấu trừ thuế cho kỳ này.",
+      "suggested_en": "Based on the revision to the Act on Special Measures Concerning Taxation following the tax reform, we consulted with our tax advisor and calculated an estimate of the tax credit for the current period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "抽象的・機械的な質問・応答になっており、取引における具体的な措置法適用の検討（優遇税制や組織再編税制、タックスヘイブン対策税制など）の実務感が不足しています。より自然な税務検討のやり取りに改善すべきです。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今回の設備投資に関して、租税特別措置法の税額控除の適用要件はクリアできそうですか。",
+        "vi": "Đối với khoản đầu tư trang thiết bị lần này, chúng ta có khả năng đáp ứng đủ điều kiện áp dụng khấu trừ thuế theo Luật Biện pháp Thuế đặc biệt không?",
+        "en": "Regarding this capital investment, do we meet the eligibility requirements for the tax credit under the Act on Special Measures Concerning Taxation?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、顧問税理士とともに要件を精査し、即時償却または税額控除のいずれの選択肢も適用可能であることを確認しました。",
+        "vi": "Vâng, chúng tôi đã rà soát kỹ các điều kiện cùng chuyên gia tư vấn thuế và xác nhận rằng cả hai phương án là khấu hao ngay lập tức hoặc khấu trừ thuế đều có thể áp dụng được.",
+        "en": "Yes, we reviewed the requirements with our tax advisor and confirmed that we are eligible for either immediate depreciation or a tax credit."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "英語訳において法律名の大文字表記（Act on Special Measures Concerning Taxation）が一貫しておらず小文字になっている点、またベトナム語訳で固有名詞としての資本化（Viết hoa）が不足している点を修正する必要があります。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "c520fc344e7776bb6e301f1134307a9855002cc38c66baa6786b67bb343abe1c",
+    "validated_at": "2026-10-01T01:39:29.626702+00:00"
+  }
+}

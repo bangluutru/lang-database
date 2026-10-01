@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000072",
+  "term": "開業費",
+  "overall_decision": "rewrite",
+  "summary_reason": "The candidate object relies heavily on robotic, slot-filled accounting templates ('月末の帳簿照合において...', '今月の月次決算で...に差異は発生していませんか') that ignore the real accounting reality of 開業費 (a one-time deferred asset subject to amortization, not routine monthly discrepancy checking), along with unnatural collocations (精算する, 照合する).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "開業費を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing pre-operating expenses.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "開業費の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural in practice when verifying deferred asset balances on the balance sheet.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "開業費を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "照合する does not directly take 開業費 as an object in professional accounting. The core operation for deferred assets is amortization.",
+      "suggested_text": "開業費を償却する"
+    },
+    {
+      "index": 3,
+      "text": "開業費を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "開業費 (pre-operating expenses capitalized as deferred assets) is not an advance or expense reimbursement account that is 'settled' (精算する).",
+      "suggested_text": "開業費を繰延資産に計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanical generic template. Routine month-end reconciliation ('月末の帳簿照合') of 開業費 makes no business sense because pre-operating expenses only occur prior to business commencement.",
+      "suggested_ja": "設立準備期間中に支出した費用は、開業費として繰延資産に計上し、5年間で均等償却します。",
+      "suggested_vi": "Các chi phí phát sinh trong giai đoạn chuẩn bị thành lập được ghi nhận vào tài sản hoãn lại dưới dạng chi phí thành lập và sẽ được phân bổ đều trong 5 năm.",
+      "suggested_en": "Expenses incurred during the preparation period prior to establishment are capitalized as pre-operating expenses under deferred assets and amortized straight-line over five years."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Boilerplate template with redundant usage ('適正な...適正に') that lacks concrete accounting substance regarding amortization or tax treatment.",
+      "suggested_ja": "税務上、開業費は任意償却が認められているため、初年度の業績に応じて償却限度額を決定します。",
+      "suggested_vi": "Về mặt thuế, chi phí trước khi hoạt động được phép khấu hao tùy ý, vì vậy chúng tôi sẽ quyết định mức khấu hao dựa trên kết quả kinh doanh năm đầu tiên.",
+      "suggested_en": "For tax purposes, voluntary amortization is permitted for pre-operating expenses, so we will determine the amortization amount based on first-year business performance."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Monthly close verification of 開業費 discrepancies is unnatural and reflects an AI template pattern. The dialogue should address real accounting issues such as tax treatment or amortization timing.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "新店舗のオープン前にかかった賃料や広告宣伝費ですが、開業費として繰延処理できますか。",
+        "vi": "Tiền thuê mặt bằng và chi phí quảng cáo phát sinh trước khi khai trương cửa hàng mới có thể ghi nhận hoãn lại dưới dạng chi phí mở cửa không?",
+        "en": "Can the rent and advertising expenses incurred before opening the new store be treated as deferred pre-operating expenses?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、特別に支出した費用に該当するため、開業費として計上した上で任意償却が可能です。",
+        "vi": "Vâng, vì đây là những khoản chi mang tính đặc biệt nên có thể ghi nhận là chi phí mở cửa và thực hiện phân bổ khấu hao tùy ý.",
+        "en": "Yes, as they qualify as specially incurred expenses, they can be capitalized as pre-operating expenses and amortized voluntarily."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese accounting terminology, 'chi phí thành lập doanh nghiệp' or 'chi phí trước khi hoạt động' is standard, whereas 'chi phí chuẩn bị khai trương hoạt động' is excessively wordy and non-standard."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "4d9461913f24e9c4a64d088dc52d71856401604c4f52c82c2e6972a0e9f78f67",
+    "validated_at": "2026-10-01T01:34:53.555882+00:00"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-tax-000144",
+  "term": "リバースチャージ方式",
+  "overall_decision": "rewrite",
+  "summary_reason": "例文2件ともに寄附金控除（ふるさと納税等）のテンプレート文が混入した重大な事実誤認（DOMAIN_FACTUAL_ERROR）および不自然なコロケーション（「活用する」「利用する」）が含まれており、消費税法上の実務に即した内容への全面改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "リバースチャージ方式を利用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "リバースチャージ方式は法的義務・課税方式であり、任意で『利用する』ような便宜的サービス・ツールではないため不自然です。",
+      "suggested_text": "リバースチャージ方式を適用する"
+    },
+    {
+      "index": 1,
+      "text": "リバースチャージ方式の適用を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "税法上の制度適用を表す表現として自然です。",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "リバースチャージ方式を活用する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "納税義務や課税方式を『活用する』とするのは不適切です（優遇税制や控除制度ではありません）。",
+      "suggested_text": "リバースチャージ方式により申告する"
+    },
+    {
+      "index": 3,
+      "text": "リバースチャージ方式の対象となる",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "「リバースチャージ方式の対象となる取引」など実務で極めて頻出する適切なコロケーションです。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「節税および地域貢献」「制度を活用」はふるさと納税等の寄附金控除の文脈が混入した致命的なハルシネーションです。リバースチャージ方式は国外事業者からの電子的役務提供等に対する消費税課税方式であり、節税や地域貢献とは一切関係がありません。",
+      "suggested_ja": "国外事業者からクラウドサービス等の提供を受けたため、リバースチャージ方式に基づいて消費税の申告を行いました。",
+      "suggested_vi": "Do tiếp nhận dịch vụ đám mây từ nhà cung cấp nước ngoài, chúng tôi đã kê khai thuế tiêu thụ theo cơ chế tự nộp thuế thay (reverse charge).",
+      "suggested_en": "Because we received cloud services from an overseas vendor, we filed our consumption tax return under the reverse charge mechanism."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「控除上限額を事前に試算」も寄附金税額控除の定型句の流用です。リバースチャージ方式における課税売上割合の判定（95%未満か否か等）の実務と乖離しています。",
+      "suggested_ja": "当社の課税売上割合が95％未満となったため、特定課税仕入れについてリバースチャージ方式の対象取引を洗い出しました。",
+      "suggested_vi": "Do tỷ lệ doanh số chịu thuế của công ty chúng tôi dưới 95%, chúng tôi đã rà soát các giao dịch mua chịu thuế đặc thù thuộc đối tượng áp dụng cơ chế reverse charge.",
+      "suggested_en": "Since our taxable sales ratio fell below 95%, we identified the transactions subject to the reverse charge mechanism for specified taxable purchases."
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "決算・消費税申告実務におけるリバースチャージ方式の証憑確認および申告添付書類のやり取りとして整合しており、自然です。",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eace26c9f197b3f376d480146d062bcaa4203e8c8763b91b8be429191af2ecdd",
+    "validated_at": "2026-10-01T01:39:57.051527+00:00"
+  }
+}

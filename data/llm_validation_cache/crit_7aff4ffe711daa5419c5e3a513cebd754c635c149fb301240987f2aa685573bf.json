@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000116",
+  "term": "その他利益剰余金",
+  "overall_decision": "rewrite",
+  "summary_reason": "純資産の勘定科目である「その他利益剰余金」に対して、日常業務（売掛金・未払金等）の機械的テンプレート（「月次決算での差異照合」「証憑書類との照合」「精算する」など）が無批判に適用されており、会計実務上の妥当性を欠いているため全面的な改訂が必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "その他利益剰余金を計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「その他利益剰余金」は純資産（株主資本）の区分科目であり、損益や負債のように日常的に「計上する」とは言いません。通常は「振り替える」や「組み入れる」を用います。",
+      "suggested_text": "その他利益剰余金へ振り替える"
+    },
+    {
+      "index": 1,
+      "text": "その他利益剰余金の残高を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "決算や純資産の部確認において自然に用いられるコロケーションです。",
+      "suggested_text": "その他利益剰余金の残高を確認する"
+    },
+    {
+      "index": 2,
+      "text": "その他利益剰余金を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "純資産の勘定科目自体を「照合する」とは言わず、株主資本等変動計算書の数値と元帳残高の一致などを検証する場合は「内訳を検証する」や「残高を照合する」と表現します。",
+      "suggested_text": "その他利益剰余金の内訳を検証する"
+    },
+    {
+      "index": 3,
+      "text": "その他利益剰余金を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「精算」は仮払金や債権債務の決済に使う動詞であり、純資産の項目であるその他利益剰余金に対して用いるのは明らかな会計的・意味的誤用です。取り崩す、あるいは配当原資とするなどの文脈が適切です。",
+      "suggested_text": "その他利益剰余金を取り崩す"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「その他利益剰余金」は月次の営業取引で計上されるものではなく、月末の帳簿照合で「計上内容の差異」を精査するというシチュエーションは会計実務上極めて不自然です（売掛金や未払金などのテンプレートの流用）。",
+      "suggested_ja": "株主総会における剰余金の配当決議に基づき、その他利益剰余金からの振替額を正確に反映します。",
+      "suggested_vi": "Căn cứ vào nghị quyết chia cổ tức bằng thặng dư tại Đại hội đồng cổ đông, chúng tôi sẽ phản ánh chính xác số tiền kết chuyển từ lợi nhuận giữ lại khác.",
+      "suggested_en": "Based on the resolution on dividend distribution at the general meeting of shareholders, we will accurately reflect the transfer amount from other retained earnings."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「適正な〜適正に処理いたしました」と重複しており、具体性のない機械的テンプレート構文です。決算における具体的な処分・振替の文脈に改訂すべきです。",
+      "suggested_ja": "当期の期末決算において当期純利益を計上した結果、その他利益剰余金の残高は前期比で増加いたしました。",
+      "suggested_vi": "Do ghi nhận lợi nhuận thuần trong đợt quyết toán cuối kỳ này, số dư lợi nhuận giữ lại khác đã tăng lên so với kỳ trước.",
+      "suggested_en": "As a result of recording net income in the current fiscal year-end closing, the balance of other retained earnings increased compared to the previous period."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「月次決算でその他利益剰余金の計上内容に差異」「証憑書類と補助元帳を照合」というやり取りは、純資産会計の実務と完全に乖離しています。その他利益剰余金は領収書等の証憑と突き合わせる科目ではありません。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "株主総会で可決された剰余金配当に伴い、その他利益剰余金の減少処理は完了していますか。",
+        "vi": "Thủ tục giảm trừ lợi nhuận giữ lại khác liên quan đến việc chia cổ tức đã được Đại hội đồng cổ đông thông qua đã hoàn tất chưa?",
+        "en": "Has the process to reduce other retained earnings following the dividend distribution approved at the shareholders' meeting been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、株主資本等変動計算書および関連する元帳への反映と残高の一致を確認済みです。",
+        "vi": "Vâng, tôi đã kiểm tra việc phản ánh vào Báo cáo thay đổi vốn chủ sở hữu cũng như sổ cái liên quan và xác nhận số dư đã khớp.",
+        "en": "Yes, I have confirmed that the entries are reflected in the statement of changes in net assets and the relevant ledgers, and that the balances match."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "ベトナム会計基準（VAS/TT200）において「利益剰余金」は通常「Lợi nhuận giữ lại」または「Lợi nhuận sau thuế chưa phân phối」と訳されます。「thặng dư」は主に資本剰余金（thặng dư vốn cổ phần）を指すため、「lợi nhuận giữ lại khác」とするのが実務上より適切です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "38971ee7dccc54467149896f68de3fec94b3bb647e9b565370768361070fa7a0",
+    "validated_at": "2026-10-01T01:35:44.460134+00:00"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "entry_id": "jp-pro-business-000141",
+  "term": "クロージング",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core term 'クロージング' (closing a deal) is consistently misused in an accounting context throughout the examples and dialogue, treating it as an accounting entry or item within financial statements ('計上内容', '残高', '処理'). This indicates a fundamental misunderstanding of the term's application in a professional Japanese business setting, particularly in accounting. While collocations are natural, the examples and dialogue are unnatural and factually incorrect from an accounting perspective. The Vietnamese translation also suffers from this contextual mismatch.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "クロージングを進める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in business contexts."
+    },
+    {
+      "index": 1,
+      "text": "クロージングを完了する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in business contexts."
+    },
+    {
+      "index": 2,
+      "text": "クロージングの手順を確認する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in business contexts."
+    },
+    {
+      "index": 3,
+      "text": "クロージングを見直す",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural and common usage in business contexts."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "The term 'クロージング' (closing a deal) is being used in an accounting context as if it were an accounting entry or balance, which is incorrect. '計上内容' and '残高' do not apply to 'クロージング' in this sense. It seems to confuse 'closing a deal' with '決算' (financial closing/settlement).",
+      "suggested_ja": "月末の帳簿照合において、決算仕訳の計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư của bút toán kết chuyển có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in the entries or balances of closing journal entries."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Similar to the first example, 'クロージング' (closing a deal) is incorrectly treated as something that is 'processed' in '決算' (financial closing) in an accounting sense. 'クロージング' (deal closing) is a business process, not an accounting item to be processed in financial statements.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算処理を適正に実施いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã thực hiện xử lý quyết toán kỳ này một cách đúng đắn.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the financial closing for this term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly uses 'クロージングの計上内容' in the context of monthly financial closing ('月次決算'). 'クロージング' (deal closing) is not an accounting entry ('計上内容') in financial statements. Speaker B's response, while grammatically correct, doesn't fix the fundamental misunderstanding of 'クロージング' in Speaker A's question.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、売上計上や費用計上に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong việc hạch toán doanh thu hoặc chi phí không?",
+        "en": "In this month's monthly financial closing, are there any discrepancies in revenue or expense recognition?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for 'クロージング' as 'chốt hợp đồng / bước ký kết đơn hàng' is too literal and doesn't fully capture the broader business context of 'closing' (e.g., closing a sales cycle, closing a project phase, not just signing a contract). It also doesn't fit the accounting context where it was incorrectly used in the examples. A more general term like 'kết thúc giao dịch' or 'hoàn tất giao dịch' might be better depending on the specific context, but given the original examples' misuse, the translation itself becomes problematic."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a0bd5cc2341c7acc3ebb9b974b35cdd786dcca85aa92ae432dbcb7d7a04186e9",
+    "validated_at": "2026-10-01T01:52:43.758858+00:00"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000039",
+  "term": "取締役会議事録",
+  "overall_decision": "rewrite",
+  "summary_reason": "Fatal chronological and domain error: the generator treated '取締役会議事録' (meeting minutes) as pre-meeting materials (取締役会資料 / 招集通知) in both the examples and dialogue, and used unnatural operational predicates such as '発送する'.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "取締役会議事録を作成する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard corporate legal collocation for drafting board minutes.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "取締役会議事録を提出する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Common when submitting minutes to financial institutions, registry offices, or auditors.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "取締役会議事録を発送する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Internal corporate governance documents like board minutes are not '発送' (dispatched/shipped); they are circulated ('回覧する'), sent ('送付する'), or kept/archived ('備え置く').",
+      "suggested_text": "取締役会議事録を備え置く"
+    },
+    {
+      "index": 3,
+      "text": "取締役会議事録を受領する",
+      "decision": "rewrite",
+      "reason_code": "NATURAL",
+      "reason": "While grammatically possible, '署名・押印する' (sign and seal) or '閲覧する' (inspect) are substantially more authentic and legally critical collocations under the Companies Act.",
+      "suggested_text": "取締役会議事録に署名押印する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Chronological and factual error: minutes (議事録) record a meeting that has already taken place. You do not dispatch board minutes to facilitate an upcoming meeting; notice of convocation (招集通知) or meeting packs (取締役会資料) are sent instead. Furthermore, there is no statutory dispatch requirement to all stakeholders.",
+      "suggested_ja": "会社法第371条の定めに従い、作成した取締役会議事録は本店に10年間備え置く必要があります。",
+      "suggested_vi": "Theo quy định tại Điều 371 Luật Doanh nghiệp Nhật Bản, biên bản cuộc họp Hội đồng quản trị đã lập phải được lưu giữ tại trụ sở chính trong thời hạn 10 năm.",
+      "suggested_en": "In accordance with Article 371 of the Companies Act, prepared minutes of board of directors meetings must be retained at the head office for ten years."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Passively 'receiving' board minutes within the company is unnatural phrasing for corporate governance; reference to execution (署名押印) or audit trails is much more idiomatic.",
+      "suggested_ja": "出席取締役および監査役による署名押印が完了した取締役会議事録は、内部統制の証跡として法務部で厳重に保管されています。",
+      "suggested_vi": "Biên bản cuộc họp Hội đồng quản trị đã được các giám đốc và kiểm soát viên tham dự ký tên đóng dấu đang được lưu trữ nghiêm ngặt tại phòng pháp chế như một bằng chứng kiểm soát nội bộ.",
+      "suggested_en": "The minutes of the board of directors meeting, duly signed and sealed by attending directors and corporate auditors, are securely archived by the legal department as internal control evidence."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fatal business logic error: Preparing, obtaining approval for, and dispatching '取締役会議事録' (board minutes) prior to an upcoming meeting ('来週開催予定の会議に向けて') is impossible because minutes document proceedings after the meeting occurs.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先週開催された定時取締役会の議事録の作成状況はいかがですか。",
+        "vi": "Tình hình soạn thảo biên bản cuộc họp Hội đồng quản trị thường kỳ diễn ra tuần trước thế nào rồi?",
+        "en": "How is the preparation of the minutes for the regular board of directors meeting held last week progressing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "原案の作成は完了しており、現在は出席役員への確認と署名押印の手続きを進めております。",
+        "vi": "Bản thảo đã hoàn tất, hiện chúng tôi đang tiến hành thủ tục xác nhận và xin chữ ký đóng dấu của các thành viên tham dự.",
+        "en": "The initial draft is complete, and we are currently proceeding with the review and signature/seal procedures with the attending directors."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Candidate term translations into English and Vietnamese are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2b46f42e92d0051034b7a12271ac9ece3bca6b18b30ff2f5ea9d13020b92c981",
+    "validated_at": "2026-10-01T01:41:37.579311+00:00"
+  }
+}

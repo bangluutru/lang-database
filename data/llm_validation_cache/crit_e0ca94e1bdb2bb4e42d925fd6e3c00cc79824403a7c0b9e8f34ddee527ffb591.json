@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000142",
+  "term": "退職給付費用",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations, examples, and the dialogue suffer from severe mechanical templating (treating pension expense like an everyday voucher expense or cash account: 残高, 照合, 精算, 証憑書類). They must be rewritten to reflect authentic corporate retirement benefit accounting (actuarial calculation, trust bank reports, service cost recognition).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "退職給付費用を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for recognizing/booking retirement benefit expenses in P/L.",
+      "suggested_text": "退職給付費用を計上する"
+    },
+    {
+      "index": 1,
+      "text": "退職給付費用の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "As a P/L expense account, 退職給付費用 represents period expenses (発生額・算定額) rather than a persistent balance (残高). In pension accounting, 残高 typically applies to the B/S liability 退職給付引当金.",
+      "suggested_text": "退職給付費用を算定する"
+    },
+    {
+      "index": 2,
+      "text": "退職給付費用を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "While reconciling amounts is common, pairing 費用 directly with 照合する is unnatural and templated. Comparing it with actuarial calculation reports or breaking down components is standard.",
+      "suggested_text": "退職給付費用の内訳を開示する"
+    },
+    {
+      "index": 3,
+      "text": "退職給付費用を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "精算する (settle/reimburse) is used for advance payments, travel expenses, or expense claims (経費精算). An actuarially calculated retirement benefit expense cannot be 'settled' (精算).",
+      "suggested_text": "退職給付費用を月割計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Retirement benefit expenses are actuarially calculated or allocated per annual actuarial reports, not reconciled monthly for '残高差異' like cash or AP accounts. It reflects a generic bookkeeping template.",
+      "suggested_ja": "年金財政計算および数理計算結果に基づき、当期の退職給付費用を適正に算定・計上しました。",
+      "suggested_vi": "Dựa trên kết quả định phí kế toán và tính toán bảo hiểm hưu trí, chúng tôi đã tính toán và ghi nhận hợp lý chi phí trợ cấp hưu trí kỳ này.",
+      "suggested_en": "Based on the pension actuarial valuation results, we appropriately calculated and recognized the retirement benefit expenses for the current period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Stylistically awkward repetition of '適正な' and '適正に' within the same sentence, alongside stilted phrasing '適正な会計基準' (usually 会計基準に基づき or 退職給付会計基準に則り).",
+      "suggested_ja": "退職給付会計基準に則り、勤務費用および利息費用を退職給付費用として処理いたしました。",
+      "suggested_vi": "Tuân thủ chuẩn mực kế toán phúc lợi cho người lao động nghỉ hưu, chúng tôi đã xử lý chi phí dịch vụ và chi phí lãi vay vào chi phí trợ cấp hưu trí.",
+      "suggested_en": "In accordance with the retirement benefit accounting standard, we processed service cost and interest cost as retirement benefit expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "In corporate practice, 退職給付費用 is verified against an actuary report (年金数理計算書) or pension asset management report from a trust bank/life insurer, not against generic '証憑書類' (receipts/vouchers) and '補助元帳'. This is a canned template ill-suited for pension accounting.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今期の退職給付費用の計上額について、信託銀行からの数理計算書との突き合わせは完了していますか。",
+        "vi": "Về số tiền ghi nhận chi phí trợ cấp hưu trí kỳ này, việc đối chiếu với bảng tính định phí từ ngân hàng ủy thác đã hoàn tất chưa?",
+        "en": "Regarding the recognized retirement benefit expenses for this period, have you completed cross-checking with the actuarial report from the trust bank?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、数理計算報告書と照合し、勤務費用や割引率の前提条件に齟齬がないことを確認いたしました。",
+        "vi": "Vâng, tôi đã đối chiếu với báo cáo tính toán định phí và xác nhận không có bất kỳ sai lệch nào về chi phí dịch vụ cũng như giả định tỷ lệ chiết khấu.",
+        "en": "Yes, I have cross-checked with the actuarial report and confirmed there are no discrepancies in service costs or discount rate assumptions."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "The candidate term translations are accurate and standard."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "be177487ee39f7f3545c6a3085c674c0485a2beadbffa811f6324de3067c3dbc",
+    "validated_at": "2026-10-01T01:36:15.657343+00:00"
+  }
+}

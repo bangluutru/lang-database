@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000052",
+  "term": "工具器具備品",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation index 2 contains a predicate mismatch ('台帳に計上する' instead of '登録する'), and Example 0 uses an unnatural template-style collocation ('最新鋭の工具器具備品').",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "工具器具備品を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for acquiring depreciable assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "工具器具備品を減価償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, frequently used phrasing in corporate accounting practice.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "工具器具備品を固定資産台帳に計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "One does not '計上する' (record as an accounting figure) into a '台帳' (register/ledger). The correct action for a register is '登録する' or '記載する', whereas '計上する' applies to financial statements (資産計上する).",
+      "suggested_text": "工具器具備品を固定資産台帳に登録する"
+    },
+    {
+      "index": 3,
+      "text": "工具器具備品の耐用年数",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Essential domain terminology regarding statutory useful life.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Collocating '最新鋭の' directly with the accounting category '工具器具備品' sounds mechanically assembled and artificial. Production lines typically introduce '機械装置' or specific equipment; if referring to tools/fixtures, specific contextualization (such as inspection equipment or office IT devices) makes it authentic business Japanese.",
+      "suggested_ja": "本社移転に伴い執務用の什器やPC等の工具器具備品を新たに取得し、固定資産台帳に登録しました。",
+      "suggested_vi": "Nhân dịp chuyển trụ sở chính, chúng tôi đã mua sắm mới công cụ, dụng cụ và thiết bị văn phòng như bàn ghế làm việc và máy tính, đồng thời đã đăng ký vào sổ tài sản cố định.",
+      "suggested_en": "Following the relocation of the head office, we acquired new tools, furniture and fixtures such as office furnishings and PCs, and recorded them in the fixed asset register."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Flawless corporate accounting sentence adhering strictly to statutory depreciation reporting practices.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "The exchange between the supervisor and accountant is logical, professional, and reflects realistic Japanese corporate closing procedures.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Both English and Vietnamese translations are accurate, professional, and standard accounting equivalents."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "13f010b3f7d6ff1e9965000370e6cd76ce8728caaa58c3dab91a1b38e2654e3e",
+    "validated_at": "2026-10-01T01:34:32.169310+00:00"
+  }
+}

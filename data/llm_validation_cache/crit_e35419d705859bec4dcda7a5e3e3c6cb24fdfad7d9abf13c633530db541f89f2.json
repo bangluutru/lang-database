@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000175",
+  "term": "減損損失",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations and sentences were generated using generic bookkeeping templates ('残高を確認する', '照合する', '精算する', '証憑と補助元帳'), which fundamentally mismatch the accounting reality of impairment testing (減損会計).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "減損損失を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, authentic accounting collocation for recognizing impairment loss.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "減損損失の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "減損損失 is a P&L expense item (特別損失), not a balance sheet account carrying an ongoing balance (残高).",
+      "suggested_text": "減損の兆候を把握する"
+    },
+    {
+      "index": 2,
+      "text": "減損損失を照合する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Impairment losses are determined via valuation/testing models, not routinely 'reconciled/collated' (照合) like ledger items.",
+      "suggested_text": "減損損失を測定する"
+    },
+    {
+      "index": 3,
+      "text": "減損損失を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Losses cannot be 'settled' or 'liquidated' (精算する); this predicate applies to expenses, advances, or accounts payable.",
+      "suggested_text": "減損損失を特別損失に計上する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Impairment testing is an event-driven or quarterly/annual closing procedure based on recoverable amount, not a monthly routine ledger reconciliation involving '残高'.",
+      "suggested_ja": "遊休資産の回収可能価額が帳簿価額を下回ったため、当期において減損損失を特別損失として計上しました。",
+      "suggested_vi": "Do giá trị có thể thu hồi của tài sản nhàn rỗi thấp hơn giá trị ghi sổ, chúng tôi đã ghi nhận khoản lỗ do suy giảm giá trị vào chi phí bất thường trong kỳ này.",
+      "suggested_en": "Because the recoverable amount of the idle assets fell below their book value, we recognized an impairment loss as an extraordinary loss in the current fiscal period."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Repetitive and stilted template phrasing ('適正な...適正に処理いたしました') lacking substantive accounting context.",
+      "suggested_ja": "固定資産の減損会計基準に基づき将来キャッシュ・フローを検証した結果、対象工場について減損損失の計上が必要と判断されました。",
+      "suggested_vi": "Kết quả thẩm định dòng tiền tương lai dựa trên chuẩn mực kế toán suy giảm giá trị tài sản cố định cho thấy cần phải ghi nhận lỗ suy giảm giá trị đối với nhà máy liên quan.",
+      "suggested_en": "Following an assessment of future cash flows in accordance with asset impairment accounting standards, it was determined necessary to recognize an impairment loss for the target factory."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Impairment loss is calculated via DCF or net realizable value calculations, not verified by matching routine vouchers (証憑書類) against subsidiary ledgers (補助元帳) during regular monthly closes.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "業績が悪化している不採算店舗について、減損の兆候は見られますか。",
+        "vi": "Đối với các cửa hàng kinh doanh không có lãi và hiệu quả giảm sút, có dấu hiệu suy giảm giá trị tài sản không?",
+        "en": "Are there any indications of impairment for the unprofitable stores experiencing declining performance?"
+      },
+      {
+        "speaker": "B",
+        "ja": "回収可能価額の試算を進めており、期末決算で減損損失の計上要否を監査法人と協議予定です。",
+        "vi": "Chúng tôi đang tiến hành ước tính giá trị có thể thu hồi và dự kiến thảo luận với công ty kiểm toán về việc có cần ghi nhận lỗ suy giảm giá trị trong kỳ quyết toán cuối năm hay không.",
+        "en": "We are estimating the recoverable amount and plan to discuss the necessity of recognizing an impairment loss with the audit firm during year-end closing."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "In Vietnamese accounting terminology, 'tài sản cố định' should be broadened to 'tài sản' (lỗ do suy giảm giá trị tài sản), as impairment applies to goodwill, intangibles, and cash-generating units, not exclusively tangible fixed assets."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "8996e25989d7426c36fde5002ac2baef8d7dec99da76aeb4b41498a30c36fb55",
+    "validated_at": "2026-10-01T01:36:49.179727+00:00"
+  }
+}

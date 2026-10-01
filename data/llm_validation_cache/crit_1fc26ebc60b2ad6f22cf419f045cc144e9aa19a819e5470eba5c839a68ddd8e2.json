@@ -1,0 +1,84 @@
+{
+  "entry_id": "jp-pro-tax-000057",
+  "term": "勤労学生控除",
+  "overall_decision": "rewrite",
+  "summary_reason": "Severe domain error in the dialogue confusing corporate financial closing declarations (決算申告) with individual personal income tax deductions (勤労学生控除), along with a factual inaccuracy regarding calculation of fixed-amount statutory deductions in collocation 2.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "勤労学生控除を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard and natural phrasing in tax return filing and payroll year-end adjustment."
+    },
+    {
+      "index": 1,
+      "text": "勤労学生控除を受ける",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard expression used by taxpayers claiming the deduction."
+    },
+    {
+      "index": 2,
+      "text": "勤労学生控除の上限額を計算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "勤労学生控除 is a fixed statutory amount (270,000 yen for income tax, 260,000 yen for inhabitant tax). There is no calculation of an 'upper limit amount' (上限額を計算する). One verifies the income eligibility criteria instead.",
+      "suggested_text": "勤労学生控除の所得要件を確認する"
+    },
+    {
+      "index": 3,
+      "text": "勤労学生控除の要件を満たす",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard legal and procedural phrasing for meeting statutory criteria."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "勤労学生控除 is an individual personal tax deduction (所得控除) typically processed via year-end adjustment (年末調整) for part-time student staff in a corporate HR context, rather than a corporate declaration using 'we' (chúng tôi).",
+      "suggested_ja": "学生アルバイトの年末調整において、要件を満たしていることを確認した上で勤労学生控除を適用しました。",
+      "suggested_vi": "Trong đợt quyết toán thuế cuối năm cho nhân viên bán thời gian là sinh viên, chúng tôi đã áp dụng khoản giảm trừ sinh viên vừa học vừa làm sau khi xác nhận họ đáp ứng đủ điều kiện.",
+      "suggested_en": "In the year-end tax adjustment for student part-timers, we applied the deduction for working students after verifying that the requirements were met."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural individual taxpayer statement (though translated as 'we', the Japanese sentence itself is grammatically and practically authentic for tax filing)."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Major domain error: '決算申告' refers to corporate tax filing at fiscal year-end. Corporations cannot claim 勤労学生控除, which is strictly a personal income tax deduction. Furthermore, required attachments are school certificates (在学証明書), not a 'tax accountant confirmation certificate' (税理士の確認書). In a corporate setting, this arises during payroll year-end adjustment (年末調整) for student staff.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "学生アルバイトの年末調整で、勤労学生控除の申告書と在学証明書は回収できていますか。",
+        "vi": "Trong đợt quyết toán thuế cuối năm cho nhân viên sinh viên làm thêm, bạn đã thu thập đủ tờ khai giảm trừ sinh viên vừa học vừa làm và giấy chứng nhận đang theo học chưa?",
+        "en": "Have you collected the working student deduction declaration forms and student enrollment certificates for the student part-timers' year-end tax adjustment?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、対象者全員の提出書類を確認し、本人の所得要件も満たしていることを確認済みです。",
+        "vi": "Vâng, tôi đã kiểm tra hồ sơ nộp của tất cả đối tượng và đã xác nhận họ đều đáp ứng đủ điều kiện về thu nhập.",
+        "en": "Yes, I have reviewed the submitted documents from all eligible staff and confirmed that they meet the personal income requirements."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Target term translations are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "121f647382b1b65f6c3b8f3c1be8b0b14aba1898114847d4cf869468914ddba0",
+    "validated_at": "2026-10-01T01:38:27.093621+00:00"
+  }
+}

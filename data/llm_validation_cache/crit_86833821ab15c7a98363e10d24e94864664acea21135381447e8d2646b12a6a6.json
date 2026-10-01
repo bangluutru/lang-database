@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-accounting-000171",
+  "term": "為替差損",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple collocations violate accounting semantics ('残高を確認する', '照合する', and critically '精算する' for a P&L expense item). Sentences and dialogue rely on rigid synthetic templates ('適正な...適正に', '適正に整合している') instead of realistic enterprise accounting practices such as evaluation rate adjustments (期末評価替え) and P&L classification (営業外費用).",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "為替差損を計上する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Highly natural and standard accounting collocation for recognizing foreign exchange loss.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "為替差損の残高を確認する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "As a profit-and-loss (P&L) item rather than a balance-sheet asset/liability, '残高' (balance) is unnatural; '発生額' (incurred amount) or '計上額' (recorded amount) is the standard terminology.",
+      "suggested_text": "為替差損の計上額を確認する"
+    },
+    {
+      "index": 2,
+      "text": "為替差損を照合する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "One does not reconcile ('照合する') a loss directly; one reconciles foreign currency ledger balances or recalculates exchange conversion differences.",
+      "suggested_text": "為替差損益を試算する"
+    },
+    {
+      "index": 3,
+      "text": "為替差損を精算する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "Severe semantic mismatch: '精算する' applies to claims, advances, or accounts (e.g., 経費, 仮払金), not to an incurred loss. For forex loss, offsetting against forex gain or recognizing as non-operating expense is standard.",
+      "suggested_text": "為替差損を為替差益と相殺する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Referring to discrepancies in '為替差損の残高' (the balance of foreign exchange loss) during reconciliation is technically awkward for a P&L item. It is more authentic to talk about rate evaluation differences during month-end closing.",
+      "suggested_ja": "月末の決算作業において、期末為替レートによる評価替えを行い、為替差損の計上額を精査します。",
+      "suggested_vi": "Trong kỳ quyết toán cuối tháng, chúng tôi thực hiện đánh giá lại theo tỷ giá cuối kỳ và rà soát kỹ lưỡng số tiền lỗ chênh lệch tỷ giá hối đoái được hạch toán.",
+      "suggested_en": "During month-end closing, we revalue balances using the period-end exchange rate and carefully review the recorded foreign exchange loss amount."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Rhetorically redundant and templated with repetitive phrasing ('適正な会計基準...適正に処理いたしました'). Real reporting specifies the P&L classification, such as booking it under non-operating expenses.",
+      "suggested_ja": "企業会計基準に基づき、当期の外貨建取引から発生した為替差損を営業外費用として計上いたしました。",
+      "suggested_vi": "Căn cứ theo chuẩn mực kế toán doanh nghiệp, chúng tôi đã hạch toán khoản lỗ chênh lệch tỷ giá phát sinh từ các giao dịch ngoại tệ kỳ này vào chi phí tài chính (chi phí ngoài hoạt động kinh doanh).",
+      "suggested_en": "In accordance with corporate accounting standards, foreign exchange losses arising from foreign currency transactions this term were recognized as non-operating expenses."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "'適正に整合している' is unnatural Japanese, and asking whether '差異' occurred in forex loss entries does not reflect genuine accounting dialogue regarding foreign currency evaluation.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で為替差損が膨らんでいますが、外貨建債権の期末評価替えは完了していますか。",
+        "vi": "Trong kỳ quyết toán tháng này, lỗ chênh lệch tỷ giá tăng mạnh, việc đánh giá lại nợ phải thu bằng ngoại tệ cuối kỳ đã hoàn tất chưa?",
+        "en": "Foreign exchange losses have grown significantly in this month-end closing; has the period-end revaluation of foreign currency receivables been completed?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、月末のTTMレートを適用して再計算し、補助元帳との残高一致を確認済みです。",
+        "vi": "Vâng, chúng tôi đã áp dụng tỷ giá TTM cuối tháng để tính toán lại và xác nhận số dư hoàn toàn khớp với sổ phụ.",
+        "en": "Yes, we recalculated using the month-end TTM rate and confirmed that the balance reconciles with the subsidiary ledger."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "Term-level translations for Vietnamese and English are accurate."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "50b5c74b2f5554026c79dc16f7826924025ae5d45b343901106977052b428e6c",
+    "validated_at": "2026-10-01T01:36:44.807281+00:00"
+  }
+}

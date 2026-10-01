@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000053",
+  "term": "コーポレートガバナンス",
+  "overall_decision": "rewrite",
+  "summary_reason": "致命的な概念混同が発生しています。企業統治（ガバナンス）概念を月次決算・仕訳・元帳照合の会計定型文にそのまま流し込んだため、例文および対話が実務上完全にナンセンスとなっています。抜本的な書き直しが必要です。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "コーポレートガバナンスを構築する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "コーポレートガバナンス（体制）の構築という文脈で一般的に使用されます。",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "コーポレートガバナンスを運用する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「ガバナンスを運用する」よりも「コーポレートガバナンスを強化する」または「体制を運用する」が圧倒的に自然です。",
+      "suggested_text": "コーポレートガバナンスを強化する"
+    },
+    {
+      "index": 2,
+      "text": "コーポレートガバナンスを評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "取締役会の実効性評価や外部評価の文脈で自然に成立します。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "コーポレートガバナンスを改善する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "統治体制の見直しや改善の文脈で使用可能です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "コーポレートガバナンスは企業統治体制の概念であり、帳簿照合で計上・残高管理する勘定科目ではありません。致命的な機械テンプレートの誤用です。",
+      "suggested_ja": "上場企業として持続的な成長を遂げるため、コーポレートガバナンスの強化に向けた基本方針を策定しました。",
+      "suggested_vi": "Để đạt được sự tăng trưởng bền vững với tư cách là một doanh nghiệp niêm yết, chúng tôi đã xây dựng chính sách cơ bản nhằm tăng cường quản trị công ty.",
+      "suggested_en": "To achieve sustainable growth as a listed company, we have formulated basic policies aimed at strengthening corporate governance."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「決算においてコーポレートガバナンスを適正に処理いたしました」は会計用語と統治概念の混同であり、日本語・実務ともに完全に破綻しています。",
+      "suggested_ja": "当社は透明性の高い経営を実現するため、独立社外取締役を選任し、コーポレートガバナンス体制を刷新いたしました。",
+      "suggested_vi": "Nhằm hiện thực hóa công tác quản trị minh bạch, công ty chúng tôi đã bổ nhiệm các thành viên hội đồng quản trị độc lập và đổi mới cơ chế quản trị doanh nghiệp.",
+      "suggested_en": "To achieve highly transparent management, we appointed independent outside directors and revamped our corporate governance framework."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "コーポレートガバナンスが月次決算で計上され、補助元帳で照合されるという完全に誤った前提で対話が構成されています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "市場再編に伴い、当社のコーポレートガバナンス・コードへの対応状況を再点検する必要がありますね。",
+        "vi": "Cùng với việc tái cơ cấu thị trường, chúng ta cần rà soát lại tình trạng tuân thủ Bộ nguyên tắc quản trị công ty của doanh nghiệp mình.",
+        "en": "With the market restructuring, we need to review our company's compliance status with the Corporate Governance Code."
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、社外取締役の比率や情報開示基準を含め、改善提案書を今週中に取りまとめます。",
+        "vi": "Vâng, tôi sẽ tổng hợp bản đề xuất cải tiến trong tuần này, bao gồm tỷ lệ thành viên hội đồng quản trị độc lập và các tiêu chuẩn công bố thông tin.",
+        "en": "Yes, I will compile a proposal for improvements within this week, covering the ratio of outside directors and disclosure standards."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese meaning contains unnecessary slash and descriptive padding ('/ quản trị doanh nghiệp minh bạch'). 'quản trị công ty' or 'quản trị doanh nghiệp' is the accurate term."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "7005678129fea02fe72dd9cd0bbc5e223e1b3d7fefb1d2422eb46275ceb736ea",
+    "validated_at": "2026-10-01T01:41:52.818565+00:00"
+  }
+}

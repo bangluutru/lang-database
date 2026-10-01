@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000094",
+  "term": "契約社員",
+  "overall_decision": "reject",
+  "summary_reason": "役員（取締役・監査役）や株主総会関連書類のテンプレートに対して「契約社員」という単語を機械的に置換した形跡があり、会社法・人事労務実務の両面で致命的な事実誤認と対話の文脈破綻が生じています。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "契約社員を選任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「選任する」は役員・監査役等に用いる表現であり、契約社員などの一般労働者には「雇用する」「採用する」を用います。",
+      "suggested_text": "契約社員を雇用する"
+    },
+    {
+      "index": 1,
+      "text": "契約社員に就任する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「就任」は役職や機関（役員など）に就く際に用いる語であり、非正規雇用の労働者区分である契約社員に対しては使用しません。",
+      "suggested_text": "契約社員として採用される"
+    },
+    {
+      "index": 2,
+      "text": "契約社員に相談する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "文法的には成立しますが、専門用語の典型的なコロケーションとして指導する価値が低いです。実務で極めて頻出する契約更新や登用に関する語が適切です。",
+      "suggested_text": "契約社員の契約を更新する"
+    },
+    {
+      "index": 3,
+      "text": "契約社員の職務を遂行する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「契約社員の職務」というコロケーションは不自然です。正社員への切り替えを表す実務表現が望ましいです。",
+      "suggested_text": "契約社員を正社員に登用する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "会社法上、契約社員の雇用に株主総会の決議や選任手続きは一切不要です。役員（取締役・監査役）用の文面を無批判に当てはめた重大な事実誤認です。",
+      "suggested_ja": "当社では、優秀な契約社員を対象とした正社員登用制度を導入しています。",
+      "suggested_vi": "Công ty chúng tôi đã áp dụng chế độ tuyển dụng chính thức dành cho những nhân viên hợp đồng có thành tích xuất sắc.",
+      "suggested_en": "Our company has introduced a system to promote high-performing contract employees to regular permanent positions."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「業務執行の適法性の確保」は監査役等のガバナンス機能であり、契約社員との定期連絡会で担保するものではなく、文脈として破綻しています。",
+      "suggested_ja": "契約社員の雇用契約満了に伴い、人事部にて契約更新の有無を確認しています。",
+      "suggested_vi": "Cùng với việc hết hạn hợp đồng lao động của nhân viên hợp đồng, bộ phận nhân sự đang tiến hành xác nhận việc có gia hạn hợp đồng hay không.",
+      "suggested_en": "With the expiration of contract employees' labor agreements, the HR department is confirming whether contracts will be renewed."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DISCONNECTED_TURNS",
+    "reason": "Aの発言「契約社員の準備状況」に対してBが「推敲を終え…発送の手配を行います」と回答しており、書類等のテンプレートを誤挿入した支離滅裂な会話になっています。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来期の人員計画ですが、プロジェクト増員に伴う契約社員の採用状況はいかがですか。",
+        "vi": "Về kế hoạch nhân sự cho kỳ tới, tình hình tuyển dụng nhân viên hợp đồng để phục vụ mở rộng dự án như thế nào rồi?",
+        "en": "Regarding the personnel plan for the next term, what is the recruitment status of contract employees for the project expansion?"
+      },
+      {
+        "speaker": "B",
+        "ja": "目標5名のうち3名の採用が内定しており、残る2名についても今週中に最終面接を行う予定です。",
+        "vi": "Trong số 5 người theo mục tiêu thì đã có 3 người được nhận, 2 người còn lại dự kiến sẽ phỏng vấn vòng cuối trong tuần này.",
+        "en": "We have made unofficial offers to three out of our target of five, and we schedule final interviews for the remaining two this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": "訳語自体の単体定義は正確ですが、例文および対話文が破綻しているため文脈全体としての見直しが必要です。"
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "2c620996605aba92851781bcaefd9aed1490a9b0e79870e700624dfddbe61287",
+    "validated_at": "2026-10-01T01:42:32.471383+00:00"
+  }
+}

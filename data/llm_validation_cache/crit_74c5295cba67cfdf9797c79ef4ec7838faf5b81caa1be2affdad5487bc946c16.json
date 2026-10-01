@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000116",
+  "term": "ディスクレ",
+  "overall_decision": "reject",
+  "summary_reason": "「ディスクレ」は貿易金融のL/C取引における書類不一致を指す専門用語であり、提示されたコロケーション、例文、対話の全てが、この用語を一般的な会計処理における「差異」や「不一致」の意味で誤用している。専門用語としての意味と使用文脈が完全に乖離しており、学習者に誤解を与えるため、全面的に修正が必要。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "ディスクレを開設する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「ディスクレ」は不一致そのものを指すため、「開設する」という動詞は不適切。口座や信用状を開設するのとは意味が異なる。",
+      "suggested_text": "ディスクレが発生する"
+    },
+    {
+      "index": 1,
+      "text": "ディスクレを決済する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「決済する」は金銭の支払いや取引の完了に使う動詞であり、不一致そのものを決済することはできない。不一致を解消するという意味合いであれば「解消する」が適切。",
+      "suggested_text": "ディスクレを解消する"
+    },
+    {
+      "index": 2,
+      "text": "ディスクレを提示する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "「ディスクレ」は不一致そのものであり、提示する対象ではない。不一致があることを指摘する、あるいは不一致の通知を提示する、といった表現が適切。",
+      "suggested_text": "ディスクレを指摘する"
+    },
+    {
+      "index": 3,
+      "text": "ディスクレの不一致を解消する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「ディスクレ」自体が不一致を意味するため、「ディスクレの不一致」は重複表現で不自然。「ディスクレを解消する」が自然。",
+      "suggested_text": "ディスクレを解消する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "「ディスクレ」は貿易金融におけるL/C取引の書類不一致を指す専門用語であり、一般的な「帳簿照合」や「計上内容」「残高」といった会計処理の文脈で使うのは不適切。会計上の差異は「差異」「不突合」などと表現される。",
+      "suggested_ja": "月末の帳簿照合において、計上内容や残高に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem nội dung hạch toán hoặc số dư có chênh lệch không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies in entries or balances."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "上記と同様、「ディスクレ」は会計基準や決算処理の文脈で「処理する」対象ではない。会計上の不一致や誤謬であれば「修正する」「調整する」などが適切。",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の決算において会計上の差異を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định các sai lệch kế toán trong đợt quyết toán kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed accounting discrepancies in this term's closing entries."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "「ディスクレ」は貿易金融のL/C取引における書類不一致を指すため、月次決算の「計上内容」の差異を問う文脈で使うのは不適切。会計上の差異であれば「差異」や「不突合」を用いるべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の月次決算で、計上内容に差異は発生していませんか。",
+        "vi": "Trong quyết toán hàng tháng này, có sự khác biệt nào trong nội dung hạch toán không?",
+        "en": "Are there any discrepancies in the recorded entries for this month's closing?"
+      },
+      {
+        "speaker": "B",
+        "ja": "証憑書類と補助元帳を照合済みで、すべて適正に整合していることを確認いたしました。",
+        "vi": "Chúng tôi đã đối chiếu chứng từ và sổ cái phụ, và xác nhận rằng tất cả đều khớp đúng.",
+        "en": "We have reconciled the supporting documents with the subsidiary ledgers and confirmed that everything is properly aligned."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "「ディスクレ」の専門用語としての意味合いが、会計文脈の例文に引きずられて不正確になっている。特にベトナム語の「sai sót bất hợp lệ trong bộ chứng từ L/C (Discrepancy)」という説明が、例文の会計文脈と合致せず、混乱を招く。英語も同様。"
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "a802945545e27b28f4139059501e83a7889f85db9a651cb56eb1760a797b6485",
+    "validated_at": "2026-10-01T01:55:52.526905+00:00"
+  }
+}

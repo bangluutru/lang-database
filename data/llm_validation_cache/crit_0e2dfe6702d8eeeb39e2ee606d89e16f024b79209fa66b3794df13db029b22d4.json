@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-business-000112",
+  "term": "育児休業",
+  "overall_decision": "rewrite",
+  "summary_reason": "While the term definitions and collocations are natural and valid, the example sentences and workplace dialogue exhibit extreme accounting template hallucination, treating an HR statutory leave status as a financial balance sheet account subject to ledger reconciliation.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "育児休業を取得する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard, highly natural corporate HR collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 1,
+      "text": "育児休業を申請する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard workplace procedure collocation.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "育児休業を認める",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural expression for employer approval.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "育児休業の期間を延長する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard administrative/statutory leave collocation.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Severe semantic mismatch: '育児休業' (statutory childcare leave) is an HR/labor status, not an accounting account or balance. Expressing '育児休業の計上内容や残高' is an egregious hallucination resulting from forced accounting templating.",
+      "suggested_ja": "従業員が育児休業を取得する際は、就業規則に基づき、開始日の1か月前までに申請書を人事部へ提出する必要があります。",
+      "suggested_vi": "Khi nhân viên nghỉ chăm con nhỏ, họ cần nộp đơn đăng ký cho phòng nhân sự trước ngày bắt đầu ít nhất một tháng theo đúng quy định làm việc.",
+      "suggested_en": "When an employee takes childcare leave, they must submit an application to the HR department at least one month prior to the start date in accordance with the work regulations."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "'当期の決算において育児休業を適正に処理いたしました' and '会計基準に則り' are factually absurd. Childcare leave is governed by the Child Care and Family Care Leave Act and labor regulations, not financial accounting standards (会計基準) or fiscal year-end closing (決算).",
+      "suggested_ja": "法改正に伴い、男性従業員の育児休業取得率の向上のため、社内規程の改定と相談窓口の設置を行いました。",
+      "suggested_vi": "Cùng với việc sửa đổi luật, chúng tôi đã sửa đổi quy chế nội bộ và thiết lập bàn tư vấn nhằm nâng cao tỷ lệ nam nhân viên nghỉ chăm con nhỏ.",
+      "suggested_en": "In conjunction with legal amendments, we revised internal regulations and established a consultation desk to increase the rate of male employees taking childcare leave."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Fatal domain distortion. Speaker A asks about '育児休業の計上内容' in monthly closing and Speaker B references matching with '補助元帳' (subsidiary ledger). Childcare leave is not an accounting ledger line item.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "来月から営業部の高橋さんが育児休業に入りますが、業務の引き継ぎ状況はいかがですか。",
+        "vi": "Từ tháng sau anh Takahashi ở bộ phận kinh doanh sẽ bắt đầu nghỉ chăm con nhỏ, tình hình bàn giao công việc thế nào rồi?",
+        "en": "Mr. Takahashi from the sales department will be taking childcare leave starting next month; how is the handover of duties going?"
+      },
+      {
+        "speaker": "B",
+        "ja": "担当案件のリストアップは完了しており、今週末までに後任への引き継ぎを終える予定です。",
+        "vi": "Danh sách các dự án phụ trách đã hoàn tất, dự kiến sẽ hoàn thành bàn giao cho người tiếp quản trước cuối tuần này.",
+        "en": "We have completed listing all projects in progress and plan to finish the handover to his successor by the end of this week."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "While the core definitions are acceptable, the example and dialogue translations carried over mechanically templated accounting nonsense and must be regenerated along with the rewritten Japanese text."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "891079c3f1a01266bcabeb61c097e45bf875008763fee1e51a7cea67aa06e7d4",
+    "validated_at": "2026-10-01T01:42:49.061728+00:00"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "entry_id": "jp-pro-trade-000081",
+  "term": "課税価格",
+  "overall_decision": "rewrite",
+  "summary_reason": "The core issue is a fundamental misunderstanding of '課税価格' as an accounting entry within a company's financial statements rather than a customs valuation concept. This leads to semantic mismatches in collocations, factual errors in examples, and unnatural dialogue. The Vietnamese translation also has a minor purity issue.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "課税価格を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 1,
+      "text": "課税価格を照会する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": ""
+    },
+    {
+      "index": 2,
+      "text": "課税価格を納付する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "課税価格 is a value, not something to be paid. 関税 (customs duty) or 消費税 (consumption tax) is paid.",
+      "suggested_text": "関税を納付する"
+    },
+    {
+      "index": 3,
+      "text": "課税価格の分類を確認する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "課税価格 itself does not have a 'classification' in the sense of HS codes. The goods (品目) have a classification which determines the dutiable value calculation method.",
+      "suggested_text": "品目の分類を確認する"
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "課税価格 is a basis for calculating customs duty, not an accounting entry (計上内容) or balance (残高) in the same way as a general ledger account. It's a value determined for customs purposes, not something booked in a company's financial statements.",
+      "suggested_ja": "月末の帳簿照合において、輸入申告書に記載された課税価格と関連書類に差異がないか精査します。",
+      "suggested_vi": "Khi đối chiếu sổ sách cuối tháng, chúng tôi kiểm tra kỹ lưỡng xem có sự khác biệt nào giữa trị giá tính thuế hải quan được ghi trên tờ khai nhập khẩu và các tài liệu liên quan hay không.",
+      "suggested_en": "During month-end book reconciliation, we carefully examine whether there are discrepancies between the customs value stated on the import declaration and related documents."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Similar to the first example, 課税価格 is not 'processed' (処理) in closing entries (決算) in the same way as financial accounts. It's a customs concept, not a financial accounting one for a company's books.",
+      "suggested_ja": "適正な会計基準および社内規程に則り、当期の輸入取引における課税価格の算出を適正に処理いたしました。",
+      "suggested_vi": "Tuân thủ các chuẩn mực kế toán và quy chế nội bộ thích hợp, chúng tôi đã xử lý đúng quy định việc tính toán trị giá tính thuế hải quan cho các giao dịch nhập khẩu trong kỳ này.",
+      "suggested_en": "In accordance with applicable accounting standards and internal rules, we properly processed the calculation of customs value for import transactions in this term."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "The dialogue incorrectly treats 課税価格 as an accounting entry (計上内容) that would appear in monthly closing (月次決算) and be reconciled with subsidiary ledgers (補助元帳). This is a fundamental misunderstanding of the term's domain.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "今月の輸入申告について、課税価格の算出根拠に問題はありませんでしたか？",
+        "vi": "Về tờ khai nhập khẩu tháng này, có vấn đề gì với cơ sở tính toán trị giá tính thuế hải quan không?",
+        "en": "Regarding this month's import declarations, were there any issues with the basis for calculating the customs value?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、関連する契約書やインボイスと照合し、すべて適正に算出されていることを確認いたしました。",
+        "vi": "Vâng, chúng tôi đã đối chiếu với các hợp đồng và hóa đơn liên quan, và xác nhận rằng tất cả đã được tính toán đúng quy định.",
+        "en": "Yes, we have cross-referenced with the relevant contracts and invoices and confirmed that everything has been properly calculated."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "The Vietnamese translation for 'meaning_vi' includes '(CIF value)' which is a specific valuation method, not a universal synonym for 'trị giá tính thuế hải quan'. While CIF is often the basis, it's not always the case (e.g., FOB for some countries). It should be removed for purity. The example sentences also carry this inaccuracy."
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "37ade21adb60d46d736e02276d0c240cb10311ce6d7e546a2e39935ea0a0a700",
+    "validated_at": "2026-10-01T01:55:08.826554+00:00"
+  }
+}

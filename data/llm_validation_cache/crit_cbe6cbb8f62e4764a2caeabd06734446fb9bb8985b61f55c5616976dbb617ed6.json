@@ -1,0 +1,90 @@
+{
+  "entry_id": "jp-pro-trade-000170",
+  "term": "全危険担保",
+  "overall_decision": "rewrite",
+  "summary_reason": "「全危険担保」という用語の使い方が、保険の種類を指すのか、契約条項を指すのかが曖昧で、日本語として不自然な箇所が散見される。特に「設ける」「違反する」といった動詞との組み合わせや、例文・対話での使用法に改善の余地がある。",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "全危険担保を設ける",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「設ける」は物理的な施設や制度に対して使うことが多く、契約条項には不自然。より自然な表現は「規定する」や「盛り込む」など。",
+      "suggested_text": "全危険担保を規定する"
+    },
+    {
+      "index": 1,
+      "text": "全危険担保に違反する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "「全危険担保」は保険の条項であり、それに違反するという表現は不自然。違反するのは契約全体や契約上の義務であり、特定の条項ではない。",
+      "suggested_text": "全危険担保の規定に違反する"
+    },
+    {
+      "index": 2,
+      "text": "全危険担保を適用する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "全危険担保を精査する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "自然な表現です。",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「明確な全危険担保を設ける」が不自然。契約書に条項を「設ける」という表現はあまり使わない。また、「全危険担保」は保険の種類を指すため、契約書に「全危険担保」という条項を「設ける」というよりは、「全危険担保特約を付帯する」や「全危険担保条件を適用する」といった表現がより適切。",
+      "suggested_ja": "予期せぬ紛争を未然に防止するため、契約書に全危険担保特約を盛り込みました。",
+      "suggested_vi": "Để ngăn ngừa các tranh chấp bất ngờ từ trước, chúng tôi đã đưa điều khoản bảo hiểm mọi rủi ro hàng hải (All Risks - A/R) vào hợp đồng.",
+      "suggested_en": "To prevent unexpected disputes beforehand, we included an all risks (A/R) special clause in the contract."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "「全危険担保の文言を一部修正しました」は、文法的には理解できるが、より自然な表現は「全危険担保に関する条項の文言を修正した」など。また、「全危険担保」は保険の種類を指すため、その「文言」を修正するというよりは、その条件や条項の文言を修正するという方が適切。",
+      "suggested_ja": "顧問弁護士の助言に基づき、相手方から提示された全危険担保に関する条項の文言を一部修正しました。",
+      "suggested_vi": "Dựa trên tư vấn của luật sư cố vấn, chúng tôi đã sửa đổi một phần câu chữ của điều khoản liên quan đến bảo hiểm mọi rủi ro hàng hải (All Risks - A/R) do đối tác đề xuất.",
+      "suggested_en": "Based on advice from our legal counsel, we partially revised the wording of the clause concerning all risks (A/R) proposed by the counterparty."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "STILTED_EXPRESSION",
+    "reason": "Bの返答が不自然。「損害賠償条項を含めてリスクがないことを確認いたしました」は、全危険担保の修正案の確認に対する直接的な返答としてやや唐突。全危険担保は保険の条項であり、損害賠償条項とは直接的な関係があるとは限らない。また、「リスクがないことを確認」という表現も漠然としている。修正案の確認内容をより具体的に述べるべき。",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "先方法務部から戻ってきた全危険担保特約の修正案ですが、確認は済みましたか。",
+        "vi": "Dự thảo sửa đổi điều khoản bảo hiểm mọi rủi ro hàng hải (All Risks - A/R) từ bộ phận pháp lý của đối tác đã được xác nhận chưa?",
+        "en": "Have you confirmed the revised draft of the All Risks (A/R) special clause that came back from the counterparty's legal department?"
+      },
+      {
+        "speaker": "B",
+        "ja": "はい、内容を精査し、当社のリスクが適切にカバーされていることを確認いたしましたので、このまま締結手続きに進めます。",
+        "vi": "Vâng, tôi đã xem xét kỹ lưỡng nội dung và xác nhận rằng rủi ro của công ty chúng ta đã được bảo hiểm đầy đủ, vì vậy chúng ta có thể tiến hành các thủ tục ký kết.",
+        "en": "Yes, I have thoroughly reviewed the content and confirmed that our company's risks are adequately covered, so we can proceed with the signing procedures as is."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "pass",
+    "en": "pass",
+    "reason": null
+  },
+  "metadata": {
+    "model": "gemini-2.5-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "eef80a61b91015cfe9097e883832a8c4c8134e8609cf47be152b5ea6345482b0",
+    "validated_at": "2026-10-01T01:57:00.461781+00:00"
+  }
+}

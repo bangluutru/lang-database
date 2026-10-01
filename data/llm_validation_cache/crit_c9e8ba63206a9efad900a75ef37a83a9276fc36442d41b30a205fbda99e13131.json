@@ -1,0 +1,87 @@
+{
+  "entry_id": "jp-pro-tax-000176",
+  "term": "過少申告加算税",
+  "overall_decision": "rewrite",
+  "summary_reason": "Multiple domain inaccuracies and mechanical template artifacts: collocation 0 mistakenly pairs penalty taxes with '申告する', examples treat penalty tax as routine tax planning/filing rather than an audit consequence, and the dialogue treats it as a regular monthly ledger reconciliation item.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "過少申告加算税を申告する",
+      "decision": "rewrite",
+      "reason_code": "SEMANTIC_MISMATCH",
+      "reason": "過少申告加算税 is an administrative penalty imposed via assessment (賦課決定方式); taxpayers do not 'declare' (申告する) the penalty tax itself, but rather file an amended return (修正申告) on which the tax office assesses the penalty.",
+      "suggested_text": "過少申告加算税が賦課される"
+    },
+    {
+      "index": 1,
+      "text": "過少申告加算税を納付する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Legitimate and standard corporate tax collocation."
+    },
+    {
+      "index": 2,
+      "text": "過少申告加算税を計算する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Natural when estimating potential penalties during tax audit defense or voluntary disclosure."
+    },
+    {
+      "index": 3,
+      "text": "過少申告加算税が課される",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard passive construction in Japanese tax practice."
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Mechanically blends regular corporate tax return boilerplate ('課税標準および適用税率を正確に算出し') with an administrative penalty. Penalty taxes are assessed upon amended returns or reassessments, not calculated as routine tax base/rates.",
+      "suggested_ja": "税務調査による修正申告に伴い、本税に加えて過少申告加算税の納付手続きを速やかに完了させました。",
+      "suggested_vi": "Cùng với việc nộp tờ khai điều chỉnh bổ sung sau thanh tra thuế, chúng tôi đã nhanh chóng hoàn tất thủ tục nộp tiền thuế gốc cùng với tiền phạt khai thiếu thuế.",
+      "suggested_en": "Following the amended return prompted by the tax audit, we promptly completed the payment of the understatement penalty tax in addition to the principal tax."
+    },
+    {
+      "index": 1,
+      "decision": "rewrite",
+      "reason_code": "DOMAIN_FACTUAL_ERROR",
+      "reason": "Companies do not calculate the impact of regular tax reforms on 'penalty taxes' for the current term; penalties are not budgeted operational tax burdens.",
+      "suggested_ja": "自主的に修正申告を行ったため、過少申告加算税の課税を免れることができました。",
+      "suggested_vi": "Do đã chủ động nộp tờ khai điều chỉnh bổ sung trước khi có thông báo thanh tra, chúng tôi đã tránh được việc bị áp mức phạt khai thiếu thuế.",
+      "suggested_en": "Because we voluntarily filed an amended return, we were able to avoid the imposition of the penalty tax for understated declaration."
+    }
+  ],
+  "dialogue": {
+    "decision": "rewrite",
+    "reason_code": "DOMAIN_ERROR",
+    "reason": "Understatement penalty taxes are exceptional one-off items resulting from tax audits, not recurring items examined for balance discrepancies during regular monthly closings (月次決算) against subsidiary ledgers.",
+    "suggested_turns": [
+      {
+        "speaker": "A",
+        "ja": "税務署からの更正通知書に基づき、過少申告加算税の会計処理はどうなっていますか。",
+        "vi": "Dựa trên thông báo ấn định thuế từ cơ quan thuế, việc xử lý kế toán cho khoản tiền phạt khai thiếu thuế đã được thực hiện thế nào rồi?",
+        "en": "Based on the notice of reassessment from the tax office, how has the accounting treatment for the understatement penalty tax been handled?"
+      },
+      {
+        "speaker": "B",
+        "ja": "追徴本税と区分し、雑損失または法人税等追徴税額として計上手続きを進めております。",
+        "vi": "Chúng tôi đang tiến hành thủ tục ghi nhận khoản này tách biệt với tiền thuế truy thu gốc, hạch toán vào chi phí khác hoặc thuế TNDN truy thu.",
+        "en": "We are processing it separated from the principal back taxes, booking it under miscellaneous loss or prior-period income taxes."
+      }
+    ]
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "pass",
+    "reason": "Vietnamese example 2 contains awkward repetitive phrasing with bracketed percentage text ('đối với số tiền thuế tiền phạt khai thiếu số thuế phải nộp (10-15%) phải nộp trong kỳ này')."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "f8e6c1b54d30c7cc2074f877221623718bf50bcfa10dcd3a602630bc5dbc7722",
+    "validated_at": "2026-10-01T01:40:30.043993+00:00"
+  }
+}

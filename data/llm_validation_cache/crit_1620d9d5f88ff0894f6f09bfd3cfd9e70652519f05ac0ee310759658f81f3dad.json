@@ -1,0 +1,77 @@
+{
+  "entry_id": "jp-pro-accounting-000056",
+  "term": "無形固定資産",
+  "overall_decision": "rewrite",
+  "summary_reason": "Collocation 0 and Example 0 suffer from an identical mechanical templating glitch where '無形固定資産' is duplicated ('無形固定資産として無形固定資産を計上する'), producing corrupted output across all three languages.",
+  "collocations": [
+    {
+      "index": 0,
+      "text": "無形固定資産を無形固定資産として計上する",
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_PREDICATE",
+      "reason": "Severe tautology/glitch repeating the target term twice ('無形固定資産を無形固定資産として').",
+      "suggested_text": "無形固定資産として計上する"
+    },
+    {
+      "index": 1,
+      "text": "無形固定資産を償却する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting collocation for amortizing intangible assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 2,
+      "text": "無形固定資産の減損処理を行う",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Standard accounting practice under ASBJ standards for recognizing impairment of intangible fixed assets.",
+      "suggested_text": null
+    },
+    {
+      "index": 3,
+      "text": "無形固定資産の資産価値を評価する",
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Grammatically sound and commonly used in valuation and audit contexts, though '無形固定資産を評価する' or '無形固定資産の評価を行う' is slightly more concise.",
+      "suggested_text": null
+    }
+  ],
+  "examples": [
+    {
+      "index": 0,
+      "decision": "rewrite",
+      "reason_code": "UNNATURAL_TEMPLATE",
+      "reason": "Contains an obvious mechanical templating glitch ('無形固定資産として無形固定資産を計上しました') which repeats the term awkwardly and translates into equally broken Vietnamese and English.",
+      "suggested_ja": "事業譲受に伴って発生した超過収益力を精査し、のれんを無形固定資産として計上しました。",
+      "suggested_vi": "Rà soát kỹ khả năng sinh lời vượt trội phát sinh từ việc nhận chuyển nhượng kinh doanh, chúng tôi đã ghi nhận lợi thế thương mại vào tài sản cố định vô hình.",
+      "suggested_en": "After examining the excess earning power arising from the business transfer, we recognized goodwill as an intangible asset."
+    },
+    {
+      "index": 1,
+      "decision": "pass",
+      "reason_code": "NATURAL",
+      "reason": "Accurate accounting terminology and natural business document style regarding periodic amortization and impairment testing.",
+      "suggested_ja": null,
+      "suggested_vi": null,
+      "suggested_en": null
+    }
+  ],
+  "dialogue": {
+    "decision": "pass",
+    "reason_code": "NATURAL",
+    "reason": "Accurate corporate accounting dialogue reflecting fixed asset register enrollment and compliance with tax and accounting standards.",
+    "suggested_turns": null
+  },
+  "translations": {
+    "vi": "rewrite",
+    "en": "rewrite",
+    "reason": "Example 0 translations reflect the tautological template glitch of the Japanese source and must be corrected."
+  },
+  "metadata": {
+    "model": "gemini-3.8-flash",
+    "prompt_version": "linguistic_judge_v1",
+    "input_hash": "75e3c7dad5b012f6a30adaafec023e241541a1c281f797f59f04775de787919c",
+    "validated_at": "2026-10-01T01:34:37.209488+00:00"
+  }
+}
