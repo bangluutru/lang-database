@@ -1,14 +1,16 @@
 """
 scripts/phase1_3a/dedup_engine.py
-Phase 1.3A Multi-Level Deduplication Engine and Existing Database Exclusion.
+Phase 1.3A & 1.3A.1 Multi-Level Deduplication Engine and Existing Database Exclusion.
 
-Operates across 6 deduplication levels:
+Operates across deduplication levels:
 Level 1: Exact surface
 Level 2: Normalized surface
 Level 3: Variant detection
-Level 4: Abbreviation mapping
+Level 4: Abbreviation mapping (deterministic deduplication, no self-references)
 Level 5: Semantic duplicate detection
-Level 6: Different sense preservation
+Level 6: Semantic cross-domain policy:
+         - SAME_CONCEPT_CROSS_DOMAIN: consolidates identical cross-domain concepts
+         - DIFFERENT_SENSE: preserved only for genuine semantic polysemy
 
 Also enforces hard exclusion of:
 - Production vocabulary (800 records)
@@ -25,12 +27,14 @@ import re
 from scripts.phase1_3a.models import (
     NormalizedCandidate,
     QualityFlag,
-    AIRecommendation
+    AIRecommendation,
+    ProvenanceType
 )
 from scripts.phase1_3a.normalizer import normalize_surface
 
 
 # Statutory and professional abbreviations dictionary
+# STRICT INVARIANT: abbr != full_form (no self-referential mappings!)
 ABBREVIATION_MAP: Dict[str, Tuple[str, str]] = {
     # abbr -> (full_form, domain)
     "NACCS": ("輸出入・港湾関連情報処理システム", "trade"),
@@ -56,18 +60,23 @@ ABBREVIATION_MAP: Dict[str, Tuple[str, str]] = {
     "独禁法": ("私的独占の禁止及び公正取引の確保に関する法律", "purchasing"),
     "外為法": ("外国為替及び外国貿易法", "trade"),
     "金商法": ("金融商品取引法", "finance"),
-    "不競法": ("不正競争防止法", "legal"),
-    "特許法": ("特許法", "legal"),
-    "意匠法": ("意匠法", "legal"),
-    "商標法": ("商標法", "legal"),
-    "会社法": ("会社法", "legal"),
-    "商業登記法": ("商業登記法", "legal"),
-    "民事再生法": ("民事再生法", "legal"),
-    "破産法": ("破産法", "legal")
+    "不競法": ("不正競争防止法", "legal")
 }
 
-# Reverse mapping: full_form -> abbr
-FULL_FORM_TO_ABBR: Dict[str, str] = {full: abbr for abbr, (full, _) in ABBREVIATION_MAP.items() if abbr != full}
+# Reverse mapping: full_form -> abbr (guaranteed abbr != full)
+FULL_FORM_TO_ABBR: Dict[str, str] = {
+    full: abbr for abbr, (full, _) in ABBREVIATION_MAP.items() if abbr != full
+}
+
+
+# Section 21 & 22: Known professional polysemous terms with genuinely different senses
+KNOWN_DIFFERENT_SENSE_TERMS: Set[str] = {
+    "手形",       # Accounting: Promissory note / Trade: Bill of exchange / permit
+    "仕向",       # Banking: Outward wire / Trade: Destination
+    "引受",       # Finance: Underwriting / Trade & Insurance: Acceptance / risk underwriting
+    "割当",       # Corporate: Allotment / Trade: Quota
+    "管轄",       # Tax: Tax office / Legal: Judicial jurisdiction
+}
 
 
 class ExistingDatabaseIndex:
@@ -142,6 +151,7 @@ class ExistingDatabaseIndex:
 class Phase13DedupEngine:
     def __init__(self, base_dir: Path):
         self.existing_index = ExistingDatabaseIndex(base_dir)
+        self.seen_relationships: Set[Tuple[str, str, str]] = set()  # (rel_type, src, tgt)
         self.stats = {
             "exact_duplicate": 0,
             "normalized_duplicate": 0,
@@ -150,6 +160,7 @@ class Phase13DedupEngine:
             "abbreviation": 0,
             "variant": 0,
             "possible_semantic_duplicate": 0,
+            "same_concept_cross_domain": 0,
             "different_sense": 0
         }
         self.examples: Dict[str, List[Dict[str, Any]]] = {
@@ -160,6 +171,7 @@ class Phase13DedupEngine:
             "abbreviation": [],
             "variant": [],
             "possible_semantic_duplicate": [],
+            "same_concept_cross_domain": [],
             "different_sense": []
         }
 
@@ -168,11 +180,11 @@ class Phase13DedupEngine:
     ) -> List[NormalizedCandidate]:
         """
         Deduplicates normalized candidates and excludes existing production/canary vocabulary.
-        Aggregates cross-source support.
+        Consolidates same-concept cross-domain references per Section 22.
+        Enforces deterministic relationship uniqueness and prevents self-references.
         """
         surviving: Dict[str, NormalizedCandidate] = {}
         seen_surfaces: Dict[str, str] = {}  # exact_surface -> canonical_norm
-        norm_to_primary: Dict[str, str] = {}  # norm -> canonical_norm
 
         for cand in candidates:
             orig = cand.surface
@@ -200,48 +212,67 @@ class Phase13DedupEngine:
                     })
                 continue
 
-            # 3. Artifact rejection
+            # 3. Artifact rejection (Section 21)
             if QualityFlag.ARTIFACT_FLAG in cand.quality_flags:
                 continue
 
-            # 4. Check abbreviation relationships
+            # 4. Check abbreviation relationships (Section 19 & 20)
             if norm in ABBREVIATION_MAP:
                 full_term, dom = ABBREVIATION_MAP[norm]
-                cand.possible_abbreviation_of = full_term
-                cand.quality_flags.append(QualityFlag.ABBREVIATION_FLAG)
-                self.stats["abbreviation"] += 1
-                if len(self.examples["abbreviation"]) < 10:
-                    self.examples["abbreviation"].append({
-                        "abbreviation": norm,
-                        "full_form": full_term,
-                        "domain": dom
-                    })
+                # Enforce no self-reference!
+                if norm != full_term:
+                    cand.possible_abbreviation_of = full_term
+                    cand.quality_flags.append(QualityFlag.ABBREVIATION_FLAG)
+                    rel_key = ("ABBREVIATION_OF", norm, full_term)
+                    if rel_key not in self.seen_relationships:
+                        self.seen_relationships.add(rel_key)
+                        self.stats["abbreviation"] += 1
+                        if len(self.examples["abbreviation"]) < 10:
+                            self.examples["abbreviation"].append({
+                                "abbreviation": norm,
+                                "full_form": full_term,
+                                "domain": dom
+                            })
 
             # Check if this candidate is the full form of a known abbreviation
             if norm in FULL_FORM_TO_ABBR:
                 abbr_form = FULL_FORM_TO_ABBR[norm]
-                cand.possible_variant_of = abbr_form
+                if abbr_form != norm:
+                    cand.possible_variant_of = abbr_form
 
-            # Level 6 & Level 1: Exact surface check with DIFFERENT_SENSE preservation
+            # Level 1 & Level 6 check: exact surface match
             if orig in seen_surfaces:
                 canon_key = seen_surfaces[orig]
                 if canon_key in surviving:
                     existing_cand = surviving[canon_key]
-                    if (existing_cand.domain != cand.domain and 
-                        existing_cand.domain in ("accounting", "tax", "trade", "hr", "legal") and
-                        cand.domain in ("accounting", "tax", "trade", "hr", "legal")):
-                        # Level 6: DIFFERENT_SENSE preservation!
-                        self.stats["different_sense"] += 1
-                        diff_key = f"{norm}__{cand.domain}"
-                        if len(self.examples["different_sense"]) < 10:
-                            self.examples["different_sense"].append({
-                                "surface": norm,
-                                "domain_1": existing_cand.domain,
-                                "domain_2": cand.domain
-                            })
-                        cand.candidate_id = f"{cand.candidate_id}-ds"
-                        surviving[diff_key] = cand
-                        continue
+                    # Section 21 & 22: SAME_CONCEPT_CROSS_DOMAIN vs DIFFERENT_SENSE
+                    if existing_cand.domain != cand.domain:
+                        if norm in KNOWN_DIFFERENT_SENSE_TERMS:
+                            self.stats["different_sense"] += 1
+                            diff_key = f"{norm}__{cand.domain}"
+                            if len(self.examples["different_sense"]) < 10:
+                                if not any(ex["surface"] == norm and ex.get("domain_2") == cand.domain for ex in self.examples["different_sense"]):
+                                    self.examples["different_sense"].append({
+                                        "surface": norm,
+                                        "domain_1": existing_cand.domain,
+                                        "domain_2": cand.domain
+                                    })
+                            cand.candidate_id = f"{cand.candidate_id}-ds"
+                            surviving[diff_key] = cand
+                            seen_surfaces[orig] = diff_key
+                            continue
+                        else:
+                            # Genuine same statutory/commercial concept across domains
+                            self.stats["same_concept_cross_domain"] += 1
+                            if len(self.examples["same_concept_cross_domain"]) < 10:
+                                if not any(ex["surface"] == norm for ex in self.examples["same_concept_cross_domain"]):
+                                    self.examples["same_concept_cross_domain"].append({
+                                        "surface": norm,
+                                        "primary_domain": existing_cand.domain,
+                                        "secondary_domain": cand.domain
+                                    })
+                            self._merge_evidence(existing_cand, cand)
+                            continue
 
                 self.stats["exact_duplicate"] += 1
                 if len(self.examples["exact_duplicate"]) < 10:
@@ -249,30 +280,42 @@ class Phase13DedupEngine:
                         "surface": orig,
                         "merged_into": canon_key
                     })
-                # Merge cross-source evidence
                 if canon_key in surviving:
                     self._merge_evidence(surviving[canon_key], cand)
                 continue
 
-            # Level 2: Normalized surface dedup within current batch
+            # Level 2 & Level 6 check: normalized surface match
             if norm in surviving:
                 existing_cand = surviving[norm]
-                # If same normalized surface has fundamentally different domain (e.g. accounting vs trade)
-                if (existing_cand.domain != cand.domain and 
-                    existing_cand.domain in ("accounting", "tax", "trade", "hr", "legal") and
-                    cand.domain in ("accounting", "tax", "trade", "hr", "legal")):
-                    # Level 6: DIFFERENT_SENSE preservation!
-                    self.stats["different_sense"] += 1
-                    diff_key = f"{norm}__{cand.domain}"
-                    if len(self.examples["different_sense"]) < 10:
-                        self.examples["different_sense"].append({
-                            "surface": norm,
-                            "domain_1": existing_cand.domain,
-                            "domain_2": cand.domain
-                        })
-                    cand.candidate_id = f"{cand.candidate_id}-ds"
-                    surviving[diff_key] = cand
-                    continue
+                if existing_cand.domain != cand.domain:
+                    # Section 21 & 22: DIFFERENT_SENSE vs SAME_CONCEPT_CROSS_DOMAIN
+                    if norm in KNOWN_DIFFERENT_SENSE_TERMS:
+                        self.stats["different_sense"] += 1
+                        diff_key = f"{norm}__{cand.domain}"
+                        if len(self.examples["different_sense"]) < 10:
+                            if not any(ex["surface"] == norm and ex.get("domain_2") == cand.domain for ex in self.examples["different_sense"]):
+                                self.examples["different_sense"].append({
+                                    "surface": norm,
+                                    "domain_1": existing_cand.domain,
+                                    "domain_2": cand.domain
+                                })
+                        cand.candidate_id = f"{cand.candidate_id}-ds"
+                        surviving[diff_key] = cand
+                        seen_surfaces[orig] = diff_key
+                        continue
+                    else:
+                        # Genuine same statutory/commercial concept across domains
+                        self.stats["same_concept_cross_domain"] += 1
+                        if len(self.examples["same_concept_cross_domain"]) < 10:
+                            if not any(ex["surface"] == norm for ex in self.examples["same_concept_cross_domain"]):
+                                self.examples["same_concept_cross_domain"].append({
+                                    "surface": norm,
+                                    "primary_domain": existing_cand.domain,
+                                    "secondary_domain": cand.domain
+                                })
+                        self._merge_evidence(existing_cand, cand)
+                        seen_surfaces[orig] = norm
+                        continue
 
                 # Formatting-only or same-domain duplicate -> Level 2 merge
                 self.stats["normalized_duplicate"] += 1
@@ -286,14 +329,12 @@ class Phase13DedupEngine:
                 seen_surfaces[orig] = norm
                 continue
 
-            # Level 3 & Level 5: Variant and semantic duplicate heuristics
-            # Check if variant exists (e.g. trailing "等", bracketed variations)
+            # Level 3: Variant detection
             stripped_variant = re.sub(r"[・\-\s\(\)（）等]", "", norm)
             variant_match = False
             for k, ex in surviving.items():
                 k_stripped = re.sub(r"[・\-\s\(\)（）等]", "", ex.normalized_surface)
                 if stripped_variant == k_stripped and len(stripped_variant) > 3:
-                    # Found structural variant
                     self.stats["variant"] += 1
                     cand.possible_variant_of = ex.normalized_surface
                     cand.quality_flags.append(QualityFlag.VARIANT_FLAG)
@@ -303,7 +344,6 @@ class Phase13DedupEngine:
                             "canonical": ex.normalized_surface
                         })
                     variant_match = True
-                    # If candidate has higher authority or cleaner string, merge
                     self._merge_evidence(ex, cand)
                     seen_surfaces[orig] = k
                     break
@@ -315,11 +355,10 @@ class Phase13DedupEngine:
             seen_surfaces[orig] = norm
             surviving[norm] = cand
 
-        result = list(surviving.values())
-        return result
+        return list(surviving.values())
 
     def _merge_evidence(self, target: NormalizedCandidate, source: NormalizedCandidate):
-        """Merges provenance and evidence from duplicate extraction into canonical candidate."""
+        """Merges provenance, evidence_refs, and contexts from duplicate extraction into canonical candidate."""
         for s_id in source.source_ids:
             if s_id not in target.source_ids:
                 target.source_ids.append(s_id)
@@ -338,3 +377,11 @@ class Phase13DedupEngine:
         for f in source.quality_flags:
             if f not in target.quality_flags:
                 target.quality_flags.append(f)
+        for ev in source.evidence_refs:
+            if ev not in target.evidence_refs:
+                target.evidence_refs.append(ev)
+
+        # Prioritize higher evidence provenance if one source is OFFICIAL_EXTRACTED
+        if source.term_provenance == ProvenanceType.OFFICIAL_EXTRACTED.value and target.term_provenance != ProvenanceType.OFFICIAL_EXTRACTED.value:
+            target.term_provenance = ProvenanceType.OFFICIAL_EXTRACTED.value
+            target.raw_snapshot_hash = source.raw_snapshot_hash

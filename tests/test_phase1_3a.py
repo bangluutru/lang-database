@@ -242,7 +242,9 @@ def test_candidate_pool_manifest():
     assert manifest_file.exists(), "Manifest file missing"
     with open(manifest_file, "r", encoding="utf-8") as f:
         manifest = json.load(f)
-    assert manifest["pool_version"] == "1.3.0"
+    assert manifest["pool_version"] in ("1.3.0", "1.3.1")
+    if manifest["pool_version"] == "1.3.1":
+        assert manifest["parent_pool_version"] == "1.3.0"
     assert manifest["candidate_count"] > 3000
     assert manifest["raw_candidate_count"] >= 5000
     assert manifest["sha256"] != ""

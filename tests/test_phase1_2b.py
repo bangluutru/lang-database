@@ -106,17 +106,24 @@ class TestSourceRegistry:
         assert len(source_ids) == len(set(source_ids)), "Duplicate source_id in registry"
 
     def test_required_metadata_fields(self, registry):
-        required_fields = [
-            "source_id", "authority", "title", "official_url", "source_type",
+        common_fields = [
+            "source_id", "authority", "title", "source_type",
             "domains", "subdomains", "jurisdiction", "language", "version",
-            "published_at", "retrieved_at", "license", "reuse_status",
-            "reuse_notes", "raw_snapshot_path", "raw_sha256", "extractor", "status"
+            "published_at", "license", "reuse_status",
+            "reuse_notes", "extractor", "status"
         ]
         for s in registry["sources"]:
-            for field in required_fields:
+            for field in common_fields:
                 assert field in s and s[field] is not None, (
                     f"Source {s.get('source_id')} missing required field '{field}'"
                 )
+            # Section 11 & 12: Verify truthful storage and provenance metadata
+            if s.get("provenance_type") == "OFFICIAL_EXTRACTED" or s.get("raw_snapshot_path"):
+                for rf in ["raw_snapshot_path", "raw_sha256", "retrieved_at", "official_url"]:
+                    assert rf in s and s[rf] is not None, f"Raw source {s.get('source_id')} missing '{rf}'"
+            elif s.get("provenance_type") in ("OFFICIAL_CURATED", "INTERNAL_CURATED"):
+                for cf in ["curated_artifact_path", "curated_sha256", "curated_at", "reference_url"]:
+                    assert cf in s and s[cf] is not None, f"Curated source {s.get('source_id')} missing '{cf}'"
 
     def test_valid_authority_classes(self, registry):
         valid_classes = {"A", "B", "C", "D"}
@@ -132,15 +139,24 @@ class TestSourceRegistry:
 
     def test_raw_snapshots_exist_and_hashes_match(self, registry):
         for s in registry["sources"]:
-            snap_dir = BASE_DIR / s["raw_snapshot_path"]
-            assert snap_dir.exists(), f"Raw snapshot path does not exist: {snap_dir}"
-            meta_file = snap_dir / "metadata.json"
-            assert meta_file.exists(), f"Raw snapshot missing metadata.json: {meta_file}"
-            computed_hash = compute_sha256_file(meta_file)
-            expected_hash = s["raw_sha256"]
-            assert computed_hash == expected_hash, (
-                f"Raw SHA-256 mismatch for {s['source_id']}: {computed_hash} != {expected_hash}"
-            )
+            if s.get("raw_snapshot_path"):
+                snap_dir = BASE_DIR / s["raw_snapshot_path"]
+                assert snap_dir.exists(), f"Raw snapshot path does not exist: {snap_dir}"
+                meta_file = snap_dir / "metadata.json"
+                assert meta_file.exists(), f"Raw snapshot missing metadata.json: {meta_file}"
+                computed_hash = compute_sha256_file(meta_file)
+                expected_hash = s["raw_sha256"]
+                assert computed_hash == expected_hash, (
+                    f"Raw SHA-256 mismatch for {s['source_id']}: {computed_hash} != {expected_hash}"
+                )
+            elif s.get("curated_artifact_path"):
+                cur_file = BASE_DIR / s["curated_artifact_path"]
+                assert cur_file.exists(), f"Curated artifact does not exist: {cur_file}"
+                computed_hash = compute_sha256_file(cur_file)
+                expected_hash = s["curated_sha256"]
+                assert computed_hash == expected_hash, (
+                    f"Curated SHA-256 mismatch for {s['source_id']}: {computed_hash} != {expected_hash}"
+                )
 
     def test_source_versioning_separated(self, registry):
         for s in registry["sources"]:

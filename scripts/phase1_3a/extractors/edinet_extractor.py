@@ -1,6 +1,6 @@
 """
 scripts/phase1_3a/extractors/edinet_extractor.py
-Phase 1.3A Extractor for FSA EDINET Taxonomy with Section 14 Composite Taxonomy Label Detection.
+Phase 1.3A & 1.3A.1 Extractor for FSA EDINET Taxonomy with Section 14 Composite Taxonomy Label Detection.
 Extracts accounting line items, statements, and financial taxonomy concepts across industry sheets.
 """
 
@@ -11,7 +11,7 @@ import openpyxl
 from datetime import datetime, timezone
 
 from scripts.phase1_3a.extractors.base import BasePhase13Extractor
-from scripts.phase1_3a.models import RawCandidate
+from scripts.phase1_3a.models import RawCandidate, ProvenanceType
 
 
 def clean_label(text: str) -> str:
@@ -36,7 +36,7 @@ def classify_edinet_label(label: str) -> Tuple[str, bool]:
         return ("NEEDS_REVIEW", True)
 
     # Pure navigation / structural artifacts
-    if label in ("目次", "勘定科目リストについて", "用語一覧", "要素名", "標準ラベル"):
+    if label in ("目次", "勘定科目リストについて", "用語一覧", "要素名", "標準ラベル", "English", "その他"):
         return ("TAXONOMY_VARIANT", True)
 
     # Explicitly known atomic professional concepts (preserve these!)
@@ -58,29 +58,35 @@ def classify_edinet_label(label: str) -> Tuple[str, bool]:
     has_other = label.startswith("その他の") or label.startswith("その他")
     has_etc = label.endswith("等")
 
-    # Composite reporting label detection (Section 14)
-    # e.g. "受取手形、売掛金及び契約資産", "受取手形及び売掛金", "受取手形及び売掛金(純額)",
-    # "売掛金及び契約資産", "売掛金及び契約資産(純額)", "受取手形(純額)", "売掛金(純額)", "契約資産(純額)", "コールローン及び買入手形"
-    if (has_and and has_net) or (has_and and ("及び" in label or "、" in label)):
+    if has_and and has_net:
         return ("COMPOSITE_REPORTING_LABEL", True)
-    if has_net:
+
+    if has_and and len(label) >= 6:
         return ("COMPOSITE_REPORTING_LABEL", True)
+
     if has_other and len(label) >= 6:
         return ("COMPOSITE_REPORTING_LABEL", True)
-    if has_and:
-        return ("COMPOSITE_REPORTING_LABEL", True)
 
-    if has_etc:
-        return ("TAXONOMY_VARIANT", False)
+    if has_net:
+        return ("TAXONOMY_VARIANT", True)
 
-    return ("CANONICAL_CONCEPT", False)
+    if has_etc and len(label) > 10:
+        return ("TAXONOMY_VARIANT", True)
+
+    if len(label) <= 10 and not has_and and not has_net and not has_other:
+        return ("CANONICAL_CONCEPT", False)
+
+    return ("POSSIBLE_CANONICAL", False)
 
 
 class FsaEdinetPhase13Extractor(BasePhase13Extractor):
     def extract_candidates(self) -> List[RawCandidate]:
-        candidates = []
+        candidates: List[RawCandidate] = []
         seen = set()
         now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        if not self.raw_snapshot_path:
+            return []
 
         # 1. 1f_AccountList.xlsx (Financial statement line items across all industries)
         account_list_path = self.raw_snapshot_path / "1f_AccountList.xlsx"
@@ -126,6 +132,10 @@ class FsaEdinetPhase13Extractor(BasePhase13Extractor):
                     if len(clean_ja) < 2 or len(clean_ja) > 50:
                         continue
 
+                    # Filter out purely generic English/code rows
+                    if re.match(r"^[A-Za-z0-9_\-\.\s]+$", clean_ja):
+                        continue
+
                     seen.add(clean_ja)
                     seq = len(candidates) + 1
                     cand_id = f"cand-edinet-{seq:06d}"
@@ -147,8 +157,14 @@ class FsaEdinetPhase13Extractor(BasePhase13Extractor):
                         source_context=context,
                         source_definition=None,
                         extracted_at=now_iso,
+                        curated_at=None,
                         extractor_version=self.extractor_version,
+                        provenance_type=ProvenanceType.OFFICIAL_EXTRACTED.value,
                         raw_snapshot_hash=self.raw_snapshot_hash,
+                        curated_artifact_hash="",
+                        artifact_path=str(account_list_path),
+                        source_url=self.official_url,
+                        reference_url=None,
                         primary_domain=primary_dom,
                         subdomain=subdom,
                         authority_class=self.authority_class,
@@ -185,7 +201,7 @@ class FsaEdinetPhase13Extractor(BasePhase13Extractor):
                     seq = len(candidates) + 1
                     cand_id = f"cand-edinet-{seq:06d}"
                     record_id = element_name if element_name else f"edinet_el_{r_idx}"
-                    locator = f"file:1e_ElementList.xlsx, sheet:{sheet_name}, row:{r_idx}"
+                    locator = f"sheet:{sheet_name}, row:{r_idx}, element:{element_name}"
 
                     classification, is_composite = classify_edinet_label(clean_ja)
                     context = f"EDINET Taxonomy disclosure element. Official EN: {en_label}" if en_label else "EDINET Taxonomy disclosure element."
@@ -213,8 +229,14 @@ class FsaEdinetPhase13Extractor(BasePhase13Extractor):
                         source_context=context,
                         source_definition=None,
                         extracted_at=now_iso,
+                        curated_at=None,
                         extractor_version=self.extractor_version,
+                        provenance_type=ProvenanceType.OFFICIAL_EXTRACTED.value,
                         raw_snapshot_hash=self.raw_snapshot_hash,
+                        curated_artifact_hash="",
+                        artifact_path=str(element_list_path),
+                        source_url=self.official_url,
+                        reference_url=None,
                         primary_domain=p_dom,
                         subdomain=s_dom,
                         authority_class=self.authority_class,

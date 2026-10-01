@@ -1,20 +1,17 @@
 {
   "dedup_statistics": {
-    "exact_duplicate": 42,
+    "exact_duplicate": 36,
     "normalized_duplicate": 3,
     "existing_production": 499,
     "existing_canary": 164,
-    "abbreviation": 8,
+    "abbreviation": 6,
     "variant": 30,
     "possible_semantic_duplicate": 0,
-    "different_sense": 8
+    "same_concept_cross_domain": 12,
+    "different_sense": 0
   },
   "representative_examples": {
     "exact_duplicate": [
-      {
-        "surface": "印紙税",
-        "merged_into": "印紙税"
-      },
       {
         "surface": "安全衛生委員会",
         "merged_into": "安全衛生委員会"
@@ -22,10 +19,6 @@
       {
         "surface": "下請法",
         "merged_into": "下請法"
-      },
-      {
-        "surface": "下請事業者",
-        "merged_into": "下請事業者"
       },
       {
         "surface": "製造委託",
@@ -50,6 +43,14 @@
       {
         "surface": "3条書面",
         "merged_into": "3条書面"
+      },
+      {
+        "surface": "5条書類",
+        "merged_into": "5条書類"
+      },
+      {
+        "surface": "下請代金の支払期日を定める義務",
+        "merged_into": "下請代金の支払期日を定める義務"
       }
     ],
     "normalized_duplicate": [
@@ -203,16 +204,6 @@
         "abbreviation": "下請法",
         "full_form": "下請代金支払遅延等防止法",
         "domain": "purchasing"
-      },
-      {
-        "abbreviation": "下請法",
-        "full_form": "下請代金支払遅延等防止法",
-        "domain": "purchasing"
-      },
-      {
-        "abbreviation": "商業登記法",
-        "full_form": "商業登記法",
-        "domain": "legal"
       }
     ],
     "variant": [
@@ -258,47 +249,58 @@
       }
     ],
     "possible_semantic_duplicate": [],
-    "different_sense": [
+    "same_concept_cross_domain": [
       {
         "surface": "寄附金",
-        "domain_1": "accounting",
-        "domain_2": "tax"
+        "primary_domain": "accounting",
+        "secondary_domain": "tax"
       },
       {
         "surface": "引当金",
-        "domain_1": "accounting",
-        "domain_2": "tax"
-      },
-      {
-        "surface": "その他",
-        "domain_1": "accounting",
-        "domain_2": "tax"
+        "primary_domain": "accounting",
+        "secondary_domain": "tax"
       },
       {
         "surface": "雇用調整助成金",
-        "domain_1": "accounting",
-        "domain_2": "hr"
+        "primary_domain": "accounting",
+        "secondary_domain": "hr"
+      },
+      {
+        "surface": "下請事業者",
+        "primary_domain": "business",
+        "secondary_domain": "purchasing"
       },
       {
         "surface": "自己株式の取得",
-        "domain_1": "accounting",
-        "domain_2": "legal"
+        "primary_domain": "accounting",
+        "secondary_domain": "legal"
       },
       {
         "surface": "実用新案権",
-        "domain_1": "accounting",
-        "domain_2": "legal"
+        "primary_domain": "accounting",
+        "secondary_domain": "legal"
       },
       {
         "surface": "意匠権",
-        "domain_1": "accounting",
-        "domain_2": "legal"
+        "primary_domain": "accounting",
+        "secondary_domain": "legal"
       },
       {
-        "surface": "English",
-        "domain_1": "tax",
-        "domain_2": "accounting"
+        "surface": "見積依頼書",
+        "primary_domain": "purchasing",
+        "secondary_domain": "sales"
+      },
+      {
+        "surface": "事業継続計画",
+        "primary_domain": "management",
+        "secondary_domain": "business"
+      },
+      {
+        "surface": "情報セキュリティ基本方針",
+        "primary_domain": "accounting",
+        "secondary_domain": "business"
       }
-    ]
+    ],
+    "different_sense": []
   }
 }

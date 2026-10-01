@@ -1,23 +1,27 @@
-# Phase 1.3A Quality & Linguistic Integrity Report
+# Phase 1.3A & 1.3A.1 Linguistic Quality, Integrity, and Audit Report
 
-## Quality Gate and Audit Findings (Section 34)
+## Quality Gate Statistics
+- **Total Candidates Evaluated**: 3770
+- **Extraction Artifacts Rejected**: 0
+- **Composite Taxonomy Labels Rejected**: 334
+- **Final Review Candidates Selected**: 1104
+- **REVIEW-A Candidates**: 882
+- **REVIEW-B Candidates**: 174
+- **REVIEW-C Candidates**: 48
 
-| Quality Metric / Flag | Count in Review Pack | Status |
-| :--- | :---: | :--- |
-| `reading_review_required` | 39 | Flagged for phonetic compound verification in REVIEW-B/C |
-| `gloss_review_required` | 186 | Flagged for English precision verification in REVIEW-B/C |
-| `canonical_value_review_required` | 13 | Borderline compound structure flagged for human review |
-| `abbreviation_flag` | 7 | Mapped with possible_abbreviation_of relationship |
-| `variant_flag` | 0 | Mapped with possible_variant_of relationship |
-| `semantic_duplicate_flag` | 0 | Verified distinct |
-| `artifact_flag` | 0 | 0 in review pack (all 100% rejected at quality gate) |
-| `taxonomy_variant_flag` | 13 | Controlled reporting labels in REVIEW-C |
-| `truncated_gloss` | 0 | Flagged and repaired / quarantined |
-| `malformed_parentheses` | 0 | Audited per Section 22 integrity rules |
-| `rejected_composite_taxonomy_labels` | 334 | Rejected from review pack (XBRL Section 14) |
-| `rejected_extraction_artifacts` | 0 | Rejected navigational/page headings |
+## Quality Flag Counts in Selected Batch
+- `READING_REVIEW_REQUIRED`: 38
+- `GLOSS_REVIEW_REQUIRED`: 181
+- `CANONICAL_VALUE_REVIEW_REQUIRED`: 13
+- `ABBREVIATION_FLAG`: 6
+- `VARIANT_FLAG`: 0
+- `SEMANTIC_DUPLICATE_FLAG`: 0
+- `ARTIFACT_FLAG`: 0 (Filtered out by gate)
+- `TAXONOMY_VARIANT_FLAG`: 14
+- `TRUNCATED_GLOSS`: 0
+- `MALFORMED_PARENTHESES`: 0
 
-## Reading Regression Fixtures Verification
+## Phonetic Override Regression Protection Verification
 - `貸出金` → `かしだしきん` (貸: かし, not たい) ✓
 - `加盟店貸勘定` → `かめいてんかしかんじょう` (貸: かし, not たい) ✓
 - `特定輸出者` → `とくていゆしゅつしゃ` (者: しゃ, not もの) ✓

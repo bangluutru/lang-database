@@ -1,175 +1,225 @@
 {
-  "total_sources": 17,
+  "total_sources": 18,
   "sources": [
     {
-      "source_id": "asbj-accounting-standards",
-      "authority": "B",
-      "extracted": 28,
-      "normalized": 28,
-      "selected_in_review_batch": 0,
-      "domain_contribution": {}
-    },
-    {
-      "source_id": "egov-corporate-law",
-      "authority": "A",
-      "extracted": 28,
-      "normalized": 28,
-      "selected_in_review_batch": 0,
-      "domain_contribution": {}
-    },
-    {
       "source_id": "fsa-edinet-taxonomy",
-      "authority": "A",
+      "authority": "金融庁 (Financial Services Agency)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
       "extracted": 3610,
-      "normalized": 3610,
-      "selected_in_review_batch": 572,
-      "domain_contribution": {
+      "selected": 571,
+      "domain_contributions": {
         "legal": 44,
         "trade": 40,
-        "accounting": 220,
-        "business": 118,
+        "accounting": 218,
+        "business": 119,
         "finance": 150
       }
     },
     {
-      "source_id": "japan-customs-trade",
-      "authority": "A",
-      "extracted": 25,
-      "normalized": 25,
-      "selected_in_review_batch": 0,
-      "domain_contribution": {}
+      "source_id": "fsa-edinet-2027-draft",
+      "authority": "金融庁 (Financial Services Agency)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "staging_only",
+      "extracted": 0,
+      "selected": 0,
+      "domain_contributions": {}
     },
     {
-      "source_id": "jetro-trade",
-      "authority": "C",
-      "extracted": 25,
-      "normalized": 25,
-      "selected_in_review_batch": 0,
-      "domain_contribution": {}
-    },
-    {
-      "source_id": "jftc-subcontract",
-      "authority": "A",
-      "extracted": 42,
-      "normalized": 42,
-      "selected_in_review_batch": 35,
-      "domain_contribution": {
-        "purchasing": 35
+      "source_id": "nta-tax-glossary",
+      "authority": "国税庁 (National Tax Agency)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 1016,
+      "selected": 184,
+      "domain_contributions": {
+        "tax": 182,
+        "accounting": 2
       }
     },
     {
+      "source_id": "asbj-accounting-standards",
+      "authority": "企業会計基準委員会 (ASBJ)",
+      "authority_class": "B",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 28,
+      "selected": 0,
+      "domain_contributions": {}
+    },
+    {
       "source_id": "jicpa-glossary",
-      "authority": "B",
+      "authority": "日本公認会計士協会 (JICPA)",
+      "authority_class": "B",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
       "extracted": 136,
-      "normalized": 136,
-      "selected_in_review_batch": 2,
-      "domain_contribution": {
-        "business": 2
+      "selected": 2,
+      "domain_contributions": {
+        "accounting": 2
+      }
+    },
+    {
+      "source_id": "japan-customs-trade",
+      "authority": "財務省関税局 (Japan Customs, Ministry of Finance)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 25,
+      "selected": 0,
+      "domain_contributions": {}
+    },
+    {
+      "source_id": "jetro-trade",
+      "authority": "日本貿易振興機構 (JETRO)",
+      "authority_class": "C",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 25,
+      "selected": 0,
+      "domain_contributions": {}
+    },
+    {
+      "source_id": "mhlw-labor",
+      "authority": "厚生労働省 (Ministry of Health, Labour and Welfare)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 29,
+      "selected": 1,
+      "domain_contributions": {
+        "hr": 1
+      }
+    },
+    {
+      "source_id": "egov-corporate-law",
+      "authority": "デジタル庁・法務省 (e-Gov / Ministry of Justice)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 28,
+      "selected": 0,
+      "domain_contributions": {}
+    },
+    {
+      "source_id": "smrj-business-guidance",
+      "authority": "中小企業基盤整備機構 (SMRJ / J-Net21)",
+      "authority_class": "C",
+      "provenance_type": "OFFICIAL_EXTRACTED",
+      "status": "VERIFIED_OFFICIAL_EXTRACT",
+      "extracted": 50,
+      "selected": 3,
+      "domain_contributions": {
+        "business": 1,
+        "management": 2
+      }
+    },
+    {
+      "source_id": "nenkin-social-insurance",
+      "authority": "日本年金機構 (Japan Pension Service)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
+      "extracted": 134,
+      "selected": 104,
+      "domain_contributions": {
+        "hr": 103,
+        "accounting": 1
+      }
+    },
+    {
+      "source_id": "naccs-trade",
+      "authority": "輸出入・港湾関連情報処理センター (NACCS Center / MOF / MLIT)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
+      "extracted": 102,
+      "selected": 45,
+      "domain_contributions": {
+        "trade": 45
+      }
+    },
+    {
+      "source_id": "jftc-subcontract",
+      "authority": "公正取引委員会 (Japan Fair Trade Commission)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
+      "extracted": 42,
+      "selected": 35,
+      "domain_contributions": {
+        "purchasing": 34,
+        "business": 1
+      }
+    },
+    {
+      "source_id": "smea-procurement",
+      "authority": "中小企業庁 (Small and Medium Enterprise Agency, METI)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
+      "extracted": 67,
+      "selected": 57,
+      "domain_contributions": {
+        "purchasing": 56,
+        "business": 1
+      }
+    },
+    {
+      "source_id": "moj-commercial-registration",
+      "authority": "法務省民事局 (Ministry of Justice, Civil Affairs Bureau)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
+      "extracted": 74,
+      "selected": 37,
+      "domain_contributions": {
+        "legal": 36,
+        "accounting": 1
       }
     },
     {
       "source_id": "jpo-intellectual-property",
-      "authority": "A",
+      "authority": "特許庁 (Japan Patent Office, METI)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
       "extracted": 21,
-      "normalized": 21,
-      "selected_in_review_batch": 16,
-      "domain_contribution": {
-        "legal": 16
+      "selected": 16,
+      "domain_contributions": {
+        "legal": 14,
+        "accounting": 2
       }
     },
     {
       "source_id": "meti-commerce-operations",
-      "authority": "A",
+      "authority": "経済産業省 (Ministry of Economy, Trade and Industry)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
       "extracted": 96,
-      "normalized": 96,
-      "selected_in_review_batch": 49,
-      "domain_contribution": {
+      "selected": 49,
+      "domain_contributions": {
         "management": 13,
         "office_communication": 24,
-        "business": 2,
+        "accounting": 2,
         "purchasing": 1,
         "sales": 9
       }
     },
     {
-      "source_id": "mhlw-labor",
-      "authority": "A",
-      "extracted": 29,
-      "normalized": 29,
-      "selected_in_review_batch": 1,
-      "domain_contribution": {
-        "hr": 1
-      }
-    },
-    {
-      "source_id": "moj-commercial-registration",
-      "authority": "A",
-      "extracted": 74,
-      "normalized": 74,
-      "selected_in_review_batch": 37,
-      "domain_contribution": {
-        "legal": 37
-      }
-    },
-    {
-      "source_id": "naccs-trade",
-      "authority": "A",
-      "extracted": 102,
-      "normalized": 102,
-      "selected_in_review_batch": 45,
-      "domain_contribution": {
-        "trade": 45
-      }
-    },
-    {
-      "source_id": "nenkin-social-insurance",
-      "authority": "A",
-      "extracted": 134,
-      "normalized": 134,
-      "selected_in_review_batch": 104,
-      "domain_contribution": {
-        "hr": 104
-      }
-    },
-    {
       "source_id": "nta-corporate-tax",
-      "authority": "A",
+      "authority": "国税庁 (National Tax Agency)",
+      "authority_class": "A",
+      "provenance_type": "OFFICIAL_CURATED",
+      "status": "CURATED_WITH_OFFICIAL_REFERENCE",
       "extracted": 133,
-      "normalized": 133,
-      "selected_in_review_batch": 48,
-      "domain_contribution": {
+      "selected": 48,
+      "domain_contributions": {
         "tax": 48
-      }
-    },
-    {
-      "source_id": "nta-tax-glossary",
-      "authority": "A",
-      "extracted": 1016,
-      "normalized": 1016,
-      "selected_in_review_batch": 187,
-      "domain_contribution": {
-        "tax": 187
-      }
-    },
-    {
-      "source_id": "smea-procurement",
-      "authority": "A",
-      "extracted": 67,
-      "normalized": 67,
-      "selected_in_review_batch": 57,
-      "domain_contribution": {
-        "purchasing": 57
-      }
-    },
-    {
-      "source_id": "smrj-business-guidance",
-      "authority": "C",
-      "extracted": 50,
-      "normalized": 50,
-      "selected_in_review_batch": 3,
-      "domain_contribution": {
-        "management": 2,
-        "purchasing": 1
       }
     }
   ]

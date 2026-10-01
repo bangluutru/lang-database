@@ -1,6 +1,6 @@
 """
 scripts/phase1_3a/normalizer.py
-Phase 1.3A Linguistic Normalizer and Surface Sanitizer.
+Phase 1.3A & 1.3A.1 Linguistic Normalizer and Surface Sanitizer.
 Implements Unicode NFKC normalization, full/half-width conversions, whitespace sanitation,
 Japanese bracket standardization, artifact detection, and original surface preservation.
 """
@@ -9,16 +9,17 @@ from typing import Tuple, List, Set
 import unicodedata
 import re
 
-from scripts.phase1_3a.models import RawCandidate, NormalizedCandidate, QualityFlag
+from scripts.phase1_3a.models import RawCandidate, NormalizedCandidate, QualityFlag, ProvenanceType
 
 
-# Known navigation and documentation structure artifacts (Section 13)
+# Known navigation and documentation structure artifacts (Sections 13 & 21)
 KNOWN_ARTIFACTS: Set[str] = {
     "用語一覧", "用語集", "用語", "目次", "ページトップ", "トップ", "はじめに",
     "索引", "五十音順", "ガイドライン", "マニュアル", "目録", "一覧", "メニュー",
     "更新情報", "検索", "詳細", "ヘルプ", "サイトマップ", "リンク集", "関連リンク",
     "標準ラベル", "冗長ラベル", "要素名", "科目分類", "勘定科目リストについて",
-    "タクソノミ要素リストについて", "略称", "正式名称", "税目", "コード", "番号"
+    "タクソノミ要素リストについて", "略称", "正式名称", "税目", "コード", "番号",
+    "English", "その他", "ホーム", "トップページ", "Q&A", "Q＆A", "FAQ", "問合せ", "お知らせ"
 }
 
 
@@ -26,6 +27,9 @@ def is_extraction_artifact(text: str) -> bool:
     """Detects whether a surface string is a navigational or structural artifact."""
     clean = text.strip()
     if clean in KNOWN_ARTIFACTS:
+        return True
+    # Non-Japanese generic words
+    if clean.lower() in ("english", "home", "search", "menu", "faq", "q&a", "top", "back"):
         return True
     if re.match(r"^(第[0-9一二三四五六七八九十百千万]+[条項号]|別表[0-9一二三四五六七八九十]*|様式第[0-9]+号)$", clean):
         return True
@@ -39,7 +43,7 @@ def is_extraction_artifact(text: str) -> bool:
 
 def normalize_surface(surface: str) -> Tuple[str, List[QualityFlag]]:
     """
-    Normalizes a surface string per Section 15:
+    Normalizes a surface string per Section 15 & 21:
     - Unicode NFKC normalization
     - Strip duplicated spaces, leading bullets, trailing punctuation
     - Normalize Japanese brackets
@@ -47,7 +51,7 @@ def normalize_surface(surface: str) -> Tuple[str, List[QualityFlag]]:
     """
     flags: List[QualityFlag] = []
     if not surface:
-        return ("", [QualityFlag.CANONICAL_VALUE_SUSPICIOUS])
+        return ("", [QualityFlag.CANONICAL_VALUE_REVIEW_REQUIRED])
 
     # 1. Unicode NFKC
     norm = unicodedata.normalize("NFKC", surface).strip()
@@ -57,7 +61,6 @@ def normalize_surface(surface: str) -> Tuple[str, List[QualityFlag]]:
     norm = re.sub(r"^[0-9]+[\.\)）]\s*", "", norm).strip()
 
     # 3. Normalize brackets: replace non-standard brackets with standard half/full-width
-    # Strip outermost enclosing brackets e.g. 【用語】 -> 用語
     m_bracket = re.match(r"^[【〔［\[\(（](.*?)[】〕］\]\)）]$", norm)
     if m_bracket:
         inner = m_bracket.group(1).strip()
@@ -84,7 +87,7 @@ def normalize_surface(surface: str) -> Tuple[str, List[QualityFlag]]:
 
 
 class Phase13Normalizer:
-    """Normalizes raw candidates into NormalizedCandidate instances."""
+    """Normalizes raw candidates into NormalizedCandidate instances with field-level provenance."""
 
     def normalize(self, raw: RawCandidate) -> NormalizedCandidate:
         norm_surface, flags = normalize_surface(raw.source_term_exact)
@@ -101,7 +104,6 @@ class Phase13Normalizer:
         # Detect composite coordinate patterns in surface (Section 14)
         if not is_composite_xbrl:
             if ("及び" in norm_surface or "、" in norm_surface or "又は" in norm_surface) and len(norm_surface) > 7:
-                # Unless it's a statutory act title (e.g. 労働安全衛生法及び関連政省令)
                 if not norm_surface.endswith("法") and not norm_surface.endswith("規則"):
                     flags.append(QualityFlag.TAXONOMY_VARIANT_FLAG)
                     flags.append(QualityFlag.CANONICAL_VALUE_REVIEW_REQUIRED)
@@ -110,6 +112,19 @@ class Phase13Normalizer:
                 flags.append(QualityFlag.TAXONOMY_VARIANT_FLAG)
                 flags.append(QualityFlag.CANONICAL_VALUE_REVIEW_REQUIRED)
                 is_composite_xbrl = True
+
+        evidence_ref = {
+            "source_id": raw.source_id,
+            "source_version": raw.source_version,
+            "authority_class": raw.authority_class,
+            "provenance_type": raw.provenance_type,
+            "source_locator": raw.source_locator,
+            "raw_snapshot_hash": raw.raw_snapshot_hash,
+            "curated_artifact_hash": raw.curated_artifact_hash,
+            "source_url": raw.source_url,
+            "reference_url": raw.reference_url,
+            "artifact_path": raw.artifact_path
+        }
 
         return NormalizedCandidate(
             candidate_id=raw.candidate_id,
@@ -123,10 +138,16 @@ class Phase13Normalizer:
             source_contexts=[raw.source_context] if raw.source_context else [],
             source_definitions=[raw.source_definition] if raw.source_definition else [],
             quality_flags=flags,
+            term_provenance=raw.provenance_type,
+            reading_provenance=ProvenanceType.MODEL_ASSISTED.value,
+            gloss_provenance=ProvenanceType.OFFICIAL_EXTRACTED.value if raw.provenance_type == ProvenanceType.OFFICIAL_EXTRACTED.value else ProvenanceType.OFFICIAL_CURATED.value,
+            domain_provenance="RULE_BASED",
+            evidence_refs=[evidence_ref],
             is_composite_taxonomy=is_composite_xbrl,
             extracted_at=raw.extracted_at,
             extractor_version=raw.extractor_version,
-            raw_snapshot_hash=raw.raw_snapshot_hash
+            raw_snapshot_hash=raw.raw_snapshot_hash,
+            curated_artifact_hash=raw.curated_artifact_hash
         )
 
     def normalize_batch(self, raw_candidates: List[RawCandidate]) -> List[NormalizedCandidate]:

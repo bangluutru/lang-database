@@ -1,8 +1,9 @@
 """
 scripts/phase1_3a/batch_selector.py
-Phase 1.3A Review Batch Selector, Domain Balancing, and Quality Gate Enforcement.
+Phase 1.3A & 1.3A.1 Review Batch Selector, Domain Balancing, and Quality Gate Enforcement.
 
-Enforces Section 27 Quality Gate:
+Enforces Section 27 Quality Gate & Section 26 Review Pack Format:
+- Field-level provenance on every candidate (term, reading, gloss)
 - Source provenance, valid domain, non-empty surface
 - Exclusion of extraction artifacts and non-canonical composite reporting labels
 - Domain balancing: prevents EDINET/accounting from dominating
@@ -68,11 +69,15 @@ class Phase13BatchSelector:
             if len(cand.normalized_surface) < 2:
                 continue
 
-            # Generate reading
-            reading, r_conf, r_flags = self.enhancer.generate_reading(cand.normalized_surface)
+            # Generate reading with provenance
+            reading, r_conf, r_flags, reading_prov = self.enhancer.generate_reading(
+                cand.normalized_surface, include_provenance=True
+            )
 
-            # Generate gloss
-            gloss, g_conf, g_flags = self.enhancer.extract_or_generate_gloss(cand)
+            # Generate gloss with provenance
+            gloss, g_conf, g_flags, gloss_prov = self.enhancer.extract_or_generate_gloss(
+                cand, include_provenance=True
+            )
 
             # Combine all flags
             all_flags = list(set(cand.quality_flags + r_flags + g_flags))
@@ -105,20 +110,24 @@ class Phase13BatchSelector:
             review_cand = ReviewCandidate(
                 candidate_id=f"phase13a-cand-{seq_id:06d}",
                 surface=cand.surface,
-                normalized_surface=cand.normalized_surface,
                 reading=reading,
-                reading_confidence=r_conf,
+                meaning_gloss=gloss,
                 domain=cand.domain,
                 subdomain=cand.subdomain,
-                meaning_gloss=gloss,
-                gloss_confidence=g_conf,
                 source_ids=cand.source_ids,
-                source_authority=cand.source_authorities[0] if cand.source_authorities else "C",
+                authority_class=cand.source_authorities[0] if cand.source_authorities else "C",
+                term_provenance=cand.term_provenance,
+                reading_provenance=reading_prov,
+                gloss_provenance=gloss_prov,
+                evidence_refs=cand.evidence_refs,
                 cross_source_count=len(set(cand.source_ids)),
                 professional_relevance_score=relevance,
                 canonical_value_score=c_val,
                 review_complexity=complexity.value,
                 quality_flags=flag_strings,
+                normalized_surface=cand.normalized_surface,
+                reading_confidence=r_conf,
+                gloss_confidence=g_conf,
                 possible_duplicate_of=cand.possible_duplicate_of,
                 possible_variant_of=cand.possible_variant_of,
                 possible_abbreviation_of=cand.possible_abbreviation_of,
@@ -130,12 +139,10 @@ class Phase13BatchSelector:
 
         # Domain Balancing (Section 6 & 7):
         # Prevent EDINET/accounting from dominating.
-        # Group candidates by domain
         domain_groups = defaultdict(list)
         for c in evaluated:
             domain_groups[c.domain].append(c)
 
-        # Sort each domain group by professional relevance descending
         for dom in domain_groups:
             domain_groups[dom].sort(
                 key=lambda x: (
@@ -148,10 +155,6 @@ class Phase13BatchSelector:
 
         selected: List[ReviewCandidate] = []
 
-        # Caps to ensure balanced representation across domains:
-        # High priority domains get full admission:
-        # tax, trade, hr, legal, purchasing, sales
-        # Accounting & finance are capped so EDINET doesn't crowd out the practical terms
         domain_caps = {
             "accounting": 220,
             "finance": 150,
@@ -170,7 +173,6 @@ class Phase13BatchSelector:
             cap = domain_caps.get(dom, 150)
             selected.extend(cands[:cap])
 
-        # If selected count is below target_min (800), relax caps for highest-scoring remaining terms
         if len(selected) < self.target_min:
             selected_ids = {c.candidate_id for c in selected}
             remaining = [c for c in evaluated if c.candidate_id not in selected_ids]
@@ -178,13 +180,11 @@ class Phase13BatchSelector:
             needed = self.target_min - len(selected)
             selected.extend(remaining[:needed])
 
-        # If selected count exceeds target_max (1500), take top 1500
         if len(selected) > self.target_max:
             selected.sort(key=lambda x: x.professional_relevance_score, reverse=True)
             selected = selected[:self.target_max]
 
         # Section 30: Review Pack Ordering:
-        # Recommended priority:
         # REVIEW-C -> REVIEW-B -> REVIEW-A
         # Within each level: domain -> canonical risk (lowest canonical_val first) -> relevance (descending)
         complexity_order = {"REVIEW-C": 1, "REVIEW-B": 2, "REVIEW-A": 3}
@@ -197,7 +197,6 @@ class Phase13BatchSelector:
             )
         )
 
-        # Renumber candidate IDs cleanly after selection & ordering
         for idx, cand in enumerate(selected, start=1):
             cand.candidate_id = f"phase13a-cand-{idx:06d}"
 
@@ -210,6 +209,12 @@ class Phase13BatchSelector:
                 "REVIEW-A": sum(1 for c in selected if c.review_complexity == "REVIEW-A"),
                 "REVIEW-B": sum(1 for c in selected if c.review_complexity == "REVIEW-B"),
                 "REVIEW-C": sum(1 for c in selected if c.review_complexity == "REVIEW-C")
+            },
+            "provenance_breakdown": {
+                "OFFICIAL_EXTRACTED": sum(1 for c in selected if c.term_provenance == "OFFICIAL_EXTRACTED"),
+                "OFFICIAL_CURATED": sum(1 for c in selected if c.term_provenance == "OFFICIAL_CURATED"),
+                "INTERNAL_CURATED": sum(1 for c in selected if c.term_provenance == "INTERNAL_CURATED"),
+                "MODEL_ASSISTED": sum(1 for c in selected if c.term_provenance == "MODEL_ASSISTED")
             },
             "domain_breakdown": {
                 dom: sum(1 for c in selected if c.domain == dom)

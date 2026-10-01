@@ -1,6 +1,6 @@
 """
 scripts/phase1_3a/linguistic_enhancer.py
-Phase 1.3A Linguistic Engine: Reading Generation, Phonetic Overrides, and Gloss Integrity.
+Phase 1.3A & 1.3A.1 Linguistic Engine: Reading Generation, Phonetic Overrides, and Gloss Integrity.
 
 Enforces deterministic reading generation with regression protection for:
 - 貸 (かし vs たい)
@@ -15,6 +15,8 @@ Also audits gloss integrity:
 - Unmatched parentheses / brackets
 - Truncated phrases
 - Generic domain category placeholders (e.g. "Tax Filing", "Financial Accounting")
+
+Returns field-level provenance for reading and gloss.
 """
 
 from typing import Tuple, List, Dict, Optional, Set
@@ -23,7 +25,8 @@ import pykakasi
 
 from scripts.phase1_3a.models import (
     NormalizedCandidate,
-    QualityFlag
+    QualityFlag,
+    ProvenanceType
 )
 
 
@@ -136,19 +139,21 @@ class Phase13LinguisticEnhancer:
     def __init__(self):
         self.kakasi = pykakasi.kakasi()
 
-    def generate_reading(self, surface: str) -> Tuple[str, str, List[QualityFlag]]:
+    def generate_reading(self, surface: str, include_provenance: bool = False):
         """
         Generates reading with regression protection and confidence level (HIGH, MEDIUM, LOW).
-        Returns (reading, confidence, flags).
+        If include_provenance is True, returns (reading, confidence, flags, reading_provenance).
+        Otherwise returns (reading, confidence, flags) for backwards compatibility.
         """
         flags: List[QualityFlag] = []
 
         # 1. Exact match in verified phonetic overrides
         if surface in PHONETIC_OVERRIDES:
+            if include_provenance:
+                return (PHONETIC_OVERRIDES[surface], "HIGH", flags, "RULE_BASED")
             return (PHONETIC_OVERRIDES[surface], "HIGH", flags)
 
         # 2. Check suffix compound heuristics
-        # Professional compound suffix rules
         reading = None
         confidence = "MEDIUM"
 
@@ -202,7 +207,6 @@ class Phase13LinguisticEnhancer:
             flags.append(QualityFlag.READING_REVIEW_REQUIRED)
 
         # Quality & confidence check
-        # If reading still contains suspicious unvoiced or literal kanji
         if re.search(r"[a-zA-Z0-9\u4e00-\u9faf]", reading):
             confidence = "LOW"
             flags.append(QualityFlag.READING_REVIEW_REQUIRED)
@@ -211,30 +215,33 @@ class Phase13LinguisticEnhancer:
         else:
             confidence = "HIGH"
 
+        if include_provenance:
+            return (reading, confidence, flags, ProvenanceType.MODEL_ASSISTED.value)
         return (reading, confidence, flags)
 
     def extract_or_generate_gloss(
-        self, candidate: NormalizedCandidate
-    ) -> Tuple[str, str, List[QualityFlag]]:
+        self, candidate: NormalizedCandidate, include_provenance: bool = False
+    ):
         """
         Extracts source-supported English gloss or generates a clean gloss.
         Audits gloss integrity per Section 22.
-        Returns (gloss, confidence, flags).
+        If include_provenance is True, returns (gloss, confidence, flags, gloss_provenance).
+        Otherwise returns (gloss, confidence, flags) for backwards compatibility.
         """
         flags: List[QualityFlag] = []
         gloss = ""
         confidence = "MEDIUM"
+        gloss_prov = ProvenanceType.OFFICIAL_CURATED.value
 
         # 1. Look for "Official EN: ..." in source_contexts
         for ctx in candidate.source_contexts:
             m = re.search(r"Official EN:\s*([^\[\n\r]+)", ctx)
             if m:
-                cand_gloss = m.group(1).strip()
-                # Clean trailing brackets/quotes
-                cand_gloss = cand_gloss.strip("\"' ")
+                cand_gloss = m.group(1).strip().strip("\"' ")
                 if cand_gloss:
                     gloss = cand_gloss
                     confidence = "HIGH"
+                    gloss_prov = ProvenanceType.OFFICIAL_EXTRACTED.value
                     break
 
         # 2. Look for source definition
@@ -243,16 +250,17 @@ class Phase13LinguisticEnhancer:
                 if d and len(d.strip()) > 3:
                     gloss = d.strip()
                     confidence = "MEDIUM"
+                    gloss_prov = ProvenanceType.OFFICIAL_CURATED.value
                     break
 
         # 3. Fallback to descriptive placeholder if empty
         if not gloss:
             gloss = f"{candidate.normalized_surface} ({candidate.subdomain.replace('_', ' ').title()})"
             confidence = "LOW"
+            gloss_prov = ProvenanceType.MODEL_ASSISTED.value
             flags.append(QualityFlag.GLOSS_REVIEW_REQUIRED)
 
         # Integrity audit:
-        # Check unmatched parentheses
         open_parens = gloss.count("(")
         close_parens = gloss.count(")")
         open_brackets = gloss.count("[")
@@ -260,11 +268,10 @@ class Phase13LinguisticEnhancer:
         if open_parens != close_parens or open_brackets != close_brackets:
             flags.append(QualityFlag.MALFORMED_PARENTHESES)
             flags.append(QualityFlag.GLOSS_REVIEW_REQUIRED)
-            # Auto-balance if single trailing open paren
             if open_parens == close_parens + 1 and not gloss.endswith(")"):
                 gloss = gloss + ")"
 
-        # Check truncated phrase (ends with punctuation or open marker)
+        # Check truncated phrase
         if re.search(r"[\(（\[,;:\-\s]$", gloss):
             flags.append(QualityFlag.TRUNCATED_GLOSS)
             flags.append(QualityFlag.GLOSS_REVIEW_REQUIRED)
@@ -272,7 +279,8 @@ class Phase13LinguisticEnhancer:
         # Check generic domain placeholder
         if gloss.lower() in GENERIC_GLOSS_PLACEHOLDERS:
             flags.append(QualityFlag.GLOSS_REVIEW_REQUIRED)
-            # Enhance with candidate surface so it describes the term itself
             gloss = f"{candidate.normalized_surface} ({gloss.title()} concept)"
 
+        if include_provenance:
+            return (gloss, confidence, flags, gloss_prov)
         return (gloss, confidence, flags)

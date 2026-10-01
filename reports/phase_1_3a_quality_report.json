@@ -1,14 +1,46 @@
 {
-  "reading_review_required": 39,
-  "gloss_review_required": 186,
-  "canonical_value_review_required": 13,
-  "abbreviation_flag": 7,
-  "variant_flag": 0,
-  "semantic_duplicate_flag": 0,
-  "artifact_flag": 0,
-  "taxonomy_variant_flag": 13,
-  "truncated_gloss": 0,
-  "malformed_parentheses": 0,
-  "rejected_composite_taxonomy_labels": 334,
-  "rejected_extraction_artifacts": 0
+  "selection_statistics": {
+    "total_evaluated": 3770,
+    "rejected_artifacts": 0,
+    "rejected_composite_taxonomy": 334,
+    "final_review_candidates": 1104,
+    "review_complexity_breakdown": {
+      "REVIEW-A": 882,
+      "REVIEW-B": 174,
+      "REVIEW-C": 48
+    },
+    "provenance_breakdown": {
+      "OFFICIAL_EXTRACTED": 759,
+      "OFFICIAL_CURATED": 345,
+      "INTERNAL_CURATED": 0,
+      "MODEL_ASSISTED": 0
+    },
+    "domain_breakdown": {
+      "accounting": 220,
+      "business": 120,
+      "finance": 150,
+      "hr": 103,
+      "legal": 94,
+      "management": 14,
+      "office_communication": 24,
+      "purchasing": 56,
+      "sales": 9,
+      "tax": 229,
+      "trade": 85
+    }
+  },
+  "quality_flag_distribution": {
+    "READING_REVIEW_REQUIRED": 38,
+    "TAXONOMY_VARIANT_FLAG": 14,
+    "CANONICAL_VALUE_REVIEW_REQUIRED": 13,
+    "ABBREVIATION_FLAG": 6,
+    "GLOSS_REVIEW_REQUIRED": 181
+  },
+  "quality_audits": {
+    "unmatched_parentheses_in_selected": 0,
+    "truncated_gloss_in_selected": 0,
+    "generic_placeholders_in_selected": 0,
+    "human_decision_pending_ratio": 1.0,
+    "composite_taxonomy_in_selected": 14
+  }
 }
