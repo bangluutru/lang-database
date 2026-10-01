@@ -233,13 +233,16 @@ class TriLanguageCoverage:
 
 
 class OriginType(str, Enum):
+    OFFICIAL_EXTRACTED = "official_extracted"
     SOURCE_DERIVED = "source_derived"
     CORPUS_DERIVED = "corpus_derived"
     HUMAN_CURATED = "human_curated"
+    SEED_CURATED = "seed_curated"
     AI_GENERATED = "ai_generated"
 
 
 LanguageEnum = LanguageCode
+
 
 
 @dataclass

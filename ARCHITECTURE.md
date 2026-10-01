@@ -255,3 +255,47 @@ Sino-Japanese and Sino-Vietnamese cognates are linked explicitly as `SINO_COGNAT
 ### 7.5 Backward Compatibility & Legacy Bridge
 `LegacyBridge` maps all 800 existing `jp-pro-*` records into canonical `Concept`, `Sense`, `Expression`, and `Classification` records while preserving legacy IDs in `data/canonical/legacy_mapping.json`. All legacy production datasets, Golden Pilot releases (v1 & v1.1), and Canaries remain byte-for-byte frozen.
 
+---
+
+## 8. Phase 1.3C Architecture: Authoritative Acquisition & Expansion
+
+Phase 1.3C upgrades the ingestion mechanism from seed-only fixtures to an end-to-end, reproducible pipeline fed by real upstream datasets.
+
+```
+UPSTREAM SOURCE (JMdict, KANJIDIC2, Joyo, NGSL family, vn_freq, Unihan, JLPT)
+      ↓
+DOWNLOAD / FETCH (`scripts/acquire_sources.py`)
+      ↓
+RAW IMMUTABLE SNAPSHOT (`data/raw/<source>/<version>/`)
+      ↓
+SHA-256 + LICENSE + VERSION METADATA (`metadata.json`, `SHA256SUMS`)
+      ↓
+PRODUCTION PARSERS (`scripts/phase1_3c/adapters/production_adapters.py`)
+      ↓
+EXTRACTED RECORDS (with line/byte/entry locators)
+      ↓
+PROVENANCE GUARD (`scripts/phase1_3c/provenance_guard.py`)
+      ↓
+MATCH-BEFORE-CREATE RESOLUTION (`scripts/phase1_3c/matcher.py`)
+      ↓
+TRI-LANGUAGE ALIGNMENT & SENSE PRESERVATION (`scripts/phase1_3c/aligner_and_expander.py`)
+      ↓
+MULTI-DIMENSIONAL CLASSIFICATION (CEFR, JLPT, Joyo, EIKEN, TOEIC, IELTS, TOEFL, VI Core)
+      ↓
+LICENSE GATE & REDISTRIBUTION AUDIT (`scripts/phase1_3b/license_gate.py`)
+      ↓
+CANONICAL LEARNING GRAPH (`data/canonical/`) [2,106 Concepts | 6,318 Expressions]
+      ↓
+OKI-LANGUAGE EXPORT ADAPTER (`data/exports/oki_language/deck_data.json`)
+```
+
+### 8.1 Match-Before-Create Graph Resolution
+Before creating a new Concept, the `ConceptMatcher` evaluates candidate terms against the canonical graph by normalized lemma, language, POS, and gloss:
+- `EXACT_EXISTING_CONCEPT`: Enriches the existing concept/expression with multi-source evidence without duplicate records.
+- `EXISTING_CONCEPT_NEW_EXPRESSION`: Attaches a new language expression to an existing concept.
+- `EXISTING_CONCEPT_NEW_SENSE`: Adds a distinct sense under an existing concept.
+- `NEW_CONCEPT`: Creates a new concept only when semantic separation is verified and complete tri-language alignment is available.
+
+### 8.2 Oki-Language Learning Web App Integration
+To prevent vocabulary divergence, downstream applications like `oki-language` consume canonical exports directly via `scripts/phase1_3c/export_oki_language.py`. Canonical concepts are exported to `data/exports/oki_language/deck_data.json` containing audio-ready lemmas, readings, definitions, classifications, and domain tags.
+

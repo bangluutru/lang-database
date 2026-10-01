@@ -238,3 +238,29 @@ Semantic alignment is audited at sense level. Ingestion is immediately halted if
 - Mutation or regression of frozen Golden Pilot v1 / v1.1
 - Uncontrolled vocabulary explosion violating pedagogical focus
 
+---
+
+## 11. Phase 1.3C Quality Gates & Provenance Guarding
+
+Phase 1.3C implements automated quality gates across all upstream ingestion waves:
+
+```
+ACQUIRE ──> VERIFY ──> PARSE ──> NORMALIZE ──> DEDUP ──> ALIGN ──> VALIDATE ──> REPORT ──> COMMIT
+```
+
+### 11.1 Special Negative Test Verification (Section 26)
+A dedicated automated test (`tests/test_phase1_3c.py::test_3_special_negative_test_curated_cannot_masquerade_as_source_derived`) asserts that:
+```
+curated local JSON + external source URL = SOURCE_DERIVED -> FAIL / QUARANTINE
+```
+The `ProvenanceGuard` enforces that:
+1. Every `SOURCE_DERIVED` or `OFFICIAL_EXTRACTED` record is backed by an authentic raw artifact snapshot in `data/raw/`.
+2. The SHA-256 hash of the artifact matches `metadata.json` exactly.
+3. The source locator (line, byte, entry ID) is non-empty and traceable.
+4. The license is approved by `LicenseGate`.
+
+### 11.2 Complete Tri-Language Invariant (Section 22 & 31)
+Only complete intersections of English Core ∩ Japanese Core ∩ Vietnamese Core are promoted to canonical `concepts.jsonl`. Concepts lacking any of the 3 languages remain outside canonical production.
+All 2,106 canonical concepts have 100% complete EN, JA, and VI expressions.
+
+

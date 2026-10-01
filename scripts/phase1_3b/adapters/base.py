@@ -74,7 +74,7 @@ class BaseSourceAdapter(ABC):
             )
         return True
 
-    def build_source_evidence(self, locator: str) -> SourceEvidence:
+    def build_source_evidence(self, locator: str, origin: Optional[str] = None) -> SourceEvidence:
         """Constructs auditable SourceEvidence object for an extracted value."""
         lic_entry = self.license_gate.licenses.get(self.license, {})
         actual_hash = self.compute_sha256() if self.raw_artifact_path.exists() else None
@@ -84,6 +84,7 @@ class BaseSourceAdapter(ABC):
             source_version=self.source_version,
             source_locator=locator,
             raw_sha256=actual_hash,
+            origin=origin or OriginType.SOURCE_DERIVED.value,
             retrieved_at=self.retrieved_at,
             source_url=self.source_url,
             reference_url=self.reference_url,
@@ -94,6 +95,7 @@ class BaseSourceAdapter(ABC):
             attribution_required=lic_entry.get("attribution_required", True),
             share_alike=lic_entry.get("share_alike", False)
         )
+
 
     @abstractmethod
     def extract_records(self) -> List[Dict[str, Any]]:

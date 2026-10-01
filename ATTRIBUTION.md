@@ -50,41 +50,64 @@ The **JP Professional Vocabulary Database** utilizes public government taxonomie
 ## 6. Electronic Dictionary Research and Development Group (EDRDG) — JMdict / KANJIDIC2
 
 - **Official Source:** JMdict (Japanese-Multilingual Dictionary) and KANJIDIC2 dictionaries.
-- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+- **License:** Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0)
 - **Notice:**
   > "This publication includes information from the JMdict and KANJIDIC dictionary files in accordance with the licence granted by the Electronic Dictionary Research and Development Group."
   > See: https://www.edrdg.org/edrdg/licence.html
 - **Application in Database:**
-  Used as reference foundation for Japanese lemmas, kana readings, and baseline English glosses in canonical expressions.
+  Used as authoritative reference foundation for Japanese lemmas, kana readings, and baseline English glosses in canonical expressions.
 
 ---
 
 ## 7. 文化庁 (Agency for Cultural Affairs, Government of Japan) — 常用漢字表
 
 - **Official Source:** 常用漢字表 (平成22年内閣告示第2号 - Cabinet Notification No. 2 of 2010).
-- **License:** Government of Japan Terms of Use / Public Data License (PDL-1.0)
+- **License:** Government of Japan Terms of Use / Public Domain (PDL-1.0)
 - **Application in Database:**
-  Official grade designations (Grades 1–6, Secondary), on/kun readings, and canonical kanji forms.
+  Official grade designations (Grades 1–6 Elementary, Grades 7–8 Secondary), on/kun readings, and canonical 2,136 Jōyō kanji forms.
 
 ---
 
-## 8. New General Service List (NGSL Project)
+## 8. New General Service List Project (NGSL, NGSL-Spoken, NAWL, BSL, TSL)
 
-- **Official Source:** New General Service List (NGSL v1.2), NGSL-Spoken, and NAWL.
+- **Official Source:** NGSL v1.2, NGSL-Spoken v1.2, NAWL v1.2, BSL v1.2, and TSL v1.2.
 - **Authors:** Dr. Charles Browne, Dr. Brent Culligan, and Joseph Phillips.
-- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)
+- **License:** Creative Commons Attribution 4.0 International (CC-BY-4.0)
 - **Notice:**
-  > "Data from the New General Service List (NGSL) project is used under the CC-BY-SA 4.0 license."
-  > See: http://www.newgeneralservicelist.org/terms-of-use
+  > "English vocabulary lists (NGSL, NGSL-Spoken, NAWL, BSL, TSL) are provided courtesy of Dr. Charles Browne, Dr. Brent Culligan, and Joseph Phillips under the Creative Commons Attribution 4.0 International License."
+  > See: https://www.newgeneralservicelist.com/
 - **Application in Database:**
-  Core English frequency rankings, CEFR level anchors, and lemma selections.
+  Core English frequency rankings, CEFR level anchors, business/TOEIC/academic exam relevance classifications.
 
 ---
 
-## 9. Open Vietnamese Lexical Foundation & Wiktionary Contributors
+## 9. tabidots / Vietnamese Word Frequencies Project (`vn_freq`)
 
-- **Official Source:** Vietnamese Wiktionary structured data extracts and open frequency projects.
-- **License:** Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-4.0 / CC-BY-SA-4.0)
+- **Official Source:** tabidots/vn-freqs (`vn_word_frequencies.tsv`).
+- **License:** MIT License
+- **Notice:**
+  > "Copyright (c) tabidots. Permitted under the MIT License."
 - **Application in Database:**
-  Vietnamese lemma realizations, IPA phonetics, and verified Hán-Việt cognate pairings.
+  Vietnamese empirical corpus frequency rankings and candidate core bands (VI_CORE_500, VI_CORE_1000, VI_CORE_2000, VI_CORE_5000).
+
+---
+
+## 10. Unicode Consortium — Unihan Database
+
+- **Official Source:** Unicode Character Database (Unihan 16.0.0, `Unihan.zip`).
+- **License:** Unicode License Agreement - Data Files and Software (Unicode-DFS-2016)
+- **Notice:**
+  > "Copyright © 1991-2026 Unicode, Inc. Distributed under the Terms of Use in https://www.unicode.org/copyright.html."
+- **Application in Database:**
+  Sino-Vietnamese readings (`kVietnamese`), Japanese On-readings (`kJapaneseOn`), and character variant mapping (`Unihan_Variants.txt`).
+
+---
+
+## 11. JLPT Consensus Vocabulary Project
+
+- **Official Source:** Tanos / Open JLPT Vocabulary Collation (`JLPT_vocab_ALL.csv`).
+- **License:** Creative Commons Zero (CC0 1.0) / Public Domain
+- **Application in Database:**
+  Community consensus JLPT vocabulary classifications across levels N5 through N1.
+
 

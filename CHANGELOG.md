@@ -4,6 +4,38 @@ All notable changes to the **English–Japanese–Vietnamese Learning Lexical Gr
 
 ---
 
+## [v1.3c-expansion] - 2026-10-01
+
+### Phase 1.3C — Authoritative Source Acquisition & Curated Corpus Expansion
+
+#### Added
+- **Authoritative Downloader & Immutable Snapshot Framework (`scripts/acquire_sources.py`)**:
+  - Implemented manifest-driven acquisition supporting `--source`, `--all-approved`, `--dry-run`, `--verify-only`, `--force-refresh`.
+  - Acquired and verified 11 immutable upstream raw source snapshots in `data/raw/` with cryptographic `metadata.json` and `SHA256SUMS`:
+    `kanjidic2`, `joyo`, `jmdict`, `ngsl`, `ngsl_spoken`, `nawl`, `bsl`, `tsl`, `vn_freq`, `unihan`, `jlpt_consensus`.
+- **Production Extraction Adapters (`scripts/phase1_3c/adapters/production_adapters.py`)**:
+  - Built streaming, memory-efficient parsers for XML, CSV, TSV, and ZIP archives.
+  - Implemented Unihan variant inheritance allowing Japanese shinjitai kanji to inherit Sino-Vietnamese readings from traditional variants.
+  - Value-level provenance tracking anchoring every extracted field to exact line/byte/entry locators.
+- **Strict Provenance Guard & Special Negative Test (`scripts/phase1_3c/provenance_guard.py` & `tests/test_phase1_3c.py`)**:
+  - Audited seed fixtures and corrected all Phase 1.3B seed adapters to `origin="seed_curated"`.
+  - Enforced Section 26 Negative Test: unbacked local curated values claiming `SOURCE_DERIVED` fail provenance verification and enter quarantine.
+- **Tri-Language Canonical Learning Expansion (`scripts/phase1_3c/aligner_and_expander.py`)**:
+  - Scaled the canonical learning graph to **2,106 high-value concepts** and **6,318 expressions** (2,106 EN, 2,106 JA, 2,106 VI).
+  - 100% complete tri-language coverage; zero partial or unaligned concepts in canonical production.
+  - Preserved existing 800 professional legal/financial concepts and their `legacy_mapping.json` completely untouched.
+- **Sense-Correct Polysemy Disambiguation**:
+  - Enforced strict sense boundaries for polysemous words (`right`, `bank`, `charge`, `interest`, `capital`, `issue`, `order`, etc.).
+  - Guaranteed `right` retains exactly 3 distinct concepts (`right_correct`, `right_direction`, `right_entitlement`) without generic collisions.
+- **Downstream Oki-Language Export Adapter (`scripts/phase1_3c/export_oki_language.py`)**:
+  - Generated `data/exports/oki_language/deck_data.json` containing 2,106 cards formatted for the oki-language learning web app.
+- **Source License Matrix & Redistribution Audit Reports (`reports/licenses/`)**:
+  - Documented share-alike boundaries under CC-BY-SA 3.0 for Japanese dictionary data and modular multi-licensing strategy.
+- **Phase 1.3C Test Suite (`tests/test_phase1_3c.py`)**:
+  - 9 automated tests passing 100% (total 314 tests in repository passing).
+
+---
+
 ## [v1.3b-foundation] - 2026-10-01
 
 ### Phase 1.3B — Tri-Language Learning Graph & Open Source Ingestion Foundation

@@ -12,7 +12,8 @@ from typing import Dict, List, Any, Optional
 import json
 
 from scripts.phase1_3b.adapters.base import BaseSourceAdapter
-from scripts.phase1_3b.models import SourceEvidence
+from scripts.phase1_3b.models import SourceEvidence, OriginType
+
 
 
 BASE_DIR = Path(__file__).resolve().parents[3]
@@ -50,7 +51,7 @@ class JMdictSeedAdapter(BaseSourceAdapter):
         records = []
         for i, item in enumerate(data):
             locator = f"item_seq:{item.get('ent_seq')}, index:{i}"
-            evidence = self.build_source_evidence(locator)
+            evidence = self.build_source_evidence(locator, origin=OriginType.SEED_CURATED.value)
             keb = item.get("k_ele", [{}])[0].get("keb", "")
             reb = item.get("r_ele", [{}])[0].get("reb", "")
             senses = item.get("sense", [])
@@ -97,7 +98,7 @@ class JoyoKanjiAdapter(BaseSourceAdapter):
         records = []
         for i, item in enumerate(data):
             locator = f"kanji:{item.get('kanji')}, grade:{item.get('grade')}"
-            evidence = self.build_source_evidence(locator)
+            evidence = self.build_source_evidence(locator, origin=OriginType.SEED_CURATED.value)
             records.append({
                 "kanji": item.get("kanji"),
                 "grade": item.get("grade"),
@@ -139,7 +140,7 @@ class NGSLSeedAdapter(BaseSourceAdapter):
         records = []
         for i, item in enumerate(data):
             locator = f"lemma:{item.get('lemma')}, rank:{item.get('ngsl_rank')}"
-            evidence = self.build_source_evidence(locator)
+            evidence = self.build_source_evidence(locator, origin=OriginType.SEED_CURATED.value)
             records.append({
                 "concept_id": item.get("concept_id"),
                 "language": "en",
@@ -161,11 +162,11 @@ class VietnameseCoreAdapter(BaseSourceAdapter):
     def __init__(self, artifact_path: Optional[Path] = None, expected_sha256: Optional[str] = None):
         target_path = artifact_path or (DEFAULT_CURATED_DIR / "vietnamese_core_seed.json")
         super().__init__(
-            source_id="viet-core-project",
+            source_id="viet-core-seed",
             source_version="2026-v1",
             raw_artifact_path=target_path,
-            license_code="CC-BY-4.0",
-            license_locator="https://creativecommons.org/licenses/by/4.0/",
+            license_code="CC-BY-SA-4.0",
+            license_locator="https://creativecommons.org/licenses/by-sa/4.0/",
             source_url="https://vi.wiktionary.org/",
             reference_url="https://vi.wiktionary.org/",
             retrieved_at="2026-10-01T12:00:00Z",
@@ -184,7 +185,7 @@ class VietnameseCoreAdapter(BaseSourceAdapter):
         records = []
         for i, item in enumerate(data):
             locator = f"lemma:{item.get('lemma')}, index:{i}"
-            evidence = self.build_source_evidence(locator)
+            evidence = self.build_source_evidence(locator, origin=OriginType.SEED_CURATED.value)
             records.append({
                 "concept_id": item.get("concept_id"),
                 "language": "vi",
@@ -192,6 +193,7 @@ class VietnameseCoreAdapter(BaseSourceAdapter):
                 "pronunciation": item.get("pronunciation"),
                 "sino_vietnamese": item.get("sino_vietnamese"),
                 "part_of_speech": item.get("part_of_speech"),
+
                 "source_evidence": [evidence.to_dict()],
                 "locator": locator
             })

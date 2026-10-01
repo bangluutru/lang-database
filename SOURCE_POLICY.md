@@ -125,3 +125,26 @@ The database will **NOT** become a general dictionary of hundreds of thousands o
 - Validated professional workplace domain utility (accounting, finance, tax, legal, trade)
 - Target: 10,000–20,000 high-yield pedagogical concepts with complete tri-language alignment.
 
+---
+
+## 11. Phase 1.3C Authoritative Upstream Snapshots & Provenance Guard
+
+### 11.1 Immutable Snapshot Directory Structure (`data/raw/`)
+Every real upstream dataset must be stored as an immutable raw snapshot:
+```
+data/raw/<source_id>/<source_version>/
+  metadata.json        # Machine-readable provenance, license, upstream URL, SHA256
+  SHA256SUMS           # Standard UNIX checksum file
+  <artifact_file>      # Raw uncompressed/compressed downloaded artifact
+```
+Snapshots are write-once and verified with `--verify-only`. In-place modification of existing raw snapshots is strictly prohibited.
+
+### 11.2 Anti-Masquerading & Special Negative Test Rule (Section 2 & 26)
+1. **Rule**: A record may be marked `SOURCE_DERIVED` or `OFFICIAL_EXTRACTED` **only** if its exact extracted value is anchored to a verifiable raw snapshot locator in `data/raw/`.
+2. **Prohibited Pattern**:
+   ```
+   curated local JSON + external source URL = SOURCE_DERIVED -> FAIL / QUARANTINE
+   ```
+3. **Seed Fixtures**: Seed datasets must be explicitly marked `origin="seed_curated"`. They must never masquerade as real upstream extractions.
+4. **Automated Enforcement**: The `ProvenanceGuard` inspects all incoming `SourceEvidence` objects. Records violating provenance rules are immediately rejected or quarantined.
+
