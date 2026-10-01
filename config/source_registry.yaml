@@ -1,227 +1,526 @@
-# JP Professional Vocabulary Database - Master Source Registry
-# Phase 1.2B - Authoritative Source Provenance & Licensing Boundaries
-# Separates SOURCE IDENTITY from SOURCE VERSION.
-
-version: "1.2.0"
-last_updated: "2026-10-01"
-
+version: 1.3.0
+last_updated: '2026-10-01'
 sources:
-  - source_id: fsa-edinet-taxonomy
-    legacy_id: fsa_edinet_2026
-    authority: "金融庁 (Financial Services Agency)"
-    authority_class: "A"
-    title: "EDINETタクソノミ 勘定科目リスト・要素リスト (EDINET Taxonomy Core)"
-    official_url: "https://www.fsa.go.jp/search/20251111.html"
-    source_type: "taxonomy"
-    domains: ["accounting", "finance"]
-    subdomains: ["financial_accounting", "bookkeeping", "financial_statements", "closing", "receivables", "payables", "fixed_assets", "inventory", "corporate_finance"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026-final"
-    published_at: "2025-11-11"
-    retrieved_at: "2026-09-30T23:03:34Z"
-    license: "PDL-1.0 (Government Website Terms of Use)"
-    reuse_status: "GREEN"
-    reuse_notes: "Permitted for commercial and educational transformation with statutory attribution. Unrestricted canonical taxonomy ingestion."
-    raw_snapshot_path: "data/raw/fsa/edinet/2026"
-    raw_sha256: "2fb26e82471d7570e51588996f89c80dc2db8aa74b0bcb0203ead36c588d5c86"
-    extractor: "FsaEdinetExtractor"
-    status: "production_eligible"
-
-  - source_id: fsa-edinet-2027-draft
-    legacy_id: fsa_edinet_2027_draft
-    authority: "金融庁 (Financial Services Agency)"
-    authority_class: "A"
-    title: "2027年版EDINETタクソノミ（案）(Draft for Public Consultation)"
-    official_url: "https://www.fsa.go.jp/search/20260911.html"
-    source_type: "taxonomy"
-    domains: ["accounting"]
-    subdomains: ["financial_accounting"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2027-draft"
-    published_at: "2026-09-11"
-    retrieved_at: "2026-09-30T23:03:39Z"
-    license: "PDL-1.0 (Draft Consultation)"
-    reuse_status: "YELLOW"
-    reuse_notes: "Draft release strictly staged in staging/fsa_edinet_2027_draft/. BLOCKED from unflagged production release."
-    raw_snapshot_path: "staging/fsa_edinet_2027_draft"
-    raw_sha256: "84086e07d1e37e9742bbdc165a0459152a7d8cb9a5147bb33bc3cfcd7161fd88"
-    extractor: "FsaEdinetExtractor"
-    status: "staging_only"
-
-  - source_id: nta-tax-glossary
-    legacy_id: nta_tax_glossary_2026
-    authority: "国税庁 (National Tax Agency)"
-    authority_class: "A"
-    title: "国税庁 タックスアンサー 専門用語集・コード一覧・省略用語集"
-    official_url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm"
-    source_type: "statutory_glossary"
-    domains: ["tax"]
-    subdomains: ["corporate_tax", "consumption_tax", "income_tax", "withholding_tax", "local_tax", "tax_filing", "tax_payment", "deductions", "tax_audit"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-09-30T23:03:41Z"
-    license: "PDL-1.0 (Government Website Terms of Use)"
-    reuse_status: "GREEN"
-    reuse_notes: "Permitted for commercial and educational transformation. Direct statutory tax terminology extraction."
-    raw_snapshot_path: "data/raw/nta/taxanswer"
-    raw_sha256: "615b074a44965f1221d7db1e928b0f2551e29f15dd63eb4849aacee82eab5fc4"
-    extractor: "NtaTaxExtractor"
-    status: "production_eligible"
-
-  - source_id: asbj-accounting-standards
-    legacy_id: asbj_accounting_standards
-    authority: "企業会計基準委員会 (ASBJ)"
-    authority_class: "B"
-    title: "企業会計基準・適用指針一覧 (Corporate Accounting Standards Catalog)"
-    official_url: "https://www.asb.or.jp/jp/accounting_standards/"
-    source_type: "accounting_standards"
-    domains: ["accounting"]
-    subdomains: ["financial_accounting", "financial_statements", "closing", "fixed_assets", "inventory", "audit"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-15"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "Professional Association Policy (Review Required)"
-    reuse_status: "YELLOW"
-    reuse_notes: "Terminology and standard titles extraction permitted; bulk copying of explanatory text prohibited. Independent explanations created."
-    raw_snapshot_path: "data/raw/asbj/standards/2026"
-    raw_sha256: "504d0191ee02791e4335788c9444b2585aad3479bca978c06034b1e146fc85ac"
-    extractor: "JicpaAsbjExtractor"
-    status: "production_eligible"
-
-  - source_id: jicpa-glossary
-    legacy_id: jicpa_glossary
-    authority: "日本公認会計士協会 (JICPA)"
-    authority_class: "B"
-    title: "日本公認会計士協会 会計・監査用語かんたん解説集"
-    official_url: "https://jicpa.or.jp/cpainfo/introduction/keyword/"
-    source_type: "professional_glossary"
-    domains: ["accounting", "management"]
-    subdomains: ["audit", "financial_accounting", "corporate_governance", "internal_control"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-09-30T23:03:44Z"
-    license: "Copyright JICPA (Reference Only)"
-    reuse_status: "YELLOW"
-    reuse_notes: "Exclusively used as terminology discovery index. Bulk reproduction of explanatory prose prohibited. Explanations generated independently."
-    raw_snapshot_path: "data/raw/jicpa/glossary"
-    raw_sha256: "cc0b128e65c34cfb95b8e041d7ae561913a998d534dfd03abf883ea96e08ea85"
-    extractor: "JicpaAsbjExtractor"
-    status: "production_eligible"
-
-  - source_id: japan-customs-trade
-    legacy_id: japan_customs_2026
-    authority: "財務省関税局 (Japan Customs, Ministry of Finance)"
-    authority_class: "A"
-    title: "税関 通関手続・関税制度・NACCS業務ガイドライン"
-    official_url: "https://www.customs.go.jp/procedure/index.htm"
-    source_type: "statutory_guidance"
-    domains: ["trade"]
-    subdomains: ["import", "export", "customs_clearance", "tariff", "origin"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "PDL-1.0 (Government Website Terms of Use)"
-    reuse_status: "GREEN"
-    reuse_notes: "Permitted for commercial and educational transformation under government terms of use. Authoritative customs and tariff terminology."
-    raw_snapshot_path: "data/raw/japan-customs/trade/2026"
-    raw_sha256: "378fae6843a1a7559e2659dada7484e1a0ba0973f87cbc30779cae13cac3a7c0"
-    extractor: "CustomsTradeExtractor"
-    status: "production_eligible"
-
-  - source_id: jetro-trade
-    legacy_id: jetro_trade
-    authority: "日本貿易振興機構 (JETRO)"
-    authority_class: "C"
-    title: "JETRO 貿易実務用語・インコタームズ2020解説"
-    official_url: "https://www.jetro.go.jp/theme/export/"
-    source_type: "trade_guidance"
-    domains: ["trade"]
-    subdomains: ["incoterms", "shipping", "freight", "trade_documents", "trade_finance"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "Copyright JETRO (Restricted Reference)"
-    reuse_status: "YELLOW"
-    reuse_notes: "Used for international trade terminology discovery and seed concepts. Explanatory prose and examples written independently."
-    raw_snapshot_path: "data/raw/jetro/trade/2026"
-    raw_sha256: "11536ec545eeabd71d7ea2c34b6ae1fbf48c65c8fa7c6ae91d812b574efe6b77"
-    extractor: "JetroTradeExtractor"
-    status: "production_eligible"
-
-  - source_id: mhlw-labor
-    legacy_id: mhlw_labor_2026
-    authority: "厚生労働省 (Ministry of Health, Labour and Welfare)"
-    authority_class: "A"
-    title: "厚生労働省 労働基準法・就業規則・社会保険実務用語一覧"
-    official_url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/index.html"
-    source_type: "statutory_guidance"
-    domains: ["hr"]
-    subdomains: ["recruitment", "employment", "payroll", "social_insurance", "working_hours", "leave", "labor_management"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "PDL-1.0 (Government Website Terms of Use)"
-    reuse_status: "GREEN"
-    reuse_notes: "Permitted for educational reuse. Primary statutory labor standards and social insurance concepts."
-    raw_snapshot_path: "data/raw/mhlw/labor/2026"
-    raw_sha256: "1e0567886690c1dbd29fa5171843f67f103cf3e6f51328e9fc8a219d8ccf1a06"
-    extractor: "MhlwLaborExtractor"
-    status: "production_eligible"
-
-  - source_id: egov-corporate-law
-    legacy_id: egov_corporate_2026
-    authority: "デジタル庁・法務省 (e-Gov / Ministry of Justice)"
-    authority_class: "A"
-    title: "e-Gov 法令検索 会社法・商業登記法 (Companies Act & Commercial Registration)"
-    official_url: "https://laws.e-gov.go.jp/law/417AC0000000086"
-    source_type: "statutory_legislation"
-    domains: ["legal", "management"]
-    subdomains: ["corporate_law", "corporate_governance", "dispute_resolution", "board_management"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "PDL-1.0 (Government Website Terms of Use)"
-    reuse_status: "GREEN"
-    reuse_notes: "Official statutory legislation published by the Japanese Government. High-authority legal terminology."
-    raw_snapshot_path: "data/raw/egov/corporate-legal/2026"
-    raw_sha256: "fd4745bb7353449b32ee889f025b53191d7549ffc53df08f5161b76b11c197e5"
-    extractor: "EgovLegalExtractor"
-    status: "production_eligible"
-
-  - source_id: smrj-business-guidance
-    legacy_id: smrj_business_2026
-    authority: "中小企業基盤整備機構 (SMRJ / J-Net21)"
-    authority_class: "C"
-    title: "中小機構・J-Net21 中小企業実務・調達・経営管理手引き"
-    official_url: "https://j-net21.smrj.go.jp/"
-    source_type: "business_guidance"
-    domains: ["business", "management", "sales", "purchasing", "office_communication"]
-    subdomains: ["general_business", "operations", "procurement", "corporate_strategy", "compliance", "sourcing", "supplier_management", "contracts", "internal_reporting"]
-    jurisdiction: "JP"
-    language: "ja"
-    version: "2026"
-    published_at: "2026-01-01"
-    retrieved_at: "2026-10-01T04:30:00Z"
-    license: "Institutional Terms of Use (Review Required)"
-    reuse_status: "YELLOW"
-    reuse_notes: "Terminology reference for Japanese SME workplace practices and commercial subcontracting rules. Learner content written independently."
-    raw_snapshot_path: "data/raw/smrj/business/2026"
-    raw_sha256: "bc4ee17baced3f469ee4ac67b2db1fc2235a71cc68fb6ee2f8bb13f8a3e8320b"
-    extractor: "SmrjBusinessExtractor"
-    status: "production_eligible"
+- source_id: fsa-edinet-taxonomy
+  legacy_id: fsa_edinet_2026
+  authority: 金融庁 (Financial Services Agency)
+  authority_class: A
+  title: EDINETタクソノミ 勘定科目リスト・要素リスト (EDINET Taxonomy Core)
+  official_url: https://www.fsa.go.jp/search/20251111.html
+  source_type: taxonomy
+  domains:
+  - accounting
+  - finance
+  subdomains:
+  - financial_accounting
+  - bookkeeping
+  - financial_statements
+  - closing
+  - receivables
+  - payables
+  - fixed_assets
+  - inventory
+  - corporate_finance
+  jurisdiction: JP
+  language: ja
+  version: 2026-final
+  published_at: '2025-11-11'
+  retrieved_at: '2026-09-30T23:03:34Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Permitted for commercial and educational transformation with statutory
+    attribution. Unrestricted canonical taxonomy ingestion.
+  raw_snapshot_path: data/raw/fsa/edinet/2026
+  raw_sha256: 2fb26e82471d7570e51588996f89c80dc2db8aa74b0bcb0203ead36c588d5c86
+  extractor: FsaEdinetExtractor
+  status: production_eligible
+- source_id: fsa-edinet-2027-draft
+  legacy_id: fsa_edinet_2027_draft
+  authority: 金融庁 (Financial Services Agency)
+  authority_class: A
+  title: 2027年版EDINETタクソノミ（案）(Draft for Public Consultation)
+  official_url: https://www.fsa.go.jp/search/20260911.html
+  source_type: taxonomy
+  domains:
+  - accounting
+  subdomains:
+  - financial_accounting
+  jurisdiction: JP
+  language: ja
+  version: 2027-draft
+  published_at: '2026-09-11'
+  retrieved_at: '2026-09-30T23:03:39Z'
+  license: PDL-1.0 (Draft Consultation)
+  reuse_status: YELLOW
+  reuse_notes: Draft release strictly staged in staging/fsa_edinet_2027_draft/. BLOCKED
+    from unflagged production release.
+  raw_snapshot_path: staging/fsa_edinet_2027_draft
+  raw_sha256: 84086e07d1e37e9742bbdc165a0459152a7d8cb9a5147bb33bc3cfcd7161fd88
+  extractor: FsaEdinetExtractor
+  status: staging_only
+- source_id: nta-tax-glossary
+  legacy_id: nta_tax_glossary_2026
+  authority: 国税庁 (National Tax Agency)
+  authority_class: A
+  title: 国税庁 タックスアンサー 専門用語集・コード一覧・省略用語集
+  official_url: https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm
+  source_type: statutory_glossary
+  domains:
+  - tax
+  subdomains:
+  - corporate_tax
+  - consumption_tax
+  - income_tax
+  - withholding_tax
+  - local_tax
+  - tax_filing
+  - tax_payment
+  - deductions
+  - tax_audit
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-09-30T23:03:41Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Permitted for commercial and educational transformation. Direct statutory
+    tax terminology extraction.
+  raw_snapshot_path: data/raw/nta/taxanswer
+  raw_sha256: 615b074a44965f1221d7db1e928b0f2551e29f15dd63eb4849aacee82eab5fc4
+  extractor: NtaTaxExtractor
+  status: production_eligible
+- source_id: asbj-accounting-standards
+  legacy_id: asbj_accounting_standards
+  authority: 企業会計基準委員会 (ASBJ)
+  authority_class: B
+  title: 企業会計基準・適用指針一覧 (Corporate Accounting Standards Catalog)
+  official_url: https://www.asb.or.jp/jp/accounting_standards/
+  source_type: accounting_standards
+  domains:
+  - accounting
+  subdomains:
+  - financial_accounting
+  - financial_statements
+  - closing
+  - fixed_assets
+  - inventory
+  - audit
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-15'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: Professional Association Policy (Review Required)
+  reuse_status: YELLOW
+  reuse_notes: Terminology and standard titles extraction permitted; bulk copying
+    of explanatory text prohibited. Independent explanations created.
+  raw_snapshot_path: data/raw/asbj/standards/2026
+  raw_sha256: 504d0191ee02791e4335788c9444b2585aad3479bca978c06034b1e146fc85ac
+  extractor: JicpaAsbjExtractor
+  status: production_eligible
+- source_id: jicpa-glossary
+  legacy_id: jicpa_glossary
+  authority: 日本公認会計士協会 (JICPA)
+  authority_class: B
+  title: 日本公認会計士協会 会計・監査用語かんたん解説集
+  official_url: https://jicpa.or.jp/cpainfo/introduction/keyword/
+  source_type: professional_glossary
+  domains:
+  - accounting
+  - management
+  subdomains:
+  - audit
+  - financial_accounting
+  - corporate_governance
+  - internal_control
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-09-30T23:03:44Z'
+  license: Copyright JICPA (Reference Only)
+  reuse_status: YELLOW
+  reuse_notes: Exclusively used as terminology discovery index. Bulk reproduction
+    of explanatory prose prohibited. Explanations generated independently.
+  raw_snapshot_path: data/raw/jicpa/glossary
+  raw_sha256: cc0b128e65c34cfb95b8e041d7ae561913a998d534dfd03abf883ea96e08ea85
+  extractor: JicpaAsbjExtractor
+  status: production_eligible
+- source_id: japan-customs-trade
+  legacy_id: japan_customs_2026
+  authority: 財務省関税局 (Japan Customs, Ministry of Finance)
+  authority_class: A
+  title: 税関 通関手続・関税制度・NACCS業務ガイドライン
+  official_url: https://www.customs.go.jp/procedure/index.htm
+  source_type: statutory_guidance
+  domains:
+  - trade
+  subdomains:
+  - import
+  - export
+  - customs_clearance
+  - tariff
+  - origin
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Permitted for commercial and educational transformation under government
+    terms of use. Authoritative customs and tariff terminology.
+  raw_snapshot_path: data/raw/japan-customs/trade/2026
+  raw_sha256: 378fae6843a1a7559e2659dada7484e1a0ba0973f87cbc30779cae13cac3a7c0
+  extractor: CustomsTradeExtractor
+  status: production_eligible
+- source_id: jetro-trade
+  legacy_id: jetro_trade
+  authority: 日本貿易振興機構 (JETRO)
+  authority_class: C
+  title: JETRO 貿易実務用語・インコタームズ2020解説
+  official_url: https://www.jetro.go.jp/theme/export/
+  source_type: trade_guidance
+  domains:
+  - trade
+  subdomains:
+  - incoterms
+  - shipping
+  - freight
+  - trade_documents
+  - trade_finance
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: Copyright JETRO (Restricted Reference)
+  reuse_status: YELLOW
+  reuse_notes: Used for international trade terminology discovery and seed concepts.
+    Explanatory prose and examples written independently.
+  raw_snapshot_path: data/raw/jetro/trade/2026
+  raw_sha256: 11536ec545eeabd71d7ea2c34b6ae1fbf48c65c8fa7c6ae91d812b574efe6b77
+  extractor: JetroTradeExtractor
+  status: production_eligible
+- source_id: mhlw-labor
+  legacy_id: mhlw_labor_2026
+  authority: 厚生労働省 (Ministry of Health, Labour and Welfare)
+  authority_class: A
+  title: 厚生労働省 労働基準法・就業規則・社会保険実務用語一覧
+  official_url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/index.html
+  source_type: statutory_guidance
+  domains:
+  - hr
+  subdomains:
+  - recruitment
+  - employment
+  - payroll
+  - social_insurance
+  - working_hours
+  - leave
+  - labor_management
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Permitted for educational reuse. Primary statutory labor standards
+    and social insurance concepts.
+  raw_snapshot_path: data/raw/mhlw/labor/2026
+  raw_sha256: 1e0567886690c1dbd29fa5171843f67f103cf3e6f51328e9fc8a219d8ccf1a06
+  extractor: MhlwLaborExtractor
+  status: production_eligible
+- source_id: egov-corporate-law
+  legacy_id: egov_corporate_2026
+  authority: デジタル庁・法務省 (e-Gov / Ministry of Justice)
+  authority_class: A
+  title: e-Gov 法令検索 会社法・商業登記法 (Companies Act & Commercial Registration)
+  official_url: https://laws.e-gov.go.jp/law/417AC0000000086
+  source_type: statutory_legislation
+  domains:
+  - legal
+  - management
+  subdomains:
+  - corporate_law
+  - corporate_governance
+  - dispute_resolution
+  - board_management
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Official statutory legislation published by the Japanese Government.
+    High-authority legal terminology.
+  raw_snapshot_path: data/raw/egov/corporate-legal/2026
+  raw_sha256: fd4745bb7353449b32ee889f025b53191d7549ffc53df08f5161b76b11c197e5
+  extractor: EgovLegalExtractor
+  status: production_eligible
+- source_id: smrj-business-guidance
+  legacy_id: smrj_business_2026
+  authority: 中小企業基盤整備機構 (SMRJ / J-Net21)
+  authority_class: C
+  title: 中小機構・J-Net21 中小企業実務・調達・経営管理手引き
+  official_url: https://j-net21.smrj.go.jp/
+  source_type: business_guidance
+  domains:
+  - business
+  - management
+  - sales
+  - purchasing
+  - office_communication
+  subdomains:
+  - general_business
+  - operations
+  - procurement
+  - corporate_strategy
+  - compliance
+  - sourcing
+  - supplier_management
+  - contracts
+  - internal_reporting
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T04:30:00Z'
+  license: Institutional Terms of Use (Review Required)
+  reuse_status: YELLOW
+  reuse_notes: Terminology reference for Japanese SME workplace practices and commercial
+    subcontracting rules. Learner content written independently.
+  raw_snapshot_path: data/raw/smrj/business/2026
+  raw_sha256: bc4ee17baced3f469ee4ac67b2db1fc2235a71cc68fb6ee2f8bb13f8a3e8320b
+  extractor: SmrjBusinessExtractor
+  status: production_eligible
+- source_id: nenkin-social-insurance
+  legacy_id: nenkin_insurance_2026
+  authority: 日本年金機構 (Japan Pension Service)
+  authority_class: A
+  title: 日本年金機構 健康保険・厚生年金保険・算定基礎実務ガイド
+  official_url: https://www.nenkin.go.jp/service/kounen/jigyosho-hiho/hihokensha1/index.html
+  source_type: statutory_guidance
+  domains:
+  - hr
+  subdomains:
+  - social_insurance
+  - payroll
+  - employment
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Official public guidance for social insurance, welfare pension, and
+    standard monthly remuneration administration.
+  raw_snapshot_path: data/raw/nenkin/social-insurance/2026
+  raw_sha256: a936cead683484c82d353505ceb589f1345319000c1f218d3875e80b9d23acef
+  extractor: NenkinExtractor
+  status: production_eligible
+- source_id: naccs-trade
+  legacy_id: naccs_trade_2026
+  authority: 輸出入・港湾関連情報処理センター (NACCS Center / MOF / MLIT)
+  authority_class: A
+  title: NACCS 貿易・通関EDI業務仕様・業務コード集
+  official_url: https://bbs.naccs.jp/naccs/dfw/bbs/doc/
+  source_type: statutory_guidance
+  domains:
+  - trade
+  subdomains:
+  - customs_clearance
+  - shipping
+  - freight
+  - trade_documents
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Authoritative automated customs declaration and EDI port processing
+    terminology.
+  raw_snapshot_path: data/raw/naccs/trade/2026
+  raw_sha256: f8cf793dd022580082fb28a1ed982e16f08146e4e4c7472202dad393e97ac988
+  extractor: NaccsExtractor
+  status: production_eligible
+- source_id: jftc-subcontract
+  legacy_id: jftc_subcontract_2026
+  authority: 公正取引委員会 (Japan Fair Trade Commission)
+  authority_class: A
+  title: 公正取引委員会 下請代金支払遅延等防止法（下請法）運用基準・調達適正化指針
+  official_url: https://www.jftc.go.jp/shitauke/
+  source_type: statutory_guidance
+  domains:
+  - purchasing
+  - business
+  subdomains:
+  - supplier_management
+  - purchase_order
+  - inspection
+  - compliance
+  - procurement
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Statutory rules and prohibited purchasing conducts under the Subcontract
+    Act.
+  raw_snapshot_path: data/raw/jftc/subcontract/2026
+  raw_sha256: e652326cb68ed919b7eea2eaa98393e6b4161994fc402f0185eea2ce4bbc97c5
+  extractor: JftcExtractor
+  status: production_eligible
+- source_id: smea-procurement
+  legacy_id: smea_procurement_2026
+  authority: 中小企業庁 (Small and Medium Enterprise Agency, METI)
+  authority_class: A
+  title: 中小企業庁 適正取引支援・サプライチェーン調達実務指針
+  official_url: https://www.chusho.meti.go.jp/keiei/torihiki/
+  source_type: statutory_guidance
+  domains:
+  - purchasing
+  - sales
+  - business
+  subdomains:
+  - sourcing
+  - delivery
+  - quotation
+  - negotiation
+  - operations
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Government guidance on SME supplier relationship management, RFQs,
+    and pricing negotiation.
+  raw_snapshot_path: data/raw/smea/procurement/2026
+  raw_sha256: 000344335ea9129787532b3112a78e832194d62570df4f9931f20e8571009799
+  extractor: SmeaExtractor
+  status: production_eligible
+- source_id: moj-commercial-registration
+  legacy_id: moj_corporate_2026
+  authority: 法務省民事局 (Ministry of Justice, Civil Affairs Bureau)
+  authority_class: A
+  title: 法務省 商業・法人登記手続・登記記録用語一覧
+  official_url: https://www.moj.go.jp/MINJI/minji06.html
+  source_type: statutory_guidance
+  domains:
+  - legal
+  - management
+  subdomains:
+  - corporate_law
+  - corporate_governance
+  - board_management
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Authoritative commercial registration, corporate resolution, and registry
+    certification terminology.
+  raw_snapshot_path: data/raw/moj/corporate-legal/2026
+  raw_sha256: 164be3d2148e72b9c19b61b87854965d9d06fd6036813865463cefa3226c5982
+  extractor: MojExtractor
+  status: production_eligible
+- source_id: jpo-intellectual-property
+  legacy_id: jpo_ip_2026
+  authority: 特許庁 (Japan Patent Office, METI)
+  authority_class: A
+  title: 特許庁 知的財産権・特許・商標・営業秘密実務手引
+  official_url: https://www.jpo.go.jp/
+  source_type: statutory_guidance
+  domains:
+  - legal
+  - business
+  subdomains:
+  - intellectual_property
+  - contracts
+  - compliance
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Official intellectual property, trademark classification, and patent
+    licensing terms.
+  raw_snapshot_path: data/raw/jpo/ip/2026
+  raw_sha256: 0d4b1111cd6577f9ca9700bec6268e3e835c0ba977eb348a6b7706bd35b5f126
+  extractor: JpoExtractor
+  status: production_eligible
+- source_id: meti-commerce-operations
+  legacy_id: meti_commerce_2026
+  authority: 経済産業省 (Ministry of Economy, Trade and Industry)
+  authority_class: A
+  title: 経済産業省 商取引実務指針・電子契約及び受発注管理基準
+  official_url: https://www.meti.go.jp/policy/economy/chizai/chiteki/
+  source_type: statutory_guidance
+  domains:
+  - sales
+  - business
+  - office_communication
+  - management
+  subdomains:
+  - proposal
+  - closing
+  - account_management
+  - internal_reporting
+  - formal_correspondence
+  - meeting_management
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Government guidance on commercial transactions, business agreements,
+    and workplace correspondence.
+  raw_snapshot_path: data/raw/meti/commerce/2026
+  raw_sha256: 722db08beff0405ee8820dd5b68fcba358147b4decb9286fd184c6fd142dfd4f
+  extractor: MetiCommerceExtractor
+  status: production_eligible
+- source_id: nta-corporate-tax
+  legacy_id: nta_corp_2026
+  authority: 国税庁 (National Tax Agency)
+  authority_class: A
+  title: 国税庁 法人税・消費税・源泉所得税 法令解釈通達・専門用語集
+  official_url: https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm
+  source_type: statutory_guidance
+  domains:
+  - tax
+  subdomains:
+  - corporate_tax
+  - consumption_tax
+  - withholding_tax
+  - tax_filing
+  - tax_audit
+  - deductions
+  jurisdiction: JP
+  language: ja
+  version: '2026'
+  published_at: '2026-01-01'
+  retrieved_at: '2026-10-01T08:00:00Z'
+  license: PDL-1.0 (Government Website Terms of Use)
+  reuse_status: GREEN
+  reuse_notes: Statutory corporate tax provisions, qualified invoice regulations,
+    and tax audit terminology.
+  raw_snapshot_path: data/raw/nta/corporate-tax/2026
+  raw_sha256: f6103b4a9c9cd5be238ebb403e1f1e4719191cbd8d66042cfa40e7f30c704437
+  extractor: NtaCorporateTaxExtractor
+  status: production_eligible

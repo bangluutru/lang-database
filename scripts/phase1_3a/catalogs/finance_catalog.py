@@ -1,0 +1,65 @@
+"""
+scripts/phase1_3a/catalogs/finance_catalog.py
+Authoritative financial, commercial banking, and treasury catalog
+from Financial Services Agency (金融庁) and Bank of Japan (日本銀行) guidance.
+Covers Corporate Loans, Bills, Factoring, Capital Raising, Swaps, FX, and Treasury Management.
+"""
+
+FINANCE_TERMS = [
+    # Commercial Lending & Collateral (融資・担保)
+    {"term": "当座貸越", "en": "Bank overdraft facility", "subdomain": "banking"},
+    {"term": "短期借入金", "en": "Short-term borrowings (due within one year)", "subdomain": "corporate_finance"},
+    {"term": "長期借入金", "en": "Long-term borrowings", "subdomain": "corporate_finance"},
+    {"term": "約定弁済", "en": "Scheduled contractual debt repayment", "subdomain": "banking"},
+    {"term": "期日一括返済", "en": "Lump-sum repayment at maturity (bullet repayment)", "subdomain": "banking"},
+    {"term": "プロパー融資", "en": "Direct commercial bank loan without credit guarantee backing", "subdomain": "banking"},
+    {"term": "保証協会付き融資", "en": "Credit guarantee corporation backed bank loan", "subdomain": "banking"},
+    {"term": "信用保証協会", "en": "Credit Guarantee Corporation", "subdomain": "banking"},
+    {"term": "連帯保証人", "en": "Joint and several guarantor", "subdomain": "banking"},
+    {"term": "抵当権", "en": "Mortgage right (specific debt)", "subdomain": "banking"},
+    {"term": "根抵当権", "en": "Revolving mortgage right (credit ceiling for fluctuating debts)", "subdomain": "banking"},
+    {"term": "質権", "en": "Pledge right / Security pledge", "subdomain": "banking"},
+    {"term": "譲渡担保", "en": "Security interest by transfer of title", "subdomain": "banking"},
+    {"term": "金銭消費貸借契約書", "en": "Loan agreement / Contract for consumption loan for consumption of money", "subdomain": "banking"},
+    {"term": "信用格付け", "en": "Credit rating", "subdomain": "corporate_finance"},
+    {"term": "債務者区分", "en": "Debtor classification (normal, attention, dangerous, bankrupt)", "subdomain": "banking"},
+    {"term": "正常先", "en": "Normal borrower (good credit standing)", "subdomain": "banking"},
+    {"term": "要注意先", "en": "Borrower requiring caution / Watch-list borrower", "subdomain": "banking"},
+    {"term": "破綻懸念先", "en": "Borrower in danger of bankruptcy", "subdomain": "banking"},
+    {"term": "実質破綻先", "en": "Substantially bankrupt borrower", "subdomain": "banking"},
+    {"term": "破綻先", "en": "Bankrupt borrower", "subdomain": "banking"},
+    {"term": "貸出金", "en": "Loans and advances / Bank credit portfolio", "subdomain": "banking"},
+    {"term": "買現先勘定", "en": "Commercial paper and securities purchased under resale agreements", "subdomain": "capital_markets"},
+    {"term": "コミットメントライン", "en": "Commitment line agreement / Revolving loan facility", "subdomain": "corporate_finance"},
+    {"term": "シンジケートローン", "en": "Syndicated loan", "subdomain": "corporate_finance"},
+    {"term": "アレンジャー", "en": "Arranger / Lead arranger bank", "subdomain": "corporate_finance"},
+    {"term": "エージェント", "en": "Administrative agent bank (syndicated facility)", "subdomain": "corporate_finance"},
+    # Commercial Bills & Settlements (手形・決済)
+    {"term": "約束手形", "en": "Promissory note", "subdomain": "settlement"},
+    {"term": "為替手形", "en": "Bill of exchange", "subdomain": "settlement"},
+    {"term": "手形振出人", "en": "Drawer of commercial bill", "subdomain": "settlement"},
+    {"term": "手形裏書", "en": "Endorsement of commercial bill", "subdomain": "settlement"},
+    {"term": "裏書譲渡", "en": "Transfer of bill by endorsement", "subdomain": "settlement"},
+    {"term": "白地手形", "en": "Blank bill / Incomplete promissory note", "subdomain": "settlement"},
+    {"term": "手形割引", "en": "Discounting of commercial bill", "subdomain": "settlement"},
+    {"term": "不渡手形", "en": "Dishonored bill / Defaulted note", "subdomain": "settlement"},
+    {"term": "取引停止処分", "en": "Suspension of bank clearing house transactions (after 2nd dishonor)", "subdomain": "settlement"},
+    {"term": "ファクタリング", "en": "Factoring / Receivables purchase financing", "subdomain": "settlement"},
+    {"term": "2者間ファクタリング", "en": "Two-party factoring (without notifying debtor)", "subdomain": "settlement"},
+    {"term": "3者間ファクタリング", "en": "Three-party factoring (with formal notification and debtor consent)", "subdomain": "settlement"},
+    # Corporate Funding & Capital Markets (資本市場・資金調達)
+    {"term": "普通社債", "en": "Straight corporate bond", "subdomain": "corporate_finance"},
+    {"term": "転換社債型新株予約権付社債", "en": "Convertible bond with share acquisition rights (CB)", "subdomain": "corporate_finance"},
+    {"term": "第三者割当増資", "en": "Third-party private placement capital increase", "subdomain": "capital_markets"},
+    {"term": "株主割当増資", "en": "Rights offering to existing shareholders", "subdomain": "capital_markets"},
+    {"term": "公募増資", "en": "Public offering capital increase", "subdomain": "capital_markets"},
+    {"term": "クラウドファンディング", "en": "Crowdfunding", "subdomain": "corporate_finance"},
+    {"term": "自己資本比率", "en": "Capital adequacy ratio (BIS capital ratio)", "subdomain": "banking"},
+    {"term": "不良債権", "en": "Non-performing loan (NPL)", "subdomain": "banking"},
+    {"term": "デューデリジェンス", "en": "Due diligence investigation (DD)", "subdomain": "corporate_finance"},
+    {"term": "為替予約", "en": "Foreign exchange forward contract", "subdomain": "treasury"},
+    {"term": "金利スワップ", "en": "Interest rate swap contract", "subdomain": "treasury"},
+    {"term": "通貨スワップ", "en": "Currency swap contract", "subdomain": "treasury"},
+    {"term": "ヘッジ会計", "en": "Hedge accounting", "subdomain": "treasury"},
+    {"term": "フリーキャッシュフロー", "en": "Free cash flow (FCF)", "subdomain": "corporate_finance"},
+]
