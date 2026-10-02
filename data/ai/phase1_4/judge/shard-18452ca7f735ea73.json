@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:10:45Z",
+ "items": [
+  {
+   "key": "cf7907eb3e48993b34164c56d85e74758550f2ec90db10c37cb6ae5180029143",
+   "input": {
+    "id": "wk-3712-s3",
+    "en": "bath",
+    "en_pos": "noun",
+    "en_sense": "The act of bathing; an instance of this; the taking of a bath.",
+    "ja": "湯浴み",
+    "ja_reading": "ゆあみ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(taking a) bath",
+     "hot spring cure"
+    ],
+    "vi": "tắm"
+   },
+   "output": {
+    "id": "wk-3712-s3",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'tắm' is a verb, not a noun. The Japanese '湯浴み' specifically means bathing in hot water and is less common than other words like '入浴'."
+   }
+  },
+  {
+   "key": "f85578a393526e93fd659cd44a38fe2312a83abc045aaf7bfd99539640143332",
+   "input": {
+    "id": "wk-3723-s0",
+    "en": "kick",
+    "en_pos": "noun",
+    "en_sense": "A hit or strike with the leg, foot or knee.",
+    "ja": "キック",
+    "ja_reading": "キック",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "kick"
+    ],
+    "vi": "đòn đá"
+   },
+   "output": {
+    "id": "wk-3723-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the noun 'kick' as a strike, though 'cú đá' is more common than 'đòn đá' in general Vietnamese."
+   }
+  },
+  {
+   "key": "12ff58eba0dec87b61d018d340c4ea37064da6875d15a79d834754d6a0eabba3",
+   "input": {
+    "id": "wk-377-s5",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "A pre-arranged meeting.",
+    "ja": "デート",
+    "ja_reading": "デート",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "date (with someone)",
+     "(social) outing (for two)",
+     "date night"
+    ],
+    "vi": "hẹn"
+   },
+   "output": {
+    "id": "wk-377-s5",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'hẹn' is a verb ('to make an appointment'), not a noun. The Japanese 'デート' is specifically a romantic date, which is narrower than the broad English definition provided."
+   }
+  },
+  {
+   "key": "6dfabf8b4f2a0e3758dbd30fabf2b43104e7b1ee3da91548c7dd5d8ae3e76ca2",
+   "input": {
+    "id": "wk-3782-s0",
+    "en": "download",
+    "en_pos": "noun",
+    "en_sense": "A file transfer to a given computer or device from a remote one through a network connection.",
+    "ja": "ダウンロード",
+    "ja_reading": "ダウンロード",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "download"
+    ],
+    "vi": "sự tải xuống"
+   },
+   "output": {
+    "id": "wk-3782-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are accurate and standard equivalents for the noun 'download'."
+   }
+  },
+  {
+   "key": "cbdf2fd89f2bc2724916d083ebc50ce93b0aec635e40d06c3f5c2700c7c2e686",
+   "input": {
+    "id": "wk-3943-s0",
+    "en": "echo",
+    "en_pos": "noun",
+    "en_sense": "A reflected sound that is heard again by its initial observer.",
+    "ja": "反響",
+    "ja_reading": "はんきょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "echo",
+     "reverberation"
+    ],
+    "vi": "tiếng vang"
+   },
+   "output": {
+    "id": "wk-3943-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '反響' is slightly broader than 'echo' as it also means 'reverberation'. The Vietnamese 'tiếng vang' is a perfect match. 'こだま' would be a more precise Japanese equivalent for 'echo'."
+   }
+  },
+  {
+   "key": "7e52065d5bcb39733879bb3550f18e39e9134eaf6e19f5558ce842ccdb6af751",
+   "input": {
+    "id": "wk-4070-s5",
+    "en": "sex",
+    "en_pos": "noun",
+    "en_sense": "Sexual activity, may be understood to be sexual intercourse unless preceded by a modifier.",
+    "ja": "セックス",
+    "ja_reading": "セックス",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "sex",
+     "sexual intercourse"
+    ],
+    "vi": "sự giao cấu"
+   },
+   "output": {
+    "id": "wk-4070-s5",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự giao cấu' is a very formal, clinical, or legal term for 'sexual intercourse' and does not match the general register of English 'sex' or Japanese 'セックス'."
+   }
+  },
+  {
+   "key": "f8d0b3048fef378940385accceefbca34067f34c5217000ebd6b5cb6c41faf62",
+   "input": {
+    "id": "wk-41-s0",
+    "en": "connotation",
+    "en_pos": "noun",
+    "en_sense": "A meaning of a word or phrase that is suggested or implied, as opposed to a denotation, or literal meaning. A characteristic of words or phrases, or of the contexts that words and phrases are used in.",
+    "ja": "含意",
+    "ja_reading": "がんい",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "implication",
+     "connotation"
+    ],
+    "vi": "hàm ý"
+   },
+   "output": {
+    "id": "wk-41-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent entry with perfect equivalents across all three languages."
+   }
+  },
+  {
+   "key": "5d37cf6309b912fddc3ea4ab900a28816e0e4b0fa1619edb7b5705bf40399702",
+   "input": {
+    "id": "wk-4134-s0",
+    "en": "envy",
+    "en_pos": "noun",
+    "en_sense": "Resentful desire of something possessed by another or others (but not limited to material possessions).",
+    "ja": "嫉妬",
+    "ja_reading": "しっと",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "jealousy",
+     "envy"
+    ],
+    "vi": "sự thèm muốn"
+   },
+   "output": {
+    "id": "wk-4134-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự thèm muốn' means 'craving' and misses the key resentful aspect of 'envy'. The Japanese '嫉妬' is broader, also covering 'jealousy'."
+   }
+  },
+  {
+   "key": "1a1171b8a8725d8380ea55f4aa815f01aca2f741a13bc7c5460a091acde77831",
+   "input": {
+    "id": "wk-4204-s0",
+    "en": "cognition",
+    "en_pos": "noun",
+    "en_sense": "The process of knowing, of acquiring knowledge and understanding through thought and through the senses.",
+    "ja": "認知",
+    "ja_reading": "にんち",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "acknowledgement",
+     "acknowledgment",
+     "recognition",
+     "cognition"
+    ],
+    "vi": "nhận thức"
+   },
+   "output": {
+    "id": "wk-4204-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard academic equivalents for 'cognition'."
+   }
+  },
+  {
+   "key": "0dfb2fcc14aa73a1493d83086d79fc016705571fac90a7bf7afe8bd2206776d2",
+   "input": {
+    "id": "wk-4229-e:567499",
+    "en": "consciousness",
+    "en_pos": "noun",
+    "en_sense": "awareness",
+    "ja": "意識",
+    "ja_reading": "いしき",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "consciousness"
+    ],
+    "vi": "ý thức"
+   },
+   "output": {
+    "id": "wk-4229-e:567499",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents for 'consciousness' or 'awareness'."
+   }
+  },
+  {
+   "key": "236daf951579c7ecb09f42bf8c46ad1d99efcb1f0364dc0aa89e2ee7d33cc952",
+   "input": {
+    "id": "wk-4386-s2",
+    "en": "crash",
+    "en_pos": "noun",
+    "en_sense": "A malfunction of computer software or hardware which causes it to shut down or become partially or totally inoperable.",
+    "ja": "クラッシュ",
+    "ja_reading": "クラッシュ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "crash (esp. of a vehicle)"
+    ],
+    "vi": "sự cố"
+   },
+   "output": {
+    "id": "wk-4386-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự cố' means 'incident' or 'problem' and is too general for the specific meaning of a computer 'crash'."
+   }
+  },
+  {
+   "key": "87fe995ccb39eeaa0c70fa4872364b875432554136679e221305a02d976013f7",
+   "input": {
+    "id": "wk-4404-s0",
+    "en": "kiss",
+    "en_pos": "noun",
+    "en_sense": "A touch with the lips, usually to express love or affection, or as a greeting.",
+    "ja": "キス",
+    "ja_reading": "キス",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "kiss"
+    ],
+    "vi": "nụ hôn"
+   },
+   "output": {
+    "id": "wk-4404-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for the noun 'kiss'."
+   }
+  }
+ ]
+}

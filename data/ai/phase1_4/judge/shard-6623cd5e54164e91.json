@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:05:44Z",
+ "items": [
+  {
+   "key": "83cdcff487e9e4a6358c522d0ce930860cbbb5ca1f04bfbc41ae12f57513d994",
+   "input": {
+    "id": "wk-962-s0",
+    "en": "forty",
+    "en_pos": "numeral",
+    "en_sense": "The cardinal number occurring after thirty-nine and before forty-one, represented in Roman numerals as XL and in Arabic numerals as 40.",
+    "ja": "四十",
+    "ja_reading": "よんじゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "forty",
+     "40"
+    ],
+    "vi": "bốn mươi"
+   },
+   "output": {
+    "id": "wk-962-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect correspondence for the number 40."
+   }
+  },
+  {
+   "key": "e23355d3de5805164a7651f7a7a3a422625f444a6e0f3da3343e0f6b40dfd212",
+   "input": {
+    "id": "wk-9624-s0",
+    "en": "confess",
+    "en_pos": "verb",
+    "en_sense": "To admit to the truth, particularly in the context of sins or crimes committed.",
+    "ja": "認める",
+    "ja_reading": "みとめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to admit",
+     "to accept",
+     "to confess (to a charge)"
+    ],
+    "vi": "thú nhận"
+   },
+   "output": {
+    "id": "wk-9624-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 認める is too broad, meaning 'to admit' or 'to recognize' in general, while the English sense and Vietnamese 'thú nhận' specifically refer to admitting crimes or sins."
+   }
+  },
+  {
+   "key": "d86e1bece5cb0f668d0322f121d6fde5059207f8524366e3039830afe8425460",
+   "input": {
+    "id": "wk-9626-e:6a52ae",
+    "en": "conceit",
+    "en_pos": "noun",
+    "en_sense": "overly high self-esteem",
+    "ja": "自惚れ",
+    "ja_reading": "うぬぼれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "conceit",
+     "vanity",
+     "pride",
+     "self-importance",
+     "egotism"
+    ],
+    "vi": "ngã mạn"
+   },
+   "output": {
+    "id": "wk-9626-e:6a52ae",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'ngã mạn' is correct but is a formal, literary, or religious term; a more common equivalent like 'tự cao tự đại' would be more natural."
+   }
+  },
+  {
+   "key": "d653651f4b76d745570b10ee89dcd1a9451ee750c99d3d394ccbf392557bd2a6",
+   "input": {
+    "id": "wk-9627-s0",
+    "en": "complexion",
+    "en_pos": "noun",
+    "en_sense": "The quality, colour, or appearance of the skin on the face.",
+    "ja": "顔色",
+    "ja_reading": "かおいろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complexion",
+     "skin tone",
+     "skin colour"
+    ],
+    "vi": "nước da"
+   },
+   "output": {
+    "id": "wk-9627-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard equivalents for 'complexion'."
+   }
+  },
+  {
+   "key": "dab07913ae5616d2fde3827f1aea4cfaf3ed89885cf4030cb3b6144788097c6e",
+   "input": {
+    "id": "wk-9629-e:090c8d",
+    "en": "cheek",
+    "en_pos": "noun",
+    "en_sense": "part of face",
+    "ja": "ほっぺた",
+    "ja_reading": "ほっぺた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cheek"
+    ],
+    "vi": "má"
+   },
+   "output": {
+    "id": "wk-9629-e:090c8d",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 'ほっぺた' is a colloquial/childish term for 'cheek'; the standard, neutral word is '頬' (ほお)."
+   }
+  },
+  {
+   "key": "4ffbbe8cfe62089b978a61f8fd6113fd76ea87c88331101f716fb10645a66c8b",
+   "input": {
+    "id": "wk-9636-s0",
+    "en": "beloved",
+    "en_pos": "adjective",
+    "en_sense": "Much loved, dearly loved.",
+    "ja": "最愛",
+    "ja_reading": "さいあい",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "beloved",
+     "dearest"
+    ],
+    "vi": "yêu quý"
+   },
+   "output": {
+    "id": "wk-9636-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'beloved'."
+   }
+  },
+  {
+   "key": "db6bd15c61fe333a11c2ccf97a81e4c86218ead196e7958c67fd3e550732aeef",
+   "input": {
+    "id": "wk-9642-s2",
+    "en": "complain",
+    "en_pos": "verb",
+    "en_sense": "To make a formal accusation or bring a formal charge.",
+    "ja": "訴える",
+    "ja_reading": "うったえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to complain"
+    ],
+    "vi": "thưa kiện"
+   },
+   "output": {
+    "id": "wk-9642-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The equivalents perfectly match the specific legal sense of 'complain' (to bring a formal charge)."
+   }
+  },
+  {
+   "key": "ccde1ea3764c094b5fc4ae2790c521c6582d6a13ae1dc060d003022143653e7f",
+   "input": {
+    "id": "wk-9648-s0",
+    "en": "boast",
+    "en_pos": "verb",
+    "en_sense": "To brag; to talk loudly in praise of oneself.",
+    "ja": "自慢する",
+    "ja_reading": "じまんする",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "pride (in one's achievements, possessions, etc.)",
+     "self-praise",
+     "boast"
+    ],
+    "vi": "khoe khoang"
+   },
+   "output": {
+    "id": "wk-9648-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and natural set of equivalents for 'boast'."
+   }
+  },
+  {
+   "key": "344168c29446760f7987a46d6b92296600394eed90d9690832ff574adea0a8e4",
+   "input": {
+    "id": "wk-9663-e:2f664e",
+    "en": "satisfy",
+    "en_pos": "verb",
+    "en_sense": "to be enough (for)",
+    "ja": "満たす",
+    "ja_reading": "みたす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to satisfy (conditions, one's appetite, etc.)",
+     "to meet (e.g. demands)",
+     "to fulfill",
+     "to gratify"
+    ],
+    "vi": "thoả mãn"
+   },
+   "output": {
+    "id": "wk-9663-e:2f664e",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the sense of satisfying a condition or requirement."
+   }
+  },
+  {
+   "key": "7a00cae64ad28da69a9daaff7546889871c7c8d75294b96531b9e3d8cb2edb37",
+   "input": {
+    "id": "wk-9665-s0",
+    "en": "darkness",
+    "en_pos": "noun",
+    "en_sense": "The state of being dark; lack of light; the absolute or comparative absence of light.",
+    "ja": "闇",
+    "ja_reading": "やみ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "darkness",
+     "the dark"
+    ],
+    "vi": "bóng tối"
+   },
+   "output": {
+    "id": "wk-9665-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and natural set of equivalents for 'darkness'."
+   }
+  },
+  {
+   "key": "5c8eda94aedd55edc45db6536dc09633bd69cbc33424ffe7de346bd3d1f2c8ef",
+   "input": {
+    "id": "wk-9667-s0",
+    "en": "debtor",
+    "en_pos": "noun",
+    "en_sense": "A person or firm that owes money; one in debt; one who owes a debt.",
+    "ja": "債務者",
+    "ja_reading": "さいむしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "debtor"
+    ],
+    "vi": "con nợ"
+   },
+   "output": {
+    "id": "wk-9667-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "There is a register mismatch; Japanese '債務者' is a formal/legal term, while Vietnamese 'con nợ' is a more common, informal term."
+   }
+  },
+  {
+   "key": "be5ecdc9f5ea95c9ca3bbb7ae9e2dc68e67912f7aef61516830c8fad29260305",
+   "input": {
+    "id": "wk-968-s0",
+    "en": "eighty",
+    "en_pos": "numeral",
+    "en_sense": "The cardinal number occurring after seventy-nine and before eighty-one, represented in Roman numerals as LXXX and in Arabic numerals as 80.",
+    "ja": "八十",
+    "ja_reading": "はちじゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "eighty",
+     "80"
+    ],
+    "vi": "tám mươi"
+   },
+   "output": {
+    "id": "wk-968-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect correspondence for the number 80."
+   }
+  }
+ ]
+}

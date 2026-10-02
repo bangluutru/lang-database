@@ -1,0 +1,410 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:33:06Z",
+ "items": [
+  {
+   "key": "fdd5007a37ee04148b6fd694a2ea3b84a615d9412ed1dfa576558cb42e196b58",
+   "input": {
+    "id": "jm-1277140-1-over_there",
+    "en": "over there",
+    "en_pos": "noun",
+    "en_sense": "over there; ahead; beyond; (in the) distance; far away; far off",
+    "ja": "向こう",
+    "ja_reading": "むこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "over there",
+     "ahead",
+     "beyond",
+     "(in the) distance",
+     "far away",
+     "far off"
+    ],
+    "vi": "đằng kia"
+   },
+   "output": {
+    "id": "jm-1277140-1-over_there",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and direct equivalents for 'over there'."
+   }
+  },
+  {
+   "key": "7803c384a7b1d34f56d9176b72951f7e259fdcea456536eb82f02de8b48d9fe8",
+   "input": {
+    "id": "jm-1277450-0-liking",
+    "en": "liking",
+    "en_pos": "adjective",
+    "en_sense": "liking; being fond of; to one's liking; to one's taste; preferred; favourite",
+    "ja": "好き",
+    "ja_reading": "すき",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "liking",
+     "being fond of",
+     "to one's liking",
+     "to one's taste",
+     "preferred",
+     "favourite"
+    ],
+    "vi": "ưa thích"
+   },
+   "output": {
+    "id": "jm-1277450-0-liking",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English lemma 'liking' is not an adjective, causing a fundamental POS mismatch with the Japanese and Vietnamese equivalents."
+   }
+  },
+  {
+   "key": "71c7fe5930bcb803c56428799a8622a8aa92c8683673cfb0d75dd84109e9a130",
+   "input": {
+    "id": "jm-1277490-0-nice",
+    "en": "nice",
+    "en_pos": "adjective",
+    "en_sense": "nice; likeable; desirable",
+    "ja": "好ましい",
+    "ja_reading": "このましい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "nice",
+     "likeable",
+     "desirable"
+    ],
+    "vi": "dễ chịu"
+   },
+   "output": {
+    "id": "jm-1277490-0-nice",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The three words have different nuances: 'nice' is broad, 'konomashii' implies desirability, and 'dễ chịu' implies pleasantness or comfort, leading to a sense mismatch."
+   }
+  },
+  {
+   "key": "aaecadaaf4bcbb77b7b39c1de9c149b8ca7e7420a5cd5af3188a500da2792905",
+   "input": {
+    "id": "jm-1277620-0-boom",
+    "en": "boom",
+    "en_pos": "noun",
+    "en_sense": "prosperous (economic) conditions; favourable conditions; (economic) boom; thriving business; brisk market",
+    "ja": "好況",
+    "ja_reading": "こうきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "prosperous (economic) conditions",
+     "favourable conditions",
+     "(economic) boom",
+     "thriving business",
+     "brisk market"
+    ],
+    "vi": "thịnh vượng"
+   },
+   "output": {
+    "id": "jm-1277620-0-boom",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good set of equivalents for economic prosperity, with the Vietnamese being slightly broader than the specific 'boom' sense but still acceptable."
+   }
+  },
+  {
+   "key": "38d158ce9e83b4f81e0fdf8ff3928a470d6510cdd757ae33b0120a8c8472bddc",
+   "input": {
+    "id": "jm-1277780-0-popularity",
+    "en": "popularity",
+    "en_pos": "noun",
+    "en_sense": "favorable reception; good reputation; popularity",
+    "ja": "好評",
+    "ja_reading": "こうひょう",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "favorable reception",
+     "good reputation",
+     "popularity"
+    ],
+    "vi": "sự yêu thích"
+   },
+   "output": {
+    "id": "jm-1277780-0-popularity",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 'kouhyou' refers to favorable reviews or reception, while the Vietnamese 'sự yêu thích' means fondness or being liked; these are related but distinct concepts."
+   }
+  },
+  {
+   "key": "285ebf0eb6e87061f263a60e401d4a958850851f637dc9b43fe7bb78f7a77c0f",
+   "input": {
+    "id": "jm-1278040-0-industry",
+    "en": "industry",
+    "en_pos": "noun",
+    "en_sense": "(manufacturing) industry",
+    "ja": "工業",
+    "ja_reading": "こうぎょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(manufacturing) industry"
+    ],
+    "vi": "công nghiệp"
+   },
+   "output": {
+    "id": "jm-1278040-0-industry",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect and standard equivalents for '(manufacturing) industry'."
+   }
+  },
+  {
+   "key": "ddcc3cb71b8b53bf21a19eb67407dc7f3a95a8b0916a17aea23b2bc743f763b9",
+   "input": {
+    "id": "jm-1278220-1-device",
+    "en": "device",
+    "en_pos": "noun",
+    "en_sense": "device; design; idea; plan; invention",
+    "ja": "工夫",
+    "ja_reading": "くふう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "device",
+     "design",
+     "idea",
+     "plan",
+     "invention"
+    ],
+    "vi": "thiết bị"
+   },
+   "output": {
+    "id": "jm-1278220-1-device",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "This entry incorrectly links the Japanese 'kufuu' (ingenuity, scheme) with the Vietnamese 'thiết bị' (physical device), which correspond to two different senses of the English word 'device'."
+   }
+  },
+  {
+   "key": "4a79fa5ff6a56606dc11d542067123f6e6eccceb95c7b4ea595b8558e0dcfbac",
+   "input": {
+    "id": "jm-1278380-0-happiness",
+    "en": "happiness",
+    "en_pos": "noun",
+    "en_sense": "happiness; blessedness; luck; fortune; felicity",
+    "ja": "幸い",
+    "ja_reading": "さいわい",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "happiness",
+     "blessedness",
+     "luck",
+     "fortune",
+     "felicity"
+    ],
+    "vi": "hạnh phúc"
+   },
+   "output": {
+    "id": "jm-1278380-0-happiness",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hạnh phúc' only covers the 'happiness' aspect, not the 'luck' or 'fortune' included in the English sense and the Japanese 'saiwai'."
+   }
+  },
+  {
+   "key": "306c4e7a782f2ec447a729c900afb1a264602d38167c57aac180f905e2242b08",
+   "input": {
+    "id": "jm-1278440-0-area",
+    "en": "area",
+    "en_pos": "noun",
+    "en_sense": "area; extent; dimensions; size",
+    "ja": "広さ",
+    "ja_reading": "ひろさ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "area",
+     "extent",
+     "dimensions",
+     "size"
+    ],
+    "vi": "diện tích"
+   },
+   "output": {
+    "id": "jm-1278440-0-area",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'hirosa' means 'spaciousness' or 'width', not 'area' as a quantitative measurement, for which 'menseki' is the correct term."
+   }
+  },
+  {
+   "key": "f7999854e3657338ea873b0f4b76cbc99192ae5e3ceab40247f717070ad467a5",
+   "input": {
+    "id": "jm-1278450-0-spread",
+    "en": "spread",
+    "en_pos": "verb",
+    "en_sense": "to spread; to be propagated",
+    "ja": "広まる",
+    "ja_reading": "ひろまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to spread",
+     "to be propagated"
+    ],
+    "vi": "lan truyền"
+   },
+   "output": {
+    "id": "jm-1278450-0-spread",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are perfect, natural equivalents for the intransitive sense of 'spread'."
+   }
+  },
+  {
+   "key": "439eb59f03441c42222b67ff6242f7b2420fb5d1fcd113faa54c62524d27f579",
+   "input": {
+    "id": "jm-1278810-0-busy",
+    "en": "busy",
+    "en_pos": "adjective",
+    "en_sense": "busy; hectic; hurried; rushed",
+    "ja": "慌ただしい",
+    "ja_reading": "あわただしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "busy",
+     "hectic",
+     "hurried",
+     "rushed"
+    ],
+    "vi": "bận rộn"
+   },
+   "output": {
+    "id": "jm-1278810-0-busy",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 'awatadashii' implies a hectic, rushed state, while the Vietnamese 'bận rộn' simply means 'busy', creating a mismatch in nuance."
+   }
+  },
+  {
+   "key": "42f46bde3be942a8f023af89cd16f8372b7445371e93cd1bdcb705d14bcf1d95",
+   "input": {
+    "id": "jm-1278830-0-panic",
+    "en": "panic",
+    "en_pos": "verb",
+    "en_sense": "to become confused (disconcerted, disorganized, disorganised); to be flustered; to panic",
+    "ja": "慌てる",
+    "ja_reading": "あわてる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to become confused (disconcerted, disorganized, disorganised)",
+     "to be flustered",
+     "to panic"
+    ],
+    "vi": "hoảng sợ"
+   },
+   "output": {
+    "id": "jm-1278830-0-panic",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hoảng sợ' means 'to be terrified', which mismatches the 'flustered' or 'confused' nuance central to the English sense and the Japanese 'awateru'."
+   }
+  }
+ ]
+}

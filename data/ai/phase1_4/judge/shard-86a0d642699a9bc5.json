@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:07Z",
+ "items": [
+  {
+   "key": "d0fd8cd9068731b738e637f62e6d649abbc13ea5d60a1778c7e7c5f3fe8e3b7b",
+   "input": {
+    "id": "wk-10742-s3",
+    "en": "reserve",
+    "en_pos": "noun",
+    "en_sense": "A tract of land reserved, or set apart, for a particular purpose",
+    "ja": "保護区",
+    "ja_reading": "ほごく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sanctuary",
+     "reserve (for wild animals)",
+     "nature preserve"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10742-s3",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The English sense 'a tract of land reserved for a particular purpose' is very general, whereas 保護区 specifically means a protected area for nature or wildlife."
+   }
+  },
+  {
+   "key": "7a26f2916eeec5c97dce69557fdb7c08d2d2e4dc5475516efbe44ca392a7057b",
+   "input": {
+    "id": "wk-10742-s5",
+    "en": "reserve",
+    "en_pos": "noun",
+    "en_sense": "A body of troops kept in the rear of an army drawn up for battle, reserved to support the other lines as occasion may require; a force or body of troops kept for an exigency.",
+    "ja": "予備役",
+    "ja_reading": "よびえき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "service in the first reserve"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10742-s5",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "予備役 refers to the status of being in the military reserve (reservist service), not the tactical body of troops held in the rear during a battle, which would be 予備隊 (yobitai)."
+   }
+  },
+  {
+   "key": "e0f112c5970ed4e704ffa9e686c3534b74487ca9cb5b4999f2b9c4b568c6d1ca",
+   "input": {
+    "id": "wk-10742-s6",
+    "en": "reserve",
+    "en_pos": "noun",
+    "en_sense": "Funds kept on hand to meet planned or unplanned financial requirements.",
+    "ja": "準備金",
+    "ja_reading": "じゅんびきん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "reserve fund"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10742-s6",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "準備金 is a perfect equivalent for the financial sense of 'reserve' or 'reserve fund'."
+   }
+  },
+  {
+   "key": "7d798a4af0f03ba4eb18768542415c53e2828194a23e45dd957b44f569f1202f",
+   "input": {
+    "id": "wk-10751-s0",
+    "en": "revise",
+    "en_pos": "verb",
+    "en_sense": "To review, alter and amend, especially of written material.",
+    "ja": "改める",
+    "ja_reading": "あらためる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to change",
+     "to alter",
+     "to revise",
+     "to replace"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10751-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "改める can mean 'to revise', but is a broader term for 'to change/alter'; more specific words like 修正する (shūsei suru) or 改訂する (kaitei suru) are common for revising written material."
+   }
+  },
+  {
+   "key": "9d38023f0e2bb5251ce3faf126b21ccd52fa04f0eb83c6d63f83b949836be783",
+   "input": {
+    "id": "wk-10755-s3",
+    "en": "riot",
+    "en_pos": "noun",
+    "en_sense": "Wanton or unrestrained behavior or emotion.",
+    "ja": "暴動",
+    "ja_reading": "ぼうどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "insurrection",
+     "riot",
+     "uprising",
+     "rebellion",
+     "revolt"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10755-s3",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "暴動 means a literal, violent public disturbance, whereas the English sense here is figurative ('a riot of color', 'a riot of emotion')."
+   }
+  },
+  {
+   "key": "629a015ea29d32269a50fd60809ed44f7adeea03947319b14633cd57379c74a2",
+   "input": {
+    "id": "wk-10767-s4",
+    "en": "scan",
+    "en_pos": "verb",
+    "en_sense": "To create an image of something with the use of a scanner.",
+    "ja": "スキャンする",
+    "ja_reading": "スキャンする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "scan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10767-s4",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "スキャンする is the standard Japanese loanword for using a digital scanner and is a perfect equivalent."
+   }
+  },
+  {
+   "key": "e4ffab6e477bc0365cc74fd3b0785f8599378da35587c1c014ebd5285f4bf227",
+   "input": {
+    "id": "wk-10768-s0",
+    "en": "scene",
+    "en_pos": "noun",
+    "en_sense": "The location of an event that attracts attention.",
+    "ja": "シーン",
+    "ja_reading": "シーン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scene",
+     "sight"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10768-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The loanword シーン refers to a scene in a film or a memorable moment, not the physical location of an event like a crime or accident, which is 現場 (genba)."
+   }
+  },
+  {
+   "key": "a3160873a67db385fb12f70b58e6dee9d30d450b351e204d9d6f15ae018ff709",
+   "input": {
+    "id": "wk-1079-e:d09d6a",
+    "en": "to",
+    "en_pos": "preposition",
+    "en_sense": "used to indicate ratios",
+    "ja": "に",
+    "ja_reading": "に",
+    "ja_pos": "prt",
+    "ja_glosses": [
+     "to",
+     "toward",
+     "into",
+     "for"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1079-e:d09d6a",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The particle に is not used for ratios in Japanese; the correct word is 対 (tai), as in 3対1 (three to one)."
+   }
+  },
+  {
+   "key": "074c31cc444d030c3135331756b5ad72dbdce9a6e8c4e2f85cce44daa054aec1",
+   "input": {
+    "id": "wk-10791-s12",
+    "en": "shell",
+    "en_pos": "noun",
+    "en_sense": "A hollow, usually spherical or cylindrical projectile fired from a siege mortar or a smoothbore cannon. It contains an explosive substance designed to be ignited by a fuse or by percussion at the target site so that it will burst and scatter at high velocity its contents and fragments. Formerly call",
+    "ja": "砲弾",
+    "ja_reading": "ほうだん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shell",
+     "cannonball"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10791-s12",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "砲弾 is the standard and correct Japanese term for an artillery shell."
+   }
+  },
+  {
+   "key": "c3c8db430e4512b26a73494f467298ab6fd348e5ed6880143d564514d55da5cb",
+   "input": {
+    "id": "wk-10791-s31",
+    "en": "shell",
+    "en_pos": "noun",
+    "en_sense": "An operating system software user interface, whose primary purpose is to launch other programs and control their interactions; the user's command interpreter. Shell is a way to separate the internal complexity of the implementation of the command from the user. The internals can change while the use",
+    "ja": "シェル",
+    "ja_reading": "シェル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shell"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10791-s31",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The loanword シェル is the standard Japanese term for a computer operating system shell."
+   }
+  },
+  {
+   "key": "37e57fd38177566e9ac40df11e2e942a352620c3076214650c7ba080fc3a0504",
+   "input": {
+    "id": "wk-1080-s5",
+    "en": "tree",
+    "en_pos": "noun",
+    "en_sense": "A connected graph with no cycles or, if the graph is finite, equivalently a connected graph with n vertices and n−1 edges.",
+    "ja": "木",
+    "ja_reading": "き",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tree",
+     "shrub",
+     "bush"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1080-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "木 (ki) is the correct term for a 'tree' in graph theory, although the provided glosses only list the common botanical meaning."
+   }
+  },
+  {
+   "key": "076fa25fe6b23863b0979617662354e194ef09fd8a1f997a1b5d40e8d2496e2c",
+   "input": {
+    "id": "wk-1080-s6",
+    "en": "tree",
+    "en_pos": "noun",
+    "en_sense": "A recursive data structure in which each node has zero or more nodes as children, but does not share children with other nodes.",
+    "ja": "ツリー構造",
+    "ja_reading": "ツリーこうぞう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tree structure"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1080-s6",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ツリー構造 (tree structure) is a standard and accurate term for the tree data structure in computer science."
+   }
+  }
+ ]
+}

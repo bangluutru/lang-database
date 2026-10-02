@@ -1,0 +1,407 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:37:15Z",
+ "items": [
+  {
+   "key": "a96ae309b21c1f35b993c6409561a0e30fd1c57c0791330006224ea6ca58017a",
+   "input": {
+    "id": "jm-1370160-0-quick",
+    "en": "quick",
+    "en_pos": "adjective",
+    "en_sense": "(very) quick; rapid; swift; speedy; prompt; expeditious",
+    "ja": "迅速",
+    "ja_reading": "じんそく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "(very) quick",
+     "rapid",
+     "swift",
+     "speedy",
+     "prompt",
+     "expeditious"
+    ],
+    "vi": "nhanh chóng"
+   },
+   "output": {
+    "id": "jm-1370160-0-quick",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for a quick and prompt action."
+   }
+  },
+  {
+   "key": "4ba14aa764c9111fb6a1c915696995d9e7be510fbab9bc7aed6794f7b6132de7",
+   "input": {
+    "id": "jm-1370320-0-drawing",
+    "en": "drawing",
+    "en_pos": "noun",
+    "en_sense": "drawing; picture; diagram; figure; illustration; chart",
+    "ja": "図",
+    "ja_reading": "ず",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "drawing",
+     "picture",
+     "diagram",
+     "figure",
+     "illustration",
+     "chart"
+    ],
+    "vi": "bản vẽ"
+   },
+   "output": {
+    "id": "jm-1370320-0-drawing",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bản vẽ' specifically means technical drawing or blueprint, which is much narrower than the broad English sense of 'drawing' or the Japanese '図'."
+   }
+  },
+  {
+   "key": "3bcd86cfc97d43f90205add4bc60e905d2a84ca3c9e4ade7507695edfa77292e",
+   "input": {
+    "id": "jm-1370490-0-chart",
+    "en": "chart",
+    "en_pos": "noun",
+    "en_sense": "chart; diagram; graph; figure",
+    "ja": "図表",
+    "ja_reading": "ずひょう",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "chart",
+     "diagram",
+     "graph",
+     "figure"
+    ],
+    "vi": "biểu đồ"
+   },
+   "output": {
+    "id": "jm-1370490-0-chart",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for a chart or diagram."
+   }
+  },
+  {
+   "key": "dfe340ce656ebaa148dd732ba4bd12445fc9f9ebc5b78b17d8aad50ccb967b89",
+   "input": {
+    "id": "jm-1370870-0-hang",
+    "en": "hang",
+    "en_pos": "verb",
+    "en_sense": "to hang; to droop; to dangle; to sag; to lower; to pull down",
+    "ja": "垂れる",
+    "ja_reading": "たれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to hang",
+     "to droop",
+     "to dangle",
+     "to sag",
+     "to lower",
+     "to pull down"
+    ],
+    "vi": "treo"
+   },
+   "output": {
+    "id": "jm-1370870-0-hang",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'treo' is a transitive verb meaning 'to hang something up', while the English sense and the Japanese '垂れる' refer to the intransitive state of drooping or dangling."
+   }
+  },
+  {
+   "key": "7734fd54dcc8607d6b197be5d141a010f7bba1676598a7303de5b9038bd9dc78",
+   "input": {
+    "id": "jm-1375880-0-formation",
+    "en": "formation",
+    "en_pos": "noun",
+    "en_sense": "formation; establishment; materialization; coming into existence",
+    "ja": "成立",
+    "ja_reading": "せいりつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "formation",
+     "establishment",
+     "materialization",
+     "coming into existence"
+    ],
+    "vi": "thành lập"
+   },
+   "output": {
+    "id": "jm-1375880-0-formation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align well, especially in the context of establishing contracts, organizations, or laws."
+   }
+  },
+  {
+   "key": "1db566219b7db5afd81b443140757061c302f68c3279307954d894454c4c2adf",
+   "input": {
+    "id": "jm-1376010-0-political",
+    "en": "political",
+    "en_pos": "adjective",
+    "en_sense": "political",
+    "ja": "政治的",
+    "ja_reading": "せいじてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "political"
+    ],
+    "vi": "chính trị"
+   },
+   "output": {
+    "id": "jm-1376010-0-political",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'chính trị' is a noun ('politics'), not an adjective ('political') like the English and Japanese terms, which is a significant part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "2f0e74edfed72a95ef9b9ba6d7f725932e114f0dd34d5238bd92ffb5fe2185c0",
+   "input": {
+    "id": "jm-1376240-0-maintenance",
+    "en": "maintenance",
+    "en_pos": "noun",
+    "en_sense": "maintenance; servicing",
+    "ja": "整備",
+    "ja_reading": "せいび",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "maintenance",
+     "servicing"
+    ],
+    "vi": "bảo trì"
+   },
+   "output": {
+    "id": "jm-1376240-0-maintenance",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for technical maintenance or servicing."
+   }
+  },
+  {
+   "key": "c3d9883fab469b3c2d4a9503f06aa1efc92f43d7bb4cef8c13c028cd681cca44",
+   "input": {
+    "id": "jm-1376250-0-sorting",
+    "en": "sorting",
+    "en_pos": "noun",
+    "en_sense": "sorting; arrangement; organization; putting in order; adjustment; regulation",
+    "ja": "整理",
+    "ja_reading": "せいり",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sorting",
+     "arrangement",
+     "organization",
+     "putting in order",
+     "adjustment",
+     "regulation"
+    ],
+    "vi": "sắp xếp"
+   },
+   "output": {
+    "id": "jm-1376250-0-sorting",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'sắp xếp' is a verb ('to sort/arrange'), while the English 'sorting' and Japanese '整理' are nouns, representing a part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "9256e69ddb004241cbe7877a861fb2a1ef9d4deea263710e84ab007292d911b3",
+   "input": {
+    "id": "jm-1376640-0-exactly",
+    "en": "exactly",
+    "en_pos": "adverb",
+    "en_sense": "exactly; just; precisely; really; truly; surely",
+    "ja": "まさに",
+    "ja_reading": "まさに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "exactly",
+     "just",
+     "precisely",
+     "really",
+     "truly",
+     "surely"
+    ],
+    "vi": "chính xác"
+   },
+   "output": {
+    "id": "jm-1376640-0-exactly",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'chính xác' is an adjective ('exact', 'accurate'), not an adverb like the English 'exactly' and Japanese 'まさに'."
+   }
+  },
+  {
+   "key": "5e967c1785dcc5b425af30d8d56af67f3ab39e1937bb4d5bf250afc8f0bf2e22",
+   "input": {
+    "id": "jm-1378030-0-front",
+    "en": "front",
+    "en_pos": "noun",
+    "en_sense": "front; frontage; facade; main",
+    "ja": "正面",
+    "ja_reading": "しょうめん",
+    "ja_pos": "n,adj-no,pref",
+    "ja_glosses": [
+     "front",
+     "frontage",
+     "facade",
+     "main"
+    ],
+    "vi": "mặt tiền"
+   },
+   "output": {
+    "id": "jm-1378030-0-front",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are precise and natural equivalents for the front facade of a building."
+   }
+  },
+  {
+   "key": "454ce40ba99f9d406dec48db0d86036dc63a110b9471bae33e29859f13ff1e5a",
+   "input": {
+    "id": "jm-1378180-0-clean",
+    "en": "clean",
+    "en_pos": "adjective",
+    "en_sense": "clean; clear",
+    "ja": "清らか",
+    "ja_reading": "きよらか",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "clean",
+     "clear"
+    ],
+    "vi": "trong sạch"
+   },
+   "output": {
+    "id": "jm-1378180-0-clean",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately capture the specific sense of 'clean' as pure, clear, and untainted, often with a moral or poetic connotation."
+   }
+  },
+  {
+   "key": "358b2c0f38319c71b6c02bc186241676f8d2c730a22f185f1210abb0cf125167",
+   "input": {
+    "id": "jm-1378200-0-clean",
+    "en": "clean",
+    "en_pos": "adjective",
+    "en_sense": "clean; hygienic; sanitary",
+    "ja": "清潔",
+    "ja_reading": "せいけつ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "clean",
+     "hygienic",
+     "sanitary"
+    ],
+    "vi": "sạch sẽ"
+   },
+   "output": {
+    "id": "jm-1378200-0-clean",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect entry, with all three terms being the most common and direct equivalents for 'clean' in the hygienic sense."
+   }
+  }
+ ]
+}

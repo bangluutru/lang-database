@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:28Z",
+ "items": [
+  {
+   "key": "844b16d60bb1ae1fa0d6ef04065a0cf170751d513d9acb360fd957eb9aed84f4",
+   "input": {
+    "id": "wk-1059-e:908993",
+    "en": "tonight",
+    "en_pos": "adverb",
+    "en_sense": "during today's nighttime",
+    "ja": "今晩",
+    "ja_reading": "こんばん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "tonight",
+     "this evening"
+    ],
+    "vi": "đêm nay"
+   },
+   "output": {
+    "id": "wk-1059-e:908993",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural way to say 'tonight' as an adverb."
+   }
+  },
+  {
+   "key": "deba16d928806ca858454208c20b9efa33f4d9b5007a65a56f5950b197376571",
+   "input": {
+    "id": "wk-10598-s1",
+    "en": "loom",
+    "en_pos": "noun",
+    "en_sense": "A frame or machine of wood or other material, in which a weaver forms cloth out of thread; a machine for interweaving yarn or threads into a fabric, as in knitting or lace making.",
+    "ja": "織機",
+    "ja_reading": "しょっき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "loom",
+     "weaving machine"
+    ],
+    "vi": "khung cửi"
+   },
+   "output": {
+    "id": "wk-10598-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard words for a weaving loom."
+   }
+  },
+  {
+   "key": "54e08c784fcf1f2bb622143e589d5d2d8b871b9740fba57f76aceb5f529686f4",
+   "input": {
+    "id": "wk-1060-s0",
+    "en": "tonight",
+    "en_pos": "noun",
+    "en_sense": "The nighttime of the current day or date; this night.",
+    "ja": "今晩",
+    "ja_reading": "こんばん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "tonight",
+     "this evening"
+    ],
+    "vi": "tối nay"
+   },
+   "output": {
+    "id": "wk-1060-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'tối nay' means 'this evening', which is narrower than the English sense 'The nighttime of the current day'."
+   }
+  },
+  {
+   "key": "72584b387dac5dc90d593a5042fab5b64e2ea755be1b8987e5d59a0761af6ff4",
+   "input": {
+    "id": "wk-10600-s0",
+    "en": "luckily",
+    "en_pos": "adverb",
+    "en_sense": "In a lucky manner; by good fortune; fortunately.",
+    "ja": "運良く",
+    "ja_reading": "うんよく",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "luckily"
+    ],
+    "vi": "may mắn"
+   },
+   "output": {
+    "id": "wk-10600-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'may mắn' is an adjective ('lucky'), not an adverb ('luckily')."
+   }
+  },
+  {
+   "key": "0f74faac804db4101b77684947ef15c61345e6e7614dd3133d661970f8283160",
+   "input": {
+    "id": "wk-10601-e:b61645",
+    "en": "lucky",
+    "en_pos": "adjective",
+    "en_sense": "of people, having good fortune",
+    "ja": "ラッキー",
+    "ja_reading": "ラッキー",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "lucky"
+    ],
+    "vi": "may mắn"
+   },
+   "output": {
+    "id": "wk-10601-e:b61645",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 'ラッキー' is slightly more colloquial than its English and Vietnamese counterparts, but it is a very common and acceptable equivalent."
+   }
+  },
+  {
+   "key": "08298cef163efdea425730f3dc39b24640ac5d1e1a3b5d830c3040aedf41d801",
+   "input": {
+    "id": "wk-10602-s1",
+    "en": "mall",
+    "en_pos": "noun",
+    "en_sense": "An enclosed shopping centre.",
+    "ja": "モール",
+    "ja_reading": "モール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(shopping) mall",
+     "shopping centre"
+    ],
+    "vi": "thương xá"
+   },
+   "output": {
+    "id": "wk-10602-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thương xá' is somewhat dated; the modern term for a shopping mall is 'trung tâm thương mại'."
+   }
+  },
+  {
+   "key": "2ce32a0f0dea20c170bad3d8e98d71836e521a59de5d9e45e79c67006b8660fa",
+   "input": {
+    "id": "wk-10605-s0",
+    "en": "maze",
+    "en_pos": "noun",
+    "en_sense": "A labyrinth; a puzzle consisting of a complicated network of paths or passages, the aim of which is to find one's way through.",
+    "ja": "迷路",
+    "ja_reading": "めいろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "maze",
+     "labyrinth"
+    ],
+    "vi": "mê cung"
+   },
+   "output": {
+    "id": "wk-10605-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise words for a maze or labyrinth."
+   }
+  },
+  {
+   "key": "457f8d39642ddbee5a9d148f9eb39080fdec10dd980204a45b231ee8430d1474",
+   "input": {
+    "id": "wk-10608-s0",
+    "en": "mend",
+    "en_pos": "verb",
+    "en_sense": "To physically repair (something that is broken, defaced, decayed, torn, or otherwise damaged).",
+    "ja": "直す",
+    "ja_reading": "なおす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to repair",
+     "to mend",
+     "to fix",
+     "to correct (a mistake, bad habit, etc.)",
+     "to put right",
+     "to restore"
+    ],
+    "vi": "sửa chữa"
+   },
+   "output": {
+    "id": "wk-10608-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While Japanese '直す' has a broader meaning than 'mend', it is the standard verb for physical repair and a good equivalent in this context."
+   }
+  },
+  {
+   "key": "5200f2190799870438cce4b9d64f00cf6a3f4a4bb0a5777b4b3f72589154f630",
+   "input": {
+    "id": "wk-1061-s0",
+    "en": "yacht",
+    "en_pos": "noun",
+    "en_sense": "A slick and light ship for making pleasure trips or racing on water, having sails but often motor-powered. At times used as a residence offshore on a dock.",
+    "ja": "ヨット",
+    "ja_reading": "ヨット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "yacht (esp. a sailing boat with one mast)",
+     "sailing boat",
+     "sailboat"
+    ],
+    "vi": "du thuyền"
+   },
+   "output": {
+    "id": "wk-1061-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'ヨット' typically refers to sailing yachts and is narrower than the English 'yacht', which includes motor yachts."
+   }
+  },
+  {
+   "key": "06e17e16a13905e110511ef23782bcd0e36311d9666b96e00992de09350f50b4",
+   "input": {
+    "id": "wk-10615-e:4c6698",
+    "en": "metabolism",
+    "en_pos": "noun",
+    "en_sense": "complete set of chemical reactions that occur in living cells",
+    "ja": "代謝",
+    "ja_reading": "たいしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "metabolism"
+    ],
+    "vi": "trao đổi chất"
+   },
+   "output": {
+    "id": "wk-10615-e:4c6698",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for metabolism."
+   }
+  },
+  {
+   "key": "a72606fb4b771a147a1d7c6e4bbbcd67b4bbba5d42c32ed77de5fae04f4543fe",
+   "input": {
+    "id": "wk-10627-s1",
+    "en": "mound",
+    "en_pos": "noun",
+    "en_sense": "A natural elevation appearing as if thrown up artificially; a regular and isolated hill, hillock, or knoll.",
+    "ja": "塚",
+    "ja_reading": "つか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mound",
+     "heap",
+     "hillock"
+    ],
+    "vi": "gò"
+   },
+   "output": {
+    "id": "wk-10627-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '塚' (tsuka) refers to an artificial mound (e.g., a burial mound), contrary to the English sense which specifies a natural elevation."
+   }
+  },
+  {
+   "key": "ca02a8885b6c2295b96d4f5689c0800c6e35fd3415bb7282b57d40ef4a2257f5",
+   "input": {
+    "id": "wk-10630-e:d8687c",
+    "en": "myth",
+    "en_pos": "noun",
+    "en_sense": "divine story",
+    "ja": "神話",
+    "ja_reading": "しんわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "myth",
+     "mythology"
+    ],
+    "vi": "thần thoại"
+   },
+   "output": {
+    "id": "wk-10630-e:d8687c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'myth' in the sense of a divine story."
+   }
+  }
+ ]
+}

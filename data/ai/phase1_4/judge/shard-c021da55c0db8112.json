@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:22:34Z",
+ "items": [
+  {
+   "key": "2310337c066bc1a551cbfc92fab047e8bcaa3f76650755a1c3b09e71cb3d6693",
+   "input": {
+    "id": "jm-1008460-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; though; nevertheless; still; yet",
+    "ja": "でも",
+    "ja_reading": "でも",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "though",
+     "nevertheless",
+     "still",
+     "yet"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008460-0-but",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "でも is a very common and natural equivalent for 'but', especially at the start of a sentence."
+   }
+  },
+  {
+   "key": "1aa129f77bd08035dad6281be850e7b765fc7ff50e26813341f8451b2c0f394b",
+   "input": {
+    "id": "jm-1008570-0-however",
+    "en": "however",
+    "en_pos": "conjunction",
+    "en_sense": "even so; however; still; whereupon; even though; nevertheless",
+    "ja": "ところが",
+    "ja_reading": "ところが",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "even so",
+     "however",
+     "still",
+     "whereupon",
+     "even though",
+     "nevertheless"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008570-0-however",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ところが is a good equivalent for 'however', especially when introducing an unexpected result or turn of events."
+   }
+  },
+  {
+   "key": "e952fe6905bca080da934c7f69236d3c377ab8d321d13c3766f6822a3ce8b247",
+   "input": {
+    "id": "jm-1008630-0-very",
+    "en": "very",
+    "en_pos": "adverb",
+    "en_sense": "very; awfully; exceedingly",
+    "ja": "とても",
+    "ja_reading": "とても",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "very",
+     "awfully",
+     "exceedingly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008630-0-very",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "とても is the standard and most common translation for 'very'."
+   }
+  },
+  {
+   "key": "89d22189fc3bfb79451bbb8c34a3e7a4cd88c297959062bd9e40bca3416ec1c8",
+   "input": {
+    "id": "jm-1008770-0-unexpected",
+    "en": "unexpected",
+    "en_pos": "adjective",
+    "en_sense": "unexpected; unlikely; strange",
+    "ja": "とんだ",
+    "ja_reading": "とんだ",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "unexpected",
+     "unlikely",
+     "strange"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008770-0-unexpected",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "とんだ specifically means 'unexpected' in a negative or unfortunate context, making it narrower than the neutral English word."
+   }
+  },
+  {
+   "key": "5c1b906f2d86672b986bcb9c8d51a273a5b0509b8b3cf7cc8404eb9cf9ff8c8b",
+   "input": {
+    "id": "jm-1008790-0-unexpected",
+    "en": "unexpected",
+    "en_pos": "adjective",
+    "en_sense": "unthinkable; unexpected; absurd; outrageous; preposterous; terrible",
+    "ja": "とんでもない",
+    "ja_reading": "とんでもない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "unthinkable",
+     "unexpected",
+     "absurd",
+     "outrageous",
+     "preposterous",
+     "terrible"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008790-0-unexpected",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "とんでもない is a strong word that matches the provided sense 'unthinkable, absurd, outrageous', which goes far beyond a simple 'unexpected'."
+   }
+  },
+  {
+   "key": "a989339e78ac362850334e5c3f10a61ad3c13d4f6f541e5d045ca28ab4891d8d",
+   "input": {
+    "id": "jm-1008990-0-somehow",
+    "en": "somehow",
+    "en_pos": "adverb",
+    "en_sense": "in some way or other; one way or another; somehow; only just; barely",
+    "ja": "どうにか",
+    "ja_reading": "どうにか",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "in some way or other",
+     "one way or another",
+     "somehow",
+     "only just",
+     "barely"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008990-0-somehow",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "どうにか is an excellent equivalent for 'somehow', especially conveying the sense of 'managing to do something'."
+   }
+  },
+  {
+   "key": "a320c1f55b8e4c110bcba2635c640c4d11058324a2dd6ac86e63af321767d2b6",
+   "input": {
+    "id": "jm-1009000-0-thank_you",
+    "en": "thank you",
+    "en_pos": "interjection",
+    "en_sense": "thank you; thanks",
+    "ja": "どうも",
+    "ja_reading": "どうも",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "thank you",
+     "thanks"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009000-0-thank_you",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "どうも can mean 'thanks' but is very broad and can also mean 'hello', 'sorry', or be a general filler, making it a potentially confusing equivalent for learners."
+   }
+  },
+  {
+   "key": "a032b86616a69dcbf820b3787c2fdb527158432e28c3e6f2f765238386731acc",
+   "input": {
+    "id": "jm-1009020-0-possibly",
+    "en": "possibly",
+    "en_pos": "adverb",
+    "en_sense": "possibly; apparently; (seem) likely; seemingly",
+    "ja": "どうやら",
+    "ja_reading": "どうやら",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "possibly",
+     "apparently",
+     "(seem) likely",
+     "seemingly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009020-0-possibly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "どうやら is a good equivalent for 'possibly' or 'apparently', conveying a judgment based on evidence or appearance."
+   }
+  },
+  {
+   "key": "536130f56885b17a0d03797aa1e7294a0ffe37058fe28e3f73a957407728a983",
+   "input": {
+    "id": "jm-1009210-2-suddenly",
+    "en": "suddenly",
+    "en_pos": "adverb",
+    "en_sense": "suddenly; all of a sudden",
+    "ja": "どっと",
+    "ja_reading": "どっと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "suddenly",
+     "all of a sudden"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009210-2-suddenly",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "どっと only means 'suddenly' in the specific context of a large group or volume of something happening at once, making it much narrower than the general term 'suddenly'."
+   }
+  },
+  {
+   "key": "8d2213dc95f4a6705b256271fdcd9c5e6f9a613df6c14b80e9a83c7375456c8d",
+   "input": {
+    "id": "jm-1009220-0-anyone",
+    "en": "anyone",
+    "en_pos": "adverb",
+    "en_sense": "anyone",
+    "ja": "どなたでも",
+    "ja_reading": "どなたでも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "anyone"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009220-0-anyone",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "REGISTER_CLASH"
+    ],
+    "note": "The part of speech for both English 'anyone' (pronoun) and Japanese どなたでも (pronoun) is incorrectly listed as adverb."
+   }
+  },
+  {
+   "key": "215ee0d1e65b166f0f1fe7ead21bd4ece87658446b0997297c860982f6555fb0",
+   "input": {
+    "id": "jm-1009320-1-rapidly",
+    "en": "rapidly",
+    "en_pos": "adverb",
+    "en_sense": "rapidly; quickly; steadily",
+    "ja": "どんどん",
+    "ja_reading": "どんどん",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "rapidly",
+     "quickly",
+     "steadily"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009320-1-rapidly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "どんどん is a very common and natural equivalent for 'rapidly' or 'quickly', especially for continuous action."
+   }
+  },
+  {
+   "key": "bccf558d39a872eabb5a911f8727c97d33bd22f99ab6d0ef286cd5c9c7d8d62a",
+   "input": {
+    "id": "jm-1009330-0-what",
+    "en": "what",
+    "en_pos": "adjective",
+    "en_sense": "what kind of; what sort of; what",
+    "ja": "どんな",
+    "ja_reading": "どんな",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "what kind of",
+     "what sort of",
+     "what"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1009330-0-what",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "どんな is the standard and direct equivalent for the adjectival use of 'what' meaning 'what kind of'."
+   }
+  }
+ ]
+}

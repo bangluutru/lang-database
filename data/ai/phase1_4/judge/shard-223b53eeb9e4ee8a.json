@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:37:04Z",
+ "items": [
+  {
+   "key": "58d563eb645bef72540558ea2b8fe558ee69eb18d43f732cd2c24da6467139db",
+   "input": {
+    "id": "wk-19600-s0",
+    "en": "newsletter",
+    "en_pos": "noun",
+    "en_sense": "A periodically sent publication containing current events or the like, generally on a particular topic or geared toward a limited audience.",
+    "ja": "ニュースレター",
+    "ja_reading": "ニュースレター",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "newsletter"
+    ],
+    "vi": "bản tin"
+   },
+   "output": {
+    "id": "wk-19600-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for this sense."
+   }
+  },
+  {
+   "key": "8c803ac28b488f545aa6337a7abbfd1436a7bfc9a8d6a0336a29f9d7a6305ed7",
+   "input": {
+    "id": "wk-19624-s0",
+    "en": "bully",
+    "en_pos": "noun",
+    "en_sense": "A person who is intentionally physically or emotionally cruel to others, especially to those whom they perceive as being vulnerable or of less power or privilege.",
+    "ja": "いじめっ子",
+    "ja_reading": "いじめっこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bully"
+    ],
+    "vi": "đầu gấu"
+   },
+   "output": {
+    "id": "wk-19624-s0",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đầu gấu' means 'thug' or 'gangster', which is much stronger than 'bully'. The Japanese 'いじめっ子' typically refers to a child bully, making it narrower than the general English sense."
+   }
+  },
+  {
+   "key": "c004c6752079e01343e2835878033968574796f7db30db4dc0870dbe0a8120e9",
+   "input": {
+    "id": "wk-19625-s0",
+    "en": "bully",
+    "en_pos": "verb",
+    "en_sense": "To intimidate (someone) as a bully.",
+    "ja": "いじめる",
+    "ja_reading": "いじめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to ill-treat",
+     "to bully",
+     "to torment",
+     "to pick on",
+     "to tease",
+     "to be cruel to"
+    ],
+    "vi": "bắt nạt"
+   },
+   "output": {
+    "id": "wk-19625-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are perfect, standard equivalents for 'to bully'."
+   }
+  },
+  {
+   "key": "d520c767ed7c7a3ed487cfbe374ed40c8da935a5282b78181bc850f333f01126",
+   "input": {
+    "id": "wk-19654-s0",
+    "en": "pick up",
+    "en_pos": "verb",
+    "en_sense": "To lift; to grasp and raise.",
+    "ja": "拾う",
+    "ja_reading": "ひろう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to pick up",
+     "to gather"
+    ],
+    "vi": "nhặt"
+   },
+   "output": {
+    "id": "wk-19654-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Japanese '拾う' and Vietnamese 'nhặt' specifically mean to pick something up from the ground, which is narrower than the general English sense 'to lift; to grasp and raise'."
+   }
+  },
+  {
+   "key": "c7321c0c28481c6fc0b5f139749330138c29735705028e317931f369cdb79650",
+   "input": {
+    "id": "wk-19654-s5",
+    "en": "pick up",
+    "en_pos": "verb",
+    "en_sense": "To collect a passenger.",
+    "ja": "乗せる",
+    "ja_reading": "のせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to give (someone) a ride",
+     "to give a lift",
+     "to pick up",
+     "to help on board"
+    ],
+    "vi": "đón"
+   },
+   "output": {
+    "id": "wk-19654-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'đón' (to go and collect) is a perfect match, but it is not equivalent to Japanese '乗せる' (to give a ride). A better Japanese equivalent for this sense is '迎えに行く'."
+   }
+  },
+  {
+   "key": "bbdf65b7cb6dafdb97f7fc4cedae37f03834cc73430732189aa1e0987b28193a",
+   "input": {
+    "id": "wk-19658-s0",
+    "en": "robustness",
+    "en_pos": "noun",
+    "en_sense": "The quality of being robust.",
+    "ja": "ロバストネス",
+    "ja_reading": "ロバストネス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "robustness"
+    ],
+    "vi": "bền vững"
+   },
+   "output": {
+    "id": "wk-19658-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bền vững' is an adjective meaning 'sustainable' or 'durable', not a noun for 'robustness'. This is a part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "da5145da979063e641713b57d994bb7c7d8032df4c4621a9901a2fbeea370450",
+   "input": {
+    "id": "wk-19713-s0",
+    "en": "star anise",
+    "en_pos": "noun",
+    "en_sense": "A plant, Illicium verum, used primarily for its starshaped seed which resembles anise in scent and flavor, and which is used as a spice.",
+    "ja": "唐樒",
+    "ja_reading": "とうしきみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "star anise (Illicium verum)"
+    ],
+    "vi": "hồi"
+   },
+   "output": {
+    "id": "wk-19713-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard names for the spice star anise."
+   }
+  },
+  {
+   "key": "b527d740c3f39fe1c7580fa0f80bd2e092a027a7b32514c4d9958c05dac64e90",
+   "input": {
+    "id": "wk-19719-s0",
+    "en": "electorate",
+    "en_pos": "noun",
+    "en_sense": "The collective people of a country, state, or electoral district who are entitled to vote.",
+    "ja": "有権者",
+    "ja_reading": "ゆうけんしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(eligible) voter",
+     "elector",
+     "constituent",
+     "the electorate"
+    ],
+    "vi": "cử tri"
+   },
+   "output": {
+    "id": "wk-19719-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, correct words for 'electorate' or '(the) voters'."
+   }
+  },
+  {
+   "key": "53602f18b6d17a6a6169b4d7159985392b1cd7ad28316eab7583d408b1389a22",
+   "input": {
+    "id": "wk-1973-e:0ef560",
+    "en": "pain",
+    "en_pos": "noun",
+    "en_sense": "ache or bodily suffering",
+    "ja": "痛み",
+    "ja_reading": "いたみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pain",
+     "ache",
+     "soreness",
+     "grief",
+     "distress"
+    ],
+    "vi": "đau"
+   },
+   "output": {
+    "id": "wk-1973-e:0ef560",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đau' is a verb or adjective meaning 'to hurt' or 'painful', not a noun for 'pain'. The correct noun would be 'nỗi đau' or 'sự đau đớn'."
+   }
+  },
+  {
+   "key": "075823f81434db623f1fc9cf02ae247f3bba9aa6997ec4972d15a1ab5c7b3c21",
+   "input": {
+    "id": "wk-19731-e:1096b3",
+    "en": "break up",
+    "en_pos": "verb",
+    "en_sense": "to end a relationship",
+    "ja": "別れる",
+    "ja_reading": "わかれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to separate (of a couple)",
+     "to break up",
+     "to divorce"
+    ],
+    "vi": "chia tay"
+   },
+   "output": {
+    "id": "wk-19731-e:1096b3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the perfect, standard way to say 'to end a romantic relationship'."
+   }
+  },
+  {
+   "key": "8d0eed86b2236164de776307e1dcaf929852c9b7f4103807954db463ae699310",
+   "input": {
+    "id": "wk-1976-s4",
+    "en": "pin",
+    "en_pos": "noun",
+    "en_sense": "A slender object specially designed for use in a specific game or sport, such as skittles or bowling.",
+    "ja": "ピン",
+    "ja_reading": "ピン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(bowling) pin"
+    ],
+    "vi": "ki"
+   },
+   "output": {
+    "id": "wk-1976-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are correct for a bowling pin, with the Vietnamese 'ki' being a loanword from French 'quille'."
+   }
+  },
+  {
+   "key": "a6bf5a2bdce35648065a9fdc46e94614b25d519ee7e27cc4368c2d376673dbb4",
+   "input": {
+    "id": "wk-19763-s0",
+    "en": "reflex",
+    "en_pos": "noun",
+    "en_sense": "An automatic response to a simple stimulus which does not require mental processing.",
+    "ja": "反射",
+    "ja_reading": "はんしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "reflex",
+     "reflexes"
+    ],
+    "vi": "phản xạ"
+   },
+   "output": {
+    "id": "wk-19763-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard scientific words for 'reflex', with the Japanese and Vietnamese terms being direct cognates."
+   }
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:35:17Z",
+ "items": [
+  {
+   "key": "ddb345d71400130f8aec2949bef68776c2e805459f2d798f0d08ed150891881c",
+   "input": {
+    "id": "wk-17863-s0",
+    "en": "precipitation",
+    "en_pos": "noun",
+    "en_sense": "Any or all of the forms of water particles, whether liquid or solid, that fall from the upper atmosphere (e.g., rain, hail, snow or sleet). It is a major class of hydrometeor, but it is distinguished from cloud, fog, dew, rime, frost, etc., in that it must fall. It is distinguished from cloud and vi",
+    "ja": "降水",
+    "ja_reading": "こうすい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rainfall",
+     "precipitation"
+    ],
+    "vi": "giáng thủy"
+   },
+   "output": {
+    "id": "wk-17863-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'giáng thủy' is a correct but very formal/technical Sino-Vietnamese term; a more common word like 'mưa' (rain) might be more useful for learners, though less precise."
+   }
+  },
+  {
+   "key": "dfab3b0a7fafab0321bfc4a64a630ddee5a080cc0eada30d7eff6ab7e45d1c26",
+   "input": {
+    "id": "wk-17864-s0",
+    "en": "humidity",
+    "en_pos": "noun",
+    "en_sense": "Dampness, especially that of the air.",
+    "ja": "湿度",
+    "ja_reading": "しつど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "humidity"
+    ],
+    "vi": "độ ẩm"
+   },
+   "output": {
+    "id": "wk-17864-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence across all three languages."
+   }
+  },
+  {
+   "key": "ea3cabea1ee59b57190ae79cd05687e5beffe9d3b6b02b037ebdad4efb85b023",
+   "input": {
+    "id": "wk-17873-s0",
+    "en": "packet",
+    "en_pos": "noun",
+    "en_sense": "A small pack or package; a little bundle or parcel",
+    "ja": "パケット",
+    "ja_reading": "パケット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "packet",
+     "parcel",
+     "package"
+    ],
+    "vi": "gói"
+   },
+   "output": {
+    "id": "wk-17873-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'パケット' is narrower than English 'packet', often referring to data packets or specific small commercial items, whereas '小包' (kozutsumi) is a better general equivalent for a small parcel."
+   }
+  },
+  {
+   "key": "167a2396dfc99a051279427b8ffe6e8caccae53434d2d1d9b8e9f58f1367eaf0",
+   "input": {
+    "id": "wk-17899-s0",
+    "en": "milestone",
+    "en_pos": "noun",
+    "en_sense": "A stone milepost (or by extension in other materials), one of a series of numbered markers placed along a road at regular intervals, typically at the side of the road or in a median.",
+    "ja": "一里塚",
+    "ja_reading": "いちりづか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "milestone (1 ri apart)"
+    ],
+    "vi": "cây số"
+   },
+   "output": {
+    "id": "wk-17899-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '一里塚' is a historical term for markers placed one 'ri' apart and is not a modern equivalent for 'milestone', unlike the Vietnamese 'cây số'."
+   }
+  },
+  {
+   "key": "94b0b56cee2bbe1f97004715af290a91d6a42ff06dfc5dd00d678b976ac92f89",
+   "input": {
+    "id": "wk-1794-s7",
+    "en": "tooth",
+    "en_pos": "noun",
+    "en_sense": "Liking, fondness (compare toothsome).",
+    "ja": "歯",
+    "ja_reading": "は",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tooth",
+     "teeth"
+    ],
+    "vi": "răng"
+   },
+   "output": {
+    "id": "wk-1794-s7",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "This is a rare, figurative sense of 'tooth' that does not translate literally into Japanese '歯' or Vietnamese 'răng', which only mean the physical body part."
+   }
+  },
+  {
+   "key": "f4af0cca0541dae4599e744102d1eb6eea545d583844396786573cab522d06b4",
+   "input": {
+    "id": "wk-17944-s0",
+    "en": "tape recorder",
+    "en_pos": "noun",
+    "en_sense": "An electromechanical device use to record and play back sound, etc.",
+    "ja": "テープレコーダー",
+    "ja_reading": "テープレコーダー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tape recorder"
+    ],
+    "vi": "máy ghi âm"
+   },
+   "output": {
+    "id": "wk-17944-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'máy ghi âm' means 'recorder' in general and is not specific to tape, unlike the English and Japanese terms."
+   }
+  },
+  {
+   "key": "b58e0a5398bf903f3a04e656b0040c21347c33a028d28e5ed117e912b0f9c431",
+   "input": {
+    "id": "wk-17952-s0",
+    "en": "refund",
+    "en_pos": "verb",
+    "en_sense": "To return (money) to (someone); to reimburse.",
+    "ja": "返金する",
+    "ja_reading": "へんきんする",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "refund",
+     "repayment",
+     "reimbursement"
+    ],
+    "vi": "bồi hoàn"
+   },
+   "output": {
+    "id": "wk-17952-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bồi hoàn' means to compensate or indemnify and is not the correct term for a simple refund; 'hoàn tiền' should be used instead."
+   }
+  },
+  {
+   "key": "2edfba0120c06d6d6adc9aeca25ea90d1364a0d8d4e5bd28cd8d4f65b021c2f7",
+   "input": {
+    "id": "wk-17958-s0",
+    "en": "exclaim",
+    "en_pos": "verb",
+    "en_sense": "To cry out suddenly, from some strong emotion.",
+    "ja": "叫ぶ",
+    "ja_reading": "さけぶ",
+    "ja_pos": "v5b,vi",
+    "ja_glosses": [
+     "to shout",
+     "to cry (out)",
+     "to scream",
+     "to shriek",
+     "to yell",
+     "to exclaim"
+    ],
+    "vi": "kêu lên"
+   },
+   "output": {
+    "id": "wk-17958-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '叫ぶ' primarily means 'to shout' and focuses on volume, making it a broad equivalent for 'exclaim', which emphasizes sudden emotion."
+   }
+  },
+  {
+   "key": "2f4418509d0c17345e1ca857cecc1e46dc42ca4700bb4b80afe6716133a88c62",
+   "input": {
+    "id": "wk-1796-s1",
+    "en": "hair",
+    "en_pos": "noun",
+    "en_sense": "The collection or mass of such growths growing from the skin of humans and animals, and forming a covering for any part or the whole body.",
+    "ja": "毛",
+    "ja_reading": "け",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hair"
+    ],
+    "vi": "lông"
+   },
+   "output": {
+    "id": "wk-1796-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the sense of 'hair' as body hair or animal fur, distinct from head hair."
+   }
+  },
+  {
+   "key": "b89833f2f296070d4059697266fed06e5cb72ef7d4532e3434b192f46992bf06",
+   "input": {
+    "id": "wk-1796-s2",
+    "en": "hair",
+    "en_pos": "noun",
+    "en_sense": "Specifically, the collection of hairs on the top and sides of the human head, growing from the scalp.",
+    "ja": "髪",
+    "ja_reading": "かみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hair (on the head)"
+    ],
+    "vi": "tóc"
+   },
+   "output": {
+    "id": "wk-1796-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the specific sense of 'hair on the human head'."
+   }
+  },
+  {
+   "key": "2217ce5b45bb2631444a6291bf331e8094aaf2f704cbb1d0ed0fd809e067e169",
+   "input": {
+    "id": "wk-17970-s0",
+    "en": "tariff",
+    "en_pos": "noun",
+    "en_sense": "A system of government-imposed duties levied on imported or exported goods; a list of such duties, or the duties themselves.",
+    "ja": "関税",
+    "ja_reading": "かんぜい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "customs (duties)",
+     "duty",
+     "tariff"
+    ],
+    "vi": "giá"
+   },
+   "output": {
+    "id": "wk-17970-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'giá' means 'price', not 'tariff'. The correct term for tariff is 'thuế quan'."
+   }
+  },
+  {
+   "key": "5d807e9579bee6b817310a08cf5069f502eea8b71284b7331781d336b75846ea",
+   "input": {
+    "id": "wk-1798-s0",
+    "en": "ear",
+    "en_pos": "noun",
+    "en_sense": "The fruiting body of a grain plant.",
+    "ja": "穂",
+    "ja_reading": "ほ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ear (of a cereal plant)",
+     "head",
+     "spike"
+    ],
+    "vi": "bông"
+   },
+   "output": {
+    "id": "wk-1798-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the specific botanical sense of 'ear' (of grain)."
+   }
+  }
+ ]
+}

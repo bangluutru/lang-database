@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:47:33Z",
+ "items": [
+  {
+   "key": "3154f0216ce2c5d55c94b57de0c1e8fd7707d8c35e132e868e5b3f08fd7fc94c",
+   "input": {
+    "id": "wk-5044-s0",
+    "en": "stand up",
+    "en_pos": "verb",
+    "en_sense": "To rise from a lying or sitting position.",
+    "ja": "立ち上がる",
+    "ja_reading": "たちあがる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to stand up",
+     "to get up",
+     "to rise (to one's feet)"
+    ],
+    "vi": "đứng dậy"
+   },
+   "output": {
+    "id": "wk-5044-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match across all three languages for this common action."
+   }
+  },
+  {
+   "key": "3458f9ba3ef9896543d70b38e6af8b9f5174819a107f01250609b8dac855d32b",
+   "input": {
+    "id": "wk-5046-s0",
+    "en": "slowly",
+    "en_pos": "adverb",
+    "en_sense": "At a slow pace.",
+    "ja": "ゆっくり",
+    "ja_reading": "ゆっくり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "slowly",
+     "unhurriedly",
+     "without haste",
+     "leisurely",
+     "at one's leisure"
+    ],
+    "vi": "chậm"
+   },
+   "output": {
+    "id": "wk-5046-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry `chậm` is an adjective meaning \"slow\", not an adverb \"slowly\". The correct adverb is `chậm chạp`."
+   }
+  },
+  {
+   "key": "189c646de0bc3cb3e27f19b045f11752a342235b45e5f2f2dcadb96cdc242ece",
+   "input": {
+    "id": "wk-505-s1",
+    "en": "add",
+    "en_pos": "verb",
+    "en_sense": "To sum up; to put together mentally; to add up.",
+    "ja": "足す",
+    "ja_reading": "たす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to add (numbers)"
+    ],
+    "vi": "cộng"
+   },
+   "output": {
+    "id": "wk-505-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect alignment for the mathematical sense of \"add\"."
+   }
+  },
+  {
+   "key": "b62504b02b9cbd3e379aefaf9e07838e30ee8006d5b9d4ec6c5b730933d3fa1d",
+   "input": {
+    "id": "wk-505-s4",
+    "en": "add",
+    "en_pos": "verb",
+    "en_sense": "To append (e.g. a statement); to say further information.",
+    "ja": "加える",
+    "ja_reading": "くわえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to add",
+     "to add up",
+     "to sum up",
+     "to append",
+     "to annex"
+    ],
+    "vi": "nói"
+   },
+   "output": {
+    "id": "wk-505-s4",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `nói` (to say) does not mean \"to add (a statement)\"; a better equivalent would be `nói thêm` or `bổ sung`."
+   }
+  },
+  {
+   "key": "28a25233683ad45061b5d3fbf8f8190291cbb0e171854eb54cd1198128e9e5ca",
+   "input": {
+    "id": "wk-5052-s0",
+    "en": "perfume",
+    "en_pos": "noun",
+    "en_sense": "A pleasant smell; the scent, odor, or odoriferous particles emitted from a sweet-smelling substance; a pleasant odor.",
+    "ja": "香水",
+    "ja_reading": "こうすい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "perfume",
+     "scent"
+    ],
+    "vi": "hương vị"
+   },
+   "output": {
+    "id": "wk-5052-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "FALSE_FRIEND"
+    ],
+    "note": "Both `香水` (liquid perfume) and `hương vị` (flavor) are incorrect translations for the English sense of \"perfume\" as a pleasant smell."
+   }
+  },
+  {
+   "key": "32e3a8a791cbba46f01a5b4c0abfcb45792bbe268b19236d71f08deed2bec39e",
+   "input": {
+    "id": "wk-5054-s2",
+    "en": "gym",
+    "en_pos": "noun",
+    "en_sense": "A sports facility specialized for lifting weights, cardio machines, and other exercise (culturally differentiated from sense 1).",
+    "ja": "ジム",
+    "ja_reading": "ジム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gym",
+     "gymnasium"
+    ],
+    "vi": "phòng thể dục"
+   },
+   "output": {
+    "id": "wk-5054-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a modern fitness gym."
+   }
+  },
+  {
+   "key": "d09435da9a9250a68222ba25591f1277f09f93a1d1e7394fb6fe2082b133331c",
+   "input": {
+    "id": "wk-5055-s0",
+    "en": "grid",
+    "en_pos": "noun",
+    "en_sense": "A rectangular array of squares or rectangles of equal size, such as in a crossword puzzle.",
+    "ja": "グリッド",
+    "ja_reading": "グリッド",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "grid"
+    ],
+    "vi": "mạng"
+   },
+   "output": {
+    "id": "wk-5055-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese `mạng` is too broad, meaning \"network\" or \"net\", while `lưới` would be a more precise translation for a visual grid."
+   }
+  },
+  {
+   "key": "164ca2b9bf9e278ede4aa54d94e0e6fae40d94f1fb784afe5a9b922edac38a54",
+   "input": {
+    "id": "wk-5056-s2",
+    "en": "check",
+    "en_pos": "noun",
+    "en_sense": "A situation in which the king is directly threatened by an opposing piece.",
+    "ja": "王手",
+    "ja_reading": "おうて",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "check"
+    ],
+    "vi": "chiếu"
+   },
+   "output": {
+    "id": "wk-5056-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match of the specific term for \"check\" in chess and similar games."
+   }
+  },
+  {
+   "key": "fe7d88b07d08e99531f3c6e66b5a200a8fb7cec0b169816076ece19c1cc0df9d",
+   "input": {
+    "id": "wk-5057-s0",
+    "en": "check",
+    "en_pos": "verb",
+    "en_sense": "To inspect; to examine.",
+    "ja": "チェックする",
+    "ja_reading": "チェックする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "check",
+     "inspection",
+     "examination",
+     "looking over",
+     "scrutinizing"
+    ],
+    "vi": "kiểm tra"
+   },
+   "output": {
+    "id": "wk-5057-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence across all three languages for the common meaning of \"check\"."
+   }
+  },
+  {
+   "key": "634d5951a1a27e03fd752422f50ee0c3aa144dcd681d0674c5e077fb7bc9628f",
+   "input": {
+    "id": "wk-5059-s0",
+    "en": "eel",
+    "en_pos": "noun",
+    "en_sense": "Any freshwater fish of the order Anguilliformes, which are elongated and resemble snakes.",
+    "ja": "うなぎ",
+    "ja_reading": "うなぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "eel (esp. the Japanese eel, Anguilla japonica)"
+    ],
+    "vi": "cá chình"
+   },
+   "output": {
+    "id": "wk-5059-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Standard and correct equivalents for \"eel\" in all three languages."
+   }
+  },
+  {
+   "key": "752590698366aae484badcdc5f7309c9e5ebb1884685f12a20fca2ef6c38ff8a",
+   "input": {
+    "id": "wk-5060-s0",
+    "en": "general election",
+    "en_pos": "noun",
+    "en_sense": "An election following the regular procedure to elect officers in all or most constituencies or electoral districts of a region or nation.",
+    "ja": "総選挙",
+    "ja_reading": "そうせんきょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "general election (of the lower house)"
+    ],
+    "vi": "tổng tuyển cử"
+   },
+   "output": {
+    "id": "wk-5060-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the political term \"general election\"."
+   }
+  },
+  {
+   "key": "6f23f8f54d6937cad467af681a8c84c392c3d780babe8c68f2f10eecc1a866aa",
+   "input": {
+    "id": "wk-5061-s0",
+    "en": "judo",
+    "en_pos": "noun",
+    "en_sense": "A Japanese martial art and sport adapted from jujitsu.",
+    "ja": "柔道",
+    "ja_reading": "じゅうどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "judo"
+    ],
+    "vi": "nhu đạo"
+   },
+   "output": {
+    "id": "wk-5061-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents, as the English and Vietnamese terms are derived from the Japanese original."
+   }
+  }
+ ]
+}

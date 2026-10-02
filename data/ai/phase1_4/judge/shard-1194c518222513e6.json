@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:38Z",
+ "items": [
+  {
+   "key": "aba43a2911e7729529969ce6b12473694d72d59154597f82b7e5819f3da9157e",
+   "input": {
+    "id": "wk-15417-s1",
+    "en": "astringent",
+    "en_pos": "adjective",
+    "en_sense": "Sharp, caustic, severe.",
+    "ja": "渋い",
+    "ja_reading": "しぶい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "astringent",
+     "bitter",
+     "puckery",
+     "rough",
+     "harsh",
+     "tart"
+    ],
+    "vi": "chát"
+   },
+   "output": {
+    "id": "wk-15417-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese words refer to the literal taste of astringency, not the figurative sense of 'sharp, caustic, severe'."
+   }
+  },
+  {
+   "key": "1b469246a4a21c6cbc9a23c666c33d4733496bc02a8242ea80571da13ada21f6",
+   "input": {
+    "id": "wk-15418-s0",
+    "en": "extradition",
+    "en_pos": "noun",
+    "en_sense": "A formal process by which a criminal suspect held by one government or jurisdiction is handed over to another government or jurisdiction for trial or, if the suspect has already been tried and found guilty, to serve his or her sentence.",
+    "ja": "引き渡し",
+    "ja_reading": "ひきわたし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "delivery",
+     "handing over",
+     "turning over",
+     "extradition"
+    ],
+    "vi": "dẫn độ"
+   },
+   "output": {
+    "id": "wk-15418-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 引き渡し means 'handing over' in general and is broader than the specific legal term 'extradition'."
+   }
+  },
+  {
+   "key": "a74eea3ef0db752fc8f468d6ea53cb76a27545d2d3241c1e34c3f6291f829466",
+   "input": {
+    "id": "wk-15421-s0",
+    "en": "unanimous",
+    "en_pos": "adjective",
+    "en_sense": "Based on unanimity, assent or agreement.",
+    "ja": "全会一致",
+    "ja_reading": "ぜんかいいっち",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "unanimous agreement",
+     "unanimity"
+    ],
+    "vi": "nhất trí"
+   },
+   "output": {
+    "id": "wk-15421-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'unanimous'."
+   }
+  },
+  {
+   "key": "5524ddc2d40969e7d051b36df36442331a28862270032857125df7d876e63af5",
+   "input": {
+    "id": "wk-15422-s0",
+    "en": "corporal punishment",
+    "en_pos": "noun",
+    "en_sense": "A form of punishment achieved by inflicting physical pain on the offender's body.",
+    "ja": "体罰",
+    "ja_reading": "たいばつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "corporal punishment"
+    ],
+    "vi": "nhục hình"
+   },
+   "output": {
+    "id": "wk-15422-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'nhục hình' emphasizes humiliation and is not the standard term for 'corporal punishment'; 'hình phạt thể xác' is better."
+   }
+  },
+  {
+   "key": "7520336a747f93a07375f020aef29bf782256366ced081f4eb63d6cdba46c6a8",
+   "input": {
+    "id": "wk-15423-s0",
+    "en": "capital punishment",
+    "en_pos": "noun",
+    "en_sense": "The practice of putting a person to death as a punishment for a crime.",
+    "ja": "極刑",
+    "ja_reading": "きょっけい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "capital punishment",
+     "death penalty",
+     "maximum penalty",
+     "ultimate punishment"
+    ],
+    "vi": "tử hình"
+   },
+   "output": {
+    "id": "wk-15423-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly refer to capital punishment, though the Japanese '死刑' (shikei) is more common than the provided '極刑' (kyokkei)."
+   }
+  },
+  {
+   "key": "48efbf662ca8026190f3d6d98f14117029732038af9cf2c3976def5e57fe3e2f",
+   "input": {
+    "id": "wk-15433-s0",
+    "en": "roam",
+    "en_pos": "verb",
+    "en_sense": "To wander or travel freely and with no specific destination.",
+    "ja": "うろつく",
+    "ja_reading": "うろつく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to loiter",
+     "to hang around",
+     "to wander around",
+     "to prowl",
+     "to roam"
+    ],
+    "vi": "lang thang"
+   },
+   "output": {
+    "id": "wk-15433-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 'うろつく' has negative connotations of loitering or prowling, making it a poor general equivalent for the more neutral 'roam'."
+   }
+  },
+  {
+   "key": "c853d3c895fde67a43325ceb4170070df1c98232bdb7147b33808b71eebbf328",
+   "input": {
+    "id": "wk-15439-s0",
+    "en": "barefoot",
+    "en_pos": "adjective",
+    "en_sense": "Wearing nothing on the feet.",
+    "ja": "裸足",
+    "ja_reading": "はだし",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "barefoot"
+    ],
+    "vi": "chân không"
+   },
+   "output": {
+    "id": "wk-15439-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect and standard equivalents."
+   }
+  },
+  {
+   "key": "08c77d7cf892581105c22098a1fc6359901127ec9b78275d012672c2cf41c7cb",
+   "input": {
+    "id": "wk-15451-s0",
+    "en": "gonorrhea",
+    "en_pos": "noun",
+    "en_sense": "A sexually transmitted infection caused by Neisseria gonorrhoeae, a species of bacteria (the gonococcus) that affects the mucous membrane of the genital and urinary tracts.",
+    "ja": "淋病",
+    "ja_reading": "りんびょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gonorrhea",
+     "gonorrhoea"
+    ],
+    "vi": "lậu"
+   },
+   "output": {
+    "id": "wk-15451-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct, standard medical names for the disease."
+   }
+  },
+  {
+   "key": "91694291c05defd6b2303ef442a87fa3e7e008df5fbf6c45183fc8341000078c",
+   "input": {
+    "id": "wk-15454-s0",
+    "en": "post office",
+    "en_pos": "noun",
+    "en_sense": "A place (building, office, shop, or counter) concerned with the business of delivering letters, post or mail and selling stamps, etc.",
+    "ja": "郵便局",
+    "ja_reading": "ゆうびんきょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "post office"
+    ],
+    "vi": "bưu điện"
+   },
+   "output": {
+    "id": "wk-15454-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect and standard equivalents for 'post office'."
+   }
+  },
+  {
+   "key": "07238d5734b08c4ca27e265c08d0bd7d2683c02471d21e943dfdd3e201c4d20b",
+   "input": {
+    "id": "wk-15461-s0",
+    "en": "marquess",
+    "en_pos": "noun",
+    "en_sense": "A title of nobility for a man ranking beneath a duke and above an earl (count).",
+    "ja": "侯爵",
+    "ja_reading": "こうしゃく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "marquis",
+     "marquess"
+    ],
+    "vi": "hầu tước"
+   },
+   "output": {
+    "id": "wk-15461-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard equivalents for this title of nobility."
+   }
+  },
+  {
+   "key": "140a86cd3a1b17c0a75512496cd0a1b021034bb3aa4229e12f48f6483406c099",
+   "input": {
+    "id": "wk-1547-s0",
+    "en": "helicopter",
+    "en_pos": "noun",
+    "en_sense": "An aircraft that is borne along by one or more sets of long rotating blades which allow it to hover, move in any direction including reverse, or land; and typically having a smaller set of blades on its tail to stabilize the aircraft.",
+    "ja": "ヘリコプター",
+    "ja_reading": "ヘリコプター",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "helicopter"
+    ],
+    "vi": "trực thăng"
+   },
+   "output": {
+    "id": "wk-1547-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for helicopter."
+   }
+  },
+  {
+   "key": "79d2fcbb4415cbffe063c748e48c92ded56eeb9aebc823cedd92db54b2141930",
+   "input": {
+    "id": "wk-15485-s0",
+    "en": "zelkova",
+    "en_pos": "noun",
+    "en_sense": "A kind of tree in the elm family (genus Zelkova).",
+    "ja": "けやき",
+    "ja_reading": "けやき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Japanese zelkova (Zelkova serrata)"
+    ],
+    "vi": "cử"
+   },
+   "output": {
+    "id": "wk-15485-s0",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese word 'cử' is an obscure Sino-Vietnamese reading and not the actual word used for this tree; it is unnatural and incorrect."
+   }
+  }
+ ]
+}

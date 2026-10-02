@@ -1,0 +1,373 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:29:42Z",
+ "items": [
+  {
+   "key": "3f590a64e824d047ba084417349959b8091d0ea11164e70d9cd4804f4a6294cb",
+   "input": {
+    "id": "wk-1290-e:82bccc",
+    "en": "child",
+    "en_pos": "noun",
+    "en_sense": "a minor",
+    "ja": "子供",
+    "ja_reading": "こども",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "child",
+     "children"
+    ],
+    "vi": "đứa bé"
+   },
+   "output": {
+    "id": "wk-1290-e:82bccc",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'đứa bé' refers to a very young child or baby, which is much narrower than the English sense 'a minor'."
+   }
+  },
+  {
+   "key": "5c95e4d2f922a2429aedaa104bd4ccf6a8a2eee5843340b7b0d41ed4d4357f92",
+   "input": {
+    "id": "wk-1290-s2",
+    "en": "child",
+    "en_pos": "noun",
+    "en_sense": "One's direct descendant by birth, regardless of age; one's offspring; a son or daughter.",
+    "ja": "子",
+    "ja_reading": "こ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "(one's) child",
+     "offspring"
+    ],
+    "vi": "con"
+   },
+   "output": {
+    "id": "wk-1290-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of 'offspring'."
+   }
+  },
+  {
+   "key": "175b854ff6c6b9a00f535c2a8b87644dc708a8cc07d1c5bc9c0e5376212655b9",
+   "input": {
+    "id": "wk-12900-e:d13bce",
+    "en": "allergy",
+    "en_pos": "noun",
+    "en_sense": "disorder of the immune system",
+    "ja": "アレルギー",
+    "ja_reading": "アレルギー",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "allergy"
+    ],
+    "vi": "dị ứng"
+   },
+   "output": {
+    "id": "wk-12900-e:d13bce",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'allergy'."
+   }
+  },
+  {
+   "key": "7e2b536540ae40f92deeb4cbda3103cf741cd714382fa46023aeb4cffc3542eb",
+   "input": {
+    "id": "wk-12913-s0",
+    "en": "pupil",
+    "en_pos": "noun",
+    "en_sense": "The hole in the middle of the iris of the eye, through which light passes to be focused on the retina.",
+    "ja": "瞳",
+    "ja_reading": "ひとみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pupil (of the eye)"
+    ],
+    "vi": "ngươi"
+   },
+   "output": {
+    "id": "wk-12913-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'ngươi' is an archaic/rare term for 'pupil' and is primarily a pronoun for 'you'; the correct term is 'con ngươi'."
+   }
+  },
+  {
+   "key": "eb7a082b937a33694a7dd150a39a122881cb2fdc144eeddb69b0b057a4b6b364",
+   "input": {
+    "id": "wk-12914-s0",
+    "en": "retina",
+    "en_pos": "noun",
+    "en_sense": "The thin layer of cells at the back of the eyeball that contains rods and cones sensitive to light, which trigger nerve impulses that pass via the optic nerve to the brain, where a visual image is formed.",
+    "ja": "網膜",
+    "ja_reading": "もうまく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "retina"
+    ],
+    "vi": "võng mạc"
+   },
+   "output": {
+    "id": "wk-12914-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard medical terms for 'retina'."
+   }
+  },
+  {
+   "key": "43d9107af0c65ed950f4302aa13cd921defec8110562bb2ae4688ca4641e7853",
+   "input": {
+    "id": "wk-1292-s0",
+    "en": "daughter",
+    "en_pos": "noun",
+    "en_sense": "One’s female offspring.",
+    "ja": "娘",
+    "ja_reading": "むすめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "daughter"
+    ],
+    "vi": "con gái"
+   },
+   "output": {
+    "id": "wk-1292-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for 'daughter'."
+   }
+  },
+  {
+   "key": "0e104dd3489972700c99523a2d644b28f5b82aaf084adbb9487e7eae4ab4d058",
+   "input": {
+    "id": "wk-12921-s1",
+    "en": "sergeant",
+    "en_pos": "noun",
+    "en_sense": "The highest rank of noncommissioned officer in some non-naval military forces and police.",
+    "ja": "軍曹",
+    "ja_reading": "ぐんそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sergeant"
+    ],
+    "vi": "trung sĩ"
+   },
+   "output": {
+    "id": "wk-12921-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are correct equivalents for the military rank of sergeant."
+   }
+  },
+  {
+   "key": "c60d801362e9f7d90449cf44b3f3cc622f1b4b9edbeb2ee8e40e8fa1e47ef224",
+   "input": {
+    "id": "wk-12927-e:814362",
+    "en": "artifact",
+    "en_pos": "noun",
+    "en_sense": "archaeological object",
+    "ja": "遺物",
+    "ja_reading": "いぶつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "artifact",
+     "relic (of a past civilization)",
+     "archaeological find"
+    ],
+    "vi": "hiện vật"
+   },
+   "output": {
+    "id": "wk-12927-e:814362",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for an archaeological artifact."
+   }
+  },
+  {
+   "key": "ba3443b6eb5849b2c05fa201772c4be62c257a97bfa9e7d89f0592679ff3392e",
+   "input": {
+    "id": "wk-1293-s2",
+    "en": "grandfather",
+    "en_pos": "noun",
+    "en_sense": "The archived older version of a file that immediately preceded the father file.",
+    "ja": "おじいさん",
+    "ja_reading": "おじいさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "grandfather"
+    ],
+    "vi": "ông"
+   },
+   "output": {
+    "id": "wk-1293-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese translations are for the common meaning 'male grandparent', not the specified technical computing sense."
+   }
+  },
+  {
+   "key": "9e96ff495077073e5d3133c325c941f4ffce6bf5b81915cb8333e79822f584d1",
+   "input": {
+    "id": "wk-12942-s1",
+    "en": "folder",
+    "en_pos": "noun",
+    "en_sense": "A virtual container in a computer's file system, in which files and other folders may be stored. The files and subfolders in a folder are usually related.",
+    "ja": "フォルダ",
+    "ja_reading": "フォルダ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "folder"
+    ],
+    "vi": "thư mục"
+   },
+   "output": {
+    "id": "wk-12942-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a computer folder."
+   }
+  },
+  {
+   "key": "abdb0fc8cec19a0d60bd1b82706cee52b2e0299d0e8500d8af2d5478ff055287",
+   "input": {
+    "id": "wk-12944-s0",
+    "en": "necklace",
+    "en_pos": "noun",
+    "en_sense": "An article of jewelry that is worn around the neck, most often made of a string of precious metal, pearls, gems, beads or shells, and sometimes having a pendant attached.",
+    "ja": "ネックレス",
+    "ja_reading": "ネックレス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "necklace"
+    ],
+    "vi": "chuỗi hạt"
+   },
+   "output": {
+    "id": "wk-12944-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chuỗi hạt' means 'string of beads', which is a specific type of necklace, not the general term."
+   }
+  },
+  {
+   "key": "eca18c5979ce98614d0c46623895a3d61e2b3537649364f4943a6d0126e3d068",
+   "input": {
+    "id": "wk-1295-s0",
+    "en": "grandmother",
+    "en_pos": "noun",
+    "en_sense": "A mother of someone's parent.",
+    "ja": "おばあさん",
+    "ja_reading": "おばあさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "grandmother"
+    ],
+    "vi": "bà"
+   },
+   "output": {
+    "id": "wk-1295-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for 'grandmother'."
+   }
+  }
+ ]
+}

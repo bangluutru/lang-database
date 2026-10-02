@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:31:30Z",
+ "items": [
+  {
+   "key": "ea454b5254b88d632fea502f30b4f9c269fd5e0335f768ada18056c95708d1c4",
+   "input": {
+    "id": "wk-14400-s0",
+    "en": "leadership",
+    "en_pos": "noun",
+    "en_sense": "The capacity of someone to lead others.",
+    "ja": "リーダーシップ",
+    "ja_reading": "リーダーシップ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "leadership"
+    ],
+    "vi": "khả năng lãnh đạo"
+   },
+   "output": {
+    "id": "wk-14400-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for the specified sense."
+   }
+  },
+  {
+   "key": "bd21f74749af83189e383d2e21ebf17d49f38abb025121c1288e6a7e826e3986",
+   "input": {
+    "id": "wk-14414-s0",
+    "en": "surgeon",
+    "en_pos": "noun",
+    "en_sense": "One who performs surgery; a doctor who performs operations on people or animals.",
+    "ja": "外科医",
+    "ja_reading": "げかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "surgeon"
+    ],
+    "vi": "bác sĩ phẫu thuật"
+   },
+   "output": {
+    "id": "wk-14414-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'surgeon'."
+   }
+  },
+  {
+   "key": "2541b60f0538c67925e4101b4518fa3ecef4f82dbc88367b1256e1c458984cc7",
+   "input": {
+    "id": "wk-1443-s0",
+    "en": "pigment",
+    "en_pos": "noun",
+    "en_sense": "Any color in plant or animal cells.",
+    "ja": "色素",
+    "ja_reading": "しきそ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "pigment",
+     "coloring",
+     "colouring",
+     "colorant",
+     "colourant"
+    ],
+    "vi": "sắc tố"
+   },
+   "output": {
+    "id": "wk-1443-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sắc tố' is specific to biological pigment and thus narrower than the Japanese '色素', which can also refer to non-biological colorants."
+   }
+  },
+  {
+   "key": "9691d3ccd9acb8354b47503e9e2cd8d05fc43670d08ee25463a8d0e31c8c23ad",
+   "input": {
+    "id": "wk-14431-s0",
+    "en": "fragrance",
+    "en_pos": "noun",
+    "en_sense": "A pleasant smell or odour.",
+    "ja": "香気",
+    "ja_reading": "こうき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fragrance"
+    ],
+    "vi": "hương vị"
+   },
+   "output": {
+    "id": "wk-14431-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'hương vị' means 'flavor' or 'taste', not 'fragrance'; the correct term would be 'hương thơm'."
+   }
+  },
+  {
+   "key": "6e8f79ce375b8115c8a37fe8a5ab1e6a6ba6d28d30f023ba355d24ceca19fcf4",
+   "input": {
+    "id": "wk-14440-s0",
+    "en": "commonplace",
+    "en_pos": "adjective",
+    "en_sense": "Ordinary; not having any remarkable characteristics.",
+    "ja": "ありふれた",
+    "ja_reading": "ありふれた",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "common",
+     "commonplace",
+     "ordinary",
+     "familiar",
+     "everyday",
+     "garden-variety"
+    ],
+    "vi": "đời thường"
+   },
+   "output": {
+    "id": "wk-14440-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and accurate equivalents for 'commonplace'."
+   }
+  },
+  {
+   "key": "a7376ebd2bffac6d8f23cbd00bb0be0dc68ca2ef4b79bfb38ce7e276f7230a83",
+   "input": {
+    "id": "wk-14443-s0",
+    "en": "comprehend",
+    "en_pos": "verb",
+    "en_sense": "To understand or grasp fully and thoroughly; to plumb.",
+    "ja": "わかる",
+    "ja_reading": "わかる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to understand",
+     "to comprehend",
+     "to grasp",
+     "to see",
+     "to get",
+     "to follow"
+    ],
+    "vi": "thấu hiểu"
+   },
+   "output": {
+    "id": "wk-14443-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 'わかる' is too broad and informal for 'comprehend'; '理解する' (rikai suru) would be a better match. The Vietnamese 'thấu hiểu' is an excellent equivalent."
+   }
+  },
+  {
+   "key": "21e31cdb7470bf94e801d5e9ce4fbaa6e4517affe04af598d6ac22e8a180dac5",
+   "input": {
+    "id": "wk-14449-e:e9b7d4",
+    "en": "tough",
+    "en_pos": "adjective",
+    "en_sense": "difficult to chew",
+    "ja": "硬い",
+    "ja_reading": "かたい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "hard",
+     "solid",
+     "tough"
+    ],
+    "vi": "dai"
+   },
+   "output": {
+    "id": "wk-14449-e:e9b7d4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are perfect natural equivalents for describing food that is difficult to chew."
+   }
+  },
+  {
+   "key": "d83cdf8a06b28e58b1bd9591a3bd7c08529e728feba8d8dfcc6d90cfc6232e86",
+   "input": {
+    "id": "wk-1445-s0",
+    "en": "dye",
+    "en_pos": "noun",
+    "en_sense": "A colorant, especially one that has an affinity to the substrate to which it is applied.",
+    "ja": "染料",
+    "ja_reading": "せんりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dye",
+     "dyestuff",
+     "coloring agent"
+    ],
+    "vi": "thuốc nhuộm"
+   },
+   "output": {
+    "id": "wk-1445-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, precise words for 'dye'."
+   }
+  },
+  {
+   "key": "21abf927c8422a1f7278d007cfe031f70e267eddebab61d3fe4960f21d85d9ee",
+   "input": {
+    "id": "wk-14453-e:1a8e65",
+    "en": "composer",
+    "en_pos": "noun",
+    "en_sense": "one who composes music",
+    "ja": "作曲家",
+    "ja_reading": "さっきょくか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "composer"
+    ],
+    "vi": "nhà soạn nhạc"
+   },
+   "output": {
+    "id": "wk-14453-e:1a8e65",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'composer'."
+   }
+  },
+  {
+   "key": "9d8835bf2e35316561e17941cc8e27e20a760b9c18c18bebfa3a130dd2eb34ad",
+   "input": {
+    "id": "wk-14457-s1",
+    "en": "careless",
+    "en_pos": "adjective",
+    "en_sense": "Not giving sufficient attention or thought, especially concerning the avoidance of harm or mistakes.",
+    "ja": "うかつ",
+    "ja_reading": "うかつ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "careless",
+     "thoughtless",
+     "stupid",
+     "heedless",
+     "unobservant",
+     "inadvertent"
+    ],
+    "vi": "bất cẩn"
+   },
+   "output": {
+    "id": "wk-14457-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, standard equivalents for 'careless'."
+   }
+  },
+  {
+   "key": "610aab3e2e4220ccc32fdb02e16ec1271ac4552fb4d609b5b6dfb944d27741ba",
+   "input": {
+    "id": "wk-14459-s1",
+    "en": "behave",
+    "en_pos": "verb",
+    "en_sense": "To act, conduct oneself in a specific manner; used with an adverbial of manner.",
+    "ja": "振る舞う",
+    "ja_reading": "ふるまう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to behave",
+     "to conduct oneself",
+     "to act"
+    ],
+    "vi": "cư xử"
+   },
+   "output": {
+    "id": "wk-14459-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and accurate translations for 'behave'."
+   }
+  },
+  {
+   "key": "6ba0a61a93bae84e5a94dc7d1c6b78e9a2ba11a866230dfa7c486f23f5b77556",
+   "input": {
+    "id": "wk-1446-s0",
+    "en": "dye",
+    "en_pos": "verb",
+    "en_sense": "To colour with dye, or as if with dye.",
+    "ja": "染める",
+    "ja_reading": "そめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to dye",
+     "to colour",
+     "to color"
+    ],
+    "vi": "nhuộm"
+   },
+   "output": {
+    "id": "wk-1446-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard, natural words for the action of dyeing."
+   }
+  }
+ ]
+}

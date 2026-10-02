@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:06Z",
+ "items": [
+  {
+   "key": "3c6f96e9cc158f6c72316519920c36446b5279906c09d6c12575f5eb7c1e7faf",
+   "input": {
+    "id": "wk-14889-s1",
+    "en": "stretcher",
+    "en_pos": "noun",
+    "en_sense": "A simple litter designed to carry a sick, injured, or dead person.",
+    "ja": "担架",
+    "ja_reading": "たんか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stretcher",
+     "litter",
+     "gurney"
+    ],
+    "vi": "cáng"
+   },
+   "output": {
+    "id": "wk-14889-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a medical stretcher."
+   }
+  },
+  {
+   "key": "bfe544f89f7fd6543d4b875e58600a3bbe2024520e6b6352f0a6db99da303095",
+   "input": {
+    "id": "wk-1489-s0",
+    "en": "backbone",
+    "en_pos": "noun",
+    "en_sense": "The series of vertebrae, separated by disks, that encloses and protects the spinal cord, and runs down the middle of the back in vertebrate animals.",
+    "ja": "背骨",
+    "ja_reading": "せぼね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spine",
+     "backbone",
+     "spinal column"
+    ],
+    "vi": "xương sống"
+   },
+   "output": {
+    "id": "wk-1489-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard anatomical words for 'backbone' or 'spine'."
+   }
+  },
+  {
+   "key": "9b60e3bdfe0bc57b3ea237c4c3148dfb28093e30fc5f9891b678c0112641f33f",
+   "input": {
+    "id": "wk-14901-s0",
+    "en": "injustice",
+    "en_pos": "noun",
+    "en_sense": "Absence of justice; unjustice.",
+    "ja": "不正",
+    "ja_reading": "ふせい",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "injustice",
+     "unfairness",
+     "wrongdoing",
+     "iniquity",
+     "impropriety",
+     "irregularity"
+    ],
+    "vi": "bất công"
+   },
+   "output": {
+    "id": "wk-14901-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 不正 is too broad, covering wrongdoing, cheating, and fraud, while the English and Vietnamese terms specifically mean injustice/unfairness."
+   }
+  },
+  {
+   "key": "19e3deb8452dccfa1b72e47d9e2b38d8daaca719f2330f25afd8b0d8393fd83f",
+   "input": {
+    "id": "wk-14903-s0",
+    "en": "wheelbarrow",
+    "en_pos": "noun",
+    "en_sense": "A small, one-wheeled (or rarely, two-wheeled) cart with handles at one end for transporting small loads.",
+    "ja": "猫",
+    "ja_reading": "ねこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wheelbarrow"
+    ],
+    "vi": "xe đẩy"
+   },
+   "output": {
+    "id": "wk-14903-s0",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 猫 primarily means 'cat' and is a confusing, non-standard choice for 'wheelbarrow'; the Vietnamese word is too broad, meaning 'push cart' in general."
+   }
+  },
+  {
+   "key": "4e9e78282f73b90f395161f46fe4e28a586054a24cf15fd61dc7e49fb6bb8d59",
+   "input": {
+    "id": "wk-14908-s0",
+    "en": "bonze",
+    "en_pos": "noun",
+    "en_sense": "A Buddhist monk or priest in East Asia.",
+    "ja": "坊主",
+    "ja_reading": "ぼうず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Buddhist priest",
+     "bonze"
+    ],
+    "vi": "nhà sư"
+   },
+   "output": {
+    "id": "wk-14908-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The English 'bonze' is rare, and the Japanese 坊主 can be disrespectful; more neutral terms like 'Buddhist monk' (EN) and お坊さん (JA) are better for learners."
+   }
+  },
+  {
+   "key": "e9e6534fbb1668dcc7929337ce5398d082cf4ab6dc6e4bbad54931227a393487",
+   "input": {
+    "id": "wk-14917-s0",
+    "en": "whirlpool",
+    "en_pos": "noun",
+    "en_sense": "A swirling body of water.",
+    "ja": "渦",
+    "ja_reading": "うず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "whirlpool",
+     "swirl",
+     "eddy",
+     "vortex",
+     "maelstrom"
+    ],
+    "vi": "xoáy nước"
+   },
+   "output": {
+    "id": "wk-14917-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'whirlpool'."
+   }
+  },
+  {
+   "key": "c25c2a3bcc20952e4bf5977861a22765b900bc0057123329b039db5b24bc543a",
+   "input": {
+    "id": "wk-1492-s0",
+    "en": "comet",
+    "en_pos": "noun",
+    "en_sense": "A small Solar System body consisting mainly of volatile ice, dust and particles of rock whose very eccentric solar orbit periodically brings it close enough to the Sun that the ice vaporises to form an atmosphere, or coma, which may be blown by the solar wind to produce a visible tail.",
+    "ja": "彗星",
+    "ja_reading": "すいせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "comet"
+    ],
+    "vi": "sao chổi"
+   },
+   "output": {
+    "id": "wk-1492-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'comet'."
+   }
+  },
+  {
+   "key": "8bbbf2cacd5261edbb91c2ddbdc9533585872f781edfe2a7117a49bc23e78404",
+   "input": {
+    "id": "wk-14922-s1",
+    "en": "egg white",
+    "en_pos": "noun",
+    "en_sense": "The white of a particular egg.",
+    "ja": "白身",
+    "ja_reading": "しろみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "egg white"
+    ],
+    "vi": "lòng trắng"
+   },
+   "output": {
+    "id": "wk-14922-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'egg white'."
+   }
+  },
+  {
+   "key": "f5c4d905c2e80bf6c6a639e511184d65481e1dd16b579618c7083fa8df82a9a4",
+   "input": {
+    "id": "wk-14927-s1",
+    "en": "debut",
+    "en_pos": "verb",
+    "en_sense": "To make one's initial formal appearance.",
+    "ja": "デビュー",
+    "ja_reading": "デビュー",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "debut",
+     "doing something for the first time"
+    ],
+    "vi": "ra mắt"
+   },
+   "output": {
+    "id": "wk-14927-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, modern, and direct equivalents for making a debut."
+   }
+  },
+  {
+   "key": "6131967f5dbdc8e7e29ab278f24ae3458c62ff0ead67fc0a7c4d941cbb7f355e",
+   "input": {
+    "id": "wk-1493-s0",
+    "en": "hobby",
+    "en_pos": "noun",
+    "en_sense": "An activity that one enjoys doing in one's spare time.",
+    "ja": "趣味",
+    "ja_reading": "しゅみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hobby",
+     "pastime"
+    ],
+    "vi": "sở thích"
+   },
+   "output": {
+    "id": "wk-1493-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both the Japanese and Vietnamese terms are broader than English 'hobby', as they also mean 'taste' or 'preference'."
+   }
+  },
+  {
+   "key": "bcedb8c7cf9d5fb3ab62add394d503ee8f109a9977368ece0fd54e268c303f90",
+   "input": {
+    "id": "wk-14943-s0",
+    "en": "heritage",
+    "en_pos": "noun",
+    "en_sense": "An inheritance; property that may be inherited.",
+    "ja": "遺産",
+    "ja_reading": "いさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inheritance",
+     "bequest",
+     "legacy",
+     "heritage"
+    ],
+    "vi": "di sản"
+   },
+   "output": {
+    "id": "wk-14943-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms match perfectly for the specified sense of 'heritage' as property/inheritance, which is a valid, though less common, meaning."
+   }
+  },
+  {
+   "key": "5a30a31d16af975eb4420fd0a636235ba386614d8bbb90d2075a3798fddb46df",
+   "input": {
+    "id": "wk-14945-s0",
+    "en": "championship",
+    "en_pos": "noun",
+    "en_sense": "A competition to determine a champion, especially the final of a series of competitions.",
+    "ja": "選手権",
+    "ja_reading": "せんしゅけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "championship",
+     "title (of champion)"
+    ],
+    "vi": "chức vô địch"
+   },
+   "output": {
+    "id": "wk-14945-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese term 'chức vô địch' means the 'title of champion', whereas the English and Japanese terms refer to the competition held to decide the champion."
+   }
+  }
+ ]
+}

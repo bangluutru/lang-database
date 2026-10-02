@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:23:21Z",
+ "items": [
+  {
+   "key": "320b767ee89439c4dd3b169b9aa55a2c4c4184d0361de1f22d79233c4d5cdced",
+   "input": {
+    "id": "wk-100-s1",
+    "en": "abbey",
+    "en_pos": "noun",
+    "en_sense": "A monastery or society of people, secluded from the world and devoted to religion and celibacy, which is headed by an abbot or abbess; also, the monastic building or buildings.",
+    "ja": "修道院",
+    "ja_reading": "しゅうどういん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "monastery",
+     "convent",
+     "cloister",
+     "abbey"
+    ],
+    "vi": "tu viện"
+   },
+   "output": {
+    "id": "wk-100-s1",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese and Vietnamese terms mean 'monastery' or 'convent' in general, which is broader than the specific English sense of 'abbey' (a monastery headed by an abbot)."
+   }
+  },
+  {
+   "key": "0f9c3fd7cec34e79e1458993aa18fe02c1f3e04b804477819a79870b39330abb",
+   "input": {
+    "id": "wk-16971-s1",
+    "en": "sweetheart",
+    "en_pos": "noun",
+    "en_sense": "A person very much liked or loved by someone, especially when both partners are young.",
+    "ja": "スウィートハート",
+    "ja_reading": "スウィートハート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sweetheart"
+    ],
+    "vi": "người yêu"
+   },
+   "output": {
+    "id": "wk-16971-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY"
+    ],
+    "note": "The Japanese entry is a direct loanword and not the common or natural equivalent for a loved one, which would be 恋人 (koibito)."
+   }
+  },
+  {
+   "key": "2a2b8269686770d670ae34d037194be3a3b5ead940d9092c5826669c34bcf56d",
+   "input": {
+    "id": "wk-30656-s0",
+    "en": "adversity",
+    "en_pos": "noun",
+    "en_sense": "The state of adverse conditions; state of misfortune or calamity.",
+    "ja": "逆境",
+    "ja_reading": "ぎゃっきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "adverse circumstances",
+     "unfortunate situation",
+     "adversity"
+    ],
+    "vi": "nghịch cảnh"
+   },
+   "output": {
+    "id": "wk-30656-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural, and standard equivalents with matching registers."
+   }
+  },
+  {
+   "key": "5c6ba370662e9a3af7cffeb040d63ff30285c1989c0895749544f476bc2d6431",
+   "input": {
+    "id": "wk-18862-s0",
+    "en": "islet",
+    "en_pos": "noun",
+    "en_sense": "A small island.",
+    "ja": "小島",
+    "ja_reading": "こじま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "small island",
+     "islet"
+    ],
+    "vi": "cù lao"
+   },
+   "output": {
+    "id": "wk-18862-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'cù lao' typically refers to an islet in a river or estuary, making it narrower than the general English 'islet'."
+   }
+  },
+  {
+   "key": "eb1715c051faf00d57c1432763756d77fb30a98525bbe3e841abc27ff98c9b61",
+   "input": {
+    "id": "wk-1980-s1",
+    "en": "galaxy",
+    "en_pos": "noun",
+    "en_sense": "Any of the collections of many millions or billions of stars, galactic dust, black holes, etc. existing as independent and coherent systems, of which there are billions in the known universe.",
+    "ja": "銀河",
+    "ja_reading": "ぎんが",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "galaxy"
+    ],
+    "vi": "thiên hà"
+   },
+   "output": {
+    "id": "wk-1980-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard astronomical terms for 'galaxy' and share the same ambiguity of also referring to the Milky Way."
+   }
+  },
+  {
+   "key": "522b5a72b7a349dcce847f03e43f1c4ca2449f11646b1884f1ad5007c274c695",
+   "input": {
+    "id": "wk-6265-e:436a1c",
+    "en": "buddha",
+    "en_pos": "noun",
+    "en_sense": "enlightened human",
+    "ja": "ブッダ",
+    "ja_reading": "ブッダ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Buddha"
+    ],
+    "vi": "phật"
+   },
+   "output": {
+    "id": "wk-6265-e:436a1c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for the concept of an enlightened being in Buddhism."
+   }
+  },
+  {
+   "key": "a3b8b23ef8ea0f0219376cf85b1db94099f2dcb932343cd59a3c6d1c8d35ee92",
+   "input": {
+    "id": "wk-1437-e:d6838c",
+    "en": "cream",
+    "en_pos": "noun",
+    "en_sense": "colour",
+    "ja": "クリーム色",
+    "ja_reading": "クリームいろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cream (colour, color)"
+    ],
+    "vi": "màu kem"
+   },
+   "output": {
+    "id": "wk-1437-e:d6838c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard, natural, and structurally similar way to refer to the color cream."
+   }
+  },
+  {
+   "key": "2f0f09deb2470eb0cd5ce7415be3d57cb86ab8c023e13fd58721f7ae89784471",
+   "input": {
+    "id": "wk-5669-s0",
+    "en": "thesis",
+    "en_pos": "noun",
+    "en_sense": "A proposition or statement supported by arguments.",
+    "ja": "テーゼ",
+    "ja_reading": "テーゼ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thesis",
+     "statement"
+    ],
+    "vi": "luận đề"
+   },
+   "output": {
+    "id": "wk-5669-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents for the specific academic/philosophical sense of 'thesis' as a proposition."
+   }
+  },
+  {
+   "key": "c348f06887c897dd0d65b96783c98716d8fdde31d35949fa263ef244e1d516b4",
+   "input": {
+    "id": "wk-15112-s2",
+    "en": "gastronomy",
+    "en_pos": "noun",
+    "en_sense": "The study of the relationship between food and culture.",
+    "ja": "ガストロノミー",
+    "ja_reading": "ガストロノミー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gastronomy"
+    ],
+    "vi": "ẩm thực"
+   },
+   "output": {
+    "id": "wk-15112-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'ẩm thực' means 'cuisine', not 'gastronomy' (the study of food and culture), which would be 'ẩm thực học'."
+   }
+  },
+  {
+   "key": "c9b53338bc31be93f8a3cc61cd15bdad25dbba8506aec4c5f36f502185d2f5cf",
+   "input": {
+    "id": "wk-34120-s1",
+    "en": "sensitive plant",
+    "en_pos": "noun",
+    "en_sense": "A plant that moves in response to touch and other physical stimuli; especially Mimosa pudica, an annual plant native to Central and South America.",
+    "ja": "おじぎそう",
+    "ja_reading": "おじぎそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mimosa (Mimosa pudica)",
+     "sensitive plant",
+     "touch-me-not"
+    ],
+    "vi": "xấu hổ"
+   },
+   "output": {
+    "id": "wk-34120-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'xấu hổ' means 'shy' or 'ashamed'; the plant itself is called 'cây xấu hổ'."
+   }
+  },
+  {
+   "key": "1a4ce5fbcc3fd0d3477b9a37d37a0585e8552de8528fea5caffaf5caf4deac5a",
+   "input": {
+    "id": "wk-690-s0",
+    "en": "cow",
+    "en_pos": "noun",
+    "en_sense": "An adult female of the species Bos taurus, especially one that has calved.",
+    "ja": "雌牛",
+    "ja_reading": "めうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cow",
+     "heifer"
+    ],
+    "vi": "bò cái"
+   },
+   "output": {
+    "id": "wk-690-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard equivalents for a female bovine."
+   }
+  },
+  {
+   "key": "fdab9389fe7b634b735d16dc9fd069cb0944b0717fa68a65a43e51686a7cafe9",
+   "input": {
+    "id": "wk-1313-e:74757b",
+    "en": "bathroom",
+    "en_pos": "noun",
+    "en_sense": "a room with a bathtub",
+    "ja": "風呂場",
+    "ja_reading": "ふろば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bathroom"
+    ],
+    "vi": "buồng tắm"
+   },
+   "output": {
+    "id": "wk-1313-e:74757b",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately and naturally denote a room specifically for bathing, matching the given English sense."
+   }
+  }
+ ]
+}

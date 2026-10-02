@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:16:05Z",
+ "items": [
+  {
+   "key": "76cd67655f223a309a82538770acda9b5966e080bbe26273ec3d59b65950df99",
+   "input": {
+    "id": "wk-7614-s1",
+    "en": "surface",
+    "en_pos": "noun",
+    "en_sense": "The overside or upside of a flat object such as a table, or of a liquid.",
+    "ja": "表面",
+    "ja_reading": "ひょうめん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "surface",
+     "face"
+    ],
+    "vi": "mặt"
+   },
+   "output": {
+    "id": "wk-7614-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for this sense."
+   }
+  },
+  {
+   "key": "0f4fc3aa868e8d2b0d25a56e505bf44de7aaf28a5836bde0af4d78b62564bdc2",
+   "input": {
+    "id": "wk-7619-s0",
+    "en": "placenta",
+    "en_pos": "noun",
+    "en_sense": "An organ in most mammals during gestation that supplies food and oxygen to the foetus and passes back waste. It is on the wall of the uterus and links to the foetus through the umbilical cord. It is expelled after birth.",
+    "ja": "胎盤",
+    "ja_reading": "たいばん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "placenta"
+    ],
+    "vi": "nhau"
+   },
+   "output": {
+    "id": "wk-7619-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard words for placenta."
+   }
+  },
+  {
+   "key": "33cbdefc806828a085985c1e857f9cdb899dfd9a91dc1167f4d0d20b398d5e63",
+   "input": {
+    "id": "wk-7623-s0",
+    "en": "madam",
+    "en_pos": "noun",
+    "en_sense": "A polite form of address for a woman or lady.",
+    "ja": "奥様",
+    "ja_reading": "おくさま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wife",
+     "your wife",
+     "his wife",
+     "married lady",
+     "madam"
+    ],
+    "vi": "cô"
+   },
+   "output": {
+    "id": "wk-7623-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese and Vietnamese terms are not general equivalents for 'madam'; 奥様 strongly implies a married woman and 'cô' is used for a younger woman."
+   }
+  },
+  {
+   "key": "9c101c5b6aaafb6963379d7ab4d6f7e58c27845ad279f4247a327dfec1789cee",
+   "input": {
+    "id": "wk-7625-s0",
+    "en": "haircut",
+    "en_pos": "noun",
+    "en_sense": "The act of cutting of the hair, often done professionally by a barber, hair stylist, or beautician.",
+    "ja": "散髪",
+    "ja_reading": "さんぱつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(having a) haircut",
+     "hair-cutting",
+     "hair-dressing"
+    ],
+    "vi": "hớt tóc"
+   },
+   "output": {
+    "id": "wk-7625-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese term 'hớt tóc' is a verb phrase ('to cut hair'), not a noun ('a haircut'), and is also a regional variant of the more standard 'cắt tóc'."
+   }
+  },
+  {
+   "key": "98f0147d22ba86cc621c42e43d35d224190743ec46a269d26940d08ba292ad63",
+   "input": {
+    "id": "wk-7632-s0",
+    "en": "enjoy",
+    "en_pos": "verb",
+    "en_sense": "To receive pleasure or satisfaction from something.",
+    "ja": "楽しむ",
+    "ja_reading": "たのしむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to enjoy",
+     "to take pleasure in",
+     "to have a good time",
+     "to have fun",
+     "to amuse oneself"
+    ],
+    "vi": "thưởng thức"
+   },
+   "output": {
+    "id": "wk-7632-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'thưởng thức' is too narrow, meaning 'to savor/appreciate' (food, art), and does not cover the general meaning of 'enjoy'."
+   }
+  },
+  {
+   "key": "80b3958e8cee3848875fb3444d3a48383bdf8abecb6fcbd9c79b61c0cb64b2da",
+   "input": {
+    "id": "wk-7639-s0",
+    "en": "conspire",
+    "en_pos": "verb",
+    "en_sense": "To secretly plot or make plans together, often with the intention to bring bad or illegal results; to collude, to connive, to plot.",
+    "ja": "たくらむ",
+    "ja_reading": "たくらむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to scheme",
+     "to plan",
+     "to play a trick",
+     "to invent",
+     "to conspire",
+     "to frame up"
+    ],
+    "vi": "âm mưu"
+   },
+   "output": {
+    "id": "wk-7639-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for 'conspire'."
+   }
+  },
+  {
+   "key": "6ba5206b1e5bbbfb8f4e328414cba662e55af2a0f108bf5a30f6801068465fb9",
+   "input": {
+    "id": "wk-7729-s0",
+    "en": "donation",
+    "en_pos": "noun",
+    "en_sense": "A voluntary gift or contribution for a specific cause.",
+    "ja": "寄付",
+    "ja_reading": "きふ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "contribution",
+     "donation"
+    ],
+    "vi": "sự tặng"
+   },
+   "output": {
+    "id": "wk-7729-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự tặng' means 'the act of gifting' in general and is not the correct term for 'donation'; 'sự quyên góp' should be used instead."
+   }
+  },
+  {
+   "key": "104f8cd79e5e9a9d3ff068d1f326f83e6a4da8b15c8ebfb2422084c4bed993fe",
+   "input": {
+    "id": "wk-7739-s0",
+    "en": "embrace",
+    "en_pos": "noun",
+    "en_sense": "An act of putting arms around someone and bringing the person close to the chest; a hug.",
+    "ja": "抱擁",
+    "ja_reading": "ほうよう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "embrace",
+     "hug",
+     "holding in one's arms"
+    ],
+    "vi": "sự ôm"
+   },
+   "output": {
+    "id": "wk-7739-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự ôm' is a correct but slightly unnatural nominalization; 'cái ôm' is the more common and natural noun for 'a hug'."
+   }
+  },
+  {
+   "key": "7338ce315b9960e917a02993e542e4e8343490284dfedf8fec462cccb67fdebe",
+   "input": {
+    "id": "wk-7871-s1",
+    "en": "pardon",
+    "en_pos": "noun",
+    "en_sense": "An order that releases a convicted criminal without further punishment, prevents future punishment, or (in some jurisdictions) removes an offence from a person's criminal record, as if it had never been committed.",
+    "ja": "赦免",
+    "ja_reading": "しゃめん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "pardon",
+     "remission",
+     "amnesty"
+    ],
+    "vi": "xá tội"
+   },
+   "output": {
+    "id": "wk-7871-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'xá tội' is a verb phrase ('to pardon'), not a noun ('a pardon'). The correct noun is 'sự xá tội' or 'ân xá'."
+   }
+  },
+  {
+   "key": "2327af15b51701a10d611a08d9ec8d14209942856996804980296f3070b82469",
+   "input": {
+    "id": "wk-7882-s0",
+    "en": "cult",
+    "en_pos": "noun",
+    "en_sense": "The veneration, devotion, and religious rites given to a deity (especially in a historical polytheistic context), or (in a Christian context) to a saint; a subset of worship.",
+    "ja": "崇拝",
+    "ja_reading": "すうはい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "worship",
+     "adoration",
+     "admiration",
+     "cult"
+    ],
+    "vi": "sự sùng bái"
+   },
+   "output": {
+    "id": "wk-7882-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The entry correctly identifies the non-pejorative, historical sense of 'cult' and provides excellent, precise equivalents."
+   }
+  },
+  {
+   "key": "d6ba770807d91e6ea7d43979de9f9b5aee5450e234a2264d5ba738f60c15baf5",
+   "input": {
+    "id": "wk-7927-s0",
+    "en": "question",
+    "en_pos": "noun",
+    "en_sense": "A worded or expressed sentence, phrase, or only a word on its own, which asks for information, a reply, or a response; an interrogative.",
+    "ja": "質問",
+    "ja_reading": "しつもん",
+    "ja_pos": "n,vs,vt,vi,adj-no",
+    "ja_glosses": [
+     "question",
+     "inquiry",
+     "enquiry"
+    ],
+    "vi": "câu hỏi"
+   },
+   "output": {
+    "id": "wk-7927-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents."
+   }
+  },
+  {
+   "key": "990989dfa162e400b024d6026a2e24762df90b98f8727a6f7fcd4a3b68d9945d",
+   "input": {
+    "id": "wk-8271-s0",
+    "en": "theft",
+    "en_pos": "noun",
+    "en_sense": "The act of stealing property.",
+    "ja": "窃盗",
+    "ja_reading": "せっとう",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "theft",
+     "stealing",
+     "larceny"
+    ],
+    "vi": "sự trộm cắp"
+   },
+   "output": {
+    "id": "wk-8271-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the act of theft, with a matching neutral-to-formal register."
+   }
+  }
+ ]
+}

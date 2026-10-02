@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:14:19Z",
+ "items": [
+  {
+   "key": "9d64022b93c49e9383662e23c4ef3d2baf7f86301c42896404b58480468d2b5c",
+   "input": {
+    "id": "wk-6590-s0",
+    "en": "enemy",
+    "en_pos": "noun",
+    "en_sense": "Someone who is hostile to, feels hatred towards, opposes the interests of, or intends injury to someone else.",
+    "ja": "仇敵",
+    "ja_reading": "きゅうてき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bitter enemy"
+    ],
+    "vi": "kẻ thù"
+   },
+   "output": {
+    "id": "wk-6590-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese word 仇敵 means \"bitter enemy\" and is too specific for the general sense of \"enemy\"; 敵 would be a better equivalent."
+   }
+  },
+  {
+   "key": "eaf3b2c945f3783141248085c52f75c6f360c58dc6a6f599480f48cf44579743",
+   "input": {
+    "id": "wk-6592-e:483286",
+    "en": "torch",
+    "en_pos": "noun",
+    "en_sense": "stick of wood, etc., with one end soaked in a flammable substance and set on fire; similarly shaped implement with a replaceable supply of flammable material",
+    "ja": "松明",
+    "ja_reading": "たいまつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "torch (made of pine, bamboo, reed, etc.)",
+     "flambeau",
+     "torchlight"
+    ],
+    "vi": "đuốc"
+   },
+   "output": {
+    "id": "wk-6592-e:483286",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a flaming torch."
+   }
+  },
+  {
+   "key": "d92d99bfe7370f6f5a7bf18719634774f4786df4617e8f1a774b1d3caa205d78",
+   "input": {
+    "id": "wk-6596-s0",
+    "en": "junk",
+    "en_pos": "noun",
+    "en_sense": "A Chinese sailing vessel.",
+    "ja": "ジャンク",
+    "ja_reading": "ジャンク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "junk (Chinese ship)"
+    ],
+    "vi": "ghe"
+   },
+   "output": {
+    "id": "wk-6596-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese word \"ghe\" means a general boat or barge, not the specific Chinese sailing vessel known as a junk."
+   }
+  },
+  {
+   "key": "787e86212fb5288dbca0c35cb5a813917f6504c99b30a0f0a2559f30b5534bea",
+   "input": {
+    "id": "wk-6613-s0",
+    "en": "anxiety",
+    "en_pos": "noun",
+    "en_sense": "An unpleasant state of mental uneasiness, nervousness, apprehension and obsession or concern about some uncertain event.",
+    "ja": "不安",
+    "ja_reading": "ふあん",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "anxiety",
+     "uneasiness",
+     "worry",
+     "apprehension",
+     "fear",
+     "insecurity"
+    ],
+    "vi": "lo âu"
+   },
+   "output": {
+    "id": "wk-6613-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for the concept of anxiety."
+   }
+  },
+  {
+   "key": "49d6230f80fbf2add43ab7c3f70dbf2928ba7388a0e3087539490e7fd9a1fef2",
+   "input": {
+    "id": "wk-6643-e:3c539d",
+    "en": "suicide",
+    "en_pos": "noun",
+    "en_sense": "instance of killing oneself",
+    "ja": "自殺",
+    "ja_reading": "じさつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "suicide"
+    ],
+    "vi": "tự sát"
+   },
+   "output": {
+    "id": "wk-6643-e:3c539d",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for suicide."
+   }
+  },
+  {
+   "key": "44473636476ebb9ed93f00c48e56720d17131db783b64d6a264cfc14232de4ed",
+   "input": {
+    "id": "wk-6797-s0",
+    "en": "appearance",
+    "en_pos": "noun",
+    "en_sense": "The act of appearing or coming into sight; the act of becoming visible to the eye.",
+    "ja": "出現",
+    "ja_reading": "しゅつげん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "appearance",
+     "emergence",
+     "advent",
+     "arrival",
+     "showing up",
+     "coming to existence"
+    ],
+    "vi": "xuất hiện"
+   },
+   "output": {
+    "id": "wk-6797-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the act of appearing."
+   }
+  },
+  {
+   "key": "7170e1605ce5f88f01b7e3148e47b5067ad2711b703045249e4351ae091f7a38",
+   "input": {
+    "id": "wk-6799-s0",
+    "en": "applause",
+    "en_pos": "noun",
+    "en_sense": "The act of applauding; approbation and praise publicly expressed by the clapping of hands, stamping or tapping of the feet, acclamation, huzzas, or other means; marked commendation.",
+    "ja": "拍手",
+    "ja_reading": "はくしゅ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "clapping hands",
+     "applause"
+    ],
+    "vi": "vỗ tay"
+   },
+   "output": {
+    "id": "wk-6799-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese \"vỗ tay\" is a verb phrase meaning \"to clap hands\", not a noun for \"applause\"; \"tiếng vỗ tay\" would be a better noun equivalent."
+   }
+  },
+  {
+   "key": "9a5256f127e336a066001130d140ef59c30b9718a3fcdeff9c3492eacb833b09",
+   "input": {
+    "id": "wk-683-s2",
+    "en": "night",
+    "en_pos": "noun",
+    "en_sense": "A period of time often defined in the legal system as beginning 30 minutes after sunset, and ending 30 minutes before sunrise.",
+    "ja": "一泊",
+    "ja_reading": "いっぱく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(staying) one night",
+     "overnight stay"
+    ],
+    "vi": "tối"
+   },
+   "output": {
+    "id": "wk-683-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both target words are incorrect; 一泊 means \"an overnight stay\" and \"tối\" means \"evening\", not \"night\" (which is 夜 in Japanese and đêm in Vietnamese)."
+   }
+  },
+  {
+   "key": "50c2e2dffaabf8d53be6b0766ac70846ed88d9618ccc7d76c4f5d0aa3075e758",
+   "input": {
+    "id": "wk-6862-s2",
+    "en": "execution",
+    "en_pos": "noun",
+    "en_sense": "The act of putting to death or being put to death as a penalty, or actions so associated.",
+    "ja": "処刑",
+    "ja_reading": "しょけい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "execution"
+    ],
+    "vi": "tử hình"
+   },
+   "output": {
+    "id": "wk-6862-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese \"tử hình\" means \"death penalty\" (the sentence), while the English and Japanese refer to the act of execution; \"xử tử\" or \"hành quyết\" would be more precise."
+   }
+  },
+  {
+   "key": "ab1b417af60eede817695ab39acd27c43a4a09e047bb330242c329caf541be3c",
+   "input": {
+    "id": "wk-6916-s3",
+    "en": "conjugation",
+    "en_pos": "noun",
+    "en_sense": "In some languages, one of several classifications of verbs categorized into distinct classes based on the specific inflectional patterns they exhibit.",
+    "ja": "活用",
+    "ja_reading": "かつよう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "conjugation",
+     "inflection"
+    ],
+    "vi": "chia động từ"
+   },
+   "output": {
+    "id": "wk-6916-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese \"chia động từ\" is a verb phrase meaning \"to conjugate a verb\", not a noun for \"conjugation\"; \"sự chia động từ\" is the corresponding noun."
+   }
+  },
+  {
+   "key": "1f81336506384b050c53899a16e9c17de89da2331d15388e792eaf715c8248ae",
+   "input": {
+    "id": "wk-6954-s0",
+    "en": "coma",
+    "en_pos": "noun",
+    "en_sense": "A state of unconsciousness from which one may not wake up, usually induced by some form of trauma.",
+    "ja": "昏睡",
+    "ja_reading": "こんすい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "coma"
+    ],
+    "vi": "hôn mê"
+   },
+   "output": {
+    "id": "wk-6954-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for a medical coma."
+   }
+  },
+  {
+   "key": "9723eddce67c4098305b1097251079b89b5ae6179ea2a777a4f7d1ad9467cb51",
+   "input": {
+    "id": "wk-7044-s0",
+    "en": "package",
+    "en_pos": "noun",
+    "en_sense": "Something which is packed, a parcel, a box, an envelope.",
+    "ja": "パッケージ",
+    "ja_reading": "パッケージ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "package"
+    ],
+    "vi": "gói"
+   },
+   "output": {
+    "id": "wk-7044-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese \"gói\" is better translated as \"packet\" or \"bundle\" and is too narrow for the general sense of \"package\" which includes boxes and parcels."
+   }
+  }
+ ]
+}

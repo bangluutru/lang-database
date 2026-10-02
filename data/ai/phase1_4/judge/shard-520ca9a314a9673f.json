@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:54Z",
+ "items": [
+  {
+   "key": "01ab88a8674d4cbd494939208a742e43a2626e529e92e7d6e0cb978b3a1508d2",
+   "input": {
+    "id": "wk-2933-e:296281",
+    "en": "long",
+    "en_pos": "adjective",
+    "en_sense": "having much distance from one point to another",
+    "ja": "長い",
+    "ja_reading": "ながい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "long (distance, length)"
+    ],
+    "vi": "dài"
+   },
+   "output": {
+    "id": "wk-2933-e:296281",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the core sense of 'long' in all three languages."
+   }
+  },
+  {
+   "key": "2c9527cf7436c7c149de1c08d06246d91c5f4a9df5022942517ed1d383e06719",
+   "input": {
+    "id": "wk-2940-s0",
+    "en": "wide",
+    "en_pos": "adjective",
+    "en_sense": "Having a large physical extent from side to side.",
+    "ja": "広い",
+    "ja_reading": "ひろい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "spacious",
+     "vast",
+     "wide"
+    ],
+    "vi": "rộng"
+   },
+   "output": {
+    "id": "wk-2940-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent core vocabulary match, despite slight semantic range differences that are common across languages."
+   }
+  },
+  {
+   "key": "aceca6f447330fc7547b149379c538737f774c190ffb6dd9322dff97c07daba8",
+   "input": {
+    "id": "wk-2941-s0",
+    "en": "high",
+    "en_pos": "adjective",
+    "en_sense": "Very elevated; extending or being far above a base; tall; lofty.",
+    "ja": "高い",
+    "ja_reading": "たかい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "high",
+     "tall"
+    ],
+    "vi": "cao"
+   },
+   "output": {
+    "id": "wk-2941-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of 'high' or 'tall' in all three languages."
+   }
+  },
+  {
+   "key": "74d37b0a8fb9551672128128bbff9a31e937682833dd6b2e71a8ce1a4c083fa9",
+   "input": {
+    "id": "wk-29440-s0",
+    "en": "marker pen",
+    "en_pos": "noun",
+    "en_sense": "A pen, often with a thick tip made of felt.",
+    "ja": "フェルトペン",
+    "ja_reading": "フェルトペン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "felt-tip pen",
+     "marker pen",
+     "felt pen"
+    ],
+    "vi": "đánh dấu"
+   },
+   "output": {
+    "id": "wk-29440-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese entry 'đánh dấu' is a verb meaning 'to mark', not a noun for 'marker pen'; the correct term would be 'bút đánh dấu'."
+   }
+  },
+  {
+   "key": "9218285cbdd343cc0ae9428efeb0ec45e1c52004803bdfe56879195c782fab19",
+   "input": {
+    "id": "wk-29441-s1",
+    "en": "lose one's mind",
+    "en_pos": "verb",
+    "en_sense": "To become frustrated, angry.",
+    "ja": "正気を失う",
+    "ja_reading": "しょうきをうしなう",
+    "ja_pos": "exp,v5u",
+    "ja_glosses": [
+     "to lose one's mind",
+     "to go crazy",
+     "to lose one's senses",
+     "to lose one's marbles"
+    ],
+    "vi": "mất trí"
+   },
+   "output": {
+    "id": "wk-29441-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese and Vietnamese expressions mean 'to go insane' literally, not the intended English sense of 'to become very frustrated or angry'."
+   }
+  },
+  {
+   "key": "9252d1c1393e8307b6ea4a9d507bb2f10f2c3806fc1d830e5ea5519ee5618278",
+   "input": {
+    "id": "wk-2946-e:838c52",
+    "en": "life",
+    "en_pos": "noun",
+    "en_sense": "the state of being alive",
+    "ja": "命",
+    "ja_reading": "いのち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "life",
+     "life force"
+    ],
+    "vi": "cuộc sống"
+   },
+   "output": {
+    "id": "wk-2946-e:838c52",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'cuộc sống' means 'life' as in daily living or one's personal history, not 'life' as the state of being alive, for which 'sự sống' or 'mạng sống' would be correct."
+   }
+  },
+  {
+   "key": "320ab5f6c547bbd3dc01fe411c93b8e7cd1cda6d56bb9afa4f0a86b782d02354",
+   "input": {
+    "id": "wk-2947-s0",
+    "en": "liquid",
+    "en_pos": "noun",
+    "en_sense": "A substance that is flowing, and keeping no shape, such as water; a substance of which the molecules, while not tending to separate from one another like those of a gas, readily change their relative position, and which therefore retains no definite shape, except that determined by the containing re",
+    "ja": "液体",
+    "ja_reading": "えきたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "liquid"
+    ],
+    "vi": "nước"
+   },
+   "output": {
+    "id": "wk-2947-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'nước' means 'water', not the general category 'liquid', for which the correct term is 'chất lỏng'."
+   }
+  },
+  {
+   "key": "eac5a14b70929a88108528a821a2169c1fc22826febb3158b1ae8f0e97a2399c",
+   "input": {
+    "id": "wk-2952-s0",
+    "en": "melt",
+    "en_pos": "verb",
+    "en_sense": "To change (or to be changed) from a solid state to a liquid state, usually by a gradual heat.",
+    "ja": "溶ける",
+    "ja_reading": "とける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to melt",
+     "to liquefy",
+     "to soften (e.g. through heat)",
+     "to thaw"
+    ],
+    "vi": "tan"
+   },
+   "output": {
+    "id": "wk-2952-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the concept of 'melt' across all three languages."
+   }
+  },
+  {
+   "key": "34a51791de7346d93feeef73322de54c23d743eefceae9cb823c70b7da486bd7",
+   "input": {
+    "id": "wk-2956-s0",
+    "en": "fluid",
+    "en_pos": "noun",
+    "en_sense": "Any substance which can flow with relative ease, tends to assume the shape of its container, and obeys Bernoulli's principle; a liquid, gas or plasma.",
+    "ja": "流体",
+    "ja_reading": "りゅうたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fluid"
+    ],
+    "vi": "chất lưu"
+   },
+   "output": {
+    "id": "wk-2956-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the scientific term 'fluid' in all three languages."
+   }
+  },
+  {
+   "key": "93cd68b230708e73cc6deca23ff8d69e0dc4f699a03023258e20908dbd5769bf",
+   "input": {
+    "id": "wk-2957-s0",
+    "en": "loss",
+    "en_pos": "noun",
+    "en_sense": "The result of no longer possessing an object, a function, or a characteristic due to external causes or misplacement.",
+    "ja": "損失",
+    "ja_reading": "そんしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "loss (of assets, profit, etc.)"
+    ],
+    "vi": "sự mất"
+   },
+   "output": {
+    "id": "wk-2957-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '損失' (sonshitsu) specifically refers to financial or material loss and is too narrow for the general English sense of 'loss'."
+   }
+  },
+  {
+   "key": "67ddde60a76e7d3bc270100c8f4d10c0191031b136a798bc1487093bc069a3c2",
+   "input": {
+    "id": "wk-296-s0",
+    "en": "i",
+    "en_pos": "noun",
+    "en_sense": "The name of the Latin script letter I/i.",
+    "ja": "Ｉ",
+    "ja_reading": "アイ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "I (alphabet letter)",
+     "i"
+    ],
+    "vi": "i"
+   },
+   "output": {
+    "id": "wk-296-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A straightforward and correct representation of the letter 'i' in all three languages."
+   }
+  },
+  {
+   "key": "cfe9b2364be741ae10c4b2fd3333f9d4f6619e886e70514157f2a3aa781c6c00",
+   "input": {
+    "id": "wk-29614-s0",
+    "en": "these days",
+    "en_pos": "adverb",
+    "en_sense": "Currently, at present.",
+    "ja": "今時",
+    "ja_reading": "いまどき",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "these days",
+     "nowadays",
+     "today",
+     "present age",
+     "modern times"
+    ],
+    "vi": "ngày nay"
+   },
+   "output": {
+    "id": "wk-29614-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good idiomatic equivalents for 'these days' or 'nowadays' in all three languages."
+   }
+  }
+ ]
+}

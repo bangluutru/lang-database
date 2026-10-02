@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:24:40Z",
+ "items": [
+  {
+   "key": "cbe97db7845dce160daa4e7802a39409c97ab7ffa224ca9692d14038d9427dda",
+   "input": {
+    "id": "jm-1145510-0-lesson",
+    "en": "lesson",
+    "en_pos": "noun",
+    "en_sense": "lesson",
+    "ja": "レッスン",
+    "ja_reading": "レッスン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lesson"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1145510-0-lesson",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match; レッスン is the standard loanword for a structured learning session."
+   }
+  },
+  {
+   "key": "781a194f586b1295c29cbaa399520954621129815407c6afd7224bcf74496082",
+   "input": {
+    "id": "jm-1148010-0-romantic",
+    "en": "romantic",
+    "en_pos": "adjective",
+    "en_sense": "romantic",
+    "ja": "ロマンチック",
+    "ja_reading": "ロマンチック",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "romantic"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1148010-0-romantic",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match; ロマンチック is the standard loanword for 'romantic'."
+   }
+  },
+  {
+   "key": "ed0d89b6bdc725593e4bdec2833368a8434e59b32822dca5df3f2022a5641fc6",
+   "input": {
+    "id": "jm-1149830-0-us",
+    "en": "us",
+    "en_pos": "noun",
+    "en_sense": "(United States of) America; United States; US; USA",
+    "ja": "アメリカ",
+    "ja_reading": "アメリカ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(United States of) America",
+     "United States",
+     "US",
+     "USA"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1149830-0-us",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English lemma 'us' is likely a typo for 'US'; アメリカ is the standard Japanese term for the United States."
+   }
+  },
+  {
+   "key": "0e36a4d8e101e2ec3355b584038afea38ad7846aaedb986d88813aed27c78e99",
+   "input": {
+    "id": "jm-1150110-0-pity",
+    "en": "pity",
+    "en_pos": "noun",
+    "en_sense": "pity; sorrow; grief; misery; compassion; pathos",
+    "ja": "哀れ",
+    "ja_reading": "あわれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pity",
+     "sorrow",
+     "grief",
+     "misery",
+     "compassion",
+     "pathos"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1150110-0-pity",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "Both words cover a similar broad range of meanings from pity and compassion to sorrow and misery."
+   }
+  },
+  {
+   "key": "77ee73159bf18ae81c60ca858161b6067c76cb137d965f4843f70895a2f6b651",
+   "input": {
+    "id": "jm-1151090-0-favorite",
+    "en": "favorite",
+    "en_pos": "adjective",
+    "en_sense": "favorite; favourite; habitually used",
+    "ja": "愛用",
+    "ja_reading": "あいよう",
+    "ja_pos": "adj-no,vs,vt",
+    "ja_glosses": [
+     "favorite",
+     "favourite",
+     "habitually used"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1151090-0-favorite",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "愛用 specifically means 'favorite' in the sense of 'habitually used with affection', and cannot be used for concepts, people, or things one does not 'use'."
+   }
+  },
+  {
+   "key": "0f54be45c4f866b897dd574fd05ad8c6d76697d905c49983df66f7cc979b6a3b",
+   "input": {
+    "id": "jm-1152720-0-clasp",
+    "en": "clasp",
+    "en_pos": "verb",
+    "en_sense": "to clasp; to grasp; to grip; to clutch",
+    "ja": "握る",
+    "ja_reading": "にぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to clasp",
+     "to grasp",
+     "to grip",
+     "to clutch"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1152720-0-clasp",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of grasping or gripping with one's hand."
+   }
+  },
+  {
+   "key": "2e974fc67b40b3882cd91c57751f14c72ea92dd5791aba2fd35672037d5601d3",
+   "input": {
+    "id": "jm-1153430-0-treatment",
+    "en": "treatment",
+    "en_pos": "noun",
+    "en_sense": "treatment; service; dealing (with); handling; management",
+    "ja": "扱い",
+    "ja_reading": "あつかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "treatment",
+     "service",
+     "dealing (with)",
+     "handling",
+     "management"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1153430-0-treatment",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match for the non-medical sense of 'treatment' as in handling or dealing with something/someone."
+   }
+  },
+  {
+   "key": "1104c22e490b8ff8a8e3261a37fae9eb6d4e2e49de007981fceafe02bcc21682",
+   "input": {
+    "id": "jm-1153520-0-candy",
+    "en": "candy",
+    "en_pos": "noun",
+    "en_sense": "(hard) candy; toffee",
+    "ja": "飴",
+    "ja_reading": "あめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(hard) candy",
+     "toffee"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1153520-0-candy",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the specific sense of hard candy or toffee."
+   }
+  },
+  {
+   "key": "a882d8c8e1f312d5a6cc1752fdb4267c5ca73f5b24109874546d656b44ba4015",
+   "input": {
+    "id": "jm-1153910-0-rest",
+    "en": "rest",
+    "en_pos": "noun",
+    "en_sense": "rest; quiet; repose",
+    "ja": "安静",
+    "ja_reading": "あんせい",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "rest",
+     "quiet",
+     "repose"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1153910-0-rest",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "安静 specifically refers to quiet rest, often for medical reasons, and is narrower and more formal than the general English word 'rest'."
+   }
+  },
+  {
+   "key": "48fd4780cdaad8ee11187da77fa46661c66e5766c45513ae1e341a6a88955290",
+   "input": {
+    "id": "jm-1154770-0-idea",
+    "en": "idea",
+    "en_pos": "noun",
+    "en_sense": "idea; plan; proposal; suggestion; (government) bill",
+    "ja": "案",
+    "ja_reading": "あん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "idea",
+     "plan",
+     "proposal",
+     "suggestion",
+     "(government) bill"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1154770-0-idea",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match for the specific sense of 'idea' as a concrete plan, proposal, or draft."
+   }
+  },
+  {
+   "key": "a372d55f387b4564290982b6360541adf1ba99c4230d6bcdc5c180f98bd544cb",
+   "input": {
+    "id": "jm-1154820-0-unexpectedly",
+    "en": "unexpectedly",
+    "en_pos": "adverb",
+    "en_sense": "unexpectedly; surprisingly",
+    "ja": "案外",
+    "ja_reading": "あんがい",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "unexpectedly",
+     "surprisingly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1154820-0-unexpectedly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and common equivalent for 'unexpectedly'."
+   }
+  },
+  {
+   "key": "66a19af3af6d9849d0b457b54c1f7e7ef549b768259722b96c8337813d044e81",
+   "input": {
+    "id": "jm-1155040-0-beyond",
+    "en": "beyond",
+    "en_pos": "noun",
+    "en_sense": "beyond; further than",
+    "ja": "以遠",
+    "ja_reading": "いえん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "beyond",
+     "further than"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1155040-0-beyond",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "以遠 is a formal term used almost exclusively for points in space or on a route (e.g., 'beyond Tokyo'), making it a very narrow translation of 'beyond'."
+   }
+  }
+ ]
+}

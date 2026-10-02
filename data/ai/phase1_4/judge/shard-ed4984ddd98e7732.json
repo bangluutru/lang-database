@@ -1,0 +1,404 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:30:48Z",
+ "items": [
+  {
+   "key": "894f894b6dcd8ab1ff6a28bbffe9e8a01cbb0bf3d71c77cd1792dbddbd5015f2",
+   "input": {
+    "id": "jm-1225110-0-engineer",
+    "en": "engineer",
+    "en_pos": "noun",
+    "en_sense": "engineer; technical officer",
+    "ja": "技師",
+    "ja_reading": "ぎし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "engineer",
+     "technical officer"
+    ],
+    "vi": "kỹ sư"
+   },
+   "output": {
+    "id": "jm-1225110-0-engineer",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for a professional engineer."
+   }
+  },
+  {
+   "key": "a50ee1ccf393cf170352d0195c72ffca3be33e662e153ffdb51d54ec42f1debd",
+   "input": {
+    "id": "jm-1225230-0-ability",
+    "en": "ability",
+    "en_pos": "noun",
+    "en_sense": "technical skill; ability; capacity",
+    "ja": "技能",
+    "ja_reading": "ぎのう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "technical skill",
+     "ability",
+     "capacity"
+    ],
+    "vi": "kỹ năng"
+   },
+   "output": {
+    "id": "jm-1225230-0-ability",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are good equivalents, all referring to technical skill, and the Vietnamese and Japanese words are direct cognates."
+   }
+  },
+  {
+   "key": "35e89f9b47cc1e2c9444f03e7cc96a381ab597faed6ef64724d4975885b6593d",
+   "input": {
+    "id": "jm-1225680-0-doubt",
+    "en": "doubt",
+    "en_pos": "noun",
+    "en_sense": "doubt; misgivings; distrust; suspicion",
+    "ja": "疑惑",
+    "ja_reading": "ぎわく",
+    "ja_pos": "n,adj-no,n-suf",
+    "ja_glosses": [
+     "doubt",
+     "misgivings",
+     "distrust",
+     "suspicion"
+    ],
+    "vi": "nghi ngờ"
+   },
+   "output": {
+    "id": "jm-1225680-0-doubt",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese term 'nghi ngờ' is primarily a verb ('to suspect'), while the noun form is typically 'sự nghi ngờ'; this creates a part-of-speech mismatch with the English and Japanese nouns."
+   }
+  },
+  {
+   "key": "66018cd2b739e1fc471724aeeb5e5af46bf9162a5fa854a611311b72e003e77b",
+   "input": {
+    "id": "jm-1226010-0-measure",
+    "en": "measure",
+    "en_pos": "noun",
+    "en_sense": "legislative bill; measure",
+    "ja": "議案",
+    "ja_reading": "ぎあん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "legislative bill",
+     "measure"
+    ],
+    "vi": "dự luật"
+   },
+   "output": {
+    "id": "jm-1226010-0-measure",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'dự luật' specifically means 'draft law' or 'bill', which is narrower than the Japanese '議案' and English 'measure', which can refer to any proposal before a legislative body."
+   }
+  },
+  {
+   "key": "f102742469fa78572d94beb518acf31b2218c92dba1cdfb87e9b8426627e1eba",
+   "input": {
+    "id": "jm-1232360-1-prevent",
+    "en": "prevent",
+    "en_pos": "verb",
+    "en_sense": "to prevent (from doing); to deny (e.g. access); to block",
+    "ja": "拒む",
+    "ja_reading": "こばむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to prevent (from doing)",
+     "to deny (e.g. access)",
+     "to block"
+    ],
+    "vi": "ngăn"
+   },
+   "output": {
+    "id": "jm-1232360-1-prevent",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '拒む' (to refuse, deny) and Vietnamese 'ngăn' (to block, stop) have different core meanings, even though both can be used to mean 'prevent'."
+   }
+  },
+  {
+   "key": "a2e6a7426010e4f74ee78657a248fe4aebc7c5229af9a0732a6c3da1ac69b32e",
+   "input": {
+    "id": "jm-1235570-0-conference",
+    "en": "conference",
+    "en_pos": "noun",
+    "en_sense": "conference; consultation; discussion; negotiation",
+    "ja": "協議",
+    "ja_reading": "きょうぎ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "conference",
+     "consultation",
+     "discussion",
+     "negotiation"
+    ],
+    "vi": "hội nghị"
+   },
+   "output": {
+    "id": "jm-1235570-0-conference",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '協議' refers to the act of discussion or consultation, while the Vietnamese 'hội nghị' refers to the event of a conference; they are not equivalents."
+   }
+  },
+  {
+   "key": "fcbe1c8f9b442e9a3816c3049b633d278e1cbca94ffa0eb6e162e6bbfdd32053",
+   "input": {
+    "id": "jm-1235700-0-cooperation",
+    "en": "cooperation",
+    "en_pos": "noun",
+    "en_sense": "cooperation; conciliation; harmony; coordination",
+    "ja": "協調",
+    "ja_reading": "きょうちょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "cooperation",
+     "conciliation",
+     "harmony",
+     "coordination"
+    ],
+    "vi": "hợp tác"
+   },
+   "output": {
+    "id": "jm-1235700-0-cooperation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'hợp tác' is both a verb ('to cooperate') and a noun ('cooperation'), while the English and Japanese terms are nouns, creating a potential part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "6948df7646a45ab38c5d0f7d1df8f6d9016a09d01fb2549d85af4ad151732319",
+   "input": {
+    "id": "jm-1235890-0-shout",
+    "en": "shout",
+    "en_pos": "noun",
+    "en_sense": "shout; cry; outcry; yell; shriek; scream",
+    "ja": "叫び",
+    "ja_reading": "さけび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shout",
+     "cry",
+     "outcry",
+     "yell",
+     "shriek",
+     "scream"
+    ],
+    "vi": "tiếng kêu"
+   },
+   "output": {
+    "id": "jm-1235890-0-shout",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'tiếng kêu' is too broad, meaning any cry or call (including animal sounds), while the English 'shout' and Japanese '叫び' specifically denote a loud human vocalization."
+   }
+  },
+  {
+   "key": "a0a656d5b434217af987201cd5ebcb8aa6a787d2ed41e97cb13741c6e9c7e4b8",
+   "input": {
+    "id": "jm-1236000-0-environment",
+    "en": "environment",
+    "en_pos": "noun",
+    "en_sense": "one's circumstances; environment; situation (in life)",
+    "ja": "境遇",
+    "ja_reading": "きょうぐう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "one's circumstances",
+     "environment",
+     "situation (in life)"
+    ],
+    "vi": "hoàn cảnh"
+   },
+   "output": {
+    "id": "jm-1236000-0-environment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the specific sense of 'environment' as personal circumstances."
+   }
+  },
+  {
+   "key": "ccb2ae5133253d0ebb1e936893231718bf37279ea23c98be70b87a5dccfb71e1",
+   "input": {
+    "id": "jm-1236200-0-reinforcement",
+    "en": "reinforcement",
+    "en_pos": "noun",
+    "en_sense": "strengthening; intensifying; reinforcement; enhancement; solidification",
+    "ja": "強化",
+    "ja_reading": "きょうか",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "strengthening",
+     "intensifying",
+     "reinforcement",
+     "enhancement",
+     "solidification"
+    ],
+    "vi": "tăng cường"
+   },
+   "output": {
+    "id": "jm-1236200-0-reinforcement",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'tăng cường' is a verb ('to strengthen'), not a noun, making it a poor equivalent for the nouns 'reinforcement' and '強化'. The correct noun form is 'sự tăng cường'."
+   }
+  },
+  {
+   "key": "97fe8c43d5a321e8e3a4f63b18a50d9cc9c0a882afdc556dde8654514694b4f6",
+   "input": {
+    "id": "jm-1236270-0-enforcement",
+    "en": "enforcement",
+    "en_pos": "noun",
+    "en_sense": "forcing (e.g. a vote); carrying out (forcibly); pushing ahead (with); enforcement",
+    "ja": "強行",
+    "ja_reading": "きょうこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "forcing (e.g. a vote)",
+     "carrying out (forcibly)",
+     "pushing ahead (with)",
+     "enforcement"
+    ],
+    "vi": "cưỡng chế"
+   },
+   "output": {
+    "id": "jm-1236270-0-enforcement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "The terms align well in the sense of forcible action, though Japanese '強行' often implies overcoming opposition to a plan while Vietnamese 'cưỡng chế' often implies legal compulsion."
+   }
+  },
+  {
+   "key": "f4f74438793051ad36adbb35b8e7ae045dd32355ae9fd3322bf452edd74097df",
+   "input": {
+    "id": "jm-1236600-0-powerful",
+    "en": "powerful",
+    "en_pos": "adjective",
+    "en_sense": "powerful; strong",
+    "ja": "強力",
+    "ja_reading": "きょうりょく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "powerful",
+     "strong"
+    ],
+    "vi": "mạnh"
+   },
+   "output": {
+    "id": "jm-1236600-0-powerful",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural, and direct equivalents for 'powerful' or 'strong'."
+   }
+  }
+ ]
+}

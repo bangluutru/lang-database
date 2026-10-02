@@ -1,0 +1,404 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:22Z",
+ "items": [
+  {
+   "key": "e38059a53868adfa36230e46dcf8d7a5fb96834f8173e89616c48b6bbf201f39",
+   "input": {
+    "id": "wk-11024-s0",
+    "en": "poem",
+    "en_pos": "noun",
+    "en_sense": "A literary piece written in verse.",
+    "ja": "詩",
+    "ja_reading": "し",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "poem",
+     "poetry",
+     "verse"
+    ],
+    "vi": "thơ"
+   },
+   "output": {
+    "id": "wk-11024-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'poem'."
+   }
+  },
+  {
+   "key": "a5e7e5504ccf4f3129f9ab6f753fd6655a30ead17f93d4220e2a02db202e61e2",
+   "input": {
+    "id": "wk-11032-s0",
+    "en": "decorate",
+    "en_pos": "verb",
+    "en_sense": "To furnish with decorations.",
+    "ja": "飾る",
+    "ja_reading": "かざる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to decorate",
+     "to ornament",
+     "to adorn"
+    ],
+    "vi": "trang trí"
+   },
+   "output": {
+    "id": "wk-11032-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'to decorate'."
+   }
+  },
+  {
+   "key": "af65ab4671fabdbf1409dc609738954abbf46ab7be193e837090995435f9611c",
+   "input": {
+    "id": "wk-11035-s0",
+    "en": "allegation",
+    "en_pos": "noun",
+    "en_sense": "An assertion, especially an accusation, not necessarily based on facts.",
+    "ja": "申し立て",
+    "ja_reading": "もうしたて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "statement",
+     "account (of something)",
+     "declaration",
+     "allegation"
+    ],
+    "vi": "cáo buộc"
+   },
+   "output": {
+    "id": "wk-11035-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '申し立て' is broader than 'allegation', as it can also mean a neutral statement or petition, not just an accusation."
+   }
+  },
+  {
+   "key": "a45b132b7cccc67ec245e4544cfd73b921f894404b0f11399132f5fa45e1f79a",
+   "input": {
+    "id": "wk-11040-s2",
+    "en": "probability",
+    "en_pos": "noun",
+    "en_sense": "The relative likelihood of an event happening.",
+    "ja": "確率",
+    "ja_reading": "かくりつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "probability",
+     "likelihood",
+     "chances"
+    ],
+    "vi": "khả năng"
+   },
+   "output": {
+    "id": "wk-11040-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'khả năng' means 'possibility/likelihood' and is too broad; the correct technical term for 'probability' is 'xác suất'."
+   }
+  },
+  {
+   "key": "ddf6b541f70168f30d55dc1228af423dbe8bcf88d9e3321214ddebbb510e7066",
+   "input": {
+    "id": "wk-11048-e:292906",
+    "en": "paddle",
+    "en_pos": "noun",
+    "en_sense": "double-bladed oar used for kayaking",
+    "ja": "パドル",
+    "ja_reading": "パドル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "paddle"
+    ],
+    "vi": "chèo"
+   },
+   "output": {
+    "id": "wk-11048-e:292906",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense is very specific ('double-bladed kayak paddle'), while both the Japanese and Vietnamese words are general terms for 'paddle'."
+   }
+  },
+  {
+   "key": "e487b75193ed05092dbdb7736292a9235acbc396924eacdddcfa56ab74955804",
+   "input": {
+    "id": "wk-1106-s2",
+    "en": "action",
+    "en_pos": "noun",
+    "en_sense": "A way of motion or functioning.",
+    "ja": "動作",
+    "ja_reading": "どうさ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "movement (of the body)",
+     "action",
+     "motion",
+     "gesture"
+    ],
+    "vi": "động tác"
+   },
+   "output": {
+    "id": "wk-1106-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of 'motion or functioning'."
+   }
+  },
+  {
+   "key": "f4515df62d2b3e360ad34b4f7830e3ad8560e87f711281df3d90644b95faaf82",
+   "input": {
+    "id": "wk-1108-e:8da1a9",
+    "en": "cardinal number",
+    "en_pos": "noun",
+    "en_sense": "number used to denote the size of a set",
+    "ja": "基数",
+    "ja_reading": "きすう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cardinal number"
+    ],
+    "vi": "số lượng"
+   },
+   "output": {
+    "id": "wk-1108-e:8da1a9",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'số lượng' means 'quantity', not the mathematical term 'cardinal number'. The correct term is 'số đếm'."
+   }
+  },
+  {
+   "key": "3ccee192902a7f9f8b7229ca158267c4fdb09da68a64ed0d91709a8de89b8ace",
+   "input": {
+    "id": "wk-11081-e:cde568",
+    "en": "trip",
+    "en_pos": "noun",
+    "en_sense": "journey",
+    "ja": "旅",
+    "ja_reading": "たび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "travel",
+     "trip",
+     "journey"
+    ],
+    "vi": "chuyến"
+   },
+   "output": {
+    "id": "wk-11081-e:cde568",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chuyến' is a classifier for trips/journeys, not a standalone noun meaning 'trip'. A correct translation would be 'chuyến đi'."
+   }
+  },
+  {
+   "key": "faf391b32aeb7ee995e8cf2e0bc092de23336d5733c4c5c303a6eeec772f27f9",
+   "input": {
+    "id": "wk-11086-s2",
+    "en": "origin",
+    "en_pos": "noun",
+    "en_sense": "The point at which the axes of a coordinate system intersect.",
+    "ja": "原点",
+    "ja_reading": "げんてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "origin (of coordinate axes)"
+    ],
+    "vi": "gốc toạ độ"
+   },
+   "output": {
+    "id": "wk-11086-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard technical expressions for the origin of a coordinate system."
+   }
+  },
+  {
+   "key": "87dec8be66cf84429edbcb5737634a3cb7799ae535091971d59ab78e436b5c83",
+   "input": {
+    "id": "wk-11097-s1",
+    "en": "desk",
+    "en_pos": "noun",
+    "en_sense": "A reading table or lectern to support the book from which the liturgical service is read, differing from the pulpit from which the sermon is preached; also (especially in the United States), a pulpit. Hence, used symbolically for the clerical profession.",
+    "ja": "机",
+    "ja_reading": "つくえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "desk"
+    ],
+    "vi": "bàn"
+   },
+   "output": {
+    "id": "wk-11097-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The entry incorrectly maps a very specific and archaic ecclesiastical sense of 'desk' (a lectern) to the general modern words for 'desk' in Japanese and Vietnamese."
+   }
+  },
+  {
+   "key": "be1e9e7c5da7d7dbdd156f85ef4eda925e77104f62773b28602e08b27fdfbbf9",
+   "input": {
+    "id": "wk-11103-s0",
+    "en": "motel",
+    "en_pos": "noun",
+    "en_sense": "A type of hotel or lodging establishment, often located near a major highway, which typically features a series of rooms whose entrances are immediately adjacent to a parking lot to facilitate convenient access to parked automobiles.",
+    "ja": "モーテル",
+    "ja_reading": "モーテル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "motel"
+    ],
+    "vi": "mô ten"
+   },
+   "output": {
+    "id": "wk-11103-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "Both the Japanese and Vietnamese equivalents have strong connotations of being 'love hotels', a significant semantic divergence. The Vietnamese 'mô ten' is also an unnatural transliteration."
+   }
+  },
+  {
+   "key": "fc1a1625c6db828dcebe4b120696eb1046b724f2ce8c27cf4fcb2ba622a37af3",
+   "input": {
+    "id": "wk-11106-s0",
+    "en": "boring",
+    "en_pos": "adjective",
+    "en_sense": "Causing boredom or tiredness; making one feel tired and impatient.",
+    "ja": "つまらない",
+    "ja_reading": "つまらない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "dull",
+     "uninteresting",
+     "boring",
+     "tedious"
+    ],
+    "vi": "chán"
+   },
+   "output": {
+    "id": "wk-11106-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chán' can mean both 'bored' (a feeling) and 'boring' (a quality), unlike the English 'boring' and Japanese 'つまらない' which only describe the quality."
+   }
+  }
+ ]
+}

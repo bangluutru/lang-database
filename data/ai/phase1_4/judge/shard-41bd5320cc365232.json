@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:00:12Z",
+ "items": [
+  {
+   "key": "78e56efa0d58f8ed141a5ebd3353521d8e4dab2d3a749939b06ba739e8b58c87",
+   "input": {
+    "id": "wk-8190-s2",
+    "en": "avoid",
+    "en_pos": "verb",
+    "en_sense": "To keep away from; to keep clear of; to stay away from.",
+    "ja": "避ける",
+    "ja_reading": "よける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to avoid (physical contact with)"
+    ],
+    "vi": "tránh"
+   },
+   "output": {
+    "id": "wk-8190-s2",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `避ける` (よける) specifically means physical avoidance, which is narrower than the general English sense and the Vietnamese `tránh`."
+   }
+  },
+  {
+   "key": "c29934234748ded912adc991755c0dbf831f8cba673121a00b561bea4f1ee195",
+   "input": {
+    "id": "wk-8194-s0",
+    "en": "hollow",
+    "en_pos": "adjective",
+    "en_sense": "Having an empty space or cavity inside.",
+    "ja": "空っぽ",
+    "ja_reading": "からっぽ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "empty",
+     "vacant",
+     "hollow"
+    ],
+    "vi": "rỗng"
+   },
+   "output": {
+    "id": "wk-8194-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While `空っぽ` emphasizes the state of being empty rather than the structure, it is a common and natural equivalent for `hollow` in many contexts."
+   }
+  },
+  {
+   "key": "bdaac2cf9c78bedd0f0f977eaa5d0884912ef4f1adfa69a230b6643e599db15f",
+   "input": {
+    "id": "wk-820-s0",
+    "en": "trumpet",
+    "en_pos": "noun",
+    "en_sense": "A musical instrument of the brass family, generally tuned to the key of B-flat; by extension, any type of lip-vibrated aerophone, most often valveless and not chromatic.",
+    "ja": "トランペット",
+    "ja_reading": "トランペット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trumpet"
+    ],
+    "vi": "kèn"
+   },
+   "output": {
+    "id": "wk-820-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `kèn` is a general term for wind instruments or horns, not specifically a trumpet."
+   }
+  },
+  {
+   "key": "84c0875e8875a179993bd0f2da0248f19144f0d729e7ec65e592f6162c2afe76",
+   "input": {
+    "id": "wk-8203-s0",
+    "en": "glacier",
+    "en_pos": "noun",
+    "en_sense": "A large body of ice which flows under its own mass, usually downhill.",
+    "ja": "氷河",
+    "ja_reading": "ひょうが",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "glacier"
+    ],
+    "vi": "sông băng"
+   },
+   "output": {
+    "id": "wk-8203-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for glacier."
+   }
+  },
+  {
+   "key": "bcabce1ab43294b32732a4c44c0f084fe6d89629b8e4389d5165f51d6b4be1bf",
+   "input": {
+    "id": "wk-8206-s0",
+    "en": "supper",
+    "en_pos": "noun",
+    "en_sense": "An optional light meal consumed shortly before going to bed.",
+    "ja": "夜食",
+    "ja_reading": "やしょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "supper",
+     "night meal",
+     "late-night snack",
+     "\"fourth meal\"",
+     "midnight snack"
+    ],
+    "vi": "ăn tối"
+   },
+   "output": {
+    "id": "wk-8206-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `ăn tối` means 'to eat dinner' (the main evening meal) and is a verb phrase, while the English sense is for a light, late-night snack (noun)."
+   }
+  },
+  {
+   "key": "02224d0edf71042e0dd3e1a0ec42aec9b5804c51e76354d3812dde138c1f2cce",
+   "input": {
+    "id": "wk-8207-s0",
+    "en": "golf",
+    "en_pos": "noun",
+    "en_sense": "A ball game played by individuals competing against one another in which the object is to hit a ball into each of a series of (usually 18 or nine) holes in the minimum number of strokes.",
+    "ja": "ゴルフ",
+    "ja_reading": "ゴルフ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "golf"
+    ],
+    "vi": "gôn"
+   },
+   "output": {
+    "id": "wk-8207-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard names for the sport of golf."
+   }
+  },
+  {
+   "key": "e61a0fc71646d4a9716c03207676acb51b8b7c44bd0be1cbfebd53a5f68e1a61",
+   "input": {
+    "id": "wk-8226-s0",
+    "en": "maker",
+    "en_pos": "noun",
+    "en_sense": "Someone who makes; a person or thing that makes or produces something.",
+    "ja": "メーカー",
+    "ja_reading": "メーカー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "maker (person or device that makes something)"
+    ],
+    "vi": "người làm"
+   },
+   "output": {
+    "id": "wk-8226-s0",
+    "en_ja": "NARROW",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Japanese `メーカー` is narrow (manufacturer), and the Vietnamese `người làm` is too broad and ambiguous (worker/doer)."
+   }
+  },
+  {
+   "key": "a64ea100527f969380ced70fd29a3ecd92f5eb299a80c215254e1884de900074",
+   "input": {
+    "id": "wk-8228-s0",
+    "en": "brooch",
+    "en_pos": "noun",
+    "en_sense": "A piece of ornamental jewellery having a pin allowing it to be fixed to garments worn on the upper body.",
+    "ja": "ブローチ",
+    "ja_reading": "ブローチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "brooch"
+    ],
+    "vi": "thoa"
+   },
+   "output": {
+    "id": "wk-8228-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `thoa` means hairpin, not brooch. The correct term would be `trâm cài áo`."
+   }
+  },
+  {
+   "key": "f62e4247deddff29d31bef53264e7bb9fd35cc049611ff31c8d1b8f6fbf7a175",
+   "input": {
+    "id": "wk-8238-s0",
+    "en": "sauna",
+    "en_pos": "noun",
+    "en_sense": "A room or a house designed for heat sessions.",
+    "ja": "サウナ",
+    "ja_reading": "サウナ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sauna"
+    ],
+    "vi": "phòng tắm hơi"
+   },
+   "output": {
+    "id": "wk-8238-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a sauna."
+   }
+  },
+  {
+   "key": "c8f3a4565a4ab706aed6da1649b3821dd18d9d7fcce0b6bae0ad641063308e43",
+   "input": {
+    "id": "wk-8244-s0",
+    "en": "chauffeur",
+    "en_pos": "noun",
+    "en_sense": "A person employed to drive a private motor car or a hired car of executive or luxury class (like a limousine).",
+    "ja": "運転手",
+    "ja_reading": "うんてんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "driver",
+     "chauffeur"
+    ],
+    "vi": "tài xế"
+   },
+   "output": {
+    "id": "wk-8244-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both `運転手` and `tài xế` mean 'driver' in general and lack the specific connotation of a professional driver for a luxury car that `chauffeur` implies."
+   }
+  },
+  {
+   "key": "54e1005020ece2e7f69d3802db36d7e9ff8ba27398a55b86f1b5243e95be8285",
+   "input": {
+    "id": "wk-8249-s0",
+    "en": "shrine",
+    "en_pos": "noun",
+    "en_sense": "A holy or sacred place dedicated to a specific deity, ancestor, hero, martyr, saint, or similar figure of awe and respect, at which said figure is venerated or worshipped.",
+    "ja": "神社",
+    "ja_reading": "じんじゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Shinto shrine"
+    ],
+    "vi": "điện"
+   },
+   "output": {
+    "id": "wk-8249-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English `shrine` is a general term, but Japanese `神社` is specific to Shintoism and Vietnamese `điện` is a specific type of worship hall."
+   }
+  },
+  {
+   "key": "0666d96408a61ed83ffc6d851b728ea61f2bcd7ee9ca626699bc3684b4450923",
+   "input": {
+    "id": "wk-825-s4",
+    "en": "tempo",
+    "en_pos": "noun",
+    "en_sense": "The number of beats per minute in a piece of music; also, an indicative term denoting approximate rate of speed in written music (examples: allegro, andante)",
+    "ja": "テンポ",
+    "ja_reading": "テンポ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tempo"
+    ],
+    "vi": "nhịp độ"
+   },
+   "output": {
+    "id": "wk-825-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct equivalents for musical tempo."
+   }
+  }
+ ]
+}

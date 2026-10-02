@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:26:36Z",
+ "items": [
+  {
+   "key": "f9e1b5044b4ef8e7dd205f103a6b8a7d7e8ce7a066d3de67c2c64a986a989ed2",
+   "input": {
+    "id": "jm-1008790-0-unexpected",
+    "en": "unexpected",
+    "en_pos": "adjective",
+    "en_sense": "unthinkable; unexpected; absurd; outrageous; preposterous; terrible",
+    "ja": "とんでもない",
+    "ja_reading": "とんでもない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "unthinkable",
+     "unexpected",
+     "absurd",
+     "outrageous",
+     "preposterous",
+     "terrible"
+    ],
+    "vi": "bất ngờ"
+   },
+   "output": {
+    "id": "jm-1008790-0-unexpected",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'bất ngờ' only means 'unexpected' and lacks the strong connotations of 'outrageous' or 'absurd' present in the English and Japanese terms."
+   }
+  },
+  {
+   "key": "1ff953006b5335d0836b2ecdd3bc3673179e0b01cb2cc3381d233c2ba0d45112",
+   "input": {
+    "id": "jm-1008990-0-somehow",
+    "en": "somehow",
+    "en_pos": "adverb",
+    "en_sense": "in some way or other; one way or another; somehow; only just; barely",
+    "ja": "どうにか",
+    "ja_reading": "どうにか",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "in some way or other",
+     "one way or another",
+     "somehow",
+     "only just",
+     "barely"
+    ],
+    "vi": "bằng cách nào đó"
+   },
+   "output": {
+    "id": "jm-1008990-0-somehow",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and standard equivalents for 'somehow'."
+   }
+  },
+  {
+   "key": "01ef6ddf623266ab2e1f57d2ebaa22b7e4da1d75b820f1bbf2013491ef27363e",
+   "input": {
+    "id": "jm-1009020-0-possibly",
+    "en": "possibly",
+    "en_pos": "adverb",
+    "en_sense": "possibly; apparently; (seem) likely; seemingly",
+    "ja": "どうやら",
+    "ja_reading": "どうやら",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "possibly",
+     "apparently",
+     "(seem) likely",
+     "seemingly"
+    ],
+    "vi": "có lẽ"
+   },
+   "output": {
+    "id": "jm-1009020-0-possibly",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'có lẽ' means 'perhaps/maybe' and lacks the nuance of 'apparently/seemingly' (based on evidence) that is central to the Japanese 'どうやら' and the specified English sense."
+   }
+  },
+  {
+   "key": "746b1a4a45d873e553c3ab79007e7d0c2bf80c8dd522cf1f2222281a504bfdca",
+   "input": {
+    "id": "jm-1009320-1-rapidly",
+    "en": "rapidly",
+    "en_pos": "adverb",
+    "en_sense": "rapidly; quickly; steadily",
+    "ja": "どんどん",
+    "ja_reading": "どんどん",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "rapidly",
+     "quickly",
+     "steadily"
+    ],
+    "vi": "nhanh chóng"
+   },
+   "output": {
+    "id": "jm-1009320-1-rapidly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'rapidly' or 'quickly'."
+   }
+  },
+  {
+   "key": "2d6462679842dbcb4a35230b016bd2a57bdfa577f39d38a76ae242ac01e6fd9d",
+   "input": {
+    "id": "jm-1009330-0-what",
+    "en": "what",
+    "en_pos": "adjective",
+    "en_sense": "what kind of; what sort of; what",
+    "ja": "どんな",
+    "ja_reading": "どんな",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "what kind of",
+     "what sort of",
+     "what"
+    ],
+    "vi": "nào"
+   },
+   "output": {
+    "id": "jm-1009330-0-what",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'nào' means 'which', not 'what kind of' like the English and Japanese terms."
+   }
+  },
+  {
+   "key": "b837039fc28e3853859b668e4890cd266a1ae37f668208267cd8d779f6583729",
+   "input": {
+    "id": "jm-1009340-0-how",
+    "en": "how",
+    "en_pos": "adverb",
+    "en_sense": "how; how much; to what extent",
+    "ja": "どんなに",
+    "ja_reading": "どんなに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "how",
+     "how much",
+     "to what extent"
+    ],
+    "vi": "thế nào"
+   },
+   "output": {
+    "id": "jm-1009340-0-how",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are good general equivalents for 'how' and 'to what extent', despite some nuances in usage."
+   }
+  },
+  {
+   "key": "0ca7cf8ef9ad30898e2278d2836cbb7b56d5c2deb8966e78fd01fceeb66c2da6",
+   "input": {
+    "id": "jm-1010040-0-slowly",
+    "en": "slowly",
+    "en_pos": "adverb",
+    "en_sense": "slowly; sluggishly",
+    "ja": "のろのろ",
+    "ja_reading": "のろのろ",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "slowly",
+     "sluggishly"
+    ],
+    "vi": "chậm chạp"
+   },
+   "output": {
+    "id": "jm-1010040-0-slowly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, capturing the nuance of 'sluggishly'."
+   }
+  },
+  {
+   "key": "0c5e06e595ba856de13037d61aa1be4dc3d1d1788be50afff69bb8fa0e53cda3",
+   "input": {
+    "id": "jm-1010150-0-clearly",
+    "en": "clearly",
+    "en_pos": "adverb",
+    "en_sense": "clearly; plainly; distinctly",
+    "ja": "はっきり",
+    "ja_reading": "はっきり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "clearly",
+     "plainly",
+     "distinctly"
+    ],
+    "vi": "rõ ràng"
+   },
+   "output": {
+    "id": "jm-1010150-0-clearly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'clearly'."
+   }
+  },
+  {
+   "key": "2b449778206c86f60f34bed992328882ea91a69fecde0ec0d442b661a8c9c196",
+   "input": {
+    "id": "jm-1010440-0-suddenly",
+    "en": "suddenly",
+    "en_pos": "adverb",
+    "en_sense": "suddenly; in a flash; quickly; rapidly; swiftly; nimbly",
+    "ja": "パッと",
+    "ja_reading": "パッと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "suddenly",
+     "in a flash",
+     "quickly",
+     "rapidly",
+     "swiftly",
+     "nimbly"
+    ],
+    "vi": "đột nhiên"
+   },
+   "output": {
+    "id": "jm-1010440-0-suddenly",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'đột nhiên' means 'suddenly' but doesn't cover the additional senses of speed like 'quickly' or 'nimbly' which are present in the Japanese 'パッと'."
+   }
+  },
+  {
+   "key": "d38d72b32a86f244edf113f8bf0f18cbf7b6925b137bc4337828e302122073ce",
+   "input": {
+    "id": "jm-1064120-0-jeans",
+    "en": "jeans",
+    "en_pos": "noun",
+    "en_sense": "jeans",
+    "ja": "ジーンズ",
+    "ja_reading": "ジーンズ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jeans"
+    ],
+    "vi": "quần jean"
+   },
+   "output": {
+    "id": "jm-1064120-0-jeans",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'jeans'."
+   }
+  },
+  {
+   "key": "4b39124af6a5146ab256dc8dfe95b57d8f94f10e757512550307cd1a6d12579e",
+   "input": {
+    "id": "jm-1065680-0-jam",
+    "en": "jam",
+    "en_pos": "noun",
+    "en_sense": "jam",
+    "ja": "ジャム",
+    "ja_reading": "ジャム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jam"
+    ],
+    "vi": "mứt"
+   },
+   "output": {
+    "id": "jm-1065680-0-jam",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese 'mứt' is a broader term for fruit preserves but is the correct and natural equivalent for 'jam'."
+   }
+  },
+  {
+   "key": "f9d5b49d60e041cebf0d0f11554de21dd6634163232d8ac2d7525a8839bb78de",
+   "input": {
+    "id": "jm-1065840-0-jacket",
+    "en": "jacket",
+    "en_pos": "noun",
+    "en_sense": "(short) jacket; blouson; windbreaker; jumper",
+    "ja": "ジャンパー",
+    "ja_reading": "ジャンパー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(short) jacket",
+     "blouson",
+     "windbreaker",
+     "jumper"
+    ],
+    "vi": "áo khoác"
+   },
+   "output": {
+    "id": "jm-1065840-0-jacket",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'áo khoác' is a general term for any jacket or coat, making it much broader than the specific 'short jacket/windbreaker' sense of the English and Japanese terms."
+   }
+  }
+ ]
+}

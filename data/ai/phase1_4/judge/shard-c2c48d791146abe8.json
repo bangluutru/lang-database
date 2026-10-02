@@ -1,0 +1,380 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:50:56Z",
+ "items": [
+  {
+   "key": "4ca5755be959710b891e1a94488faedaa3104d6bb8145b10b8534b3770569ec0",
+   "input": {
+    "id": "jm-1584640-1-wrong",
+    "en": "wrong",
+    "en_pos": "adjective",
+    "en_sense": "wrong (e.g. direction)",
+    "ja": "明後日",
+    "ja_reading": "あさって",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "wrong (e.g. direction)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584640-1-wrong",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 明後日 (asatte) means 'the day after tomorrow' and is completely incorrect as a translation for 'wrong'."
+   }
+  },
+  {
+   "key": "3ba421b5eab0ecbaa27eeb557886124138d63ac73f8df25ed4d9684edb6b99d9",
+   "input": {
+    "id": "jm-1584670-1-avoid",
+    "en": "avoid",
+    "en_pos": "verb",
+    "en_sense": "to avoid (e.g. punishment); to evade (e.g. responsibility); to avert; to elude; to be exempted from",
+    "ja": "免れる",
+    "ja_reading": "まぬがれる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to avoid (e.g. punishment)",
+     "to evade (e.g. responsibility)",
+     "to avert",
+     "to elude",
+     "to be exempted from"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584670-1-avoid",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 免れる (manugareru) is an excellent equivalent for the English sense of avoiding something negative like punishment or responsibility."
+   }
+  },
+  {
+   "key": "881d563ab74761598dab657af45eb23093e06088d22fbeafc9fd391e09f4b0e2",
+   "input": {
+    "id": "jm-1584900-0-finance",
+    "en": "finance",
+    "en_pos": "noun",
+    "en_sense": "lending (money, commodities, etc.); finance; loan",
+    "ja": "融通",
+    "ja_reading": "ゆうずう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "lending (money, commodities, etc.)",
+     "finance",
+     "loan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584900-0-finance",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "融通 (yuuzuu) correctly captures the sense of lending or financing, although other terms like 融資 (yuushi) might be more common for formal loans."
+   }
+  },
+  {
+   "key": "8f5f0adbe6f252b8a8296ef975a87586beeb00c23ba0360432da770e360ead05",
+   "input": {
+    "id": "jm-1584910-0-dinner",
+    "en": "dinner",
+    "en_pos": "noun",
+    "en_sense": "evening meal; dinner; supper",
+    "ja": "夕飯",
+    "ja_reading": "ゆうはん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "evening meal",
+     "dinner",
+     "supper"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584910-0-dinner",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "夕飯 (yuuhan) is a natural and common Japanese word for 'dinner' or 'evening meal'."
+   }
+  },
+  {
+   "key": "d1c8e33727c729448f5707ca4c5ec0646e1236e53c1e277d2287f0a398b4eaf3",
+   "input": {
+    "id": "jm-1585050-0-attendance",
+    "en": "attendance",
+    "en_pos": "noun",
+    "en_sense": "attendance",
+    "ja": "来場",
+    "ja_reading": "らいじょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "attendance"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1585050-0-attendance",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "来場 (raijou) specifically means attendance at a venue or event, making it narrower than the general English word 'attendance' which also covers school or meetings."
+   }
+  },
+  {
+   "key": "a1120d1ab2d6ff8be43dbfff1e13075626aed1d2bc93073f717ae930de6d2b9a",
+   "input": {
+    "id": "jm-1585315-0-six",
+    "en": "six",
+    "en_pos": "numeral",
+    "en_sense": "six",
+    "ja": "六つ",
+    "ja_reading": "むっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "six"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1585315-0-six",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "六つ (muttsu) is the standard native Japanese numeral for counting six items."
+   }
+  },
+  {
+   "key": "01b2bbcf02d431dd52cde1e87e1912c3a45b2e5c19bcd6c9431eeb05a9b1f755",
+   "input": {
+    "id": "jm-1585460-0-well",
+    "en": "well",
+    "en_pos": "conjunction",
+    "en_sense": "well; now; then",
+    "ja": "さて",
+    "ja_reading": "さて",
+    "ja_pos": "conj,int",
+    "ja_glosses": [
+     "well",
+     "now",
+     "then"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1585460-0-well",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word さて (sate) is an excellent equivalent for the English discourse marker 'well' or 'now then'."
+   }
+  },
+  {
+   "key": "bccf35b6eed388be7b2bae6c4cf45cfc8e6f84598037543bad64be997083b84d",
+   "input": {
+    "id": "jm-1585820-0-close",
+    "en": "close",
+    "en_pos": "verb",
+    "en_sense": "to close (one's eyes); to shut",
+    "ja": "つぶる",
+    "ja_reading": "つぶる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to close (one's eyes)",
+     "to shut"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1585820-0-close",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese verb つぶる (tsuburu) or つむる (tsumuru) is the specific and correct word for closing one's eyes."
+   }
+  },
+  {
+   "key": "ba516f9d04d1f6d207be467ea98fb2736b492c4f8f71546c208a6cc9f31bb34f",
+   "input": {
+    "id": "jm-1586270-0-open",
+    "en": "open",
+    "en_pos": "verb",
+    "en_sense": "to open (e.g. doors)",
+    "ja": "空く",
+    "ja_reading": "あく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to open (e.g. doors)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1586270-0-open",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 空く (aku) means 'to become empty,' not 'to open'; the correct word for '(for something) to open' is the homophone 開く (aku)."
+   }
+  },
+  {
+   "key": "456b4d9abfb942aa242adb00769861b9c7b3cdcff82d7e8ab9b48c993bde0e38",
+   "input": {
+    "id": "jm-1586330-0-breakfast",
+    "en": "breakfast",
+    "en_pos": "noun",
+    "en_sense": "breakfast",
+    "ja": "朝ごはん",
+    "ja_reading": "あさごはん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "breakfast"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1586330-0-breakfast",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "朝ごはん (asagohan) is the most common and natural Japanese word for 'breakfast'."
+   }
+  },
+  {
+   "key": "1fd20f66f1578da414bc33c7025e9e08de2b28d0827703ac7e2d2f3b9ef350a9",
+   "input": {
+    "id": "jm-1586520-0-name",
+    "en": "name",
+    "en_pos": "noun",
+    "en_sense": "name and address (on an envelope, etc.); (addressee's) name; addressee",
+    "ja": "宛名",
+    "ja_reading": "あてな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "name and address (on an envelope, etc.)",
+     "(addressee's) name",
+     "addressee"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1586520-0-name",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 宛名 (atena) is a perfect match for the specific sense of 'addressee's name'."
+   }
+  },
+  {
+   "key": "fa31937a41816e3692fc23807794bb332831f7102f416b48e0bd6fbc4b273477",
+   "input": {
+    "id": "jm-1586530-0-apply",
+    "en": "apply",
+    "en_pos": "verb",
+    "en_sense": "to apply; to adapt",
+    "ja": "当てはめる",
+    "ja_reading": "あてはめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to apply",
+     "to adapt"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1586530-0-apply",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "当てはめる (atehameru) is a precise equivalent for the sense of 'apply' a rule or theory to a situation."
+   }
+  }
+ ]
+}

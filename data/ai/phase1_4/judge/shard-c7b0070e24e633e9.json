@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:45Z",
+ "items": [
+  {
+   "key": "72ecdb176c6a51a592b552dbd79add5e49740d8ef0b41c833154c8b2467560d4",
+   "input": {
+    "id": "wk-27445-s0",
+    "en": "reassuring",
+    "en_pos": "adjective",
+    "en_sense": "That reassures; causing or restoring comfort or confidence.",
+    "ja": "心強い",
+    "ja_reading": "こころづよい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "heartening",
+     "reassuring"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27445-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "心強い is an excellent and natural equivalent for reassuring in this sense."
+   }
+  },
+  {
+   "key": "4d33ac96141bf42f090a128819c8e15e6ff15e7bdf3a95bb9e5c8bc12f927ec2",
+   "input": {
+    "id": "wk-2746-s9",
+    "en": "altitude",
+    "en_pos": "noun",
+    "en_sense": "Height.",
+    "ja": "高度",
+    "ja_reading": "こうど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "altitude",
+     "height",
+     "elevation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2746-s9",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "高度 is the standard Japanese word for altitude, despite the overly simplistic English definition provided."
+   }
+  },
+  {
+   "key": "e1f2e985d6304bdcf15bd17b3d09f0d0470834971a4f56c8cae0b1b699536c48",
+   "input": {
+    "id": "wk-2748-s5",
+    "en": "basis",
+    "en_pos": "noun",
+    "en_sense": "In a vector space, a linearly independent set of vectors spanning the whole vector space.",
+    "ja": "基底",
+    "ja_reading": "きてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "basis (linear algebra)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2748-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "基底 is the correct and standard technical term for a mathematical basis in linear algebra."
+   }
+  },
+  {
+   "key": "720573cf84fbd1adcbca89a4d3105d02da89911b963698498a0e1de203d602b5",
+   "input": {
+    "id": "wk-27481-s0",
+    "en": "car rental",
+    "en_pos": "noun",
+    "en_sense": "The hiring of automobiles (motor cars) for relatively short periods.",
+    "ja": "レンタカー",
+    "ja_reading": "レンタカー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "car rental agency",
+     "car hire agency",
+     "hire car agency"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27481-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense is the service of renting a car, but the Japanese glosses define レンタカー as the rental agency, which is a different, though related, sense."
+   }
+  },
+  {
+   "key": "6fcb89d2d98461eee4e282e58e679bfdf84f4018f12248b0a8f0bec732f63bdc",
+   "input": {
+    "id": "wk-2760-s1",
+    "en": "ice",
+    "en_pos": "noun",
+    "en_sense": "Any frozen volatile chemical, such as ammonia or carbon dioxide.",
+    "ja": "ドライアイス",
+    "ja_reading": "ドライアイス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dry ice"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2760-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "ドライアイス (dry ice) is specifically frozen carbon dioxide, which is only one example of the broader scientific sense of 'ice' (any frozen volatile chemical)."
+   }
+  },
+  {
+   "key": "0eda0ee19d882d04abc10562bec590e3c2875a1df373b074fa17927c93041265",
+   "input": {
+    "id": "wk-2760-s8",
+    "en": "ice",
+    "en_pos": "noun",
+    "en_sense": "A frozen dessert made of fruit juice, water and sugar.",
+    "ja": "アイス",
+    "ja_reading": "アイス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ice"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2760-s8",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese アイス is a general term for frozen desserts, most commonly ice cream, and is much broader than the specific 'water ice' sense of the English word."
+   }
+  },
+  {
+   "key": "c45894aa755e5c67dd50984f2eb574d46806edb0b2386b50569da7990aa01ff9",
+   "input": {
+    "id": "wk-27613-s0",
+    "en": "day and night",
+    "en_pos": "adverb",
+    "en_sense": "All the time; round the clock; unceasingly.",
+    "ja": "日夜",
+    "ja_reading": "にちや",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "day and night",
+     "around the clock",
+     "always",
+     "constantly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27613-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "日夜 is a perfect and standard equivalent for the adverbial phrase 'day and night' meaning 'unceasingly'."
+   }
+  },
+  {
+   "key": "a02154a1ad821dfeb3543293f09dedcb1f59d2c6044e5be055ef510d1bebb727",
+   "input": {
+    "id": "wk-27632-s0",
+    "en": "reliably",
+    "en_pos": "adverb",
+    "en_sense": "In a reliable manner.",
+    "ja": "しっかり",
+    "ja_reading": "しっかり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "reliably",
+     "dependably",
+     "levelheadedly",
+     "shrewdly",
+     "wisely",
+     "cleverly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27632-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "しっかり is a very broad adverb meaning things like 'firmly' or 'diligently'; while it can sometimes imply reliability, it is not a direct one-to-one translation of 'reliably'."
+   }
+  },
+  {
+   "key": "4fa715b19b1a713561df7b5bc3fea04eb29a11b1ea89362261e0b4f75e90dadb",
+   "input": {
+    "id": "wk-2767-s0",
+    "en": "sovereign",
+    "en_pos": "noun",
+    "en_sense": "A monarch: a supreme ruler of a country in a monarchical system.",
+    "ja": "君主",
+    "ja_reading": "くんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "monarch",
+     "sovereign",
+     "ruler",
+     "liege (lord)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2767-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "君主 is the standard and correct Japanese term for a sovereign or monarch."
+   }
+  },
+  {
+   "key": "e88b54ef67e36b9460c40e15e82628496bd6280c0756906b860f0a20068b6193",
+   "input": {
+    "id": "wk-27672-e:08c87b",
+    "en": "astrological sign",
+    "en_pos": "noun",
+    "en_sense": "sign that is used as the basis of astrology",
+    "ja": "星座",
+    "ja_reading": "せいざ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "astrological sign",
+     "star sign",
+     "zodiac sign"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27672-e:08c87b",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "星座 is the common and standard Japanese word for 'astrological sign' or 'star sign'."
+   }
+  },
+  {
+   "key": "ceca762ecb9164f68ff73923692ad1d5330d2ffcc08a9cf68807af99340e78ed",
+   "input": {
+    "id": "wk-27673-s0",
+    "en": "see off",
+    "en_pos": "verb",
+    "en_sense": "To accompany someone to a point of departure; to ensure someone departs safely.",
+    "ja": "見送る",
+    "ja_reading": "みおくる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to see (someone) off",
+     "to escort"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27673-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "見送る is the perfect Japanese equivalent for the phrasal verb 'to see off'."
+   }
+  },
+  {
+   "key": "96a656e5851ef661ee8852d2a927477560a4bd4972d40f3367a3011f4593e1f9",
+   "input": {
+    "id": "wk-27724-s0",
+    "en": "school year",
+    "en_pos": "noun",
+    "en_sense": "The academic year of a school.",
+    "ja": "学年",
+    "ja_reading": "がくねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "academic year",
+     "school year"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27724-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "学年 is broader than 'school year' as it also means 'grade level' (e.g., first grade, second grade), a sense not present in the English term."
+   }
+  }
+ ]
+}

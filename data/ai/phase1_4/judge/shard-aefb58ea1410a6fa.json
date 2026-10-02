@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:48:02Z",
+ "items": [
+  {
+   "key": "fa9a2d5c3de28d10d2dd54f439f1f442f4eb4d7b186194e5e971b3c6b9b345e6",
+   "input": {
+    "id": "jm-1609350-0-birth",
+    "en": "birth",
+    "en_pos": "noun",
+    "en_sense": "birth; birthplace",
+    "ja": "生まれ",
+    "ja_reading": "うまれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "birth",
+     "birthplace"
+    ],
+    "vi": "sự ra đời"
+   },
+   "output": {
+    "id": "jm-1609350-0-birth",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The English sense combines 'birth' and 'birthplace', but the Vietnamese 'sự ra đời' only means 'birth'."
+   }
+  },
+  {
+   "key": "9ea64331a96120994233a7096d821d5a94ecbf47d5b09a625c21eb429d16aa33",
+   "input": {
+    "id": "jm-1609390-0-west",
+    "en": "west",
+    "en_pos": "noun",
+    "en_sense": "Europe and the United States; Europe and America; the West",
+    "ja": "欧米",
+    "ja_reading": "おうべい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Europe and the United States",
+     "Europe and America",
+     "the West"
+    ],
+    "vi": "phương tây"
+   },
+   "output": {
+    "id": "jm-1609390-0-west",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for the concept of 'the West'."
+   }
+  },
+  {
+   "key": "34b1744fabe8f215914a9975c0a6b0b8bcc17fb5c30e555f61fb94ded4646a3c",
+   "input": {
+    "id": "jm-1609580-0-date",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "month and day (of the year); (the) date",
+    "ja": "月日",
+    "ja_reading": "がっぴ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "month and day (of the year)",
+     "(the) date"
+    ],
+    "vi": "ngày tháng"
+   },
+   "output": {
+    "id": "jm-1609580-0-date",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 月日 (gappi) is less common and more literary than 日付 (hizuke) for 'the date'."
+   }
+  },
+  {
+   "key": "782a3e2022a130b66283d1b44d468d4a1366073e7655dcc2f8f4c29c4d3888fb",
+   "input": {
+    "id": "jm-1609660-0-rule",
+    "en": "rule",
+    "en_pos": "noun",
+    "en_sense": "rule; regulation",
+    "ja": "決まり",
+    "ja_reading": "きまり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "rule",
+     "regulation"
+    ],
+    "vi": "quy tắc"
+   },
+   "output": {
+    "id": "jm-1609660-0-rule",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'rule' or 'regulation'."
+   }
+  },
+  {
+   "key": "b228d5f15848a53f05520870ab00151ece47344dc96e1d5ea5b0eda5ad365ac9",
+   "input": {
+    "id": "jm-1609740-0-economic",
+    "en": "economic",
+    "en_pos": "adjective",
+    "en_sense": "economic; financial",
+    "ja": "経済的",
+    "ja_reading": "けいざいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "economic",
+     "financial"
+    ],
+    "vi": "kinh tế"
+   },
+   "output": {
+    "id": "jm-1609740-0-economic",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'kinh tế' is a noun ('economy'), not an adjective ('economic') like the English and Japanese terms."
+   }
+  },
+  {
+   "key": "2eeeb83a54ccefe77a2e54e79da74c9ed713543461028d957d2ea4efe818f998",
+   "input": {
+    "id": "jm-1610270-0-request",
+    "en": "request",
+    "en_pos": "noun",
+    "en_sense": "request; favor; favour",
+    "ja": "頼み",
+    "ja_reading": "たのみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "request",
+     "favor",
+     "favour"
+    ],
+    "vi": "yêu cầu"
+   },
+   "output": {
+    "id": "jm-1610270-0-request",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard terms for 'request', though the Vietnamese 'yêu cầu' can sometimes be stronger, closer to 'demand'."
+   }
+  },
+  {
+   "key": "15891739e05ea565933eeb31439c6ef74819215eaa273543b3595c1e89d792a7",
+   "input": {
+    "id": "jm-1610340-0-grand",
+    "en": "grand",
+    "en_pos": "adjective",
+    "en_sense": "long and large; tall and large; grand; huge",
+    "ja": "長大",
+    "ja_reading": "ちょうだい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "long and large",
+     "tall and large",
+     "grand",
+     "huge"
+    ],
+    "vi": "to lớn"
+   },
+   "output": {
+    "id": "jm-1610340-0-grand",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote large physical size, though the Japanese and English terms are slightly more formal than the Vietnamese."
+   }
+  },
+  {
+   "key": "18aa02135f5658f83daeea880e058953eb6cef59ff033b237d0545a993ab6b05",
+   "input": {
+    "id": "jm-1610870-0-as_soon_as",
+    "en": "as soon as",
+    "en_pos": "noun",
+    "en_sense": "just (now, at the moment, etc.); just as; in the act of; as soon as; at the moment that",
+    "ja": "途端",
+    "ja_reading": "とたん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "just (now, at the moment, etc.)",
+     "just as",
+     "in the act of",
+     "as soon as",
+     "at the moment that"
+    ],
+    "vi": "ngay khi"
+   },
+   "output": {
+    "id": "jm-1610870-0-as_soon_as",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English entry 'as soon as' is a conjunction but is incorrectly labeled as a noun."
+   }
+  },
+  {
+   "key": "57d49bd1543c95090cffa3d8900068b24bd2a8e47315f20d35f8fac0ae69703b",
+   "input": {
+    "id": "jm-1610960-0-scene",
+    "en": "scene",
+    "en_pos": "noun",
+    "en_sense": "scene; view; prospect; outlook",
+    "ja": "眺め",
+    "ja_reading": "ながめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scene",
+     "view",
+     "prospect",
+     "outlook"
+    ],
+    "vi": "cảnh"
+   },
+   "output": {
+    "id": "jm-1610960-0-scene",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a 'view' or 'scene'."
+   }
+  },
+  {
+   "key": "d247545dba64a7b40738e63e778f5370624a15157a7f739d4029e266c6ff5dd0",
+   "input": {
+    "id": "jm-1611200-0-origin",
+    "en": "origin",
+    "en_pos": "noun",
+    "en_sense": "origin; beginning; start",
+    "ja": "始まり",
+    "ja_reading": "はじまり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "origin",
+     "beginning",
+     "start"
+    ],
+    "vi": "nguồn gốc"
+   },
+   "output": {
+    "id": "jm-1611200-0-origin",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'nguồn gốc' only means 'origin' and does not cover 'beginning' or 'start', unlike the English sense and the Japanese '始まり'."
+   }
+  },
+  {
+   "key": "d79e9974d908d995ff495d97c63d641b1d2c2c12dae33b14f83a9f5783ec1159",
+   "input": {
+    "id": "jm-1611370-0-day",
+    "en": "day",
+    "en_pos": "noun",
+    "en_sense": "date (of a planned event, act, etc.); day",
+    "ja": "日日",
+    "ja_reading": "ひにち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date (of a planned event, act, etc.)",
+     "day"
+    ],
+    "vi": "ngày"
+   },
+   "output": {
+    "id": "jm-1611370-0-day",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms match the sense of 'a specific day or date for an event'; the Japanese kanji spelling 日日 is less common than 日にち."
+   }
+  },
+  {
+   "key": "d8f5ffa93f795a30a0e37c74fa4197e8d0892aa292400d318831682641b2a240",
+   "input": {
+    "id": "jm-1611440-0-foot",
+    "en": "foot",
+    "en_pos": "noun",
+    "en_sense": "foot (of a mountain or hill); bottom; base",
+    "ja": "麓",
+    "ja_reading": "ふもと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "foot (of a mountain or hill)",
+     "bottom",
+     "base"
+    ],
+    "vi": "chân"
+   },
+   "output": {
+    "id": "jm-1611440-0-foot",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chân' is too general; the correct term for 'foot of a mountain' is 'chân núi'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:41:16Z",
+ "items": [
+  {
+   "key": "a3cf2cdc5ca919817c95f75c6c4561efb89ed34efcfc84f629ee15778e25cd04",
+   "input": {
+    "id": "wk-25889-s0",
+    "en": "rain cloud",
+    "en_pos": "noun",
+    "en_sense": "A cloud from which rain is falling or may fall.",
+    "ja": "雨雲",
+    "ja_reading": "あまぐも",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rain cloud"
+    ],
+    "vi": "mây mưa"
+   },
+   "output": {
+    "id": "wk-25889-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for 'rain cloud'."
+   }
+  },
+  {
+   "key": "6a8bf798a03241628e8c6a971d853196d0b7a334b3e7b79f5cfcada6b6634180",
+   "input": {
+    "id": "wk-259-s0",
+    "en": "bureaucrat",
+    "en_pos": "noun",
+    "en_sense": "An official who is part of a bureaucracy.",
+    "ja": "官僚",
+    "ja_reading": "かんりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bureaucrat",
+     "government official",
+     "bureaucracy"
+    ],
+    "vi": "kẻ quan liêu"
+   },
+   "output": {
+    "id": "wk-259-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese term 'kẻ quan liêu' is strongly pejorative and not a neutral equivalent for 'bureaucrat', unlike the Japanese '官僚'."
+   }
+  },
+  {
+   "key": "7cd6f4f367524afaf0af3dba7d1f349dbaba3159a6f12ebb37ef92010f6055a0",
+   "input": {
+    "id": "wk-25902-s0",
+    "en": "fortune teller",
+    "en_pos": "noun",
+    "en_sense": "A person who professes to predict the future in return for money.",
+    "ja": "占い師",
+    "ja_reading": "うらないし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "diviner",
+     "fortune teller",
+     "soothsayer"
+    ],
+    "vi": "thầy bói"
+   },
+   "output": {
+    "id": "wk-25902-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'fortune teller'."
+   }
+  },
+  {
+   "key": "dd1af331c1164272ced925a7817a645ab29e23205567895096d46b8e2d496001",
+   "input": {
+    "id": "wk-2594-e:c45441",
+    "en": "stiff",
+    "en_pos": "adjective",
+    "en_sense": "of an object, rigid, hard to bend, inflexible",
+    "ja": "硬い",
+    "ja_reading": "かたい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "stiff",
+     "tight",
+     "wooden",
+     "unpolished (e.g. writing)"
+    ],
+    "vi": "cứng"
+   },
+   "output": {
+    "id": "wk-2594-e:c45441",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the primary, natural words for the physical property of being stiff or hard."
+   }
+  },
+  {
+   "key": "a94a6439aca1eea34edc691eb34821ee2eec2534787094392bc3ab11abaa7efe",
+   "input": {
+    "id": "wk-25957-s1",
+    "en": "rooftop",
+    "en_pos": "noun",
+    "en_sense": "The top layer of a roof; the material covering or composing a roof.",
+    "ja": "屋上",
+    "ja_reading": "おくじょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rooftop"
+    ],
+    "vi": "nóc"
+   },
+   "output": {
+    "id": "wk-25957-s1",
+    "en_ja": "WRONG",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '屋上' (accessible space) and Vietnamese 'nóc' (peak/ridge) do not match the English sense of the material/layer of a roof."
+   }
+  },
+  {
+   "key": "f48305cd2b55ede030557336d7074898fac0f7767067b6675e1d54658db8e9bd",
+   "input": {
+    "id": "wk-2598-s2",
+    "en": "strike",
+    "en_pos": "noun",
+    "en_sense": "A work stoppage (or otherwise concerted stoppage of an activity) as a form of protest.",
+    "ja": "スト",
+    "ja_reading": "スト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "strike (i.e. industrial action)"
+    ],
+    "vi": "đình công"
+   },
+   "output": {
+    "id": "wk-2598-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a labor strike."
+   }
+  },
+  {
+   "key": "c30a7d5f80e945e93b30b4a2f829ae195c33e4381fae47cf74d496540bdc03f2",
+   "input": {
+    "id": "wk-2599-e:186d7a",
+    "en": "string",
+    "en_pos": "noun",
+    "en_sense": "programming: sequence of characters",
+    "ja": "ストリング",
+    "ja_reading": "ストリング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "string"
+    ],
+    "vi": "chuỗi"
+   },
+   "output": {
+    "id": "wk-2599-e:186d7a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard technical terms for a 'string' in programming."
+   }
+  },
+  {
+   "key": "6d6d7c3b9286e198aff4ceac13951e42a085b7dbc069d2a0db2a62ac0c1ac0f7",
+   "input": {
+    "id": "wk-2599-e:9415f8",
+    "en": "string",
+    "en_pos": "noun",
+    "en_sense": "long, thin structure made from twisted threads",
+    "ja": "ひも",
+    "ja_reading": "ひも",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "string",
+     "cord"
+    ],
+    "vi": "chuỗi"
+   },
+   "output": {
+    "id": "wk-2599-e:9415f8",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chuỗi' is a false friend; it means 'sequence' or 'chain' (like a string of beads), not a piece of twine or cord."
+   }
+  },
+  {
+   "key": "bb5f7217de133301385d11ba097372cf2122812dd9f972569de8a589177ae33e",
+   "input": {
+    "id": "wk-2599-s11",
+    "en": "string",
+    "en_pos": "noun",
+    "en_sense": "A stringed instrument.",
+    "ja": "弦",
+    "ja_reading": "つる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "string (of shamisen, guitar, violin, etc.)"
+    ],
+    "vi": "dây"
+   },
+   "output": {
+    "id": "wk-2599-s11",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese words correctly translate 'string' as a component of a musical instrument, but the provided English definition 'A stringed instrument' is incorrect for the lemma 'string'."
+   }
+  },
+  {
+   "key": "c78d4f94fc07560d0f923c269d11376dc9ab18173767c792806fe89d56e8cb36",
+   "input": {
+    "id": "wk-26-s0",
+    "en": "march",
+    "en_pos": "verb",
+    "en_sense": "To walk with long, regular strides, as a soldier does.",
+    "ja": "行軍する",
+    "ja_reading": "こうぐんする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "march",
+     "marching"
+    ],
+    "vi": "hành quân"
+   },
+   "output": {
+    "id": "wk-26-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for military marching."
+   }
+  },
+  {
+   "key": "ff04aefbf6e7b077764f7163860168d0c95d3d13c1e48debb39fff5efb722069",
+   "input": {
+    "id": "wk-2600-e:77b7c4",
+    "en": "swear",
+    "en_pos": "verb",
+    "en_sense": "to take an oath",
+    "ja": "誓う",
+    "ja_reading": "ちかう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to swear",
+     "to vow",
+     "to take an oath",
+     "to pledge"
+    ],
+    "vi": "thề"
+   },
+   "output": {
+    "id": "wk-2600-e:77b7c4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the primary, natural equivalents for the sense of swearing an oath."
+   }
+  },
+  {
+   "key": "cebce8597bdec5ed107011c30db0248af938572789fcc8e3ad260c5766f23354",
+   "input": {
+    "id": "wk-2601-s0",
+    "en": "sweep",
+    "en_pos": "verb",
+    "en_sense": "To clean (a surface) by means of a stroking motion of a broom or brush.",
+    "ja": "掃く",
+    "ja_reading": "はく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to sweep",
+     "to brush",
+     "to clean"
+    ],
+    "vi": "quét"
+   },
+   "output": {
+    "id": "wk-2601-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the primary, natural equivalents for the action of sweeping with a broom."
+   }
+  }
+ ]
+}

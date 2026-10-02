@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:28:16Z",
+ "items": [
+  {
+   "key": "72d00803ede0c98285e786586eb5cbe40b78d8adec32719ca076fee89b6e5449",
+   "input": {
+    "id": "wk-11916-s0",
+    "en": "fist",
+    "en_pos": "noun",
+    "en_sense": "A hand with the fingers clenched or curled inward.",
+    "ja": "拳",
+    "ja_reading": "こぶし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fist"
+    ],
+    "vi": "quyền"
+   },
+   "output": {
+    "id": "wk-11916-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'quyền' is a formal/literary term for fist; the common, everyday word is 'nắm đấm'."
+   }
+  },
+  {
+   "key": "0f396531d9c02bc7b0a1148a2f50766dc7f944658a6fcb833e37ad0abcded8d6",
+   "input": {
+    "id": "wk-1193-s0",
+    "en": "quarrel",
+    "en_pos": "noun",
+    "en_sense": "A dispute or heated argument (especially one that is verbal).",
+    "ja": "言い争い",
+    "ja_reading": "いいあらそい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "a quarrel",
+     "argument"
+    ],
+    "vi": "cãi vã"
+   },
+   "output": {
+    "id": "wk-1193-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for a verbal quarrel."
+   }
+  },
+  {
+   "key": "fd45b30173668e937778f63eb9060e69e414cb170ed8be1ac5b5aeae116bc911",
+   "input": {
+    "id": "wk-11930-e:05e569",
+    "en": "remove",
+    "en_pos": "verb",
+    "en_sense": "to take away",
+    "ja": "除く",
+    "ja_reading": "のぞく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to remove",
+     "to get rid of",
+     "to take away",
+     "to eliminate"
+    ],
+    "vi": "chuyển đi"
+   },
+   "output": {
+    "id": "wk-11930-e:05e569",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chuyển đi' means 'to move away/relocate', not 'remove', and the Japanese '除く' is narrower, meaning 'to exclude/eliminate'."
+   }
+  },
+  {
+   "key": "f43bae1041ad4b7080042e9003fef75c516ba85e6a6be7b0d2c45ae35ae323e5",
+   "input": {
+    "id": "wk-11937-s0",
+    "en": "disgusting",
+    "en_pos": "adjective",
+    "en_sense": "Causing disgust; repulsive; distasteful.",
+    "ja": "忌まわしい",
+    "ja_reading": "いまわしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "abhorrent",
+     "abominable",
+     "detestable",
+     "disgusting",
+     "horrid",
+     "repugnant"
+    ],
+    "vi": "ghê"
+   },
+   "output": {
+    "id": "wk-11937-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '忌まわしい' is much stronger, more formal, and narrower in scope than the common English word 'disgusting'."
+   }
+  },
+  {
+   "key": "32b25a07114e0f83a120077f7b5dad16b70135d6adb6b463f8311d08678dd852",
+   "input": {
+    "id": "wk-1194-s0",
+    "en": "quarrel",
+    "en_pos": "verb",
+    "en_sense": "To argue fiercely; to contend; to squabble; to cease to be on friendly terms, to fall out.",
+    "ja": "口論する",
+    "ja_reading": "こうろんする",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "quarrel",
+     "argument",
+     "row",
+     "(verbal) dispute"
+    ],
+    "vi": "cãi vã"
+   },
+   "output": {
+    "id": "wk-1194-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for the verb 'to quarrel'."
+   }
+  },
+  {
+   "key": "b13398456aed01ae36daac285e2813710c43c8de9a62e3e5e217b4272405c99b",
+   "input": {
+    "id": "wk-11942-s0",
+    "en": "reign",
+    "en_pos": "verb",
+    "en_sense": "To exercise sovereign power, to rule as a monarch.",
+    "ja": "統治する",
+    "ja_reading": "とうちする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "rule",
+     "reign",
+     "government",
+     "governing"
+    ],
+    "vi": "cai trị"
+   },
+   "output": {
+    "id": "wk-11942-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both Japanese and Vietnamese equivalents mean 'to rule/govern', which is broader than 'reign' (specific to monarchs), but they are the standard and natural translations in this context."
+   }
+  },
+  {
+   "key": "2195c0188dffb3e64e83e4378562cd069a5c6597d1a6ba6cc0bd1c6d9db7153b",
+   "input": {
+    "id": "wk-11946-s0",
+    "en": "get lost",
+    "en_pos": "verb",
+    "en_sense": "To lose one's way.",
+    "ja": "迷う",
+    "ja_reading": "まよう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to lose one's way",
+     "to get lost",
+     "to go astray"
+    ],
+    "vi": "lạc"
+   },
+   "output": {
+    "id": "wk-11946-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents for the sense 'to lose one's way'."
+   }
+  },
+  {
+   "key": "1e28bc9df1a00850b85ed85dd3d85f64b69f7150734ccebda8d4ab5c2f7eaea3",
+   "input": {
+    "id": "wk-11947-e:929495",
+    "en": "hijack",
+    "en_pos": "verb",
+    "en_sense": "to seize control of a vehicle",
+    "ja": "乗っ取る",
+    "ja_reading": "のっとる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to hijack (a plane, ship, etc.)"
+    ],
+    "vi": "không tặc"
+   },
+   "output": {
+    "id": "wk-11947-e:929495",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG"
+    ],
+    "note": "The Vietnamese word 'không tặc' is a noun meaning '(air) hijacker', not the verb 'to hijack'."
+   }
+  },
+  {
+   "key": "2fe37ab1afc70fe20428cd56e19aaf3016d1da74a523d9c8fc4026a516e93fb5",
+   "input": {
+    "id": "wk-11949-s0",
+    "en": "plague",
+    "en_pos": "noun",
+    "en_sense": "The bubonic plague, the pestilent disease caused by the virulent bacterium Yersinia pestis.",
+    "ja": "ペスト",
+    "ja_reading": "ペスト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plague",
+     "black plague"
+    ],
+    "vi": "dịch hạch"
+   },
+   "output": {
+    "id": "wk-11949-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents for the specific disease 'bubonic plague'."
+   }
+  },
+  {
+   "key": "f582f05783e0d1cbb9b4f2cec1f80889b769e0ce8a0834644ca1c7ecfb1b18ae",
+   "input": {
+    "id": "wk-11952-e:96341e",
+    "en": "cuddle",
+    "en_pos": "verb",
+    "en_sense": "intransitive: embrace, lie together snugly",
+    "ja": "寄り添う",
+    "ja_reading": "よりそう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to get close",
+     "to cuddle close together",
+     "to nestle close to",
+     "to snuggle up to"
+    ],
+    "vi": "ôm ấp"
+   },
+   "output": {
+    "id": "wk-11952-e:96341e",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good set of equivalents capturing the sense of snuggling and embracing closely."
+   }
+  },
+  {
+   "key": "f64efcd10557957b9a1da973d7e13e5dca41f2f8c37ccb9e89607a872deed7d4",
+   "input": {
+    "id": "wk-11957-s0",
+    "en": "shiver",
+    "en_pos": "verb",
+    "en_sense": "To tremble or shake, especially when cold or frightened.",
+    "ja": "震える",
+    "ja_reading": "ふるえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to shiver",
+     "to shake",
+     "to quake",
+     "to tremble",
+     "to quaver",
+     "to quiver"
+    ],
+    "vi": "run"
+   },
+   "output": {
+    "id": "wk-11957-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents for 'to shiver/tremble'."
+   }
+  },
+  {
+   "key": "4b6ff2421003335b155a837571a1bb67f510486f333e674b5f698742e14313e9",
+   "input": {
+    "id": "wk-11979-s0",
+    "en": "pillow",
+    "en_pos": "noun",
+    "en_sense": "A soft cushion used to support the head in bed.",
+    "ja": "枕",
+    "ja_reading": "まくら",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "pillow",
+     "bolster"
+    ],
+    "vi": "gối"
+   },
+   "output": {
+    "id": "wk-11979-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents for 'pillow'."
+   }
+  }
+ ]
+}

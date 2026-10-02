@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:59:46Z",
+ "items": [
+  {
+   "key": "1501aa7f4223dda2b6f69462cae8721e54f1bd935c801b9b3548b903b2d23282",
+   "input": {
+    "id": "wk-7947-s6",
+    "en": "press",
+    "en_pos": "verb",
+    "en_sense": "To drive or thrust by pressure, to force in a certain direction.",
+    "ja": "押す",
+    "ja_reading": "おす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to press (down)",
+     "to push (e.g. a button)",
+     "to exert pressure on"
+    ],
+    "vi": "ép"
+   },
+   "output": {
+    "id": "wk-7947-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are core vocabulary for 'press' in the sense of applying physical force."
+   }
+  },
+  {
+   "key": "6cdf84b05a8ba55bb231cd8f765d8ce44e7580132b65af9e1d77e4e796fc93d7",
+   "input": {
+    "id": "wk-7948-e:d9fc92",
+    "en": "cupboard",
+    "en_pos": "noun",
+    "en_sense": "enclosed storage",
+    "ja": "食器棚",
+    "ja_reading": "しょっきだな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cupboard",
+     "sideboard"
+    ],
+    "vi": "tủ"
+   },
+   "output": {
+    "id": "wk-7948-e:d9fc92",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese word 食器棚 specifically means a cupboard for dishes, which is too narrow for the general English sense of 'cupboard'."
+   }
+  },
+  {
+   "key": "16e9592d622f56ba778fdfbdba2b35b7806fc7a10b98f1f941c76ed7cc646bb2",
+   "input": {
+    "id": "wk-7949-s6",
+    "en": "wardrobe",
+    "en_pos": "noun",
+    "en_sense": "A movable cupboard or cabinet designed for storing clothes, particularly as a large piece of bedroom furniture.",
+    "ja": "洋服ダンス",
+    "ja_reading": "ようふくだんす",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wardrobe (esp. for Western clothes)",
+     "chest of drawers",
+     "clothespress",
+     "dresser",
+     "tallboy"
+    ],
+    "vi": "quần áo"
+   },
+   "output": {
+    "id": "wk-7949-s6",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'quần áo' means 'clothes', not the furniture 'wardrobe' used to store them."
+   }
+  },
+  {
+   "key": "ca7dd2fc2fb9a9f79151402e248f7fc5591009ada7cec92f836379161981c901",
+   "input": {
+    "id": "wk-795-s0",
+    "en": "pink",
+    "en_pos": "adjective",
+    "en_sense": "Having a colour between red and white; pale red.",
+    "ja": "桃色",
+    "ja_reading": "ももいろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "pink (colour, color)",
+     "peach"
+    ],
+    "vi": "màu hồng"
+   },
+   "output": {
+    "id": "wk-795-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural ways to express the color 'pink'."
+   }
+  },
+  {
+   "key": "244c6bc2bf6ea50c77ea9e349ffc05506cd71d9e21ae924bf75fd966facb1323",
+   "input": {
+    "id": "wk-7954-s0",
+    "en": "incident",
+    "en_pos": "noun",
+    "en_sense": "An event or occurrence.",
+    "ja": "事故",
+    "ja_reading": "じこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "accident",
+     "incident",
+     "trouble"
+    ],
+    "vi": "sự kiện"
+   },
+   "output": {
+    "id": "wk-7954-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 事故 means 'accident' and has a negative connotation, which is a mismatch for the given neutral English sense 'an event or occurrence'."
+   }
+  },
+  {
+   "key": "9cf2f62413450f04f6ff5fc33ee6239ebbed68b658a40d39c7c177cc54d603ac",
+   "input": {
+    "id": "wk-7957-s0",
+    "en": "sue",
+    "en_pos": "verb",
+    "en_sense": "To file a legal action against someone, generally a non-criminal (civil) action.",
+    "ja": "訴える",
+    "ja_reading": "うったえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to sue (a person)",
+     "to take someone to court"
+    ],
+    "vi": "kiện"
+   },
+   "output": {
+    "id": "wk-7957-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents for the legal action of 'to sue'."
+   }
+  },
+  {
+   "key": "81bc7019c445a977f2cb2d620fd7b0b4a2d187506f9c0b0eebf5e8c12707f88c",
+   "input": {
+    "id": "wk-796-e:d6838c",
+    "en": "purple",
+    "en_pos": "noun",
+    "en_sense": "colour",
+    "ja": "紫",
+    "ja_reading": "むらさき",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "purple",
+     "violet"
+    ],
+    "vi": "tía"
+   },
+   "output": {
+    "id": "wk-796-e:d6838c",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'tía' refers to a specific reddish-purple shade, while the standard word for 'purple' is 'tím'."
+   }
+  },
+  {
+   "key": "17974f6a1dfc46934be40d4620c02fdfb0b006200011d6279aed5a6d8ae20906",
+   "input": {
+    "id": "wk-7961-e:73ce78",
+    "en": "earn",
+    "en_pos": "verb",
+    "en_sense": "transitive: receive (money) for working",
+    "ja": "稼ぐ",
+    "ja_reading": "かせぐ",
+    "ja_pos": "v5g,vt",
+    "ja_glosses": [
+     "to earn (income)",
+     "to make (money)"
+    ],
+    "vi": "kiếm"
+   },
+   "output": {
+    "id": "wk-7961-e:73ce78",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the standard, idiomatic terms for earning money through work."
+   }
+  },
+  {
+   "key": "a45452e14ae087ddeb9e75173ba1807143b4dc4db40306ee2b8705198b03ca68",
+   "input": {
+    "id": "wk-7967-s0",
+    "en": "dough",
+    "en_pos": "noun",
+    "en_sense": "A thick, malleable substance made by mixing flour with other ingredients such as water, eggs, or butter, that is made into a particular form and then baked.",
+    "ja": "生地",
+    "ja_reading": "きじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dough",
+     "batter"
+    ],
+    "vi": "bột"
+   },
+   "output": {
+    "id": "wk-7967-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'bột' means 'flour' or 'powder', not 'dough'. The correct term is 'bột nhào'."
+   }
+  },
+  {
+   "key": "40708b5d027968df99a895391e78efbfe50ce6d6b877365cb3880b842fcce487",
+   "input": {
+    "id": "wk-7968-e:58703c",
+    "en": "bake",
+    "en_pos": "verb",
+    "en_sense": "to cook in an oven",
+    "ja": "焼く",
+    "ja_reading": "やく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to roast",
+     "to broil",
+     "to grill",
+     "to bake",
+     "to toast",
+     "to barbecue"
+    ],
+    "vi": "nướng"
+   },
+   "output": {
+    "id": "wk-7968-e:58703c",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both 焼く and nướng are broad terms for dry-heat cooking and also mean 'grill' or 'roast', making them broader than the specific English sense of 'bake' (in an oven)."
+   }
+  },
+  {
+   "key": "14a2b842dc998e1a0de15fa734c14ad0b26041efa1917d815bf48ff1c78d7282",
+   "input": {
+    "id": "wk-7971-s1",
+    "en": "chronic",
+    "en_pos": "adjective",
+    "en_sense": "Prolonged or slow to heal.",
+    "ja": "慢性的",
+    "ja_reading": "まんせいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "chronic"
+    ],
+    "vi": "mãn tính"
+   },
+   "output": {
+    "id": "wk-7971-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect match using Sino-Japanese and Sino-Vietnamese cognates for a technical term."
+   }
+  },
+  {
+   "key": "41bda837426a9f1904842880628776db8c45d86f01a06a70d992adf430b22199",
+   "input": {
+    "id": "wk-7972-s0",
+    "en": "tumor",
+    "en_pos": "noun",
+    "en_sense": "An abnormal growth; differential diagnosis includes abscess, metaplasia, and neoplasia.",
+    "ja": "腫瘍",
+    "ja_reading": "しゅよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tumor",
+     "tumour",
+     "neoplasm",
+     "neoplasia"
+    ],
+    "vi": "u"
+   },
+   "output": {
+    "id": "wk-7972-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the standard terms for 'tumor' in their respective languages."
+   }
+  }
+ ]
+}

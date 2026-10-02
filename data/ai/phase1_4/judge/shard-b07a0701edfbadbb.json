@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:39:24Z",
+ "items": [
+  {
+   "key": "164f2891e55088859edda4d623dc875b5c7ceb35a8093402f8d627d54d5ec0bb",
+   "input": {
+    "id": "wk-22820-s0",
+    "en": "natural disaster",
+    "en_pos": "noun",
+    "en_sense": "Any natural phenomenon that causes great damage and loss of life.",
+    "ja": "自然災害",
+    "ja_reading": "しぜんさいがい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "natural disaster"
+    ],
+    "vi": "thiên tai"
+   },
+   "output": {
+    "id": "wk-22820-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'natural disaster'."
+   }
+  },
+  {
+   "key": "a3b66e74fe329c874328a8731463594ee155c61ed6a5cd12df2c21785c659254",
+   "input": {
+    "id": "wk-2283-s0",
+    "en": "skirt",
+    "en_pos": "noun",
+    "en_sense": "A separate article of clothing, usually worn by women and girls, that hangs from the waist and covers the lower torso and part of the legs.",
+    "ja": "スカート",
+    "ja_reading": "スカート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "skirt"
+    ],
+    "vi": "váy"
+   },
+   "output": {
+    "id": "wk-2283-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'váy' is too broad as it can mean both 'skirt' and 'dress'; 'chân váy' would be a more precise equivalent for this sense."
+   }
+  },
+  {
+   "key": "50489241fe66b894a82fcd3014b22c7d3604c481eb9b2d2fe32f999bbc4e3fee",
+   "input": {
+    "id": "wk-22838-s0",
+    "en": "chemical bond",
+    "en_pos": "noun",
+    "en_sense": "Any of several attractive forces that serve to bind atoms together to form molecules",
+    "ja": "化学結合",
+    "ja_reading": "かがくけつごう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chemical bond"
+    ],
+    "vi": "liên kết"
+   },
+   "output": {
+    "id": "wk-22838-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'liên kết' is too broad, meaning just 'bond' or 'connection'; the correct term is 'liên kết hóa học'."
+   }
+  },
+  {
+   "key": "ba9e29217cb3c8f602c4b9c92e08400e90b6c72f41dca28c9a9f83ffed7cf7b8",
+   "input": {
+    "id": "wk-2287-s0",
+    "en": "speak",
+    "en_pos": "verb",
+    "en_sense": "To communicate with one's voice, to say words out loud.",
+    "ja": "話す",
+    "ja_reading": "はなす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to speak (a language)"
+    ],
+    "vi": "nói"
+   },
+   "output": {
+    "id": "wk-2287-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese gloss is slightly too narrow, but the word '話す' itself is a perfect match for the general sense of 'speak'."
+   }
+  },
+  {
+   "key": "9b27bbf9fd05f69bd491b4b2ff1363d6c595a0bf4baf8522467e1b205a5f9b03",
+   "input": {
+    "id": "wk-2289-e:5a1a23",
+    "en": "straight",
+    "en_pos": "adjective",
+    "en_sense": "direct, truthful, frank",
+    "ja": "ストレート",
+    "ja_reading": "ストレート",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "straight"
+    ],
+    "vi": "thẳng"
+   },
+   "output": {
+    "id": "wk-2289-e:5a1a23",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly convey the metaphorical sense of 'straight' as 'frank' or 'direct'."
+   }
+  },
+  {
+   "key": "05e9ccdf35521cbf61d8c0d341c0e30aa3ce576206af5345dd0ef36d3220fc10",
+   "input": {
+    "id": "wk-229-s0",
+    "en": "lens",
+    "en_pos": "noun",
+    "en_sense": "An object, usually made of glass, that focuses or defocuses the light that passes through it.",
+    "ja": "レンズ",
+    "ja_reading": "レンズ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lens"
+    ],
+    "vi": "thấu kính"
+   },
+   "output": {
+    "id": "wk-229-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for an optical lens."
+   }
+  },
+  {
+   "key": "bf53b7da57124d293ee43a20a7e66d101ead2d18d22b54a36a970112b0e3535d",
+   "input": {
+    "id": "wk-22910-s0",
+    "en": "impregnable",
+    "en_pos": "adjective",
+    "en_sense": "Of a fortress or other fortified place: able to withstand all attacks; impenetrable, inconquerable, unvanquishable.",
+    "ja": "鉄壁",
+    "ja_reading": "てっぺき",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "impregnable",
+     "invulnerable",
+     "unassailable",
+     "cast-iron"
+    ],
+    "vi": "hiểm"
+   },
+   "output": {
+    "id": "wk-22910-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'hiểm' means 'dangerous' or 'perilous', not 'impregnable'."
+   }
+  },
+  {
+   "key": "9aaea3c4d16f162153e2578dd5e59906a50bc2ece3bf9711b06a91c1cab1db0d",
+   "input": {
+    "id": "wk-2293-s0",
+    "en": "thunder",
+    "en_pos": "noun",
+    "en_sense": "The loud rumbling, cracking, or crashing sound caused by expansion of rapidly heated air around a lightning bolt.",
+    "ja": "雷鳴",
+    "ja_reading": "らいめい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thunder",
+     "thunderclap",
+     "crash of thunder"
+    ],
+    "vi": "sấm"
+   },
+   "output": {
+    "id": "wk-2293-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms specifically and correctly denote the sound of thunder."
+   }
+  },
+  {
+   "key": "0ada9bda57679626b5c86bae1e452ebf58a2cb077e3b1085a1887417c9115de1",
+   "input": {
+    "id": "wk-2295-s2",
+    "en": "zenith",
+    "en_pos": "noun",
+    "en_sense": "Highest point or state; peak.",
+    "ja": "頂点",
+    "ja_reading": "ちょうてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "peak (of popularity, a boom, etc.)",
+     "height (e.g. of prosperity)",
+     "apex",
+     "zenith",
+     "climax"
+    ],
+    "vi": "cực điểm"
+   },
+   "output": {
+    "id": "wk-2295-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the metaphorical sense of 'zenith' as a peak or highest point."
+   }
+  },
+  {
+   "key": "2263f3b972e99f0dca6dd2ce160ba5917a87acc034870bbf9942cbc0ffafec0b",
+   "input": {
+    "id": "wk-2296-s0",
+    "en": "secretary",
+    "en_pos": "noun",
+    "en_sense": "A person who keeps records, takes notes and handles general clerical work.",
+    "ja": "秘書",
+    "ja_reading": "ひしょ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "(private) secretary"
+    ],
+    "vi": "bí thư"
+   },
+   "output": {
+    "id": "wk-2296-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'bí thư' is a false friend; it means a political 'Secretary' (e.g., of the Communist Party), not an office secretary, for which 'thư ký' is used."
+   }
+  },
+  {
+   "key": "af7dacf1772cfddf01662579bc9e0a5976ea7a9ef8f42564276651193772c17c",
+   "input": {
+    "id": "wk-2296-s1",
+    "en": "secretary",
+    "en_pos": "noun",
+    "en_sense": "The head of a department of government.",
+    "ja": "長官",
+    "ja_reading": "ちょうかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "secretary (government)",
+     "director",
+     "chief"
+    ],
+    "vi": "bộ trưởng"
+   },
+   "output": {
+    "id": "wk-2296-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are correct equivalents for the head of a government department."
+   }
+  },
+  {
+   "key": "564b6ae349535b4f10c556857ffd94d11e804f120ee423ad9945636e0b2f53b2",
+   "input": {
+    "id": "wk-22982-e:d64deb",
+    "en": "secondary school",
+    "en_pos": "noun",
+    "en_sense": "school",
+    "ja": "中学校",
+    "ja_reading": "ちゅうがっこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "junior high school",
+     "middle school",
+     "lower secondary school"
+    ],
+    "vi": "trường trung học"
+   },
+   "output": {
+    "id": "wk-22982-e:d64deb",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '中学校' (chūgakkō) refers specifically to junior high school, which is only a part of the broader concept of 'secondary school'."
+   }
+  }
+ ]
+}

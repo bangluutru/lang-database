@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:15Z",
+ "items": [
+  {
+   "key": "56de91a95926a22796a26c22ce6fd7a18a9fc5c19b08585f9921f4f09d4e3537",
+   "input": {
+    "id": "wk-10088-s0",
+    "en": "surrender",
+    "en_pos": "verb",
+    "en_sense": "To give up into the power, control, or possession of another.",
+    "ja": "降伏する",
+    "ja_reading": "こうふくする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "surrender",
+     "capitulation",
+     "submission"
+    ],
+    "vi": "đầu hàng"
+   },
+   "output": {
+    "id": "wk-10088-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for surrendering in a conflict."
+   }
+  },
+  {
+   "key": "aab5adf923c94a0eded3db01650a2e8b9f28afff80815b20fb369f0ecda18bc7",
+   "input": {
+    "id": "wk-10088-s2",
+    "en": "surrender",
+    "en_pos": "verb",
+    "en_sense": "To give oneself up into the power of another, especially as a prisoner; to submit or give in.",
+    "ja": "自首する",
+    "ja_reading": "じしゅする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "surrender (to the authorities)",
+     "giving oneself up",
+     "turning oneself in"
+    ],
+    "vi": "đầu hàng"
+   },
+   "output": {
+    "id": "wk-10088-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '自首する' means to turn oneself in to authorities, while the Vietnamese 'đầu hàng' means to surrender in a military context; they do not match."
+   }
+  },
+  {
+   "key": "98dc7d2bc74717162d8cff2c20e096050157ed4f7e1e943f13b782652cb09b69",
+   "input": {
+    "id": "wk-1009-s3",
+    "en": "some",
+    "en_pos": "determiner",
+    "en_sense": "A certain, an unspecified or unknown.",
+    "ja": "ある",
+    "ja_reading": "ある",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "a certain ...",
+     "some ..."
+    ],
+    "vi": "nào đó"
+   },
+   "output": {
+    "id": "wk-1009-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for the sense of an unspecified entity."
+   }
+  },
+  {
+   "key": "06cda29b5ae79956b08aac591fea7bef58d8df7d3a683d0a437ca635f1280481",
+   "input": {
+    "id": "wk-10104-s0",
+    "en": "bait",
+    "en_pos": "noun",
+    "en_sense": "Any substance, especially food, used in catching fish, or other animals, by alluring them to a hook, snare, trap, or net.",
+    "ja": "餌",
+    "ja_reading": "えさ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bait",
+     "lure",
+     "enticement"
+    ],
+    "vi": "mồi"
+   },
+   "output": {
+    "id": "wk-10104-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, primary words for bait used in fishing or trapping."
+   }
+  },
+  {
+   "key": "965e1d73ee11903fa042984a310342804f5afe7638b92545612bac26d001596e",
+   "input": {
+    "id": "wk-10108-s0",
+    "en": "banker",
+    "en_pos": "noun",
+    "en_sense": "One who conducts the business of banking; one who, individually, or as a member of a company, keeps an establishment for the deposit or loan of money, or for traffic in money, bills of exchange, etc.",
+    "ja": "銀行家",
+    "ja_reading": "ぎんこうか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "banker",
+     "bank proprietor",
+     "bank manager"
+    ],
+    "vi": "chủ ngân hàng"
+   },
+   "output": {
+    "id": "wk-10108-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chủ ngân hàng' specifically means 'bank owner', which is much narrower than the English 'banker' or Japanese '銀行家'."
+   }
+  },
+  {
+   "key": "af1c2eba941d7dedcde9d6b35ed72b432c9bc6301b310945908b07d2edd19dc9",
+   "input": {
+    "id": "wk-10109-s0",
+    "en": "banner",
+    "en_pos": "noun",
+    "en_sense": "A flag or standard used by a military commander, monarch or nation.",
+    "ja": "旗",
+    "ja_reading": "はた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "banner (administrative division of Inner Mongolia)"
+    ],
+    "vi": "ngọn"
+   },
+   "output": {
+    "id": "wk-10109-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese gloss refers to an administrative division in Inner Mongolia, and the Vietnamese word is a classifier for flags, not the word for 'banner' itself."
+   }
+  },
+  {
+   "key": "b89502c7c1615fdbaa26c951fafe867edaa2c83a40bcdce7cb42496ee04f1771",
+   "input": {
+    "id": "wk-10109-s5",
+    "en": "banner",
+    "en_pos": "noun",
+    "en_sense": "A cause or purpose; a campaign or movement.",
+    "ja": "旗印",
+    "ja_reading": "はたじるし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "banner (e.g. of democracy)",
+     "slogan",
+     "cause",
+     "objective"
+    ],
+    "vi": "vận động"
+   },
+   "output": {
+    "id": "wk-10109-s5",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'vận động' is a verb meaning 'to campaign', not a noun for a cause or banner, and thus does not match the English or Japanese nouns."
+   }
+  },
+  {
+   "key": "c9707b2a1e8992171eb9cc8c20267cf47c70257bb5803ea18f32109eb09f969c",
+   "input": {
+    "id": "wk-1011-s1",
+    "en": "percent",
+    "en_pos": "noun",
+    "en_sense": "One part per hundred; one percent, hundredth.",
+    "ja": "パーセント",
+    "ja_reading": "パーセント",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "percent",
+     "per cent",
+     "percentage"
+    ],
+    "vi": "phần trăm"
+   },
+   "output": {
+    "id": "wk-1011-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'percent'."
+   }
+  },
+  {
+   "key": "17959572ea672cf9bf12dd194c8adfab33fa08f499f82e0fbd3bea59b9021230",
+   "input": {
+    "id": "wk-10112-s14",
+    "en": "beam",
+    "en_pos": "noun",
+    "en_sense": "A ray; a gleam.",
+    "ja": "ビーム",
+    "ja_reading": "ビーム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beam"
+    ],
+    "vi": "tia"
+   },
+   "output": {
+    "id": "wk-10112-s14",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for a beam or ray of light/energy."
+   }
+  },
+  {
+   "key": "09ed597791c8c6437b5f592f05bdf2a74d1701c4312a02e70791fc5dba9dd9be",
+   "input": {
+    "id": "wk-10119-s0",
+    "en": "betray",
+    "en_pos": "verb",
+    "en_sense": "To deliver into the hands of an enemy by treachery or fraud, in violation of trust; to give up treacherously or faithlessly.",
+    "ja": "裏切る",
+    "ja_reading": "うらぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to betray",
+     "to turn traitor (to)",
+     "to double-cross",
+     "to go back on",
+     "to be unfaithful (to)"
+    ],
+    "vi": "phản bội"
+   },
+   "output": {
+    "id": "wk-10119-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the primary, standard equivalents for 'to betray'."
+   }
+  },
+  {
+   "key": "3385391a7fd3b56f3e1e9cc039db3928d188cad7f8a91edaa98ab9e3291ca205",
+   "input": {
+    "id": "wk-1012-e:5f1fcd",
+    "en": "hand",
+    "en_pos": "noun",
+    "en_sense": "set of cards held by a player in a card game",
+    "ja": "手札",
+    "ja_reading": "てふだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "one's hand"
+    ],
+    "vi": "ván"
+   },
+   "output": {
+    "id": "wk-1012-e:5f1fcd",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'ván' means a round or game, not the hand of cards held by a player, which is the meaning of the English and Japanese terms."
+   }
+  },
+  {
+   "key": "f73154de20f8c74874a548cd16f80f260fa34fe68b8ff6fad97efdb063a82fa8",
+   "input": {
+    "id": "wk-1012-s1",
+    "en": "hand",
+    "en_pos": "noun",
+    "en_sense": "A limb of certain animals, such as the foot of a hawk, or any one of the four extremities of a monkey.",
+    "ja": "手",
+    "ja_reading": "て",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hand",
+     "arm"
+    ],
+    "vi": "tay"
+   },
+   "output": {
+    "id": "wk-1012-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'hand' and are naturally extended to cover hand-like appendages of animals like monkeys."
+   }
+  }
+ ]
+}

@@ -1,0 +1,408 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:34:14Z",
+ "items": [
+  {
+   "key": "e9da1c5a2e379e148624c9ce76bd40cb155e26bd3411ef9a0bf3a06b0bf1d04b",
+   "input": {
+    "id": "jm-1306630-0-manage",
+    "en": "manage",
+    "en_pos": "verb",
+    "en_sense": "to be in charge of; to manage; to direct; to administer; to preside over",
+    "ja": "司る",
+    "ja_reading": "つかさどる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to be in charge of",
+     "to manage",
+     "to direct",
+     "to administer",
+     "to preside over"
+    ],
+    "vi": "quản lý"
+   },
+   "output": {
+    "id": "jm-1306630-0-manage",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "司る is slightly more formal/literary than the common 'manage' or 'quản lý', but the sense is a perfect match."
+   }
+  },
+  {
+   "key": "10835d2d3e0c6050e525e1943d479378b3a67773aa37eb9f4dff073fefdfea9c",
+   "input": {
+    "id": "jm-1307040-0-four",
+    "en": "four",
+    "en_pos": "numeral",
+    "en_sense": "four; 4",
+    "ja": "四つ",
+    "ja_reading": "よっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "four",
+     "4"
+    ],
+    "vi": "bốn"
+   },
+   "output": {
+    "id": "jm-1307040-0-four",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and fundamental vocabulary item."
+   }
+  },
+  {
+   "key": "36af0da65ffe8367f842773406b095e0a1d6643d2fa959d4837d399fe14bde57",
+   "input": {
+    "id": "jm-1307570-0-continuously",
+    "en": "continuously",
+    "en_pos": "adverb",
+    "en_sense": "continuously; from beginning to end; from first to last",
+    "ja": "始終",
+    "ja_reading": "しじゅう",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "continuously",
+     "from beginning to end",
+     "from first to last"
+    ],
+    "vi": "liên tục"
+   },
+   "output": {
+    "id": "jm-1307570-0-continuously",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are good, common equivalents for 'continuously'."
+   }
+  },
+  {
+   "key": "25836058708a1a1c3508d3364658f72ee3339689e9c58d92e9afd9c6a1fac674",
+   "input": {
+    "id": "jm-1307620-0-management",
+    "en": "management",
+    "en_pos": "noun",
+    "en_sense": "management; dealing with; settlement; cleaning up; disposal",
+    "ja": "始末",
+    "ja_reading": "しまつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "management",
+     "dealing with",
+     "settlement",
+     "cleaning up",
+     "disposal"
+    ],
+    "vi": "giải quyết"
+   },
+   "output": {
+    "id": "jm-1307620-0-management",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'giải quyết' is a verb ('to solve/settle') while the English and Japanese words are nouns, causing a part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "3351e54ab1898be01bcc17767d145b413697d8d8bbcde382ebe84db51525a74f",
+   "input": {
+    "id": "jm-1307980-0-son",
+    "en": "son",
+    "en_pos": "noun",
+    "en_sense": "(another's) son",
+    "ja": "子息",
+    "ja_reading": "しそく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(another's) son"
+    ],
+    "vi": "quý tử"
+   },
+   "output": {
+    "id": "jm-1307980-0-son",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The English 'son' is neutral, while Japanese '子息' and especially Vietnamese 'quý tử' are formal, honorific terms, creating a significant register clash."
+   }
+  },
+  {
+   "key": "71526632fa031d81663520fd544a5edc0768b68b82d431353f9d8c9fc903756e",
+   "input": {
+    "id": "jm-1309060-0-intend",
+    "en": "intend",
+    "en_pos": "verb",
+    "en_sense": "to aspire to; to aim for; to intend; to resolve",
+    "ja": "志す",
+    "ja_reading": "こころざす",
+    "ja_pos": "v5s,vi,vt",
+    "ja_glosses": [
+     "to aspire to",
+     "to aim for",
+     "to intend",
+     "to resolve"
+    ],
+    "vi": "mong muốn"
+   },
+   "output": {
+    "id": "jm-1309060-0-intend",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "FALSE_FRIEND"
+    ],
+    "note": "Japanese '志す' is narrower (to aspire), while Vietnamese 'mong muốn' means 'to wish/desire', both differing from the general meaning of 'intend'."
+   }
+  },
+  {
+   "key": "46f084aeddd9f345c8d1c6bfeca0dc4904a0a6bbdbac4c067f88ed00fe350337",
+   "input": {
+    "id": "jm-1309110-0-intention",
+    "en": "intention",
+    "en_pos": "noun",
+    "en_sense": "intention; aim; preference (for); orientation (towards a goal)",
+    "ja": "志向",
+    "ja_reading": "しこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "intention",
+     "aim",
+     "preference (for)",
+     "orientation (towards a goal)"
+    ],
+    "vi": "ý định"
+   },
+   "output": {
+    "id": "jm-1309110-0-intention",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '志向' means 'orientation/preference', which is narrower than the general English 'intention' for which the Vietnamese 'ý định' is a perfect match."
+   }
+  },
+  {
+   "key": "eeca1d7ce05d4c8c816650ede14f8302a0c6024acfd51b93e37580a393a27762",
+   "input": {
+    "id": "jm-1309230-0-assume",
+    "en": "assume",
+    "en_pos": "verb",
+    "en_sense": "to be convinced (that); to be under the impression (that); to feel sure (that); to assume (that)",
+    "ja": "思い込む",
+    "ja_reading": "おもいこむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to be convinced (that)",
+     "to be under the impression (that)",
+     "to feel sure (that)",
+     "to assume (that)"
+    ],
+    "vi": "cho rằng"
+   },
+   "output": {
+    "id": "jm-1309230-0-assume",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "English and Japanese match on the specific sense of 'to be firmly (and possibly wrongly) convinced', but Vietnamese 'cho rằng' is a more general 'to think that'."
+   }
+  },
+  {
+   "key": "d5d12a2677028a5d6ec13c421178812f66a661a4088f65b22ebae3502bcf0080",
+   "input": {
+    "id": "jm-1309380-0-idea",
+    "en": "idea",
+    "en_pos": "noun",
+    "en_sense": "idea; plan; fancy; impulse; thought; whim",
+    "ja": "思い付き",
+    "ja_reading": "おもいつき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "idea",
+     "plan",
+     "fancy",
+     "impulse",
+     "thought",
+     "whim"
+    ],
+    "vi": "ý nghĩ"
+   },
+   "output": {
+    "id": "jm-1309380-0-idea",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "English and Japanese match on the specific sense of a 'sudden idea or whim', but Vietnamese 'ý nghĩ' is a more general 'thought' or 'idea'."
+   }
+  },
+  {
+   "key": "8d81607f68fc667a40988fec38a3f3e57694663f141bdc4436f058e19dafbab2",
+   "input": {
+    "id": "jm-1309560-0-thought",
+    "en": "thought",
+    "en_pos": "noun",
+    "en_sense": "thought; idea; ideology",
+    "ja": "思想",
+    "ja_reading": "しそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thought",
+     "idea",
+     "ideology"
+    ],
+    "vi": "tư tưởng"
+   },
+   "output": {
+    "id": "jm-1309560-0-thought",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words perfectly match the specific, high-level sense of 'thought' as a system of ideas or ideology."
+   }
+  },
+  {
+   "key": "5d861b45dad3fba0f2e184341a5c1d10ed76ec2dd1dc3918a97f5c86786c701c",
+   "input": {
+    "id": "jm-1309700-0-command",
+    "en": "command",
+    "en_pos": "noun",
+    "en_sense": "command; direction; supervision",
+    "ja": "指揮",
+    "ja_reading": "しき",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "command",
+     "direction",
+     "supervision"
+    ],
+    "vi": "chỉ huy"
+   },
+   "output": {
+    "id": "jm-1309700-0-command",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents, with '指揮' and 'chỉ huy' being direct cognates."
+   }
+  },
+  {
+   "key": "4bcb88ffd9efb394f55149c3fe2cd479f7c58423cb8bc83482fea32f9a3f189d",
+   "input": {
+    "id": "jm-1309910-0-specification",
+    "en": "specification",
+    "en_pos": "noun",
+    "en_sense": "designation; specification; assignment; appointment; pointing at",
+    "ja": "指定",
+    "ja_reading": "してい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "designation",
+     "specification",
+     "assignment",
+     "appointment",
+     "pointing at"
+    ],
+    "vi": "chỉ định"
+   },
+   "output": {
+    "id": "jm-1309910-0-specification",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents, with '指定' and 'chỉ định' being direct cognates meaning 'designation' or 'specification'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:33:13Z",
+ "items": [
+  {
+   "key": "21cac4c581de8a25389a4306df42432aa1bbefe4fd142f7d503cd14fab32a909",
+   "input": {
+    "id": "jm-1297960-0-composition",
+    "en": "composition",
+    "en_pos": "noun",
+    "en_sense": "writing (an essay, prose, etc.); composition",
+    "ja": "作文",
+    "ja_reading": "さくぶん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "writing (an essay, prose, etc.)",
+     "composition"
+    ],
+    "vi": "viết văn"
+   },
+   "output": {
+    "id": "jm-1297960-0-composition",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for 'composition' in a school or writing context."
+   }
+  },
+  {
+   "key": "36f4fc8af700f6f86c00c2b03be708b9c5b8c7c71852952103ec6ef5d20d4567",
+   "input": {
+    "id": "jm-1297980-0-manners",
+    "en": "manners",
+    "en_pos": "noun",
+    "en_sense": "manners; etiquette; propriety",
+    "ja": "作法",
+    "ja_reading": "さほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "manners",
+     "etiquette",
+     "propriety"
+    ],
+    "vi": "phép tắc"
+   },
+   "output": {
+    "id": "jm-1297980-0-manners",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'phép tắc' is closer to 'rules and regulations' or 'discipline' and is narrower than the general English 'manners' or Japanese '作法'."
+   }
+  },
+  {
+   "key": "3a683dbbfab1be070f992c15b17f6a318f41ca75515a4e80b1a4fd04d0c8f74c",
+   "input": {
+    "id": "jm-1298260-0-plan",
+    "en": "plan",
+    "en_pos": "noun",
+    "en_sense": "plan; policy; means; measure; stratagem; scheme",
+    "ja": "策",
+    "ja_reading": "さく",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "plan",
+     "policy",
+     "means",
+     "measure",
+     "stratagem",
+     "scheme"
+    ],
+    "vi": "kế hoạch"
+   },
+   "output": {
+    "id": "jm-1298260-0-plan",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '策' emphasizes 'stratagem/scheme', while the Vietnamese 'kế hoạch' means a general 'plan', creating a divergence in nuance despite both being valid translations of the broad English term."
+   }
+  },
+  {
+   "key": "c318402f8ff4813f9ad8735dd84ea1bb97484de8e483650a5e88bc3e1230b7c0",
+   "input": {
+    "id": "jm-1298670-0-print",
+    "en": "print",
+    "en_pos": "verb",
+    "en_sense": "to print",
+    "ja": "刷る",
+    "ja_reading": "する",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to print"
+    ],
+    "vi": "in"
+   },
+   "output": {
+    "id": "jm-1298670-0-print",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a straightforward and perfect equivalence across all three languages."
+   }
+  },
+  {
+   "key": "93bf985000e01c665e880efecb8abccc692356cb9ca3f08baf10ab69d5d86a60",
+   "input": {
+    "id": "jm-1299240-0-rough",
+    "en": "rough",
+    "en_pos": "adjective",
+    "en_sense": "rough; crude; sloppy; messy",
+    "ja": "雑",
+    "ja_reading": "ざつ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "rough",
+     "crude",
+     "sloppy",
+     "messy"
+    ],
+    "vi": "thô"
+   },
+   "output": {
+    "id": "jm-1299240-0-rough",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thô' means 'rough/coarse' and doesn't capture the sense of 'sloppy/messy' which is central to the English and Japanese terms."
+   }
+  },
+  {
+   "key": "a355e687cd7f9869ea51d270253face241c49e6ff4282ffa053f16ba823abf4b",
+   "input": {
+    "id": "jm-1299685-0-plate",
+    "en": "plate",
+    "en_pos": "noun",
+    "en_sense": "plate; dish",
+    "ja": "お皿",
+    "ja_reading": "おさら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plate",
+     "dish"
+    ],
+    "vi": "đĩa"
+   },
+   "output": {
+    "id": "jm-1299685-0-plate",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents for a common household item."
+   }
+  },
+  {
+   "key": "1cab8860854a56eefc0aa8b0f6cb6b4758a289c1d93ecba0c71728d9c6dd6b90",
+   "input": {
+    "id": "jm-1299740-0-three",
+    "en": "three",
+    "en_pos": "numeral",
+    "en_sense": "three",
+    "ja": "三つ",
+    "ja_reading": "みっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "three"
+    ],
+    "vi": "ba"
+   },
+   "output": {
+    "id": "jm-1299740-0-three",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a fundamental and correct equivalence."
+   }
+  },
+  {
+   "key": "52904755826d3ee6118a39671e300172238fe93799310abf8d84ccd3c9b613f0",
+   "input": {
+    "id": "jm-1303810-0-production",
+    "en": "production",
+    "en_pos": "noun",
+    "en_sense": "production; output; turning out; extraction (e.g. of minerals)",
+    "ja": "産出",
+    "ja_reading": "さんしゅつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "production",
+     "output",
+     "turning out",
+     "extraction (e.g. of minerals)"
+    ],
+    "vi": "sản xuất"
+   },
+   "output": {
+    "id": "jm-1303810-0-production",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese '産出' and Vietnamese 'sản xuất' are cognates and provide a good match for the English 'production', especially in an industrial or economic context."
+   }
+  },
+  {
+   "key": "a454021340936281041c9391f91dc0852db5854b398cbae4c318690b89b1cd0d",
+   "input": {
+    "id": "jm-1282010-0-executive",
+    "en": "executive",
+    "en_pos": "noun",
+    "en_sense": "executive; government",
+    "ja": "行政",
+    "ja_reading": "ぎょうせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "executive",
+     "government"
+    ],
+    "vi": "hành chính"
+   },
+   "output": {
+    "id": "jm-1282010-0-executive",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'hành chính' is an adjective ('administrative'), not a noun for 'the executive branch', unlike its Japanese cognate '行政'."
+   }
+  },
+  {
+   "key": "62707d30a8171986278f2611adf0952c8f4f38aa5097224c527b3f0dfe594ceb",
+   "input": {
+    "id": "jm-1282240-0-lecture",
+    "en": "lecture",
+    "en_pos": "noun",
+    "en_sense": "lecture; address; speech",
+    "ja": "講演",
+    "ja_reading": "こうえん",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "lecture",
+     "address",
+     "speech"
+    ],
+    "vi": "bài giảng"
+   },
+   "output": {
+    "id": "jm-1282240-0-lecture",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'bài giảng' is specific to an academic lecture or lesson, while English 'lecture' and Japanese '講演' can also mean a public speech or address."
+   }
+  },
+  {
+   "key": "1fe6e214bdeb5563286baa090795343a83f16c76778f9e98210d359113204530",
+   "input": {
+    "id": "jm-1283240-0-raise",
+    "en": "raise",
+    "en_pos": "verb",
+    "en_sense": "to raise; to lift; to boost; to enhance",
+    "ja": "高める",
+    "ja_reading": "たかめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to raise",
+     "to lift",
+     "to boost",
+     "to enhance"
+    ],
+    "vi": "nâng cao"
+   },
+   "output": {
+    "id": "jm-1283240-0-raise",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly on the abstract meaning of 'to raise, enhance, boost' (e.g., quality, awareness, level)."
+   }
+  },
+  {
+   "key": "baba9ec1b350b250fdcff245339db64e1a52ab9ce924ffc12c495d4b93d36628",
+   "input": {
+    "id": "jm-1283300-0-expensive",
+    "en": "expensive",
+    "en_pos": "adjective",
+    "en_sense": "highly priced; expensive; valuable; costly",
+    "ja": "高価",
+    "ja_reading": "こうか",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "highly priced",
+     "expensive",
+     "valuable",
+     "costly"
+    ],
+    "vi": "đắt"
+   },
+   "output": {
+    "id": "jm-1283300-0-expensive",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A solid entry. The Japanese '高価' is slightly more formal than the most common word '高い', but it's a perfect semantic match for 'expensive/costly'."
+   }
+  }
+ ]
+}

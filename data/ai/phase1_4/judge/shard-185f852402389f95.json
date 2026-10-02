@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:34Z",
+ "items": [
+  {
+   "key": "d17182f0e4a659d071583149da7355eff84453e9b756871b8f29497c4ed419a5",
+   "input": {
+    "id": "wk-2822-s0",
+    "en": "swallow",
+    "en_pos": "noun",
+    "en_sense": "A small, migratory bird of the Hirundinidae family with long, pointed, moon-shaped wings and a forked tail which feeds on the wing by catching insects.",
+    "ja": "つばめ",
+    "ja_reading": "つばめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "swallow (bird of the Hirundinidae family)",
+     "martin"
+    ],
+    "vi": "én"
+   },
+   "output": {
+    "id": "wk-2822-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common names for the swallow bird."
+   }
+  },
+  {
+   "key": "09adcc658c13759e8416e2e43d911cc3a8cfa5d0d8cdcab23e81036c2b1acd19",
+   "input": {
+    "id": "wk-2823-s0",
+    "en": "gull",
+    "en_pos": "noun",
+    "en_sense": "A seabird of the genus Larus or of the subfamily Larinae.",
+    "ja": "カモメ",
+    "ja_reading": "カモメ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gull (Laridae spp.)",
+     "seagull"
+    ],
+    "vi": "hải âu"
+   },
+   "output": {
+    "id": "wk-2823-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common names for the gull/seagull."
+   }
+  },
+  {
+   "key": "9364f92a4c655ede9385761a38c6440540798833c213c2351a07277768c4a5ff",
+   "input": {
+    "id": "wk-28264-s0",
+    "en": "miai",
+    "en_pos": "noun",
+    "en_sense": "In Japan, a formal marriage interview, marriage meeting.",
+    "ja": "見合い",
+    "ja_reading": "みあい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "miai",
+     "two different options such that if one player takes one, the other player can take the other"
+    ],
+    "vi": "dạm ngõ"
+   },
+   "output": {
+    "id": "wk-28264-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'dạm ngõ' is a specific pre-wedding ceremony, not a direct equivalent of the Japanese 'miai' (formal marriage interview); they are distinct cultural practices."
+   }
+  },
+  {
+   "key": "bbc9a29a75c055c095a23932b931e3bebdd094c21a82479a551dd59c4ac39867",
+   "input": {
+    "id": "wk-2828-s1",
+    "en": "sparrow",
+    "en_pos": "noun",
+    "en_sense": "A member of the family Passeridae, comprising small Old World songbirds.",
+    "ja": "雀",
+    "ja_reading": "すずめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tree sparrow (Passer montanus)"
+    ],
+    "vi": "sẻ"
+   },
+   "output": {
+    "id": "wk-2828-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '雀' (suzume) typically refers to the tree sparrow (a specific species), while the English sense refers to the entire family of Old World sparrows (Passeridae)."
+   }
+  },
+  {
+   "key": "dce80e0102844036d71199c07bb59a6348a2263659c7ae10e7132ff0d078462f",
+   "input": {
+    "id": "wk-2829-s1",
+    "en": "peacock",
+    "en_pos": "noun",
+    "en_sense": "A peafowl (of the genus Pavo or Afropavo), either male or female.",
+    "ja": "ピーコック",
+    "ja_reading": "ピーコック",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "peacock"
+    ],
+    "vi": "công"
+   },
+   "output": {
+    "id": "wk-2829-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese entry 'ピーコック' is a loanword and less common for the bird itself than the native word '孔雀' (kujaku), making it an unnatural choice for a learner."
+   }
+  },
+  {
+   "key": "6ce433b2cb95b512f901e9820efac935dc80d077d86e60e29f353cabec55e503",
+   "input": {
+    "id": "wk-2830-s1",
+    "en": "butterfly",
+    "en_pos": "noun",
+    "en_sense": "The imago (final form) of such an insect, consisting usually of a long body with large flat wings, as opposed to earlier instars such as caterpillar or pupa.",
+    "ja": "蝶々",
+    "ja_reading": "ちょうちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "butterfly"
+    ],
+    "vi": "bướm"
+   },
+   "output": {
+    "id": "wk-2830-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese '蝶々' (chouchou) is a slightly colloquial/child-friendly term for butterfly, but it's very common and a good equivalent."
+   }
+  },
+  {
+   "key": "de33c5224592b65ae7089bd7779ca1664f2f19ea3ffd6f85c73252f23ad1cead",
+   "input": {
+    "id": "wk-2831-s0",
+    "en": "rumor",
+    "en_pos": "noun",
+    "en_sense": "A statement or claim of questionable accuracy, from no known reliable source, usually spread by word of mouth.",
+    "ja": "噂",
+    "ja_reading": "うわさ",
+    "ja_pos": "n,vs,adj-no",
+    "ja_glosses": [
+     "rumour",
+     "rumor",
+     "report",
+     "hearsay",
+     "gossip",
+     "common talk"
+    ],
+    "vi": "tin đồn"
+   },
+   "output": {
+    "id": "wk-2831-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'rumor'."
+   }
+  },
+  {
+   "key": "9b3d0a05e38fe33a9057092de2b44cac7852519e18b63834b7f589eecd2d4a5b",
+   "input": {
+    "id": "wk-2832-s0",
+    "en": "hierarchy",
+    "en_pos": "noun",
+    "en_sense": "A body of authoritative officials organized in nested ranks.",
+    "ja": "ヒエラルキー",
+    "ja_reading": "ヒエラルキー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hierarchy"
+    ],
+    "vi": "thứ bậc"
+   },
+   "output": {
+    "id": "wk-2832-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for the concept of hierarchy."
+   }
+  },
+  {
+   "key": "e275c10e7d4b114566c0b9618082b9d04c38b7ae6361817bb5ac90af0025453c",
+   "input": {
+    "id": "wk-2833-s0",
+    "en": "authority",
+    "en_pos": "noun",
+    "en_sense": "Power or right to make or enforce rules, give orders, or impose obligation; or a position having such power or right.",
+    "ja": "権威",
+    "ja_reading": "けんい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "authority",
+     "power",
+     "influence",
+     "prestige"
+    ],
+    "vi": "quyền lực"
+   },
+   "output": {
+    "id": "wk-2833-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '権威' (ken'i) emphasizes prestige and legitimate authority, while the Vietnamese 'quyền lực' emphasizes raw power, creating a significant semantic mismatch between the two translations."
+   }
+  },
+  {
+   "key": "427ef5a49b536616c7f3933bd8d29b09f889fc2f76109acd075aeaa4126f5c2b",
+   "input": {
+    "id": "wk-2835-s10",
+    "en": "power",
+    "en_pos": "noun",
+    "en_sense": "Electricity or a supply of electricity.",
+    "ja": "電力",
+    "ja_reading": "でんりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "electric power"
+    ],
+    "vi": "điện lực"
+   },
+   "output": {
+    "id": "wk-2835-s10",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'電力' and 'điện lực' are direct cognates meaning 'electric power' and are good technical translations, though the more common word for 'electricity' in everyday Vietnamese is simply 'điện'."
+   }
+  },
+  {
+   "key": "0e1551a88179222b4220df54d5319266f928dcc692f1bbe64fa9262e2e87c8d4",
+   "input": {
+    "id": "wk-2837-s0",
+    "en": "proportion",
+    "en_pos": "noun",
+    "en_sense": "A quantity of something that is part of the whole amount or number.",
+    "ja": "割合",
+    "ja_reading": "わりあい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rate",
+     "ratio",
+     "percentage",
+     "proportion"
+    ],
+    "vi": "tỉ lệ"
+   },
+   "output": {
+    "id": "wk-2837-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'proportion' in the sense of a part of a whole."
+   }
+  },
+  {
+   "key": "cd09ccb714ef6b7dfdd6c6de030838393434c279f588377f5797b448ccbbbbde",
+   "input": {
+    "id": "wk-2840-s0",
+    "en": "pheasant",
+    "en_pos": "noun",
+    "en_sense": "A bird of family Phasianidae, often hunted for food.",
+    "ja": "キジ",
+    "ja_reading": "キジ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "green pheasant (Phasianus versicolor)",
+     "Japanese green pheasant"
+    ],
+    "vi": "trĩ"
+   },
+   "output": {
+    "id": "wk-2840-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 'キジ' (kiji) refers specifically to the green pheasant, a particular species, while the English sense refers to the broader family of pheasants."
+   }
+  }
+ ]
+}

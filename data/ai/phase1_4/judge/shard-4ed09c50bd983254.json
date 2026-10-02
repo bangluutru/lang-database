@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:33:34Z",
+ "items": [
+  {
+   "key": "92b613818a760419d375f3fc4a8b76bbd5fb16e5144c7ad467da00c24f8caad6",
+   "input": {
+    "id": "jm-1318400-0-car",
+    "en": "car",
+    "en_pos": "noun",
+    "en_sense": "car; automobile; motorcar; motor vehicle; auto",
+    "ja": "自動車",
+    "ja_reading": "じどうしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "car",
+     "automobile",
+     "motorcar",
+     "motor vehicle",
+     "auto"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1318400-0-car",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "自動車 is a perfect and standard equivalent for the English sense of car/automobile, though 車 (kuruma) is more common in casual speech."
+   }
+  },
+  {
+   "key": "95534c366047c4383ae88df8ddf05197d114475b3458e81ba084ef8cd66a3700",
+   "input": {
+    "id": "jm-1318980-0-resignation",
+    "en": "resignation",
+    "en_pos": "noun",
+    "en_sense": "resignation",
+    "ja": "辞職",
+    "ja_reading": "じしょく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "resignation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1318980-0-resignation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "辞職 is a standard and accurate translation for resignation, particularly from an official or high-ranking position."
+   }
+  },
+  {
+   "key": "69a0a7031ab55a8841ecacb04243487e7d62a7b4f832c18b74ef2dfc3763890e",
+   "input": {
+    "id": "jm-1319210-0-seven",
+    "en": "seven",
+    "en_pos": "numeral",
+    "en_sense": "seven",
+    "ja": "七",
+    "ja_reading": "しち",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "seven"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1319210-0-seven",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "七 is the direct equivalent of the number seven."
+   }
+  },
+  {
+   "key": "e11aab7377e2d84f91b7fb480c55048c8c5a957735b6dce911862109a9a34057",
+   "input": {
+    "id": "jm-1319750-0-lose",
+    "en": "lose",
+    "en_pos": "verb",
+    "en_sense": "to lose",
+    "ja": "失う",
+    "ja_reading": "うしなう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to lose"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1319750-0-lose",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "失う translates 'to lose' in the sense of being deprived of something significant (e.g., a job, a life), but not for misplacing items (なくす) or losing a game (負ける)."
+   }
+  },
+  {
+   "key": "016afe7024513a692d0c6645361cd691f6ba7d63ff442b63bf2d873992be39da",
+   "input": {
+    "id": "jm-1320300-0-room",
+    "en": "room",
+    "en_pos": "noun",
+    "en_sense": "room",
+    "ja": "室",
+    "ja_reading": "しつ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "room"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1320300-0-room",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "REGISTER_CLASH"
+    ],
+    "note": "While 室 means 'room', it is almost always used as a suffix (e.g., 教室); the natural standalone word for 'room' is 部屋 (heya)."
+   }
+  },
+  {
+   "key": "f487d19be75ee779653c4adbf36010194a9a7ce037b95dec6b90883ab157cbf7",
+   "input": {
+    "id": "jm-1320680-0-question",
+    "en": "question",
+    "en_pos": "noun",
+    "en_sense": "question",
+    "ja": "質疑",
+    "ja_reading": "しつぎ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "question"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1320680-0-question",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "質疑 refers specifically to formal questioning (e.g., in a debate or inquiry), not a general 'question'; the correct general equivalent is 質問 (shitsumon)."
+   }
+  },
+  {
+   "key": "9229e87b3733595d74fa39dbab278cc0762f6e4d05e3f9ae50a4d9aabff0358f",
+   "input": {
+    "id": "jm-1321200-0-practice",
+    "en": "practice",
+    "en_pos": "noun",
+    "en_sense": "practice (in the field); training (esp. practical and hands-on); practical exercise; drill",
+    "ja": "実習",
+    "ja_reading": "じっしゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "practice (in the field)",
+     "training (esp. practical and hands-on)",
+     "practical exercise",
+     "drill"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321200-0-practice",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "実習 is a perfect translation for the specific sense of 'practice' as hands-on training or a practicum."
+   }
+  },
+  {
+   "key": "2073f781d9571316b70cf74c53142ac5ee786d2383805464c526c9537fd154aa",
+   "input": {
+    "id": "jm-1321260-0-practice",
+    "en": "practice",
+    "en_pos": "noun",
+    "en_sense": "practice; putting into practice; implementation",
+    "ja": "実践",
+    "ja_reading": "じっせん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "practice",
+     "putting into practice",
+     "implementation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321260-0-practice",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "実践 is a perfect translation for 'practice' in the sense of implementation or application of a theory."
+   }
+  },
+  {
+   "key": "01c58b56c38dc9e445e3f80f14588afaab1a141c63c53257aa0df95089dcf54c",
+   "input": {
+    "id": "jm-1321360-0-reality",
+    "en": "reality",
+    "en_pos": "noun",
+    "en_sense": "true state; actual condition; reality",
+    "ja": "実態",
+    "ja_reading": "じったい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "true state",
+     "actual condition",
+     "reality"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321360-0-reality",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "実態 is an excellent translation for 'reality' in the specific sense of the 'true state' or 'actual condition' of a matter."
+   }
+  },
+  {
+   "key": "2bcffdbfe5ceb80718442c817fa6d57ea277e16f3e2e79437c5218ef77013beb",
+   "input": {
+    "id": "jm-1321480-0-utility",
+    "en": "utility",
+    "en_pos": "noun",
+    "en_sense": "practical use; utility",
+    "ja": "実用",
+    "ja_reading": "じつよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "practical use",
+     "utility"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321480-0-utility",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "実用 is a direct and accurate translation for 'utility' or 'practical use'."
+   }
+  },
+  {
+   "key": "6f57a3a7b75ca772cc4fd262ad1aa60503007972e05c0417f75ec980d53b9bdd",
+   "input": {
+    "id": "jm-1321510-0-practical",
+    "en": "practical",
+    "en_pos": "adjective",
+    "en_sense": "practical; useful; utilitarian; pragmatic",
+    "ja": "実用的",
+    "ja_reading": "じつようてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "practical",
+     "useful",
+     "utilitarian",
+     "pragmatic"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321510-0-practical",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "実用的 is the standard and direct adjectival equivalent of 'practical' or 'useful'."
+   }
+  },
+  {
+   "key": "d7a6f3771323b82d6e35af4e84470be3f1d9e084c8fcf398e6d4cef67a05a151",
+   "input": {
+    "id": "jm-1321630-0-play",
+    "en": "play",
+    "en_pos": "noun",
+    "en_sense": "play; drama",
+    "ja": "芝居",
+    "ja_reading": "しばい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "play",
+     "drama"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321630-0-play",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "芝居 is a natural and common equivalent for a theatrical 'play' or 'drama'."
+   }
+  }
+ ]
+}

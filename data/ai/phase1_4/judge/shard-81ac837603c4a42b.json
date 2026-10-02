@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:54:20Z",
+ "items": [
+  {
+   "key": "9744ee0d9e31fa22eeb0dd4597aea2a348911b3d2e755709ad633252c8f6b13b",
+   "input": {
+    "id": "jm-2081570-0-tax",
+    "en": "tax",
+    "en_pos": "noun",
+    "en_sense": "tax",
+    "ja": "税",
+    "ja_reading": "ぜい",
+    "ja_pos": "n,suf",
+    "ja_glosses": [
+     "tax"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2081570-0-tax",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and standard equivalent."
+   }
+  },
+  {
+   "key": "c788e36b04a3a8d0bf9aa136d2b64015cdcd7e424cdd6ac61d723a01348b5d21",
+   "input": {
+    "id": "jm-2082450-3-university",
+    "en": "university",
+    "en_pos": "noun",
+    "en_sense": "university",
+    "ja": "大",
+    "ja_reading": "だい",
+    "ja_pos": "n-suf",
+    "ja_glosses": [
+     "university"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2082450-3-university",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "大 is a suffix or abbreviation for 大学 (daigaku), the full word for university, and cannot be used as a standalone equivalent."
+   }
+  },
+  {
+   "key": "f6c2ca0c562aea25d8843af28e7c0b1f99cb6910c499dc691bb0cf06ac53cdcc",
+   "input": {
+    "id": "jm-2083540-2-urine",
+    "en": "urine",
+    "en_pos": "noun",
+    "en_sense": "urine; piss; pee; urination",
+    "ja": "小",
+    "ja_reading": "しょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "urine",
+     "piss",
+     "pee",
+     "urination"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2083540-2-urine",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "ARCHAIC_OR_RARE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "小 is a component of the word 小便 (shōben) for urine and is not used alone in this sense in modern Japanese."
+   }
+  },
+  {
+   "key": "cca86b7d82955fbdf47cc097151841129af8c8ab85773553cfdc883d7fac283d",
+   "input": {
+    "id": "jm-2101130-1-clan",
+    "en": "clan",
+    "en_pos": "noun",
+    "en_sense": "clan",
+    "ja": "氏",
+    "ja_reading": "し",
+    "ja_pos": "n,suf",
+    "ja_glosses": [
+     "clan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2101130-1-clan",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 氏 means \"clan\" when read as \"uji\", but the provided reading \"shi\" corresponds to \"family name\" or a polite suffix."
+   }
+  },
+  {
+   "key": "77d5e705f1c244b1ba349911df422eab5b6f05816280557c70a3bcd0167ea9a3",
+   "input": {
+    "id": "jm-2136180-0-small",
+    "en": "small",
+    "en_pos": "adjective",
+    "en_sense": "small; little; tiny",
+    "ja": "小さな",
+    "ja_reading": "ちいさな",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "small",
+     "little",
+     "tiny"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2136180-0-small",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A very common and natural equivalent for attributive \"small\"."
+   }
+  },
+  {
+   "key": "908803ca8e650341740151e74cd85d3b8acb58ac8bfafa79b5b4670bdee7a822",
+   "input": {
+    "id": "jm-2136690-0-in",
+    "en": "in",
+    "en_pos": "conjunction",
+    "en_sense": "in; on; at; during; in the condition of",
+    "ja": "にあっては",
+    "ja_reading": "にあっては",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "in",
+     "on",
+     "at",
+     "during",
+     "in the condition of"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2136690-0-in",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English POS is incorrect, and the Japanese phrase にあっては is a specific grammatical structure meaning \"in the case of\" or \"when it comes to\", not a general equivalent for the preposition \"in\"."
+   }
+  },
+  {
+   "key": "a99031a9839799bfd1f4d073a6768df5750bbe7f4464a024816676bbf2782480",
+   "input": {
+    "id": "jm-2147630-0-after",
+    "en": "after",
+    "en_pos": "noun",
+    "en_sense": "after",
+    "ja": "後",
+    "ja_reading": "ご",
+    "ja_pos": "n,n-suf,adv",
+    "ja_glosses": [
+     "after"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2147630-0-after",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese reading \"ご\" indicates a suffix meaning \"after\" (e.g., 食後, after meal), not a standalone word; the standalone word is 後 read as \"あと\"."
+   }
+  },
+  {
+   "key": "fe10474c9f59c21eb4d50163d178170367aa858ae052f56c874b36a466169dfd",
+   "input": {
+    "id": "jm-2147990-0-back",
+    "en": "back",
+    "en_pos": "noun",
+    "en_sense": "back",
+    "ja": "背",
+    "ja_reading": "せ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "back"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2147990-0-back",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "背 (se) specifically refers to the anatomical back, while English \"back\" has broader meanings; the more common word for the human back is 背中 (senaka)."
+   }
+  },
+  {
+   "key": "3f809dd4e4c3383d52ba280f10f066390c939e17d3a1a63a3d55fbe5e2f5ca96",
+   "input": {
+    "id": "jm-2179090-0-repeatedly",
+    "en": "repeatedly",
+    "en_pos": "noun",
+    "en_sense": "(blinking) repeatedly",
+    "ja": "しばしば",
+    "ja_reading": "しばしば",
+    "ja_pos": "vs,adv",
+    "ja_glosses": [
+     "(blinking) repeatedly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2179090-0-repeatedly",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English part of speech is incorrectly listed as noun, and the sense \"(blinking) repeatedly\" is a specific example of use, not the general meaning of しばしば, which is \"often\" or \"frequently\"."
+   }
+  },
+  {
+   "key": "8446d97047da1f5ab7ed1700cbcd96c839667ba1aa2e8c84783b6325a7629e1f",
+   "input": {
+    "id": "jm-2217040-0-see",
+    "en": "see",
+    "en_pos": "verb",
+    "en_sense": "to see; to look; to watch",
+    "ja": "ご覧になる",
+    "ja_reading": "ごらんになる",
+    "ja_pos": "exp,v5r",
+    "ja_glosses": [
+     "to see",
+     "to look",
+     "to watch"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2217040-0-see",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "TOO_NARROW"
+    ],
+    "note": "ご覧になる is a high-level honorific (keigo) verb for \"to see\" and is not a neutral equivalent for the English verb."
+   }
+  },
+  {
+   "key": "d3c1f32291423300729bc54a5292113205416a46c5e10674caf0957b7e0c9b84",
+   "input": {
+    "id": "jm-2220600-0-bath",
+    "en": "bath",
+    "en_pos": "noun",
+    "en_sense": "bath",
+    "ja": "お風呂",
+    "ja_reading": "おふろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bath"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2220600-0-bath",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and standard equivalent for \"bath\"."
+   }
+  },
+  {
+   "key": "afb403e0159afc1b3f27b7c27bfbb5afec0edccc93e6df3ce7ac87c054ac32aa",
+   "input": {
+    "id": "jm-2396190-0-also",
+    "en": "also",
+    "en_pos": "conjunction",
+    "en_sense": "and then; in addition to that; also; even so",
+    "ja": "それと",
+    "ja_reading": "それと",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "and then",
+     "in addition to that",
+     "also",
+     "even so"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2396190-0-also",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English part of speech is incorrectly listed as conjunction (it's an adverb), but それと is a good conversational equivalent for \"also\" or \"and in addition\"."
+   }
+  }
+ ]
+}

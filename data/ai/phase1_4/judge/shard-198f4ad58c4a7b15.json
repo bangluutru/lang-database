@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:43:53Z",
+ "items": [
+  {
+   "key": "dabf128b6fc3e26f03d2bbc0244e4310fe38e1ebadd3f9ce0d3cb634d2b381c9",
+   "input": {
+    "id": "jm-1490900-0-poor",
+    "en": "poor",
+    "en_pos": "adjective",
+    "en_sense": "poverty-stricken; destitute; poor; penurious",
+    "ja": "貧乏",
+    "ja_reading": "びんぼう",
+    "ja_pos": "adj-na,n,vs,vi",
+    "ja_glosses": [
+     "poverty-stricken",
+     "destitute",
+     "poor",
+     "penurious"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490900-0-poor",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of being financially poor."
+   }
+  },
+  {
+   "key": "ffe644108c7e2fd366bcf3ec9e7d139ba65fb9d041d64fade5330a5168176315",
+   "input": {
+    "id": "jm-1491050-0-frequent",
+    "en": "frequent",
+    "en_pos": "adjective",
+    "en_sense": "frequent; incessant",
+    "ja": "頻繁",
+    "ja_reading": "ひんぱん",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "frequent",
+     "incessant"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1491050-0-frequent",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence in meaning and usage."
+   }
+  },
+  {
+   "key": "4cf5a8e0adea0bb66f7f6509e7a502154d206d3bd90039bde3c1723109b670a0",
+   "input": {
+    "id": "jm-1491370-0-wrong",
+    "en": "wrong",
+    "en_pos": "adjective",
+    "en_sense": "wrong; bad; improper; unjustifiable; inadvisable",
+    "ja": "不可",
+    "ja_reading": "ふか",
+    "ja_pos": "adj-no,adj-na,n,n-suf",
+    "ja_glosses": [
+     "wrong",
+     "bad",
+     "improper",
+     "unjustifiable",
+     "inadvisable"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1491370-0-wrong",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA",
+     "TOO_NARROW"
+    ],
+    "note": "「不可」 is too formal and specific, meaning 'unacceptable' or 'impermissible', and is not a general equivalent for the broad adjective 'wrong'."
+   }
+  },
+  {
+   "key": "6bf809f1940f42ee725d43f4be4311f2a967d10c6d5afab3953662e83e3b94ec",
+   "input": {
+    "id": "jm-1491400-0-essential",
+    "en": "essential",
+    "en_pos": "adjective",
+    "en_sense": "indispensable; essential",
+    "ja": "不可欠",
+    "ja_reading": "ふかけつ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "indispensable",
+     "essential"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1491400-0-essential",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A precise and standard translation for 'essential' or 'indispensable'."
+   }
+  },
+  {
+   "key": "2f4955f0abcd8aea4eef3c294a08ad5214df634478a0148d363e149b571a37b5",
+   "input": {
+    "id": "jm-1491840-0-irregular",
+    "en": "irregular",
+    "en_pos": "adjective",
+    "en_sense": "irregular; unsystematic; unsteady; disorderly",
+    "ja": "不規則",
+    "ja_reading": "ふきそく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "irregular",
+     "unsystematic",
+     "unsteady",
+     "disorderly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1491840-0-irregular",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence in meaning and usage for 'irregular'."
+   }
+  },
+  {
+   "key": "5a117ceab262253127633a0579fd216e0ba2d9f5f2ac6cc050f730d6f4fd77ce",
+   "input": {
+    "id": "jm-1492120-0-depression",
+    "en": "depression",
+    "en_pos": "noun",
+    "en_sense": "economic slump; hard times; depression; recession",
+    "ja": "不景気",
+    "ja_reading": "ふけいき",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "economic slump",
+     "hard times",
+     "depression",
+     "recession"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1492120-0-depression",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A precise match for the economic sense of 'depression'."
+   }
+  },
+  {
+   "key": "1a146417c389ff14e3868379930cdb9efe38162fe9bee6f77c66eab19d9397d6",
+   "input": {
+    "id": "jm-1492460-0-absence",
+    "en": "absence",
+    "en_pos": "noun",
+    "en_sense": "absence",
+    "ja": "不在",
+    "ja_reading": "ふざい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "absence"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1492460-0-absence",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "「不在」 specifically means the absence of a person from a place, making it narrower than the general English word 'absence'."
+   }
+  },
+  {
+   "key": "fa5c3562e7171bd993e910fcabe1f21c3f01cd13ada11d13e4e295928ef31cdd",
+   "input": {
+    "id": "jm-1492680-0-discomfort",
+    "en": "discomfort",
+    "en_pos": "noun",
+    "en_sense": "discomfort; inconvenience",
+    "ja": "不自由",
+    "ja_reading": "ふじゆう",
+    "ja_pos": "n,adj-na,vs,vi",
+    "ja_glosses": [
+     "discomfort",
+     "inconvenience"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1492680-0-discomfort",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "「不自由」 means a lack of freedom, a disability, or a major inconvenience due to lack of resources, not the general physical or mental 'discomfort'."
+   }
+  },
+  {
+   "key": "88f67e8c8556cee20313d2c18977e9ffb2fc1313101ab8e9ee7a50ef381e96fb",
+   "input": {
+    "id": "jm-1493120-0-doubt",
+    "en": "doubt",
+    "en_pos": "noun",
+    "en_sense": "doubt; suspicion; question; strangeness",
+    "ja": "不審",
+    "ja_reading": "ふしん",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "doubt",
+     "suspicion",
+     "question",
+     "strangeness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1493120-0-doubt",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "「不審」 primarily means 'suspicion' or 'mistrust', making it a narrower and more specific term than the general English word 'doubt'."
+   }
+  },
+  {
+   "key": "fd874d1b54d4c58508368fddceb5cfe9fd51c2c867b6ca6dbb93be9714d14c78",
+   "input": {
+    "id": "jm-1493240-0-suddenly",
+    "en": "suddenly",
+    "en_pos": "adverb",
+    "en_sense": "suddenly; casually; accidentally; incidentally; unexpectedly; unintentionally",
+    "ja": "ふと",
+    "ja_reading": "ふと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "suddenly",
+     "casually",
+     "accidentally",
+     "incidentally",
+     "unexpectedly",
+     "unintentionally"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1493240-0-suddenly",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "「ふと」 describes a specific kind of suddenness, usually an unplanned action or a thought that comes to mind, making it narrower than the general English 'suddenly'."
+   }
+  },
+  {
+   "key": "e0149d77694678d3c2519a86169e83faf57539eb9f6582503611f88a11e8d524",
+   "input": {
+    "id": "jm-1493630-0-partial",
+    "en": "partial",
+    "en_pos": "adjective",
+    "en_sense": "partial; incomplete; imperfect",
+    "ja": "不全",
+    "ja_reading": "ふぜん",
+    "ja_pos": "adj-na,adj-no,n",
+    "ja_glosses": [
+     "partial",
+     "incomplete",
+     "imperfect"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1493630-0-partial",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "「不全」 is a technical term, mainly used in medical contexts (e.g., heart failure), and is not a general equivalent for 'partial' or 'incomplete'."
+   }
+  },
+  {
+   "key": "274db611b5ed48084712f2f00e0917cdb01ddbf8b5e5269b25793803405e0d06",
+   "input": {
+    "id": "jm-1493840-0-disorder",
+    "en": "disorder",
+    "en_pos": "noun",
+    "en_sense": "bad condition; poor condition; disorder; slump; being out of form",
+    "ja": "不調",
+    "ja_reading": "ふちょう",
+    "ja_pos": "n,adj-no,adj-na",
+    "ja_glosses": [
+     "bad condition",
+     "poor condition",
+     "disorder",
+     "slump",
+     "being out of form"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1493840-0-disorder",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of being in poor condition, out of form, or in a slump."
+   }
+  }
+ ]
+}

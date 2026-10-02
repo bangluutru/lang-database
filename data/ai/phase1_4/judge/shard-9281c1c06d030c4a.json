@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:29:19Z",
+ "items": [
+  {
+   "key": "8c2a4f23c7bd03d8026bd89b6dd594f92c801b200f3d34555bba59457a1a209b",
+   "input": {
+    "id": "wk-12488-s0",
+    "en": "gambling",
+    "en_pos": "noun",
+    "en_sense": "An activity characterized by a balance between winning and losing that is governed by skill and/or chance, usually with money wagered on the outcome.",
+    "ja": "賭博",
+    "ja_reading": "とばく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gambling"
+    ],
+    "vi": "cờ bạc"
+   },
+   "output": {
+    "id": "wk-12488-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'gambling'."
+   }
+  },
+  {
+   "key": "d7b7e4b8db876caea20ceb4b884e57ecce3081856cf2b53dd8c9284634700e58",
+   "input": {
+    "id": "wk-12496-s0",
+    "en": "miss",
+    "en_pos": "verb",
+    "en_sense": "To fail to hit, catch, grasp, etc.",
+    "ja": "取り損なう",
+    "ja_reading": "とりそこなう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to miss",
+     "to fail to get",
+     "to fail to obtain",
+     "to fail to catch",
+     "to fail to win"
+    ],
+    "vi": "trượt"
+   },
+   "output": {
+    "id": "wk-12496-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'trượt' is not a good general equivalent; it usually means 'to slip' or 'to fail an exam', and for 'miss' it's often part of a compound verb like 'bắn trượt' (miss a shot)."
+   }
+  },
+  {
+   "key": "4645e5d82273b96a8dd6accd3646ee01c106fdc0431b7d9599c562bb6697cd12",
+   "input": {
+    "id": "wk-12496-s5",
+    "en": "miss",
+    "en_pos": "verb",
+    "en_sense": "To become aware of the loss or absence of; to feel the want or need of, sometimes with regret; to feel sadness at the absence of somebody or something.",
+    "ja": "恋い慕う",
+    "ja_reading": "こいしたう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to miss",
+     "to yearn for"
+    ],
+    "vi": "nhớ"
+   },
+   "output": {
+    "id": "wk-12496-s5",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "REGISTER_CLASH",
+     "ARCHAIC_OR_RARE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '恋い慕う' is a very strong, literary term for 'yearning' and not the common word for 'miss', which is better translated by expressions like '寂しい' or '会いたい'."
+   }
+  },
+  {
+   "key": "2434902d418fe2e9e6f08d131b82edb4a427b985c0c934fec6fa9fa34f39dca5",
+   "input": {
+    "id": "wk-12498-s3",
+    "en": "mistress",
+    "en_pos": "noun",
+    "en_sense": "The other woman in an extramarital relationship, generally including sexual relations.",
+    "ja": "愛人",
+    "ja_reading": "あいじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lover",
+     "mistress"
+    ],
+    "vi": "người yêu"
+   },
+   "output": {
+    "id": "wk-12498-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'người yêu' means 'lover' in the sense of a boyfriend/girlfriend, not 'mistress'. This is a critical error."
+   }
+  },
+  {
+   "key": "5a8384409e2a9c80225418b9bac261123fef387e996ae0b99d19ba8c61255535",
+   "input": {
+    "id": "wk-125-e:6164db",
+    "en": "able",
+    "en_pos": "adjective",
+    "en_sense": "skillful",
+    "ja": "有能",
+    "ja_reading": "ゆうのう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "able",
+     "capable",
+     "competent",
+     "talented",
+     "efficient"
+    ],
+    "vi": "có năng lực"
+   },
+   "output": {
+    "id": "wk-125-e:6164db",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are excellent, natural equivalents for 'able' in the sense of 'skillful' or 'competent'."
+   }
+  },
+  {
+   "key": "09b139dd3ef0a0fda017c68887be4a8fa86056ac401947f3ab98494a26ec9b23",
+   "input": {
+    "id": "wk-12501-s8",
+    "en": "proposition",
+    "en_pos": "noun",
+    "en_sense": "An assertion which is provably true, but not important enough to be called a theorem.",
+    "ja": "命題",
+    "ja_reading": "めいだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "proposition",
+     "thesis"
+    ],
+    "vi": "mệnh đề"
+   },
+   "output": {
+    "id": "wk-12501-s8",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect match of technical terms in mathematics and logic."
+   }
+  },
+  {
+   "key": "a69fb8aa67c9c98a40c8d459d526860326b2737ecc7bed80c85d9cf5ecb0fcff",
+   "input": {
+    "id": "wk-12502-s0",
+    "en": "villa",
+    "en_pos": "noun",
+    "en_sense": "A house, often larger and more expensive than average, in the countryside or on the coast, often used as a retreat.",
+    "ja": "ビラ",
+    "ja_reading": "ビラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "villa",
+     "holiday house"
+    ],
+    "vi": "biệt thự"
+   },
+   "output": {
+    "id": "wk-12502-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 'ビラ' means 'leaflet' or 'flyer'; the word for 'villa' is 'ヴィラ' (katakana) or '別荘' (bessō)."
+   }
+  },
+  {
+   "key": "e1520f3e7b1583e092542ea9c72019cdf7a8721b42a3869f85233990fef2ee25",
+   "input": {
+    "id": "wk-12511-s0",
+    "en": "funny",
+    "en_pos": "adjective",
+    "en_sense": "Amusing; humorous; comical.",
+    "ja": "おかしい",
+    "ja_reading": "おかしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "funny",
+     "amusing",
+     "comical",
+     "laughable",
+     "ridiculous"
+    ],
+    "vi": "buồn cười"
+   },
+   "output": {
+    "id": "wk-12511-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'funny' in the sense of 'amusing'."
+   }
+  },
+  {
+   "key": "aa3e5359a376cdd4212c9558d53e2ffd88e2f65c096346bb6f2c1228a213a6f5",
+   "input": {
+    "id": "wk-12511-s1",
+    "en": "funny",
+    "en_pos": "adjective",
+    "en_sense": "Strange or unusual, often in an unpleasant way.",
+    "ja": "変",
+    "ja_reading": "へん",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "strange",
+     "odd",
+     "peculiar",
+     "weird",
+     "curious",
+     "eccentric"
+    ],
+    "vi": "là lạ"
+   },
+   "output": {
+    "id": "wk-12511-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent natural equivalents for 'funny' in the sense of 'strange'."
+   }
+  },
+  {
+   "key": "d23b03c4435ef22db1e08622f61b0794349695a674c30212835019e2dc0559ed",
+   "input": {
+    "id": "wk-12518-s0",
+    "en": "mystery",
+    "en_pos": "noun",
+    "en_sense": "Something secret or unexplainable; an unknown.",
+    "ja": "神秘",
+    "ja_reading": "しんぴ",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "mystery",
+     "mysteriousness",
+     "secret"
+    ],
+    "vi": "bí ẩn"
+   },
+   "output": {
+    "id": "wk-12518-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'mystery' in the sense of something profound and unexplainable."
+   }
+  },
+  {
+   "key": "f50a9e16186a70260152e50cf016de5b2015c5fa0674ae5462944f94be442c83",
+   "input": {
+    "id": "wk-12528-s0",
+    "en": "arena",
+    "en_pos": "noun",
+    "en_sense": "An enclosed area, often outdoor, for the presentation of sporting events (sports arena) or other spectacular events; earthen area, often oval, specifically for rodeos (North America) or circular area for bullfights (especially Hispanic America).",
+    "ja": "アリーナ",
+    "ja_reading": "アリーナ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "arena"
+    ],
+    "vi": "sân khấu"
+   },
+   "output": {
+    "id": "wk-12528-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'sân khấu' means 'stage', not 'arena'. The correct term would be 'đấu trường' or 'nhà thi đấu'."
+   }
+  },
+  {
+   "key": "ab8228c2ccbb3637538d1c1d2a489986205ff92fb33ce9f40d0ff3b8b1c22e9b",
+   "input": {
+    "id": "wk-12530-s0",
+    "en": "oval",
+    "en_pos": "noun",
+    "en_sense": "A two-dimensional one.",
+    "ja": "楕円形",
+    "ja_reading": "だえんけい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "elliptical shape",
+     "oval shape"
+    ],
+    "vi": "hình trái xoan"
+   },
+   "output": {
+    "id": "wk-12530-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard ways to refer to an oval shape."
+   }
+  }
+ ]
+}

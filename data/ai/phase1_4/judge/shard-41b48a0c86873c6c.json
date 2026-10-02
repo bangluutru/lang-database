@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:11Z",
+ "items": [
+  {
+   "key": "11fee400c9394b7e289441791df4a025cc326b681759fd422c9ea548684ad53a",
+   "input": {
+    "id": "wk-10791-s3",
+    "en": "shell",
+    "en_pos": "noun",
+    "en_sense": "The conjoined scutes that constitute the \"shell\" (carapace) of a tortoise or turtle.",
+    "ja": "甲羅",
+    "ja_reading": "こうら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shell (of a crab, tortoise, etc.)",
+     "carapace",
+     "plastron"
+    ],
+    "vi": "mai"
+   },
+   "output": {
+    "id": "wk-10791-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for the shell of a tortoise or turtle."
+   }
+  },
+  {
+   "key": "cc424aa95cc428f98d0c10626f9d0258da2fbd8d79c22066aab80d8cbb5ddcea",
+   "input": {
+    "id": "wk-10799-s0",
+    "en": "shy",
+    "en_pos": "adjective",
+    "en_sense": "Easily frightened; timid.",
+    "ja": "恥ずかしい",
+    "ja_reading": "はずかしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "embarrassing",
+     "embarrassed",
+     "ashamed",
+     "humiliated",
+     "shy"
+    ],
+    "vi": "nhát"
+   },
+   "output": {
+    "id": "wk-10799-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 恥ずかしい means 'embarrassed' or 'ashamed', not 'easily frightened', which is the specified English sense."
+   }
+  },
+  {
+   "key": "7bbe12db4e0ce319296ea64f1df1d00dc295c86a66d870ff0a463994436418db",
+   "input": {
+    "id": "wk-10799-s1",
+    "en": "shy",
+    "en_pos": "adjective",
+    "en_sense": "Reserved; disinclined to familiar approach.",
+    "ja": "内気",
+    "ja_reading": "うちき",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "shy",
+     "bashful",
+     "timid",
+     "reserved"
+    ],
+    "vi": "ngại"
+   },
+   "output": {
+    "id": "wk-10799-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the sense of being socially reserved or bashful."
+   }
+  },
+  {
+   "key": "bd9077bd17c6cef0972de0792cb4b76ac8e23e84516554e89f35f1357581e266",
+   "input": {
+    "id": "wk-108-s1",
+    "en": "abdomen",
+    "en_pos": "noun",
+    "en_sense": "The belly, or that part of the body between the thorax and the pelvis, not including the back; or in some lower vertebrates, the portion between the cardiac and caudal regions.",
+    "ja": "腹",
+    "ja_reading": "はら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "abdomen",
+     "belly",
+     "stomach"
+    ],
+    "vi": "bụng"
+   },
+   "output": {
+    "id": "wk-108-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'abdomen' or 'belly'."
+   }
+  },
+  {
+   "key": "07b44e59ccc9f7e96ef8af1d4ca9a61ba06b90dc23de95d7463e53b44f295dc2",
+   "input": {
+    "id": "wk-10801-s0",
+    "en": "sigh",
+    "en_pos": "verb",
+    "en_sense": "To inhale a larger quantity of air than usual, and immediately expel it; to make a deep single audible respiration, especially as the result or involuntary expression of fatigue, exhaustion, grief, sorrow, frustration, or the like.",
+    "ja": "嘆息する",
+    "ja_reading": "たんそくする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "sigh (of grief, disappointment, etc.)",
+     "grieving",
+     "lamenting",
+     "deploring"
+    ],
+    "vi": "thở dài"
+   },
+   "output": {
+    "id": "wk-10801-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 嘆息する is a formal/literary term for sighing from grief, while the more general and common expression is ため息をつく."
+   }
+  },
+  {
+   "key": "ae440e32cc06ca63d8fbe2490c8e77a9660cc71c9f5a44d0a4b1ede2eac67129",
+   "input": {
+    "id": "wk-10802-s0",
+    "en": "sigh",
+    "en_pos": "noun",
+    "en_sense": "A deep, prolonged audible inhale and exhale of breath; as when fatigued, frustrated, grieved, or relieved; the act of sighing.",
+    "ja": "ため息",
+    "ja_reading": "ためいき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sigh"
+    ],
+    "vi": "thở dài"
+   },
+   "output": {
+    "id": "wk-10802-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, standard equivalents for the noun 'sigh'."
+   }
+  },
+  {
+   "key": "e6bc459ffc18e773176b17e264ddec7adcae08f8847ef695914ae93be423ba47",
+   "input": {
+    "id": "wk-10804-s0",
+    "en": "silhouette",
+    "en_pos": "noun",
+    "en_sense": "An artistic depiction, often of a person's profile, in the form of an outline without any other visual details, similar to a shadow, made by cutting a piece of black paper, filling in an outline with a solid colour (usually black), etc.",
+    "ja": "シルエット",
+    "ja_reading": "シルエット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "silhouette"
+    ],
+    "vi": "bóng"
+   },
+   "output": {
+    "id": "wk-10804-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bóng' means 'shadow' and is too broad for the specific artistic sense of 'silhouette'; 'hình bóng' would be a better equivalent."
+   }
+  },
+  {
+   "key": "d9516b19c22fe5c41ad996c94112758b01e3e26328e2ce912feda92af983e42f",
+   "input": {
+    "id": "wk-10812-e:797200",
+    "en": "slap",
+    "en_pos": "verb",
+    "en_sense": "to give a slap",
+    "ja": "ひっぱたく",
+    "ja_reading": "ひっぱたく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to slap",
+     "to strike",
+     "to spank"
+    ],
+    "vi": "tát"
+   },
+   "output": {
+    "id": "wk-10812-e:797200",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are common and accurate equivalents for 'to slap'."
+   }
+  },
+  {
+   "key": "35670dfd3e26dc0f3199d6fecfbb20c8aa0304e43b086e3a2baa4ee4d118a3a2",
+   "input": {
+    "id": "wk-10813-s1",
+    "en": "slice",
+    "en_pos": "noun",
+    "en_sense": "A thin, broad piece cut off.",
+    "ja": "切れ",
+    "ja_reading": "きれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "piece",
+     "slice",
+     "strip",
+     "scrap"
+    ],
+    "vi": "lát mỏng"
+   },
+   "output": {
+    "id": "wk-10813-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for a thin slice of something."
+   }
+  },
+  {
+   "key": "9c7381a5c02b19d6204f1c22623dd8a73e57160f07e8b4e59a1cea61f56485d2",
+   "input": {
+    "id": "wk-10817-s1",
+    "en": "slime",
+    "en_pos": "noun",
+    "en_sense": "Any mucilaginous substance; or a mucus-like substance which exudes from the bodies of certain animals, such as snails or slugs.",
+    "ja": "ぬめり",
+    "ja_reading": "ぬめり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slime",
+     "sliminess",
+     "mucus",
+     "viscous liquid"
+    ],
+    "vi": "nhớt"
+   },
+   "output": {
+    "id": "wk-10817-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'slime' or 'mucus'."
+   }
+  },
+  {
+   "key": "00e75df79298227f1037dafaa2e81935dd1090dacb168d6b91bc18b62c4829e4",
+   "input": {
+    "id": "wk-10826-s0",
+    "en": "so-called",
+    "en_pos": "adjective",
+    "en_sense": "So named; commonly called.",
+    "ja": "いわゆる",
+    "ja_reading": "いわゆる",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "what is called",
+     "what you call",
+     "what they call",
+     "so-called"
+    ],
+    "vi": "cái gọi là"
+   },
+   "output": {
+    "id": "wk-10826-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, standard equivalents for 'so-called'."
+   }
+  },
+  {
+   "key": "6d5ba272374dc7f812e872684d14d30d33468329a36414ffde028ab5c13d368b",
+   "input": {
+    "id": "wk-10832-e:5ed7db",
+    "en": "spatial",
+    "en_pos": "adjective",
+    "en_sense": "pertaining to space",
+    "ja": "空間的",
+    "ja_reading": "くうかんてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "spatial",
+     "space-like"
+    ],
+    "vi": "không gian"
+   },
+   "output": {
+    "id": "wk-10832-e:5ed7db",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'không gian' is a noun meaning 'space', not an adjective meaning 'spatial'."
+   }
+  }
+ ]
+}

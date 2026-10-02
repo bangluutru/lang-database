@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:38:01Z",
+ "items": [
+  {
+   "key": "0ec2b9f52b20ea56f6974d570ebbd112576bf7881c740a7bb0a204567c62d150",
+   "input": {
+    "id": "jm-1394840-0-everyone",
+    "en": "everyone",
+    "en_pos": "noun",
+    "en_sense": "all members; all hands; everyone; everybody; whole crew",
+    "ja": "全員",
+    "ja_reading": "ぜんいん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "all members",
+     "all hands",
+     "everyone",
+     "everybody",
+     "whole crew"
+    ],
+    "vi": "mọi người"
+   },
+   "output": {
+    "id": "jm-1394840-0-everyone",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'everyone' or 'all members'."
+   }
+  },
+  {
+   "key": "08137337d8e8f2244767f37df872cdf44ff3a45e95dbc1c10fbcdc5d27964ec1",
+   "input": {
+    "id": "jm-1395410-0-whole",
+    "en": "whole",
+    "en_pos": "noun",
+    "en_sense": "whole (body); full-length (e.g. portrait)",
+    "ja": "全身",
+    "ja_reading": "ぜんしん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "whole (body)",
+     "full-length (e.g. portrait)"
+    ],
+    "vi": "toàn thân"
+   },
+   "output": {
+    "id": "jm-1395410-0-whole",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are perfect cognate equivalents for 'the whole body'."
+   }
+  },
+  {
+   "key": "cffb7cb5804dfd55a8611e784f4a21b9dbadf4b333338dc3e40eea58b6d49632",
+   "input": {
+    "id": "jm-1396820-0-ancestor",
+    "en": "ancestor",
+    "en_pos": "noun",
+    "en_sense": "ancestor",
+    "ja": "祖先",
+    "ja_reading": "そせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ancestor"
+    ],
+    "vi": "tổ tiên"
+   },
+   "output": {
+    "id": "jm-1396820-0-ancestor",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognate equivalents for 'ancestor'."
+   }
+  },
+  {
+   "key": "60ebf266820be406dbae1301055fc433f08a91efe388133655ef5e0903ccad94",
+   "input": {
+    "id": "jm-1396840-0-grandfather",
+    "en": "grandfather",
+    "en_pos": "noun",
+    "en_sense": "grandfather",
+    "ja": "祖父",
+    "ja_reading": "そふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "grandfather"
+    ],
+    "vi": "ông nội"
+   },
+   "output": {
+    "id": "jm-1396840-0-grandfather",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'ông nội' specifically means 'paternal grandfather', which is narrower than the general English 'grandfather' and Japanese '祖父'."
+   }
+  },
+  {
+   "key": "6b5b50cf2ae92dac78d9091be346a8994e8b406202badf5abd04c5a79bea011c",
+   "input": {
+    "id": "jm-1396860-0-grandmother",
+    "en": "grandmother",
+    "en_pos": "noun",
+    "en_sense": "grandmother",
+    "ja": "祖母",
+    "ja_reading": "そぼ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "grandmother"
+    ],
+    "vi": "bà nội"
+   },
+   "output": {
+    "id": "jm-1396860-0-grandmother",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bà nội' specifically means 'paternal grandmother', which is narrower than the general English 'grandmother' and Japanese '祖母'."
+   }
+  },
+  {
+   "key": "2478d475f4f11019bb3e1e7b6fe8f2abdd4146e1cb59a079b7c1d85956bdfcb0",
+   "input": {
+    "id": "jm-1397100-0-crude",
+    "en": "crude",
+    "en_pos": "adjective",
+    "en_sense": "crude; rough; plain; humble; shabby; poor-quality",
+    "ja": "粗末",
+    "ja_reading": "そまつ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "crude",
+     "rough",
+     "plain",
+     "humble",
+     "shabby",
+     "poor-quality"
+    ],
+    "vi": "thô sơ"
+   },
+   "output": {
+    "id": "jm-1397100-0-crude",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the sense of 'crude, rough, plain'."
+   }
+  },
+  {
+   "key": "be3ca6e2c06ae481024b69f0522cc1b4a7ab9073cd8fc272af4deb99a2db3b8d",
+   "input": {
+    "id": "jm-1397310-0-quick",
+    "en": "quick",
+    "en_pos": "adjective",
+    "en_sense": "quick; swift; nimble; agile",
+    "ja": "素早い",
+    "ja_reading": "すばやい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "quick",
+     "swift",
+     "nimble",
+     "agile"
+    ],
+    "vi": "nhanh nhẹn"
+   },
+   "output": {
+    "id": "jm-1397310-0-quick",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the sense of 'quick, nimble, agile'."
+   }
+  },
+  {
+   "key": "87665703c593d9c165672edd186457776965b906cc4b81b07b5edb9c9531004f",
+   "input": {
+    "id": "jm-1397390-0-simple",
+    "en": "simple",
+    "en_pos": "adjective",
+    "en_sense": "simple; artless; naive; unsophisticated",
+    "ja": "素朴",
+    "ja_reading": "そぼく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "simple",
+     "artless",
+     "naive",
+     "unsophisticated"
+    ],
+    "vi": "mộc mạc"
+   },
+   "output": {
+    "id": "jm-1397390-0-simple",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents, capturing the nuance of 'simple, artless, rustic'."
+   }
+  },
+  {
+   "key": "97be7141dfae1b025006dd7de5a761373fb93cb7ede5fcc602c9f9ff543e7a6c",
+   "input": {
+    "id": "jm-1397450-0-class",
+    "en": "class",
+    "en_pos": "noun",
+    "en_sense": "class (of students)",
+    "ja": "組",
+    "ja_reading": "くみ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "class (of students)"
+    ],
+    "vi": "lớp"
+   },
+   "output": {
+    "id": "jm-1397450-0-class",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a 'class' of students in a school context."
+   }
+  },
+  {
+   "key": "6964e7b180de06bdb74792fe3566260b093c5c988a6bd4b50b1db37771aa9c9c",
+   "input": {
+    "id": "jm-1397480-0-combine",
+    "en": "combine",
+    "en_pos": "verb",
+    "en_sense": "to put together; to combine; to join together; to join up",
+    "ja": "組み合わせる",
+    "ja_reading": "くみあわせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to put together",
+     "to combine",
+     "to join together",
+     "to join up"
+    ],
+    "vi": "kết hợp"
+   },
+   "output": {
+    "id": "jm-1397480-0-combine",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'to combine'."
+   }
+  },
+  {
+   "key": "029d5aceae023787de54b54bf06d7f6bd25fe756876395497120c2a39bcaad92",
+   "input": {
+    "id": "jm-1397510-0-insert",
+    "en": "insert",
+    "en_pos": "verb",
+    "en_sense": "to insert; to include; to incorporate; to install; to embed",
+    "ja": "組み込む",
+    "ja_reading": "くみこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to insert",
+     "to include",
+     "to incorporate",
+     "to install",
+     "to embed"
+    ],
+    "vi": "lồng ghép"
+   },
+   "output": {
+    "id": "jm-1397510-0-insert",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are good equivalents for the sense of 'inserting' or 'incorporating' one thing into another."
+   }
+  },
+  {
+   "key": "08a8c7089728a573878327c097d8389203c7ae8124c9088236e0544b887c6789",
+   "input": {
+    "id": "jm-1397590-0-cross",
+    "en": "cross",
+    "en_pos": "verb",
+    "en_sense": "to cross (legs or arms); to link (arms)",
+    "ja": "組む",
+    "ja_reading": "くむ",
+    "ja_pos": "v5m,vt,vi",
+    "ja_glosses": [
+     "to cross (legs or arms)",
+     "to link (arms)"
+    ],
+    "vi": "khoanh"
+   },
+   "output": {
+    "id": "jm-1397590-0-cross",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'khoanh' is perfect for 'cross arms' but does not cover the common action of crossing legs while seated on a chair, making it too narrow for the full English sense."
+   }
+  }
+ ]
+}

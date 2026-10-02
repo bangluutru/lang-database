@@ -1,0 +1,402 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:13:31Z",
+ "items": [
+  {
+   "key": "c416b59bdbbf0422127ff0abd160a63f9785bb78025e5b92a7fadc88f18892e9",
+   "input": {
+    "id": "wk-5979-s0",
+    "en": "oppose",
+    "en_pos": "verb",
+    "en_sense": "To attempt to stop the progression of; to resist or antagonize by physical means, or by arguments, etc.; to contend against.",
+    "ja": "阻む",
+    "ja_reading": "はばむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to keep someone from doing",
+     "to stop",
+     "to prevent",
+     "to check",
+     "to hinder",
+     "to obstruct"
+    ],
+    "vi": "chống đối"
+   },
+   "output": {
+    "id": "wk-5979-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese '阻む' (habamu) is narrower than 'oppose', focusing on 'obstructing' or 'hindering', while English 'oppose' and Vietnamese 'chống đối' also cover ideological or argumentative opposition."
+   }
+  },
+  {
+   "key": "aa9268618291e65e712bb79a69ead1633a31515beffbe986bd856e31f9b93ed4",
+   "input": {
+    "id": "wk-5980-s0",
+    "en": "opposite",
+    "en_pos": "adjective",
+    "en_sense": "Located directly across from something else, or from each other.",
+    "ja": "向かい",
+    "ja_reading": "むかい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "facing",
+     "opposite",
+     "across the street",
+     "other side"
+    ],
+    "vi": "đối diện"
+   },
+   "output": {
+    "id": "wk-5980-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the locational sense of 'opposite'."
+   }
+  },
+  {
+   "key": "828b14ba097d95997e93164432cec7354cf19d9a49166040affdcbdd60b2be13",
+   "input": {
+    "id": "wk-5980-s3",
+    "en": "opposite",
+    "en_pos": "adjective",
+    "en_sense": "Of either of two complementary or mutually exclusive things.",
+    "ja": "あべこべ",
+    "ja_reading": "あべこべ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "contrary",
+     "opposite",
+     "inverse",
+     "reverse",
+     "back-to-front"
+    ],
+    "vi": "trái ngược"
+   },
+   "output": {
+    "id": "wk-5980-s3",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "Japanese 'あべこべ' is too specific, meaning 'topsy-turvy' or 'the wrong way around', and is not the general word for abstract opposition. '反対' (hantai) or '逆' (gyaku) would be better."
+   }
+  },
+  {
+   "key": "f2afa112f7c0288b9267268b2ab5e4bb978af5a561a1c466ec9920b1d0c2f678",
+   "input": {
+    "id": "wk-5982-s0",
+    "en": "opposite",
+    "en_pos": "adverb",
+    "en_sense": "In an opposite position.",
+    "ja": "あべこべ",
+    "ja_reading": "あべこべ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "contrary",
+     "opposite",
+     "inverse",
+     "reverse",
+     "back-to-front"
+    ],
+    "vi": "đối diện"
+   },
+   "output": {
+    "id": "wk-5982-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'あべこべ' is completely incorrect for the locational adverb 'opposite'; it means 'topsy-turvy'. The correct term would be '向かいに' (mukai ni)."
+   }
+  },
+  {
+   "key": "f7d2200717dfbbe6e8b1e7a4230c11f19104bbfe8f6327e7aaa28f904ae66ee5",
+   "input": {
+    "id": "wk-5987-s1",
+    "en": "deny",
+    "en_pos": "verb",
+    "en_sense": "To assert that something is not true.",
+    "ja": "打ち消す",
+    "ja_reading": "うちけす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to deny",
+     "to contradict"
+    ],
+    "vi": "chối"
+   },
+   "output": {
+    "id": "wk-5987-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are good equivalents for 'deny', though the Vietnamese 'chối' can be more informal than the others ('phủ nhận' is a more formal alternative)."
+   }
+  },
+  {
+   "key": "2182c7903b53c130145d19dc3403a4cd0807878dc40327e676392d1a5bf6e625",
+   "input": {
+    "id": "wk-5989-s1",
+    "en": "childhood",
+    "en_pos": "noun",
+    "en_sense": "The time during which one is a child, from between infancy and puberty.",
+    "ja": "幼年時代",
+    "ja_reading": "ようねんじだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "childhood"
+    ],
+    "vi": "tuổi thơ"
+   },
+   "output": {
+    "id": "wk-5989-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese '幼年時代' is a correct but somewhat formal/literary term for 'childhood'; '子供の頃' is more common in speech."
+   }
+  },
+  {
+   "key": "5e7745a5a62a1767be3dd7d5b0b1c11df4fdc610311062a5fbb7a38765a77795",
+   "input": {
+    "id": "wk-5990-s0",
+    "en": "neighbour",
+    "en_pos": "noun",
+    "en_sense": "A person living on adjacent or nearby land; a person situated adjacently or nearby; anything (of the same type of thing as the subject) in an adjacent or nearby position.",
+    "ja": "隣人",
+    "ja_reading": "りんじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "neighbour",
+     "neighbor",
+     "(people in the) neighbourhood",
+     "neighborhood"
+    ],
+    "vi": "hàng xóm"
+   },
+   "output": {
+    "id": "wk-5990-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and most common words for 'neighbour'."
+   }
+  },
+  {
+   "key": "fc4fce1dbe83eb5b98dd7fd404fa023484f56b98b89d8370330a7d0763f451a6",
+   "input": {
+    "id": "wk-5992-e:e3d715",
+    "en": "passion",
+    "en_pos": "noun",
+    "en_sense": "suffering of Jesus",
+    "ja": "受難",
+    "ja_reading": "じゅなん",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "Passion (of Christ)",
+     "crucifixion"
+    ],
+    "vi": "thương khó"
+   },
+   "output": {
+    "id": "wk-5992-e:e3d715",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct, specific theological terms for the Passion of Christ in their respective languages."
+   }
+  },
+  {
+   "key": "bab85e39872937e3214ff4ec69af626e9b834920ffd764c33ac96c715f6f94b4",
+   "input": {
+    "id": "wk-5992-s1",
+    "en": "passion",
+    "en_pos": "noun",
+    "en_sense": "Any great, strong, powerful emotion, especially romantic love or extreme hate.",
+    "ja": "激情",
+    "ja_reading": "げきじょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "violent emotion",
+     "passion",
+     "fury"
+    ],
+    "vi": "đam mê"
+   },
+   "output": {
+    "id": "wk-5992-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '激情' (gekijō) is too specific to 'violent emotion' or 'fury' and is not a good general equivalent for 'passion'. '情熱' (jōnetsu) is a much better translation."
+   }
+  },
+  {
+   "key": "bc31c04aba4e2761dbb4c72f45e73e5fec4ebea24292a95f3111f24da3ac69e4",
+   "input": {
+    "id": "wk-5995-s0",
+    "en": "beauty",
+    "en_pos": "noun",
+    "en_sense": "The quality of being (especially visually) attractive, pleasing, fine or good-looking; comeliness.",
+    "ja": "美",
+    "ja_reading": "び",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "beauty"
+    ],
+    "vi": "đẹp"
+   },
+   "output": {
+    "id": "wk-5995-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese translation 'đẹp' is an adjective ('beautiful'), not a noun ('beauty'). The correct noun would be 'vẻ đẹp'."
+   }
+  },
+  {
+   "key": "d2a140944c77717872d97895204cc494fe418003514c8e521934df82361a95ea",
+   "input": {
+    "id": "wk-6003-e:4faee2",
+    "en": "copy",
+    "en_pos": "noun",
+    "en_sense": "result of copying",
+    "ja": "コピー",
+    "ja_reading": "コピー",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "copy",
+     "photocopy"
+    ],
+    "vi": "bản sao"
+   },
+   "output": {
+    "id": "wk-6003-e:4faee2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents."
+   }
+  },
+  {
+   "key": "3e8a82e827558d34d8feb0316bb4e5998e819b1a790ced93c608139de4f9eced",
+   "input": {
+    "id": "wk-6111-s0",
+    "en": "rescue",
+    "en_pos": "noun",
+    "en_sense": "An act or episode of rescuing, saving.",
+    "ja": "救出",
+    "ja_reading": "きゅうしゅつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "rescue",
+     "extricate",
+     "reclaim",
+     "deliverance"
+    ],
+    "vi": "sự cứu"
+   },
+   "output": {
+    "id": "wk-6111-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự cứu' is an awkward nominalization; 'cuộc giải cứu' or 'sự giải cứu' would be more natural translations for the noun 'rescue'."
+   }
+  }
+ ]
+}

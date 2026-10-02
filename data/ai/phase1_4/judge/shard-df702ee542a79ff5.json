@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:48:19Z",
+ "items": [
+  {
+   "key": "c69b4a658f10b9428a8a4b0096299554f291f29bab5d057063864e58acea4718",
+   "input": {
+    "id": "jm-1613730-0-anything",
+    "en": "anything",
+    "en_pos": "adverb",
+    "en_sense": "(not) anything; (nothing) at all; (not) any",
+    "ja": "何にも",
+    "ja_reading": "なんにも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) anything",
+     "(nothing) at all",
+     "(not) any"
+    ],
+    "vi": "gì cả"
+   },
+   "output": {
+    "id": "jm-1613730-0-anything",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are standard negative polarity items and are perfect equivalents."
+   }
+  },
+  {
+   "key": "f8ca028c38983ea56c514700d88ea0d6710d4c7cd51bda6af33a9b4f8b78ceb1",
+   "input": {
+    "id": "jm-1632320-0-broadly",
+    "en": "broadly",
+    "en_pos": "adverb",
+    "en_sense": "sweetly (smiling); broadly (grinning)",
+    "ja": "にっこり",
+    "ja_reading": "にっこり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "sweetly (smiling)",
+     "broadly (grinning)"
+    ],
+    "vi": "tươi cười"
+   },
+   "output": {
+    "id": "jm-1632320-0-broadly",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tươi cười' is more of a verb or adjective meaning 'to smile brightly' rather than a direct adverbial equivalent of 'broadly'."
+   }
+  },
+  {
+   "key": "9f6fce2090d963f12a0959afebfc7e0dd0b632685826a25758fb2800c8c794cb",
+   "input": {
+    "id": "jm-1632430-1-unexpectedly",
+    "en": "unexpectedly",
+    "en_pos": "adverb",
+    "en_sense": "unexpectedly (meeting someone)",
+    "ja": "ばったり",
+    "ja_reading": "ばったり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "unexpectedly (meeting someone)"
+    ],
+    "vi": "bất ngờ"
+   },
+   "output": {
+    "id": "jm-1632430-1-unexpectedly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'ばったり' is highly specific to unexpectedly meeting someone, whereas the Vietnamese 'bất ngờ' is a general term for 'unexpectedly'."
+   }
+  },
+  {
+   "key": "75dc4f34b72a98018d8eba3df4d3dabfb40fd274804c63052c708424bb874a70",
+   "input": {
+    "id": "jm-1643640-0-imagine",
+    "en": "imagine",
+    "en_pos": "verb",
+    "en_sense": "to imagine; to picture; to figure; to see",
+    "ja": "思い描く",
+    "ja_reading": "おもいえがく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to imagine",
+     "to picture",
+     "to figure",
+     "to see"
+    ],
+    "vi": "tưởng tượng"
+   },
+   "output": {
+    "id": "jm-1643640-0-imagine",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent and natural equivalents for the sense of picturing something in one's mind."
+   }
+  },
+  {
+   "key": "b4b0167bd0647ba339f26410b07f14353941d4fc9771ed353c0d1f8fe489751a",
+   "input": {
+    "id": "jm-1660100-0-lunch",
+    "en": "lunch",
+    "en_pos": "noun",
+    "en_sense": "lunch",
+    "ja": "お昼",
+    "ja_reading": "おひる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lunch"
+    ],
+    "vi": "bữa trưa"
+   },
+   "output": {
+    "id": "jm-1660100-0-lunch",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'lunch'."
+   }
+  },
+  {
+   "key": "30727128195dea31bc49c99edbb4824038f20a9052ecc5f92f59dae87af3a0f6",
+   "input": {
+    "id": "jm-1662130-0-nutrient",
+    "en": "nutrient",
+    "en_pos": "noun",
+    "en_sense": "nutrient; nourishment",
+    "ja": "養分",
+    "ja_reading": "ようぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nutrient",
+     "nourishment"
+    ],
+    "vi": "chất dinh dưỡng"
+   },
+   "output": {
+    "id": "jm-1662130-0-nutrient",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for 'nutrient'."
+   }
+  },
+  {
+   "key": "3211351a45304b5a7263592a70887811b6d56d0e11c366b334675ae975487b3c",
+   "input": {
+    "id": "jm-1702610-0-social",
+    "en": "social",
+    "en_pos": "adjective",
+    "en_sense": "social; societal; societary",
+    "ja": "社会的",
+    "ja_reading": "しゃかいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "social",
+     "societal",
+     "societary"
+    ],
+    "vi": "xã hội"
+   },
+   "output": {
+    "id": "jm-1702610-0-social",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'xã hội' is a noun meaning 'society', not an adjective like the English 'social' or Japanese '社会的'."
+   }
+  },
+  {
+   "key": "4916fc937b25a8418521331cba0d74db926d6499b1f23de4a00fcc6f4e5586a7",
+   "input": {
+    "id": "jm-1761540-0-educational",
+    "en": "educational",
+    "en_pos": "adjective",
+    "en_sense": "educational; instructive",
+    "ja": "教育的",
+    "ja_reading": "きょういくてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "educational",
+     "instructive"
+    ],
+    "vi": "giáo dục"
+   },
+   "output": {
+    "id": "jm-1761540-0-educational",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'giáo dục' is a noun ('education') or verb ('to educate'), not an adjective like the English 'educational' or Japanese '教育的'."
+   }
+  },
+  {
+   "key": "b1f8ed6fd814d56940d08f4cb669ebe439710bd06090f5a12bf0c96addf4dab3",
+   "input": {
+    "id": "jm-1894690-0-continuation",
+    "en": "continuation",
+    "en_pos": "noun",
+    "en_sense": "continuation; rest (of the story, work, etc.); next installment; sequel",
+    "ja": "続き",
+    "ja_reading": "つづき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "continuation",
+     "rest (of the story, work, etc.)",
+     "next installment",
+     "sequel"
+    ],
+    "vi": "tiếp theo"
+   },
+   "output": {
+    "id": "jm-1894690-0-continuation",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'tiếp theo' is an adjective/adverb meaning 'next', not a noun like the English 'continuation' or Japanese '続き'."
+   }
+  },
+  {
+   "key": "fec8c1e4ddd9c6d829d6720a0e368a2fa035cd1139eb4dcc95254eacdc0967b9",
+   "input": {
+    "id": "jm-1955900-0-learning",
+    "en": "learning",
+    "en_pos": "noun",
+    "en_sense": "learning; scholarship; study; erudition; knowledge; education",
+    "ja": "学",
+    "ja_reading": "がく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "learning",
+     "scholarship",
+     "study",
+     "erudition",
+     "knowledge",
+     "education"
+    ],
+    "vi": "sự học"
+   },
+   "output": {
+    "id": "jm-1955900-0-learning",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '学' is a bit formal and less common as a standalone word for 'learning' compared to '学習'; the English and Vietnamese terms are more general."
+   }
+  },
+  {
+   "key": "da96e5aacfacb1635a8de74c0a791af2eb4d4a80aee2c1ff1030d434dfafdb3f",
+   "input": {
+    "id": "jm-1956150-1-precept",
+    "en": "precept",
+    "en_pos": "noun",
+    "en_sense": "precept; lesson; one's teachings",
+    "ja": "訓",
+    "ja_reading": "くん",
+    "ja_pos": "n,suf",
+    "ja_glosses": [
+     "precept",
+     "lesson",
+     "one's teachings"
+    ],
+    "vi": "giáo huấn"
+   },
+   "output": {
+    "id": "jm-1956150-1-precept",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, register-matched equivalents for this formal concept."
+   }
+  },
+  {
+   "key": "a42c4035a7291fdcbc4cc4b8b9170ec6728a1e6cade2844745b9006f3a3b189b",
+   "input": {
+    "id": "jm-1956960-0-nothing",
+    "en": "nothing",
+    "en_pos": "noun",
+    "en_sense": "nothing; naught; nought; nil; zero",
+    "ja": "無",
+    "ja_reading": "む",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nothing",
+     "naught",
+     "nought",
+     "nil",
+     "zero"
+    ],
+    "vi": "không có gì"
+   },
+   "output": {
+    "id": "jm-1956960-0-nothing",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'không có gì' is a colloquial verb phrase meaning 'there isn't anything', not a noun for the concept of 'nothing' like the English 'nothing' or the philosophical Japanese '無'."
+   }
+  }
+ ]
+}

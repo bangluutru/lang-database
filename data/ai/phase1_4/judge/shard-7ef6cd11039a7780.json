@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:52:54Z",
+ "items": [
+  {
+   "key": "df69a1b510f270a1be2d6647e3e801d26c2f19dd1c542727ee6b178b0b41c0da",
+   "input": {
+    "id": "jm-1662130-0-nutrient",
+    "en": "nutrient",
+    "en_pos": "noun",
+    "en_sense": "nutrient; nourishment",
+    "ja": "養分",
+    "ja_reading": "ようぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nutrient",
+     "nourishment"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1662130-0-nutrient",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "養分 is a perfect equivalent for 'nutrient' in the sense of nourishment."
+   }
+  },
+  {
+   "key": "03575bd1f3722dbfb6b7c78e8cf65e55fca0cea8904d8ae43e48df1491df98b8",
+   "input": {
+    "id": "jm-1694410-1-discount",
+    "en": "discount",
+    "en_pos": "noun",
+    "en_sense": "(giving a) discount; price reduction",
+    "ja": "おまけ",
+    "ja_reading": "おまけ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(giving a) discount",
+     "price reduction"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1694410-1-discount",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "おまけ means a freebie, bonus, or extra item given with a purchase, not a price reduction (discount), which is 割引 (waribiki)."
+   }
+  },
+  {
+   "key": "89ec338e3e254f16633655ea1edba30199b8448253eaa3cbccc1c6cb892a1e08",
+   "input": {
+    "id": "jm-1702610-0-social",
+    "en": "social",
+    "en_pos": "adjective",
+    "en_sense": "social; societal; societary",
+    "ja": "社会的",
+    "ja_reading": "しゃかいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "social",
+     "societal",
+     "societary"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1702610-0-social",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "社会的 is the standard and direct equivalent for 'social' in the sense of 'relating to society'."
+   }
+  },
+  {
+   "key": "c7948866849f3f58b183f583c664730fa58600eadded735786d010f8bb03cb34",
+   "input": {
+    "id": "jm-1758380-0-intelligence",
+    "en": "intelligence",
+    "en_pos": "adjective",
+    "en_sense": "intelligence; cleverness; innate aptitude",
+    "ja": "利根",
+    "ja_reading": "りこん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "intelligence",
+     "cleverness",
+     "innate aptitude"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1758380-0-intelligence",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA",
+     "POS_MISMATCH"
+    ],
+    "note": "利根 is an archaic and very rare word for intelligence; the common words are 知能 or 賢さ. The English POS is also incorrectly listed as adjective."
+   }
+  },
+  {
+   "key": "843d41eeb6d3ce9544e146f5325b0ee03ca98ea86095b896062c9b354de771ca",
+   "input": {
+    "id": "jm-1761540-0-educational",
+    "en": "educational",
+    "en_pos": "adjective",
+    "en_sense": "educational; instructive",
+    "ja": "教育的",
+    "ja_reading": "きょういくてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "educational",
+     "instructive"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1761540-0-educational",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "教育的 is the standard and direct equivalent for 'educational'."
+   }
+  },
+  {
+   "key": "a35ce36a37eba8385753492face8e106b9bb1685c9ff747e425ca85f3294baa8",
+   "input": {
+    "id": "jm-1894690-0-continuation",
+    "en": "continuation",
+    "en_pos": "noun",
+    "en_sense": "continuation; rest (of the story, work, etc.); next installment; sequel",
+    "ja": "続き",
+    "ja_reading": "つづき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "continuation",
+     "rest (of the story, work, etc.)",
+     "next installment",
+     "sequel"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1894690-0-continuation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "続き is the perfect and common word for the continuation of a story or work."
+   }
+  },
+  {
+   "key": "91c48f97f6c7f23336e26e86859030ac1083e0488cf93a5417c2078ba5964055",
+   "input": {
+    "id": "jm-1910260-0-store",
+    "en": "store",
+    "en_pos": "noun",
+    "en_sense": "store; shop",
+    "ja": "店屋",
+    "ja_reading": "みせや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "store",
+     "shop"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1910260-0-store",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "店屋 is a somewhat dated and less common word for 'store'; the standard, neutral word is 店 (mise)."
+   }
+  },
+  {
+   "key": "071d4b55ad75e1d67f32ca16687d5bb24414d31045291346613002daad71ac1b",
+   "input": {
+    "id": "jm-1955900-0-learning",
+    "en": "learning",
+    "en_pos": "noun",
+    "en_sense": "learning; scholarship; study; erudition; knowledge; education",
+    "ja": "学",
+    "ja_reading": "がく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "learning",
+     "scholarship",
+     "study",
+     "erudition",
+     "knowledge",
+     "education"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1955900-0-learning",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "学 is a good equivalent for the formal sense of 'learning' as scholarship or erudition."
+   }
+  },
+  {
+   "key": "8938044cc0aafabc819cb461ac9f3ce2f206caa549a13955ea99eeaee723b4d9",
+   "input": {
+    "id": "jm-1956150-1-precept",
+    "en": "precept",
+    "en_pos": "noun",
+    "en_sense": "precept; lesson; one's teachings",
+    "ja": "訓",
+    "ja_reading": "くん",
+    "ja_pos": "n,suf",
+    "ja_glosses": [
+     "precept",
+     "lesson",
+     "one's teachings"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1956150-1-precept",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "訓 is an excellent match for 'precept' or 'teachings'."
+   }
+  },
+  {
+   "key": "c64afc95874c8db60054b0a8387ad918b770513afb8d814af62449f712fd803c",
+   "input": {
+    "id": "jm-1956960-0-nothing",
+    "en": "nothing",
+    "en_pos": "noun",
+    "en_sense": "nothing; naught; nought; nil; zero",
+    "ja": "無",
+    "ja_reading": "む",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nothing",
+     "naught",
+     "nought",
+     "nil",
+     "zero"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1956960-0-nothing",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "無 represents the concept of nothingness or non-existence, a good match for the abstract sense of 'nothing', but is more formal than the everyday English word."
+   }
+  },
+  {
+   "key": "2d9ca6476e8b38c1ad8edfb411461778a9f79d5b47c9c2209a1f7a169f019931",
+   "input": {
+    "id": "jm-1981450-0-so",
+    "en": "so",
+    "en_pos": "adverb",
+    "en_sense": "to that extent; to that degree; so much; so",
+    "ja": "あんなに",
+    "ja_reading": "あんなに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "to that extent",
+     "to that degree",
+     "so much",
+     "so"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1981450-0-so",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "あんなに is not a general equivalent for 'so'; it is part of the 'ko-so-a-do' system and specifically means 'so' in relation to something distant from both speaker and listener."
+   }
+  },
+  {
+   "key": "bc861caaffb48b5c5edfba55c3968001ddcf0e0dbf946fac546df311ea369222",
+   "input": {
+    "id": "jm-1983690-0-relatively",
+    "en": "relatively",
+    "en_pos": "adverb",
+    "en_sense": "comparatively; relatively; fairly; rather; pretty; unexpectedly",
+    "ja": "割と",
+    "ja_reading": "わりと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "comparatively",
+     "relatively",
+     "fairly",
+     "rather",
+     "pretty",
+     "unexpectedly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1983690-0-relatively",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "割と is a good colloquial equivalent for 'relatively' or 'fairly', but it is informal; the more direct and formal equivalent is 比較的 (hikakuteki)."
+   }
+  }
+ ]
+}

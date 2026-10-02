@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:47Z",
+ "items": [
+  {
+   "key": "cd7808f0e821df03147fb65575398efe1779754e599b9309079a8a57a5bf2aaa",
+   "input": {
+    "id": "wk-7006-s0",
+    "en": "waiter",
+    "en_pos": "noun",
+    "en_sense": "A male or female attendant who serves customers at their tables in a restaurant, café or similar.",
+    "ja": "給仕",
+    "ja_reading": "きゅうじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "waiter",
+     "waitress",
+     "waitperson",
+     "server",
+     "cabin boy",
+     "bellboy"
+    ],
+    "vi": "bồi"
+   },
+   "output": {
+    "id": "wk-7006-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "TOO_NARROW",
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Japanese '給仕' is archaic and broad (can mean bellboy), while the Vietnamese 'bồi' is dated and male-specific; modern, more precise terms exist in both languages."
+   }
+  },
+  {
+   "key": "253b6cb6245c911d84a4c0cfff1e356927985a10cb4987693d9c7f4d9f3a3aa3",
+   "input": {
+    "id": "wk-7007-s0",
+    "en": "waitress",
+    "en_pos": "noun",
+    "en_sense": "A female attendant who serves customers in a restaurant, café, or similar.",
+    "ja": "ウェイトレス",
+    "ja_reading": "ウェイトレス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "waitress"
+    ],
+    "vi": "chị hầu bàn"
+   },
+   "output": {
+    "id": "wk-7007-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chị hầu bàn' is a descriptive phrase ('the lady who serves tables') rather than a standard dictionary headword for the job title 'waitress'."
+   }
+  },
+  {
+   "key": "d5199a2ec792e1d6f10001466d1346632385c515d098451a635128971acb0e64",
+   "input": {
+    "id": "wk-7010-s4",
+    "en": "parameter",
+    "en_pos": "noun",
+    "en_sense": "An input variable of a function definition, that gets an actual value (argument) at execution time.",
+    "ja": "仮引数",
+    "ja_reading": "かりひきすう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(formal) parameter",
+     "formal argument"
+    ],
+    "vi": "thông số"
+   },
+   "output": {
+    "id": "wk-7010-s4",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thông số' is a general term for 'parameter' or 'specification' and is not the correct technical term for a function parameter in programming, which is 'tham số'."
+   }
+  },
+  {
+   "key": "fd59fd061a0749a6e2c6911a61f287ed6418a993a143f9c453b678df007e0d72",
+   "input": {
+    "id": "wk-7014-e:52348e",
+    "en": "resist",
+    "en_pos": "verb",
+    "en_sense": "to withstand actions or effects of",
+    "ja": "耐える",
+    "ja_reading": "たえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to support",
+     "to withstand",
+     "to resist",
+     "to brave"
+    ],
+    "vi": "chống cự"
+   },
+   "output": {
+    "id": "wk-7014-e:52348e",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chống cự' is too narrow, as it implies active, physical struggle, whereas 'resist' and '耐える' also cover passively withstanding effects."
+   }
+  },
+  {
+   "key": "aa5699a1b94dc3c695ec30b8feced19a0fde7e31c7988c4709e115c5cc32c4b0",
+   "input": {
+    "id": "wk-7016-e:97500e",
+    "en": "lord",
+    "en_pos": "noun",
+    "en_sense": "ruler, one having mastery over others",
+    "ja": "卿",
+    "ja_reading": "きょう",
+    "ja_pos": "suf",
+    "ja_glosses": [
+     "Lord",
+     "Sir"
+    ],
+    "vi": "lãnh chúa"
+   },
+   "output": {
+    "id": "wk-7016-e:97500e",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '卿' is a suffix or title ('Lord', 'Sir'), not a noun for 'ruler', making it a mismatch in both part of speech and meaning."
+   }
+  },
+  {
+   "key": "910ef1bf771465409ecdc7915e3e0bd4876e870de699a6652d73bfd0522811d8",
+   "input": {
+    "id": "wk-702-s0",
+    "en": "it",
+    "en_pos": "pronoun",
+    "en_sense": "The third-person singular neuter personal pronoun used to refer to an inanimate object, abstract entity, or non-human living thing.",
+    "ja": "それ",
+    "ja_reading": "それ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "that",
+     "it"
+    ],
+    "vi": "nó"
+   },
+   "output": {
+    "id": "wk-702-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'それ' is a demonstrative pronoun ('that') whose usage depends on proximity, not a direct equivalent of the English personal pronoun 'it'."
+   }
+  },
+  {
+   "key": "74a0a5b2cda0c78edcdb2e054a073a9cb5b4824f2d99424dd7e9b2132e91946d",
+   "input": {
+    "id": "wk-7022-s3",
+    "en": "cheer",
+    "en_pos": "verb",
+    "en_sense": "To applaud or encourage with cheers or shouts.",
+    "ja": "励ます",
+    "ja_reading": "はげます",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to encourage",
+     "to cheer on",
+     "to cheer (someone) up"
+    ],
+    "vi": "cổ vũ"
+   },
+   "output": {
+    "id": "wk-7022-s3",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '励ます' means 'to encourage' in general and lacks the specific sense of shouting or cheering, unlike the English definition and the Vietnamese 'cổ vũ'."
+   }
+  },
+  {
+   "key": "d7cddad88c12cf215d1e784c19904005901b59eb8632f1db9db9b945c7234cc3",
+   "input": {
+    "id": "wk-7023-s0",
+    "en": "health",
+    "en_pos": "noun",
+    "en_sense": "The state of being free from physical or psychological disease, illness, or malfunction; wellness.",
+    "ja": "健康",
+    "ja_reading": "けんこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "health"
+    ],
+    "vi": "sức khỏe"
+   },
+   "output": {
+    "id": "wk-7023-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'health'."
+   }
+  },
+  {
+   "key": "33962b49badf7cec251f0ace98e749f35007b4aed624317fcc95464e8caa2b16",
+   "input": {
+    "id": "wk-7027-e:53670a",
+    "en": "bottom",
+    "en_pos": "noun",
+    "en_sense": "lowest part",
+    "ja": "底",
+    "ja_reading": "そこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bottom",
+     "sole"
+    ],
+    "vi": "đáy"
+   },
+   "output": {
+    "id": "wk-7027-e:53670a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'bottom' (lowest part)."
+   }
+  },
+  {
+   "key": "9f5aa4daf19414ff44d30c5ecb21df4fa02e32858d6740973ea0c2b03e3e2f6b",
+   "input": {
+    "id": "wk-7031-e:8e77ab",
+    "en": "alcohol",
+    "en_pos": "noun",
+    "en_sense": "organic chemistry sense",
+    "ja": "アルコール",
+    "ja_reading": "アルコール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "alcohol"
+    ],
+    "vi": "rượu"
+   },
+   "output": {
+    "id": "wk-7031-e:8e77ab",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'rượu' means 'alcoholic beverage', not 'alcohol' in the specified organic chemistry sense, for which the correct term is 'cồn'."
+   }
+  },
+  {
+   "key": "eedc79a78f8d38819a5fb0e57deab204803f0d22f593f251cd6ec792b8f309c6",
+   "input": {
+    "id": "wk-7033-e:edf724",
+    "en": "constellation",
+    "en_pos": "noun",
+    "en_sense": "arbitrary formation of stars perceived as a figure or pattern, or a division of the sky including it",
+    "ja": "星座",
+    "ja_reading": "せいざ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "constellation"
+    ],
+    "vi": "chòm sao"
+   },
+   "output": {
+    "id": "wk-7033-e:edf724",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'constellation'."
+   }
+  },
+  {
+   "key": "9a2f8664392a99b9564053518ba015d9c21e92bd207badaea4be6d4d5a8fb3a7",
+   "input": {
+    "id": "wk-7035-s0",
+    "en": "tattoo",
+    "en_pos": "noun",
+    "en_sense": "An image made on a body part, usually the skin with ink and a needle.",
+    "ja": "入れ墨",
+    "ja_reading": "いれずみ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "tattoo (esp. a traditional Japanese one)",
+     "tattooing"
+    ],
+    "vi": "xăm"
+   },
+   "output": {
+    "id": "wk-7035-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '入れ墨' refers to traditional tattoos with strong cultural connotations; the loanword 'タトゥー' is the better neutral equivalent for the general term 'tattoo'."
+   }
+  }
+ ]
+}

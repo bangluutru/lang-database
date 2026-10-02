@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:27:54Z",
+ "items": [
+  {
+   "key": "c8be3a94460293d9ccc3f343e6e77f4b49c4771d1e327b15e4acc19b007f0617",
+   "input": {
+    "id": "jm-1225920-0-duty",
+    "en": "duty",
+    "en_pos": "noun",
+    "en_sense": "duty; sense of duty; honor; honour; decency; courtesy",
+    "ja": "義理",
+    "ja_reading": "ぎり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "duty",
+     "sense of duty",
+     "honor",
+     "honour",
+     "decency",
+     "courtesy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225920-0-duty",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "義理 (giri) is a culturally specific type of social obligation, much narrower and more nuanced than the general English word 'duty'."
+   }
+  },
+  {
+   "key": "d13c35da369fee838a57ef25164b8452be19d58f6e16293087af858b7b4e7096",
+   "input": {
+    "id": "jm-1226010-0-measure",
+    "en": "measure",
+    "en_pos": "noun",
+    "en_sense": "legislative bill; measure",
+    "ja": "議案",
+    "ja_reading": "ぎあん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "legislative bill",
+     "measure"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226010-0-measure",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "議案 is an excellent and precise equivalent for 'measure' in the legislative sense."
+   }
+  },
+  {
+   "key": "6dbeac47f136f845f8a16fd4b09ae9faaad93fbff57b9b79084be8493bbc0adf",
+   "input": {
+    "id": "jm-1226020-0-member_of_parliament",
+    "en": "member of parliament",
+    "en_pos": "noun",
+    "en_sense": "member of an assembly; member of the Diet; member of parliament; member of Congress",
+    "ja": "議員",
+    "ja_reading": "ぎいん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "member of an assembly",
+     "member of the Diet",
+     "member of parliament",
+     "member of Congress"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226020-0-member_of_parliament",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "議員 is the standard, general term for a member of a legislative body, matching the English sense perfectly."
+   }
+  },
+  {
+   "key": "9d23d282691cf24cfc15f0edc11e975557f38376879fe941d0770f62261a5164",
+   "input": {
+    "id": "jm-1226360-1-surprise",
+    "en": "surprise",
+    "en_pos": "adjective",
+    "en_sense": "surprise (e.g. surprise party)",
+    "ja": "びっくり",
+    "ja_reading": "びっくり",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "surprise (e.g. surprise party)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226360-1-surprise",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "びっくり is not a general adjective; it's an adverb or verb. The loanword サプライズ is used for this adjectival sense (e.g., サプライズパーティー)."
+   }
+  },
+  {
+   "key": "8aa8bdcd39bc32b6524ed8ef5c5c84c41cc943e40cce4492e109f7450161df53",
+   "input": {
+    "id": "jm-1226480-2-shrink",
+    "en": "shrink",
+    "en_pos": "verb",
+    "en_sense": "to be become shorter; to shrink; to narrow",
+    "ja": "詰まる",
+    "ja_reading": "つまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to be become shorter",
+     "to shrink",
+     "to narrow"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226480-2-shrink",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "詰まる primarily means 'to be clogged'. While it can mean 'to become shorter' (e.g., of a garment's length), the more general word for 'shrink' (like fabric) is 縮む (chijimu)."
+   }
+  },
+  {
+   "key": "86f2af94fbfb268ca6efe7cbdd52e8a385fa0eca8121949ac6af608c6f8522cb",
+   "input": {
+    "id": "jm-1226960-0-reverse",
+    "en": "reverse",
+    "en_pos": "adjective",
+    "en_sense": "reverse; opposite",
+    "ja": "逆",
+    "ja_reading": "ぎゃく",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "reverse",
+     "opposite"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226960-0-reverse",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "逆 is the standard and direct equivalent for the adjective 'reverse' or 'opposite'."
+   }
+  },
+  {
+   "key": "49c0c808e0390bd1ece9b006a2457446a957d693157d23b44268ad24af1f5e59",
+   "input": {
+    "id": "jm-1226990-0-oppose",
+    "en": "oppose",
+    "en_pos": "verb",
+    "en_sense": "to go against; to oppose; to disobey; to defy",
+    "ja": "逆らう",
+    "ja_reading": "さからう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to go against",
+     "to oppose",
+     "to disobey",
+     "to defy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1226990-0-oppose",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "逆らう is a very good translation for 'oppose' in the sense of defying or going against an authority or flow."
+   }
+  },
+  {
+   "key": "c49455c7d84b28c4faf89f34779748012a2abbbe938a4394e02d6a239366429f",
+   "input": {
+    "id": "jm-1227320-0-hill",
+    "en": "hill",
+    "en_pos": "noun",
+    "en_sense": "hill; hillock",
+    "ja": "丘陵",
+    "ja_reading": "きゅうりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hill",
+     "hillock"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1227320-0-hill",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "丘陵 means 'hilly country' or 'rolling hills', not a single 'hill'. The correct word for a single hill is 丘 (oka)."
+   }
+  },
+  {
+   "key": "3d15dc8d8340d6ec3aa0f567975dec352fb410521cd06a110576265ec20211d3",
+   "input": {
+    "id": "jm-1227340-0-long",
+    "en": "long",
+    "en_pos": "adjective",
+    "en_sense": "long (time that has passed); old (story)",
+    "ja": "久しい",
+    "ja_reading": "ひさしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "long (time that has passed)",
+     "old (story)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1227340-0-long",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "久しい is the perfect equivalent for 'long' when referring to a duration of past time."
+   }
+  },
+  {
+   "key": "b7d9cc35e221e59d56f064c5745034c709de2c2ac444ef16b6718ce4ee3d7921",
+   "input": {
+    "id": "jm-1227570-0-rest",
+    "en": "rest",
+    "en_pos": "verb",
+    "en_sense": "to rest; to suspend; to give relief",
+    "ja": "休める",
+    "ja_reading": "やすめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to rest",
+     "to suspend",
+     "to give relief"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1227570-0-rest",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "休める is the transitive verb 'to give rest to something/someone', while the English 'rest' is more commonly used intransitively (which is 休む in Japanese)."
+   }
+  },
+  {
+   "key": "e0314bf51a635ba022939b60e89b4ab5d6d0984cf0bee283f9a61e34e21176d2",
+   "input": {
+    "id": "jm-1227610-0-holiday",
+    "en": "holiday",
+    "en_pos": "noun",
+    "en_sense": "holiday; vacation; day off; time off; leave; furlough",
+    "ja": "休暇",
+    "ja_reading": "きゅうか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "holiday",
+     "vacation",
+     "day off",
+     "time off",
+     "leave",
+     "furlough"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1227610-0-holiday",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "休暇 is the correct term for a leave of absence from work or school, such as a vacation or furlough, matching the specified sense of 'holiday'."
+   }
+  },
+  {
+   "key": "e76319e91e40292abed57e9aa0c9fb050abeef8756ec28a7f1f472dddea28e92",
+   "input": {
+    "id": "jm-1227940-0-rest",
+    "en": "rest",
+    "en_pos": "noun",
+    "en_sense": "rest; relief; relaxation",
+    "ja": "休息",
+    "ja_reading": "きゅうそく",
+    "ja_pos": "n,vs,vi,adj-no",
+    "ja_glosses": [
+     "rest",
+     "relief",
+     "relaxation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1227940-0-rest",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "休息 is a good equivalent for 'rest' or 'break', particularly in the sense of taking a break from an activity to recover; it is slightly more formal than 休み."
+   }
+  }
+ ]
+}

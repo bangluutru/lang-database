@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:29:09Z",
+ "items": [
+  {
+   "key": "a83315c49a0214214c02ac714b4e702680f9d08c8d286a2b562a9dba892961b3",
+   "input": {
+    "id": "wk-12372-e:017ecc",
+    "en": "pistol",
+    "en_pos": "noun",
+    "en_sense": "handgun",
+    "ja": "拳銃",
+    "ja_reading": "けんじゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pistol",
+     "handgun"
+    ],
+    "vi": "súng lục"
+   },
+   "output": {
+    "id": "wk-12372-e:017ecc",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'pistol' or 'handgun'."
+   }
+  },
+  {
+   "key": "121f9f5cebbd8d3979e4f960923d8fa30f174ef03c6c2ef0a7d1da6179deab0b",
+   "input": {
+    "id": "wk-12380-s0",
+    "en": "regiment",
+    "en_pos": "noun",
+    "en_sense": "A unit of armed troops under the command of an officer, and consisting of several smaller units.",
+    "ja": "連隊",
+    "ja_reading": "れんたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "regiment"
+    ],
+    "vi": "trung đoàn"
+   },
+   "output": {
+    "id": "wk-12380-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard military equivalents for 'regiment'."
+   }
+  },
+  {
+   "key": "f5cfd87143e3613b7075bb6ac64bee9012b94af739d1f7e9d8c3aea10a8cebb7",
+   "input": {
+    "id": "wk-12387-s0",
+    "en": "conclusion",
+    "en_pos": "noun",
+    "en_sense": "The end, finish, close or last part of something.",
+    "ja": "終わり",
+    "ja_reading": "おわり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "ending",
+     "close",
+     "conclusion"
+    ],
+    "vi": "kết thúc"
+   },
+   "output": {
+    "id": "wk-12387-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the sense of 'end' or 'final part'."
+   }
+  },
+  {
+   "key": "89c8770ae1d9c4a67bb87b28f3dfe79743a856b3075f72de9670f266ab316d9a",
+   "input": {
+    "id": "wk-12387-s1",
+    "en": "conclusion",
+    "en_pos": "noun",
+    "en_sense": "The outcome or result of a process or act.",
+    "ja": "結末",
+    "ja_reading": "けつまつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "conclusion"
+    ],
+    "vi": "kết quả"
+   },
+   "output": {
+    "id": "wk-12387-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '結末' is too specific, often implying the end of a narrative, whereas the English sense and Vietnamese 'kết quả' refer more broadly to any result or outcome."
+   }
+  },
+  {
+   "key": "56416920c936079b86155df5b69ea25720150148ae4c7b1970c45bf73dae8b39",
+   "input": {
+    "id": "wk-12390-s0",
+    "en": "sarcophagus",
+    "en_pos": "noun",
+    "en_sense": "A stonen coffin, often with its exterior inscribed, or decorated with sculpture.",
+    "ja": "石棺",
+    "ja_reading": "せっかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sarcophagus",
+     "stone coffin"
+    ],
+    "vi": "quách"
+   },
+   "output": {
+    "id": "wk-12390-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'quách' means 'outer coffin' and is not necessarily made of stone, whereas 'sarcophagus' and Japanese '石棺' specifically refer to a stone coffin."
+   }
+  },
+  {
+   "key": "a68363b8532eb7183488fe94799700e672ab0473c877051a1da09ad345431aee",
+   "input": {
+    "id": "wk-12399-e:31200a",
+    "en": "clerk",
+    "en_pos": "noun",
+    "en_sense": "one working with records etc.",
+    "ja": "事務員",
+    "ja_reading": "じむいん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "clerk",
+     "office worker",
+     "office staff"
+    ],
+    "vi": "nhân viên văn phòng"
+   },
+   "output": {
+    "id": "wk-12399-e:31200a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for 'office clerk' or 'office worker'."
+   }
+  },
+  {
+   "key": "160bd4cc4856f1b1a326e1e18a783055f57f98b0fc5e58db6e84f35f0229da6a",
+   "input": {
+    "id": "wk-12404-s0",
+    "en": "gunpowder",
+    "en_pos": "noun",
+    "en_sense": "An explosive mixture of saltpetre (potassium nitrate), charcoal and sulfur; formerly used in gunnery but now mostly used in fireworks.",
+    "ja": "火薬",
+    "ja_reading": "かやく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gunpowder",
+     "powder"
+    ],
+    "vi": "thuốc súng"
+   },
+   "output": {
+    "id": "wk-12404-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'gunpowder'."
+   }
+  },
+  {
+   "key": "6fbb5467372092e131d6efe9e841f91e43e345ca4d33e89d5997a1772ce31f45",
+   "input": {
+    "id": "wk-12406-s0",
+    "en": "endure",
+    "en_pos": "verb",
+    "en_sense": "To continue or carry on, despite obstacles or hardships; to persist.",
+    "ja": "耐える",
+    "ja_reading": "たえる",
+    "ja_pos": "v1,vi,vt",
+    "ja_glosses": [
+     "to bear",
+     "to stand",
+     "to endure",
+     "to put up with"
+    ],
+    "vi": "tồn tại"
+   },
+   "output": {
+    "id": "wk-12406-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tồn tại' means 'to exist' and does not capture the sense of enduring hardship, which is central to the English 'endure' and the Japanese '耐える'."
+   }
+  },
+  {
+   "key": "4b8d97d25d528a3bb6f9eb845e695a00695eb37eab9c8ebddcd17e1ba4405a0c",
+   "input": {
+    "id": "wk-12409-s0",
+    "en": "role",
+    "en_pos": "noun",
+    "en_sense": "A character or part played by a performer or actor.",
+    "ja": "役柄",
+    "ja_reading": "やくがら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "role",
+     "duty",
+     "position",
+     "part"
+    ],
+    "vi": "vai"
+   },
+   "output": {
+    "id": "wk-12409-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and correct for an actor's role."
+   }
+  },
+  {
+   "key": "9ee746b433894e8101919a91c255882a85643688e869352198b90e9c94cd665d",
+   "input": {
+    "id": "wk-12421-s0",
+    "en": "competitor",
+    "en_pos": "noun",
+    "en_sense": "A person or organization against whom one is competing.",
+    "ja": "競争者",
+    "ja_reading": "きょうそうしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "competitor",
+     "rival"
+    ],
+    "vi": "đối thủ"
+   },
+   "output": {
+    "id": "wk-12421-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'competitor'."
+   }
+  },
+  {
+   "key": "d158e46ab0cebe4474358d91aebfeaaf1ec537e8d39fae2e83215a885c2254ea",
+   "input": {
+    "id": "wk-1243-e:fe4a0a",
+    "en": "south",
+    "en_pos": "noun",
+    "en_sense": "compass point",
+    "ja": "南",
+    "ja_reading": "みなみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "south"
+    ],
+    "vi": "nam"
+   },
+   "output": {
+    "id": "wk-1243-e:fe4a0a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence across all three languages for a basic concept."
+   }
+  },
+  {
+   "key": "1aab6415dba6c0f99679d74f7230d56ae943504650a8d532babece7b1f2cb21f",
+   "input": {
+    "id": "wk-12434-s0",
+    "en": "aristocracy",
+    "en_pos": "noun",
+    "en_sense": "The nobility, or the hereditary ruling class.",
+    "ja": "貴族",
+    "ja_reading": "きぞく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "nobility",
+     "aristocracy",
+     "peerage"
+    ],
+    "vi": "chế độ quý tộc"
+   },
+   "output": {
+    "id": "wk-12434-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chế độ quý tộc' means 'aristocratic system', not the aristocratic class itself, which is what the English and Japanese words refer to."
+   }
+  }
+ ]
+}

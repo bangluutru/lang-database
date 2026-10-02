@@ -1,5 +1,25 @@
 # Changelog
 
+## [Phase 1.4] - 2026-10-02 — Curated corpus expansion (2,106 → 6,935 concepts)
+
+### Added
+- Wiktionary (EN edition, CC-BY-SA-4.0) snapshot `data/raw/wiktionary_en/2026-09-28` (filtered extract + full-upstream SHA-256).
+- `scripts/phase1_4/`: sense-level candidate builder, JMdict corroboration, learning-value scoring, match-before-create,
+  blind pairwise judge, append-only deterministic promotion, views/Oki exporters, reports.
+- 4,829 new concepts (`concept-lex-*`): 2,514 tri-language (source-derived VI), 2,315 judge-validated EN–JA partials.
+- `data/exports/views_v1_4/` learning views (JLPT, Jōyō, CEFR, NGSL/spoken/academic, exam relevance, VI Core, VI-first lexicon, 12 domains).
+- **Project rule: no external/paid API calls** — `CLAUDE.md`, `AGENTS.md`, `scripts/external_api_guard.py`, `tests/test_external_api_policy.py`.
+- Sealed-baseline manifest `data/releases/phase1_3d-sealed/` + prefix-hash tests.
+
+### Changed / Fixed
+- Canonical JSONL files are append-only; 1.3D hard-coded count tests converted to baseline-subset invariants; 3 tests already failing at the sealed commit fixed.
+- JMdict POS: `vi`/`vt` no longer treated as verb markers. ATTRIBUTION: JLPT licence corrected to CC-BY-3.0.
+- Additive classification backfill (991 rows) for sealed concepts (NGSL-Spoken / NAWL / BSL / VI core); no sealed record modified.
+
+### Known issues
+- Sealed baseline spot audit: 49% strict-accept on 150 sampled core concepts (see `reports/phase1_4/baseline_defect_audit.json`); remediation deferred.
+
+
 All notable changes to the **English–Japanese–Vietnamese Learning Lexical Graph** are documented here in accordance with [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and Semantic Versioning.
 
 ---

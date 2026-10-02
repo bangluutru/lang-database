@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:41:15Z",
+ "items": [
+  {
+   "key": "cd0657a5e73e2d0760cc604f3b79f7913ca4b6b8753a7e4bc49f3cb74593ccf4",
+   "input": {
+    "id": "jm-1471210-0-tear",
+    "en": "tear",
+    "en_pos": "verb",
+    "en_sense": "to get torn; to tear; to rip; to break; to wear out",
+    "ja": "破れる",
+    "ja_reading": "やぶれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to get torn",
+     "to tear",
+     "to rip",
+     "to break",
+     "to wear out"
+    ],
+    "vi": "bị rách"
+   },
+   "output": {
+    "id": "jm-1471210-0-tear",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and direct equivalents for the intransitive sense of 'to tear'."
+   }
+  },
+  {
+   "key": "2bb92fb86d2b4aff6b8e0f550b1ed55c333744c2c8496f6eaa417c7828b7ec45",
+   "input": {
+    "id": "jm-1471300-0-destruction",
+    "en": "destruction",
+    "en_pos": "noun",
+    "en_sense": "tearing up and discarding (e.g. documents); destruction",
+    "ja": "破棄",
+    "ja_reading": "はき",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "tearing up and discarding (e.g. documents)",
+     "destruction"
+    ],
+    "vi": "hủy bỏ"
+   },
+   "output": {
+    "id": "jm-1471300-0-destruction",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hủy bỏ' means 'to cancel' or 'abolish' and is broader than the specific sense of physically tearing up and discarding documents implied by the English and Japanese terms."
+   }
+  },
+  {
+   "key": "463e6b3cf1a7727d8d758de30782e51ac0c596710ec6165c6b661e9eed1302a1",
+   "input": {
+    "id": "jm-1471380-0-damage",
+    "en": "damage",
+    "en_pos": "noun",
+    "en_sense": "damage; breakage",
+    "ja": "破損",
+    "ja_reading": "はそん",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "damage",
+     "breakage"
+    ],
+    "vi": "hư hỏng"
+   },
+   "output": {
+    "id": "jm-1471380-0-damage",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for physical damage or breakage."
+   }
+  },
+  {
+   "key": "b6441d1a6b4718d08d3c2d6433085cd85840cd9d7b52ffb87620777ab10a58a7",
+   "input": {
+    "id": "jm-1472030-0-disposal",
+    "en": "disposal",
+    "en_pos": "noun",
+    "en_sense": "disposal; abandonment; scrapping; discarding; abolition",
+    "ja": "廃棄",
+    "ja_reading": "はいき",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "disposal",
+     "abandonment",
+     "scrapping",
+     "discarding",
+     "abolition"
+    ],
+    "vi": "thải bỏ"
+   },
+   "output": {
+    "id": "jm-1472030-0-disposal",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard equivalents for 'disposal' or 'discarding', especially of waste."
+   }
+  },
+  {
+   "key": "8207a085adea5df9c33524ed421178f0a676751bc0ef1ff2577c0c273f37f618",
+   "input": {
+    "id": "jm-1472560-0-defeat",
+    "en": "defeat",
+    "en_pos": "noun",
+    "en_sense": "defeat; lost battle; losing a war",
+    "ja": "敗戦",
+    "ja_reading": "はいせん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "defeat",
+     "lost battle",
+     "losing a war"
+    ],
+    "vi": "thất bại"
+   },
+   "output": {
+    "id": "jm-1472560-0-defeat",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '敗戦' specifically means losing a war, matching the English sense, but the Vietnamese 'thất bại' is a general term for 'failure' or 'defeat'."
+   }
+  },
+  {
+   "key": "5d7609a696f138d18c69c48f7e4d8c61354ec23ffaa953342fbf605080c21595",
+   "input": {
+    "id": "jm-1472650-0-height",
+    "en": "height",
+    "en_pos": "noun",
+    "en_sense": "height; stature",
+    "ja": "背",
+    "ja_reading": "せい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "height",
+     "stature"
+    ],
+    "vi": "chiều cao"
+   },
+   "output": {
+    "id": "jm-1472650-0-height",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a person's height or stature."
+   }
+  },
+  {
+   "key": "cc3a346945e300cc8f82ace423a07b4de42ba2f75eae229c075b2dcc5c6bd6a9",
+   "input": {
+    "id": "jm-1473210-0-consideration",
+    "en": "consideration",
+    "en_pos": "noun",
+    "en_sense": "consideration; concern; attention; thoughtfulness; making arrangements; care",
+    "ja": "配慮",
+    "ja_reading": "はいりょ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "consideration",
+     "concern",
+     "attention",
+     "thoughtfulness",
+     "making arrangements",
+     "care"
+    ],
+    "vi": "quan tâm"
+   },
+   "output": {
+    "id": "jm-1473210-0-consideration",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'quan tâm' is a verb ('to care for'), not a noun like English 'consideration' and Japanese '配慮'."
+   }
+  },
+  {
+   "key": "c0d1bd0895be4ed42527f5b100b901f958c73d4abfcbdfcb21c6882edd134b68",
+   "input": {
+    "id": "jm-1473960-0-sell",
+    "en": "sell",
+    "en_pos": "verb",
+    "en_sense": "to sell (well)",
+    "ja": "売れる",
+    "ja_reading": "うれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to sell (well)"
+    ],
+    "vi": "bán chạy"
+   },
+   "output": {
+    "id": "jm-1473960-0-sell",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect idiomatic equivalents for the concept of a product selling well."
+   }
+  },
+  {
+   "key": "01a8b12dfd80e23f06b5ea6b8a1493e18690e9c3c79f17da521aa1b57276f751",
+   "input": {
+    "id": "jm-1474050-0-trade",
+    "en": "trade",
+    "en_pos": "noun",
+    "en_sense": "trade; buying and selling; trafficking (e.g. of humans, arms, drugs); dealing",
+    "ja": "売買",
+    "ja_reading": "ばいばい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "trade",
+     "buying and selling",
+     "trafficking (e.g. of humans, arms, drugs)",
+     "dealing"
+    ],
+    "vi": "mua bán"
+   },
+   "output": {
+    "id": "jm-1474050-0-trade",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, with the Japanese and Vietnamese being direct calques of each other ('sell-buy' vs 'buy-sell')."
+   }
+  },
+  {
+   "key": "e96d9b6c2d45892aaa88869981da89defde8a265b57581cdb4ca76d7cf25d5c7",
+   "input": {
+    "id": "jm-1474110-0-compensation",
+    "en": "compensation",
+    "en_pos": "noun",
+    "en_sense": "compensation; reparations; indemnity; damages",
+    "ja": "賠償",
+    "ja_reading": "ばいしょう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "compensation",
+     "reparations",
+     "indemnity",
+     "damages"
+    ],
+    "vi": "bồi thường"
+   },
+   "output": {
+    "id": "jm-1474110-0-compensation",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'bồi thường' is a verb ('to compensate'), not a noun like English 'compensation' and Japanese '賠償'."
+   }
+  },
+  {
+   "key": "c028a1f4f641907771534319b12459b9da79bc15a28f079fc31b4d15df930a89",
+   "input": {
+    "id": "jm-1474620-0-expert",
+    "en": "expert",
+    "en_pos": "noun",
+    "en_sense": "expert; learned person",
+    "ja": "博士",
+    "ja_reading": "はかせ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "expert",
+     "learned person"
+    ],
+    "vi": "chuyên gia"
+   },
+   "output": {
+    "id": "jm-1474620-0-expert",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '博士' (hakase) primarily means 'Ph.D.' in modern usage; using it for the general sense of 'expert' is archaic and misleading."
+   }
+  },
+  {
+   "key": "7926070de07520701b487b191d1985ff0ed0e868991e50aa9964476aa1499c6e",
+   "input": {
+    "id": "jm-1475720-0-approach",
+    "en": "approach",
+    "en_pos": "verb",
+    "en_sense": "to approach; to draw near; to be imminent",
+    "ja": "迫る",
+    "ja_reading": "せまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to approach",
+     "to draw near",
+     "to be imminent"
+    ],
+    "vi": "tiếp cận"
+   },
+   "output": {
+    "id": "jm-1475720-0-approach",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are good equivalents for 'to approach' or 'to draw near', covering both physical and temporal proximity."
+   }
+  }
+ ]
+}

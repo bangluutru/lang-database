@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:31:38Z",
+ "items": [
+  {
+   "key": "ebfa6ea87609bd8c550efb829579fc067d5dde214af1f71b5c239e2d9191d401",
+   "input": {
+    "id": "jm-1253190-0-receive",
+    "en": "receive",
+    "en_pos": "verb",
+    "en_sense": "to go out to meet; to receive; to welcome; to greet; to salute; to hail",
+    "ja": "迎える",
+    "ja_reading": "むかえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to go out to meet",
+     "to receive",
+     "to welcome",
+     "to greet",
+     "to salute",
+     "to hail"
+    ],
+    "vi": "đón tiếp"
+   },
+   "output": {
+    "id": "jm-1253190-0-receive",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for the sense of welcoming or receiving a person."
+   }
+  },
+  {
+   "key": "dcf8a707dee8a96fafcfc225ccd47b217551d722fd1bf9a6ef9b9f91eca628a3",
+   "input": {
+    "id": "jm-1254130-0-ever",
+    "en": "ever",
+    "en_pos": "adverb",
+    "en_sense": "(not) ever; (not) by any means; (not) in the least; (not) in any way; (not) at all",
+    "ja": "決して",
+    "ja_reading": "けっして",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) ever",
+     "(not) by any means",
+     "(not) in the least",
+     "(not) in any way",
+     "(not) at all"
+    ],
+    "vi": "tuyệt đối không"
+   },
+   "output": {
+    "id": "jm-1254130-0-ever",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three expressions are excellent matches for the sense of 'never' or 'by no means' in negative contexts."
+   }
+  },
+  {
+   "key": "f49980e020a7bb8efc274124c2eb66fe12e11a8fab962a991311d518b405289b",
+   "input": {
+    "id": "jm-1254240-0-resolution",
+    "en": "resolution",
+    "en_pos": "noun",
+    "en_sense": "resolution; vote; decision",
+    "ja": "決議",
+    "ja_reading": "けつぎ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "resolution",
+     "vote",
+     "decision"
+    ],
+    "vi": "nghị quyết"
+   },
+   "output": {
+    "id": "jm-1254240-0-resolution",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are precise and standard equivalents for a formal resolution by a committee or assembly."
+   }
+  },
+  {
+   "key": "427be1e3c7fa546726d15365048eaef22d5faed7fe71e84054408f52bf2d7341",
+   "input": {
+    "id": "jm-1254370-0-decision",
+    "en": "decision",
+    "en_pos": "noun",
+    "en_sense": "decision; determination",
+    "ja": "決断",
+    "ja_reading": "けつだん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "decision",
+     "determination"
+    ],
+    "vi": "quyết định"
+   },
+   "output": {
+    "id": "jm-1254370-0-decision",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'quyết định' is a general term for 'decision', while the English sense and Japanese '決断' imply a more specific, firm, and determined decision."
+   }
+  },
+  {
+   "key": "3a62043fa84a10f20f1f09169a2bfca40c3776550bf73993c4f74af03a8c0c13",
+   "input": {
+    "id": "jm-1254630-0-connection",
+    "en": "connection",
+    "en_pos": "noun",
+    "en_sense": "connection; relation",
+    "ja": "結び付き",
+    "ja_reading": "むすびつき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "connection",
+     "relation"
+    ],
+    "vi": "kết nối"
+   },
+   "output": {
+    "id": "jm-1254630-0-connection",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'kết nối' is primarily used for technical connections (e.g., internet) and is unnatural for the general sense of social or abstract relations, where 'mối liên hệ' or 'sự gắn kết' would be better."
+   }
+  },
+  {
+   "key": "5e940233c4c144c73163ba1fc9d02ef65af193e8ac5226096c9b428699acb0c5",
+   "input": {
+    "id": "jm-1254650-0-tie",
+    "en": "tie",
+    "en_pos": "verb",
+    "en_sense": "to tie (to); to fasten; to attach; to join; to bind",
+    "ja": "結び付ける",
+    "ja_reading": "むすびつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to tie (to)",
+     "to fasten",
+     "to attach",
+     "to join",
+     "to bind"
+    ],
+    "vi": "buộc"
+   },
+   "output": {
+    "id": "jm-1254650-0-tie",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and natural equivalents for the act of tying or fastening."
+   }
+  },
+  {
+   "key": "6b5ebce9134d6d2959bed950f14fc732d6f781da65e2d5bb6a70475e77322208",
+   "input": {
+    "id": "jm-1254930-0-union",
+    "en": "union",
+    "en_pos": "noun",
+    "en_sense": "union; unity; solidarity",
+    "ja": "結束",
+    "ja_reading": "けっそく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "union",
+     "unity",
+     "solidarity"
+    ],
+    "vi": "đoàn kết"
+   },
+   "output": {
+    "id": "jm-1254930-0-union",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for the concept of unity and solidarity."
+   }
+  },
+  {
+   "key": "2ac70bee38c19e47f80852974394f01e7172a1f5f47aed778d5b4d70045ec912",
+   "input": {
+    "id": "jm-1255780-0-time",
+    "en": "time",
+    "en_pos": "noun",
+    "en_sense": "time; years; days; (one's) life",
+    "ja": "月日",
+    "ja_reading": "つきひ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "time",
+     "years",
+     "days",
+     "(one's) life"
+    ],
+    "vi": "thời gian"
+   },
+   "output": {
+    "id": "jm-1255780-0-time",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thời gian' is the general word for 'time', while the English sense and Japanese '月日' refer more specifically and poetically to the passage of days and years."
+   }
+  },
+  {
+   "key": "dc4a826bba39815d1f39251311795c5d570d71d00216365b4d043440968fa34b",
+   "input": {
+    "id": "jm-1255880-0-monday",
+    "en": "monday",
+    "en_pos": "noun",
+    "en_sense": "Monday",
+    "ja": "月曜",
+    "ja_reading": "げつよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Monday"
+    ],
+    "vi": "thứ hai"
+   },
+   "output": {
+    "id": "jm-1255880-0-monday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural ways to refer to Monday; '月曜' is a very common abbreviation."
+   }
+  },
+  {
+   "key": "1ec8a01e8c613ed152cd3e4dc41d82b9fa4833ea2cd31ac6c8b827d719a8f112",
+   "input": {
+    "id": "jm-1255890-0-monday",
+    "en": "monday",
+    "en_pos": "noun",
+    "en_sense": "Monday",
+    "ja": "月曜日",
+    "ja_reading": "げつようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Monday"
+    ],
+    "vi": "thứ hai"
+   },
+   "output": {
+    "id": "jm-1255890-0-monday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the canonical, standard words for Monday."
+   }
+  },
+  {
+   "key": "785ec1f0da98d83ceacbadd5042b2f5b7ddcd05af5ae44c464ab5c332d76f92e",
+   "input": {
+    "id": "jm-1256720-0-combination",
+    "en": "combination",
+    "en_pos": "noun",
+    "en_sense": "multi-use; combined use; combination; serving two purposes",
+    "ja": "兼用",
+    "ja_reading": "けんよう",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "multi-use",
+     "combined use",
+     "combination",
+     "serving two purposes"
+    ],
+    "vi": "đa năng"
+   },
+   "output": {
+    "id": "jm-1256720-0-combination",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "While the meanings align perfectly, the parts of speech do not. English 'combination' is a noun, while Vietnamese 'đa năng' is an adjective, which can cause grammatical errors for learners."
+   }
+  },
+  {
+   "key": "a2b461adfa031805a28abb6449cb0ba2311bfed1116e6981fb73fb2906db68b2",
+   "input": {
+    "id": "jm-1257500-0-construction",
+    "en": "construction",
+    "en_pos": "noun",
+    "en_sense": "construction; architecture (of buildings)",
+    "ja": "建築",
+    "ja_reading": "けんちく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "construction",
+     "architecture (of buildings)"
+    ],
+    "vi": "kiến trúc"
+   },
+   "output": {
+    "id": "jm-1257500-0-construction",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'kiến trúc' only means 'architecture' (the design), not 'construction' (the physical act of building), whereas the English sense and the Japanese '建築' cover both."
+   }
+  }
+ ]
+}

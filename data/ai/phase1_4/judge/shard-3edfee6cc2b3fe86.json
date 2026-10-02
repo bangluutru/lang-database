@@ -1,0 +1,381 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:53:38Z",
+ "items": [
+  {
+   "key": "4a22e4ce9a4578fe49e8aefc9788e7e34a1d5969632d1eb7db85206e5ee95574",
+   "input": {
+    "id": "wk-6069-s1",
+    "en": "source",
+    "en_pos": "noun",
+    "en_sense": "Spring; fountainhead; wellhead; any collection of water on or under the surface of the ground in which a stream originates.",
+    "ja": "源泉",
+    "ja_reading": "げんせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "source (of a spring, etc.)"
+    ],
+    "vi": "nguồn"
+   },
+   "output": {
+    "id": "wk-6069-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese `nguồn` is too general, meaning \"source\" of anything; `源泉` is a perfect match for the specific sense of a water source."
+   }
+  },
+  {
+   "key": "4ee36dcc4786bda964394ab2e61b66787860641d8da04d9b6a2807c656bab61c",
+   "input": {
+    "id": "wk-6073-e:f47628",
+    "en": "intestine",
+    "en_pos": "noun",
+    "en_sense": "alimentary canal",
+    "ja": "腸",
+    "ja_reading": "ちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intestine",
+     "bowel"
+    ],
+    "vi": "ruột"
+   },
+   "output": {
+    "id": "wk-6073-e:f47628",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for \"intestine\"."
+   }
+  },
+  {
+   "key": "8a4350e372cfd36414c4f5ebb4a5a53d2ceed725fbc2360cf83e4d3e2f65976c",
+   "input": {
+    "id": "wk-6074-s0",
+    "en": "geography",
+    "en_pos": "noun",
+    "en_sense": "The study of the physical properties of the earth, including how humans affect and are affected by them.",
+    "ja": "地理学",
+    "ja_reading": "ちりがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "geography"
+    ],
+    "vi": "địa lý học"
+   },
+   "output": {
+    "id": "wk-6074-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly and specifically denote the academic discipline of geography."
+   }
+  },
+  {
+   "key": "988b70f4b5263b4b3fb61d8d51b551e905b474e33264b9b6d71f947fab640053",
+   "input": {
+    "id": "wk-6078-e:77c04e",
+    "en": "battery",
+    "en_pos": "noun",
+    "en_sense": "device storing electricity",
+    "ja": "電池",
+    "ja_reading": "でんち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "battery",
+     "cell"
+    ],
+    "vi": "pin"
+   },
+   "output": {
+    "id": "wk-6078-e:77c04e",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Both `電池` and `pin` refer specifically to smaller, portable batteries/cells and do not cover larger types like car batteries."
+   }
+  },
+  {
+   "key": "00dd53fa368dbbb63bb65861ab90db58c53b342a57b5c10b99b243dd9c5a94c5",
+   "input": {
+    "id": "wk-6079-s0",
+    "en": "gig",
+    "en_pos": "noun",
+    "en_sense": "Originally (music), a performing engagement by a musician or musical group; (by extension, film, television, theater) a job or role for a performer.",
+    "ja": "ギグ",
+    "ja_reading": "ギグ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gig"
+    ],
+    "vi": "biểu diễn"
+   },
+   "output": {
+    "id": "wk-6079-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese `biểu diễn` means \"(a) performance\" or \"to perform\" and is much broader and more neutral than the colloquial English \"gig\" (a paid engagement)."
+   }
+  },
+  {
+   "key": "f3fff19c6c539f86d5f17ea8dbfc2d30ff998c7ec2ebdd7dab121d2e744f5835",
+   "input": {
+    "id": "wk-6080-s1",
+    "en": "infertility",
+    "en_pos": "noun",
+    "en_sense": "The inability to conceive children.",
+    "ja": "不妊",
+    "ja_reading": "ふにん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "infertility",
+     "sterility",
+     "barrenness"
+    ],
+    "vi": "vô sinh"
+   },
+   "output": {
+    "id": "wk-6080-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for \"infertility\"."
+   }
+  },
+  {
+   "key": "da9b06d26fcbecd0e2fcdf04fc848d4ef2e3911c850a837f791afa955855f2c9",
+   "input": {
+    "id": "wk-6085-s0",
+    "en": "destroy",
+    "en_pos": "verb",
+    "en_sense": "To damage beyond use or repair; to damage (something) to the point that it effectively ceases to exist.",
+    "ja": "壊す",
+    "ja_reading": "こわす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to break",
+     "to destroy",
+     "to demolish"
+    ],
+    "vi": "phá huỷ"
+   },
+   "output": {
+    "id": "wk-6085-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are common and appropriate equivalents for \"destroy\"."
+   }
+  },
+  {
+   "key": "fa36cc30384c1bf8e63b2e3f7877be6d9fb5658e3ac9b77af1c4d088993c913f",
+   "input": {
+    "id": "wk-6089-e:673956",
+    "en": "gel",
+    "en_pos": "noun",
+    "en_sense": "suspension of solid in liquid",
+    "ja": "ゲル",
+    "ja_reading": "ゲル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gel"
+    ],
+    "vi": "keo"
+   },
+   "output": {
+    "id": "wk-6089-e:673956",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `keo` means \"glue\" or \"adhesive\", not \"gel\". This is a false friend."
+   }
+  },
+  {
+   "key": "d5a0fee88c2d233eed87697aa0693fe86055b40e16759a3fc36fbe6c3aca2d5f",
+   "input": {
+    "id": "wk-609-s0",
+    "en": "abuse",
+    "en_pos": "verb",
+    "en_sense": "To put to a wrong use; to misapply; to use improperly; to use for a wrong purpose or end; to pervert",
+    "ja": "濫用する",
+    "ja_reading": "らんようする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "abuse",
+     "misuse",
+     "misappropriation",
+     "using to excess"
+    ],
+    "vi": "lạm dụng"
+   },
+   "output": {
+    "id": "wk-609-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of \"misuse\" or \"improper use\"."
+   }
+  },
+  {
+   "key": "3b42dbc706e1bf1d6e4718074867014e5ff97cd6e5fc97d6110088b58e767524",
+   "input": {
+    "id": "wk-6092-s0",
+    "en": "sleeve",
+    "en_pos": "noun",
+    "en_sense": "The part of a garment that covers the arm.",
+    "ja": "袖",
+    "ja_reading": "そで",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sleeve"
+    ],
+    "vi": "tay áo"
+   },
+   "output": {
+    "id": "wk-6092-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for \"sleeve\"."
+   }
+  },
+  {
+   "key": "d4436d9465c4635cd04c064633aaaa8b5d2966810747619e21bbbbf764d22d83",
+   "input": {
+    "id": "wk-6101-e:747a8f",
+    "en": "portal",
+    "en_pos": "noun",
+    "en_sense": "website",
+    "ja": "ポータル",
+    "ja_reading": "ポータル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "portal"
+    ],
+    "vi": "cổng"
+   },
+   "output": {
+    "id": "wk-6101-e:747a8f",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese `cổng` means \"gate\" and is not used by itself to mean a portal website; the full term is `cổng thông tin`."
+   }
+  },
+  {
+   "key": "4991ebeba367d970f22a0753bc48eb41473cf366eebe03616f03757bfc9bd762",
+   "input": {
+    "id": "wk-6103-s0",
+    "en": "jelly",
+    "en_pos": "noun",
+    "en_sense": "A dessert made by boiling gelatine (or a plant-based alternative such as agar or carrageenan), sugar and some flavouring (often derived from fruit) and allowing it to set.",
+    "ja": "ゼリー",
+    "ja_reading": "ゼリー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jello",
+     "jelly",
+     "gelatin dessert"
+    ],
+    "vi": "thạch"
+   },
+   "output": {
+    "id": "wk-6103-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a gelatin-based dessert."
+   }
+  }
+ ]
+}

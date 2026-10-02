@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:49:42Z",
+ "items": [
+  {
+   "key": "7ff43b33a3fcd9dc38f6451541fc3424b9bc53795924db88d421071c19b9af8c",
+   "input": {
+    "id": "jm-1553820-0-change",
+    "en": "change",
+    "en_pos": "noun",
+    "en_sense": "change; money exchange",
+    "ja": "両替",
+    "ja_reading": "りょうがえ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "change",
+     "money exchange"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1553820-0-change",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Both terms are the standard, specific words for money exchange."
+   }
+  },
+  {
+   "key": "7cbbfe8fe50331cdb2d06b70f34d83ed47878a9109c9cffc73cd5c8e0c321c36",
+   "input": {
+    "id": "jm-1554270-0-fee",
+    "en": "fee",
+    "en_pos": "noun",
+    "en_sense": "fee; charge; rate",
+    "ja": "料",
+    "ja_reading": "りょう",
+    "ja_pos": "n-suf,n",
+    "ja_glosses": [
+     "fee",
+     "charge",
+     "rate"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1554270-0-fee",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "料 is almost always used as a suffix (e.g., 手数料) to mean 'fee'; as a standalone noun, 料金 is the common word."
+   }
+  },
+  {
+   "key": "97d53bf3368e640fe6583b25fcd61c2f9d547dd5d5c565784f034eb8a93b65ac",
+   "input": {
+    "id": "jm-1554550-0-good",
+    "en": "good",
+    "en_pos": "adjective",
+    "en_sense": "good; fine; excellent; favorable; favourable; satisfactory",
+    "ja": "良好",
+    "ja_reading": "りょうこう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "good",
+     "fine",
+     "excellent",
+     "favorable",
+     "favourable",
+     "satisfactory"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1554550-0-good",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "良好 is a formal and context-specific word for 'good' (e.g., results, condition), not a general equivalent like 良い (yoi)."
+   }
+  },
+  {
+   "key": "65f859a8c26f7ea58b6259605c1c109153f4b00f53854a16643bd13d3b5d3c17",
+   "input": {
+    "id": "jm-1554750-0-receipt",
+    "en": "receipt",
+    "en_pos": "noun",
+    "en_sense": "receipt (of money); receiving",
+    "ja": "領収",
+    "ja_reading": "りょうしゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "receipt (of money)",
+     "receiving"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1554750-0-receipt",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Both terms correctly refer to the act of receiving money, not the document (which is 領収書)."
+   }
+  },
+  {
+   "key": "586bedb52a49250c119097bd64b2d9a44cc2b71fe2abef5ca2c312b7139d3c8b",
+   "input": {
+    "id": "jm-1554780-0-territory",
+    "en": "territory",
+    "en_pos": "noun",
+    "en_sense": "territory; dominion; grounds (e.g. school)",
+    "ja": "領地",
+    "ja_reading": "りょうち",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "territory",
+     "dominion",
+     "grounds (e.g. school)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1554780-0-territory",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "領地 specifically means a feudal territory or fief, not a country's territory (領土) or school grounds (校庭)."
+   }
+  },
+  {
+   "key": "90b8cd7d56b6fd7c3770e25c2218ae533c9c38f4fc358b594f47b67b758b8b4c",
+   "input": {
+    "id": "jm-1554940-0-powerful",
+    "en": "powerful",
+    "en_pos": "adjective",
+    "en_sense": "powerful; strong; forceful; vigorous",
+    "ja": "力強い",
+    "ja_reading": "ちからづよい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "powerful",
+     "strong",
+     "forceful",
+     "vigorous"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1554940-0-powerful",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "力強い is an excellent and common equivalent for 'powerful' in the sense of being strong, forceful, and vigorous."
+   }
+  },
+  {
+   "key": "b326ca9eb4cf5306c2fb471a56e65d6df439a6231af6883b1042cde2438b83b8",
+   "input": {
+    "id": "jm-1555300-0-green",
+    "en": "green",
+    "en_pos": "noun",
+    "en_sense": "green",
+    "ja": "緑",
+    "ja_reading": "みどり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "green"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1555300-0-green",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for the color green as a noun."
+   }
+  },
+  {
+   "key": "5273568ee7eee0ecd43fb8abeb63e70f656fc5d5a2cddf1c7b1ffd915a7c9fce",
+   "input": {
+    "id": "jm-1555390-0-ethics",
+    "en": "ethics",
+    "en_pos": "noun",
+    "en_sense": "ethics; morals",
+    "ja": "倫理",
+    "ja_reading": "りんり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ethics",
+     "morals"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1555390-0-ethics",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "倫理 is the standard and correct Japanese equivalent for the concept of 'ethics'."
+   }
+  },
+  {
+   "key": "0b9028a9f99967bd5c79004be0918e92cfe3bc61c7f606544bf1edc1b29842ad",
+   "input": {
+    "id": "jm-1555560-0-overlook",
+    "en": "overlook",
+    "en_pos": "verb",
+    "en_sense": "to look out on; to overlook; to front onto",
+    "ja": "臨む",
+    "ja_reading": "のぞむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to look out on",
+     "to overlook",
+     "to front onto"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1555560-0-overlook",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "臨む is a perfect match for the specific sense of 'overlook' meaning 'to look out on'."
+   }
+  },
+  {
+   "key": "aad4af7780bd205b3fc704a75f5540cc1b43b74814b707b0508c26d185045aef",
+   "input": {
+    "id": "jm-1555830-0-next",
+    "en": "next",
+    "en_pos": "adjective",
+    "en_sense": "next (to); adjoining; adjacent",
+    "ja": "隣",
+    "ja_reading": "となり",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "next (to)",
+     "adjoining",
+     "adjacent"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1555830-0-next",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "隣 is the standard and most common word for 'next to' or 'adjoining'."
+   }
+  },
+  {
+   "key": "7212a5526afe31d8ab06fb4766e940e70e2073cc9914146ab353aba7bf50f699",
+   "input": {
+    "id": "jm-1556100-0-similarity",
+    "en": "similarity",
+    "en_pos": "noun",
+    "en_sense": "resemblance; similarity; likeness; analogy",
+    "ja": "類似",
+    "ja_reading": "るいじ",
+    "ja_pos": "n,vs,vi,adj-no",
+    "ja_glosses": [
+     "resemblance",
+     "similarity",
+     "likeness",
+     "analogy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1556100-0-similarity",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "類似 is a standard and accurate translation for 'similarity'."
+   }
+  },
+  {
+   "key": "8b928194083ea297f441cccc0ac3aaa14d39b8dbaac83007478252e196db2e79",
+   "input": {
+    "id": "jm-1556630-0-cool_down",
+    "en": "cool down",
+    "en_pos": "verb",
+    "en_sense": "to grow cold; to get chilly; to cool down",
+    "ja": "冷える",
+    "ja_reading": "ひえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to grow cold",
+     "to get chilly",
+     "to cool down"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1556630-0-cool_down",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "冷える is the perfect intransitive verb equivalent for 'to cool down' or 'to get cold'."
+   }
+  }
+ ]
+}

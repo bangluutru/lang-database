@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:50:29Z",
+ "items": [
+  {
+   "key": "0a0aeab09316f1dd2b142d94997b712f9949ca834089d2249d4722b8bc8f9bb0",
+   "input": {
+    "id": "jm-1582470-2-around",
+    "en": "around",
+    "en_pos": "noun",
+    "en_sense": "around; about; approximately",
+    "ja": "内外",
+    "ja_reading": "ないがい",
+    "ja_pos": "n-suf",
+    "ja_glosses": [
+     "around",
+     "about",
+     "approximately"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1582470-2-around",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English POS is incorrectly listed as 'noun' for this sense, and the Japanese word is a suffix (n-suf), not a standalone adverb like 'around'."
+   }
+  },
+  {
+   "key": "8b089e217099594cac488aaef69e1b7c5a6a047431ca758b62420fe18fec5a8e",
+   "input": {
+    "id": "jm-1582640-0-difficult",
+    "en": "difficult",
+    "en_pos": "adjective",
+    "en_sense": "difficult; hard",
+    "ja": "難い",
+    "ja_reading": "かたい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "difficult",
+     "hard"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1582640-0-difficult",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "難い (かたい) is only used as a suffix to verb stems (e.g., 信じ難い) and is not a standalone equivalent for 'difficult'; 難しい (muzukashii) is the correct general term."
+   }
+  },
+  {
+   "key": "f55aa336cda081f0281b2cc8ffdcceb04b42c629fdb880e2f30c3507a62f1135",
+   "input": {
+    "id": "jm-1582710-0-japan",
+    "en": "japan",
+    "en_pos": "noun",
+    "en_sense": "Japan",
+    "ja": "日本",
+    "ja_reading": "にほん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Japan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1582710-0-japan",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match."
+   }
+  },
+  {
+   "key": "94d64818b0f6f6472c49ad1892c3df41da828da42bb90e50eba1b5877e6adcc5",
+   "input": {
+    "id": "jm-1583095-0-eight",
+    "en": "eight",
+    "en_pos": "numeral",
+    "en_sense": "eight",
+    "ja": "八つ",
+    "ja_reading": "やっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "eight"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1583095-0-eight",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "八つ is the standard native Japanese counter for eight general items."
+   }
+  },
+  {
+   "key": "81729d4d603ff9fddd05205d97a8ba48fe90cbe06be883c1dc184ee3abfa12db",
+   "input": {
+    "id": "jm-1583470-0-article",
+    "en": "article",
+    "en_pos": "noun",
+    "en_sense": "article; item; thing; goods; stock",
+    "ja": "品",
+    "ja_reading": "しな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "article",
+     "item",
+     "thing",
+     "goods",
+     "stock"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1583470-0-article",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "品 (しな) is a good equivalent for the sense of an article as an item of merchandise or goods."
+   }
+  },
+  {
+   "key": "cd4b672765669bd71bf606b6fa492654c24d60b28b116f1627da8c25cdb68a1a",
+   "input": {
+    "id": "jm-1583720-0-cold",
+    "en": "cold",
+    "en_pos": "noun",
+    "en_sense": "(common) cold; influenza; flu; ague; inflammatory respiratory system illness (in general)",
+    "ja": "風邪",
+    "ja_reading": "かぜ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(common) cold",
+     "influenza",
+     "flu",
+     "ague",
+     "inflammatory respiratory system illness (in general)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1583720-0-cold",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "風邪 (かぜ) is the standard and natural equivalent for the common cold."
+   }
+  },
+  {
+   "key": "2822c0116a90139ece7a30dab7ed13f1db4ac3e2727514d6303f248f8326cdae",
+   "input": {
+    "id": "jm-1584090-0-embrace",
+    "en": "embrace",
+    "en_pos": "verb",
+    "en_sense": "to hold in one's arms (e.g. a baby); to embrace; to hug",
+    "ja": "抱く",
+    "ja_reading": "いだく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to hold in one's arms (e.g. a baby)",
+     "to embrace",
+     "to hug"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584090-0-embrace",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The reading いだく (idaku) is for the metaphorical sense (e.g., 'to harbor a dream'), while the physical sense 'to hug' is read だく (daku)."
+   }
+  },
+  {
+   "key": "c6cb1a85a830dde82c65ade13caaeee84f2e97e42db334fc568f02914f5aa521",
+   "input": {
+    "id": "jm-1584100-0-people",
+    "en": "people",
+    "en_pos": "noun",
+    "en_sense": "people; (all) persons; everyone; ladies and gentlemen",
+    "ja": "方々",
+    "ja_reading": "かたがた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "people",
+     "(all) persons",
+     "everyone",
+     "ladies and gentlemen"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584100-0-people",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "方々 (かたがた) is a good equivalent for the polite/honorific sense of 'people' (e.g., 'ladies and gentlemen')."
+   }
+  },
+  {
+   "key": "6ddf4f95c5fd5a7611753110dbf528e33dc8bed7fd0c01cfb1f7a5796e96a873",
+   "input": {
+    "id": "jm-1584105-0-here_and_there",
+    "en": "here and there",
+    "en_pos": "adverb",
+    "en_sense": "here and there; this way and that way; everywhere; all over",
+    "ja": "方々",
+    "ja_reading": "ほうぼう",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "here and there",
+     "this way and that way",
+     "everywhere",
+     "all over"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584105-0-here_and_there",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "方々 (ほうぼう) is a perfect match for 'here and there'."
+   }
+  },
+  {
+   "key": "93cced7a437001638a0d7b8597dd1dfaeb4b70028c7c13731e1a8035d866df86",
+   "input": {
+    "id": "jm-1584160-0-cheek",
+    "en": "cheek",
+    "en_pos": "noun",
+    "en_sense": "cheek (of the face)",
+    "ja": "頬",
+    "ja_reading": "ほお",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cheek (of the face)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584160-0-cheek",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match."
+   }
+  },
+  {
+   "key": "e02a157b191bbb01239711da9fd5756468644530a57dfdc4877fd3a63fd0194f",
+   "input": {
+    "id": "jm-1584250-0-farm",
+    "en": "farm",
+    "en_pos": "noun",
+    "en_sense": "farm (livestock); stock farm; ranch; station",
+    "ja": "牧場",
+    "ja_reading": "ぼくじょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "farm (livestock)",
+     "stock farm",
+     "ranch",
+     "station"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584250-0-farm",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "牧場 (ぼくじょう) is a perfect match for the specific sense of a livestock farm or ranch."
+   }
+  },
+  {
+   "key": "29e2494aca4449ab997fce0358b6bf557243b5ee4eae0d72baa3f04f5e6a94f1",
+   "input": {
+    "id": "jm-1584500-0-everybody",
+    "en": "everybody",
+    "en_pos": "noun",
+    "en_sense": "all people; everybody",
+    "ja": "万人",
+    "ja_reading": "ばんにん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "all people",
+     "everybody"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1584500-0-everybody",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "万人 (ばんにん) is a correct but somewhat formal/literary equivalent; みんな (minna) is the more common, everyday word for 'everybody'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:10:07Z",
+ "items": [
+  {
+   "key": "bc9325765ab27f049ea77543d7e7da688b7da5f33cab155698bb949c4e195d08",
+   "input": {
+    "id": "wk-2612-s0",
+    "en": "thought",
+    "en_pos": "noun",
+    "en_sense": "A representation created in the mind without the use of one's faculties of vision, sound, smell, touch, or taste; an instance of thinking.",
+    "ja": "思考",
+    "ja_reading": "しこう",
+    "ja_pos": "n,vs,vt,vi,adj-no",
+    "ja_glosses": [
+     "thought",
+     "consideration",
+     "thinking"
+    ],
+    "vi": "tư duy"
+   },
+   "output": {
+    "id": "wk-2612-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately denote the process or faculty of thinking, matching the formal definition provided."
+   }
+  },
+  {
+   "key": "c43955c3c7a1999b3b9d158f56cf0932899d5665e966f2e6df94057b4e1e0bd2",
+   "input": {
+    "id": "wk-26386-s0",
+    "en": "flat tyre",
+    "en_pos": "noun",
+    "en_sense": "A tyre of a motor vehicle that is deflated, especially one deflated because of a puncture when in use.",
+    "ja": "パンク",
+    "ja_reading": "パンク",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "puncture",
+     "flat tyre (tire)",
+     "blowout"
+    ],
+    "vi": "bánh xe xẹp"
+   },
+   "output": {
+    "id": "wk-26386-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard, natural terms for a flat tyre."
+   }
+  },
+  {
+   "key": "e39aa3eb42fa4f5d1208442b56bed2185656c8026d395c6656e18a3c1c004ad4",
+   "input": {
+    "id": "wk-26520-s0",
+    "en": "matchmaking",
+    "en_pos": "noun",
+    "en_sense": "An attempt to make two people romantically interested in each other, especially an attempt to set up a date between people or to arrange a marriage.",
+    "ja": "媒酌",
+    "ja_reading": "ばいしゃく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "matchmaking",
+     "acting as a go-between"
+    ],
+    "vi": "làm mối"
+   },
+   "output": {
+    "id": "wk-26520-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese term `媒酌` is too specific, referring to the formal go-between at a wedding, not general matchmaking as in English and Vietnamese."
+   }
+  },
+  {
+   "key": "4a514fca67f7513e49c6965799c0456360699a2253059c9a3c6b1564c7aa0639",
+   "input": {
+    "id": "wk-2731-s0",
+    "en": "control",
+    "en_pos": "noun",
+    "en_sense": "An influence or authority over something.",
+    "ja": "支配",
+    "ja_reading": "しはい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "control (of one's destiny, public opinion, etc.)",
+     "governing",
+     "influence",
+     "sway"
+    ],
+    "vi": "kiểm soát"
+   },
+   "output": {
+    "id": "wk-2731-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `支配` implies strong domination or rule, which is a narrower and stronger sense than the general English 'control' or the Vietnamese `kiểm soát`."
+   }
+  },
+  {
+   "key": "512bce4512c89e61c7f94e8fb4a9b3dd5608a6b91633dbb1ea444c10ef35902e",
+   "input": {
+    "id": "wk-2754-s0",
+    "en": "journey",
+    "en_pos": "noun",
+    "en_sense": "A set amount of travelling, seen as a single unit; a discrete trip, a voyage.",
+    "ja": "旅行",
+    "ja_reading": "りょこう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "travel",
+     "trip",
+     "journey",
+     "excursion",
+     "tour"
+    ],
+    "vi": "cuộc hành trình"
+   },
+   "output": {
+    "id": "wk-2754-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `旅行` primarily means 'trip' or 'travel for pleasure', which does not fully cover the broader meaning of 'journey' captured by the Vietnamese `cuộc hành trình`."
+   }
+  },
+  {
+   "key": "00fe023f56b79571226be14c998b9471c46b8e42674e08421a0f1d70126aa9a5",
+   "input": {
+    "id": "wk-2808-s0",
+    "en": "bankruptcy",
+    "en_pos": "noun",
+    "en_sense": "A legally declared or recognized condition of insolvency of a person or organization.",
+    "ja": "破産",
+    "ja_reading": "はさん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "bankruptcy",
+     "insolvency"
+    ],
+    "vi": "phá sản"
+   },
+   "output": {
+    "id": "wk-2808-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise legal and financial equivalents for bankruptcy."
+   }
+  },
+  {
+   "key": "a9f7d9a17d491e360ce759f52ceba6539fb8438885eb432550a96ac3094de9ac",
+   "input": {
+    "id": "wk-28329-s0",
+    "en": "press conference",
+    "en_pos": "noun",
+    "en_sense": "A question-and-answer session with members of television, print and other media.",
+    "ja": "記者会見",
+    "ja_reading": "きしゃかいけん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "press conference",
+     "news conference"
+    ],
+    "vi": "họp báo"
+   },
+   "output": {
+    "id": "wk-28329-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and direct equivalents for a press conference."
+   }
+  },
+  {
+   "key": "c90f0b67449ca9282db881546351afb5eaeabf897ea71bb2b884a22b03a21bf7",
+   "input": {
+    "id": "wk-29640-s0",
+    "en": "filial piety",
+    "en_pos": "noun",
+    "en_sense": "The virtue of showing respect and doing good deeds for one's parents, elders, and ancestors, as understood in Confucian ethics and commonly observed in the Sinosphere.",
+    "ja": "親孝行",
+    "ja_reading": "おやこうこう",
+    "ja_pos": "n,vs,vi,adj-na",
+    "ja_glosses": [
+     "filial piety",
+     "being kind to one's parents",
+     "taking care of one's parents"
+    ],
+    "vi": "hiếu"
+   },
+   "output": {
+    "id": "wk-29640-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese `親孝行` focuses specifically on being good to one's parents, making it narrower than the broader concept of 'filial piety' which includes ancestors and is perfectly captured by the Vietnamese `hiếu`."
+   }
+  },
+  {
+   "key": "4c5eb0bc8c199d687eab75fbd69699b55323296df5ccf938a051c065661105bb",
+   "input": {
+    "id": "wk-29849-s0",
+    "en": "division of labour",
+    "en_pos": "noun",
+    "en_sense": "The separation of work into different categories or tasks, each category or task being carried out by different groups of workers.",
+    "ja": "分業",
+    "ja_reading": "ぶんぎょう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "division of labor",
+     "division of labour",
+     "specialization",
+     "specialisation",
+     "assembly-line production"
+    ],
+    "vi": "phân công lao động"
+   },
+   "output": {
+    "id": "wk-29849-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard economic terms for 'division of labour' and are direct equivalents."
+   }
+  },
+  {
+   "key": "46d6fc2e6b0ace3f96bfb8df48ff72392324ebabc66e770dc4074fca8dba2ae3",
+   "input": {
+    "id": "wk-30988-e:45d821",
+    "en": "printing",
+    "en_pos": "noun",
+    "en_sense": "the process or business of producing printed material — see also typography",
+    "ja": "印刷",
+    "ja_reading": "いんさつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "printing"
+    ],
+    "vi": "in ấn"
+   },
+   "output": {
+    "id": "wk-30988-e:45d821",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for the process or business of printing."
+   }
+  },
+  {
+   "key": "e339ee8a7d317acfcfb779c7f27ebf5adbbbc65466c5df1178049676f794907c",
+   "input": {
+    "id": "wk-3123-s0",
+    "en": "election",
+    "en_pos": "noun",
+    "en_sense": "A process of choosing a leader, members of parliament, councillors, or other representatives by popular vote.",
+    "ja": "選挙",
+    "ja_reading": "せんきょ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "election"
+    ],
+    "vi": "tuyển cử"
+   },
+   "output": {
+    "id": "wk-3123-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese `tuyển cử` is a correct but very formal term for 'election'; the more common and natural word is `bầu cử`."
+   }
+  },
+  {
+   "key": "f96677c31a9795d7611e14645e6a4ef078223e38d0a2251107306c8695cfbb5a",
+   "input": {
+    "id": "wk-3178-s2",
+    "en": "drill",
+    "en_pos": "noun",
+    "en_sense": "An activity done as an exercise or practice (especially a military exercise), particularly in preparation for some possible future event or occurrence.",
+    "ja": "訓練",
+    "ja_reading": "くんれん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "training",
+     "drill",
+     "practice",
+     "discipline"
+    ],
+    "vi": "thực hành"
+   },
+   "output": {
+    "id": "wk-3178-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `thực hành` means 'practice' or 'practical application' and is too broad for the specific sense of 'drill' as a preparatory exercise, unlike the Japanese `訓練`."
+   }
+  }
+ ]
+}

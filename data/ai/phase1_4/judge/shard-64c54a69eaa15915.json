@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:41Z",
+ "items": [
+  {
+   "key": "8a0b58147202c881acf6b8508a33fa0dc9512b7574c8d67539682b208387f47b",
+   "input": {
+    "id": "wk-8574-s1",
+    "en": "seat",
+    "en_pos": "verb",
+    "en_sense": "To provide with a place to sit.",
+    "ja": "座る",
+    "ja_reading": "すわる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to sit (down)",
+     "to have a seat",
+     "to be seated",
+     "to kneel (on the floor)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8574-s1",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "English 'seat' (verb) is transitive ('to cause to sit'), while Japanese '座る' is intransitive ('to sit down')."
+   }
+  },
+  {
+   "key": "9ba19e8d63508e8168647cd16a0756a5618cb283e110c882cce2884bec7e68b3",
+   "input": {
+    "id": "wk-858-s0",
+    "en": "weave",
+    "en_pos": "verb",
+    "en_sense": "To move by turning and twisting.",
+    "ja": "縫う",
+    "ja_reading": "ぬう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to weave one's way (e.g. through a crowd)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-858-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese verb '縫う' (primarily 'to sew') is idiomatically used to mean 'to weave through a crowd', matching the English sense."
+   }
+  },
+  {
+   "key": "637888da1e1a2ff2be8c3540a5059ee19f0ca275ce25685e569d2b89179fc1b7",
+   "input": {
+    "id": "wk-860-s0",
+    "en": "wound",
+    "en_pos": "verb",
+    "en_sense": "To hurt or injure (someone) by cutting, piercing, or tearing the skin.",
+    "ja": "傷付ける",
+    "ja_reading": "きずつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to wound",
+     "to injure"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-860-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of inflicting a physical wound."
+   }
+  },
+  {
+   "key": "60f050b8f6e43f52150cc043edd47f9ce511f586f94daf51e17979e741154d23",
+   "input": {
+    "id": "wk-8602-s0",
+    "en": "froth",
+    "en_pos": "noun",
+    "en_sense": "Foam.",
+    "ja": "泡",
+    "ja_reading": "あわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bubble",
+     "foam",
+     "froth",
+     "suds",
+     "lather",
+     "head (on beer)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8602-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence; '泡' is the standard Japanese word for froth and foam."
+   }
+  },
+  {
+   "key": "e123f2083bc0e3c84f450eaf9a13dd80d8689649127315c623713e16670f38ef",
+   "input": {
+    "id": "wk-8643-s2",
+    "en": "load",
+    "en_pos": "noun",
+    "en_sense": "A certain number of articles or quantity of material that can be transported or processed at one time.",
+    "ja": "積載量",
+    "ja_reading": "せきさいりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(maximum) load",
+     "load capacity",
+     "loading capacity",
+     "carrying capacity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8643-s2",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '積載量' means 'load capacity' or 'maximum load', not a single 'load' of material like 'a load of laundry'."
+   }
+  },
+  {
+   "key": "f45446862a69cf7b4d8c7a0b38dd81a035a54de88276a387537ae5f3be08013d",
+   "input": {
+    "id": "wk-8643-s8",
+    "en": "load",
+    "en_pos": "noun",
+    "en_sense": "The electrical current or power delivered by a device.",
+    "ja": "負荷",
+    "ja_reading": "ふか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "load (electrical, mechanical, etc.)",
+     "stress",
+     "workload"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8643-s8",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the technical sense of 'load' in engineering and physics."
+   }
+  },
+  {
+   "key": "b530b81c92f99bb976cba0ca68624ac797ad5cdc8f4daa8538af78d8f28f0a6e",
+   "input": {
+    "id": "wk-8644-s9",
+    "en": "load",
+    "en_pos": "verb",
+    "en_sense": "To read (data or a program) from a storage medium into computer memory.",
+    "ja": "読み込む",
+    "ja_reading": "よみこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to load (data)",
+     "to read",
+     "to fetch (e.g. a CPU instruction)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8644-s9",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the computing sense of 'load'."
+   }
+  },
+  {
+   "key": "1d07eb759e7ade9c2f48f0ee5ba38a98c9b92b3eb1c82a39e0722c7b4ae22805",
+   "input": {
+    "id": "wk-8647-s0",
+    "en": "pouch",
+    "en_pos": "noun",
+    "en_sense": "A small bag usually closed with a drawstring.",
+    "ja": "袋",
+    "ja_reading": "ふくろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bag",
+     "sack",
+     "pouch"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8647-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '袋' is a general term for 'bag' or 'sack' and is much broader than the English 'pouch'."
+   }
+  },
+  {
+   "key": "bd42401559a8e29824eb716a81137ad73eb83b79a71582953d96a3ec433c1c0e",
+   "input": {
+    "id": "wk-8651-s1",
+    "en": "denial",
+    "en_pos": "noun",
+    "en_sense": "The negation in logic.",
+    "ja": "打ち消し",
+    "ja_reading": "うちけし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "negation",
+     "denial",
+     "negative"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8651-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'打ち消し' is a standard term for negation or denial, fitting the logical/grammatical sense well."
+   }
+  },
+  {
+   "key": "6e78cdfb9bbbc624e6156196dd319d00607ae3e559812c7095d0d9bdecd0b682",
+   "input": {
+    "id": "wk-8667-s0",
+    "en": "serious",
+    "en_pos": "adjective",
+    "en_sense": "Without humor or expression of happiness; grave in manner or disposition.",
+    "ja": "真面目",
+    "ja_reading": "まじめ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "serious",
+     "earnest",
+     "sober",
+     "grave"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8667-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "'真面目' means earnest or diligent, which only partially overlaps with 'serious' (grave, not joking); it's a frequent source of translation errors."
+   }
+  },
+  {
+   "key": "958787eca628e333f4edee4052936b6258c902e2b5efb18fee6d3a259636cb9e",
+   "input": {
+    "id": "wk-8668-s3",
+    "en": "shade",
+    "en_pos": "noun",
+    "en_sense": "A subtle variation in a concept.",
+    "ja": "意味合い",
+    "ja_reading": "いみあい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "implication",
+     "nuance",
+     "shade of meaning",
+     "connotation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8668-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the figurative sense of 'shade' as in 'a shade of meaning'."
+   }
+  },
+  {
+   "key": "a1ce9e20735597575f43523797f9285c8fb5156566bb658f854692eb8806b4de",
+   "input": {
+    "id": "wk-8674-e:9722d2",
+    "en": "contact",
+    "en_pos": "noun",
+    "en_sense": "someone with whom one is in communication",
+    "ja": "連絡先",
+    "ja_reading": "れんらくさき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "contact information (address, phone number, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8674-e:9722d2",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "English 'contact' refers to a person, while Japanese '連絡先' refers to contact information (e.g., phone number, address)."
+   }
+  }
+ ]
+}

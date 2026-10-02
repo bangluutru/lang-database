@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:03Z",
+ "items": [
+  {
+   "key": "3c36c4ab25ee8d5baf94d499e5d6a50eff5767712b0e4d22cf5c2901eae4a01c",
+   "input": {
+    "id": "wk-17075-s0",
+    "en": "completion",
+    "en_pos": "noun",
+    "en_sense": "The act or state of being or making something complete; conclusion, accomplishment.",
+    "ja": "完了",
+    "ja_reading": "ワンラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "completion"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17075-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "完了 is a direct and standard equivalent for completion in the sense of finishing an act or process."
+   }
+  },
+  {
+   "key": "587456d8370b5d41d5f615265c4595cc88348aac282e057d1dc8763a67f7a4a1",
+   "input": {
+    "id": "wk-17098-s0",
+    "en": "detergent",
+    "en_pos": "noun",
+    "en_sense": "Any non-soap cleaning agent, especially a synthetic surfactant.",
+    "ja": "洗剤",
+    "ja_reading": "せんざい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "detergent",
+     "cleanser",
+     "cleaning agent",
+     "washing material"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17098-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "洗剤 is the common word for detergent, but it's a broader term that also includes soap, while the English definition specifies 'non-soap'."
+   }
+  },
+  {
+   "key": "142cbb22b80b42609603248c02f17278247b173bfbc100c966996407227ad64f",
+   "input": {
+    "id": "wk-17110-s1",
+    "en": "polish",
+    "en_pos": "noun",
+    "en_sense": "Cleanliness; smoothness, shininess.",
+    "ja": "艶",
+    "ja_reading": "つや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gloss",
+     "luster",
+     "lustre",
+     "shine",
+     "sheen",
+     "polish"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17110-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "艶 correctly translates the abstract quality of shininess or luster meant by this sense of polish."
+   }
+  },
+  {
+   "key": "7f1bb7cde9ac85afb409783442d02048cc1b47ea8c9bcdc75bab2c971d51b4a8",
+   "input": {
+    "id": "wk-17122-s0",
+    "en": "apple",
+    "en_pos": "noun",
+    "en_sense": "A computer produced by the company Apple Inc.",
+    "ja": "アップル",
+    "ja_reading": "アップル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "apple"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17122-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY"
+    ],
+    "note": "アップル is the name of the company, Apple Inc.; the computer is typically called a Mac (マック)."
+   }
+  },
+  {
+   "key": "f1b29a74f35ed84e48f9a3adb36aa4d4956796cdcf14b4bab5a3795ca114d394",
+   "input": {
+    "id": "wk-1715-s5",
+    "en": "think",
+    "en_pos": "verb",
+    "en_sense": "To guess; to reckon; to believe while admittedly being uncertain.",
+    "ja": "思う",
+    "ja_reading": "おもう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to think",
+     "to consider",
+     "to believe",
+     "to reckon"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1715-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "思う is the standard and most natural equivalent for 'think' in the sense of expressing a belief or opinion."
+   }
+  },
+  {
+   "key": "7712d136162895e959a6b1676964dcb2e52133909111fdfc6fff62e081f96119",
+   "input": {
+    "id": "wk-1718-s1",
+    "en": "breath",
+    "en_pos": "noun",
+    "en_sense": "A single act of breathing in or out; a breathing of air.",
+    "ja": "息",
+    "ja_reading": "いき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "breath",
+     "breathing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1718-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "息 is the direct and standard Japanese equivalent for breath."
+   }
+  },
+  {
+   "key": "a4eb52108ae5927ef8e90b9c729936f4dc3d10c82a7fa05bd5e13875e60da9d3",
+   "input": {
+    "id": "wk-1720-s1",
+    "en": "song",
+    "en_pos": "noun",
+    "en_sense": "Any musical composition.",
+    "ja": "曲",
+    "ja_reading": "きょく",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "composition",
+     "piece of music",
+     "song",
+     "track (on a record)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1720-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "曲 is a perfect match for the given definition of 'song' as 'any musical composition', though 'song' in common English usage often implies vocals."
+   }
+  },
+  {
+   "key": "7ce0e7aa55e87564a55caf537c7c87e8ad5406a8b234bf6ff9e7762269acd988",
+   "input": {
+    "id": "wk-1722-s2",
+    "en": "cry",
+    "en_pos": "verb",
+    "en_sense": "To shout, scream, yell.",
+    "ja": "叫ぶ",
+    "ja_reading": "さけぶ",
+    "ja_pos": "v5b,vi",
+    "ja_glosses": [
+     "to shout",
+     "to cry (out)",
+     "to scream",
+     "to shriek",
+     "to yell",
+     "to exclaim"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1722-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "叫ぶ correctly translates the sense of 'cry' meaning to shout or yell, as distinct from weeping."
+   }
+  },
+  {
+   "key": "d8779ec00e36a05e22c37d33b09cc9feed9b6d06d0c55b8101986fa35eef6c59",
+   "input": {
+    "id": "wk-17246-s1",
+    "en": "china",
+    "en_pos": "noun",
+    "en_sense": "Chinaware: porcelain tableware.",
+    "ja": "磁器",
+    "ja_reading": "じき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "porcelain",
+     "china",
+     "chinaware"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17246-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "磁器 is the correct Japanese word for porcelain, which is the meaning of 'china' in this context."
+   }
+  },
+  {
+   "key": "5e0304d9fef949904f8a3f311f2be318b85dc0cc57fe7ba067c2d3220651bb96",
+   "input": {
+    "id": "wk-17271-s0",
+    "en": "cabin",
+    "en_pos": "noun",
+    "en_sense": "A small dwelling characteristic of the frontier, especially when built from logs with simple tools and not constructed by professional builders, but by those who meant to live in it.",
+    "ja": "小屋",
+    "ja_reading": "こや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hut",
+     "cabin",
+     "shed",
+     "(animal) pen"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17271-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "小屋 is a general term for a hut or shed and is much broader than the specific sense of a frontier log cabin provided."
+   }
+  },
+  {
+   "key": "3c33c464118c2fd84c451f2c7e6b83563af2ac393332b49f165f70a1de2f1ce8",
+   "input": {
+    "id": "wk-1733-s5",
+    "en": "sound",
+    "en_pos": "verb",
+    "en_sense": "To cause to produce a sound.",
+    "ja": "鳴らす",
+    "ja_reading": "ならす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to ring",
+     "to sound",
+     "to chime",
+     "to beat",
+     "to snort (nose)",
+     "to snap (fingers)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1733-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "鳴らす is the correct transitive verb for 'to cause to produce a sound', perfectly matching this sense of 'sound'."
+   }
+  },
+  {
+   "key": "3a0970a0af9ffade84ecbfb7dafdae9b84f6c8ade0a329c1fabac4c6891c9cdf",
+   "input": {
+    "id": "wk-1735-s1",
+    "en": "sound",
+    "en_pos": "verb",
+    "en_sense": "To ascertain, or to try to ascertain, the thoughts, motives, and purposes of (a person); to examine; to try; to test; to probe.",
+    "ja": "探る",
+    "ja_reading": "さぐる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to investigate",
+     "to probe into",
+     "to spy on",
+     "to sound out"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1735-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "探る is an excellent equivalent for the figurative sense of 'sound' meaning to probe or ascertain someone's thoughts."
+   }
+  }
+ ]
+}

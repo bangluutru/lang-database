@@ -1,0 +1,381 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:26:17Z",
+ "items": [
+  {
+   "key": "a76ca3f81e448180a5d628ca7ee35de692ae119845fa43a68c3562f1beda31e5",
+   "input": {
+    "id": "jm-1191740-1-house",
+    "en": "house",
+    "en_pos": "noun",
+    "en_sense": "house",
+    "ja": "うち",
+    "ja_reading": "うち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "house"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1191740-1-house",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese 'うち' is closer to 'home' (the place one lives, one's family) than just 'house' (the physical building), for which '家' (ie) is more specific."
+   }
+  },
+  {
+   "key": "a974f121ea39feaed5b08fc6cf822c04057a227a67c82ba26c3d0512f873d713",
+   "input": {
+    "id": "jm-1191990-0-landlord",
+    "en": "landlord",
+    "en_pos": "noun",
+    "en_sense": "landlord; landlady",
+    "ja": "家主",
+    "ja_reading": "やぬし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "landlord",
+     "landlady"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1191990-0-landlord",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent and direct translation for the owner of a rented property."
+   }
+  },
+  {
+   "key": "d4b7105d4fa1d61a08fb0dfa32543b9e082871b838cb1c9be9ec5538aa557f31",
+   "input": {
+    "id": "jm-1192420-0-wife",
+    "en": "wife",
+    "en_pos": "noun",
+    "en_sense": "(my) wife",
+    "ja": "家内",
+    "ja_reading": "かない",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(my) wife"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1192420-0-wife",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "'家内' is a humble term for one's own wife, carrying a specific register not present in the neutral English 'wife', and can be seen as slightly old-fashioned."
+   }
+  },
+  {
+   "key": "e2b6ee28bcad7751c4efee98ed30505635451d0220abda979b881882f32f2d22",
+   "input": {
+    "id": "jm-1192850-0-accomplish",
+    "en": "accomplish",
+    "en_pos": "verb",
+    "en_sense": "to accomplish; to achieve; to carry out; to fulfill; to fulfil; to realize",
+    "ja": "果たす",
+    "ja_reading": "はたす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to accomplish",
+     "to achieve",
+     "to carry out",
+     "to fulfill",
+     "to fulfil",
+     "to realize"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1192850-0-accomplish",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A very good and common translation for accomplishing or fulfilling a duty, goal, or promise."
+   }
+  },
+  {
+   "key": "d8632ab7502eddcefca923b3f8c3bfa9c117fae9b44215af5f1201d681d58dec",
+   "input": {
+    "id": "jm-1193450-0-song",
+    "en": "song",
+    "en_pos": "noun",
+    "en_sense": "song; ballad",
+    "ja": "歌謡",
+    "ja_reading": "かよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "song",
+     "ballad"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1193450-0-song",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "'歌謡' is a specific term for popular songs or ballads, not the general word for 'song', which is '歌' (uta)."
+   }
+  },
+  {
+   "key": "c5219b7c04208b80bd64cc80eb0fe2280844ea7df8da69e6404b2e70dc6bcda0",
+   "input": {
+    "id": "jm-1194280-0-tuesday",
+    "en": "tuesday",
+    "en_pos": "noun",
+    "en_sense": "Tuesday",
+    "ja": "火曜",
+    "ja_reading": "かよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Tuesday"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1194280-0-tuesday",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'火曜' is the common and natural abbreviation for '火曜日' (Tuesday)."
+   }
+  },
+  {
+   "key": "b11d188e65cb9eb1ba5af21d447d0d5e2cc810e48d8661aef16a4a020b30f2ae",
+   "input": {
+    "id": "jm-1194290-0-tuesday",
+    "en": "tuesday",
+    "en_pos": "noun",
+    "en_sense": "Tuesday",
+    "ja": "火曜日",
+    "ja_reading": "かようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Tuesday"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1194290-0-tuesday",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is the standard, complete word for Tuesday and a perfect equivalent."
+   }
+  },
+  {
+   "key": "9c4e1addbf343e84ffb21c9e5d19ec987990bba33bc58ab45ad1bfab888bca08",
+   "input": {
+    "id": "jm-1194870-0-vase",
+    "en": "vase",
+    "en_pos": "noun",
+    "en_sense": "(flower) vase",
+    "ja": "花瓶",
+    "ja_reading": "かびん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(flower) vase"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1194870-0-vase",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "An excellent and direct translation."
+   }
+  },
+  {
+   "key": "1924974785bc227ce0e7c1e198266d70d6d5ac1d7bacad1de04f290ef31b1131",
+   "input": {
+    "id": "jm-1195710-0-lesson",
+    "en": "lesson",
+    "en_pos": "noun",
+    "en_sense": "lesson",
+    "ja": "課",
+    "ja_reading": "か",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "lesson"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1195710-0-lesson",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "POS_MISMATCH"
+    ],
+    "note": "'課' (ka) only means 'lesson' as a textbook chapter (e.g., Lesson 1: 第一課) and is mainly used as a suffix, not a standalone noun."
+   }
+  },
+  {
+   "key": "f88e7f38918190a60711d6fa8b026941387b2d7b571f89bd5141bedeef09f562",
+   "input": {
+    "id": "jm-1195850-0-course",
+    "en": "course",
+    "en_pos": "noun",
+    "en_sense": "course; curriculum",
+    "ja": "課程",
+    "ja_reading": "かてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "course",
+     "curriculum"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1195850-0-course",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect translation for 'course' in the sense of an academic curriculum or program."
+   }
+  },
+  {
+   "key": "8043b5f33b543308daedea784eff6b4e11b59ab65378c48893a3a9eeb2d00a35",
+   "input": {
+    "id": "jm-1195960-0-past",
+    "en": "past",
+    "en_pos": "noun",
+    "en_sense": "past; after",
+    "ja": "過ぎ",
+    "ja_reading": "すぎ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "past",
+     "after"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1195960-0-past",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "While '過ぎ' (sugi) conveys the meaning of 'past' a time, it functions as a suffix, not a standalone noun, creating a grammatical mismatch."
+   }
+  },
+  {
+   "key": "945e5a55162cea80b59b72e199c96b47815c35bb03f181bde48a0a965d4197f0",
+   "input": {
+    "id": "jm-1196120-0-accident",
+    "en": "accident",
+    "en_pos": "noun",
+    "en_sense": "accident (caused by negligence); error; blunder",
+    "ja": "過失",
+    "ja_reading": "かしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "accident (caused by negligence)",
+     "error",
+     "blunder"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1196120-0-accident",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'過失' is a perfect translation for the specific sense of 'accident' as a fault or act of negligence, but not for a general accident like a car crash."
+   }
+  }
+ ]
+}

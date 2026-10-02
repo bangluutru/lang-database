@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:47Z",
+ "items": [
+  {
+   "key": "dbfe741c02850970bb816dd436036ebf82020f0da7a434cf9ba060881309ef68",
+   "input": {
+    "id": "wk-17892-s0",
+    "en": "reverend",
+    "en_pos": "noun",
+    "en_sense": "A title indicating respect, prefixed to the names of Christian clergy.",
+    "ja": "牧師",
+    "ja_reading": "ぼくし",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "pastor",
+     "minister",
+     "clergyman",
+     "reverend"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17892-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English 'Reverend' is a title prefixed to a name, whereas the Japanese 牧師 (bokushi) is a noun for a specific role (pastor), not the title itself."
+   }
+  },
+  {
+   "key": "ec0013057f200aa84009a812422364e6b3bada8139f7ec9f5493190bb8e32010",
+   "input": {
+    "id": "wk-17898-s0",
+    "en": "take over",
+    "en_pos": "verb",
+    "en_sense": "To assume control of something, such as a business or enterprise, and sometimes by force.",
+    "ja": "引き受ける",
+    "ja_reading": "ひきうける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to take over",
+     "to inherit"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17898-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "引き受ける (hikiukeru) means 'to undertake' or 'accept a task', lacking the 'assume control, possibly by force' nuance of this sense of 'take over'."
+   }
+  },
+  {
+   "key": "d08e22ce15bcbf81bb238f923314478a811160a5727f48bf3854cae772437cfc",
+   "input": {
+    "id": "wk-17904-s0",
+    "en": "drawback",
+    "en_pos": "noun",
+    "en_sense": "A disadvantage; something that detracts or takes away.",
+    "ja": "欠点",
+    "ja_reading": "けってん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fault",
+     "defect",
+     "flaw",
+     "weak point",
+     "weakness",
+     "shortcoming"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17904-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence in meaning and usage between 'drawback' and 欠点 (ketten)."
+   }
+  },
+  {
+   "key": "088e54c676327413b76854ecfa0cdb2a72364ed838d736ff6016569017914f21",
+   "input": {
+    "id": "wk-17939-s0",
+    "en": "talon",
+    "en_pos": "noun",
+    "en_sense": "A sharp, hooked claw of a bird of prey or other predatory animal.",
+    "ja": "爪",
+    "ja_reading": "つめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nail (e.g. fingernail, toenail)",
+     "claw",
+     "talon",
+     "hoof"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17939-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "爪 (tsume) is a general term for 'nail' or 'claw' and is much broader than the specific 'talon' of a bird of prey; 鉤爪 (kagizume) is a more precise equivalent."
+   }
+  },
+  {
+   "key": "297a8ddf0516a5eacf5432a8695e2a17421d988c7e956377d3ce0d8e8598a41a",
+   "input": {
+    "id": "wk-17977-s2",
+    "en": "attain",
+    "en_pos": "verb",
+    "en_sense": "To gain (a desired result or other objective) through effort; to accomplish, to achieve.",
+    "ja": "到る",
+    "ja_reading": "いたる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to arrive at (e.g. a decision)",
+     "to reach (a stage)",
+     "to attain"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17977-s2",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "UNNATURAL_JA"
+    ],
+    "note": "到る (itaru) is an intransitive verb meaning 'to reach', which doesn't capture the transitive, effort-focused meaning of 'attain'; 達成する (tassei suru) is a better equivalent."
+   }
+  },
+  {
+   "key": "a76e29e1daaf76d952473f1d8291624d864b078b8897d578e54b612cca7bce80",
+   "input": {
+    "id": "wk-17993-s3",
+    "en": "revolve",
+    "en_pos": "verb",
+    "en_sense": "To rotate around an axis.",
+    "ja": "回る",
+    "ja_reading": "まわる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to turn",
+     "to rotate",
+     "to revolve",
+     "to spin"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17993-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match; 回る (mawaru) is the standard, natural Japanese equivalent for 'revolve' or 'rotate'."
+   }
+  },
+  {
+   "key": "2fff27589c0dbccf09bd103becc143a1a122a38c0d74306a7fa1e658042d2b34",
+   "input": {
+    "id": "wk-180-s0",
+    "en": "absolutely",
+    "en_pos": "adverb",
+    "en_sense": "In an absolute or unconditional manner; utterly, positively, wholly.",
+    "ja": "絶対に",
+    "ja_reading": "ぜったいに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "absolutely",
+     "definitely",
+     "unconditionally"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-180-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence; 絶対に (zettai ni) is the canonical translation for 'absolutely' in this sense."
+   }
+  },
+  {
+   "key": "a6ed23c56b654f6a0a30d923840e8085f74f5eb95862af624904543eb108eab8",
+   "input": {
+    "id": "wk-1801-s1",
+    "en": "mouth",
+    "en_pos": "noun",
+    "en_sense": "The end of a river out of which water flows into a sea or other large body of water; or the end of a tributary out of which water flows into a larger river.",
+    "ja": "河口",
+    "ja_reading": "かこう",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "mouth of river",
+     "estuary"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1801-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "河口 (kakou) is the precise and standard Japanese term for the mouth of a river."
+   }
+  },
+  {
+   "key": "6299e633f2a737ac3318dd05f5a0de60facef9528ced13c0b6bf3dd8abf3582d",
+   "input": {
+    "id": "wk-1802-s13",
+    "en": "tongue",
+    "en_pos": "noun",
+    "en_sense": "In a shoe, the flap of material that goes between the laces and the foot (so called because it resembles a tongue in the mouth).",
+    "ja": "タン",
+    "ja_reading": "タン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tongue (of a shoe)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1802-s13",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "タン (tan) is the standard Japanese term, a direct loanword from English for the tongue of a shoe."
+   }
+  },
+  {
+   "key": "828192888f4312b04e2a499792f996b7bf7cd5fcfff282b5dde202b6aa850e27",
+   "input": {
+    "id": "wk-18024-s0",
+    "en": "hastily",
+    "en_pos": "adverb",
+    "en_sense": "In a hasty manner; quickly or hurriedly.",
+    "ja": "急に",
+    "ja_reading": "きゅうに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "swiftly",
+     "rapidly",
+     "quickly",
+     "immediately",
+     "hastily",
+     "hurriedly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-18024-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "急に (kyuu ni) means 'suddenly' or 'unexpectedly', which is different from 'hastily', which implies being rushed and often careless; 慌てて (awatete) is a better equivalent."
+   }
+  },
+  {
+   "key": "eb90082f11ec4fee0cf829f1ccb231bf98c5e3e55be88799b277ab902bf33520",
+   "input": {
+    "id": "wk-1804-s2",
+    "en": "leg",
+    "en_pos": "noun",
+    "en_sense": "The portion of the lower limb of a human that extends from the knee to the ankle.",
+    "ja": "下腿",
+    "ja_reading": "かたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lower leg",
+     "shank"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1804-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "For the specific anatomical sense of 'leg' (knee to ankle), 下腿 (katai) is the precise and correct Japanese equivalent."
+   }
+  },
+  {
+   "key": "cb680777fe283a50a371b966174c00b2517d856a9be9153337b17291e31dae0e",
+   "input": {
+    "id": "wk-1807-s2",
+    "en": "neck",
+    "en_pos": "noun",
+    "en_sense": "The part of a shirt, dress etc., which fits a person's neck.",
+    "ja": "襟",
+    "ja_reading": "えり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "collar",
+     "lapel",
+     "neckband",
+     "neck"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1807-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "襟 (eri) is the correct Japanese term for the neck or collar of a garment."
+   }
+  }
+ ]
+}

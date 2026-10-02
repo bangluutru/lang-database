@@ -1,0 +1,412 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:07:49Z",
+ "items": [
+  {
+   "key": "9a7bd0b02c28ea9a814c1721e076a18fbdc85e71389a916555c46898b18f9c96",
+   "input": {
+    "id": "wk-10372-s0",
+    "en": "fermentation",
+    "en_pos": "noun",
+    "en_sense": "Any of many anaerobic biochemical reactions in which an enzyme (or several enzymes produced by a microorganism) catalyses the conversion of one substance into another; especially the conversion (using yeast) of sugars to alcohol or acetic acid with the evolution of carbon dioxide",
+    "ja": "発酵",
+    "ja_reading": "はっこう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "fermentation",
+     "zymosis"
+    ],
+    "vi": "lên men"
+   },
+   "output": {
+    "id": "wk-10372-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'lên men' is a verb phrase ('to ferment'), not a noun ('fermentation'); the correct noun is 'sự lên men'."
+   }
+  },
+  {
+   "key": "d11e8d2e880044293365a2e7a8f181d596cf97ecc4ab2bd14c2645d41f2580bb",
+   "input": {
+    "id": "wk-10486-s0",
+    "en": "immigration",
+    "en_pos": "noun",
+    "en_sense": "The act of immigrating; the passing or coming into a country of which one is not native born for the purpose of permanent residence.",
+    "ja": "移民",
+    "ja_reading": "いみん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "immigration",
+     "emigration"
+    ],
+    "vi": "sự nhập cư"
+   },
+   "output": {
+    "id": "wk-10486-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '移民' is broader as it can mean both immigration and emigration, whereas the English sense is strictly about entering a country."
+   }
+  },
+  {
+   "key": "baaaa39141b81db1032b68350fcd65cdc862d124108671b5485cb45cde7d1e97",
+   "input": {
+    "id": "wk-10494-s0",
+    "en": "inauguration",
+    "en_pos": "noun",
+    "en_sense": "The act of inaugurating, or inducting into office with solemnity; investiture by appropriate ceremonies.",
+    "ja": "就任",
+    "ja_reading": "しゅうにん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "assumption (of office)",
+     "taking up (a post)",
+     "inauguration",
+     "installation"
+    ],
+    "vi": "nhậm chức"
+   },
+   "output": {
+    "id": "wk-10494-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'nhậm chức' is a verb phrase ('to assume office'), not the noun 'inauguration'; the correct noun is 'sự nhậm chức'."
+   }
+  },
+  {
+   "key": "af28be46072404743543ce0b05ee1336b0a730faafc1c174eca0f82c371c53a5",
+   "input": {
+    "id": "wk-105-s0",
+    "en": "abbreviation",
+    "en_pos": "noun",
+    "en_sense": "The result of shortening or reducing; abridgment.",
+    "ja": "省略",
+    "ja_reading": "しょうりゃく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "abbreviation",
+     "abridgment",
+     "abridgement",
+     "shortening (e.g. of a name)"
+    ],
+    "vi": "sự tóm tắt"
+   },
+   "output": {
+    "id": "wk-105-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sự tóm tắt' means 'summary' and does not cover other types of abbreviation like shortening a word (which is 'sự viết tắt')."
+   }
+  },
+  {
+   "key": "9bb7421f7e3649f40ac6b1d0be99433fc480dc46e4bfa0bac606326f402d5844",
+   "input": {
+    "id": "wk-10510-s2",
+    "en": "injury",
+    "en_pos": "noun",
+    "en_sense": "The violation of a person's reputation, rights, property, or interests.",
+    "ja": "傷害",
+    "ja_reading": "しょうがい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "injury",
+     "inflicting bodily injury"
+    ],
+    "vi": "thương tích"
+   },
+   "output": {
+    "id": "wk-10510-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both Japanese and Vietnamese words mean physical/bodily injury, which is a different sense from the provided English definition (violation of rights, reputation, etc.)."
+   }
+  },
+  {
+   "key": "4da9cd2e0115d5af997736a1c767cafe93e271fc99b98c71fd845ccfdf25c382",
+   "input": {
+    "id": "wk-10538-s0",
+    "en": "interrogation",
+    "en_pos": "noun",
+    "en_sense": "The act of interrogating or questioning; an examination by questions; an inquiry.",
+    "ja": "尋問",
+    "ja_reading": "じんもん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "questioning",
+     "interrogation",
+     "examination (of a witness)"
+    ],
+    "vi": "thẩm vấn"
+   },
+   "output": {
+    "id": "wk-10538-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thẩm vấn' is a verb ('to interrogate'), not the noun 'interrogation'; the correct noun is 'sự thẩm vấn'."
+   }
+  },
+  {
+   "key": "67e932d1bbdb8909d6010939ac1c9b1811810995ea41eb93b57aad4944de2642",
+   "input": {
+    "id": "wk-10545-s0",
+    "en": "irrigation",
+    "en_pos": "noun",
+    "en_sense": "The act or process of irrigating, or the state of being irrigated; especially, the operation of causing water to flow over lands, for nourishing plants.",
+    "ja": "灌漑",
+    "ja_reading": "かんがい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "irrigation"
+    ],
+    "vi": "thuỷ lợi"
+   },
+   "output": {
+    "id": "wk-10545-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thuỷ lợi' means 'water management' or 'hydraulic engineering', a much broader concept than just 'irrigation'."
+   }
+  },
+  {
+   "key": "a15d5083088d1850b3c75649b063cc0a5ac65a44b68088d157eba2fdcf0da9a5",
+   "input": {
+    "id": "wk-10725-s1",
+    "en": "release",
+    "en_pos": "noun",
+    "en_sense": "The distribution, either public or private, of an initial or new and upgraded version of a computer software product.",
+    "ja": "リリース",
+    "ja_reading": "リリース",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "release (of a film, product, etc.)",
+     "publication"
+    ],
+    "vi": "phiên bản"
+   },
+   "output": {
+    "id": "wk-10725-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'phiên bản' means 'version', not 'release'. The act of releasing is 'sự phát hành'."
+   }
+  },
+  {
+   "key": "fa2f98dbf75472c9db6b15705caa5484fc5ec7986ac865fd036e75b97c239d5b",
+   "input": {
+    "id": "wk-10802-s0",
+    "en": "sigh",
+    "en_pos": "noun",
+    "en_sense": "A deep, prolonged audible inhale and exhale of breath; as when fatigued, frustrated, grieved, or relieved; the act of sighing.",
+    "ja": "嘆息",
+    "ja_reading": "たんそく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "sigh (of grief, disappointment, etc.)",
+     "grieving",
+     "lamenting",
+     "deploring"
+    ],
+    "vi": "thở dài"
+   },
+   "output": {
+    "id": "wk-10802-s0",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "TOO_NARROW",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese '嘆息' is narrow, implying grief (the common word is 'ため息'), and the Vietnamese 'thở dài' is a verb ('to sigh'), not a noun."
+   }
+  },
+  {
+   "key": "a62765ef5ea2ca0c7a175071edd822aa444d3ceb405e64da0b44c5aee697f4b9",
+   "input": {
+    "id": "wk-10813-s1",
+    "en": "slice",
+    "en_pos": "noun",
+    "en_sense": "A thin, broad piece cut off.",
+    "ja": "スライス",
+    "ja_reading": "スライス",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "slice"
+    ],
+    "vi": "lát mỏng"
+   },
+   "output": {
+    "id": "wk-10813-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for a thin slice."
+   }
+  },
+  {
+   "key": "992d61f5b5d8be410a6c15dbcd4d2147b0466526b21a706783a792fc207cd657",
+   "input": {
+    "id": "wk-1106-s1",
+    "en": "action",
+    "en_pos": "noun",
+    "en_sense": "Something done, often so as to accomplish a purpose.",
+    "ja": "行動",
+    "ja_reading": "こうどう",
+    "ja_pos": "n,vs,vi,adj-no",
+    "ja_glosses": [
+     "action",
+     "conduct",
+     "behaviour",
+     "behavior",
+     "mobilization",
+     "mobilisation"
+    ],
+    "vi": "hành động"
+   },
+   "output": {
+    "id": "wk-1106-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for this sense of 'action'."
+   }
+  },
+  {
+   "key": "d6dada347c1562235b2c53f0bb8ff968dc32fc1f616357e2f5c9fc890c52655b",
+   "input": {
+    "id": "wk-11081-e:cde568",
+    "en": "trip",
+    "en_pos": "noun",
+    "en_sense": "journey",
+    "ja": "旅行",
+    "ja_reading": "りょこう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "travel",
+     "trip",
+     "journey",
+     "excursion",
+     "tour"
+    ],
+    "vi": "chuyến"
+   },
+   "output": {
+    "id": "wk-11081-e:cde568",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'chuyến' is a classifier and cannot stand alone; the correct term is 'chuyến đi'."
+   }
+  }
+ ]
+}

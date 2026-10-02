@@ -1,0 +1,372 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:45:24Z",
+ "items": [
+  {
+   "key": "ec5d8a35d2095d8380ba1c2b68559bd6f709d58dc50cab0a3f44f86687262fea",
+   "input": {
+    "id": "wk-3764-s0",
+    "en": "kimono",
+    "en_pos": "noun",
+    "en_sense": "A traditional Japanese T-shaped, wrapped-front garment with square sleeves and a rectangular body, now generally worn only on formal occasions.",
+    "ja": "着物",
+    "ja_reading": "きもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kimono",
+     "Japanese traditional clothing (esp. full-length)"
+    ],
+    "vi": "kimono"
+   },
+   "output": {
+    "id": "wk-3764-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the Japanese traditional garment, with English and Vietnamese using a loanword from Japanese."
+   }
+  },
+  {
+   "key": "095575a69c17a5b96d497e4b04352d79cd1bc462914a85db1a53a4d39cdc5a56",
+   "input": {
+    "id": "wk-377-s0",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "The addition to a writing, inscription, coin, etc., which specifies the time (especially the day, month, and year) when the writing or inscription was given, executed, or made.",
+    "ja": "年月日",
+    "ja_reading": "ねんがっぴ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date (year, month and day)"
+    ],
+    "vi": "ngày"
+   },
+   "output": {
+    "id": "wk-377-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `ngày` means 'day', not the full date specification (year, month, day) which is what the English sense and Japanese `年月日` denote."
+   }
+  },
+  {
+   "key": "d50f0edefcfb899914c135e69c1374b7d40fb860f21640b87e21b8d50767e792",
+   "input": {
+    "id": "wk-377-s1",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "A specific day in time at which a transaction or event takes place, or is appointed to take place; a given point of time.",
+    "ja": "日付",
+    "ja_reading": "ひづけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date",
+     "dating"
+    ],
+    "vi": "ngày"
+   },
+   "output": {
+    "id": "wk-377-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly refer to a specific day or calendar date for an event."
+   }
+  },
+  {
+   "key": "64a190e9075179b6ee67806a5062a8bba2f2a764d836709c217faa66ee02824d",
+   "input": {
+    "id": "wk-377-s5",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "A pre-arranged meeting.",
+    "ja": "デート",
+    "ja_reading": "デート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date (day)"
+    ],
+    "vi": "hẹn"
+   },
+   "output": {
+    "id": "wk-377-s5",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese `デート` is specifically a romantic date, while the English definition 'a pre-arranged meeting' and Vietnamese `hẹn` are more general."
+   }
+  },
+  {
+   "key": "23f86b3262a04190d3e740bccb90615351a12e5efd7943054ce9abeb9f12089f",
+   "input": {
+    "id": "wk-3770-s1",
+    "en": "legend",
+    "en_pos": "noun",
+    "en_sense": "A story of unknown origin describing plausible but extraordinary past events.",
+    "ja": "伝説",
+    "ja_reading": "でんせつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "legend",
+     "folklore",
+     "tradition"
+    ],
+    "vi": "huyền thoại"
+   },
+   "output": {
+    "id": "wk-3770-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'legend'."
+   }
+  },
+  {
+   "key": "e68ba7b5a5611ddd7b72cb923c665f3bd39caa1e446f7556011dab0bb4f42cb1",
+   "input": {
+    "id": "wk-3773-s0",
+    "en": "moth",
+    "en_pos": "noun",
+    "en_sense": "Any flying insect of the order Lepidoptera not in the superfamily Papilionoidea, most species of which are nocturnal and can be distinguished from butterflies by feather-like antennae.",
+    "ja": "蛾",
+    "ja_reading": "が",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "moth"
+    ],
+    "vi": "ngài"
+   },
+   "output": {
+    "id": "wk-3773-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'moth'."
+   }
+  },
+  {
+   "key": "9ae35d44f35f179974e84c789bb2ad52aa210376ceefd6e7fd8aabc122ffc686",
+   "input": {
+    "id": "wk-3778-s0",
+    "en": "beta",
+    "en_pos": "noun",
+    "en_sense": "The second letter of the Greek alphabet (Β, β), preceded by alpha (Α, α) and followed by gamma, (Γ, γ). In modern Greek it represents the voiced labiodental fricative sound of v found in the English words have and vase.",
+    "ja": "Β",
+    "ja_reading": "ベータ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beta"
+    ],
+    "vi": "bêta"
+   },
+   "output": {
+    "id": "wk-3778-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three entries correctly represent the Greek letter beta."
+   }
+  },
+  {
+   "key": "a1d7cbdb7616b4f246afea3d9ac00010fa8e3bfe74f3c9f36a901637f7de5d12",
+   "input": {
+    "id": "wk-378-s3",
+    "en": "date",
+    "en_pos": "verb",
+    "en_sense": "To take (someone) on a date, or a series of dates.",
+    "ja": "デートする",
+    "ja_reading": "デートする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "date (with someone)",
+     "(social) outing (for two)",
+     "date night"
+    ],
+    "vi": "hẹn hò"
+   },
+   "output": {
+    "id": "wk-378-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural verbs for 'to date' in a romantic sense."
+   }
+  },
+  {
+   "key": "25bdd9a1513bd36c038cfab2f775139cf121e5802ce64aa012430978a82332f8",
+   "input": {
+    "id": "wk-3783-s0",
+    "en": "download",
+    "en_pos": "verb",
+    "en_sense": "To transfer data to a given computer from a remote one via a network.",
+    "ja": "ダウンロードする",
+    "ja_reading": "ダウンロードする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "download"
+    ],
+    "vi": "tải"
+   },
+   "output": {
+    "id": "wk-3783-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard verbs for 'download'."
+   }
+  },
+  {
+   "key": "397730503dc123d0b521a098db066ffe9e7bb00e14f2ab2f0e60530249542c72",
+   "input": {
+    "id": "wk-3787-s0",
+    "en": "astronomy",
+    "en_pos": "noun",
+    "en_sense": "The study of the physical universe beyond the Earth's atmosphere, including the process of mapping locations and properties of the matter and radiation in the universe.",
+    "ja": "天文学",
+    "ja_reading": "てんもんがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "astronomy"
+    ],
+    "vi": "thiên văn học"
+   },
+   "output": {
+    "id": "wk-3787-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'astronomy'."
+   }
+  },
+  {
+   "key": "e06969d8708b84a9fbc9906974988ed3ab2d078b52829088184acd113b93d7f3",
+   "input": {
+    "id": "wk-3788-s0",
+    "en": "giraffe",
+    "en_pos": "noun",
+    "en_sense": "A ruminant in the genus Giraffa of the African savannah with long legs, a highly elongated neck, yellow fur patterned with dark spots typically in the form of a network, and two or more horn-like projections called ossicones; the tallest living animal.",
+    "ja": "きりん",
+    "ja_reading": "きりん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "giraffe (Giraffa camelopardalis)"
+    ],
+    "vi": "hươu cao cổ"
+   },
+   "output": {
+    "id": "wk-3788-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'giraffe'."
+   }
+  },
+  {
+   "key": "096327bc9442603b2476743e2a97972999c11bfbc9137cbef807d852adaeb5f5",
+   "input": {
+    "id": "wk-3792-e:6920b7",
+    "en": "test",
+    "en_pos": "noun",
+    "en_sense": "challenge, trial",
+    "ja": "試練",
+    "ja_reading": "しれん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "test",
+     "trial",
+     "ordeal",
+     "tribulation"
+    ],
+    "vi": "sự thử thách"
+   },
+   "output": {
+    "id": "wk-3792-e:6920b7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly capture the sense of 'test' as a difficult challenge or trial."
+   }
+  }
+ ]
+}

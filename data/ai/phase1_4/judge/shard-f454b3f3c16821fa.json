@@ -1,0 +1,378 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:13Z",
+ "items": [
+  {
+   "key": "bc98e624b6db5a71fa01a140abbf64f0ede292d2428e9c7cac092ab1256f591b",
+   "input": {
+    "id": "wk-1091-s0",
+    "en": "boy",
+    "en_pos": "noun",
+    "en_sense": "A male child.",
+    "ja": "少年",
+    "ja_reading": "しょうねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "boy"
+    ],
+    "vi": "con trai"
+   },
+   "output": {
+    "id": "wk-1091-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'boy' or 'male child'."
+   }
+  },
+  {
+   "key": "248fee8d04dca638c9b2728e3111a8d1b509bc815447d26742e6ce816446feff",
+   "input": {
+    "id": "wk-1092-e:8f85b3",
+    "en": "girl",
+    "en_pos": "noun",
+    "en_sense": "young female person",
+    "ja": "少女",
+    "ja_reading": "しょうじょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "girl (usu. between 7 and 17)",
+     "young lady"
+    ],
+    "vi": "gái"
+   },
+   "output": {
+    "id": "wk-1092-e:8f85b3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'gái' is not a suitable standalone equivalent for 'girl'; 'con gái' or 'cô bé' would be correct."
+   }
+  },
+  {
+   "key": "c898cb2a81a0b5a3e936a0f876eb627fd44c0b74e18c1eb5dfd620b31002e489",
+   "input": {
+    "id": "wk-10921-s0",
+    "en": "thirst",
+    "en_pos": "noun",
+    "en_sense": "A sensation of dryness in the throat associated with a craving for liquids, produced by deprivation of drink, or by some other cause (such as fear, excitement, etc.) which stops the secretion of the pharyngeal mucous membrane.",
+    "ja": "渇き",
+    "ja_reading": "かわき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thirst"
+    ],
+    "vi": "khát"
+   },
+   "output": {
+    "id": "wk-10921-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'khát' is an adjective meaning 'thirsty', not a noun for 'thirst'; the correct noun would be 'sự khát' or 'cơn khát'."
+   }
+  },
+  {
+   "key": "479df7e7a4eeb446d197039c6b95f8285096ff4dd9f26a2a3a4948c5abf45d25",
+   "input": {
+    "id": "wk-10925-s0",
+    "en": "thyme",
+    "en_pos": "noun",
+    "en_sense": "Any plant of the labiate genus Thymus, such as garden thyme (Thymus vulgaris), a warm, pungent aromatic, that is much used to give a relish to seasoning and soups.",
+    "ja": "タイム",
+    "ja_reading": "タイム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thyme"
+    ],
+    "vi": "húng tây"
+   },
+   "output": {
+    "id": "wk-10925-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the herb thyme."
+   }
+  },
+  {
+   "key": "f3f989a92f6583f3e7bd6444918659d1c87f729e0f64ee44b9cc9aeda29ee6bf",
+   "input": {
+    "id": "wk-10928-s0",
+    "en": "towel",
+    "en_pos": "noun",
+    "en_sense": "A cloth used for wiping, especially one used for drying anything wet, such as a person after a bath.",
+    "ja": "タオル",
+    "ja_reading": "タオル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "towel"
+    ],
+    "vi": "khăn"
+   },
+   "output": {
+    "id": "wk-10928-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'khăn' is a broad term for cloth/scarf/towel; 'towel' is more specific, usually 'khăn tắm' or 'khăn mặt'."
+   }
+  },
+  {
+   "key": "11e2f06b52fcf5149523542c85ff6660f7ba828b2908cad46a85824c74d06977",
+   "input": {
+    "id": "wk-10929-s17",
+    "en": "track",
+    "en_pos": "noun",
+    "en_sense": "A circular (never-ending) data storage unit on a side of magnetic or optical disk, divided into sectors.",
+    "ja": "トラック",
+    "ja_reading": "トラック",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(running) track"
+    ],
+    "vi": "rãnh"
+   },
+   "output": {
+    "id": "wk-10929-s17",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Japanese entry 'トラック' with the gloss '(running) track' corresponds to a different sense of the English word 'track', not the specified data storage sense."
+   }
+  },
+  {
+   "key": "f58c36878e3f798cad77edfbd68308e7f12e598b6a0478a133a26fee34aeab13",
+   "input": {
+    "id": "wk-10938-s4",
+    "en": "treat",
+    "en_pos": "verb",
+    "en_sense": "To handle, deal with or behave towards in a specific way.",
+    "ja": "扱う",
+    "ja_reading": "あつかう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to deal with (a person)",
+     "to treat",
+     "to handle",
+     "to take care of",
+     "to entertain"
+    ],
+    "vi": "đối xử"
+   },
+   "output": {
+    "id": "wk-10938-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect and natural equivalents for this sense of 'treat'."
+   }
+  },
+  {
+   "key": "9f8730dc07a50833f4d139a84ea5ff37d536e4468295eb775c8a98be720fb8dd",
+   "input": {
+    "id": "wk-10940-s2",
+    "en": "trend",
+    "en_pos": "noun",
+    "en_sense": "A fad or fashion style.",
+    "ja": "トレンド",
+    "ja_reading": "トレンド",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trend"
+    ],
+    "vi": "trào lưu"
+   },
+   "output": {
+    "id": "wk-10940-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and widely used equivalents for 'trend' in the sense of a fad or fashion."
+   }
+  },
+  {
+   "key": "24db72520e155cf6bdbd236e64e284189d0e9785b21a64ef28a050504582946b",
+   "input": {
+    "id": "wk-10943-s0",
+    "en": "tripe",
+    "en_pos": "noun",
+    "en_sense": "The lining of the large stomach of ruminating animals, when prepared for food.",
+    "ja": "トライプ",
+    "ja_reading": "トライプ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tripe"
+    ],
+    "vi": "dạ dày"
+   },
+   "output": {
+    "id": "wk-10943-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'dạ dày' means 'stomach' (the organ), not 'tripe' (the prepared food from the stomach lining)."
+   }
+  },
+  {
+   "key": "cf535eb9c71839f4490b3ded540c407c7a1e04ce8d9e4d1dfce7056704407492",
+   "input": {
+    "id": "wk-10951-s0",
+    "en": "trowel",
+    "en_pos": "noun",
+    "en_sense": "A mason’s tool, used in spreading and dressing mortar, and breaking bricks to shape them.",
+    "ja": "こて",
+    "ja_reading": "こて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trowel"
+    ],
+    "vi": "bay"
+   },
+   "output": {
+    "id": "wk-10951-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a mason's trowel."
+   }
+  },
+  {
+   "key": "eafe244850535093eb6ee3e31e95da45815c3e4853191f0c777f95972aa9f8cf",
+   "input": {
+    "id": "wk-10970-s0",
+    "en": "volunteer",
+    "en_pos": "noun",
+    "en_sense": "One who enters into, or offers themselves for, any service of their own free will, especially when done without pay.",
+    "ja": "ボランティア",
+    "ja_reading": "ボランティア",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "volunteer"
+    ],
+    "vi": "tình nguyện viên"
+   },
+   "output": {
+    "id": "wk-10970-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'volunteer'."
+   }
+  },
+  {
+   "key": "470a4db5add452765a1394e6e3410ad307a8c59701ad8688cac8f09c285b171a",
+   "input": {
+    "id": "wk-10972-s0",
+    "en": "vow",
+    "en_pos": "noun",
+    "en_sense": "A solemn promise to perform some act, or behave in a specified manner, especially a promise to live and act in accordance with the rules of a religious order.",
+    "ja": "誓い",
+    "ja_reading": "ちかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "oath",
+     "vow"
+    ],
+    "vi": "lời thề"
+   },
+   "output": {
+    "id": "wk-10972-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a solemn promise or vow."
+   }
+  }
+ ]
+}

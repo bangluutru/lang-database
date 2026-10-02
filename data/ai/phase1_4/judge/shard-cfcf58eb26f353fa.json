@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:35:58Z",
+ "items": [
+  {
+   "key": "0987cc39380a85ba91226cea9489ab19c941ba40b3d1af81eae24b675b3893c2",
+   "input": {
+    "id": "wk-18724-s0",
+    "en": "encounter",
+    "en_pos": "verb",
+    "en_sense": "To meet (someone) or find (something), especially unexpectedly.",
+    "ja": "遭遇する",
+    "ja_reading": "そうぐうする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "encounter",
+     "running into",
+     "meeting with (e.g. an accident)",
+     "being confronted with (e.g. a difficulty)"
+    ],
+    "vi": "bắt gặp"
+   },
+   "output": {
+    "id": "wk-18724-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately convey the sense of an unexpected meeting or discovery."
+   }
+  },
+  {
+   "key": "444e8c2b504f7669511d88efd4086a4e867f867fe04cad5a2f485c21f6186d4a",
+   "input": {
+    "id": "wk-18756-s0",
+    "en": "disgraceful",
+    "en_pos": "adjective",
+    "en_sense": "Bringing or warranting disgrace; shameful.",
+    "ja": "恥ずべき",
+    "ja_reading": "はずべき",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "disgraceful",
+     "shameful"
+    ],
+    "vi": "xấu hổ"
+   },
+   "output": {
+    "id": "wk-18756-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'xấu hổ' means 'ashamed' (the feeling), not 'disgraceful' (the quality causing shame). The correct term would be 'đáng xấu hổ'."
+   }
+  },
+  {
+   "key": "826ef6294b2256317c398950edc585f4f0611c0da226e9bc51640c0439f9ba99",
+   "input": {
+    "id": "wk-18758-s0",
+    "en": "thickness",
+    "en_pos": "noun",
+    "en_sense": "The property of being thick (in dimension).",
+    "ja": "厚み",
+    "ja_reading": "あつみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thickness"
+    ],
+    "vi": "dày"
+   },
+   "output": {
+    "id": "wk-18758-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'dày' is an adjective ('thick'), not a noun ('thickness'). The correct noun is 'độ dày'."
+   }
+  },
+  {
+   "key": "e14c40fac4bd1dd8a588900a86b7482a64d9ddf6cce8dfd7f501d55636377c09",
+   "input": {
+    "id": "wk-18773-s0",
+    "en": "demolish",
+    "en_pos": "verb",
+    "en_sense": "To destroy (buildings, etc.), especially in a planned or intentional fashion.",
+    "ja": "取り壊す",
+    "ja_reading": "とりこわす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to demolish",
+     "to tear down",
+     "to pull down"
+    ],
+    "vi": "phá hủy"
+   },
+   "output": {
+    "id": "wk-18773-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'phá hủy' (destroy) is much broader than English 'demolish' or Japanese '取り壊す', which usually refer to buildings. A better VI equivalent is 'phá dỡ'."
+   }
+  },
+  {
+   "key": "6e1a15250b85af2b588ad23bae41615744ef4524c807d149d2f9eb252b8c7faf",
+   "input": {
+    "id": "wk-18776-s0",
+    "en": "seafood",
+    "en_pos": "noun",
+    "en_sense": "Food from the sea, including that derived from fish, shellfish, crustaceans, cephalopods, seaweed, algae, marine mammals, and other marine organisms.",
+    "ja": "シーフード",
+    "ja_reading": "シーフード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "seafood"
+    ],
+    "vi": "hải sản"
+   },
+   "output": {
+    "id": "wk-18776-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for seafood in their respective languages."
+   }
+  },
+  {
+   "key": "d402666cb3e4f38bfaebb6a66b17f24a956379a59d9cfb58ec19e97e0f342f3b",
+   "input": {
+    "id": "wk-18786-s0",
+    "en": "pharmacy",
+    "en_pos": "noun",
+    "en_sense": "A place where prescription drugs are sold or dispensed.",
+    "ja": "薬局",
+    "ja_reading": "やっきょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pharmacy",
+     "drugstore",
+     "chemist's (shop)"
+    ],
+    "vi": "nhà thuốc"
+   },
+   "output": {
+    "id": "wk-18786-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a pharmacy where drugs are dispensed."
+   }
+  },
+  {
+   "key": "c3793a6165ad0e04f0be4c71f46ff6c52bfadce01474c5951b4aa544959aa95d",
+   "input": {
+    "id": "wk-18786-s1",
+    "en": "pharmacy",
+    "en_pos": "noun",
+    "en_sense": "The science of medicinal substances, inclusive of pharmaceutics, pharmaceutical chemistry, pharmacology, phytochemistry, and forensics.",
+    "ja": "薬学",
+    "ja_reading": "やくがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(study of) pharmacy",
+     "pharmaceutics"
+    ],
+    "vi": "dược học"
+   },
+   "output": {
+    "id": "wk-18786-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the academic field of pharmacy."
+   }
+  },
+  {
+   "key": "3e0cfda2feea2641069dad26659ba664160b6f4db280aa8179b78461cdd0f216",
+   "input": {
+    "id": "wk-1880-e:5d0a8a",
+    "en": "sidewalk",
+    "en_pos": "noun",
+    "en_sense": "paved footpath",
+    "ja": "人道",
+    "ja_reading": "じんどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sidewalk",
+     "footpath"
+    ],
+    "vi": "vỉa hè"
+   },
+   "output": {
+    "id": "wk-1880-e:5d0a8a",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese '人道' (jindou) is a very rare and archaic term for sidewalk; its common meaning is 'humanity'. The standard word is '歩道' (hodou)."
+   }
+  },
+  {
+   "key": "d175bb485afa366951472c7a468e3a04cb8b0debb971b85e9549159b579e6198",
+   "input": {
+    "id": "wk-18802-s0",
+    "en": "socket",
+    "en_pos": "noun",
+    "en_sense": "An opening into which a plug or other connecting part is designed to fit (e.g. a light bulb socket).",
+    "ja": "コンセント",
+    "ja_reading": "コンセント",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(electrical) outlet",
+     "(wall) socket",
+     "power point"
+    ],
+    "vi": "ổ cắm điện"
+   },
+   "output": {
+    "id": "wk-18802-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese and Vietnamese terms refer specifically to an electrical wall outlet, whereas the English sense of 'socket' is broader (e.g., includes light bulb sockets)."
+   }
+  },
+  {
+   "key": "0bba017ed82d3881561c255a76f21fedb0f4c8af4e061a641e24c7506cca0ac3",
+   "input": {
+    "id": "wk-18811-s0",
+    "en": "sensor",
+    "en_pos": "noun",
+    "en_sense": "A device or organ that detects certain external stimuli and responds in a distinctive manner.",
+    "ja": "センサー",
+    "ja_reading": "センサー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sensor"
+    ],
+    "vi": "cảm biến"
+   },
+   "output": {
+    "id": "wk-18811-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'sensor'."
+   }
+  },
+  {
+   "key": "9486d43537f8803aedb36145e36dd3001bb160aad53862ec02afa1a02e1f7ac5",
+   "input": {
+    "id": "wk-18827-s0",
+    "en": "slippery",
+    "en_pos": "adjective",
+    "en_sense": "Of a surface, having low friction, often due to being covered in a non-viscous liquid, and therefore hard to grip, hard to stand on without falling, etc.",
+    "ja": "滑りやすい",
+    "ja_reading": "すべりやすい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "greasy",
+     "slimy",
+     "slippery"
+    ],
+    "vi": "trơn"
+   },
+   "output": {
+    "id": "wk-18827-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for a slippery surface."
+   }
+  },
+  {
+   "key": "2b1d1a092a21b1defbf8ab8f5d82072dc8cc920c073781d5be7094effd66fbe7",
+   "input": {
+    "id": "wk-18844-s0",
+    "en": "forestry",
+    "en_pos": "noun",
+    "en_sense": "The science of planting and growing trees in forests.",
+    "ja": "林業",
+    "ja_reading": "りんぎょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "forestry"
+    ],
+    "vi": "lâm nghiệp"
+   },
+   "output": {
+    "id": "wk-18844-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'forestry'."
+   }
+  }
+ ]
+}

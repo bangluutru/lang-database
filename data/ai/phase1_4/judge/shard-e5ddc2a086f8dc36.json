@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:44:00Z",
+ "items": [
+  {
+   "key": "c9c259d2338f5cf9f2db5dc66c8cdb1825d96bdd2304824bd9cd6ea984f3ed6c",
+   "input": {
+    "id": "wk-32741-e:d4fa86",
+    "en": "water",
+    "en_pos": "noun",
+    "en_sense": "inorganic compound H₂O",
+    "ja": "水",
+    "ja_reading": "みず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "water (esp. cool or cold)"
+    ],
+    "vi": "nước"
+   },
+   "output": {
+    "id": "wk-32741-e:d4fa86",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The words are perfect, standard equivalents for the concept of water (H₂O)."
+   }
+  },
+  {
+   "key": "c0c3a665d8910b531ce0473d3ec8ba42a5a7181a3fc5715180575c32d3f4d8c8",
+   "input": {
+    "id": "wk-32742-s1",
+    "en": "water",
+    "en_pos": "verb",
+    "en_sense": "To pour water into the soil surrounding (plants).",
+    "ja": "水をやる",
+    "ja_reading": "みずをやる",
+    "ja_pos": "exp,v5r",
+    "ja_glosses": [
+     "to water (a plant, a flower etc.)"
+    ],
+    "vi": "tưới"
+   },
+   "output": {
+    "id": "wk-32742-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The expressions are perfect, standard equivalents for the act of watering plants."
+   }
+  },
+  {
+   "key": "25c257ffb99b212c951b51cebbde28e0fd88ab1d35a4c15267793e93ef79eeb7",
+   "input": {
+    "id": "wk-3275-e:732eee",
+    "en": "content",
+    "en_pos": "noun",
+    "en_sense": "subject matter",
+    "ja": "コンテンツ",
+    "ja_reading": "コンテンツ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "contents",
+     "content"
+    ],
+    "vi": "nội dung"
+   },
+   "output": {
+    "id": "wk-3275-e:732eee",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese loanword コンテンツ is typically used for media/digital content, which is narrower than the general English sense of 'subject matter'."
+   }
+  },
+  {
+   "key": "d871c35983838ee19d59090abe94bc9e16ec52f7c6da8af3c93cf51da6fd0d2c",
+   "input": {
+    "id": "wk-3278-s0",
+    "en": "attorney",
+    "en_pos": "noun",
+    "en_sense": "A lawyer; one who advises or represents others in legal matters as a profession.",
+    "ja": "弁護士",
+    "ja_reading": "べんごし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lawyer",
+     "attorney"
+    ],
+    "vi": "luật sư"
+   },
+   "output": {
+    "id": "wk-3278-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are the standard, professional titles for a lawyer in all three languages."
+   }
+  },
+  {
+   "key": "66fa8d1167c799aa6eabb7bb395ccadc293a3cd99242f8fbebe066f95fe31515",
+   "input": {
+    "id": "wk-3280-s0",
+    "en": "manga",
+    "en_pos": "noun",
+    "en_sense": "A comic originating in Japan.",
+    "ja": "漫画",
+    "ja_reading": "まんが",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cartoon",
+     "comic",
+     "comic strip",
+     "manga"
+    ],
+    "vi": "manga"
+   },
+   "output": {
+    "id": "wk-3280-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 漫画 means comics in general, while the English and Vietnamese loanword 'manga' specifically refers to Japanese comics."
+   }
+  },
+  {
+   "key": "131cb148f37da01429218d2cf1a459568f897962b3f7e6633fe62bf218bfd8bc",
+   "input": {
+    "id": "wk-3283-s0",
+    "en": "dojo",
+    "en_pos": "noun",
+    "en_sense": "A training facility, usually led by one or more sensei; a hall or room used for such training.",
+    "ja": "道場",
+    "ja_reading": "どうじょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dojo",
+     "hall used for martial arts training"
+    ],
+    "vi": "võ đường"
+   },
+   "output": {
+    "id": "wk-3283-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are perfect equivalents, with 'dojo' being a loanword in English and 'võ đường' being the standard Vietnamese term."
+   }
+  },
+  {
+   "key": "95fc90627c6c9ffac8f77be9f74445eafa48014d536d7321d38e18a638ba5f9d",
+   "input": {
+    "id": "wk-3288-s11",
+    "en": "party",
+    "en_pos": "noun",
+    "en_sense": "A social gathering, usually of invited guests, which typically involves eating, drinking, and entertainment and often held to celebrate a particular occasion.",
+    "ja": "会",
+    "ja_reading": "かい",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "meeting",
+     "assembly",
+     "party",
+     "gathering",
+     "conference",
+     "athletic meet"
+    ],
+    "vi": "tiệc"
+   },
+   "output": {
+    "id": "wk-3288-s11",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 会 is too broad, meaning any gathering or meeting; パーティー is the correct equivalent for the English sense of a social party."
+   }
+  },
+  {
+   "key": "31cc469f32d4ac25c5fb0f2c6583b19e4dfd8d50d7e4e7aeac8265fb27fe3d38",
+   "input": {
+    "id": "wk-3289-s9",
+    "en": "platform",
+    "en_pos": "noun",
+    "en_sense": "A particular operating system or environment such as a database or other specific software; a particular type of computer or microprocessor, used for running other software.",
+    "ja": "プラットホーム",
+    "ja_reading": "プラットホーム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "platform"
+    ],
+    "vi": "nền tảng"
+   },
+   "output": {
+    "id": "wk-3289-s9",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese プラットホーム refers to a train platform; the correct term for a computing platform is プラットフォーム."
+   }
+  },
+  {
+   "key": "434e352aa41333ed56c305c3e1153db145ccc90450da4b4116fdfd8d548f6b4a",
+   "input": {
+    "id": "wk-3291-s0",
+    "en": "faction",
+    "en_pos": "noun",
+    "en_sense": "A group of people, especially within a political organization, which expresses a shared belief or opinion different from people who are not part of the group.",
+    "ja": "派閥",
+    "ja_reading": "はばつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "clique",
+     "faction"
+    ],
+    "vi": "đảng phái"
+   },
+   "output": {
+    "id": "wk-3291-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'đảng phái' usually means '(political) party', not an internal faction within an organization, for which 'phe phái' is the better term."
+   }
+  },
+  {
+   "key": "7d7ac8a105fb824c4786c95590a480412720931ae0f86a37162009e89af8fe1b",
+   "input": {
+    "id": "wk-32921-s0",
+    "en": "vegetable garden",
+    "en_pos": "noun",
+    "en_sense": "A garden where vegetables and herbs are grown for personal or household use, sometimes inclusive of cold frames, greenhouses, and market gardens. (This entry is a translation hub.)",
+    "ja": "菜園",
+    "ja_reading": "さいえん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vegetable garden"
+    ],
+    "vi": "vườn rau"
+   },
+   "output": {
+    "id": "wk-32921-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are literal and standard equivalents for 'vegetable garden' in all three languages."
+   }
+  },
+  {
+   "key": "0bf536223bf36f58b0be9c1073f473d5b2406ff53d4445ff8300c577e4dd8b22",
+   "input": {
+    "id": "wk-3298-s0",
+    "en": "similarity",
+    "en_pos": "noun",
+    "en_sense": "Closeness of appearance to something else.",
+    "ja": "相似",
+    "ja_reading": "そうじ",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "similarity"
+    ],
+    "vi": "sự giống nhau"
+   },
+   "output": {
+    "id": "wk-3298-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 相似 is a valid translation but is more formal/technical than the common English and Vietnamese terms."
+   }
+  },
+  {
+   "key": "ae43467c2b4fa53a78c54b3006539c047e86de7a4cf7a6bfe49e9a54eb54461b",
+   "input": {
+    "id": "wk-33-s0",
+    "en": "wednesday",
+    "en_pos": "noun",
+    "en_sense": "The fourth day of the week in many religious traditions, and the third day of the week in systems using the ISO 8601 norm; it follows Tuesday and precedes Thursday.",
+    "ja": "水曜日",
+    "ja_reading": "すいようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Wednesday"
+    ],
+    "vi": "thứ tư"
+   },
+   "output": {
+    "id": "wk-33-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are the standard and direct equivalents for 'Wednesday' in all three languages."
+   }
+  }
+ ]
+}

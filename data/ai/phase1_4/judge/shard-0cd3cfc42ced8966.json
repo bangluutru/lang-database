@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:48:14Z",
+ "items": [
+  {
+   "key": "b6b4b0607d9d7f53acaa7c92e2aba4ccf9d72ac729bdd405f3dae5a49e8f3622",
+   "input": {
+    "id": "jm-1611450-0-brush",
+    "en": "brush",
+    "en_pos": "noun",
+    "en_sense": "brush",
+    "ja": "ブラシ",
+    "ja_reading": "ブラシ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "brush"
+    ],
+    "vi": "bàn chải"
+   },
+   "output": {
+    "id": "jm-1611450-0-brush",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, neutral words for a brush."
+   }
+  },
+  {
+   "key": "a2fe296e7658e5a6ca676ec09415556364f7c0a65b48e358ebf0ede00c76a427",
+   "input": {
+    "id": "jm-1611770-0-route",
+    "en": "route",
+    "en_pos": "noun",
+    "en_sense": "route; way; course; directions",
+    "ja": "道順",
+    "ja_reading": "みちじゅん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "route",
+     "way",
+     "course",
+     "directions"
+    ],
+    "vi": "tuyến đường"
+   },
+   "output": {
+    "id": "jm-1611770-0-route",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tuyến đường' is narrower than English 'route' and Japanese '道順', often referring to a fixed path like a bus route or highway and not covering 'directions'."
+   }
+  },
+  {
+   "key": "5cb5d6d94d95a938bdb0608b30b5d48bd80ac799becc792bba8b61186d3a073f",
+   "input": {
+    "id": "jm-1612000-0-rarely",
+    "en": "rarely",
+    "en_pos": "adverb",
+    "en_sense": "rarely; seldom",
+    "ja": "滅多に",
+    "ja_reading": "めったに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "rarely",
+     "seldom"
+    ],
+    "vi": "hiếm khi"
+   },
+   "output": {
+    "id": "jm-1612000-0-rarely",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'rarely'."
+   }
+  },
+  {
+   "key": "5607932e95eb3fc1d87b7718ed54d53f55d7b579a3f9ecdcfae743796af91eda",
+   "input": {
+    "id": "jm-1612050-0-if",
+    "en": "if",
+    "en_pos": "adverb",
+    "en_sense": "if; in case; supposing",
+    "ja": "もしも",
+    "ja_reading": "もしも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "if",
+     "in case",
+     "supposing"
+    ],
+    "vi": "nếu"
+   },
+   "output": {
+    "id": "jm-1612050-0-if",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard ways to introduce a conditional clause, despite minor differences in POS classification."
+   }
+  },
+  {
+   "key": "632cba93e5efcfff4112cdddd9c1810940d509f95df24bdb9d1f8b7c33e2fb94",
+   "input": {
+    "id": "jm-1612060-1-wear",
+    "en": "wear",
+    "en_pos": "noun",
+    "en_sense": "wear; durability; life",
+    "ja": "持ち",
+    "ja_reading": "もち",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "wear",
+     "durability",
+     "life"
+    ],
+    "vi": "độ bền"
+   },
+   "output": {
+    "id": "jm-1612060-1-wear",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately and naturally convey the sense of durability or how long something lasts."
+   }
+  },
+  {
+   "key": "e5b8fea0c3a9b59d81213fcd9d090adc05162575aecf373e9c71c4c96d751cbf",
+   "input": {
+    "id": "jm-1612300-0-evident",
+    "en": "evident",
+    "en_pos": "adjective",
+    "en_sense": "evident; plain; distinct; clear",
+    "ja": "歴然",
+    "ja_reading": "れきぜん",
+    "ja_pos": "adj-t,adv-to",
+    "ja_glosses": [
+     "evident",
+     "plain",
+     "distinct",
+     "clear"
+    ],
+    "vi": "rõ ràng"
+   },
+   "output": {
+    "id": "jm-1612300-0-evident",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'evident' or 'clear', with '歴然' being slightly more formal/literary."
+   }
+  },
+  {
+   "key": "a323cd42607253183d2521f24bcd329c2db1ba77fb8e99e1cecff21c76e6dffc",
+   "input": {
+    "id": "jm-1612530-0-each",
+    "en": "each",
+    "en_pos": "adverb",
+    "en_sense": "each (person); individually; one by one; one at a time; in turn",
+    "ja": "一人一人",
+    "ja_reading": "ひとりひとり",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "each (person)",
+     "individually",
+     "one by one",
+     "one at a time",
+     "in turn"
+    ],
+    "vi": "từng người"
+   },
+   "output": {
+    "id": "jm-1612530-0-each",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The entry correctly specifies the sense to 'each person', and all three terms are perfect equivalents for this specific meaning."
+   }
+  },
+  {
+   "key": "81efa5aebbed3c0eff071a261f7684cdc8a229733f3ce19ee47ae3b9309cf393",
+   "input": {
+    "id": "jm-1612620-0-here_and_there",
+    "en": "here and there",
+    "en_pos": "pronoun",
+    "en_sense": "here and there; various places; all around; all over; everywhere; throughout",
+    "ja": "あちこち",
+    "ja_reading": "あちこち",
+    "ja_pos": "pn,adv,vs",
+    "ja_glosses": [
+     "here and there",
+     "various places",
+     "all around",
+     "all over",
+     "everywhere",
+     "throughout"
+    ],
+    "vi": "khắp nơi"
+   },
+   "output": {
+    "id": "jm-1612620-0-here_and_there",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'khắp nơi' means 'everywhere', which is stronger/broader than English 'here and there' (implying scattered places)."
+   }
+  },
+  {
+   "key": "ec369d80f38757a53f636e7a5412151de460f7470b9a2e83dc3748ad420732d1",
+   "input": {
+    "id": "jm-1612630-0-necessarily",
+    "en": "necessarily",
+    "en_pos": "adverb",
+    "en_sense": "(not) necessarily; (not) entirely; (not) altogether",
+    "ja": "あながち",
+    "ja_reading": "あながち",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) necessarily",
+     "(not) entirely",
+     "(not) altogether"
+    ],
+    "vi": "nhất thiết"
+   },
+   "output": {
+    "id": "jm-1612630-0-necessarily",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'nhất thiết' means 'necessary' or 'essential'; it requires a negative particle ('không') to mean '(not) necessarily', which is the sense of the English and Japanese entries."
+   }
+  },
+  {
+   "key": "7269c07a29185b4f1490a8b4e30132908fc75996c2a41e98de9c703bf7de4285",
+   "input": {
+    "id": "jm-1612680-0-holiday",
+    "en": "holiday",
+    "en_pos": "noun",
+    "en_sense": "holiday; day off; absence",
+    "ja": "お休み",
+    "ja_reading": "おやすみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "holiday",
+     "day off",
+     "absence"
+    ],
+    "vi": "ngày nghỉ"
+   },
+   "output": {
+    "id": "jm-1612680-0-holiday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a day off or holiday."
+   }
+  },
+  {
+   "key": "f3633108afe85f0fe1cffae8d626f7caa31a2e45dfdd1150d1896d6032454de1",
+   "input": {
+    "id": "jm-1612950-0-beat",
+    "en": "beat",
+    "en_pos": "verb",
+    "en_sense": "to beat; to attack (an enemy); to do away with; to finish off",
+    "ja": "やっつける",
+    "ja_reading": "やっつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to beat",
+     "to attack (an enemy)",
+     "to do away with",
+     "to finish off"
+    ],
+    "vi": "đánh bại"
+   },
+   "output": {
+    "id": "jm-1612950-0-beat",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 'やっつける' is more colloquial than the English and Vietnamese terms, but the core meaning of defeating an opponent is a good match."
+   }
+  },
+  {
+   "key": "50ae6511acd1c21daa05129d2afcb105a5d7f67ee15571b1fa825fc69f468dc0",
+   "input": {
+    "id": "jm-1613570-0-swimming",
+    "en": "swimming",
+    "en_pos": "noun",
+    "en_sense": "swimming",
+    "ja": "泳ぎ",
+    "ja_reading": "およぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "swimming"
+    ],
+    "vi": "bơi lội"
+   },
+   "output": {
+    "id": "jm-1613570-0-swimming",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for the activity of swimming."
+   }
+  }
+ ]
+}

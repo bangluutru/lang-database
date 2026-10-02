@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:52:22Z",
+ "items": [
+  {
+   "key": "8923ba36cfe6adae68f9da827a77ccf7d4cc97f08cdfa5929280eccc726ef87b",
+   "input": {
+    "id": "jm-1610340-0-grand",
+    "en": "grand",
+    "en_pos": "adjective",
+    "en_sense": "long and large; tall and large; grand; huge",
+    "ja": "長大",
+    "ja_reading": "ちょうだい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "long and large",
+     "tall and large",
+     "grand",
+     "huge"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610340-0-grand",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 長大 is a very good match for the specific sense of \"grand\" meaning \"long and large\", though it is slightly more formal/literary."
+   }
+  },
+  {
+   "key": "24e64db8b8b7a251f1a785c6052bc2c8e8a428d2d2579939242dfaccea2da0ea",
+   "input": {
+    "id": "jm-1610870-0-as_soon_as",
+    "en": "as soon as",
+    "en_pos": "noun",
+    "en_sense": "just (now, at the moment, etc.); just as; in the act of; as soon as; at the moment that",
+    "ja": "途端",
+    "ja_reading": "とたん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "just (now, at the moment, etc.)",
+     "just as",
+     "in the act of",
+     "as soon as",
+     "at the moment that"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610870-0-as_soon_as",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "途端 is an excellent equivalent for \"as soon as\" or \"the moment that\", especially in the common V-た途端に construction."
+   }
+  },
+  {
+   "key": "171c2b9bdf3adc82111f9768e98748fa4134469aeb9437d4ec3f2a0cb48c409f",
+   "input": {
+    "id": "jm-1610950-0-persist",
+    "en": "persist",
+    "en_pos": "verb",
+    "en_sense": "to be prolonged; to drag on; to take a long time; to persist; to linger",
+    "ja": "長引く",
+    "ja_reading": "ながびく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to be prolonged",
+     "to drag on",
+     "to take a long time",
+     "to persist",
+     "to linger"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610950-0-persist",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "長引く is a perfect equivalent for the sense of \"persist\" meaning to drag on or be prolonged, often with a negative connotation."
+   }
+  },
+  {
+   "key": "1d16123607964ef63c30d43a74d3e82ddda98db2325e6bbf9e066cd85143704d",
+   "input": {
+    "id": "jm-1610960-0-scene",
+    "en": "scene",
+    "en_pos": "noun",
+    "en_sense": "scene; view; prospect; outlook",
+    "ja": "眺め",
+    "ja_reading": "ながめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scene",
+     "view",
+     "prospect",
+     "outlook"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610960-0-scene",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "眺め is an excellent translation for \"scene\" in the sense of a view or landscape."
+   }
+  },
+  {
+   "key": "a43a07702e4aedd316826222c5a214dd02ea862bdb338ed51f4b12b470571e99",
+   "input": {
+    "id": "jm-1611000-0-bear_fruit",
+    "en": "bear fruit",
+    "en_pos": "verb",
+    "en_sense": "to bear fruit",
+    "ja": "なる",
+    "ja_reading": "なる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to bear fruit"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611000-0-bear_fruit",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The verb なる (naru) alone does not mean \"to bear fruit\"; the correct and natural expressions are 実がなる (mi ga naru) or 実る (minoru)."
+   }
+  },
+  {
+   "key": "94e2a6393c8a6c1c1c64a0ffd34c2f4c6666e039e9b0f257cd0415646a3b25be",
+   "input": {
+    "id": "jm-1611200-0-origin",
+    "en": "origin",
+    "en_pos": "noun",
+    "en_sense": "origin; beginning; start",
+    "ja": "始まり",
+    "ja_reading": "はじまり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "origin",
+     "beginning",
+     "start"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611200-0-origin",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "始まり is a common and natural equivalent for \"origin\" in the sense of a beginning or start."
+   }
+  },
+  {
+   "key": "69f6fb312f6ad4fe6ed5effba4943b8f47d8a61802d8d4e29caecb58c48ba330",
+   "input": {
+    "id": "jm-1611370-0-day",
+    "en": "day",
+    "en_pos": "noun",
+    "en_sense": "date (of a planned event, act, etc.); day",
+    "ja": "日日",
+    "ja_reading": "ひにち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date (of a planned event, act, etc.)",
+     "day"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611370-0-day",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "日にち (hinichi) is the perfect Japanese word for the specific sense of \"day\" as a date for a planned event."
+   }
+  },
+  {
+   "key": "7350cc78a832098454d9b4a2943220fab46db3a1fc4ac8f9a734070c0aa3cdad",
+   "input": {
+    "id": "jm-1611440-0-foot",
+    "en": "foot",
+    "en_pos": "noun",
+    "en_sense": "foot (of a mountain or hill); bottom; base",
+    "ja": "麓",
+    "ja_reading": "ふもと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "foot (of a mountain or hill)",
+     "bottom",
+     "base"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611440-0-foot",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "麓 is the exact and standard Japanese word for the foot of a mountain."
+   }
+  },
+  {
+   "key": "b29a713195f65865770958aa28ebe74c5509f10a9e20a6fa531ddf48a935a0a0",
+   "input": {
+    "id": "jm-1611450-0-brush",
+    "en": "brush",
+    "en_pos": "noun",
+    "en_sense": "brush",
+    "ja": "ブラシ",
+    "ja_reading": "ブラシ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "brush"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611450-0-brush",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ブラシ is the standard Japanese word for \"brush\", a direct loanword from English."
+   }
+  },
+  {
+   "key": "152e98081f088d6600eefe216e9bb995cdf96fd3e07919dfdb96b405b312ca30",
+   "input": {
+    "id": "jm-1611770-0-route",
+    "en": "route",
+    "en_pos": "noun",
+    "en_sense": "route; way; course; directions",
+    "ja": "道順",
+    "ja_reading": "みちじゅん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "route",
+     "way",
+     "course",
+     "directions"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1611770-0-route",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "道順 is a perfect equivalent for \"route\" in the sense of a path or directions to a destination."
+   }
+  },
+  {
+   "key": "2a87e3f2fe9640e1fe4ad516a466c37f51ae2395e6b835d7ce87086d4dc8343f",
+   "input": {
+    "id": "jm-1612000-0-rarely",
+    "en": "rarely",
+    "en_pos": "adverb",
+    "en_sense": "rarely; seldom",
+    "ja": "滅多に",
+    "ja_reading": "めったに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "rarely",
+     "seldom"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1612000-0-rarely",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "滅多に (mettani), used with a negative verb, is the standard and natural way to express \"rarely\" or \"seldom\"."
+   }
+  },
+  {
+   "key": "dbe14632f36a30b5e22c0b634ec7c000ad61d93f01f9d40f30be957aed60d3fa",
+   "input": {
+    "id": "jm-1612050-0-if",
+    "en": "if",
+    "en_pos": "adverb",
+    "en_sense": "if; in case; supposing",
+    "ja": "もしも",
+    "ja_reading": "もしも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "if",
+     "in case",
+     "supposing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1612050-0-if",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "もしも is a common, slightly emphatic adverb used to mean \"if\" or \"supposing\", making it a good equivalent."
+   }
+  }
+ ]
+}

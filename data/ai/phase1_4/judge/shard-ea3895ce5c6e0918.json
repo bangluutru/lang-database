@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:00:22Z",
+ "items": [
+  {
+   "key": "a1172153d5cbf0b496365bf2e91fdd31a4bea42a0356c223baae9dfb8c9b3318",
+   "input": {
+    "id": "wk-8251-e:2fca3a",
+    "en": "victim",
+    "en_pos": "noun",
+    "en_sense": "one who is harmed by a disaster or other adverse circumstance",
+    "ja": "被災者",
+    "ja_reading": "ひさいしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "person affected by a disaster",
+     "afflicted person",
+     "victim",
+     "sufferer",
+     "survivor"
+    ],
+    "vi": "nạn nhân"
+   },
+   "output": {
+    "id": "wk-8251-e:2fca3a",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word '被災者' specifically means 'disaster victim', matching the English sense well, but the Vietnamese word 'nạn nhân' is the general term for 'victim' and thus too broad."
+   }
+  },
+  {
+   "key": "b23c669531e03d9efae5ca1176022ba3903e368474fa8a68acc1270fceda9ad7",
+   "input": {
+    "id": "wk-8251-e:6ead82",
+    "en": "victim",
+    "en_pos": "noun",
+    "en_sense": "one who is harmed",
+    "ja": "犠牲者",
+    "ja_reading": "ぎせいしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "victim (esp. someone killed)",
+     "casualty"
+    ],
+    "vi": "nạn nhân"
+   },
+   "output": {
+    "id": "wk-8251-e:6ead82",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese word '犠牲者' is too narrow, as it strongly implies a casualty or someone killed, whereas the English sense is the general 'one who is harmed'."
+   }
+  },
+  {
+   "key": "0d655249ac91bdcd2bc9cfbc8b437f07a2272b17d6af056b5e931f2b26ab7fb9",
+   "input": {
+    "id": "wk-8251-e:8b1290",
+    "en": "victim",
+    "en_pos": "noun",
+    "en_sense": "a living being slain and offered as a sacrifice",
+    "ja": "犠牲",
+    "ja_reading": "ぎせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "victim (esp. someone killed)",
+     "casualty"
+    ],
+    "vi": "lễ vật"
+   },
+   "output": {
+    "id": "wk-8251-e:8b1290",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'lễ vật' means 'offering' in general and is too broad; a more specific term like 'vật tế' would better match the sense of a sacrificial victim."
+   }
+  },
+  {
+   "key": "5a5d0897ce5fa11f86c95bd56a2e71e76ee2925f905b3fb16b3a362387a3258f",
+   "input": {
+    "id": "wk-8256-s1",
+    "en": "morgue",
+    "en_pos": "noun",
+    "en_sense": "A building or room where dead bodies are kept before their proper burial or cremation, (now) particularly in legal and law enforcement contexts.",
+    "ja": "モルグ",
+    "ja_reading": "モルグ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "morgue",
+     "mortuary"
+    ],
+    "vi": "nhà xác"
+   },
+   "output": {
+    "id": "wk-8256-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'morgue' and are excellent equivalents."
+   }
+  },
+  {
+   "key": "6ba8b9c01a13b6ddc21d234b8007499bfd650cd8e53027a19eb4dd0125a3181a",
+   "input": {
+    "id": "wk-8268-s0",
+    "en": "mirror",
+    "en_pos": "noun",
+    "en_sense": "A smooth surface, usually made of glass with reflective material painted on the underside, that reflects light so as to give an image of what is in front of it.",
+    "ja": "鏡",
+    "ja_reading": "かがみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mirror",
+     "looking-glass"
+    ],
+    "vi": "kính"
+   },
+   "output": {
+    "id": "wk-8268-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'kính' means 'glass', not 'mirror'. The correct word for mirror is 'gương'."
+   }
+  },
+  {
+   "key": "c094fb3e177612dd37fbb0e5af912f344bdd24a7048164c90eb76462094595ad",
+   "input": {
+    "id": "wk-8270-s0",
+    "en": "fur",
+    "en_pos": "noun",
+    "en_sense": "The hairy coat of various mammal species, especially when fine, soft and thick.",
+    "ja": "毛皮",
+    "ja_reading": "けがわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fur",
+     "skin",
+     "pelt"
+    ],
+    "vi": "lông"
+   },
+   "output": {
+    "id": "wk-8270-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'lông' is broader, as it can also mean 'hair' or 'feathers', while English 'fur' and Japanese '毛皮' refer specifically to the coat of a mammal."
+   }
+  },
+  {
+   "key": "663cfe0ef2a741907be2cc24bc7b822b8c63c57dd556ff67782e05073185e963",
+   "input": {
+    "id": "wk-8271-s0",
+    "en": "theft",
+    "en_pos": "noun",
+    "en_sense": "The act of stealing property.",
+    "ja": "盗難",
+    "ja_reading": "とうなん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "theft",
+     "robbery"
+    ],
+    "vi": "sự trộm cắp"
+   },
+   "output": {
+    "id": "wk-8271-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and accurate equivalents for the act of theft."
+   }
+  },
+  {
+   "key": "413f4c03219b1a69ac19e21128739889f00a5e861e060a29cb4d0b3a8839aa21",
+   "input": {
+    "id": "wk-8272-s0",
+    "en": "hoof",
+    "en_pos": "noun",
+    "en_sense": "The tip of a toe of an ungulate such as a horse, ox or deer, strengthened by a thick keratin covering.",
+    "ja": "蹄",
+    "ja_reading": "ひづめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hoof"
+    ],
+    "vi": "móng"
+   },
+   "output": {
+    "id": "wk-8272-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'móng' is too broad, meaning nail, claw, or hoof; the specific term for 'hoof' is 'móng guốc'."
+   }
+  },
+  {
+   "key": "2c9a0f221fd4adfb13ad37e075aad3e9f420e32dcbabfca39af3e327d9edc01b",
+   "input": {
+    "id": "wk-8273-s0",
+    "en": "hill",
+    "en_pos": "noun",
+    "en_sense": "An elevated landmass smaller than a mountain.",
+    "ja": "丘",
+    "ja_reading": "おか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hill",
+     "height",
+     "knoll",
+     "rising ground"
+    ],
+    "vi": "đồi"
+   },
+   "output": {
+    "id": "wk-8273-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'hill'."
+   }
+  },
+  {
+   "key": "b324bd5103d64ef43ae73a302b3bc4355598f3e48320b181f573582fef872209",
+   "input": {
+    "id": "wk-8276-s0",
+    "en": "bookcase",
+    "en_pos": "noun",
+    "en_sense": "A piece of furniture for the storage and display of books.",
+    "ja": "本棚",
+    "ja_reading": "ほんだな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bookshelves",
+     "bookshelf",
+     "bookcase"
+    ],
+    "vi": "tủ sách"
+   },
+   "output": {
+    "id": "wk-8276-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'bookcase'."
+   }
+  },
+  {
+   "key": "0d350c75201162acb33f136c019982115c39c86deeeafe73aba955aa5d3b62a8",
+   "input": {
+    "id": "wk-8279-s1",
+    "en": "driver",
+    "en_pos": "noun",
+    "en_sense": "A person who drives a motorized vehicle such as a car, truck, bus, train, forklift, etc.",
+    "ja": "ドライバー",
+    "ja_reading": "ドライバー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "driver (of a vehicle)",
+     "motorist"
+    ],
+    "vi": "tài xế"
+   },
+   "output": {
+    "id": "wk-8279-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are common and standard for a vehicle driver, making them good equivalents."
+   }
+  },
+  {
+   "key": "e046c1855cba4f3fe98b6a82c268db5df7bb89f4edb3c8bd256b61aa98b5838b",
+   "input": {
+    "id": "wk-8283-s0",
+    "en": "refrigerator",
+    "en_pos": "noun",
+    "en_sense": "A household or commercial appliance used for keeping food fresh using refrigeration.",
+    "ja": "冷蔵庫",
+    "ja_reading": "れいぞうこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "refrigerator",
+     "fridge"
+    ],
+    "vi": "tủ lạnh"
+   },
+   "output": {
+    "id": "wk-8283-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'refrigerator'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:43Z",
+ "items": [
+  {
+   "key": "8f8da05054312a65e8ae759a17d4aab80236e9580df64c2917da6ed897ed133d",
+   "input": {
+    "id": "concept-core-unusual",
+    "en": "unusual",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'unusual': extreme, great, extraordinary",
+    "ja": "珍しい",
+    "ja_reading": "めずらしい",
+    "ja_pos": "adjective",
+    "ja_glosses": [],
+    "vi": "khác thường"
+   },
+   "output": {
+    "id": "concept-core-unusual",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese words mean 'unusual' as in 'rare', not the specified sense of 'extreme, great, extraordinary'."
+   }
+  },
+  {
+   "key": "64c2a5c4bbe8cc6a6496e6abeeb01c0b7654df6dbdafec19e7d410a5500b842a",
+   "input": {
+    "id": "concept-core-motion",
+    "en": "motion",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'motion': motion, movement",
+    "ja": "運動",
+    "ja_reading": "うんどう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "motion",
+     "movement"
+    ],
+    "vi": "vận động"
+   },
+   "output": {
+    "id": "concept-core-motion",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "Both 運動 and vận động primarily mean 'exercise' or 'campaign'; for the physical sense of 'motion', other words are more common and natural in both languages."
+   }
+  },
+  {
+   "key": "eda95c8daf3f051bb14d1c0d47056e8cc7f5271551475e2a10cdc61c9fe3dbd4",
+   "input": {
+    "id": "concept-core-there",
+    "en": "there",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'there': there, over there, that place",
+    "ja": "彼処",
+    "ja_reading": "あそこ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "there",
+     "over there",
+     "that place",
+     "yonder",
+     "you-know-where"
+    ],
+    "vi": "đó"
+   },
+   "output": {
+    "id": "concept-core-there",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'asoko' (彼処) refers to a place distant from both speaker and listener, while Vietnamese 'đó' refers to a place near the listener; they are not equivalents."
+   }
+  },
+  {
+   "key": "7b03d7d388578a5336191b6f2869e427382ba93254517a3e02883fd72613b437",
+   "input": {
+    "id": "concept-core-pride",
+    "en": "pride",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'pride': self-respect, esteem, self-importance",
+    "ja": "誇り",
+    "ja_reading": "ほこり",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "niềm tự hào"
+   },
+   "output": {
+    "id": "concept-core-pride",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for the positive sense of pride."
+   }
+  },
+  {
+   "key": "1b012ff10a15728f4907a5d4826c8a2ac8ba7a70f0c2f620443d660985e178f7",
+   "input": {
+    "id": "concept-core-region",
+    "en": "region",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'region': district, region, area",
+    "ja": "地方",
+    "ja_reading": "ちほう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "district",
+     "region",
+     "area",
+     "locality"
+    ],
+    "vi": "địa phương"
+   },
+   "output": {
+    "id": "concept-core-region",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'địa phương' means 'locality' and is narrower than English 'region' or Japanese '地方', which can refer to much larger areas."
+   }
+  },
+  {
+   "key": "d1717cae79ab67b846be54c6889009a0b899d5f4e54e38cb2bfe56d47873a038",
+   "input": {
+    "id": "concept-core-cool",
+    "en": "cool",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'cool': cool, calm, composed",
+    "ja": "平気",
+    "ja_reading": "へいき",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "cool",
+     "calm",
+     "composed",
+     "unconcerned",
+     "nonchalant",
+     "unmoved"
+    ],
+    "vi": "mát mẻ"
+   },
+   "output": {
+    "id": "concept-core-cool",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'mát mẻ' translates the temperature sense of 'cool', not the specified psychological sense of 'calm, composed'."
+   }
+  },
+  {
+   "key": "a992b9ac15c19a29352390b0fb41f0e582dea69fdb7909a5fcf3f69c07793828",
+   "input": {
+    "id": "concept-core-effective",
+    "en": "effective",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'effective': valid, effective",
+    "ja": "有効",
+    "ja_reading": "ゆうこう",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "valid",
+     "effective"
+    ],
+    "vi": "hữu hiệu"
+   },
+   "output": {
+    "id": "concept-core-effective",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents, especially in contexts like medicine or strategy."
+   }
+  },
+  {
+   "key": "dda5929339800e9ee55f3bbf763a54387febc09ea1db867242066dcefc0b9ad5",
+   "input": {
+    "id": "concept-core-performance",
+    "en": "performance",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'performance': ability, performance, efficiency",
+    "ja": "性能",
+    "ja_reading": "せいのう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "ability",
+     "performance",
+     "efficiency"
+    ],
+    "vi": "tính năng"
+   },
+   "output": {
+    "id": "concept-core-performance",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'tính năng' means 'feature' or 'function', not 'performance' (how well something works), which is the meaning of the English and Japanese terms."
+   }
+  },
+  {
+   "key": "a81b86cbbc2684c264cdf674667d53c5da3578361a8cf77170c1894dd92369a1",
+   "input": {
+    "id": "concept-core-dark",
+    "en": "dark",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'dark': dark, gloomy, murky",
+    "ja": "暗い",
+    "ja_reading": "くらい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "dark",
+     "gloomy",
+     "murky"
+    ],
+    "vi": "tối"
+   },
+   "output": {
+    "id": "concept-core-dark",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'tối' primarily means literal darkness and is less used for the figurative 'gloomy' sense compared to English 'dark' and Japanese '暗い'."
+   }
+  },
+  {
+   "key": "ff440bf4281b797a8b5093e725ba1a3919703c09613c98a5fd57ee0445b04bcb",
+   "input": {
+    "id": "concept-core-car",
+    "en": "car",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'car': car",
+    "ja": "カー",
+    "ja_reading": "カー",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "car"
+    ],
+    "vi": "xe"
+   },
+   "output": {
+    "id": "concept-core-car",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese 'カー' is unnatural as a standalone word for 'car' (should be 車), and the Vietnamese 'xe' is too broad, meaning 'vehicle' (should be 'xe hơi')."
+   }
+  },
+  {
+   "key": "a81130a535ccf48a20b8c7b2e06b918d674678cb8cb2671555a18efc442415c1",
+   "input": {
+    "id": "concept-core-man",
+    "en": "man",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'man': man, person, people",
+    "ja": "人",
+    "ja_reading": "じん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "man",
+     "person",
+     "people"
+    ],
+    "vi": "đàn ông"
+   },
+   "output": {
+    "id": "concept-core-man",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese '人' translates the 'human/person' sense of 'man', while the Vietnamese 'đàn ông' translates the 'adult male' sense, creating a contradiction."
+   }
+  },
+  {
+   "key": "4acd60b7465f1306f8a21275287a64d4b027f19f2b85a15768e0019c3dbaf3e1",
+   "input": {
+    "id": "concept-core-excellent",
+    "en": "excellent",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'excellent': golden, prosperous, excellent",
+    "ja": "素晴らしい",
+    "ja_reading": "すばらしい",
+    "ja_pos": "adjective",
+    "ja_glosses": [],
+    "vi": "tuyệt vời"
+   },
+   "output": {
+    "id": "concept-core-excellent",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'excellent' or 'wonderful', despite the slightly confusing English sense definition."
+   }
+  }
+ ]
+}

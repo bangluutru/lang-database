@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:49Z",
+ "items": [
+  {
+   "key": "1d96456fb36d2e01cae59dc1328a0479fe0bd65e0d73800aed4ff486bff04727",
+   "input": {
+    "id": "wk-15489-s0",
+    "en": "ranch",
+    "en_pos": "noun",
+    "en_sense": "A large plot of land used for raising cattle, sheep or other livestock.",
+    "ja": "ランチ",
+    "ja_reading": "ランチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ranch"
+    ],
+    "vi": "điền trang"
+   },
+   "output": {
+    "id": "wk-15489-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'điền trang' means 'estate' and is not specific to livestock ranching; 'trang trại' would be a better equivalent."
+   }
+  },
+  {
+   "key": "037522abb03c5931f4e7a46c66378af5e39160964e97b92aea01894ad11a3eab",
+   "input": {
+    "id": "wk-1549-s0",
+    "en": "mosquito",
+    "en_pos": "noun",
+    "en_sense": "A small flying insect of the family Culicidae, the females of which bite humans and animals and suck blood, leaving an itching bump on the skin, and sometimes carrying diseases like malaria, dengue and yellow fever.",
+    "ja": "蚊",
+    "ja_reading": "か",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mosquito"
+    ],
+    "vi": "muỗi"
+   },
+   "output": {
+    "id": "wk-1549-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'mosquito'."
+   }
+  },
+  {
+   "key": "f85da61d65ba3a26e0b96ce627024776c77b05998fd9b9262e87c90424e845a6",
+   "input": {
+    "id": "wk-15499-s0",
+    "en": "fossil",
+    "en_pos": "noun",
+    "en_sense": "The mineralized remains of an animal or plant.",
+    "ja": "化石",
+    "ja_reading": "かせき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fossil"
+    ],
+    "vi": "hoá thạch"
+   },
+   "output": {
+    "id": "wk-15499-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'fossil', with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "7e0228f95cb43cc73e4e3bd4210fab1f60ddda803865dfacbf9c08143ba52b68",
+   "input": {
+    "id": "wk-1550-e:18f6b0",
+    "en": "hello",
+    "en_pos": "interjection",
+    "en_sense": "greeting",
+    "ja": "こんにちは",
+    "ja_reading": "こんにちは",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "hello",
+     "good day",
+     "good afternoon"
+    ],
+    "vi": "chào"
+   },
+   "output": {
+    "id": "wk-1550-e:18f6b0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 'こんにちは' is a daytime greeting, making it narrower than the all-day English 'hello' and Vietnamese 'chào'."
+   }
+  },
+  {
+   "key": "b95a94fff34e65b77a782b4bedca31c4cd58bcf834eb8df432d2953450c1d152",
+   "input": {
+    "id": "wk-1550-s2",
+    "en": "hello",
+    "en_pos": "interjection",
+    "en_sense": "A call for response if it is not clear if anyone is present or listening, or if a telephone conversation may have been disconnected.",
+    "ja": "もしもし",
+    "ja_reading": "もしもし",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "hello (e.g. on phone)"
+    ],
+    "vi": "ơi"
+   },
+   "output": {
+    "id": "wk-1550-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'ơi' is a vocative particle and not used for 'hello?' on a phone or to check for presence; 'A lô?' would be the correct equivalent."
+   }
+  },
+  {
+   "key": "eacf6fc78e1b4348f30d476dadb81365c501767305e9eb590ffb785d3cdcf1cb",
+   "input": {
+    "id": "wk-15511-s0",
+    "en": "flush",
+    "en_pos": "noun",
+    "en_sense": "A hand consisting of all cards with the same suit.",
+    "ja": "フラッシュ",
+    "ja_reading": "フラッシュ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "flush (poker hand)"
+    ],
+    "vi": "thùng"
+   },
+   "output": {
+    "id": "wk-15511-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard words for a 'flush' in poker."
+   }
+  },
+  {
+   "key": "13a084704a117e0126e17217acdce4ffe0ba801d4181493b663dd04864103ae5",
+   "input": {
+    "id": "wk-1552-s1",
+    "en": "gun",
+    "en_pos": "noun",
+    "en_sense": "A very portable, short firearm, for hand use, which fires bullets or projectiles, such as a handgun, revolver, pistol, or Derringer.",
+    "ja": "銃",
+    "ja_reading": "じゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gun",
+     "firearm",
+     "small arms (e.g. rifle, pistol, etc)"
+    ],
+    "vi": "súng lục"
+   },
+   "output": {
+    "id": "wk-1552-s1",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense is specifically 'handgun', for which the Japanese '銃' (gun) is too broad; the correct Japanese term is '拳銃' (kenjū)."
+   }
+  },
+  {
+   "key": "f0607b98b90128eb11160e0228963d2ca4f237faaa0c5999745d3fe38d6240bd",
+   "input": {
+    "id": "wk-1552-s3",
+    "en": "gun",
+    "en_pos": "noun",
+    "en_sense": "A cannon with relatively long barrel, operating with relatively low angle of fire, and having a high muzzle velocity.",
+    "ja": "大砲",
+    "ja_reading": "たいほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(large) gun",
+     "cannon",
+     "artillery"
+    ],
+    "vi": "đại bác"
+   },
+   "output": {
+    "id": "wk-1552-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'cannon' or 'large gun', with the Japanese and Vietnamese terms being cognates."
+   }
+  },
+  {
+   "key": "ebeddfb45b67f10be9c03403884f5d68b92a404279375abd6b57d0cb3b2b2901",
+   "input": {
+    "id": "wk-1554-s0",
+    "en": "goodbye",
+    "en_pos": "interjection",
+    "en_sense": "Farewell; a formula used to another person or persons when the speaker, writer, or person addressed is departing.",
+    "ja": "さよなら",
+    "ja_reading": "さよなら",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "goodbye",
+     "so long",
+     "farewell"
+    ],
+    "vi": "chào"
+   },
+   "output": {
+    "id": "wk-1554-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chào' is too broad as it also means 'hello', and the Japanese 'さよなら' carries a stronger sense of finality than 'goodbye'."
+   }
+  },
+  {
+   "key": "db91e73d22688d06376f51f88904bc47e81b69bf8d263b80443e366835ee1b56",
+   "input": {
+    "id": "wk-15553-s0",
+    "en": "thorax",
+    "en_pos": "noun",
+    "en_sense": "The region of the mammalian body between the neck and abdomen as well as the cavity containing the heart and lungs.",
+    "ja": "胸郭",
+    "ja_reading": "きょうかく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "chest",
+     "thorax"
+    ],
+    "vi": "ngực"
+   },
+   "output": {
+    "id": "wk-15553-s0",
+    "en_ja": "NARROW",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '胸郭' (rib cage) is too narrow, and the Vietnamese 'ngực' (chest) is too broad and non-technical for the specific anatomical term 'thorax'."
+   }
+  },
+  {
+   "key": "af92c821b1f0e9939a3033b8e855af51bdb835c86bc50d99f344b0acb321cff0",
+   "input": {
+    "id": "wk-15554-s0",
+    "en": "skilled",
+    "en_pos": "adjective",
+    "en_sense": "Having or showing skill; skillful.",
+    "ja": "上手",
+    "ja_reading": "じょうず",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "skillful",
+     "skilled",
+     "proficient",
+     "good (at)",
+     "adept",
+     "clever"
+    ],
+    "vi": "lành nghề"
+   },
+   "output": {
+    "id": "wk-15554-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'lành nghề' is too narrow, as it specifically refers to skill in a trade or craft, whereas English 'skilled' and Japanese '上手' are more general."
+   }
+  },
+  {
+   "key": "762fba8d2abf2c296f43ca6ae7a7539d6f664ce41d3eca38b81c59bf4204e8ee",
+   "input": {
+    "id": "wk-15565-s1",
+    "en": "picnic",
+    "en_pos": "noun",
+    "en_sense": "The meal eaten at such a gathering.",
+    "ja": "ピクニック",
+    "ja_reading": "ピクニック",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "picnic"
+    ],
+    "vi": "dã ngoại"
+   },
+   "output": {
+    "id": "wk-15565-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense specifies the picnic 'meal', but the Vietnamese 'dã ngoại' refers to the picnic 'outing' or 'activity'."
+   }
+  }
+ ]
+}

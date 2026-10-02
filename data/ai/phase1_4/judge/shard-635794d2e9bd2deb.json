@@ -1,0 +1,407 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:26:32Z",
+ "items": [
+  {
+   "key": "c60bb61ac9461ef2401e520254de8e2d99e61d25872f793becc408232a3ba38d",
+   "input": {
+    "id": "jm-1004060-0-fast",
+    "en": "fast",
+    "en_pos": "adverb",
+    "en_sense": "soundly (sleeping); fast (asleep)",
+    "ja": "ぐっすり",
+    "ja_reading": "ぐっすり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "soundly (sleeping)",
+     "fast (asleep)"
+    ],
+    "vi": "say giấc"
+   },
+   "output": {
+    "id": "jm-1004060-0-fast",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'say giấc' is a noun phrase ('sound sleep'), not an adverb like English 'fast' (asleep) or Japanese 'ぐっすり'."
+   }
+  },
+  {
+   "key": "84c553cce4f33598b044ec396c298ee028828f1b4427fb2e28695c95b4633599",
+   "input": {
+    "id": "jm-1007040-0-besides",
+    "en": "besides",
+    "en_pos": "conjunction",
+    "en_sense": "besides; in addition; also; moreover",
+    "ja": "それに",
+    "ja_reading": "それに",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "besides",
+     "in addition",
+     "also",
+     "moreover"
+    ],
+    "vi": "ngoài ra"
+   },
+   "output": {
+    "id": "jm-1007040-0-besides",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural, and standard equivalents for this sense."
+   }
+  },
+  {
+   "key": "38bc81349e8bd7bd2b6129f87fdf90637ee35d81e985c2649653ef5a5ad6f894",
+   "input": {
+    "id": "jm-1007170-0-rough",
+    "en": "rough",
+    "en_pos": "adjective",
+    "en_sense": "rough; careless; slovenly; slipshod; rude; impolite",
+    "ja": "ぞんざい",
+    "ja_reading": "ぞんざい",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "rough",
+     "careless",
+     "slovenly",
+     "slipshod",
+     "rude",
+     "impolite"
+    ],
+    "vi": "thô lỗ"
+   },
+   "output": {
+    "id": "jm-1007170-0-rough",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thô lỗ' is too narrow, focusing only on the 'rude/impolite' aspect and not the 'careless/slovenly' part of the English sense and the Japanese 'ぞんざい'."
+   }
+  },
+  {
+   "key": "680180f67779259cf73d4f2f5efc67a24db12cc75f6fa9c0ece96ab8a6fec399",
+   "input": {
+    "id": "jm-1007240-0-amply",
+    "en": "amply",
+    "en_pos": "adverb",
+    "en_sense": "plentifully; amply; abundantly; copiously; generously; fully",
+    "ja": "たっぷり",
+    "ja_reading": "たっぷり",
+    "ja_pos": "adv,adv-to,adj-na,suf",
+    "ja_glosses": [
+     "plentifully",
+     "amply",
+     "abundantly",
+     "copiously",
+     "generously",
+     "fully"
+    ],
+    "vi": "dồi dào"
+   },
+   "output": {
+    "id": "jm-1007240-0-amply",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'dồi dào' is an adjective ('abundant'), not an adverb like English 'amply' or Japanese 'たっぷり'."
+   }
+  },
+  {
+   "key": "82d4e498d4f2ccba736e6cb259b2ce2d2efa8e9cf0b2a72aab124916f4e33bb6",
+   "input": {
+    "id": "jm-1007370-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; although",
+    "ja": "だけど",
+    "ja_reading": "だけど",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "although"
+    ],
+    "vi": "nhưng"
+   },
+   "output": {
+    "id": "jm-1007370-0-but",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are very common conjunctions for 'but'; 'だけど' is slightly more informal/spoken than the others but is a perfectly acceptable equivalent."
+   }
+  },
+  {
+   "key": "da432fb0162a8559ed0fe0443b570de4f01893f9f6c692c86b84ce652e1f2eec",
+   "input": {
+    "id": "jm-1007430-0-loose",
+    "en": "loose",
+    "en_pos": "adjective",
+    "en_sense": "loose (of clothing); baggy",
+    "ja": "だぶだぶ",
+    "ja_reading": "だぶだぶ",
+    "ja_pos": "adj-na,adj-no,adv,adv-to,vs",
+    "ja_glosses": [
+     "loose (of clothing)",
+     "baggy"
+    ],
+    "vi": "rộng"
+   },
+   "output": {
+    "id": "jm-1007430-0-loose",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect and standard equivalents for 'loose' or 'baggy' clothing."
+   }
+  },
+  {
+   "key": "9b6e826c413162527d1d4c1ed362673be2aa3621e19324eb5801f38239b8e158",
+   "input": {
+    "id": "jm-1007560-0-at_all",
+    "en": "at all",
+    "en_pos": "adverb",
+    "en_sense": "(not) at all; (not) a bit; (not) in the least; (not) in the slightest",
+    "ja": "ちっとも",
+    "ja_reading": "ちっとも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) at all",
+     "(not) a bit",
+     "(not) in the least",
+     "(not) in the slightest"
+    ],
+    "vi": "chút nào"
+   },
+   "output": {
+    "id": "jm-1007560-0-at_all",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect idiomatic equivalents, typically used with a negative."
+   }
+  },
+  {
+   "key": "a48b0fd756923792035afed582805a76296755f546271ea2e2bc7fb0cf9bc434",
+   "input": {
+    "id": "jm-1008050-0-while",
+    "en": "while",
+    "en_pos": "adverb",
+    "en_sense": "while (one is at it); when; on the occasion of; at the same time (as); on one's way (to); by the way",
+    "ja": "ついでに",
+    "ja_reading": "ついでに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "while (one is at it)",
+     "when",
+     "on the occasion of",
+     "at the same time (as)",
+     "on one's way (to)",
+     "by the way"
+    ],
+    "vi": "tiện thể"
+   },
+   "output": {
+    "id": "jm-1008050-0-while",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect idiomatic equivalents for doing something secondary while taking the opportunity of a primary action."
+   }
+  },
+  {
+   "key": "f79c3fc648c780e834aa188e86719fe32845b98ef6d4d8f1cd2b091e800eced1",
+   "input": {
+    "id": "jm-1008450-0-then",
+    "en": "then",
+    "en_pos": "conjunction",
+    "en_sense": "then; well; so; well then",
+    "ja": "では",
+    "ja_reading": "では",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "then",
+     "well",
+     "so",
+     "well then"
+    ],
+    "vi": "vậy thì"
+   },
+   "output": {
+    "id": "jm-1008450-0-then",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard and natural equivalents used as discourse markers to mean 'well then' or 'in that case'."
+   }
+  },
+  {
+   "key": "ab5b77a1d6e3c9703e25d5d937deddabf223f2cf249033217a1dcd31f12e078e",
+   "input": {
+    "id": "jm-1008460-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; though; nevertheless; still; yet",
+    "ja": "でも",
+    "ja_reading": "でも",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "though",
+     "nevertheless",
+     "still",
+     "yet"
+    ],
+    "vi": "nhưng"
+   },
+   "output": {
+    "id": "jm-1008460-0-but",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are very common conjunctions for 'but'; 'でも' is slightly more informal/spoken than the others but is a perfectly acceptable equivalent."
+   }
+  },
+  {
+   "key": "cbc9cb273d59c5200da496c5e5d2049b81b7c566b40ce1abcb7bf79f1516d107",
+   "input": {
+    "id": "jm-1008570-0-however",
+    "en": "however",
+    "en_pos": "conjunction",
+    "en_sense": "even so; however; still; whereupon; even though; nevertheless",
+    "ja": "ところが",
+    "ja_reading": "ところが",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "even so",
+     "however",
+     "still",
+     "whereupon",
+     "even though",
+     "nevertheless"
+    ],
+    "vi": "tuy nhiên"
+   },
+   "output": {
+    "id": "jm-1008570-0-however",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'ところが' is too specific, only meaning 'however, contrary to expectations', while English 'however' and Vietnamese 'tuy nhiên' are more general."
+   }
+  },
+  {
+   "key": "18f6c132b84dac1dd4491e09b124354fb8e85ce477f79ef8a251b70d3b8c85c3",
+   "input": {
+    "id": "jm-1008630-0-very",
+    "en": "very",
+    "en_pos": "adverb",
+    "en_sense": "very; awfully; exceedingly",
+    "ja": "とても",
+    "ja_reading": "とても",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "very",
+     "awfully",
+     "exceedingly"
+    ],
+    "vi": "rất"
+   },
+   "output": {
+    "id": "jm-1008630-0-very",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the most common and standard equivalents for the intensifier 'very'."
+   }
+  }
+ ]
+}

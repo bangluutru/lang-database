@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:02Z",
+ "items": [
+  {
+   "key": "6e5054c4f4576b597167401750b7d52fa5513e1c1d8ef933d85fb13fcf001901",
+   "input": {
+    "id": "wk-662-s0",
+    "en": "choir",
+    "en_pos": "noun",
+    "en_sense": "A group of people who sing together; a company of people who are trained to sing together.",
+    "ja": "合唱団",
+    "ja_reading": "がっしょうだん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chorus group",
+     "choir"
+    ],
+    "vi": "hợp xướng"
+   },
+   "output": {
+    "id": "wk-662-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'hợp xướng' refers to the musical form (chorus), not the group of singers (choir), which is 'dàn hợp xướng'."
+   }
+  },
+  {
+   "key": "7b392608bdc20060217bada825b8650a6d84ac06ba0abfb8dd9fd97d71a2ac84",
+   "input": {
+    "id": "wk-663-s0",
+    "en": "shuttle",
+    "en_pos": "noun",
+    "en_sense": "A tool used to carry the woof back and forth between the warp threads on a loom.",
+    "ja": "梭",
+    "ja_reading": "ひ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shuttle (of a loom)"
+    ],
+    "vi": "thoi"
+   },
+   "output": {
+    "id": "wk-663-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and correct word for a loom shuttle."
+   }
+  },
+  {
+   "key": "889f3c2fa75fcd729523a87e13f002ad408f984bfa1066683ad96807d39cacbe",
+   "input": {
+    "id": "wk-6633-s0",
+    "en": "edge",
+    "en_pos": "noun",
+    "en_sense": "The boundary line of a surface.",
+    "ja": "際",
+    "ja_reading": "きわ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "edge",
+     "brink",
+     "verge",
+     "side"
+    ],
+    "vi": "cạnh"
+   },
+   "output": {
+    "id": "wk-6633-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While 際 is correct, 縁 (fuchi) or 端 (hashi) are more common for the physical edge of an object in Japanese."
+   }
+  },
+  {
+   "key": "a2f85627bdb98e5e79a2cc9823c8961d0707eec5d456919bb4978286cf3fa6e9",
+   "input": {
+    "id": "wk-6633-s3",
+    "en": "edge",
+    "en_pos": "noun",
+    "en_sense": "The thin cutting side of the blade of an instrument, such as an ax, knife, sword, or scythe; that which cuts as an edge does, or wounds deeply, etc.",
+    "ja": "刃",
+    "ja_reading": "は",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "edge (of a knife or sword)",
+     "blade"
+    ],
+    "vi": "lưỡi dao"
+   },
+   "output": {
+    "id": "wk-6633-s3",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'lưỡi dao' specifically means 'knife blade', while the English sense and Japanese equivalent '刃' apply to any cutting instrument."
+   }
+  },
+  {
+   "key": "8f40e315db59f6c800e44d29057b19b4a05b3d2f477f45da7dd93128185c0f75",
+   "input": {
+    "id": "wk-6645-s0",
+    "en": "tone",
+    "en_pos": "noun",
+    "en_sense": "A specific pitch.",
+    "ja": "トーン",
+    "ja_reading": "トーン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tone"
+    ],
+    "vi": "tiếng"
+   },
+   "output": {
+    "id": "wk-6645-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both 'トーン' and 'tiếng' are too broad; 'tiếng' means 'sound' in general, not the specific musical sense of 'pitch'."
+   }
+  },
+  {
+   "key": "1d6c19a0e162dd881e03b54742eed35e0d6c1deddd9568801aa585f551d0e9a9",
+   "input": {
+    "id": "wk-6646-e:6a6f43",
+    "en": "muscle",
+    "en_pos": "noun",
+    "en_sense": "contractile tissue",
+    "ja": "筋肉",
+    "ja_reading": "きんにく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "muscle"
+    ],
+    "vi": "cơ"
+   },
+   "output": {
+    "id": "wk-6646-e:6a6f43",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'muscle'."
+   }
+  },
+  {
+   "key": "9850143a98bfa77dab02701e564bed1662a720d046a316761371784211d93c02",
+   "input": {
+    "id": "wk-6648-s0",
+    "en": "niche",
+    "en_pos": "noun",
+    "en_sense": "A cavity, hollow, or recess, generally within the thickness of a wall, for a statue, bust, or other erect ornament.",
+    "ja": "壁龕",
+    "ja_reading": "へきがん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "niche (in Western architecture)"
+    ],
+    "vi": "hốc"
+   },
+   "output": {
+    "id": "wk-6648-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '壁龕' is a very technical and rare term for an architectural niche; the loanword 'ニッチ' is more common."
+   }
+  },
+  {
+   "key": "fbf8c78a1b21c8e34923fab77b6e1fadf5ff89fb6a70725affb2f9b6900a5edb",
+   "input": {
+    "id": "wk-6649-s0",
+    "en": "niche",
+    "en_pos": "adjective",
+    "en_sense": "Pertaining to or intended for a market niche; having specific appeal; obscure.",
+    "ja": "ニッチ",
+    "ja_reading": "ニッチ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "niche (market, industry, hobby, etc.)"
+    ],
+    "vi": "ngách"
+   },
+   "output": {
+    "id": "wk-6649-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural way to express the concept of a 'niche' market or interest."
+   }
+  },
+  {
+   "key": "1b987090084c99261af479cad6caab5f83a393b5b82af10b6998e20670a42ef4",
+   "input": {
+    "id": "wk-665-s0",
+    "en": "map",
+    "en_pos": "noun",
+    "en_sense": "A visual representation of an area, whether real or imaginary, showing the relative positions of places and other features.",
+    "ja": "地図",
+    "ja_reading": "ちず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "map",
+     "atlas",
+     "chart",
+     "plan"
+    ],
+    "vi": "bản đồ"
+   },
+   "output": {
+    "id": "wk-665-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence between all three languages for the primary sense of 'map'."
+   }
+  },
+  {
+   "key": "4073c0f0e0260198b9cef615e7549fbacc31837a9ae774ce0aea1719648bf615",
+   "input": {
+    "id": "wk-665-s2",
+    "en": "map",
+    "en_pos": "noun",
+    "en_sense": "A function, especially a function satisfying a certain property (e.g. continuity, linearity, etc.; see Usage notes).",
+    "ja": "写像",
+    "ja_reading": "しゃぞう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mapping",
+     "map",
+     "image",
+     "representation"
+    ],
+    "vi": "ánh xạ"
+   },
+   "output": {
+    "id": "wk-665-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard mathematical term for 'map' or 'mapping'."
+   }
+  },
+  {
+   "key": "8d24b86689c06faa14a8a12baf8a50fb494d6bd3febd96de9a9143da86165a3c",
+   "input": {
+    "id": "wk-6651-s0",
+    "en": "goalkeeper",
+    "en_pos": "noun",
+    "en_sense": "A designated player that attempts to prevent the opposing team from scoring by protecting a goal.",
+    "ja": "ゴールキーパー",
+    "ja_reading": "ゴールキーパー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "goalkeeper"
+    ],
+    "vi": "thủ môn"
+   },
+   "output": {
+    "id": "wk-6651-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for 'goalkeeper'."
+   }
+  },
+  {
+   "key": "7e7c027661c7a66e11e733c456cddc3f14dc763e64e2c73c9e50e9ac124f63f0",
+   "input": {
+    "id": "wk-6658-s1",
+    "en": "step",
+    "en_pos": "noun",
+    "en_sense": "A rest, or one of a set of rests, for the foot in ascending or descending, as a stair, or a rung of a ladder.",
+    "ja": "段",
+    "ja_reading": "だん",
+    "ja_pos": "n,ctr",
+    "ja_glosses": [
+     "step",
+     "stair",
+     "rung",
+     "(flight of) steps"
+    ],
+    "vi": "bậc"
+   },
+   "output": {
+    "id": "wk-6658-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and natural words for a single step of a stair or a rung of a ladder."
+   }
+  }
+ ]
+}

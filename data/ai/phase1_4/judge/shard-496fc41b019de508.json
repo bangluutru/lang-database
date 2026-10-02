@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:03Z",
+ "items": [
+  {
+   "key": "3959ffccd82b8d49e7a605528e9a8a3fa7e7d314d9edffa6ee6bb76f2b6295e7",
+   "input": {
+    "id": "wk-14823-e:7082f2",
+    "en": "domesticate",
+    "en_pos": "verb",
+    "en_sense": "(transitive) to adapt to live with humans",
+    "ja": "馴らす",
+    "ja_reading": "ならす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to tame",
+     "to domesticate",
+     "to train (an animal)"
+    ],
+    "vi": "thuần hoá"
+   },
+   "output": {
+    "id": "wk-14823-e:7082f2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'domesticate' in the sense of taming an animal."
+   }
+  },
+  {
+   "key": "69929f4604f7b0bece987c5c1448bfc1f1077aafa1cec8bda60a30e2d05905ae",
+   "input": {
+    "id": "wk-14829-s0",
+    "en": "supermarket",
+    "en_pos": "noun",
+    "en_sense": "A large self-service store that sells groceries and, usually, medications, household goods, and/or clothing.",
+    "ja": "スーパーマーケット",
+    "ja_reading": "スーパーマーケット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "supermarket"
+    ],
+    "vi": "siêu thị"
+   },
+   "output": {
+    "id": "wk-14829-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, modern words for 'supermarket'."
+   }
+  },
+  {
+   "key": "392f2b4c5c9d46fc8bf84e5116732679cff78cc10b5a27bec590d475cc7a360d",
+   "input": {
+    "id": "wk-14831-s0",
+    "en": "greengrocer",
+    "en_pos": "noun",
+    "en_sense": "A person who sells fresh vegetables and fruit, normally from a relatively small shop.",
+    "ja": "八百屋",
+    "ja_reading": "やおや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "greengrocer",
+     "fruit and vegetable shop"
+    ],
+    "vi": "người bán rau cải"
+   },
+   "output": {
+    "id": "wk-14831-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese term 'người bán rau cải' is too specific (leafy greens) and is an unnatural description rather than the correct term for a greengrocer, which should cover fruit and vegetables."
+   }
+  },
+  {
+   "key": "44e8b2a2d44a9cf6befcc14403ae92885a596d67f4f6df6243f64390afcba5b4",
+   "input": {
+    "id": "wk-1484-s1",
+    "en": "hut",
+    "en_pos": "noun",
+    "en_sense": "A small wooden shed.",
+    "ja": "小屋",
+    "ja_reading": "こや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hut",
+     "cabin",
+     "shed",
+     "(animal) pen"
+    ],
+    "vi": "chòi"
+   },
+   "output": {
+    "id": "wk-1484-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense is 'a small wooden shed', which the Vietnamese 'chòi' (a watch-hut or simple shelter, not for storage) does not accurately represent."
+   }
+  },
+  {
+   "key": "984bd2498930d829a1d4809f0b691657f948ca455eec08c4027e0ddd6924267e",
+   "input": {
+    "id": "wk-14849-s0",
+    "en": "weir",
+    "en_pos": "noun",
+    "en_sense": "An adjustable dam placed across a river to regulate the flow of water downstream.",
+    "ja": "堰",
+    "ja_reading": "せき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dam",
+     "weir",
+     "barrier",
+     "sluice"
+    ],
+    "vi": "đăng"
+   },
+   "output": {
+    "id": "wk-14849-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese word 'đăng' means a type of fish trap, not a weir for water regulation."
+   }
+  },
+  {
+   "key": "e6b2a996ac446c81ad21a1139eb5d5c295079820cd09b52bf96dd3319a66046a",
+   "input": {
+    "id": "wk-14857-s0",
+    "en": "certificate",
+    "en_pos": "noun",
+    "en_sense": "A document containing a certified statement.",
+    "ja": "証明書",
+    "ja_reading": "しょうめいしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "certificate",
+     "credentials",
+     "testimonial"
+    ],
+    "vi": "giấy chứng nhận"
+   },
+   "output": {
+    "id": "wk-14857-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for a certificate document."
+   }
+  },
+  {
+   "key": "09f62ed7220f9ef6dd7e3892f90cc2bdaf0fa16d63400ea965f50661b985c6ba",
+   "input": {
+    "id": "wk-14859-s1",
+    "en": "witness",
+    "en_pos": "noun",
+    "en_sense": "One who sees or has personal knowledge of something.",
+    "ja": "目撃者",
+    "ja_reading": "もくげきしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "eye-witness",
+     "witness"
+    ],
+    "vi": "nhân chứng"
+   },
+   "output": {
+    "id": "wk-14859-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese term '目撃者' means 'eyewitness' and is too narrow for the general sense of 'witness', which is correctly translated by the Vietnamese 'nhân chứng'."
+   }
+  },
+  {
+   "key": "c0d1c9a3134aa6b8c55fcf332c631993c51473258c38eaa59ba8cf9007a95908",
+   "input": {
+    "id": "wk-14865-e:2b7e84",
+    "en": "pill",
+    "en_pos": "noun",
+    "en_sense": "small object for swallowing",
+    "ja": "錠剤",
+    "ja_reading": "じょうざい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pill",
+     "lozenge",
+     "tablet"
+    ],
+    "vi": "viên"
+   },
+   "output": {
+    "id": "wk-14865-e:2b7e84",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'viên' is a classifier for small objects and cannot stand alone to mean 'pill'; the correct term is 'viên thuốc'."
+   }
+  },
+  {
+   "key": "4f31abc1d093ee823f51654ae6731123ea181bc656cb30a6be3a9abcd1a5bef3",
+   "input": {
+    "id": "wk-1487-s0",
+    "en": "bronze",
+    "en_pos": "noun",
+    "en_sense": "A naturally occurring or man-made alloy of copper, usually in combination with tin, but also with one or more other metals.",
+    "ja": "青銅",
+    "ja_reading": "せいどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bronze"
+    ],
+    "vi": "đồng thanh"
+   },
+   "output": {
+    "id": "wk-1487-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote bronze; the Vietnamese 'đồng thanh' is the precise, though somewhat formal, equivalent."
+   }
+  },
+  {
+   "key": "5e8838b0f4ce0a2526ed94798292118ee306f45d3088c0a2e7da3116db0333ad",
+   "input": {
+    "id": "wk-14870-s0",
+    "en": "vulva",
+    "en_pos": "noun",
+    "en_sense": "The external female genitalia of humans and other placental mammals, which includes the clitoris, labia, and vulval vestibule/vulvar opening.",
+    "ja": "陰門",
+    "ja_reading": "いんもん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vulva"
+    ],
+    "vi": "bướm"
+   },
+   "output": {
+    "id": "wk-14870-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese word 'bướm' (butterfly) is vulgar slang for vulva and has a completely different register from the English medical term."
+   }
+  },
+  {
+   "key": "c7520750fba10370933d6c600860a79c10053ec28c51b5aef88873079fda14db",
+   "input": {
+    "id": "wk-14877-s0",
+    "en": "tremble",
+    "en_pos": "verb",
+    "en_sense": "To shake, quiver, or vibrate.",
+    "ja": "震える",
+    "ja_reading": "ふるえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to shiver",
+     "to shake",
+     "to quake",
+     "to tremble",
+     "to quaver",
+     "to quiver"
+    ],
+    "vi": "rung"
+   },
+   "output": {
+    "id": "wk-14877-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard, natural, and direct equivalents for 'tremble' or 'shake'."
+   }
+  },
+  {
+   "key": "b4008da2973ad915cbd131da0ec25c0798d42e6ad4ef2ae595a55d51b5ed2f24",
+   "input": {
+    "id": "wk-14879-e:ed754c",
+    "en": "curriculum vitae",
+    "en_pos": "noun",
+    "en_sense": "written account of one's education, accomplishments, etc.",
+    "ja": "履歴書",
+    "ja_reading": "りれきしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "personal history document",
+     "curriculum vitae",
+     "resume"
+    ],
+    "vi": "lý lịch"
+   },
+   "output": {
+    "id": "wk-14879-e:ed754c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for a CV/resume, with the Vietnamese 'lý lịch' being a common and acceptable term for the document."
+   }
+  }
+ ]
+}

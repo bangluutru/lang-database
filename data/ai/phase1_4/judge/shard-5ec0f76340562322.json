@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:49:58Z",
+ "items": [
+  {
+   "key": "68b35e7d766c6eb64336cb7adff77406cfa799f2ee02fd378b79bdb0c105fb94",
+   "input": {
+    "id": "wk-5281-s0",
+    "en": "steel",
+    "en_pos": "noun",
+    "en_sense": "An artificial metal produced from iron, harder and more elastic than elemental iron; used figuratively as a symbol of hardness.",
+    "ja": "鋼鉄",
+    "ja_reading": "こうてつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "steel"
+    ],
+    "vi": "thép"
+   },
+   "output": {
+    "id": "wk-5281-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'steel'."
+   }
+  },
+  {
+   "key": "48ad3cd84efebd5b1b983d4653117c1f5a4a8832f59b9ef08a437ab9a3dbcef4",
+   "input": {
+    "id": "wk-5284-s0",
+    "en": "spool",
+    "en_pos": "noun",
+    "en_sense": "A reel; a device around which thread, wire or cable is wound, especially a cylinder or spindle.",
+    "ja": "スプール",
+    "ja_reading": "スプール",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "spool"
+    ],
+    "vi": "suốt"
+   },
+   "output": {
+    "id": "wk-5284-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'suốt' typically refers to a spool for thread (a bobbin), while English 'spool' and Japanese 'スプール' can be used for thread, wire, or cable."
+   }
+  },
+  {
+   "key": "c06a8a68d535f8f592420f4f2ccf83bec45360b5e89bad11d86e4a48e943d0c2",
+   "input": {
+    "id": "wk-5285-s1",
+    "en": "plan",
+    "en_pos": "noun",
+    "en_sense": "A set of intended actions, usually mutually related, through which one expects to achieve a goal.",
+    "ja": "プラン",
+    "ja_reading": "プラン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plan",
+     "scheme"
+    ],
+    "vi": "kế hoạch"
+   },
+   "output": {
+    "id": "wk-5285-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "Japanese 'プラン' is a loanword often used for commercial or less formal plans, while Vietnamese 'kế hoạch' is a standard, general term, more akin to Japanese '計画' (keikaku)."
+   }
+  },
+  {
+   "key": "4355b4409bb8daffc79456e47038b3b03c85b8eb92ed1b98ded4aec0957727d2",
+   "input": {
+    "id": "wk-5290-e:b0e9ca",
+    "en": "major",
+    "en_pos": "noun",
+    "en_sense": "military rank",
+    "ja": "少佐",
+    "ja_reading": "しょうさ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "major",
+     "lieutenant commander",
+     "wing commander"
+    ],
+    "vi": "thiếu tá"
+   },
+   "output": {
+    "id": "wk-5290-e:b0e9ca",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are the direct equivalents for the military rank of 'major' in their respective languages."
+   }
+  },
+  {
+   "key": "ea43fbd2f4b734c03462679b8bab5ba24b2f20d0dfcc693d3a7eea28667561ed",
+   "input": {
+    "id": "wk-5294-s2",
+    "en": "drama",
+    "en_pos": "noun",
+    "en_sense": "Theatrical plays in general.",
+    "ja": "ドラマ",
+    "ja_reading": "ドラマ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "drama",
+     "dramatic incident",
+     "spectacle",
+     "tragedy"
+    ],
+    "vi": "kịch"
+   },
+   "output": {
+    "id": "wk-5294-s2",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese 'ドラマ' almost always refers to TV dramas, while the English sense is 'theatrical plays in general', for which '演劇' (engeki) is the correct Japanese term."
+   }
+  },
+  {
+   "key": "be0ec5dde5f3a12e91d2160336d815e821be0f1445d204cd3f0091bdd27a70fa",
+   "input": {
+    "id": "wk-5295-s0",
+    "en": "parrot",
+    "en_pos": "noun",
+    "en_sense": "A kind of bird, many species of which are colorful and able to mimic human speech, of the order Psittaciformes or (narrowly) of the family Psittacidae.",
+    "ja": "オウム",
+    "ja_reading": "オウム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(large) parrot (incl. the cockatoo)"
+    ],
+    "vi": "két"
+   },
+   "output": {
+    "id": "wk-5295-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'オウム' refers specifically to large parrots like cockatoos, while 'インコ' refers to smaller ones; neither covers the entire English sense of 'parrot' on its own."
+   }
+  },
+  {
+   "key": "203b087087914b3c18c3ff161a64e9da380c710ecb3cccf845075e30922ad886",
+   "input": {
+    "id": "wk-5304-e:07e539",
+    "en": "participant",
+    "en_pos": "noun",
+    "en_sense": "one who participates",
+    "ja": "参加者",
+    "ja_reading": "さんかしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "participant",
+     "entrant",
+     "player",
+     "competitor"
+    ],
+    "vi": "người tham gia"
+   },
+   "output": {
+    "id": "wk-5304-e:07e539",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and literal equivalents for 'participant'."
+   }
+  },
+  {
+   "key": "21e30f27ce2a2abbc6f938811d6861eb7e7b98edfe76fb5b9171d68f01a61c69",
+   "input": {
+    "id": "wk-5306-s0",
+    "en": "shelf",
+    "en_pos": "noun",
+    "en_sense": "A flat, rigid structure, fixed at right angles to a wall or forming a part of a cabinet, desk, etc., and used to display, store, or support objects.",
+    "ja": "棚",
+    "ja_reading": "たな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shelf",
+     "ledge",
+     "rack"
+    ],
+    "vi": "giá"
+   },
+   "output": {
+    "id": "wk-5306-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'giá' is a bit broad, covering 'rack' and 'stand' as well as 'shelf'. The word 'kệ' is a strong alternative, especially for a single shelf or a shelving unit."
+   }
+  },
+  {
+   "key": "bd5e0319fda2fb59ac441657f58f72bb1060b5fd1250a76a6ff0c47e2fd03687",
+   "input": {
+    "id": "wk-5307-s5",
+    "en": "front",
+    "en_pos": "noun",
+    "en_sense": "An area where armies are engaged in conflict, especially the line of contact.",
+    "ja": "前線",
+    "ja_reading": "ぜんせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(weather) front"
+    ],
+    "vi": "mặt trận"
+   },
+   "output": {
+    "id": "wk-5307-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese gloss is misleadingly narrow (only showing 'weather front'), but the word '前線' is the correct term for a military front as well, matching the English and Vietnamese."
+   }
+  },
+  {
+   "key": "82aae14673d58a50efc7e7ce3a5b8ee7084ece04b2ab34f8556d1bf4da46a944",
+   "input": {
+    "id": "wk-5311-e:bd8944",
+    "en": "code",
+    "en_pos": "noun",
+    "en_sense": "set of rules for converting information",
+    "ja": "コード",
+    "ja_reading": "コード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "code",
+     "regulation",
+     "rules"
+    ],
+    "vi": "mã"
+   },
+   "output": {
+    "id": "wk-5311-e:bd8944",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for 'code' in the sense of information encoding."
+   }
+  },
+  {
+   "key": "4fe12854ac5ae38b0d5d99cef379849a23f84f92084f82ce8f89382c63cbaab4",
+   "input": {
+    "id": "wk-5311-s1",
+    "en": "code",
+    "en_pos": "noun",
+    "en_sense": "A body of law, sanctioned by legislation, in which the rules of law to be specifically applied by the courts are set forth in systematic form; a compilation of laws by public authority; a digest.",
+    "ja": "規約",
+    "ja_reading": "きやく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "agreement",
+     "rules",
+     "code",
+     "protocol",
+     "convention",
+     "bylaw"
+    ],
+    "vi": "luật"
+   },
+   "output": {
+    "id": "wk-5311-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '規約' means 'bylaws' or 'terms of agreement', not a 'code of law' sanctioned by legislation. The correct Japanese term would be '法典' (houten)."
+   }
+  },
+  {
+   "key": "1d80bab1951cda63952504608f0dfe5eecdbe882a0f0e19371f6b0cd00229a71",
+   "input": {
+    "id": "wk-5316-s0",
+    "en": "vision",
+    "en_pos": "noun",
+    "en_sense": "The sense or ability of sight.",
+    "ja": "視覚",
+    "ja_reading": "しかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(sense of) sight",
+     "eyesight",
+     "vision"
+    ],
+    "vi": "thị giác"
+   },
+   "output": {
+    "id": "wk-5316-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise, formal/scientific equivalents for 'the sense of sight'."
+   }
+  }
+ ]
+}

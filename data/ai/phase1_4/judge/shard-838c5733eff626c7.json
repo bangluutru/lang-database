@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:40:58Z",
+ "items": [
+  {
+   "key": "ecc892a94bd3aa3124a5450b4096321da080075d53e2f3896a483d99da82f5e2",
+   "input": {
+    "id": "jm-1451850-0-agreement",
+    "en": "agreement",
+    "en_pos": "noun",
+    "en_sense": "agreement; consent; approval; assent",
+    "ja": "同意",
+    "ja_reading": "どうい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "agreement",
+     "consent",
+     "approval",
+     "assent"
+    ],
+    "vi": "đồng ý"
+   },
+   "output": {
+    "id": "jm-1451850-0-agreement",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đồng ý' is a verb ('to agree'), not a noun ('agreement'), which would be 'sự đồng ý'."
+   }
+  },
+  {
+   "key": "1611e7870c3a4f1db704c0beacce5ddb4573ac9f786f3bd836994acbf118c6ec",
+   "input": {
+    "id": "jm-1452500-1-simultaneous",
+    "en": "simultaneous",
+    "en_pos": "adjective",
+    "en_sense": "simultaneous; concurrent; synchronous",
+    "ja": "同時",
+    "ja_reading": "どうじ",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "simultaneous",
+     "concurrent",
+     "synchronous"
+    ],
+    "vi": "đồng thời"
+   },
+   "output": {
+    "id": "jm-1452500-1-simultaneous",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for each other."
+   }
+  },
+  {
+   "key": "e4467eaf3b545f0280f336a34e9ec4e8f0c84afce3a22e78516a370084c45f53",
+   "input": {
+    "id": "jm-1453120-0-agreement",
+    "en": "agreement",
+    "en_pos": "noun",
+    "en_sense": "conformity; alignment; agreement; sympathy; following suit",
+    "ja": "同調",
+    "ja_reading": "どうちょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "conformity",
+     "alignment",
+     "agreement",
+     "sympathy",
+     "following suit"
+    ],
+    "vi": "đồng tình"
+   },
+   "output": {
+    "id": "jm-1453120-0-agreement",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH"
+    ],
+    "note": "Japanese '同調' implies conformity, while Vietnamese 'đồng tình' implies genuine sympathy/agreement and is also primarily a verb."
+   }
+  },
+  {
+   "key": "66817491d27b36767ccf83b6680077ee635462a49a74714cbfe51527f4ed9ca6",
+   "input": {
+    "id": "jm-1453790-0-introduction",
+    "en": "introduction",
+    "en_pos": "noun",
+    "en_sense": "introduction; bringing in; installation; setting up; importation",
+    "ja": "導入",
+    "ja_reading": "どうにゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "introduction",
+     "bringing in",
+     "installation",
+     "setting up",
+     "importation"
+    ],
+    "vi": "giới thiệu"
+   },
+   "output": {
+    "id": "jm-1453790-0-introduction",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'giới thiệu' is a verb and is narrower than the EN/JA sense, not covering 'installation' or 'importation'."
+   }
+  },
+  {
+   "key": "437bba5c6951e8d3514c31a58129ec6cc9c4f8ff217353359ed53ef66b05eac8",
+   "input": {
+    "id": "jm-1454290-0-road",
+    "en": "road",
+    "en_pos": "noun",
+    "en_sense": "road; highway",
+    "ja": "道路",
+    "ja_reading": "どうろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "road",
+     "highway"
+    ],
+    "vi": "đường"
+   },
+   "output": {
+    "id": "jm-1454290-0-road",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'road'."
+   }
+  },
+  {
+   "key": "222d162d77ab2cde2d06f6b85d4d2800e3869141a6b971e44bddefc39991e711",
+   "input": {
+    "id": "jm-1454420-0-pass",
+    "en": "pass",
+    "en_pos": "noun",
+    "en_sense": "(mountain) pass; highest point on a mountain road; ridge",
+    "ja": "峠",
+    "ja_reading": "とうげ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "(mountain) pass",
+     "highest point on a mountain road",
+     "ridge"
+    ],
+    "vi": "đèo"
+   },
+   "output": {
+    "id": "jm-1454420-0-pass",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a mountain pass."
+   }
+  },
+  {
+   "key": "ff1050fd14e1ad9e0caf09d398021c1a10f602ada5434d2b730f9df1e54c503a",
+   "input": {
+    "id": "jm-1454510-0-satisfaction",
+    "en": "satisfaction",
+    "en_pos": "noun",
+    "en_sense": "satisfaction; pride; triumph; elation",
+    "ja": "得意",
+    "ja_reading": "とくい",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "satisfaction",
+     "pride",
+     "triumph",
+     "elation"
+    ],
+    "vi": "hài lòng"
+   },
+   "output": {
+    "id": "jm-1454510-0-satisfaction",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH"
+    ],
+    "note": "Vietnamese 'hài lòng' means general satisfaction and is a verb/adjective, unlike Japanese '得意' which means triumphant pride and is a noun."
+   }
+  },
+  {
+   "key": "6ac14a91d8d30d5dc79c152f555b6570680b0514b65dac142111e9a47249af82",
+   "input": {
+    "id": "jm-1454590-0-score",
+    "en": "score",
+    "en_pos": "noun",
+    "en_sense": "scoring; score; points made; marks obtained; goals; runs",
+    "ja": "得点",
+    "ja_reading": "とくてん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "scoring",
+     "score",
+     "points made",
+     "marks obtained",
+     "goals",
+     "runs"
+    ],
+    "vi": "điểm số"
+   },
+   "output": {
+    "id": "jm-1454590-0-score",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for score/points in a game or test."
+   }
+  },
+  {
+   "key": "7ba919abe6cc385c67a1f70851115f2082c24c5b1fe125f9b374a75dcb74c7b2",
+   "input": {
+    "id": "jm-1454970-0-special",
+    "en": "special",
+    "en_pos": "adjective",
+    "en_sense": "special; particular; peculiar; unique",
+    "ja": "特殊",
+    "ja_reading": "とくしゅ",
+    "ja_pos": "adj-na,adj-no,n",
+    "ja_glosses": [
+     "special",
+     "particular",
+     "peculiar",
+     "unique"
+    ],
+    "vi": "đặc biệt"
+   },
+   "output": {
+    "id": "jm-1454970-0-special",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents, with 'đặc biệt' being a very common translation for 'special'."
+   }
+  },
+  {
+   "key": "dfd9fa7d2f2d2747d6ab150ea3f114dcd79f55bcfbe0165dc7931ed5c333a33d",
+   "input": {
+    "id": "jm-1455060-0-feature",
+    "en": "feature",
+    "en_pos": "noun",
+    "en_sense": "feature (e.g. newspaper); special edition; report",
+    "ja": "特集",
+    "ja_reading": "とくしゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "feature (e.g. newspaper)",
+     "special edition",
+     "report"
+    ],
+    "vi": "chuyên đề"
+   },
+   "output": {
+    "id": "jm-1455060-0-feature",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a media feature or special report."
+   }
+  },
+  {
+   "key": "498ed2105f4eb30b2fa85e897dc25b835c4035ea8c1ac179a1b7b1882a5bab8f",
+   "input": {
+    "id": "jm-1455370-0-characteristic",
+    "en": "characteristic",
+    "en_pos": "adjective",
+    "en_sense": "characteristic (of); peculiar (to)",
+    "ja": "特有",
+    "ja_reading": "とくゆう",
+    "ja_pos": "adj-no,adj-na",
+    "ja_glosses": [
+     "characteristic (of)",
+     "peculiar (to)"
+    ],
+    "vi": "đặc trưng"
+   },
+   "output": {
+    "id": "jm-1455370-0-characteristic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the adjectival sense of 'characteristic (of)'."
+   }
+  },
+  {
+   "key": "c2c9994e632d19b7479bc4131291c90c5472aee8d620e6d30ec32ff7e5aafda4",
+   "input": {
+    "id": "jm-1455810-0-original",
+    "en": "original",
+    "en_pos": "adjective",
+    "en_sense": "original; unique; distinctive; characteristic; peculiar",
+    "ja": "独自",
+    "ja_reading": "どくじ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "original",
+     "unique",
+     "distinctive",
+     "characteristic",
+     "peculiar"
+    ],
+    "vi": "độc đáo"
+   },
+   "output": {
+    "id": "jm-1455810-0-original",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are strong equivalents for 'original' and 'unique'."
+   }
+  }
+ ]
+}

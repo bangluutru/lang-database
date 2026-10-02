@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:03:03Z",
+ "items": [
+  {
+   "key": "ac36ab33ba2c58742a5bca410a276ee680505bd32797e8b16cc367dc1811c570",
+   "input": {
+    "id": "wk-889-s2",
+    "en": "keyboard",
+    "en_pos": "noun",
+    "en_sense": "An electronic device containing a keyboard (preceding sense), especially one that is capable of producing musical sounds when the keys are played.",
+    "ja": "キーボード",
+    "ja_reading": "キーボード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "keyboard"
+    ],
+    "vi": "organ"
+   },
+   "output": {
+    "id": "wk-889-s2",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'organ' refers to a specific type of electronic keyboard, not the general category of musical keyboards."
+   }
+  },
+  {
+   "key": "546abc40bad51de5c119c30ee3cc5321339f6c33e37a8dee93e4b4fa5b9dd002",
+   "input": {
+    "id": "wk-8890-s1",
+    "en": "cardamom",
+    "en_pos": "noun",
+    "en_sense": "Seed of Elettaria cardamomum, used as a medicine and spice, especially in curry powder.",
+    "ja": "カルダモン",
+    "ja_reading": "カルダモン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cardamom",
+     "cardamon"
+    ],
+    "vi": "thảo quả"
+   },
+   "output": {
+    "id": "wk-8890-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "Vietnamese 'thảo quả' refers to black cardamom (Amomum tsao-ko), not the green cardamom (Elettaria cardamomum) specified in the English sense."
+   }
+  },
+  {
+   "key": "22319ca7afe63ac7476b6f084e57cb45e726981dcc8db9db4a2f056f1aa4bdca",
+   "input": {
+    "id": "wk-8892-s0",
+    "en": "plough",
+    "en_pos": "verb",
+    "en_sense": "To use a plough on soil to prepare for planting.",
+    "ja": "耕す",
+    "ja_reading": "たがやす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to till",
+     "to plow",
+     "to plough",
+     "to cultivate"
+    ],
+    "vi": "cày"
+   },
+   "output": {
+    "id": "wk-8892-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for the act of ploughing."
+   }
+  },
+  {
+   "key": "9aade81d4c551545b2d3bed9b1cba08774610b3a2f825869d7fc1bf707989ed7",
+   "input": {
+    "id": "wk-8894-s1",
+    "en": "meteor",
+    "en_pos": "noun",
+    "en_sense": "A fast-moving streak of light in the night sky caused by the entry of extraterrestrial matter into the earth's atmosphere; a shooting star or falling star.",
+    "ja": "流星",
+    "ja_reading": "りゅうせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "meteor",
+     "shooting star",
+     "falling star"
+    ],
+    "vi": "sao băng"
+   },
+   "output": {
+    "id": "wk-8894-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a meteor or shooting star."
+   }
+  },
+  {
+   "key": "e9c67addfe5e9a7f31ad54b74ba86d3b5692f2b7643c0462beb89c9e11516af7",
+   "input": {
+    "id": "wk-8902-s0",
+    "en": "harbinger",
+    "en_pos": "noun",
+    "en_sense": "A person or thing that foreshadows or foretells the coming of someone or something.",
+    "ja": "前触れ",
+    "ja_reading": "まえぶれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "herald",
+     "harbinger",
+     "forerunner",
+     "portent",
+     "sign",
+     "omen"
+    ],
+    "vi": "dấu hiệu"
+   },
+   "output": {
+    "id": "wk-8902-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'dấu hiệu' (sign) is too broad and neutral for the more literary and specific 'harbinger'."
+   }
+  },
+  {
+   "key": "95967d6d3df7a95c8f50a666fb0656b43b688da144d3eb1c8b5983f818b77fa2",
+   "input": {
+    "id": "wk-8906-s4",
+    "en": "barrel",
+    "en_pos": "noun",
+    "en_sense": "A metallic tube, as of a gun, from which a projectile is discharged.",
+    "ja": "銃身",
+    "ja_reading": "じゅうしん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gun barrel"
+    ],
+    "vi": "nòng"
+   },
+   "output": {
+    "id": "wk-8906-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard words for the barrel of a gun."
+   }
+  },
+  {
+   "key": "6d1d07385a14536cb5346a33e4a634ff4dde52a0b19bf6888ad4c78ab4a636a8",
+   "input": {
+    "id": "wk-8908-s0",
+    "en": "measure",
+    "en_pos": "verb",
+    "en_sense": "To ascertain the quantity of a unit of material via calculated comparison with respect to a standard.",
+    "ja": "計る",
+    "ja_reading": "はかる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to measure",
+     "to weigh",
+     "to survey",
+     "to time (sound, gauge, estimate)"
+    ],
+    "vi": "đo"
+   },
+   "output": {
+    "id": "wk-8908-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, general-purpose verbs for 'to measure'."
+   }
+  },
+  {
+   "key": "ceb28c07edf6000e7cfe918d8c0d57f9d9f92a619238376ead101549608ab55e",
+   "input": {
+    "id": "wk-8913-s0",
+    "en": "hurdle",
+    "en_pos": "noun",
+    "en_sense": "An artificial barrier, variously constructed, over which athletes or horses jump in a race.",
+    "ja": "ハードル",
+    "ja_reading": "ハードル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hurdle"
+    ],
+    "vi": "cừu"
+   },
+   "output": {
+    "id": "wk-8913-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese word 'cừu' means 'sheep', not 'hurdle'."
+   }
+  },
+  {
+   "key": "49554c46577ed2122a0375af22c270ae829bad4042d185b7178d1e8c3daef731",
+   "input": {
+    "id": "wk-8916-s1",
+    "en": "faith",
+    "en_pos": "noun",
+    "en_sense": "A conviction about abstractions, ideas, or beliefs, without empirical evidence, experience, or observation.",
+    "ja": "信義",
+    "ja_reading": "しんぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "faith",
+     "fidelity",
+     "loyalty"
+    ],
+    "vi": "tin"
+   },
+   "output": {
+    "id": "wk-8916-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '信義' means fidelity/loyalty, not belief without proof. Vietnamese 'tin' is a verb (to believe) or a different noun (news)."
+   }
+  },
+  {
+   "key": "b3c4d1529548aa7d71617843658bbd3b318c277c14aad03f295efa2d73a38969",
+   "input": {
+    "id": "wk-8918-s0",
+    "en": "roll",
+    "en_pos": "verb",
+    "en_sense": "To revolve by turning over and over; to move by turning on a horizontal axis; to impel forward with a revolving motion on a supporting surface.",
+    "ja": "転がる",
+    "ja_reading": "ころがる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to roll",
+     "to tumble"
+    ],
+    "vi": "lăn"
+   },
+   "output": {
+    "id": "wk-8918-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard intransitive verbs for 'to roll'."
+   }
+  },
+  {
+   "key": "88a1b6bf3e00e3a811a20f4ffce4043b01d5294b7dff59d3166ae1eeb457d0d8",
+   "input": {
+    "id": "wk-8918-s1",
+    "en": "roll",
+    "en_pos": "verb",
+    "en_sense": "To wrap (something) round on itself; to form into a spherical or cylindrical body by causing to turn over and over.",
+    "ja": "丸める",
+    "ja_reading": "まるめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to make round",
+     "to roll up",
+     "to curl up"
+    ],
+    "vi": "cuốn"
+   },
+   "output": {
+    "id": "wk-8918-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the transitive act of rolling something up."
+   }
+  },
+  {
+   "key": "5ca7e847628d5db85a3f9616abddad90be3c05b7cc1ca37a232c2160fbd9c516",
+   "input": {
+    "id": "wk-8918-s2",
+    "en": "roll",
+    "en_pos": "verb",
+    "en_sense": "To bind or involve by winding, as with a bandage; to enwrap; often with up.",
+    "ja": "巻く",
+    "ja_reading": "まく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to wind",
+     "to coil",
+     "to roll",
+     "to wear (e.g. turban, scarf)"
+    ],
+    "vi": "quấn"
+   },
+   "output": {
+    "id": "wk-8918-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of winding something around an object, like a bandage."
+   }
+  }
+ ]
+}

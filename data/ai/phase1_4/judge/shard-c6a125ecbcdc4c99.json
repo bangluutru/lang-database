@@ -1,0 +1,410 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:29:34Z",
+ "items": [
+  {
+   "key": "2c3cf563c21921aeeb88f88ee72615b00c97db42b7c24f2c2d3c633d3a2eddbc",
+   "input": {
+    "id": "jm-1206040-0-memory",
+    "en": "memory",
+    "en_pos": "noun",
+    "en_sense": "memory; sense; experience",
+    "ja": "覚え",
+    "ja_reading": "おぼえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "memory",
+     "sense",
+     "experience"
+    ],
+    "vi": "ký ức"
+   },
+   "output": {
+    "id": "jm-1206040-0-memory",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'ký ức' is narrower than the Japanese '覚え', focusing on specific recollections rather than the broader sense of 'experience' or 'sense of having done something'."
+   }
+  },
+  {
+   "key": "5b1484bed544a7e9f9f574e196da7348c8ca83753f88a8eec20d49847c92f773",
+   "input": {
+    "id": "jm-1206060-0-awaken",
+    "en": "awaken",
+    "en_pos": "verb",
+    "en_sense": "to awaken; to arouse from sleep",
+    "ja": "覚ます",
+    "ja_reading": "さます",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to awaken",
+     "to arouse from sleep"
+    ],
+    "vi": "đánh thức"
+   },
+   "output": {
+    "id": "jm-1206060-0-awaken",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for the transitive act of waking someone up."
+   }
+  },
+  {
+   "key": "56f3004b05f0c6eeefaaa701e251d1d1f8b34b9608db2da661c07379d05a332b",
+   "input": {
+    "id": "jm-1206360-0-isolate",
+    "en": "isolate",
+    "en_pos": "verb",
+    "en_sense": "to separate (by distance, time, etc.); to isolate; to partition; to divide",
+    "ja": "隔てる",
+    "ja_reading": "へだてる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to separate (by distance, time, etc.)",
+     "to isolate",
+     "to partition",
+     "to divide"
+    ],
+    "vi": "cách ly"
+   },
+   "output": {
+    "id": "jm-1206360-0-isolate",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'cách ly' specifically means to quarantine or isolate in a formal/technical sense, and is much narrower than the general separation implied by English 'isolate' and Japanese '隔てる'."
+   }
+  },
+  {
+   "key": "94524ae00237a4e7d27f017a806524b79cafde6e57115000739c517f10662889",
+   "input": {
+    "id": "jm-1206470-0-reform",
+    "en": "reform",
+    "en_pos": "noun",
+    "en_sense": "reform; innovation",
+    "ja": "革新",
+    "ja_reading": "かくしん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "reform",
+     "innovation"
+    ],
+    "vi": "cải cách"
+   },
+   "output": {
+    "id": "jm-1206470-0-reform",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, formal words for '(social/political) reform' and are good equivalents."
+   }
+  },
+  {
+   "key": "85d6cdb152b37667c4e4aa5b36323a795fcd69bad934453bbb384ba0b2f94da0",
+   "input": {
+    "id": "jm-1206870-0-science",
+    "en": "science",
+    "en_pos": "noun",
+    "en_sense": "science; learning; scholarship; arts and sciences; academic pursuits",
+    "ja": "学術",
+    "ja_reading": "がくじゅつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "science",
+     "learning",
+     "scholarship",
+     "arts and sciences",
+     "academic pursuits"
+    ],
+    "vi": "khoa học"
+   },
+   "output": {
+    "id": "jm-1206870-0-science",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'khoa học' means 'science' (natural/social) and does not cover the broad sense of 'arts and sciences, academic pursuits' intended by the English sense and the Japanese '学術'."
+   }
+  },
+  {
+   "key": "0996d40a800b07fe6bbaab83dd814f51e78b0d599aa40ae14e9813c1260ad47b",
+   "input": {
+    "id": "jm-1207180-0-scholarship",
+    "en": "scholarship",
+    "en_pos": "noun",
+    "en_sense": "scholarly ability; scholarship; knowledge; literary ability",
+    "ja": "学力",
+    "ja_reading": "がくりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scholarly ability",
+     "scholarship",
+     "knowledge",
+     "literary ability"
+    ],
+    "vi": "học lực"
+   },
+   "output": {
+    "id": "jm-1207180-0-scholarship",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognates/equivalents for the concept of 'academic ability'."
+   }
+  },
+  {
+   "key": "d964e937984fcbac3d68e000ecdd216223f0d6a12b5d430517c2b006ee44c9f4",
+   "input": {
+    "id": "jm-1207230-0-comfort",
+    "en": "comfort",
+    "en_pos": "noun",
+    "en_sense": "comfort; ease; relief; (at) peace; relaxation",
+    "ja": "楽",
+    "ja_reading": "らく",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "comfort",
+     "ease",
+     "relief",
+     "(at) peace",
+     "relaxation"
+    ],
+    "vi": "thoải mái"
+   },
+   "output": {
+    "id": "jm-1207230-0-comfort",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The meaning is a perfect match, but there is a part-of-speech mismatch as English 'comfort' is a noun while Vietnamese 'thoải mái' is an adjective."
+   }
+  },
+  {
+   "key": "6ffca543f852e7e5b1db68e4fa4bb4299cee4db88c688f85183cc8ca792c48e6",
+   "input": {
+    "id": "jm-1207730-0-tear",
+    "en": "tear",
+    "en_pos": "verb",
+    "en_sense": "to tear; to rip up",
+    "ja": "裂く",
+    "ja_reading": "さく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to tear",
+     "to rip up"
+    ],
+    "vi": "xé"
+   },
+   "output": {
+    "id": "jm-1207730-0-tear",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common verbs for the action of tearing something like paper or cloth."
+   }
+  },
+  {
+   "key": "979664a6c21679d22311df2b128b1bbf120e24272b6ff11be983728afee07ffe",
+   "input": {
+    "id": "jm-1207790-0-calculate",
+    "en": "calculate",
+    "en_pos": "verb",
+    "en_sense": "to calculate; to compute",
+    "ja": "割り出す",
+    "ja_reading": "わりだす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to calculate",
+     "to compute"
+    ],
+    "vi": "tính toán"
+   },
+   "output": {
+    "id": "jm-1207790-0-calculate",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese '割り出す' is narrower than English 'calculate', often implying deduction or inference rather than just mathematical computation, for which '計算する' is more common."
+   }
+  },
+  {
+   "key": "c2c25a9e52799ad0be6a0466ddab081c975d0325d20098cc0e23d7be4817a8cd",
+   "input": {
+    "id": "jm-1208270-0-energy",
+    "en": "energy",
+    "en_pos": "noun",
+    "en_sense": "energy; vigour; vigor; liveliness; spirit; life",
+    "ja": "活気",
+    "ja_reading": "かっき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "energy",
+     "vigour",
+     "vigor",
+     "liveliness",
+     "spirit",
+     "life"
+    ],
+    "vi": "năng lượng"
+   },
+   "output": {
+    "id": "jm-1208270-0-energy",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'năng lượng' means 'energy' in the scientific/resource sense, not the sense of vitality or liveliness intended by the English sense and the Japanese '活気'."
+   }
+  },
+  {
+   "key": "f0ccc55acea0b9d14888c858b772bbea727084cc67bcefe2ce903f0161f0c377",
+   "input": {
+    "id": "jm-1208450-0-activity",
+    "en": "activity",
+    "en_pos": "noun",
+    "en_sense": "activity (esp. energetic or successful); great efforts; active participation",
+    "ja": "活躍",
+    "ja_reading": "かつやく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "activity (esp. energetic or successful)",
+     "great efforts",
+     "active participation"
+    ],
+    "vi": "hoạt động"
+   },
+   "output": {
+    "id": "jm-1208450-0-activity",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'hoạt động' is a general term for 'activity' and lacks the specific nuance of 'successful, energetic, or remarkable activity' that is central to the English sense and the Japanese '活躍'."
+   }
+  },
+  {
+   "key": "7e6de777617410b54e3f1a277800ca284c1cf3fa87bd7e92001e89b1fd5b8235",
+   "input": {
+    "id": "jm-1208560-0-smooth",
+    "en": "smooth",
+    "en_pos": "adjective",
+    "en_sense": "smooth (of a surface); glassy; velvety; soft",
+    "ja": "滑らか",
+    "ja_reading": "なめらか",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "smooth (of a surface)",
+     "glassy",
+     "velvety",
+     "soft"
+    ],
+    "vi": "mịn"
+   },
+   "output": {
+    "id": "jm-1208560-0-smooth",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'smooth' in the sense of a surface's texture."
+   }
+  }
+ ]
+}

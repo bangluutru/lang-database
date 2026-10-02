@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:22:17Z",
+ "items": [
+  {
+   "key": "86c776fc6e26eda2a82936cd4658fe1ebbccab47f9b13f39df3c27f570f77238",
+   "input": {
+    "id": "jm-1002290-0-you",
+    "en": "you",
+    "en_pos": "pronoun",
+    "en_sense": "you",
+    "ja": "お前",
+    "ja_reading": "おまえ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "you"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1002290-0-you",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese pronoun お前 (omae) has a strong, often rude or overly familiar, register that does not match the neutral English 'you'."
+   }
+  },
+  {
+   "key": "62f553852a82d3a8d3bd21fa8e140c7d5d31d0033bcf26c35bc5da9d28e69093",
+   "input": {
+    "id": "jm-1003200-0-firmly",
+    "en": "firmly",
+    "en_pos": "adverb",
+    "en_sense": "firmly; solidly; sturdily; strongly; toughly",
+    "ja": "がっしり",
+    "ja_reading": "がっしり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "firmly",
+     "solidly",
+     "sturdily",
+     "strongly",
+     "toughly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003200-0-firmly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match; がっしり effectively conveys the sense of being solidly or sturdily built."
+   }
+  },
+  {
+   "key": "07102c0407f5b6eee53b5cf7094f7d9619622bdf19a5fcb931e6e21b90292433",
+   "input": {
+    "id": "jm-1003210-0-solid",
+    "en": "solid",
+    "en_pos": "adverb",
+    "en_sense": "solid; robust; well-built",
+    "ja": "がっちり",
+    "ja_reading": "がっちり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "solid",
+     "robust",
+     "well-built"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003210-0-solid",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English part of speech is listed as adverb, but the sense 'solid; robust; well-built' uses adjectives; がっちり is a good semantic match but is an adverb."
+   }
+  },
+  {
+   "key": "dff8ef6a41a7cabca31eefe20ff0763603427ada8962f6d913267cde882fdeb2",
+   "input": {
+    "id": "jm-1003390-0-properly",
+    "en": "properly",
+    "en_pos": "adverb",
+    "en_sense": "properly; accurately; exactly; precisely; regularly",
+    "ja": "きちっと",
+    "ja_reading": "きちっと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "properly",
+     "accurately",
+     "exactly",
+     "precisely",
+     "regularly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003390-0-properly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match; きちっと is a common adverb for doing something properly or precisely."
+   }
+  },
+  {
+   "key": "23e273e29f5b76b218d06c517beca9961f4052e67fa5ff073e7eac24c7c6b30b",
+   "input": {
+    "id": "jm-1003400-0-properly",
+    "en": "properly",
+    "en_pos": "adverb",
+    "en_sense": "properly; accurately; exactly; precisely; regularly",
+    "ja": "きちんと",
+    "ja_reading": "きちんと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "properly",
+     "accurately",
+     "exactly",
+     "precisely",
+     "regularly"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003400-0-properly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent and standard equivalent for 'properly' in the sense of doing something neatly and correctly."
+   }
+  },
+  {
+   "key": "c485d9987c82d59e1850d7f86ea829f9e133d3d08858140ad6b36a73e698f320",
+   "input": {
+    "id": "jm-1003410-0-exactly",
+    "en": "exactly",
+    "en_pos": "adverb",
+    "en_sense": "exactly; just; precisely",
+    "ja": "きっかり",
+    "ja_reading": "きっかり",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "exactly",
+     "just",
+     "precisely"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003410-0-exactly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match, especially for expressing exactness in time or quantity."
+   }
+  },
+  {
+   "key": "576604c316c38abdbf9dfee8b3ccabfeed41a514aabbb1d966fa1891024abeae",
+   "input": {
+    "id": "jm-1003420-0-exactly",
+    "en": "exactly",
+    "en_pos": "adverb",
+    "en_sense": "exactly; precisely; punctually; on the dot",
+    "ja": "きっちり",
+    "ja_reading": "きっちり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "exactly",
+     "precisely",
+     "punctually",
+     "on the dot"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003420-0-exactly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A very good and common equivalent for 'exactly' or 'precisely', covering aspects of measurement, time, and action."
+   }
+  },
+  {
+   "key": "b406c990a396ab875a78c8ea57d79e333d7dde32f906e40ddca26d230c5a548b",
+   "input": {
+    "id": "jm-1003440-0-clearly",
+    "en": "clearly",
+    "en_pos": "adverb",
+    "en_sense": "clearly; plainly; distinctly; decisively; flatly; definitely",
+    "ja": "きっぱり",
+    "ja_reading": "きっぱり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "clearly",
+     "plainly",
+     "distinctly",
+     "decisively",
+     "flatly",
+     "definitely"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003440-0-clearly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for the specific sense of 'clearly' meaning decisively or flatly, as in making a statement."
+   }
+  },
+  {
+   "key": "48a8454a9b747339002712dbbe4895bf6aed034b1a3101a2b1c68abaa0290dbf",
+   "input": {
+    "id": "jm-1003590-0-closely",
+    "en": "closely",
+    "en_pos": "adverb",
+    "en_sense": "tightly (packed); densely; closely; crammed",
+    "ja": "ぎっしり",
+    "ja_reading": "ぎっしり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "tightly (packed)",
+     "densely",
+     "closely",
+     "crammed"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003590-0-closely",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and idiomatic match for the sense of being tightly packed or crammed."
+   }
+  },
+  {
+   "key": "9915bcf8c178ccc1e7a3f5165eeb86b1eb975da5dcdab4f92677b7ea1cd28e2b",
+   "input": {
+    "id": "jm-1003840-0-clearly",
+    "en": "clearly",
+    "en_pos": "adverb",
+    "en_sense": "clearly (standing out); distinctly; sharply; boldly; in sharp relief",
+    "ja": "くっきり",
+    "ja_reading": "くっきり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "clearly (standing out)",
+     "distinctly",
+     "sharply",
+     "boldly",
+     "in sharp relief"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003840-0-clearly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "An excellent match for the specific visual sense of 'clearly' meaning with sharp, distinct outlines."
+   }
+  },
+  {
+   "key": "66f02101e93d10882d72edcf82137aefcdffd9c2587dd5a90192efd67ba793f0",
+   "input": {
+    "id": "jm-1003870-0-attach",
+    "en": "attach",
+    "en_pos": "verb",
+    "en_sense": "to attach; to stick together; to paste; to glue",
+    "ja": "くっつける",
+    "ja_reading": "くっつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to attach",
+     "to stick together",
+     "to paste",
+     "to glue"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1003870-0-attach",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good, common equivalent for 'attach' or 'stick together'."
+   }
+  },
+  {
+   "key": "a48c6b972e114aeb4e24a360f57f13d91a35f135e471efdca12f8835bac03ac6",
+   "input": {
+    "id": "jm-1004060-0-fast",
+    "en": "fast",
+    "en_pos": "adverb",
+    "en_sense": "soundly (sleeping); fast (asleep)",
+    "ja": "ぐっすり",
+    "ja_reading": "ぐっすり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "soundly (sleeping)",
+     "fast (asleep)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1004060-0-fast",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and idiomatic match; ぐっすり is the canonical adverb for sleeping soundly."
+   }
+  }
+ ]
+}

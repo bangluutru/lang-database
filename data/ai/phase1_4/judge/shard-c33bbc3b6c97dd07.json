@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:13:48Z",
+ "items": [
+  {
+   "key": "15a92b5e22b676f354ed6c658352d965519771ecadf1a491686b77c604038029",
+   "input": {
+    "id": "wk-6208-s0",
+    "en": "swimming",
+    "en_pos": "noun",
+    "en_sense": "The act or art of sustaining and propelling the body in water.",
+    "ja": "水泳",
+    "ja_reading": "すいえい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "swimming"
+    ],
+    "vi": "bơi lội"
+   },
+   "output": {
+    "id": "wk-6208-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the activity of swimming."
+   }
+  },
+  {
+   "key": "76d52d04521538c6393cd5fb0196dfa1f24f4b1779c452e5acf120309364381f",
+   "input": {
+    "id": "wk-6403-s0",
+    "en": "alliance",
+    "en_pos": "noun",
+    "en_sense": "The state of being allied.",
+    "ja": "同盟",
+    "ja_reading": "どうめい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "alliance",
+     "union",
+     "league"
+    ],
+    "vi": "đồng minh"
+   },
+   "output": {
+    "id": "wk-6403-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese and Vietnamese terms are cognates and standard translations for the English word 'alliance'."
+   }
+  },
+  {
+   "key": "eac0b326f34e62b6ddf088cf9eeed2c12fe1bf39738dd3b6f8a8cf9be48347a1",
+   "input": {
+    "id": "wk-6405-s2",
+    "en": "allow",
+    "en_pos": "verb",
+    "en_sense": "To permit, to give permission to.",
+    "ja": "許す",
+    "ja_reading": "ゆるす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to permit",
+     "to allow",
+     "to approve",
+     "to consent to"
+    ],
+    "vi": "cho"
+   },
+   "output": {
+    "id": "wk-6405-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'cho' is too broad, primarily meaning 'to give'; 'cho phép' would be a more precise equivalent for 'allow'."
+   }
+  },
+  {
+   "key": "7fd7f9fcc5b7f8efcfbb37a5ad46b577e3c2278fd33e2c92f8b5017d2dbe3e7a",
+   "input": {
+    "id": "wk-6415-s5",
+    "en": "chip",
+    "en_pos": "noun",
+    "en_sense": "A circuit fabricated in one piece on a small, thin substrate; a microchip.",
+    "ja": "チップ",
+    "ja_reading": "チップ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chip",
+     "microchip"
+    ],
+    "vi": "vi mạch"
+   },
+   "output": {
+    "id": "wk-6415-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a microchip."
+   }
+  },
+  {
+   "key": "db7ac8b85a20a1b0aad1ceb5d1c52799c9a769074198e80433352a95d252ab51",
+   "input": {
+    "id": "wk-6423-s0",
+    "en": "already",
+    "en_pos": "adverb",
+    "en_sense": "Prior to some specified time, either past, present, or future; by this time; previously.",
+    "ja": "すでに",
+    "ja_reading": "すでに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "already"
+    ],
+    "vi": "đã"
+   },
+   "output": {
+    "id": "wk-6423-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'đã' is a past tense marker, not a translation of the adverb 'already'; the correct equivalent is 'đã ... rồi'."
+   }
+  },
+  {
+   "key": "4ced05a15810473614ac25ba42a15d3ff26ebd5f1e9950514a620f3dbb1f565b",
+   "input": {
+    "id": "wk-6423-s2",
+    "en": "already",
+    "en_pos": "adverb",
+    "en_sense": "An intensifier used to emphasize impatience or express exasperation.",
+    "ja": "もう",
+    "ja_reading": "もう",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "already",
+     "yet",
+     "by now",
+     "now",
+     "(not) any more",
+     "(not) any longer"
+    ],
+    "vi": "rồi"
+   },
+   "output": {
+    "id": "wk-6423-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms can be used idiomatically to express impatience or exasperation, matching the specified sense."
+   }
+  },
+  {
+   "key": "3bd43241fb89edb2caa9089ed65dd01d0612d059ee2da554ecbdcfd5d0a571cf",
+   "input": {
+    "id": "wk-6434-s0",
+    "en": "migration",
+    "en_pos": "noun",
+    "en_sense": "An instance of moving to live in another place for a while.",
+    "ja": "移住",
+    "ja_reading": "いじゅう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "migration",
+     "move",
+     "emigration",
+     "immigration"
+    ],
+    "vi": "di cư"
+   },
+   "output": {
+    "id": "wk-6434-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for human migration."
+   }
+  },
+  {
+   "key": "c62a0697f63bbf61ba1f321605d63bb7d780e5a4965610726316dd59980f329f",
+   "input": {
+    "id": "wk-6434-s1",
+    "en": "migration",
+    "en_pos": "noun",
+    "en_sense": "Seasonal moving of animals, as mammals, birds or fish, especially between breeding and non-breeding areas.",
+    "ja": "移動",
+    "ja_reading": "いどう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "movement",
+     "transfer",
+     "migration",
+     "removal",
+     "travel"
+    ],
+    "vi": "di cư"
+   },
+   "output": {
+    "id": "wk-6434-s1",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese term '移動' (movement) is too broad for the specific sense of seasonal animal migration."
+   }
+  },
+  {
+   "key": "3ccf6f224dc56cbfa52d260279b9714e5b98f4ba7216dfbb70caa677a9c4fb09",
+   "input": {
+    "id": "wk-6439-e:b474a9",
+    "en": "shark",
+    "en_pos": "noun",
+    "en_sense": "fish",
+    "ja": "サメ",
+    "ja_reading": "サメ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shark"
+    ],
+    "vi": "cá mập"
+   },
+   "output": {
+    "id": "wk-6439-e:b474a9",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a shark."
+   }
+  },
+  {
+   "key": "61cd1b3806520cd5bb8e9c8e5e4c60069ebd756e242581e126631fbce3a11b3b",
+   "input": {
+    "id": "wk-6440-s1",
+    "en": "whale",
+    "en_pos": "noun",
+    "en_sense": "Any species of Cetacea, including dolphins and porpoises.",
+    "ja": "くじら",
+    "ja_reading": "くじら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "whale (Cetacea spp.)"
+    ],
+    "vi": "cá voi"
+   },
+   "output": {
+    "id": "wk-6440-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese and Vietnamese terms refer to large whales and do not include dolphins, making them narrower than the provided scientific definition of 'whale' (all Cetacea)."
+   }
+  },
+  {
+   "key": "f81f794c64a82bc5919d2196e21593954d18b9dff0e0e9678fbdd2fe3c6ebbbd",
+   "input": {
+    "id": "wk-6444-s1",
+    "en": "amateur",
+    "en_pos": "noun",
+    "en_sense": "A person attached to a particular pursuit, study, science, or art (such as music or painting), especially one who cultivates any study, interest, taste, or attachment without engaging in it professionally.",
+    "ja": "アマチュア",
+    "ja_reading": "アマチュア",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "amateur"
+    ],
+    "vi": "nghiệp dư"
+   },
+   "output": {
+    "id": "wk-6444-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for 'amateur' as a non-professional."
+   }
+  },
+  {
+   "key": "982fba7cabc6ca5e2a7a52f44e6f639d05d59ca025adc984929df8094590a85f",
+   "input": {
+    "id": "wk-6446-e:482a37",
+    "en": "ambassador",
+    "en_pos": "noun",
+    "en_sense": "representative",
+    "ja": "大使",
+    "ja_reading": "たいし",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "ambassador"
+    ],
+    "vi": "đại sứ"
+   },
+   "output": {
+    "id": "wk-6446-e:482a37",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese and Vietnamese terms are cognates and the precise, standard translations for 'ambassador'."
+   }
+  }
+ ]
+}

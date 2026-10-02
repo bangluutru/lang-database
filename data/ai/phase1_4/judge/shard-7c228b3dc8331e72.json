@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:00:04Z",
+ "items": [
+  {
+   "key": "2f67a3c18a10da81d272215993ec723ba367726634b0d88ff8a800af68d0d7e8",
+   "input": {
+    "id": "wk-8130-s0",
+    "en": "mad",
+    "en_pos": "adjective",
+    "en_sense": "Insane; crazy; mentally deranged.",
+    "ja": "狂おしい",
+    "ja_reading": "くるおしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "mad (with grief, love, etc.)",
+     "crazy",
+     "out of one's mind",
+     "on the verge of insanity"
+    ],
+    "vi": "điên"
+   },
+   "output": {
+    "id": "wk-8130-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 狂おしい refers to being driven mad by emotion, not the state of clinical insanity."
+   }
+  },
+  {
+   "key": "6dac01df428bcbfcfa7b3051dc9341bf215c056d1e859264d45491d6fb1acea1",
+   "input": {
+    "id": "wk-8137-e:920952",
+    "en": "vanilla",
+    "en_pos": "noun",
+    "en_sense": "fruit",
+    "ja": "バニラ",
+    "ja_reading": "バニラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vanilla"
+    ],
+    "vi": "vani"
+   },
+   "output": {
+    "id": "wk-8137-e:920952",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard loanwords for vanilla and are perfect equivalents."
+   }
+  },
+  {
+   "key": "a8fca782f05fa67582bc43f8986f298cf6b0953296bafaf6022b6e27dd5aac87",
+   "input": {
+    "id": "wk-8138-s0",
+    "en": "mute",
+    "en_pos": "adjective",
+    "en_sense": "Not having the power of speech; dumb.",
+    "ja": "黙々",
+    "ja_reading": "もくもく",
+    "ja_pos": "adj-t,adv-to",
+    "ja_glosses": [
+     "silent",
+     "mute",
+     "dumb"
+    ],
+    "vi": "câm"
+   },
+   "output": {
+    "id": "wk-8138-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 黙々 means 'silently' (by choice), not the physical inability to speak, and is primarily an adverb."
+   }
+  },
+  {
+   "key": "0e0567045a96bb000c077cdf3e69badf1983e45224585fb83141b11bbc485429",
+   "input": {
+    "id": "wk-8150-s1",
+    "en": "trajectory",
+    "en_pos": "noun",
+    "en_sense": "The path of a body as it travels through space.",
+    "ja": "弾道",
+    "ja_reading": "だんどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trajectory",
+     "line of fire"
+    ],
+    "vi": "quỹ đạo"
+   },
+   "output": {
+    "id": "wk-8150-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 弾道 specifically refers to the trajectory of a projectile, while the English and Vietnamese terms are more general."
+   }
+  },
+  {
+   "key": "8e376e648db7c36f1a83a46174f4d59e2f00321cca791f268d0e1f31e727665d",
+   "input": {
+    "id": "wk-8151-s0",
+    "en": "scientist",
+    "en_pos": "noun",
+    "en_sense": "One whose activities make use of the scientific method to answer questions regarding the measurable universe. A scientist may be involved in original research, or make use of the results of the research of others.",
+    "ja": "科学者",
+    "ja_reading": "かがくしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scientist"
+    ],
+    "vi": "khoa học gia"
+   },
+   "output": {
+    "id": "wk-8151-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'khoa học gia' is correct but less common and more formal than the more natural 'nhà khoa học'."
+   }
+  },
+  {
+   "key": "f075367797bfaa646eef59505d43003663bcddea6c207eba12e9e21e917336df",
+   "input": {
+    "id": "wk-8152-s0",
+    "en": "lagoon",
+    "en_pos": "noun",
+    "en_sense": "A shallow body of water separated from deeper sea by a bar.",
+    "ja": "潟",
+    "ja_reading": "かた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lagoon"
+    ],
+    "vi": "phá"
+   },
+   "output": {
+    "id": "wk-8152-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and natural geographical terms for a lagoon."
+   }
+  },
+  {
+   "key": "e8bda1507dc123586687df46d5d33320af741b017e88cf3d4ee6461b2b31f8cb",
+   "input": {
+    "id": "wk-8158-s0",
+    "en": "clown",
+    "en_pos": "noun",
+    "en_sense": "A slapstick performance artist often associated with a circus and usually characterized by bright, oversized clothing, a red nose, face paint, and a brightly colored wig.",
+    "ja": "ピエロ",
+    "ja_reading": "ピエロ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "clown"
+    ],
+    "vi": "hề"
+   },
+   "output": {
+    "id": "wk-8158-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While ピエロ originally refers to the specific 'Pierrot' character, it is the most common Japanese word for a general circus clown."
+   }
+  },
+  {
+   "key": "464949d88ccc9ae7d87cd545b43c4b3f202a62b097ad69e54e408ccffc11a741",
+   "input": {
+    "id": "wk-8161-s12",
+    "en": "part",
+    "en_pos": "noun",
+    "en_sense": "Position or role (especially in a play).",
+    "ja": "役",
+    "ja_reading": "やく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "part (in a play, film, etc.)",
+     "role",
+     "character"
+    ],
+    "vi": "vai"
+   },
+   "output": {
+    "id": "wk-8161-s12",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect and standard equivalents for a role in a performance."
+   }
+  },
+  {
+   "key": "aa0df51448afd060b073da9a0630410da9e17165521facebea6045320debf71e",
+   "input": {
+    "id": "wk-8169-s0",
+    "en": "axiom",
+    "en_pos": "noun",
+    "en_sense": "A seemingly self-evident or necessary truth which is based on assumption; a principle or proposition which cannot actually be proved or disproved.",
+    "ja": "公理",
+    "ja_reading": "こうり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "axiom",
+     "postulate"
+    ],
+    "vi": "sự thật"
+   },
+   "output": {
+    "id": "wk-8169-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự thật' means 'truth' and is not a translation of the specific logical/mathematical term 'axiom'; the correct term is 'tiên đề'."
+   }
+  },
+  {
+   "key": "87002a5a16cfc43e553fb1e4d2cb156709cb1bbe966bdbb914b6a427c8a2971b",
+   "input": {
+    "id": "wk-8171-s3",
+    "en": "award",
+    "en_pos": "noun",
+    "en_sense": "A trophy or medal; something that denotes an accomplishment, especially in a competition. A prize or honor based on merit.",
+    "ja": "アワード",
+    "ja_reading": "アワード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "award"
+    ],
+    "vi": "giải thưởng"
+   },
+   "output": {
+    "id": "wk-8171-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese アワード is a direct loanword; the native term 賞 (shō) is more common and natural."
+   }
+  },
+  {
+   "key": "090a0fda85398935ae9b8eae7cfdd3491a26b45004d3dad509220e2f36a396e6",
+   "input": {
+    "id": "wk-8179-s0",
+    "en": "avalanche",
+    "en_pos": "noun",
+    "en_sense": "A large mass or body of snow and ice sliding swiftly down a mountain side, or falling down a precipice.",
+    "ja": "雪崩",
+    "ja_reading": "なだれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "avalanche",
+     "snowslide"
+    ],
+    "vi": "tuyết lở"
+   },
+   "output": {
+    "id": "wk-8179-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for a snow avalanche."
+   }
+  },
+  {
+   "key": "1af9cdb65ebc29b0009e4896975fd5bd317524dce09230df2f884d43b2fd8ad5",
+   "input": {
+    "id": "wk-8188-s0",
+    "en": "aviation",
+    "en_pos": "noun",
+    "en_sense": "The art or science of making and flying aircraft.",
+    "ja": "航空",
+    "ja_reading": "こうくう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "aviation",
+     "flying"
+    ],
+    "vi": "hàng không"
+   },
+   "output": {
+    "id": "wk-8188-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, correct, and cognate equivalents for aviation."
+   }
+  }
+ ]
+}

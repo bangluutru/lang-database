@@ -1,0 +1,378 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:44:51Z",
+ "items": [
+  {
+   "key": "9fb3a309819273c54f94847744ea84b9f350a8eda20273ba67d53234ce2fa576",
+   "input": {
+    "id": "wk-4202-s6",
+    "en": "truth",
+    "en_pos": "noun",
+    "en_sense": "That which is real, in a deeper sense; spiritual or ‘genuine’ reality.",
+    "ja": "真理",
+    "ja_reading": "しんり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "truth"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4202-s6",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "真理 is the perfect Japanese equivalent for the philosophical or spiritual sense of 'truth', as distinct from 'fact' (事実)."
+   }
+  },
+  {
+   "key": "ab72956df7c76e8544bfee1cc76fd5475823bf3a1d784f05206e14d3b0a704e0",
+   "input": {
+    "id": "wk-421-s3",
+    "en": "music",
+    "en_pos": "noun",
+    "en_sense": "A guide to playing or singing a particular tune; sheet music.",
+    "ja": "楽譜",
+    "ja_reading": "がくふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "score",
+     "sheet music"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-421-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "楽譜 is the correct Japanese word for 'sheet music', which is the specified sense of 'music'."
+   }
+  },
+  {
+   "key": "a864316490f534a920b0274f12d502fc94addabf0ee513540a64be8b08322f07",
+   "input": {
+    "id": "wk-4211-s0",
+    "en": "expose",
+    "en_pos": "verb",
+    "en_sense": "To reveal; to uncover; to make visible; to bring to light.",
+    "ja": "晒す",
+    "ja_reading": "さらす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to expose (to the sun, public, danger, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4211-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "晒す is a valid translation but often implies physical exposure or public shaming; 暴く (abaku) is a better equivalent for actively uncovering secrets or crimes."
+   }
+  },
+  {
+   "key": "a6f6a817e01a1d360afb81d78cad73537ec56dd3559f3d1e73cf07c1ec5336a3",
+   "input": {
+    "id": "wk-4215-s0",
+    "en": "alter",
+    "en_pos": "verb",
+    "en_sense": "To change the form or structure of.",
+    "ja": "変える",
+    "ja_reading": "かえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to change",
+     "to alter",
+     "to transform",
+     "to convert",
+     "to turn",
+     "to vary"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4215-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "変える is an excellent and general equivalent for 'alter'."
+   }
+  },
+  {
+   "key": "1040d622ce096bed49f62ab0297b85d0dd4eb672f89a07ee1f89b4be84e55fac",
+   "input": {
+    "id": "wk-4227-s1",
+    "en": "education",
+    "en_pos": "noun",
+    "en_sense": "Facts, skills and ideas that have been learned, especially through formal instruction.",
+    "ja": "教養",
+    "ja_reading": "きょうよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(understanding or appreciation of) culture",
+     "(one's) education",
+     "cultivation",
+     "sophistication",
+     "refinement"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4227-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "教養 means 'culture' or 'refinement' gained from education, which is a narrower concept than the general 'facts, skills and ideas' learned."
+   }
+  },
+  {
+   "key": "9a2d874558aca51eb5b8a9a133141350127ca8a26ad23c0c5adf525e6073a83e",
+   "input": {
+    "id": "wk-4240-s5",
+    "en": "developer",
+    "en_pos": "noun",
+    "en_sense": "A software developer; a person or company who creates or modifies computer software.",
+    "ja": "開発者",
+    "ja_reading": "かいはつしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "developer"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4240-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "開発者 is the standard term for a developer and is perfectly understood to mean a software developer in a computing context."
+   }
+  },
+  {
+   "key": "1ab27a2bb8a6152c51a5b5d87716e9f8f1555e1c00e7cee23900a87180a4e89d",
+   "input": {
+    "id": "wk-425-e:32d56c",
+    "en": "most",
+    "en_pos": "adverb",
+    "en_sense": "forming the superlative",
+    "ja": "最も",
+    "ja_reading": "もっとも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "most",
+     "extremely"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-425-e:32d56c",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "最も is the direct Japanese equivalent for 'most' when forming the superlative."
+   }
+  },
+  {
+   "key": "9264f365ec60259dc7b537168e8e5afeeeecb959e50d94e7fce1b97e5012e538",
+   "input": {
+    "id": "wk-4254-e:7ace78",
+    "en": "electronic",
+    "en_pos": "adjective",
+    "en_sense": "pertaining to electrons",
+    "ja": "電子",
+    "ja_reading": "でんし",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "electronic"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4254-e:7ace78",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG"
+    ],
+    "note": "電子 is a noun meaning 'electron', not an adjective meaning 'electronic'. The correct adjectival form is 電子の."
+   }
+  },
+  {
+   "key": "7227056d0dd24541dbd98287403eb10b4df6724ea08ed2119f08af0ad2b878cc",
+   "input": {
+    "id": "wk-4255-s4",
+    "en": "circuit",
+    "en_pos": "noun",
+    "en_sense": "Enclosed path of an electric current, usually designed for a certain function.",
+    "ja": "回路",
+    "ja_reading": "かいろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "circuit"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4255-s4",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "回路 is the perfect and standard Japanese equivalent for an electrical 'circuit'."
+   }
+  },
+  {
+   "key": "5d44f9e2c1a71a2957560179cae809352296c01fa96cf1b702878ea653402713",
+   "input": {
+    "id": "wk-427-s0",
+    "en": "war",
+    "en_pos": "verb",
+    "en_sense": "To engage in conflict (may be followed by \"with\" to specify the foe).",
+    "ja": "戦争する",
+    "ja_reading": "せんそうする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "war"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-427-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "戦争する is the standard Japanese verb for 'to war'."
+   }
+  },
+  {
+   "key": "46091779137123117ecf9983e5f0da701672883e13751ea5bd92a8e81ac4d816",
+   "input": {
+    "id": "wk-4283-s1",
+    "en": "laughter",
+    "en_pos": "noun",
+    "en_sense": "A movement (usually involuntary) of the muscles of the laughing face, particularly of the lips, and of the whole body, with a peculiar expression of the eyes, indicating merriment, satisfaction or derision, and usually attended by a sonorous and interrupted expulsion of air from the lungs.",
+    "ja": "笑い",
+    "ja_reading": "わらい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "laugh",
+     "laughter"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4283-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "笑い is the perfect and most common Japanese word for 'laughter'."
+   }
+  },
+  {
+   "key": "f467f79a298766fe81719547bb212c1f868179da856e65fd3cb2120f711fb646",
+   "input": {
+    "id": "wk-4291-s0",
+    "en": "free time",
+    "en_pos": "noun",
+    "en_sense": "Time when one is not working.",
+    "ja": "暇",
+    "ja_reading": "ひま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spare time",
+     "free time",
+     "leisure"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4291-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "暇 is the standard and most common Japanese equivalent for 'free time'."
+   }
+  }
+ ]
+}

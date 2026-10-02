@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:43:32Z",
+ "items": [
+  {
+   "key": "774d789a1e39b7f9576c7ad0c9cf55b7e7474023edbf2c578c8e2d8d0fc49cc2",
+   "input": {
+    "id": "wk-3025-s0",
+    "en": "smoke",
+    "en_pos": "verb",
+    "en_sense": "To inhale and exhale the smoke from a burning cigarette or cigar, burning material in a pipe, etc.",
+    "ja": "吸う",
+    "ja_reading": "すう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to breathe in",
+     "to inhale",
+     "to smoke (a cigarette, etc.)"
+    ],
+    "vi": "hút thuốc"
+   },
+   "output": {
+    "id": "wk-3025-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese 吸う is too broad, meaning 'to inhale/suck' in general; it requires an object like タバコ (tobacco) to specify smoking."
+   }
+  },
+  {
+   "key": "de87c916f055b6dfe37365db1e7f62668d949f386da5751f8da829625fa6a72c",
+   "input": {
+    "id": "wk-3026-s0",
+    "en": "flame",
+    "en_pos": "noun",
+    "en_sense": "The visible part of fire; a stream of burning vapour or gas, emitting light and heat.",
+    "ja": "炎",
+    "ja_reading": "ほのお",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "flame",
+     "blaze"
+    ],
+    "vi": "ngọn lửa"
+   },
+   "output": {
+    "id": "wk-3026-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent equivalent in all three languages for the concept of a flame."
+   }
+  },
+  {
+   "key": "c6a162702927f8a01668928939fd269a5d9351b33cd84b3f5ae12690053f322f",
+   "input": {
+    "id": "wk-3028-s0",
+    "en": "ash",
+    "en_pos": "noun",
+    "en_sense": "The solid remains of a fire.",
+    "ja": "灰",
+    "ja_reading": "はい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ash",
+     "ashes"
+    ],
+    "vi": "tro"
+   },
+   "output": {
+    "id": "wk-3028-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for 'ash' from a fire."
+   }
+  },
+  {
+   "key": "9add60847b0c594bb7ec64e8c1f08bf8def415fe6be454aa9726912541b9c319",
+   "input": {
+    "id": "wk-303-s0",
+    "en": "second",
+    "en_pos": "adjective",
+    "en_sense": "Number-two; following after the first one with nothing between them. The ordinal number corresponding to the cardinal number two.",
+    "ja": "第二",
+    "ja_reading": "だいに",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "second"
+    ],
+    "vi": "thứ hai"
+   },
+   "output": {
+    "id": "wk-303-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 第二 is correct but more formal than the common alternative 二番目, creating a slight register mismatch for a general learner's entry."
+   }
+  },
+  {
+   "key": "16ad6c3901adc8f772f607f5d904c18a34ad9267fc2492d27d8780b678990aa5",
+   "input": {
+    "id": "wk-3031-s1",
+    "en": "decrease",
+    "en_pos": "verb",
+    "en_sense": "To make (a quantity) smaller.",
+    "ja": "減らす",
+    "ja_reading": "へらす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to abate",
+     "to decrease",
+     "to diminish",
+     "to shorten"
+    ],
+    "vi": "hạ"
+   },
+   "output": {
+    "id": "wk-3031-s1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'hạ' means 'to lower' and is not a general equivalent for 'decrease'; 'làm giảm' would be a better translation."
+   }
+  },
+  {
+   "key": "70d78152a465127e1e8c8d7bd1302d146b7972bd1630302d05d432fb168769bb",
+   "input": {
+    "id": "wk-3033-s1",
+    "en": "space",
+    "en_pos": "noun",
+    "en_sense": "A physical extent across two or three dimensions (sometimes for or to do something).",
+    "ja": "空間",
+    "ja_reading": "くうかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "space",
+     "room",
+     "airspace"
+    ],
+    "vi": "chỗ"
+   },
+   "output": {
+    "id": "wk-3033-s1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'chỗ' means 'place/spot' and is too narrow and informal; 'không gian' is the correct equivalent for the given sense."
+   }
+  },
+  {
+   "key": "1dffcaa5d0c1de898ba0d963c1ea609f5402e9352510210cc525815702bb11e3",
+   "input": {
+    "id": "wk-3034-s0",
+    "en": "vacuum",
+    "en_pos": "noun",
+    "en_sense": "A region of space that contains no matter.",
+    "ja": "真空",
+    "ja_reading": "しんくう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vacuum"
+    ],
+    "vi": "chân không"
+   },
+   "output": {
+    "id": "wk-3034-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence across all three languages for the scientific concept of a vacuum."
+   }
+  },
+  {
+   "key": "d6047edffc5f717c04bb436449ae590dd7bd6eb5fcf2955d6c39ab0e42294971",
+   "input": {
+    "id": "wk-3036-e:df5e7a",
+    "en": "matter",
+    "en_pos": "noun",
+    "en_sense": "basic structural component of the universe",
+    "ja": "物質",
+    "ja_reading": "ぶっしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "matter"
+    ],
+    "vi": "vật chất"
+   },
+   "output": {
+    "id": "wk-3036-e:df5e7a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the scientific/philosophical concept of 'matter'."
+   }
+  },
+  {
+   "key": "a89329eacdba96db9b5b3a0c0b6813b400fdd47b10cc54c30555a2a3a6947032",
+   "input": {
+    "id": "wk-3036-s5",
+    "en": "matter",
+    "en_pos": "noun",
+    "en_sense": "An affair, condition, or subject, especially one of concern or (especially when preceded by the) one that is problematic.",
+    "ja": "こと",
+    "ja_reading": "こと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thing",
+     "matter"
+    ],
+    "vi": "việc"
+   },
+   "output": {
+    "id": "wk-3036-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the abstract sense of 'matter' as an affair or subject."
+   }
+  },
+  {
+   "key": "3d0b195377c793978ca6f6c38b205acb8facd7fbeeb3ffd97f712131d90c54b0",
+   "input": {
+    "id": "wk-3038-s1",
+    "en": "volume",
+    "en_pos": "noun",
+    "en_sense": "Strength of sound: how loud it is.",
+    "ja": "音量",
+    "ja_reading": "おんりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "volume (sound)"
+    ],
+    "vi": "âm lượng"
+   },
+   "output": {
+    "id": "wk-3038-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence using cognates for the specific sense of audio volume."
+   }
+  },
+  {
+   "key": "60195a18b8f7ae3ca7b22ce29c121930e5644cf710ef3ca6884f2176a6d08014",
+   "input": {
+    "id": "wk-3038-s2",
+    "en": "volume",
+    "en_pos": "noun",
+    "en_sense": "The issues of a periodical over a period of one year.",
+    "ja": "ボリューム",
+    "ja_reading": "ボリューム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "volume (sound level)"
+    ],
+    "vi": "quyển"
+   },
+   "output": {
+    "id": "wk-3038-s2",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese ボリューム means audio volume, a completely different and incorrect sense."
+   }
+  },
+  {
+   "key": "ce2fd67893f860a4583423e75dc201e8b49d8d692a30faa4fec009a034b192a8",
+   "input": {
+    "id": "wk-3038-s4",
+    "en": "volume",
+    "en_pos": "noun",
+    "en_sense": "A single book of a publication issued in multi-book format, such as an encyclopedia.",
+    "ja": "巻",
+    "ja_reading": "かん",
+    "ja_pos": "n,ctr",
+    "ja_glosses": [
+     "volume (of book)",
+     "reel (of film)"
+    ],
+    "vi": "tập"
+   },
+   "output": {
+    "id": "wk-3038-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for 'volume' in the sense of a single book in a series."
+   }
+  }
+ ]
+}

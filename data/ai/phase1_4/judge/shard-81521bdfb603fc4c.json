@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:05:41Z",
+ "items": [
+  {
+   "key": "83e8fb46521a95e76b70e2a56cd4dfd9e555cf3bd41e171ae34724e1f268e780",
+   "input": {
+    "id": "wk-9579-s1",
+    "en": "balloon",
+    "en_pos": "noun",
+    "en_sense": "Such an object as a child’s toy or party decoration.",
+    "ja": "風船",
+    "ja_reading": "ふうせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "balloon (toy or decoration)"
+    ],
+    "vi": "bóng"
+   },
+   "output": {
+    "id": "wk-9579-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bóng' is too broad, often meaning 'ball'; the correct term for a toy balloon is 'bóng bay'."
+   }
+  },
+  {
+   "key": "0dea1f6d5c0126e018d97968181466434d254aa6b325a8e8c0119d64cd4ba84f",
+   "input": {
+    "id": "wk-9586-s0",
+    "en": "gullet",
+    "en_pos": "noun",
+    "en_sense": "The throat or esophagus.",
+    "ja": "食道",
+    "ja_reading": "しょくどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "esophagus",
+     "oesophagus",
+     "gullet"
+    ],
+    "vi": "thực quản"
+   },
+   "output": {
+    "id": "wk-9586-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct anatomical equivalents for 'esophagus'."
+   }
+  },
+  {
+   "key": "52e6ad901db2245936d7e16093dc40300160f620939a4e463b0bfe361d6dfe2e",
+   "input": {
+    "id": "wk-9588-s0",
+    "en": "trachea",
+    "en_pos": "noun",
+    "en_sense": "A thin-walled, cartilaginous tube connecting the larynx to the bronchi.",
+    "ja": "気管",
+    "ja_reading": "きかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trachea",
+     "windpipe"
+    ],
+    "vi": "khí quản"
+   },
+   "output": {
+    "id": "wk-9588-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct anatomical equivalents for 'trachea'."
+   }
+  },
+  {
+   "key": "bf6c8ed169532ac1a637d2ec46d2e2e23718f06d418b5a88268ad599b02df3ad",
+   "input": {
+    "id": "wk-9592-s0",
+    "en": "good news",
+    "en_pos": "noun",
+    "en_sense": "Something or someone pleasant, fortunate, or otherwise positive.",
+    "ja": "朗報",
+    "ja_reading": "ろうほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "good news",
+     "happy news",
+     "glad tidings"
+    ],
+    "vi": "tin lành"
+   },
+   "output": {
+    "id": "wk-9592-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'tin lành' primarily means 'Gospel' and has strong religious connotations; 'tin vui' is the correct neutral term for 'good news'."
+   }
+  },
+  {
+   "key": "66131140762d9ce9bd407e612439003efdc4b6d54225d87abd53cd784c3747a3",
+   "input": {
+    "id": "wk-9599-s0",
+    "en": "bough",
+    "en_pos": "noun",
+    "en_sense": "A tree-branch, usually a primary one directly attached to the trunk.",
+    "ja": "枝",
+    "ja_reading": "えだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "branch",
+     "bough",
+     "limb",
+     "twig",
+     "sprig",
+     "spray"
+    ],
+    "vi": "ngành"
+   },
+   "output": {
+    "id": "wk-9599-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'ngành' is a false friend meaning 'sector' or 'field'; the correct word for a tree branch is 'cành'. The Japanese '枝' is too broad."
+   }
+  },
+  {
+   "key": "6ed80195b0e8761e1926c8774d3f05687f09f8137a3e4cafbf18659274e8f9b5",
+   "input": {
+    "id": "wk-960-s0",
+    "en": "twenty",
+    "en_pos": "numeral",
+    "en_sense": "The cardinal number 20, occurring after nineteen and before twenty-one.",
+    "ja": "二十",
+    "ja_reading": "にじゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "twenty",
+     "20"
+    ],
+    "vi": "hai mươi"
+   },
+   "output": {
+    "id": "wk-960-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for the number twenty."
+   }
+  },
+  {
+   "key": "0b274fb586027bd3dada2cc237fe64a64e5d0324de0362351121871713057576",
+   "input": {
+    "id": "wk-9600-s0",
+    "en": "blunt",
+    "en_pos": "adjective",
+    "en_sense": "Having a thick edge or point; not sharp.",
+    "ja": "鈍い",
+    "ja_reading": "にぶい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "dull (e.g. a knife)",
+     "blunt"
+    ],
+    "vi": "cùn"
+   },
+   "output": {
+    "id": "wk-9600-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a blunt or dull edge."
+   }
+  },
+  {
+   "key": "2d8d40e035f55e2406388584d7c081730b45e4f39924e9a395d67c39fe336991",
+   "input": {
+    "id": "wk-9602-s0",
+    "en": "blind",
+    "en_pos": "adjective",
+    "en_sense": "Unable to see, or only partially able to see.",
+    "ja": "盲",
+    "ja_reading": "めくら",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "blindness",
+     "blind person"
+    ],
+    "vi": "mù"
+   },
+   "output": {
+    "id": "wk-9602-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "POS_MISMATCH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese term 'めくら' is a derogatory and outdated slur for a blind person and primarily a noun, not an adjective."
+   }
+  },
+  {
+   "key": "e2ca05b37b9dd6d168c1a539532afcd531a8aa2f753b86e313ff36e1f9209207",
+   "input": {
+    "id": "wk-9608-s0",
+    "en": "superman",
+    "en_pos": "noun",
+    "en_sense": "An imagined superior type of human being representing a new stage of human development; an übermensch; (loosely), a man of extraordinary powers.",
+    "ja": "超人",
+    "ja_reading": "ちょうじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "superman",
+     "superwoman"
+    ],
+    "vi": "siêu nhân"
+   },
+   "output": {
+    "id": "wk-9608-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are direct and standard translations of 'superman'."
+   }
+  },
+  {
+   "key": "381a9b80d015a19c9460208df0ebf4f0c0eed5dccfb18b9c70bf532fc3449fa5",
+   "input": {
+    "id": "wk-961-s0",
+    "en": "thirty",
+    "en_pos": "numeral",
+    "en_sense": "The cardinal number occurring after twenty-nine and before thirty-one, represented in Arabic numerals as 30.",
+    "ja": "三十",
+    "ja_reading": "さんじゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "thirty",
+     "30"
+    ],
+    "vi": "ba mươi"
+   },
+   "output": {
+    "id": "wk-961-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for the number thirty."
+   }
+  },
+  {
+   "key": "020dcc320e9df561599010e0fc8272cda49fbe7b71855e91cd045fbfbac53eca",
+   "input": {
+    "id": "wk-9611-e:256c89",
+    "en": "climb",
+    "en_pos": "verb",
+    "en_sense": "to ascend, to go up",
+    "ja": "登る",
+    "ja_reading": "のぼる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to ascend",
+     "to go up",
+     "to climb"
+    ],
+    "vi": "lên"
+   },
+   "output": {
+    "id": "wk-9611-e:256c89",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'lên' (to go up) is much broader than 'climb'; 'leo' or 'trèo' are better equivalents for the action of climbing."
+   }
+  },
+  {
+   "key": "74ae7bd6ae2cf087db7363eeb10f6b32501bf01ffb215ed90b0fee7a1cf21983",
+   "input": {
+    "id": "wk-9614-s0",
+    "en": "comment",
+    "en_pos": "verb",
+    "en_sense": "To remark.",
+    "ja": "論評する",
+    "ja_reading": "ろんぴょうする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "comment",
+     "criticism",
+     "critique",
+     "review"
+    ],
+    "vi": "bình luận"
+   },
+   "output": {
+    "id": "wk-9614-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '論評する' is too narrow and formal, meaning 'to critique' or 'to review'; a more general equivalent for 'to comment' is 'コメントする'."
+   }
+  }
+ ]
+}

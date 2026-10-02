@@ -1,0 +1,378 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:30:19Z",
+ "items": [
+  {
+   "key": "292b24f4255e44e496be3289fae304925bd89509f0172f957efe72bdf65a70a0",
+   "input": {
+    "id": "wk-13255-s0",
+    "en": "cinema",
+    "en_pos": "noun",
+    "en_sense": "A movie theatre, a movie house.",
+    "ja": "映画館",
+    "ja_reading": "えいがかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "movie theatre",
+     "movie theater",
+     "cinema"
+    ],
+    "vi": "rạp phim"
+   },
+   "output": {
+    "id": "wk-13255-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a movie theater."
+   }
+  },
+  {
+   "key": "5514347a9568a70bff98f82260e278817060f2b72ea0888a7bec78d0fdbe1888",
+   "input": {
+    "id": "wk-13256-s3",
+    "en": "comedy",
+    "en_pos": "noun",
+    "en_sense": "a dramatic work that is light and humorous or satirical in tone",
+    "ja": "喜劇",
+    "ja_reading": "きげき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "comedy"
+    ],
+    "vi": "hài kịch"
+   },
+   "output": {
+    "id": "wk-13256-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the genre of comedy."
+   }
+  },
+  {
+   "key": "682287a789f2e53c6fa8e16d7c304d93d2c47483965a6906db048174f431a458",
+   "input": {
+    "id": "wk-1326-s0",
+    "en": "cool",
+    "en_pos": "adjective",
+    "en_sense": "Of a mildly low temperature.",
+    "ja": "涼しい",
+    "ja_reading": "すずしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "cool",
+     "refreshing"
+    ],
+    "vi": "mát"
+   },
+   "output": {
+    "id": "wk-1326-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a pleasant, mild coolness."
+   }
+  },
+  {
+   "key": "b169d382f06b5de5154a968e82d152305a3fb9833f3cc972cb8478ccb16f621b",
+   "input": {
+    "id": "wk-13266-s0",
+    "en": "ophthalmology",
+    "en_pos": "noun",
+    "en_sense": "The anatomy, functions, pathology, and treatment of the eye.",
+    "ja": "眼科",
+    "ja_reading": "がんか",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "ophthalmology"
+    ],
+    "vi": "khoa mắt"
+   },
+   "output": {
+    "id": "wk-13266-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'khoa mắt' refers to the hospital department, while the English sense and Japanese '眼科' refer to the field of study; 'nhãn khoa' would be a more precise Vietnamese equivalent."
+   }
+  },
+  {
+   "key": "819e8d9c44244c74497c85633682e1bb3cd112ac718130a6a65aba195f34178b",
+   "input": {
+    "id": "wk-13267-s0",
+    "en": "orchestra",
+    "en_pos": "noun",
+    "en_sense": "A large group of musicians who play together on various instruments, usually including some from strings, woodwind, brass and/or percussion; the instruments played by such a group.",
+    "ja": "オーケストラ",
+    "ja_reading": "オーケストラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "orchestra"
+    ],
+    "vi": "dàn nhạc"
+   },
+   "output": {
+    "id": "wk-13267-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'dàn nhạc' is too broad, meaning any musical group, whereas English 'orchestra' and Japanese 'オーケストラ' refer to a specific large ensemble."
+   }
+  },
+  {
+   "key": "e581d5be00b584b8b31b3d5c84456e857de428d2b2c0a10f01dff2c455eacca2",
+   "input": {
+    "id": "wk-13273-s0",
+    "en": "panorama",
+    "en_pos": "noun",
+    "en_sense": "An unbroken view of an entire surrounding area.",
+    "ja": "パノラマ",
+    "ja_reading": "パノラマ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "panorama"
+    ],
+    "vi": "toàn cảnh"
+   },
+   "output": {
+    "id": "wk-13273-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent expressions for a panoramic view."
+   }
+  },
+  {
+   "key": "1189e06e23de09d384a956fde9609a30614cfe80b16147348336d74a4bb43dc7",
+   "input": {
+    "id": "wk-13290-s0",
+    "en": "karma",
+    "en_pos": "noun",
+    "en_sense": "The sum total of a person's actions, which determine the person's next incarnation in samsara, the cycle of death and rebirth.",
+    "ja": "業",
+    "ja_reading": "ごう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "karma"
+    ],
+    "vi": "nghiệp"
+   },
+   "output": {
+    "id": "wk-13290-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for the concept of karma in their respective languages."
+   }
+  },
+  {
+   "key": "f6911da32fc80b7893ae9639c22ad9e0a1448df4d3250aa645f11e750fc77311",
+   "input": {
+    "id": "wk-13294-s0",
+    "en": "yoga",
+    "en_pos": "noun",
+    "en_sense": "Any of several Hindu or Buddhist disciplines aimed at training the consciousness for a state of perfect spiritual insight and tranquillity; especially a system of exercises practiced to promote control of the body and mind.",
+    "ja": "ヨガ",
+    "ja_reading": "ヨガ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "yoga"
+    ],
+    "vi": "thuyết du già"
+   },
+   "output": {
+    "id": "wk-13294-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'thuyết du già' is an archaic and scholarly term; the modern and standard word is the loanword 'yoga'."
+   }
+  },
+  {
+   "key": "9873c43aa2974149910efa19a13d604963b996a274cdbddf42c2bc8a609ee3fc",
+   "input": {
+    "id": "wk-13297-s0",
+    "en": "pangolin",
+    "en_pos": "noun",
+    "en_sense": "Any of several long-tailed, scale-covered mammals of the family Manidae within the order Pholidota of tropical Africa and Asia.",
+    "ja": "せんざんこう",
+    "ja_reading": "せんざんこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pangolin",
+     "scaly anteater"
+    ],
+    "vi": "trút"
+   },
+   "output": {
+    "id": "wk-13297-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Vietnamese word 'trút' is a rare or regional term for pangolin; the standard and common word is 'tê tê'."
+   }
+  },
+  {
+   "key": "c11d491d242ae278855555f3c27d9b94334f3c359eb0ecd07b96db3101d9b7f7",
+   "input": {
+    "id": "wk-13298-s1",
+    "en": "durian",
+    "en_pos": "noun",
+    "en_sense": "The spiky edible fruit of this tree, known for its strong taste and very strong, unpleasant odor.",
+    "ja": "ドリアン",
+    "ja_reading": "ドリアン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "durian (fruit)"
+    ],
+    "vi": "sầu riêng"
+   },
+   "output": {
+    "id": "wk-13298-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the durian fruit."
+   }
+  },
+  {
+   "key": "c451fa306ea770e6fd61ad3e6c8303409e46254a03c7182431cb48d39e8dbe63",
+   "input": {
+    "id": "wk-13301-s0",
+    "en": "orangutan",
+    "en_pos": "noun",
+    "en_sense": "An arboreal ape, characterised by its shaggy reddish-brown coat and long arms, of the genus Pongo, native to Borneo and Sumatra.",
+    "ja": "オランウータン",
+    "ja_reading": "オランウータン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "orangutan (Pongo pygmaeus)",
+     "orang-utan",
+     "orangutang"
+    ],
+    "vi": "đười ươi"
+   },
+   "output": {
+    "id": "wk-13301-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the orangutan."
+   }
+  },
+  {
+   "key": "25cfe973debf1ce871dcc21aa9d1784384209520b70b86a2981ab1bb262dfe8c",
+   "input": {
+    "id": "wk-13304-s0",
+    "en": "wrinkled",
+    "en_pos": "adjective",
+    "en_sense": "Uneven, with many furrows and prominent points, often in reference to the skin or hide of animals.",
+    "ja": "しわくちゃ",
+    "ja_reading": "しわくちゃ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "crumpled",
+     "wrinkled",
+     "crinkled",
+     "creased"
+    ],
+    "vi": "nhăn"
+   },
+   "output": {
+    "id": "wk-13304-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are common, natural words for 'wrinkled' and are good equivalents."
+   }
+  }
+ ]
+}

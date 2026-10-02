@@ -1,0 +1,381 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:39:17Z",
+ "items": [
+  {
+   "key": "5d88088cddd6d446eb6b10600bf6979eb096f91678f0255b50f7d1df7835b80b",
+   "input": {
+    "id": "wk-2257-s1",
+    "en": "morphology",
+    "en_pos": "noun",
+    "en_sense": "The study of the form and structure of animals and plants.",
+    "ja": "形態学",
+    "ja_reading": "けいたいがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "morphology"
+    ],
+    "vi": "hình thái học"
+   },
+   "output": {
+    "id": "wk-2257-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard scientific equivalents for morphology in biology."
+   }
+  },
+  {
+   "key": "f74255077726d6470cefe40494c2dbb391cd7e6cdf01f61e20628fc55ac8f594",
+   "input": {
+    "id": "wk-22573-s0",
+    "en": "bookshop",
+    "en_pos": "noun",
+    "en_sense": "A shop that sells books.",
+    "ja": "書店",
+    "ja_reading": "しょてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bookshop",
+     "bookstore"
+    ],
+    "vi": "nhà sách"
+   },
+   "output": {
+    "id": "wk-22573-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and most common words for a bookshop."
+   }
+  },
+  {
+   "key": "93fc69231f4139b056bf03b822d018ce921eb6073e83aa1084ffc116b67c0d63",
+   "input": {
+    "id": "wk-2261-s2",
+    "en": "reactor",
+    "en_pos": "noun",
+    "en_sense": "A device which uses atomic energy to produce heat.",
+    "ja": "原子炉",
+    "ja_reading": "げんしろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "atomic reactor",
+     "nuclear reactor"
+    ],
+    "vi": "lò phản ứng"
+   },
+   "output": {
+    "id": "wk-2261-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese `lò phản ứng` is a general term for 'reactor', while the English sense and Japanese `原子炉` specifically refer to a nuclear reactor."
+   }
+  },
+  {
+   "key": "4d0a1cb246713aa8e671dc22fe1249fffebf888901e2295d0cd08e508a0d1607",
+   "input": {
+    "id": "wk-22625-s0",
+    "en": "enjoyable",
+    "en_pos": "adjective",
+    "en_sense": "Pleasant, capable of giving pleasure.",
+    "ja": "楽しい",
+    "ja_reading": "たのしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "enjoyable",
+     "fun",
+     "pleasant",
+     "happy",
+     "delightful"
+    ],
+    "vi": "thú vị"
+   },
+   "output": {
+    "id": "wk-22625-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `thú vị` means 'interesting', which is different from the English 'enjoyable' and Japanese `楽しい` (fun, enjoyable)."
+   }
+  },
+  {
+   "key": "b8ef51dece6e0616739a48134674a0582c0eb411fca2a771f5b72db816628497",
+   "input": {
+    "id": "wk-2263-s0",
+    "en": "criminal",
+    "en_pos": "noun",
+    "en_sense": "A person who is guilty of a crime, notably breaking the law.",
+    "ja": "犯罪者",
+    "ja_reading": "はんざいしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "criminal",
+     "culprit"
+    ],
+    "vi": "tội phạm"
+   },
+   "output": {
+    "id": "wk-2263-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard legal and general words for a criminal."
+   }
+  },
+  {
+   "key": "31d40ba372a6df7a5c53787d976ff116825c5c59b775292f3708df9ac792bc7e",
+   "input": {
+    "id": "wk-22631-e:48efe7",
+    "en": "canteen",
+    "en_pos": "noun",
+    "en_sense": "small cafeteria or snack bar",
+    "ja": "食堂",
+    "ja_reading": "しょくどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dining room",
+     "dining hall",
+     "cafeteria",
+     "canteen",
+     "messroom"
+    ],
+    "vi": "căng tin"
+   },
+   "output": {
+    "id": "wk-22631-e:48efe7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a canteen or cafeteria."
+   }
+  },
+  {
+   "key": "4b759a0445a056789aca60c161681b9b1f3ef590b77e314c2856b550fcb72912",
+   "input": {
+    "id": "wk-2264-s3",
+    "en": "actor",
+    "en_pos": "noun",
+    "en_sense": "A person who acts a part in a theatrical play or (later) in film or television; a dramatic performer.",
+    "ja": "俳優",
+    "ja_reading": "はいゆう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "actor",
+     "actress",
+     "player",
+     "performer"
+    ],
+    "vi": "diễn viên"
+   },
+   "output": {
+    "id": "wk-2264-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, gender-neutral words for an actor."
+   }
+  },
+  {
+   "key": "b6f6acaa39c5114de1d11d36d65338ce29c30b7ac52dccfbf87d2ddfe2ef84df",
+   "input": {
+    "id": "wk-22643-e:e03800",
+    "en": "no problem",
+    "en_pos": "interjection",
+    "en_sense": "it does not pose a problem",
+    "ja": "問題ない",
+    "ja_reading": "もんだいない",
+    "ja_pos": "exp,adj-i",
+    "ja_glosses": [
+     "no problem",
+     "all right",
+     "not an issue",
+     "unobjectionable"
+    ],
+    "vi": "không sao"
+   },
+   "output": {
+    "id": "wk-22643-e:e03800",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are very common and natural expressions with the same meaning and usage."
+   }
+  },
+  {
+   "key": "98800e734ed483edff7dfd425127993e015716864422913827f2fd6c4a727e51",
+   "input": {
+    "id": "wk-2265-s6",
+    "en": "factor",
+    "en_pos": "noun",
+    "en_sense": "Any of various objects multiplied together to form some whole.",
+    "ja": "因数",
+    "ja_reading": "いんすう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "factor"
+    ],
+    "vi": "thừa số"
+   },
+   "output": {
+    "id": "wk-2265-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard mathematical term for 'factor'."
+   }
+  },
+  {
+   "key": "d54c20486eb270559335a53b1435b50ae0373612d8e92b5cf8bb9c8287948c86",
+   "input": {
+    "id": "wk-2265-s7",
+    "en": "factor",
+    "en_pos": "noun",
+    "en_sense": "Influence; a phenomenon that affects the nature, the magnitude, and/or the timing of a consequence.",
+    "ja": "要因",
+    "ja_reading": "よういん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "main cause",
+     "primary factor"
+    ],
+    "vi": "yếu tố"
+   },
+   "output": {
+    "id": "wk-2265-s7",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese `要因` tends to mean 'main factor' or 'primary cause', making it narrower than the general English 'factor' and the Vietnamese `yếu tố`."
+   }
+  },
+  {
+   "key": "b99b2fb6ba190422f7cfc3d99b04925de4abf3e433422ee36c05c5f55a9387cb",
+   "input": {
+    "id": "wk-2266-e:cd8965",
+    "en": "cable",
+    "en_pos": "noun",
+    "en_sense": "assembly of wires for electricity",
+    "ja": "ケーブル",
+    "ja_reading": "ケーブル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cable"
+    ],
+    "vi": "cáp"
+   },
+   "output": {
+    "id": "wk-2266-e:cd8965",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for an electrical cable, with the Japanese and Vietnamese being common loanwords."
+   }
+  },
+  {
+   "key": "875e45154ae16b3b35ab53617a704b3a3913f9de9fa6db558f13bdf6844a1768",
+   "input": {
+    "id": "wk-22665-s0",
+    "en": "shareholder",
+    "en_pos": "noun",
+    "en_sense": "One who owns shares of stock in a corporation.",
+    "ja": "株主",
+    "ja_reading": "かぶぬし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shareholder",
+     "stockholder"
+    ],
+    "vi": "cổ đông"
+   },
+   "output": {
+    "id": "wk-22665-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard financial and legal terms for a shareholder."
+   }
+  }
+ ]
+}

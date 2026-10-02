@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:41:31Z",
+ "items": [
+  {
+   "key": "ca012bc3181c5f9189fcf07e0a70181245d9ee0680c69668042f5cfaa0f5a982",
+   "input": {
+    "id": "jm-1475790-0-vague",
+    "en": "vague",
+    "en_pos": "adjective",
+    "en_sense": "vague; obscure; indistinct; hazy; ambiguous",
+    "ja": "漠然",
+    "ja_reading": "ばくぜん",
+    "ja_pos": "adj-t,adv-to",
+    "ja_glosses": [
+     "vague",
+     "obscure",
+     "indistinct",
+     "hazy",
+     "ambiguous"
+    ],
+    "vi": "mơ hồ"
+   },
+   "output": {
+    "id": "jm-1475790-0-vague",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence in meaning and usage across all three languages."
+   }
+  },
+  {
+   "key": "89b0c1097e99a2dbdc1facea47da17fd93335f99540e87cb30a41977bacfdc87",
+   "input": {
+    "id": "jm-1475910-0-explosion",
+    "en": "explosion",
+    "en_pos": "noun",
+    "en_sense": "explosion; detonation; blast; blowing up; eruption",
+    "ja": "爆発",
+    "ja_reading": "ばくはつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "explosion",
+     "detonation",
+     "blast",
+     "blowing up",
+     "eruption"
+    ],
+    "vi": "vụ nổ"
+   },
+   "output": {
+    "id": "jm-1475910-0-explosion",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good match for the concept of a physical explosion event."
+   }
+  },
+  {
+   "key": "e56594eaa589bf5919d196338b54ac36cc44d000dd63c92d1d92543e9bcb9729",
+   "input": {
+    "id": "jm-1476450-0-skin",
+    "en": "skin",
+    "en_pos": "noun",
+    "en_sense": "skin",
+    "ja": "肌",
+    "ja_reading": "はだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "skin"
+    ],
+    "vi": "da"
+   },
+   "output": {
+    "id": "jm-1476450-0-skin",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent core vocabulary entry, using the most common everyday terms in all three languages."
+   }
+  },
+  {
+   "key": "3b04b9d264a40c415b02e44ec7c1610741c1f38c2b452dfac6531c3e5f044411",
+   "input": {
+    "id": "jm-1477140-0-growth",
+    "en": "growth",
+    "en_pos": "noun",
+    "en_sense": "(physical) growth; development",
+    "ja": "発育",
+    "ja_reading": "はついく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(physical) growth",
+     "development"
+    ],
+    "vi": "phát triển"
+   },
+   "output": {
+    "id": "jm-1477140-0-growth",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'phát triển' means 'development' in general and is too broad for the specific sense of '(physical) growth' denoted by English 'growth' and Japanese '発育'."
+   }
+  },
+  {
+   "key": "1ae444f408c3cf03c44ec6dfc37822f78cc27ad449af9c979a283c55f6bb551c",
+   "input": {
+    "id": "jm-1477620-0-occurrence",
+    "en": "occurrence",
+    "en_pos": "noun",
+    "en_sense": "occurrence; incidence; outbreak; birth (e.g. of civilization)",
+    "ja": "発生",
+    "ja_reading": "はっせい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "occurrence",
+     "incidence",
+     "outbreak",
+     "birth (e.g. of civilization)"
+    ],
+    "vi": "xảy ra"
+   },
+   "output": {
+    "id": "jm-1477620-0-occurrence",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'xảy ra' is a verb meaning 'to occur', not a noun for 'occurrence'."
+   }
+  },
+  {
+   "key": "91cdce759b1f7d45374acdbb6401f27bab5fa32702ed37b0367e1f2e806cf34b",
+   "input": {
+    "id": "jm-1477680-0-development",
+    "en": "development",
+    "en_pos": "noun",
+    "en_sense": "development; growth",
+    "ja": "発達",
+    "ja_reading": "はったつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "development",
+     "growth"
+    ],
+    "vi": "phát triển"
+   },
+   "output": {
+    "id": "jm-1477680-0-development",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry with direct conceptual and etymological correspondence between the Japanese and Vietnamese terms."
+   }
+  },
+  {
+   "key": "f20e85cc8814cdaf364c1d3afd48220f734ec4a6523126f9c37154e48feaa72c",
+   "input": {
+    "id": "jm-1477810-0-sale",
+    "en": "sale",
+    "en_pos": "noun",
+    "en_sense": "sale; offering for sale; putting on sale; putting on the market; release (for sale)",
+    "ja": "発売",
+    "ja_reading": "はつばい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sale",
+     "offering for sale",
+     "putting on sale",
+     "putting on the market",
+     "release (for sale)"
+    ],
+    "vi": "bán"
+   },
+   "output": {
+    "id": "jm-1477810-0-sale",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'bán' is a verb ('to sell') and does not match the noun 'sale' or the specific sense of 'release for sale' from the Japanese '発売'."
+   }
+  },
+  {
+   "key": "d41f10cb589a506e8bf3f8ce14489543de4842da02a7342b0951e6497eae537d",
+   "input": {
+    "id": "jm-1478200-0-come_out",
+    "en": "come out",
+    "en_pos": "verb",
+    "en_sense": "to come out; to fall out; to be omitted; to be missing; to escape; to come loose",
+    "ja": "抜ける",
+    "ja_reading": "ぬける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to come out",
+     "to fall out",
+     "to be omitted",
+     "to be missing",
+     "to escape",
+     "to come loose"
+    ],
+    "vi": "rơi ra"
+   },
+   "output": {
+    "id": "jm-1478200-0-come_out",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good entry, with all three verbs corresponding well for the core physical sense of something coming/falling out."
+   }
+  },
+  {
+   "key": "2d628edcd6690736188c4546838bf0127150758acb453c277d7659f4590b74f6",
+   "input": {
+    "id": "jm-1478370-0-accompany",
+    "en": "accompany",
+    "en_pos": "verb",
+    "en_sense": "to accompany; to go hand in hand with; to be consequent upon",
+    "ja": "伴う",
+    "ja_reading": "ともなう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to accompany",
+     "to go hand in hand with",
+     "to be consequent upon"
+    ],
+    "vi": "đi cùng"
+   },
+   "output": {
+    "id": "jm-1478370-0-accompany",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'đi cùng' only covers the literal sense of physically going with someone, and misses the abstract sense of 'to go hand in hand with' present in both English and Japanese."
+   }
+  },
+  {
+   "key": "9f3d6ca25b7b4c504bfd4ad53d5752a4b9467cfc3cb41fd8326d97fbfea4bcbc",
+   "input": {
+    "id": "jm-1478750-0-half",
+    "en": "half",
+    "en_pos": "noun",
+    "en_sense": "half; semi-; partial",
+    "ja": "半",
+    "ja_reading": "はん",
+    "ja_pos": "n-pref,n",
+    "ja_glosses": [
+     "half",
+     "semi-",
+     "partial"
+    ],
+    "vi": "nửa"
+   },
+   "output": {
+    "id": "jm-1478750-0-half",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence for the basic concept of 'half' across all three languages."
+   }
+  },
+  {
+   "key": "fcd768822827e93a85b5428966fa28c9ddcbe29193c55b52042767cc2548ed53",
+   "input": {
+    "id": "jm-1478780-0-middle",
+    "en": "middle",
+    "en_pos": "noun",
+    "en_sense": "middle; halfway; midway",
+    "ja": "半ば",
+    "ja_reading": "なかば",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "middle",
+     "halfway",
+     "midway"
+    ],
+    "vi": "giữa"
+   },
+   "output": {
+    "id": "jm-1478780-0-middle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good correspondence for the concept of 'middle' or 'halfway'."
+   }
+  },
+  {
+   "key": "433f25bc3740b324190061ec990de8091503bffdcf7e6587c7d1c7c5913da040",
+   "input": {
+    "id": "jm-1479890-0-half",
+    "en": "half",
+    "en_pos": "adverb",
+    "en_sense": "half",
+    "ja": "半分",
+    "ja_reading": "はんぶん",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "half"
+    ],
+    "vi": "một nửa"
+   },
+   "output": {
+    "id": "jm-1479890-0-half",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'một nửa' is a noun phrase ('one half') and cannot function as an adverb like the English 'half' or Japanese '半分'."
+   }
+  }
+ ]
+}

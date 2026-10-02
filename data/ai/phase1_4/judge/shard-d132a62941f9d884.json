@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:31:50Z",
+ "items": [
+  {
+   "key": "7c7cd61f5c12cc98aa9ea66698455523eded1bf066be242abf1def5a97c7d8c9",
+   "input": {
+    "id": "jm-1257690-0-prize",
+    "en": "prize",
+    "en_pos": "noun",
+    "en_sense": "offering a prize; prize competition; prize; reward",
+    "ja": "懸賞",
+    "ja_reading": "けんしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "offering a prize",
+     "prize competition",
+     "prize",
+     "reward"
+    ],
+    "vi": "giải thưởng"
+   },
+   "output": {
+    "id": "jm-1257690-0-prize",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'giải thưởng' means 'prize/award' but lacks the 'prize competition' sense of English 'prize' (in this specific definition) and Japanese '懸賞'."
+   }
+  },
+  {
+   "key": "e2581e6161de269401ac672a136202c77724303a483490abed44b0c9ca725e30",
+   "input": {
+    "id": "jm-1258130-0-power",
+    "en": "power",
+    "en_pos": "noun",
+    "en_sense": "power; authority; jurisdiction",
+    "ja": "権限",
+    "ja_reading": "けんげん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "power",
+     "authority",
+     "jurisdiction"
+    ],
+    "vi": "quyền hạn"
+   },
+   "output": {
+    "id": "jm-1258130-0-power",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match across all three languages for the specific sense of official authority or jurisdiction."
+   }
+  },
+  {
+   "key": "9b7ca8798e9205addd82c2e9274fccd6ac81ea651f0d78e141e78a8c2ed6e826",
+   "input": {
+    "id": "jm-1258330-0-canine",
+    "en": "canine",
+    "en_pos": "noun",
+    "en_sense": "dog (Canis (lupus) familiaris); canine",
+    "ja": "犬",
+    "ja_reading": "いぬ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dog (Canis (lupus) familiaris)",
+     "canine"
+    ],
+    "vi": "chó"
+   },
+   "output": {
+    "id": "jm-1258330-0-canine",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "'canine' is more formal/scientific than the common words '犬' (inu) and 'chó', but the equivalence is acceptable for learning purposes."
+   }
+  },
+  {
+   "key": "fbb9c38af7c3bc5878034d3c771c09d242c6fbaa5384bab3a20528dad0a09298",
+   "input": {
+    "id": "jm-1258500-0-menu",
+    "en": "menu",
+    "en_pos": "noun",
+    "en_sense": "menu; bill of fare",
+    "ja": "献立",
+    "ja_reading": "こんだて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "menu",
+     "bill of fare"
+    ],
+    "vi": "thực đơn"
+   },
+   "output": {
+    "id": "jm-1258500-0-menu",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good set of equivalents, although the loanword 'メニュー' is also extremely common in Japanese for a restaurant menu."
+   }
+  },
+  {
+   "key": "832c9f776adc77ef383a9b3876d330dda4da099674b183d5c0a54aba6b7a0a7b",
+   "input": {
+    "id": "jm-1259240-1-show",
+    "en": "show",
+    "en_pos": "noun",
+    "en_sense": "show; exhibition; spectacle; freakshow; side show",
+    "ja": "見せ物",
+    "ja_reading": "みせもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "show",
+     "exhibition",
+     "spectacle",
+     "freakshow",
+     "side show"
+    ],
+    "vi": "buổi biểu diễn"
+   },
+   "output": {
+    "id": "jm-1259240-1-show",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'buổi biểu diễn' is a general term for 'performance' and misses the specific 'spectacle/sideshow' nuance of 'show' (in this sense) and Japanese '見せ物'."
+   }
+  },
+  {
+   "key": "744a465a8561006ed098fe3d9a2f95492130e7e4e607f69e6dc78c05ced51731",
+   "input": {
+    "id": "jm-1259370-0-overlook",
+    "en": "overlook",
+    "en_pos": "verb",
+    "en_sense": "to overlook; to command a view of; to look down on",
+    "ja": "見下ろす",
+    "ja_reading": "みおろす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to overlook",
+     "to command a view of",
+     "to look down on"
+    ],
+    "vi": "nhìn xuống"
+   },
+   "output": {
+    "id": "jm-1259370-0-overlook",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for the literal sense of looking down from a high place."
+   }
+  },
+  {
+   "key": "cab4cb1374793f631169d50c74c325130cf49251bdab033c8b991a6d2bf05e69",
+   "input": {
+    "id": "jm-1259440-0-inspection",
+    "en": "inspection",
+    "en_pos": "noun",
+    "en_sense": "inspection; study by observation; field trip; tour; review",
+    "ja": "見学",
+    "ja_reading": "けんがく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "inspection",
+     "study by observation",
+     "field trip",
+     "tour",
+     "review"
+    ],
+    "vi": "tham quan"
+   },
+   "output": {
+    "id": "jm-1259440-0-inspection",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents for the concept of a study tour or observational visit."
+   }
+  },
+  {
+   "key": "41799139b0e18ff0358f69b963c95402e1c19da61a5dee9c3952104b7601c818",
+   "input": {
+    "id": "jm-1259570-1-postpone",
+    "en": "postpone",
+    "en_pos": "verb",
+    "en_sense": "to postpone; to put off; to withhold; to abandon",
+    "ja": "見合わせる",
+    "ja_reading": "みあわせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to postpone",
+     "to put off",
+     "to withhold",
+     "to abandon"
+    ],
+    "vi": "hoãn"
+   },
+   "output": {
+    "id": "jm-1259570-1-postpone",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good match for the core sense of 'postpone', though the extended sense 'abandon' is not fully covered by the Japanese and Vietnamese terms."
+   }
+  },
+  {
+   "key": "20cef8606e9f6875cd951698926b68f5d94b8b76e964ced94d9045fe2cd40652",
+   "input": {
+    "id": "jm-1259770-0-view",
+    "en": "view",
+    "en_pos": "noun",
+    "en_sense": "(scenic) view; prospect; outlook",
+    "ja": "見晴らし",
+    "ja_reading": "みはらし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(scenic) view",
+     "prospect",
+     "outlook"
+    ],
+    "vi": "cảnh quan"
+   },
+   "output": {
+    "id": "jm-1259770-0-view",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'cảnh quan' means 'landscape' or 'scenery', not 'view' (the quality of sight from a vantage point), which is the meaning of English 'view' and Japanese '見晴らし'."
+   }
+  },
+  {
+   "key": "f4cd537b1ec30b163bb1507d34ea13e273e8f6bddb9c9a5f1e916129b7c538cb",
+   "input": {
+    "id": "jm-1259790-0-estimate",
+    "en": "estimate",
+    "en_pos": "verb",
+    "en_sense": "to estimate",
+    "ja": "見積もる",
+    "ja_reading": "みつもる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to estimate"
+    ],
+    "vi": "ước tính"
+   },
+   "output": {
+    "id": "jm-1259790-0-estimate",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages."
+   }
+  },
+  {
+   "key": "bca8061fea833df337e49d153dbb3b01478275a4477be972ccfc7ce58e3633c7",
+   "input": {
+    "id": "jm-1259820-1-postponement",
+    "en": "postponement",
+    "en_pos": "noun",
+    "en_sense": "deferment; postponement; shelving",
+    "ja": "見送り",
+    "ja_reading": "みおくり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "deferment",
+     "postponement",
+     "shelving"
+    ],
+    "vi": "sự hoãn lại"
+   },
+   "output": {
+    "id": "jm-1259820-1-postponement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good set of equivalents. The Japanese '見送り' is polysemous (also 'seeing someone off'), but this sense of 'postponement' is correct."
+   }
+  },
+  {
+   "key": "39111513635cd28dc0ab2e11eda1afbcf6eba8abcb39ef9d1116108179d1816d",
+   "input": {
+    "id": "jm-1259900-1-review",
+    "en": "review",
+    "en_pos": "verb",
+    "en_sense": "to re-examine (policy, estimate, plan, etc.); to review",
+    "ja": "見直す",
+    "ja_reading": "みなおす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to re-examine (policy, estimate, plan, etc.)",
+     "to review"
+    ],
+    "vi": "xem xét lại"
+   },
+   "output": {
+    "id": "jm-1259900-1-review",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent, perfectly aligned set of equivalents for 'to re-examine'."
+   }
+  }
+ ]
+}

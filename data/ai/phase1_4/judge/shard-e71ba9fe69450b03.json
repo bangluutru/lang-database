@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:57Z",
+ "items": [
+  {
+   "key": "1a89b327d12cb630443446546c6806c410e46794c1c70a35be2c2734c35f2297",
+   "input": {
+    "id": "wk-16950-s1",
+    "en": "left wing",
+    "en_pos": "noun",
+    "en_sense": "The more left-wing faction of a group, party, or group of parties.",
+    "ja": "左翼",
+    "ja_reading": "さよく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "left wing"
+    ],
+    "vi": "cánh tả"
+   },
+   "output": {
+    "id": "wk-16950-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard political term for 'left wing' and are direct equivalents."
+   }
+  },
+  {
+   "key": "1bf9af583fee8fbb3feffc74ee5658d764f2d9cf58ff9ec718700f3ab09f16ed",
+   "input": {
+    "id": "wk-16952-s0",
+    "en": "sorcerer",
+    "en_pos": "noun",
+    "en_sense": "A magician or wizard. Sometimes specifically male.",
+    "ja": "魔法使い",
+    "ja_reading": "まほうつかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "magician",
+     "wizard",
+     "sorcerer",
+     "witch",
+     "mage"
+    ],
+    "vi": "phù thuỷ"
+   },
+   "output": {
+    "id": "wk-16952-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'phù thuỷ' primarily means 'witch' and carries different connotations than the more general English 'sorcerer' or Japanese '魔法使い'."
+   }
+  },
+  {
+   "key": "85f502ab09d46eb03a4d5e2068348c997657e78202a121ee2b7282dd6a5fafbe",
+   "input": {
+    "id": "wk-16955-s4",
+    "en": "soda",
+    "en_pos": "noun",
+    "en_sense": "Any carbonated (usually sweet) soft drink.",
+    "ja": "炭酸飲料",
+    "ja_reading": "たんさんいんりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "carbonated drink",
+     "fizzy drink",
+     "soda"
+    ],
+    "vi": "nước ngọt"
+   },
+   "output": {
+    "id": "wk-16955-s4",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'nước ngọt' (sweet drink) is broader than English 'soda' (carbonated drink) and Japanese '炭酸飲料' (carbonated beverage), as it can include non-carbonated drinks."
+   }
+  },
+  {
+   "key": "f37069775e36a9ba4589a2e7b52feabdd53af51b903b36bb1324e705fae4b4bf",
+   "input": {
+    "id": "wk-16969-s0",
+    "en": "circus",
+    "en_pos": "noun",
+    "en_sense": "A traveling company of performers that may include acrobats, clowns, trained animals, and other novelty acts, that gives shows usually in a circular tent.",
+    "ja": "サーカス",
+    "ja_reading": "サーカス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "circus"
+    ],
+    "vi": "xiếc"
+   },
+   "output": {
+    "id": "wk-16969-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'circus' in their respective languages."
+   }
+  },
+  {
+   "key": "e85bcd2282d14007a94dcbe3e659e6c2f57291bd5669975099485494a3accff0",
+   "input": {
+    "id": "wk-1697-s0",
+    "en": "beat",
+    "en_pos": "verb",
+    "en_sense": "To hit; to strike.",
+    "ja": "殴る",
+    "ja_reading": "なぐる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to strike",
+     "to hit",
+     "to beat",
+     "to punch"
+    ],
+    "vi": "đánh"
+   },
+   "output": {
+    "id": "wk-1697-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '殴る' specifically means 'to punch' or 'to strike with a fist', which is narrower than the general English sense 'to hit; to strike' and the Vietnamese 'đánh'."
+   }
+  },
+  {
+   "key": "4b1e6c703b79fa51c5f63eb17b5b2b82ccd98771af9705c19ccc5f3b157c9832",
+   "input": {
+    "id": "wk-16988-s0",
+    "en": "hairpin",
+    "en_pos": "noun",
+    "en_sense": "A pin or fastener for the hair.",
+    "ja": "ヘアピン",
+    "ja_reading": "ヘアピン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hairpin curve",
+     "hairpin turn"
+    ],
+    "vi": "thoa"
+   },
+   "output": {
+    "id": "wk-16988-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "FALSE_FRIEND",
+     "POS_MISMATCH"
+    ],
+    "note": "The Japanese glosses refer to a 'hairpin curve', not the hair accessory, and the Vietnamese 'thoa' is a verb meaning 'to apply', not a noun for hairpin."
+   }
+  },
+  {
+   "key": "f2e38eda98a578142e2ee86bf5327827ee60ff2e8d5e073affcd7c514f40964a",
+   "input": {
+    "id": "wk-16989-s0",
+    "en": "great-grandchild",
+    "en_pos": "noun",
+    "en_sense": "The child (son or daughter) of one's grandchild.",
+    "ja": "曾孫",
+    "ja_reading": "ひまご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "great-grandchild"
+    ],
+    "vi": "chắt"
+   },
+   "output": {
+    "id": "wk-16989-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard words for 'great-grandchild'."
+   }
+  },
+  {
+   "key": "6d6c4b7014b963101adb659414867332d820a7bba217c71e627514af12abf2c9",
+   "input": {
+    "id": "wk-16990-s0",
+    "en": "condiment",
+    "en_pos": "noun",
+    "en_sense": "Something used to enhance the flavor of food, for example, salt or pepper, especially when added by the eater to taste rather than by the cook.",
+    "ja": "調味料",
+    "ja_reading": "ちょうみりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "seasoning",
+     "flavoring",
+     "flavouring",
+     "condiment"
+    ],
+    "vi": "gia vị"
+   },
+   "output": {
+    "id": "wk-16990-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both '調味料' and 'gia vị' mean 'seasoning' in general, which is broader than the English 'condiment' sense that emphasizes items added by the eater at the table."
+   }
+  },
+  {
+   "key": "8f213e43229b8c8a79c6ce5f320c26abdd2a2690b53aab05d9760c694fa76192",
+   "input": {
+    "id": "wk-17-s0",
+    "en": "crow",
+    "en_pos": "noun",
+    "en_sense": "A bird, usually black, of the genus Corvus, having a strong conical beak, with projecting bristles; it has a harsh, croaking call.",
+    "ja": "カラス",
+    "ja_reading": "カラス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "crow (Corvus spp.)",
+     "raven"
+    ],
+    "vi": "quạ"
+   },
+   "output": {
+    "id": "wk-17-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'crow'."
+   }
+  },
+  {
+   "key": "98ef7da12f221a2d2476f1927fe80c68314ae00e41928a48ee5660957e45ed6d",
+   "input": {
+    "id": "wk-170-s0",
+    "en": "servant",
+    "en_pos": "noun",
+    "en_sense": "One who is hired to perform regular household or other duties, and receives compensation. As opposed to a slave.",
+    "ja": "召使い",
+    "ja_reading": "めしつかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "servant",
+     "menial"
+    ],
+    "vi": "đầy tớ"
+   },
+   "output": {
+    "id": "wk-170-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'đầy tớ' is an archaic and derogatory term for servant, unlike the more neutral English 'servant' or the slightly dated Japanese '召使い'."
+   }
+  },
+  {
+   "key": "eb4b74731a053dcaec3b7848970df1af0a85747a05e4cb185f8895fa81f48314",
+   "input": {
+    "id": "wk-1702-e:b25a03",
+    "en": "so",
+    "en_pos": "adverb",
+    "en_sense": "to a particular extent",
+    "ja": "こんなに",
+    "ja_reading": "こんなに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "so",
+     "like this",
+     "in this way",
+     "this much",
+     "to this extent"
+    ],
+    "vi": "vậy"
+   },
+   "output": {
+    "id": "wk-1702-e:b25a03",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'vậy' means 'like that' and is not a direct equivalent for the adverb of degree 'so' ('to this extent'), unlike the Japanese 'こんなに'."
+   }
+  },
+  {
+   "key": "8bd012ae5c50117d3153687553a871802f980f77c8b5f6783520db710b038d42",
+   "input": {
+    "id": "wk-17023-s0",
+    "en": "percentage",
+    "en_pos": "noun",
+    "en_sense": "The amount, number or rate of something, regarded as part of a total of 100; a part of a whole.",
+    "ja": "百分率",
+    "ja_reading": "ひゃくぶんりつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "percentage"
+    ],
+    "vi": "số phần trăm"
+   },
+   "output": {
+    "id": "wk-17023-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All terms correctly refer to 'percentage'. The Japanese '百分率' is somewhat formal, and the Vietnamese 'số phần trăm' is a descriptive phrase but commonly used."
+   }
+  }
+ ]
+}

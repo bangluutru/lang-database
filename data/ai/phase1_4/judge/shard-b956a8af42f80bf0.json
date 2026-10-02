@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:38:03Z",
+ "items": [
+  {
+   "key": "80db86789cfc25eecda2bbc0cb3bbfe5e0eb00a0cd8caa2fdac535127f2896d4",
+   "input": {
+    "id": "wk-2111-s0",
+    "en": "eat",
+    "en_pos": "verb",
+    "en_sense": "To consume (something solid or semi-solid, usually food) by putting it into the mouth and swallowing it.",
+    "ja": "食べる",
+    "ja_reading": "たべる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to eat"
+    ],
+    "vi": "ăn"
+   },
+   "output": {
+    "id": "wk-2111-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence between the three most basic words for 'eat'."
+   }
+  },
+  {
+   "key": "3a30bcc5189691ed1a6ce0432f566e081cb844e84ad7c3066bcd966d6669e901",
+   "input": {
+    "id": "wk-2112-s0",
+    "en": "feed",
+    "en_pos": "verb",
+    "en_sense": "To give (someone or something) food to eat.",
+    "ja": "飼う",
+    "ja_reading": "かう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to keep (a pet or other animal)",
+     "to have",
+     "to own",
+     "to raise",
+     "to rear",
+     "to feed"
+    ],
+    "vi": "cho ăn"
+   },
+   "output": {
+    "id": "wk-2112-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese `飼う` means 'to keep/raise an animal', not 'to feed', which is a different action."
+   }
+  },
+  {
+   "key": "a5d7eeedef8424ba0ffce28333fabc4cddd38cddb875d61797ec6355f487a866",
+   "input": {
+    "id": "wk-2113-e:6130c6",
+    "en": "feed",
+    "en_pos": "noun",
+    "en_sense": "encapsulated online content",
+    "ja": "フィード",
+    "ja_reading": "フィード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(web) feed"
+    ],
+    "vi": "nguồn cấp"
+   },
+   "output": {
+    "id": "wk-2113-e:6130c6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for the technical concept of a web feed."
+   }
+  },
+  {
+   "key": "a52a08425f400a82ef5fbe4abd5d40a7ac0b19276a77624c4f4e403b68f6ffab",
+   "input": {
+    "id": "wk-21136-s0",
+    "en": "morale",
+    "en_pos": "noun",
+    "en_sense": "The mental and emotional state of a person or group, especially their level of confidence, enthusiasm, and loyalty with regard to a function or task.",
+    "ja": "士気",
+    "ja_reading": "しき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "morale (of troops, team, etc.)",
+     "esprit de corps"
+    ],
+    "vi": "tinh thần"
+   },
+   "output": {
+    "id": "wk-21136-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese `tinh thần` is much broader than `morale` or `士気`, as it can also mean 'spirit' or 'mental state' in general."
+   }
+  },
+  {
+   "key": "720d06d4f3e3a8da477e90230123b1087e79d058716fb452e1b98cda622652d5",
+   "input": {
+    "id": "wk-21169-s0",
+    "en": "laptop",
+    "en_pos": "noun",
+    "en_sense": "A laptop computer.",
+    "ja": "ノートパソコン",
+    "ja_reading": "ノートパソコン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "laptop (computer)",
+     "notebook (computer)"
+    ],
+    "vi": "máy tính xách tay"
+   },
+   "output": {
+    "id": "wk-21169-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent, standard equivalents for 'laptop computer' in all three languages."
+   }
+  },
+  {
+   "key": "9577ce4e4c703723b11e29139909fa18b6056f9fa9c0b0f7a07e732d55917bcf",
+   "input": {
+    "id": "wk-21191-s0",
+    "en": "logistics",
+    "en_pos": "noun",
+    "en_sense": "The process of planning, implementing, and controlling the efficient, effective flow and storage of goods, services and related information from their point of origin to point of consumption for the purpose of satisfying customer requirements.",
+    "ja": "物流",
+    "ja_reading": "ぶつりゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "physical distribution",
+     "distribution of goods",
+     "logistics"
+    ],
+    "vi": "hậu cần"
+   },
+   "output": {
+    "id": "wk-21191-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `hậu cần` primarily means military logistics, making it a poor translation for the commercial sense defined here."
+   }
+  },
+  {
+   "key": "5fe1974e632c206f821bc62dfbd5286fc0d9cbbf47a74270f80264bd0ca9d399",
+   "input": {
+    "id": "wk-21191-s1",
+    "en": "logistics",
+    "en_pos": "noun",
+    "en_sense": "The procurement, supply, maintenance, and transportation of equipment, facilities, and personnel.",
+    "ja": "兵站",
+    "ja_reading": "へいたん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "logistics",
+     "supply",
+     "communications"
+    ],
+    "vi": "hậu cần"
+   },
+   "output": {
+    "id": "wk-21191-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence for the specific military sense of logistics."
+   }
+  },
+  {
+   "key": "965a1afb3bf3d9ef172c572d75f502b1debb0b4180ba4cd7b0b256ab13ec6c3a",
+   "input": {
+    "id": "wk-21197-s0",
+    "en": "fine arts",
+    "en_pos": "noun",
+    "en_sense": "The purely aesthetic arts, such as music, painting, and poetry, as opposed to industrial or functional arts such as architecture or carpentry.",
+    "ja": "美術",
+    "ja_reading": "びじゅつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "art",
+     "fine arts"
+    ],
+    "vi": "mỹ thuật"
+   },
+   "output": {
+    "id": "wk-21197-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both `美術` and `mỹ thuật` refer specifically to the visual arts (painting, sculpture) and do not include music or poetry, making them narrower than the English definition of 'fine arts'."
+   }
+  },
+  {
+   "key": "07f7117e8fea36106396b52c9f192a4ff17b641a996a25e625350146bacc8cb2",
+   "input": {
+    "id": "wk-212-e:5154b2",
+    "en": "season",
+    "en_pos": "noun",
+    "en_sense": "quarter of a year",
+    "ja": "季節",
+    "ja_reading": "きせつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "season",
+     "time of year"
+    ],
+    "vi": "mùa"
+   },
+   "output": {
+    "id": "wk-212-e:5154b2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence for the four seasons of the year."
+   }
+  },
+  {
+   "key": "8c8b07b5ba5fc892ce3d376ad619fcb8915fa37f7e13b553aaf43f636068d685",
+   "input": {
+    "id": "wk-212-s3",
+    "en": "season",
+    "en_pos": "noun",
+    "en_sense": "A year, but with emphasis on the most important part of the year in context, such as the months when plants or animals grow and reproduce.",
+    "ja": "旬",
+    "ja_reading": "しゅん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "season (for fruit, seafood, etc.)",
+     "best time of the year (for)"
+    ],
+    "vi": "mùa"
+   },
+   "output": {
+    "id": "wk-212-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly capture the sense of a specific period of the year being the right time for something (e.g., food, activities)."
+   }
+  },
+  {
+   "key": "3a74b303207d83239851ec2a978898329b84db2d942ca816bb97699218a8c0bf",
+   "input": {
+    "id": "wk-21204-s0",
+    "en": "youngest",
+    "en_pos": "noun",
+    "en_sense": "The youngest child in a family, or individual in a group.",
+    "ja": "末っ子",
+    "ja_reading": "すえっこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "youngest child"
+    ],
+    "vi": "út"
+   },
+   "output": {
+    "id": "wk-21204-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both `末っ子` and `út` refer specifically to the youngest child in a family, not the youngest person in any group, making them narrower than the English definition."
+   }
+  },
+  {
+   "key": "aec72765473397c8e4d4785d0c31bd20899ad8d5f89a768394def4fd9e98249c",
+   "input": {
+    "id": "wk-2122-s0",
+    "en": "find",
+    "en_pos": "verb",
+    "en_sense": "To encounter or discover by accident; to happen upon.",
+    "ja": "見付ける",
+    "ja_reading": "みつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to find",
+     "to discover",
+     "to come across",
+     "to spot",
+     "to catch (someone doing)"
+    ],
+    "vi": "tìm"
+   },
+   "output": {
+    "id": "wk-2122-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `tìm` means 'to search for', not 'to find'. The correct term for 'find' is `tìm thấy`."
+   }
+  }
+ ]
+}

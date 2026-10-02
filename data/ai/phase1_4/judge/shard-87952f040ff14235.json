@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:43:06Z",
+ "items": [
+  {
+   "key": "7c31f86f710873c8ec05bd0f50fb54a756d8b95847e91bfa1c7177cee766199f",
+   "input": {
+    "id": "jm-1484710-0-fault",
+    "en": "fault",
+    "en_pos": "noun",
+    "en_sense": "fault; error; mistake",
+    "ja": "非",
+    "ja_reading": "ひ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fault",
+     "error",
+     "mistake"
+    ],
+    "vi": "lỗi"
+   },
+   "output": {
+    "id": "jm-1484710-0-fault",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms align well in the sense of a mistake for which one is responsible."
+   }
+  },
+  {
+   "key": "208c86e73b16763aa64c40dcd845cef955ebedef4e95936f50c27c2ff0fb786d",
+   "input": {
+    "id": "jm-1484850-0-informal",
+    "en": "informal",
+    "en_pos": "adjective",
+    "en_sense": "informal; unofficial",
+    "ja": "非公式",
+    "ja_reading": "ひこうしき",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "informal",
+     "unofficial"
+    ],
+    "vi": "không chính thức"
+   },
+   "output": {
+    "id": "jm-1484850-0-informal",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are direct and standard translations for 'informal' or 'unofficial'."
+   }
+  },
+  {
+   "key": "6e9e0c51a61d41a5803d523934eea5ee65ac4ed77cfe0a994de098b015d4702f",
+   "input": {
+    "id": "jm-1485350-0-run_out",
+    "en": "run out",
+    "en_pos": "verb",
+    "en_sense": "to jump out; to leap out; to fly out; to run out; to rush out; to bolt out",
+    "ja": "飛び出す",
+    "ja_reading": "とびだす",
+    "ja_pos": "v5s,vi",
+    "ja_glosses": [
+     "to jump out",
+     "to leap out",
+     "to fly out",
+     "to run out",
+     "to rush out",
+     "to bolt out"
+    ],
+    "vi": "chạy ra"
+   },
+   "output": {
+    "id": "jm-1485350-0-run_out",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'chạy ra' only means 'to run out' and is narrower than the Japanese '飛び出す' and the English sense which includes jumping or flying out."
+   }
+  },
+  {
+   "key": "673c8e0fe0fd8f90f7418dd999e7d0000d6c05c40a5207c268bf630cf2d5046f",
+   "input": {
+    "id": "jm-1485770-0-tail",
+    "en": "tail",
+    "en_pos": "noun",
+    "en_sense": "tail (of an animal); cauda",
+    "ja": "尾",
+    "ja_reading": "お",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tail (of an animal)",
+     "cauda"
+    ],
+    "vi": "đuôi"
+   },
+   "output": {
+    "id": "jm-1485770-0-tail",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, primary words for an animal's tail."
+   }
+  },
+  {
+   "key": "9879875416b190cc34ed731280a8b5ed561089c15af700fc980630a74d6e720d",
+   "input": {
+    "id": "jm-1486050-0-particle",
+    "en": "particle",
+    "en_pos": "noun",
+    "en_sense": "particle; atom; little piece",
+    "ja": "微塵",
+    "ja_reading": "みじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "particle",
+     "atom",
+     "little piece"
+    ],
+    "vi": "hạt"
+   },
+   "output": {
+    "id": "jm-1486050-0-particle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "While related, '微塵' (mijin) often implies fragments from being shattered, whereas 'hạt' is a more general term for a particle or grain."
+   }
+  },
+  {
+   "key": "8c7c4dfd3001839efd3d11e72296a437b0473b58f73d2f3d73c1eeb245946098",
+   "input": {
+    "id": "jm-1486170-0-subtle",
+    "en": "subtle",
+    "en_pos": "adjective",
+    "en_sense": "subtle; delicate; fine",
+    "ja": "微妙",
+    "ja_reading": "びみょう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "subtle",
+     "delicate",
+     "fine"
+    ],
+    "vi": "tinh tế"
+   },
+   "output": {
+    "id": "jm-1486170-0-subtle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align well for the core meaning of 'subtle, delicate, fine'."
+   }
+  },
+  {
+   "key": "b73e50f6cc4e8a4f8adc852e6e982fc9914d58f31e00b4300e8cbc6c557d93b0",
+   "input": {
+    "id": "jm-1486460-0-art_gallery",
+    "en": "art gallery",
+    "en_pos": "noun",
+    "en_sense": "art museum; art gallery",
+    "ja": "美術館",
+    "ja_reading": "びじゅつかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "art museum",
+     "art gallery"
+    ],
+    "vi": "phòng trưng bày nghệ thuật"
+   },
+   "output": {
+    "id": "jm-1486460-0-art_gallery",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '美術館' means 'art museum', while the Vietnamese 'phòng trưng bày nghệ thuật' means 'art gallery', a distinction that is often made in those languages."
+   }
+  },
+  {
+   "key": "492255a1b37f2d9a94c0f6340e5fcdf12bc0a6dd96b1224647046639181b6819",
+   "input": {
+    "id": "jm-1488000-0-hundred",
+    "en": "hundred",
+    "en_pos": "numeral",
+    "en_sense": "hundred; 100",
+    "ja": "百",
+    "ja_reading": "ひゃく",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "hundred",
+     "100"
+    ],
+    "vi": "một trăm"
+   },
+   "output": {
+    "id": "jm-1488000-0-hundred",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard representations of the number 100."
+   }
+  },
+  {
+   "key": "11c3f6536f3527bedda285e5371111f3da3705df1d1b12afa79580aa66c204a4",
+   "input": {
+    "id": "jm-1489320-0-vote",
+    "en": "vote",
+    "en_pos": "noun",
+    "en_sense": "vote; ballot",
+    "ja": "票",
+    "ja_reading": "ひょう",
+    "ja_pos": "n,n-suf,ctr",
+    "ja_glosses": [
+     "vote",
+     "ballot"
+    ],
+    "vi": "phiếu bầu"
+   },
+   "output": {
+    "id": "jm-1489320-0-vote",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a vote or ballot paper."
+   }
+  },
+  {
+   "key": "54e61ba659638001964bc3f0b07b0cba3d89d0e7b0b87908f44bbf78a4f4bb3a",
+   "input": {
+    "id": "jm-1490140-0-description",
+    "en": "description",
+    "en_pos": "noun",
+    "en_sense": "depiction; description; portrayal",
+    "ja": "描写",
+    "ja_reading": "びょうしゃ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "depiction",
+     "description",
+     "portrayal"
+    ],
+    "vi": "mô tả"
+   },
+   "output": {
+    "id": "jm-1490140-0-description",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'mô tả' is a verb ('to describe'), not a noun ('description'), creating a part-of-speech mismatch with the English and Japanese terms."
+   }
+  },
+  {
+   "key": "5605b473d22d7bdb0e7b7cac5b7e5b3f7f024cf7204da58b9f2f4d650605e5e9",
+   "input": {
+    "id": "jm-1490670-0-article",
+    "en": "article",
+    "en_pos": "noun",
+    "en_sense": "article; item; thing; goods; wares",
+    "ja": "品物",
+    "ja_reading": "しなもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "article",
+     "item",
+     "thing",
+     "goods",
+     "wares"
+    ],
+    "vi": "hàng hóa"
+   },
+   "output": {
+    "id": "jm-1490670-0-article",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms align well for the specific sense of 'article' as goods or merchandise."
+   }
+  },
+  {
+   "key": "0a7b84b19b01f94881efc1e2ff184e7af4d2b701efd3c4aa025b01b6c023ca95",
+   "input": {
+    "id": "jm-1490720-0-beach",
+    "en": "beach",
+    "en_pos": "noun",
+    "en_sense": "beach; foreshore",
+    "ja": "浜辺",
+    "ja_reading": "はまべ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beach",
+     "foreshore"
+    ],
+    "vi": "bãi biển"
+   },
+   "output": {
+    "id": "jm-1490720-0-beach",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, primary words for 'beach'."
+   }
+  }
+ ]
+}

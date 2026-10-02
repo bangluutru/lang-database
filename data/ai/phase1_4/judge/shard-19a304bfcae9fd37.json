@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:58Z",
+ "items": [
+  {
+   "key": "50fa902f8ab8b904f8a60c15ca5e2c33e9c1a899c334ed73e7ff03d2d06fe3d5",
+   "input": {
+    "id": "wk-25383-s0",
+    "en": "nearsightedness",
+    "en_pos": "noun",
+    "en_sense": "The property of being nearsighted, myopia.",
+    "ja": "近眼",
+    "ja_reading": "きんがん",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "nearsightedness",
+     "shortsightedness",
+     "myopia"
+    ],
+    "vi": "cận thị"
+   },
+   "output": {
+    "id": "wk-25383-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for myopia and are perfect equivalents."
+   }
+  },
+  {
+   "key": "0a06e69ebd65b46685146ffa27a547cd4a0b7ed235b06faf37e93f9b5e59f53a",
+   "input": {
+    "id": "wk-254-e:08b0fd",
+    "en": "number",
+    "en_pos": "noun",
+    "en_sense": "used to show the rank of something in a list or sequence",
+    "ja": "番",
+    "ja_reading": "ばん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "number (in a series)"
+    ],
+    "vi": "số"
+   },
+   "output": {
+    "id": "wk-254-e:08b0fd",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'số' is too broad, covering multiple senses of 'number', while the Japanese '番' specifically matches the sense of rank in a series."
+   }
+  },
+  {
+   "key": "b9fe47a0b6ee194f3c3bdaf10207044596699f93da7953903956cb926c49f26b",
+   "input": {
+    "id": "wk-254-s1",
+    "en": "number",
+    "en_pos": "noun",
+    "en_sense": "An abstract entity used to describe quantity.",
+    "ja": "数",
+    "ja_reading": "かず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "number",
+     "amount"
+    ],
+    "vi": "số"
+   },
+   "output": {
+    "id": "wk-254-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and natural words for the abstract concept of a number representing quantity."
+   }
+  },
+  {
+   "key": "a1e9111b8a7ab4e3f7ab5191f0206dd93e8ec3a5682362ff276367fb72074feb",
+   "input": {
+    "id": "wk-254-s5",
+    "en": "number",
+    "en_pos": "noun",
+    "en_sense": "A sequence of digits and letters used to register people, automobiles, and various other items.",
+    "ja": "番号",
+    "ja_reading": "ばんごう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "number",
+     "series of digits"
+    ],
+    "vi": "số"
+   },
+   "output": {
+    "id": "wk-254-s5",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Vietnamese 'số' is too broad, while Japanese '番号' perfectly matches the specific sense of an identification number."
+   }
+  },
+  {
+   "key": "7f18732cc5b3e9f9bb282d2b6f17c2858b529418406fecd67ddf2b1ebfc7adc1",
+   "input": {
+    "id": "wk-2541-e:abdd6b",
+    "en": "carp",
+    "en_pos": "noun",
+    "en_sense": "any of various freshwater fish of the family Cyprinidae",
+    "ja": "鯉",
+    "ja_reading": "こい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "common carp (Cyprinus carpio)",
+     "koi carp"
+    ],
+    "vi": "cá chép"
+   },
+   "output": {
+    "id": "wk-2541-e:abdd6b",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense refers to the entire carp family (Cyprinidae), while both Japanese '鯉' and Vietnamese 'cá chép' refer specifically to the common carp (Cyprinus carpio)."
+   }
+  },
+  {
+   "key": "ca7b6c92e3b1bb53076a45210e9674f90c04253964380432bc85030ab647c53a",
+   "input": {
+    "id": "wk-25434-s0",
+    "en": "apart from",
+    "en_pos": "preposition",
+    "en_sense": "Except for; besides.",
+    "ja": "以外",
+    "ja_reading": "いがい",
+    "ja_pos": "n-suf",
+    "ja_glosses": [
+     "excluding",
+     "except (for)",
+     "apart from",
+     "other than",
+     "besides",
+     "in addition to"
+    ],
+    "vi": "trừ"
+   },
+   "output": {
+    "id": "wk-25434-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'trừ' only captures the exclusionary sense ('except for') of 'apart from', not the inclusive sense ('besides'), which both English and Japanese '以外' can convey."
+   }
+  },
+  {
+   "key": "33ca174f7b0162df236ec7b5a508bc2f44723224b9700bdb3ec6f881e895d0d3",
+   "input": {
+    "id": "wk-25445-s0",
+    "en": "solar eclipse",
+    "en_pos": "noun",
+    "en_sense": "A phenomenon occurring when the Moon passes between the Earth and the sun.",
+    "ja": "日食",
+    "ja_reading": "にっしょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "solar eclipse"
+    ],
+    "vi": "nhật thực"
+   },
+   "output": {
+    "id": "wk-25445-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'solar eclipse'."
+   }
+  },
+  {
+   "key": "7130b9d33acefe4df82bfe845c9d84090c2d426058bbff58dc63dd5d73203f6a",
+   "input": {
+    "id": "wk-25467-s0",
+    "en": "lunar eclipse",
+    "en_pos": "noun",
+    "en_sense": "A phenomenon occurring when the Earth casts a shadow over the Moon.",
+    "ja": "月食",
+    "ja_reading": "げっしょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lunar eclipse"
+    ],
+    "vi": "nguyệt thực"
+   },
+   "output": {
+    "id": "wk-25467-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'lunar eclipse'."
+   }
+  },
+  {
+   "key": "e90c78bc64b59f62d646179daa8b56516d4a9f37c2291cc3ca21c2716ca24d2c",
+   "input": {
+    "id": "wk-25484-s0",
+    "en": "worldview",
+    "en_pos": "noun",
+    "en_sense": "An individual's, ingroup's or society's view of the world and how it is to be interpreted.",
+    "ja": "世界観",
+    "ja_reading": "せかいかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "worldview",
+     "outlook on the world",
+     "Weltanschauung"
+    ],
+    "vi": "thế giới quan"
+   },
+   "output": {
+    "id": "wk-25484-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'worldview'."
+   }
+  },
+  {
+   "key": "8b83a250fb678be20100b4e0ef0d7f1c353162df022cf72b6018ac9a7055698c",
+   "input": {
+    "id": "wk-25497-s0",
+    "en": "cameraman",
+    "en_pos": "noun",
+    "en_sense": "Somebody who operates a movie camera or television camera.",
+    "ja": "カメラマン",
+    "ja_reading": "カメラマン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cameraman",
+     "camera operator",
+     "cinematographer"
+    ],
+    "vi": "chuyên viên quay phim"
+   },
+   "output": {
+    "id": "wk-25497-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'chuyên viên quay phim' is a bit formal and less common than 'người quay phim'; 'cameraman' and 'カメラマン' are more neutral."
+   }
+  },
+  {
+   "key": "529c746a378d76088d9bcb082e6c0435e488db3def337b93ff1c91f36d0a8ce7",
+   "input": {
+    "id": "wk-2550-s0",
+    "en": "threat",
+    "en_pos": "noun",
+    "en_sense": "An expression of intent to injure or punish another.",
+    "ja": "脅かし",
+    "ja_reading": "おどかし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "threat"
+    ],
+    "vi": "uy hiếp"
+   },
+   "output": {
+    "id": "wk-2550-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'uy hiếp' is primarily a verb and denotes a stronger action than a simple 'threat', for which 'lời đe dọa' is better."
+   }
+  },
+  {
+   "key": "683038e3a7fbf17820149da222256045378efbb3ca1d044b292daf3c42d4dc37",
+   "input": {
+    "id": "wk-2551-s2",
+    "en": "shoot",
+    "en_pos": "verb",
+    "en_sense": "To fire a projectile at (a person or target).",
+    "ja": "撃つ",
+    "ja_reading": "うつ",
+    "ja_pos": "v5t,vt",
+    "ja_glosses": [
+     "to shoot (a gun, person, etc.)",
+     "to fire"
+    ],
+    "vi": "bắn"
+   },
+   "output": {
+    "id": "wk-2551-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the primary, standard words for firing a projectile and are perfect equivalents."
+   }
+  }
+ ]
+}

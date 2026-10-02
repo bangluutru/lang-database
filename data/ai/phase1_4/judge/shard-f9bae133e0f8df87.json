@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:24Z",
+ "items": [
+  {
+   "key": "6964efc852b51ecd56d1baf2af1a50031482f94afb07d835992b5a4c882578bd",
+   "input": {
+    "id": "wk-16041-e:c9a7ca",
+    "en": "realize",
+    "en_pos": "verb",
+    "en_sense": "(''transitive'') to become aware of or understand (a fact or situation) ",
+    "ja": "気付く",
+    "ja_reading": "きづく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to notice",
+     "to realize",
+     "to realise",
+     "to become aware (of)",
+     "to perceive",
+     "to sense"
+    ],
+    "vi": "nhận ra"
+   },
+   "output": {
+    "id": "wk-16041-e:c9a7ca",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for becoming aware of a fact."
+   }
+  },
+  {
+   "key": "cd43772e717e5df6f0388ccac65d4173589e7f6d8a3db20b64732be332b08a1f",
+   "input": {
+    "id": "wk-16057-s0",
+    "en": "culprit",
+    "en_pos": "noun",
+    "en_sense": "The person or thing at fault for a problem or crime.",
+    "ja": "犯人",
+    "ja_reading": "はんにん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "offender",
+     "criminal",
+     "culprit"
+    ],
+    "vi": "thủ phạm"
+   },
+   "output": {
+    "id": "wk-16057-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents, primarily used for crimes but extendable to other problems."
+   }
+  },
+  {
+   "key": "04f75f8a3765f2fcd18a9781da6d42d363588e2bf200ec32527c5f6aa5180c5f",
+   "input": {
+    "id": "wk-16073-s0",
+    "en": "syndrome",
+    "en_pos": "noun",
+    "en_sense": "A recognizable pattern of signs, symptoms and/or behaviours, especially of a disease or medical or psychological condition.",
+    "ja": "症候群",
+    "ja_reading": "しょうこうぐん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "syndrome"
+    ],
+    "vi": "hội chứng"
+   },
+   "output": {
+    "id": "wk-16073-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard technical terms for 'syndrome' and are direct equivalents."
+   }
+  },
+  {
+   "key": "fd168b2089919a4a1425cad8ee0192d16caab0ac3c38431fdee13df671c93356",
+   "input": {
+    "id": "wk-16094-s0",
+    "en": "loop",
+    "en_pos": "noun",
+    "en_sense": "A length of thread, line or rope that is doubled over to make an opening.",
+    "ja": "ループ",
+    "ja_reading": "ループ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "loop",
+     "band",
+     "ring"
+    ],
+    "vi": "thòng lọng"
+   },
+   "output": {
+    "id": "wk-16094-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thòng lọng' means 'noose', which is a specific and often menacing type of loop, whereas the English sense is general."
+   }
+  },
+  {
+   "key": "42d562338f4fcfce990ff2c1acf7fdde8145ee30de6a3487d9e5e45515cf4697",
+   "input": {
+    "id": "wk-1610-s1",
+    "en": "episode",
+    "en_pos": "noun",
+    "en_sense": "A bounded narrative unit within a television series, constituting a single installment that is structurally discrete yet interrelated with the series as a whole.",
+    "ja": "エピソード",
+    "ja_reading": "エピソード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "episode",
+     "anecdote",
+     "vignette"
+    ],
+    "vi": "phần"
+   },
+   "output": {
+    "id": "wk-1610-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "Both 'エピソード' and 'phần' are acceptable but are not the most common or precise terms; '話' (wa) in Japanese and 'tập' in Vietnamese are better for 'TV episode'."
+   }
+  },
+  {
+   "key": "0187c6f7bf65048c28e32514d66427cf049a95fe5b0e6c3c5ec4893030628fb0",
+   "input": {
+    "id": "wk-16109-s0",
+    "en": "chinese character",
+    "en_pos": "noun",
+    "en_sense": "Any character used in the written form of several languages of China, Japan, Korea and Vietnam.",
+    "ja": "漢字",
+    "ja_reading": "かんじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kanji",
+     "Chinese character"
+    ],
+    "vi": "chữ nho"
+   },
+   "output": {
+    "id": "wk-16109-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chữ nho' refers specifically to the classical Chinese script used historically in Vietnam, while 'chữ Hán' is the more general modern term for 'Chinese character'."
+   }
+  },
+  {
+   "key": "669390a6eb82994640af8cba4d3b41787569550de36ae5b1c4d960325026cde2",
+   "input": {
+    "id": "wk-16111-s0",
+    "en": "laboratory",
+    "en_pos": "noun",
+    "en_sense": "A room, building or institution equipped for scientific research, experimentation or analysis.",
+    "ja": "研究室",
+    "ja_reading": "けんきゅうしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "laboratory"
+    ],
+    "vi": "phòng thí nghiệm"
+   },
+   "output": {
+    "id": "wk-16111-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a scientific laboratory."
+   }
+  },
+  {
+   "key": "8e478483d8f4ffcbdc8d5d50f65230b99afa602ed4e71d849f0f16e22cb6ae41",
+   "input": {
+    "id": "wk-16111-s1",
+    "en": "laboratory",
+    "en_pos": "noun",
+    "en_sense": "A place where chemicals, drugs or microbes are prepared or manufactured.",
+    "ja": "ラボラトリー",
+    "ja_reading": "ラボラトリー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "laboratory"
+    ],
+    "vi": "phòng thí nghiệm"
+   },
+   "output": {
+    "id": "wk-16111-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The loanword 'ラボラトリー' is a common and suitable equivalent for 'laboratory' in this context, as is the Vietnamese 'phòng thí nghiệm'."
+   }
+  },
+  {
+   "key": "904e0825de0d550cb28e9e2c5ba707f8de4e34b568f137ff750ac90057ebea57",
+   "input": {
+    "id": "wk-16116-s4",
+    "en": "script",
+    "en_pos": "noun",
+    "en_sense": "The written document containing the dialogue and action for a drama; the text of a stage play, movie, or other performance. Especially, the final form used for the performance itself.",
+    "ja": "脚本",
+    "ja_reading": "きゃくほん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "script",
+     "screenplay",
+     "scenario"
+    ],
+    "vi": "kịch bản"
+   },
+   "output": {
+    "id": "wk-16116-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise words for a performance script."
+   }
+  },
+  {
+   "key": "76b90231117f53f0abe5872c4b6d690fc185480f0599db5108db0aae2779fbf3",
+   "input": {
+    "id": "wk-16116-s6",
+    "en": "script",
+    "en_pos": "noun",
+    "en_sense": "A brief and simple program.",
+    "ja": "スクリプト",
+    "ja_reading": "スクリプト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "script (for a TV show, film, etc.)"
+    ],
+    "vi": "kịch bản"
+   },
+   "output": {
+    "id": "wk-16116-s6",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'kịch bản' translates the 'performance script' sense, not the 'computer program' sense of the English word."
+   }
+  },
+  {
+   "key": "b620573628a0e2b6ccfe1db2426482659e23f6f99f1de311876801a1b95c085a",
+   "input": {
+    "id": "wk-1612-s0",
+    "en": "rice",
+    "en_pos": "noun",
+    "en_sense": "Cereal plants, Oryza sativa of the grass family whose seeds are used as food.",
+    "ja": "稲",
+    "ja_reading": "いね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rice plant (Oryza sativa)"
+    ],
+    "vi": "lúa"
+   },
+   "output": {
+    "id": "wk-1612-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly and specifically refer to the rice plant, as distinct from the grain or cooked rice."
+   }
+  },
+  {
+   "key": "5984814f1eda1b638edb56ba8496692fa0845e1fafb489bc68528d156fa1b326",
+   "input": {
+    "id": "wk-16121-s0",
+    "en": "chili",
+    "en_pos": "noun",
+    "en_sense": "The pungent, spicy fresh or dried fruit of any of several cultivated varieties of capsicum peppers, used in cooking.",
+    "ja": "唐辛子",
+    "ja_reading": "とうがらし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "capsicum (Capsicum annuum, esp. the cultivated chili peppers)",
+     "chili pepper (chile, chilli)",
+     "cayenne",
+     "red pepper"
+    ],
+    "vi": "ớt"
+   },
+   "output": {
+    "id": "wk-16121-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for chili pepper."
+   }
+  }
+ ]
+}

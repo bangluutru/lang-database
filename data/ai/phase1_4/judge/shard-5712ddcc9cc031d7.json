@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:29:21Z",
+ "items": [
+  {
+   "key": "8f8e49a269f0d93e2795181176865a9c2162b0e09b42e139e06b36e67e42401a",
+   "input": {
+    "id": "jm-1176950-0-production",
+    "en": "production",
+    "en_pos": "noun",
+    "en_sense": "direction (of a play, film, etc.); production",
+    "ja": "演出",
+    "ja_reading": "えんしゅつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "direction (of a play, film, etc.)",
+     "production"
+    ],
+    "vi": "sản xuất"
+   },
+   "output": {
+    "id": "jm-1176950-0-production",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sản xuất' means 'production' in the sense of manufacturing, not the artistic direction of a play or film as intended by the English sense and the Japanese '演出'."
+   }
+  },
+  {
+   "key": "726f2caef46cac5311b6aea3eae874301910610dad04eb83fbdeed468d351277",
+   "input": {
+    "id": "jm-1177500-0-edge",
+    "en": "edge",
+    "en_pos": "noun",
+    "en_sense": "rim; brim; edge; brink",
+    "ja": "縁",
+    "ja_reading": "ふち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rim",
+     "brim",
+     "edge",
+     "brink"
+    ],
+    "vi": "mép"
+   },
+   "output": {
+    "id": "jm-1177500-0-edge",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for the sense of an outer boundary, rim, or brink."
+   }
+  },
+  {
+   "key": "b4404b587f8a3d41ba5930b8d2c27ae05ec63ab90c75f1771c9e4b4f217331e8",
+   "input": {
+    "id": "jm-1177820-0-distance",
+    "en": "distance",
+    "en_pos": "noun",
+    "en_sense": "far away; distant place; a (great) distance; a long way off; afar",
+    "ja": "遠く",
+    "ja_reading": "とおく",
+    "ja_pos": "n,adv,adj-no",
+    "ja_glosses": [
+     "far away",
+     "distant place",
+     "a (great) distance",
+     "a long way off",
+     "afar"
+    ],
+    "vi": "xa"
+   },
+   "output": {
+    "id": "jm-1177820-0-distance",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'xa' is an adjective/adverb meaning 'far', not a noun for 'distance' or 'a distant place' like the English and Japanese entries."
+   }
+  },
+  {
+   "key": "337921db9dafd2011b64d68945088eca8925ae4d476ca3e657ebdb6419d2daca",
+   "input": {
+    "id": "jm-1178450-0-reserve",
+    "en": "reserve",
+    "en_pos": "noun",
+    "en_sense": "reserve; constraint; restraint; modesty; diffidence; hesitation",
+    "ja": "遠慮",
+    "ja_reading": "えんりょ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "reserve",
+     "constraint",
+     "restraint",
+     "modesty",
+     "diffidence",
+     "hesitation"
+    ],
+    "vi": "ngại"
+   },
+   "output": {
+    "id": "jm-1178450-0-reserve",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'ngại' is a verb meaning 'to hesitate/be reluctant', while the English entry 'reserve' is a noun."
+   }
+  },
+  {
+   "key": "a144fe3e6570f91d29aa2a9ee3854421a6a8258220dab8dc265cc63f46a11c59",
+   "input": {
+    "id": "jm-1179320-0-interior",
+    "en": "interior",
+    "en_pos": "noun",
+    "en_sense": "inner part; interior; back (of a drawer, one's throat, etc.); depths (e.g. of a forest); recesses (e.g. of a cave); heart",
+    "ja": "奥",
+    "ja_reading": "おく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inner part",
+     "interior",
+     "back (of a drawer, one's throat, etc.)",
+     "depths (e.g. of a forest)",
+     "recesses (e.g. of a cave)",
+     "heart"
+    ],
+    "vi": "bên trong"
+   },
+   "output": {
+    "id": "jm-1179320-0-interior",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'bên trong' means 'inside' generally, while the English 'interior' and Japanese '奥' refer more specifically to the deep, inner, or back part."
+   }
+  },
+  {
+   "key": "0c01c59e388a55ef11a14b5a81520df19aee53d51d201b06c52ec2e04d1b254d",
+   "input": {
+    "id": "jm-1179810-1-affect",
+    "en": "affect",
+    "en_pos": "verb",
+    "en_sense": "to affect; to take a toll; to strike home; to have an effect on; to be hard on someone (e.g. heat, cold, work, illness, etc.); to be a strain",
+    "ja": "応える",
+    "ja_reading": "こたえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to affect",
+     "to take a toll",
+     "to strike home",
+     "to have an effect on",
+     "to be hard on someone (e.g. heat, cold, work, illness, etc.)",
+     "to be a strain"
+    ],
+    "vi": "ảnh hưởng"
+   },
+   "output": {
+    "id": "jm-1179810-1-affect",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'ảnh hưởng' is a general term for 'affect/influence' and lacks the specific negative nuance of 'taking a toll' present in the English sense and the Japanese '応える'."
+   }
+  },
+  {
+   "key": "1a02d3ad3b48dd5636770e4d5865f80d5bc8110cf86ae8a61d623d3af8a076cd",
+   "input": {
+    "id": "jm-1179930-0-reception",
+    "en": "reception",
+    "en_pos": "noun",
+    "en_sense": "reception (e.g. of visitors); dealing with",
+    "ja": "応接",
+    "ja_reading": "おうせつ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "reception (e.g. of visitors)",
+     "dealing with"
+    ],
+    "vi": "tiếp đón"
+   },
+   "output": {
+    "id": "jm-1179930-0-reception",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'tiếp đón' is a verb meaning 'to receive/welcome', while the English entry 'reception' is a noun."
+   }
+  },
+  {
+   "key": "9b85d3a348d7810bfc295e9e7b5c1d4763fa7ac85ef643b1e951ca169cf16986",
+   "input": {
+    "id": "jm-1180030-0-application",
+    "en": "application",
+    "en_pos": "noun",
+    "en_sense": "application; subscription; entry (competition, raffle, etc.); enlistment",
+    "ja": "応募",
+    "ja_reading": "おうぼ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "application",
+     "subscription",
+     "entry (competition, raffle, etc.)",
+     "enlistment"
+    ],
+    "vi": "đăng ký"
+   },
+   "output": {
+    "id": "jm-1180030-0-application",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'đăng ký' is a verb meaning 'to register/apply', while the English entry 'application' is a noun."
+   }
+  },
+  {
+   "key": "861cfb65bfe4d11c051561092f7cfff6a8b8e629fadbbbf71380f740b771acdb",
+   "input": {
+    "id": "jm-1201060-0-revision",
+    "en": "revision",
+    "en_pos": "noun",
+    "en_sense": "revision (of text); alteration; change",
+    "ja": "改訂",
+    "ja_reading": "かいてい",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "revision (of text)",
+     "alteration",
+     "change"
+    ],
+    "vi": "sửa đổi"
+   },
+   "output": {
+    "id": "jm-1201060-0-revision",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the revision of a text, law, or document."
+   }
+  },
+  {
+   "key": "b4e1ca4ede2652d7e8e225676d49e7e282c47bade80a0f611bcee7fca5c316a6",
+   "input": {
+    "id": "jm-1201140-0-improvement",
+    "en": "improvement",
+    "en_pos": "noun",
+    "en_sense": "improvement; reform",
+    "ja": "改良",
+    "ja_reading": "かいりょう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "improvement",
+     "reform"
+    ],
+    "vi": "cải thiện"
+   },
+   "output": {
+    "id": "jm-1201140-0-improvement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'improvement' or 'reform'."
+   }
+  },
+  {
+   "key": "7973061fc91e2ec50e0b057ae31f395b7953e4e3ecaf876713c8db10f7ff413e",
+   "input": {
+    "id": "jm-1201790-0-ocean",
+    "en": "ocean",
+    "en_pos": "noun",
+    "en_sense": "ocean; sea",
+    "ja": "海洋",
+    "ja_reading": "かいよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ocean",
+     "sea"
+    ],
+    "vi": "đại dương"
+   },
+   "output": {
+    "id": "jm-1201790-0-ocean",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Vietnamese 'đại dương' specifically means 'ocean', while Japanese '海洋' can also mean 'sea', but the correspondence is strong and acceptable for teaching."
+   }
+  },
+  {
+   "key": "d37aefd37d890a3a9f0b59b6a574e9d1224495c89421a15294aaf0bbe6128408",
+   "input": {
+    "id": "jm-1202440-0-open",
+    "en": "open",
+    "en_pos": "verb",
+    "en_sense": "to open; to undo; to unseal; to unpack",
+    "ja": "開く",
+    "ja_reading": "ひらく",
+    "ja_pos": "v5k,vi,vt",
+    "ja_glosses": [
+     "to open",
+     "to undo",
+     "to unseal",
+     "to unpack"
+    ],
+    "vi": "mở"
+   },
+   "output": {
+    "id": "jm-1202440-0-open",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are common, natural ways to express the action of opening something."
+   }
+  }
+ ]
+}

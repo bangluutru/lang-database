@@ -1,0 +1,377 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:28Z",
+ "items": [
+  {
+   "key": "4a181459cd93b29d1ab74d7f7453521fb03df1eb393ad32aced745ab9f674863",
+   "input": {
+    "id": "wk-28436-s0",
+    "en": "table salt",
+    "en_pos": "noun",
+    "en_sense": "Sodium chloride or a mineral product chiefly composed of it: the salt most commonly used to season food at table.",
+    "ja": "食塩",
+    "ja_reading": "しょくえん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "table salt"
+    ],
+    "vi": "muối ăn"
+   },
+   "output": {
+    "id": "wk-28436-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, literal 'eating salt' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "3afdc1c630823f8be8ee2ac1b7a151586a4453218878fba677d39295f8918190",
+   "input": {
+    "id": "wk-285-s0",
+    "en": "two",
+    "en_pos": "numeral",
+    "en_sense": "A numerical value equal to 2; the number following one and preceding three.",
+    "ja": "二",
+    "ja_reading": "に",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "two",
+     "2"
+    ],
+    "vi": "hai"
+   },
+   "output": {
+    "id": "wk-285-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the number two."
+   }
+  },
+  {
+   "key": "6a28bd0145330617bcd49eaba318a723159336d3d82eb5c77786d8860e3fa3af",
+   "input": {
+    "id": "wk-28524-s0",
+    "en": "physical education",
+    "en_pos": "noun",
+    "en_sense": "An element of an educational curriculum concerned with bodily development, physical health and wellness, strength, physical co-ordination, and agility.",
+    "ja": "体育",
+    "ja_reading": "たいいく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "physical education",
+     "PE",
+     "gym (class)"
+    ],
+    "vi": "thể dục"
+   },
+   "output": {
+    "id": "wk-28524-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thể dục' is broader, also meaning 'exercise' in general; the more precise term for the school subject is 'giáo dục thể chất'."
+   }
+  },
+  {
+   "key": "e4642612f87151a23cd002a58396a1eabc512849e77b32149f3c4f62a566c193",
+   "input": {
+    "id": "wk-2854-s0",
+    "en": "buffalo",
+    "en_pos": "noun",
+    "en_sense": "An animal from the subtribe Bubalina, also known as true buffalos, such as the Cape buffalo, Syncerus caffer, or the water buffalo, Bubalus bubalis.",
+    "ja": "野牛",
+    "ja_reading": "やぎゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "buffalo"
+    ],
+    "vi": "trâu"
+   },
+   "output": {
+    "id": "wk-2854-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "TOO_NARROW"
+    ],
+    "note": "The three terms refer to different animals: 'buffalo' is a broad/ambiguous category, '野牛' (yagyū) often refers to bison, and 'trâu' specifically means water buffalo."
+   }
+  },
+  {
+   "key": "ea414a2189efdd6bc5aecfe34f1b9249d1391f634a2b654c46fae2c421db89f9",
+   "input": {
+    "id": "wk-28551-s0",
+    "en": "soy milk",
+    "en_pos": "noun",
+    "en_sense": "A milky liquid made from soy beans and used as a beverage, cooking ingredient or substitute for dairy milk.",
+    "ja": "豆乳",
+    "ja_reading": "とうにゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "soy milk"
+    ],
+    "vi": "sữa đậu nành"
+   },
+   "output": {
+    "id": "wk-28551-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'soy milk'."
+   }
+  },
+  {
+   "key": "d4ddaacf9f6bf99b4a4f36bb619b6d876b166588b873b3e01ff9ea9ec8e3d9a9",
+   "input": {
+    "id": "wk-2859-s0",
+    "en": "beaver",
+    "en_pos": "noun",
+    "en_sense": "A semiaquatic rodent of the genus Castor, having a wide, flat tail and webbed feet, native to the Northern Hemisphere.",
+    "ja": "ビーバー",
+    "ja_reading": "ビーバー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beaver"
+    ],
+    "vi": "hải ly"
+   },
+   "output": {
+    "id": "wk-2859-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard names for the animal beaver."
+   }
+  },
+  {
+   "key": "1a74df088c4f8cffbef60daa7a225360cad7b38b3ecc28db8367b59f5640037b",
+   "input": {
+    "id": "wk-2861-s0",
+    "en": "donkey",
+    "en_pos": "noun",
+    "en_sense": "A domestic animal, Equus asinus asinus, similar to a horse.",
+    "ja": "ろば",
+    "ja_reading": "ろば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "donkey",
+     "ass"
+    ],
+    "vi": "lừa"
+   },
+   "output": {
+    "id": "wk-2861-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for donkey."
+   }
+  },
+  {
+   "key": "9b7e1c8576394a8bd1ade9621335824b4650da3b08078fd15d3c0cdf283599ad",
+   "input": {
+    "id": "wk-28632-s0",
+    "en": "mosquito net",
+    "en_pos": "noun",
+    "en_sense": "A fine net, placed around a bed, in a window opening, etc., to provide protection against mosquitoes and other insects, and the diseases carried by them.",
+    "ja": "蚊帳",
+    "ja_reading": "かや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mosquito net"
+    ],
+    "vi": "màn"
+   },
+   "output": {
+    "id": "wk-28632-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'màn' is correct but is polysemous (also 'curtain') and primarily Northern dialect; the Southern dialect uses 'mùng'."
+   }
+  },
+  {
+   "key": "03c16bba1372e53af17cf51c6590fe3d905f0d7fdbf301c61854598f9d03a738",
+   "input": {
+    "id": "wk-28661-s0",
+    "en": "love song",
+    "en_pos": "noun",
+    "en_sense": "A song about love; a song that expresses amorous feelings.",
+    "ja": "ラブソング",
+    "ja_reading": "ラブソング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "love song"
+    ],
+    "vi": "tình ca"
+   },
+   "output": {
+    "id": "wk-28661-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for 'love song'."
+   }
+  },
+  {
+   "key": "cdd6607ca636429f1746781c2ac7890ec2e90434d3938588184bef9db495b1d8",
+   "input": {
+    "id": "wk-28682-s0",
+    "en": "make a mistake",
+    "en_pos": "verb",
+    "en_sense": "To err, to be wrong. (This entry is a translation hub.)",
+    "ja": "間違える",
+    "ja_reading": "まちがえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to make a mistake (in)",
+     "to commit an error",
+     "to get wrong",
+     "to do incorrectly"
+    ],
+    "vi": "phạm lỗi"
+   },
+   "output": {
+    "id": "wk-28682-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'phạm lỗi' is too formal and narrow, meaning 'to commit a fault/error', while 'make a mistake' and '間違える' are more general; 'mắc lỗi' or 'làm sai' would be better."
+   }
+  },
+  {
+   "key": "47aa079101fcc32a5f983e4e40c24e0207a4f9999d09c80881493ec24c909cd8",
+   "input": {
+    "id": "wk-2869-s0",
+    "en": "badger",
+    "en_pos": "noun",
+    "en_sense": "Any member of species of the genera Meles, Arctonyx, Mellivora or Taxidea, of mammals.",
+    "ja": "あなぐま",
+    "ja_reading": "あなぐま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "badger"
+    ],
+    "vi": "lửng"
+   },
+   "output": {
+    "id": "wk-2869-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard names for the animal 'badger' in their respective languages, despite referring to different specific species."
+   }
+  },
+  {
+   "key": "7e497f42566aa53746e5994be5c0ca9b34d6e433054a68f50cb0eace7e7f8ba2",
+   "input": {
+    "id": "wk-287-s0",
+    "en": "three",
+    "en_pos": "numeral",
+    "en_sense": "A numerical value equal to 3; the number following two and preceding four.",
+    "ja": "三",
+    "ja_reading": "さん",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "three",
+     "3"
+    ],
+    "vi": "ba"
+   },
+   "output": {
+    "id": "wk-287-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the number three."
+   }
+  }
+ ]
+}

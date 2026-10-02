@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:30:43Z",
+ "items": [
+  {
+   "key": "e1a9241d38cc496492000c094bbe9b68972cff39fd07af35a6b0d95363445349",
+   "input": {
+    "id": "jm-1208840-0-and",
+    "en": "and",
+    "en_pos": "conjunction",
+    "en_sense": "and; moreover; besides; as well as; and on top of that; at the same time",
+    "ja": "かつ",
+    "ja_reading": "かつ",
+    "ja_pos": "conj,adv",
+    "ja_glosses": [
+     "and",
+     "moreover",
+     "besides",
+     "as well as",
+     "and on top of that",
+     "at the same time"
+    ],
+    "vi": "và"
+   },
+   "output": {
+    "id": "jm-1208840-0-and",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'và' is the general word for 'and', lacking the specific 'moreover' or 'at the same time' nuance of the English sense and the Japanese 'かつ'."
+   }
+  },
+  {
+   "key": "31a0024f09b10273527b2b5c6cb764f07b9027003ca155157f424db7ab62d742",
+   "input": {
+    "id": "jm-1210570-0-publication",
+    "en": "publication",
+    "en_pos": "noun",
+    "en_sense": "publication; issue",
+    "ja": "刊行",
+    "ja_reading": "かんこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "publication",
+     "issue"
+    ],
+    "vi": "xuất bản"
+   },
+   "output": {
+    "id": "jm-1210570-0-publication",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'xuất bản' is a verb ('to publish'), while the English entry is a noun ('publication'); 'sự xuất bản' would be a more accurate noun equivalent."
+   }
+  },
+  {
+   "key": "32a39f3e78338b4f415df565441499afd5c0a8b4b56276c3a413af87c81e9b95",
+   "input": {
+    "id": "jm-1210590-0-perception",
+    "en": "perception",
+    "en_pos": "noun",
+    "en_sense": "perception; intuition; the sixth sense",
+    "ja": "勘",
+    "ja_reading": "かん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "perception",
+     "intuition",
+     "the sixth sense"
+    ],
+    "vi": "trực giác"
+   },
+   "output": {
+    "id": "jm-1210590-0-perception",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly on the specific sense of intuition or a sixth sense."
+   }
+  },
+  {
+   "key": "5820406571b8928958767c6ca45a25df7565d90694edd41c83069f13c332406d",
+   "input": {
+    "id": "jm-1210900-0-recommendation",
+    "en": "recommendation",
+    "en_pos": "noun",
+    "en_sense": "recommendation; advice; suggestion; encouragement",
+    "ja": "勧め",
+    "ja_reading": "すすめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "recommendation",
+     "advice",
+     "suggestion",
+     "encouragement"
+    ],
+    "vi": "khuyến nghị"
+   },
+   "output": {
+    "id": "jm-1210900-0-recommendation",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'khuyến nghị' is more formal and specific ('official recommendation') than the general English sense and the Japanese '勧め'."
+   }
+  },
+  {
+   "key": "949ac650321274d1aca148319cfa6738aa5b5a9d6831cc30509f3cb02b85f99e",
+   "input": {
+    "id": "jm-1211120-0-invitation",
+    "en": "invitation",
+    "en_pos": "noun",
+    "en_sense": "invitation; solicitation; canvassing; canvasing; inducement; persuasion",
+    "ja": "勧誘",
+    "ja_reading": "かんゆう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "invitation",
+     "solicitation",
+     "canvassing",
+     "canvasing",
+     "inducement",
+     "persuasion"
+    ],
+    "vi": "mời gọi"
+   },
+   "output": {
+    "id": "jm-1211120-0-invitation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'mời gọi' is primarily a verb ('to solicit'), while the English entry is a noun ('solicitation'); 'sự mời gọi' would be a more accurate noun."
+   }
+  },
+  {
+   "key": "dbbae0e9d09f6bbba8f9ff5e78afd4f318196b994d93971f25550191713ba466",
+   "input": {
+    "id": "jm-1211150-1-involve",
+    "en": "involve",
+    "en_pos": "verb",
+    "en_sense": "to involve; to drag into",
+    "ja": "巻き込む",
+    "ja_reading": "まきこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to involve",
+     "to drag into"
+    ],
+    "vi": "lôi kéo"
+   },
+   "output": {
+    "id": "jm-1211150-1-involve",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly on the sense of unwillingly involving or dragging someone into a situation."
+   }
+  },
+  {
+   "key": "9319405997a5e1021402a5d87e5838da83d7cb039402123a876646b6fcb5f043",
+   "input": {
+    "id": "jm-1211490-0-completion",
+    "en": "completion",
+    "en_pos": "noun",
+    "en_sense": "completion; perfection; accomplishment",
+    "ja": "完成",
+    "ja_reading": "かんせい",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "completion",
+     "perfection",
+     "accomplishment"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1211490-0-completion",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'hoàn thành' is a verb ('to complete'), not a noun ('completion'); 'sự hoàn thành' would be the correct noun form."
+   }
+  },
+  {
+   "key": "4e64d12bb20af03733d4ff1eaa3e55a7b6f7b4d9074aaccb384f19b8f5bb5342",
+   "input": {
+    "id": "jm-1212170-0-management",
+    "en": "management",
+    "en_pos": "noun",
+    "en_sense": "management; (executive) staff; leaders; leadership; top brass; upper echelons",
+    "ja": "幹部",
+    "ja_reading": "かんぶ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "management",
+     "(executive) staff",
+     "leaders",
+     "leadership",
+     "top brass",
+     "upper echelons"
+    ],
+    "vi": "ban lãnh đạo"
+   },
+   "output": {
+    "id": "jm-1212170-0-management",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly and naturally denote the group of people in leadership positions, not the act of managing."
+   }
+  },
+  {
+   "key": "aee4711b7deb0c14ed1727a4019b800eecb4d664bdc7020c2f76ed09f1c98c9a",
+   "input": {
+    "id": "jm-1212250-0-feeling",
+    "en": "feeling",
+    "en_pos": "noun",
+    "en_sense": "feeling; sense; impression",
+    "ja": "感じ",
+    "ja_reading": "かんじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "feeling",
+     "sense",
+     "impression"
+    ],
+    "vi": "cảm giác"
+   },
+   "output": {
+    "id": "jm-1212250-0-feeling",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match across all three languages for the sense of 'feeling' as a sensation or impression."
+   }
+  },
+  {
+   "key": "fc96f99416f730da2d2943d69181e39fa32d7a29a8fd3ef530694300dbe62a08",
+   "input": {
+    "id": "jm-1212550-0-sensitivity",
+    "en": "sensitivity",
+    "en_pos": "noun",
+    "en_sense": "sensitivity (e.g. of a measuring instrument); reception (radio, TV, etc.)",
+    "ja": "感度",
+    "ja_reading": "かんど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sensitivity (e.g. of a measuring instrument)",
+     "reception (radio, TV, etc.)"
+    ],
+    "vi": "độ nhạy"
+   },
+   "output": {
+    "id": "jm-1212550-0-sensitivity",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard technical words for the sensitivity of a device."
+   }
+  },
+  {
+   "key": "5b22a297cb23a1f971e7d0ed75bfc84bef7ff32b75c06b62276e3ce7b391902f",
+   "input": {
+    "id": "jm-1212750-0-custom",
+    "en": "custom",
+    "en_pos": "noun",
+    "en_sense": "custom; practice; convention; precedent",
+    "ja": "慣例",
+    "ja_reading": "かんれい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "custom",
+     "practice",
+     "convention",
+     "precedent"
+    ],
+    "vi": "tập quán"
+   },
+   "output": {
+    "id": "jm-1212750-0-custom",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well on the meaning of an established social custom or practice."
+   }
+  },
+  {
+   "key": "e3c5b45b29c6b96ef938188d9e3ca6061ae5253bfa33399c34945bcc1074d5b3",
+   "input": {
+    "id": "jm-1213000-0-cheer",
+    "en": "cheer",
+    "en_pos": "noun",
+    "en_sense": "cheer; shout of joy",
+    "ja": "歓声",
+    "ja_reading": "かんせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cheer",
+     "shout of joy"
+    ],
+    "vi": "tiếng reo hò"
+   },
+   "output": {
+    "id": "jm-1213000-0-cheer",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly match the meaning of a shout of joy or a cheer."
+   }
+  }
+ ]
+}

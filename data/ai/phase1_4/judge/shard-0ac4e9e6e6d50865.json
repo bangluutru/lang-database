@@ -1,0 +1,367 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:58Z",
+ "items": [
+  {
+   "key": "9dc33b24ea312e1d75d96f10a8c0a3a0554277ea957841e83217cea163eaf7e0",
+   "input": {
+    "id": "concept-core-vice",
+    "en": "vice",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'vice': crime, sin, vice",
+    "ja": "悪徳",
+    "ja_reading": "あくとく",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "tệ nạn"
+   },
+   "output": {
+    "id": "concept-core-vice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'vice' in the sense of moral corruption or social evil."
+   }
+  },
+  {
+   "key": "0a82674fedfbda2b1af2dd68b0af65d50d812b4cc1b61be4ec48850ff30df582",
+   "input": {
+    "id": "concept-core-limitation",
+    "en": "limitation",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'limitation': restriction, restraint, limitation",
+    "ja": "制限",
+    "ja_reading": "せいげん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "hạn chế"
+   },
+   "output": {
+    "id": "concept-core-limitation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent and standard equivalents across all three languages."
+   }
+  },
+  {
+   "key": "deab705d25fce978a0f6fddb7c4d0644115befee729acef6d5c3d8fd63820bc5",
+   "input": {
+    "id": "concept-core-baby",
+    "en": "baby",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'baby': infant, baby",
+    "ja": "嬰児",
+    "ja_reading": "えいじ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "infant",
+     "baby"
+    ],
+    "vi": "bé"
+   },
+   "output": {
+    "id": "concept-core-baby",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "REGISTER_CLASH",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 嬰児 is too formal and rare for a core concept (赤ちゃん is standard); the Vietnamese 'bé' is too broad and has a register mismatch with the Japanese."
+   }
+  },
+  {
+   "key": "b290539b6b2ca8ed8606fbf53e216a1d2fa231df9b3dbc8ceeb712ef4aacfd99",
+   "input": {
+    "id": "concept-core-voluntary",
+    "en": "voluntary",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'voluntary': voluntary, optional, free",
+    "ja": "随意",
+    "ja_reading": "ずいい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "voluntary",
+     "optional",
+     "free",
+     "elective"
+    ],
+    "vi": "tuỳ ý"
+   },
+   "output": {
+    "id": "concept-core-voluntary",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are good matches, all conveying the sense of 'optional' or 'at one's will'."
+   }
+  },
+  {
+   "key": "3c18c54906177e32296add91b88af4c89647551db9a3104420b1453e653795a7",
+   "input": {
+    "id": "concept-core-observation",
+    "en": "observation",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'observation': monitoring, watching, observation",
+    "ja": "観察",
+    "ja_reading": "かんさつ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "quan sát"
+   },
+   "output": {
+    "id": "concept-core-observation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, canonical equivalents across all three languages."
+   }
+  },
+  {
+   "key": "14747f11132b8b96a8d5caee74da368b1e84fe78aafdf34c2b3bd632666015b8",
+   "input": {
+    "id": "concept-core-comparison",
+    "en": "comparison",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'comparison': reference (e.g. to a dictionary, passage, footnotes), consultation, comparison",
+    "ja": "比較",
+    "ja_reading": "ひかく",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "sự so sánh"
+   },
+   "output": {
+    "id": "concept-core-comparison",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese words mean 'comparison', but the specified English sense is 'reference, consultation', for which the correct Japanese would be 参照 (sanshou)."
+   }
+  },
+  {
+   "key": "9ac478bed61729fffad4a1ee7345a282ed4cfa4d9d7b63fad51f62518514ea9f",
+   "input": {
+    "id": "concept-core-open",
+    "en": "open",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'open': plain, frank, candid",
+    "ja": "明白",
+    "ja_reading": "あからさま",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "plain",
+     "frank",
+     "candid",
+     "open",
+     "direct",
+     "straightforward"
+    ],
+    "vi": "mở"
+   },
+   "output": {
+    "id": "concept-core-open",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'mở' is a literal but incorrect translation for this sense ('cởi mở' is needed). The Japanese entry has a confusing kanji/reading pair, though the reading 'akarasama' matches the sense."
+   }
+  },
+  {
+   "key": "d2c9fce2e29ec284c8c2e287c26655e39f770a30e8719f9579b8cfca611e6639",
+   "input": {
+    "id": "concept-core-sake",
+    "en": "sake",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'sake': sake, Japanese rice wine, brand of sake from Nada region during Tenpō era (1830-1844)",
+    "ja": "日本酒",
+    "ja_reading": "にほんしゅ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "rượu sake"
+   },
+   "output": {
+    "id": "concept-core-sake",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct ways to refer to Japanese sake."
+   }
+  },
+  {
+   "key": "057377528c36aa9079606743c32e09b77f7423bec2d784d32c9fcbb7720baf4a",
+   "input": {
+    "id": "concept-core-state",
+    "en": "state",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'state': state, country, nation",
+    "ja": "国家",
+    "ja_reading": "こっか",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "state",
+     "country",
+     "nation"
+    ],
+    "vi": "quốc gia"
+   },
+   "output": {
+    "id": "concept-core-state",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, canonical equivalents across all three languages, with JA and VI being direct cognates."
+   }
+  },
+  {
+   "key": "10c963bb6e55ca2b4016864c8db251ecfa8168cef679e75e261613755adc5a1e",
+   "input": {
+    "id": "concept-core-science",
+    "en": "science",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'science': science",
+    "ja": "科学",
+    "ja_reading": "かがく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "science"
+    ],
+    "vi": "khoa học"
+   },
+   "output": {
+    "id": "concept-core-science",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, canonical equivalents across all three languages, with JA and VI being direct cognates."
+   }
+  },
+  {
+   "key": "c45b3d3cd6a64ddf6869a4aa22b63cc3d24e9aa842a88fadca1d6ff3aa9aee3e",
+   "input": {
+    "id": "concept-core-delivery",
+    "en": "delivery",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'delivery': delivery, issuance, handing over",
+    "ja": "配達",
+    "ja_reading": "はいたつ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "giao hàng"
+   },
+   "output": {
+    "id": "concept-core-delivery",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'giao hàng' specifically means 'delivery of goods' and is narrower than English 'delivery' or Japanese '配達', which can also include mail."
+   }
+  },
+  {
+   "key": "d1d1f1a85d1a9db0ef05245bdc4b3b3d800634a213840330a51273b3f0f00cda",
+   "input": {
+    "id": "concept-core-tea",
+    "en": "tea",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'tea': tea",
+    "ja": "茶",
+    "ja_reading": "ちゃ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "tea"
+    ],
+    "vi": "trà"
+   },
+   "output": {
+    "id": "concept-core-tea",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, canonical equivalents across all three languages, with JA and VI being direct cognates."
+   }
+  }
+ ]
+}

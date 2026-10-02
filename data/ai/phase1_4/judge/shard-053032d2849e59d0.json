@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:46:36Z",
+ "items": [
+  {
+   "key": "5e1dc80ff4ecec8848d83dd2ddf44d435973ea6154e87b864fc1261f443e5fa3",
+   "input": {
+    "id": "wk-4406-s1",
+    "en": "fraction",
+    "en_pos": "noun",
+    "en_sense": "A ratio of two numbers (numerator and denominator), usually written one above the other and separated by a horizontal bar called the vinculum or, alternatively, in sequence on the same line and separated by a solidus (diagonal bar).",
+    "ja": "分数",
+    "ja_reading": "ぶんすう",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "fraction"
+    ],
+    "vi": "phân số"
+   },
+   "output": {
+    "id": "wk-4406-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise mathematical term for \"fraction\"."
+   }
+  },
+  {
+   "key": "f39ecf1ea85917ae84965efad9254d5a82a56ceebadc5cda2f17e2cf7f82ce7b",
+   "input": {
+    "id": "wk-4407-s1",
+    "en": "consume",
+    "en_pos": "verb",
+    "en_sense": "To eat.",
+    "ja": "食べ尽くす",
+    "ja_reading": "たべつくす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to eat up",
+     "to consume (completely)"
+    ],
+    "vi": "ăn"
+   },
+   "output": {
+    "id": "wk-4407-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word 食べ尽くす means \"to eat up completely\", which is narrower than the English sense \"to eat\"."
+   }
+  },
+  {
+   "key": "48a3fd267ad8c0d956f1b98fc7cef31819a9fd917271c9361d6e846a0462d94f",
+   "input": {
+    "id": "wk-4409-s0",
+    "en": "maximum",
+    "en_pos": "noun",
+    "en_sense": "The highest limit.",
+    "ja": "最大",
+    "ja_reading": "さいだい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "biggest",
+     "greatest",
+     "largest",
+     "maximum"
+    ],
+    "vi": "cực điểm"
+   },
+   "output": {
+    "id": "wk-4409-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word cực điểm means \"climax\" or \"extreme point\", not \"maximum\"; the correct term is tối đa."
+   }
+  },
+  {
+   "key": "b59facec1f73f322e7ca190761fcf219094e0bc6fc58fac8434707067a535c45",
+   "input": {
+    "id": "wk-4411-s0",
+    "en": "minimum",
+    "en_pos": "noun",
+    "en_sense": "The lowest limit.",
+    "ja": "極小",
+    "ja_reading": "きょくしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "local minimum"
+    ],
+    "vi": "tối thiểu"
+   },
+   "output": {
+    "id": "wk-4411-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 極小 means \"local minimum\", a specific mathematical term, whereas the general term for \"minimum\" is 最小."
+   }
+  },
+  {
+   "key": "2455710a076c328ac09798cd9e52322779d142897df710f3ee6c6df98002a812",
+   "input": {
+    "id": "wk-4414-s1",
+    "en": "staff",
+    "en_pos": "noun",
+    "en_sense": "A series of horizontal lines on which musical notes are written; a stave.",
+    "ja": "五線",
+    "ja_reading": "ごせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "staff",
+     "stave"
+    ],
+    "vi": "khuông nhạc"
+   },
+   "output": {
+    "id": "wk-4414-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a musical staff."
+   }
+  },
+  {
+   "key": "120cc2811cdd72a01fe0bef2978efc09f3d773604d206df4571c48c1d6636822",
+   "input": {
+    "id": "wk-4419-s1",
+    "en": "gamble",
+    "en_pos": "verb",
+    "en_sense": "To play risky games, especially casino games, for monetary gain.",
+    "ja": "賭ける",
+    "ja_reading": "かける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to wager",
+     "to bet",
+     "to risk",
+     "to stake",
+     "to gamble"
+    ],
+    "vi": "đánh bạc"
+   },
+   "output": {
+    "id": "wk-4419-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for the act of gambling."
+   }
+  },
+  {
+   "key": "a0ac183df3b2a45350d757285409cfb0fd3272f1dee7c948447d27955b33c643",
+   "input": {
+    "id": "wk-4424-s0",
+    "en": "phone",
+    "en_pos": "verb",
+    "en_sense": "To call (someone) using a telephone.",
+    "ja": "電話する",
+    "ja_reading": "でんわする",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "telephone call",
+     "phone call"
+    ],
+    "vi": "điện thoại"
+   },
+   "output": {
+    "id": "wk-4424-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are common and natural ways to say \"to make a phone call\"."
+   }
+  },
+  {
+   "key": "bffd6a1ba6e94fe7fb65a6eed78189f87462274fd011298dfe13741e00dfeb0f",
+   "input": {
+    "id": "wk-4427-s0",
+    "en": "net",
+    "en_pos": "noun",
+    "en_sense": "A mesh of string, cord or rope.",
+    "ja": "網",
+    "ja_reading": "あみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "net",
+     "netting"
+    ],
+    "vi": "mạng"
+   },
+   "output": {
+    "id": "wk-4427-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word mạng primarily means \"network\" (like the internet), while the correct word for a physical net is lưới."
+   }
+  },
+  {
+   "key": "b7ceec8214fe7469413da9304641e04f28954de8094338a08fe68d36f4a257ca",
+   "input": {
+    "id": "wk-4429-s0",
+    "en": "navel",
+    "en_pos": "noun",
+    "en_sense": "The indentation or bump remaining in the abdomen of placental mammals where the umbilical cord was attached before birth.",
+    "ja": "へそ",
+    "ja_reading": "へそ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "navel",
+     "belly button"
+    ],
+    "vi": "rốn"
+   },
+   "output": {
+    "id": "wk-4429-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for \"navel\"."
+   }
+  },
+  {
+   "key": "c8120497cb6a07ee66c4544434403037c0c6c85914fc6db1a45034faa0658fd4",
+   "input": {
+    "id": "wk-4430-s0",
+    "en": "side",
+    "en_pos": "noun",
+    "en_sense": "A bounding straight edge of a two-dimensional shape.",
+    "ja": "辺",
+    "ja_reading": "へん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "side",
+     "edge"
+    ],
+    "vi": "bên"
+   },
+   "output": {
+    "id": "wk-4430-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word bên means side in a general sense, not the geometric side of a shape, for which cạnh is the correct term."
+   }
+  },
+  {
+   "key": "9369269d481c94053d465d7ecdf482fbc1a4b0b273da6bf9545106c5e7a4c268",
+   "input": {
+    "id": "wk-4432-s0",
+    "en": "mast",
+    "en_pos": "noun",
+    "en_sense": "A tall, slim post or tower, usually tapering upward, used to support, for example, sails or observation platforms on a ship, the main rotor of a helicopter, flags, floodlights, meteorological instruments, or communications equipment, such as an aerial, usually supported by guy-wires (except in the c",
+    "ja": "マスト",
+    "ja_reading": "マスト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mast (of ship)"
+    ],
+    "vi": "cột"
+   },
+   "output": {
+    "id": "wk-4432-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word cột is too general, meaning \"pole\" or \"post\"; \"mast\" is more specific, requiring a compound like cột buồm for clarity."
+   }
+  },
+  {
+   "key": "baf2c635f7dad932705663217837bffd99fa4da2269f38c583d77b437dd818e6",
+   "input": {
+    "id": "wk-4436-s0",
+    "en": "switch",
+    "en_pos": "noun",
+    "en_sense": "A device to turn electric current on and off or direct its flow.",
+    "ja": "スイッチ",
+    "ja_reading": "スイッチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "switch"
+    ],
+    "vi": "công tắc"
+   },
+   "output": {
+    "id": "wk-4436-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for an electrical switch."
+   }
+  }
+ ]
+}

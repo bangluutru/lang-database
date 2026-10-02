@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:46:25Z",
+ "items": [
+  {
+   "key": "b91417df1e42087b7ddee88a969506e5504cf9c1c4b4475adfad0e03547ead23",
+   "input": {
+    "id": "jm-1527770-0-unknown",
+    "en": "unknown",
+    "en_pos": "adjective",
+    "en_sense": "not yet known; unknown; strange",
+    "ja": "未知",
+    "ja_reading": "みち",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "not yet known",
+     "unknown",
+     "strange"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1527770-0-unknown",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 未知 is a perfect equivalent for the English sense of 'unknown' as in 'not yet known'."
+   }
+  },
+  {
+   "key": "24db677b3caacfb7f6ba5024755b0e8bbf41222b932379701d97d49de0b27378",
+   "input": {
+    "id": "jm-1528130-0-regret",
+    "en": "regret",
+    "en_pos": "noun",
+    "en_sense": "lingering attachment; lingering affection; regret; reluctance; ruefulness",
+    "ja": "未練",
+    "ja_reading": "みれん",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "lingering attachment",
+     "lingering affection",
+     "regret",
+     "reluctance",
+     "ruefulness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1528130-0-regret",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 未練 perfectly captures the specific English sense of regret as a lingering attachment or reluctance to let go."
+   }
+  },
+  {
+   "key": "b1c82b911de48db53c111c4da3513e1e19f4e73a0dfaa2510c668eb412e1c4bd",
+   "input": {
+    "id": "jm-1528790-0-democracy",
+    "en": "democracy",
+    "en_pos": "noun",
+    "en_sense": "democracy; popular sovereignty",
+    "ja": "民主",
+    "ja_reading": "みんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "democracy",
+     "popular sovereignty"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1528790-0-democracy",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "While 民主 is correct, the full word 民主主義 is the more common and natural standalone equivalent for 'democracy'."
+   }
+  },
+  {
+   "key": "bdb2a74a6a1018f5298083aa07bd1db78b32f0b40e79c48279fc6d02c9947860",
+   "input": {
+    "id": "jm-1529390-0-sleep",
+    "en": "sleep",
+    "en_pos": "verb",
+    "en_sense": "to sleep",
+    "ja": "眠る",
+    "ja_reading": "ねむる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to sleep"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1529390-0-sleep",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "眠る is a perfect and natural translation for the verb 'to sleep', focusing on the state of being asleep."
+   }
+  },
+  {
+   "key": "e8b259c16fb35dcc0a8cbd5232948ce9557a2f8fb24cfe1c0bd475a0861bd14e",
+   "input": {
+    "id": "jm-1529500-1-daze",
+    "en": "daze",
+    "en_pos": "noun",
+    "en_sense": "forgetting oneself; daze; trance; ecstasy; delirium",
+    "ja": "夢中",
+    "ja_reading": "むちゅう",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "forgetting oneself",
+     "daze",
+     "trance",
+     "ecstasy",
+     "delirium"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1529500-1-daze",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "夢中 means to be absorbed or engrossed in something, which is a different meaning from 'daze' (to be stunned or bewildered)."
+   }
+  },
+  {
+   "key": "be6199ad296d55f91fd248213eee01f79c05241a524ec00c1e8d56483b3587d1",
+   "input": {
+    "id": "jm-1529550-2-disappear",
+    "en": "disappear",
+    "en_pos": "verb",
+    "en_sense": "to disappear (e.g. pain); to be lost (e.g. a dream, confidence)",
+    "ja": "なくなる",
+    "ja_reading": "なくなる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to disappear (e.g. pain)",
+     "to be lost (e.g. a dream, confidence)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1529550-2-disappear",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The verb なくなる is a natural and correct equivalent for 'disappear' in the sense of something ceasing to exist or being lost, especially for abstract concepts."
+   }
+  },
+  {
+   "key": "5441714d279394e50830036e7454cf6ab2eaa830c38668701c154af819a5da58",
+   "input": {
+    "id": "jm-1529560-0-without",
+    "en": "without",
+    "en_pos": "noun",
+    "en_sense": "without",
+    "ja": "なし",
+    "ja_reading": "なし",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "without"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1529560-0-without",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English word 'without' is a preposition or adverb, not a noun as stated in the entry, making the POS mapping incorrect."
+   }
+  },
+  {
+   "key": "86fe130d19a535062268b17bbf2129e88a199980331faa18cea6751612d5de3e",
+   "input": {
+    "id": "jm-1529860-0-silence",
+    "en": "silence",
+    "en_pos": "noun",
+    "en_sense": "silence (not speaking); muteness",
+    "ja": "無言",
+    "ja_reading": "むごん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "silence (not speaking)",
+     "muteness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1529860-0-silence",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "無言 is a perfect match for the specific sense of 'silence' as in 'not speaking' or 'muteness'."
+   }
+  },
+  {
+   "key": "41960b317bfc82e20233cbb3e2719184dc43ed7db380b7b4f9feef6dff5c103a",
+   "input": {
+    "id": "jm-1530080-0-innocent",
+    "en": "innocent",
+    "en_pos": "adjective",
+    "en_sense": "innocent; childlike; sweet and innocent; artless",
+    "ja": "無邪気",
+    "ja_reading": "むじゃき",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "innocent",
+     "childlike",
+     "sweet and innocent",
+     "artless"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1530080-0-innocent",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "無邪気 is a perfect equivalent for the specific sense of 'innocent' as in childlike, naive, and artless."
+   }
+  },
+  {
+   "key": "b9a638f51b4800e33b5af36fead441ce57341dcbe9978dc93608ebb438aee8e2",
+   "input": {
+    "id": "jm-1530650-0-plain",
+    "en": "plain",
+    "en_pos": "adjective",
+    "en_sense": "plain; unfigured; patternless; solid (color)",
+    "ja": "無地",
+    "ja_reading": "むじ",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "plain",
+     "unfigured",
+     "patternless",
+     "solid (color)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1530650-0-plain",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "無地 is the exact and standard Japanese word for 'plain' in the sense of being unpatterned or a solid color."
+   }
+  },
+  {
+   "key": "4bb8c1ceb578e7f63f72b654a641223f54dd162cb98253b2561ac5b42c5f59a6",
+   "input": {
+    "id": "jm-1530770-0-regret",
+    "en": "regret",
+    "en_pos": "noun",
+    "en_sense": "regret; chagrin; mortification",
+    "ja": "無念",
+    "ja_reading": "むねん",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "regret",
+     "chagrin",
+     "mortification"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1530770-0-regret",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "無念 perfectly captures the specific sense of deep, bitter regret mixed with frustration or chagrin."
+   }
+  },
+  {
+   "key": "c3adffc95df5ddddc3ba9ed65df6627e635a7e40e1698172c05f960fb21bd5af",
+   "input": {
+    "id": "jm-1530970-1-impossible",
+    "en": "impossible",
+    "en_pos": "adjective",
+    "en_sense": "impossible",
+    "ja": "無理",
+    "ja_reading": "むり",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "impossible"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1530970-1-impossible",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "無理 is a very common translation for 'impossible', but it is broader, also meaning 'unreasonable' or 'to overdo things'."
+   }
+  }
+ ]
+}

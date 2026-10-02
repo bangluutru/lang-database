@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:41:27Z",
+ "items": [
+  {
+   "key": "1cc39259b045dcee9dc86b737321a466a8388f1d60a2d2512aad222780ddd05d",
+   "input": {
+    "id": "wk-2633-e:58243a",
+    "en": "wear",
+    "en_pos": "verb",
+    "en_sense": "to have on (clothes or accessories)",
+    "ja": "着る",
+    "ja_reading": "きる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to wear (from the shoulders down)",
+     "to put on"
+    ],
+    "vi": "đi"
+   },
+   "output": {
+    "id": "wk-2633-e:58243a",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "WRONG"
+    ],
+    "note": "Japanese 着る is too narrow (only for upper body clothing), and Vietnamese đi means 'to go' or specifically 'to wear footwear', not 'to wear' in general."
+   }
+  },
+  {
+   "key": "c51c25bfe3f2cfe76b5ecf6c3b55509e3e731928685e0e253a330fe28cde348c",
+   "input": {
+    "id": "wk-2637-s1",
+    "en": "wet",
+    "en_pos": "adjective",
+    "en_sense": "Of an object, etc.: covered or impregnated with liquid, usually (but not always) water.",
+    "ja": "湿っぽい",
+    "ja_reading": "しめっぽい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "damp",
+     "humid",
+     "wet"
+    ],
+    "vi": "ướt"
+   },
+   "output": {
+    "id": "wk-2637-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese 湿っぽい means 'damp' or 'clammy' and is narrower than the general English 'wet'; 濡れている would be a better general equivalent."
+   }
+  },
+  {
+   "key": "49f449796996cec029060216e72b725932b23193f54898e9ee61ef58a3fc4378",
+   "input": {
+    "id": "wk-26372-s0",
+    "en": "monorail",
+    "en_pos": "noun",
+    "en_sense": "a railroad system where the trains run on one rail",
+    "ja": "モノレール",
+    "ja_reading": "モノレール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "monorail"
+    ],
+    "vi": "đường một rầy"
+   },
+   "output": {
+    "id": "wk-26372-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đường một rầy' is a literal and awkward translation; 'tàu điện một ray' is the more standard term."
+   }
+  },
+  {
+   "key": "9fd5522b41471e8c50462a93695d91020c2faefc527113f4a07074330f819a31",
+   "input": {
+    "id": "wk-264-s1",
+    "en": "acid",
+    "en_pos": "noun",
+    "en_sense": "Any compound which yields H+ ions (protons) when dissolved in water; an Arrhenius acid.",
+    "ja": "酸",
+    "ja_reading": "さん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "acid"
+    ],
+    "vi": "axit"
+   },
+   "output": {
+    "id": "wk-264-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard chemical term for 'acid' in their respective languages."
+   }
+  },
+  {
+   "key": "31283bd7dc321b6d9356585ee104ea8ec07f894c5978bec8ff7cfe09b9aad453",
+   "input": {
+    "id": "wk-2640-s5",
+    "en": "wind",
+    "en_pos": "noun",
+    "en_sense": "One of the four elements of the ancient Greeks and Romans; air.",
+    "ja": "風",
+    "ja_reading": "かぜ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wind",
+     "breeze",
+     "draught",
+     "draft"
+    ],
+    "vi": "gió"
+   },
+   "output": {
+    "id": "wk-2640-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly represent 'wind' both in the general sense and as one of the classical elements."
+   }
+  },
+  {
+   "key": "778c77ee577ed4593993884047bfbb4e1a231a4319d6ab7cb31ebd3ab338d420",
+   "input": {
+    "id": "wk-26407-s0",
+    "en": "signboard",
+    "en_pos": "noun",
+    "en_sense": "A board carrying a sign, or on which signs may be posted.",
+    "ja": "看板",
+    "ja_reading": "かんばん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "signboard",
+     "sign",
+     "billboard",
+     "hoarding",
+     "doorplate"
+    ],
+    "vi": "biển"
+   },
+   "output": {
+    "id": "wk-26407-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese 'biển' is polysemous (meaning 'sea' or 'sign'), but it is the correct and natural word for 'signboard' in this context."
+   }
+  },
+  {
+   "key": "dd3b28b86234b33eb574726e7505ff21b1253eda93585a37b6ddd25cf08d9ceb",
+   "input": {
+    "id": "wk-26408-s0",
+    "en": "smartphone",
+    "en_pos": "noun",
+    "en_sense": "A mobile phone with more advanced features and greater computing capacity than a feature phone.",
+    "ja": "スマホ",
+    "ja_reading": "スマホ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "smartphone",
+     "smart phone"
+    ],
+    "vi": "điện thoại thông minh"
+   },
+   "output": {
+    "id": "wk-26408-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and most common ways to refer to a smartphone in their respective languages."
+   }
+  },
+  {
+   "key": "1623e690ffd9778e9446aa2990ff80ce90001a3dda796536b73ed54fd64874b1",
+   "input": {
+    "id": "wk-2644-e:3e1e65",
+    "en": "era",
+    "en_pos": "noun",
+    "en_sense": "time period",
+    "ja": "紀元",
+    "ja_reading": "きげん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "era"
+    ],
+    "vi": "thời đại"
+   },
+   "output": {
+    "id": "wk-2644-e:3e1e65",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese 紀元 specifically refers to a calendar era (e.g., AD/BC) and is not a general equivalent for 'era' as a time period; 時代 would be better."
+   }
+  },
+  {
+   "key": "9d6b57ce078356530aa8371b11b2f04acff0d1e38700ad600152a28f25a352e0",
+   "input": {
+    "id": "wk-26529-s0",
+    "en": "vial",
+    "en_pos": "noun",
+    "en_sense": "A glass or plastic vessel or bottle, especially a small tube-shaped bottle used to store medicine, perfume or other chemicals.",
+    "ja": "バイアル",
+    "ja_reading": "バイアル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vial"
+    ],
+    "vi": "lọ"
+   },
+   "output": {
+    "id": "wk-26529-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'lọ' is a very general term for 'bottle' or 'jar' and is much broader than the specific English 'vial'."
+   }
+  },
+  {
+   "key": "457b2c5a601978c3139d66706019a920fe7bcbb662e6439768ab19205380a6dd",
+   "input": {
+    "id": "wk-26534-s0",
+    "en": "secretary of state",
+    "en_pos": "noun",
+    "en_sense": "Any of several senior government positions whose function varies from nation to nation.",
+    "ja": "国務長官",
+    "ja_reading": "こくむちょうかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Secretary of State"
+    ],
+    "vi": "ngoại trưởng"
+   },
+   "output": {
+    "id": "wk-26534-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Both the Japanese and Vietnamese terms specifically refer to the U.S. Secretary of State (or the equivalent role of Foreign Minister), which is narrower than the broad English definition provided."
+   }
+  },
+  {
+   "key": "c16bb5f7c0c5378b69f6eaa48e3a4b47eaebbaff2be5152b8710742655eb03a2",
+   "input": {
+    "id": "wk-2654-s0",
+    "en": "round",
+    "en_pos": "adjective",
+    "en_sense": "Circular or cylindrical; having a circular cross-section in one direction.",
+    "ja": "丸い",
+    "ja_reading": "まるい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "round",
+     "circular",
+     "spherical"
+    ],
+    "vi": "tròn"
+   },
+   "output": {
+    "id": "wk-2654-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence across all three languages for this sense."
+   }
+  },
+  {
+   "key": "cc374d6dd5f0874a92949a2a3ee7df354b647b946de00940727768dcc9953f5f",
+   "input": {
+    "id": "wk-26547-s0",
+    "en": "the end",
+    "en_pos": "expression",
+    "en_sense": "Used traditionally at the end of a story or film.",
+    "ja": "終わり",
+    "ja_reading": "おわり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "ending",
+     "close",
+     "conclusion"
+    ],
+    "vi": "hết"
+   },
+   "output": {
+    "id": "wk-26547-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and natural way to signify the end of a story or film."
+   }
+  }
+ ]
+}

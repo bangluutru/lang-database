@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:51:41Z",
+ "items": [
+  {
+   "key": "3c77c3dfced77c496d03b09df4a40b710b26390f475a8308b0843d1c6d5b63ec",
+   "input": {
+    "id": "jm-1597470-0-arrival",
+    "en": "arrival",
+    "en_pos": "noun",
+    "en_sense": "arrival; arriving at ...",
+    "ja": "着",
+    "ja_reading": "ちゃく",
+    "ja_pos": "n-suf",
+    "ja_glosses": [
+     "arrival",
+     "arriving at ..."
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1597470-0-arrival",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word `着` is a suffix meaning 'arrival' and cannot be used as a standalone noun equivalent to the English 'arrival'; the correct word is `到着` (tōchaku)."
+   }
+  },
+  {
+   "key": "a05efd7917a0949c294ab03528cc45aa256993a9bcc0915fea4d8dedc0f9ace1",
+   "input": {
+    "id": "jm-1597480-0-steadily",
+    "en": "steadily",
+    "en_pos": "adverb",
+    "en_sense": "steadily",
+    "ja": "着々",
+    "ja_reading": "ちゃくちゃく",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "steadily"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1597480-0-steadily",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good and natural equivalent for 'steadily', especially in the context of making progress."
+   }
+  },
+  {
+   "key": "b0abd24038f587d150185be2da230cff78deaf0698009de2ab8baf9921e2f67f",
+   "input": {
+    "id": "jm-1597850-0-one_by_one",
+    "en": "one by one",
+    "en_pos": "adverb",
+    "en_sense": "in succession; one by one",
+    "ja": "次々",
+    "ja_reading": "つぎつぎ",
+    "ja_pos": "adv,adv-to,n",
+    "ja_glosses": [
+     "in succession",
+     "one by one"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1597850-0-one_by_one",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent and common equivalent for 'one by one' or 'in succession'."
+   }
+  },
+  {
+   "key": "ac7ceb2a62fa13663bde92d16d499747ce278d1f3359e7289ba11ff70ff7de45",
+   "input": {
+    "id": "jm-1598240-0-salary",
+    "en": "salary",
+    "en_pos": "noun",
+    "en_sense": "salary; pay; compensation; allowance (e.g. housing allowance); benefit; bonus",
+    "ja": "手当て",
+    "ja_reading": "てあて",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "salary",
+     "pay",
+     "compensation",
+     "allowance (e.g. housing allowance)",
+     "benefit",
+     "bonus"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1598240-0-salary",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "`手当て` means 'allowance' or 'benefit', not 'salary'. The correct Japanese word for 'salary' is `給料` (kyūryō)."
+   }
+  },
+  {
+   "key": "b4d3a215ecf6573a43291757908f53669da235832fc04f4faf6f17234ebf6bb1",
+   "input": {
+    "id": "jm-1598400-0-towel",
+    "en": "towel",
+    "en_pos": "noun",
+    "en_sense": "tenugui; (hand) towel (usu. thin cotton cloth)",
+    "ja": "手拭い",
+    "ja_reading": "てぬぐい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tenugui",
+     "(hand) towel (usu. thin cotton cloth)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1598400-0-towel",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "`手拭い` (tenugui) is a specific type of traditional Japanese towel; the general word for 'towel' is the loanword `タオル` (taoru)."
+   }
+  },
+  {
+   "key": "ea8ac6ebf005d800880feecfb88ac7e8f4ba5d26eba518a78e11ae47e5c1cc94",
+   "input": {
+    "id": "jm-1598810-0-report",
+    "en": "report",
+    "en_pos": "noun",
+    "en_sense": "report; notification; registration",
+    "ja": "届け",
+    "ja_reading": "とどけ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "report",
+     "notification",
+     "registration"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1598810-0-report",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a good match for the specific sense of a formal report, notification, or registration submitted to an authority."
+   }
+  },
+  {
+   "key": "f61f03840d0b7bcad005b603b47d6be63722528735fb689d3d37128b56526415",
+   "input": {
+    "id": "jm-1599070-0-control",
+    "en": "control",
+    "en_pos": "noun",
+    "en_sense": "control; management; supervision",
+    "ja": "取り締まり",
+    "ja_reading": "とりしまり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "control",
+     "management",
+     "supervision"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599070-0-control",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "`取り締まり` specifically means control in the sense of regulation, enforcement, or a crackdown, which is narrower than the general English word 'control'."
+   }
+  },
+  {
+   "key": "9410c14c762ea6d5b27ffb2012c8bb838e94513a65498b6a5761d955478aaadc",
+   "input": {
+    "id": "jm-1599120-0-business",
+    "en": "business",
+    "en_pos": "noun",
+    "en_sense": "transactions; dealings; business",
+    "ja": "取り引き",
+    "ja_reading": "とりひき",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "transactions",
+     "dealings",
+     "business"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599120-0-business",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of 'business' as in 'transactions' or 'dealings'."
+   }
+  },
+  {
+   "key": "285363143206bd0160d4f7a05ea13accbe806e5e066e504a90fa1966479e8931",
+   "input": {
+    "id": "jm-1599160-1-pick",
+    "en": "pick",
+    "en_pos": "verb",
+    "en_sense": "to pick (e.g. flowers); to gather (e.g. mushrooms); to catch (e.g. insects)",
+    "ja": "採る",
+    "ja_reading": "とる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to pick (e.g. flowers)",
+     "to gather (e.g. mushrooms)",
+     "to catch (e.g. insects)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599160-1-pick",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`採る` is the correct and specific verb for picking flowers or gathering mushrooms, matching the English sense perfectly."
+   }
+  },
+  {
+   "key": "5ff10a8d4c7ec6bb41314df5a491fc52db4b2e1272af60984834204f739a00c4",
+   "input": {
+    "id": "jm-1599490-0-charitable",
+    "en": "charitable",
+    "en_pos": "adjective",
+    "en_sense": "tender-hearted; compassionate; charitable; good-hearted",
+    "ja": "情け深い",
+    "ja_reading": "なさけぶかい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "tender-hearted",
+     "compassionate",
+     "charitable",
+     "good-hearted"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599490-0-charitable",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match for the sense of 'charitable' meaning compassionate or tender-hearted."
+   }
+  },
+  {
+   "key": "6feb4159dfa19b88bf385dbd6c6830f726ea658b1a68be26e00773cd594ef6e6",
+   "input": {
+    "id": "jm-1599570-0-casual",
+    "en": "casual",
+    "en_pos": "adjective",
+    "en_sense": "casual; unconcerned; nonchalant; indifferent; offhand",
+    "ja": "何気ない",
+    "ja_reading": "なにげない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "casual",
+     "unconcerned",
+     "nonchalant",
+     "indifferent",
+     "offhand"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599570-0-casual",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of 'casual' meaning unintentional, unconcerned, or offhand."
+   }
+  },
+  {
+   "key": "4243ffd6b3cf07e18738733fd149e5ab722e164206733de08fa8d6bab4dbdc36",
+   "input": {
+    "id": "jm-1599620-0-average",
+    "en": "average",
+    "en_pos": "adjective",
+    "en_sense": "average; medium; common; ordinary",
+    "ja": "並み",
+    "ja_reading": "なみ",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "average",
+     "medium",
+     "common",
+     "ordinary"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1599620-0-average",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A common and natural equivalent for 'average' in the sense of 'ordinary' or 'on par with'."
+   }
+  }
+ ]
+}

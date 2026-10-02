@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:07Z",
+ "items": [
+  {
+   "key": "1f1505fc938ae9bd09240da6c49c6aa7529ebb5227c5a7cbdc0cb52e0fdd3db6",
+   "input": {
+    "id": "wk-14946-s0",
+    "en": "mainstream",
+    "en_pos": "adjective",
+    "en_sense": "Used or accepted broadly rather than by small portions of population, market, scientific community, etc.",
+    "ja": "主流",
+    "ja_reading": "しゅりゅう",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "(the) mainstream"
+    ],
+    "vi": "chính thống"
+   },
+   "output": {
+    "id": "wk-14946-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chính thống' means 'orthodox' or 'legitimate', which is a different sense from 'mainstream' (popular, common)."
+   }
+  },
+  {
+   "key": "6e66cd0c238cd0c699c5b83c0915c2a80bfc54d950c65e3bc1c1d10689924526",
+   "input": {
+    "id": "wk-14951-s0",
+    "en": "activist",
+    "en_pos": "noun",
+    "en_sense": "One who is politically active in the role of a citizen; especially, one who campaigns for change.",
+    "ja": "活動家",
+    "ja_reading": "かつどうか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "activist"
+    ],
+    "vi": "phần tử tích cực"
+   },
+   "output": {
+    "id": "wk-14951-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'phần tử tích cực' is an unnatural and pejorative-sounding phrase; the correct term is 'nhà hoạt động'."
+   }
+  },
+  {
+   "key": "b12ba7ea5f435d347587ae5d71027f284ca5a5600d789bfb66c0a6d7fe608309",
+   "input": {
+    "id": "wk-1496-s0",
+    "en": "coral",
+    "en_pos": "noun",
+    "en_sense": "Any of many species of marine invertebrates in the class Anthozoa, most of which build hard calcium carbonate skeletons and form colonies, or a colony belonging to one of those species.",
+    "ja": "さんご",
+    "ja_reading": "さんご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "coral"
+    ],
+    "vi": "san hô"
+   },
+   "output": {
+    "id": "wk-1496-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'coral'."
+   }
+  },
+  {
+   "key": "efb0087997762b8366c702ee8ff9955ca690c69e8d3145c35f01faa136eeeb75",
+   "input": {
+    "id": "wk-14962-s2",
+    "en": "booth",
+    "en_pos": "noun",
+    "en_sense": "A boxlike room or enclosure just big enough to accommodate one standing person, such as a phone booth or polling booth.",
+    "ja": "ブース",
+    "ja_reading": "ブース",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "booth"
+    ],
+    "vi": "buồng"
+   },
+   "output": {
+    "id": "wk-14962-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'buồng' is too general, meaning 'chamber' or 'room', and requires a modifier to specify the type of booth."
+   }
+  },
+  {
+   "key": "aa45f492c21fca2f7c3448379a6ebba3283df9ac7d8d175cac4aa1fa6da717c1",
+   "input": {
+    "id": "wk-14967-s2",
+    "en": "wick",
+    "en_pos": "noun",
+    "en_sense": "Any piece of porous material that conveys liquid by capillary action; specifically (medicine), a strip of gauze placed in a wound, etc., to absorb fluids.",
+    "ja": "芯",
+    "ja_reading": "しん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wick",
+     "marrow",
+     "staple (for stapler)",
+     "(pencil) lead",
+     "stuffing",
+     "pith"
+    ],
+    "vi": "bấc"
+   },
+   "output": {
+    "id": "wk-14967-s2",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '芯' is broader than 'wick', meaning 'core' in general, while the Vietnamese 'bấc' is a perfect match."
+   }
+  },
+  {
+   "key": "e1b3531ef86445b9f2cc1a1bc551f41ef3d0e28832a6c362f8a9c139b5181609",
+   "input": {
+    "id": "wk-14970-s0",
+    "en": "earring",
+    "en_pos": "noun",
+    "en_sense": "A piece of jewelry worn on the ear.",
+    "ja": "イヤリング",
+    "ja_reading": "イヤリング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "earring"
+    ],
+    "vi": "khuyên"
+   },
+   "output": {
+    "id": "wk-14970-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'イヤリング' specifically means non-pierced (clip-on) earrings, while pierced earrings are 'ピアス'; this is a significant mismatch with the general English term."
+   }
+  },
+  {
+   "key": "b7a63407e5043b1a771481191e247bed5b3957f786755664bd470db9db40241e",
+   "input": {
+    "id": "wk-14971-s7",
+    "en": "probe",
+    "en_pos": "noun",
+    "en_sense": "A small, usually uncrewed, spacecraft used to acquire information or measurements about its surroundings.",
+    "ja": "探査機",
+    "ja_reading": "たんさき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(space) probe"
+    ],
+    "vi": "thăm dò"
+   },
+   "output": {
+    "id": "wk-14971-s7",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG"
+    ],
+    "note": "The Vietnamese 'thăm dò' is a verb meaning 'to probe', not the noun 'a probe' (the spacecraft), which would be 'tàu thăm dò'."
+   }
+  },
+  {
+   "key": "fbefc4cbf48bed22f5955c24e00c332f21fcdb05886f808a288b2549109d14a9",
+   "input": {
+    "id": "wk-14973-e:6ca10a",
+    "en": "widow",
+    "en_pos": "noun",
+    "en_sense": "woman whose spouse has died",
+    "ja": "寡婦",
+    "ja_reading": "かふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "widow",
+     "divorced woman not remarried",
+     "unmarried woman"
+    ],
+    "vi": "goá"
+   },
+   "output": {
+    "id": "wk-14973-e:6ca10a",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'goá' is an adjective ('widowed'), not a noun ('widow'); the Japanese '寡婦' is a very formal/legal term."
+   }
+  },
+  {
+   "key": "c80fabe92fce6a3919542e87a9de3f1013f68a4adeb1b9c50694688f2476f2ba",
+   "input": {
+    "id": "wk-14983-s0",
+    "en": "red blood cell",
+    "en_pos": "noun",
+    "en_sense": "A type of cell in the blood of vertebrates that contains hemoglobin and transports oxygen from the lungs to the tissues; an erythrocyte.",
+    "ja": "赤血球",
+    "ja_reading": "せっけっきゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "red blood cell",
+     "erythrocyte"
+    ],
+    "vi": "hồng cầu"
+   },
+   "output": {
+    "id": "wk-14983-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'red blood cell'."
+   }
+  },
+  {
+   "key": "5e32ecfe1638a5215a3114b3d8f0bfae6671661c6919520b88badcc7c6169a0e",
+   "input": {
+    "id": "wk-15001-s0",
+    "en": "schoolgirl",
+    "en_pos": "noun",
+    "en_sense": "A girl attending school.",
+    "ja": "女学生",
+    "ja_reading": "じょがくせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "schoolgirl",
+     "female student"
+    ],
+    "vi": "nữ sinh"
+   },
+   "output": {
+    "id": "wk-15001-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'schoolgirl' or 'female student'."
+   }
+  },
+  {
+   "key": "c0b8fa4725efdb3ebfc37c46ef933a77e7bc13948872e27567fdf89a427d8eb2",
+   "input": {
+    "id": "wk-15002-s0",
+    "en": "willingly",
+    "en_pos": "adverb",
+    "en_sense": "Of one’s own free will; freely and spontaneously.",
+    "ja": "進んで",
+    "ja_reading": "すすんで",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "voluntarily",
+     "willingly",
+     "of one's own free will"
+    ],
+    "vi": "sẵn lòng"
+   },
+   "output": {
+    "id": "wk-15002-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'sẵn lòng' means 'to be willing' and is not an adverb like English 'willingly' or Japanese '進んで'."
+   }
+  },
+  {
+   "key": "15b7c68ffd6492cde20480812d0e4fd2e9eef89800ee9748526345e3b4e9435c",
+   "input": {
+    "id": "wk-1501-s3",
+    "en": "recipe",
+    "en_pos": "noun",
+    "en_sense": "Now especially, a set of instructions for making or preparing food dishes.",
+    "ja": "作り方",
+    "ja_reading": "つくりかた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "recipe"
+    ],
+    "vi": "công thức"
+   },
+   "output": {
+    "id": "wk-1501-s3",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While both Japanese '作り方' (how to make) and Vietnamese 'công thức' (formula) are broader in their literal meanings, they are the standard and natural words for a food recipe."
+   }
+  }
+ ]
+}

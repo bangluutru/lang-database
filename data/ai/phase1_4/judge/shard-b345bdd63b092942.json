@@ -1,0 +1,399 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:45:44Z",
+ "items": [
+  {
+   "key": "866af493bc9894cdb9ad8b772cba71c2fa6d28b91cf2134d31c51a06c5b4ad7c",
+   "input": {
+    "id": "jm-1561620-0-discuss",
+    "en": "discuss",
+    "en_pos": "verb",
+    "en_sense": "to discuss; to talk about; to deal with (a topic)",
+    "ja": "論じる",
+    "ja_reading": "ろんじる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to discuss",
+     "to talk about",
+     "to deal with (a topic)"
+    ],
+    "vi": "thảo luận"
+   },
+   "output": {
+    "id": "jm-1561620-0-discuss",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'discuss'."
+   }
+  },
+  {
+   "key": "2cb1f0af389b1a84992a000aaf4cbb1054f33abc34997c10d605c0e2c0774a9b",
+   "input": {
+    "id": "jm-1561890-0-logical",
+    "en": "logical",
+    "en_pos": "adjective",
+    "en_sense": "logical",
+    "ja": "論理的",
+    "ja_reading": "ろんりてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "logical"
+    ],
+    "vi": "hợp lý"
+   },
+   "output": {
+    "id": "jm-1561890-0-logical",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'hợp lý' means 'reasonable' or 'sensible', which is broader than the strict meaning of 'logical' / '論理的'."
+   }
+  },
+  {
+   "key": "bdca408b4090d939a31fdf06929b9e20865583ef11c4a3af09487359918bb056",
+   "input": {
+    "id": "jm-1578150-0-nine",
+    "en": "nine",
+    "en_pos": "numeral",
+    "en_sense": "nine; 9",
+    "ja": "九",
+    "ja_reading": "きゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "nine",
+     "9"
+    ],
+    "vi": "chín"
+   },
+   "output": {
+    "id": "jm-1578150-0-nine",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for the number nine."
+   }
+  },
+  {
+   "key": "e05a7ca26219c2657013f92d190dfcd24761bc0d28740ba42e26479b15227c28",
+   "input": {
+    "id": "jm-1578210-1-sink",
+    "en": "sink",
+    "en_pos": "verb",
+    "en_sense": "to go down (sun, moon); to sink",
+    "ja": "傾く",
+    "ja_reading": "かたむく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to go down (sun, moon)",
+     "to sink"
+    ],
+    "vi": "lặn"
+   },
+   "output": {
+    "id": "jm-1578210-1-sink",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "While '傾く' can mean the sun is setting, the more common and direct Japanese word is '沈む' (shizumu), making this a less ideal choice for a learner."
+   }
+  },
+  {
+   "key": "6d4f387fc6bd2bf41f79bf8e4d6deeb17b9ee503ed726c92d4e7e2366ffa0a9a",
+   "input": {
+    "id": "jm-1579080-0-time",
+    "en": "time",
+    "en_pos": "noun",
+    "en_sense": "(approximate) time; around; about; toward",
+    "ja": "ころ",
+    "ja_reading": "ころ",
+    "ja_pos": "n,adv,n-suf",
+    "ja_glosses": [
+     "(approximate) time",
+     "around",
+     "about",
+     "toward"
+    ],
+    "vi": "khoảng"
+   },
+   "output": {
+    "id": "jm-1579080-0-time",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "POS_MISMATCH"
+    ],
+    "note": "The English headword 'time' is incorrect for the given sense of 'around, about'. The Japanese 'ころ' and Vietnamese 'khoảng' translate 'around/about', not 'time'."
+   }
+  },
+  {
+   "key": "3a1071e2b97b9b11c7a77f6246263a16423d5739c3e7a277837c4526b5b6068a",
+   "input": {
+    "id": "jm-1579130-0-this_year",
+    "en": "this year",
+    "en_pos": "noun",
+    "en_sense": "this year",
+    "ja": "今年",
+    "ja_reading": "ことし",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "this year"
+    ],
+    "vi": "năm nay"
+   },
+   "output": {
+    "id": "jm-1579130-0-this_year",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for 'this year'."
+   }
+  },
+  {
+   "key": "1b3ed69afdc285d4c7a5d4e438481193f882f01eeb4ffd26a7fc50ab51375658",
+   "input": {
+    "id": "jm-1579510-0-enforcement",
+    "en": "enforcement",
+    "en_pos": "noun",
+    "en_sense": "putting in force (a law); putting into operation; putting into effect; enforcement",
+    "ja": "施行",
+    "ja_reading": "しこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "putting in force (a law)",
+     "putting into operation",
+     "putting into effect",
+     "enforcement"
+    ],
+    "vi": "thi hành"
+   },
+   "output": {
+    "id": "jm-1579510-0-enforcement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'thi hành' is a verb, while the English 'enforcement' is a noun, creating a part-of-speech mismatch. The noun form 'sự thi hành' would be a better match."
+   }
+  },
+  {
+   "key": "a0a5cdf04eb33ad24313ac24e360d0ef7999d3aa764801c76f18276106b64c2a",
+   "input": {
+    "id": "jm-1579840-0-ten",
+    "en": "ten",
+    "en_pos": "numeral",
+    "en_sense": "ten; 10",
+    "ja": "十",
+    "ja_reading": "じゅう",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "ten",
+     "10"
+    ],
+    "vi": "mười"
+   },
+   "output": {
+    "id": "jm-1579840-0-ten",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for the number ten."
+   }
+  },
+  {
+   "key": "b9f2acfda81813dae6ba50c444b11cafe3cddb9d0fdc6bf2dcdfd838331654f4",
+   "input": {
+    "id": "jm-1579990-0-convenient",
+    "en": "convenient",
+    "en_pos": "adjective",
+    "en_sense": "convenient; useful; handy; helpful",
+    "ja": "重宝",
+    "ja_reading": "ちょうほう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "convenient",
+     "useful",
+     "handy",
+     "helpful"
+    ],
+    "vi": "tiện lợi"
+   },
+   "output": {
+    "id": "jm-1579990-0-convenient",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '重宝' is a poor equivalent for 'convenient'; the standard word is '便利' (benri). '重宝' means something is handy and highly valued."
+   }
+  },
+  {
+   "key": "fdb5422567abc926476e5ef895cce06561b01330f02fff766335efaae216e183",
+   "input": {
+    "id": "jm-1580310-0-consumption",
+    "en": "consumption",
+    "en_pos": "noun",
+    "en_sense": "exhaustion; consumption; using up; dissipation; waste",
+    "ja": "消耗",
+    "ja_reading": "しょうもう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "exhaustion",
+     "consumption",
+     "using up",
+     "dissipation",
+     "waste"
+    ],
+    "vi": "tiêu hao"
+   },
+   "output": {
+    "id": "jm-1580310-0-consumption",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of 'using up' or 'depleting' resources or energy."
+   }
+  },
+  {
+   "key": "9128ec0a9dde72724df88ca8d43fba36a90b87c4712f303536e34d56f9a37f67",
+   "input": {
+    "id": "jm-1580480-0-healthy",
+    "en": "healthy",
+    "en_pos": "adjective",
+    "en_sense": "healthy; robust; strong; solid; durable",
+    "ja": "丈夫",
+    "ja_reading": "じょうぶ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "healthy",
+     "robust",
+     "strong",
+     "solid",
+     "durable"
+    ],
+    "vi": "khỏe mạnh"
+   },
+   "output": {
+    "id": "jm-1580480-0-healthy",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'khỏe mạnh' only means 'healthy' for living beings and does not cover the 'strong, durable' sense for objects that both 'healthy' (in this definition) and '丈夫' possess."
+   }
+  },
+  {
+   "key": "a26f9a27c0d82da896f31640e608bd88c5db0ea492dade7c420825073d0f29fd",
+   "input": {
+    "id": "jm-1580570-0-bed",
+    "en": "bed",
+    "en_pos": "noun",
+    "en_sense": "bed; couch",
+    "ja": "寝台",
+    "ja_reading": "しんだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bed",
+     "couch"
+    ],
+    "vi": "giường"
+   },
+   "output": {
+    "id": "jm-1580570-0-bed",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '寝台' is a formal and somewhat dated term for 'bed'; the common modern word is the loanword 'ベッド' (beddo)."
+   }
+  }
+ ]
+}

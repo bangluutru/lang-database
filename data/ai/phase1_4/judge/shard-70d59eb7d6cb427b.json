@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:35:47Z",
+ "items": [
+  {
+   "key": "2b9674dd76bebc44831fcc8c134d1d350bd2279718ebf04fbca327dd00f9b1d2",
+   "input": {
+    "id": "wk-18265-s0",
+    "en": "air conditioner",
+    "en_pos": "noun",
+    "en_sense": "A machine that is used to control temperature and humidity in an enclosed space.",
+    "ja": "エアコン",
+    "ja_reading": "エアコン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "air conditioner",
+     "air conditioning",
+     "aircon"
+    ],
+    "vi": "máy lạnh"
+   },
+   "output": {
+    "id": "wk-18265-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for an air conditioner."
+   }
+  },
+  {
+   "key": "7c1a9cbcb6cb8f32fde74bb84b24efc8c0f72d524dd3f19fbe709a1dfc5aa282",
+   "input": {
+    "id": "wk-18271-e:186d06",
+    "en": "saddle",
+    "en_pos": "noun",
+    "en_sense": "seat for a rider placed on the back of a horse or other animal",
+    "ja": "サドル",
+    "ja_reading": "サドル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "saddle"
+    ],
+    "vi": "yên"
+   },
+   "output": {
+    "id": "wk-18271-e:186d06",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word サドル refers to a bicycle/motorcycle saddle, not a horse saddle, which is 鞍 (kura)."
+   }
+  },
+  {
+   "key": "1a1790b22c7018ffe142a436f6348724bf4558beec8fb4f64ee105eefec19693",
+   "input": {
+    "id": "wk-1828-s0",
+    "en": "which",
+    "en_pos": "determiner",
+    "en_sense": "What, of those mentioned or implied.",
+    "ja": "どの",
+    "ja_reading": "どの",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "which",
+     "what (way)"
+    ],
+    "vi": "nào"
+   },
+   "output": {
+    "id": "wk-1828-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for the determiner \"which\"."
+   }
+  },
+  {
+   "key": "3c84078eb4a03db1b08a88284511ae6eed9b78ea79bd4731e14318fa53b189fd",
+   "input": {
+    "id": "wk-18315-s0",
+    "en": "cardinality",
+    "en_pos": "noun",
+    "en_sense": "The number of elements a given set contains.",
+    "ja": "濃度",
+    "ja_reading": "のうど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cardinality"
+    ],
+    "vi": "lực lượng"
+   },
+   "output": {
+    "id": "wk-18315-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese `lực lượng` means \"force/strength\" and is not the correct term for mathematical cardinality, which is `bản số`."
+   }
+  },
+  {
+   "key": "ac039cb3cba0e3ab88e2d7497d8f6d68389b688f00671a059f94795e636eeb78",
+   "input": {
+    "id": "wk-1832-s0",
+    "en": "smell",
+    "en_pos": "noun",
+    "en_sense": "A sensation, pleasant or unpleasant, detected by inhaling air (or, the case of water-breathing animals, water) carrying airborne molecules of a substance.",
+    "ja": "匂い",
+    "ja_reading": "におい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "smell",
+     "scent",
+     "odour",
+     "odor",
+     "stench"
+    ],
+    "vi": "hơi"
+   },
+   "output": {
+    "id": "wk-1832-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word for \"smell\" (the sensation) is `mùi`, not `hơi` which means vapor or breath."
+   }
+  },
+  {
+   "key": "c915703f44c53778a3e1648c868d9e547af62d190b0930d2a00c82e68fc0a189",
+   "input": {
+    "id": "wk-1832-s1",
+    "en": "smell",
+    "en_pos": "noun",
+    "en_sense": "The sense that detects odours.",
+    "ja": "嗅覚",
+    "ja_reading": "きゅうかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sense of smell",
+     "olfaction"
+    ],
+    "vi": "khứu giác"
+   },
+   "output": {
+    "id": "wk-1832-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and matching technical terms for the \"sense of smell\"."
+   }
+  },
+  {
+   "key": "0113fbbfaeffd7cea8b669e2fac9591d33a6a4aac4223634c8a9e1f5134de541",
+   "input": {
+    "id": "wk-18325-s0",
+    "en": "ballet",
+    "en_pos": "noun",
+    "en_sense": "A classical form of dance.",
+    "ja": "バレエ",
+    "ja_reading": "バレエ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ballet"
+    ],
+    "vi": "ba lê"
+   },
+   "output": {
+    "id": "wk-18325-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard loanwords for \"ballet\" and are perfect equivalents."
+   }
+  },
+  {
+   "key": "1c369b3650bb6d76bb510d1f81f33f77e2cd1d50db224b395beb279ca26ceb52",
+   "input": {
+    "id": "wk-1833-e:82afcf",
+    "en": "smell",
+    "en_pos": "verb",
+    "en_sense": "to have a particular smell, whether good or bad; if descriptive, followed by \"like\" or \"of\"",
+    "ja": "匂う",
+    "ja_reading": "におう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to be fragrant",
+     "to smell (good)"
+    ],
+    "vi": "có mùi"
+   },
+   "output": {
+    "id": "wk-1833-e:82afcf",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese verb 匂う typically implies a good or neutral smell, making it narrower than the English verb \"smell\" which can be good or bad."
+   }
+  },
+  {
+   "key": "a2250ac7a414e82d3aba08f64ad30f2f06b4f400f162fe0124d5618af3176a8d",
+   "input": {
+    "id": "wk-1833-e:b01309",
+    "en": "smell",
+    "en_pos": "verb",
+    "en_sense": "sense with nose",
+    "ja": "嗅ぐ",
+    "ja_reading": "かぐ",
+    "ja_pos": "v5g,vt",
+    "ja_glosses": [
+     "to sniff",
+     "to smell"
+    ],
+    "vi": "ngửi"
+   },
+   "output": {
+    "id": "wk-1833-e:b01309",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard transitive verbs for the action of smelling."
+   }
+  },
+  {
+   "key": "dbe9f9057099b61d484fd458fa865233e5c14d2f33246a8431e650505ce41ade",
+   "input": {
+    "id": "wk-1835-s0",
+    "en": "translate",
+    "en_pos": "verb",
+    "en_sense": "To change spoken words or written text (of a book, document, movie, etc.) from one language to another.",
+    "ja": "訳す",
+    "ja_reading": "やくす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to translate",
+     "to interpret"
+    ],
+    "vi": "dịch"
+   },
+   "output": {
+    "id": "wk-1835-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general verbs for \"to translate\"."
+   }
+  },
+  {
+   "key": "adf49c80d47e6651f8d1566987597f6a5abfa11f89a60559d686b999b817ae62",
+   "input": {
+    "id": "wk-18396-s0",
+    "en": "folk music",
+    "en_pos": "noun",
+    "en_sense": "Any genre of music originating from the ethnic community of a specific region, often passed down through oral tradition, without recorded songwriters and possessing a clear purpose or social function.",
+    "ja": "フォークソング",
+    "ja_reading": "フォークソング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "folk song",
+     "folk music"
+    ],
+    "vi": "dân ca"
+   },
+   "output": {
+    "id": "wk-18396-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese フォークソング refers to Western-style folk revival music, not traditional folk music as defined, for which the term is 民謡 (min'yō)."
+   }
+  },
+  {
+   "key": "2bf16b663e9372b2a2db19c670e3c0af7bdf14ba007f4d0bdbfd91312950feba",
+   "input": {
+    "id": "wk-18397-s0",
+    "en": "spinal cord",
+    "en_pos": "noun",
+    "en_sense": "A thick, whitish cord of nerve tissue which is a major part of the vertebrate central nervous system. It extends from the brain stem down through the spine, with nerves branching off to various parts of the body.",
+    "ja": "脊髄",
+    "ja_reading": "せきずい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spinal cord"
+    ],
+    "vi": "tuỷ sống"
+   },
+   "output": {
+    "id": "wk-18397-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard anatomical terms for \"spinal cord\"."
+   }
+  }
+ ]
+}

@@ -106,8 +106,27 @@ The **JP Professional Vocabulary Database** utilizes public government taxonomie
 ## 11. JLPT Consensus Vocabulary Project
 
 - **Official Source:** Tanos / Open JLPT Vocabulary Collation (`JLPT_vocab_ALL.csv`).
-- **License:** Creative Commons Zero (CC0 1.0) / Public Domain
+- **License:** Creative Commons Attribution 3.0 (CC-BY-3.0) — Jonathan Waller / tanos.co.uk; repository wrapper (Bluskyo/JLPT_Vocabulary) is MIT.
+  *(Phase 1.4 correction: earlier versions of this file said CC0; the immutable snapshot `data/raw/jlpt_consensus/2026-v1/metadata.json` — CC-BY-3.0 — is the authoritative statement.)*
 - **Application in Database:**
-  Community consensus JLPT vocabulary classifications across levels N5 through N1.
+  Community consensus JLPT vocabulary classifications across levels N5 through N1. These are *derived / community* classifications — there is no official fixed JLPT vocabulary list.
+
+---
+
+## 12. Wiktionary (English edition) via Wiktextract / kaikki.org  *(added in Phase 1.4)*
+
+- **Source:** English Wiktionary translation tables, as extracted by Wiktextract (T. Ylonen) and published at <https://kaikki.org/dictionary/English/>. Snapshot `data/raw/wiktionary_en/2026-09-28/`.
+- **License:** Wiktionary text is dual-licensed CC-BY-SA 4.0 and GFDL (<https://en.wiktionary.org/wiki/Wiktionary:Copyrights>). We redistribute the derived records under **CC-BY-SA-4.0** (share-alike tracked per evidence record).
+- **Attribution:** “Wiktionary contributors”, individual authorship is recorded in the page histories of the cited English Wiktionary entries; each record carries a `line:N, sense:…` locator into the immutable extract.
+- **Application in Database:** Sense-level English headword ↔ Japanese ↔ Vietnamese translation blocks (the editor-asserted equivalence inside one `trans-top` sense). Used as a *candidate source*; every pair is independently corroborated against JMdict and judged before promotion.
+- **License compatibility note:** JMdict/KANJIDIC2/Jōyō-derived data are CC-BY-SA-3.0; CC-BY-SA-4.0 is an officially designated compatible license for adaptations of BY-SA-3.0 material, so the combined corpus may be shared under CC-BY-SA-4.0.
+
+---
+
+## 13. Sources evaluated and deliberately NOT ingested (Phase 1.4)
+
+- **wordfreq** (en/ja/vi frequencies): data is compiled from many corpora with mixed/uncertain redistribution terms → licensing could not be established → not ingested.
+- **Proprietary / paywalled lists** (Oxford 3000/5000, English Vocabulary Profile, commercial J-V dictionaries): not redistributable → not used. CEFR/EIKEN/TOEIC/IELTS/TOEFL values are therefore *inferred* from open lists and labelled as such.
+
 
 

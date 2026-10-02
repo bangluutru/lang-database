@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:30:03Z",
+ "items": [
+  {
+   "key": "164f0e5df413c2c80c0294d5a2fac10e90d229efd7b053e6a8d0d4e3d379cee5",
+   "input": {
+    "id": "jm-1214270-0-simple",
+    "en": "simple",
+    "en_pos": "adjective",
+    "en_sense": "simple; simplified",
+    "ja": "簡易",
+    "ja_reading": "かんい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "simple",
+     "simplified"
+    ],
+    "vi": "đơn giản"
+   },
+   "output": {
+    "id": "jm-1214270-0-simple",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for 'simple' or 'simplified'."
+   }
+  },
+  {
+   "key": "63de24aa2b46325b80b07f7b569299c31e3acf93d44d51ddd6d5bc402d00bbea",
+   "input": {
+    "id": "jm-1214410-0-loose",
+    "en": "loose",
+    "en_pos": "adjective",
+    "en_sense": "loose",
+    "ja": "緩い",
+    "ja_reading": "ゆるい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "loose"
+    ],
+    "vi": "lỏng"
+   },
+   "output": {
+    "id": "jm-1214410-0-loose",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the primary, natural words for 'loose' in the physical sense."
+   }
+  },
+  {
+   "key": "5c393f0bfd7b070fdb0191ded416e105b2861096d2891ba98e5e520683f97f76",
+   "input": {
+    "id": "jm-1214430-1-relax",
+    "en": "relax",
+    "en_pos": "verb",
+    "en_sense": "to become less tense; to relax; to let one's guard down",
+    "ja": "緩む",
+    "ja_reading": "ゆるむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to become less tense",
+     "to relax",
+     "to let one's guard down"
+    ],
+    "vi": "thư giãn"
+   },
+   "output": {
+    "id": "jm-1214430-1-relax",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thư giãn' only means to relax/de-stress and doesn't cover the broader senses of 'relax'/'緩む' like 'to slacken' or 'to let one's guard down'."
+   }
+  },
+  {
+   "key": "66f160f30860fc51194961db6cbe3190fe058fe44a5a37f5db2640f61c6d3f58",
+   "input": {
+    "id": "jm-1214450-0-loose",
+    "en": "loose",
+    "en_pos": "adjective",
+    "en_sense": "loose; slack",
+    "ja": "緩やか",
+    "ja_reading": "ゆるやか",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "loose",
+     "slack"
+    ],
+    "vi": "lỏng lẻo"
+   },
+   "output": {
+    "id": "jm-1214450-0-loose",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "This set captures a more figurative or nuanced sense of 'loose/slack' (e.g., lax, not rigorous), and the equivalents are appropriate for that."
+   }
+  },
+  {
+   "key": "729bda38a3a3d93c1aa593fe10058207dc1a15d80e4c42148279149dc359d442",
+   "input": {
+    "id": "jm-1214980-0-observation",
+    "en": "observation",
+    "en_pos": "noun",
+    "en_sense": "observation; survey; measurement",
+    "ja": "観測",
+    "ja_reading": "かんそく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "observation",
+     "survey",
+     "measurement"
+    ],
+    "vi": "quan sát"
+   },
+   "output": {
+    "id": "jm-1214980-0-observation",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'quan sát' is a general verb 'to observe' and lacks the specific 'survey/measurement' nuance of the English and Japanese nouns."
+   }
+  },
+  {
+   "key": "d02d0647cd678d1a5a1fdf15e1f0861985a8096ea630abd556f0bfe3305b6cda",
+   "input": {
+    "id": "jm-1215200-0-appreciation",
+    "en": "appreciation",
+    "en_pos": "noun",
+    "en_sense": "appreciation (of art, music, poetry, etc.)",
+    "ja": "鑑賞",
+    "ja_reading": "かんしょう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "appreciation (of art, music, poetry, etc.)"
+    ],
+    "vi": "thưởng thức"
+   },
+   "output": {
+    "id": "jm-1215200-0-appreciation",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'thưởng thức' is a verb ('to appreciate/enjoy') while the English and Japanese words are nouns ('appreciation')."
+   }
+  },
+  {
+   "key": "ea23a06d52595c446cfa246542f39b22432446bf90d787e40f374be1ecca5acc",
+   "input": {
+    "id": "jm-1215230-2-between",
+    "en": "between",
+    "en_pos": "noun",
+    "en_sense": "between (two parties or things)",
+    "ja": "間",
+    "ja_reading": "あいだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "between (two parties or things)"
+    ],
+    "vi": "giữa"
+   },
+   "output": {
+    "id": "jm-1215230-2-between",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'giữa' is a preposition ('between'), not a noun ('the space between') like the English and Japanese entries."
+   }
+  },
+  {
+   "key": "47658e8c6f8b974769467d0e17325382ccd497cdca76e20523948a5e4f7e0749",
+   "input": {
+    "id": "jm-1215260-1-manage",
+    "en": "manage",
+    "en_pos": "verb",
+    "en_sense": "to serve (suit, meet) the purpose; to be good enough; to be enough; to manage; to make do",
+    "ja": "間に合う",
+    "ja_reading": "まにあう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to serve (suit, meet) the purpose",
+     "to be good enough",
+     "to be enough",
+     "to manage",
+     "to make do"
+    ],
+    "vi": "đủ"
+   },
+   "output": {
+    "id": "jm-1215260-1-manage",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'đủ' means 'enough' (adjective/adverb), not 'to manage' (verb)."
+   }
+  },
+  {
+   "key": "494e7630d9b0e14085bcd71671512363784d2df34114c5b989d22c82d2b3d814",
+   "input": {
+    "id": "jm-1215290-0-soon",
+    "en": "soon",
+    "en_pos": "adverb",
+    "en_sense": "soon; shortly; before long; in a short time; in a little while",
+    "ja": "まもなく",
+    "ja_reading": "まもなく",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "soon",
+     "shortly",
+     "before long",
+     "in a short time",
+     "in a little while"
+    ],
+    "vi": "sắp"
+   },
+   "output": {
+    "id": "jm-1215290-0-soon",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for 'soon'."
+   }
+  },
+  {
+   "key": "e6f44da30b275232fad2d01e19c6fd738c70df1ca65e49fafe1027c5a4158868",
+   "input": {
+    "id": "jm-1215550-0-indirect",
+    "en": "indirect",
+    "en_pos": "adjective",
+    "en_sense": "indirect",
+    "ja": "間接的",
+    "ja_reading": "かんせつてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "indirect"
+    ],
+    "vi": "gián tiếp"
+   },
+   "output": {
+    "id": "jm-1215550-0-indirect",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents, with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "4f2d27fa43b8325c022fd975734b4f996f448d3e97f74bfa81dc7bfd1edb1783",
+   "input": {
+    "id": "jm-1216050-0-participation",
+    "en": "participation",
+    "en_pos": "noun",
+    "en_sense": "participation; taking part in; participating in; being concerned in",
+    "ja": "関与",
+    "ja_reading": "かんよ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "participation",
+     "taking part in",
+     "participating in",
+     "being concerned in"
+    ],
+    "vi": "tham gia"
+   },
+   "output": {
+    "id": "jm-1216050-0-participation",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'tham gia' is a verb ('to participate'), while the English and Japanese words are nouns ('participation')."
+   }
+  },
+  {
+   "key": "cbb054b8e0bfc5edb6af66f79908ad2089c6f127f2f35f53f4124e606d79d789",
+   "input": {
+    "id": "jm-1216250-0-circle",
+    "en": "circle",
+    "en_pos": "noun",
+    "en_sense": "circle",
+    "ja": "丸",
+    "ja_reading": "まる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "circle"
+    ],
+    "vi": "vòng tròn"
+   },
+   "output": {
+    "id": "jm-1216250-0-circle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural words for 'circle'."
+   }
+  }
+ ]
+}

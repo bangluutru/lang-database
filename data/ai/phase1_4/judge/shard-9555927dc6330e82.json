@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:26Z",
+ "items": [
+  {
+   "key": "3891e5cb7bbbb6d13a05800dec037ccb7306b6e4dfc723f356d3811b0b401af5",
+   "input": {
+    "id": "wk-10673-s0",
+    "en": "potential",
+    "en_pos": "noun",
+    "en_sense": "A currently unrealized ability (with the most common adposition being to).",
+    "ja": "可能性",
+    "ja_reading": "かのうせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "potential",
+     "potentiality",
+     "promise"
+    ],
+    "vi": "tiềm năng"
+   },
+   "output": {
+    "id": "wk-10673-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 可能性 also means 'possibility' and is broader than the specific sense of 'unrealized ability'. A more precise term would be 潜在力 (senzai-ryoku)."
+   }
+  },
+  {
+   "key": "883375c05898f2903db074c1d02e7be55c6403562bb990d0f6aab9f70b306e4e",
+   "input": {
+    "id": "wk-10680-s0",
+    "en": "prey",
+    "en_pos": "noun",
+    "en_sense": "That which is or may be seized by animals to be devoured.",
+    "ja": "獲物",
+    "ja_reading": "えもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "prey",
+     "catch",
+     "kill",
+     "game"
+    ],
+    "vi": "mồi"
+   },
+   "output": {
+    "id": "wk-10680-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'mồi' means 'bait' or 'lure', not 'prey'. The correct word for prey is 'con mồi'."
+   }
+  },
+  {
+   "key": "ab186cadc20e6f843b86ce1ef69f7808aaa4212725bcca042c4745d4f5fb2be4",
+   "input": {
+    "id": "wk-10683-s0",
+    "en": "priority",
+    "en_pos": "noun",
+    "en_sense": "An item's relative importance.",
+    "ja": "優先権",
+    "ja_reading": "ゆうせんけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "priority",
+     "preference",
+     "preferential right",
+     "right of way"
+    ],
+    "vi": "sự ưu tiên"
+   },
+   "output": {
+    "id": "wk-10683-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 優先権 specifically means 'right of priority' or 'preferential right', which is much narrower and more legalistic than the general sense of 'relative importance'. The common word is 優先 (yuusen) or 優先順位 (yuusenjun'i)."
+   }
+  },
+  {
+   "key": "51753d1b571693fabd1a1915155e39ed0118f0260082897ab54aba7d3fb167c7",
+   "input": {
+    "id": "wk-10684-s2",
+    "en": "prize",
+    "en_pos": "noun",
+    "en_sense": "An honour or reward striven for in a competitive contest; anything offered to be competed for, or as an inducement to, or reward of, effort.",
+    "ja": "賞",
+    "ja_reading": "しょう",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "prize",
+     "award"
+    ],
+    "vi": "giải"
+   },
+   "output": {
+    "id": "wk-10684-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a prize in a competition."
+   }
+  },
+  {
+   "key": "4b904cb15b4633b688594ef927bfe10ca772561d9f2c0ea1d2d6d0ba349ab611",
+   "input": {
+    "id": "wk-1070-s2",
+    "en": "hunt",
+    "en_pos": "verb",
+    "en_sense": "To drive; to chase; with down, from, away, etc.",
+    "ja": "狩る",
+    "ja_reading": "かる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to hunt (animals)"
+    ],
+    "vi": "săn bắn"
+   },
+   "output": {
+    "id": "wk-1070-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense is 'to drive; to chase', but the Japanese and Vietnamese words mean 'to hunt animals for game', which is a different sense of 'hunt'."
+   }
+  },
+  {
+   "key": "3cefe122194d2fc603fa7752d54c700f99e6b1e57d987c977fd1f4c6e120b5dd",
+   "input": {
+    "id": "wk-10702-e:104a3c",
+    "en": "razor",
+    "en_pos": "noun",
+    "en_sense": "shaving knife",
+    "ja": "かみそり",
+    "ja_reading": "かみそり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "razor"
+    ],
+    "vi": "dao cạo"
+   },
+   "output": {
+    "id": "wk-10702-e:104a3c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'razor'."
+   }
+  },
+  {
+   "key": "de3e695bf11b4a13afab3aaf7faa024227fe8138d800c8d7af4c089b761d4551",
+   "input": {
+    "id": "wk-10703-s0",
+    "en": "reach",
+    "en_pos": "verb",
+    "en_sense": "To extend, stretch, or thrust out (for example a limb or object held in the hand).",
+    "ja": "伸ばす",
+    "ja_reading": "のばす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to reach out",
+     "to hold out"
+    ],
+    "vi": "với"
+   },
+   "output": {
+    "id": "wk-10703-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs perfectly capture the sense of extending a limb to get something."
+   }
+  },
+  {
+   "key": "118ec1dab0a89a80dd995e6545789ef4fef39035c528ab022c5b5728d87bdc8d",
+   "input": {
+    "id": "wk-10706-s0",
+    "en": "reap",
+    "en_pos": "verb",
+    "en_sense": "To cut (for example a grain) with a sickle, scythe, or reaping machine.",
+    "ja": "刈る",
+    "ja_reading": "かる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to cut (grass, hair, etc.)",
+     "to mow",
+     "to clip",
+     "to trim",
+     "to prune",
+     "to shear"
+    ],
+    "vi": "gặt"
+   },
+   "output": {
+    "id": "wk-10706-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 刈る means 'to cut, mow, trim' in general (grass, hair) and is much broader than 'reap', which is specific to harvesting grain. The Vietnamese gặt is a perfect match."
+   }
+  },
+  {
+   "key": "a91d6997440ecbae947364a40b50e0a4c5932341b024d9ed557b38e98d552825",
+   "input": {
+    "id": "wk-10707-e:c6a28e",
+    "en": "recently",
+    "en_pos": "adverb",
+    "en_sense": "in the recent past",
+    "ja": "最近",
+    "ja_reading": "さいきん",
+    "ja_pos": "n,adj-no,adv",
+    "ja_glosses": [
+     "recently",
+     "lately",
+     "these days",
+     "nowadays",
+     "right now"
+    ],
+    "vi": "mới đây"
+   },
+   "output": {
+    "id": "wk-10707-e:c6a28e",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "最近 can also mean 'nowadays' or 'these days', making it slightly broader than 'recently', but it is the most common and acceptable translation."
+   }
+  },
+  {
+   "key": "56f662308511d22cad13f6ec705c6e183a0868ee0468dc7a85b3b61ab8120895",
+   "input": {
+    "id": "wk-10708-s1",
+    "en": "recessive",
+    "en_pos": "adjective",
+    "en_sense": "Able to be masked by a dominant allele or trait.",
+    "ja": "潜性",
+    "ja_reading": "せんせい",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "recessive"
+    ],
+    "vi": "lặn"
+   },
+   "output": {
+    "id": "wk-10708-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct technical terms for a recessive genetic trait."
+   }
+  },
+  {
+   "key": "0eb3695c19ee7efdb77cd4f130cc0c72d2464057733b2c5eff9f3c1f9a1a8c7c",
+   "input": {
+    "id": "wk-1071-s0",
+    "en": "hunt",
+    "en_pos": "noun",
+    "en_sense": "The act of hunting.",
+    "ja": "狩り",
+    "ja_reading": "かり",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "hunting",
+     "hunt",
+     "shooting"
+    ],
+    "vi": "sự săn bắn"
+   },
+   "output": {
+    "id": "wk-1071-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard nouns for 'the act of hunting'."
+   }
+  },
+  {
+   "key": "41faac486bca74339e459914a6632d07fe8b7b6ee413c0cf780dac2fae4121ae",
+   "input": {
+    "id": "wk-10710-s0",
+    "en": "recommend",
+    "en_pos": "verb",
+    "en_sense": "To bestow commendation on; to represent favorably; to suggest, endorse or encourage as an appropriate choice.",
+    "ja": "勧める",
+    "ja_reading": "すすめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to recommend (someone to do)",
+     "to advise",
+     "to encourage",
+     "to urge"
+    ],
+    "vi": "giới thiệu"
+   },
+   "output": {
+    "id": "wk-10710-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese word 'giới thiệu' primarily means 'to introduce' and is broader than 'recommend', which implies endorsement. It can be used for 'recommend' but lacks precision."
+   }
+  }
+ ]
+}

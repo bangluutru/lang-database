@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:31:03Z",
+ "items": [
+  {
+   "key": "2903738628ea661321d1ab09d8c256762a469dc5150593513480a9911bc12556",
+   "input": {
+    "id": "wk-13708-s1",
+    "en": "institute",
+    "en_pos": "noun",
+    "en_sense": "An institution of learning; a college, especially for technical subjects",
+    "ja": "学院",
+    "ja_reading": "がくいん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "institute",
+     "academy"
+    ],
+    "vi": "học viện"
+   },
+   "output": {
+    "id": "wk-13708-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for a learning institution or academy."
+   }
+  },
+  {
+   "key": "829e6d2187469ffb6427c45646f3bb6b94a9c0d59afd46ac04be4d4aef55c2f6",
+   "input": {
+    "id": "wk-1371-s0",
+    "en": "duck",
+    "en_pos": "noun",
+    "en_sense": "Any of certain aquatic birds of the family Anatidae, having a flat bill and webbed feet, distinguished from swans and geese by generally being smaller and shorter-necked.",
+    "ja": "かも",
+    "ja_reading": "かも",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "duck"
+    ],
+    "vi": "vịt"
+   },
+   "output": {
+    "id": "wk-1371-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for \"duck\"."
+   }
+  },
+  {
+   "key": "c7bed8227bec4d8dd508895e26bd620a32610e4a9ed2600c308106f1a18876b7",
+   "input": {
+    "id": "wk-13711-s0",
+    "en": "interview",
+    "en_pos": "verb",
+    "en_sense": "To ask questions of (somebody); to have an interview.",
+    "ja": "面接する",
+    "ja_reading": "めんせつする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "interview (e.g. for a job)"
+    ],
+    "vi": "phỏng vấn"
+   },
+   "output": {
+    "id": "wk-13711-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `面接する` is specific to job/school interviews, while the English sense is general; `インタビューする` would be a better match for other contexts."
+   }
+  },
+  {
+   "key": "84c9f2411d69a3f662c4f5e69086cbdeadf4869be0cb73111ef740ad91045cb4",
+   "input": {
+    "id": "wk-13712-s0",
+    "en": "intention",
+    "en_pos": "noun",
+    "en_sense": "A course of action that a person intends to follow.",
+    "ja": "意向",
+    "ja_reading": "いこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intention",
+     "inclination",
+     "mind",
+     "idea",
+     "wish",
+     "view"
+    ],
+    "vi": "ý định"
+   },
+   "output": {
+    "id": "wk-13712-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `意向` (ikou) has a nuance of 'inclination' or 'disposition' which is slightly different from the more plan-focused 'intention' / `ý định`."
+   }
+  },
+  {
+   "key": "53f7a84b773d02ff167bd799983d512eca12afb116c672fa23dc9003619ecac9",
+   "input": {
+    "id": "wk-13716-s0",
+    "en": "resin",
+    "en_pos": "noun",
+    "en_sense": "A viscous water-insoluble hydrocarbon exudate of certain plants, or such a substance as a component of a plant exudate; used in lacquers, varnishes and many other applications.",
+    "ja": "樹脂",
+    "ja_reading": "じゅし",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "resin",
+     "rosin"
+    ],
+    "vi": "nhựa"
+   },
+   "output": {
+    "id": "wk-13716-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `nhựa` is too broad, as its primary modern meaning is \"plastic\", creating ambiguity with \"resin\"."
+   }
+  },
+  {
+   "key": "ab7bb7068bec2e0879b9aa9354a2203919b18e50013d95e92c1667cd1bd0802b",
+   "input": {
+    "id": "wk-13717-s0",
+    "en": "good-looking",
+    "en_pos": "adjective",
+    "en_sense": "Physically attractive (of a person).",
+    "ja": "かっこいい",
+    "ja_reading": "かっこいい",
+    "ja_pos": "adj-ix",
+    "ja_glosses": [
+     "attractive",
+     "good-looking",
+     "stylish",
+     "cool",
+     "smooth",
+     "neat"
+    ],
+    "vi": "đẹp"
+   },
+   "output": {
+    "id": "wk-13717-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "`かっこいい` primarily means \"cool\" or \"stylish\" and is mostly used for men, making it a poor general equivalent for the gender-neutral \"good-looking\"."
+   }
+  },
+  {
+   "key": "8a55d66c51991b26bdf09f4311cb24210a07c48feaa507bfe45104f0ca75dad4",
+   "input": {
+    "id": "wk-13727-s1",
+    "en": "congress",
+    "en_pos": "noun",
+    "en_sense": "A legislative body of a state, originally the bicameral legislature of the United States of America.",
+    "ja": "議会",
+    "ja_reading": "ぎかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "congress",
+     "parliament",
+     "diet",
+     "legislative assembly"
+    ],
+    "vi": "quốc hội"
+   },
+   "output": {
+    "id": "wk-13727-s1",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese and Vietnamese terms are generic for \"legislature\", while the English sense is specific to \"Congress\", particularly the US model."
+   }
+  },
+  {
+   "key": "719a83e854455252505bf93b2052ca8a4e2e98558ffb95cc8f5b1864ec871874",
+   "input": {
+    "id": "wk-1373-s0",
+    "en": "apology",
+    "en_pos": "noun",
+    "en_sense": "An expression of remorse or regret for having said or done something that harmed another: an instance of apologizing (saying that one is sorry).",
+    "ja": "詫び",
+    "ja_reading": "わび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "apology"
+    ],
+    "vi": "sự xin lỗi"
+   },
+   "output": {
+    "id": "wk-1373-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `sự xin lỗi` is a slightly awkward nominalization; `lời xin lỗi` (words of apology) is often more natural for \"an apology\"."
+   }
+  },
+  {
+   "key": "6caa23cc0285fd26019373b5589fea381776d2255566a7117d092d17b187690f",
+   "input": {
+    "id": "wk-13737-s1",
+    "en": "slightly",
+    "en_pos": "adverb",
+    "en_sense": "To a small extent or degree.",
+    "ja": "少し",
+    "ja_reading": "すこし",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "a little",
+     "a bit",
+     "a small amount",
+     "a few",
+     "some",
+     "slightly"
+    ],
+    "vi": "hơi"
+   },
+   "output": {
+    "id": "wk-13737-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, common equivalents for \"slightly\"."
+   }
+  },
+  {
+   "key": "bec938b457509ec482f1c024bd6d1321b09890c660b5ef3f383988cc2c6af7c4",
+   "input": {
+    "id": "wk-13752-s7",
+    "en": "liberty",
+    "en_pos": "noun",
+    "en_sense": "An empty space next to a group of stones of the same color.",
+    "ja": "呼吸点",
+    "ja_reading": "こきゅうてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "liberty (of a stone)"
+    ],
+    "vi": "khí"
+   },
+   "output": {
+    "id": "wk-13752-s7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese term `呼吸点` is a valid but non-standard and rare term for a Go liberty; the standard term is `ダメ` (dame)."
+   }
+  },
+  {
+   "key": "5f8ef37d8cc1615e7411e3bb7e1eca569d2f8ccfbe872c6e5d0871392c33c9f1",
+   "input": {
+    "id": "wk-1376-e:96044d",
+    "en": "tulip",
+    "en_pos": "noun",
+    "en_sense": "plant",
+    "ja": "チューリップ",
+    "ja_reading": "チューリップ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tulip"
+    ],
+    "vi": "tulip"
+   },
+   "output": {
+    "id": "wk-1376-e:96044d",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard (loanword) names for the tulip flower."
+   }
+  },
+  {
+   "key": "150caa04230e2725e6a73948bf1d63470d32ac5f3d32717037c869dceff2e4df",
+   "input": {
+    "id": "wk-13776-s2",
+    "en": "initial",
+    "en_pos": "noun",
+    "en_sense": "onset, part of a syllable that precedes the syllable nucleus in phonetics and phonology.",
+    "ja": "声母",
+    "ja_reading": "せいぼ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "initial (part of Chinese syllable)"
+    ],
+    "vi": "thanh mẫu"
+   },
+   "output": {
+    "id": "wk-13776-s2",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese terms refer specifically to the initial in Chinese/Sino-xenic phonology, while the English sense is the general phonological concept of an 'onset'."
+   }
+  }
+ ]
+}

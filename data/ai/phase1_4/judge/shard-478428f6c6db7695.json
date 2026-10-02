@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:41:18Z",
+ "items": [
+  {
+   "key": "fe59f163dd7a2e5e8ca91c486531eaf03ba89b6aa9ebe06e5554dc9ec5dc73d7",
+   "input": {
+    "id": "jm-1479920-0-while",
+    "en": "while",
+    "en_pos": "conjunction",
+    "en_sense": "while; although; though; but",
+    "ja": "半面",
+    "ja_reading": "はんめん",
+    "ja_pos": "conj,prt",
+    "ja_glosses": [
+     "while",
+     "although",
+     "though",
+     "but"
+    ],
+    "vi": "trong khi"
+   },
+   "output": {
+    "id": "jm-1479920-0-while",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'trong khi' primarily means 'while' in a temporal sense; for the concessive sense of 'although/but', 'mặc dù' or 'nhưng' would be more natural and precise."
+   }
+  },
+  {
+   "key": "29b4851f8625b5ec9ed4c5d70d582abc2e91c9ba98bff74c568bdca9fbe8a2e4",
+   "input": {
+    "id": "jm-1481550-0-commit",
+    "en": "commit",
+    "en_pos": "verb",
+    "en_sense": "to commit (e.g. crime); to perpetrate; to make (e.g. mistake)",
+    "ja": "犯す",
+    "ja_reading": "おかす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to commit (e.g. crime)",
+     "to perpetrate",
+     "to make (e.g. mistake)"
+    ],
+    "vi": "phạm"
+   },
+   "output": {
+    "id": "jm-1481550-0-commit",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for committing a crime or mistake."
+   }
+  },
+  {
+   "key": "70cb039760e471f147f4e5a28422db486b133f457b7964dd8676a4bdbad9e402",
+   "input": {
+    "id": "jm-1481890-0-extent",
+    "en": "extent",
+    "en_pos": "noun",
+    "en_sense": "extent; scope; sphere; range; span",
+    "ja": "範囲",
+    "ja_reading": "はんい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "extent",
+     "scope",
+     "sphere",
+     "range",
+     "span"
+    ],
+    "vi": "phạm vi"
+   },
+   "output": {
+    "id": "jm-1481890-0-extent",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents, with the Japanese and Vietnamese terms being cognates."
+   }
+  },
+  {
+   "key": "ad708c05d9faa25551ab6826b4f25aca5e69724977313e0340da9c2be5beb646",
+   "input": {
+    "id": "jm-1482980-0-rejection",
+    "en": "rejection",
+    "en_pos": "noun",
+    "en_sense": "rejection; negation; voting down",
+    "ja": "否決",
+    "ja_reading": "ひけつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "rejection",
+     "negation",
+     "voting down"
+    ],
+    "vi": "bác bỏ"
+   },
+   "output": {
+    "id": "jm-1482980-0-rejection",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese term 'bác bỏ' is a verb, while the English 'rejection' and Japanese '否決' are nouns."
+   }
+  },
+  {
+   "key": "99acc44c2cbfb442d4c4fe9ddac72c41cab1265ae3e7e14e834106c78e1ec438",
+   "input": {
+    "id": "jm-1483180-0-beyond",
+    "en": "beyond",
+    "en_pos": "pronoun",
+    "en_sense": "beyond; across; the other side; the distance",
+    "ja": "かなた",
+    "ja_reading": "かなた",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "beyond",
+     "across",
+     "the other side",
+     "the distance"
+    ],
+    "vi": "phía bên kia"
+   },
+   "output": {
+    "id": "jm-1483180-0-beyond",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English and Japanese terms are somewhat literary, while the Vietnamese is a common, neutral phrase, but all correctly convey the meaning of 'the other side'."
+   }
+  },
+  {
+   "key": "95b883f0ef3fe2ba295cd91c65af7b6b76143e4ede8a07b0247bb98972c9e745",
+   "input": {
+    "id": "jm-1483600-0-relatively",
+    "en": "relatively",
+    "en_pos": "adverb",
+    "en_sense": "comparatively; relatively",
+    "ja": "比較的",
+    "ja_reading": "ひかくてき",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "comparatively",
+     "relatively"
+    ],
+    "vi": "tương đối"
+   },
+   "output": {
+    "id": "jm-1483600-0-relatively",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents."
+   }
+  },
+  {
+   "key": "cb3de39195d43e313f73f929bb600cf3449f6a68429ff8eb1caf39f150564ee2",
+   "input": {
+    "id": "jm-1483680-0-ratio",
+    "en": "ratio",
+    "en_pos": "noun",
+    "en_sense": "ratio; proportion; percentage",
+    "ja": "比率",
+    "ja_reading": "ひりつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ratio",
+     "proportion",
+     "percentage"
+    ],
+    "vi": "tỉ lệ"
+   },
+   "output": {
+    "id": "jm-1483680-0-ratio",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents, with the Japanese and Vietnamese terms being cognates."
+   }
+  },
+  {
+   "key": "c12299eb188775be3c06698aecad00a291cc753508a9a132014cfc890e620718",
+   "input": {
+    "id": "jm-1483805-0-leather",
+    "en": "leather",
+    "en_pos": "noun",
+    "en_sense": "leather",
+    "ja": "革",
+    "ja_reading": "かわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "leather"
+    ],
+    "vi": "da"
+   },
+   "output": {
+    "id": "jm-1483805-0-leather",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'da' means both 'skin' and 'leather', making it broader than English 'leather' and Japanese '革' (which specifically means leather)."
+   }
+  },
+  {
+   "key": "a9e3a07f7201e0c7fc34fc08cfbdabb65645c70845b045884655f8a8a7a87951",
+   "input": {
+    "id": "jm-1484320-0-cover",
+    "en": "cover",
+    "en_pos": "verb",
+    "en_sense": "to cover (with something)",
+    "ja": "かぶせる",
+    "ja_reading": "かぶせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to cover (with something)"
+    ],
+    "vi": "che"
+   },
+   "output": {
+    "id": "jm-1484320-0-cover",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are good, common equivalents for the act of covering something."
+   }
+  },
+  {
+   "key": "145c88d5ae23ce3d0f953a68228bdb8da30dcbaeef103a07059c0af661f0366a",
+   "input": {
+    "id": "jm-1484330-3-overlap",
+    "en": "overlap",
+    "en_pos": "verb",
+    "en_sense": "to overlap (e.g. sound or color)",
+    "ja": "被る",
+    "ja_reading": "かぶる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to overlap (e.g. sound or color)"
+    ],
+    "vi": "chồng lên"
+   },
+   "output": {
+    "id": "jm-1484330-3-overlap",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good set of equivalents for the concept of 'overlap'."
+   }
+  },
+  {
+   "key": "4988a189948455d9098e47c1247fbd6e522ae0def3b4598c989c1c567f370bc4",
+   "input": {
+    "id": "jm-1484350-0-damage",
+    "en": "damage",
+    "en_pos": "noun",
+    "en_sense": "(suffering) damage; injury; harm",
+    "ja": "被害",
+    "ja_reading": "ひがい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(suffering) damage",
+     "injury",
+     "harm"
+    ],
+    "vi": "thiệt hại"
+   },
+   "output": {
+    "id": "jm-1484350-0-damage",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect set of equivalents for damage/harm suffered."
+   }
+  },
+  {
+   "key": "621462aefd0482e9482821007a6fe77b4e257436ed7150ac41e5f0f7d803d196",
+   "input": {
+    "id": "jm-1484600-0-spend",
+    "en": "spend",
+    "en_pos": "verb",
+    "en_sense": "to spend; to expend; to consume",
+    "ja": "費やす",
+    "ja_reading": "ついやす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to spend",
+     "to expend",
+     "to consume"
+    ],
+    "vi": "tiêu"
+   },
+   "output": {
+    "id": "jm-1484600-0-spend",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good set of equivalents for 'spend' in the sense of using up resources like time, money, or energy."
+   }
+  }
+ ]
+}

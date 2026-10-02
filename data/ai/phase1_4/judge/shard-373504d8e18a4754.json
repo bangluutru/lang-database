@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:00:59Z",
+ "items": [
+  {
+   "key": "1be14749ef329773749b269d285807441d2b5d95ce2c1193dc7b45a60343cdc8",
+   "input": {
+    "id": "wk-682-e:0ea357",
+    "en": "ask",
+    "en_pos": "verb",
+    "en_sense": "make a request",
+    "ja": "頼む",
+    "ja_reading": "たのむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to request",
+     "to beg",
+     "to ask"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-682-e:0ea357",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "頼む is a perfect equivalent for the \"request\" sense of \"ask\", as distinct from the \"inquire\" sense (聞く)."
+   }
+  },
+  {
+   "key": "0228e5230667c4c3936e153977a5dfc141686583dec988312b03f5fe407f120d",
+   "input": {
+    "id": "wk-10074-s0",
+    "en": "assemble",
+    "en_pos": "verb",
+    "en_sense": "To put together.",
+    "ja": "組み立てる",
+    "ja_reading": "くみたてる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to assemble",
+     "to put together",
+     "to set up",
+     "to construct",
+     "to build",
+     "to compose (a story, poem, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10074-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "組み立てる is the standard and direct translation for \"assemble\" in the sense of putting parts together."
+   }
+  },
+  {
+   "key": "8f25416dec4a4b04f3fb8b92dedaa7259c69b971fe71beec39ca1a88711df2d3",
+   "input": {
+    "id": "wk-13129-s0",
+    "en": "assist",
+    "en_pos": "verb",
+    "en_sense": "To help.",
+    "ja": "手伝う",
+    "ja_reading": "てつだう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to help",
+     "to assist",
+     "to aid"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-13129-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "手伝う is a very common equivalent for \"assist\", though it can be slightly less formal, being closer to \"help\"."
+   }
+  },
+  {
+   "key": "2717b6211cdb9212dd03fbafe4060016126eb6d1cce09ddbfa5715057c7d1f0a",
+   "input": {
+    "id": "wk-4207-s1",
+    "en": "assume",
+    "en_pos": "verb",
+    "en_sense": "To take on a position, duty or form.",
+    "ja": "負う",
+    "ja_reading": "おう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to take (responsibility)",
+     "to assume",
+     "to accept",
+     "to bear (the blame, costs, etc.)",
+     "to have (a duty, obligation, etc.)",
+     "to become responsible for"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4207-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "負う only covers the \"take on a duty/responsibility\" part of the English sense, not \"position\" or \"form\"."
+   }
+  },
+  {
+   "key": "2cd6c023ebd4119ba20c3a53ec46c122f278fa3874ed78f858b1e2638a3debad",
+   "input": {
+    "id": "wk-21292-s0",
+    "en": "at all",
+    "en_pos": "adverb",
+    "en_sense": "Indicating degree, quantity or frequency greater than zero: to the slightest degree, in any way, at any time or in any circumstance.",
+    "ja": "全然",
+    "ja_reading": "ぜんぜん",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) at all",
+     "(not) in the slightest"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-21292-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "全然 is primarily used with negatives to mean \"(not) at all\", whereas the English sense describes an affirmative use which is a mismatch."
+   }
+  },
+  {
+   "key": "e11586c9f177c72e6aad6a84b8e6c8debb17679630ed1c500c1313e60471af8f",
+   "input": {
+    "id": "wk-2324-s0",
+    "en": "attack",
+    "en_pos": "verb",
+    "en_sense": "To apply violent force to someone or something.",
+    "ja": "攻撃する",
+    "ja_reading": "こうげきする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "attack",
+     "assault",
+     "raid",
+     "onslaught",
+     "offensive"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2324-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "攻撃する is the direct and standard equivalent of \"to attack\"."
+   }
+  },
+  {
+   "key": "cba1da4d81a1007268ba744971d6050c1bc3fa6bce8644e06ea8559f979353d9",
+   "input": {
+    "id": "wk-2327-s0",
+    "en": "attempt",
+    "en_pos": "noun",
+    "en_sense": "The action of trying at something.",
+    "ja": "試み",
+    "ja_reading": "こころみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attempt",
+     "trial",
+     "experiment"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2327-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "試み is a good, standard translation for \"attempt\" (noun)."
+   }
+  },
+  {
+   "key": "7e662e2c39abe05324d5c80ce292e570c96df8d567bfa3a6b13703d5e5ce7e45",
+   "input": {
+    "id": "wk-6563-s0",
+    "en": "attic",
+    "en_pos": "noun",
+    "en_sense": "The space, often unfinished and with sloped walls, directly below the roof in the uppermost part of a house or other building, generally used for storage or habitation.",
+    "ja": "屋根裏",
+    "ja_reading": "やねうら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attic",
+     "loft"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-6563-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "屋根裏, literally \"roof's underside\", is the direct and standard equivalent of \"attic\"."
+   }
+  },
+  {
+   "key": "fc0b3821b1e7c12e34076fd0ab230e73e97f6d9c753a89485a771bbf4f0eb30a",
+   "input": {
+    "id": "wk-2833-s0",
+    "en": "authority",
+    "en_pos": "noun",
+    "en_sense": "Power or right to make or enforce rules, give orders, or impose obligation; or a position having such power or right.",
+    "ja": "権威",
+    "ja_reading": "けんい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "authority",
+     "power",
+     "influence",
+     "prestige"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2833-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "権威 refers to authority as in prestige or expertise (being an authority), not the power to enforce rules (having authority), which is better translated as 権限."
+   }
+  },
+  {
+   "key": "fce32e87039161d0576d17b850fb7deaa910056b5bdf86c867aa94914101dfed",
+   "input": {
+    "id": "wk-1600-s0",
+    "en": "avocado",
+    "en_pos": "noun",
+    "en_sense": "The large, usually yellowish-green or black, savory fruit of the avocado tree.",
+    "ja": "アボカド",
+    "ja_reading": "アボカド",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "avocado (Persea americana)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1600-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "アボカド is the standard loanword for avocado and the only term used."
+   }
+  },
+  {
+   "key": "66b03186e0744277136d25a62745fdeac2a2c6cddfc6d9af3026dbc3bab4c7a3",
+   "input": {
+    "id": "wk-2047-s0",
+    "en": "awake",
+    "en_pos": "verb",
+    "en_sense": "To become conscious after having slept.",
+    "ja": "目覚める",
+    "ja_reading": "めざめる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to wake up",
+     "to awake"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2047-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "目覚める is a perfect equivalent for the intransitive verb \"awake\" (to wake up)."
+   }
+  },
+  {
+   "key": "5701b01a0399f4710a5bdbd6f790dbef25988a05b44ecf1dc9d35f4455442665",
+   "input": {
+    "id": "wk-19498-s0",
+    "en": "awaken",
+    "en_pos": "verb",
+    "en_sense": "To cause to become awake.",
+    "ja": "起こす",
+    "ja_reading": "おこす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to wake",
+     "to wake up",
+     "to waken",
+     "to awaken"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-19498-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "起こす is the standard transitive verb for \"awaken\" (to cause someone to wake up)."
+   }
+  }
+ ]
+}

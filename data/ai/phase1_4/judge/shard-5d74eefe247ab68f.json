@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:42:19Z",
+ "items": [
+  {
+   "key": "8e776317d33c56768a64211cbe3e662bbdcdfdc87c49b33ce7dc17da51c77fc5",
+   "input": {
+    "id": "jm-1496670-0-woman",
+    "en": "woman",
+    "en_pos": "noun",
+    "en_sense": "woman; lady; adult female",
+    "ja": "婦人",
+    "ja_reading": "ふじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "woman",
+     "lady",
+     "adult female"
+    ],
+    "vi": "phụ nữ"
+   },
+   "output": {
+    "id": "jm-1496670-0-woman",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 婦人 is somewhat dated and formal; the more common and neutral modern term for 'woman' is 女性."
+   }
+  },
+  {
+   "key": "a5fc2d3d5d61cee50e749bbe7a56124c428a5d676d4c972a3430670cab58d39a",
+   "input": {
+    "id": "jm-1496990-0-support",
+    "en": "support",
+    "en_pos": "noun",
+    "en_sense": "support (e.g. of one's dependents); maintenance",
+    "ja": "扶養",
+    "ja_reading": "ふよう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "support (e.g. of one's dependents)",
+     "maintenance"
+    ],
+    "vi": "nuôi dưỡng"
+   },
+   "output": {
+    "id": "jm-1496990-0-support",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'nuôi dưỡng' is a verb meaning 'to nurture/raise', which is broader than the specific financial noun sense of 'support' and Japanese '扶養'."
+   }
+  },
+  {
+   "key": "359b5a64aee59c210f55dc8b71c22d66329b3220cfff05bc5075f8770d2059cf",
+   "input": {
+    "id": "jm-1497450-0-affair",
+    "en": "affair",
+    "en_pos": "noun",
+    "en_sense": "extramarital sex; affair; fooling around",
+    "ja": "浮気",
+    "ja_reading": "うわき",
+    "ja_pos": "n,adj-na,vs,vi",
+    "ja_glosses": [
+     "extramarital sex",
+     "affair",
+     "fooling around"
+    ],
+    "vi": "ngoại tình"
+   },
+   "output": {
+    "id": "jm-1497450-0-affair",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for an extramarital affair, though 浮気 can also apply to unmarried couples."
+   }
+  },
+  {
+   "key": "fc7c387dab18210f237ec9331ff3d0db5246476fed8ab1b15c48ef55d0461e9e",
+   "input": {
+    "id": "jm-1497680-0-father",
+    "en": "father",
+    "en_pos": "noun",
+    "en_sense": "father",
+    "ja": "父親",
+    "ja_reading": "ちちおや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "father"
+    ],
+    "vi": "cha"
+   },
+   "output": {
+    "id": "jm-1497680-0-father",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, neutral words for 'father'."
+   }
+  },
+  {
+   "key": "6437043844e4b481cb6e574ad65f2ff32f6f08169d769576b2ad0923efe18948",
+   "input": {
+    "id": "jm-1498080-0-debt",
+    "en": "debt",
+    "en_pos": "noun",
+    "en_sense": "debt; liabilities",
+    "ja": "負債",
+    "ja_reading": "ふさい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "debt",
+     "liabilities"
+    ],
+    "vi": "nợ"
+   },
+   "output": {
+    "id": "jm-1498080-0-debt",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 負債 is a formal/technical term for 'liabilities', while the more common word for everyday 'debt' is 借金; the Vietnamese 'nợ' is a general term."
+   }
+  },
+  {
+   "key": "84b88d8428eceaa24d5a72e253409c45641356755ce04555bf563161fbc27625",
+   "input": {
+    "id": "jm-1498100-0-injury",
+    "en": "injury",
+    "en_pos": "noun",
+    "en_sense": "injury; wound",
+    "ja": "負傷",
+    "ja_reading": "ふしょう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "injury",
+     "wound"
+    ],
+    "vi": "vết thương"
+   },
+   "output": {
+    "id": "jm-1498100-0-injury",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'vết thương' means 'wound' and is narrower than 'injury' (e.g., it doesn't cover sprains or internal injuries), which is covered by '負傷'."
+   }
+  },
+  {
+   "key": "6e78d3eabfacfaaea0bea29c22608ba457a951d0c444ed817ef64ffcb0338ec1",
+   "input": {
+    "id": "jm-1499100-0-dance",
+    "en": "dance",
+    "en_pos": "verb",
+    "en_sense": "to dance (orig. a whirling dance)",
+    "ja": "舞う",
+    "ja_reading": "まう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to dance (orig. a whirling dance)"
+    ],
+    "vi": "nhảy"
+   },
+   "output": {
+    "id": "jm-1499100-0-dance",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "Vietnamese 'nhảy' means to jump or dance in a modern style, while Japanese '舞う' refers to a graceful, traditional dance, for which 'múa' is the correct Vietnamese equivalent."
+   }
+  },
+  {
+   "key": "5b5864af26bb1b4bc4732766bb9149371c67508fbbce8c1a31b126aade8a4d0b",
+   "input": {
+    "id": "jm-1499890-0-custom",
+    "en": "custom",
+    "en_pos": "noun",
+    "en_sense": "custom",
+    "ja": "風習",
+    "ja_reading": "ふうしゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "custom"
+    ],
+    "vi": "phong tục"
+   },
+   "output": {
+    "id": "jm-1499890-0-custom",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence between all three terms, with the Japanese and Vietnamese being direct cognates."
+   }
+  },
+  {
+   "key": "41377b90326e3c0c20ea8c77764865448c99408584859d60fdce4ced11800caa",
+   "input": {
+    "id": "jm-1500970-0-attire",
+    "en": "attire",
+    "en_pos": "noun",
+    "en_sense": "attire; dress; clothes; clothing; costume; garb",
+    "ja": "服装",
+    "ja_reading": "ふくそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attire",
+     "dress",
+     "clothes",
+     "clothing",
+     "costume",
+     "garb"
+    ],
+    "vi": "trang phục"
+   },
+   "output": {
+    "id": "jm-1500970-0-attire",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, slightly formal equivalents for 'attire' or 'outfit'."
+   }
+  },
+  {
+   "key": "5cb5e0be232a4eb3948bf4d8b754298ed5b30ec60d5c4e6337aa20db760223b0",
+   "input": {
+    "id": "jm-1501020-0-happiness",
+    "en": "happiness",
+    "en_pos": "noun",
+    "en_sense": "good fortune; happiness; blessing; good luck",
+    "ja": "福",
+    "ja_reading": "ふく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "good fortune",
+     "happiness",
+     "blessing",
+     "good luck"
+    ],
+    "vi": "hạnh phúc"
+   },
+   "output": {
+    "id": "jm-1501020-0-happiness",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "Vietnamese 'hạnh phúc' means the emotional state of happiness, whereas Japanese '福' and the provided English sense refer to good fortune or blessings, for which the Vietnamese equivalent is 'phúc'."
+   }
+  },
+  {
+   "key": "d6c37b44ad54054d81e45ab86368bd861dde9dd43830a35b94253d2a3c5d1b9a",
+   "input": {
+    "id": "jm-1501320-0-composite",
+    "en": "composite",
+    "en_pos": "noun",
+    "en_sense": "composite; combined; complex",
+    "ja": "複合",
+    "ja_reading": "ふくごう",
+    "ja_pos": "n,vs,adj-no,vt,vi",
+    "ja_glosses": [
+     "composite",
+     "combined",
+     "complex"
+    ],
+    "vi": "phức hợp"
+   },
+   "output": {
+    "id": "jm-1501320-0-composite",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence between all three terms, with the Japanese and Vietnamese being direct cognates."
+   }
+  },
+  {
+   "key": "e9bb67dd05ad19658ebee882742e39623055d6837a9608c975fad4b125cd7234",
+   "input": {
+    "id": "jm-1501390-0-reproduction",
+    "en": "reproduction",
+    "en_pos": "noun",
+    "en_sense": "copying; duplication; reproduction; copy",
+    "ja": "複写",
+    "ja_reading": "ふくしゃ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "copying",
+     "duplication",
+     "reproduction",
+     "copy"
+    ],
+    "vi": "bản sao"
+   },
+   "output": {
+    "id": "jm-1501390-0-reproduction",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bản sao' means 'a copy' (the result), while the English and Japanese terms can also refer to the act of copying."
+   }
+  }
+ ]
+}

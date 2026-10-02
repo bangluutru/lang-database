@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:06Z",
+ "items": [
+  {
+   "key": "2cf4844f8bdf73b4b1f874f693bba52eb04039841253b0e2ee44aea3d1944a48",
+   "input": {
+    "id": "wk-17028-s0",
+    "en": "designer",
+    "en_pos": "noun",
+    "en_sense": "A person who designs something, or who designs things as a profession.",
+    "ja": "デザイナー",
+    "ja_reading": "デザイナー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "designer"
+    ],
+    "vi": "nhà thiết kế"
+   },
+   "output": {
+    "id": "wk-17028-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'designer'."
+   }
+  },
+  {
+   "key": "601a8a306da56e1195a7f2795adba5d2cc735ed1f8113ca70be59d36df947d59",
+   "input": {
+    "id": "wk-17047-s0",
+    "en": "swindle",
+    "en_pos": "verb",
+    "en_sense": "To defraud.",
+    "ja": "騙す",
+    "ja_reading": "だます",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to trick",
+     "to cheat",
+     "to deceive",
+     "to swindle",
+     "to dupe"
+    ],
+    "vi": "lừa đảo"
+   },
+   "output": {
+    "id": "wk-17047-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 騙す (damasu) is too broad, meaning 'to deceive' in general, while the English 'swindle' and Vietnamese 'lừa đảo' specifically refer to fraud."
+   }
+  },
+  {
+   "key": "e6ed389319d6dd65358d7e4f8fc45c599df6efd0a55c2318da02d0f11361980c",
+   "input": {
+    "id": "wk-17047-s1",
+    "en": "swindle",
+    "en_pos": "verb",
+    "en_sense": "To obtain (money or property) by fraudulent or deceitful methods.",
+    "ja": "騙る",
+    "ja_reading": "かたる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to swindle out of",
+     "to cheat out of",
+     "to defraud of"
+    ],
+    "vi": "lừa đảo"
+   },
+   "output": {
+    "id": "wk-17047-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the specific sense of swindling money or property."
+   }
+  },
+  {
+   "key": "b3ad4726a522e2a985330509cb85252748dfa835ec7f92adbdd6303f02649f55",
+   "input": {
+    "id": "wk-1708-s0",
+    "en": "listen",
+    "en_pos": "verb",
+    "en_sense": "To use one's sense of hearing and auditory cognition in an intentional way; to make deliberate use of one's ears; to pay attention to or wait for a specific sound.",
+    "ja": "聞く",
+    "ja_reading": "きく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to listen (e.g. to music)"
+    ],
+    "vi": "nghe"
+   },
+   "output": {
+    "id": "wk-1708-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both 聞く (kiku) and nghe also mean 'to hear' (unintentional), making them broader than the specific English sense of 'listen' (intentional), but they are the standard translations."
+   }
+  },
+  {
+   "key": "de9b7b70c814c0a2ea60ee30f2214746c8784f96c006a7b23918962b95af6dc6",
+   "input": {
+    "id": "wk-1709-s0",
+    "en": "touch",
+    "en_pos": "verb",
+    "en_sense": "To make physical contact with; to bring the hand, finger or other part of the body into contact with.",
+    "ja": "接触する",
+    "ja_reading": "せっしょくする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "touch",
+     "contact",
+     "touching"
+    ],
+    "vi": "động"
+   },
+   "output": {
+    "id": "wk-1709-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 接触する is too formal for a general 'touch' (触る is better), and the Vietnamese động is not the primary word for 'touch' (chạm is better)."
+   }
+  },
+  {
+   "key": "eae50f8f4d0ccc81c2b9e91a4c86ea61f9c290a32d017b80d655d23a3effffb5",
+   "input": {
+    "id": "wk-171-s0",
+    "en": "robot",
+    "en_pos": "noun",
+    "en_sense": "An intelligent mechanical being designed to look like a human or other creature, and usually made from metal.",
+    "ja": "ロボット",
+    "ja_reading": "ロボット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "robot"
+    ],
+    "vi": "người máy"
+   },
+   "output": {
+    "id": "wk-171-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for 'robot'."
+   }
+  },
+  {
+   "key": "961239c64594e366578af9dab54d90282900995f9f46e1c7a44e0071c27e49da",
+   "input": {
+    "id": "wk-1710-s1",
+    "en": "touch",
+    "en_pos": "noun",
+    "en_sense": "The faculty or sense of perception by physical contact.",
+    "ja": "触覚",
+    "ja_reading": "しょっかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sense of touch"
+    ],
+    "vi": "xúc giác"
+   },
+   "output": {
+    "id": "wk-1710-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard words for 'the sense of touch'."
+   }
+  },
+  {
+   "key": "1f295fb136cd9425a7b408924d232cc151532633119c84f01126137a71efbcc5",
+   "input": {
+    "id": "wk-17109-s1",
+    "en": "parade",
+    "en_pos": "noun",
+    "en_sense": "A public procession, especially one commemorating a holiday or special event or (dated) in protest.",
+    "ja": "行列",
+    "ja_reading": "ぎょうれつ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "line",
+     "queue",
+     "procession",
+     "parade"
+    ],
+    "vi": "sự phô trương"
+   },
+   "output": {
+    "id": "wk-17109-s1",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự phô trương' means 'ostentation' and is completely wrong; the correct term is 'cuộc diễu hành'. The Japanese '行列' is too broad, also meaning 'line' or 'queue'."
+   }
+  },
+  {
+   "key": "a0eba1efdd5fff11289bbf2aa3bb308066967521912fa66b1ca96d87ef7a6c61",
+   "input": {
+    "id": "wk-1711-s1",
+    "en": "bite",
+    "en_pos": "verb",
+    "en_sense": "To hold something by clamping one's teeth.",
+    "ja": "噛む",
+    "ja_reading": "かむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to bite"
+    ],
+    "vi": "cắn"
+   },
+   "output": {
+    "id": "wk-1711-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for 'to bite'."
+   }
+  },
+  {
+   "key": "64725f0f095602a630f55d870c332ad7c380352801ff98ac00223a05e31f4a75",
+   "input": {
+    "id": "wk-17111-s0",
+    "en": "polish",
+    "en_pos": "verb",
+    "en_sense": "To shine; to make a surface very smooth or shiny by rubbing, cleaning, or grinding.",
+    "ja": "磨く",
+    "ja_reading": "みがく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to polish",
+     "to shine",
+     "to burnish",
+     "to scour",
+     "to scrub",
+     "to brush (teeth)"
+    ],
+    "vi": "đánh bóng"
+   },
+   "output": {
+    "id": "wk-17111-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for 'to polish'."
+   }
+  },
+  {
+   "key": "f46460311c4b3ef4c32e4b1381ef4443d561a8d50a2958b152fa323c2601b321",
+   "input": {
+    "id": "wk-17112-s0",
+    "en": "a",
+    "en_pos": "numeral",
+    "en_sense": "The first numeral symbol of the English alphabet, called ay and written in the Latin script.",
+    "ja": "イ",
+    "ja_reading": "イ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "A (note)"
+    ],
+    "vi": "a"
+   },
+   "output": {
+    "id": "wk-17112-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English entry incorrectly identifies the letter 'a' as a numeral, and the Japanese equivalent イ is for the musical note A, not the letter A."
+   }
+  },
+  {
+   "key": "0c7ca24d85c04cdd8ce2a6c13f073dedd4cb39a2daf1295b63a05957e471350f",
+   "input": {
+    "id": "wk-17113-s0",
+    "en": "a",
+    "en_pos": "noun",
+    "en_sense": "The name of the Latin script letter A/a.",
+    "ja": "Ａ",
+    "ja_reading": "エー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "A",
+     "a"
+    ],
+    "vi": "a"
+   },
+   "output": {
+    "id": "wk-17113-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three items correctly refer to the letter 'a' of the Latin alphabet."
+   }
+  }
+ ]
+}

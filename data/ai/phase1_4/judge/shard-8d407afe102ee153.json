@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:36:49Z",
+ "items": [
+  {
+   "key": "49bed62f159276dec1b0b72f574004c93e5c5d2c532ce673f77e25bc7243df97",
+   "input": {
+    "id": "jm-1370980-0-vertical",
+    "en": "vertical",
+    "en_pos": "adjective",
+    "en_sense": "vertical",
+    "ja": "垂直",
+    "ja_reading": "すいちょく",
+    "ja_pos": "adj-na,adj-no,n",
+    "ja_glosses": [
+     "vertical"
+    ],
+    "vi": "thẳng đứng"
+   },
+   "output": {
+    "id": "jm-1370980-0-vertical",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'vertical'."
+   }
+  },
+  {
+   "key": "2bcc3ef12c573a0f6e5ea2f9a4a3bf630db30650714a1c7962bd686c4a50121a",
+   "input": {
+    "id": "jm-1371100-0-estimate",
+    "en": "estimate",
+    "en_pos": "noun",
+    "en_sense": "estimate; estimation",
+    "ja": "推計",
+    "ja_reading": "すいけい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "estimate",
+     "estimation"
+    ],
+    "vi": "ước tính"
+   },
+   "output": {
+    "id": "jm-1371100-0-estimate",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'estimate' or 'estimation' in a calculated sense."
+   }
+  },
+  {
+   "key": "e375ae9689f07aab955062eaa2d136ea03160088550109f1d42aed50b7c2be62",
+   "input": {
+    "id": "jm-1371210-0-assumption",
+    "en": "assumption",
+    "en_pos": "noun",
+    "en_sense": "presumption; assumption",
+    "ja": "推定",
+    "ja_reading": "すいてい",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "presumption",
+     "assumption"
+    ],
+    "vi": "giả định"
+   },
+   "output": {
+    "id": "jm-1371210-0-assumption",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '推定' (presumption, inference) and Vietnamese 'giả định' (supposition, hypothesis) translate different senses of the English word 'assumption'."
+   }
+  },
+  {
+   "key": "fc2e86af25c9c84e5e55970cee50e4936171e3c833c406fba1259b7ccc0105b1",
+   "input": {
+    "id": "jm-1371610-0-level",
+    "en": "level",
+    "en_pos": "noun",
+    "en_sense": "level; standard",
+    "ja": "水準",
+    "ja_reading": "すいじゅん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "level",
+     "standard"
+    ],
+    "vi": "mức"
+   },
+   "output": {
+    "id": "jm-1371610-0-level",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for the abstract sense of 'level' or 'standard'."
+   }
+  },
+  {
+   "key": "878a75b3c637c2f3ee23d2bbea247d4f05748703c880ded363b55b04c18de67f",
+   "input": {
+    "id": "jm-1371920-0-waterworks",
+    "en": "waterworks",
+    "en_pos": "noun",
+    "en_sense": "water supply; water service; waterworks; tap water",
+    "ja": "水道",
+    "ja_reading": "すいどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "water supply",
+     "water service",
+     "waterworks",
+     "tap water"
+    ],
+    "vi": "cấp nước"
+   },
+   "output": {
+    "id": "jm-1371920-0-waterworks",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'cấp nước' (water supply service) is narrower than the English and Japanese terms, which also cover the physical infrastructure ('waterworks') and the resulting tap water."
+   }
+  },
+  {
+   "key": "e2909bdcfbd0b9ee013b98568c31e4fc885cb49ab9ee8e1ce95787976c30b818",
+   "input": {
+    "id": "jm-1372060-0-horizon",
+    "en": "horizon",
+    "en_pos": "noun",
+    "en_sense": "horizon (related to bodies of water)",
+    "ja": "水平線",
+    "ja_reading": "すいへいせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "horizon (related to bodies of water)"
+    ],
+    "vi": "đường chân trời"
+   },
+   "output": {
+    "id": "jm-1372060-0-horizon",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'đường chân trời' is the general word for 'horizon', while the English sense and the Japanese '水平線' specifically refer to the horizon over water."
+   }
+  },
+  {
+   "key": "ed15fdf185c2616603f35897d37ac5f54c9f3f4081cb9907b8bf5554dce8fe23",
+   "input": {
+    "id": "jm-1372190-0-wednesday",
+    "en": "wednesday",
+    "en_pos": "noun",
+    "en_sense": "Wednesday",
+    "ja": "水曜日",
+    "ja_reading": "すいようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Wednesday"
+    ],
+    "vi": "thứ tư"
+   },
+   "output": {
+    "id": "jm-1372190-0-wednesday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, unambiguous names for Wednesday."
+   }
+  },
+  {
+   "key": "376ed303a7a6fa25d9773f76c36f1f8cc0adb05550013a93337c1416e0e660ea",
+   "input": {
+    "id": "jm-1372430-0-decline",
+    "en": "decline",
+    "en_pos": "verb",
+    "en_sense": "to become weak; to decline; to wear; to abate; to decay; to wither",
+    "ja": "衰える",
+    "ja_reading": "おとろえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to become weak",
+     "to decline",
+     "to wear",
+     "to abate",
+     "to decay",
+     "to wither"
+    ],
+    "vi": "suy yếu"
+   },
+   "output": {
+    "id": "jm-1372430-0-decline",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and direct equivalents for the sense of declining in strength or vitality."
+   }
+  },
+  {
+   "key": "19e5e3d785c7675dc9540aecaadf9d088ab0e9409e73335736f7d09107ecdfb9",
+   "input": {
+    "id": "jm-1372620-0-accomplish",
+    "en": "accomplish",
+    "en_pos": "verb",
+    "en_sense": "to accomplish; to achieve; to carry out",
+    "ja": "遂げる",
+    "ja_reading": "とげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to accomplish",
+     "to achieve",
+     "to carry out"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1372620-0-accomplish",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are good equivalents for accomplishing or completing a task or goal."
+   }
+  },
+  {
+   "key": "2aeaf5145ca0cc7ebe7ae56130dd4c5cab5eff89355346fd5965cbe200c5c394",
+   "input": {
+    "id": "jm-1372650-0-get_drunk",
+    "en": "get drunk",
+    "en_pos": "verb",
+    "en_sense": "to get drunk; to become intoxicated",
+    "ja": "酔う",
+    "ja_reading": "よう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to get drunk",
+     "to become intoxicated"
+    ],
+    "vi": "say"
+   },
+   "output": {
+    "id": "jm-1372650-0-get_drunk",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the most common and direct ways to say 'get drunk'."
+   }
+  },
+  {
+   "key": "10e5aa4603672dc66c7817977c65dfa2effcc499c9d5e3a9ab10c5ea6c3ce8b8",
+   "input": {
+    "id": "jm-1373500-0-install",
+    "en": "install",
+    "en_pos": "verb",
+    "en_sense": "to install; to equip; to mount; to fix (in place); to set up",
+    "ja": "据え付ける",
+    "ja_reading": "すえつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to install",
+     "to equip",
+     "to mount",
+     "to fix (in place)",
+     "to set up"
+    ],
+    "vi": "lắp đặt"
+   },
+   "output": {
+    "id": "jm-1373500-0-install",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and direct equivalents for 'to install' equipment or machinery."
+   }
+  },
+  {
+   "key": "89f965b7e0003cf6b47034ee3d60f2508e426b4d0ad0549cdf89f8fb50e02a74",
+   "input": {
+    "id": "jm-1373970-0-world",
+    "en": "world",
+    "en_pos": "noun",
+    "en_sense": "world; society; people; the public",
+    "ja": "世間",
+    "ja_reading": "せけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "world",
+     "society",
+     "people",
+     "the public"
+    ],
+    "vi": "thế giới"
+   },
+   "output": {
+    "id": "jm-1373970-0-world",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'thế giới' means the physical world (planet Earth), whereas the English sense and Japanese '世間' refer to society or the public."
+   }
+  }
+ ]
+}

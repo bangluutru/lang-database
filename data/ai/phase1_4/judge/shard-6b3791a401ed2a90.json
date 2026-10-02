@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:11:01Z",
+ "items": [
+  {
+   "key": "ed986d2bf41887e878adad78118f3af7910378a8ba4aec47e64a5f277a397a05",
+   "input": {
+    "id": "wk-510-s0",
+    "en": "frequency",
+    "en_pos": "noun",
+    "en_sense": "The rate of occurrence of anything; the relationship between incidence and time period.",
+    "ja": "頻度",
+    "ja_reading": "ひんど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "frequency (of occurrence)"
+    ],
+    "vi": "tính thường xuyên"
+   },
+   "output": {
+    "id": "wk-510-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tính thường xuyên' means 'regularity' or 'frequentness', not the quantifiable 'rate of occurrence' which is better translated as 'tần suất'."
+   }
+  },
+  {
+   "key": "3c9b355d6f5cd5db0cb9b713dcbf6f70ee280841876d8e7e1a995736a78cbbf6",
+   "input": {
+    "id": "wk-5111-s0",
+    "en": "feast",
+    "en_pos": "noun",
+    "en_sense": "A holiday, festival, especially a religious one",
+    "ja": "祭り",
+    "ja_reading": "まつり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "festival",
+     "feast",
+     "matsuri"
+    ],
+    "vi": "tiệc"
+   },
+   "output": {
+    "id": "wk-5111-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tiệc' means 'banquet' or 'party', matching a different sense of 'feast', not the intended sense of 'religious festival' ('lễ hội')."
+   }
+  },
+  {
+   "key": "e4345838939567eb57105071b70b88477896ea5eb1787de331d9fe0ba07cc4b5",
+   "input": {
+    "id": "wk-5112-s5",
+    "en": "signal",
+    "en_pos": "noun",
+    "en_sense": "An electromagnetic action, normally a voltage that is a function of time, that conveys the information of the radio or TV program or of communication with another party.",
+    "ja": "電波",
+    "ja_reading": "でんぱ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "radio wave",
+     "reception",
+     "signal"
+    ],
+    "vi": "tín hiệu"
+   },
+   "output": {
+    "id": "wk-5112-s5",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '電波' means 'radio wave', not 'signal' in the sense of conveyed information; the correct term is '信号' (shingou)."
+   }
+  },
+  {
+   "key": "37599c470815c424fe29777fc0fae1aa2495f51d2a0e1a1aa7e82c755c62cfc4",
+   "input": {
+    "id": "wk-5123-s0",
+    "en": "humour",
+    "en_pos": "noun",
+    "en_sense": "The quality of being amusing, comical, funny.",
+    "ja": "ユーモア",
+    "ja_reading": "ユーモア",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "humor",
+     "humour",
+     "joke"
+    ],
+    "vi": "sự hài hước"
+   },
+   "output": {
+    "id": "wk-5123-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for the concept of 'humour'."
+   }
+  },
+  {
+   "key": "b3dd78c8d2c9a70c6e6870ea532c1ce53b977b72935ed391644741e54a8bacf3",
+   "input": {
+    "id": "wk-5126-e:78ed07",
+    "en": "onion",
+    "en_pos": "noun",
+    "en_sense": "Allium cepa",
+    "ja": "玉葱",
+    "ja_reading": "たまねぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "onion (Allium cepa)"
+    ],
+    "vi": "hành"
+   },
+   "output": {
+    "id": "wk-5126-e:78ed07",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'hành' is a broad term for Alliums; the specific word for onion (Allium cepa) is 'hành tây'."
+   }
+  },
+  {
+   "key": "21bd414acae3f78ff3b10e18a7ec6154ded2f6d02dfa7b2f5e0375431fb71825",
+   "input": {
+    "id": "wk-513-s1",
+    "en": "mobile phone",
+    "en_pos": "noun",
+    "en_sense": "A portable (handheld) telephone that connects with the cellular telephone network.",
+    "ja": "携帯電話",
+    "ja_reading": "けいたいでんわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mobile phone",
+     "cell phone"
+    ],
+    "vi": "di động"
+   },
+   "output": {
+    "id": "wk-513-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese 'di động' is a very common shorthand for 'điện thoại di động' (mobile phone) and is a natural equivalent."
+   }
+  },
+  {
+   "key": "1cbbfdbf0d59d6cb79aca76eca07f85fb36473a6e38770bae5a0b7c688594d26",
+   "input": {
+    "id": "wk-5130-s0",
+    "en": "paralysis",
+    "en_pos": "noun",
+    "en_sense": "The complete loss of voluntary control of part of a living body, such as one or more limbs.",
+    "ja": "麻痺",
+    "ja_reading": "まひ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "paralysis",
+     "palsy",
+     "stupor"
+    ],
+    "vi": "liệt"
+   },
+   "output": {
+    "id": "wk-5130-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'liệt' is a verb/adjective root ('to be paralyzed'); the noun 'paralysis' is 'sự tê liệt'."
+   }
+  },
+  {
+   "key": "086ca2a596e0896522212d539b89219883b87dfc434683a18d5cb55eb3045ceb",
+   "input": {
+    "id": "wk-5134-s0",
+    "en": "marrow",
+    "en_pos": "noun",
+    "en_sense": "The substance inside bones which produces blood cells.",
+    "ja": "骨髄",
+    "ja_reading": "こつずい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bone marrow",
+     "medulla"
+    ],
+    "vi": "tủy xương"
+   },
+   "output": {
+    "id": "wk-5134-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and natural equivalents for 'bone marrow'."
+   }
+  },
+  {
+   "key": "cf74d94bb96bab4c071d360e5e4362ec113144f6e727e8d2084934c2e1699d46",
+   "input": {
+    "id": "wk-5136-s0",
+    "en": "lock",
+    "en_pos": "noun",
+    "en_sense": "Something used for fastening, which can only be opened with a key or combination.",
+    "ja": "錠",
+    "ja_reading": "じょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lock",
+     "padlock"
+    ],
+    "vi": "khóa"
+   },
+   "output": {
+    "id": "wk-5136-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are valid equivalents for 'lock', with minor nuances in usage but no significant divergence."
+   }
+  },
+  {
+   "key": "b091fefef499d28b7cd6a25210526e7053e9189b8c87f539091cdb9b44381731",
+   "input": {
+    "id": "wk-529-s0",
+    "en": "consent",
+    "en_pos": "noun",
+    "en_sense": "Voluntary agreement or permission.",
+    "ja": "承諾",
+    "ja_reading": "しょうだく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "consent",
+     "approval",
+     "acceptance",
+     "agreement",
+     "compliance"
+    ],
+    "vi": "sự đồng ý"
+   },
+   "output": {
+    "id": "wk-529-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural, and register-matched equivalents for 'consent'."
+   }
+  },
+  {
+   "key": "30c336b1e2474157e88933a25b9314af12c4270356fca5a789ff6b77ad4bae05",
+   "input": {
+    "id": "wk-5323-s0",
+    "en": "retail",
+    "en_pos": "noun",
+    "en_sense": "The sale of goods directly to the consumer, encompassing the storefronts, mail-order, websites, etc., and the corporate mechanisms, branding, advertising, etc. that support them.",
+    "ja": "小売",
+    "ja_reading": "こうり",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "retail"
+    ],
+    "vi": "bán lẻ"
+   },
+   "output": {
+    "id": "wk-5323-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, precise, and natural equivalents for 'retail'."
+   }
+  },
+  {
+   "key": "36337d5e4d4bac7c9fdfaf77f3739ca103a77ef814cf1b227012f846acd1e224",
+   "input": {
+    "id": "wk-5337-s0",
+    "en": "offer",
+    "en_pos": "noun",
+    "en_sense": "A proposal that has been made.",
+    "ja": "提供",
+    "ja_reading": "ていきょう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "offer",
+     "tender",
+     "providing",
+     "supplying",
+     "making available",
+     "donating (blood, organs, etc.)"
+    ],
+    "vi": "chào hàng"
+   },
+   "output": {
+    "id": "wk-5337-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both '提供' (provision) and 'chào hàng' (offering goods for sale) fail to capture the general meaning of 'offer' as a proposal."
+   }
+  }
+ ]
+}

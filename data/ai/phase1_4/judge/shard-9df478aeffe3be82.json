@@ -1,0 +1,401 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:52:53Z",
+ "items": [
+  {
+   "key": "7488fe1e2ef82281363af8d4776c4bc6067df5d550cd558bb5ff1b7a28c9039a",
+   "input": {
+    "id": "wk-712-s2",
+    "en": "president",
+    "en_pos": "noun",
+    "en_sense": "A person presiding over a meeting.",
+    "ja": "議長",
+    "ja_reading": "ぎちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chair",
+     "chairman",
+     "chairperson",
+     "speaker (of an assembly)",
+     "president (of a council, senate, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-712-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "議長 is a perfect equivalent for 'president' in the specific sense of presiding over a formal meeting or assembly."
+   }
+  },
+  {
+   "key": "4f2b45dea92a6168a89bc38faf64ce38dddd1a6b2c6896573eb614d6e867660d",
+   "input": {
+    "id": "wk-713-s1",
+    "en": "security",
+    "en_pos": "noun",
+    "en_sense": "Something that secures.",
+    "ja": "セキュリティ",
+    "ja_reading": "セキュリティ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "security"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-713-s1",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense 'Something that secures' is extremely abstract; the Japanese loanword セキュリティ refers more concretely to systems, measures, or the state of being secure, not just any object that secures (like a lock)."
+   }
+  },
+  {
+   "key": "eed2fee4ec1ff2ad68d84b9bd0aad027315a5cbb1aa20e1ce68b6c33a89b7711",
+   "input": {
+    "id": "wk-713-s5",
+    "en": "security",
+    "en_pos": "noun",
+    "en_sense": "A tradeable financial asset, such as a share of stock or any of various classes of bond.",
+    "ja": "担保",
+    "ja_reading": "たんぽ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "security",
+     "guarantee",
+     "collateral",
+     "mortgage"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-713-s5",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "This is a classic false friend; 担保 means 'collateral' or 'security for a loan', not 'security' in the sense of a tradable financial asset like a stock or bond (which is 証券)."
+   }
+  },
+  {
+   "key": "2776de509ad87087d04f12711b03a36b1238a1f5c6e204d8e0bc82fb3e21b9a0",
+   "input": {
+    "id": "wk-713-s7",
+    "en": "security",
+    "en_pos": "noun",
+    "en_sense": "Property etc. temporarily relinquished to guarantee repayment of a loan.",
+    "ja": "証券",
+    "ja_reading": "しょうけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bond",
+     "bill",
+     "certificate",
+     "security"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-713-s7",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "This entry incorrectly pairs the English sense for 'collateral' with the Japanese word for 'financial securities' (証券); the correct Japanese word for this sense is 担保."
+   }
+  },
+  {
+   "key": "4625472fe77a37c0d8e4e77be82dbbe0700d40ed5136029bfdd484e6be45dcf9",
+   "input": {
+    "id": "wk-7136-e:579d23",
+    "en": "express",
+    "en_pos": "noun",
+    "en_sense": "quick mode of transportation",
+    "ja": "急行列車",
+    "ja_reading": "きゅうこうれっしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "express train"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7136-e:579d23",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 急行列車 specifically means 'express train', while the English 'express' can refer to other modes of transport, making the Japanese term too narrow. 急行 would be a better fit."
+   }
+  },
+  {
+   "key": "9c2e90f9001fe027619bb869da7b3b7ba00caf6e701e9dce6b7fe238808a7297",
+   "input": {
+    "id": "wk-7160-s0",
+    "en": "battle",
+    "en_pos": "verb",
+    "en_sense": "To join in battle; to contend in fight",
+    "ja": "戦う",
+    "ja_reading": "たたかう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to make war (on)",
+     "to wage war (against)",
+     "to go to war (with)",
+     "to fight (with)",
+     "to do battle (against)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7160-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "戦う is the standard and natural Japanese equivalent for the verb 'to battle'."
+   }
+  },
+  {
+   "key": "eb88298e892b1020677c56b6764d2a1fed1403fc852e2ee75208564c79be6b49",
+   "input": {
+    "id": "wk-7164-s0",
+    "en": "match",
+    "en_pos": "verb",
+    "en_sense": "To agree; to be equal; to correspond.",
+    "ja": "合う",
+    "ja_reading": "あう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to fit",
+     "to match",
+     "to suit",
+     "to agree with",
+     "to be correct"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7164-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "合う is the perfect Japanese equivalent for the verb 'match' in the sense of corresponding or agreeing."
+   }
+  },
+  {
+   "key": "c00ae70cd7cf8f26cfc248016239dbbcfbb2cd504b74acccb475b7570940d6ec",
+   "input": {
+    "id": "wk-7164-s2",
+    "en": "match",
+    "en_pos": "verb",
+    "en_sense": "To equal or exceed in achievement.",
+    "ja": "敵う",
+    "ja_reading": "かなう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to match",
+     "to be a match for",
+     "to rival",
+     "to equal",
+     "to compare with"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7164-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "敵う is the ideal Japanese verb for 'match' in the competitive sense of 'to be a match for' or 'to rival'."
+   }
+  },
+  {
+   "key": "54da8c5f85ec94e3a562e1527abf2a90f0760d3b87571323a600efd241064650",
+   "input": {
+    "id": "wk-7164-s3",
+    "en": "match",
+    "en_pos": "verb",
+    "en_sense": "To make a successful match or pairing.",
+    "ja": "合わせる",
+    "ja_reading": "あわせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to match (rhythm, speed, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7164-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "合わせる is the correct transitive verb in Japanese corresponding to 'to match' something with something else."
+   }
+  },
+  {
+   "key": "a81e3c0f021a81e892de0b3131fca81a755011bbf7608e3d9ec20dfab8a7848b",
+   "input": {
+    "id": "wk-7171-s0",
+    "en": "approach",
+    "en_pos": "noun",
+    "en_sense": "An act of drawing near in place or time; an advancing or coming near.",
+    "ja": "アプローチ",
+    "ja_reading": "アプローチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "approach (of a long jump, aircraft's flight, etc.)",
+     "inrun (of a ski jump)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7171-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese loanword アプローチ is used in specific contexts (sports, aviation, methodology) and is not a general equivalent for 'approach' in the sense of simply drawing near, for which 接近 (sekkin) is used."
+   }
+  },
+  {
+   "key": "993f8a7d4d45c751f3fe0dc09875c96d1ea970bc126e1de646c17880c667acfa",
+   "input": {
+    "id": "wk-718-s1",
+    "en": "thin",
+    "en_pos": "verb",
+    "en_sense": "To become thin or thinner.",
+    "ja": "痩せる",
+    "ja_reading": "やせる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to become thin",
+     "to lose weight",
+     "to slim"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-718-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "痩せる specifically means for a person or animal to become thin/lose weight, and does not cover other senses of 'to thin' like a crowd or a liquid."
+   }
+  },
+  {
+   "key": "1f606f25600ee16beb4ea778aa2b64b53ce8d663201a24d50f27d52b65c9d504",
+   "input": {
+    "id": "wk-718-s2",
+    "en": "thin",
+    "en_pos": "verb",
+    "en_sense": "To dilute.",
+    "ja": "薄める",
+    "ja_reading": "うすめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to dilute",
+     "to water down",
+     "to thin",
+     "to lighten (e.g. a color)",
+     "to make less strong (e.g. flavor, depth, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-718-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "薄める is the standard and correct Japanese verb for 'to thin' in the sense of diluting a liquid or weakening a concentration."
+   }
+  }
+ ]
+}

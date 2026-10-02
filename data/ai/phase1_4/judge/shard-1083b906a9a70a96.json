@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:27:31Z",
+ "items": [
+  {
+   "key": "e8e42223273fe11069779eb5212042583bac24e4daa045e8dbb9dcea5b0c676c",
+   "input": {
+    "id": "jm-1126590-0-microphone",
+    "en": "microphone",
+    "en_pos": "noun",
+    "en_sense": "mike; mic; microphone",
+    "ja": "マイク",
+    "ja_reading": "マイク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mike",
+     "mic",
+     "microphone"
+    ],
+    "vi": "micrô"
+   },
+   "output": {
+    "id": "jm-1126590-0-microphone",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'microphone' in their respective languages."
+   }
+  },
+  {
+   "key": "77db15e3a7a39aee6cc90f37b91640832d0ddba64041dabb689d1252a56f4084",
+   "input": {
+    "id": "jm-1127870-0-mask",
+    "en": "mask",
+    "en_pos": "noun",
+    "en_sense": "(face) mask",
+    "ja": "マスク",
+    "ja_reading": "マスク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(face) mask"
+    ],
+    "vi": "khẩu trang"
+   },
+   "output": {
+    "id": "jm-1127870-0-mask",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a face mask."
+   }
+  },
+  {
+   "key": "118e523485a0a08034e7534974e02a18df53431d4a2b6be98cb1d4d482210fbb",
+   "input": {
+    "id": "jm-1128430-0-match",
+    "en": "match",
+    "en_pos": "noun",
+    "en_sense": "match (for lighting a fire)",
+    "ja": "マッチ",
+    "ja_reading": "マッチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "match (for lighting a fire)"
+    ],
+    "vi": "diêm"
+   },
+   "output": {
+    "id": "jm-1128430-0-match",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a matchstick."
+   }
+  },
+  {
+   "key": "004556dad3c7619d62b548470daac64802d432d53f7455c32563a5b25fe60378",
+   "input": {
+    "id": "jm-1134370-0-member",
+    "en": "member",
+    "en_pos": "noun",
+    "en_sense": "member; participant; attendee; lineup (sport)",
+    "ja": "メンバー",
+    "ja_reading": "メンバー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "member",
+     "participant",
+     "attendee",
+     "lineup (sport)"
+    ],
+    "vi": "thành viên"
+   },
+   "output": {
+    "id": "jm-1134370-0-member",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'member'."
+   }
+  },
+  {
+   "key": "df4cccebe9eba0aaf07e2d9531b012af9c09f98a426709f8b49a79cb9d7606b3",
+   "input": {
+    "id": "jm-1158880-0-differ",
+    "en": "differ",
+    "en_pos": "verb",
+    "en_sense": "to differ (from); to be different; to be distinct; to be unlike; to vary; to disagree (with)",
+    "ja": "違う",
+    "ja_reading": "ちがう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to differ (from)",
+     "to be different",
+     "to be distinct",
+     "to be unlike",
+     "to vary",
+     "to disagree (with)"
+    ],
+    "vi": "khác"
+   },
+   "output": {
+    "id": "jm-1158880-0-differ",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'khác' is an adjective/stative verb meaning 'different', not a dynamic verb like English 'differ' or Japanese '違う', causing a part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "3162446477ba85565b58deceab0208e585a3e9fcd45949647f163ed0eec4b901",
+   "input": {
+    "id": "jm-1159930-0-doctor",
+    "en": "doctor",
+    "en_pos": "noun",
+    "en_sense": "doctor; physician",
+    "ja": "医師",
+    "ja_reading": "いし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "doctor",
+     "physician"
+    ],
+    "vi": "bác sĩ"
+   },
+   "output": {
+    "id": "jm-1159930-0-doctor",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for a medical doctor."
+   }
+  },
+  {
+   "key": "29b1575168c7049f55431f3b53b78ebf9d89d078cd80018920ff5b3589594d42",
+   "input": {
+    "id": "jm-1160540-0-grow",
+    "en": "grow",
+    "en_pos": "verb",
+    "en_sense": "to be raised (e.g. child); to be brought up; to grow (up)",
+    "ja": "育つ",
+    "ja_reading": "そだつ",
+    "ja_pos": "v5t,vi",
+    "ja_glosses": [
+     "to be raised (e.g. child)",
+     "to be brought up",
+     "to grow (up)"
+    ],
+    "vi": "lớn lên"
+   },
+   "output": {
+    "id": "jm-1160540-0-grow",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and natural way to say 'to grow up' for a person."
+   }
+  },
+  {
+   "key": "cf6d5fc8fb00a7a944015b26ab492300284398dc2db9e7895fd2c0f5d183c7f9",
+   "input": {
+    "id": "jm-1160820-0-one",
+    "en": "one",
+    "en_pos": "numeral",
+    "en_sense": "one",
+    "ja": "一つ",
+    "ja_reading": "ひとつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "one"
+    ],
+    "vi": "một"
+   },
+   "output": {
+    "id": "jm-1160820-0-one",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the basic words for the number 'one'."
+   }
+  },
+  {
+   "key": "881f18b520bbf725e5f6ca2d324c5a098d34ce25e824c8fc9697d721de1007af",
+   "input": {
+    "id": "jm-1161470-0-bundle",
+    "en": "bundle",
+    "en_pos": "noun",
+    "en_sense": "lumping together; summing up; bundle; lump; batch",
+    "ja": "一括",
+    "ja_reading": "いっかつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "lumping together",
+     "summing up",
+     "bundle",
+     "lump",
+     "batch"
+    ],
+    "vi": "gói"
+   },
+   "output": {
+    "id": "jm-1161470-0-bundle",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'gói' means a physical package or packet, while the English and Japanese terms refer to the abstract concept of lumping things together into a single batch or action."
+   }
+  },
+  {
+   "key": "ee7123992bc6982eb991501ece6b9277b789e22f0feba22767851b5bf827b47d",
+   "input": {
+    "id": "jm-1161830-0-rest",
+    "en": "rest",
+    "en_pos": "noun",
+    "en_sense": "(short) rest; breather; break",
+    "ja": "一休み",
+    "ja_reading": "ひとやすみ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "(short) rest",
+     "breather",
+     "break"
+    ],
+    "vi": "nghỉ"
+   },
+   "output": {
+    "id": "jm-1161830-0-rest",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'nghỉ' is a verb ('to rest'), not a noun ('a rest') like the English and Japanese terms."
+   }
+  },
+  {
+   "key": "1079caebc073e513301d7a38392acbcddd75b1e757918a992b7849f48e5c9211",
+   "input": {
+    "id": "jm-1162980-0-temporary",
+    "en": "temporary",
+    "en_pos": "adjective",
+    "en_sense": "temporary; transitory; short-lived",
+    "ja": "一時的",
+    "ja_reading": "いちじてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "temporary",
+     "transitory",
+     "short-lived"
+    ],
+    "vi": "tạm thời"
+   },
+   "output": {
+    "id": "jm-1162980-0-temporary",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'temporary'."
+   }
+  },
+  {
+   "key": "167a0c68a98d1086ea35662fe5c7e5a1d9f2f20e6eb3efb096a0203b2c492afa",
+   "input": {
+    "id": "jm-1163170-0-kind",
+    "en": "kind",
+    "en_pos": "noun",
+    "en_sense": "a kind; a sort; a variety; a species",
+    "ja": "一種",
+    "ja_reading": "いっしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "a kind",
+     "a sort",
+     "a variety",
+     "a species"
+    ],
+    "vi": "loại"
+   },
+   "output": {
+    "id": "jm-1163170-0-kind",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'a kind' or 'a type' of something."
+   }
+  }
+ ]
+}

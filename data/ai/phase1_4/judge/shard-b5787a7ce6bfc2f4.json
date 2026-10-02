@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:43:25Z",
+ "items": [
+  {
+   "key": "5ee23bf4bda7bb6c39fac9fa1e683f94255ea91629eabae2ae2bece06a689876",
+   "input": {
+    "id": "wk-3040-s0",
+    "en": "everyone",
+    "en_pos": "pronoun",
+    "en_sense": "Every individual in a set; every person.",
+    "ja": "みな",
+    "ja_reading": "みな",
+    "ja_pos": "n,pn,adv",
+    "ja_glosses": [
+     "everyone",
+     "everybody",
+     "all"
+    ],
+    "vi": "mọi người"
+   },
+   "output": {
+    "id": "wk-3040-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'everyone'."
+   }
+  },
+  {
+   "key": "60af3c20858ac8856e4a5640335bce91bbae7b3bfa5d885f3d022a454f0ed509",
+   "input": {
+    "id": "wk-3041-s0",
+    "en": "someone",
+    "en_pos": "pronoun",
+    "en_sense": "One or some person of unspecified or indefinite identity.",
+    "ja": "誰か",
+    "ja_reading": "だれか",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "someone",
+     "somebody"
+    ],
+    "vi": "ai đó"
+   },
+   "output": {
+    "id": "wk-3041-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'someone'."
+   }
+  },
+  {
+   "key": "d12fc7e66a2668af99f3fb2919d90f0e6afa9ab188ce706bfaecae43b11e7cdf",
+   "input": {
+    "id": "wk-30411-s0",
+    "en": "child prodigy",
+    "en_pos": "noun",
+    "en_sense": "A highly talented or gifted person at a young age.",
+    "ja": "神童",
+    "ja_reading": "しんどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "child prodigy",
+     "infant genius",
+     "wonder child"
+    ],
+    "vi": "thần đồng"
+   },
+   "output": {
+    "id": "wk-30411-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents, with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "eaed1c4ade221d8aeda24a1909d94478b7c25c4210b61ee86a12e96bb9a507da",
+   "input": {
+    "id": "wk-3045-s0",
+    "en": "many",
+    "en_pos": "determiner",
+    "en_sense": "before a countable noun: A large, indefinite number of.",
+    "ja": "多い",
+    "ja_reading": "おおい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "many",
+     "numerous",
+     "a lot"
+    ],
+    "vi": "nhiều"
+   },
+   "output": {
+    "id": "wk-3045-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Japanese word '多い' is an adjective, not a determiner like English 'many', leading to a significant grammatical mismatch."
+   }
+  },
+  {
+   "key": "ca2fc90f19c8abd4dc1ebc12a86818bcb90e1a247c7c92af37d3ef3ea62b6210",
+   "input": {
+    "id": "wk-3048-s0",
+    "en": "correct",
+    "en_pos": "verb",
+    "en_sense": "To make something that was wrong become right; to remove error from.",
+    "ja": "正す",
+    "ja_reading": "ただす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to correct",
+     "to rectify",
+     "to reform",
+     "to amend",
+     "to redress"
+    ],
+    "vi": "chữa"
+   },
+   "output": {
+    "id": "wk-3048-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'chữa' is a valid translation in some contexts (e.g., correcting errors), but is narrower than English 'correct' and Japanese '正す'; a more general equivalent is 'sửa'."
+   }
+  },
+  {
+   "key": "02c81125ab019d3d8ef0764aeb4af612e63e22578274aca29395d308a4132d33",
+   "input": {
+    "id": "wk-3051-e:a7c448",
+    "en": "meter",
+    "en_pos": "noun",
+    "en_sense": "measuring instrument",
+    "ja": "メーター",
+    "ja_reading": "メーター",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "meter",
+     "gauge"
+    ],
+    "vi": "cái đo"
+   },
+   "output": {
+    "id": "wk-3051-e:a7c448",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'cái đo' is an unnatural, literal description, not the actual term for a meter (which would be 'đồng hồ đo' or a more specific term)."
+   }
+  },
+  {
+   "key": "aa3b08514b1059642e97a270907b1a7c99fe8c180960f47ef859761a96ef4b05",
+   "input": {
+    "id": "wk-306-s0",
+    "en": "second",
+    "en_pos": "noun",
+    "en_sense": "A unit of time historically and commonly defined as a sixtieth of a minute which the International System of Units more precisely defines as the duration of 9,192,631,770 periods of radiation corresponding to the transition between two hyperfine levels of caesium-133 in a ground state at a temperatu",
+    "ja": "秒",
+    "ja_reading": "びょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "second (unit of time)"
+    ],
+    "vi": "giây"
+   },
+   "output": {
+    "id": "wk-306-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents for the unit of time."
+   }
+  },
+  {
+   "key": "961bb91db3f9cc17de9565506d3e2b79f1e2ab2ca2901eafd7bd46e75607fec2",
+   "input": {
+    "id": "wk-3061-e:db1474",
+    "en": "key",
+    "en_pos": "noun",
+    "en_sense": "scale of musical notes",
+    "ja": "調",
+    "ja_reading": "ちょう",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "key"
+    ],
+    "vi": "điệu"
+   },
+   "output": {
+    "id": "wk-3061-e:db1474",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'điệu' means 'tune' or 'melody', not 'musical key'; the correct term is 'giọng'. This is a false friend with the Japanese '調'."
+   }
+  },
+  {
+   "key": "90ccfa52f0b41a1555342663264e0e57a5be645efbff6b2fe9b8a5d784060ee6",
+   "input": {
+    "id": "wk-3061-s20",
+    "en": "key",
+    "en_pos": "noun",
+    "en_sense": "One of several small, usually square buttons on a typewriter or computer keyboard, mostly corresponding to text characters.",
+    "ja": "キー",
+    "ja_reading": "キー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "key (of a piano, organ, computer keyboard, etc.)"
+    ],
+    "vi": "phím"
+   },
+   "output": {
+    "id": "wk-3061-s20",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for a key on a keyboard or piano."
+   }
+  },
+  {
+   "key": "fe4c9bf7ba15c930fbd4be8d2f68d235ce0ec6ecee96865ff163bca64eeac6b9",
+   "input": {
+    "id": "wk-3065-e:6b2db1",
+    "en": "field",
+    "en_pos": "noun",
+    "en_sense": "physics: region affected by a particular force",
+    "ja": "場",
+    "ja_reading": "ば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "field",
+     "discipline",
+     "sphere",
+     "realm"
+    ],
+    "vi": "trường"
+   },
+   "output": {
+    "id": "wk-3065-e:6b2db1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents for the physics sense of 'field', with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "afa8c8fa473fdb305153a2c353adcfaca034c3b1c096bc12eb5a575da5e39e4e",
+   "input": {
+    "id": "wk-3065-e:bb2fa7",
+    "en": "field",
+    "en_pos": "noun",
+    "en_sense": "wide, open space used to grow crops or to hold farm animals",
+    "ja": "畑",
+    "ja_reading": "はたけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "field (for growing wheat, fruit, vegetables, etc.)",
+     "cultivated land",
+     "vegetable plot",
+     "kitchen garden",
+     "plantation"
+    ],
+    "vi": "ruộng"
+   },
+   "output": {
+    "id": "wk-3065-e:bb2fa7",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '畑' (dry field) and Vietnamese 'ruộng' (wet rice paddy) are specific, non-overlapping types of the general English 'field'."
+   }
+  },
+  {
+   "key": "6cf34d9fa66161cdf70586d24f7b1d0ceeab423d91ddfcad166c382b6d0ce1a3",
+   "input": {
+    "id": "wk-3065-e:e93fac",
+    "en": "field",
+    "en_pos": "noun",
+    "en_sense": "land area free of woodland, cities, and towns; open country",
+    "ja": "野原",
+    "ja_reading": "のはら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "field",
+     "plain",
+     "prairie",
+     "moor"
+    ],
+    "vi": "cánh đồng"
+   },
+   "output": {
+    "id": "wk-3065-e:e93fac",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'cánh đồng' refers to a large expanse of cultivated fields, which mismatches the English sense of 'open country' and the Japanese '野原' (uncultivated plain)."
+   }
+  }
+ ]
+}

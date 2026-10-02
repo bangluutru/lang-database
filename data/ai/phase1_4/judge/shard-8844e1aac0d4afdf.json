@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:18Z",
+ "items": [
+  {
+   "key": "c26d963c2fb20792d2fdd1d58b05605d9afadc20ad1a6fc8dc5caa1ce77a3e7e",
+   "input": {
+    "id": "wk-2401-e:f8c447",
+    "en": "condition",
+    "en_pos": "noun",
+    "en_sense": "health status of a patient",
+    "ja": "コンディション",
+    "ja_reading": "コンディション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "condition"
+    ],
+    "vi": "bệnh tình"
+   },
+   "output": {
+    "id": "wk-2401-e:f8c447",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese コンディション is too broad and less common in a specific medical context than 病状 (byōjō) or 容体 (yōdai); the Vietnamese 'bệnh tình' is a good match."
+   }
+  },
+  {
+   "key": "85375722f98f2df7a02eb81f51a671948af3acec3622b47b8df364f36d6c5628",
+   "input": {
+    "id": "wk-24014-s0",
+    "en": "headset",
+    "en_pos": "noun",
+    "en_sense": "A pair of headphones or earphones, or a singular headphone or earphone, typically with an attached microphone.",
+    "ja": "ヘッドセット",
+    "ja_reading": "ヘッドセット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "headset (for phones, etc.)"
+    ],
+    "vi": "tai nghe"
+   },
+   "output": {
+    "id": "wk-24014-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tai nghe' is too broad, meaning headphones/earphones in general, whereas 'headset' and 'ヘッドセット' specifically include a microphone."
+   }
+  },
+  {
+   "key": "4f1a7ccc344db959d61f163f758b268caa6695495bee8087193d8030f1f153f7",
+   "input": {
+    "id": "wk-24025-s0",
+    "en": "hot spring",
+    "en_pos": "noun",
+    "en_sense": "A natural spring producing water whose temperature is greater than about 20 °C (68 °F).",
+    "ja": "温泉",
+    "ja_reading": "おんせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hot spring"
+    ],
+    "vi": "suối nước nóng"
+   },
+   "output": {
+    "id": "wk-24025-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for this concept."
+   }
+  },
+  {
+   "key": "fd9deae6f4e31a8dac1ea820940d3bb9d2f9fe205fdfb6e83a6bd441c6e6e74b",
+   "input": {
+    "id": "wk-2403-s1",
+    "en": "complex",
+    "en_pos": "adjective",
+    "en_sense": "Not simple, easy, or straightforward; complicated.",
+    "ja": "複雑",
+    "ja_reading": "ふくざつ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "complex",
+     "complicated",
+     "intricate",
+     "mixed (feelings)"
+    ],
+    "vi": "phức tạp"
+   },
+   "output": {
+    "id": "wk-2403-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural, and direct equivalents."
+   }
+  },
+  {
+   "key": "ab06492f1a341d5b4456d5353d74327919e5e4be4b093f3d6b363a14432930da",
+   "input": {
+    "id": "wk-2404-e:6bdaee",
+    "en": "complex",
+    "en_pos": "noun",
+    "en_sense": "psychologically based dislike or fear",
+    "ja": "コンプレックス",
+    "ja_reading": "コンプレックス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complex",
+     "inferiority complex"
+    ],
+    "vi": "mặc cảm"
+   },
+   "output": {
+    "id": "wk-2404-e:6bdaee",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both the Japanese and Vietnamese words specifically mean 'inferiority complex', which is narrower than the general psychological sense of 'complex' given in the English definition."
+   }
+  },
+  {
+   "key": "bc137c8fbd5bb6e1cdbd9d1e682744bd069fa89337a169fd4e20fd5089d583e9",
+   "input": {
+    "id": "wk-2405-s0",
+    "en": "cruel",
+    "en_pos": "adjective",
+    "en_sense": "Intentionally causing or reveling in pain and suffering; merciless, heartless.",
+    "ja": "残酷",
+    "ja_reading": "ざんこく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "cruel",
+     "brutal",
+     "ruthless",
+     "merciless",
+     "inhuman"
+    ],
+    "vi": "độc ác"
+   },
+   "output": {
+    "id": "wk-2405-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'cruel'."
+   }
+  },
+  {
+   "key": "9d7532fffb04c24011de1007cf74329bbefd397d04cd95f8e98f371baadeb6cd",
+   "input": {
+    "id": "wk-2406-e:dcb577",
+    "en": "butter",
+    "en_pos": "noun",
+    "en_sense": "soft foodstuff made from milk",
+    "ja": "バター",
+    "ja_reading": "バター",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "butter"
+    ],
+    "vi": "bơ"
+   },
+   "output": {
+    "id": "wk-2406-e:dcb577",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bơ' is too broad, as it can also mean margarine or avocado, while English 'butter' and Japanese 'バター' refer specifically to the dairy product."
+   }
+  },
+  {
+   "key": "699c5380b6690b72f913f4a8b4d7bb6550d42fa12c1f0fc651200ed1d579388f",
+   "input": {
+    "id": "wk-24069-s0",
+    "en": "spinning top",
+    "en_pos": "noun",
+    "en_sense": "A toy with a tapering point that can be made to spin on its axis, either with a built-in pump-action handle, with the fingers or with a string.",
+    "ja": "こま",
+    "ja_reading": "こま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spinning top"
+    ],
+    "vi": "cù"
+   },
+   "output": {
+    "id": "wk-24069-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a spinning top."
+   }
+  },
+  {
+   "key": "4a60055b582e6ae55b335091116e824bc3d84026bb442aeb2a644959f7d3abfe",
+   "input": {
+    "id": "wk-2408-e:ab70cd",
+    "en": "bridge",
+    "en_pos": "noun",
+    "en_sense": "construction or natural feature that spans a divide",
+    "ja": "橋",
+    "ja_reading": "はし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bridge"
+    ],
+    "vi": "cầu"
+   },
+   "output": {
+    "id": "wk-2408-e:ab70cd",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'bridge'."
+   }
+  },
+  {
+   "key": "3b8e70efad6e9e444743c678f7d1826de029512d48a32766d8c2267fde0db89d",
+   "input": {
+    "id": "wk-24082-s0",
+    "en": "extradite",
+    "en_pos": "verb",
+    "en_sense": "To remove a person from one state to another by legal process.",
+    "ja": "引き渡す",
+    "ja_reading": "ひきわたす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to deliver",
+     "to extradite",
+     "to stretch across",
+     "to hand over"
+    ],
+    "vi": "dẫn độ"
+   },
+   "output": {
+    "id": "wk-24082-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '引き渡す' is too broad, meaning 'to hand over' in general, whereas 'extradite' and the Vietnamese 'dẫn độ' are specific legal terms."
+   }
+  },
+  {
+   "key": "ad1f26af1eb452adf6a3744e232cafd8379fe28bf485e57c757cddcf83e6b006",
+   "input": {
+    "id": "wk-24104-s0",
+    "en": "bye-bye",
+    "en_pos": "interjection",
+    "en_sense": "Goodbye.",
+    "ja": "バイバイ",
+    "ja_reading": "バイバイ",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "bye-bye",
+     "goodbye"
+    ],
+    "vi": "bái bai"
+   },
+   "output": {
+    "id": "wk-24104-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the same informal expression 'bye-bye', borrowed into Japanese and Vietnamese."
+   }
+  },
+  {
+   "key": "cbc58498ea8a224dccf7b6e247decf9a69943b9c9f1d1f122d504e1860a9b1f6",
+   "input": {
+    "id": "wk-2411-s0",
+    "en": "branch",
+    "en_pos": "noun",
+    "en_sense": "The woody part of a tree arising from the trunk and usually dividing.",
+    "ja": "枝",
+    "ja_reading": "えだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "branch",
+     "bough",
+     "limb",
+     "twig",
+     "sprig",
+     "spray"
+    ],
+    "vi": "cành"
+   },
+   "output": {
+    "id": "wk-2411-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'branch' of a tree."
+   }
+  }
+ ]
+}

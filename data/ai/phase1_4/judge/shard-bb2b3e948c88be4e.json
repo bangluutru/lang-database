@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:27:53Z",
+ "items": [
+  {
+   "key": "b86473ae8946b21cd386a9eb443274b6dd80ab751d93abf4b9e4e5c095f4fba0",
+   "input": {
+    "id": "jm-1231590-0-milk",
+    "en": "milk",
+    "en_pos": "noun",
+    "en_sense": "(cow's) milk",
+    "ja": "牛乳",
+    "ja_reading": "ぎゅうにゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(cow's) milk"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1231590-0-milk",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and direct translation for the specific sense of cow's milk."
+   }
+  },
+  {
+   "key": "baf1b94fe8deb39b3c6f65d7a1d6d2ee932038525534c3fbca07eb35b141d102",
+   "input": {
+    "id": "jm-1231810-0-residence",
+    "en": "residence",
+    "en_pos": "noun",
+    "en_sense": "residence; living (at, in); abode",
+    "ja": "居住",
+    "ja_reading": "きょじゅう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "residence",
+     "living (at, in)",
+     "abode"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1231810-0-residence",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "居住 accurately captures the formal sense of residing or living in a place."
+   }
+  },
+  {
+   "key": "e08d42cbea8535b1e071d51e6fddbb292d9cb0f046f736a4a5fc96b190aa06c8",
+   "input": {
+    "id": "jm-1232180-0-huge",
+    "en": "huge",
+    "en_pos": "adjective",
+    "en_sense": "huge; gigantic; enormous",
+    "ja": "巨大",
+    "ja_reading": "きょだい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "huge",
+     "gigantic",
+     "enormous"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1232180-0-huge",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "巨大 is an excellent and direct equivalent for the English word 'huge'."
+   }
+  },
+  {
+   "key": "a9ad5c39fd74c9a8f3d0c8e2f0c0f4ef9257c13649a6a410d1c5b596e32f25cc",
+   "input": {
+    "id": "jm-1232360-1-prevent",
+    "en": "prevent",
+    "en_pos": "verb",
+    "en_sense": "to prevent (from doing); to deny (e.g. access); to block",
+    "ja": "拒む",
+    "ja_reading": "こばむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to prevent (from doing)",
+     "to deny (e.g. access)",
+     "to block"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1232360-1-prevent",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "拒む is a good match for the specific sense of 'prevent' that involves active refusal, denial, or blocking."
+   }
+  },
+  {
+   "key": "440f8f9ff1749cbab92de6eab0e671a4ad564f3ccbf006c21b7f8b53bcc0ce22",
+   "input": {
+    "id": "jm-1232910-0-permission",
+    "en": "permission",
+    "en_pos": "noun",
+    "en_sense": "permission; allowance; acceptance; tolerance; pardon",
+    "ja": "許容",
+    "ja_reading": "きょよう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "permission",
+     "allowance",
+     "acceptance",
+     "tolerance",
+     "pardon"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1232910-0-permission",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "許容 primarily means 'tolerance' or 'allowance within limits', making it a narrow and somewhat inaccurate match for the broader concept of 'permission', and 'pardon' is an incorrect gloss."
+   }
+  },
+  {
+   "key": "8923d1509cfe49509fa594ebd3914d78ad95ce99067231a3d8e51762791ecc30",
+   "input": {
+    "id": "jm-1235570-0-conference",
+    "en": "conference",
+    "en_pos": "noun",
+    "en_sense": "conference; consultation; discussion; negotiation",
+    "ja": "協議",
+    "ja_reading": "きょうぎ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "conference",
+     "consultation",
+     "discussion",
+     "negotiation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1235570-0-conference",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "協議 accurately represents the sense of a meeting for discussion, consultation, or negotiation."
+   }
+  },
+  {
+   "key": "008385c581e6d10ee0295ca577a016c83ad1cd654e8ee6ead229fc8e3a90ae27",
+   "input": {
+    "id": "jm-1235700-0-cooperation",
+    "en": "cooperation",
+    "en_pos": "noun",
+    "en_sense": "cooperation; conciliation; harmony; coordination",
+    "ja": "協調",
+    "ja_reading": "きょうちょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "cooperation",
+     "conciliation",
+     "harmony",
+     "coordination"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1235700-0-cooperation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "協調 is an excellent equivalent, capturing the nuances of cooperation, harmony, and coordination."
+   }
+  },
+  {
+   "key": "f5e464df4b3dab30f272692d9fcdf790c4d2d0e1696f82f088700ab0cab7d3ac",
+   "input": {
+    "id": "jm-1235890-0-shout",
+    "en": "shout",
+    "en_pos": "noun",
+    "en_sense": "shout; cry; outcry; yell; shriek; scream",
+    "ja": "叫び",
+    "ja_reading": "さけび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shout",
+     "cry",
+     "outcry",
+     "yell",
+     "shriek",
+     "scream"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1235890-0-shout",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "叫び is the perfect noun equivalent for 'shout' and its synonyms like 'cry' or 'scream'."
+   }
+  },
+  {
+   "key": "3bde57f740f401b0749f7626bbae93bf10b7ee5034162079411168176b777829",
+   "input": {
+    "id": "jm-1236000-0-environment",
+    "en": "environment",
+    "en_pos": "noun",
+    "en_sense": "one's circumstances; environment; situation (in life)",
+    "ja": "境遇",
+    "ja_reading": "きょうぐう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "one's circumstances",
+     "environment",
+     "situation (in life)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1236000-0-environment",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "境遇 is the precise word for 'environment' in the sense of one's personal circumstances or situation in life."
+   }
+  },
+  {
+   "key": "054ef51d50cc4f370c6a19ae72e6133726ca431127975032838f6fc546a0f9d3",
+   "input": {
+    "id": "jm-1236200-0-reinforcement",
+    "en": "reinforcement",
+    "en_pos": "noun",
+    "en_sense": "strengthening; intensifying; reinforcement; enhancement; solidification",
+    "ja": "強化",
+    "ja_reading": "きょうか",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "strengthening",
+     "intensifying",
+     "reinforcement",
+     "enhancement",
+     "solidification"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1236200-0-reinforcement",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "強化 is a direct and widely used equivalent for 'reinforcement' in the sense of strengthening or enhancing."
+   }
+  },
+  {
+   "key": "7568fd27980996e69f6a5fa392c22077009c1f06f8bf2617a71b6eb95dade216",
+   "input": {
+    "id": "jm-1236270-0-enforcement",
+    "en": "enforcement",
+    "en_pos": "noun",
+    "en_sense": "forcing (e.g. a vote); carrying out (forcibly); pushing ahead (with); enforcement",
+    "ja": "強行",
+    "ja_reading": "きょうこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "forcing (e.g. a vote)",
+     "carrying out (forcibly)",
+     "pushing ahead (with)",
+     "enforcement"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1236270-0-enforcement",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "強行 is the exact term for forcing something through against opposition, matching this specific sense of 'enforcement'."
+   }
+  },
+  {
+   "key": "84daf1ee0ff92ed3dded3924ae84a15943ad836975b9514cf8b8e89b735cb503",
+   "input": {
+    "id": "jm-1236600-0-powerful",
+    "en": "powerful",
+    "en_pos": "adjective",
+    "en_sense": "powerful; strong",
+    "ja": "強力",
+    "ja_reading": "きょうりょく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "powerful",
+     "strong"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1236600-0-powerful",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "強力 is a direct and common equivalent for 'powerful' or 'strong'."
+   }
+  }
+ ]
+}

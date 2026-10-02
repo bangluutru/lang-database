@@ -1,0 +1,401 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:27:52Z",
+ "items": [
+  {
+   "key": "2c50b2e2684359e9aa8b91283dde7f602b7e21f3320cfb5d67121cd2ef3f1a3d",
+   "input": {
+    "id": "jm-1222700-0-steam_locomotive",
+    "en": "steam locomotive",
+    "en_pos": "noun",
+    "en_sense": "steam locomotive; steam train",
+    "ja": "汽車",
+    "ja_reading": "きしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "steam locomotive",
+     "steam train"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222700-0-steam_locomotive",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese word 汽車 is now commonly used for 'train' in general, not just steam trains, and the more precise term for 'steam locomotive' is 蒸気機関車 (jōki kikansha)."
+   }
+  },
+  {
+   "key": "7a0e0cd9882110816c0656868d2a6173d2cfeea27253fdab88594fa31fabec87",
+   "input": {
+    "id": "jm-1222970-0-standard",
+    "en": "standard",
+    "en_pos": "noun",
+    "en_sense": "standard; norm",
+    "ja": "規格",
+    "ja_reading": "きかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "standard",
+     "norm"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222970-0-standard",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "規格 specifically means a technical or industrial standard/specification, not a social 'norm' or a general standard of quality."
+   }
+  },
+  {
+   "key": "f0910e421f43a0826d6722e139923f97536284dd3c96eeb4b64ef8b56c85d754",
+   "input": {
+    "id": "jm-1223060-0-prescription",
+    "en": "prescription",
+    "en_pos": "noun",
+    "en_sense": "stipulation; prescription; provision; regulation; rule",
+    "ja": "規定",
+    "ja_reading": "きてい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "stipulation",
+     "prescription",
+     "provision",
+     "regulation",
+     "rule"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1223060-0-prescription",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent match for the non-medical, legal/formal sense of 'prescription' as a rule or provision."
+   }
+  },
+  {
+   "key": "c3561164082e4ac5ad3b96b09235b21d5b23ad9e3ee0b3ef11500b0a897f5d45",
+   "input": {
+    "id": "jm-1223230-0-mention",
+    "en": "mention",
+    "en_pos": "noun",
+    "en_sense": "mention (in a document); record; entry; statement; listing",
+    "ja": "記載",
+    "ja_reading": "きさい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "mention (in a document)",
+     "record",
+     "entry",
+     "statement",
+     "listing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1223230-0-mention",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect match for the sense of a written mention, record, or entry in a document."
+   }
+  },
+  {
+   "key": "f5db48d779de5bfac28c25b5296d7166f4c45392a381ce5b055a2af82373843b",
+   "input": {
+    "id": "jm-1223430-0-signature",
+    "en": "signature",
+    "en_pos": "noun",
+    "en_sense": "signature; signing one's name; writing one's name (on); registration (of a bond)",
+    "ja": "記名",
+    "ja_reading": "きめい",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "signature",
+     "signing one's name",
+     "writing one's name (on)",
+     "registration (of a bond)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1223430-0-signature",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "記名 means 'writing one's name' (which can be printed), while a handwritten 'signature' is 署名 (shomei) or サイン (sain)."
+   }
+  },
+  {
+   "key": "92a42adebc138cfa56176bfc88d7622b6db9899b2d60357e6568bf12f0469b45",
+   "input": {
+    "id": "jm-1223860-0-origin",
+    "en": "origin",
+    "en_pos": "noun",
+    "en_sense": "starting point; origin",
+    "ja": "起点",
+    "ja_reading": "きてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "starting point",
+     "origin"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1223860-0-origin",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect match for the sense of a physical or temporal starting point."
+   }
+  },
+  {
+   "key": "035d32e47223370e8c80b5f0927e617fd73d464f491736835f5f1cb564fba813",
+   "input": {
+    "id": "jm-1224880-0-good",
+    "en": "good",
+    "en_pos": "adjective",
+    "en_sense": "good; OK; all right; fine; very well; will do",
+    "ja": "よろしい",
+    "ja_reading": "よろしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "good",
+     "OK",
+     "all right",
+     "fine",
+     "very well",
+     "will do"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1224880-0-good",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "よろしい is a polite/formal equivalent of いい (ii) and matches the sense, but it is higher register than some of the English equivalents like 'OK' or 'fine'."
+   }
+  },
+  {
+   "key": "4072823d84500f4ad1df163d7bcd49ca4364c9e6b99b9f68f4c585025979a38e",
+   "input": {
+    "id": "jm-1225090-0-technique",
+    "en": "technique",
+    "en_pos": "noun",
+    "en_sense": "technique; art; skill; move",
+    "ja": "技",
+    "ja_reading": "わざ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "technique",
+     "art",
+     "skill",
+     "move"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225090-0-technique",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for 'technique' in the sense of a specific skill or move, especially in arts or sports."
+   }
+  },
+  {
+   "key": "db977cb2275849421d5988b7be4529039403cb376dd3a7101f94594c77f0a31b",
+   "input": {
+    "id": "jm-1225110-0-engineer",
+    "en": "engineer",
+    "en_pos": "noun",
+    "en_sense": "engineer; technical officer",
+    "ja": "技師",
+    "ja_reading": "ぎし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "engineer",
+     "technical officer"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225110-0-engineer",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "技師 is a valid but somewhat formal or dated term for 'engineer'; the loanword エンジニア is more common in modern usage."
+   }
+  },
+  {
+   "key": "b96516b9a15c7381f18a0a850a37d99fa062c39792491d6db075279cae4bb688",
+   "input": {
+    "id": "jm-1225230-0-ability",
+    "en": "ability",
+    "en_pos": "noun",
+    "en_sense": "technical skill; ability; capacity",
+    "ja": "技能",
+    "ja_reading": "ぎのう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "technical skill",
+     "ability",
+     "capacity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225230-0-ability",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a good match, as 技能 specifically refers to technical skill, which is captured in the provided English sense."
+   }
+  },
+  {
+   "key": "3d4d80a0f1fa4705f76f2a4e39c9fd37c19cec8670d6be7384f42a69b54309af",
+   "input": {
+    "id": "jm-1225630-0-doubt",
+    "en": "doubt",
+    "en_pos": "noun",
+    "en_sense": "doubt; question; suspicion; dubiousness",
+    "ja": "疑問",
+    "ja_reading": "ぎもん",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "doubt",
+     "question",
+     "suspicion",
+     "dubiousness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225630-0-doubt",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "疑問 primarily means 'question' or 'intellectual doubt', and lacks the strong sense of 'suspicion' of a person that the English word 'doubt' can carry."
+   }
+  },
+  {
+   "key": "1773c5156d93e10ab21fdfd44a7594b0e79f3028607db7a126e3877a11ea9b26",
+   "input": {
+    "id": "jm-1225680-0-doubt",
+    "en": "doubt",
+    "en_pos": "noun",
+    "en_sense": "doubt; misgivings; distrust; suspicion",
+    "ja": "疑惑",
+    "ja_reading": "ぎわく",
+    "ja_pos": "n,adj-no,n-suf",
+    "ja_glosses": [
+     "doubt",
+     "misgivings",
+     "distrust",
+     "suspicion"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1225680-0-doubt",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent match for the sense of 'doubt' that implies suspicion or distrust, often in a legal or political context."
+   }
+  }
+ ]
+}

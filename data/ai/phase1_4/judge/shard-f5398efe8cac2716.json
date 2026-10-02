@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:45:26Z",
+ "items": [
+  {
+   "key": "92764c9a979862aa1b6fd7979ef7186e25836a49d00365310040f51a6e1ea0c9",
+   "input": {
+    "id": "wk-3793-e:39d21c",
+    "en": "test",
+    "en_pos": "verb",
+    "en_sense": "to challenge",
+    "ja": "試す",
+    "ja_reading": "ためす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to try (out)",
+     "to have a try (at)",
+     "to test",
+     "to put to the test"
+    ],
+    "vi": "thử"
+   },
+   "output": {
+    "id": "wk-3793-e:39d21c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are standard and natural equivalents for the sense of testing or challenging something's limits."
+   }
+  },
+  {
+   "key": "db269e989515a94893226a4c143e4d70ac8cba4d03c11d57388383b99a553387",
+   "input": {
+    "id": "wk-3798-s1",
+    "en": "delta",
+    "en_pos": "noun",
+    "en_sense": "A landform at the mouth of a river where it empties into a body of water.",
+    "ja": "三角州",
+    "ja_reading": "さんかくす",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(river) delta"
+    ],
+    "vi": "châu thổ"
+   },
+   "output": {
+    "id": "wk-3798-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, specific words for a river delta."
+   }
+  },
+  {
+   "key": "eb3b390a5105e6cecff661fccefa513c42f5afc2bdddd278de2a94eee6d6a0f0",
+   "input": {
+    "id": "wk-38-s0",
+    "en": "sunday",
+    "en_pos": "noun",
+    "en_sense": "The first day of the week in many religious traditions, and the seventh day of the week in systems using the ISO 8601 standard; the Christian Sabbath; it follows Saturday and precedes Monday.",
+    "ja": "日曜日",
+    "ja_reading": "にちようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Sunday"
+    ],
+    "vi": "chủ nhật"
+   },
+   "output": {
+    "id": "wk-38-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, unambiguous words for Sunday."
+   }
+  },
+  {
+   "key": "9c0e1470232b417396c3d273034c88375f979c49452018311107bbd70fb6984b",
+   "input": {
+    "id": "wk-3805-s0",
+    "en": "labyrinth",
+    "en_pos": "noun",
+    "en_sense": "A complicated irregular network of passages or paths, especially underground or covered, in which it is difficult to find one's way.",
+    "ja": "迷宮",
+    "ja_reading": "めいきゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "labyrinth",
+     "maze"
+    ],
+    "vi": "mê cung"
+   },
+   "output": {
+    "id": "wk-3805-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese and Vietnamese terms are direct cognates and standard equivalents for labyrinth/maze."
+   }
+  },
+  {
+   "key": "12e0727b763b31feb592993e14f04a92a82465db4748b68d708a64def9d141fc",
+   "input": {
+    "id": "wk-3812-s1",
+    "en": "daily",
+    "en_pos": "noun",
+    "en_sense": "A newspaper or comic strip etc. that is published every day.",
+    "ja": "日報",
+    "ja_reading": "にっぽう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "daily report"
+    ],
+    "vi": "nhật báo"
+   },
+   "output": {
+    "id": "wk-3812-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_JA",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 日報 means 'daily report' (e.g., in a business context), not 'daily newspaper', for which 日刊紙 is used; the Vietnamese is a correct cognate."
+   }
+  },
+  {
+   "key": "66bec97656b1b2fd088de480c8074e824aa2c3e283f91dca8908e1cd5c0b98c0",
+   "input": {
+    "id": "wk-3813-s0",
+    "en": "daily",
+    "en_pos": "adverb",
+    "en_sense": "quotidianly, every day",
+    "ja": "日々",
+    "ja_reading": "ひび",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "daily",
+     "everyday"
+    ],
+    "vi": "mổi ngày"
+   },
+   "output": {
+    "id": "wk-3813-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word has a typo ('mổi' should be 'mỗi'), but otherwise all three are good equivalents for 'daily'."
+   }
+  },
+  {
+   "key": "1031346fa898cfeb8ffe16c3fa0fa180f65d138e2145c774603c81e660013dac",
+   "input": {
+    "id": "wk-3814-s0",
+    "en": "dancer",
+    "en_pos": "noun",
+    "en_sense": "A person who dances, usually as a hobby, an occupation, or a profession.",
+    "ja": "ダンサー",
+    "ja_reading": "ダンサー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dancer"
+    ],
+    "vi": "vũ công"
+   },
+   "output": {
+    "id": "wk-3814-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'vũ công' specifically means a professional dancer, which is narrower than the English sense that includes hobbyists."
+   }
+  },
+  {
+   "key": "37e4ab7c94e1fb44c2fa4532171fb89b7602850285ae39c2cf0277c3e02cd2b7",
+   "input": {
+    "id": "wk-3816-s0",
+    "en": "dawn",
+    "en_pos": "noun",
+    "en_sense": "The morning twilight period immediately before sunrise.",
+    "ja": "夜明け",
+    "ja_reading": "よあけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dawn",
+     "daybreak"
+    ],
+    "vi": "bình minh"
+   },
+   "output": {
+    "id": "wk-3816-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard and natural words for dawn."
+   }
+  },
+  {
+   "key": "42953d3cae57ba547afa6bee8baa35a39bbfbfe5efb29ae3e99a66539e77e565",
+   "input": {
+    "id": "wk-383-s0",
+    "en": "transitive verb",
+    "en_pos": "noun",
+    "en_sense": "A verb that is accompanied (either clearly or implicitly) by a direct object in the active voice. It links the action taken by the subject with the object upon which that action is taken. Consequently, transitive verbs can also be used in the passive voice when the direct object of the equivalent ac",
+    "ja": "他動詞",
+    "ja_reading": "たどうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "transitive verb"
+    ],
+    "vi": "ngoại động từ"
+   },
+   "output": {
+    "id": "wk-383-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard grammatical terms for 'transitive verb'."
+   }
+  },
+  {
+   "key": "9a08ab28940130e1d8487469dcfbcd1dbd57860f4a5a3145ff4b619b9d6e467c",
+   "input": {
+    "id": "wk-3835-e:195989",
+    "en": "line",
+    "en_pos": "noun",
+    "en_sense": "path through two or more points, threadlike mark",
+    "ja": "線",
+    "ja_reading": "せん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "line",
+     "stripe",
+     "stria"
+    ],
+    "vi": "đường"
+   },
+   "output": {
+    "id": "wk-3835-e:195989",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Vietnamese 'đường' is too broad, also meaning 'road' and 'sugar', while the English and Japanese words are specific to 'line'."
+   }
+  },
+  {
+   "key": "caeb1676a6be33ac068e9cb830f08b327cb8e6b4dec48b34d2e4cdf8ab5a28c1",
+   "input": {
+    "id": "wk-3835-e:f8232d",
+    "en": "line",
+    "en_pos": "noun",
+    "en_sense": "single horizontal row of text on a screen, printed paper, etc.",
+    "ja": "行",
+    "ja_reading": "ぎょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "line (of text)",
+     "row",
+     "verse"
+    ],
+    "vi": "hàng"
+   },
+   "output": {
+    "id": "wk-3835-e:f8232d",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the correct and standard terms for a line of text."
+   }
+  },
+  {
+   "key": "b7aa038c13c72fd435b30e33303375896c7f8f8f296e8d28cbb74e0bd7a690be",
+   "input": {
+    "id": "wk-3840-s1",
+    "en": "graph",
+    "en_pos": "noun",
+    "en_sense": "A set of points constituting a graphical representation of a real function; (formally) a set of tuples (x_1,x_2,…,x_m,y)∈ R ᵐ⁺¹, where y=f(x_1,x_2,…,x_m) for a given function f: R ᵐ→ R . See also Graph of a function on Wikipedia.Wikipedia",
+    "ja": "グラフ",
+    "ja_reading": "グラフ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "graph",
+     "chart",
+     "diagram"
+    ],
+    "vi": "biểu đồ"
+   },
+   "output": {
+    "id": "wk-3840-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'biểu đồ' means 'chart' or 'diagram' and is less precise for a mathematical function graph than 'đồ thị'."
+   }
+  }
+ ]
+}

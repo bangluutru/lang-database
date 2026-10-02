@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:59Z",
+ "items": [
+  {
+   "key": "afc2ac7bc3e09f4340889f9ce2ddffedbce2fb34f0e226093b31798bcfdffa3c",
+   "input": {
+    "id": "concept-core-read",
+    "en": "read",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'read': to read",
+    "ja": "読む",
+    "ja_reading": "よむ",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "to read"
+    ],
+    "vi": "đọc"
+   },
+   "output": {
+    "id": "concept-core-read",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent, fundamental equivalence for 'to read' across all three languages."
+   }
+  },
+  {
+   "key": "a2657bd3cc736b9220212e6a661a004e2849215208a166f57f63e4f0af0b8c83",
+   "input": {
+    "id": "concept-core-plot",
+    "en": "plot",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'plot': plot, intrigue, scheme",
+    "ja": "陰謀",
+    "ja_reading": "いんぼう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "plot",
+     "intrigue",
+     "scheme"
+    ],
+    "vi": "âm mưu"
+   },
+   "output": {
+    "id": "concept-core-plot",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The equivalents correctly capture the 'conspiracy' sense of 'plot'."
+   }
+  },
+  {
+   "key": "eba55c01e4f5fd208d827b5f229f00b830ac3d6eb6260cdb7f929f4806e92da1",
+   "input": {
+    "id": "concept-core-transportation",
+    "en": "transportation",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'transportation': traffic, transportation",
+    "ja": "交通",
+    "ja_reading": "こうつう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "traffic",
+     "transportation"
+    ],
+    "vi": "giao thông"
+   },
+   "output": {
+    "id": "concept-core-transportation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese and Vietnamese terms correctly match the broad concept of traffic and transportation systems."
+   }
+  },
+  {
+   "key": "611b086c20ce2a4a56a5901e8a3b95ac7ac09f7e2b315fe6a8a8a0f246c12758",
+   "input": {
+    "id": "concept-core-side",
+    "en": "side",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'side': side, end, goal area",
+    "ja": "側",
+    "ja_reading": "そば",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "bên"
+   },
+   "output": {
+    "id": "concept-core-side",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese reading 'そば' (soba) means 'near', not 'side'; the correct reading for this sense would be 'がわ' (gawa)."
+   }
+  },
+  {
+   "key": "a0d2347df331f589ddbcd1ce873e98146ef0e49e7118fe17954791ad49d45154",
+   "input": {
+    "id": "concept-core-well",
+    "en": "well",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'well': say, well, um",
+    "ja": "あの",
+    "ja_reading": "あの",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "say",
+     "well",
+     "um",
+     "er"
+    ],
+    "vi": "tốt"
+   },
+   "output": {
+    "id": "concept-core-well",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The entry is completely broken: the POS is wrong for all languages, and the Vietnamese word translates a different sense of 'well'."
+   }
+  },
+  {
+   "key": "0e81f2745828f5270cfa3cc76348bef93c27827b6b072458f3eaccfa7293afb0",
+   "input": {
+    "id": "concept-core-survival",
+    "en": "survival",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'survival': existence, being, life",
+    "ja": "生存",
+    "ja_reading": "せいぞん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "existence",
+     "being",
+     "life",
+     "survival"
+    ],
+    "vi": "sinh tồn"
+   },
+   "output": {
+    "id": "concept-core-survival",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent equivalence across all three languages, with direct cognates for Japanese and Vietnamese."
+   }
+  },
+  {
+   "key": "823560501fc85934594f1b3f14d8d8127d0740e05cee89d4282b4a88af9d9ed4",
+   "input": {
+    "id": "concept-core-conference",
+    "en": "conference",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'conference': meeting, conference, session",
+    "ja": "会議",
+    "ja_reading": "かいぎ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "meeting",
+     "conference",
+     "session",
+     "assembly",
+     "council",
+     "convention"
+    ],
+    "vi": "hội nghị"
+   },
+   "output": {
+    "id": "concept-core-conference",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hội nghị' is more specific to large/formal conferences than the Japanese '会議', which can also mean a simple meeting."
+   }
+  },
+  {
+   "key": "da6c42b89b51ddb6e2bf4160c92baed78c72d98b0949b7c719800d42b697cfac",
+   "input": {
+    "id": "concept-core-ruin",
+    "en": "ruin",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'ruin': framework (of a building, etc.), skeleton, remains",
+    "ja": "台無しにする",
+    "ja_reading": "だいなしにする",
+    "ja_pos": "verb",
+    "ja_glosses": [],
+    "vi": "làm hỏng"
+   },
+   "output": {
+    "id": "concept-core-ruin",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense describes the noun 'ruins' (remains of a building), but the entry provides translations for the verb 'to ruin' (to spoil)."
+   }
+  },
+  {
+   "key": "93fae01c2f2dc42dc8681677270d9658ced07fbecf9af852c0e4f796851d9e46",
+   "input": {
+    "id": "concept-core-husband",
+    "en": "husband",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'husband': husband",
+    "ja": "お父さん",
+    "ja_reading": "おとうさん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "husband"
+    ],
+    "vi": "chồng"
+   },
+   "output": {
+    "id": "concept-core-husband",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 'お父さん' means 'father', not 'husband'. The correct word is '夫' (otto)."
+   }
+  },
+  {
+   "key": "6a8a9ad5d809b73aa3789d1c4fbdda1a42a2d1a332080db3ba13535000461aea",
+   "input": {
+    "id": "concept-core-engine",
+    "en": "engine",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'engine': engine",
+    "ja": "エンジン",
+    "ja_reading": "エンジン",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "động cơ"
+   },
+   "output": {
+    "id": "concept-core-engine",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent equivalence, using the standard loanword in Japanese and the native term in Vietnamese."
+   }
+  },
+  {
+   "key": "8433ef34e11e32b4162273ddafdda32af641637831ce9c40e1a3ede0bc42a836",
+   "input": {
+    "id": "concept-core-front",
+    "en": "front",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'front': front, ahead",
+    "ja": "前",
+    "ja_reading": "ぜん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "phía trước"
+   },
+   "output": {
+    "id": "concept-core-front",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese reading 'ぜん' is incorrect for 'front'; the correct reading is 'まえ'."
+   }
+  },
+  {
+   "key": "6179eef8b6876d5eb359878aa763b8aa2d92c5e98e5d6e263eebb213e49e9435",
+   "input": {
+    "id": "concept-core-athlete",
+    "en": "athlete",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'athlete': player (of a sport), athlete, team member",
+    "ja": "選手",
+    "ja_reading": "せんしゅ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "player (of a sport)",
+     "athlete",
+     "team member"
+    ],
+    "vi": "tuyển thủ"
+   },
+   "output": {
+    "id": "concept-core-athlete",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tuyển thủ' is too narrow, meaning a 'selected player', whereas 'vận động viên' is a better general equivalent for 'athlete'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:54:52Z",
+ "items": [
+  {
+   "key": "71f37e38d8c6ed0bd1beb597536f8bdd29c485492a9c321866ed39310af6b8bc",
+   "input": {
+    "id": "jm-1983710-0-know",
+    "en": "know",
+    "en_pos": "verb",
+    "en_sense": "to know; to be aware (of); to be acquainted (with)",
+    "ja": "存ずる",
+    "ja_reading": "ぞんずる",
+    "ja_pos": "vz,vt",
+    "ja_glosses": [
+     "to know",
+     "to be aware (of)",
+     "to be acquainted (with)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1983710-0-know",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "存ずる is a humble (kenjougo) equivalent for \"know\" and is not a suitable general translation for learners; 知る (shiru) is the neutral term."
+   }
+  },
+  {
+   "key": "bf11193c3c4d7cf92e6c0822d97aab9db113d4fde8854e6a44a6621a1d12bb52",
+   "input": {
+    "id": "jm-1983740-0-lead",
+    "en": "lead",
+    "en_pos": "verb",
+    "en_sense": "to be open (to traffic); to lead (to); to connect (to); to run (from, between; e.g. bus service); to extend (up to); to go (to)",
+    "ja": "通ずる",
+    "ja_reading": "つうずる",
+    "ja_pos": "vz,vi",
+    "ja_glosses": [
+     "to be open (to traffic)",
+     "to lead (to)",
+     "to connect (to)",
+     "to run (from, between; e.g. bus service)",
+     "to extend (up to)",
+     "to go (to)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1983740-0-lead",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "通ずる is a slightly literary/formal form; the more common modern equivalent is 通じる (tsuujiru)."
+   }
+  },
+  {
+   "key": "4f472d96b4c3b3f5ce087c6ffce6cbbb10475a07f5229950d4f2014082028704",
+   "input": {
+    "id": "jm-1983750-0-tear",
+    "en": "tear",
+    "en_pos": "verb",
+    "en_sense": "to tear; to rip",
+    "ja": "破く",
+    "ja_reading": "やぶく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to tear",
+     "to rip"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1983750-0-tear",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "破く is a good equivalent for \"to tear\", though the kanji form 破る (yaburu) is more common."
+   }
+  },
+  {
+   "key": "1156444320efe987fa7aa201436a97b533ea1d105709d3a2df65b7d123beb6a2",
+   "input": {
+    "id": "jm-2004390-0-under",
+    "en": "under",
+    "en_pos": "noun",
+    "en_sense": "under (guidance, supervision, rules, the law, etc.)",
+    "ja": "下",
+    "ja_reading": "もと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "under (guidance, supervision, rules, the law, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2004390-0-under",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Japanese 下 (moto) correctly translates the abstract sense of \"under\", but listing \"under\" as a noun for this prepositional sense is problematic in English."
+   }
+  },
+  {
+   "key": "5a51e46219bb012bdb8812a77ca68e1d31b17ad6a2ba4a970d55749238b6d405",
+   "input": {
+    "id": "jm-2006130-0-anyone",
+    "en": "anyone",
+    "en_pos": "pronoun",
+    "en_sense": "anyone; any person; whoever",
+    "ja": "何人",
+    "ja_reading": "なにびと",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "anyone",
+     "any person",
+     "whoever"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2006130-0-anyone",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "何人 (nanibito) is a literary and somewhat archaic word for \"anyone\"; the common modern equivalent is 誰でも (daredemo)."
+   }
+  },
+  {
+   "key": "0669a5054248f4b9b6d7e28c8881d6c70c3582093522393111b323b7348768a9",
+   "input": {
+    "id": "jm-2007420-0-lot",
+    "en": "lot",
+    "en_pos": "adverb",
+    "en_sense": "a great deal; very much; a lot",
+    "ja": "うんと",
+    "ja_reading": "うんと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "a great deal",
+     "very much",
+     "a lot"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2007420-0-lot",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "うんと is a natural and common colloquial equivalent for \"a lot\"."
+   }
+  },
+  {
+   "key": "2551df3cbbe1dde66f22b68e0096dc68c010c25a1aef8c86af8423c2dd1cd55b",
+   "input": {
+    "id": "jm-2008040-0-thus",
+    "en": "thus",
+    "en_pos": "conjunction",
+    "en_sense": "thus; in this way",
+    "ja": "こうして",
+    "ja_reading": "こうして",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "thus",
+     "in this way"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2008040-0-thus",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "こうして is a perfect translation for \"thus\" in the sense of \"in this way\"."
+   }
+  },
+  {
+   "key": "584a8fdecebbda291db6d0e3a4a5aa85f3f3fe2f844a5100b3fe469972af6f8b",
+   "input": {
+    "id": "jm-2008380-0-manage",
+    "en": "manage",
+    "en_pos": "noun",
+    "en_sense": "to manage; to deal with; to cope with",
+    "ja": "処する",
+    "ja_reading": "しょする",
+    "ja_pos": "vs-s,vt",
+    "ja_glosses": [
+     "to manage",
+     "to deal with",
+     "to cope with"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2008380-0-manage",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English entry incorrectly lists \"manage\" as a noun instead of a verb, and the Japanese verb 処する is too formal for a general equivalent."
+   }
+  },
+  {
+   "key": "6278578c478af23fc267990fb1f32a7e10657ec3b7904480191bdfa23981269c",
+   "input": {
+    "id": "jm-2008740-0-so",
+    "en": "so",
+    "en_pos": "adverb",
+    "en_sense": "so much; so; like that",
+    "ja": "そんなに",
+    "ja_reading": "そんなに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "so much",
+     "so",
+     "like that"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2008740-0-so",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "そんなに is a perfect and very common equivalent for \"so\" in the sense of \"so much\" or \"like that\"."
+   }
+  },
+  {
+   "key": "757b780c6a59a0d8b448d17fee20aa3e69d3a76345b03011fb0df3536bb0718d",
+   "input": {
+    "id": "jm-2028940-4-further",
+    "en": "further",
+    "en_pos": "adverb",
+    "en_sense": "further; more; again; another; the other",
+    "ja": "も",
+    "ja_reading": "も",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "further",
+     "more",
+     "again",
+     "another",
+     "the other"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2028940-4-further",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The particle も does not mean \"further\"; the correct Japanese equivalents are adverbs like さらに or もっと."
+   }
+  },
+  {
+   "key": "1968043390118c23fbee7c090a5757e057034ab63fd45bf43bfdb999dc4d4618",
+   "input": {
+    "id": "jm-2055530-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; (and) yet; nevertheless; still; for all that",
+    "ja": "だが",
+    "ja_reading": "だが",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "(and) yet",
+     "nevertheless",
+     "still",
+     "for all that"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2055530-0-but",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "だが is a good equivalent for \"but\", though it is more common in written or formal contexts than in casual speech."
+   }
+  },
+  {
+   "key": "056b98ecc9c9d5b2ab12df226a71be5028edbe12b0bdca900eb39778aec32e4d",
+   "input": {
+    "id": "jm-2057030-0-translation",
+    "en": "translation",
+    "en_pos": "noun",
+    "en_sense": "translation; version (e.g. \"English version\")",
+    "ja": "訳",
+    "ja_reading": "やく",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "translation",
+     "version (e.g. \"English version\")"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2057030-0-translation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "訳 is a perfect and common equivalent for \"translation\", used both as a noun and a suffix."
+   }
+  }
+ ]
+}

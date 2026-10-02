@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:33:44Z",
+ "items": [
+  {
+   "key": "8980ec164fdd589cf6663f5c3b7d660b696c0c73d302ea6d0d7c7fb8dfa48a78",
+   "input": {
+    "id": "jm-1286520-0-international",
+    "en": "international",
+    "en_pos": "adjective",
+    "en_sense": "international; worldwide; cross-border; cosmopolitan",
+    "ja": "国際的",
+    "ja_reading": "こくさいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "international",
+     "worldwide",
+     "cross-border",
+     "cosmopolitan"
+    ],
+    "vi": "quốc tế"
+   },
+   "output": {
+    "id": "jm-1286520-0-international",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'international'."
+   }
+  },
+  {
+   "key": "256c0cfee3f55e28360a8e45009825c941d86650d4bab948b5dfec9f754eb921",
+   "input": {
+    "id": "jm-1286590-0-domestic",
+    "en": "domestic",
+    "en_pos": "adjective",
+    "en_sense": "domestically produced; domestic; Japanese-made",
+    "ja": "国産",
+    "ja_reading": "こくさん",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "domestically produced",
+     "domestic",
+     "Japanese-made"
+    ],
+    "vi": "nội địa"
+   },
+   "output": {
+    "id": "jm-1286590-0-domestic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'domestic' in the sense of products or origin."
+   }
+  },
+  {
+   "key": "5e0e4643fd6ac68a14cecad6ec00ba2bd684085ee1645514a4469064d0f5f4ee",
+   "input": {
+    "id": "jm-1287180-0-national",
+    "en": "national",
+    "en_pos": "adjective",
+    "en_sense": "national; founded and run by the central government",
+    "ja": "国立",
+    "ja_reading": "こくりつ",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "national",
+     "founded and run by the central government"
+    ],
+    "vi": "quốc gia"
+   },
+   "output": {
+    "id": "jm-1287180-0-national",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'quốc gia' is too broad, meaning 'national' in general, while the English and Japanese terms specifically mean 'state-run' or 'government-established'."
+   }
+  },
+  {
+   "key": "cbd6584bdcf595f9e39b6e1db99139969e5a5f12d355f63949e1cbf81c08102c",
+   "input": {
+    "id": "jm-1287410-0-black",
+    "en": "black",
+    "en_pos": "noun",
+    "en_sense": "black",
+    "ja": "黒",
+    "ja_reading": "くろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "black"
+    ],
+    "vi": "đen"
+   },
+   "output": {
+    "id": "jm-1287410-0-black",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đen' is an adjective, while the English and Japanese terms are nouns for the color; the correct Vietnamese noun is 'màu đen'."
+   }
+  },
+  {
+   "key": "071aa3b5d3ae1f038913a745c3af9fd790d041a5bfd22f395a8ea13aaf1e84e4",
+   "input": {
+    "id": "jm-1287710-0-black",
+    "en": "black",
+    "en_pos": "noun",
+    "en_sense": "(being in) the black; surplus",
+    "ja": "黒字",
+    "ja_reading": "くろじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(being in) the black",
+     "surplus"
+    ],
+    "vi": "lãi"
+   },
+   "output": {
+    "id": "jm-1287710-0-black",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct equivalents for a financial surplus."
+   }
+  },
+  {
+   "key": "5bce52956ece6abd3ac8d4a960a06c5e25e99abd632825e415b9382160065c0d",
+   "input": {
+    "id": "jm-1288340-0-lower_back",
+    "en": "lower back",
+    "en_pos": "noun",
+    "en_sense": "lower back; waist; hips; lumbar region",
+    "ja": "腰",
+    "ja_reading": "こし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lower back",
+     "waist",
+     "hips",
+     "lumbar region"
+    ],
+    "vi": "lưng"
+   },
+   "output": {
+    "id": "jm-1288340-0-lower_back",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'lưng' means the entire back, while English 'lower back' and Japanese '腰' (koshi) refer specifically to the lower part of the back/waist area."
+   }
+  },
+  {
+   "key": "6c10e51e94981bf7e44b13fd39e6026c4d77fb74ed097b246f7d79bee72e9b85",
+   "input": {
+    "id": "jm-1288370-0-seat",
+    "en": "seat",
+    "en_pos": "noun",
+    "en_sense": "seat; bench",
+    "ja": "腰掛け",
+    "ja_reading": "こしかけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "seat",
+     "bench"
+    ],
+    "vi": "ghế"
+   },
+   "output": {
+    "id": "jm-1288370-0-seat",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good general equivalents for a seat or bench."
+   }
+  },
+  {
+   "key": "db28e3dd1ba29c38bcdb491d0284db5e6cebd51bfca073eba5b23cf5e7d12a08",
+   "input": {
+    "id": "jm-1288790-0-charge",
+    "en": "charge",
+    "en_pos": "verb",
+    "en_sense": "to load (a gun, etc.); to charge",
+    "ja": "込める",
+    "ja_reading": "こめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to load (a gun, etc.)",
+     "to charge"
+    ],
+    "vi": "nạp"
+   },
+   "output": {
+    "id": "jm-1288790-0-charge",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and correct for the sense of loading a gun."
+   }
+  },
+  {
+   "key": "105f9a233bd106604b1ef20ac876756e129ab9b2a39655959771bc9912140140",
+   "input": {
+    "id": "jm-1288810-0-here",
+    "en": "here",
+    "en_pos": "pronoun",
+    "en_sense": "here; this place",
+    "ja": "ここ",
+    "ja_reading": "ここ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "here",
+     "this place"
+    ],
+    "vi": "đây"
+   },
+   "output": {
+    "id": "jm-1288810-0-here",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the basic, standard, and direct equivalents for 'here'."
+   }
+  },
+  {
+   "key": "24b5f9be6c9db06e1e9a6a8b0e3f4a3cda694eaa412ffdf431b41b1c2f9a117d",
+   "input": {
+    "id": "jm-1289150-0-now",
+    "en": "now",
+    "en_pos": "adverb",
+    "en_sense": "now (when it is already much too late); at this stage",
+    "ja": "今更",
+    "ja_reading": "いまさら",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "now (when it is already much too late)",
+     "at this stage"
+    ],
+    "vi": "bây giờ"
+   },
+   "output": {
+    "id": "jm-1289150-0-now",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'bây giờ' means 'now' in general and lacks the specific nuance of 'too late' which is central to the English sense and the Japanese '今更' (imasara)."
+   }
+  },
+  {
+   "key": "8ab00d14dbe6ddeccbe2bcf69c6b3bcb9338868a392fdab6b9c44e526f9281ed",
+   "input": {
+    "id": "jm-1290260-0-root",
+    "en": "root",
+    "en_pos": "noun",
+    "en_sense": "root; basis; foundation",
+    "ja": "根底",
+    "ja_reading": "こんてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "root",
+     "basis",
+     "foundation"
+    ],
+    "vi": "căn bản"
+   },
+   "output": {
+    "id": "jm-1290260-0-root",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'căn bản' is more commonly an adjective/adverb ('basic'/'basically'); as a noun for 'root/foundation', it is less natural than 'nền tảng' or 'gốc rễ'."
+   }
+  },
+  {
+   "key": "7d12386cdc5d2787292b92a3b908c9c2a833893fe7518141771da4dd7cc70ed6",
+   "input": {
+    "id": "jm-1290290-0-fundamental",
+    "en": "fundamental",
+    "en_pos": "adjective",
+    "en_sense": "fundamental; basic",
+    "ja": "根本的",
+    "ja_reading": "こんぽんてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "fundamental",
+     "basic"
+    ],
+    "vi": "cơ bản"
+   },
+   "output": {
+    "id": "jm-1290290-0-fundamental",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'fundamental' or 'basic'."
+   }
+  }
+ ]
+}

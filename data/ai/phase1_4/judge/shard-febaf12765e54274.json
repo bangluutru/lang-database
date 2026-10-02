@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:45:37Z",
+ "items": [
+  {
+   "key": "5d45003fd0fe810de2bdf3debba4b6ea548e2ecfb20345ef9cd134212306ce00",
+   "input": {
+    "id": "wk-3723-s0",
+    "en": "kick",
+    "en_pos": "noun",
+    "en_sense": "A hit or strike with the leg, foot or knee.",
+    "ja": "蹴り",
+    "ja_reading": "けり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kick"
+    ],
+    "vi": "đòn đá"
+   },
+   "output": {
+    "id": "wk-3723-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms accurately denote a kick as a noun and are natural equivalents."
+   }
+  },
+  {
+   "key": "ac8f0fbe37d7eeccc25dec998b78be5e832e69c1bbd30df30b07942ad96fb1f1",
+   "input": {
+    "id": "wk-3734-e:d86dc7",
+    "en": "please",
+    "en_pos": "interjection",
+    "en_sense": "interjection to make a polite request",
+    "ja": "お願いします",
+    "ja_reading": "おねがいします",
+    "ja_pos": "exp",
+    "ja_glosses": [
+     "please"
+    ],
+    "vi": "xin"
+   },
+   "output": {
+    "id": "wk-3734-e:d86dc7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'xin' is a verb used to form polite requests, not a direct equivalent of the English interjection 'please'; 'làm ơn' would be a closer match."
+   }
+  },
+  {
+   "key": "72c63c5f3859ce6ab7fe8567693d84144bdad5d9fbac6fce474c3da1c2bd95cf",
+   "input": {
+    "id": "wk-3745-s0",
+    "en": "rot",
+    "en_pos": "verb",
+    "en_sense": "To suffer decomposition due to biological action, especially by fungi or bacteria.",
+    "ja": "腐る",
+    "ja_reading": "くさる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to rot",
+     "to go bad",
+     "to decay",
+     "to spoil",
+     "to fester",
+     "to decompose"
+    ],
+    "vi": "rữa"
+   },
+   "output": {
+    "id": "wk-3745-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'rữa' is too specific, mainly used for the decomposition of corpses, while English 'rot' and Japanese '腐る' are more general."
+   }
+  },
+  {
+   "key": "44018b32dfe976350d6f2820bd42da28b86815f991bd01077a3efbd7d8b89365",
+   "input": {
+    "id": "wk-3748-s2",
+    "en": "multiplication",
+    "en_pos": "noun",
+    "en_sense": "The process of multiplying or increasing in number; increase.",
+    "ja": "掛け算",
+    "ja_reading": "かけざん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "multiplication"
+    ],
+    "vi": "phép nhân"
+   },
+   "output": {
+    "id": "wk-3748-s2",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese and Vietnamese terms refer specifically to mathematical multiplication, not the broader sense of 'increase' given in the English definition."
+   }
+  },
+  {
+   "key": "cb92f0d7964e8db2c580e9e0663f04b776d7fff7d3cc9297f2b73a585f970168",
+   "input": {
+    "id": "wk-3750-s4",
+    "en": "division",
+    "en_pos": "noun",
+    "en_sense": "A formation, usually made up of two or three brigades.",
+    "ja": "師団",
+    "ja_reading": "しだん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(army) division"
+    ],
+    "vi": "sư"
+   },
+   "output": {
+    "id": "wk-3750-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for a military division."
+   }
+  },
+  {
+   "key": "7f6136651e13a133650cfc3b8773fc4b830e433335748450e0708fe476bc157f",
+   "input": {
+    "id": "wk-3751-s5",
+    "en": "sir",
+    "en_pos": "noun",
+    "en_sense": "A respectful term of address to an adult male (often older), especially if his name or proper title is unknown.",
+    "ja": "旦那",
+    "ja_reading": "だんな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sir",
+     "boss",
+     "master",
+     "governor"
+    ],
+    "vi": "ông"
+   },
+   "output": {
+    "id": "wk-3751-s5",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '旦那' primarily means 'husband' or 'master' and is not a general equivalent for 'sir'."
+   }
+  },
+  {
+   "key": "1b49ca104bb87d853f53ebceabbbf8861f2cd0af1289949a9937c689c70185e4",
+   "input": {
+    "id": "wk-3757-s0",
+    "en": "null",
+    "en_pos": "noun",
+    "en_sense": "A non-existent or empty value or set of values.",
+    "ja": "ヌル",
+    "ja_reading": "ヌル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "null"
+    ],
+    "vi": "rỗng"
+   },
+   "output": {
+    "id": "wk-3757-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for the concept of 'null' in technical contexts."
+   }
+  },
+  {
+   "key": "6333182c645d9cbe5ae3d9f33af1768765e177e59b1b5de8c9d1fbda2b2d739a",
+   "input": {
+    "id": "wk-3759-s0",
+    "en": "tank",
+    "en_pos": "noun",
+    "en_sense": "A closed container for liquids or gases.",
+    "ja": "タンク",
+    "ja_reading": "タンク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tank (of fluid)",
+     "cistern",
+     "vat"
+    ],
+    "vi": "thùng"
+   },
+   "output": {
+    "id": "wk-3759-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thùng' is a very general term for 'container' or 'barrel'; more specific words like 'bể' or 'bình' are often better equivalents for 'tank'."
+   }
+  },
+  {
+   "key": "faba3b1f39031a0c447ebf90eb4228167816f6a7a391c0bd9b61809d92769e71",
+   "input": {
+    "id": "wk-3759-s5",
+    "en": "tank",
+    "en_pos": "noun",
+    "en_sense": "An armoured fighting vehicle, armed with a gun designed for direct fire, and moving on caterpillar tracks.",
+    "ja": "戦車",
+    "ja_reading": "せんしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tank (military vehicle)"
+    ],
+    "vi": "xe tăng"
+   },
+   "output": {
+    "id": "wk-3759-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for a military tank."
+   }
+  },
+  {
+   "key": "e380f4e93cec123ed603bf946a6961f5a32015b8ae6360b4480d039da54318e9",
+   "input": {
+    "id": "wk-376-s1",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "The date palm.",
+    "ja": "デーツ",
+    "ja_reading": "デーツ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "date"
+    ],
+    "vi": "trái chà là"
+   },
+   "output": {
+    "id": "wk-376-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese terms refer to the date fruit, while the English sense specifies the date palm tree."
+   }
+  },
+  {
+   "key": "2454e1cc0cb79b14ffe8a8a4c5cce21aa92f6139d344c7142df3779c65253749",
+   "input": {
+    "id": "wk-3760-e:495b44",
+    "en": "wand",
+    "en_pos": "noun",
+    "en_sense": "hand-held narrow rod",
+    "ja": "杖",
+    "ja_reading": "つえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cane",
+     "walking stick",
+     "staff",
+     "wand"
+    ],
+    "vi": "que"
+   },
+   "output": {
+    "id": "wk-3760-e:495b44",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '杖' is too broad (meaning staff/cane), and the Vietnamese 'que' is also too broad (meaning generic stick); neither is a good specific equivalent for 'wand'."
+   }
+  },
+  {
+   "key": "164efe3ab2b166bf836ff767cf9c7a6d4d0339d22f3c14b36bf56283262cf216",
+   "input": {
+    "id": "wk-3763-s0",
+    "en": "obi",
+    "en_pos": "noun",
+    "en_sense": "A sash worn with a kimono.",
+    "ja": "帯",
+    "ja_reading": "おび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "obi (kimono sash)"
+    ],
+    "vi": "dải lưng thêu"
+   },
+   "output": {
+    "id": "wk-3763-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'dải lưng thêu' is an unnatural and overly specific description ('embroidered waist sash'), not the standard term for an obi."
+   }
+  }
+ ]
+}

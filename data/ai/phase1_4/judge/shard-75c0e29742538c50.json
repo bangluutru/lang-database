@@ -1,0 +1,401 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:41:38Z",
+ "items": [
+  {
+   "key": "bc6da63e178d608f8e6203ed8f8975876c47218eae6271089851698222db7536",
+   "input": {
+    "id": "wk-2602-s1",
+    "en": "swell",
+    "en_pos": "verb",
+    "en_sense": "To cause to become bigger.",
+    "ja": "腫れる",
+    "ja_reading": "はれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to swell (from inflammation)",
+     "to become swollen"
+    ],
+    "vi": "sưng"
+   },
+   "output": {
+    "id": "wk-2602-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese words mean \"to become swollen\" (intransitive, usually due to inflammation), which does not match the general, transitive English sense \"To cause to become bigger\"."
+   }
+  },
+  {
+   "key": "eabb103a686714851d661880904a3ec9c1f842dd7e13d5918c6ccfe86596d159",
+   "input": {
+    "id": "wk-26044-e:f1313e",
+    "en": "circuit breaker",
+    "en_pos": "noun",
+    "en_sense": "high-current electrical switch",
+    "ja": "遮断器",
+    "ja_reading": "しゃだんき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "circuit breaker"
+    ],
+    "vi": "cầu dao"
+   },
+   "output": {
+    "id": "wk-26044-e:f1313e",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese `cầu dao` is a bit broad as it can also mean a simple knife switch, whereas `circuit breaker` and `遮断器` refer to an automatic device."
+   }
+  },
+  {
+   "key": "ebc028fd9db489cfe05634441dcd20145f4d4309c829fb5095ed826d7138d82c",
+   "input": {
+    "id": "wk-2606-s0",
+    "en": "swim",
+    "en_pos": "verb",
+    "en_sense": "To move through the water, without touching the bottom; to propel oneself in water by natural means.",
+    "ja": "泳ぐ",
+    "ja_reading": "およぐ",
+    "ja_pos": "v5g,vi",
+    "ja_glosses": [
+     "to swim"
+    ],
+    "vi": "tắm"
+   },
+   "output": {
+    "id": "wk-2606-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese word `tắm` means \"to bathe\", not \"to swim\". The correct translation for \"swim\" is `bơi`."
+   }
+  },
+  {
+   "key": "c4ad5cf4f5a533148da9728590f0ec4f526856c79a6b463a68cd7d1897d40731",
+   "input": {
+    "id": "wk-2609-s4",
+    "en": "swing",
+    "en_pos": "noun",
+    "en_sense": "A hanging seat that can swing back and forth, in a children's playground, for acrobats in a circus, or on a porch for relaxing.",
+    "ja": "ぶらんこ",
+    "ja_reading": "ぶらんこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "swing",
+     "trapeze"
+    ],
+    "vi": "xích đu"
+   },
+   "output": {
+    "id": "wk-2609-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for a playground swing."
+   }
+  },
+  {
+   "key": "db63deaa5059cc284273f192819ead7904c230997da6c25fe1761ec7c6230bc0",
+   "input": {
+    "id": "wk-2610-e:7679dd",
+    "en": "teach",
+    "en_pos": "verb",
+    "en_sense": "to pass on knowledge",
+    "ja": "教える",
+    "ja_reading": "おしえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to teach",
+     "to instruct"
+    ],
+    "vi": "dạy"
+   },
+   "output": {
+    "id": "wk-2610-e:7679dd",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for \"teach\" in the sense of passing on knowledge."
+   }
+  },
+  {
+   "key": "c0a606192e6964eece77a71d14c3a5f0fb6c04d3c7b4d304baf379ddd63627e8",
+   "input": {
+    "id": "wk-2612-s0",
+    "en": "thought",
+    "en_pos": "noun",
+    "en_sense": "A representation created in the mind without the use of one's faculties of vision, sound, smell, touch, or taste; an instance of thinking.",
+    "ja": "考え",
+    "ja_reading": "かんがえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thinking",
+     "thought",
+     "view",
+     "opinion",
+     "concept"
+    ],
+    "vi": "tư duy"
+   },
+   "output": {
+    "id": "wk-2612-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `tư duy` refers to the faculty or process of thinking (cognition) and is too formal and abstract for the common English word \"thought\"; `suy nghĩ` would be a better equivalent."
+   }
+  },
+  {
+   "key": "51919a890559def626ec816ed6d9d24313219e964e4ea82573a1e2a075d24d0e",
+   "input": {
+    "id": "wk-2613-s13",
+    "en": "throw",
+    "en_pos": "verb",
+    "en_sense": "To cause a certain number on the die or dice to be shown after rolling it.",
+    "ja": "投げる",
+    "ja_reading": "なげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to throw",
+     "to hurl",
+     "to fling",
+     "to toss",
+     "to cast"
+    ],
+    "vi": "ném"
+   },
+   "output": {
+    "id": "wk-2613-s13",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI",
+     "TOO_BROAD"
+    ],
+    "note": "The English sense is specific to rolling dice, but the Japanese and Vietnamese words are general \"throw\" verbs. The Vietnamese `ném` is not the correct verb for dice; `gieo` should be used."
+   }
+  },
+  {
+   "key": "b62941f066bcba17eaa094bde409b26244984ce0281df32ccbe7cd21180b1c7f",
+   "input": {
+    "id": "wk-26158-s0",
+    "en": "precious stone",
+    "en_pos": "noun",
+    "en_sense": "Any gem, such as a diamond or ruby, that is expensive because of its rarity or desirability; especially one set into a piece of jewelry.",
+    "ja": "宝石",
+    "ja_reading": "ほうせき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gem",
+     "jewel",
+     "precious stone"
+    ],
+    "vi": "ngọc"
+   },
+   "output": {
+    "id": "wk-26158-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese `ngọc` is strongly associated with \"jade\", making it a narrower term than \"precious stone\" or the Japanese `宝石`. A better Vietnamese equivalent is `đá quý`."
+   }
+  },
+  {
+   "key": "71e685cdca299873cad689aecc007799183f5c18deb8b1be5016bdc50d2a3e8c",
+   "input": {
+    "id": "wk-2617-s6",
+    "en": "tread",
+    "en_pos": "verb",
+    "en_sense": "To crush under the foot; to trample in contempt or hatred; to subdue; to repress.",
+    "ja": "踏む",
+    "ja_reading": "ふむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to step on",
+     "to tread on",
+     "to trample on"
+    ],
+    "vi": "giẫm"
+   },
+   "output": {
+    "id": "wk-2617-s6",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese `踏む` is a bit too general; while it can mean \"trample\", it often means a neutral \"step on\". The English sense implies a stronger, more negative action."
+   }
+  },
+  {
+   "key": "99787be1f544efba185e70e45379615a578f597098c31ecf29150b9bfb1f2069",
+   "input": {
+    "id": "wk-26188-s0",
+    "en": "order of magnitude",
+    "en_pos": "noun",
+    "en_sense": "The class of scale or magnitude of any amount, where each class contains values of a fixed ratio (most often 10) to the class preceding it.",
+    "ja": "桁",
+    "ja_reading": "けた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "digit",
+     "decade",
+     "order of magnitude"
+    ],
+    "vi": "bậc độ lớn"
+   },
+   "output": {
+    "id": "wk-26188-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "All three terms correctly denote \"order of magnitude\" in a technical or scientific context."
+   }
+  },
+  {
+   "key": "a654668d1b981fc9be42a6cc5f43842b58a249ff31a0f7d3823cd3c3986ba9b1",
+   "input": {
+    "id": "wk-2621-e:8c6f84",
+    "en": "understand",
+    "en_pos": "verb",
+    "en_sense": "to grasp the meaning of",
+    "ja": "わかる",
+    "ja_reading": "わかる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to understand",
+     "to comprehend",
+     "to grasp",
+     "to see",
+     "to get",
+     "to follow"
+    ],
+    "vi": "hiểu"
+   },
+   "output": {
+    "id": "wk-2621-e:8c6f84",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the most common, natural, and direct equivalents for \"understand\"."
+   }
+  },
+  {
+   "key": "ddae6e28d1e8c38d91a15feb51fd23741fc88ac6c94babb54e2d3e01e06bd54d",
+   "input": {
+    "id": "wk-263-s0",
+    "en": "acid",
+    "en_pos": "adjective",
+    "en_sense": "Sour, sharp, or biting to the taste; tart; having the taste of vinegar.",
+    "ja": "酸っぱい",
+    "ja_reading": "すっぱい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "sour",
+     "acid"
+    ],
+    "vi": "chua"
+   },
+   "output": {
+    "id": "wk-263-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect equivalents for the taste \"sour\"."
+   }
+  }
+ ]
+}

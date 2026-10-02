@@ -148,3 +148,29 @@ Snapshots are write-once and verified with `--verify-only`. In-place modificatio
 3. **Seed Fixtures**: Seed datasets must be explicitly marked `origin="seed_curated"`. They must never masquerade as real upstream extractions.
 4. **Automated Enforcement**: The `ProvenanceGuard` inspects all incoming `SourceEvidence` objects. Records violating provenance rules are immediately rejected or quarantined.
 
+
+
+---
+
+## 12. Phase 1.4 — Source Selection for the ~10k Curated Learning Corpus
+
+**Reference universe vs curated corpus.** JMdict (~218k entries) and the Wiktionary extract (~36k English entries with ja/vi translations)
+are *candidate universes*. Only candidates with learning value (independent curriculum signals) and passing the quality gates are promoted.
+
+| Source | Role | License | Decision |
+|---|---|---|---|
+| Wiktionary EN (Wiktextract) | sense-level EN-JA-VI candidate blocks | CC-BY-SA-4.0 | ACQUIRED (new) |
+| JMdict | JA corroboration, readings, POS, priority | CC-BY-SA-3.0 | reused |
+| NGSL / NGSL-Spoken / NAWL / BSL / TSL | EN curriculum signals | CC-BY-4.0 | reused |
+| JLPT consensus (tanos) | JA curriculum signal | CC-BY-3.0 | reused |
+| vn_freq | VI frequency, Core bands | MIT | reused |
+| Jōyō / KANJIDIC2 / Unihan | JA/VI views | CC-BY-SA-3.0 / Unicode | reused |
+| wordfreq | — | mixed / uncertain | REJECTED (license) |
+
+**Large-snapshot rule.** When the upstream artifact is too large to commit (the full Wiktextract dump is 523 MB gz),
+the immutable snapshot is a deterministic *filtered extract*; `metadata.json` records the full upstream file's SHA-256 and byte size, the extract's SHA-256,
+and the extraction script (`scripts/phase1_4/extract_wiktionary.py`).
+
+**AI rule (unchanged, tightened).** AI may propose Vietnamese forms and judge candidates. Generator (gemini-2.5-flash) and gate judge
+(gemini-2.5-pro) are different models; the post-hoc auditor is a third model. AI-generated lexemes keep `provenance_type = AI_GENERATED`
+forever; judge validation is a *separate* metadata dimension.

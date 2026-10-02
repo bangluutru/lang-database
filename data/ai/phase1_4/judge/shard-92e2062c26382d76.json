@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:46:36Z",
+ "items": [
+  {
+   "key": "9519b01fe024dc684d637387da11893e745a0b8a766af1bee0e9a4e83dd8d331",
+   "input": {
+    "id": "wk-4369-e:ba3206",
+    "en": "slash",
+    "en_pos": "noun",
+    "en_sense": "typography: / symbol",
+    "ja": "スラッシュ",
+    "ja_reading": "スラッシュ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slash (punctuation mark)"
+    ],
+    "vi": "dấu gạch chéo"
+   },
+   "output": {
+    "id": "wk-4369-e:ba3206",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for the '/' symbol."
+   }
+  },
+  {
+   "key": "184881985f3052bed3e0d68030a5b0404cd744b0ae254c9422d708de146b8955",
+   "input": {
+    "id": "wk-4379-s1",
+    "en": "weird",
+    "en_pos": "adjective",
+    "en_sense": "Deviating from the normal; bizarre.",
+    "ja": "変",
+    "ja_reading": "へん",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "strange",
+     "odd",
+     "peculiar",
+     "weird",
+     "curious",
+     "eccentric"
+    ],
+    "vi": "lạ"
+   },
+   "output": {
+    "id": "wk-4379-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'lạ' is broader, meaning 'strange' or 'unfamiliar', while English 'weird' and Japanese '変' imply a stronger sense of bizarrerie."
+   }
+  },
+  {
+   "key": "160d1bee9b68cd5eded217b716e2397bb2c61605d5e6c47e0002b60e139ede22",
+   "input": {
+    "id": "wk-4382-s1",
+    "en": "forest",
+    "en_pos": "noun",
+    "en_sense": "Any dense collection or amount.",
+    "ja": "森",
+    "ja_reading": "もり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "forest"
+    ],
+    "vi": "rừng"
+   },
+   "output": {
+    "id": "wk-4382-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '森' (mori) is almost exclusively used for a literal forest of trees, unlike the English and Vietnamese which can be used metaphorically for this sense."
+   }
+  },
+  {
+   "key": "45508d2509105e472f1bc5a2d53ad0e8b470a8521cbfc1a20905e982e3751412",
+   "input": {
+    "id": "wk-4387-s0",
+    "en": "crash",
+    "en_pos": "verb",
+    "en_sense": "To collide with something destructively; to fall or come down violently.",
+    "ja": "クラッシュする",
+    "ja_reading": "クラッシュする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "crash (esp. of a vehicle)"
+    ],
+    "vi": "đâm"
+   },
+   "output": {
+    "id": "wk-4387-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'đâm' primarily means 'to collide into' and doesn't cover the sense of 'falling violently' which is part of the English 'crash'."
+   }
+  },
+  {
+   "key": "a47b3a24c2ffce2413ace120692893e547e98e5b7d78a324544194ffe0ca5b6a",
+   "input": {
+    "id": "wk-4388-s0",
+    "en": "rash",
+    "en_pos": "noun",
+    "en_sense": "An area of inflamed and irritated skin characterized by reddened spots that may be filled with fluid or pus. Also, preceded by a descriptive word (rare or obsolete), an illness characterized by a type of rash.",
+    "ja": "皮疹",
+    "ja_reading": "ひしん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rash",
+     "eruption",
+     "efflorescence"
+    ],
+    "vi": "mụn"
+   },
+   "output": {
+    "id": "wk-4388-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'mụn' means 'pimple' or 'acne', not 'rash'. The correct term for rash is 'phát ban' or 'nổi mẩn'."
+   }
+  },
+  {
+   "key": "39811f4c5df8878b4bd408e1f63b79eacf8de7c1e3874386f43a9eb77a7584f3",
+   "input": {
+    "id": "wk-4392-e:da752c",
+    "en": "dash",
+    "en_pos": "noun",
+    "en_sense": "typographic symbol",
+    "ja": "ダッシュ",
+    "ja_reading": "ダッシュ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "dash"
+    ],
+    "vi": "dấu gạch ngang"
+   },
+   "output": {
+    "id": "wk-4392-e:da752c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for the dash symbol."
+   }
+  },
+  {
+   "key": "ccafd5db28cfbda4f611efe3e5c0a780f182cc4c7ab56a58adfc421964beeb67",
+   "input": {
+    "id": "wk-4393-s0",
+    "en": "wash",
+    "en_pos": "verb",
+    "en_sense": "To clean with water.",
+    "ja": "洗う",
+    "ja_reading": "あらう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to wash",
+     "to cleanse",
+     "to rinse"
+    ],
+    "vi": "rửa"
+   },
+   "output": {
+    "id": "wk-4393-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'rửa' is narrower than English 'wash' and Japanese '洗う', as it is not used for washing clothes (giặt) or hair (gội)."
+   }
+  },
+  {
+   "key": "8097ec6bf7c4b6a3e75319ef25331b7608d318411c3c99871a0334189b1778cd",
+   "input": {
+    "id": "wk-4398-s0",
+    "en": "meal",
+    "en_pos": "noun",
+    "en_sense": "Food that is prepared and eaten, usually at a specific time, and usually in a comparatively large quantity.",
+    "ja": "飯",
+    "ja_reading": "めし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "meal",
+     "food"
+    ],
+    "vi": "bữa"
+   },
+   "output": {
+    "id": "wk-4398-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '飯' (meshi) is more informal and colloquial than the neutral English 'meal' and Vietnamese 'bữa'; '食事' (shokuji) would be a better register match."
+   }
+  },
+  {
+   "key": "ac1fae87e3b1fab2ad1125d80b660d6278527ff27104b060f11486b1d52fee15",
+   "input": {
+    "id": "wk-4399-s0",
+    "en": "lunch",
+    "en_pos": "noun",
+    "en_sense": "A light meal usually eaten around midday, notably when not as main meal of the day.",
+    "ja": "昼食",
+    "ja_reading": "ちゅうしょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lunch",
+     "midday meal"
+    ],
+    "vi": "bữa trưa"
+   },
+   "output": {
+    "id": "wk-4399-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'lunch'."
+   }
+  },
+  {
+   "key": "9e7100a7c2e872e57318efdf14ddae7c5260569bbf42f78417275c38e1314963",
+   "input": {
+    "id": "wk-4401-s1",
+    "en": "dinner",
+    "en_pos": "noun",
+    "en_sense": "An evening meal.",
+    "ja": "夕食",
+    "ja_reading": "ゆうしょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "evening meal",
+     "dinner"
+    ],
+    "vi": "bữa tối"
+   },
+   "output": {
+    "id": "wk-4401-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'dinner' (as an evening meal)."
+   }
+  },
+  {
+   "key": "2d5d96ebd06e66fbad866cc53f25dc9fcd701e08b632d345682585da670f0aee",
+   "input": {
+    "id": "wk-4403-s0",
+    "en": "kiss",
+    "en_pos": "verb",
+    "en_sense": "To touch with the lips or press the lips against, usually to show love or affection or passion, or as part of a greeting.",
+    "ja": "キスする",
+    "ja_reading": "キスする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "kiss"
+    ],
+    "vi": "hôn"
+   },
+   "output": {
+    "id": "wk-4403-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'to kiss'."
+   }
+  },
+  {
+   "key": "14fabfbf4ab370194fe4b10dfeb29ee7b145a826b0d840ed132155099d1dd701",
+   "input": {
+    "id": "wk-4405-s0",
+    "en": "college",
+    "en_pos": "noun",
+    "en_sense": "A specialized division of a university.",
+    "ja": "学部",
+    "ja_reading": "がくぶ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "faculty (of a university)",
+     "school",
+     "college",
+     "department"
+    ],
+    "vi": "khoa"
+   },
+   "output": {
+    "id": "wk-4405-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard equivalents for a 'college' in the sense of a university faculty or division."
+   }
+  }
+ ]
+}

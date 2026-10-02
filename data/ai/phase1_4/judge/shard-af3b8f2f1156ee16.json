@@ -1,0 +1,375 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:16Z",
+ "items": [
+  {
+   "key": "02cb6fc298cec1c1f37693d255ad9146c1cb9e6c522b37004d3d96e5a39cf7e6",
+   "input": {
+    "id": "concept-core-harm",
+    "en": "harm",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'harm': injury, harm, danger",
+    "ja": "害する",
+    "ja_reading": "がいする",
+    "ja_pos": "verb",
+    "ja_glosses": [],
+    "vi": "gây hại"
+   },
+   "output": {
+    "id": "concept-core-harm",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the verb 'to harm'."
+   }
+  },
+  {
+   "key": "d453e8abc46f20107761d2da73f9672227b2951eb6cdec0da1ff0df0e64b6b06",
+   "input": {
+    "id": "concept-core-voice",
+    "en": "voice",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'voice': voice, speech",
+    "ja": "声",
+    "ja_reading": "こえ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "giọng nói"
+   },
+   "output": {
+    "id": "concept-core-voice",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'giọng nói' is slightly narrower than English 'voice' or Japanese '声', often emphasizing the quality or tone of the speaking voice."
+   }
+  },
+  {
+   "key": "b6f9d3539239226fb68f991d6c9658804f1e6144e49e984328535e7a48f71f42",
+   "input": {
+    "id": "concept-core-publication",
+    "en": "publication",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'publication': opening to the public, making available to the public, exhibiting",
+    "ja": "出版",
+    "ja_reading": "しゅっぱん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "xuất bản"
+   },
+   "output": {
+    "id": "concept-core-publication",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese terms refer specifically to publishing media (books, etc.) and do not cover the broader sense of 'exhibiting' or 'making public' in general."
+   }
+  },
+  {
+   "key": "7dd884e8a0a12bfa2e78dc4a9781d71f9c0b77378bf1d20e8d83f5eb3149fa27",
+   "input": {
+    "id": "concept-core-salary",
+    "en": "salary",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'salary': working conditions, salary, pay",
+    "ja": "給料",
+    "ja_reading": "きゅうりょう",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lương"
+   },
+   "output": {
+    "id": "concept-core-salary",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "MULTIPLE_SENSES_COLLAPSED",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense incorrectly includes 'working conditions'; the Japanese and Vietnamese terms correctly translate only the 'salary/pay' aspect."
+   }
+  },
+  {
+   "key": "f384497446d1f2783a756bc3fb93ad95f5b431a8c51e406fd3c750e2e11bf68f",
+   "input": {
+    "id": "concept-core-effect",
+    "en": "effect",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'effect': influence, effect",
+    "ja": "効果",
+    "ja_reading": "こうか",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "hiệu quả"
+   },
+   "output": {
+    "id": "concept-core-effect",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hiệu quả' means 'effectiveness' or 'efficacy', not 'effect', which is a significant meaning difference from the English and Japanese terms."
+   }
+  },
+  {
+   "key": "768f871f995c2d2b9639497e67a3da2de9ac0caa7cfd7a0f8f4ab999178a1643",
+   "input": {
+    "id": "concept-core-castle",
+    "en": "castle",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'castle': castle, citadel, fortress",
+    "ja": "城",
+    "ja_reading": "しろ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lâu đài"
+   },
+   "output": {
+    "id": "concept-core-castle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are good equivalents, though each is strongly associated with a specific architectural style (European for 'lâu đài', Japanese for '城')."
+   }
+  },
+  {
+   "key": "c27de70fccd7144a98b29924df6724a3fb4d451fad31f27e9fc3358a7c4743af",
+   "input": {
+    "id": "concept-core-work",
+    "en": "work",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'work': to operate (e.g. a machine), to handle, to work",
+    "ja": "扱う",
+    "ja_reading": "あつかう",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "to operate (e.g. a machine)",
+     "to handle",
+     "to work"
+    ],
+    "vi": "công việc"
+   },
+   "output": {
+    "id": "concept-core-work",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'công việc' is a noun meaning 'work/job', not a verb, which mismatches the English and Japanese verbs."
+   }
+  },
+  {
+   "key": "d9c1786afcc805a47de78cc5eed5202f6945e518190490bd4ac927ea12be26f9",
+   "input": {
+    "id": "concept-core-sudden",
+    "en": "sudden",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'sudden': abrupt, sudden",
+    "ja": "唐突",
+    "ja_reading": "とうとつ",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "abrupt",
+     "sudden"
+    ],
+    "vi": "đường đột"
+   },
+   "output": {
+    "id": "concept-core-sudden",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent matches, conveying the specific nuance of abruptness."
+   }
+  },
+  {
+   "key": "d307434088c7db01980664260f2293cb182dfb54d3c1492ea810840e083a9bfa",
+   "input": {
+    "id": "concept-core-welcome",
+    "en": "welcome",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'welcome': welcome, (warm) reception",
+    "ja": "歓迎",
+    "ja_reading": "かんげい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "welcome",
+     "(warm) reception"
+    ],
+    "vi": "hoan nghênh"
+   },
+   "output": {
+    "id": "concept-core-welcome",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'hoan nghênh' is primarily a verb ('to welcome'), not a noun like the English 'welcome' or Japanese '歓迎'."
+   }
+  },
+  {
+   "key": "9cd803a0b0b60a2312354fc2c5040275b0000f8793e02d19e641661ac2f91b64",
+   "input": {
+    "id": "concept-core-very",
+    "en": "very",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'very': very, extremely, totally",
+    "ja": "如何にも",
+    "ja_reading": "いかにも",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "very",
+     "extremely",
+     "totally",
+     "terribly"
+    ],
+    "vi": "rất"
+   },
+   "output": {
+    "id": "concept-core-very",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_JA",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The POS is incorrectly listed as 'verb' for English and Japanese, and the Japanese '如何にも' is a poor and unnatural choice for a core equivalent of 'very'."
+   }
+  },
+  {
+   "key": "a1f5e809cc5dc29dec5862c8afc8b003a5fe595507b5733414539738cecacc4b",
+   "input": {
+    "id": "concept-core-therapy",
+    "en": "therapy",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'therapy': (medical) treatment, care, therapy",
+    "ja": "治療",
+    "ja_reading": "ちりょう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "(medical) treatment",
+     "care",
+     "therapy",
+     "cure",
+     "remedy"
+    ],
+    "vi": "trị liệu"
+   },
+   "output": {
+    "id": "concept-core-therapy",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents for medical 'therapy' or 'treatment'."
+   }
+  },
+  {
+   "key": "99c8dc133b71ee3c19c9d5265336ebd4f3fe3f7e75437453390afb182d66c3ac",
+   "input": {
+    "id": "concept-core-labor",
+    "en": "labor",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'labor': labour, labor, effort",
+    "ja": "働く",
+    "ja_reading": "はたらく",
+    "ja_pos": "verb",
+    "ja_glosses": [],
+    "vi": "làm việc"
+   },
+   "output": {
+    "id": "concept-core-labor",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese terms mean 'to work' in general and lack the specific connotation of hard, strenuous effort implied by the English verb 'to labor'."
+   }
+  }
+ ]
+}

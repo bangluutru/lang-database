@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:41:08Z",
+ "items": [
+  {
+   "key": "fb386b77f31b5ade94daa91524e8d7f04ff8dd4e70e0fce43c885132ae2ab920",
+   "input": {
+    "id": "wk-25523-s0",
+    "en": "brain death",
+    "en_pos": "noun",
+    "en_sense": "An irreversible loss of brain function and cessation of brain activity.",
+    "ja": "脳死",
+    "ja_reading": "のうし",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "brain death"
+    ],
+    "vi": "chết não"
+   },
+   "output": {
+    "id": "wk-25523-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard medical equivalents for 'brain death'."
+   }
+  },
+  {
+   "key": "cef9780d523a66a0b5df5fa9722c4453fde45e5322e8460f80bc3a1dedd209e5",
+   "input": {
+    "id": "wk-25527-s0",
+    "en": "shogi",
+    "en_pos": "noun",
+    "en_sense": "Japanese chess; a board game similar to chess, invented and traditionally played in Japan.",
+    "ja": "将棋",
+    "ja_reading": "しょうぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shogi",
+     "Japanese chess"
+    ],
+    "vi": "cờ tướng nhật bản"
+   },
+   "output": {
+    "id": "wk-25527-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese term is a descriptive name ('Japanese chess') but is the standard and most common way to refer to the game."
+   }
+  },
+  {
+   "key": "52021a7d0aa92a7d80beb891053f398e435282d59b0d82a8db819107d5e1bc80",
+   "input": {
+    "id": "wk-25539-s0",
+    "en": "runner-up",
+    "en_pos": "noun",
+    "en_sense": "The person who finishes second, or in any position after the first.",
+    "ja": "次点",
+    "ja_reading": "じてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "runner-up"
+    ],
+    "vi": "á quân"
+   },
+   "output": {
+    "id": "wk-25539-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'á quân' specifically means second place, whereas the English 'runner-up' can refer to any position after the first."
+   }
+  },
+  {
+   "key": "82fc691d5e94aec5be02348c637f44ff7fd8172dffcd0518411210dd9542a4a0",
+   "input": {
+    "id": "wk-2554-s14",
+    "en": "shot",
+    "en_pos": "noun",
+    "en_sense": "A single snapshot or an unbroken sequence of photographic film exposures, or the digital equivalent; an unedited sequence of frames.",
+    "ja": "ショット",
+    "ja_reading": "ショット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shot"
+    ],
+    "vi": "pô"
+   },
+   "output": {
+    "id": "wk-2554-s14",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'pô' is incorrect for this sense; the correct term would be 'cảnh quay' or 'cú máy'."
+   }
+  },
+  {
+   "key": "2b54043050ec2610e9d56660e395e4bd9fa8c37c12143bbd55d116f35984a358",
+   "input": {
+    "id": "wk-2555-e:b2852d",
+    "en": "show",
+    "en_pos": "verb",
+    "en_sense": "to display",
+    "ja": "見せる",
+    "ja_reading": "みせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to show",
+     "to display"
+    ],
+    "vi": "chỉ"
+   },
+   "output": {
+    "id": "wk-2555-e:b2852d",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chỉ' primarily means 'to point' and is too narrow for the general sense of 'show' as 'display'."
+   }
+  },
+  {
+   "key": "4bc905474df538b77287871019413c7909b5de07871eac375188b90169f0631b",
+   "input": {
+    "id": "wk-2555-s1",
+    "en": "show",
+    "en_pos": "verb",
+    "en_sense": "To indicate; to convey facts that lead to a conclusion.",
+    "ja": "示す",
+    "ja_reading": "しめす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to (take out and) show",
+     "to demonstrate",
+     "to tell",
+     "to exemplify",
+     "to make apparent"
+    ],
+    "vi": "cho thấy"
+   },
+   "output": {
+    "id": "wk-2555-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are excellent and natural equivalents for this sense of 'show' (to indicate/demonstrate)."
+   }
+  },
+  {
+   "key": "c4d42478ef01e14a809ed27788a4f1d966c7f3346cf4edeb030d6d66dd4f0ad4",
+   "input": {
+    "id": "wk-2556-s2",
+    "en": "show",
+    "en_pos": "noun",
+    "en_sense": "A broadcast program, especially a light entertainment program.",
+    "ja": "ショー",
+    "ja_reading": "ショー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "show",
+     "performance"
+    ],
+    "vi": "chương trình"
+   },
+   "output": {
+    "id": "wk-2556-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'chương trình' means 'program' and is broader than 'show', which often implies entertainment."
+   }
+  },
+  {
+   "key": "f9ca0303d70676a8e915572d7170c148c564c509efbecf3c9aa789b08eb5bce7",
+   "input": {
+    "id": "wk-25569-s0",
+    "en": "hometown",
+    "en_pos": "noun",
+    "en_sense": "An individual’s place of birth, childhood home, or place of main residence.",
+    "ja": "ふるさと",
+    "ja_reading": "ふるさと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hometown",
+     "birthplace",
+     "native place",
+     "one's old home"
+    ],
+    "vi": "quê hương"
+   },
+   "output": {
+    "id": "wk-25569-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural, and emotionally resonant equivalents for 'hometown'."
+   }
+  },
+  {
+   "key": "77562d55f14646d9f9df4508ab0413221aef0e2fde46c96bfd6a632ff30c3e35",
+   "input": {
+    "id": "wk-2558-s0",
+    "en": "sit",
+    "en_pos": "verb",
+    "en_sense": "To be in a position in which the upper body is upright and supported by the buttocks.",
+    "ja": "座る",
+    "ja_reading": "すわる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to sit (down)",
+     "to have a seat",
+     "to be seated",
+     "to kneel (on the floor)"
+    ],
+    "vi": "ngồi"
+   },
+   "output": {
+    "id": "wk-2558-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '座る' is slightly broader as it can also refer to kneeling (seiza), but it is the correct primary equivalent."
+   }
+  },
+  {
+   "key": "4fdd474e7255685b34f0fd05bae40cf3d4856d2fed02c59bbc3ea4fa01f08b00",
+   "input": {
+    "id": "wk-25599-s0",
+    "en": "power station",
+    "en_pos": "noun",
+    "en_sense": "Synonym of power plant.",
+    "ja": "発電所",
+    "ja_reading": "はつでんしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "power plant",
+     "power station"
+    ],
+    "vi": "nhà máy điện"
+   },
+   "output": {
+    "id": "wk-25599-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'power station' or 'power plant'."
+   }
+  },
+  {
+   "key": "62c282bfa8a8e656b9d4090e1ae700e38eb93b8af8646e674d818566c0ee05f5",
+   "input": {
+    "id": "wk-25615-e:22ae95",
+    "en": "no",
+    "en_pos": "determiner",
+    "en_sense": "used to show an activity is forbidden",
+    "ja": "だめ",
+    "ja_reading": "だめ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "no good",
+     "not serving its purpose",
+     "useless",
+     "broken"
+    ],
+    "vi": "cấm"
+   },
+   "output": {
+    "id": "wk-25615-e:22ae95",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "This entry incorrectly equates the English determiner 'no' with a Japanese adjective ('dame') and a Vietnamese verb ('cấm'), which are not grammatical equivalents."
+   }
+  },
+  {
+   "key": "a24d96e6bff3ed4e5aad5a6ebf15753c87aed09440416764d8da4efd1d9a69c0",
+   "input": {
+    "id": "wk-2562-s0",
+    "en": "slide",
+    "en_pos": "noun",
+    "en_sense": "An item of play equipment that children can climb up and then slide down again.",
+    "ja": "滑り台",
+    "ja_reading": "すべりだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(playground) slide"
+    ],
+    "vi": "cầu trượt"
+   },
+   "output": {
+    "id": "wk-2562-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect and standard equivalents for a playground slide."
+   }
+  }
+ ]
+}

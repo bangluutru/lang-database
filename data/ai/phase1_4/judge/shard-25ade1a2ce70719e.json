@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:50:47Z",
+ "items": [
+  {
+   "key": "9d9b6cad65997c781ca7a69e6567dace3ef22aa766c94539dfdbfbb0f7bec85d",
+   "input": {
+    "id": "wk-5628-s0",
+    "en": "flour",
+    "en_pos": "noun",
+    "en_sense": "Powder obtained by grinding or milling cereal grains, especially wheat, or other foodstuffs such as soybeans and potatoes, and used to bake bread, cakes, and pastry.",
+    "ja": "穀粉",
+    "ja_reading": "こくふん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(grain) flour"
+    ],
+    "vi": "bột"
+   },
+   "output": {
+    "id": "wk-5628-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'bột' means 'powder' in general and is too broad; 'bột mì' is flour. Japanese '穀粉' is correct but less common than '小麦粉' (wheat flour)."
+   }
+  },
+  {
+   "key": "ecda5d970bd26e3f4316dc0d1858b3534c99cf0cc1b9066275af1e81a9e4b9f9",
+   "input": {
+    "id": "wk-5629-s0",
+    "en": "mango",
+    "en_pos": "noun",
+    "en_sense": "Any of species Mangifera indica of tropical Asian fruit trees.",
+    "ja": "マンゴー",
+    "ja_reading": "マンゴー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mango (Mangifera indica)"
+    ],
+    "vi": "xoài"
+   },
+   "output": {
+    "id": "wk-5629-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry, all terms are the standard, natural equivalents."
+   }
+  },
+  {
+   "key": "5659868eb2374e9ead3768d9d2b70778516a72fc9140339fd1cd877539f0501e",
+   "input": {
+    "id": "wk-563-s0",
+    "en": "natural gas",
+    "en_pos": "noun",
+    "en_sense": "A mixture of gaseous hydrocarbons associated with petroleum deposits; mostly methane with smaller amounts of ethane, propane and butane; principally used as a fuel.",
+    "ja": "天然ガス",
+    "ja_reading": "てんねんガス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "natural gas"
+    ],
+    "vi": "khí đốt"
+   },
+   "output": {
+    "id": "wk-563-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'khí đốt' means 'fuel gas' and is broader than 'natural gas', for which 'khí thiên nhiên' is the precise term, but 'khí đốt' is commonly used."
+   }
+  },
+  {
+   "key": "2bdf6e487b5df7e4d79c6a8004abf4d79863a4b018bd52782e23eae952f98385",
+   "input": {
+    "id": "wk-5630-s0",
+    "en": "curry",
+    "en_pos": "noun",
+    "en_sense": "One of a family of dishes originating from Indian cuisine, flavored by a spiced sauce.",
+    "ja": "カレー",
+    "ja_reading": "カレー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "curry (esp. Japanese curry)"
+    ],
+    "vi": "cà ri"
+   },
+   "output": {
+    "id": "wk-5630-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'カレー' primarily refers to Japanese-style curry, which is a narrow subset of the dishes covered by the English word 'curry'."
+   }
+  },
+  {
+   "key": "9eaac67e863286503e70e2dac3845a712f0165881eb707b70e101ef8f11cc0d5",
+   "input": {
+    "id": "wk-5634-s0",
+    "en": "rope",
+    "en_pos": "noun",
+    "en_sense": "Thick strings, yarn, monofilaments, metal wires, or strands of other cordage that are twisted together to form a stronger line.",
+    "ja": "綱",
+    "ja_reading": "つな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rope",
+     "cord",
+     "line"
+    ],
+    "vi": "dây"
+   },
+   "output": {
+    "id": "wk-5634-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'dây' is too broad, meaning any kind of string, cord, or wire; 'dây thừng' is 'rope'. Japanese '綱' is a good match, typically for a thick rope."
+   }
+  },
+  {
+   "key": "8aa827b28f31f8ab43ecc90e2517c2f5e3c2a9fef87f378535d0125f7b7fe8f2",
+   "input": {
+    "id": "wk-5635-e:70603c",
+    "en": "killer",
+    "en_pos": "noun",
+    "en_sense": "murderer, person who kills",
+    "ja": "キラー",
+    "ja_reading": "キラー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "killer",
+     "destroyer",
+     "annihilator",
+     "defeater"
+    ],
+    "vi": "kẻ giết người"
+   },
+   "output": {
+    "id": "wk-5635-e:70603c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'キラー' is a loanword often used figuratively or with sensationalist nuance, while '殺人犯' is the standard term for 'murderer'. Vietnamese 'kẻ giết người' is a perfect match."
+   }
+  },
+  {
+   "key": "e1926f88f1772658ae47aeebeb899600a0eb76d6562535c0faea3e6a3dfa1025",
+   "input": {
+    "id": "wk-5636-e:35c163",
+    "en": "system",
+    "en_pos": "noun",
+    "en_sense": "group or set of related things that operate together as a complex whole",
+    "ja": "系",
+    "ja_reading": "けい",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "system",
+     "lineage",
+     "group"
+    ],
+    "vi": "hệ thống"
+   },
+   "output": {
+    "id": "wk-5636-e:35c163",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry. Japanese '系' and Vietnamese 'hệ thống' are cognates and standard equivalents for this sense of 'system'."
+   }
+  },
+  {
+   "key": "8a013d88f65c29ef0474dd69863a5e5630d15dbf0721e70fff48787628622339",
+   "input": {
+    "id": "wk-5639-s1",
+    "en": "hurricane",
+    "en_pos": "noun",
+    "en_sense": "A severe tropical cyclone in the North Atlantic Ocean, Caribbean Sea, Gulf of Mexico, or in the eastern North Pacific off the west coast of Mexico, with winds of 119 km/h (74 miles per hour) or greater accompanied by rain, lightning, and thunder that sometimes moves into temperate latitudes.",
+    "ja": "ハリケーン",
+    "ja_reading": "ハリケーン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hurricane"
+    ],
+    "vi": "bão"
+   },
+   "output": {
+    "id": "wk-5639-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'bão' is a general term for a strong tropical cyclone (typhoon/hurricane) and lacks the specific geographical location defined for 'hurricane'."
+   }
+  },
+  {
+   "key": "de3e5cea5053c844d732717a85873aa815646a557cbbc1a5ee8a0afb3ca10bd1",
+   "input": {
+    "id": "wk-564-e:54f685",
+    "en": "mi",
+    "en_pos": "noun",
+    "en_sense": "third note of a major scale",
+    "ja": "ミ",
+    "ja_reading": "ミ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mi (3rd note of a major scale in movable-do solfège)",
+     "me"
+    ],
+    "vi": "mi"
+   },
+   "output": {
+    "id": "wk-564-e:54f685",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect entry, all terms are the standard solfège names."
+   }
+  },
+  {
+   "key": "9ba0af2f14259291937c1746611cdee9a1cb0431207dedf21f3ac86199bc369f",
+   "input": {
+    "id": "wk-5640-s1",
+    "en": "typhoon",
+    "en_pos": "noun",
+    "en_sense": "A weather phenomenon in the northwestern Pacific that is precisely equivalent to a hurricane except for its geographical region, typically resulting in wind speeds of 64 knots (119 km/h) or above. Equivalent to a cyclone in the Indian Ocean and Indonesia and Australia.",
+    "ja": "台風",
+    "ja_reading": "たいふう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "typhoon",
+     "hurricane"
+    ],
+    "vi": "bão"
+   },
+   "output": {
+    "id": "wk-5640-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good set of equivalents. Vietnamese 'bão' is the standard word for a typhoon in its region."
+   }
+  },
+  {
+   "key": "6b011c0cc88e61372010c8f37ecb794c349b90b1ea3b98d977c494382cc86b27",
+   "input": {
+    "id": "wk-5641-s0",
+    "en": "cyclone",
+    "en_pos": "noun",
+    "en_sense": "Any weather phenomenon consisting of a system of winds rotating around a centre of low atmospheric pressure; a low pressure system.",
+    "ja": "サイクロン",
+    "ja_reading": "サイクロン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cyclone"
+    ],
+    "vi": "bão"
+   },
+   "output": {
+    "id": "wk-5641-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bão' refers specifically to a strong tropical cyclone (typhoon/hurricane), making it too narrow for the general meteorological definition of 'cyclone' as any low-pressure system."
+   }
+  },
+  {
+   "key": "d9746d36f2ad896c46438fa8870ce7354a8777debcb4649494b22c45927efeea",
+   "input": {
+    "id": "wk-5644-s0",
+    "en": "lust",
+    "en_pos": "noun",
+    "en_sense": "A feeling of strong desire, especially such a feeling driven by sexual arousal.",
+    "ja": "色欲",
+    "ja_reading": "しきよく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lust",
+     "sexual appetite",
+     "carnal desire"
+    ],
+    "vi": "ham muốn"
+   },
+   "output": {
+    "id": "wk-5644-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "Vietnamese 'ham muốn' means 'desire' in general and is too broad for 'lust'; a more specific term is needed. Japanese '色欲' is a good but formal/literary equivalent."
+   }
+  }
+ ]
+}

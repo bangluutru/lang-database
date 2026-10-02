@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:41:00Z",
+ "items": [
+  {
+   "key": "28294737ae8e82105f503f40364115ba97db6a35238c90cb599edb5d377b0859",
+   "input": {
+    "id": "wk-2320-s2",
+    "en": "addition",
+    "en_pos": "noun",
+    "en_sense": "The arithmetic operation of adding.",
+    "ja": "足し算",
+    "ja_reading": "たしざん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "addition"
+    ],
+    "vi": "phép cộng"
+   },
+   "output": {
+    "id": "wk-2320-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, precise equivalents for the arithmetic operation of addition."
+   }
+  },
+  {
+   "key": "aa18c087b53745e4f1b6fb043f1e17de53a2681ad854113cf6462d7f10cfdde9",
+   "input": {
+    "id": "wk-2321-e:e15318",
+    "en": "among",
+    "en_pos": "preposition",
+    "en_sense": "of a person or thing: in the midst of and surrounded by (other people or things)",
+    "ja": "中",
+    "ja_reading": "なか",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "among",
+     "within"
+    ],
+    "vi": "trong số"
+   },
+   "output": {
+    "id": "wk-2321-e:e15318",
+    "en_ja": "BROAD",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "TOO_BROAD",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese and Vietnamese terms are not general equivalents for \"among\"; 中 is too broad and has a POS mismatch, while trong số is too narrow."
+   }
+  },
+  {
+   "key": "b90e06be79adc29fc35bfc39511e3fbfba19aa59b8385f3adbcba60f05aadace",
+   "input": {
+    "id": "wk-2323-e:741844",
+    "en": "attack",
+    "en_pos": "noun",
+    "en_sense": "attempt to cause damage, injury, or death",
+    "ja": "攻撃",
+    "ja_reading": "こうげき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cyber attack (e.g. DDoS)"
+    ],
+    "vi": "sự tấn công"
+   },
+   "output": {
+    "id": "wk-2323-e:741844",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese gloss is misleadingly specific, but the word 攻撃 itself is a correct and general equivalent for \"attack\"."
+   }
+  },
+  {
+   "key": "4cf35e0e94cb64487d76b85a7cc3a23bbc6f9e18a7da55a52a12a2b474c37702",
+   "input": {
+    "id": "wk-2324-s0",
+    "en": "attack",
+    "en_pos": "verb",
+    "en_sense": "To apply violent force to someone or something.",
+    "ja": "攻撃する",
+    "ja_reading": "こうげきする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "attack",
+     "assault",
+     "raid",
+     "onslaught",
+     "offensive"
+    ],
+    "vi": "công kích"
+   },
+   "output": {
+    "id": "wk-2324-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `công kích` is a poor choice, as it usually refers to verbal attacks, not the physical violence implied by the English sense; `tấn công` would be the correct equivalent."
+   }
+  },
+  {
+   "key": "4f8535ece85b96295f00b2687ce124abb0945f2decb8e467c9142d2a65f32d23",
+   "input": {
+    "id": "wk-2326-s0",
+    "en": "attempt",
+    "en_pos": "verb",
+    "en_sense": "To try.",
+    "ja": "試みる",
+    "ja_reading": "こころみる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to try",
+     "to attempt",
+     "to have a go (at)"
+    ],
+    "vi": "cố gắng"
+   },
+   "output": {
+    "id": "wk-2326-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The words are good equivalents, though 試みる can be slightly more formal than the others."
+   }
+  },
+  {
+   "key": "0b353717972182b745d90f516587af29c94afd61ebba1bc1660e5b0a51829b8e",
+   "input": {
+    "id": "wk-2327-s0",
+    "en": "attempt",
+    "en_pos": "noun",
+    "en_sense": "The action of trying at something.",
+    "ja": "試み",
+    "ja_reading": "こころみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attempt",
+     "trial",
+     "experiment"
+    ],
+    "vi": "sự thử"
+   },
+   "output": {
+    "id": "wk-2327-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `sự thử` is a literal translation but less idiomatic than `nỗ lực` or `sự cố gắng` for \"an attempt\"."
+   }
+  },
+  {
+   "key": "a5ade0b2ad8c5feaa9f7ca90046607c7698b9a39a5132df305ccca643472de35",
+   "input": {
+    "id": "wk-2329-s0",
+    "en": "overcome",
+    "en_pos": "verb",
+    "en_sense": "To surmount (a physical or abstract obstacle); to prevail over, to get the better of.",
+    "ja": "乗り越える",
+    "ja_reading": "のりこえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to overcome (a difficulty, obstacle, etc.)",
+     "to surmount",
+     "to get through (an illness, crisis, etc.)",
+     "to get over (e.g. one's pain)"
+    ],
+    "vi": "vượt qua"
+   },
+   "output": {
+    "id": "wk-2329-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect alignment in meaning and usage across all three languages."
+   }
+  },
+  {
+   "key": "7e36f504649fe90a90f00f04463873876b335b78134f1225cbd1c8259091d607",
+   "input": {
+    "id": "wk-233-e:920952",
+    "en": "orange",
+    "en_pos": "noun",
+    "en_sense": "fruit",
+    "ja": "オレンジ",
+    "ja_reading": "オレンジ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "orange (fruit, colour)"
+    ],
+    "vi": "cam"
+   },
+   "output": {
+    "id": "wk-233-e:920952",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the orange fruit."
+   }
+  },
+  {
+   "key": "d328ed658ced5d9c84962e1a9d2c0fd26c7935eab587568d58e1948e5ec73b5a",
+   "input": {
+    "id": "wk-233-e:d6838c",
+    "en": "orange",
+    "en_pos": "noun",
+    "en_sense": "colour",
+    "ja": "橙色",
+    "ja_reading": "だいだいいろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "orange (color, colour)"
+    ],
+    "vi": "màu da cam"
+   },
+   "output": {
+    "id": "wk-233-e:d6838c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the color orange."
+   }
+  },
+  {
+   "key": "652500db9866d892b8dfac67a9cb610614a2a35a49481aaa689943b0afb28ff5",
+   "input": {
+    "id": "wk-2333-s3",
+    "en": "myself",
+    "en_pos": "pronoun",
+    "en_sense": "Me, as the object of a verb or preposition without a reflexive trigger. Sometimes used for intensifying the pronoun of oneself.",
+    "ja": "自分",
+    "ja_reading": "じぶん",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "myself",
+     "yourself",
+     "oneself",
+     "himself",
+     "herself"
+    ],
+    "vi": "mình"
+   },
+   "output": {
+    "id": "wk-2333-s3",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both `自分` and `mình` are general reflexive pronouns for \"oneself\" and are not specific to the first person like \"myself\"."
+   }
+  },
+  {
+   "key": "14a786846e18268fa25a992ceb7f58e6c2f9462e7aa595dd340576eff154e9a1",
+   "input": {
+    "id": "wk-23333-s0",
+    "en": "checkpoint",
+    "en_pos": "noun",
+    "en_sense": "A point or place where a check is performed, especially a point along a road or on a frontier where travellers are stopped for inspection.",
+    "ja": "チェックポイント",
+    "ja_reading": "チェックポイント",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "checkpoint"
+    ],
+    "vi": "chốt"
+   },
+   "output": {
+    "id": "wk-23333-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, standard equivalents for \"checkpoint\"."
+   }
+  },
+  {
+   "key": "4fe4093d5c878962ec9e9d9c372033c98c322c41cc2abd49d8be641fe33ff587",
+   "input": {
+    "id": "wk-2334-e:55c30b",
+    "en": "boot",
+    "en_pos": "noun",
+    "en_sense": "heavy shoe that covers part of the leg",
+    "ja": "ブーツ",
+    "ja_reading": "ブーツ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "boots",
+     "boot"
+    ],
+    "vi": "ủng"
+   },
+   "output": {
+    "id": "wk-2334-e:55c30b",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `ủng` is too narrow, referring specifically to rubber/waterproof boots, not boots in general like the English and Japanese terms."
+   }
+  }
+ ]
+}

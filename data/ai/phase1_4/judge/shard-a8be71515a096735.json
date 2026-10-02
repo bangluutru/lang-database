@@ -1,0 +1,401 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:18Z",
+ "items": [
+  {
+   "key": "551359295911b334afa3cbd4fd24a1da41605f52ab71485409586ffbd4c8ec2c",
+   "input": {
+    "id": "concept-core-always",
+    "en": "always",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'always': always, all the time, constantly",
+    "ja": "しょっちゅう",
+    "ja_reading": "しょっちゅう",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "always",
+     "all the time",
+     "constantly",
+     "frequently",
+     "often"
+    ],
+    "vi": "luôn luôn"
+   },
+   "output": {
+    "id": "concept-core-always",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English and Japanese POS are incorrectly listed as verb, and しょっちゅう means 'frequently' or 'very often', not the absolute 'always'."
+   }
+  },
+  {
+   "key": "314798cdc10a8214de945bad218cd79deb292dc0401eeb60a70e4577c0269d77",
+   "input": {
+    "id": "concept-core-rice",
+    "en": "rice",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'rice': rice",
+    "ja": "米",
+    "ja_reading": "よね",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "rice"
+    ],
+    "vi": "cơm"
+   },
+   "output": {
+    "id": "concept-core-rice",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "TOO_NARROW"
+    ],
+    "note": "The three words refer to different states of rice: English is general, Japanese (米) is uncooked grain, and Vietnamese (cơm) is cooked rice."
+   }
+  },
+  {
+   "key": "23cacb42723bf5d173f20f5713f62e94661acf6a43afdd0835d63467a952e496",
+   "input": {
+    "id": "concept-core-district",
+    "en": "district",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'district': area, zone, district",
+    "ja": "区域",
+    "ja_reading": "くいき",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "area",
+     "zone",
+     "district",
+     "quarter",
+     "section",
+     "limits"
+    ],
+    "vi": "khu vực"
+   },
+   "output": {
+    "id": "concept-core-district",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'khu vực' is much broader, meaning 'area' or 'region' in general, while English 'district' and Japanese '区域' imply a more formally defined zone."
+   }
+  },
+  {
+   "key": "8c55178c984ccdeb64ebaa1db4bc84fbd9ae2130cf381f548559ccd5b97b6b9a",
+   "input": {
+    "id": "concept-core-play",
+    "en": "play",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'play': (non-documentary) television series, TV drama, teledrama",
+    "ja": "ドラマ",
+    "ja_reading": "ドラマ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "(non-documentary) television series",
+     "TV drama",
+     "teledrama",
+     "play"
+    ],
+    "vi": "chơi"
+   },
+   "output": {
+    "id": "concept-core-play",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chơi' is a verb meaning 'to play' and is completely incorrect; the English sense provided is for 'TV drama', not a typical sense of 'play'."
+   }
+  },
+  {
+   "key": "60d67ae66b3a95580b9af1635cb950b3a5bc16e01f73abacbbc024f6099d4a3f",
+   "input": {
+    "id": "concept-core-heavy",
+    "en": "heavy",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'heavy': too rich (taste, etc.), fatty, heavy",
+    "ja": "執拗い",
+    "ja_reading": "しつこい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "too rich (taste, etc.)",
+     "fatty",
+     "heavy",
+     "greasy"
+    ],
+    "vi": "nặng"
+   },
+   "output": {
+    "id": "concept-core-heavy",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'nặng' is a literal translation of 'heavy' (weight) and is not used for rich or fatty food; the correct term would be 'ngấy' or 'béo'."
+   }
+  },
+  {
+   "key": "805dbffe66634e060ec93e5d358380aac44d0cd86ceb71977d04eba6184337ab",
+   "input": {
+    "id": "concept-core-language",
+    "en": "language",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'language': language",
+    "ja": "言語",
+    "ja_reading": "げんご",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "language"
+    ],
+    "vi": "ngôn ngữ"
+   },
+   "output": {
+    "id": "concept-core-language",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'language' and match perfectly."
+   }
+  },
+  {
+   "key": "153d5f35777a871df7224aa100c5b6dc42206f9162c155020998b559f96a5420",
+   "input": {
+    "id": "concept-core-normal",
+    "en": "normal",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'normal': common, ordinary, usual",
+    "ja": "通常",
+    "ja_reading": "つうじょう",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "thông thường"
+   },
+   "output": {
+    "id": "concept-core-normal",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "While semantically aligned, the Vietnamese 'thông thường' is primarily an adjective, whereas the English and Japanese entries are listed as nouns."
+   }
+  },
+  {
+   "key": "ef3212e83b9e70387c1411bf72f726d7d08e1e054263fd42f0526ca3ddb2ac1b",
+   "input": {
+    "id": "concept-core-property",
+    "en": "property",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'property': property, fortune, assets",
+    "ja": "財産",
+    "ja_reading": "ざいさん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "property",
+     "fortune",
+     "assets"
+    ],
+    "vi": "tài sản"
+   },
+   "output": {
+    "id": "concept-core-property",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the financial sense of 'property' as assets or fortune."
+   }
+  },
+  {
+   "key": "731c4027324b346bb5aebd50619938836067ec096d197085af859e248226c6e8",
+   "input": {
+    "id": "concept-core-charity",
+    "en": "charity",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'charity': charity, benevolence, philanthropy",
+    "ja": "慈善",
+    "ja_reading": "じぜん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "charity",
+     "benevolence",
+     "philanthropy"
+    ],
+    "vi": "từ thiện"
+   },
+   "output": {
+    "id": "concept-core-charity",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the abstract concept of charity or benevolence."
+   }
+  },
+  {
+   "key": "88542d6ea68afe41b986bf95ef1910e5073c353f0b5f7edced3bbb29bb5b4484",
+   "input": {
+    "id": "concept-core-girl",
+    "en": "girl",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'girl': woman, girl, daughter",
+    "ja": "女",
+    "ja_reading": "じょ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "woman",
+     "girl",
+     "daughter"
+    ],
+    "vi": "gái"
+   },
+   "output": {
+    "id": "concept-core-girl",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "UNNATURAL_VI",
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both the Japanese '女' (jo) and Vietnamese 'gái' are inappropriate standalone equivalents for 'girl' due to usage, register, and negative connotations."
+   }
+  },
+  {
+   "key": "7fb12f4127102e891012e5e642f243f621fc5ebc569622de7f05dc8c1e541fda",
+   "input": {
+    "id": "concept-core-justice",
+    "en": "justice",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'justice': justice, fairness, impartiality",
+    "ja": "公正",
+    "ja_reading": "こうせい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "justice",
+     "fairness",
+     "impartiality"
+    ],
+    "vi": "công chính"
+   },
+   "output": {
+    "id": "concept-core-justice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly, with 'công chính' being the direct Sino-Vietnamese equivalent of '公正'."
+   }
+  },
+  {
+   "key": "6453042d897e370d3efcc16d970d3e71849679ed6e7c83830bddbdd11c512661",
+   "input": {
+    "id": "concept-core-money",
+    "en": "money",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'money': money",
+    "ja": "お金",
+    "ja_reading": "おかね",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "money"
+    ],
+    "vi": "tiền"
+   },
+   "output": {
+    "id": "concept-core-money",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the most common, natural, and direct equivalents for 'money'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:55Z",
+ "items": [
+  {
+   "key": "0b604b1a9248a6c1ef8013be28078ffd4fece7f0a4450465cde8618251f4b4fe",
+   "input": {
+    "id": "concept-core-logic",
+    "en": "logic",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'logic': reason, logic",
+    "ja": "論理",
+    "ja_reading": "ろんり",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lô-gic"
+   },
+   "output": {
+    "id": "concept-core-logic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, core words for 'logic' in their respective languages."
+   }
+  },
+  {
+   "key": "deb2cbfb682333481dce7c14b117a481632bc07fcab4d5f612ee4c434a07a416",
+   "input": {
+    "id": "concept-core-fruit",
+    "en": "fruit",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'fruit': fruit, nut, berry",
+    "ja": "果実",
+    "ja_reading": "かじつ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "fruit",
+     "nut",
+     "berry"
+    ],
+    "vi": "trái cây"
+   },
+   "output": {
+    "id": "concept-core-fruit",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'trái cây' is narrower than the English sense and the Japanese '果実', as it typically excludes nuts."
+   }
+  },
+  {
+   "key": "ca057aa93b327037ae4a5c9c273c67ca05b6954f27f19df6c7df7dc902bffca7",
+   "input": {
+    "id": "concept-core-policy",
+    "en": "policy",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'policy': political measures, policy",
+    "ja": "政策",
+    "ja_reading": "せいさく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "political measures",
+     "policy"
+    ],
+    "vi": "chính sách"
+   },
+   "output": {
+    "id": "concept-core-policy",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognate equivalents for '(political) policy'."
+   }
+  },
+  {
+   "key": "000d2cd70e1c37c1cfa529bf8c91fd1b9737b84a02c308f6cefa6d5b2f7382d1",
+   "input": {
+    "id": "concept-core-chair",
+    "en": "chair",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'chair': chair, seat, stool",
+    "ja": "椅子",
+    "ja_reading": "いす",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "chair",
+     "seat",
+     "stool",
+     "bench"
+    ],
+    "vi": "ghế"
+   },
+   "output": {
+    "id": "concept-core-chair",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'chair' and other seating furniture."
+   }
+  },
+  {
+   "key": "c0b46e6985c5a3ed58aedaaab5066aefd2dbd67318f4dd33cfc65ac7f450657b",
+   "input": {
+    "id": "concept-core-boundary",
+    "en": "boundary",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'boundary': area, zone, district",
+    "ja": "境界",
+    "ja_reading": "きょうかい",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "ranh giới"
+   },
+   "output": {
+    "id": "concept-core-boundary",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense 'area, zone, district' is incorrect for the lemma 'boundary'. Both Japanese and Vietnamese words mean 'boundary line', not 'area'."
+   }
+  },
+  {
+   "key": "a81169e27a5200ad20fd5032054a39129f1ddb42660ab7635e5ed3ef4d61e3a0",
+   "input": {
+    "id": "concept-core-rural",
+    "en": "rural",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'rural': rural",
+    "ja": "農村",
+    "ja_reading": "のうそん",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "rural"
+    ],
+    "vi": "nông thôn"
+   },
+   "output": {
+    "id": "concept-core-rural",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "'Rural' is primarily an adjective in English; using it as a noun is less common and awkward for a core concept. The JA/VI nouns mean 'rural area'."
+   }
+  },
+  {
+   "key": "a538ab490577a6ef21d0bafc5fd5104417fab2529fb3957763ed8caecd98bf64",
+   "input": {
+    "id": "concept-core-presence",
+    "en": "presence",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'presence': existence, being, presence",
+    "ja": "存在",
+    "ja_reading": "そんざい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "existence",
+     "being",
+     "presence"
+    ],
+    "vi": "tồn tại"
+   },
+   "output": {
+    "id": "concept-core-presence",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'tồn tại' is a verb ('to exist'), while the English and Japanese entries are nouns."
+   }
+  },
+  {
+   "key": "55d36a2b62a9490f69a40b1eae3cb9ed25b637e8c53df996d18cb995f58402d1",
+   "input": {
+    "id": "concept-core-company",
+    "en": "company",
+    "en_pos": "noun",
+    "en_sense": "A commercial business organization established to generate profit.",
+    "ja": "会社",
+    "ja_reading": "かいしゃ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "công ty"
+   },
+   "output": {
+    "id": "concept-core-company",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'company' (business)."
+   }
+  },
+  {
+   "key": "991f970db96b02a493de5ac9da6a05104bbe9112d3a683336661431528b6d4be",
+   "input": {
+    "id": "concept-core-extraordinary",
+    "en": "extraordinary",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'extraordinary': extreme, great, extraordinary",
+    "ja": "非常",
+    "ja_reading": "ひじょう",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "extreme",
+     "great",
+     "extraordinary",
+     "remarkable",
+     "unusual",
+     "terrible"
+    ],
+    "vi": "phi thường"
+   },
+   "output": {
+    "id": "concept-core-extraordinary",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms, including the cognates '非常' and 'phi thường', are excellent equivalents for 'extraordinary'."
+   }
+  },
+  {
+   "key": "15032c62be60498892895f6e27cf8422fa3aadf1505be1d18cd57f9c49ee6dee",
+   "input": {
+    "id": "concept-core-gain",
+    "en": "gain",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'gain': fruits (of one's labors), gain, result",
+    "ja": "収穫",
+    "ja_reading": "しゅうかく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "fruits (of one's labors)",
+     "gain",
+     "result",
+     "returns"
+    ],
+    "vi": "thu hoạch"
+   },
+   "output": {
+    "id": "concept-core-gain",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The set correctly captures the parallel figurative sense of 'harvest' as 'gains from labor' in all three languages."
+   }
+  },
+  {
+   "key": "55deebc847d1e15926113442d27b912243514e5b3a320db26d3d7ed195f617e0",
+   "input": {
+    "id": "concept-core-command",
+    "en": "command",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'command': order (esp. to a number of people), command",
+    "ja": "号令",
+    "ja_reading": "ごうれい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "order (esp. to a number of people)",
+     "command"
+    ],
+    "vi": "hiệu lệnh"
+   },
+   "output": {
+    "id": "concept-core-command",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly on the specific sense of a command given to a group for synchronized action."
+   }
+  },
+  {
+   "key": "5530906f135a13824ceeb5d9ab855771e199b3fa45901abe4f0b2d32281fbe4d",
+   "input": {
+    "id": "concept-core-cry",
+    "en": "cry",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'cry': to cry, to shed tears, to weep",
+    "ja": "泣く",
+    "ja_reading": "なく",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "to cry",
+     "to shed tears",
+     "to weep",
+     "to sob"
+    ],
+    "vi": "khóc"
+   },
+   "output": {
+    "id": "concept-core-cry",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the primary, standard verbs for 'to cry' (shed tears)."
+   }
+  }
+ ]
+}

@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:28:35Z",
+ "items": [
+  {
+   "key": "672ca323cf9cf4e590d908369c91580610f186518f00adf42b5691b6546de0bd",
+   "input": {
+    "id": "jm-1185290-0-boarding",
+    "en": "boarding",
+    "en_pos": "noun",
+    "en_sense": "boarding; lodging; board and lodging; room and board",
+    "ja": "下宿",
+    "ja_reading": "げしゅく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "boarding",
+     "lodging",
+     "board and lodging",
+     "room and board"
+    ],
+    "vi": "trọ"
+   },
+   "output": {
+    "id": "jm-1185290-0-boarding",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents for the concept of lodging, especially for students or workers."
+   }
+  },
+  {
+   "key": "0d369a86330f3839aa55bae87b30c8b0405488dc62b2c0895a13817b3c3e9a15",
+   "input": {
+    "id": "jm-1185970-1-preparation",
+    "en": "preparation",
+    "en_pos": "noun",
+    "en_sense": "preparation (for a class); going over one's lessons (in advance); studying ahead",
+    "ja": "下調べ",
+    "ja_reading": "したしらべ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "preparation (for a class)",
+     "going over one's lessons (in advance)",
+     "studying ahead"
+    ],
+    "vi": "chuẩn bị"
+   },
+   "output": {
+    "id": "jm-1185970-1-preparation",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `chuẩn bị` is too general for the specific sense of 'studying ahead for a class', for which `chuẩn bị bài` would be better."
+   }
+  },
+  {
+   "key": "bba4aa5635cb8d287228c845e9e5cf664a332fd99b0fd04f5374caa967b4da30",
+   "input": {
+    "id": "jm-1186710-2-change",
+    "en": "change",
+    "en_pos": "verb",
+    "en_sense": "to change (into); to transform; to metamorphose",
+    "ja": "化ける",
+    "ja_reading": "ばける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to change (into)",
+     "to transform",
+     "to metamorphose"
+    ],
+    "vi": "biến đổi"
+   },
+   "output": {
+    "id": "jm-1186710-2-change",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `化ける` is too specific, often implying disguise or supernatural transformation, making it a narrow equivalent for the more general English 'change (into)'."
+   }
+  },
+  {
+   "key": "3d9bca21068b9f03bc276581142672cbff4286de349d9f511b36a42c0b20f5c2",
+   "input": {
+    "id": "jm-1188880-0-forever",
+    "en": "forever",
+    "en_pos": "adverb",
+    "en_sense": "forever; eternally; for good; as long as one likes; indefinitely; endlessly",
+    "ja": "いつまでも",
+    "ja_reading": "いつまでも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "forever",
+     "eternally",
+     "for good",
+     "as long as one likes",
+     "indefinitely",
+     "endlessly"
+    ],
+    "vi": "mãi mãi"
+   },
+   "output": {
+    "id": "jm-1188880-0-forever",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural, and common equivalents for 'forever'."
+   }
+  },
+  {
+   "key": "f35c3ed321e887b3765b05b4e5a1df70d9dae5134560d0060ab1e4df16c4f350",
+   "input": {
+    "id": "jm-1189000-0-somewhere",
+    "en": "somewhere",
+    "en_pos": "noun",
+    "en_sense": "somewhere",
+    "ja": "どこか",
+    "ja_reading": "どこか",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "somewhere"
+    ],
+    "vi": "đâu đó"
+   },
+   "output": {
+    "id": "jm-1189000-0-somewhere",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are perfect equivalents for 'somewhere'."
+   }
+  },
+  {
+   "key": "72fab6720eb06e0b126729245561cccce2717c54694c437014a11fba642159b8",
+   "input": {
+    "id": "jm-1190120-0-treatment",
+    "en": "treatment",
+    "en_pos": "noun",
+    "en_sense": "manufacturing; processing; treatment; machining",
+    "ja": "加工",
+    "ja_reading": "かこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "manufacturing",
+     "processing",
+     "treatment",
+     "machining"
+    ],
+    "vi": "gia công"
+   },
+   "output": {
+    "id": "jm-1190120-0-treatment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are perfect equivalents in the specific industrial/manufacturing sense."
+   }
+  },
+  {
+   "key": "bf1d3da699031645362b296da65b0044da826b8ad78e02a55f3b847904c0dcf1",
+   "input": {
+    "id": "jm-1190740-0-lovely",
+    "en": "lovely",
+    "en_pos": "adjective",
+    "en_sense": "lovely; sweet; pretty; cute; adorable",
+    "ja": "可愛らしい",
+    "ja_reading": "かわいらしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "lovely",
+     "sweet",
+     "pretty",
+     "cute",
+     "adorable"
+    ],
+    "vi": "đáng yêu"
+   },
+   "output": {
+    "id": "jm-1190740-0-lovely",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three adjectives are excellent and natural equivalents for the concept of 'lovely/cute/adorable'."
+   }
+  },
+  {
+   "key": "9518891d3a8bd7789fd02f15418edafd180f520b8ed8edf718c0f8fd84c9d91d",
+   "input": {
+    "id": "jm-1190810-0-approval",
+    "en": "approval",
+    "en_pos": "noun",
+    "en_sense": "approval; adoption (of a motion, bill, etc.); passage",
+    "ja": "可決",
+    "ja_reading": "かけつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "approval",
+     "adoption (of a motion, bill, etc.)",
+     "passage"
+    ],
+    "vi": "thông qua"
+   },
+   "output": {
+    "id": "jm-1190810-0-approval",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `thông qua` is a verb meaning 'to pass/approve', not a noun for 'approval', which should be `sự thông qua`."
+   }
+  },
+  {
+   "key": "7d955bc4db02b72d1c5f07846c0aa1eec9f51a615fe436da9ec268faa0572339",
+   "input": {
+    "id": "jm-1191990-0-landlord",
+    "en": "landlord",
+    "en_pos": "noun",
+    "en_sense": "landlord; landlady",
+    "ja": "家主",
+    "ja_reading": "やぬし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "landlord",
+     "landlady"
+    ],
+    "vi": "chủ nhà"
+   },
+   "output": {
+    "id": "jm-1191990-0-landlord",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'landlord/landlady'."
+   }
+  },
+  {
+   "key": "01d37fac2e819e8e18aafb1d0fad6ab92db86abe97ea2a8f726dd58caed07a02",
+   "input": {
+    "id": "jm-1192420-0-wife",
+    "en": "wife",
+    "en_pos": "noun",
+    "en_sense": "(my) wife",
+    "ja": "家内",
+    "ja_reading": "かない",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(my) wife"
+    ],
+    "vi": "vợ"
+   },
+   "output": {
+    "id": "jm-1192420-0-wife",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `家内` is a humble and somewhat dated term for one's own wife, while Vietnamese `vợ` is the general term for 'wife', creating both register and scope mismatches."
+   }
+  },
+  {
+   "key": "018a5d242630e34f4a6d596cb5c30b540e3d690d0f8778ab75096648273f021f",
+   "input": {
+    "id": "jm-1192850-0-accomplish",
+    "en": "accomplish",
+    "en_pos": "verb",
+    "en_sense": "to accomplish; to achieve; to carry out; to fulfill; to fulfil; to realize",
+    "ja": "果たす",
+    "ja_reading": "はたす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to accomplish",
+     "to achieve",
+     "to carry out",
+     "to fulfill",
+     "to fulfil",
+     "to realize"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1192850-0-accomplish",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three verbs are strong equivalents for accomplishing or fulfilling a task, duty, or goal."
+   }
+  },
+  {
+   "key": "909a93be1904106c491b6acf8b7b888feb915ba6266455e7e3b8dbb3a2597f82",
+   "input": {
+    "id": "jm-1194280-0-tuesday",
+    "en": "tuesday",
+    "en_pos": "noun",
+    "en_sense": "Tuesday",
+    "ja": "火曜",
+    "ja_reading": "かよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Tuesday"
+    ],
+    "vi": "thứ ba"
+   },
+   "output": {
+    "id": "jm-1194280-0-tuesday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'Tuesday'."
+   }
+  }
+ ]
+}

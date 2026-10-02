@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:29:00Z",
+ "items": [
+  {
+   "key": "cbcffe4dca2fbab82df3aa6e17c66a3cbe2be1acf02ea11e00093d0b9f671444",
+   "input": {
+    "id": "jm-1169390-0-sink",
+    "en": "sink",
+    "en_pos": "verb",
+    "en_sense": "to draw back; to sink; to cave in",
+    "ja": "引っ込む",
+    "ja_reading": "ひっこむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to draw back",
+     "to sink",
+     "to cave in"
+    ],
+    "vi": "lún"
+   },
+   "output": {
+    "id": "jm-1169390-0-sink",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'lún' only covers the 'sink/cave in' aspect, not the 'draw back' aspect present in both English and Japanese."
+   }
+  },
+  {
+   "key": "629828272287722dde2468d4b70fadd289b3f7de42d81fc28492b425ad4a2d3c",
+   "input": {
+    "id": "jm-1169610-0-retirement",
+    "en": "retirement",
+    "en_pos": "noun",
+    "en_sense": "retirement",
+    "ja": "引退",
+    "ja_reading": "いんたい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "retirement"
+    ],
+    "vi": "nghỉ hưu"
+   },
+   "output": {
+    "id": "jm-1169610-0-retirement",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'nghỉ hưu' specifically means retirement due to age, while Japanese '引退' and English 'retirement' can also refer to stepping down from a role (e.g., in sports) at any age."
+   }
+  },
+  {
+   "key": "3cffeccc0442f1868dc59a684a4c24bcb88dd1150b7af9749eccdbdd06d47aab",
+   "input": {
+    "id": "jm-1169660-0-quotation",
+    "en": "quotation",
+    "en_pos": "noun",
+    "en_sense": "quotation; citation; reference",
+    "ja": "引用",
+    "ja_reading": "いんよう",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "quotation",
+     "citation",
+     "reference"
+    ],
+    "vi": "trích dẫn"
+   },
+   "output": {
+    "id": "jm-1169660-0-quotation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'quotation' or 'citation'."
+   }
+  },
+  {
+   "key": "c9dc3e58012f27903cb8ca007e5fbf9493f9f15ff54a294d19d2e588db74f162",
+   "input": {
+    "id": "jm-1170690-0-retirement",
+    "en": "retirement",
+    "en_pos": "noun",
+    "en_sense": "retirement (from work); leading a quiet life (after retirement)",
+    "ja": "隠居",
+    "ja_reading": "いんきょ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "retirement (from work)",
+     "leading a quiet life (after retirement)"
+    ],
+    "vi": "nghỉ hưu"
+   },
+   "output": {
+    "id": "jm-1170690-0-retirement",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "Japanese '隠居' is an old-fashioned term for retirement implying seclusion, which does not match the modern, neutral Vietnamese 'nghỉ hưu'."
+   }
+  },
+  {
+   "key": "dc415036bec76aa4fc184155c7bb5d84a15f25341ef573be638d267a260684dc",
+   "input": {
+    "id": "jm-1172690-0-management",
+    "en": "management",
+    "en_pos": "noun",
+    "en_sense": "management; administration; operation",
+    "ja": "運営",
+    "ja_reading": "うんえい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "management",
+     "administration",
+     "operation"
+    ],
+    "vi": "quản lý"
+   },
+   "output": {
+    "id": "jm-1172690-0-management",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "While all three terms can mean 'management', Japanese '運営' focuses on 'operation', while Vietnamese 'quản lý' is a broader term that also includes supervision and control."
+   }
+  },
+  {
+   "key": "40844568e579475a320875c80cd5c22ca446860b15f29cd143ea400239c7be61",
+   "input": {
+    "id": "jm-1173420-0-run",
+    "en": "run",
+    "en_pos": "verb",
+    "en_sense": "to run (a business); to operate; to conduct; to practice (law, medicine, etc.)",
+    "ja": "営む",
+    "ja_reading": "いとなむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to run (a business)",
+     "to operate",
+     "to conduct",
+     "to practice (law, medicine, etc.)"
+    ],
+    "vi": "điều hành"
+   },
+   "output": {
+    "id": "jm-1173420-0-run",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'điều hành' is narrower than English 'run' and Japanese '営む', typically referring to executive management of a larger organization rather than running a small business or practicing a profession."
+   }
+  },
+  {
+   "key": "2c28a85ae8f1a66deeb7c9ba2924463aac56d71a9b45917d2c36a92bed830825",
+   "input": {
+    "id": "jm-1173780-0-projection",
+    "en": "projection",
+    "en_pos": "noun",
+    "en_sense": "projection (on a screen)",
+    "ja": "映写",
+    "ja_reading": "えいしゃ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "projection (on a screen)"
+    ],
+    "vi": "chiếu"
+   },
+   "output": {
+    "id": "jm-1173780-0-projection",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'chiếu' is a verb ('to project'), not a noun ('projection') like the English and Japanese terms."
+   }
+  },
+  {
+   "key": "1c58d454e09127df3e607de5be077344d41dfe123c22d8b18b301eacab45f805",
+   "input": {
+    "id": "jm-1174420-0-english",
+    "en": "english",
+    "en_pos": "noun",
+    "en_sense": "English (language)",
+    "ja": "英語",
+    "ja_reading": "えいご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "English (language)"
+    ],
+    "vi": "tiếng anh"
+   },
+   "output": {
+    "id": "jm-1174420-0-english",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalents for the English language."
+   }
+  },
+  {
+   "key": "9935a591a8054f95f668fc0af806f32ea2d73205b05e2560fb12945adfdb80d4",
+   "input": {
+    "id": "jm-1174970-0-liquid",
+    "en": "liquid",
+    "en_pos": "noun",
+    "en_sense": "liquid; fluid",
+    "ja": "液",
+    "ja_reading": "えき",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "liquid",
+     "fluid"
+    ],
+    "vi": "chất lỏng"
+   },
+   "output": {
+    "id": "jm-1174970-0-liquid",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and correct equivalents for 'liquid'."
+   }
+  },
+  {
+   "key": "7c50e9dc3f59283691a21bc661d1b127e4c6737c8b09cc67d610ad5db9437524",
+   "input": {
+    "id": "jm-1175140-0-railway_station",
+    "en": "railway station",
+    "en_pos": "noun",
+    "en_sense": "railway station; train station",
+    "ja": "駅",
+    "ja_reading": "えき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "railway station",
+     "train station"
+    ],
+    "vi": "nhà ga"
+   },
+   "output": {
+    "id": "jm-1175140-0-railway_station",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'train station'."
+   }
+  },
+  {
+   "key": "711e8fb7cfe6b691ebc6a12a8fdd6a068a8149528a5d820761fe952f0d1e1dee",
+   "input": {
+    "id": "jm-1176740-0-coast",
+    "en": "coast",
+    "en_pos": "noun",
+    "en_sense": "coast; shore",
+    "ja": "沿岸",
+    "ja_reading": "えんがん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "coast",
+     "shore"
+    ],
+    "vi": "bờ biển"
+   },
+   "output": {
+    "id": "jm-1176740-0-coast",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '沿岸' can refer to any shore (sea, lake, river), while Vietnamese 'bờ biển' is specifically 'seacoast'."
+   }
+  },
+  {
+   "key": "7a683a2dfe18cd3c713281b08d4232d4fe701eb7076d6693f100d2b7958c5ce2",
+   "input": {
+    "id": "jm-1176780-0-act",
+    "en": "act",
+    "en_pos": "verb",
+    "en_sense": "to act (a part); to play (a role)",
+    "ja": "演じる",
+    "ja_reading": "えんじる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to act (a part)",
+     "to play (a role)"
+    ],
+    "vi": "đóng"
+   },
+   "output": {
+    "id": "jm-1176780-0-act",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard and natural choices for 'to act a role'."
+   }
+  }
+ ]
+}

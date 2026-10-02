@@ -1,0 +1,369 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:56Z",
+ "items": [
+  {
+   "key": "6321a8b7f3493bf392c80bb9fd4d38aea10d729bf6b84f62ebe316565b85df4c",
+   "input": {
+    "id": "concept-core-proper",
+    "en": "proper",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'proper': formal, official, regular",
+    "ja": "正式",
+    "ja_reading": "せいしき",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "formal",
+     "official",
+     "regular",
+     "proper",
+     "legal",
+     "due (formalities)"
+    ],
+    "vi": "chính thức"
+   },
+   "output": {
+    "id": "concept-core-proper",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents for the sense of 'formal' or 'official'."
+   }
+  },
+  {
+   "key": "ab5bd202744cc0412b27a2bb2fcb29e3e73e9e4a556104efefdb015d762e1f3e",
+   "input": {
+    "id": "concept-core-doctor",
+    "en": "doctor",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'doctor': doctor, PhD, Dr.",
+    "ja": "医者",
+    "ja_reading": "いしゃ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "bác sĩ"
+   },
+   "output": {
+    "id": "concept-core-doctor",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "MULTIPLE_SENSES_COLLAPSED",
+     "TOO_NARROW"
+    ],
+    "note": "The English sense incorrectly combines 'medical doctor' with 'PhD holder'; the Japanese and Vietnamese words only mean 'medical doctor'."
+   }
+  },
+  {
+   "key": "8d0d6dd3a53f23b7d30fce4429441cf6d8b7a7c227b9f054ddbf8aafdacfe824",
+   "input": {
+    "id": "concept-core-hard",
+    "en": "hard",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'hard': tough, hard, severe",
+    "ja": "きつい",
+    "ja_reading": "きつい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "tough",
+     "hard",
+     "severe",
+     "demanding",
+     "harsh"
+    ],
+    "vi": "khó"
+   },
+   "output": {
+    "id": "concept-core-hard",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'khó' only means 'difficult', while English 'hard' and Japanese 'きつい' also cover senses like 'severe' or 'harsh'."
+   }
+  },
+  {
+   "key": "6a2c4410a9a2dc90b1616ff05874032778778c88237344b5ce2d5098e04303b5",
+   "input": {
+    "id": "concept-core-wish",
+    "en": "wish",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'wish': desire, wish, aspiration",
+    "ja": "願望",
+    "ja_reading": "がんぼう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "desire",
+     "wish",
+     "aspiration"
+    ],
+    "vi": "nguyện vọng"
+   },
+   "output": {
+    "id": "concept-core-wish",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents, sharing a common origin and meaning of a strong desire or aspiration."
+   }
+  },
+  {
+   "key": "7fa1db121a45c767e0395a85ef6399d76f7417a357ef88e37d9858e2a844507f",
+   "input": {
+    "id": "concept-core-part",
+    "en": "part",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'part': part, section",
+    "ja": "部分",
+    "ja_reading": "ぶぶん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "phần"
+   },
+   "output": {
+    "id": "concept-core-part",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are the most common and direct equivalents for this core concept."
+   }
+  },
+  {
+   "key": "cc6ee76c989d7305c30061b692dd2ab40341c87a99b2393f2a2cc119d1699235",
+   "input": {
+    "id": "concept-core-section",
+    "en": "section",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'section': part, section",
+    "ja": "部分",
+    "ja_reading": "ぶぶん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "phần"
+   },
+   "output": {
+    "id": "concept-core-section",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "As with 'part', these three terms are excellent equivalents for the concept of a 'section'."
+   }
+  },
+  {
+   "key": "373a9e6c5530448104ff43c62b6705412265709e986a5d95b3d30c96426acb64",
+   "input": {
+    "id": "concept-core-position",
+    "en": "position",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'position': (one's) stance, position, opinion",
+    "ja": "立場",
+    "ja_reading": "たちば",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lập trường"
+   },
+   "output": {
+    "id": "concept-core-position",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents, with the Japanese and Vietnamese being direct cognates for this specific sense of 'position'."
+   }
+  },
+  {
+   "key": "29562a2c21083d86ca02a81bdcc7b8d9622586b7cc01b6b912057e3504610273",
+   "input": {
+    "id": "concept-core-response",
+    "en": "response",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'response': reaction, response",
+    "ja": "反応",
+    "ja_reading": "はんのう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "reaction",
+     "response"
+    ],
+    "vi": "phản ứng"
+   },
+   "output": {
+    "id": "concept-core-response",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents, with the Japanese and Vietnamese being direct cognates for 'reaction' or 'response'."
+   }
+  },
+  {
+   "key": "6dc19093f408f6ed90193210e782d60924ef6f6732ab91eefb70d2b1bb1434e0",
+   "input": {
+    "id": "concept-core-task",
+    "en": "task",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'task': task, duty, obligation",
+    "ja": "仕事",
+    "ja_reading": "しごと",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "công việc"
+   },
+   "output": {
+    "id": "concept-core-task",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese and Vietnamese words mean 'work' or 'job' in general, which is broader than the English 'task'."
+   }
+  },
+  {
+   "key": "abeb3a4055443864e85e313ad3044409ce803f28f1f47f7547fa886bfd72acb2",
+   "input": {
+    "id": "concept-core-manager",
+    "en": "manager",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'manager': director, superintendent, supervisor",
+    "ja": "マネージャー",
+    "ja_reading": "マネージャー",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "quản lý"
+   },
+   "output": {
+    "id": "concept-core-manager",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, modern words for 'manager' in their respective languages."
+   }
+  },
+  {
+   "key": "77686a54384a0b6f41285a44eea7354de71cad591b70c34c3aec7fa57709dd61",
+   "input": {
+    "id": "concept-core-technique",
+    "en": "technique",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'technique': technique, method",
+    "ja": "手法",
+    "ja_reading": "しゅほう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "technique",
+     "method"
+    ],
+    "vi": "thủ pháp"
+   },
+   "output": {
+    "id": "concept-core-technique",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thủ pháp' is a cognate of the Japanese '手法' but is much narrower, typically restricted to artistic or literary techniques."
+   }
+  },
+  {
+   "key": "db0401194daeb753a19ca22328d41ace39d9bc2da293ac04a5a993dd066643f3",
+   "input": {
+    "id": "concept-core-variable",
+    "en": "variable",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'variable': variable",
+    "ja": "変数",
+    "ja_reading": "へんすう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "variable"
+    ],
+    "vi": "biến số"
+   },
+   "output": {
+    "id": "concept-core-variable",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are the standard technical equivalents for 'variable' in mathematics and science."
+   }
+  }
+ ]
+}

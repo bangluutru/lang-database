@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:44:47Z",
+ "items": [
+  {
+   "key": "3826ffa6f18dac55c0c0e4c89c49f44344b15c216c100ef776611b94e6da2e54",
+   "input": {
+    "id": "wk-4101-s1",
+    "en": "universal",
+    "en_pos": "adjective",
+    "en_sense": "Common to all members of a group or class.",
+    "ja": "普遍的",
+    "ja_reading": "ふへんてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "universal",
+     "omnipresent",
+     "ubiquitous"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4101-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "普遍的 is the standard and accurate translation for this abstract sense of 'universal'."
+   }
+  },
+  {
+   "key": "65e7fd264d2926070fd7f8765ff9d6ce3ff02bd2ffc5d13e1a9f9fb2376cf966",
+   "input": {
+    "id": "wk-4101-s2",
+    "en": "universal",
+    "en_pos": "adjective",
+    "en_sense": "Common to all society; worldwide, global.",
+    "ja": "世界的",
+    "ja_reading": "せかいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "worldwide",
+     "global",
+     "international",
+     "universal"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4101-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "世界的 is the correct translation for the 'worldwide' or 'global' sense of 'universal'."
+   }
+  },
+  {
+   "key": "5615ba9fb22950af4c3fc123fc28078cccb927d164f8ec29ba9e780e9b51cf21",
+   "input": {
+    "id": "wk-4109-s8",
+    "en": "terminal",
+    "en_pos": "noun",
+    "en_sense": "The apparatus to send and/or receive signals on a line, such as a telephone or network device.",
+    "ja": "終着駅",
+    "ja_reading": "しゅうちゃくえき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "terminal station"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4109-s8",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "終着駅 means a terminal station for transport, not an electronic terminal for communication."
+   }
+  },
+  {
+   "key": "0bddd957eac1f4e4afacd141014431f3f760ed7d77811827835e175a5c571933",
+   "input": {
+    "id": "wk-4109-s9",
+    "en": "terminal",
+    "en_pos": "noun",
+    "en_sense": "A device for entering data into a computer or a communications system and/or displaying data received, especially a device equipped with a keyboard and some sort of textual display.",
+    "ja": "端末",
+    "ja_reading": "たんまつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "terminal",
+     "computer terminal"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4109-s9",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "端末 is the correct and standard Japanese term for a computer or communications terminal."
+   }
+  },
+  {
+   "key": "44bfa187a0e9f8334b87005df692db02e2dd0934c9c588b0ddfc1187e40db1be",
+   "input": {
+    "id": "wk-4126-s0",
+    "en": "function",
+    "en_pos": "verb",
+    "en_sense": "To have a function.",
+    "ja": "作用する",
+    "ja_reading": "さようする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "action",
+     "operation",
+     "process",
+     "agency",
+     "effect",
+     "function"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4126-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "作用する means 'to act upon' or 'to have an effect', which is a narrower sense than the general 'to function'; 機能する is a better equivalent."
+   }
+  },
+  {
+   "key": "b0d3de66053d305d03472141a0f68b026a33359cb9df42a6af471764de43bc8e",
+   "input": {
+    "id": "wk-4127-s5",
+    "en": "error",
+    "en_pos": "noun",
+    "en_sense": "A play which is scored as having been made incorrectly.",
+    "ja": "失策",
+    "ja_reading": "しっさく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "error"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4127-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "失策 is the correct Japanese term for a fielding error in baseball, matching the English sense perfectly."
+   }
+  },
+  {
+   "key": "cb1d57b7ae490216aba2b452c8f840db414d59b91039937da00e04073d75b5a3",
+   "input": {
+    "id": "wk-4151-e:497020",
+    "en": "insect",
+    "en_pos": "noun",
+    "en_sense": "colloquial: any small arthropod",
+    "ja": "虫",
+    "ja_reading": "むし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "insect",
+     "bug",
+     "cricket",
+     "moth"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4151-e:497020",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "虫 perfectly matches the colloquial English sense of 'insect' which includes other small arthropods and bugs."
+   }
+  },
+  {
+   "key": "ce4078f4f79b82efff810db4aa340f939db91e2201696a7e202fbaa5b0cff926",
+   "input": {
+    "id": "wk-4156-s0",
+    "en": "jet",
+    "en_pos": "noun",
+    "en_sense": "an operation that takes a differentiable function f and produces a polynomial, the Taylor polynomial (truncated Taylor series) of f, at each point of its domain.",
+    "ja": "ジェット",
+    "ja_reading": "ジェット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jet"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4156-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ジェット is the standard Japanese transliteration used as the technical term for a mathematical 'jet'."
+   }
+  },
+  {
+   "key": "2c0b80cd6ad0c7caae61586f76f3672719bcac2c3de64d5b15f6faaeb3a0dea9",
+   "input": {
+    "id": "wk-4162-e:0d055f",
+    "en": "tool",
+    "en_pos": "noun",
+    "en_sense": "software for developers",
+    "ja": "ツール",
+    "ja_reading": "ツール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tool (software)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4162-e:0d055f",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The loanword ツール is the standard and natural term for 'software tool' in Japanese."
+   }
+  },
+  {
+   "key": "f933bc4fc9b6b650b72bd872967d0ae7bc634f7122743c4058895e0ff9ea2fa3",
+   "input": {
+    "id": "wk-4189-s0",
+    "en": "onus",
+    "en_pos": "noun",
+    "en_sense": "A legal obligation.",
+    "ja": "責任",
+    "ja_reading": "せきにん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "liability",
+     "onus"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4189-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "責任 (responsibility, liability) is much broader than 'onus', which specifically implies a burden or legal obligation."
+   }
+  },
+  {
+   "key": "67f6aba955bbb625403584282516007df00c513b339198b69731576874ab4dab",
+   "input": {
+    "id": "wk-4196-s1",
+    "en": "pilot",
+    "en_pos": "noun",
+    "en_sense": "A person who knows well the depths, shoals, and currents of a harbor or coastal area, who is hired by a vessel to help navigate the harbor or coast.",
+    "ja": "水先人",
+    "ja_reading": "みずさきにん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(boat) pilot"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4196-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "水先人 is the precise and correct Japanese term for a maritime/harbor pilot."
+   }
+  },
+  {
+   "key": "07d40ae3497c07ef8fe1912eb085167d17350499746dfb261117c79263e63535",
+   "input": {
+    "id": "wk-4200-s0",
+    "en": "real",
+    "en_pos": "noun",
+    "en_sense": "Former unit of currency of Spain and Spain's colonies.",
+    "ja": "レアル",
+    "ja_reading": "レアル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "real (currency of Brazil)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-4200-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "レアル in Japanese refers to the Brazilian currency, not the historical Spanish currency specified in the English sense."
+   }
+  }
+ ]
+}

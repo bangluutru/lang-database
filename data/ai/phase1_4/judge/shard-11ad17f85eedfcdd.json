@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:29:32Z",
+ "items": [
+  {
+   "key": "dd1e049983f2d069c5761ccd61c9942cd0be5aefe0247d8fc346e61d23259121",
+   "input": {
+    "id": "wk-12755-e:7c55f3",
+    "en": "hunger",
+    "en_pos": "noun",
+    "en_sense": "need for food",
+    "ja": "飢え",
+    "ja_reading": "うえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hunger",
+     "starvation"
+    ],
+    "vi": "đói"
+   },
+   "output": {
+    "id": "wk-12755-e:7c55f3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'đói' is an adjective meaning 'hungry', not a noun for 'hunger'. The correct noun form would be 'sự đói'."
+   }
+  },
+  {
+   "key": "538092202b180f68873def86b44ce3e2887c5241da0c30888ce200802311d99c",
+   "input": {
+    "id": "wk-12763-s0",
+    "en": "bunker",
+    "en_pos": "noun",
+    "en_sense": "A hardened shelter, often partly buried or fully underground, designed to protect the inhabitants from falling bombs or other attacks.",
+    "ja": "バンカー",
+    "ja_reading": "バンカー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bunker"
+    ],
+    "vi": "hầm"
+   },
+   "output": {
+    "id": "wk-12763-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard equivalents for a military bunker."
+   }
+  },
+  {
+   "key": "7195bf0151556dc693732357480a9f1d84a63015fca73b5f7f86d9592f07a38d",
+   "input": {
+    "id": "wk-12766-s0",
+    "en": "version",
+    "en_pos": "noun",
+    "en_sense": "A specific form or variation of something.",
+    "ja": "バージョン",
+    "ja_reading": "バージョン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "version"
+    ],
+    "vi": "phiên bản"
+   },
+   "output": {
+    "id": "wk-12766-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'version'."
+   }
+  },
+  {
+   "key": "ab8336989318ce98bf3fbf5232f423049308c476f0142fb2d0375d52d08c5c77",
+   "input": {
+    "id": "wk-12770-s4",
+    "en": "blank",
+    "en_pos": "noun",
+    "en_sense": "A space to be filled in on a form or template.",
+    "ja": "空欄",
+    "ja_reading": "くうらん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "blank column",
+     "blank space"
+    ],
+    "vi": "khoảng trống"
+   },
+   "output": {
+    "id": "wk-12770-s4",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'khoảng trống' is a bit too general ('empty space'); 'chỗ trống' or 'ô trống' would be more precise for a blank on a form."
+   }
+  },
+  {
+   "key": "8c5e2ad7f8d4b9b0e98a51457ea38510e6a76dc832f994a7519241b4d588c451",
+   "input": {
+    "id": "wk-12773-s0",
+    "en": "container",
+    "en_pos": "noun",
+    "en_sense": "An item in which objects, materials or data can be stored or transported.",
+    "ja": "容器",
+    "ja_reading": "ようき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "container",
+     "receptacle",
+     "vessel",
+     "packaging"
+    ],
+    "vi": "thùng"
+   },
+   "output": {
+    "id": "wk-12773-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'thùng' is too specific, meaning a large box, crate, or barrel, while 'container' is a much more general term."
+   }
+  },
+  {
+   "key": "8fec5dee5aaa13ad616215f75ab0d32f2eaec1872a9528cd640df8411f081d0b",
+   "input": {
+    "id": "wk-12777-s0",
+    "en": "compliment",
+    "en_pos": "noun",
+    "en_sense": "An expression of praise, congratulation, or respect.",
+    "ja": "お世辞",
+    "ja_reading": "おせじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "flattery",
+     "compliment"
+    ],
+    "vi": "lời khen"
+   },
+   "output": {
+    "id": "wk-12777-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese 'お世辞' (oseji) strongly implies insincere flattery, unlike the neutral English 'compliment'. A better Japanese word is '褒め言葉' (homekotoba)."
+   }
+  },
+  {
+   "key": "4cd2299576b51304788eedfc9760ecc774cb9888259fa31e435208809de775c0",
+   "input": {
+    "id": "wk-1278-s10",
+    "en": "right",
+    "en_pos": "adjective",
+    "en_sense": "Pertaining to the political right; conservative.",
+    "ja": "右翼",
+    "ja_reading": "うよく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "right wing"
+    ],
+    "vi": "hữu khuynh"
+   },
+   "output": {
+    "id": "wk-1278-s10",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard political equivalents for 'right-wing'."
+   }
+  },
+  {
+   "key": "a3be8b5d445d2b48b1ea208cf856b0514706f3bd37e02690399eff70127a5ebf",
+   "input": {
+    "id": "wk-12789-s0",
+    "en": "jug",
+    "en_pos": "noun",
+    "en_sense": "A serving vessel or container, typically circular in cross-section and typically higher than it is wide, with a relatively small mouth or spout, an ear handle and often a stopper or top.",
+    "ja": "ジャグ",
+    "ja_reading": "ジャグ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jug"
+    ],
+    "vi": "bình"
+   },
+   "output": {
+    "id": "wk-12789-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'bình' is too broad, meaning 'vessel' or 'jar' in general, while 'jug' is a more specific type of container."
+   }
+  },
+  {
+   "key": "4bd1e5e53b7e7e39d61206864b18d290fbbba56d4d2c774a1aedf09d814eb37a",
+   "input": {
+    "id": "wk-12790-e:e12293",
+    "en": "twin",
+    "en_pos": "noun",
+    "en_sense": "either of two people who shared the same uterus, or of two similar or closely related objects",
+    "ja": "双子",
+    "ja_reading": "ふたご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "twins",
+     "twin"
+    ],
+    "vi": "trẻ sinh đôi"
+   },
+   "output": {
+    "id": "wk-12790-e:e12293",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'trẻ sinh đôi' is too narrow as it means 'twin child', excluding adults and objects. The Japanese '双子' usually refers to the pair."
+   }
+  },
+  {
+   "key": "99f57a3a8bedd840349901ce3ca5f93ea72749a24755c88408cfe57c76ba8895",
+   "input": {
+    "id": "wk-12795-s3",
+    "en": "cartridge",
+    "en_pos": "noun",
+    "en_sense": "A vessel which contains the ink or toner for a computer printer and can be easily replaced with another.",
+    "ja": "インクカートリッジ",
+    "ja_reading": "インクカートリッジ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ink cartridge"
+    ],
+    "vi": "mực"
+   },
+   "output": {
+    "id": "wk-12795-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'mực' means 'ink' (the substance), not 'cartridge' (the container). The correct term would be 'hộp mực'."
+   }
+  },
+  {
+   "key": "f2676587fd08b8da649ff693aef544102e479a0030a510fe90e0731be609ec97",
+   "input": {
+    "id": "wk-1280-s0",
+    "en": "right",
+    "en_pos": "interjection",
+    "en_sense": "Yes, that is correct; I agree.",
+    "ja": "左右",
+    "ja_reading": "さゆう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "left and right",
+     "right and left"
+    ],
+    "vi": "đúng"
+   },
+   "output": {
+    "id": "wk-1280-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese word '左右' (sayuu) means 'left and right' and is completely incorrect for the interjection 'right!' meaning 'correct!'."
+   }
+  },
+  {
+   "key": "00e93c7654812cadc9626d0b9208c8d5ab05a0784e741513871e0723582c6fba",
+   "input": {
+    "id": "wk-1281-s5",
+    "en": "right",
+    "en_pos": "noun",
+    "en_sense": "The ensemble of right-wing political parties; political conservatives as a group.",
+    "ja": "右翼",
+    "ja_reading": "うよく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "right wing"
+    ],
+    "vi": "cánh hữu"
+   },
+   "output": {
+    "id": "wk-1281-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard political nouns for 'the right-wing'."
+   }
+  }
+ ]
+}

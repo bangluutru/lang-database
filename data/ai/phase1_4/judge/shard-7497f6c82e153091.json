@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:35:53Z",
+ "items": [
+  {
+   "key": "3b176534c59683c5dbaa5fba2bbd5c42eed2b328e6d39561cc259139e54ad742",
+   "input": {
+    "id": "jm-1363010-0-propose",
+    "en": "propose",
+    "en_pos": "verb",
+    "en_sense": "to propose; to suggest",
+    "ja": "申し入れる",
+    "ja_reading": "もうしいれる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to propose",
+     "to suggest"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363010-0-propose",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`申し入れる` is a good equivalent for making a formal proposal or suggestion."
+   }
+  },
+  {
+   "key": "e0166e7a1fa3c22838f8c15404fe9983994a312bb1d7234bfbcce409c6e9d2fe",
+   "input": {
+    "id": "jm-1363030-0-complaint",
+    "en": "complaint",
+    "en_pos": "noun",
+    "en_sense": "complaint; protest; objection; fault",
+    "ja": "申し分",
+    "ja_reading": "もうしぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complaint",
+     "protest",
+     "objection",
+     "fault"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363030-0-complaint",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "`申し分` is almost exclusively used in the negative phrase `申し分ない` (perfect, no grounds for complaint) and is not a general equivalent for \"complaint\"."
+   }
+  },
+  {
+   "key": "e301aa9ddd6d921db9064e82993ae7423640a291aac28809253ba8dd4e23c97a",
+   "input": {
+    "id": "jm-1363050-0-apology",
+    "en": "apology",
+    "en_pos": "noun",
+    "en_sense": "apology; excuse",
+    "ja": "申し訳",
+    "ja_reading": "もうしわけ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "apology",
+     "excuse"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363050-0-apology",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "`申し訳` is primarily used in set phrases like `申し訳ない` (I'm sorry) and is not a good standalone equivalent for \"apology\" or \"excuse\"."
+   }
+  },
+  {
+   "key": "df3f68148e478c31af4669c19bfaa79a237e1cfeeccceb96543c9c0d11956c62",
+   "input": {
+    "id": "jm-1363090-0-say",
+    "en": "say",
+    "en_pos": "verb",
+    "en_sense": "to say; to be called",
+    "ja": "申す",
+    "ja_reading": "もうす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to say",
+     "to be called"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363090-0-say",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "TOO_NARROW"
+    ],
+    "note": "`申す` is the humble equivalent of \"to say\" (言う) and is not a general substitute for the neutral English verb \"say\"."
+   }
+  },
+  {
+   "key": "4334b8186f1bd6ee753a21bf444cd75214634a51def5e2df94b2211ee027ad50",
+   "input": {
+    "id": "jm-1363100-0-report",
+    "en": "report",
+    "en_pos": "noun",
+    "en_sense": "report; return (e.g. tax); statement; declaration; notification; filing",
+    "ja": "申告",
+    "ja_reading": "しんこく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "report",
+     "return (e.g. tax)",
+     "statement",
+     "declaration",
+     "notification",
+     "filing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363100-0-report",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`申告` is a perfect match for the specified sense of a formal declaration or filing, especially with authorities (e.g., taxes)."
+   }
+  },
+  {
+   "key": "51a311d4aea0b93295da1443cb998728e0466fbdb567b332832a5caf36971762",
+   "input": {
+    "id": "jm-1363130-0-application",
+    "en": "application",
+    "en_pos": "noun",
+    "en_sense": "application; request; petition",
+    "ja": "申請",
+    "ja_reading": "しんせい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "application",
+     "request",
+     "petition"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363130-0-application",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`申請` is the standard term for a formal application to an authority, matching the English sense perfectly."
+   }
+  },
+  {
+   "key": "88d27002b557bc3c1ff0900fb2dbaa4dd3ce0cb120b0139d7b382c882738e6f6",
+   "input": {
+    "id": "jm-1363250-1-complete",
+    "en": "complete",
+    "en_pos": "adjective",
+    "en_sense": "downright (e.g. lie); complete; utter",
+    "ja": "真っ赤",
+    "ja_reading": "まっか",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "downright (e.g. lie)",
+     "complete",
+     "utter"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363250-1-complete",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真っ赤` means \"complete\" or \"downright\" specifically in the context of a lie, as in the common phrase `真っ赤な嘘` (a downright lie)."
+   }
+  },
+  {
+   "key": "7db03bd8d3c34c9b5e347b27691996d53f3c69fdecf7b2d294ce5b783b40f859",
+   "input": {
+    "id": "jm-1363260-0-head",
+    "en": "head",
+    "en_pos": "noun",
+    "en_sense": "the head; the foremost; beginning; the very front",
+    "ja": "真っ先",
+    "ja_reading": "まっさき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "the head",
+     "the foremost",
+     "beginning",
+     "the very front"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363260-0-head",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真っ先` correctly translates to the sense of \"foremost\" or \"very first\", which is one of the meanings of \"head\"."
+   }
+  },
+  {
+   "key": "4c363fa4a93d4eb2721f8a32b4bc80ef7cf33391f294d690fdb6025a917d3811",
+   "input": {
+    "id": "jm-1363540-0-by_no_means",
+    "en": "by no means",
+    "en_pos": "interjection",
+    "en_sense": "by no means; never!; well, I never!; you don't say!; no way!",
+    "ja": "まさか",
+    "ja_reading": "まさか",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "by no means",
+     "never!",
+     "well, I never!",
+     "you don't say!",
+     "no way!"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363540-0-by_no_means",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`まさか` is a perfect equivalent for expressions of disbelief like \"no way!\" or \"it can't be!\"."
+   }
+  },
+  {
+   "key": "e105f4777b942235e23316e48d511235f59190a52ff2f77862159b686e7e3043",
+   "input": {
+    "id": "jm-1363650-0-serious",
+    "en": "serious",
+    "en_pos": "adjective",
+    "en_sense": "serious; earnest",
+    "ja": "真剣",
+    "ja_reading": "しんけん",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "serious",
+     "earnest"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363650-0-serious",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真剣` is an excellent equivalent for \"serious\" or \"earnest\" when describing a person's attitude or approach."
+   }
+  },
+  {
+   "key": "c4346b18ae4699c721f34f75919f166c05ca3f45f613bb514fdcff8ee91297f9",
+   "input": {
+    "id": "jm-1363740-0-mimicry",
+    "en": "mimicry",
+    "en_pos": "noun",
+    "en_sense": "imitating; copying; mimicry",
+    "ja": "真似",
+    "ja_reading": "まね",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "imitating",
+     "copying",
+     "mimicry"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1363740-0-mimicry",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真似` is the standard and direct equivalent for \"mimicry\", \"imitation\", or \"copying\"."
+   }
+  },
+  {
+   "key": "487d9ced8459fe0ced3a03b5edd69a7988f433c2db8a4c560e0da63008c73e5b",
+   "input": {
+    "id": "jm-1364110-0-truth",
+    "en": "truth",
+    "en_pos": "noun",
+    "en_sense": "truth; real situation",
+    "ja": "真相",
+    "ja_reading": "しんそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "truth",
+     "real situation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1364110-0-truth",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真相` is a precise match for the sense of \"the truth of a matter\" or \"the real situation\" behind an event."
+   }
+  }
+ ]
+}

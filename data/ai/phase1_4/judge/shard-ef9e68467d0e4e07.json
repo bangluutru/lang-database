@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:39:14Z",
+ "items": [
+  {
+   "key": "003be79ebbe3079d287246a7de75a4971eaaddb9a647f8e31bc8981bf9049590",
+   "input": {
+    "id": "jm-1425030-0-halfway",
+    "en": "halfway",
+    "en_pos": "noun",
+    "en_sense": "halfway; midway; partway; mid-course",
+    "ja": "中途",
+    "ja_reading": "ちゅうと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "halfway",
+     "midway",
+     "partway",
+     "mid-course"
+    ],
+    "vi": "nửa chừng"
+   },
+   "output": {
+    "id": "jm-1425030-0-halfway",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the concept of being 'halfway' through a process or journey."
+   }
+  },
+  {
+   "key": "e17a475283377b0d5074bb6f377ad53caccb82efbf49ede71d24cd3a7ca1ee1f",
+   "input": {
+    "id": "jm-1426000-0-reconciliation",
+    "en": "reconciliation",
+    "en_pos": "noun",
+    "en_sense": "reconciliation; making up (with); making peace (with); being friends again; patching up a quarrel",
+    "ja": "仲直り",
+    "ja_reading": "なかなおり",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "reconciliation",
+     "making up (with)",
+     "making peace (with)",
+     "being friends again",
+     "patching up a quarrel"
+    ],
+    "vi": "làm hòa"
+   },
+   "output": {
+    "id": "jm-1426000-0-reconciliation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'làm hòa' is a verb phrase ('to make peace'), while the English entry is a noun ('reconciliation'); the correct noun form would be 'sự làm hòa'."
+   }
+  },
+  {
+   "key": "4db73285627beddd6e93104fc7ad290aa56ad52a5918433a25c29d2cfa5ac02b",
+   "input": {
+    "id": "jm-1426140-0-advice",
+    "en": "advice",
+    "en_pos": "noun",
+    "en_sense": "advice; warning",
+    "ja": "忠告",
+    "ja_reading": "ちゅうこく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "advice",
+     "warning"
+    ],
+    "vi": "lời khuyên"
+   },
+   "output": {
+    "id": "jm-1426140-0-advice",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '忠告' implies a strong warning, which the Vietnamese 'lời khuyên' (general advice) does not fully capture."
+   }
+  },
+  {
+   "key": "bd8db7d0f482e365a265e1ccedad32436852e54337de78f1861d923fcd0788dc",
+   "input": {
+    "id": "jm-1426250-0-noon",
+    "en": "noon",
+    "en_pos": "noun",
+    "en_sense": "noon; midday",
+    "ja": "昼",
+    "ja_reading": "ひる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "noon",
+     "midday"
+    ],
+    "vi": "buổi trưa"
+   },
+   "output": {
+    "id": "jm-1426250-0-noon",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both '昼' and 'buổi trưa' refer to the broader midday period, not the specific point of 12:00 PM ('noon'). More precise terms would be 正午 (shōgo) and chính ngọ."
+   }
+  },
+  {
+   "key": "305e93e6a47efc7080ede222acd6a8d9aa95106811c890d47c4360614aa08e9c",
+   "input": {
+    "id": "jm-1426410-0-lunch",
+    "en": "lunch",
+    "en_pos": "noun",
+    "en_sense": "lunch; midday meal",
+    "ja": "昼飯",
+    "ja_reading": "ひるめし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lunch",
+     "midday meal"
+    ],
+    "vi": "bữa trưa"
+   },
+   "output": {
+    "id": "jm-1426410-0-lunch",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '昼飯' is somewhat informal; '昼食' (chūshoku) would be a more neutral and standard equivalent for 'lunch'."
+   }
+  },
+  {
+   "key": "73d6b8380739eae84f0f55f80295d3d7b904fb03c510f7d5fa5312c32591fefe",
+   "input": {
+    "id": "jm-1426520-0-annotation",
+    "en": "annotation",
+    "en_pos": "noun",
+    "en_sense": "annotation; explanatory note; comment",
+    "ja": "注",
+    "ja_reading": "ちゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "annotation",
+     "explanatory note",
+     "comment"
+    ],
+    "vi": "chú thích"
+   },
+   "output": {
+    "id": "jm-1426520-0-annotation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents; 'chú' in 'chú thích' is a Sino-Vietnamese reading of the character '注'."
+   }
+  },
+  {
+   "key": "eb9ebe77aa350dea28ce6485dea8d60cf390c85d8d8e835c9ca426a478b74fb9",
+   "input": {
+    "id": "jm-1426670-0-notice",
+    "en": "notice",
+    "en_pos": "noun",
+    "en_sense": "notice; attention; observation",
+    "ja": "注目",
+    "ja_reading": "ちゅうもく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "notice",
+     "attention",
+     "observation"
+    ],
+    "vi": "chú ý"
+   },
+   "output": {
+    "id": "jm-1426670-0-notice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'chú ý' is a verb phrase ('to pay attention'), while the English entry is a noun ('notice'); the noun form is 'sự chú ý'."
+   }
+  },
+  {
+   "key": "0522ba0cdaa099d26bb1c5aff527df32de94ded33899ff57bd7a085d35ea6702",
+   "input": {
+    "id": "jm-1427070-0-remarkable",
+    "en": "remarkable",
+    "en_pos": "adjective",
+    "en_sense": "striking; remarkable; considerable",
+    "ja": "著しい",
+    "ja_reading": "いちじるしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "striking",
+     "remarkable",
+     "considerable"
+    ],
+    "vi": "đáng kể"
+   },
+   "output": {
+    "id": "jm-1427070-0-remarkable",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a very good set of equivalents for 'remarkable' in the sense of 'considerable' or 'striking'."
+   }
+  },
+  {
+   "key": "b3a42aa3fbf4f642c106c3e164773f7326d577357767b30d794d6eb2af3c68a5",
+   "input": {
+    "id": "jm-1427080-0-write",
+    "en": "write",
+    "en_pos": "verb",
+    "en_sense": "to write; to publish",
+    "ja": "著す",
+    "ja_reading": "あらわす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to write",
+     "to publish"
+    ],
+    "vi": "viết"
+   },
+   "output": {
+    "id": "jm-1427080-0-write",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'viết' is the general verb 'to write' (like Japanese 書く), lacking the specific nuance of 'authoring a book' present in '著す'."
+   }
+  },
+  {
+   "key": "0c8d2497c359907a3d4f26918c141bddeee03445140f15234d0d46e5746a87e9",
+   "input": {
+    "id": "jm-1427140-0-work",
+    "en": "work",
+    "en_pos": "noun",
+    "en_sense": "(written) work; book; writings",
+    "ja": "著書",
+    "ja_reading": "ちょしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(written) work",
+     "book",
+     "writings"
+    ],
+    "vi": "tác phẩm"
+   },
+   "output": {
+    "id": "jm-1427140-0-work",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'tác phẩm' can refer to any creative work (art, music), making it broader than the Japanese '著書' which is specifically a written work."
+   }
+  },
+  {
+   "key": "df992f97bb8db61a97271897556627969b99a328b34b3c480c7a232f4c1d7f42",
+   "input": {
+    "id": "jm-1427170-0-deposit",
+    "en": "deposit",
+    "en_pos": "noun",
+    "en_sense": "putting money aside; savings; deposit (e.g. in a bank)",
+    "ja": "貯金",
+    "ja_reading": "ちょきん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "putting money aside",
+     "savings",
+     "deposit (e.g. in a bank)"
+    ],
+    "vi": "tiền gửi"
+   },
+   "output": {
+    "id": "jm-1427170-0-deposit",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tiền gửi' specifically means 'bank deposit' and is narrower than the English sense and Japanese '貯金', which also cover 'savings' in general."
+   }
+  },
+  {
+   "key": "e651eeeb7b2bc9eabe406aa36c5e8bc9f5b7d8f3a6b8da81e1e483711fc21aa0",
+   "input": {
+    "id": "jm-1430070-0-length",
+    "en": "length",
+    "en_pos": "noun",
+    "en_sense": "(relative) length",
+    "ja": "長短",
+    "ja_reading": "ちょうたん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(relative) length"
+    ],
+    "vi": "độ dài"
+   },
+   "output": {
+    "id": "jm-1430070-0-length",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese '長短' is a specific term for relative length or 'long and short', and also means 'merits and demerits'; it is not a good equivalent for the general Vietnamese 'độ dài' (length), whose Japanese counterpart is '長さ'."
+   }
+  }
+ ]
+}

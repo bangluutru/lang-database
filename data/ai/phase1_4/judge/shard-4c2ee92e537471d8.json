@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:43:41Z",
+ "items": [
+  {
+   "key": "b944e2d8dda5ab03ce75204a31e8ce31e86a8055b0b3fbeaa559b9cd3cc986dc",
+   "input": {
+    "id": "wk-31479-s2",
+    "en": "i'm sorry",
+    "en_pos": "expression",
+    "en_sense": "Indicates that the speaker is confused or requests information to be repeated; come again?, say again?, I beg your pardon?",
+    "ja": "申し訳ありません",
+    "ja_reading": "もうしわけありません",
+    "ja_pos": "exp",
+    "ja_glosses": [
+     "I'm sorry",
+     "(it's) inexcusable"
+    ],
+    "vi": "xin lỗi"
+   },
+   "output": {
+    "id": "wk-31479-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense is a request for repetition ('pardon?'), while the Japanese and Vietnamese expressions are apologies ('I'm sorry for what I did')."
+   }
+  },
+  {
+   "key": "2be0b444ba1635f31d1fb48b9796c07da4b58507747dd12496654b7e94bda5a8",
+   "input": {
+    "id": "wk-3148-s0",
+    "en": "u",
+    "en_pos": "noun",
+    "en_sense": "The name of the Latin script letter U/u.",
+    "ja": "Ｕ",
+    "ja_reading": "ユー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "U",
+     "u"
+    ],
+    "vi": "u"
+   },
+   "output": {
+    "id": "wk-3148-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the name of the Latin letter 'u'."
+   }
+  },
+  {
+   "key": "e6104b38f20b53a7edba02527eb260ed6c6f25875a858efcb5ae3e730f433cec",
+   "input": {
+    "id": "wk-315-s0",
+    "en": "few",
+    "en_pos": "determiner",
+    "en_sense": "An indefinite, but usually small, number of.",
+    "ja": "少し",
+    "ja_reading": "すこし",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "a little",
+     "a bit",
+     "a small amount",
+     "a few",
+     "some",
+     "slightly"
+    ],
+    "vi": "ít"
+   },
+   "output": {
+    "id": "wk-315-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese 少し is primarily an adverb or used for uncountable nouns ('a little'), while English 'few' is a determiner for countable nouns. 少ない would be a better equivalent."
+   }
+  },
+  {
+   "key": "91a0ab00435e104082c563f9d2360b92eb026d9132f4f0350d82890a1d6413f6",
+   "input": {
+    "id": "wk-3155-s1",
+    "en": "still",
+    "en_pos": "adverb",
+    "en_sense": "Up to a time, as in the preceding time.",
+    "ja": "まだ",
+    "ja_reading": "まだ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "still",
+     "as yet",
+     "only"
+    ],
+    "vi": "còn"
+   },
+   "output": {
+    "id": "wk-3155-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are perfect equivalents for the sense of 'still' indicating continuance."
+   }
+  },
+  {
+   "key": "0f64792da4e9dddbf0aaca2f8e3c984e03cf37670f13f09ffabe7e3aa8ebbd62",
+   "input": {
+    "id": "wk-3163-s0",
+    "en": "romaji",
+    "en_pos": "noun",
+    "en_sense": "A representation of Japanese in Latin script.",
+    "ja": "ローマ字",
+    "ja_reading": "ローマじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "romaji",
+     "romanized Japanese",
+     "system of transliterating Japanese into the Latin alphabet"
+    ],
+    "vi": "chữ cái latinh"
+   },
+   "output": {
+    "id": "wk-3163-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chữ cái latinh' means 'Latin alphabet', not 'romaji', which is the specific system of romanizing Japanese."
+   }
+  },
+  {
+   "key": "17191b42a3d474879ff01bbf7c4f233acad5fb11de104d6ee3d0f93097eacf24",
+   "input": {
+    "id": "wk-3164-s0",
+    "en": "stop",
+    "en_pos": "verb",
+    "en_sense": "To cease moving.",
+    "ja": "止まる",
+    "ja_reading": "とまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to stop (moving)",
+     "to come to a stop"
+    ],
+    "vi": "dừng"
+   },
+   "output": {
+    "id": "wk-3164-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard intransitive verbs for 'to cease moving'."
+   }
+  },
+  {
+   "key": "5be55272fcd233fe2daa5e81aef3d6086d35174d6d430603041249de1ba8e731",
+   "input": {
+    "id": "wk-3165-s0",
+    "en": "stop",
+    "en_pos": "noun",
+    "en_sense": "A (usually marked) place where buses, trams or trains halt to let passengers get on and off, usually smaller than a station.",
+    "ja": "停留所",
+    "ja_reading": "ていりゅうじょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stop (bus, tram, etc.)",
+     "station",
+     "stopping place"
+    ],
+    "vi": "trạm"
+   },
+   "output": {
+    "id": "wk-3165-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for a bus or tram stop."
+   }
+  },
+  {
+   "key": "c0c077bcea010b3d250ef07555f23979d9014a44ed90aacedb654284903e07b5",
+   "input": {
+    "id": "wk-3167-s21",
+    "en": "stroke",
+    "en_pos": "noun",
+    "en_sense": "A line making up a written character.",
+    "ja": "画",
+    "ja_reading": "かく",
+    "ja_pos": "n,ctr",
+    "ja_glosses": [
+     "stroke (of a kanji)"
+    ],
+    "vi": "nét"
+   },
+   "output": {
+    "id": "wk-3167-s21",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and natural words for a stroke in a written character."
+   }
+  },
+  {
+   "key": "f1910a558613dda3befa0201b8ad26aa2d338b593299a21cda28fb0472604749",
+   "input": {
+    "id": "wk-3167-s28",
+    "en": "stroke",
+    "en_pos": "noun",
+    "en_sense": "A sudden interruption of blood supply to the brain, causing minor to major brain damage and possible death; it may be either hemorrhagic or thrombotic.",
+    "ja": "脳卒中",
+    "ja_reading": "のうそっちゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stroke",
+     "cerebral haemorrhage",
+     "cerebral hemorrhage"
+    ],
+    "vi": "đột quỵ"
+   },
+   "output": {
+    "id": "wk-3167-s28",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct medical term for a stroke."
+   }
+  },
+  {
+   "key": "05247bc18ea02688808956be42d05f53d9d4f65b5c7b17bf1f79ebecc2b0d8cf",
+   "input": {
+    "id": "wk-31716-s0",
+    "en": "qilin",
+    "en_pos": "noun",
+    "en_sense": "A mythical Chinese hooved chimerical creature, said to appear in conjunction with the arrival of a sage.",
+    "ja": "麒麟",
+    "ja_reading": "きりん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "qilin (Chinese unicorn)"
+    ],
+    "vi": "kỳ lân"
+   },
+   "output": {
+    "id": "wk-31716-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms refer to the same mythical creature, with the Japanese and Vietnamese terms being direct cognates from Chinese."
+   }
+  },
+  {
+   "key": "ea3a05688d0128e64012ceea3a7a7bb6f21ef270efb9c446c9fb0eafc79a4bf1",
+   "input": {
+    "id": "wk-3173-e:2a0d2b",
+    "en": "shock",
+    "en_pos": "noun",
+    "en_sense": "sudden, heavy impact",
+    "ja": "ショック",
+    "ja_reading": "ショック",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shock (physical)",
+     "impact",
+     "jolt"
+    ],
+    "vi": "bất ngờ"
+   },
+   "output": {
+    "id": "wk-3173-e:2a0d2b",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'bất ngờ' means 'surprise' and is not a translation for 'shock' in the sense of physical impact."
+   }
+  },
+  {
+   "key": "7a8456d51642a8ebf589c936a8ab62239c7c2435d18f920c725e9469697d8754",
+   "input": {
+    "id": "wk-31732-s0",
+    "en": "body temperature",
+    "en_pos": "noun",
+    "en_sense": "The temperature of the body of a person or animal, especially when used as a simple guide to health.",
+    "ja": "体温",
+    "ja_reading": "たいおん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "body temperature"
+    ],
+    "vi": "thân nhiệt"
+   },
+   "output": {
+    "id": "wk-31732-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'body temperature'."
+   }
+  }
+ ]
+}

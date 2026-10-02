@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:42Z",
+ "items": [
+  {
+   "key": "5c0652cd1a9fa70cd764f7330385a478664f4051d3224d7e7f444e7825c5fef9",
+   "input": {
+    "id": "concept-core-too",
+    "en": "too",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'too': too, also, as well",
+    "ja": "矢っ張り",
+    "ja_reading": "やっぱり",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "too",
+     "also",
+     "as well",
+     "likewise",
+     "(not) either"
+    ],
+    "vi": "quá"
+   },
+   "output": {
+    "id": "concept-core-too",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "All three words are incorrect for the sense 'also, as well'. 'やっぱり' means 'as expected', and 'quá' means 'excessively'. The listed POS 'verb' is also incorrect for all."
+   }
+  },
+  {
+   "key": "4a687f1ed4b7fdcc95b81f859cef6007c058fd89117ca9f804595351293ac979",
+   "input": {
+    "id": "concept-core-week",
+    "en": "week",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'week': week",
+    "ja": "週",
+    "ja_reading": "しゅう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "week"
+    ],
+    "vi": "tuần"
+   },
+   "output": {
+    "id": "concept-core-week",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages for the core concept of 'week'."
+   }
+  },
+  {
+   "key": "b1da19e90962dd7e20408b07722f16701bfcff2f46321ad09a34ac2bb7e8d3d8",
+   "input": {
+    "id": "concept-core-happiness",
+    "en": "happiness",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'happiness': good fortune, luck, happiness",
+    "ja": "幸せ",
+    "ja_reading": "しあわせ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "hạnh phúc"
+   },
+   "output": {
+    "id": "concept-core-happiness",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the sense of happiness including good fortune."
+   }
+  },
+  {
+   "key": "673befd813b61ce1795c523a52ec52a2ea3f7556b3a5211c3287f435eaabad10",
+   "input": {
+    "id": "concept-core-blood",
+    "en": "blood",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'blood': blood",
+    "ja": "血",
+    "ja_reading": "ち",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "blood"
+    ],
+    "vi": "máu"
+   },
+   "output": {
+    "id": "concept-core-blood",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages."
+   }
+  },
+  {
+   "key": "c8893b97b14ba69430602a398bda8edc29cefb563640ef9970cdb48d25c28d01",
+   "input": {
+    "id": "concept-core-counsel",
+    "en": "counsel",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'counsel': advice, counsel, remonstrance",
+    "ja": "勧告",
+    "ja_reading": "かんこく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "advice",
+     "counsel",
+     "remonstrance",
+     "recommendation"
+    ],
+    "vi": "khuyến cáo"
+   },
+   "output": {
+    "id": "concept-core-counsel",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "This triplet works well for formal/official counsel or recommendations, but is too narrow for the general meaning of 'counsel' as everyday advice."
+   }
+  },
+  {
+   "key": "a8c542ab5308de828eef7336975fa1e8fc83115dbb773ab7000de92ff1b27f06",
+   "input": {
+    "id": "concept-core-study",
+    "en": "study",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'study': learning, study",
+    "ja": "学習",
+    "ja_reading": "がくしゅう",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "learning",
+     "study"
+    ],
+    "vi": "học tập"
+   },
+   "output": {
+    "id": "concept-core-study",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the concept of studying or learning."
+   }
+  },
+  {
+   "key": "aca13012e8dafe51f2e9073605343831ce76e69d5230c364f4540bf21493fe2f",
+   "input": {
+    "id": "concept-core-run",
+    "en": "run",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'run': race, run, dash",
+    "ja": "競走",
+    "ja_reading": "きょうそう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "race",
+     "run",
+     "dash",
+     "sprint"
+    ],
+    "vi": "chạy"
+   },
+   "output": {
+    "id": "concept-core-run",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Japanese word is too specific (race), and the Vietnamese word 'chạy' is primarily a verb, not a noun, creating a POS mismatch."
+   }
+  },
+  {
+   "key": "a67d4f4bd0ade127eaed8954b46d12c762b8d8826a08769b1e26b5e969dd6f45",
+   "input": {
+    "id": "concept-core-limit",
+    "en": "limit",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'limit': limit, restriction",
+    "ja": "限定",
+    "ja_reading": "げんてい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "limit",
+     "restriction"
+    ],
+    "vi": "hạn định"
+   },
+   "output": {
+    "id": "concept-core-limit",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'hạn định' is primarily a verb, not a noun for 'limit', creating a POS and sense mismatch. The correct noun is 'giới hạn'."
+   }
+  },
+  {
+   "key": "428cc8e51bbb3aad3db02cd2bbd7860db94d6228b93925c383f6a03a1d46a29f",
+   "input": {
+    "id": "concept-core-angle",
+    "en": "angle",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'angle': angle",
+    "ja": "角度",
+    "ja_reading": "かくど",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "angle"
+    ],
+    "vi": "góc độ"
+   },
+   "output": {
+    "id": "concept-core-angle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages, including the figurative sense of 'point of view'."
+   }
+  },
+  {
+   "key": "c3a8d9c0ff803a7cb75610dd5a01c16e6d230ca1d7fb88fcaa7ec845cc41aba6",
+   "input": {
+    "id": "concept-core-bird",
+    "en": "bird",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'bird': bird",
+    "ja": "鳥",
+    "ja_reading": "とり",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "bird"
+    ],
+    "vi": "chim"
+   },
+   "output": {
+    "id": "concept-core-bird",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages."
+   }
+  },
+  {
+   "key": "dd9899587c1a41da595f98f33b48eb8a3a07cfffa41e64961ed8ba281fb400e3",
+   "input": {
+    "id": "concept-core-reaction",
+    "en": "reaction",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'reaction': reaction, response",
+    "ja": "反応",
+    "ja_reading": "はんのう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "reaction",
+     "response"
+    ],
+    "vi": "phản ứng"
+   },
+   "output": {
+    "id": "concept-core-reaction",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages, as the Japanese and Vietnamese are direct cognates."
+   }
+  },
+  {
+   "key": "350f6eaa8811f5703819fb255d1e0cc63d278d4fe34faec969bcceeb4d75b9cf",
+   "input": {
+    "id": "concept-core-tree",
+    "en": "tree",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'tree': tree, trees and shrubs",
+    "ja": "樹木",
+    "ja_reading": "じゅもく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "tree",
+     "trees and shrubs"
+    ],
+    "vi": "cây"
+   },
+   "output": {
+    "id": "concept-core-tree",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word '樹木' is formal/collective, while the more common word is '木' (ki). The Vietnamese 'cây' is too broad, also meaning 'plant'."
+   }
+  }
+ ]
+}

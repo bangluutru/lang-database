@@ -1,0 +1,402 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:08:34Z",
+ "items": [
+  {
+   "key": "23e1f5d5e31c2c245d79f10c8bd9cba6f4900c1ec6d54855970e63656bb8b1ef",
+   "input": {
+    "id": "wk-14602-s1",
+    "en": "wake up",
+    "en_pos": "verb",
+    "en_sense": "To awaken somebody.",
+    "ja": "起こす",
+    "ja_reading": "おこす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to wake",
+     "to wake up",
+     "to waken",
+     "to awaken"
+    ],
+    "vi": "đánh thức"
+   },
+   "output": {
+    "id": "wk-14602-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect transitive equivalents for 'to wake someone up'."
+   }
+  },
+  {
+   "key": "633e36a47028e453e269d35cec719feaedfb1cbdcd515dd53849489182cdae7d",
+   "input": {
+    "id": "wk-14604-s0",
+    "en": "walking stick",
+    "en_pos": "noun",
+    "en_sense": "A tool, such as a cane, used to ease pressure on the legs, and to aid stability, when walking.",
+    "ja": "杖",
+    "ja_reading": "つえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cane",
+     "walking stick",
+     "staff",
+     "wand"
+    ],
+    "vi": "gậy"
+   },
+   "output": {
+    "id": "wk-14604-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for a walking stick or cane."
+   }
+  },
+  {
+   "key": "dcc7cfb6ac7d0ae6551d40e4f34bccde14057d3871fa528a35fa444c99287abf",
+   "input": {
+    "id": "wk-14605-s0",
+    "en": "wallet",
+    "en_pos": "noun",
+    "en_sense": "A small case, often flat and often made of leather, for keeping money (especially paper money), credit cards, etc.",
+    "ja": "財布",
+    "ja_reading": "さいふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wallet",
+     "purse",
+     "coin purse",
+     "billfold",
+     "pocketbook"
+    ],
+    "vi": "ví"
+   },
+   "output": {
+    "id": "wk-14605-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a wallet."
+   }
+  },
+  {
+   "key": "9bf9ee90d7200f3577c4aead63c2a8dcb164a7875bbb564c7624fd5f905a9a4f",
+   "input": {
+    "id": "wk-14606-s0",
+    "en": "waltz",
+    "en_pos": "noun",
+    "en_sense": "A ballroom dance in 3/4 time.",
+    "ja": "ワルツ",
+    "ja_reading": "ワルツ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "waltz"
+    ],
+    "vi": "van"
+   },
+   "output": {
+    "id": "wk-14606-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Both Japanese and Vietnamese use standard loanwords for 'waltz'."
+   }
+  },
+  {
+   "key": "19d29ecd2ed58218155e093eb89fc149340fc8cb78a2992f5374e31f8b3bbd69",
+   "input": {
+    "id": "wk-1461-s1",
+    "en": "rat",
+    "en_pos": "noun",
+    "en_sense": "A medium-sized rodent belonging to the genus Rattus.",
+    "ja": "ラット",
+    "ja_reading": "ラット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rat (esp. a laboratory rat)"
+    ],
+    "vi": "chuột"
+   },
+   "output": {
+    "id": "wk-1461-s1",
+    "en_ja": "NARROW",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "TOO_BROAD",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese ラット specifically means 'lab rat', which is too narrow, while the Vietnamese chuột is too broad, meaning both 'rat' and 'mouse'."
+   }
+  },
+  {
+   "key": "576276b5a47e7f9a1045bb6f5ff0352c0946a912bac49950b282c32fd7bef54f",
+   "input": {
+    "id": "wk-14613-s0",
+    "en": "e-book",
+    "en_pos": "noun",
+    "en_sense": "An electronic book, a book published in electronic form.",
+    "ja": "電子書籍",
+    "ja_reading": "でんししょせき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ebook",
+     "e-book",
+     "electronic book",
+     "digital book"
+    ],
+    "vi": "sách điện tử"
+   },
+   "output": {
+    "id": "wk-14613-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, literal translations for 'e-book'."
+   }
+  },
+  {
+   "key": "a66529489ac1e2ab47bf7ebf63002c4444c0b3100b16e2086df266d471bb57a3",
+   "input": {
+    "id": "wk-14616-s0",
+    "en": "paper money",
+    "en_pos": "noun",
+    "en_sense": "Cash in the form of banknotes.",
+    "ja": "紙幣",
+    "ja_reading": "しへい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "paper money",
+     "note",
+     "bill"
+    ],
+    "vi": "tiền giấy"
+   },
+   "output": {
+    "id": "wk-14616-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and directly equivalent."
+   }
+  },
+  {
+   "key": "847e4277be71d1d1b19385961530d5eaf2dcdf18d7687be9fd50bede6f39728e",
+   "input": {
+    "id": "wk-1462-s0",
+    "en": "gray",
+    "en_pos": "adjective",
+    "en_sense": "Of a color between black and white, having neutral hue and intermediate brightness.",
+    "ja": "灰色",
+    "ja_reading": "はいいろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "grey",
+     "gray",
+     "ashen"
+    ],
+    "vi": "hoa râm"
+   },
+   "output": {
+    "id": "wk-1462-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'hoa râm' specifically refers to graying hair, not the color gray in general."
+   }
+  },
+  {
+   "key": "77d2b9930c5037387ccaf3bef0798ebf8e24e086e10a2558a5f7a22d2fa60204",
+   "input": {
+    "id": "wk-14696-s0",
+    "en": "reform",
+    "en_pos": "noun",
+    "en_sense": "The change of something that is defective, broken, inefficient or otherwise negative, in order to correct or improve it",
+    "ja": "改革",
+    "ja_reading": "かいかく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "reform",
+     "reformation",
+     "reorganization"
+    ],
+    "vi": "cải cách"
+   },
+   "output": {
+    "id": "wk-14696-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent, with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "4f28b09a001cde11decb4a3799be3dba7160c74db400982079a88db937f76661",
+   "input": {
+    "id": "wk-14699-s0",
+    "en": "comprehension",
+    "en_pos": "noun",
+    "en_sense": "A thorough understanding.",
+    "ja": "了解",
+    "ja_reading": "りょうかい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "comprehension",
+     "consent",
+     "understanding",
+     "agreement"
+    ],
+    "vi": "sự hiểu"
+   },
+   "output": {
+    "id": "wk-14699-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 了解 implies acknowledgement rather than deep comprehension (for which 理解 is better)."
+   }
+  },
+  {
+   "key": "8270493c56a5c9da9f325c2203728bd686dd14e57bc4f2dd51a54d5fbfa4a644",
+   "input": {
+    "id": "wk-14752-s0",
+    "en": "sculpture",
+    "en_pos": "noun",
+    "en_sense": "A three-dimensional work of art created by shaping malleable objects and letting them harden or by chipping away pieces from a rock (sculpting).",
+    "ja": "彫刻",
+    "ja_reading": "ちょうこく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "carving",
+     "engraving",
+     "sculpture"
+    ],
+    "vi": "tượng"
+   },
+   "output": {
+    "id": "wk-14752-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tượng' means 'statue', which is a type of sculpture but not the general term; 'điêu khắc' would be correct."
+   }
+  },
+  {
+   "key": "fcb794b751a26403ae4b73581d8658666e75688a41c35261f30c3f314a4f0487",
+   "input": {
+    "id": "wk-1506-s0",
+    "en": "travel",
+    "en_pos": "noun",
+    "en_sense": "The act of traveling; passage from place to place.",
+    "ja": "旅行",
+    "ja_reading": "りょこう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "travel",
+     "trip",
+     "journey",
+     "excursion",
+     "tour"
+    ],
+    "vi": "sự du lịch"
+   },
+   "output": {
+    "id": "wk-1506-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự du lịch' specifically means 'tourism' or leisure travel, which is narrower than the general English sense of 'travel'."
+   }
+  }
+ ]
+}

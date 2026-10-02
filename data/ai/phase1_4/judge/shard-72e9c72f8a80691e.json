@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:39:27Z",
+ "items": [
+  {
+   "key": "0a8af01c474feec0f1cf1bbbef77f591ab242f621f1442b35b4f61e69325be01",
+   "input": {
+    "id": "jm-1414360-1-world_war",
+    "en": "world war",
+    "en_pos": "noun",
+    "en_sense": "world war",
+    "ja": "大戦",
+    "ja_reading": "たいせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "world war"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1414360-1-world_war",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "大戦 is a common and natural equivalent for 'world war', especially when referring to WWI or WWII, though 世界大戦 is more literal."
+   }
+  },
+  {
+   "key": "1a5870b80e669bf5ac19534e12cbe36ad8227e66460a48aa739f6503847d4206",
+   "input": {
+    "id": "jm-1414790-0-majority",
+    "en": "majority",
+    "en_pos": "noun",
+    "en_sense": "majority; more than half; most (of)",
+    "ja": "大半",
+    "ja_reading": "たいはん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "majority",
+     "more than half",
+     "most (of)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1414790-0-majority",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "大半 is a perfect equivalent for 'majority' in the sense of 'more than half' or 'most of'."
+   }
+  },
+  {
+   "key": "d31ae60dce30d7e9f4d1655e77df76131c5f4e6e14b66ca049ad633818a6bb3c",
+   "input": {
+    "id": "jm-1414830-1-most",
+    "en": "most",
+    "en_pos": "noun",
+    "en_sense": "most (e.g. most part); greater; fairly; a good deal; much",
+    "ja": "大部",
+    "ja_reading": "たいぶ",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "most (e.g. most part)",
+     "greater",
+     "fairly",
+     "a good deal",
+     "much"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1414830-1-most",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The English entry is for a noun, but the most common sense of 大部 (たいぶ) is adverbial ('considerably', 'greatly'), and its noun sense ('most part') is much less common than 大部分 or 大半."
+   }
+  },
+  {
+   "key": "ea4fe1a1199e5c55769276f8ccd86157f20e28e1dc152bfc66a42c3bcf972506",
+   "input": {
+    "id": "jm-1414850-0-majority",
+    "en": "majority",
+    "en_pos": "noun",
+    "en_sense": "most part; greater part; majority",
+    "ja": "大部分",
+    "ja_reading": "だいぶぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "most part",
+     "greater part",
+     "majority"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1414850-0-majority",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "大部分 is a perfect and very common equivalent for 'majority' or 'the greater part'."
+   }
+  },
+  {
+   "key": "6acc378310d2aa006dadd12582e3ab43c86ef75421d248f8454b323588ad74cf",
+   "input": {
+    "id": "jm-1414870-0-big",
+    "en": "big",
+    "en_pos": "adjective",
+    "en_sense": "big; large; drastic; substantial",
+    "ja": "大幅",
+    "ja_reading": "おおはば",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "big",
+     "large",
+     "drastic",
+     "substantial"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1414870-0-big",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "大幅 correctly translates the specific sense of 'big' when referring to a substantial or drastic change in scale or degree, not physical size."
+   }
+  },
+  {
+   "key": "55be147ddfb9fbdba3b7e2879115d252c0ce383a723e493a03b32792bf67ced1",
+   "input": {
+    "id": "jm-1415020-0-majority",
+    "en": "majority",
+    "en_pos": "noun",
+    "en_sense": "large part; greater part; majority",
+    "ja": "大方",
+    "ja_reading": "おおかた",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "large part",
+     "greater part",
+     "majority"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1415020-0-majority",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "大方 is a correct equivalent for 'majority', though perhaps slightly less common in everyday speech than 大半 or 大部分."
+   }
+  },
+  {
+   "key": "e40e8e57e3076030155273c6a4740e484266452da319fe443444dea52a29adf3",
+   "input": {
+    "id": "jm-1415470-0-title",
+    "en": "title",
+    "en_pos": "noun",
+    "en_sense": "title; subject; theme; topic",
+    "ja": "題",
+    "ja_reading": "だい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "title",
+     "subject",
+     "theme",
+     "topic"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1415470-0-title",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "題 is the standard and common word for 'title', 'topic', or 'subject'."
+   }
+  },
+  {
+   "key": "985ca9f5ec1ab612f062094bedd7e36c512a6ba62c9ec6d9830eb672c9d86fba",
+   "input": {
+    "id": "jm-1415870-0-lot",
+    "en": "lot",
+    "en_pos": "adjective",
+    "en_sense": "a lot; lots; plenty; many; a large number; much",
+    "ja": "たくさん",
+    "ja_reading": "たくさん",
+    "ja_pos": "adj-no,adj-na,n,adv",
+    "ja_glosses": [
+     "a lot",
+     "lots",
+     "plenty",
+     "many",
+     "a large number",
+     "much"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1415870-0-lot",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English POS is incorrectly listed as 'adjective'; 'lot' in 'a lot' is a noun/quantifier. Semantically, たくさん is a perfect and natural equivalent."
+   }
+  },
+  {
+   "key": "6862f99d3b185f624994c0c4fc7d4b5d4be0fd6dba8ed6dd85433f5aa1b56e5e",
+   "input": {
+    "id": "jm-1416190-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; provided that",
+    "ja": "ただし",
+    "ja_reading": "ただし",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "provided that"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1416190-0-but",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ただし is an excellent translation for 'but' or 'however' when introducing a proviso, condition, or exception."
+   }
+  },
+  {
+   "key": "0ab0614ef775071befb27d473505c7c89d105f62f812d57da5ffb3de3124268c",
+   "input": {
+    "id": "jm-1416240-0-healthy",
+    "en": "healthy",
+    "en_pos": "adjective",
+    "en_sense": "in good health; healthy; well; fit; robust; strong",
+    "ja": "達者",
+    "ja_reading": "たっしゃ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "in good health",
+     "healthy",
+     "well",
+     "fit",
+     "robust",
+     "strong"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1416240-0-healthy",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "達者 correctly means 'healthy', but it has a traditional nuance and is often used for the elderly; 健康な is the more common and neutral modern equivalent."
+   }
+  },
+  {
+   "key": "153328080c3c678333ef0acb18a7c241d806cf1c6231cca82b5fe7018583bc00",
+   "input": {
+    "id": "jm-1416680-0-reach",
+    "en": "reach",
+    "en_pos": "verb",
+    "en_sense": "to (finally) arrive at; to reach (at last); to (manage to) get to; to find one's way to",
+    "ja": "辿り着く",
+    "ja_reading": "たどりつく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to (finally) arrive at",
+     "to reach (at last)",
+     "to (manage to) get to",
+     "to find one's way to"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1416680-0-reach",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "辿り着く is a perfect translation for the specific sense of 'to reach after a difficult journey or process'."
+   }
+  },
+  {
+   "key": "d3c693fe53d89d4b92c0e9caf9d9b4cf92a8e8eac49aa8bdcd6e83e202a1230d",
+   "input": {
+    "id": "jm-1417020-0-mere",
+    "en": "mere",
+    "en_pos": "adjective",
+    "en_sense": "mere; simple; sheer",
+    "ja": "単なる",
+    "ja_reading": "たんなる",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "mere",
+     "simple",
+     "sheer"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1417020-0-mere",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "単なる is a perfect and standard equivalent for the adjective 'mere'."
+   }
+  }
+ ]
+}

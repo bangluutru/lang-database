@@ -22,6 +22,8 @@ from typing import Dict, Any, Optional
 
 import requests
 
+from scripts.external_api_guard import require_external_api_permission
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 PROJECT_ID = "gen-lang-client-0626407458"
@@ -148,6 +150,7 @@ class AIClient:
         if cached:
             return cached["output"]
 
+        require_external_api_permission("Vertex AI call (phase1_3d AIClient)")
         # Call Gemini via Vertex AI
         delay = 1.0
         for attempt in range(max_retries):

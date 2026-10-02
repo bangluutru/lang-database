@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:43:41Z",
+ "items": [
+  {
+   "key": "970e7d7eb38cf638bc9663cc34eccf68398f0080df00fe7b6a927e8bb13d6055",
+   "input": {
+    "id": "jm-1486170-0-subtle",
+    "en": "subtle",
+    "en_pos": "adjective",
+    "en_sense": "subtle; delicate; fine",
+    "ja": "微妙",
+    "ja_reading": "びみょう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "subtle",
+     "delicate",
+     "fine"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1486170-0-subtle",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 微妙 is a perfect equivalent for the given sense of 'subtle', though it has other common meanings (e.g., 'questionable', 'so-so') not covered here."
+   }
+  },
+  {
+   "key": "340c9680da2eef221886ff041497659b712203d52499db465ec14973e9575601",
+   "input": {
+    "id": "jm-1486460-0-art_gallery",
+    "en": "art gallery",
+    "en_pos": "noun",
+    "en_sense": "art museum; art gallery",
+    "ja": "美術館",
+    "ja_reading": "びじゅつかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "art museum",
+     "art gallery"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1486460-0-art_gallery",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "美術館 is the standard Japanese term for 'art museum' or 'art gallery'."
+   }
+  },
+  {
+   "key": "5606f2e8609f40cc3af8448a5ca254b8ca59f653af71c0a84a8a31a55be4682f",
+   "input": {
+    "id": "jm-1486670-0-beauty",
+    "en": "beauty",
+    "en_pos": "noun",
+    "en_sense": "beauty; good figure; (beautiful) appearance; (beautiful) features",
+    "ja": "美容",
+    "ja_reading": "びよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beauty",
+     "good figure",
+     "(beautiful) appearance",
+     "(beautiful) features"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1486670-0-beauty",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "美容 (biyō) refers to beauty care, cosmetology, or the practice of improving appearance, not the quality or state of beauty itself."
+   }
+  },
+  {
+   "key": "0cd9d40a3b62365b6e0c8d6bd666439fccdc898b6adc0f4c6a7f89485765d540",
+   "input": {
+    "id": "jm-1487410-0-always",
+    "en": "always",
+    "en_pos": "adverb",
+    "en_sense": "(not) always; (not) necessarily; (not) entirely; (not) all",
+    "ja": "必ずしも",
+    "ja_reading": "かならずしも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) always",
+     "(not) necessarily",
+     "(not) entirely",
+     "(not) all"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1487410-0-always",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The entry is misleading; 必ずしも is used with a negative verb to mean 'not always' or 'not necessarily', it is not a translation of 'always'."
+   }
+  },
+  {
+   "key": "6d6981d3a16bbf8c3c314e009208b57a3b0879fd79aec46178ba8175e6177586",
+   "input": {
+    "id": "jm-1487770-0-paintbrush",
+    "en": "paintbrush",
+    "en_pos": "noun",
+    "en_sense": "writing brush; paintbrush; pen",
+    "ja": "筆",
+    "ja_reading": "ふで",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "writing brush",
+     "paintbrush",
+     "pen"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1487770-0-paintbrush",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English sense is incorrect as 'paintbrush' does not mean 'writing brush' or 'pen'. The Japanese word 筆 (fude) primarily means 'writing brush', not a general 'paintbrush'."
+   }
+  },
+  {
+   "key": "f70fa13043777bcef450996cf8cbaa7e62fbcb91e93a4db99d0265e71ee1ee6d",
+   "input": {
+    "id": "jm-1488000-0-hundred",
+    "en": "hundred",
+    "en_pos": "numeral",
+    "en_sense": "hundred; 100",
+    "ja": "百",
+    "ja_reading": "ひゃく",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "hundred",
+     "100"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1488000-0-hundred",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and fundamental equivalence."
+   }
+  },
+  {
+   "key": "d49d95039d0562a5275e170e0c84ec314fb97b6329a805fdb05efebcea01955d",
+   "input": {
+    "id": "jm-1489320-0-vote",
+    "en": "vote",
+    "en_pos": "noun",
+    "en_sense": "vote; ballot",
+    "ja": "票",
+    "ja_reading": "ひょう",
+    "ja_pos": "n,n-suf,ctr",
+    "ja_glosses": [
+     "vote",
+     "ballot"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1489320-0-vote",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "票 (hyō) is the correct Japanese noun for a single vote or a ballot paper."
+   }
+  },
+  {
+   "key": "aa3629bbb01627c1d50ba44f932f44fa6bbd58caa6037f7f28456b22f74488cd",
+   "input": {
+    "id": "jm-1490140-0-description",
+    "en": "description",
+    "en_pos": "noun",
+    "en_sense": "depiction; description; portrayal",
+    "ja": "描写",
+    "ja_reading": "びょうしゃ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "depiction",
+     "description",
+     "portrayal"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490140-0-description",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "描写 is a good translation for 'description' specifically in the sense of a vivid, artistic, or literary depiction or portrayal."
+   }
+  },
+  {
+   "key": "206454404998814a7927be380e4c61f1eb8c0fc580f67b93200f7b5b45e9efee",
+   "input": {
+    "id": "jm-1490620-0-type",
+    "en": "type",
+    "en_pos": "noun",
+    "en_sense": "type (of goods); sort",
+    "ja": "品種",
+    "ja_reading": "ひんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "type (of goods)",
+     "sort"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490620-0-type",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "品種 is a narrow translation of 'type', typically referring to biological breeds or varieties (of plants/animals), and is not a general term for 'type of goods'."
+   }
+  },
+  {
+   "key": "2efa30bf86a8930cd9d9bf4833d96fe657fac48627c387c8e1ae7df67335ffe2",
+   "input": {
+    "id": "jm-1490670-0-article",
+    "en": "article",
+    "en_pos": "noun",
+    "en_sense": "article; item; thing; goods; wares",
+    "ja": "品物",
+    "ja_reading": "しなもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "article",
+     "item",
+     "thing",
+     "goods",
+     "wares"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490670-0-article",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "For the specific sense of an item of merchandise, 品物 is an excellent translation of 'article'."
+   }
+  },
+  {
+   "key": "b511702a8966d056e13dbf165ee3db3bfb859556c25b322e17460f3b306b1ce2",
+   "input": {
+    "id": "jm-1490720-0-beach",
+    "en": "beach",
+    "en_pos": "noun",
+    "en_sense": "beach; foreshore",
+    "ja": "浜辺",
+    "ja_reading": "はまべ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beach",
+     "foreshore"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490720-0-beach",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "浜辺 is a natural and standard Japanese word for 'beach', with a slightly more scenic nuance than the loanword ビーチ."
+   }
+  },
+  {
+   "key": "83dec4d20eb65539cbc20b03a092b9c7a83af785b8b6be7a0432e80771df712c",
+   "input": {
+    "id": "jm-1490850-0-poor",
+    "en": "poor",
+    "en_pos": "adjective",
+    "en_sense": "poor; meagre; meager; feeble; scanty; shabby",
+    "ja": "貧弱",
+    "ja_reading": "ひんじゃく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "poor",
+     "meagre",
+     "meager",
+     "feeble",
+     "scanty",
+     "shabby"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1490850-0-poor",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "貧弱 is an excellent translation for the 'poor quality', 'meager', or 'feeble' sense of the English word 'poor'."
+   }
+  }
+ ]
+}

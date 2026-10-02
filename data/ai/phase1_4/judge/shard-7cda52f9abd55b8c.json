@@ -1,0 +1,197 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:04Z",
+ "items": [
+  {
+   "key": "6c26f0ba872f29f799301560c4532bc735843516d93befc8a0bc62b97ce253fc",
+   "input": {
+    "id": "concept-core-color",
+    "en": "color",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'color': colour, color, hue",
+    "ja": "色",
+    "ja_reading": "いろ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "màu"
+   },
+   "output": {
+    "id": "concept-core-color",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the most basic and direct equivalents for 'color' in their respective languages."
+   }
+  },
+  {
+   "key": "a912cd122625f748164d526a24c856a997c641631fb128f2134957776171c622",
+   "input": {
+    "id": "concept-core-college",
+    "en": "college",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'college': university, college",
+    "ja": "大学",
+    "ja_reading": "だいがく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "university",
+     "college"
+    ],
+    "vi": "đại học"
+   },
+   "output": {
+    "id": "concept-core-college",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are direct equivalents for 'university', which is a primary sense of 'college' and explicitly included in the English sense definition, making this a valid entry for learners."
+   }
+  },
+  {
+   "key": "d9bd2d6401a73257ac772ad22dd3bf8d85827fadf59228d134c03c66ee787a27",
+   "input": {
+    "id": "concept-core-opposition",
+    "en": "opposition",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'opposition': opposition, resistance, insubordination",
+    "ja": "反抗",
+    "ja_reading": "はんこう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "opposition",
+     "resistance",
+     "insubordination",
+     "defiance",
+     "hostility",
+     "rebellion"
+    ],
+    "vi": "phản kháng"
+   },
+   "output": {
+    "id": "concept-core-opposition",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms, including the cognates 反抗 and phản kháng, align perfectly with the specified sense of active resistance or insubordination."
+   }
+  },
+  {
+   "key": "65610981dd2a5df6d21bce04863d593ea0c3cb2978f750c544c75325903032fa",
+   "input": {
+    "id": "concept-core-world",
+    "en": "world",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'world': place, world, environment",
+    "ja": "園",
+    "ja_reading": "その",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "place",
+     "world",
+     "environment"
+    ],
+    "vi": "thế giới"
+   },
+   "output": {
+    "id": "concept-core-world",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 園 (sono) means 'garden' and is only a rare, metaphorical translation for 'world'; the Vietnamese 'thế giới' means 'world' in the common sense (planet/society), creating a three-way mismatch."
+   }
+  },
+  {
+   "key": "ac6bff0e86d8633b4867a8fff094a62386e216437d80e649d35e1ba58d6aafff",
+   "input": {
+    "id": "concept-core-remark",
+    "en": "remark",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'remark': notes, comment, remark",
+    "ja": "コメント",
+    "ja_reading": "コメント",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "nhận xét"
+   },
+   "output": {
+    "id": "concept-core-remark",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and common equivalents for a comment or remark."
+   }
+  },
+  {
+   "key": "5d75b488e428db39ff65cc32a8b99b210759872f59eb31f6b00def79e4233ee1",
+   "input": {
+    "id": "concept-core-person",
+    "en": "person",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'person': person",
+    "ja": "向き",
+    "ja_reading": "むき",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "person"
+    ],
+    "vi": "người"
+   },
+   "output": {
+    "id": "concept-core-person",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese word 向き (muki) is a completely incorrect and unnatural choice for the core meaning of 'person'; the standard word is 人 (hito)."
+   }
+  }
+ ]
+}

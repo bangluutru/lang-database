@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:28:49Z",
+ "items": [
+  {
+   "key": "58aa916608eb4e00d880c9e2ddece76e6f8278a5c45094c30f9af72ed80f97df",
+   "input": {
+    "id": "wk-12222-s0",
+    "en": "plain",
+    "en_pos": "noun",
+    "en_sense": "An expanse of land with relatively low relief and few trees, especially a grassy expanse.",
+    "ja": "平野",
+    "ja_reading": "へいや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plain",
+     "open field"
+    ],
+    "vi": "đồng bằng"
+   },
+   "output": {
+    "id": "wk-12222-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a geographical plain."
+   }
+  },
+  {
+   "key": "3cfe02258d20a9e7740d3ed4d8f452139eedfb44e4401f2e6577dee1d87226a5",
+   "input": {
+    "id": "wk-12228-s0",
+    "en": "moss",
+    "en_pos": "noun",
+    "en_sense": "Any of various small, green, seedless plants growing on the ground or on the surfaces of trees, stones, etc.; now specifically, a plant of the phylum Bryophyta (formerly division Musci).",
+    "ja": "こけ",
+    "ja_reading": "こけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "moss"
+    ],
+    "vi": "rêu"
+   },
+   "output": {
+    "id": "wk-12228-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for moss and are direct equivalents."
+   }
+  },
+  {
+   "key": "9d3dac71b358a184aba9aaf84e87664d4b6188686440703d9bbdc1aaf644bc40",
+   "input": {
+    "id": "wk-12230-e:25f56b",
+    "en": "task",
+    "en_pos": "noun",
+    "en_sense": "piece of work done as part of one’s duties",
+    "ja": "課題",
+    "ja_reading": "かだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "problem (that needs solving)",
+     "task",
+     "challenge",
+     "question"
+    ],
+    "vi": "nhiệm vụ"
+   },
+   "output": {
+    "id": "wk-12230-e:25f56b",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '課題' (kadai) implies a challenge or problem to be solved, not a routine piece of work as part of one's duties."
+   }
+  },
+  {
+   "key": "6fb791714acb5781920c1621a78db62b5501bade39c8d1a9de9fd1acd567192a",
+   "input": {
+    "id": "wk-12230-s4",
+    "en": "task",
+    "en_pos": "noun",
+    "en_sense": "A difficult or tedious undertaking; a substantial project.",
+    "ja": "任務",
+    "ja_reading": "にんむ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "duty",
+     "function",
+     "office",
+     "mission",
+     "task",
+     "role"
+    ],
+    "vi": "nhiệm vụ"
+   },
+   "output": {
+    "id": "wk-12230-s4",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '任務' (ninmu) means 'mission' or 'assigned duty' and is a better fit for the sense 'piece of work done as part of one’s duties', whereas this sense ('difficult undertaking') is better captured by '課題' (kadai)."
+   }
+  },
+  {
+   "key": "72a4d14019c1127ed2fc24363d96d21b95919f82a3619f13e2205f2808b455c0",
+   "input": {
+    "id": "wk-12236-s0",
+    "en": "intelligentsia",
+    "en_pos": "noun",
+    "en_sense": "The intellectual elite of a society, particularly in Marxist doctrine.",
+    "ja": "インテリ",
+    "ja_reading": "インテリ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intelligentsia"
+    ],
+    "vi": "giới trí thức"
+   },
+   "output": {
+    "id": "wk-12236-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese 'インテリ' (interi) can refer to an individual intellectual, whereas English 'intelligentsia' and Vietnamese 'giới trí thức' refer to the collective class."
+   }
+  },
+  {
+   "key": "b0974218a3c8e028553a3e3f3750e47dbe6be96ed2f7f37ceae3ab14e4b097bc",
+   "input": {
+    "id": "wk-12241-s0",
+    "en": "urge",
+    "en_pos": "verb",
+    "en_sense": "To press; to push; to drive; to impel; to force onward.",
+    "ja": "急き立てる",
+    "ja_reading": "せきたてる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to hurry (up)",
+     "to press",
+     "to urge on"
+    ],
+    "vi": "thúc"
+   },
+   "output": {
+    "id": "wk-12241-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent and natural equivalents for this sense."
+   }
+  },
+  {
+   "key": "d7a89d82759c969fdc754b5b035237e5bfb3bc575fa337b8ca48cf2a5ddab703",
+   "input": {
+    "id": "wk-12255-s0",
+    "en": "yarn",
+    "en_pos": "noun",
+    "en_sense": "A twisted strand of fibre used for knitting or weaving.",
+    "ja": "糸",
+    "ja_reading": "いと",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "thread",
+     "yarn",
+     "string"
+    ],
+    "vi": "sợi"
+   },
+   "output": {
+    "id": "wk-12255-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both '糸' (ito) and 'sợi' are too general, meaning 'thread' or 'strand'; more specific terms like '毛糸' (keito) or '(sợi) len' are needed for 'yarn'."
+   }
+  },
+  {
+   "key": "cbb0d74381089ccf554c1c768407974a120fbc0c6617c576ffa666e602841d36",
+   "input": {
+    "id": "wk-12258-e:f0dc30",
+    "en": "fence",
+    "en_pos": "noun",
+    "en_sense": "barrier",
+    "ja": "柵",
+    "ja_reading": "さく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fence",
+     "paling",
+     "railing"
+    ],
+    "vi": "hàng rào"
+   },
+   "output": {
+    "id": "wk-12258-e:f0dc30",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The provided English sense 'barrier' is too general, but the Japanese and Vietnamese words are perfect translations for the lemma 'fence'."
+   }
+  },
+  {
+   "key": "c42950d0d84233f2014d2cd191ef47e1f1d07b2d1a449a6b763f70bf4198c199",
+   "input": {
+    "id": "wk-12262-s1",
+    "en": "total",
+    "en_pos": "noun",
+    "en_sense": "Sum.",
+    "ja": "総額",
+    "ja_reading": "そうがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "total amount (of money)",
+     "total sum",
+     "sum total"
+    ],
+    "vi": "tổng"
+   },
+   "output": {
+    "id": "wk-12262-s1",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '総額' (sougaku) is too specific as it refers only to a total sum of money, while English 'total' and Vietnamese 'tổng' are general."
+   }
+  },
+  {
+   "key": "3dbe7f4464369cf8cfc902012c9d063bd373ef12d09bfec1e1ebda415e67028d",
+   "input": {
+    "id": "wk-12268-s0",
+    "en": "sickle",
+    "en_pos": "noun",
+    "en_sense": "An implement having a semicircular blade and short handle, used for cutting long grass and cereal crops.",
+    "ja": "鎌",
+    "ja_reading": "かま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sickle"
+    ],
+    "vi": "liềm"
+   },
+   "output": {
+    "id": "wk-12268-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for a sickle."
+   }
+  },
+  {
+   "key": "3f6e5c9bf1e9ca9557a3831b1faa9d4c6e72610b90e55b337dbe1ed67374c5a4",
+   "input": {
+    "id": "wk-12273-s0",
+    "en": "archive",
+    "en_pos": "noun",
+    "en_sense": "A repository or other place for storing material (such as documents and records) no longer in current use, and usually having historical value.",
+    "ja": "書庫",
+    "ja_reading": "しょこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "archive (file)"
+    ],
+    "vi": "kho tàng"
+   },
+   "output": {
+    "id": "wk-12273-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'kho tàng' means 'treasury' and is too figurative; the correct term for 'archive' is 'kho lưu trữ'."
+   }
+  },
+  {
+   "key": "67261a7981ebed3de6cd1f3cd32c5feec9e1a6fc6980764d744ed744db4d73fe",
+   "input": {
+    "id": "wk-12277-s0",
+    "en": "solo",
+    "en_pos": "noun",
+    "en_sense": "A piece of music for one performer.",
+    "ja": "ソロ",
+    "ja_reading": "ソロ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "solo"
+    ],
+    "vi": "độc tấu"
+   },
+   "output": {
+    "id": "wk-12277-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'độc tấu' is too narrow as it refers specifically to an instrumental solo, whereas English 'solo' and Japanese 'ソロ' can be instrumental or vocal."
+   }
+  }
+ ]
+}

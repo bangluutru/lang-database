@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:44:35Z",
+ "items": [
+  {
+   "key": "7d4a4930ab504393b15768664b44bd6be28f5b49ce65f9a1c2a53646586fcabd",
+   "input": {
+    "id": "wk-3475-s0",
+    "en": "bribe",
+    "en_pos": "noun",
+    "en_sense": "Something (usually money) given in exchange for influence or as an inducement to breaking the law.",
+    "ja": "賄賂",
+    "ja_reading": "わいろ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bribe",
+     "sweetener",
+     "douceur"
+    ],
+    "vi": "hối lộ"
+   },
+   "output": {
+    "id": "wk-3475-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the concept of a bribe."
+   }
+  },
+  {
+   "key": "1e06de614bda0c563be7df5b336b1ef89f2245db49e477419a76e3ea2a8596e7",
+   "input": {
+    "id": "wk-34864-s0",
+    "en": "be awake",
+    "en_pos": "verb",
+    "en_sense": "To not sleep, to stay awake. (This entry is a translation hub.)",
+    "ja": "起きる",
+    "ja_reading": "おきる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to wake up",
+     "to be awake",
+     "to stay awake"
+    ],
+    "vi": "thức"
+   },
+   "output": {
+    "id": "wk-34864-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese 起きる means \"to wake up\" (action), not \"to be awake\" (state), which is better translated as 起きている. Vietnamese thức correctly means \"to be awake\"."
+   }
+  },
+  {
+   "key": "52475f585cff0e20f65e2f421a16d47b801485da6b2240abbe96c31386781383",
+   "input": {
+    "id": "wk-3491-s0",
+    "en": "handkerchief",
+    "en_pos": "noun",
+    "en_sense": "A piece of cloth, usually square and often fine and elegant, carried for wiping the face, eyes, nose or hands.",
+    "ja": "ハンカチ",
+    "ja_reading": "ハンカチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "handkerchief"
+    ],
+    "vi": "mùi soa"
+   },
+   "output": {
+    "id": "wk-3491-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Vietnamese mùi soa is a correct but somewhat dated or regional term; khăn tay is a more common modern equivalent."
+   }
+  },
+  {
+   "key": "9fc35e683f68825fcbb8b2e37cdf1ca5a6951b80a9e16875967a737a7ebd65c2",
+   "input": {
+    "id": "wk-3493-s0",
+    "en": "pear",
+    "en_pos": "noun",
+    "en_sense": "An edible fruit produced by the pear tree, similar to an apple but typically elongated towards the stem.",
+    "ja": "なし",
+    "ja_reading": "なし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nashi (esp. Pyrus pyrifolia)",
+     "Japanese pear",
+     "Asian pear"
+    ],
+    "vi": "lê"
+   },
+   "output": {
+    "id": "wk-3493-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese なし refers specifically to the Asian pear, while English 'pear' is a general term which often evokes the Western pear, making this a poor general equivalent."
+   }
+  },
+  {
+   "key": "a2a5371b24754e729616fc1bf3ac0fab68e8fe6a90bf193e6d71ba5efd1ec157",
+   "input": {
+    "id": "wk-3496-e:c94f34",
+    "en": "happy",
+    "en_pos": "adjective",
+    "en_sense": "contented, joyous",
+    "ja": "嬉しい",
+    "ja_reading": "うれしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "happy",
+     "glad",
+     "pleased",
+     "delighted",
+     "overjoyed"
+    ],
+    "vi": "vui"
+   },
+   "output": {
+    "id": "wk-3496-e:c94f34",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 嬉しい is closer to \"glad\" or \"pleased\" (momentary happiness), while English 'happy' and Vietnamese 'vui' cover a broader sense of contentment and joy."
+   }
+  },
+  {
+   "key": "cde7d829e138914e6c1fbe6e1183c1715bfd1287e5752423c64e628cc54c0248",
+   "input": {
+    "id": "wk-3499-s1",
+    "en": "itinerary",
+    "en_pos": "noun",
+    "en_sense": "A route or proposed route of a journey.",
+    "ja": "旅程",
+    "ja_reading": "りょてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "itinerary",
+     "travel plans"
+    ],
+    "vi": "hành trình"
+   },
+   "output": {
+    "id": "wk-3499-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for \"itinerary\"."
+   }
+  },
+  {
+   "key": "17e4234477c8ad4ec43e8deeac751ff5944d5e6ff04c4826846ed99fc08f277a",
+   "input": {
+    "id": "wk-3502-s0",
+    "en": "kidney",
+    "en_pos": "noun",
+    "en_sense": "An organ in the body that filters the blood, producing urine.",
+    "ja": "腎臓",
+    "ja_reading": "じんぞう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kidney"
+    ],
+    "vi": "thận"
+   },
+   "output": {
+    "id": "wk-3502-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages for the anatomical term \"kidney\"."
+   }
+  },
+  {
+   "key": "2fea62bc97d70ee2817172f6d62d41f6dc3773106621d69b0e2a6c53f0cca6d8",
+   "input": {
+    "id": "wk-35226-s0",
+    "en": "caliber",
+    "en_pos": "noun",
+    "en_sense": "Diameter of the bore of a firearm, typically measured between opposite lands.",
+    "ja": "口径",
+    "ja_reading": "こうけい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "aperture",
+     "bore",
+     "calibre",
+     "caliber"
+    ],
+    "vi": "cỡ"
+   },
+   "output": {
+    "id": "wk-35226-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'cỡ' means \"size\" in general and is too broad; a more specific term like 'cỡ nòng' would be better."
+   }
+  },
+  {
+   "key": "3561b68afafd5fde42c83e13b5ea165a67b52cc5c0466299bdd3689db54a0799",
+   "input": {
+    "id": "wk-3524-s0",
+    "en": "cardinal",
+    "en_pos": "noun",
+    "en_sense": "One of the officials appointed by the pope in the Roman Catholic Church, ranking only below the pope, equal to the patriarchs, constituting the special college which elects the pope.",
+    "ja": "枢機卿",
+    "ja_reading": "すうききょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cardinal (Catholic Church)"
+    ],
+    "vi": "hồng y"
+   },
+   "output": {
+    "id": "wk-3524-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard words for a Catholic Cardinal."
+   }
+  },
+  {
+   "key": "6d187ea08257a671f9323008b28542c19091441b418133312c8aba6beb2fe334",
+   "input": {
+    "id": "wk-35246-s0",
+    "en": "right hand",
+    "en_pos": "noun",
+    "en_sense": "A trusted assistant.",
+    "ja": "右手",
+    "ja_reading": "みぎて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "right hand"
+    ],
+    "vi": "cánh tay phải"
+   },
+   "output": {
+    "id": "wk-35246-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 右手 (right hand) is a literal translation and not the correct idiom for \"trusted assistant\", which is 右腕 (right arm). The Vietnamese cánh tay phải is a correct idiom."
+   }
+  },
+  {
+   "key": "b33a772221030b5648a6a7403f65742d6351fa035f5d7b0067d2c92e93dd1fce",
+   "input": {
+    "id": "wk-3525-e:d73908",
+    "en": "stepmother",
+    "en_pos": "noun",
+    "en_sense": "wife of one's biological father, not one's biological mother",
+    "ja": "継母",
+    "ja_reading": "ままはは",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stepmother"
+    ],
+    "vi": "mẹ kế"
+   },
+   "output": {
+    "id": "wk-3525-e:d73908",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for \"stepmother\"."
+   }
+  },
+  {
+   "key": "17314d8d1d9f76a35e544945c61f5fe16fabd7d42b5f148de2266a2bef5a63c3",
+   "input": {
+    "id": "wk-3526-s0",
+    "en": "size",
+    "en_pos": "noun",
+    "en_sense": "The dimensions or magnitude of a thing; how big something is.",
+    "ja": "大小",
+    "ja_reading": "だいしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "size",
+     "dimension",
+     "magnitude"
+    ],
+    "vi": "kích thước"
+   },
+   "output": {
+    "id": "wk-3526-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 大小 is not the general word for \"size\"; it refers more to the concept of \"big vs. small\". The more common and appropriate Japanese words are 大きさ or サイズ."
+   }
+  }
+ ]
+}

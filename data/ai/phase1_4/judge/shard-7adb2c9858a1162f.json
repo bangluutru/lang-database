@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:29Z",
+ "items": [
+  {
+   "key": "8d4004349ff85b1dea5b95fe701bb84fc471a61e84a1d77e4834c5c08ce4519f",
+   "input": {
+    "id": "concept-core-together",
+    "en": "together",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'together': together, jointly",
+    "ja": "共に",
+    "ja_reading": "ともに",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "together",
+     "jointly"
+    ],
+    "vi": "cùng"
+   },
+   "output": {
+    "id": "concept-core-together",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English and Japanese entries incorrectly label the word as a verb; 'together' and '共に' are adverbs."
+   }
+  },
+  {
+   "key": "8a09498dedb18cb2e7df082e47724e8856ab62a97403627cd537b69778613a95",
+   "input": {
+    "id": "concept-core-application",
+    "en": "application",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'application': making use of, application, practical use",
+    "ja": "運用",
+    "ja_reading": "うんよう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "making use of",
+     "application",
+     "practical use",
+     "effective management (e.g. of funds)"
+    ],
+    "vi": "vận dụng"
+   },
+   "output": {
+    "id": "concept-core-application",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for the sense of 'practical application' of knowledge or theory."
+   }
+  },
+  {
+   "key": "8ebbf25df28ce7a476866a752d63232f9c88a33c77c0e4742d42cb1c3ae5a153",
+   "input": {
+    "id": "concept-core-theory",
+    "en": "theory",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'theory': theory",
+    "ja": "理論",
+    "ja_reading": "りろん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lý thuyết"
+   },
+   "output": {
+    "id": "concept-core-theory",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one-to-one correspondence for the concept of 'theory'."
+   }
+  },
+  {
+   "key": "6e0bbc1d3eaf1d159cbc03dc61a7705cf06d90e6d8595ce94db292fc51a893b3",
+   "input": {
+    "id": "concept-core-hypothesis",
+    "en": "hypothesis",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'hypothesis': condition, assumption, prerequisite",
+    "ja": "仮説",
+    "ja_reading": "かせつ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "giả thuyết"
+   },
+   "output": {
+    "id": "concept-core-hypothesis",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The provided English sense 'condition, assumption, prerequisite' does not accurately represent 'hypothesis', which is what the Japanese and Vietnamese words correctly translate."
+   }
+  },
+  {
+   "key": "cd632ba7980f7274c06bceb83781ffc12b29f0271a9f79c950f653f1ed52bbf9",
+   "input": {
+    "id": "concept-core-investigation",
+    "en": "investigation",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'investigation': research, study, investigation",
+    "ja": "調査",
+    "ja_reading": "ちょうさ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "điều tra"
+   },
+   "output": {
+    "id": "concept-core-investigation",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'điều tra' is too narrow, primarily meaning a formal or criminal investigation, unlike the broader English sense and the Japanese '調査' which also cover 'research' and 'study'."
+   }
+  },
+  {
+   "key": "95cd61c57d3b953766bab3924c2f70c79807d39fb771a3310e90cdf681bff580",
+   "input": {
+    "id": "concept-core-idea",
+    "en": "idea",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'idea': idea, notion, concept",
+    "ja": "考え",
+    "ja_reading": "かんがえ",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "ý tưởng"
+   },
+   "output": {
+    "id": "concept-core-idea",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good general-purpose equivalents for 'idea', though Japanese '考え' can also mean 'thought' or 'opinion'."
+   }
+  },
+  {
+   "key": "b5ee0eabcf12b120a4960335356db04544ee50b85b376a5949ee75848a7f822c",
+   "input": {
+    "id": "concept-core-distinct",
+    "en": "distinct",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'distinct': clear, precise, definite",
+    "ja": "明確",
+    "ja_reading": "めいかく",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "clear",
+     "precise",
+     "definite",
+     "distinct"
+    ],
+    "vi": "minh xác"
+   },
+   "output": {
+    "id": "concept-core-distinct",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'minh xác' is a correct but formal/literary equivalent; 'rõ ràng' is a more common and natural choice for learners."
+   }
+  },
+  {
+   "key": "e48cc12ef4c4b5ac268d58c30b7670c5267920f472c7cd6460f01bfb2c7edbfa",
+   "input": {
+    "id": "concept-core-light",
+    "en": "light",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'light': lamp, light",
+    "ja": "ランプ",
+    "ja_reading": "ランプ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "lamp",
+     "light"
+    ],
+    "vi": "nhẹ"
+   },
+   "output": {
+    "id": "concept-core-light",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'nhẹ' means 'light' in weight (adjective), not a 'light' for illumination (noun)."
+   }
+  },
+  {
+   "key": "848f43560af9c30f66ece5de3749ddc890060fe3b69f05aba5bb943245225fb1",
+   "input": {
+    "id": "concept-core-pain",
+    "en": "pain",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'pain': to torment, to pain, to inflict (physical) pain",
+    "ja": "苦しめる",
+    "ja_reading": "くるしめる",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "to torment",
+     "to pain",
+     "to inflict (physical) pain",
+     "to hurt"
+    ],
+    "vi": "đau đớn"
+   },
+   "output": {
+    "id": "concept-core-pain",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'đau đớn' is an adjective/noun meaning '(being in) pain', not a transitive verb meaning 'to inflict pain'."
+   }
+  },
+  {
+   "key": "c9b3f54cc818503648c8c9a6adf16e3b752ee91e214f1d2215d1d4b02f2ca84c",
+   "input": {
+    "id": "concept-core-management",
+    "en": "management",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'management': use (of capital, funds, etc.), management, investment",
+    "ja": "管理",
+    "ja_reading": "かんり",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "quản lý"
+   },
+   "output": {
+    "id": "concept-core-management",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "'管理' and 'quản lý' mean general management/administration and are too broad for the specific sense of 'use of funds' or 'investment'."
+   }
+  },
+  {
+   "key": "66a7e14907852e931968a623ef89d9f64dcc98f2a7ec4f7c41942bb81de03177",
+   "input": {
+    "id": "concept-core-plain",
+    "en": "plain",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'plain': obvious, clear, plain",
+    "ja": "明白",
+    "ja_reading": "めいはく",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "obvious",
+     "clear",
+     "plain",
+     "evident",
+     "apparent",
+     "explicit"
+    ],
+    "vi": "minh bạch"
+   },
+   "output": {
+    "id": "concept-core-plain",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'minh bạch' is a correct but formal equivalent, often implying transparency; 'rõ ràng' is a more common word for 'plain' or 'obvious'."
+   }
+  },
+  {
+   "key": "b23a8f2bbc53e9b4c4e03d96c4d1e569cf38e3ffe8ee67f9a71e734811abc975",
+   "input": {
+    "id": "concept-core-leader",
+    "en": "leader",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'leader': leader",
+    "ja": "リーダー",
+    "ja_reading": "リーダー",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "lãnh đạo"
+   },
+   "output": {
+    "id": "concept-core-leader",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'lãnh đạo' is too formal and typically refers to a high-level political or organizational leader, unlike the general-purpose English 'leader' or Japanese 'リーダー'."
+   }
+  }
+ ]
+}

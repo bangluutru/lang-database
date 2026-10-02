@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:33:33Z",
+ "items": [
+  {
+   "key": "e2581a8476463d6115d6e6b6658508358c58a9e4943c64974eaba86b9d52754a",
+   "input": {
+    "id": "jm-1321790-0-copy",
+    "en": "copy",
+    "en_pos": "noun",
+    "en_sense": "copy; duplicate; facsimile; transcript",
+    "ja": "写し",
+    "ja_reading": "うつし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "copy",
+     "duplicate",
+     "facsimile",
+     "transcript"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1321790-0-copy",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`写し` is a perfect equivalent for this sense of `copy`."
+   }
+  },
+  {
+   "key": "b57cec2fa73b5cc26403486aeba4aad27d0267a7dd17e4ffd231b5c167316fab",
+   "input": {
+    "id": "jm-1322120-0-portrayal",
+    "en": "portrayal",
+    "en_pos": "noun",
+    "en_sense": "sketching; drawing from nature; portrayal; description",
+    "ja": "写生",
+    "ja_reading": "しゃせい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sketching",
+     "drawing from nature",
+     "portrayal",
+     "description"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1322120-0-portrayal",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`写生` is the specific term for sketching or drawing from life, which matches the provided English sense perfectly."
+   }
+  },
+  {
+   "key": "dcaf77e6ca7030b2f503720adddce61dee0c25149cdd8158f9a7c2858dca00ef",
+   "input": {
+    "id": "jm-1322170-0-shine",
+    "en": "shine",
+    "en_pos": "verb",
+    "en_sense": "to shine",
+    "ja": "射す",
+    "ja_reading": "さす",
+    "ja_pos": "v5s,vi",
+    "ja_glosses": [
+     "to shine"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1322170-0-shine",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "`射す` only means \"to shine\" in the sense of light rays falling on or piercing through something, making it a narrow equivalent for the general verb \"shine\"."
+   }
+  },
+  {
+   "key": "de280c8bad20ad628235d3f47ae1b99cdec7ad15707091db3ed2de0778989dcc",
+   "input": {
+    "id": "jm-1322470-0-slope",
+    "en": "slope",
+    "en_pos": "noun",
+    "en_sense": "slope; slanting surface; bevel",
+    "ja": "斜面",
+    "ja_reading": "しゃめん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slope",
+     "slanting surface",
+     "bevel"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1322470-0-slope",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`斜面` is the standard and direct translation for a physical slope or slanting surface."
+   }
+  },
+  {
+   "key": "166c1ce7c46712916233d37257e297c8aeb8f4b660108b458221d67c220add35",
+   "input": {
+    "id": "jm-1322990-0-person",
+    "en": "person",
+    "en_pos": "noun",
+    "en_sense": "person",
+    "ja": "者",
+    "ja_reading": "もの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "person"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1322990-0-person",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "`者` (mono) means \"person\" but is more formal, literary, or has specific nuances compared to the general word `人` (hito)."
+   }
+  },
+  {
+   "key": "2602beeec4411c31040cf9d54c9b2d2db5b96653675e8a78fd472dd42ef458f2",
+   "input": {
+    "id": "jm-1323010-0-apologize",
+    "en": "apologize",
+    "en_pos": "verb",
+    "en_sense": "to apologize (apologise)",
+    "ja": "謝る",
+    "ja_reading": "あやまる",
+    "ja_pos": "v5r,vt,vi",
+    "ja_glosses": [
+     "to apologize (apologise)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1323010-0-apologize",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`謝る` is the standard and most common verb for \"to apologize\"."
+   }
+  },
+  {
+   "key": "4265aaf3d4f5cecda5a1f74d7a9ad04c2cf133ad0d4f079128e9ccd9f68c82ec",
+   "input": {
+    "id": "jm-1323280-0-wheel",
+    "en": "wheel",
+    "en_pos": "noun",
+    "en_sense": "(vehicle) wheel",
+    "ja": "車輪",
+    "ja_reading": "しゃりん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(vehicle) wheel"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1323280-0-wheel",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`車輪` is the precise term for a vehicle's wheel, matching the specified English sense perfectly."
+   }
+  },
+  {
+   "key": "fc5f60a43695145d138b3258332d1f1f3575c2620d8464ca696e86af38364278",
+   "input": {
+    "id": "jm-1323540-0-debt",
+    "en": "debt",
+    "en_pos": "noun",
+    "en_sense": "borrowing; debt; loan",
+    "ja": "借り",
+    "ja_reading": "かり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "borrowing",
+     "debt",
+     "loan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1323540-0-debt",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`借り` correctly translates to debt, loan, or the act of borrowing."
+   }
+  },
+  {
+   "key": "c49b3d3fc2e767e663048665869d234ebf7d657dab14a93d46d639804162dc66",
+   "input": {
+    "id": "jm-1324210-0-pour",
+    "en": "pour",
+    "en_pos": "verb",
+    "en_sense": "to pour (sake); to serve; to drink (together)",
+    "ja": "酌む",
+    "ja_reading": "くむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to pour (sake)",
+     "to serve",
+     "to drink (together)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1324210-0-pour",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`酌む` is the specific verb for pouring and sharing alcoholic drinks, which perfectly matches the narrow English sense provided."
+   }
+  },
+  {
+   "key": "5da97c936716beb6e255c462475e2ac9219e1d19599ec8762e307fac86b87a7e",
+   "input": {
+    "id": "jm-1324320-0-or",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "or; otherwise",
+    "ja": "もしくは",
+    "ja_reading": "もしくは",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or",
+     "otherwise"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1324320-0-or",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "`もしくは` is a valid translation for \"or\", but it is generally more formal than the English word."
+   }
+  },
+  {
+   "key": "db3e360e506ff9e924b96bad1b16cda4d58efb08cb0776609333dd9e947de386",
+   "input": {
+    "id": "jm-1324330-0-some",
+    "en": "some",
+    "en_pos": "adjective",
+    "en_sense": "some; few; a number of; a little (bit)",
+    "ja": "若干",
+    "ja_reading": "じゃっかん",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "some",
+     "few",
+     "a number of",
+     "a little (bit)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1324330-0-some",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "`若干` means \"some\" or \"a few\" but is primarily used in formal or written language, making it a register mismatch for the general word \"some\"."
+   }
+  },
+  {
+   "key": "42e6180c7ed34eecd0bddbd92524c6cff033f04b9480fd0c0f536a629bff934b",
+   "input": {
+    "id": "jm-1324510-1-weakness",
+    "en": "weakness",
+    "en_pos": "noun",
+    "en_sense": "weakness; the weak; low (setting)",
+    "ja": "弱",
+    "ja_reading": "じゃく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "weakness",
+     "the weak",
+     "low (setting)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1324510-1-weakness",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "`弱` is not a good general equivalent for \"weakness\"; it's typically used as a prefix or a label (e.g., for a device's low setting), while `弱点` or `弱み` are the common words for weakness."
+   }
+  }
+ ]
+}

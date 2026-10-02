@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:43:31Z",
+ "items": [
+  {
+   "key": "e413dcdd00389157987d154e797b2f936a5c65b125f3fc28aa9297bd67ccdc69",
+   "input": {
+    "id": "jm-1501580-0-deposit",
+    "en": "deposit",
+    "en_pos": "verb",
+    "en_sense": "to deposit; to pay in",
+    "ja": "払い込む",
+    "ja_reading": "はらいこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to deposit",
+     "to pay in"
+    ],
+    "vi": "gửi"
+   },
+   "output": {
+    "id": "jm-1501580-0-deposit",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'gửi' is too broad, meaning 'to send' or 'to entrust' in general; a more specific term like 'gửi tiền' (deposit money) would be a better equivalent."
+   }
+  },
+  {
+   "key": "df5d9625959d773d4929df5241ab68463a132ae0cc7ed615afc5779f1a4e2482",
+   "input": {
+    "id": "jm-1501760-0-buddha",
+    "en": "buddha",
+    "en_pos": "noun",
+    "en_sense": "Buddha; Shakyamuni",
+    "ja": "仏",
+    "ja_reading": "ほとけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Buddha",
+     "Shakyamuni"
+    ],
+    "vi": "phật"
+   },
+   "output": {
+    "id": "jm-1501760-0-buddha",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for 'Buddha'."
+   }
+  },
+  {
+   "key": "bdc6c6ca42c773c03c95c168a23d173adf9179ee2f5b08f63bcd0a195d450d5b",
+   "input": {
+    "id": "jm-1502450-0-controversy",
+    "en": "controversy",
+    "en_pos": "noun",
+    "en_sense": "public discussion; public criticism; controversy",
+    "ja": "物議",
+    "ja_reading": "ぶつぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "public discussion",
+     "public criticism",
+     "controversy"
+    ],
+    "vi": "tranh cãi"
+   },
+   "output": {
+    "id": "jm-1502450-0-controversy",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese '物議' is a good match but is somewhat more formal and literary than the common English and Vietnamese equivalents."
+   }
+  },
+  {
+   "key": "acbb4b9fcc25233e9ee83c7b5b6350589284b9ec9e4801280f751e1f7f5027fb",
+   "input": {
+    "id": "jm-1502530-0-ruler",
+    "en": "ruler",
+    "en_pos": "noun",
+    "en_sense": "ruler; measure; measuring stick",
+    "ja": "物差し",
+    "ja_reading": "ものさし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ruler",
+     "measure",
+     "measuring stick"
+    ],
+    "vi": "thước kẻ"
+   },
+   "output": {
+    "id": "jm-1502530-0-ruler",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'thước kẻ' specifically means a ruler for drawing lines, making it slightly narrower than the Japanese '物差し' (general measuring stick), but it's the most common equivalent in many contexts."
+   }
+  },
+  {
+   "key": "8fdc1bd606f627126e9112aa7d23582bc59e8f30357f8efac7f80be94f405c22",
+   "input": {
+    "id": "jm-1502540-0-goods",
+    "en": "goods",
+    "en_pos": "noun",
+    "en_sense": "goods; materials; commodities; resources; supplies",
+    "ja": "物資",
+    "ja_reading": "ぶっし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "goods",
+     "materials",
+     "commodities",
+     "resources",
+     "supplies"
+    ],
+    "vi": "hàng hóa"
+   },
+   "output": {
+    "id": "jm-1502540-0-goods",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Japanese '物資' refers to supplies/materials, while the Vietnamese 'hàng hóa' refers to commercial goods/commodities; they are not equivalents."
+   }
+  },
+  {
+   "key": "8434373aaa2b0986e815aeb895a6574e960f5a03ea48c339e02280949aa803b1",
+   "input": {
+    "id": "jm-1502640-0-dangerous",
+    "en": "dangerous",
+    "en_pos": "adjective",
+    "en_sense": "dangerous; unsettled; troubled; disturbed; insecure",
+    "ja": "物騒",
+    "ja_reading": "ぶっそう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "dangerous",
+     "unsettled",
+     "troubled",
+     "disturbed",
+     "insecure"
+    ],
+    "vi": "nguy hiểm"
+   },
+   "output": {
+    "id": "jm-1502640-0-dangerous",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '物騒' has a specific nuance of being unsafe due to crime or social unrest, while the Vietnamese 'nguy hiểm' is the general term for 'dangerous'."
+   }
+  },
+  {
+   "key": "2cac7d6c98514f33996219715b016c5b425c71dd39e470cc10091de0f0a37f3a",
+   "input": {
+    "id": "jm-1502790-1-physics",
+    "en": "physics",
+    "en_pos": "noun",
+    "en_sense": "physics",
+    "ja": "物理",
+    "ja_reading": "ぶつり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "physics"
+    ],
+    "vi": "vật lý"
+   },
+   "output": {
+    "id": "jm-1502790-1-physics",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, direct equivalents for 'physics'."
+   }
+  },
+  {
+   "key": "2315d55cff88c5ac19fad240148baa4859a5cf7e5d1844bb97956086c2aae943",
+   "input": {
+    "id": "jm-1502800-0-physics",
+    "en": "physics",
+    "en_pos": "noun",
+    "en_sense": "physics",
+    "ja": "物理学",
+    "ja_reading": "ぶつりがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "physics"
+    ],
+    "vi": "vật lý"
+   },
+   "output": {
+    "id": "jm-1502800-0-physics",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'physics', with the Japanese '物理学' specifically denoting the academic field of study."
+   }
+  },
+  {
+   "key": "74c0d735c5faf93c34413c5add66a3ca921640807d6eed90e00902d636bba351",
+   "input": {
+    "id": "jm-1504510-0-split",
+    "en": "split",
+    "en_pos": "noun",
+    "en_sense": "split; division; break up",
+    "ja": "分裂",
+    "ja_reading": "ぶんれつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "split",
+     "division",
+     "break up"
+    ],
+    "vi": "chia rẽ"
+   },
+   "output": {
+    "id": "jm-1504510-0-split",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the concept of a split or division, especially within a group or organization."
+   }
+  },
+  {
+   "key": "625d9d846f828d0eeff2d923bc1f5b5dc9a7bd9ab82c32ff4c469dfa4e3a72c3",
+   "input": {
+    "id": "jm-1505050-0-loss",
+    "en": "loss",
+    "en_pos": "noun",
+    "en_sense": "loss; going missing",
+    "ja": "紛失",
+    "ja_reading": "ふんしつ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "loss",
+     "going missing"
+    ],
+    "vi": "mất mát"
+   },
+   "output": {
+    "id": "jm-1505050-0-loss",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'mất mát' implies a significant or emotional loss, whereas the Japanese '紛失' and the English sense 'going missing' refer to simply misplacing an object."
+   }
+  },
+  {
+   "key": "98d547169746ca72193a5e0adee8ea05f8ade5f7b72111fa634c203bab49a1a7",
+   "input": {
+    "id": "jm-1505060-0-dispute",
+    "en": "dispute",
+    "en_pos": "noun",
+    "en_sense": "dispute; conflict; trouble; unrest; strife",
+    "ja": "紛争",
+    "ja_reading": "ふんそう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "dispute",
+     "conflict",
+     "trouble",
+     "unrest",
+     "strife"
+    ],
+    "vi": "tranh chấp"
+   },
+   "output": {
+    "id": "jm-1505060-0-dispute",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'dispute' or 'conflict', especially in a legal or political context."
+   }
+  },
+  {
+   "key": "7b77517711320a45fafc8f2301ff43efb4faa3592bd64874f3fd3e41df066901",
+   "input": {
+    "id": "jm-1505160-0-cultural",
+    "en": "cultural",
+    "en_pos": "adjective",
+    "en_sense": "cultural",
+    "ja": "文化的",
+    "ja_reading": "ぶんかてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "cultural"
+    ],
+    "vi": "văn hóa"
+   },
+   "output": {
+    "id": "jm-1505160-0-cultural",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'văn hóa' is a noun meaning 'culture', not an adjective like the English 'cultural' and Japanese '文化的'."
+   }
+  }
+ ]
+}

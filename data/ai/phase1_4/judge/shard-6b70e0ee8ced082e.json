@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:18Z",
+ "items": [
+  {
+   "key": "18fa49667e51ed92951e8e3b5a944b198ef66e3333d6b12843265df0ffb46931",
+   "input": {
+    "id": "wk-23774-s0",
+    "en": "handlebar",
+    "en_pos": "noun",
+    "en_sense": "The bar used to steer a bicycle, motorbike, or similar vehicle using the hands.",
+    "ja": "ハンドル",
+    "ja_reading": "ハンドル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "handlebar",
+     "handlebars"
+    ],
+    "vi": "tay lái"
+   },
+   "output": {
+    "id": "wk-23774-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both the Japanese 'ハンドル' and Vietnamese 'tay lái' are broader than the English sense, as they also mean 'steering wheel'."
+   }
+  },
+  {
+   "key": "453f1f2281c612c256f64b0154fddb172607fb0e7b4403e4f7407872ee011b18",
+   "input": {
+    "id": "wk-23790-s4",
+    "en": "identifier",
+    "en_pos": "noun",
+    "en_sense": "A formal name used in source code to refer to a variable, function, procedure, package, etc. or in an operating system to refer to a process, user, group, etc.",
+    "ja": "識別子",
+    "ja_reading": "しきべつし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "identifier"
+    ],
+    "vi": "mã số"
+   },
+   "output": {
+    "id": "wk-23790-s4",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'mã số' (code number) is too narrow for the general programming concept of 'identifier', which can be any formal name."
+   }
+  },
+  {
+   "key": "e8e010223138f34d87f53bc1cbbcd557fa1b5c3ec6d67ef3c1c899eed163bad4",
+   "input": {
+    "id": "wk-2381-s0",
+    "en": "thing",
+    "en_pos": "noun",
+    "en_sense": "That which is considered to exist as a separate entity, object, quality or concept.",
+    "ja": "物",
+    "ja_reading": "もの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thing",
+     "object",
+     "article",
+     "stuff",
+     "substance"
+    ],
+    "vi": "điều"
+   },
+   "output": {
+    "id": "wk-2381-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '物' refers to physical things while the Vietnamese 'điều' refers to abstract things; neither fully captures the English sense which includes both."
+   }
+  },
+  {
+   "key": "63966004163af9f7f258afb5f47029b68139d4dad7d91a526a90bce9bd30b18e",
+   "input": {
+    "id": "wk-23823-s0",
+    "en": "drainage basin",
+    "en_pos": "noun",
+    "en_sense": "A topographic region in which all water drains to a common outlet; a watershed.",
+    "ja": "流域",
+    "ja_reading": "りゅういき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "drainage basin",
+     "catchment basin",
+     "river basin",
+     "watershed",
+     "valley"
+    ],
+    "vi": "lưu vực"
+   },
+   "output": {
+    "id": "wk-23823-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard technical equivalents for 'drainage basin'."
+   }
+  },
+  {
+   "key": "fd21ae94bbe56255b3f557e41ad62e2d8acab8b4699bb740af94f61a8dc72512",
+   "input": {
+    "id": "wk-23825-s0",
+    "en": "silviculture",
+    "en_pos": "noun",
+    "en_sense": "The care and development of forests in order to obtain a product or provide a benefit.",
+    "ja": "林学",
+    "ja_reading": "りんがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "forestry",
+     "silviculture"
+    ],
+    "vi": "lâm nghiệp"
+   },
+   "output": {
+    "id": "wk-23825-s0",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '林学' refers to the academic study of forestry, not the practice of silviculture, while the Vietnamese 'lâm nghiệp' is broader, meaning the forestry industry."
+   }
+  },
+  {
+   "key": "880b5079bd0d3798586365125aa0014a7d822943bf2b76d39ca021c34e3c9a90",
+   "input": {
+    "id": "wk-2383-s0",
+    "en": "bubble",
+    "en_pos": "noun",
+    "en_sense": "A spherically contained volume of air or other gas in a liquid, commonly a soapy liquid.",
+    "ja": "泡",
+    "ja_reading": "あわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bubble",
+     "foam",
+     "froth",
+     "suds",
+     "lather",
+     "head (on beer)"
+    ],
+    "vi": "bong bóng"
+   },
+   "output": {
+    "id": "wk-2383-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '泡' can mean a single bubble but also foam or froth, making it broader than the English sense and the Vietnamese 'bong bóng'."
+   }
+  },
+  {
+   "key": "bd9f9855d95d47d532ecc172ca2415ac55e8a392857b8addcae65c4a89ea56ee",
+   "input": {
+    "id": "wk-2384-s0",
+    "en": "bubble",
+    "en_pos": "verb",
+    "en_sense": "To produce bubbles, to rise up in bubbles (such as in foods cooking or liquids boiling).",
+    "ja": "泡立つ",
+    "ja_reading": "あわだつ",
+    "ja_pos": "v5t,vi",
+    "ja_glosses": [
+     "to bubble",
+     "to foam",
+     "to froth"
+    ],
+    "vi": "sủi"
+   },
+   "output": {
+    "id": "wk-2384-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are natural and accurate translations for the action of bubbling or foaming."
+   }
+  },
+  {
+   "key": "c63933c97b46f1c863993177f011c9284702f5d583305b39c6289c3fda022a7c",
+   "input": {
+    "id": "wk-2385-s2",
+    "en": "self",
+    "en_pos": "noun",
+    "en_sense": "An individual person as the object of the person's own reflective consciousness (plural selves).",
+    "ja": "自己",
+    "ja_reading": "じこ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "self",
+     "oneself"
+    ],
+    "vi": "bản thân"
+   },
+   "output": {
+    "id": "wk-2385-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for the concept of 'self' as an object of reflection."
+   }
+  },
+  {
+   "key": "289bc6dbe74547f2fc63672977ee099a210952611b12e9c8c72af521017af952",
+   "input": {
+    "id": "wk-23893-s0",
+    "en": "inkstone",
+    "en_pos": "noun",
+    "en_sense": "A stone mortar used for grinding and holding ink in the East Asian art and calligraphy tradition.",
+    "ja": "硯",
+    "ja_reading": "すずり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inkstone"
+    ],
+    "vi": "nghiên"
+   },
+   "output": {
+    "id": "wk-23893-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and correct names for an inkstone."
+   }
+  },
+  {
+   "key": "059d24f3059893ff361d0df63d750a29aa877a7a9850ee2655e67c477dfcc0f0",
+   "input": {
+    "id": "wk-23902-s0",
+    "en": "common sense",
+    "en_pos": "noun",
+    "en_sense": "Ordinary sensible understanding; one's basic intelligence which allows for plain understanding and without which good decisions or judgments cannot be made.",
+    "ja": "常識",
+    "ja_reading": "じょうしき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "common sense",
+     "good sense",
+     "common knowledge",
+     "general knowledge",
+     "common practice",
+     "accepted practice"
+    ],
+    "vi": "lẽ thường"
+   },
+   "output": {
+    "id": "wk-23902-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '常識' emphasizes common knowledge/social norms, while the Vietnamese 'lẽ thường' emphasizes inherent reason, creating a mismatch between them."
+   }
+  },
+  {
+   "key": "2caf6b2ef38fbee0b3f55b9359e10a0a2ad36d3b6490ce195c1a35b360f98214",
+   "input": {
+    "id": "wk-2391-s4",
+    "en": "boat",
+    "en_pos": "noun",
+    "en_sense": "A vessel used to store the incense to be burned during a service; an incense boat.",
+    "ja": "ボート",
+    "ja_reading": "ボート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "boat"
+    ],
+    "vi": "thuyền"
+   },
+   "output": {
+    "id": "wk-2391-s4",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese and Vietnamese words are translations for the common meaning of 'boat' (a watercraft), not the specific ecclesiastical sense of 'incense boat'."
+   }
+  },
+  {
+   "key": "e0b4f394b0dfc90d13459b19957da172bc994dfe195c5df8d1b3d9efb7590569",
+   "input": {
+    "id": "wk-23917-s1",
+    "en": "dubbing",
+    "en_pos": "noun",
+    "en_sense": "The replacement of a voice part in a film or animation, particularly with a translation, revoicing.",
+    "ja": "吹き替え",
+    "ja_reading": "ふきかえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dubbing (of a film, etc. into a different language)"
+    ],
+    "vi": "lồng tiếng"
+   },
+   "output": {
+    "id": "wk-23917-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, correct words for film dubbing."
+   }
+  }
+ ]
+}

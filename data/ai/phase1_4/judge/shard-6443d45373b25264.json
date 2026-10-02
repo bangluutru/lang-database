@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:27:21Z",
+ "items": [
+  {
+   "key": "9a016555a9cf5ed6798ca60ddfa0500477e22faee33a3a3b9ffd0056bc4dea90",
+   "input": {
+    "id": "jm-1032100-0-automatic",
+    "en": "automatic",
+    "en_pos": "adjective",
+    "en_sense": "automatic",
+    "ja": "オートマチック",
+    "ja_reading": "オートマチック",
+    "ja_pos": "adj-no,adj-na",
+    "ja_glosses": [
+     "automatic"
+    ],
+    "vi": "tự động"
+   },
+   "output": {
+    "id": "jm-1032100-0-automatic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'automatic'."
+   }
+  },
+  {
+   "key": "3c1f07b144613e2f3f4ad7f42f2602421297e51b3dba3b83af037e59897d17c4",
+   "input": {
+    "id": "jm-1004480-1-insist",
+    "en": "insist",
+    "en_pos": "verb",
+    "en_sense": "to be particular (about); to pay special attention (to); to be fastidious (about); to insist (on); to be uncompromising",
+    "ja": "こだわる",
+    "ja_reading": "こだわる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to be particular (about)",
+     "to pay special attention (to)",
+     "to be fastidious (about)",
+     "to insist (on)",
+     "to be uncompromising"
+    ],
+    "vi": "khăng khăng"
+   },
+   "output": {
+    "id": "jm-1004480-1-insist",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'khăng khăng' only means 'to insist stubbornly' and misses the nuance of 'being particular/fastidious about' present in both English and Japanese."
+   }
+  },
+  {
+   "key": "45909361041da8b5e8fc6b40a994c3f2347c4aa11094085c161587d1a2917f4f",
+   "input": {
+    "id": "jm-1004500-0-this_way",
+    "en": "this way",
+    "en_pos": "pronoun",
+    "en_sense": "this way; this direction",
+    "ja": "こちら",
+    "ja_reading": "こちら",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "this way",
+     "this direction"
+    ],
+    "vi": "đằng này"
+   },
+   "output": {
+    "id": "jm-1004500-0-this_way",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are common and mean 'this way/direction', with a minor register difference where Japanese 'こちら' is more polite than the others."
+   }
+  },
+  {
+   "key": "0d7fd22e2bf529ebba6bc0ae8448528f78e033b17364d9394889a002190f55c2",
+   "input": {
+    "id": "jm-1004660-0-besides",
+    "en": "besides",
+    "en_pos": "conjunction",
+    "en_sense": "besides; moreover; in addition",
+    "ja": "このほか",
+    "ja_reading": "このほか",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "besides",
+     "moreover",
+     "in addition"
+    ],
+    "vi": "ngoài ra"
+   },
+   "output": {
+    "id": "jm-1004660-0-besides",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for the conjunction 'besides'."
+   }
+  },
+  {
+   "key": "9da9cab76ff17ab867f197d547e2d6b2f2f61f3d6c97bc46419623391dd6701c",
+   "input": {
+    "id": "jm-1004830-0-these",
+    "en": "these",
+    "en_pos": "pronoun",
+    "en_sense": "these",
+    "ja": "これら",
+    "ja_reading": "これら",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "these"
+    ],
+    "vi": "những cái này"
+   },
+   "output": {
+    "id": "jm-1004830-0-these",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard pronominal way to refer to 'these (things)'."
+   }
+  },
+  {
+   "key": "c1090fb9d1f5bee97a95574092c6a3986404d19c3bc8f5aca712859c179c89ac",
+   "input": {
+    "id": "jm-1004880-0-such",
+    "en": "such",
+    "en_pos": "adjective",
+    "en_sense": "this sort of; this kind of; like this; such",
+    "ja": "こんな",
+    "ja_reading": "こんな",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "this sort of",
+     "this kind of",
+     "like this",
+     "such"
+    ],
+    "vi": "như thế"
+   },
+   "output": {
+    "id": "jm-1004880-0-such",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "The Vietnamese 'như thế' means 'like that', which is a direct contradiction to the English 'like this' and Japanese 'こんな'. The correct Vietnamese would be 'như thế này'."
+   }
+  },
+  {
+   "key": "6fd9f04540b368f9457fb17a25f5e01714dbf50214875f6bc9c080dfbe8619e6",
+   "input": {
+    "id": "jm-1005110-0-come",
+    "en": "come",
+    "en_pos": "interjection",
+    "en_sense": "come (on); come now; come along; here",
+    "ja": "さあ",
+    "ja_reading": "さあ",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "come (on)",
+     "come now",
+     "come along",
+     "here"
+    ],
+    "vi": "nào"
+   },
+   "output": {
+    "id": "jm-1005110-0-come",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are common, natural interjections used to encourage or urge someone."
+   }
+  },
+  {
+   "key": "4958259b526d5ecc1ee6b95063642ddb58831e31c368e5256960f42776c37800",
+   "input": {
+    "id": "jm-1005190-0-quickly",
+    "en": "quickly",
+    "en_pos": "adverb",
+    "en_sense": "quickly; promptly; immediately; without delay; without hesitation; briskly",
+    "ja": "さっさと",
+    "ja_reading": "さっさと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "quickly",
+     "promptly",
+     "immediately",
+     "without delay",
+     "without hesitation",
+     "briskly"
+    ],
+    "vi": "nhanh chóng"
+   },
+   "output": {
+    "id": "jm-1005190-0-quickly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are good equivalents for 'quickly', though the Japanese 'さっさと' can carry a stronger nuance of impatience than the neutral Vietnamese 'nhanh chóng'."
+   }
+  },
+  {
+   "key": "0350bff09969319703cc0e33a158354f82bba68026966b0849d1edb46dad0b3e",
+   "input": {
+    "id": "jm-1005200-0-quickly",
+    "en": "quickly",
+    "en_pos": "adverb",
+    "en_sense": "quickly (esp. actions)",
+    "ja": "さっと",
+    "ja_reading": "さっと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "quickly (esp. actions)"
+    ],
+    "vi": "thoắt"
+   },
+   "output": {
+    "id": "jm-1005200-0-quickly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent set of equivalents, capturing the specific nuance of a swift, brief, sudden action."
+   }
+  },
+  {
+   "key": "1e8d70806c90fdbb30a968e8ada044d2871951071c0a22cf30a52c709e7585bf",
+   "input": {
+    "id": "jm-1005500-0-fail",
+    "en": "fail",
+    "en_pos": "verb",
+    "en_sense": "to fail; to blunder; to mess up; to screw up",
+    "ja": "しくじる",
+    "ja_reading": "しくじる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to fail",
+     "to blunder",
+     "to mess up",
+     "to screw up"
+    ],
+    "vi": "thất bại"
+   },
+   "output": {
+    "id": "jm-1005500-0-fail",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'thất bại' is too formal and corresponds to Japanese '失敗する', not the colloquial 'しくじる' which means 'to mess up' or 'screw up'."
+   }
+  },
+  {
+   "key": "2a4c7c7d775e8dceeb656c0a1d8b50a8053c1ba4d6b9ef44d9147c9a913bc174",
+   "input": {
+    "id": "jm-1005610-0-deeply",
+    "en": "deeply",
+    "en_pos": "adverb",
+    "en_sense": "keenly; deeply; fully; heartily; seriously; earnestly",
+    "ja": "しみじみ",
+    "ja_reading": "しみじみ",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "keenly",
+     "deeply",
+     "fully",
+     "heartily",
+     "seriously",
+     "earnestly"
+    ],
+    "vi": "sâu sắc"
+   },
+   "output": {
+    "id": "jm-1005610-0-deeply",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for expressing a deep, keen, or heartfelt feeling or thought."
+   }
+  },
+  {
+   "key": "b7fa3bcc4345632c3b57908826eeab5c4f3bb036a1735c2d6ba1f3f143a8fa94",
+   "input": {
+    "id": "jm-1005870-0-still",
+    "en": "still",
+    "en_pos": "adverb",
+    "en_sense": "motionlessly (e.g. stand, wait); (be) still",
+    "ja": "じっと",
+    "ja_reading": "じっと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "motionlessly (e.g. stand, wait)",
+     "(be) still"
+    ],
+    "vi": "bất động"
+   },
+   "output": {
+    "id": "jm-1005870-0-still",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'motionlessly' or 'still'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,409 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:22:26Z",
+ "items": [
+  {
+   "key": "b129db028bb6cbc6d1be74864ab134496478e993bac353f4239430e4cc289724",
+   "input": {
+    "id": "wk-6469-s0",
+    "en": "stuff",
+    "en_pos": "verb",
+    "en_sense": "To fill by packing or crowding something into; to cram with something; to load to excess.",
+    "ja": "詰める",
+    "ja_reading": "つめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to stuff into",
+     "to jam",
+     "to cram",
+     "to pack",
+     "to fill",
+     "to plug"
+    ],
+    "vi": "nhét"
+   },
+   "output": {
+    "id": "wk-6469-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are excellent, natural equivalents for the sense of cramming or stuffing something into a space."
+   }
+  },
+  {
+   "key": "6cc781c842d34e4895c77ba0fbc5bfed69884e87d968cfea3140a2aaf37589fe",
+   "input": {
+    "id": "wk-14563-s0",
+    "en": "mechanism",
+    "en_pos": "noun",
+    "en_sense": "Any mechanical means for the conversion or control of motion, or the transmission or control of power.",
+    "ja": "機構",
+    "ja_reading": "きこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mechanism",
+     "machinery"
+    ],
+    "vi": "máy móc"
+   },
+   "output": {
+    "id": "wk-14563-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese `máy móc` means 'machinery' in general and is too broad; a better equivalent for 'mechanism' is `cơ cấu` or `cơ chế`."
+   }
+  },
+  {
+   "key": "4b8e4e90df8097d52825c52629ef0de7d5cbf791dc2b80a7af3f00b43de5a3f8",
+   "input": {
+    "id": "wk-32883-s0",
+    "en": "get used",
+    "en_pos": "verb",
+    "en_sense": "To become accustomed to something; to acclimate; to adjust.",
+    "ja": "慣れる",
+    "ja_reading": "なれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to get used to",
+     "to grow accustomed to",
+     "to become familiar with"
+    ],
+    "vi": "quen"
+   },
+   "output": {
+    "id": "wk-32883-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for becoming accustomed to something."
+   }
+  },
+  {
+   "key": "556a380e178d16e16f6d86a22bdeb1b11d04d9713dee030e5a50dff18e4863c2",
+   "input": {
+    "id": "wk-2118-s2",
+    "en": "fight",
+    "en_pos": "verb",
+    "en_sense": "To contend in physical conflict, either singly or in war, battle, etc.",
+    "ja": "戦う",
+    "ja_reading": "たたかう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to make war (on)",
+     "to wage war (against)",
+     "to go to war (with)",
+     "to fight (with)",
+     "to do battle (against)"
+    ],
+    "vi": "chiến đấu"
+   },
+   "output": {
+    "id": "wk-2118-s2",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese `chiến đấu` is specific to organized combat or battle and doesn't cover individual fights, for which `đánh nhau` is better."
+   }
+  },
+  {
+   "key": "e9f0599d859de8cd18de8dd966cb8225c09dabf18a3871fb739eb7e4a9ca1ab4",
+   "input": {
+    "id": "wk-1361-s0",
+    "en": "female",
+    "en_pos": "adjective",
+    "en_sense": "Belonging to the sex which typically produces eggs (ova), or to the gender which is typically associated with it.",
+    "ja": "めす",
+    "ja_reading": "めす",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "female (animal, plant)"
+    ],
+    "vi": "cái"
+   },
+   "output": {
+    "id": "wk-1361-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both `めす` and `cái` are used for female animals, not humans, making them too narrow for the general English word 'female'."
+   }
+  },
+  {
+   "key": "2450f30b04f11a697c64ac265c10a53937250dd70d782e810335e68166369f36",
+   "input": {
+    "id": "wk-338-s21",
+    "en": "be",
+    "en_pos": "verb",
+    "en_sense": "To occupy a place.",
+    "ja": "ある",
+    "ja_reading": "ある",
+    "ja_pos": "v5r-i,vi",
+    "ja_glosses": [
+     "to be",
+     "to exist",
+     "to live"
+    ],
+    "vi": "ở"
+   },
+   "output": {
+    "id": "wk-338-s21",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese `ある` is only used for inanimate objects, while English 'be' and Vietnamese `ở` are used for both animate and inanimate subjects."
+   }
+  },
+  {
+   "key": "72a88a7a1fd1fab142adbd7d2b0142b350508f8cf60bf3cc070aa644bd8c6cd8",
+   "input": {
+    "id": "wk-2093-s0",
+    "en": "cut",
+    "en_pos": "verb",
+    "en_sense": "To perform an incision on, for example with a knife.",
+    "ja": "切る",
+    "ja_reading": "きる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to cut",
+     "to cut through",
+     "to perform (surgery)"
+    ],
+    "vi": "cắt"
+   },
+   "output": {
+    "id": "wk-2093-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the primary, most common equivalents for the action of cutting."
+   }
+  },
+  {
+   "key": "64030deb89d134b67f78339b82e7ad8c7fc6e438164c22b64b38f7b275458918",
+   "input": {
+    "id": "wk-3220-s0",
+    "en": "investigate",
+    "en_pos": "verb",
+    "en_sense": "To inquire into or study in order to ascertain facts or information.",
+    "ja": "調べる",
+    "ja_reading": "しらべる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to examine",
+     "to look up",
+     "to investigate",
+     "to check up",
+     "to sense",
+     "to study"
+    ],
+    "vi": "điều tra"
+   },
+   "output": {
+    "id": "wk-3220-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `調べる` is too broad, also meaning 'to check' or 'to look up', while `investigate` and `điều tra` imply a more formal inquiry."
+   }
+  },
+  {
+   "key": "90924cd01d064a2431ce353e431316b7c1aac4e4d8613be424421b7530fb3503",
+   "input": {
+    "id": "wk-12872-s2",
+    "en": "reflect",
+    "en_pos": "verb",
+    "en_sense": "To mirror, or show the image of something.",
+    "ja": "映す",
+    "ja_reading": "うつす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to project",
+     "to reflect",
+     "to cast (shadow)"
+    ],
+    "vi": "phản chiếu"
+   },
+   "output": {
+    "id": "wk-12872-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are excellent equivalents for the physical act of reflecting an image."
+   }
+  },
+  {
+   "key": "4560172cc7bd5b58c642481b88748b6f510b6b77056f55c771a8329ad4992674",
+   "input": {
+    "id": "wk-5202-s0",
+    "en": "land",
+    "en_pos": "verb",
+    "en_sense": "To descend to a surface, especially from the air.",
+    "ja": "上陸する",
+    "ja_reading": "じょうりくする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "making landfall (of a typhoon)",
+     "striking land",
+     "hitting land"
+    ],
+    "vi": "hạ cánh"
+   },
+   "output": {
+    "id": "wk-5202-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese `上陸する` means 'to land from the sea' or 'make landfall', not 'to land from the air' like an airplane, which is `着陸する`."
+   }
+  },
+  {
+   "key": "2ca2a2166af338d8969b6d527b4ab234bc4f50ea63ccc90abb2f446610b8ee1d",
+   "input": {
+    "id": "wk-483-s0",
+    "en": "global",
+    "en_pos": "adjective",
+    "en_sense": "Concerning all parts of the world.",
+    "ja": "地球規模",
+    "ja_reading": "ちきゅうきぼ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "global scale"
+    ],
+    "vi": "thế giới"
+   },
+   "output": {
+    "id": "wk-483-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG"
+    ],
+    "note": "The Vietnamese `thế giới` is a noun meaning 'world', not an adjective meaning 'global'; the correct adjective is `toàn cầu`."
+   }
+  },
+  {
+   "key": "0be0f242b4f4039421ee7500c8074bf35d89148a3892be9cd92c46d32afc2516",
+   "input": {
+    "id": "wk-3881-s0",
+    "en": "feather",
+    "en_pos": "noun",
+    "en_sense": "A branching, hair-like structure that grows on the bodies of birds, used for flight, swimming, protection and display.",
+    "ja": "羽",
+    "ja_reading": "はね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "feather",
+     "plume",
+     "down"
+    ],
+    "vi": "lông"
+   },
+   "output": {
+    "id": "wk-3881-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese `羽` can also mean 'wing' and the Vietnamese `lông` also means 'hair/fur', making both imprecise; `羽根` (ja) and `lông vũ` (vi) are better."
+   }
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:34:39Z",
+ "items": [
+  {
+   "key": "510b45ad1c3145b444a714daac6c04a84129e8593d6b2b6b26eaf24a178a8e69",
+   "input": {
+    "id": "wk-1777-s0",
+    "en": "capital",
+    "en_pos": "noun",
+    "en_sense": "Money and wealth: the means to acquire or produce goods and services, especially in a non-barter system.",
+    "ja": "資本",
+    "ja_reading": "しほん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "funds",
+     "capital"
+    ],
+    "vi": "chính"
+   },
+   "output": {
+    "id": "wk-1777-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'chính' means 'main' or 'principal' (adjective) and is completely wrong for the financial sense of 'capital' (noun)."
+   }
+  },
+  {
+   "key": "d0cd7d4c7fd5931b26836ef2bd0faea7a2b47a8d4a90a469fdaa1f2a25bfb89d",
+   "input": {
+    "id": "wk-17773-s0",
+    "en": "anti-war",
+    "en_pos": "adjective",
+    "en_sense": "Opposed to war, or to a specific war.",
+    "ja": "反戦",
+    "ja_reading": "はんせん",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "anti-war"
+    ],
+    "vi": "phản chiến"
+   },
+   "output": {
+    "id": "wk-17773-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents derived from the same morphemes (反戦)."
+   }
+  },
+  {
+   "key": "ffc1630c6ff44b56c0ddaa48927b21df11c757f109ca2e59d5671f01f33febb8",
+   "input": {
+    "id": "wk-17783-s0",
+    "en": "sentimental",
+    "en_pos": "adjective",
+    "en_sense": "Characterized by sentiment, sentimentality or excess emotion; appealing to the emotions (especially tender emotions) rather than reason, morality, aesthetic taste, etc.",
+    "ja": "センチメンタル",
+    "ja_reading": "センチメンタル",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "sentimental"
+    ],
+    "vi": "đa cảm"
+   },
+   "output": {
+    "id": "wk-17783-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents, with the Japanese being a direct loanword and the Vietnamese being a standard native equivalent."
+   }
+  },
+  {
+   "key": "d7a4ed2c4c1b1626248e74f12b5d2c8161d7d3f08b51323a8aca939ae27b2163",
+   "input": {
+    "id": "wk-17808-s1",
+    "en": "reporter",
+    "en_pos": "noun",
+    "en_sense": "A journalist who investigates, edits and reports news stories for newspapers, radio and television.",
+    "ja": "記者",
+    "ja_reading": "きしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "reporter",
+     "journalist"
+    ],
+    "vi": "phóng viên"
+   },
+   "output": {
+    "id": "wk-17808-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'reporter'."
+   }
+  },
+  {
+   "key": "6a03a3a7be85b4f52add90fa6688ee47cc1211fef600094bec35f31a27d80888",
+   "input": {
+    "id": "wk-17809-s0",
+    "en": "resentment",
+    "en_pos": "noun",
+    "en_sense": "Anger or displeasure stemming from belief that one or one's group has been wronged or betrayed by others; indignation.",
+    "ja": "憤り",
+    "ja_reading": "いきどおり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "resentment",
+     "indignation",
+     "anger"
+    ],
+    "vi": "giận"
+   },
+   "output": {
+    "id": "wk-17809-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'giận' simply means 'anger' and is too broad for the specific sense of 'resentment' which implies being wronged."
+   }
+  },
+  {
+   "key": "9798c0f3f6be54e7c0bd8869b8e023eb3a53216e65b949dd889fde39332e5f5b",
+   "input": {
+    "id": "wk-1781-s5",
+    "en": "we",
+    "en_pos": "pronoun",
+    "en_sense": "The sovereign alone in his or her capacity as monarch. (This is the royal we. The reflexive case of this sense of we is ourself.)",
+    "ja": "朕",
+    "ja_reading": "ちん",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "We"
+    ],
+    "vi": "trẫm"
+   },
+   "output": {
+    "id": "wk-1781-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "All three terms are the correct and specific pronouns for the 'royal we', though they are archaic by nature."
+   }
+  },
+  {
+   "key": "07adb7ca08d14d11d109f62cdb7a73380ea9e6a4bb49d7c7a020cac249262484",
+   "input": {
+    "id": "wk-17815-s0",
+    "en": "guerrilla",
+    "en_pos": "noun",
+    "en_sense": "A soldier in a small independent group, fighting against the government or regular forces by surprise raids.",
+    "ja": "ゲリラ",
+    "ja_reading": "ゲリラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "guerrilla",
+     "guerrilla warfare"
+    ],
+    "vi": "du kích"
+   },
+   "output": {
+    "id": "wk-17815-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct equivalents for a guerrilla soldier."
+   }
+  },
+  {
+   "key": "f4481ed602461adb828717e36b39e0994d7514ce0174d51b52b25862a8fc135b",
+   "input": {
+    "id": "wk-1782-s3",
+    "en": "he",
+    "en_pos": "pronoun",
+    "en_sense": "A genderless object regarded as masculine, such as certain stars or planets (e.g. Sun, Mercury, Mars, Jupiter) or certain ships.",
+    "ja": "彼",
+    "ja_reading": "かれ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "he",
+     "him"
+    ],
+    "vi": "nó"
+   },
+   "output": {
+    "id": "wk-1782-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'nó' is a gender-neutral pronoun for 'it', completely missing the specific sense of masculine personification."
+   }
+  },
+  {
+   "key": "590e2e574da32d589f85dad0c1484a139c452a19fce66e9ede7410e04478eee4",
+   "input": {
+    "id": "wk-17828-s0",
+    "en": "timetable",
+    "en_pos": "noun",
+    "en_sense": "A tabular schedule of events with the times at which they occur, especially times of arrivals and departures.",
+    "ja": "時刻表",
+    "ja_reading": "じこくひょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "timetable",
+     "schedule"
+    ],
+    "vi": "lịch trình"
+   },
+   "output": {
+    "id": "wk-17828-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate for 'timetable' or 'schedule'."
+   }
+  },
+  {
+   "key": "f0821494e1ed34d04ab11ce61cb6854dddeb1d726cd89852e40e1ced7e7e053f",
+   "input": {
+    "id": "wk-1783-e:38a81e",
+    "en": "she",
+    "en_pos": "pronoun",
+    "en_sense": "person",
+    "ja": "彼女",
+    "ja_reading": "かのじょ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "she",
+     "her"
+    ],
+    "vi": "nó"
+   },
+   "output": {
+    "id": "wk-1783-e:38a81e",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'nó' is a gender-neutral pronoun ('it') and is completely incorrect and potentially offensive as a translation for 'she'."
+   }
+  },
+  {
+   "key": "555a89ea32fe2ab423b49edc93b19e2e3c124aa1792e4be2920a698c1d16bea5",
+   "input": {
+    "id": "wk-17837-s0",
+    "en": "literal",
+    "en_pos": "adjective",
+    "en_sense": "Exactly as stated; read or understood without interpretation; according to the letter; not figurative or metaphorical; following the letter or exact words; not taking liberties; etymonic rather than idiomatic.",
+    "ja": "文字通り",
+    "ja_reading": "もじどおり",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "literal"
+    ],
+    "vi": "nghĩa đen"
+   },
+   "output": {
+    "id": "wk-17837-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'nghĩa đen' is a noun phrase meaning 'literal meaning', not an adjective, making it a poor one-to-one equivalent for the adjective 'literal'."
+   }
+  },
+  {
+   "key": "5192e2df112f317cad33b76d3ca45c632dffe99bd43a96a2f1b1c4bccd7e20f8",
+   "input": {
+    "id": "wk-17846-s0",
+    "en": "lecturer",
+    "en_pos": "noun",
+    "en_sense": "A person who gives lectures, especially as a profession.",
+    "ja": "講師",
+    "ja_reading": "こうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lecturer (at a university or college)",
+     "instructor"
+    ],
+    "vi": "giảng viên"
+   },
+   "output": {
+    "id": "wk-17846-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'lecturer' in a university context."
+   }
+  }
+ ]
+}

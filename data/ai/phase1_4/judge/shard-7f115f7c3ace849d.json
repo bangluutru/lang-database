@@ -1,0 +1,402 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:21:18Z",
+ "items": [
+  {
+   "key": "4aac0acfe14526768487c5c74fc31adfd86c9af624ec221349275697458c78e2",
+   "input": {
+    "id": "wk-1872-s0",
+    "en": "sale",
+    "en_pos": "noun",
+    "en_sense": "An exchange of goods or services for currency or credit.",
+    "ja": "販売",
+    "ja_reading": "はんばい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sale",
+     "sales",
+     "selling",
+     "marketing"
+    ],
+    "vi": "sự bán"
+   },
+   "output": {
+    "id": "wk-1872-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự bán' is a literal but somewhat unnatural way to express 'the act of selling'; 'việc bán hàng' or 'doanh số' are more common depending on the context."
+   }
+  },
+  {
+   "key": "a7dd528b71850a65e2594b6bf4b13f7bd9d6910f754534396fe8eba849ba2208",
+   "input": {
+    "id": "wk-20043-s1",
+    "en": "training",
+    "en_pos": "noun",
+    "en_sense": "The activity of imparting and acquiring skills.",
+    "ja": "訓練",
+    "ja_reading": "くんれん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "training",
+     "drill",
+     "practice",
+     "discipline"
+    ],
+    "vi": "sự đào tạo"
+   },
+   "output": {
+    "id": "wk-20043-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'training' in a professional or skills-based context."
+   }
+  },
+  {
+   "key": "0dfa22bbc8d24784162c85daf826f8cc197265266d8939b13af4f46f1ed83fe0",
+   "input": {
+    "id": "wk-20277-s0",
+    "en": "a little",
+    "en_pos": "adverb",
+    "en_sense": "To a small extent or degree.",
+    "ja": "少し",
+    "ja_reading": "すこし",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "a little",
+     "a bit",
+     "a small amount",
+     "a few",
+     "some",
+     "slightly"
+    ],
+    "vi": "ít"
+   },
+   "output": {
+    "id": "wk-20277-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'ít' means 'little/few' (quantifier), not 'a little' as an adverb of degree; the correct equivalent would be 'một chút' or 'hơi'."
+   }
+  },
+  {
+   "key": "a614325432cd934f62f8d0b7862bd6713e79d9d39554aa119260743d042a46e2",
+   "input": {
+    "id": "wk-20426-s0",
+    "en": "privatization",
+    "en_pos": "noun",
+    "en_sense": "The transfer of a company or organization from government to private ownership and control.",
+    "ja": "民営化",
+    "ja_reading": "みんえいか",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "privatization",
+     "privatisation"
+    ],
+    "vi": "tư nhân hóa"
+   },
+   "output": {
+    "id": "wk-20426-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, specific words for privatization."
+   }
+  },
+  {
+   "key": "60b9c3d8429f34d54efc6ca79544ca54f1bb6c5721041b00bc8881c8ef455aea",
+   "input": {
+    "id": "wk-21523-s0",
+    "en": "injection",
+    "en_pos": "noun",
+    "en_sense": "The act of injecting, or something that is injected.",
+    "ja": "注射",
+    "ja_reading": "ちゅうしゃ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "injection",
+     "jab",
+     "shot"
+    ],
+    "vi": "sự tiêm"
+   },
+   "output": {
+    "id": "wk-21523-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự tiêm' only refers to the act of injecting and is less common than 'mũi tiêm' (a shot); it doesn't cover 'something that is injected'."
+   }
+  },
+  {
+   "key": "b5a302625671f1a35aef4b6f59aafa34ace1b20aeacde508b8ca57afcb66d3ca",
+   "input": {
+    "id": "wk-2218-e:f0d6fe",
+    "en": "reading",
+    "en_pos": "noun",
+    "en_sense": "process of interpreting written language",
+    "ja": "読書",
+    "ja_reading": "どくしょ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "reading (books)"
+    ],
+    "vi": "sự đọc"
+   },
+   "output": {
+    "id": "wk-2218-e:f0d6fe",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '読書' (dokusho) specifically means 'reading books' and is too narrow for the general sense of 'reading'."
+   }
+  },
+  {
+   "key": "1d54944773531017cea295d0d3e923ad0e2e3155f0424d19254985645213c7d9",
+   "input": {
+    "id": "wk-23659-s0",
+    "en": "mountaineering",
+    "en_pos": "noun",
+    "en_sense": "The sport of climbing mountains.",
+    "ja": "登山",
+    "ja_reading": "とざん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "mountain climbing",
+     "mountaineering",
+     "ascent of a mountain"
+    ],
+    "vi": "leo núi"
+   },
+   "output": {
+    "id": "wk-23659-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural expressions for mountaineering."
+   }
+  },
+  {
+   "key": "9addbcc82ff143047069d6151daff7b5acc4fda8803136119bb5af91eaf99bdf",
+   "input": {
+    "id": "wk-24022-s0",
+    "en": "shipbuilding",
+    "en_pos": "noun",
+    "en_sense": "The construction of ships.",
+    "ja": "造船",
+    "ja_reading": "ぞうせん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "shipbuilding"
+    ],
+    "vi": "nghề đóng tàu"
+   },
+   "output": {
+    "id": "wk-24022-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for shipbuilding, with the Vietnamese term emphasizing the craft/profession aspect."
+   }
+  },
+  {
+   "key": "0f2baddd8ce992ec8e34a416563f5d930e342560976ec9c1d4080bf46faab1ac",
+   "input": {
+    "id": "wk-24449-s1",
+    "en": "mobilization",
+    "en_pos": "noun",
+    "en_sense": "The marshalling and organizing of troops and national resources in preparation for war, bringing them to a state of readiness for an action.",
+    "ja": "動員",
+    "ja_reading": "どういん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "mobilization",
+     "mobilisation"
+    ],
+    "vi": "sự động viên"
+   },
+   "output": {
+    "id": "wk-24449-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "WRONG"
+    ],
+    "note": "The Vietnamese 'sự động viên' means 'encouragement' and is a false friend of Japanese '動員' (douin); the correct term for 'mobilization' is 'sự huy động'."
+   }
+  },
+  {
+   "key": "d6232daff386691055a5d43be44e57361164a5a3abec9de53468a0971191b62e",
+   "input": {
+    "id": "wk-27618-s0",
+    "en": "disinfection",
+    "en_pos": "noun",
+    "en_sense": "Treatment with disinfectant materials in order to destroy harmful microorganisms.",
+    "ja": "消毒",
+    "ja_reading": "しょうどく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "disinfection",
+     "sterilization",
+     "sterilisation"
+    ],
+    "vi": "sự tẩy uế"
+   },
+   "output": {
+    "id": "wk-27618-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sự tẩy uế' is an archaic/non-technical term; the standard modern equivalent for 'disinfection' is 'sự khử trùng'."
+   }
+  },
+  {
+   "key": "df081eaa5da0ed6116b85bb5a28700dfa1c984007a1d5da837758d34b3fdb6fb",
+   "input": {
+    "id": "wk-2837-s0",
+    "en": "proportion",
+    "en_pos": "noun",
+    "en_sense": "A quantity of something that is part of the whole amount or number.",
+    "ja": "比例",
+    "ja_reading": "ひれい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "proportion"
+    ],
+    "vi": "tỉ lệ"
+   },
+   "output": {
+    "id": "wk-2837-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '比例' (hirei) refers to mathematical proportionality, not the general sense of a part of a whole; '割合' (wariai) would be a better fit."
+   }
+  },
+  {
+   "key": "8d5b73b57303c5cc9d2bfee044ae92bb5bd686a273e4744b4cb4c51401df0aaa",
+   "input": {
+    "id": "wk-2907-s0",
+    "en": "dialogue",
+    "en_pos": "noun",
+    "en_sense": "A conversation or other form of discourse between two or more individuals.",
+    "ja": "対話",
+    "ja_reading": "たいわ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "dialogue",
+     "conversation",
+     "talk",
+     "discussion",
+     "communication"
+    ],
+    "vi": "sự hội thoại"
+   },
+   "output": {
+    "id": "wk-2907-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are good equivalents, with the Vietnamese 'sự hội thoại' being slightly formal but correct."
+   }
+  }
+ ]
+}

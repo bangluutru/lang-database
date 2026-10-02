@@ -1,0 +1,407 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:26:24Z",
+ "items": [
+  {
+   "key": "9408ccdc313c24664673694fedd32615cde9748cb30ba253b3aaac350d9c2cd5",
+   "input": {
+    "id": "jm-1001960-0-birth",
+    "en": "birth",
+    "en_pos": "noun",
+    "en_sense": "(giving) birth; childbirth; delivery",
+    "ja": "お産",
+    "ja_reading": "おさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(giving) birth",
+     "childbirth",
+     "delivery"
+    ],
+    "vi": "sinh nở"
+   },
+   "output": {
+    "id": "jm-1001960-0-birth",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are direct and natural equivalents for the act of childbirth."
+   }
+  },
+  {
+   "key": "7d77eb5cec983715232f67a7d08ad10d2a0307e9bce00efbbb946edd3b904dc1",
+   "input": {
+    "id": "jm-1001990-0-older_sister",
+    "en": "older sister",
+    "en_pos": "noun",
+    "en_sense": "older sister; elder sister",
+    "ja": "お姉さん",
+    "ja_reading": "おねえさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "older sister",
+     "elder sister"
+    ],
+    "vi": "chị gái"
+   },
+   "output": {
+    "id": "jm-1001990-0-older_sister",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural way to express 'older sister'."
+   }
+  },
+  {
+   "key": "2d3d2534650d9a426f59c4da8fa349fa4c11f239b199659287539f69c142ea94",
+   "input": {
+    "id": "jm-1002170-0-daughter",
+    "en": "daughter",
+    "en_pos": "noun",
+    "en_sense": "(another's) daughter",
+    "ja": "お嬢さん",
+    "ja_reading": "おじょうさん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(another's) daughter"
+    ],
+    "vi": "con gái"
+   },
+   "output": {
+    "id": "jm-1002170-0-daughter",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'con gái' is a general term for 'daughter', while the English sense and Japanese 'お嬢さん' specifically refer to another person's daughter in a polite context."
+   }
+  },
+  {
+   "key": "8d088f25d18c8871d938ed55d311b2f3d5a733e535766cc13d2e98a445ecb124",
+   "input": {
+    "id": "jm-1003200-0-firmly",
+    "en": "firmly",
+    "en_pos": "adverb",
+    "en_sense": "firmly; solidly; sturdily; strongly; toughly",
+    "ja": "がっしり",
+    "ja_reading": "がっしり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "firmly",
+     "solidly",
+     "sturdily",
+     "strongly",
+     "toughly"
+    ],
+    "vi": "vững chắc"
+   },
+   "output": {
+    "id": "jm-1003200-0-firmly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese term is an adjective but is used adverbially in many contexts, matching the sense of the English and Japanese adverbs."
+   }
+  },
+  {
+   "key": "a700fe80925bf68071f7e7e9b5245de50b479d4bc947d1160a2ca0b03cde8e4c",
+   "input": {
+    "id": "jm-1003390-0-properly",
+    "en": "properly",
+    "en_pos": "adverb",
+    "en_sense": "properly; accurately; exactly; precisely; regularly",
+    "ja": "きちっと",
+    "ja_reading": "きちっと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "properly",
+     "accurately",
+     "exactly",
+     "precisely",
+     "regularly"
+    ],
+    "vi": "đúng mực"
+   },
+   "output": {
+    "id": "jm-1003390-0-properly",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'đúng mực' primarily means 'appropriately' in a social context, not 'accurately' or 'precisely' like the English and Japanese terms."
+   }
+  },
+  {
+   "key": "763c38dbdfad6c2c030db23c24d2254c2654ab8b4bc8a95b3213b5b2b8f6b48a",
+   "input": {
+    "id": "jm-1003400-0-properly",
+    "en": "properly",
+    "en_pos": "adverb",
+    "en_sense": "properly; accurately; exactly; precisely; regularly",
+    "ja": "きちんと",
+    "ja_reading": "きちんと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "properly",
+     "accurately",
+     "exactly",
+     "precisely",
+     "regularly"
+    ],
+    "vi": "nghiêm chỉnh"
+   },
+   "output": {
+    "id": "jm-1003400-0-properly",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'nghiêm chỉnh' is too narrow, meaning 'seriously' or 'in a disciplined manner', not the general sense of 'properly' or 'correctly'."
+   }
+  },
+  {
+   "key": "a56a28972b785997f471232e69218c3618d4643c9769b2c115dc47cba553eae0",
+   "input": {
+    "id": "jm-1003410-0-exactly",
+    "en": "exactly",
+    "en_pos": "adverb",
+    "en_sense": "exactly; just; precisely",
+    "ja": "きっかり",
+    "ja_reading": "きっかり",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "exactly",
+     "just",
+     "precisely"
+    ],
+    "vi": "chính xác"
+   },
+   "output": {
+    "id": "jm-1003410-0-exactly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for 'exactly' or 'precisely'."
+   }
+  },
+  {
+   "key": "3874cf6a99bd33120b959dcf687f0f4eee9880da9d478cebbeb02ce35ed75cfe",
+   "input": {
+    "id": "jm-1003420-0-exactly",
+    "en": "exactly",
+    "en_pos": "adverb",
+    "en_sense": "exactly; precisely; punctually; on the dot",
+    "ja": "きっちり",
+    "ja_reading": "きっちり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "exactly",
+     "precisely",
+     "punctually",
+     "on the dot"
+    ],
+    "vi": "đúng giờ"
+   },
+   "output": {
+    "id": "jm-1003420-0-exactly",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'đúng giờ' only means 'on time/punctually' and does not cover the broader sense of 'exactly/precisely' that the English and Japanese words have."
+   }
+  },
+  {
+   "key": "4619aebe3afc6080f492f62a35f5f8db0ad129854cec861acdcef55ee6379b15",
+   "input": {
+    "id": "jm-1003440-0-clearly",
+    "en": "clearly",
+    "en_pos": "adverb",
+    "en_sense": "clearly; plainly; distinctly; decisively; flatly; definitely",
+    "ja": "きっぱり",
+    "ja_reading": "きっぱり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "clearly",
+     "plainly",
+     "distinctly",
+     "decisively",
+     "flatly",
+     "definitely"
+    ],
+    "vi": "dứt khoát"
+   },
+   "output": {
+    "id": "jm-1003440-0-clearly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms align perfectly in the specific sense of being decisive, firm, and definite."
+   }
+  },
+  {
+   "key": "6fa7833dbe5d9ed0de4b52791ed293a488d10bab6830c3163bf17a63c644b819",
+   "input": {
+    "id": "jm-1003590-0-closely",
+    "en": "closely",
+    "en_pos": "adverb",
+    "en_sense": "tightly (packed); densely; closely; crammed",
+    "ja": "ぎっしり",
+    "ja_reading": "ぎっしり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "tightly (packed)",
+     "densely",
+     "closely",
+     "crammed"
+    ],
+    "vi": "chật ních"
+   },
+   "output": {
+    "id": "jm-1003590-0-closely",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are idiomatic and direct equivalents for the sense of being tightly packed or crammed."
+   }
+  },
+  {
+   "key": "d2bebeb70d22343eb9503da4c3eb90a52ef5d8b845c70eacde4130405a46ae5c",
+   "input": {
+    "id": "jm-1003840-0-clearly",
+    "en": "clearly",
+    "en_pos": "adverb",
+    "en_sense": "clearly (standing out); distinctly; sharply; boldly; in sharp relief",
+    "ja": "くっきり",
+    "ja_reading": "くっきり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "clearly (standing out)",
+     "distinctly",
+     "sharply",
+     "boldly",
+     "in sharp relief"
+    ],
+    "vi": "rõ nét"
+   },
+   "output": {
+    "id": "jm-1003840-0-clearly",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms align perfectly in the specific sense of visual clarity and sharpness."
+   }
+  },
+  {
+   "key": "1c23c7b184d5465ab09b913bd89f545a1f05cd16e50462d1e110b7b696845c08",
+   "input": {
+    "id": "jm-1003870-0-attach",
+    "en": "attach",
+    "en_pos": "verb",
+    "en_sense": "to attach; to stick together; to paste; to glue",
+    "ja": "くっつける",
+    "ja_reading": "くっつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to attach",
+     "to stick together",
+     "to paste",
+     "to glue"
+    ],
+    "vi": "dán"
+   },
+   "output": {
+    "id": "jm-1003870-0-attach",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'dán' specifically means to stick using an adhesive (glue, paste, tape), which is narrower than the general sense of 'attach' or the Japanese 'くっつける'."
+   }
+  }
+ ]
+}

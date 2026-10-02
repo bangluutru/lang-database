@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:46:28Z",
+ "items": [
+  {
+   "key": "c8181ee094da5dd1d2f29b38a6663197353942f36b08ffe26302ba6cde499c9e",
+   "input": {
+    "id": "wk-4274-s0",
+    "en": "trash",
+    "en_pos": "noun",
+    "en_sense": "Useless physical things to be discarded; rubbish; refuse.",
+    "ja": "ゴミ",
+    "ja_reading": "ゴミ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rubbish",
+     "trash",
+     "garbage",
+     "refuse",
+     "litter"
+    ],
+    "vi": "rác"
+   },
+   "output": {
+    "id": "wk-4274-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, everyday words for 'trash' or 'rubbish' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "776c3977c517bd228dd5aa8a085aab1753ab5c2ebfe6e62fbe538099ea659571",
+   "input": {
+    "id": "wk-4283-s0",
+    "en": "laughter",
+    "en_pos": "noun",
+    "en_sense": "The sound of laughing, produced by air so expelled; any similar sound.",
+    "ja": "笑い声",
+    "ja_reading": "わらいごえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(sound of) laughter",
+     "laughing voice"
+    ],
+    "vi": "sự cười"
+   },
+   "output": {
+    "id": "wk-4283-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự cười' means 'the act of laughing', not 'the sound of laughter', for which 'tiếng cười' is the correct and natural equivalent."
+   }
+  },
+  {
+   "key": "86f1f4ecb657bc0c851c3fdc9cfa50c33dc95c1f0e467d7f04db9ea183cd9fd5",
+   "input": {
+    "id": "wk-4297-s1",
+    "en": "slogan",
+    "en_pos": "noun",
+    "en_sense": "A catchphrase associated with a product or service being advertised.",
+    "ja": "スローガン",
+    "ja_reading": "スローガン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slogan"
+    ],
+    "vi": "khẩu hiệu"
+   },
+   "output": {
+    "id": "wk-4297-s1",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both Japanese and Vietnamese terms are broader than the specified advertising sense, also covering political or social slogans; 'キャッチフレーズ' (ja) would be more specific."
+   }
+  },
+  {
+   "key": "3435e0e3bd9020c52a8ea62ae0a087df7a0c599883f05a797d56161940db67d6",
+   "input": {
+    "id": "wk-43-s1",
+    "en": "dialect",
+    "en_pos": "noun",
+    "en_sense": "A variety of a language that is characteristic of a particular area, community, or social group, differing from other varieties of the same language in relatively minor ways as regards grammar, phonology, and lexicon.",
+    "ja": "方言",
+    "ja_reading": "ほうげん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dialect",
+     "provincialism"
+    ],
+    "vi": "phương ngữ"
+   },
+   "output": {
+    "id": "wk-43-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for 'dialect' and match perfectly in sense and register."
+   }
+  },
+  {
+   "key": "6034a4bdcfc87d0703b3cbc18e47efd1aae2af0c7ed49fd68ee0c3dc2239ee6d",
+   "input": {
+    "id": "wk-430-s3",
+    "en": "peace",
+    "en_pos": "noun",
+    "en_sense": "Harmony in personal relations.",
+    "ja": "和平",
+    "ja_reading": "わへい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "peace"
+    ],
+    "vi": "hoà bình"
+   },
+   "output": {
+    "id": "wk-430-s3",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both '和平' and 'hoà bình' mean peace in the context of nations or war, not the specified sense of 'harmony in personal relations'."
+   }
+  },
+  {
+   "key": "1d6321745a1a99e79ff60de54f26e71a030359baf545f7e42163f7e38ee2f296",
+   "input": {
+    "id": "wk-4300-e:b129ae",
+    "en": "problem",
+    "en_pos": "noun",
+    "en_sense": "difficulty",
+    "ja": "問題",
+    "ja_reading": "もんだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "problem (e.g. societal, political)",
+     "question",
+     "issue",
+     "subject (e.g. of research)",
+     "case",
+     "matter"
+    ],
+    "vi": "vấn đề"
+   },
+   "output": {
+    "id": "wk-4300-e:b129ae",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'problem' or 'issue' and are excellent equivalents."
+   }
+  },
+  {
+   "key": "d9f7e1283d54284f736d088f9cdd155b1f2ad49ba83c9acf1c2c70b61871d81e",
+   "input": {
+    "id": "wk-431-e:01104d",
+    "en": "and",
+    "en_pos": "conjunction",
+    "en_sense": "used to string together sentences or sentence fragments in chronological order",
+    "ja": "して",
+    "ja_reading": "して",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "and",
+     "so",
+     "then"
+    ],
+    "vi": "và"
+   },
+   "output": {
+    "id": "wk-431-e:01104d",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "While Japanese 'して' correctly implies chronological sequence, Vietnamese 'và' is a more general connector; 'rồi' would better capture the sequential meaning."
+   }
+  },
+  {
+   "key": "7e6eaf873bfff9d185d36e3724c0a4df498d0c541126b0d88080e6227c5bdeb5",
+   "input": {
+    "id": "wk-431-e:2a0101",
+    "en": "and",
+    "en_pos": "conjunction",
+    "en_sense": "used to connect two similar words, phrases, et cetera",
+    "ja": "と",
+    "ja_reading": "と",
+    "ja_pos": "prt,conj",
+    "ja_glosses": [
+     "and",
+     "as well as"
+    ],
+    "vi": "và"
+   },
+   "output": {
+    "id": "wk-431-e:2a0101",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard and most basic connectors for listing nouns or similar items."
+   }
+  },
+  {
+   "key": "03d3f3b0f5b9c24db5c7c16d8d1892cdb6bc84ebd4f94aadf062717b8c706af6",
+   "input": {
+    "id": "wk-431-s0",
+    "en": "and",
+    "en_pos": "conjunction",
+    "en_sense": "Used simply to connect two noun phrases, adjectives or adverbs.",
+    "ja": "そして",
+    "ja_reading": "そして",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "and",
+     "and then",
+     "thus",
+     "and now",
+     "and finally"
+    ],
+    "vi": "và"
+   },
+   "output": {
+    "id": "wk-431-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'そして' connects sentences or clauses, not individual words or phrases as described in the English sense; 'と' would be correct for nouns."
+   }
+  },
+  {
+   "key": "abd0117094bd9936ee3f40fafbd1a467c2a9357b501daf7a3dbcec87ca30ba64",
+   "input": {
+    "id": "wk-4310-e:8ac6b8",
+    "en": "degree",
+    "en_pos": "noun",
+    "en_sense": "unit of measurement of temperature",
+    "ja": "度",
+    "ja_reading": "ど",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "degree (angle, temperature, scale, etc.)"
+    ],
+    "vi": "độ"
+   },
+   "output": {
+    "id": "wk-4310-e:8ac6b8",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'degree' as a unit of measurement and are perfect equivalents."
+   }
+  },
+  {
+   "key": "08802db05adbf3958384b589366c046f3f09b31b327b9ca18515d89b46480bae",
+   "input": {
+    "id": "wk-4310-s3",
+    "en": "degree",
+    "en_pos": "noun",
+    "en_sense": "The sum of the exponents of a term; the order of a polynomial.",
+    "ja": "次数",
+    "ja_reading": "じすう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "degree",
+     "order"
+    ],
+    "vi": "bậc"
+   },
+   "output": {
+    "id": "wk-4310-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard mathematical terms for the degree of a polynomial."
+   }
+  },
+  {
+   "key": "e60bf52ba2dc8d5355e9f2dc85878f6a4d8d2dd0a842735813b5fa6e861d40c5",
+   "input": {
+    "id": "wk-4325-s0",
+    "en": "ministry",
+    "en_pos": "noun",
+    "en_sense": "A government department at the administrative level, normally headed by a minister (or equivalent rank, e.g. secretary of state), who holds it as portfolio, especially in a constitutional monarchy, but also as a polity.",
+    "ja": "省",
+    "ja_reading": "しょう",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "ministry",
+     "department"
+    ],
+    "vi": "bộ"
+   },
+   "output": {
+    "id": "wk-4325-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard official words for a government 'ministry' and are perfect equivalents."
+   }
+  }
+ ]
+}

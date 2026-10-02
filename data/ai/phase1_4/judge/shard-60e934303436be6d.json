@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:21Z",
+ "items": [
+  {
+   "key": "d93472c4d955f158e54153c1133d064d039f13a73ab1b0743d9bff23d91cd8d1",
+   "input": {
+    "id": "wk-27551-s0",
+    "en": "tap water",
+    "en_pos": "noun",
+    "en_sense": "Water that comes from a tap.",
+    "ja": "水道水",
+    "ja_reading": "すいどうすい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tap water"
+    ],
+    "vi": "nước máy"
+   },
+   "output": {
+    "id": "wk-27551-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'tap water'."
+   }
+  },
+  {
+   "key": "beec15cb80d345f6e5fab97495183937559ab495323a14b0a621a79f58db96aa",
+   "input": {
+    "id": "wk-27585-s0",
+    "en": "social science",
+    "en_pos": "noun",
+    "en_sense": "A branch of science that studies the society and human behavior in it.",
+    "ja": "社会科学",
+    "ja_reading": "しゃかいかがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "social science"
+    ],
+    "vi": "khoa học xã hội"
+   },
+   "output": {
+    "id": "wk-27585-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard academic equivalents for 'social science'."
+   }
+  },
+  {
+   "key": "15e8587b4ef8a99239a453df876a99d0ca64386cca5c42e08bdab577f6a22232",
+   "input": {
+    "id": "wk-276-s1",
+    "en": "decade",
+    "en_pos": "noun",
+    "en_sense": "A period of ten years , particularly such a period beginning with a year ending in 0 and ending with a year ending in 9.",
+    "ja": "十年",
+    "ja_reading": "じゅうねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ten years",
+     "decade"
+    ],
+    "vi": "thập niên"
+   },
+   "output": {
+    "id": "wk-276-s1",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese 十年 just means 'ten years' and is broader than the specific sense of 'decade' (e.g., the 1980s), for which 年代 is often used."
+   }
+  },
+  {
+   "key": "06031c47e5ca560c5d261064771052add0d84c4f668de50b6ed45cf2dc10f37a",
+   "input": {
+    "id": "wk-2760-s0",
+    "en": "ice",
+    "en_pos": "noun",
+    "en_sense": "Water in frozen (solid) form.",
+    "ja": "氷",
+    "ja_reading": "こおり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ice"
+    ],
+    "vi": "đá"
+   },
+   "output": {
+    "id": "wk-2760-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Vietnamese word 'đá' is polysemous, meaning both 'ice' and 'stone', making it broader than the English and Japanese terms."
+   }
+  },
+  {
+   "key": "32a1714bb0020121db35d18e342befbdd546d0487de0ed4314180ea5232af5b9",
+   "input": {
+    "id": "wk-27677-s0",
+    "en": "in order to",
+    "en_pos": "conjunction",
+    "en_sense": "before an infinitive: As a means of achieving the specified end; to.",
+    "ja": "ように",
+    "ja_reading": "ように",
+    "ja_pos": "exp",
+    "ja_glosses": [
+     "so that",
+     "in order that",
+     "so as to",
+     "in order to"
+    ],
+    "vi": "để"
+   },
+   "output": {
+    "id": "wk-27677-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are common and natural ways to express purpose."
+   }
+  },
+  {
+   "key": "1ad9a6df011f3cfa05bae41bebc6244d01df25b5010788636d9183fc8167fc7f",
+   "input": {
+    "id": "wk-2768-s1",
+    "en": "sovereignty",
+    "en_pos": "noun",
+    "en_sense": "Of a nation or other polity: the state of being able to control resources, make laws independently, and otherwise govern itself without the coercion or concurrence of other polities.",
+    "ja": "主権",
+    "ja_reading": "しゅけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sovereignty",
+     "supremacy",
+     "dominion"
+    ],
+    "vi": "chủ quyền"
+   },
+   "output": {
+    "id": "wk-2768-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, formal equivalents for 'sovereignty', with the Japanese and Vietnamese terms being direct cognates."
+   }
+  },
+  {
+   "key": "6abfc36ab3069294b0eef808abf6bceba5bcc9253389ba692ed5e450de907cf1",
+   "input": {
+    "id": "wk-27712-s0",
+    "en": "even though",
+    "en_pos": "conjunction",
+    "en_sense": "Although; though; despite or in spite of the fact that.",
+    "ja": "いえども",
+    "ja_reading": "いえども",
+    "ja_pos": "exp",
+    "ja_glosses": [
+     "even though",
+     "despite",
+     "notwithstanding"
+    ],
+    "vi": "dù"
+   },
+   "output": {
+    "id": "wk-27712-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese expression いえども is archaic and literary, making it an unnatural and register-mismatched equivalent for the common English 'even though'."
+   }
+  },
+  {
+   "key": "2ea6106be4e6b86fd757232719ce2ddd5762ffd32e84c5064cde761760edd456",
+   "input": {
+    "id": "wk-2778-s0",
+    "en": "kanji",
+    "en_pos": "noun",
+    "en_sense": "The system of writing Japanese using Chinese characters.",
+    "ja": "漢字",
+    "ja_reading": "かんじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kanji",
+     "Chinese character"
+    ],
+    "vi": "chữ nhật"
+   },
+   "output": {
+    "id": "wk-2778-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chữ nhật' can refer to the entire Japanese writing system, not just kanji, making it too broad and somewhat unnatural."
+   }
+  },
+  {
+   "key": "2e2a6268b9a76b976d6ec411ec01e1be679c8ac1f19c9d825fddffc405b5f7c3",
+   "input": {
+    "id": "wk-27786-s0",
+    "en": "here you are",
+    "en_pos": "expression",
+    "en_sense": "Said when handing something over to someone or doing a favour to them, usually to draw the recipient's attention to the exchange; equivalent to “thank you” when receiving something.",
+    "ja": "どうぞ",
+    "ja_reading": "どうぞ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "here you are"
+    ],
+    "vi": "của bạn đây"
+   },
+   "output": {
+    "id": "wk-27786-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are natural, idiomatic expressions used when handing something to someone."
+   }
+  },
+  {
+   "key": "f0b496f38f2591855c9da4fb2db9f6ceee1e7450ed24d44819c35bd73cd71c75",
+   "input": {
+    "id": "wk-2779-s2",
+    "en": "recession",
+    "en_pos": "noun",
+    "en_sense": "A period of reduced economic activity.",
+    "ja": "リセッション",
+    "ja_reading": "リセッション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "recession"
+    ],
+    "vi": "sự suy sút"
+   },
+   "output": {
+    "id": "wk-2779-s2",
+    "en_ja": "ACCEPTABLE",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự suy sút' means 'decline' in general and is not the correct economic term for 'recession'; the standard term is 'suy thoái kinh tế'."
+   }
+  },
+  {
+   "key": "cf12a49c2fcf50b0ce38ca1c03b53c9780599338397af70ba3843f84e4b36d97",
+   "input": {
+    "id": "wk-27837-s0",
+    "en": "royal family",
+    "en_pos": "noun",
+    "en_sense": "The family of the ruling sovereign of a country or state.",
+    "ja": "王室",
+    "ja_reading": "おうしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "royal family"
+    ],
+    "vi": "hoàng gia"
+   },
+   "output": {
+    "id": "wk-27837-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents, though Japanese uses a different specific term (皇室) for its own imperial family."
+   }
+  },
+  {
+   "key": "9c53673e9ecc5921a8ad282fc0dcffca80268e33e512173a333c15ba257272b1",
+   "input": {
+    "id": "wk-2785-e:2f7ec4",
+    "en": "dry",
+    "en_pos": "verb",
+    "en_sense": "to make dry",
+    "ja": "乾かす",
+    "ja_reading": "かわかす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to dry (clothes, etc.)",
+     "to desiccate"
+    ],
+    "vi": "sấy"
+   },
+   "output": {
+    "id": "wk-2785-e:2f7ec4",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'sấy' specifically means to dry with heat or an appliance, making it narrower than the general English 'dry' and Japanese '乾かす'."
+   }
+  }
+ ]
+}

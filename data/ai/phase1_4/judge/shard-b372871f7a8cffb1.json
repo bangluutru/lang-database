@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:22:36Z",
+ "items": [
+  {
+   "key": "8c096f2a42fda0b7e3283d52031eff1602df7f5668b8ba7c93003efbe440593a",
+   "input": {
+    "id": "wk-10665-s0",
+    "en": "peel",
+    "en_pos": "noun",
+    "en_sense": "The skin or outer layer of a fruit, vegetable, etc.",
+    "ja": "皮",
+    "ja_reading": "かわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rind",
+     "peel",
+     "husk",
+     "bark"
+    ],
+    "vi": "vỏ"
+   },
+   "output": {
+    "id": "wk-10665-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the standard, natural terms for the peel of a fruit or vegetable."
+   }
+  },
+  {
+   "key": "d22c098ab82d959bdda8d3b9c8257312854a852e64ac9ad1cd24a66e8c058504",
+   "input": {
+    "id": "wk-1110-e:af0da0",
+    "en": "concrete",
+    "en_pos": "noun",
+    "en_sense": "building material",
+    "ja": "コンクリート",
+    "ja_reading": "コンクリート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "concrete"
+    ],
+    "vi": "bê tông"
+   },
+   "output": {
+    "id": "wk-1110-e:af0da0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the building material 'concrete', with Japanese borrowing from English and Vietnamese from French."
+   }
+  },
+  {
+   "key": "b8ee8df847d82e186405e78f81c81def403f721268a858b34f6b6a49c438c8c4",
+   "input": {
+    "id": "wk-7738-s0",
+    "en": "embrace",
+    "en_pos": "verb",
+    "en_sense": "To clasp (someone or each other) in the arms with affection; to take in the arms; to hug.",
+    "ja": "抱擁する",
+    "ja_reading": "ほうようする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "embrace",
+     "hug",
+     "holding in one's arms"
+    ],
+    "vi": "ôm"
+   },
+   "output": {
+    "id": "wk-7738-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 抱擁する is more formal and literary than the common English 'embrace' and the very common Vietnamese 'ôm'."
+   }
+  },
+  {
+   "key": "b1a2d13259adf6c765fac0d8448a0140b40d24a0ed27e1a7066711d013cd3bc8",
+   "input": {
+    "id": "wk-2731-s1",
+    "en": "control",
+    "en_pos": "noun",
+    "en_sense": "The method and means of governing the performance of any apparatus, machine or system, such as a lever, handle or button.",
+    "ja": "制御装置",
+    "ja_reading": "せいぎょそうち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "controller",
+     "control unit"
+    ],
+    "vi": "điều khiển"
+   },
+   "output": {
+    "id": "wk-2731-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'điều khiển' is primarily a verb or an abstract noun for 'control', while the English sense and the Japanese '制御装置' refer specifically to a physical control device."
+   }
+  },
+  {
+   "key": "7e8dd100584e6c5845ac987d7a01635e3ba572137ae20ef2bf86a6cf6578392c",
+   "input": {
+    "id": "wk-6404-s2",
+    "en": "ally",
+    "en_pos": "noun",
+    "en_sense": "A person, group, state, etc., which is associated or united by treaty with another for a common (especially military or political) purpose; a confederate.",
+    "ja": "味方",
+    "ja_reading": "みかた",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "friend",
+     "ally",
+     "supporter"
+    ],
+    "vi": "nước đồng minh"
+   },
+   "output": {
+    "id": "wk-6404-s2",
+    "en_ja": "BROAD",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 味方 is too broad (any supporter), while the Vietnamese nước đồng minh is too narrow (only allied nations), failing to match the specific sense of 'ally'."
+   }
+  },
+  {
+   "key": "3567dfa9de149636ac2907f6f0710d5b0acca3b990ac661e5bba6e3c54c8aa42",
+   "input": {
+    "id": "wk-11869-s1",
+    "en": "cancel",
+    "en_pos": "verb",
+    "en_sense": "To invalidate or annul something.",
+    "ja": "取り消す",
+    "ja_reading": "とりけす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to cancel",
+     "to withdraw",
+     "to retract",
+     "to take back (words, etc.)",
+     "to revoke"
+    ],
+    "vi": "hủy"
+   },
+   "output": {
+    "id": "wk-11869-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard and direct equivalents for cancelling or annulling something."
+   }
+  },
+  {
+   "key": "082d2b0d407cd52ba76a292a546351b6ba710e02f1c996e678105e1de02ee05e",
+   "input": {
+    "id": "wk-6920-e:edcf27",
+    "en": "soup",
+    "en_pos": "noun",
+    "en_sense": "dish",
+    "ja": "汁",
+    "ja_reading": "しる",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "soup",
+     "broth"
+    ],
+    "vi": "canh"
+   },
+   "output": {
+    "id": "wk-6920-e:edcf27",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both 汁 (ja) and canh (vi) refer to a specific type of traditional, light, brothy soup and are not general terms for all kinds of soup like the English word."
+   }
+  },
+  {
+   "key": "4c2db1ac0c9783d4d64a5dc7822570240d66cd7853f5817067af2a9d49e61528",
+   "input": {
+    "id": "wk-3664-s5",
+    "en": "host",
+    "en_pos": "noun",
+    "en_sense": "Any computer attached to a network.",
+    "ja": "ホスト",
+    "ja_reading": "ホスト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "host (of a party, summit, etc.)"
+    ],
+    "vi": "máy chủ"
+   },
+   "output": {
+    "id": "wk-3664-s5",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese word 'máy chủ' means 'server', which is narrower than the English 'host' (any computer on a network). The Japanese gloss provided is also for the wrong sense of 'host'."
+   }
+  },
+  {
+   "key": "ee2e93a902ef016cbbb4f46b1c6998b3ca4888765030933458ed3d40bbc8850c",
+   "input": {
+    "id": "wk-16878-s0",
+    "en": "employer",
+    "en_pos": "noun",
+    "en_sense": "A person, firm or other entity which pays for or hires the services of another person.",
+    "ja": "雇用者",
+    "ja_reading": "こようしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "employer",
+     "person hiring others"
+    ],
+    "vi": "chủ"
+   },
+   "output": {
+    "id": "wk-16878-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'chủ' is too broad, meaning 'owner' or 'master' in general, while the English and Japanese terms specifically mean 'employer'."
+   }
+  },
+  {
+   "key": "8fc99508f9d33f73057413683a94dea6373a59823e3efc0ca3985a83cd61ba58",
+   "input": {
+    "id": "wk-11465-e:a8578a",
+    "en": "channel",
+    "en_pos": "noun",
+    "en_sense": "broadcasting: specific radio frequency or band of frequencies",
+    "ja": "チャネル",
+    "ja_reading": "チャネル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "channel"
+    ],
+    "vi": "kênh"
+   },
+   "output": {
+    "id": "wk-11465-e:a8578a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the standard terms for a broadcasting channel in their respective languages."
+   }
+  },
+  {
+   "key": "6a99d54d31f1b21943247cf2a762114e0a9786abe1ac8632cbf1e5524746b4a5",
+   "input": {
+    "id": "wk-6605-s0",
+    "en": "annoying",
+    "en_pos": "adjective",
+    "en_sense": "Causing irritation or annoyance; troublesome; vexatious.",
+    "ja": "うるさい",
+    "ja_reading": "うるさい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "annoying",
+     "troublesome",
+     "tiresome",
+     "persistent",
+     "importunate"
+    ],
+    "vi": "phiền"
+   },
+   "output": {
+    "id": "wk-6605-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three words are common and natural equivalents for 'annoying', suitable for a learner."
+   }
+  },
+  {
+   "key": "63c56aa533f876670a7ac3cde0cdcd238de04bcd2fdcb66292a8095d7c7d72c0",
+   "input": {
+    "id": "wk-9642-s0",
+    "en": "complain",
+    "en_pos": "verb",
+    "en_sense": "To express feelings of pain, dissatisfaction, or resentment.",
+    "ja": "ぼやく",
+    "ja_reading": "ぼやく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to grumble",
+     "to complain"
+    ],
+    "vi": "phàn nàn"
+   },
+   "output": {
+    "id": "wk-9642-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word ぼやく is specific to informal grumbling/muttering and is narrower than the general English 'complain' and Vietnamese 'phàn nàn'."
+   }
+  }
+ ]
+}

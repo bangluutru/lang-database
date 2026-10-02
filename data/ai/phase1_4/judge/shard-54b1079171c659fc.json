@@ -1,0 +1,404 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:42:26Z",
+ "items": [
+  {
+   "key": "1a086f095f12d7b88f35e4a120ae3110d1790fd397931eccfc0b406fa29e7252",
+   "input": {
+    "id": "jm-1505290-0-literature",
+    "en": "literature",
+    "en_pos": "noun",
+    "en_sense": "literature",
+    "ja": "文芸",
+    "ja_reading": "ぶんげい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "literature"
+    ],
+    "vi": "văn học"
+   },
+   "output": {
+    "id": "jm-1505290-0-literature",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for 'literature'."
+   }
+  },
+  {
+   "key": "c2f264a3781f8142036986fd4ef4e9cc86067b9d2c79f56ca9ef0ba1a2985904",
+   "input": {
+    "id": "jm-1505470-0-writing",
+    "en": "writing",
+    "en_pos": "noun",
+    "en_sense": "writing; composition; essay; article; passage; prose",
+    "ja": "文章",
+    "ja_reading": "ぶんしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "writing",
+     "composition",
+     "essay",
+     "article",
+     "passage",
+     "prose"
+    ],
+    "vi": "văn bản"
+   },
+   "output": {
+    "id": "jm-1505470-0-writing",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'văn bản' means 'document' or 'official text' and is too narrow and formal for the general sense of 'writing' or 'composition'."
+   }
+  },
+  {
+   "key": "2baafc19c9d48497cc87d879ab2d9bf740b56bd3db043529b724b28c4bc24148",
+   "input": {
+    "id": "jm-1505990-0-however",
+    "en": "however",
+    "en_pos": "conjunction",
+    "en_sense": "however; but",
+    "ja": "しかし",
+    "ja_reading": "しかし",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "however",
+     "but"
+    ],
+    "vi": "tuy nhiên"
+   },
+   "output": {
+    "id": "jm-1505990-0-however",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for the concessive conjunction 'however'."
+   }
+  },
+  {
+   "key": "a66805214047fab448e0dd59f92f2c73cf88aba949ace48003c5a3c65e370de5",
+   "input": {
+    "id": "jm-1506000-0-however",
+    "en": "however",
+    "en_pos": "adverb",
+    "en_sense": "however; nevertheless",
+    "ja": "しかしながら",
+    "ja_reading": "しかしながら",
+    "ja_pos": "adv,conj",
+    "ja_glosses": [
+     "however",
+     "nevertheless"
+    ],
+    "vi": "tuy nhiên"
+   },
+   "output": {
+    "id": "jm-1506000-0-however",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese 'しかしながら' is more formal than 'however' or 'tuy nhiên' but is a correct equivalent in formal contexts."
+   }
+  },
+  {
+   "key": "b73422a8f3b88f5d69a7f677625e561eb328bfff5f95cd5c09a6ec629031e018",
+   "input": {
+    "id": "jm-1507720-0-weekday",
+    "en": "weekday",
+    "en_pos": "adverb",
+    "en_sense": "weekday; ordinary days (i.e. non-holiday)",
+    "ja": "平日",
+    "ja_reading": "へいじつ",
+    "ja_pos": "adv,n",
+    "ja_glosses": [
+     "weekday",
+     "ordinary days (i.e. non-holiday)"
+    ],
+    "vi": "ngày thường"
+   },
+   "output": {
+    "id": "jm-1507720-0-weekday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'weekday'."
+   }
+  },
+  {
+   "key": "bf67ebd51beaa67d3843acd3da690218d4a5f986e69aca490dd16ceb7975e3c4",
+   "input": {
+    "id": "jm-1507910-0-ordinary",
+    "en": "ordinary",
+    "en_pos": "adjective",
+    "en_sense": "ordinary; common; commonplace; mediocre; unremarkable; undistinguished",
+    "ja": "平凡",
+    "ja_reading": "へいぼん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "ordinary",
+     "common",
+     "commonplace",
+     "mediocre",
+     "unremarkable",
+     "undistinguished"
+    ],
+    "vi": "bình thường"
+   },
+   "output": {
+    "id": "jm-1507910-0-ordinary",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'bình thường' is more neutral ('normal') and lacks the negative connotation of 'mediocre' or 'unremarkable' present in the English sense and the Japanese '平凡'."
+   }
+  },
+  {
+   "key": "21b2b4969dbed2876aeab232e0149136893d08b8068332372930ced9e56f2431",
+   "input": {
+    "id": "jm-1508670-0-closure",
+    "en": "closure",
+    "en_pos": "noun",
+    "en_sense": "closing; closure",
+    "ja": "閉鎖",
+    "ja_reading": "へいさ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "closing",
+     "closure"
+    ],
+    "vi": "đóng cửa"
+   },
+   "output": {
+    "id": "jm-1508670-0-closure",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đóng cửa' is a verb phrase ('to close'), not a noun like the English 'closure' or Japanese '閉鎖'."
+   }
+  },
+  {
+   "key": "e343a2bbef7777e26b07235612341f0a236e714734199a713835d9b523a85e60",
+   "input": {
+    "id": "jm-1509430-0-distinction",
+    "en": "distinction",
+    "en_pos": "noun",
+    "en_sense": "distinction; difference; discrimination",
+    "ja": "別",
+    "ja_reading": "べつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "distinction",
+     "difference",
+     "discrimination"
+    ],
+    "vi": "khác biệt"
+   },
+   "output": {
+    "id": "jm-1509430-0-distinction",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'khác biệt' primarily means 'difference' and doesn't fully cover the senses of 'distinction' (act of distinguishing) or 'discrimination'."
+   }
+  },
+  {
+   "key": "22b195346e22448e77b38a9dc7b828c583624f74a56c2c5e36ee8adaa552b58d",
+   "input": {
+    "id": "jm-1509480-0-particularly",
+    "en": "particularly",
+    "en_pos": "adverb",
+    "en_sense": "(not) particularly; (not) especially; (not) specially",
+    "ja": "別に",
+    "ja_reading": "べつに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) particularly",
+     "(not) especially",
+     "(not) specially"
+    ],
+    "vi": "đặc biệt"
+   },
+   "output": {
+    "id": "jm-1509480-0-particularly",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '別に' is used in negative sentences to mean 'not particularly', while the Vietnamese 'đặc biệt' is used in positive sentences to mean 'particularly' or 'especially'."
+   }
+  },
+  {
+   "key": "89b5ff6482d388d6e0ec673eadb989e24cb089ffdd39d606ee983dcaa183bc54",
+   "input": {
+    "id": "jm-1510000-1-particularly",
+    "en": "particularly",
+    "en_pos": "adverb",
+    "en_sense": "(not) particularly; (not) especially",
+    "ja": "別段",
+    "ja_reading": "べつだん",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) particularly",
+     "(not) especially"
+    ],
+    "vi": "đặc biệt"
+   },
+   "output": {
+    "id": "jm-1510000-1-particularly",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '別段' is used in negative sentences to mean 'not particularly', while the Vietnamese 'đặc biệt' is used in positive sentences to mean 'particularly' or 'especially'."
+   }
+  },
+  {
+   "key": "bc7f3838dc902e676f792e2fc7e4b20ad6fd5ed9a74416b9d397e89dbfeccf47",
+   "input": {
+    "id": "jm-1511040-0-change",
+    "en": "change",
+    "en_pos": "noun",
+    "en_sense": "change; modification; alteration; revision; amendment",
+    "ja": "変更",
+    "ja_reading": "へんこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "change",
+     "modification",
+     "alteration",
+     "revision",
+     "amendment"
+    ],
+    "vi": "thay đổi"
+   },
+   "output": {
+    "id": "jm-1511040-0-change",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'change' in the sense of modification or alteration."
+   }
+  },
+  {
+   "key": "8c5488045ef9c47e7e45b785642029b98fcf226f2cda92af91f8b6f6689501ab",
+   "input": {
+    "id": "jm-1511260-0-change",
+    "en": "change",
+    "en_pos": "noun",
+    "en_sense": "change; transition; vicissitudes",
+    "ja": "変遷",
+    "ja_reading": "へんせん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "change",
+     "transition",
+     "vicissitudes"
+    ],
+    "vi": "biến đổi"
+   },
+   "output": {
+    "id": "jm-1511260-0-change",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly capture the specific sense of 'change' as a transition or transformation over time."
+   }
+  }
+ ]
+}

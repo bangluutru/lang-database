@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:42:43Z",
+ "items": [
+  {
+   "key": "a305362e832d5e9e51e14ef925f59eb3aaa9fcc1155dc14aca0253feb236481f",
+   "input": {
+    "id": "jm-1468950-0-age",
+    "en": "age",
+    "en_pos": "noun",
+    "en_sense": "age; era; period; date",
+    "ja": "年代",
+    "ja_reading": "ねんだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "age",
+     "era",
+     "period",
+     "date"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1468950-0-age",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "年代 is an excellent equivalent for the specified sense of 'age' as a historical period or era."
+   }
+  },
+  {
+   "key": "7fd420d6bdc3a082ed7c3abaa35e29c87a9307fb4b92369fddd512b34b69b6d5",
+   "input": {
+    "id": "jm-1469030-0-senior",
+    "en": "senior",
+    "en_pos": "adjective",
+    "en_sense": "senior; older",
+    "ja": "年長",
+    "ja_reading": "ねんちょう",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "senior",
+     "older"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1469030-0-senior",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "年長 correctly translates 'senior' in the sense of being older in age."
+   }
+  },
+  {
+   "key": "fb9a7f5e0565eebdbf6b30d603a7568ff0095f1e5ec266d5bac27a7697b58505",
+   "input": {
+    "id": "jm-1469320-0-sense",
+    "en": "sense",
+    "en_pos": "noun",
+    "en_sense": "sense; idea; thought; feeling",
+    "ja": "念",
+    "ja_reading": "ねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sense",
+     "idea",
+     "thought",
+     "feeling"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1469320-0-sense",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA"
+    ],
+    "note": "念 is a poor and misleading equivalent for 'sense'; it has a much more specific meaning related to a thought or feeling held in mind, and is not a general term for idea or sense."
+   }
+  },
+  {
+   "key": "d71d7a9b3bff0567d22f30024a67a54a8c72db7716e325ba092a33f0cb6459a3",
+   "input": {
+    "id": "jm-1469810-1-or",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "or",
+    "ja": "ないし",
+    "ja_reading": "ないし",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1469810-1-or",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "ないし is a formal and specific conjunction, often for ranges, and is not a general equivalent for the common English word 'or'."
+   }
+  },
+  {
+   "key": "75cf95510a3f57c14df7979ecd3ee776a9ff7f8d352ee979a4f39cf001a40a21",
+   "input": {
+    "id": "jm-1469850-0-trouble",
+    "en": "trouble",
+    "en_pos": "noun",
+    "en_sense": "trouble; troubles; worry; distress; sorrows; anguish",
+    "ja": "悩み",
+    "ja_reading": "なやみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trouble",
+     "troubles",
+     "worry",
+     "distress",
+     "sorrows",
+     "anguish"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1469850-0-trouble",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "悩み is a perfect match for the specified sense of 'trouble' as mental worry or anguish."
+   }
+  },
+  {
+   "key": "94743e49a30ad6763dbcf42c99c4d1866a188a467d205a5426476ab2d352309e",
+   "input": {
+    "id": "jm-1470080-0-consent",
+    "en": "consent",
+    "en_pos": "noun",
+    "en_sense": "consent; agreement; acceptance",
+    "ja": "納得",
+    "ja_reading": "なっとく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "consent",
+     "agreement",
+     "acceptance"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1470080-0-consent",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "納得 means understanding and acceptance ('being convinced'), not consent or permission. The correct word for consent is typically 同意."
+   }
+  },
+  {
+   "key": "4c0820a92395655ac9363885eba8444c8825c9296a2d85fcf5f4b691b95016e8",
+   "input": {
+    "id": "jm-1470090-1-supply",
+    "en": "supply",
+    "en_pos": "noun",
+    "en_sense": "supply (of goods); delivery",
+    "ja": "納入",
+    "ja_reading": "のうにゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "supply (of goods)",
+     "delivery"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1470090-1-supply",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "納入 is a precise and standard term for the supply and delivery of goods in a contractual context."
+   }
+  },
+  {
+   "key": "47bfc07cf3c3d6dc10bc62e2f6eb87877272a748e7b7ff03d880b798e0a3b864",
+   "input": {
+    "id": "jm-1470120-0-talent",
+    "en": "talent",
+    "en_pos": "noun",
+    "en_sense": "talent; gift; function",
+    "ja": "能",
+    "ja_reading": "のう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "talent",
+     "gift",
+     "function"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1470120-0-talent",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "能 is an archaic or literary term for talent; the standard modern Japanese word is 才能 (sainou)."
+   }
+  },
+  {
+   "key": "fcdab5fc42b0c08028049bcbba5e0c90fdd859eb7cfef0d98caa7802eef0b8fc",
+   "input": {
+    "id": "jm-1470330-0-efficiency",
+    "en": "efficiency",
+    "en_pos": "noun",
+    "en_sense": "efficiency",
+    "ja": "能率",
+    "ja_reading": "のうりつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "efficiency"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1470330-0-efficiency",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "能率 is a standard and accurate translation for 'efficiency,' especially concerning work or production."
+   }
+  },
+  {
+   "key": "62bf1b43fbf9c585390ccbf4b0fd17886c16f5c2ba122d1c151d80a723903863",
+   "input": {
+    "id": "jm-1470680-0-agriculture",
+    "en": "agriculture",
+    "en_pos": "noun",
+    "en_sense": "farming; agriculture; cultivation",
+    "ja": "農耕",
+    "ja_reading": "のうこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "farming",
+     "agriculture",
+     "cultivation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1470680-0-agriculture",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "農耕 is a valid translation for 'farming/cultivation' but is narrower than 'agriculture'; the more common equivalent for agriculture as a whole is 農業 (nougyou)."
+   }
+  },
+  {
+   "key": "11df22527759079b1babc9fa92f0230098ec015c720440c22de34e1e798f3bd5",
+   "input": {
+    "id": "jm-1471120-0-group",
+    "en": "group",
+    "en_pos": "noun",
+    "en_sense": "group; faction; clique; coterie",
+    "ja": "派",
+    "ja_reading": "は",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "group",
+     "faction",
+     "clique",
+     "coterie"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1471120-0-group",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "For the specific sense of 'group' as a faction or school of thought, 派 is the correct and natural Japanese equivalent."
+   }
+  },
+  {
+   "key": "bd2d06819223f0a20cbd07e7ccc0a72330914431598d3c7788e96407140a5dba",
+   "input": {
+    "id": "jm-1471130-0-dispatch",
+    "en": "dispatch",
+    "en_pos": "noun",
+    "en_sense": "dispatch; despatch; deployment",
+    "ja": "派遣",
+    "ja_reading": "はけん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "dispatch",
+     "despatch",
+     "deployment"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1471130-0-dispatch",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "派遣 is the standard and accurate term for the dispatch or deployment of personnel."
+   }
+  }
+ ]
+}

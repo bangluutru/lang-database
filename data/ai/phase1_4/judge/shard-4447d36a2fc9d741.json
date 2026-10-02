@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:14:30Z",
+ "items": [
+  {
+   "key": "10d1a4b60ff9afb9294c7751eb521869c5a01ee94a5f896d12f43cc58665ea2d",
+   "input": {
+    "id": "wk-7234-s4",
+    "en": "oak",
+    "en_pos": "noun",
+    "en_sense": "Any member of species of the genus Quercus, in family Fagaceae.",
+    "ja": "オーク",
+    "ja_reading": "オーク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "oak"
+    ],
+    "vi": "sồi"
+   },
+   "output": {
+    "id": "wk-7234-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'oak'."
+   }
+  },
+  {
+   "key": "237a2f5d6656c389fa01b9f83386f20b565c365f1a164609573e01ddbd6838f6",
+   "input": {
+    "id": "wk-724-s0",
+    "en": "close",
+    "en_pos": "adjective",
+    "en_sense": "At little distance; near in space or time.",
+    "ja": "近い",
+    "ja_reading": "ちかい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "close (in time)",
+     "soon"
+    ],
+    "vi": "gần"
+   },
+   "output": {
+    "id": "wk-724-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'close' in the sense of proximity in space or time."
+   }
+  },
+  {
+   "key": "daa444a883c39f0b3b22fc93913150a1fc9510ade7b2de171e3ed09049cd693d",
+   "input": {
+    "id": "wk-7243-e:83c4f1",
+    "en": "until",
+    "en_pos": "preposition",
+    "en_sense": "up to the time of",
+    "ja": "まで",
+    "ja_reading": "まで",
+    "ja_pos": "prt",
+    "ja_glosses": [
+     "until (a time)",
+     "till",
+     "to",
+     "up to"
+    ],
+    "vi": "đến"
+   },
+   "output": {
+    "id": "wk-7243-e:83c4f1",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "POS_MISMATCH"
+    ],
+    "note": "The Japanese and Vietnamese words also cover spatial endpoints ('to'), making them broader than the specified temporal sense of 'until'."
+   }
+  },
+  {
+   "key": "6b97a7e5091d337ee7972604fff7413a31c6b7fa2de847b6c6d2a468131200cb",
+   "input": {
+    "id": "wk-7247-s0",
+    "en": "email",
+    "en_pos": "noun",
+    "en_sense": "A system for sending messages and datas by means of a computer network, primarily the Internet, using the Simple Mail Transfer Protocol and the Internet Message Format.",
+    "ja": "電子メール",
+    "ja_reading": "でんしメール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "email",
+     "e-mail",
+     "electronic mail"
+    ],
+    "vi": "thư điện tử"
+   },
+   "output": {
+    "id": "wk-7247-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "These are the correct full/formal terms for 'email' as a system; shorter forms are more common in daily use but these are perfectly valid."
+   }
+  },
+  {
+   "key": "6147663a6aa486712acfaf86ccd7050ca068bcd4b57c3bff1083c6bb5d6c041d",
+   "input": {
+    "id": "wk-7247-s3",
+    "en": "email",
+    "en_pos": "noun",
+    "en_sense": "An email address.",
+    "ja": "メールアドレス",
+    "ja_reading": "メールアドレス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "email address"
+    ],
+    "vi": "địa chỉ điện thư"
+   },
+   "output": {
+    "id": "wk-7247-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'địa chỉ điện thư' is a very literal and unnatural-sounding translation; 'địa chỉ email' is the standard term."
+   }
+  },
+  {
+   "key": "583f4d071992f7884100e6ec50ee3a3532ea86d8ed0d44bc376c4b6b11e3a2c9",
+   "input": {
+    "id": "wk-7248-s0",
+    "en": "email",
+    "en_pos": "verb",
+    "en_sense": "To send an email or emails to.",
+    "ja": "メールする",
+    "ja_reading": "メールする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "email"
+    ],
+    "vi": "gửi điện thư"
+   },
+   "output": {
+    "id": "wk-7248-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'gửi điện thư' is unnatural; 'gửi email' is the common phrase. The term 'điện thư' is archaic or overly formal."
+   }
+  },
+  {
+   "key": "cd22bd944357abe252de6572aeef4068c1ebcadf1144f4d0ef5e93f220c01910",
+   "input": {
+    "id": "wk-7257-s0",
+    "en": "pornography",
+    "en_pos": "noun",
+    "en_sense": "The explicit literary or visual depiction of sexual subject matter; any display of material of an erotic nature.",
+    "ja": "ポルノ",
+    "ja_reading": "ポルノ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pornography",
+     "porn",
+     "porno"
+    ],
+    "vi": "khiêu dâm"
+   },
+   "output": {
+    "id": "wk-7257-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for pornography."
+   }
+  },
+  {
+   "key": "18ce2d7dc57db01090bbfcee45fec996b51ec9078b6cbc4ac4e4c61e493e8ef9",
+   "input": {
+    "id": "wk-7261-s0",
+    "en": "broom",
+    "en_pos": "noun",
+    "en_sense": "A domestic utensil with fibers bound together at the end of a long handle, used for sweeping.",
+    "ja": "ほうき",
+    "ja_reading": "ほうき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "broom"
+    ],
+    "vi": "chổi"
+   },
+   "output": {
+    "id": "wk-7261-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, basic vocabulary correspondence."
+   }
+  },
+  {
+   "key": "6937eb51b796206312acfea1023888853a8e5c449e7b9baae27242f6ad1d3aae",
+   "input": {
+    "id": "wk-7263-s1",
+    "en": "radical",
+    "en_pos": "noun",
+    "en_sense": "In logographic writing systems such as the Chinese writing system, the portion of a character (if any) that provides an indication of its meaning, as opposed to being wholly phonetic.",
+    "ja": "部首",
+    "ja_reading": "ぶしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "radical (of a kanji character)"
+    ],
+    "vi": "bộ thủ"
+   },
+   "output": {
+    "id": "wk-7263-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct technical terms for a character radical in their respective languages."
+   }
+  },
+  {
+   "key": "5fa16b52ae9f539e75834902423296413bf735a73912f5c4b6e6d66635bdf3b1",
+   "input": {
+    "id": "wk-7266-s0",
+    "en": "diet",
+    "en_pos": "noun",
+    "en_sense": "The food and beverage a person or animal consumes.",
+    "ja": "ダイエット",
+    "ja_reading": "ダイエット",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "diet",
+     "dieting"
+    ],
+    "vi": "chế độ ăn uống"
+   },
+   "output": {
+    "id": "wk-7266-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'ダイエット' is a false friend; it means 'dieting for weight loss', not the general sense of 'what one eats'."
+   }
+  },
+  {
+   "key": "d86e2ce3a8c4b713f4e8871a99a4d19a68c4e2c1f5ff755c473bf43ca3eca945",
+   "input": {
+    "id": "wk-727-s0",
+    "en": "know",
+    "en_pos": "verb",
+    "en_sense": "To perceive the truth or factuality of; to be certain of; to be certain that.",
+    "ja": "知る",
+    "ja_reading": "しる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to know",
+     "to be aware (of)",
+     "to be conscious (of)",
+     "to learn (of)",
+     "to find out",
+     "to discover"
+    ],
+    "vi": "biết"
+   },
+   "output": {
+    "id": "wk-727-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "These are the standard verbs for 'to know' (factual knowledge) in each language."
+   }
+  },
+  {
+   "key": "39bad69b8e9450087867ae234b801abd7982766d761f7288037b93e7683b6b2a",
+   "input": {
+    "id": "wk-7270-e:c3da2b",
+    "en": "ward",
+    "en_pos": "noun",
+    "en_sense": "administrative subdivision of cities",
+    "ja": "区",
+    "ja_reading": "く",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ward",
+     "borough",
+     "city (in Tokyo)"
+    ],
+    "vi": "phường"
+   },
+   "output": {
+    "id": "wk-7270-e:c3da2b",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct names for the administrative subdivision of a city known as a 'ward' in their respective systems."
+   }
+  }
+ ]
+}

@@ -1,0 +1,405 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:25Z",
+ "items": [
+  {
+   "key": "fd6438c7d89fa74a4e482733dfae4e8ccf10fba9d1dc9020654a70c56e18358c",
+   "input": {
+    "id": "wk-10193-s0",
+    "en": "cram",
+    "en_pos": "verb",
+    "en_sense": "To press, force, or drive, particularly in filling, or in thrusting one thing into another; to stuff; to fill to superfluity.",
+    "ja": "詰め込む",
+    "ja_reading": "つめこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to cram",
+     "to stuff",
+     "to jam",
+     "to squeeze",
+     "to pack",
+     "to crowd"
+    ],
+    "vi": "nhét"
+   },
+   "output": {
+    "id": "wk-10193-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for the physical act of stuffing or cramming."
+   }
+  },
+  {
+   "key": "5ca4195028f63c08c1902c64ea6ca758d2a813785141d6fff34c7cacb81c0f2b",
+   "input": {
+    "id": "wk-10206-s0",
+    "en": "crouch",
+    "en_pos": "verb",
+    "en_sense": "To bend down; to stoop low; to stand close to the ground with legs bent, like an animal when waiting for prey, or someone in fear.",
+    "ja": "うずくまる",
+    "ja_reading": "うずくまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to crouch",
+     "to squat",
+     "to cower"
+    ],
+    "vi": "cúi"
+   },
+   "output": {
+    "id": "wk-10206-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'cúi' means to bend or bow from the waist, not to crouch by bending one's legs; 'うずくまる' is a good Japanese equivalent."
+   }
+  },
+  {
+   "key": "17079afa862a2be60c2e313d8dfbd981200f5925f81f85915022b06f8f6d0874",
+   "input": {
+    "id": "wk-10237-s0",
+    "en": "despicable",
+    "en_pos": "adjective",
+    "en_sense": "Fit or deserving to be despised; contemptible; mean.",
+    "ja": "卑しい",
+    "ja_reading": "いやしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "vulgar",
+     "coarse",
+     "crude",
+     "mean",
+     "base",
+     "vile"
+    ],
+    "vi": "đáng khinh"
+   },
+   "output": {
+    "id": "wk-10237-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '卑しい' is broader, also meaning vulgar or greedy, while the English and Vietnamese terms specifically mean morally contemptible."
+   }
+  },
+  {
+   "key": "9e034cd29947462427cb9a1062fa1e3b8907e062e1e72bb5bdcf474f15bf062d",
+   "input": {
+    "id": "wk-10238-s0",
+    "en": "destination",
+    "en_pos": "noun",
+    "en_sense": "The place set for the end of a journey or to which something is sent; place or point aimed at.",
+    "ja": "目的地",
+    "ja_reading": "もくてきち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "destination (one is heading towards)",
+     "goal"
+    ],
+    "vi": "đích"
+   },
+   "output": {
+    "id": "wk-10238-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'destination'."
+   }
+  },
+  {
+   "key": "d06e2873644974350d3161f5014b2fac257c8fd13774a95adab394fa73b230e8",
+   "input": {
+    "id": "wk-10256-s0",
+    "en": "discount",
+    "en_pos": "noun",
+    "en_sense": "A reduction in price.",
+    "ja": "割引",
+    "ja_reading": "わりびき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "discount",
+     "reduction",
+     "rebate"
+    ],
+    "vi": "bớt giá"
+   },
+   "output": {
+    "id": "wk-10256-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bớt giá' is a verb phrase ('to reduce the price'), not a noun for 'a discount'; the correct noun is 'giảm giá'."
+   }
+  },
+  {
+   "key": "2b2ff86bdaec1addd97ec77efb95f610cc7b0cf7cd3994d825de123e7ddb265c",
+   "input": {
+    "id": "wk-1027-e:d3a40d",
+    "en": "this",
+    "en_pos": "determiner",
+    "en_sense": "the (thing) here",
+    "ja": "この",
+    "ja_reading": "この",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "this"
+    ],
+    "vi": "này"
+   },
+   "output": {
+    "id": "wk-1027-e:d3a40d",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard and correct determiners for 'this'."
+   }
+  },
+  {
+   "key": "0da16343cd26a4584d5eb58722326c1da374e8342bd7d3df7f4c8dc76eda7c40",
+   "input": {
+    "id": "wk-1028-s0",
+    "en": "this",
+    "en_pos": "pronoun",
+    "en_sense": "The thing, item, etc. being indicated.",
+    "ja": "これ",
+    "ja_reading": "これ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "this",
+     "this one"
+    ],
+    "vi": "đây"
+   },
+   "output": {
+    "id": "wk-1028-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard and correct pronouns for 'this'."
+   }
+  },
+  {
+   "key": "9232de0bf42ea1dbedf5472d21e5326d62d98da7435a8e75378e29428c3a5c52",
+   "input": {
+    "id": "wk-1029-s1",
+    "en": "regime",
+    "en_pos": "noun",
+    "en_sense": "A form of government, or the government in power, particularly an authoritarian or totalitarian one.",
+    "ja": "レジーム",
+    "ja_reading": "レジーム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "regime"
+    ],
+    "vi": "chế độ"
+   },
+   "output": {
+    "id": "wk-1029-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'レジーム' is a correct loanword in Japanese, and 'chế độ' is the standard Vietnamese equivalent, both matching the English sense and register."
+   }
+  },
+  {
+   "key": "fbccc55baa615c3a390f149a32bd5e0c68be859c20c169a92bfa5177993f4b26",
+   "input": {
+    "id": "wk-10296-s0",
+    "en": "elite",
+    "en_pos": "noun",
+    "en_sense": "A special group or social class of people who have a superior social or economic status and attendant power, advantages, or privileges in society; a member of such a group.",
+    "ja": "精鋭",
+    "ja_reading": "せいえい",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "elite",
+     "best",
+     "pick",
+     "cream of the crop"
+    ],
+    "vi": "giới tinh hoa"
+   },
+   "output": {
+    "id": "wk-10296-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '精鋭' refers to the 'best' in terms of skill (e.g., troops), not the social or economic elite, for which the loanword 'エリート' is used."
+   }
+  },
+  {
+   "key": "61110bbcbcf52c21373f1036da155f1d354d37339d12ccc2e6234b25ad807505",
+   "input": {
+    "id": "wk-10301-s0",
+    "en": "embed",
+    "en_pos": "verb",
+    "en_sense": "To lay (something) as in a bed; to lay in surrounding matter; to bed.",
+    "ja": "埋め込む",
+    "ja_reading": "うめこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to bury",
+     "to embed",
+     "to implant"
+    ],
+    "vi": "đóng"
+   },
+   "output": {
+    "id": "wk-10301-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đóng' is too general (meaning hit, close, nail) and doesn't capture the sense of 'embed' (to fix firmly in a surrounding mass) like the Japanese '埋め込む' does."
+   }
+  },
+  {
+   "key": "331691217c897255efa05737786b90495f0d766cb961e6705dfa9d46f67a95e6",
+   "input": {
+    "id": "wk-1031-s1",
+    "en": "fall",
+    "en_pos": "verb",
+    "en_sense": "To come down, to drop or descend.",
+    "ja": "降る",
+    "ja_reading": "ふる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to fall (of rain, snow, ash, etc.)",
+     "to come down"
+    ],
+    "vi": "xuống"
+   },
+   "output": {
+    "id": "wk-1031-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both '降る' (for precipitation) and 'xuống' (to descend) are too specific and do not cover the general meaning of 'fall'; the correct general equivalents are different words."
+   }
+  },
+  {
+   "key": "4431c0cac93c62b7f38dfbbd40a3ec41c8eae0180b07300026f0c87f632ed785",
+   "input": {
+    "id": "wk-10312-s0",
+    "en": "enthusiastic",
+    "en_pos": "adjective",
+    "en_sense": "With zealous fervor; excited, motivated.",
+    "ja": "熱心",
+    "ja_reading": "ねっしん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "zealous",
+     "enthusiastic",
+     "ardent",
+     "fervent",
+     "keen",
+     "eager"
+    ],
+    "vi": "nhiệt tình"
+   },
+   "output": {
+    "id": "wk-10312-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'enthusiastic'."
+   }
+  }
+ ]
+}

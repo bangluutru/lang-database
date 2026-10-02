@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:21:19Z",
+ "items": [
+  {
+   "key": "6075bbce821bd10866f105ad731046190cfb2bcbf17a4732e6b4466164cc9cdf",
+   "input": {
+    "id": "wk-15715-s3",
+    "en": "engagement",
+    "en_pos": "noun",
+    "en_sense": "The period of time when marriage is planned or promised.",
+    "ja": "婚約",
+    "ja_reading": "こんやく",
+    "ja_pos": "n,vs,vi,adj-no",
+    "ja_glosses": [
+     "engagement",
+     "betrothal"
+    ],
+    "vi": "hôn ước"
+   },
+   "output": {
+    "id": "wk-15715-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and align well in meaning, referring to the promise or period of engagement."
+   }
+  },
+  {
+   "key": "4618fd7c0f3989302f3dad9cc8ea06fe81d1dc123076254dd6ad6501b7f7e954",
+   "input": {
+    "id": "wk-16146-s1",
+    "en": "retirement",
+    "en_pos": "noun",
+    "en_sense": "The state of being retired; seclusion.",
+    "ja": "退職",
+    "ja_reading": "たいしょく",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "retirement",
+     "resignation"
+    ],
+    "vi": "nghỉ hưu"
+   },
+   "output": {
+    "id": "wk-16146-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 退職 means 'leaving a job' or 'resignation' in general, not specifically the state of retirement due to age, which is the intended English sense."
+   }
+  },
+  {
+   "key": "5d165c1d327c4d8ae61751e8bf4a1c1523c955f07a318e484c6ae6fcccab8cac",
+   "input": {
+    "id": "wk-16159-s0",
+    "en": "mischief",
+    "en_pos": "noun",
+    "en_sense": "Conduct that playfully causes petty annoyance.",
+    "ja": "いたずら",
+    "ja_reading": "いたずら",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "mischief",
+     "prank",
+     "trick",
+     "practical joke"
+    ],
+    "vi": "trò tinh nghịch"
+   },
+   "output": {
+    "id": "wk-16159-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly capture the sense of playful, petty annoyance or a prank."
+   }
+  },
+  {
+   "key": "6687f16ce6f50fd8518a086bc018a412a0f10f245998a4eb9be090b8673ac83e",
+   "input": {
+    "id": "wk-16203-s0",
+    "en": "blood transfusion",
+    "en_pos": "noun",
+    "en_sense": "The act or process of transferring blood products into a person's circulation intravenously; an instance of it.",
+    "ja": "輸血",
+    "ja_reading": "ゆけつ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "blood transfusion"
+    ],
+    "vi": "truyền máu"
+   },
+   "output": {
+    "id": "wk-16203-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard medical terms for blood transfusion."
+   }
+  },
+  {
+   "key": "6c37ed298213776f14b1256574686bc0d80a9426f7ede04b2a9c7904171531ac",
+   "input": {
+    "id": "wk-17171-e:acd383",
+    "en": "Lady",
+    "en_pos": "noun",
+    "en_sense": "aristocratic title for a woman",
+    "ja": "奥方",
+    "ja_reading": "おくがた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lady",
+     "nobleman's wife"
+    ],
+    "vi": "phu nhân"
+   },
+   "output": {
+    "id": "wk-17171-e:acd383",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese terms mean 'nobleman's wife', not the title 'Lady' which can also be held by an unmarried woman. The Japanese term 奥方 is also archaic."
+   }
+  },
+  {
+   "key": "39136670a4f7ffb2f3940c47238368fd70f683d777cc0fa4cbef2a350f613b5c",
+   "input": {
+    "id": "wk-17184-s0",
+    "en": "Mass",
+    "en_pos": "noun",
+    "en_sense": "The principal liturgical service of the Church, encompassing both a scripture service (Liturgy of the Word) and a eucharistic service (Liturgy of the Eucharist), which includes the consecration and oblation (offering) of the host and wine.",
+    "ja": "ミサ",
+    "ja_reading": "ミサ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(Catholic) Mass"
+    ],
+    "vi": "thánh lễ"
+   },
+   "output": {
+    "id": "wk-17184-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, correct words for the Catholic Mass in their respective languages."
+   }
+  },
+  {
+   "key": "45f9484220f6bbe25545a0e96aa6b482efd621e8b38c466cc3174202983bb1f7",
+   "input": {
+    "id": "wk-17200-s0",
+    "en": "Pole",
+    "en_pos": "noun",
+    "en_sense": "A person from Poland or of Polish descent.",
+    "ja": "ポーランド人",
+    "ja_reading": "ポーランドじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Polander",
+     "Pole",
+     "Polish"
+    ],
+    "vi": "người ba lan"
+   },
+   "output": {
+    "id": "wk-17200-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and literal way to say 'a person from Poland'."
+   }
+  },
+  {
+   "key": "6cbb5c4ad46f743f10a052b976760ccffbf50ecb1dcb562363774c032815600a",
+   "input": {
+    "id": "wk-17831-s0",
+    "en": "persecution",
+    "en_pos": "noun",
+    "en_sense": "The act of persecuting, especially a specific group of people; an instance of persecution.",
+    "ja": "迫害",
+    "ja_reading": "はくがい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "persecution",
+     "oppression"
+    ],
+    "vi": "sự khủng bố"
+   },
+   "output": {
+    "id": "wk-17831-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese term 'sự khủng bố' means 'terrorism', which is a different concept from 'persecution'."
+   }
+  },
+  {
+   "key": "5a283c242f9be9847aa99f8bcecc87759b588c77c48e99b13bbc4d9fc1c48b78",
+   "input": {
+    "id": "wk-17974-s0",
+    "en": "encore",
+    "en_pos": "noun",
+    "en_sense": "A brief extra performance, done after the main performance is complete.",
+    "ja": "アンコール",
+    "ja_reading": "アンコール",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "encore"
+    ],
+    "vi": "bài hát lại"
+   },
+   "output": {
+    "id": "wk-17974-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese term 'bài hát lại' is too narrow as it only refers to a song, whereas an encore can be any type of performance, and the loanword 'encore' is standard in Vietnamese."
+   }
+  },
+  {
+   "key": "883626eaaa4655a144dac58ce54cf48f63c6bd64438e0e619d22e3cc9b5c51a4",
+   "input": {
+    "id": "wk-1810-s1",
+    "en": "phrase",
+    "en_pos": "noun",
+    "en_sense": "A word or, more commonly, a group of words that functions as a single unit in the syntax of a sentence, always containing an expressed or implied head (the principal word or subgroup, with core importance) and often consisting of a head plus some other elaborating words.",
+    "ja": "句",
+    "ja_reading": "く",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "phrase"
+    ],
+    "vi": "cụm từ"
+   },
+   "output": {
+    "id": "wk-1810-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard linguistic terms for 'phrase' and match the definition perfectly."
+   }
+  },
+  {
+   "key": "17128eff88da5cdba8d73b282585ff5c81ad153439cc0af95b5bf8dec20ccff6",
+   "input": {
+    "id": "wk-18213-s0",
+    "en": "recommendation",
+    "en_pos": "noun",
+    "en_sense": "An act of recommending.",
+    "ja": "推薦",
+    "ja_reading": "すいせん",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "recommendation",
+     "referral",
+     "endorsement"
+    ],
+    "vi": "sự giới thiệu"
+   },
+   "output": {
+    "id": "wk-18213-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sự giới thiệu' is broader, often meaning 'introduction' without the inherent positive endorsement of 'recommendation' or '推薦'."
+   }
+  },
+  {
+   "key": "44029cb81db9a5419eac82a64832726e31d937051edaddfe2a990fb2f6c9aa60",
+   "input": {
+    "id": "wk-18569-s0",
+    "en": "disappointment",
+    "en_pos": "noun",
+    "en_sense": "The feeling or state of being disappointed: a feeling of sadness or frustration when something is not as good as one hoped or expected, or when something bad unexpectedly happens.",
+    "ja": "失望",
+    "ja_reading": "しつぼう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "disappointment",
+     "despair"
+    ],
+    "vi": "sự thất vọng"
+   },
+   "output": {
+    "id": "wk-18569-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the feeling of disappointment."
+   }
+  }
+ ]
+}

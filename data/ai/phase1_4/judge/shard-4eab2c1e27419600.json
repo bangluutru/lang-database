@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:07Z",
+ "items": [
+  {
+   "key": "b9c37eabe0bb53d48bf983e8b4546883f16aff130d132ccdf314f70d8e8e74fc",
+   "input": {
+    "id": "wk-27149-s1",
+    "en": "pinwheel",
+    "en_pos": "noun",
+    "en_sense": "A toy for children, comprising an artificial (usually plastic) stem and a flower that spins round in the wind like a tiny windmill.",
+    "ja": "風車",
+    "ja_reading": "かざぐるま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pinwheel (toy)",
+     "windmill (toy)"
+    ],
+    "vi": "chong chóng"
+   },
+   "output": {
+    "id": "wk-27149-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a pinwheel toy."
+   }
+  },
+  {
+   "key": "66cec7e0ccfe915273399bbae21954c1ddb2fed22e54fb661ed08cbcc5f160ae",
+   "input": {
+    "id": "wk-2716-s0",
+    "en": "cake",
+    "en_pos": "noun",
+    "en_sense": "A rich, sweet dessert food, typically made of flour, sugar, and eggs and baked in an oven, and often covered in icing.",
+    "ja": "ケーキ",
+    "ja_reading": "ケーキ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cake"
+    ],
+    "vi": "bánh"
+   },
+   "output": {
+    "id": "wk-2716-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'bánh' is a hypernym for many flour/starch-based foods and is too broad; 'bánh ngọt' or 'bánh gato' would be more accurate for the English sense of 'cake'."
+   }
+  },
+  {
+   "key": "309c335aa2d7c9611eb9fb24192d4eb960fe97a9bbc912234622726f227d7260",
+   "input": {
+    "id": "wk-27177-s0",
+    "en": "treetop",
+    "en_pos": "noun",
+    "en_sense": "The crown or uppermost branches of a tree.",
+    "ja": "梢",
+    "ja_reading": "こずえ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "treetop",
+     "tip of a branch"
+    ],
+    "vi": "ngọn"
+   },
+   "output": {
+    "id": "wk-27177-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'ngọn' is too general, meaning 'top' or 'tip'; the correct term for 'treetop' is 'ngọn cây'."
+   }
+  },
+  {
+   "key": "f1b94937d1fbab56c1363b52ebc7c87eaa5a56e1fe1e9937acde2049d6355847",
+   "input": {
+    "id": "wk-2718-s0",
+    "en": "care",
+    "en_pos": "verb",
+    "en_sense": "To be concerned (about), to have an interest (in); to feel concern (about).",
+    "ja": "構う",
+    "ja_reading": "かまう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to mind",
+     "to care about",
+     "to be concerned about",
+     "to have a regard for"
+    ],
+    "vi": "quan tâm"
+   },
+   "output": {
+    "id": "wk-2718-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '構う' is a narrow match, often used in the negative ('don't mind') and doesn't fully cover the general sense of 'to be concerned about'."
+   }
+  },
+  {
+   "key": "81cf2cb7eed670ae0b3f8664daae5e2260ce9aa07c5f5b369976d8ae3a37b64b",
+   "input": {
+    "id": "wk-2718-s3",
+    "en": "care",
+    "en_pos": "verb",
+    "en_sense": "(with for) To look after or look out for.",
+    "ja": "面倒を見る",
+    "ja_reading": "めんどうをみる",
+    "ja_pos": "exp,v1",
+    "ja_glosses": [
+     "to care for someone",
+     "to look after someone"
+    ],
+    "vi": "quan tâm"
+   },
+   "output": {
+    "id": "wk-2718-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'quan tâm' means 'to be concerned about', not 'to look after'; the correct term for 'care for' is 'chăm sóc'."
+   }
+  },
+  {
+   "key": "4c17297be5c05ceb5636ca0ba9f070aee5103f167673f082f6d4ad398c8631c9",
+   "input": {
+    "id": "wk-2719-e:118181",
+    "en": "clean",
+    "en_pos": "adjective",
+    "en_sense": "not dirty",
+    "ja": "清い",
+    "ja_reading": "きよい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "clean",
+     "clear"
+    ],
+    "vi": "sạch"
+   },
+   "output": {
+    "id": "wk-2719-e:118181",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '清い' carries a strong connotation of purity and is less common for general physical cleanliness than 'きれい'."
+   }
+  },
+  {
+   "key": "4c4e8286f5526ad89aa22f5dc65e9b910d292fd12fc39dcdef9379ccae343373",
+   "input": {
+    "id": "wk-27226-s0",
+    "en": "find fault",
+    "en_pos": "verb",
+    "en_sense": "To criticize something excessively.",
+    "ja": "咎める",
+    "ja_reading": "とがめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to blame",
+     "to reproach",
+     "to censure",
+     "to rebuke",
+     "to reprove",
+     "to find fault"
+    ],
+    "vi": "bắt bẻ"
+   },
+   "output": {
+    "id": "wk-27226-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are good equivalents for criticizing or finding fault."
+   }
+  },
+  {
+   "key": "319729a63909d65f23a6808768ab3b1044a5a07c80fe2105231db38c18a8cedd",
+   "input": {
+    "id": "wk-2725-e:efe0ad",
+    "en": "base",
+    "en_pos": "noun",
+    "en_sense": "8. chemical compound that will neutralize an acid",
+    "ja": "塩基",
+    "ja_reading": "えんき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "base"
+    ],
+    "vi": "bazơ"
+   },
+   "output": {
+    "id": "wk-2725-e:efe0ad",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard technical terms for a chemical base."
+   }
+  },
+  {
+   "key": "1fe087678e9f46cf4bffcd37178f3c97025a0a7699730881ae89494f4164b94e",
+   "input": {
+    "id": "wk-2725-s3",
+    "en": "base",
+    "en_pos": "noun",
+    "en_sense": "A site, structure, or both, usually durable and often permanent, for housing military personnel and materiel.",
+    "ja": "基地",
+    "ja_reading": "きち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "base (military, expedition, etc.)"
+    ],
+    "vi": "căn cứ"
+   },
+   "output": {
+    "id": "wk-2725-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a military base."
+   }
+  },
+  {
+   "key": "64c6e5c380a9f82b8e81e1ba07c9755f0a1f96fc7485fdb2ddf06d13e19ead2f",
+   "input": {
+    "id": "wk-27254-s1",
+    "en": "hard disk",
+    "en_pos": "noun",
+    "en_sense": "The unit itself, and all the disks within it.",
+    "ja": "ハードディスク",
+    "ja_reading": "ハードディスク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hard disk (drive)",
+     "hard drive"
+    ],
+    "vi": "ổ đĩa cứng"
+   },
+   "output": {
+    "id": "wk-27254-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard technical terms for a hard disk."
+   }
+  },
+  {
+   "key": "4c15233e3d1c80e2ed36ff8f8ae5113d121fd588a0a87edff947b8db5702d603",
+   "input": {
+    "id": "wk-27261-s0",
+    "en": "multipurpose",
+    "en_pos": "adjective",
+    "en_sense": "Designed or intended to fit more than one type of function or application; having multiple uses.",
+    "ja": "多目的",
+    "ja_reading": "たもくてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "multipurpose"
+    ],
+    "vi": "đa năng"
+   },
+   "output": {
+    "id": "wk-27261-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'multipurpose'."
+   }
+  },
+  {
+   "key": "1b23913bb15c1f9cacb4bf679ae9f4b55844b4ea5b144dc240f18648bffd0906",
+   "input": {
+    "id": "wk-2727-s0",
+    "en": "cover",
+    "en_pos": "noun",
+    "en_sense": "A lid.",
+    "ja": "蓋",
+    "ja_reading": "ふた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cover",
+     "lid",
+     "cap"
+    ],
+    "vi": "nắp"
+   },
+   "output": {
+    "id": "wk-2727-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a lid or cover on a container."
+   }
+  }
+ ]
+}

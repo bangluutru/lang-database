@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:50:48Z",
+ "items": [
+  {
+   "key": "9887d6e5f8353acd9dd18e6a57c8e9185a86e29b0d7af3ea260a3c7c4f84b442",
+   "input": {
+    "id": "wk-5599-e:257c4a",
+    "en": "nutrition",
+    "en_pos": "noun",
+    "en_sense": "nutrition",
+    "ja": "栄養",
+    "ja_reading": "えいよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nutrition",
+     "nourishment"
+    ],
+    "vi": "dinh dưỡng"
+   },
+   "output": {
+    "id": "wk-5599-e:257c4a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'nutrition'."
+   }
+  },
+  {
+   "key": "6a8a5234423b9f4cc8216ec8cb7aedfdd9ed3af85db922a0e774978f0d3a8ac8",
+   "input": {
+    "id": "wk-56-s0",
+    "en": "swap",
+    "en_pos": "noun",
+    "en_sense": "An exchange of two comparable things.",
+    "ja": "スワップ",
+    "ja_reading": "スワップ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "swap"
+    ],
+    "vi": "sự giao hoán"
+   },
+   "output": {
+    "id": "wk-56-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự giao hoán' means 'commutativity' (a mathematical property) and is not a translation of the general English sense of 'swap'."
+   }
+  },
+  {
+   "key": "326d35f13ae4d639b9b01df63fddf2d981a1fbd5f408e933d928e1870b74414e",
+   "input": {
+    "id": "wk-560-e:02770f",
+    "en": "new",
+    "en_pos": "adjective",
+    "en_sense": "recently made or created",
+    "ja": "新しい",
+    "ja_reading": "あたらしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "new",
+     "novel",
+     "fresh",
+     "recent",
+     "latest",
+     "up-to-date"
+    ],
+    "vi": "mới"
+   },
+   "output": {
+    "id": "wk-560-e:02770f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'new'."
+   }
+  },
+  {
+   "key": "460135b4efb2f7ca66e97ba5d74e3c1167bc90f52a405113beec740f7432faf5",
+   "input": {
+    "id": "wk-561-e:fa74bd",
+    "en": "gas",
+    "en_pos": "noun",
+    "en_sense": "(uncountable, chemistry) state of matter",
+    "ja": "ガス",
+    "ja_reading": "ガス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gas (state of matter)"
+    ],
+    "vi": "khí"
+   },
+   "output": {
+    "id": "wk-561-e:fa74bd",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word ガス is more commonly used for fuel gas; 気体 (kitai) is the more precise scientific term for 'gas' as a state of matter."
+   }
+  },
+  {
+   "key": "03175ba4583c566e7ddb1bcfb7f88c1b7d848d8a432ce3e8d02f72fecf517a1a",
+   "input": {
+    "id": "wk-5613-s0",
+    "en": "antenna",
+    "en_pos": "noun",
+    "en_sense": "An appendage used for sensing on the head of an insect, crab, or other animal.",
+    "ja": "触角",
+    "ja_reading": "しょっかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "feeler",
+     "antenna"
+    ],
+    "vi": "râu"
+   },
+   "output": {
+    "id": "wk-5613-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'râu' is broader, also meaning beard or whiskers, but it is the correct and natural term for an insect's antenna."
+   }
+  },
+  {
+   "key": "f389d9a113e2e435e3a3a310e46155e4a6ae6e8416324fd7d726c9d7dab356b8",
+   "input": {
+    "id": "wk-5614-s1",
+    "en": "appendix",
+    "en_pos": "noun",
+    "en_sense": "A text added to the end of a book or an article, containing additional information.",
+    "ja": "付録",
+    "ja_reading": "ふろく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "appendix",
+     "supplement",
+     "annex",
+     "extra (of a newspaper or magazine)"
+    ],
+    "vi": "phụ lục"
+   },
+   "output": {
+    "id": "wk-5614-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for a book's appendix."
+   }
+  },
+  {
+   "key": "02f7f4675bb28d49e66d85111540a059b2d35f8da618b63eec6e120511205fcc",
+   "input": {
+    "id": "wk-5615-s3",
+    "en": "trunk",
+    "en_pos": "noun",
+    "en_sense": "A large suitcase, chest, or similar receptacle for carrying or storing personal possessions, usually with a hinged, often domed lid, and handles at each end, so that generally it takes two persons to carry a full trunk.",
+    "ja": "トランク",
+    "ja_reading": "トランク",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trunk (of a car)",
+     "boot"
+    ],
+    "vi": "hành lý"
+   },
+   "output": {
+    "id": "wk-5615-s3",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese glosses refer to a car's trunk, not a suitcase, and the Vietnamese word 'hành lý' means 'luggage' in general, not a specific trunk."
+   }
+  },
+  {
+   "key": "d6d3f09d79bb9300b11f735312c0ccfb3c88ad39cc2f07a8fe5019b034eb2db9",
+   "input": {
+    "id": "wk-5616-s0",
+    "en": "bacterium",
+    "en_pos": "noun",
+    "en_sense": "A single-celled organism with cell walls but no nucleus or organelles.",
+    "ja": "細菌",
+    "ja_reading": "さいきん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bacterium",
+     "bacteria",
+     "germ"
+    ],
+    "vi": "vi khuẩn"
+   },
+   "output": {
+    "id": "wk-5616-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'bacterium'."
+   }
+  },
+  {
+   "key": "b3b80af4c98bf4840067ab5cb600c492bf7cb4b72d6b2cdfd2654de2f5dbf91b",
+   "input": {
+    "id": "wk-5618-e:b4f8b7",
+    "en": "corpus",
+    "en_pos": "noun",
+    "en_sense": "linguistics: collection of writings",
+    "ja": "コーパス",
+    "ja_reading": "コーパス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "corpus",
+     "corpora"
+    ],
+    "vi": "ngữ liệu"
+   },
+   "output": {
+    "id": "wk-5618-e:b4f8b7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard technical equivalents for a linguistic 'corpus'."
+   }
+  },
+  {
+   "key": "523c1e67b3f3cfd2d80d8cc0877438ef90ece32a8a3bb598e9df4c004f384845",
+   "input": {
+    "id": "wk-5621-s0",
+    "en": "method",
+    "en_pos": "noun",
+    "en_sense": "A process by which a task is completed; a way of doing something (followed by the adposition of, to or for before the purpose of the process).",
+    "ja": "方法",
+    "ja_reading": "ほうほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "method",
+     "way",
+     "manner",
+     "process",
+     "procedure",
+     "means"
+    ],
+    "vi": "phương pháp"
+   },
+   "output": {
+    "id": "wk-5621-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, direct equivalents for 'method', with the Japanese and Vietnamese being cognates."
+   }
+  },
+  {
+   "key": "ecb71049c12bd303fac7b4f738a4a9d0f2321a7bce71e2de310503657cb87e83",
+   "input": {
+    "id": "wk-5624-s0",
+    "en": "label",
+    "en_pos": "noun",
+    "en_sense": "A small ticket or sign giving information about something to which it is attached or intended to be attached.",
+    "ja": "荷札",
+    "ja_reading": "にふだ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "label",
+     "tag"
+    ],
+    "vi": "nhãn"
+   },
+   "output": {
+    "id": "wk-5624-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word '荷札' (nifuda) specifically means a luggage tag or shipping label, which is too narrow for the general sense of 'label'."
+   }
+  },
+  {
+   "key": "1d4a2126cb8633a9559be910316ce3dd94ebaccd4bb535559d680179b1d41ae3",
+   "input": {
+    "id": "wk-5625-s0",
+    "en": "buyer",
+    "en_pos": "noun",
+    "en_sense": "A person who makes one or more purchases.",
+    "ja": "買い手",
+    "ja_reading": "かいて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "buyer"
+    ],
+    "vi": "người mua"
+   },
+   "output": {
+    "id": "wk-5625-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'buyer'."
+   }
+  }
+ ]
+}

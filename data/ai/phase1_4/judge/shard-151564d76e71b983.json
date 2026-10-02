@@ -1,0 +1,402 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:48:43Z",
+ "items": [
+  {
+   "key": "355fde9142b45f3f65f69d586842a62cb121282e6f4a8290548cebfe67074d73",
+   "input": {
+    "id": "jm-1543240-0-arrangement",
+    "en": "arrangement",
+    "en_pos": "noun",
+    "en_sense": "plans; arrangement; schedule; program; programme; expectation",
+    "ja": "予定",
+    "ja_reading": "よてい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "plans",
+     "arrangement",
+     "schedule",
+     "program",
+     "programme",
+     "expectation"
+    ],
+    "vi": "kế hoạch"
+   },
+   "output": {
+    "id": "jm-1543240-0-arrangement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and align well in the sense of 'plan' or 'schedule'."
+   }
+  },
+  {
+   "key": "974d426e50ff29357e6a2bce93f70f67d1c69ce1f71e2936aec881c9039af61b",
+   "input": {
+    "id": "jm-1543910-0-remain",
+    "en": "remain",
+    "en_pos": "verb",
+    "en_sense": "to remain; to be left over; to be in excess; to be too many",
+    "ja": "余る",
+    "ja_reading": "あまる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to remain",
+     "to be left over",
+     "to be in excess",
+     "to be too many"
+    ],
+    "vi": "còn lại"
+   },
+   "output": {
+    "id": "jm-1543910-0-remain",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three expressions align well for the sense of 'to be left over', especially with an implication of surplus."
+   }
+  },
+  {
+   "key": "e6fb620deca12256686b78c1a49db69bdc7505e028acf5b201f35c8a52d5fa7c",
+   "input": {
+    "id": "jm-1544040-0-entertainment",
+    "en": "entertainment",
+    "en_pos": "noun",
+    "en_sense": "performance (at a party or banquet, etc.); side show; entertainment",
+    "ja": "余興",
+    "ja_reading": "よきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "performance (at a party or banquet, etc.)",
+     "side show",
+     "entertainment"
+    ],
+    "vi": "tiết mục"
+   },
+   "output": {
+    "id": "jm-1544040-0-entertainment",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tiết mục' refers to a single performance item, which is narrower than the overall concept of 'entertainment' or 'side show' at an event."
+   }
+  },
+  {
+   "key": "0c57a638c08e185e8aad54f07a498bc12294ec30cf67de4318a55a160e728554",
+   "input": {
+    "id": "jm-1544090-0-extra",
+    "en": "extra",
+    "en_pos": "adjective",
+    "en_sense": "extra; more; too much; too many; excessive; superfluous",
+    "ja": "余計",
+    "ja_reading": "よけい",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "extra",
+     "more",
+     "too much",
+     "too many",
+     "excessive",
+     "superfluous"
+    ],
+    "vi": "thừa"
+   },
+   "output": {
+    "id": "jm-1544090-0-extra",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly convey the sense of being excessive or superfluous."
+   }
+  },
+  {
+   "key": "7f025cc462418a72e9f38b518b43fae28bc03f807045799db514df0fd2736204",
+   "input": {
+    "id": "jm-1544380-0-space",
+    "en": "space",
+    "en_pos": "noun",
+    "en_sense": "space; room; unused land",
+    "ja": "余地",
+    "ja_reading": "よち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "space",
+     "room",
+     "unused land"
+    ],
+    "vi": "chỗ trống"
+   },
+   "output": {
+    "id": "jm-1544380-0-space",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chỗ trống' only covers the physical sense of 'empty space' and misses the figurative 'room for...' sense present in both English and Japanese."
+   }
+  },
+  {
+   "key": "c2e958766320c458b87155966f2042b3dd00a1a8bdfb79f6c0cce23593153d56",
+   "input": {
+    "id": "jm-1544520-0-extra",
+    "en": "extra",
+    "en_pos": "adjective",
+    "en_sense": "extra; excess; surplus",
+    "ja": "余分",
+    "ja_reading": "よぶん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "extra",
+     "excess",
+     "surplus"
+    ],
+    "vi": "dư thừa"
+   },
+   "output": {
+    "id": "jm-1544520-0-extra",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly for the meaning of 'extra, excess, surplus'."
+   }
+  },
+  {
+   "key": "052a40b26983f40bf704abdee3d799cef47e20267672454c5f0637b14165413c",
+   "input": {
+    "id": "jm-1545110-0-little",
+    "en": "little",
+    "en_pos": "adjective",
+    "en_sense": "very young; little",
+    "ja": "幼い",
+    "ja_reading": "おさない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "very young",
+     "little"
+    ],
+    "vi": "non nớt"
+   },
+   "output": {
+    "id": "jm-1545110-0-little",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'non nớt' is too specific, emphasizing immaturity and fragility, whereas 'little' in this sense just means 'very young'."
+   }
+  },
+  {
+   "key": "759a096bc0cb019aca171b2b34ff7d960468c05c2b144c1eeea9a1ef3faee86c",
+   "input": {
+    "id": "jm-1545600-0-shake",
+    "en": "shake",
+    "en_pos": "verb",
+    "en_sense": "to shake; to jolt; to rock; to swing; to sway",
+    "ja": "揺さぶる",
+    "ja_reading": "ゆさぶる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to shake",
+     "to jolt",
+     "to rock",
+     "to swing",
+     "to sway"
+    ],
+    "vi": "rung lắc"
+   },
+   "output": {
+    "id": "jm-1545600-0-shake",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are good equivalents for the action of shaking something."
+   }
+  },
+  {
+   "key": "b8b0be6c2e6ad925f603f5b6cb2381b4ca2c446be6d68208a2652cd9c35f6820",
+   "input": {
+    "id": "jm-1545790-2-state",
+    "en": "state",
+    "en_pos": "noun",
+    "en_sense": "state; situation; appearance; manner",
+    "ja": "様",
+    "ja_reading": "さま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "state",
+     "situation",
+     "appearance",
+     "manner"
+    ],
+    "vi": "tình hình"
+   },
+   "output": {
+    "id": "jm-1545790-2-state",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'tình hình' only translates 'state' as in 'situation' and does not cover the 'appearance' or 'manner' aspects present in the English and Japanese terms."
+   }
+  },
+  {
+   "key": "06fe2131571845e412710fdcf8596207b55ad4ad37e87032877fd36ee926977b",
+   "input": {
+    "id": "jm-1545830-0-style",
+    "en": "style",
+    "en_pos": "noun",
+    "en_sense": "style; form; pattern",
+    "ja": "様式",
+    "ja_reading": "ようしき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "style",
+     "form",
+     "pattern"
+    ],
+    "vi": "kiểu dáng"
+   },
+   "output": {
+    "id": "jm-1545830-0-style",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms align well for the sense of style related to form, pattern, and design."
+   }
+  },
+  {
+   "key": "cd2c1d0053efbd609520f1b61f65a9fb46bdc6bf63f0dcac77ae21c5c0cd3bd1",
+   "input": {
+    "id": "jm-1546050-0-mix",
+    "en": "mix",
+    "en_pos": "verb",
+    "en_sense": "to mix (e.g. water with flour); to dissolve (salt in water, paint, etc.); to mix in",
+    "ja": "溶く",
+    "ja_reading": "とく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to mix (e.g. water with flour)",
+     "to dissolve (salt in water, paint, etc.)",
+     "to mix in"
+    ],
+    "vi": "hòa"
+   },
+   "output": {
+    "id": "jm-1546050-0-mix",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs accurately describe the specific action of mixing a solid or powder into a liquid."
+   }
+  },
+  {
+   "key": "8c72665e18232169db853e60bace86b9047697aa5f81b7f2aadefa22c9584298",
+   "input": {
+    "id": "jm-1546090-1-integrate",
+    "en": "integrate",
+    "en_pos": "verb",
+    "en_sense": "to blend into (surroundings); to fit in; to adapt to; to integrate",
+    "ja": "溶け込む",
+    "ja_reading": "とけこむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to blend into (surroundings)",
+     "to fit in",
+     "to adapt to",
+     "to integrate"
+    ],
+    "vi": "hòa nhập"
+   },
+   "output": {
+    "id": "jm-1546090-1-integrate",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect idiomatic equivalents for the concept of integrating or blending into a group or environment."
+   }
+  }
+ ]
+}

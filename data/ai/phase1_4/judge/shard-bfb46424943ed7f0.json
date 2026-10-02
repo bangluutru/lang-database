@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:55:53Z",
+ "items": [
+  {
+   "key": "55572e578d43fc4aa0c908aaec5c9bbe671e2a6799ac8d1316c313c33cbee3f0",
+   "input": {
+    "id": "wk-6860-s1",
+    "en": "holiday",
+    "en_pos": "noun",
+    "en_sense": "A day declared free from work by the state or government.",
+    "ja": "休日",
+    "ja_reading": "きゅうじつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "holiday",
+     "day off"
+    ],
+    "vi": "nghỉ lễ"
+   },
+   "output": {
+    "id": "wk-6860-s1",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 休日 is too broad as it includes any day off, not just a public holiday defined by the state. 祝日 would be a better match. Vietnamese nghỉ lễ is correct."
+   }
+  },
+  {
+   "key": "12704b11042d57945eb5e00a531e16c03e7356a8dafa693498a9f8ed494e99a4",
+   "input": {
+    "id": "wk-6874-s0",
+    "en": "cliff",
+    "en_pos": "noun",
+    "en_sense": "A vertical (or nearly vertical) rock face.",
+    "ja": "崖",
+    "ja_reading": "がけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cliff",
+     "precipice"
+    ],
+    "vi": "vách đá"
+   },
+   "output": {
+    "id": "wk-6874-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for this sense."
+   }
+  },
+  {
+   "key": "8adc9c65cbcbb19308bf5444b4c52c05d1b4f2417db95aa45e0c07788d2c14d0",
+   "input": {
+    "id": "wk-688-s2",
+    "en": "drink",
+    "en_pos": "verb",
+    "en_sense": "To consume alcoholic beverages.",
+    "ja": "飲む",
+    "ja_reading": "のむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to drink",
+     "to swallow",
+     "to take (medicine)"
+    ],
+    "vi": "nhậu"
+   },
+   "output": {
+    "id": "wk-688-s2",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "Japanese 飲む is too broad, meaning 'to drink' any liquid. Vietnamese nhậu is a good colloquial equivalent for social drinking, but is more specific and informal than the English."
+   }
+  },
+  {
+   "key": "8e11194f52fb82731ade190d63ea53a5416ea180c07cb66544cb64aaf47d9b40",
+   "input": {
+    "id": "wk-6880-s0",
+    "en": "roe",
+    "en_pos": "noun",
+    "en_sense": "Eggs of fish.",
+    "ja": "卵",
+    "ja_reading": "たまご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "eggs",
+     "egg",
+     "spawn",
+     "roe"
+    ],
+    "vi": "trứng cá"
+   },
+   "output": {
+    "id": "wk-6880-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 卵 means 'egg' in general and is too broad; 魚卵 (gyoran) or 魚の卵 (sakana no tamago) would be the correct equivalent for 'roe'. Vietnamese trứng cá is a perfect match."
+   }
+  },
+  {
+   "key": "4bdc8664701d6fa021ac031b89b8bfe63b2bc1d0c89ba289c2ff26b04c8a4c98",
+   "input": {
+    "id": "wk-6883-e:5176e7",
+    "en": "passive",
+    "en_pos": "adjective",
+    "en_sense": "not active, but acted upon",
+    "ja": "受動的",
+    "ja_reading": "じゅどうてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "passive"
+    ],
+    "vi": "bị động"
+   },
+   "output": {
+    "id": "wk-6883-e:5176e7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents."
+   }
+  },
+  {
+   "key": "69e293b5155d379d0e9e0b3c8dcba40a64c2183ec8e6226deacc4b883adfaee5",
+   "input": {
+    "id": "wk-689-s0",
+    "en": "drink",
+    "en_pos": "noun",
+    "en_sense": "A beverage.",
+    "ja": "飲み物",
+    "ja_reading": "のみもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "drink",
+     "beverage"
+    ],
+    "vi": "ly"
+   },
+   "output": {
+    "id": "wk-689-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'ly' means 'glass' or 'cup', the container, not the beverage itself. The correct term is 'đồ uống'."
+   }
+  },
+  {
+   "key": "d82782cb03a00a3808c445f07db10aa1e77e9e397f48d145c0543c300b353868",
+   "input": {
+    "id": "wk-689-s6",
+    "en": "drink",
+    "en_pos": "noun",
+    "en_sense": "A standard drink.",
+    "ja": "飲料",
+    "ja_reading": "いんりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beverage",
+     "drink"
+    ],
+    "vi": "đồ uống"
+   },
+   "output": {
+    "id": "wk-689-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good set of translations for 'beverage'. Japanese 飲料 is slightly more formal than English 'drink' or Vietnamese 'đồ uống', but it's a common and correct equivalent."
+   }
+  },
+  {
+   "key": "6dc84e4068f878dc9640ac0aa5a9e35638b571369de7b634a82ed071ef469d25",
+   "input": {
+    "id": "wk-6896-s4",
+    "en": "hat",
+    "en_pos": "noun",
+    "en_sense": "A hat switch.",
+    "ja": "帽子",
+    "ja_reading": "ぼうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hat",
+     "cap"
+    ],
+    "vi": "mũ"
+   },
+   "output": {
+    "id": "wk-6896-s4",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese words mean 'wearable hat', not the specified technical sense of 'hat switch' on a game controller."
+   }
+  },
+  {
+   "key": "8b497970c0794e94d7543167dd581ab382c39328f5d47e8268c403b65c0de374",
+   "input": {
+    "id": "wk-6897-s0",
+    "en": "sad",
+    "en_pos": "adjective",
+    "en_sense": "Feeling sorrow; sorrowful, mournful.",
+    "ja": "悲しい",
+    "ja_reading": "かなしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "sad",
+     "miserable",
+     "unhappy",
+     "sorrowful"
+    ],
+    "vi": "buồn"
+   },
+   "output": {
+    "id": "wk-6897-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, most common equivalents for 'sad'."
+   }
+  },
+  {
+   "key": "08218d0b7a8f88730469942d57b2842e32e1c31ca152ada8f47fd60176fc9dfc",
+   "input": {
+    "id": "wk-690-s1",
+    "en": "cow",
+    "en_pos": "noun",
+    "en_sense": "Any member of the species Bos taurus that is not of a bucking breed or fighting breed, regardless of sex or age, including steers and calves.",
+    "ja": "牛",
+    "ja_reading": "うし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cattle (Bos taurus)",
+     "cow",
+     "bull",
+     "ox",
+     "calf"
+    ],
+    "vi": "bò"
+   },
+   "output": {
+    "id": "wk-690-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English sense is for 'cattle' (Bos taurus), and both the Japanese and Vietnamese words are perfect equivalents for this species-level term."
+   }
+  },
+  {
+   "key": "ae59770aff85bbc3e45135daf7a63489ff80ef50ba2a8c0d11fb8f155363bd7b",
+   "input": {
+    "id": "wk-6902-s0",
+    "en": "dangerous",
+    "en_pos": "adjective",
+    "en_sense": "Full of danger.",
+    "ja": "危ない",
+    "ja_reading": "あぶない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "dangerous",
+     "risky",
+     "hazardous",
+     "perilous",
+     "precarious"
+    ],
+    "vi": "nguy hiểm"
+   },
+   "output": {
+    "id": "wk-6902-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, common equivalents for 'dangerous'."
+   }
+  },
+  {
+   "key": "7f5344d6dcd5ca6a6d726fd391730d1db8d076dbe01952995558e61c94c97844",
+   "input": {
+    "id": "wk-6919-s0",
+    "en": "pedestrian",
+    "en_pos": "noun",
+    "en_sense": "A walker; one who walks or goes on foot, especially as opposed to one who uses a vehicle.",
+    "ja": "歩行者",
+    "ja_reading": "ほこうしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pedestrian",
+     "walker"
+    ],
+    "vi": "bằng chân"
+   },
+   "output": {
+    "id": "wk-6919-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'bằng chân' means 'by foot' and is an adverbial phrase, not a noun for 'pedestrian'. The correct noun is 'người đi bộ'."
+   }
+  }
+ ]
+}

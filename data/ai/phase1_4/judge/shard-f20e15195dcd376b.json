@@ -1,0 +1,404 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:38:09Z",
+ "items": [
+  {
+   "key": "24bf9fcacd94ae7611bb2c1a334a97637af6e6ff3238d45872b4a40c033ed78f",
+   "input": {
+    "id": "jm-1384860-0-break",
+    "en": "break",
+    "en_pos": "verb",
+    "en_sense": "to break; to snap; to be cut; to split; to crack",
+    "ja": "切れる",
+    "ja_reading": "きれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to break",
+     "to snap",
+     "to be cut",
+     "to split",
+     "to crack"
+    ],
+    "vi": "đứt"
+   },
+   "output": {
+    "id": "jm-1384860-0-break",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence between all three languages for the specific sense of a linear object snapping or breaking."
+   }
+  },
+  {
+   "key": "1ccccb80437faaf56e3bfe9ae81979cc4bb1af7952f478e0564036e55b7e1521",
+   "input": {
+    "id": "jm-1385070-0-stamp",
+    "en": "stamp",
+    "en_pos": "noun",
+    "en_sense": "stamp (postage)",
+    "ja": "切手",
+    "ja_reading": "きって",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stamp (postage)"
+    ],
+    "vi": "tem"
+   },
+   "output": {
+    "id": "jm-1385070-0-stamp",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, unambiguous words for 'postage stamp'."
+   }
+  },
+  {
+   "key": "0fc4001cc8be5667027bb7e2a01e7303b8b2a81ca15bd72d9c6d6c7c2fa9df21",
+   "input": {
+    "id": "jm-1385900-1-return",
+    "en": "return",
+    "en_pos": "verb",
+    "en_sense": "to turn back; to double back; to return",
+    "ja": "折り返す",
+    "ja_reading": "おりかえす",
+    "ja_pos": "v5s,vi",
+    "ja_glosses": [
+     "to turn back",
+     "to double back",
+     "to return"
+    ],
+    "vi": "quay lại"
+   },
+   "output": {
+    "id": "jm-1385900-1-return",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well for the specific sense of turning back along a path."
+   }
+  },
+  {
+   "key": "60b942a3a9be5880903aaf3d631a38f4b7fb9b211e81bfb157a77f6197909675",
+   "input": {
+    "id": "jm-1385960-0-compromise",
+    "en": "compromise",
+    "en_pos": "noun",
+    "en_sense": "compromise; cross; blending; eclecticism",
+    "ja": "折衷",
+    "ja_reading": "せっちゅう",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "compromise",
+     "cross",
+     "blending",
+     "eclecticism"
+    ],
+    "vi": "dung hòa"
+   },
+   "output": {
+    "id": "jm-1385960-0-compromise",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'dung hòa' is a verb ('to harmonize'), while the English and Japanese entries are nouns. 'Sự dung hòa' would be the correct noun form."
+   }
+  },
+  {
+   "key": "692d36660382dbad71e40f63d549ceb0b25c3ffd0e9d9ca1373792ae251959ab",
+   "input": {
+    "id": "jm-1386000-0-prepare",
+    "en": "prepare",
+    "en_pos": "verb",
+    "en_sense": "to prepare; to provide",
+    "ja": "設ける",
+    "ja_reading": "もうける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to prepare",
+     "to provide"
+    ],
+    "vi": "chuẩn bị"
+   },
+   "output": {
+    "id": "jm-1386000-0-prepare",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese word '設ける' has a more specific meaning of 'to set up, establish, provide' than the general English 'prepare' or Vietnamese 'chuẩn bị'."
+   }
+  },
+  {
+   "key": "3249f5adaa4dfe4b460bf79a98dba9547df480d5437a5f3ec5f9bcb0e859dd65",
+   "input": {
+    "id": "jm-1386060-0-establishment",
+    "en": "establishment",
+    "en_pos": "noun",
+    "en_sense": "establishment; creation; posing (a problem); setting (movie, novel, etc.); scene",
+    "ja": "設定",
+    "ja_reading": "せってい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "establishment",
+     "creation",
+     "posing (a problem)",
+     "setting (movie, novel, etc.)",
+     "scene"
+    ],
+    "vi": "thiết lập"
+   },
+   "output": {
+    "id": "jm-1386060-0-establishment",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'thiết lập' is a verb, not a noun, and it doesn't cover the important sense of 'setting' (for a story, device, etc.) that '設定' does."
+   }
+  },
+  {
+   "key": "053a039e06e657156c1209c9224358ca21a0043ff1e6840cf1ac0b150bf4347d",
+   "input": {
+    "id": "jm-1386370-0-theory",
+    "en": "theory",
+    "en_pos": "noun",
+    "en_sense": "theory; doctrine",
+    "ja": "説",
+    "ja_reading": "せつ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "theory",
+     "doctrine"
+    ],
+    "vi": "lý thuyết"
+   },
+   "output": {
+    "id": "jm-1386370-0-theory",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good correspondence, although Japanese also has 理論 (riron) which is a closer match to Vietnamese 'lý thuyết' in some scientific contexts."
+   }
+  },
+  {
+   "key": "8609840b5cf26d37f236ed69a4cc0d154ec5fa4e326f6456b06febb9c6f3121e",
+   "input": {
+    "id": "jm-1389020-1-pick",
+    "en": "pick",
+    "en_pos": "verb",
+    "en_sense": "to pick (e.g. fruit); to pluck; to tear off",
+    "ja": "ちぎる",
+    "ja_reading": "ちぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to pick (e.g. fruit)",
+     "to pluck",
+     "to tear off"
+    ],
+    "vi": "hái"
+   },
+   "output": {
+    "id": "jm-1389020-1-pick",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese verb 'ちぎる' means 'to tear/shred', not 'to pick fruit'. The correct Japanese verb for picking fruit would be 'もぐ' or '採る'."
+   }
+  },
+  {
+   "key": "2f549a0aba3436a1379746205ed1054ba940cbe5b4fd3538e46e37d39fec280d",
+   "input": {
+    "id": "jm-1390660-1-ability",
+    "en": "ability",
+    "en_pos": "noun",
+    "en_sense": "ability (to compete); capabilities; valuable asset",
+    "ja": "戦力",
+    "ja_reading": "せんりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ability (to compete)",
+     "capabilities",
+     "valuable asset"
+    ],
+    "vi": "năng lực"
+   },
+   "output": {
+    "id": "jm-1390660-1-ability",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '戦力' refers specifically to competitive or military strength, while the Vietnamese 'năng lực' is a general term for 'ability' or 'capacity'."
+   }
+  },
+  {
+   "key": "3d11d618bc89e6b410a89175c1fe20bb4b0f6ff374eddbc4dbdf52b113b98e12",
+   "input": {
+    "id": "jm-1392240-0-selection",
+    "en": "selection",
+    "en_pos": "noun",
+    "en_sense": "selection; choice; screening",
+    "ja": "選考",
+    "ja_reading": "せんこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "selection",
+     "choice",
+     "screening"
+    ],
+    "vi": "tuyển chọn"
+   },
+   "output": {
+    "id": "jm-1392240-0-selection",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'tuyển chọn' is a verb ('to select/recruit'), not a noun. The correct noun form would be 'sự tuyển chọn'."
+   }
+  },
+  {
+   "key": "148aede45dc340c265e199ed5d4541727943d4b36dd28c1e02b17478697da8f9",
+   "input": {
+    "id": "jm-1393750-0-future",
+    "en": "future",
+    "en_pos": "noun",
+    "en_sense": "future; prospects; outlook",
+    "ja": "前途",
+    "ja_reading": "ぜんと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "future",
+     "prospects",
+     "outlook"
+    ],
+    "vi": "tương lai"
+   },
+   "output": {
+    "id": "jm-1393750-0-future",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '前途' is more specific and formal ('prospects, road ahead') than the general Vietnamese 'tương lai' (future). A better match for '前途' would be 'tiền đồ'."
+   }
+  },
+  {
+   "key": "5c67f6c7e300263057fea973b4197182b1deba362e3c4e70fd49b5480b84dff8",
+   "input": {
+    "id": "jm-1394770-1-complete",
+    "en": "complete",
+    "en_pos": "noun",
+    "en_sense": "complete (set); in total",
+    "ja": "全",
+    "ja_reading": "ぜん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complete (set)",
+     "in total"
+    ],
+    "vi": "toàn bộ"
+   },
+   "output": {
+    "id": "jm-1394770-1-complete",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence in meaning for 'all, whole, entire'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:21Z",
+ "items": [
+  {
+   "key": "c3718afbc858eda32553afe9578311465d3847ec25cd5d02010d862af3ee467c",
+   "input": {
+    "id": "wk-10475-s1",
+    "en": "housewife",
+    "en_pos": "noun",
+    "en_sense": "The wife of a householder; the mistress of a family; the female head of a household.",
+    "ja": "主婦",
+    "ja_reading": "しゅふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "housewife",
+     "mistress (of the house)",
+     "homemaker"
+    ],
+    "vi": "bà nội trợ"
+   },
+   "output": {
+    "id": "wk-10475-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for 'housewife'."
+   }
+  },
+  {
+   "key": "9cad51ded814cba4c9e6f1fda11c9d96fc7a1d7ff996ff2691fbbdc9edf2c4e9",
+   "input": {
+    "id": "wk-10477-s0",
+    "en": "howl",
+    "en_pos": "verb",
+    "en_sense": "To utter a loud, protracted, mournful sound or cry, as dogs and wolves often do.",
+    "ja": "吠える",
+    "ja_reading": "ほえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to howl (of the wind)",
+     "to roar (of the sea)"
+    ],
+    "vi": "hú"
+   },
+   "output": {
+    "id": "wk-10477-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 吠える is broader, often meaning 'to bark', and the provided glosses (wind, sea) do not match the animal-specific English sense."
+   }
+  },
+  {
+   "key": "616e209011031b12c7dcda9423136faefd04ad1bd06711594b383be5cf55fb3f",
+   "input": {
+    "id": "wk-10484-s0",
+    "en": "imagination",
+    "en_pos": "noun",
+    "en_sense": "The image-making power of the mind; the act of mentally creating or reproducing an object not previously perceived; the ability to create such images.",
+    "ja": "想像力",
+    "ja_reading": "そうぞうりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(power of) imagination"
+    ],
+    "vi": "sự hình dung"
+   },
+   "output": {
+    "id": "wk-10484-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sự hình dung' means 'visualization' or 'the act of imagining', which is narrower than 'imagination' as a general faculty ('trí tưởng tượng')."
+   }
+  },
+  {
+   "key": "c3c11286e828976c8469ad051f3856dee1eb40eda5cd0edf4647eff8a9b18f68",
+   "input": {
+    "id": "wk-10486-s0",
+    "en": "immigration",
+    "en_pos": "noun",
+    "en_sense": "The act of immigrating; the passing or coming into a country of which one is not native born for the purpose of permanent residence.",
+    "ja": "イミグレーション",
+    "ja_reading": "イミグレーション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "immigration"
+    ],
+    "vi": "sự nhập cư"
+   },
+   "output": {
+    "id": "wk-10486-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and correct equivalents for 'immigration'."
+   }
+  },
+  {
+   "key": "63b0f072ac318646a019cb557f560de6fe1e02ae6cd63328747bfd5aaab8d46f",
+   "input": {
+    "id": "wk-105-s1",
+    "en": "abbreviation",
+    "en_pos": "noun",
+    "en_sense": "A shortened or contracted form of a word or phrase used to represent the whole, using omission of letters, and sometimes substitution of letters, or duplication of initial letters to signify plurality, including signs such as +, =, @.",
+    "ja": "略",
+    "ja_reading": "りゃく",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "abbreviation",
+     "omission"
+    ],
+    "vi": "viết tắt"
+   },
+   "output": {
+    "id": "wk-105-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'viết tắt' is a verb phrase ('to abbreviate'), not a noun ('abbreviation')."
+   }
+  },
+  {
+   "key": "4ef0f849a897714a98f34703f51ed6b9562bd0b904066e2b9ee236df6cd1a16e",
+   "input": {
+    "id": "wk-10507-s1",
+    "en": "inflammation",
+    "en_pos": "noun",
+    "en_sense": "The state of being inflamed.",
+    "ja": "炎症",
+    "ja_reading": "えんしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inflammation",
+     "irritation"
+    ],
+    "vi": "viêm"
+   },
+   "output": {
+    "id": "wk-10507-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct medical equivalents for 'inflammation'."
+   }
+  },
+  {
+   "key": "6129f1d146f28df6e9df1256daf9d6776cd685a40173b6c2260fb2158fbba879",
+   "input": {
+    "id": "wk-1051-s0",
+    "en": "picture",
+    "en_pos": "noun",
+    "en_sense": "A representation of anything (as a person, a landscape, a building) upon canvas, paper, or other surface, by drawing, painting, printing, photography, etc.",
+    "ja": "絵",
+    "ja_reading": "え",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "picture",
+     "drawing",
+     "painting",
+     "sketch"
+    ],
+    "vi": "hình ảnh"
+   },
+   "output": {
+    "id": "wk-1051-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 絵 (e) refers to drawings or paintings and does not typically include photographs, making it narrower than the English sense."
+   }
+  },
+  {
+   "key": "860ae628d5b572e6f77195943033760639e5615ee2aedad3525a33b02ba9b8aa",
+   "input": {
+    "id": "wk-10523-e:6afc1f",
+    "en": "court",
+    "en_pos": "noun",
+    "en_sense": "enclosed space; a courtyard",
+    "ja": "中庭",
+    "ja_reading": "なかにわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "courtyard",
+     "quadrangle",
+     "middle court"
+    ],
+    "vi": "sân"
+   },
+   "output": {
+    "id": "wk-10523-e:6afc1f",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 中庭 means 'courtyard', which is a specific type of 'court' (enclosed space) and thus narrower than the English sense."
+   }
+  },
+  {
+   "key": "fdf3470d9532193caf94813eeadedd7980ce89caf2e6f951e722bb10da681678",
+   "input": {
+    "id": "wk-10523-e:709a9f",
+    "en": "court",
+    "en_pos": "noun",
+    "en_sense": "place for playing the game of tennis and some other ball games",
+    "ja": "コート",
+    "ja_reading": "コート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "court (e.g. tennis, basketball, volleyball)"
+    ],
+    "vi": "sân"
+   },
+   "output": {
+    "id": "wk-10523-e:709a9f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a sports court."
+   }
+  },
+  {
+   "key": "55bbdc14c2ae9682ca7c67dcd71072344bdaaa2fa4da41d63cb4bca245852a2b",
+   "input": {
+    "id": "wk-10523-s8",
+    "en": "court",
+    "en_pos": "noun",
+    "en_sense": "The hall, chamber, or place, where justice is administered.",
+    "ja": "裁判所",
+    "ja_reading": "さいばんしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "court",
+     "courthouse"
+    ],
+    "vi": "tòa án"
+   },
+   "output": {
+    "id": "wk-10523-s8",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for a court of law as a physical place."
+   }
+  },
+  {
+   "key": "3a1a70965262227a8430b26d570f746169fadea7d57282bcf91b93c78ea4c9f3",
+   "input": {
+    "id": "wk-10523-s9",
+    "en": "court",
+    "en_pos": "noun",
+    "en_sense": "The persons officially assembled under authority of law, at the appropriate time and place, for the administration of justice; an official assembly, legally met together for the transaction of judicial business; a judge or judges sitting for the hearing or trial of cases.",
+    "ja": "法廷",
+    "ja_reading": "ほうてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "court (of law)",
+     "courtroom"
+    ],
+    "vi": "tòa án"
+   },
+   "output": {
+    "id": "wk-10523-s9",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the court as the judicial body or the session where justice is administered."
+   }
+  },
+  {
+   "key": "e0bc33c0591e86bef6ee23d989b2734d59c6098a94cb1903c2c8cb8fc134114c",
+   "input": {
+    "id": "wk-10525-s0",
+    "en": "innovation",
+    "en_pos": "noun",
+    "en_sense": "The act of innovating; the introduction of something new, in customs, rites, etc.",
+    "ja": "イノベーション",
+    "ja_reading": "イノベーション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "innovation"
+    ],
+    "vi": "sáng tạo"
+   },
+   "output": {
+    "id": "wk-10525-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'sáng tạo' means 'creativity' or 'creation', not 'innovation', which is 'sự đổi mới'."
+   }
+  }
+ ]
+}

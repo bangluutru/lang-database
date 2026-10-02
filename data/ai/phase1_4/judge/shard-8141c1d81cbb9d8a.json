@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:27:19Z",
+ "items": [
+  {
+   "key": "b31ba7d4ff1011e9d69f4c6846dde7e910aecf6d6123a977a2e90f9434d7cbd4",
+   "input": {
+    "id": "jm-1220540-0-period",
+    "en": "period",
+    "en_pos": "noun",
+    "en_sense": "period; time",
+    "ja": "期",
+    "ja_reading": "き",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "period",
+     "time"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1220540-0-period",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese word 期 is correct but often used in compounds; a word like 期間 might be a more general equivalent for 'period'."
+   }
+  },
+  {
+   "key": "ade91dbeb9b60f76d2568b322ce9db9ad24e69fddded770721371009993c9650",
+   "input": {
+    "id": "jm-1220560-0-term",
+    "en": "term",
+    "en_pos": "noun",
+    "en_sense": "term; period; time frame",
+    "ja": "期限",
+    "ja_reading": "きげん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "term",
+     "period",
+     "time frame"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1220560-0-term",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "期限 specifically means a time limit or deadline, not a general term or period."
+   }
+  },
+  {
+   "key": "2cd89014425296f52529c78553cee9c790607e208e6e6fedcb8c9c9b421c9023",
+   "input": {
+    "id": "jm-1220610-1-deadline",
+    "en": "deadline",
+    "en_pos": "noun",
+    "en_sense": "deadline; due date",
+    "ja": "期日",
+    "ja_reading": "きじつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "deadline",
+     "due date"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1220610-1-deadline",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "期日 is a perfect equivalent for 'deadline' or 'due date', especially in formal or official contexts."
+   }
+  },
+  {
+   "key": "34931fcfc64922ac12122e49ddd8b366613a4c359da83ab726bd4647932563a9",
+   "input": {
+    "id": "jm-1220930-0-humour",
+    "en": "humour",
+    "en_pos": "noun",
+    "en_sense": "humour; humor; temper; mood; spirits",
+    "ja": "機嫌",
+    "ja_reading": "きげん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "humour",
+     "humor",
+     "temper",
+     "mood",
+     "spirits"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1220930-0-humour",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "ARCHAIC_OR_RARE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "This is a classic false friend; 機嫌 means 'mood' or 'temper', not 'humour' in the modern sense of being amusing."
+   }
+  },
+  {
+   "key": "6803a364e2815cf492a00d0a53a457d9bbc60cec2c4aeffb6ddfc102270a3d5d",
+   "input": {
+    "id": "jm-1221250-0-return",
+    "en": "return",
+    "en_pos": "noun",
+    "en_sense": "return; coming back",
+    "ja": "帰り",
+    "ja_reading": "かえり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "return",
+     "coming back"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1221250-0-return",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "帰り is a perfect and common equivalent for the noun 'return' in the sense of 'coming back'."
+   }
+  },
+  {
+   "key": "f476cf97809cb9143fc1b08610f13a384a91eeb41a85f7be8fc777b47b27586f",
+   "input": {
+    "id": "jm-1221740-0-like",
+    "en": "like",
+    "en_pos": "verb",
+    "en_sense": "to like; to be pleased with; to be delighted with; to take a liking to; to suit one's fancy",
+    "ja": "気に入る",
+    "ja_reading": "きにいる",
+    "ja_pos": "exp,v5r",
+    "ja_glosses": [
+     "to like",
+     "to be pleased with",
+     "to be delighted with",
+     "to take a liking to",
+     "to suit one's fancy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1221740-0-like",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "気に入る is a very common and natural way to express 'to come to like' or 'to be pleased with' something."
+   }
+  },
+  {
+   "key": "ac85a5151f770ced4ad553bda2d9ade41e1f7834a3414ca6018274733d63b954",
+   "input": {
+    "id": "jm-1221770-0-pitiful",
+    "en": "pitiful",
+    "en_pos": "adjective",
+    "en_sense": "pitiful; unfortunate; poor; miserable; wretched",
+    "ja": "気の毒",
+    "ja_reading": "きのどく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "pitiful",
+     "unfortunate",
+     "poor",
+     "miserable",
+     "wretched"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1221770-0-pitiful",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "気の毒 is a perfect match for 'pitiful' or 'unfortunate' when expressing sympathy for someone's plight."
+   }
+  },
+  {
+   "key": "a04d49d6ed76570b87cc21bb67123ebf28d59199aa9d3d3255a4bd8a35d31a14",
+   "input": {
+    "id": "jm-1222120-0-constraint",
+    "en": "constraint",
+    "en_pos": "noun",
+    "en_sense": "constraint; reserve; feeling hesitant; being afraid of troubling someone",
+    "ja": "気兼ね",
+    "ja_reading": "きがね",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "constraint",
+     "reserve",
+     "feeling hesitant",
+     "being afraid of troubling someone"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222120-0-constraint",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "気兼ね refers specifically to social hesitation or reserve, which is only a very narrow and non-primary sense of the English word 'constraint'."
+   }
+  },
+  {
+   "key": "37f0b2bb1fa4381fcdb5736e3946b6302dff7b1e42023fd9ead7e2a349311031",
+   "input": {
+    "id": "jm-1222270-0-weather",
+    "en": "weather",
+    "en_pos": "noun",
+    "en_sense": "weather (conditions)",
+    "ja": "気象",
+    "ja_reading": "きしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "weather (conditions)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222270-0-weather",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "気象 is a technical/formal term for 'weather conditions' or 'meteorology'; the common word for 'weather' is 天気 (tenki)."
+   }
+  },
+  {
+   "key": "131d69d96786da25bb88a57cc64401b23134d9cde879bff1e42ee50bbbf6c877",
+   "input": {
+    "id": "jm-1222510-0-indication",
+    "en": "indication",
+    "en_pos": "noun",
+    "en_sense": "indication; sign; hint; sensation; feeling",
+    "ja": "気配",
+    "ja_reading": "けはい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "indication",
+     "sign",
+     "hint",
+     "sensation",
+     "feeling"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222510-0-indication",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "気配 is an excellent equivalent for a subtle 'indication', 'sign', or 'feeling' of something's presence."
+   }
+  },
+  {
+   "key": "8d2445d9d2ab2d7422f86627ea044ed37a41a8a91527b5441a7cdf5a9907f48c",
+   "input": {
+    "id": "jm-1222580-0-character",
+    "en": "character",
+    "en_pos": "noun",
+    "en_sense": "character; traits; ethos",
+    "ja": "気風",
+    "ja_reading": "きふう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "character",
+     "traits",
+     "ethos"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222580-0-character",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "気風 refers specifically to the collective character or spirit of a group or place (ethos), not an individual's character."
+   }
+  },
+  {
+   "key": "b266ecc569950d767df1bf4e55d50d8abf0e6d618f9cbcb62f6ccca057ed54a4",
+   "input": {
+    "id": "jm-1222640-0-sensation",
+    "en": "sensation",
+    "en_pos": "noun",
+    "en_sense": "sensation; feeling",
+    "ja": "気味",
+    "ja_reading": "きみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sensation",
+     "feeling"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1222640-0-sensation",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "気味 is almost exclusively used as a suffix (-gimi) meaning 'a touch of' or 'feeling slightly'; it is not a good standalone equivalent for 'sensation'."
+   }
+  }
+ ]
+}

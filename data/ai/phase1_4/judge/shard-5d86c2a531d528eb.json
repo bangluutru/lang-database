@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:49:51Z",
+ "items": [
+  {
+   "key": "0785075dd53b721ff5021a2e22371322c720c2ef0cdd010de91c9493d1a39766",
+   "input": {
+    "id": "wk-5216-s13",
+    "en": "horn",
+    "en_pos": "noun",
+    "en_sense": "A loud alarm, especially one on a motor vehicle.",
+    "ja": "警笛",
+    "ja_reading": "けいてき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "horn",
+     "alarm",
+     "whistle",
+     "foghorn"
+    ],
+    "vi": "râu"
+   },
+   "output": {
+    "id": "wk-5216-s13",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'râu' means 'beard' or 'mustache', not a vehicle's horn."
+   }
+  },
+  {
+   "key": "be7b7e97388b3f303dfac0f52550b8832344bb0e3b2ba1e92115c79778abca75",
+   "input": {
+    "id": "wk-5219-s0",
+    "en": "something",
+    "en_pos": "pronoun",
+    "en_sense": "An uncertain or unspecified thing; one thing.",
+    "ja": "何か",
+    "ja_reading": "なにか",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "something",
+     "some",
+     "any"
+    ],
+    "vi": "gì"
+   },
+   "output": {
+    "id": "wk-5219-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'gì' is more 'what' or 'anything'; 'something' is better translated as 'cái gì đó'."
+   }
+  },
+  {
+   "key": "16dd6b95936b54374218e9eefae4470563d0519384e2d060b6e41eb4a24b96f8",
+   "input": {
+    "id": "wk-5221-s0",
+    "en": "weak",
+    "en_pos": "adjective",
+    "en_sense": "Lacking in force (usually strength) or ability.",
+    "ja": "弱い",
+    "ja_reading": "よわい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "weak",
+     "frail",
+     "delicate",
+     "tender",
+     "unskilled",
+     "weak (wine)"
+    ],
+    "vi": "yếu"
+   },
+   "output": {
+    "id": "wk-5221-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'weak'."
+   }
+  },
+  {
+   "key": "c039827462489c89e9d2c057f324f4ba5251da9794176a59f661559180f35496",
+   "input": {
+    "id": "wk-523-s0",
+    "en": "radio",
+    "en_pos": "noun",
+    "en_sense": "The technology that allows for the transmission of sound or other signals by modulation of electromagnetic waves.",
+    "ja": "ラジオ",
+    "ja_reading": "ラジオ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "radio"
+    ],
+    "vi": "vô tuyến điện"
+   },
+   "output": {
+    "id": "wk-523-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "Japanese 'ラジオ' usually means the device, while the sense is the technology, for which '無線' would be a better fit."
+   }
+  },
+  {
+   "key": "83291f5d524c376ac8100545958d560b8bd092341aaca836d1a4158baa0eab1b",
+   "input": {
+    "id": "wk-523-s2",
+    "en": "radio",
+    "en_pos": "noun",
+    "en_sense": "Any audio playing device, such as the on-board entertainment system in a car, usually including a radio receiver as well as the capability to play audio from recorded media; see also car radio.",
+    "ja": "無線",
+    "ja_reading": "むせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "radio (communication)"
+    ],
+    "vi": "ra đi ô"
+   },
+   "output": {
+    "id": "wk-523-s2",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '無線' means radio technology/communication, not the radio device itself, which is 'ラジオ'."
+   }
+  },
+  {
+   "key": "99a124567755c8f2a66a17ad737e55b0b95a1c2f13be757bb2034f485c6711d1",
+   "input": {
+    "id": "wk-5230-e:cf7d9e",
+    "en": "leopard",
+    "en_pos": "noun",
+    "en_sense": "a large wild cat with a spotted coat, Panthera pardus",
+    "ja": "ひょう",
+    "ja_reading": "ひょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "leopard (Panthera pardus)"
+    ],
+    "vi": "báo"
+   },
+   "output": {
+    "id": "wk-5230-e:cf7d9e",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'báo' is a general term for spotted big cats and is broader than the specific 'leopard'."
+   }
+  },
+  {
+   "key": "0eb2e0d7600c057ece323f3e491b3771649d303b7d415ca645f660a07c07b488",
+   "input": {
+    "id": "wk-5231-e:1f862c",
+    "en": "lion",
+    "en_pos": "noun",
+    "en_sense": "big cat Panthera leo",
+    "ja": "ライオン",
+    "ja_reading": "ライオン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lion (Panthera leo)"
+    ],
+    "vi": "sư tử"
+   },
+   "output": {
+    "id": "wk-5231-e:1f862c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'lion'."
+   }
+  },
+  {
+   "key": "6b3125e35894256f400d91d4dc1b3a33ae8c5d6d047c52a292947648d67476c5",
+   "input": {
+    "id": "wk-5236-s0",
+    "en": "water buffalo",
+    "en_pos": "noun",
+    "en_sense": "A large ungulate, widely used as a domestic animal in Asia, South America. North Africa and Europe: Bubalus bubalis.",
+    "ja": "水牛",
+    "ja_reading": "すいぎゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "water buffalo (Bubalus bubalis)",
+     "domestic Asian water buffalo"
+    ],
+    "vi": "trâu"
+   },
+   "output": {
+    "id": "wk-5236-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'water buffalo'."
+   }
+  },
+  {
+   "key": "3cc25284f8d083d51ec7deeeb15cfc71dabd470c410950a6583e326d53a27e3d",
+   "input": {
+    "id": "wk-5249-s0",
+    "en": "cobra",
+    "en_pos": "noun",
+    "en_sense": "Any of the genus Naja of venomous snakes that can spread their neck ribs into a broad hood when threatened; a true cobra.",
+    "ja": "コブラ",
+    "ja_reading": "コブラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cobra"
+    ],
+    "vi": "hổ mang"
+   },
+   "output": {
+    "id": "wk-5249-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'cobra'."
+   }
+  },
+  {
+   "key": "c16f61496019f3e071cc6a734f93c287c9521bad911ab2dfcbf6f0049de283d1",
+   "input": {
+    "id": "wk-5250-s0",
+    "en": "liar",
+    "en_pos": "noun",
+    "en_sense": "Someone who tells a lie; especially, a person who frequently lies.",
+    "ja": "嘘つき",
+    "ja_reading": "うそつき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "liar",
+     "fibber"
+    ],
+    "vi": "kẻ nói dối"
+   },
+   "output": {
+    "id": "wk-5250-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, natural equivalents for 'liar'."
+   }
+  },
+  {
+   "key": "8df327d9340ce457566adc5eef54611ae770ac477b87aafc4713532daa4964a0",
+   "input": {
+    "id": "wk-5254-s0",
+    "en": "toxic",
+    "en_pos": "adjective",
+    "en_sense": "Having a chemical nature that is harmful to health or lethal if consumed or otherwise entering into the body in sufficient quantities.",
+    "ja": "毒性",
+    "ja_reading": "どくせい",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "toxic",
+     "virulent",
+     "poisonous"
+    ],
+    "vi": "độc"
+   },
+   "output": {
+    "id": "wk-5254-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'toxic' in its chemical sense."
+   }
+  },
+  {
+   "key": "8ec8c88967e73d578cdcd6b65b831d8026c795e1ed2f8281f919cb206531822c",
+   "input": {
+    "id": "wk-5257-s1",
+    "en": "ape",
+    "en_pos": "noun",
+    "en_sense": "A Hominoidea primate other than a human.",
+    "ja": "さる",
+    "ja_reading": "さる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "monkey (esp. the Japanese macaque, Macaca fuscata)",
+     "ape",
+     "non-human primate"
+    ],
+    "vi": "vượn"
+   },
+   "output": {
+    "id": "wk-5257-s1",
+    "en_ja": "BROAD",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese 'さる' means monkey (too broad), and the Vietnamese 'vượn' means gibbon (too narrow); neither is a correct general translation for 'ape'."
+   }
+  }
+ ]
+}

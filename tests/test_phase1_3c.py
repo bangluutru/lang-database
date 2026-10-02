@@ -257,6 +257,8 @@ def test_6_polysemy_disambiguation_integrity():
     with open(expressions_file, "r", encoding="utf-8") as f:
         for line in f:
             e = json.loads(line)
+            if e["concept_id"].startswith("concept-lex-"):
+                continue  # Phase 1.4 adds further, separate senses; this test pins the 1.3C benchmark set
             if e["language"] == "en":
                 lemma = e["lemma"]
                 if lemma == "right":

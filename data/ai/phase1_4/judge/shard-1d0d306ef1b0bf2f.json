@@ -1,0 +1,409 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:35:27Z",
+ "items": [
+  {
+   "key": "54d0a07ac411356c645548a6d1ca76a07e2b53f6f45fe09f47524f1ef47ff65d",
+   "input": {
+    "id": "jm-1324210-0-pour",
+    "en": "pour",
+    "en_pos": "verb",
+    "en_sense": "to pour (sake); to serve; to drink (together)",
+    "ja": "酌む",
+    "ja_reading": "くむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to pour (sake)",
+     "to serve",
+     "to drink (together)"
+    ],
+    "vi": "rót"
+   },
+   "output": {
+    "id": "jm-1324210-0-pour",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'rót' is a general term for 'to pour', lacking the specific social context of pouring/drinking alcohol together implied by English 'pour' (in this sense) and Japanese '酌む'."
+   }
+  },
+  {
+   "key": "33aac7cf585cc4c3d6d87cd4495bde488eb4830e07b72735b0706b6a082cdd49",
+   "input": {
+    "id": "jm-1324320-0-or",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "or; otherwise",
+    "ja": "もしくは",
+    "ja_reading": "もしくは",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or",
+     "otherwise"
+    ],
+    "vi": "hoặc"
+   },
+   "output": {
+    "id": "jm-1324320-0-or",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "All three terms are good equivalents for 'or', although the Japanese 'もしくは' is slightly more formal than the typical English 'or' or Vietnamese 'hoặc'."
+   }
+  },
+  {
+   "key": "ecd8d338f32a4100295cd7a110bc4759c7cb22a91aa2b22c6037801765d9bdab",
+   "input": {
+    "id": "jm-1324330-0-some",
+    "en": "some",
+    "en_pos": "adjective",
+    "en_sense": "some; few; a number of; a little (bit)",
+    "ja": "若干",
+    "ja_reading": "じゃっかん",
+    "ja_pos": "adj-no",
+    "ja_glosses": [
+     "some",
+     "few",
+     "a number of",
+     "a little (bit)"
+    ],
+    "vi": "một vài"
+   },
+   "output": {
+    "id": "jm-1324330-0-some",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'một vài' is a good translation for 'some' with countable nouns, but unlike English 'some' and Japanese '若干', it cannot be used with uncountable nouns."
+   }
+  },
+  {
+   "key": "af5df1c208a7e26d4c0dc0e7df4f086fafb8fb9d0c91bbbc956d4ca29214cf97",
+   "input": {
+    "id": "jm-1325450-0-sponsorship",
+    "en": "sponsorship",
+    "en_pos": "noun",
+    "en_sense": "sponsorship (i.e. conducting under one's auspices); promotion; organizing; organising; hosting; staging",
+    "ja": "主催",
+    "ja_reading": "しゅさい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sponsorship (i.e. conducting under one's auspices)",
+     "promotion",
+     "organizing",
+     "organising",
+     "hosting",
+     "staging"
+    ],
+    "vi": "tổ chức"
+   },
+   "output": {
+    "id": "jm-1325450-0-sponsorship",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well for the sense of organizing or hosting an event, with 'tổ chức' being the direct Vietnamese equivalent of 'organizing'."
+   }
+  },
+  {
+   "key": "a922ce9951f20281bfb5b956214d41448a6f34c982cabb3b879483b10e690574",
+   "input": {
+    "id": "jm-1325840-0-core",
+    "en": "core",
+    "en_pos": "noun",
+    "en_sense": "main constituent; core; nucleus",
+    "ja": "主体",
+    "ja_reading": "しゅたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "main constituent",
+     "core",
+     "nucleus"
+    ],
+    "vi": "cốt lõi"
+   },
+   "output": {
+    "id": "jm-1325840-0-core",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '主体' primarily means 'agent' or 'subject' and is not a good general equivalent for 'core', unlike the excellent Vietnamese 'cốt lõi'."
+   }
+  },
+  {
+   "key": "3e3752043f2af6177cbbf1fd88e0e4eb5c2af613e3a9d20607af022948866b48",
+   "input": {
+    "id": "jm-1325980-0-leadership",
+    "en": "leadership",
+    "en_pos": "noun",
+    "en_sense": "leadership; initiative; spearhead",
+    "ja": "主導",
+    "ja_reading": "しゅどう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "leadership",
+     "initiative",
+     "spearhead"
+    ],
+    "vi": "lãnh đạo"
+   },
+   "output": {
+    "id": "jm-1325980-0-leadership",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent and standard equivalents for 'leadership' or 'taking the initiative'."
+   }
+  },
+  {
+   "key": "085b18395a6337826aaa79bd673ec9b5d7a1f39ec2f1b70aaf39551f3f441135",
+   "input": {
+    "id": "jm-1326320-0-chief",
+    "en": "chief",
+    "en_pos": "adjective",
+    "en_sense": "chief; main; principal; major",
+    "ja": "主要",
+    "ja_reading": "しゅよう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "chief",
+     "main",
+     "principal",
+     "major"
+    ],
+    "vi": "chính"
+   },
+   "output": {
+    "id": "jm-1326320-0-chief",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence in meaning, usage, and register across all three languages."
+   }
+  },
+  {
+   "key": "5af79cb59fa4ea178006b3f28f41aa928ffa4ca4a736ce4c8e56e2856aff9004",
+   "input": {
+    "id": "jm-1326540-0-handle",
+    "en": "handle",
+    "en_pos": "verb",
+    "en_sense": "to handle; to operate (a machine, etc.); to use",
+    "ja": "取り扱う",
+    "ja_reading": "とりあつかう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to handle",
+     "to operate (a machine, etc.)",
+     "to use"
+    ],
+    "vi": "xử lý"
+   },
+   "output": {
+    "id": "jm-1326540-0-handle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well for the meaning of 'to handle' or 'to deal with', although for 'operate a machine' more specific verbs might be used in Vietnamese."
+   }
+  },
+  {
+   "key": "597887624773895cd715711e6414ac89e328f197e5bee52a688c6d56715e6a99",
+   "input": {
+    "id": "jm-1326620-0-order",
+    "en": "order",
+    "en_pos": "verb",
+    "en_sense": "to order; to send away for; to have (something) sent to one",
+    "ja": "取り寄せる",
+    "ja_reading": "とりよせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to order",
+     "to send away for",
+     "to have (something) sent to one"
+    ],
+    "vi": "đặt hàng"
+   },
+   "output": {
+    "id": "jm-1326620-0-order",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect and standard equivalents for ordering goods for delivery."
+   }
+  },
+  {
+   "key": "00e1c2137b062d9d71ba01198c92bb0b3ae247bc67952da7bf0829e3e62e6bfc",
+   "input": {
+    "id": "jm-1326780-0-remove",
+    "en": "remove",
+    "en_pos": "verb",
+    "en_sense": "to remove; to deinstall; to take away; to set apart",
+    "ja": "取り除く",
+    "ja_reading": "とりのぞく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to remove",
+     "to deinstall",
+     "to take away",
+     "to set apart"
+    ],
+    "vi": "loại bỏ"
+   },
+   "output": {
+    "id": "jm-1326780-0-remove",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'loại bỏ' means 'to eliminate/get rid of' and is narrower than the general English verb 'remove', which can also mean simply to move something."
+   }
+  },
+  {
+   "key": "0d51e1f7d3fa21e2b4963c634338d116eeabc714f7fc59b55a30b51caeef4a8c",
+   "input": {
+    "id": "jm-1326800-1-adopt",
+    "en": "adopt",
+    "en_pos": "verb",
+    "en_sense": "to adopt (a proposal); to take up (a topic); to accept; to listen to",
+    "ja": "取り上げる",
+    "ja_reading": "とりあげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to adopt (a proposal)",
+     "to take up (a topic)",
+     "to accept",
+     "to listen to"
+    ],
+    "vi": "chấp nhận"
+   },
+   "output": {
+    "id": "jm-1326800-1-adopt",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'chấp nhận' means 'to accept', which is only part of the sense of 'adopt' or '取り上げる', which also includes 'to take up a topic for discussion'."
+   }
+  },
+  {
+   "key": "c2a14e36f2b10fdf350900697085b06c2ac4de5a78fa8668a5091d345b59f876",
+   "input": {
+    "id": "jm-1326820-1-tackle",
+    "en": "tackle",
+    "en_pos": "verb",
+    "en_sense": "to tackle (e.g. a problem); to come to grips with; to work hard on",
+    "ja": "取り組む",
+    "ja_reading": "とりくむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to tackle (e.g. a problem)",
+     "to come to grips with",
+     "to work hard on"
+    ],
+    "vi": "giải quyết"
+   },
+   "output": {
+    "id": "jm-1326820-1-tackle",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'giải quyết' means 'to solve', whereas English 'tackle' and Japanese '取り組む' mean to begin to deal with or work on a problem."
+   }
+  }
+ ]
+}

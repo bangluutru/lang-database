@@ -1,0 +1,407 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:44:25Z",
+ "items": [
+  {
+   "key": "ce449a2711448260e493da74707e73327fd6a91e428a1b085d8e3c3cfc80076d",
+   "input": {
+    "id": "jm-1539980-0-friend",
+    "en": "friend",
+    "en_pos": "noun",
+    "en_sense": "friend; companion; comrade; pal",
+    "ja": "友",
+    "ja_reading": "とも",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "friend",
+     "companion",
+     "comrade",
+     "pal"
+    ],
+    "vi": "bạn"
+   },
+   "output": {
+    "id": "jm-1539980-0-friend",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the most common and direct equivalents for 'friend'."
+   }
+  },
+  {
+   "key": "52107e54f60b4b10cb41a3567e12ce70ba0124d4c6cea2615a5a83e25acdbf4d",
+   "input": {
+    "id": "jm-1540150-0-friend",
+    "en": "friend",
+    "en_pos": "noun",
+    "en_sense": "friend",
+    "ja": "友人",
+    "ja_reading": "ゆうじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "friend"
+    ],
+    "vi": "bạn bè"
+   },
+   "output": {
+    "id": "jm-1540150-0-friend",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bạn bè' means 'friends' (plural, collective) and is not a suitable translation for the singular 'friend'."
+   }
+  },
+  {
+   "key": "fd297a14b220dc2efaae189c8283f6fbd6738fbd534b9b080ebcf5f86e589a92",
+   "input": {
+    "id": "jm-1541000-0-plain",
+    "en": "plain",
+    "en_pos": "adjective",
+    "en_sense": "as it is; plain (truth); bare; undisguised; unvarnished; unexaggerated",
+    "ja": "ありのまま",
+    "ja_reading": "ありのまま",
+    "ja_pos": "adj-no,adv,n",
+    "ja_glosses": [
+     "as it is",
+     "plain (truth)",
+     "bare",
+     "undisguised",
+     "unvarnished",
+     "unexaggerated"
+    ],
+    "vi": "chân thật"
+   },
+   "output": {
+    "id": "jm-1541000-0-plain",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'chân thật' (truthful, sincere) is narrower than the Japanese 'ありのまま' (as it is), which can describe situations beyond just truthfulness."
+   }
+  },
+  {
+   "key": "77684d5e6686ba8d261f6a446210c4634d4c2cf75e5c72349921926cb7bde57a",
+   "input": {
+    "id": "jm-1541060-0-state",
+    "en": "state",
+    "en_pos": "noun",
+    "en_sense": "state; condition; circumstances; sight; spectacle",
+    "ja": "有様",
+    "ja_reading": "ありさま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "state",
+     "condition",
+     "circumstances",
+     "sight",
+     "spectacle"
+    ],
+    "vi": "tình trạng"
+   },
+   "output": {
+    "id": "jm-1541060-0-state",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'tình trạng' means 'state/condition' but misses the 'sight/spectacle' nuance present in both English 'state' (in this sense) and Japanese '有様'."
+   }
+  },
+  {
+   "key": "3aae5541ccbe6283bbddebed7954f5dad8a73598bc5db803fabe67d7883abb0f",
+   "input": {
+    "id": "jm-1541430-0-prominent",
+    "en": "prominent",
+    "en_pos": "adjective",
+    "en_sense": "prominent; eminent; leading; foremost; distinguished",
+    "ja": "有数",
+    "ja_reading": "ゆうすう",
+    "ja_pos": "adj-na,adj-no,n-suf,n",
+    "ja_glosses": [
+     "prominent",
+     "eminent",
+     "leading",
+     "foremost",
+     "distinguished"
+    ],
+    "vi": "nổi bật"
+   },
+   "output": {
+    "id": "jm-1541430-0-prominent",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are excellent equivalents for 'prominent' or 'distinguished'."
+   }
+  },
+  {
+   "key": "fac7a122124cab3e3a39e8f3ef8d9ff1a221afb8e8d22bc45f8b1717cd474a1b",
+   "input": {
+    "id": "jm-1541620-0-famous",
+    "en": "famous",
+    "en_pos": "adjective",
+    "en_sense": "famous; well-known",
+    "ja": "有名",
+    "ja_reading": "ゆうめい",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "famous",
+     "well-known"
+    ],
+    "vi": "nổi tiếng"
+   },
+   "output": {
+    "id": "jm-1541620-0-famous",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents for 'famous'."
+   }
+  },
+  {
+   "key": "8e17ef661657399ad3209036cc91d70f7b935644d8cc9cd46a2ec8dd1245b317",
+   "input": {
+    "id": "jm-1541710-0-influential",
+    "en": "influential",
+    "en_pos": "adjective",
+    "en_sense": "influential; prominent; leading",
+    "ja": "有力",
+    "ja_reading": "ゆうりょく",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "influential",
+     "prominent",
+     "leading"
+    ],
+    "vi": "có ảnh hưởng"
+   },
+   "output": {
+    "id": "jm-1541710-0-influential",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are standard and natural ways to convey 'influential'."
+   }
+  },
+  {
+   "key": "399f63d80bd9a4ef57a429be371c4766ee671caf75f9e32b04d523539ff02650",
+   "input": {
+    "id": "jm-1542020-0-guidance",
+    "en": "guidance",
+    "en_pos": "noun",
+    "en_sense": "guidance; leading; induction; introduction; incitement; inducement",
+    "ja": "誘導",
+    "ja_reading": "ゆうどう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "guidance",
+     "leading",
+     "induction",
+     "introduction",
+     "incitement",
+     "inducement"
+    ],
+    "vi": "hướng dẫn"
+   },
+   "output": {
+    "id": "jm-1542020-0-guidance",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'hướng dẫn' is a neutral term for 'guidance' and does not cover the senses of 'induction' or 'incitement' included in the English sense and the Japanese '誘導'."
+   }
+  },
+  {
+   "key": "47903dfc8e701946a68ba22ef6c15554bc8cb6d226727ec9d4f8e4ee60c9a3c3",
+   "input": {
+    "id": "jm-1542600-0-loan",
+    "en": "loan",
+    "en_pos": "noun",
+    "en_sense": "financing; loan",
+    "ja": "融資",
+    "ja_reading": "ゆうし",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "financing",
+     "loan"
+    ],
+    "vi": "cho vay"
+   },
+   "output": {
+    "id": "jm-1542600-0-loan",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'cho vay' is a verb phrase meaning 'to lend', not a noun for 'loan'. The correct noun would be 'khoản vay'."
+   }
+  },
+  {
+   "key": "b377d521b9fd9d03725fd270b9d8d5d613831e29edb9cca26c02ac89e2262b8d",
+   "input": {
+    "id": "jm-1542920-0-expectation",
+    "en": "expectation",
+    "en_pos": "noun",
+    "en_sense": "expectation; anticipation; forecast",
+    "ja": "予期",
+    "ja_reading": "よき",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "expectation",
+     "anticipation",
+     "forecast"
+    ],
+    "vi": "mong đợi"
+   },
+   "output": {
+    "id": "jm-1542920-0-expectation",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'mong đợi' implies hope or desire, making it narrower than the more neutral 'expectation' and '予期'."
+   }
+  },
+  {
+   "key": "061ed2b6a8a22979c6f367339e5a89be02e157b97b7d8c337a962da4f9f4cea0",
+   "input": {
+    "id": "jm-1543000-0-estimate",
+    "en": "estimate",
+    "en_pos": "noun",
+    "en_sense": "estimate (of costs); budget",
+    "ja": "予算",
+    "ja_reading": "よさん",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "estimate (of costs)",
+     "budget"
+    ],
+    "vi": "ngân sách"
+   },
+   "output": {
+    "id": "jm-1543000-0-estimate",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "MULTIPLE_SENSES_COLLAPSED",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both '予算' and 'ngân sách' mean 'budget', not 'estimate'. The English lemma 'estimate' is misleading for this entry."
+   }
+  },
+  {
+   "key": "9435c3a6e068300f6702da1c0e7a19009ad51167b0de792521d295448cc33694",
+   "input": {
+    "id": "jm-1543200-0-prediction",
+    "en": "prediction",
+    "en_pos": "noun",
+    "en_sense": "prediction; estimation",
+    "ja": "予測",
+    "ja_reading": "よそく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "prediction",
+     "estimation"
+    ],
+    "vi": "dự đoán"
+   },
+   "output": {
+    "id": "jm-1543200-0-prediction",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'prediction'."
+   }
+  }
+ ]
+}

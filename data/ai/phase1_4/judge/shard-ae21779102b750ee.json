@@ -1,0 +1,367 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:26:16Z",
+ "items": [
+  {
+   "key": "42ae660f401b784bb76f40cebb10e254b46036984d62bb6b052df02b22efa49c",
+   "input": {
+    "id": "jm-1065860-0-jump",
+    "en": "jump",
+    "en_pos": "noun",
+    "en_sense": "jump",
+    "ja": "ジャンプ",
+    "ja_reading": "ジャンプ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "jump"
+    ],
+    "vi": "nhảy"
+   },
+   "output": {
+    "id": "jm-1065860-0-jump",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'nhảy' is a verb, while the English and Japanese words are nouns. A correct noun would be 'cú nhảy'."
+   }
+  },
+  {
+   "key": "8591fbe3a10fb9dfd3b315b52b31ca4a2ba92bef7db1c4abcfc39794dbed1d4c",
+   "input": {
+    "id": "jm-1067040-0-soup",
+    "en": "soup",
+    "en_pos": "noun",
+    "en_sense": "(Western) soup",
+    "ja": "スープ",
+    "ja_reading": "スープ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(Western) soup"
+    ],
+    "vi": "súp"
+   },
+   "output": {
+    "id": "jm-1067040-0-soup",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are loanwords that specifically denote Western-style soup and are the standard words for it."
+   }
+  },
+  {
+   "key": "018128d43c395bb8c24f3fb407e4baacdb80999e40a3bd0b9f9c6df39540e390",
+   "input": {
+    "id": "jm-1067480-0-scarf",
+    "en": "scarf",
+    "en_pos": "noun",
+    "en_sense": "scarf (esp. a lightweight summer scarf worn by women)",
+    "ja": "スカーフ",
+    "ja_reading": "スカーフ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scarf (esp. a lightweight summer scarf worn by women)"
+    ],
+    "vi": "khăn quàng"
+   },
+   "output": {
+    "id": "jm-1067480-0-scarf",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'khăn quàng' is a general term for any scarf, while the English and Japanese terms specify a lightweight, fashion scarf."
+   }
+  },
+  {
+   "key": "f47dad9974692554767fca6d6d78267485635f6ed9a3fead9d5b63d7994ff283",
+   "input": {
+    "id": "jm-1069210-0-celebrity",
+    "en": "celebrity",
+    "en_pos": "noun",
+    "en_sense": "star (actor, athlete, etc.); celebrity",
+    "ja": "スター",
+    "ja_reading": "スター",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "star (actor, athlete, etc.)",
+     "celebrity"
+    ],
+    "vi": "ngôi sao"
+   },
+   "output": {
+    "id": "jm-1069210-0-celebrity",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms use the 'star' metaphor to refer to a celebrity and are perfect equivalents."
+   }
+  },
+  {
+   "key": "7fed7699bfa1805d0b8c802367ec98591d27a6966ade4f4dc6d3b4b52aa6e533",
+   "input": {
+    "id": "jm-1072260-0-speech",
+    "en": "speech",
+    "en_pos": "noun",
+    "en_sense": "speech",
+    "ja": "スピーチ",
+    "ja_reading": "スピーチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "speech"
+    ],
+    "vi": "bài phát biểu"
+   },
+   "output": {
+    "id": "jm-1072260-0-speech",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural way to refer to a speech delivered to an audience."
+   }
+  },
+  {
+   "key": "452be1adb9b8282e49a2e3ace0c192c4ec101fa220b2251f698ebfb984194671",
+   "input": {
+    "id": "jm-1072310-0-speed",
+    "en": "speed",
+    "en_pos": "noun",
+    "en_sense": "speed",
+    "ja": "スピード",
+    "ja_reading": "スピード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "speed"
+    ],
+    "vi": "tốc độ"
+   },
+   "output": {
+    "id": "jm-1072310-0-speed",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'speed'."
+   }
+  },
+  {
+   "key": "743cf15b0962ae7674fb0f344af56606ac297b682b4ef847ad15bb12164e0329",
+   "input": {
+    "id": "jm-1072690-0-spring",
+    "en": "spring",
+    "en_pos": "noun",
+    "en_sense": "(coil) spring",
+    "ja": "スプリング",
+    "ja_reading": "スプリング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(coil) spring"
+    ],
+    "vi": "lò xo"
+   },
+   "output": {
+    "id": "jm-1072690-0-spring",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and correct for a mechanical (coil) spring."
+   }
+  },
+  {
+   "key": "88e6b010b057206a5be1a56f94f851f90626c3df4e4a33fe163017a28f7e562a",
+   "input": {
+    "id": "jm-1073570-1-slim",
+    "en": "slim",
+    "en_pos": "adjective",
+    "en_sense": "slim; slender",
+    "ja": "スマート",
+    "ja_reading": "スマート",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "slim",
+     "slender"
+    ],
+    "vi": "thon thả"
+   },
+   "output": {
+    "id": "jm-1073570-1-slim",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Although Japanese 'スマート' comes from English 'smart', its primary meaning in modern Japanese is 'slim' or 'stylish', making it a correct equivalent."
+   }
+  },
+  {
+   "key": "c79a024c147c6b044887e11ff649bd954b27161db0b78bae415b3b337d0bd83f",
+   "input": {
+    "id": "jm-1074090-0-slot",
+    "en": "slot",
+    "en_pos": "noun",
+    "en_sense": "slot",
+    "ja": "スロット",
+    "ja_reading": "スロット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slot"
+    ],
+    "vi": "khe"
+   },
+   "output": {
+    "id": "jm-1074090-0-slot",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'slot'."
+   }
+  },
+  {
+   "key": "1a7f4f0301801bcfd43386b7d071069731f571cb2975afe0c2b953c13bfecef1",
+   "input": {
+    "id": "jm-1074260-0-pants",
+    "en": "pants",
+    "en_pos": "noun",
+    "en_sense": "trousers; pants",
+    "ja": "ズボン",
+    "ja_reading": "ズボン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trousers",
+     "pants"
+    ],
+    "vi": "quần"
+   },
+   "output": {
+    "id": "jm-1074260-0-pants",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for trousers/pants, assuming the American English sense."
+   }
+  },
+  {
+   "key": "1c1c1251bd5a296e76e159376a0b90729423975753a73e1ff0ba5024e834c5a3",
+   "input": {
+    "id": "jm-1074330-0-sale",
+    "en": "sale",
+    "en_pos": "noun",
+    "en_sense": "sale",
+    "ja": "セール",
+    "ja_reading": "セール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sale"
+    ],
+    "vi": "giảm giá"
+   },
+   "output": {
+    "id": "jm-1074330-0-sale",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly refer to a discount sale event and are the common expressions for it."
+   }
+  },
+  {
+   "key": "8a4e7a1fcb20982b6e9111084a9a5ebfecd1d23a9179b2f43f988f9dd7ca742f",
+   "input": {
+    "id": "jm-1075000-0-sense",
+    "en": "sense",
+    "en_pos": "noun",
+    "en_sense": "taste (in fashion, music, etc.); sense (e.g. of humour); flair",
+    "ja": "センス",
+    "ja_reading": "センス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "taste (in fashion, music, etc.)",
+     "sense (e.g. of humour)",
+     "flair"
+    ],
+    "vi": "gu"
+   },
+   "output": {
+    "id": "jm-1075000-0-sense",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard equivalents for the concept of 'taste' or 'flair' in fashion, humor, etc."
+   }
+  }
+ ]
+}

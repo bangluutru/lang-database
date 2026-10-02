@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:25Z",
+ "items": [
+  {
+   "key": "db70ff37622d298d60e480263fca7fe8a70ec302bc9adf786b59d1a86d6f35d1",
+   "input": {
+    "id": "wk-10973-s0",
+    "en": "vow",
+    "en_pos": "verb",
+    "en_sense": "To make a vow; to promise.",
+    "ja": "誓う",
+    "ja_reading": "ちかう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to swear",
+     "to vow",
+     "to take an oath",
+     "to pledge"
+    ],
+    "vi": "phát nguyện"
+   },
+   "output": {
+    "id": "wk-10973-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'phát nguyện' is too specific, usually referring to a religious or spiritual vow, whereas English 'vow' and Japanese '誓う' are more general."
+   }
+  },
+  {
+   "key": "21056588cf4d5f1657fe0812c6d1969b305b883c0b61c247f4c20e79ef9a9c5b",
+   "input": {
+    "id": "wk-1098-s0",
+    "en": "my",
+    "en_pos": "determiner",
+    "en_sense": "Belonging to me.",
+    "ja": "我が",
+    "ja_reading": "わが",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "my",
+     "our",
+     "one's own"
+    ],
+    "vi": "tôi"
+   },
+   "output": {
+    "id": "wk-1098-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG",
+     "UNNATURAL_VI",
+     "UNNATURAL_JA",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'tôi' means 'I/me' (pronoun), not 'my' (determiner). The Japanese '我が' is a formal/literary term, not the common word for 'my'."
+   }
+  },
+  {
+   "key": "0a8e3eb9f0d6c3b1ee7ef8b351137519408311a9ce90ee58274a43d567abcc77",
+   "input": {
+    "id": "wk-10983-s0",
+    "en": "whirlwind",
+    "en_pos": "noun",
+    "en_sense": "A windstorm of limited extent, such as a tornado, dust devil, or waterspout, characterized by an inward spiral motion of the air with an upward current in the center; a vortex of air.",
+    "ja": "旋風",
+    "ja_reading": "せんぷう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "whirlwind"
+    ],
+    "vi": "lốc"
+   },
+   "output": {
+    "id": "wk-10983-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'whirlwind'."
+   }
+  },
+  {
+   "key": "e83ef722016a1b0c153c090265fa0993f5227671c302790e3d4f0aaba5d55598",
+   "input": {
+    "id": "wk-10989-s0",
+    "en": "youth",
+    "en_pos": "noun",
+    "en_sense": "The quality or state of being young.",
+    "ja": "青春",
+    "ja_reading": "せいしゅん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "youth",
+     "adolescence",
+     "springtime of life"
+    ],
+    "vi": "tuổi trẻ"
+   },
+   "output": {
+    "id": "wk-10989-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the abstract concept of 'youth' as a period of life."
+   }
+  },
+  {
+   "key": "d9f24ff05ca9866509c70d7382e50d047ba94fe6293b3d14c5d463e32f5873ec",
+   "input": {
+    "id": "wk-10989-s3",
+    "en": "youth",
+    "en_pos": "noun",
+    "en_sense": "A young man; a male adolescent or young adult.",
+    "ja": "青年",
+    "ja_reading": "せいねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "youth",
+     "young man"
+    ],
+    "vi": "thanh niên"
+   },
+   "output": {
+    "id": "wk-10989-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese '青年' and Vietnamese 'thanh niên' are cognates and perfectly match the English sense of 'a young man'."
+   }
+  },
+  {
+   "key": "f5bceb772e2a1ab4c60235fc0e3b770867561412e55ebfd9ca0aae05d794da76",
+   "input": {
+    "id": "wk-10995-s0",
+    "en": "transplant",
+    "en_pos": "verb",
+    "en_sense": "To uproot (a growing plant), and plant it in another place.",
+    "ja": "移植する",
+    "ja_reading": "いしょくする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "transplanting (a plant)",
+     "transplant",
+     "grafting"
+    ],
+    "vi": "cấy"
+   },
+   "output": {
+    "id": "wk-10995-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'cấy' is too narrow, primarily meaning to transplant seedlings (especially rice), while the English and Japanese terms are more general."
+   }
+  },
+  {
+   "key": "2bd630f947e53d2d8da49af883689bf0af3fdfa7e76ece59a7fad5e03be5931e",
+   "input": {
+    "id": "wk-10999-s2",
+    "en": "valour",
+    "en_pos": "noun",
+    "en_sense": "Strength of mind in regard to danger; the quality that enables a person to encounter danger with firmness; a feeling of upstanding bravery against adversity.",
+    "ja": "勇気",
+    "ja_reading": "ゆうき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "courage",
+     "bravery",
+     "valour",
+     "valor",
+     "nerve",
+     "boldness"
+    ],
+    "vi": "dũng cảm"
+   },
+   "output": {
+    "id": "wk-10999-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "WRONG"
+    ],
+    "note": "The Vietnamese 'dũng cảm' is an adjective meaning 'brave', not a noun for 'valour'. The correct noun would be 'lòng dũng cảm'."
+   }
+  },
+  {
+   "key": "d152be4fa280a93e840f22f1568b5bf8fcb197a37735d27255fc7ac61c2512ac",
+   "input": {
+    "id": "wk-11-e:327463",
+    "en": "pound",
+    "en_pos": "noun",
+    "en_sense": "unit of currency",
+    "ja": "ポンド",
+    "ja_reading": "ポンド",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pound (unit of weight)"
+    ],
+    "vi": "bảng"
+   },
+   "output": {
+    "id": "wk-11-e:327463",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese entry 'ポンド' is glossed as a unit of weight, which is the wrong sense for the English entry 'pound (unit of currency)'."
+   }
+  },
+  {
+   "key": "ed8e950cc9da9e3e9a002ee417e7f33e4633c5f078bccc05ca173f43f8310f16",
+   "input": {
+    "id": "wk-11008-s0",
+    "en": "clergyman",
+    "en_pos": "noun",
+    "en_sense": "A male member of a clergy; especially, an ordained (male) Christian minister.",
+    "ja": "聖職者",
+    "ja_reading": "せいしょくしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "clergyman",
+     "churchman",
+     "clergy"
+    ],
+    "vi": "mục sư"
+   },
+   "output": {
+    "id": "wk-11008-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'mục sư' specifically means '(Protestant) pastor', which is much narrower than the English 'clergyman' and Japanese '聖職者'."
+   }
+  },
+  {
+   "key": "34dd479f34ecf89485d6bd0c3f9b778f2c5d240fbd9db661ff983b303489ba22",
+   "input": {
+    "id": "wk-11013-s0",
+    "en": "survive",
+    "en_pos": "verb",
+    "en_sense": "Of a person, to continue to live; to remain alive.",
+    "ja": "生き残る",
+    "ja_reading": "いきのこる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to survive"
+    ],
+    "vi": "sống sót"
+   },
+   "output": {
+    "id": "wk-11013-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, sharing a similar compound structure and meaning 'to remain alive'."
+   }
+  },
+  {
+   "key": "441fba33f596c68d75f28cc8b533a7f2b87c039736593f9183748fb547a42da4",
+   "input": {
+    "id": "wk-11017-s2",
+    "en": "candy",
+    "en_pos": "noun",
+    "en_sense": "A piece of confectionery of this kind.",
+    "ja": "キャンディ",
+    "ja_reading": "キャンディ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "candy",
+     "sweets"
+    ],
+    "vi": "kẹo"
+   },
+   "output": {
+    "id": "wk-11017-s2",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'キャンディ' often specifically refers to hard candy, making it narrower than the general American English 'candy' and Vietnamese 'kẹo'."
+   }
+  },
+  {
+   "key": "89f3463dfe4a57f72e60020870b3f95cd37c67a02819a0a4b10f7c12fefbffc6",
+   "input": {
+    "id": "wk-11021-s0",
+    "en": "worthless",
+    "en_pos": "adjective",
+    "en_sense": "Having no worth or use; without value.",
+    "ja": "つまらない",
+    "ja_reading": "つまらない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "insignificant",
+     "unimportant",
+     "trifling",
+     "trivial",
+     "worthless"
+    ],
+    "vi": "vô giá trị"
+   },
+   "output": {
+    "id": "wk-11021-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "FALSE_FRIEND"
+    ],
+    "note": "The primary meaning of Japanese 'つまらない' is 'boring', making it a poor and misleading equivalent for 'worthless'. A better Japanese term is '価値がない'."
+   }
+  }
+ ]
+}

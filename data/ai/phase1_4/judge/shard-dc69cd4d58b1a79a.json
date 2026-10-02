@@ -1,0 +1,407 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:45:39Z",
+ "items": [
+  {
+   "key": "e4f6bd62e0b6653b45b75fd4113151cf234e4ff0853740d95d43a45f1f9c635e",
+   "input": {
+    "id": "jm-1562310-0-discuss",
+    "en": "discuss",
+    "en_pos": "verb",
+    "en_sense": "to discuss; to talk together",
+    "ja": "話し合う",
+    "ja_reading": "はなしあう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to discuss",
+     "to talk together"
+    ],
+    "vi": "thảo luận"
+   },
+   "output": {
+    "id": "jm-1562310-0-discuss",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'to discuss'."
+   }
+  },
+  {
+   "key": "cb8707b3982ea572cf180b661742235e8003588f829b2085ca9642dcbda0d51e",
+   "input": {
+    "id": "jm-1562510-0-cover",
+    "en": "cover",
+    "en_pos": "verb",
+    "en_sense": "to supply (goods, money, etc.); to cover (costs); to pay; to finance; to maintain (e.g. a family)",
+    "ja": "まかなう",
+    "ja_reading": "まかなう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to supply (goods, money, etc.)",
+     "to cover (costs)",
+     "to pay",
+     "to finance",
+     "to maintain (e.g. a family)"
+    ],
+    "vi": "chi trả"
+   },
+   "output": {
+    "id": "jm-1562510-0-cover",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chi trả' only covers the monetary payment aspect ('cover costs'), while the English and Japanese terms also include supplying goods or maintaining a family."
+   }
+  },
+  {
+   "key": "f281719c39b1997fe61e41784a1ade644df2aad6c307f31c127beb57fa84d6ab",
+   "input": {
+    "id": "jm-1562580-1-tempt",
+    "en": "tempt",
+    "en_pos": "verb",
+    "en_sense": "to tempt; to seduce",
+    "ja": "惑わす",
+    "ja_reading": "まどわす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to tempt",
+     "to seduce"
+    ],
+    "vi": "cám dỗ"
+   },
+   "output": {
+    "id": "jm-1562580-1-tempt",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent and natural equivalents for 'to tempt' or 'to seduce'."
+   }
+  },
+  {
+   "key": "1581707b614ec5798960c29d12d9dee41b54ce5669dd9da491db8a34aaa400f3",
+   "input": {
+    "id": "jm-1562780-0-bowl",
+    "en": "bowl",
+    "en_pos": "noun",
+    "en_sense": "bowl (wooden)",
+    "ja": "椀",
+    "ja_reading": "わん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bowl (wooden)"
+    ],
+    "vi": "bát"
+   },
+   "output": {
+    "id": "jm-1562780-0-bowl",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense and Japanese '椀' specify a wooden bowl, whereas the Vietnamese 'bát' is a general term for any bowl, regardless of material."
+   }
+  },
+  {
+   "key": "9c206f016b4d7d08e28cc8760c1de78d58652179ca45c71a24f4b84cb3a85c22",
+   "input": {
+    "id": "jm-1565500-0-taste",
+    "en": "taste",
+    "en_pos": "noun",
+    "en_sense": "taste; liking; preference",
+    "ja": "嗜好",
+    "ja_reading": "しこう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "taste",
+     "liking",
+     "preference"
+    ],
+    "vi": "sở thích"
+   },
+   "output": {
+    "id": "jm-1565500-0-taste",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The terms align well in meaning, with a minor register mismatch as Japanese '嗜好' is slightly more formal/written than the others."
+   }
+  },
+  {
+   "key": "7510bfa351624ca04d42b8202f033954362fcaff9439c7a2fbf39aaf49e9fff3",
+   "input": {
+    "id": "jm-1567390-0-make",
+    "en": "make",
+    "en_pos": "verb",
+    "en_sense": "to make; to manufacture; to fabricate",
+    "ja": "こしらえる",
+    "ja_reading": "こしらえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to make",
+     "to manufacture",
+     "to fabricate"
+    ],
+    "vi": "chế tạo"
+   },
+   "output": {
+    "id": "jm-1567390-0-make",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chế tạo' specifically means 'to manufacture' and is narrower than the general sense of 'to make' included in the English and Japanese terms."
+   }
+  },
+  {
+   "key": "4e4ae46b9a6fff502d38c138aecb784eca30d5d283c5e50996c16964866fa382",
+   "input": {
+    "id": "jm-1568910-0-warm",
+    "en": "warm",
+    "en_pos": "verb",
+    "en_sense": "to warm (e.g. one's hands over a fire); to dry",
+    "ja": "あぶる",
+    "ja_reading": "あぶる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to warm (e.g. one's hands over a fire)",
+     "to dry"
+    ],
+    "vi": "sấy"
+   },
+   "output": {
+    "id": "jm-1568910-0-warm",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'sấy' means 'to dry (with heat/air)' and does not fit the primary sense of 'to warm one's hands over a fire', for which 'hơ' or 'sưởi' would be used."
+   }
+  },
+  {
+   "key": "0b78fdaaada1dadce3015a1f36ffd131a335bb0b7c25f5290e7660f7f820d46b",
+   "input": {
+    "id": "jm-1570040-0-well",
+    "en": "well",
+    "en_pos": "adverb",
+    "en_sense": "(not) well; (not) properly; (not) enough; (not) sufficiently; (not) satisfactorily; (not) decently",
+    "ja": "ろくに",
+    "ja_reading": "ろくに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) well",
+     "(not) properly",
+     "(not) enough",
+     "(not) sufficiently",
+     "(not) satisfactorily",
+     "(not) decently"
+    ],
+    "vi": "đàng hoàng"
+   },
+   "output": {
+    "id": "jm-1570040-0-well",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese 'ろくに' is used with a negative verb to mean 'not properly', while the Vietnamese 'đàng hoàng' means 'properly' and is used in positive contexts."
+   }
+  },
+  {
+   "key": "94b647f5cf9396eea3f913369d12f055f1522e0d440dccfbec8eae6752676afa",
+   "input": {
+    "id": "jm-1570120-0-little",
+    "en": "little",
+    "en_pos": "adverb",
+    "en_sense": "a little; partially; somewhat; slightly; semi-; -ish",
+    "ja": "やや",
+    "ja_reading": "やや",
+    "ja_pos": "adv,adj-f",
+    "ja_glosses": [
+     "a little",
+     "partially",
+     "somewhat",
+     "slightly",
+     "semi-",
+     "-ish"
+    ],
+    "vi": "hơi"
+   },
+   "output": {
+    "id": "jm-1570120-0-little",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "All three terms are good equivalents for 'a little' or 'somewhat', with the Japanese 'やや' being slightly more formal than the others."
+   }
+  },
+  {
+   "key": "13d2aa5588153a23c310ca69ad2ef30ca7beed416499bfea77a24afe0608a97e",
+   "input": {
+    "id": "jm-1573190-0-introduce",
+    "en": "introduce",
+    "en_pos": "verb",
+    "en_sense": "to bring (news, knowledge, etc.); to introduce",
+    "ja": "もたらす",
+    "ja_reading": "もたらす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to bring (news, knowledge, etc.)",
+     "to introduce"
+    ],
+    "vi": "mang lại"
+   },
+   "output": {
+    "id": "jm-1573190-0-introduce",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the sense of 'to bring about' or 'to introduce' an abstract concept, news, or result."
+   }
+  },
+  {
+   "key": "b57856121064ed9bf11f67d392989f65c14bdd26026541eafbc1dba5bc638f08",
+   "input": {
+    "id": "jm-1573410-0-discipline",
+    "en": "discipline",
+    "en_pos": "noun",
+    "en_sense": "discipline; training; teaching manners",
+    "ja": "しつけ",
+    "ja_reading": "しつけ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "discipline",
+     "training",
+     "teaching manners"
+    ],
+    "vi": "kỷ luật"
+   },
+   "output": {
+    "id": "jm-1573410-0-discipline",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'kỷ luật' refers to formal/institutional discipline and punishment, not the parental training ('upbringing') implied by the English sense and Japanese 'しつけ'."
+   }
+  },
+  {
+   "key": "654c9b5555d47e813a0195f580c17fdde0c8f82cdfa1dedcb2b5d106f059eac5",
+   "input": {
+    "id": "jm-1576200-0-lifetime",
+    "en": "lifetime",
+    "en_pos": "noun",
+    "en_sense": "whole life; a lifetime; all through life",
+    "ja": "一生",
+    "ja_reading": "いっしょう",
+    "ja_pos": "n,adj-no,adv",
+    "ja_glosses": [
+     "whole life",
+     "a lifetime",
+     "all through life"
+    ],
+    "vi": "cả đời"
+   },
+   "output": {
+    "id": "jm-1576200-0-lifetime",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for 'lifetime'."
+   }
+  }
+ ]
+}

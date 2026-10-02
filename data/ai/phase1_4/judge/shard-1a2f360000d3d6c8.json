@@ -1,0 +1,71 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:19:29Z",
+ "items": [
+  {
+   "key": "6de035463431f5c33c18e9030e3d3484acd1919762e95141e898824934f26f9d",
+   "input": {
+    "id": "wk-16239-s0",
+    "en": "fragrant",
+    "en_pos": "adjective",
+    "en_sense": "Sweet-smelling; having a pleasant (usually strong) scent or fragrance.",
+    "ja": "香り高い",
+    "ja_reading": "かおりたかい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "fragrant",
+     "aromatic"
+    ],
+    "vi": "thơm"
+   },
+   "output": {
+    "id": "wk-16239-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'fragrant'."
+   }
+  },
+  {
+   "key": "7621b6b1c3f6345ff614843a1ff4c352f570cf3cb941885a4142603df7e54d25",
+   "input": {
+    "id": "wk-8783-s0",
+    "en": "scar",
+    "en_pos": "noun",
+    "en_sense": "A permanent mark on the skin, sometimes caused by the healing of a wound.",
+    "ja": "瘢痕",
+    "ja_reading": "はんこん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scar",
+     "cicatrix"
+    ],
+    "vi": "sẹo"
+   },
+   "output": {
+    "id": "wk-8783-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 瘢痕 (hankon) is a formal, medical term for 'scar'; the common, everyday word is 傷跡 (kizuato)."
+   }
+  }
+ ]
+}

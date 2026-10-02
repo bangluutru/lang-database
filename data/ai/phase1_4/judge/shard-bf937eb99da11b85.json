@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:22Z",
+ "items": [
+  {
+   "key": "3fc094f178c78fcdb852f13bf1c14b0c4d3993012bff6c6ab8d93c4f2444840c",
+   "input": {
+    "id": "wk-6678-s0",
+    "en": "deceive",
+    "en_pos": "verb",
+    "en_sense": "To trick or mislead.",
+    "ja": "欺く",
+    "ja_reading": "あざむく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to deceive",
+     "to delude",
+     "to trick",
+     "to fool"
+    ],
+    "vi": "lừa"
+   },
+   "output": {
+    "id": "wk-6678-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'to deceive'."
+   }
+  },
+  {
+   "key": "dff2bd6d2b8c15d88ad8608f77da623010d68cf4c19d4bdf9fbf90fa915d02b6",
+   "input": {
+    "id": "wk-6698-s0",
+    "en": "scold",
+    "en_pos": "verb",
+    "en_sense": "To rebuke angrily.",
+    "ja": "しかる",
+    "ja_reading": "しかる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to scold",
+     "to chide",
+     "to rebuke",
+     "to reprimand"
+    ],
+    "vi": "chửi"
+   },
+   "output": {
+    "id": "wk-6698-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'chửi' is too strong, implying verbal abuse or swearing, whereas 'scold' and 'しかる' mean to reprimand, which is better translated as 'mắng'."
+   }
+  },
+  {
+   "key": "5d62a1e290147374ab05b4b100e2088b1fdabc9235e55aaeb43ba314118d9671",
+   "input": {
+    "id": "wk-6699-s0",
+    "en": "enthusiasm",
+    "en_pos": "noun",
+    "en_sense": "An intensity of feeling; an excited interest or eagerness.",
+    "ja": "情熱",
+    "ja_reading": "じょうねつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "passion",
+     "enthusiasm",
+     "zeal"
+    ],
+    "vi": "sự hăng hái"
+   },
+   "output": {
+    "id": "wk-6699-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '情熱' is closer to 'passion', which is stronger than 'enthusiasm'; a better Japanese equivalent would be '熱意' (netsui)."
+   }
+  },
+  {
+   "key": "9f87235221c680d62d1528d96270fe85cbdc0003f658a127ac3f96e14b89b9ef",
+   "input": {
+    "id": "wk-67-e:f3eb49",
+    "en": "product",
+    "en_pos": "noun",
+    "en_sense": "multiplication result",
+    "ja": "積",
+    "ja_reading": "せき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "product"
+    ],
+    "vi": "tích"
+   },
+   "output": {
+    "id": "wk-67-e:f3eb49",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard mathematical terms for the result of multiplication."
+   }
+  },
+  {
+   "key": "376156777ef4776ae7ef05073712e5cbd49048763b2900b7bcfbcfff2e030c80",
+   "input": {
+    "id": "wk-6700-s2",
+    "en": "use",
+    "en_pos": "noun",
+    "en_sense": "Usefulness, utility, benefit; purpose, point.",
+    "ja": "効用",
+    "ja_reading": "こうよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "use",
+     "utility",
+     "effect",
+     "benefit"
+    ],
+    "vi": "ích"
+   },
+   "output": {
+    "id": "wk-6700-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'ích' is a bit formal and less common as a standalone noun than 'lợi ích' or 'công dụng', though it correctly conveys the sense of benefit/utility."
+   }
+  },
+  {
+   "key": "5cc1b8921e5c433e23d1c9366fe3d6a2d7e5b82d2214260955cad029c5b44065",
+   "input": {
+    "id": "wk-6701-s0",
+    "en": "use",
+    "en_pos": "verb",
+    "en_sense": "To employ; to apply; to utilize.",
+    "ja": "用いる",
+    "ja_reading": "もちいる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to use",
+     "to make use of",
+     "to utilize",
+     "to utilise"
+    ],
+    "vi": "dùng"
+   },
+   "output": {
+    "id": "wk-6701-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate equivalents for 'to use'."
+   }
+  },
+  {
+   "key": "39700b1a524561ae8d55623af2305d0adc12eaddbeb81038dcf9cd8520ea4b6e",
+   "input": {
+    "id": "wk-6705-s0",
+    "en": "snot",
+    "en_pos": "noun",
+    "en_sense": "Mucus, especially mucus from the nose.",
+    "ja": "鼻水",
+    "ja_reading": "はなみず",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nasal mucus",
+     "dripping nose",
+     "snot"
+    ],
+    "vi": "nước mũi"
+   },
+   "output": {
+    "id": "wk-6705-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, everyday words for nasal mucus."
+   }
+  },
+  {
+   "key": "ed4de0729415961ecdc47c1547420cc38ff3702e95c7536be0e156944011b382",
+   "input": {
+    "id": "wk-6707-s0",
+    "en": "discuss",
+    "en_pos": "verb",
+    "en_sense": "To converse or debate concerning a particular topic.",
+    "ja": "論ずる",
+    "ja_reading": "ろんずる",
+    "ja_pos": "vz,vt",
+    "ja_glosses": [
+     "to discuss",
+     "to talk about",
+     "to deal with (a topic)"
+    ],
+    "vi": "thảo luận"
+   },
+   "output": {
+    "id": "wk-6707-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '論ずる' is more formal than 'discuss' and 'thảo luận'; '議論する' or '話し合う' would be more common, neutral equivalents."
+   }
+  },
+  {
+   "key": "1bb06fede32820cbda4683c4548106bafaf4f41cb5c7e8ba08b0b849f5254bcb",
+   "input": {
+    "id": "wk-6712-e:1ae029",
+    "en": "drop",
+    "en_pos": "noun",
+    "en_sense": "small quantity of liquid, just large enough to hold its own round shape through surface tension",
+    "ja": "滴",
+    "ja_reading": "しずく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "drop (e.g. of water)",
+     "drip"
+    ],
+    "vi": "giọt"
+   },
+   "output": {
+    "id": "wk-6712-e:1ae029",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the perfect, standard words for a drop of liquid."
+   }
+  },
+  {
+   "key": "7bf573562dde54dab4430192dc8ff033ae1803b7fb97c6e2860a75a457cf1b56",
+   "input": {
+    "id": "wk-6713-e:886860",
+    "en": "drop",
+    "en_pos": "verb",
+    "en_sense": "to let (something) fall; to allow (something) to fall (either by releasing hold of, or losing one's grip on)",
+    "ja": "落とす",
+    "ja_reading": "おとす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to drop",
+     "to lose",
+     "to let fall",
+     "to shed (light)",
+     "to cast (one's gaze)",
+     "to pour in (liquid)"
+    ],
+    "vi": "buông rơi"
+   },
+   "output": {
+    "id": "wk-6713-e:886860",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'buông rơi' is a descriptive phrase and narrower than 'drop'; 'làm rơi' is a more common and general equivalent."
+   }
+  },
+  {
+   "key": "1146199f3f85119ffb00c5a513ae8558bcc56ae45d08ceab4d842bb008f1d478",
+   "input": {
+    "id": "wk-6716-s1",
+    "en": "follow",
+    "en_pos": "verb",
+    "en_sense": "To go or come after in a sequence.",
+    "ja": "追う",
+    "ja_reading": "おう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to follow (a set order, a trend, etc.)"
+    ],
+    "vi": "theo"
+   },
+   "output": {
+    "id": "wk-6716-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '追う' means 'to chase' or 'to pursue', not 'to follow in a sequence' which is the sense provided."
+   }
+  },
+  {
+   "key": "e220ac0bb65735241719e3244f238e66e585df0b1c4e0c5af9575e6e776be590",
+   "input": {
+    "id": "wk-6716-s7",
+    "en": "follow",
+    "en_pos": "verb",
+    "en_sense": "To subscribe to see content from an account on a social media platform.",
+    "ja": "フォローする",
+    "ja_reading": "フォローする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "follow"
+    ],
+    "vi": "theo dõi"
+   },
+   "output": {
+    "id": "wk-6716-s7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, idiomatic expressions for 'following' on social media in their respective languages."
+   }
+  }
+ ]
+}

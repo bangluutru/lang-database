@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:28:18Z",
+ "items": [
+  {
+   "key": "512e08738b8c6e8c6aac8c32e877857293f44a4f1dd90496514ac0783a1d95c3",
+   "input": {
+    "id": "wk-11722-s2",
+    "en": "shave",
+    "en_pos": "verb",
+    "en_sense": "To remove hair from one's face by this means.",
+    "ja": "剃る",
+    "ja_reading": "そる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to shave"
+    ],
+    "vi": "cạo"
+   },
+   "output": {
+    "id": "wk-11722-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural verbs for 'to shave'."
+   }
+  },
+  {
+   "key": "2a879d3866454f2fe21fc29bf0a1b0b2b574645d7a78fc0e8102a86417554733",
+   "input": {
+    "id": "wk-11725-s0",
+    "en": "vitamin",
+    "en_pos": "noun",
+    "en_sense": "Any of a specific group of organic compounds essential in small quantities for healthy human growth, metabolism, development, and body function. They are found in minute amounts in plant and animal foods or sometimes produced synthetically, and deficiencies of specific vitamins produce specific diso",
+    "ja": "ビタミン",
+    "ja_reading": "ビタミン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "vitamin"
+    ],
+    "vi": "sinh tố"
+   },
+   "output": {
+    "id": "wk-11725-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Vietnamese word 'sinh tố' now primarily means 'smoothie'; the correct word for 'vitamin' is the loanword 'vitamin'."
+   }
+  },
+  {
+   "key": "df79eca5f0543d397a069ed619e145fccdabbc521b8420c4171ef8f757d8d26a",
+   "input": {
+    "id": "wk-11731-s1",
+    "en": "lovely",
+    "en_pos": "adjective",
+    "en_sense": "Nice; wonderful.",
+    "ja": "綺麗",
+    "ja_reading": "きれい",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "pretty",
+     "lovely",
+     "beautiful",
+     "fair"
+    ],
+    "vi": "dễ thương"
+   },
+   "output": {
+    "id": "wk-11731-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Both '綺麗' (pretty/beautiful) and 'dễ thương' (cute) are too narrow, failing to capture the general 'nice, wonderful' sense of 'lovely'."
+   }
+  },
+  {
+   "key": "72a7ce423649e11ab0f89fc8691f918479a4a898434412b70930f6c7246709fc",
+   "input": {
+    "id": "wk-11741-s0",
+    "en": "overseas chinese",
+    "en_pos": "noun",
+    "en_sense": "A person or people of Chinese ethnicity, living in a non-Chinese country; a member of the ethnic Chinese expatriate or immigrant community; Huaqiao",
+    "ja": "華僑",
+    "ja_reading": "かきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "overseas Chinese"
+    ],
+    "vi": "hoa kiều"
+   },
+   "output": {
+    "id": "wk-11741-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are cognates (華僑) and are the standard, correct words for this concept."
+   }
+  },
+  {
+   "key": "a135709f13535b349e4898f81b5c36415e3f4e0e7690ac6fc35e60ce19f32038",
+   "input": {
+    "id": "wk-1175-s0",
+    "en": "advertisement",
+    "en_pos": "noun",
+    "en_sense": "A commercial solicitation designed to sell some commodity, service or similar.",
+    "ja": "ＣＭ",
+    "ja_reading": "シー・エム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "commercial (on radio, TV, etc.)",
+     "advertisement",
+     "commercial message"
+    ],
+    "vi": "quảng cáo"
+   },
+   "output": {
+    "id": "wk-1175-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese term 'ＣＭ' specifically means a TV or radio commercial and is too narrow for the general sense of 'advertisement'; the correct general term is '広告' (kōkoku)."
+   }
+  },
+  {
+   "key": "21301957b00f0db82f35b9d62b2a3f075d968f4e0ae8d081e75cefc3508da773",
+   "input": {
+    "id": "wk-11762-s0",
+    "en": "latter",
+    "en_pos": "noun",
+    "en_sense": "The second of aforementioned two items.",
+    "ja": "後者",
+    "ja_reading": "こうしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "the latter",
+     "the second"
+    ],
+    "vi": "sau"
+   },
+   "output": {
+    "id": "wk-11762-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'sau' means 'after/later' and is not the correct equivalent for 'the latter'; a phrase like 'cái sau' or 'vế sau' would be needed."
+   }
+  },
+  {
+   "key": "17a32d6149de87258c8fed52580dfb9054f687c4131b8e59588e06e28f94b364",
+   "input": {
+    "id": "wk-1177-e:ec2511",
+    "en": "island",
+    "en_pos": "noun",
+    "en_sense": "area of land completely surrounded by water",
+    "ja": "島",
+    "ja_reading": "しま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "island"
+    ],
+    "vi": "đảo"
+   },
+   "output": {
+    "id": "wk-1177-e:ec2511",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'island'."
+   }
+  },
+  {
+   "key": "f0b129f8e24da8b81d84aefb94421751dbb4a20487db4c47ec4697299e2c1775",
+   "input": {
+    "id": "wk-11772-e:c5548a",
+    "en": "calligraphy",
+    "en_pos": "noun",
+    "en_sense": "art of writing beautifully",
+    "ja": "書道",
+    "ja_reading": "しょどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "calligraphy (esp. Asian calligraphy based on Chinese characters)"
+    ],
+    "vi": "thư pháp"
+   },
+   "output": {
+    "id": "wk-11772-e:c5548a",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While '書道' and 'thư pháp' specifically refer to East Asian calligraphy, they are the standard and natural translations for 'calligraphy' in Japanese and Vietnamese contexts."
+   }
+  },
+  {
+   "key": "682279b2c6376a547056c557431171ee6d4bcf82a8a80d3d85307a97db69abdb",
+   "input": {
+    "id": "wk-11776-s0",
+    "en": "glue",
+    "en_pos": "noun",
+    "en_sense": "A hard gelatin made by boiling bones and hides, used in solution as an adhesive; or any sticky adhesive substance.",
+    "ja": "接着剤",
+    "ja_reading": "せっちゃくざい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "adhesive",
+     "glue"
+    ],
+    "vi": "hồ"
+   },
+   "output": {
+    "id": "wk-11776-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'hồ' is too narrow, referring specifically to paste, while the general term is 'keo'. The Japanese '接着剤' is a broad term for 'adhesive'."
+   }
+  },
+  {
+   "key": "b15b91f012dea93ce20d978f001f2973529c2ca14a4bc4cc790346f4abc0ac66",
+   "input": {
+    "id": "wk-11790-s0",
+    "en": "bedroom",
+    "en_pos": "noun",
+    "en_sense": "A room in a house, apartment, hotel, or other dwelling where a bed is kept for sleeping.",
+    "ja": "寝室",
+    "ja_reading": "しんしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bedroom"
+    ],
+    "vi": "phòng ngủ"
+   },
+   "output": {
+    "id": "wk-11790-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'bedroom'."
+   }
+  },
+  {
+   "key": "f512108bc535db421f2de5ed3263940fe5b5ae2c46e1038656dc63d117784ca1",
+   "input": {
+    "id": "wk-11793-e:395498",
+    "en": "shelter",
+    "en_pos": "noun",
+    "en_sense": "a refuge or other protection",
+    "ja": "避難所",
+    "ja_reading": "ひなんじょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shelter",
+     "safe shelter",
+     "evacuation shelter",
+     "place of refuge"
+    ],
+    "vi": "chỗ che"
+   },
+   "output": {
+    "id": "wk-11793-e:395498",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '避難所' is too narrow (evacuation shelter only), and the Vietnamese 'chỗ che' is an unnatural and overly literal phrase for the general concept of 'shelter'."
+   }
+  },
+  {
+   "key": "7b5693d865a3e31ea6043d981bce257f0837270b2882ae3c434afaf86bd602a5",
+   "input": {
+    "id": "wk-11795-s0",
+    "en": "variant",
+    "en_pos": "noun",
+    "en_sense": "Something that is slightly different from a type or norm.",
+    "ja": "変種",
+    "ja_reading": "へんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "variant",
+     "variation",
+     "variety",
+     "mutation",
+     "freak",
+     "novelty"
+    ],
+    "vi": "phương án"
+   },
+   "output": {
+    "id": "wk-11795-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese word 'phương án' means 'plan' or 'option', which is completely different from 'variant'."
+   }
+  }
+ ]
+}

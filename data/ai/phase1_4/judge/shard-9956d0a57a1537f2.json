@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:42:34Z",
+ "items": [
+  {
+   "key": "84f6743a95a5763edba884e61da8be8cddfaa5e6f972daf8aaaa7960e4875665",
+   "input": {
+    "id": "jm-1511450-0-change",
+    "en": "change",
+    "en_pos": "noun",
+    "en_sense": "change; fluctuation",
+    "ja": "変動",
+    "ja_reading": "へんどう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "change",
+     "fluctuation"
+    ],
+    "vi": "biến động"
+   },
+   "output": {
+    "id": "jm-1511450-0-change",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognate equivalents for 'fluctuation' or 'change' in a technical or economic sense."
+   }
+  },
+  {
+   "key": "b2ee0be236f0d324696023cc7a6d982dd0f99f0d86c55f1c8ef87d2612977e8d",
+   "input": {
+    "id": "jm-1512080-0-neighborhood",
+    "en": "neighborhood",
+    "en_pos": "noun",
+    "en_sense": "(in the) neighbourhood; neighborhood; vicinity; nearby; surroundings",
+    "ja": "辺り",
+    "ja_reading": "あたり",
+    "ja_pos": "n,n-suf,adv",
+    "ja_glosses": [
+     "(in the) neighbourhood",
+     "neighborhood",
+     "vicinity",
+     "nearby",
+     "surroundings"
+    ],
+    "vi": "khu vực"
+   },
+   "output": {
+    "id": "jm-1512080-0-neighborhood",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'khu vực' (area, region) is broader than the English 'neighborhood' (in the sense of vicinity) and the Japanese '辺り'."
+   }
+  },
+  {
+   "key": "b7690fd8513969ea0e30d075851948d44ed75ae28a88a3200eabb0b16738416a",
+   "input": {
+    "id": "jm-1512170-0-return",
+    "en": "return",
+    "en_pos": "noun",
+    "en_sense": "return; restoration",
+    "ja": "返還",
+    "ja_reading": "へんかん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "return",
+     "restoration"
+    ],
+    "vi": "hoàn trả"
+   },
+   "output": {
+    "id": "jm-1512170-0-return",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the formal act of returning or restoring something to its owner."
+   }
+  },
+  {
+   "key": "e62c21f0800832ca8a24665ebe1071b67d140559ba0419d23fff549d4cf5f941",
+   "input": {
+    "id": "jm-1512290-0-reply",
+    "en": "reply",
+    "en_pos": "noun",
+    "en_sense": "reply; answer",
+    "ja": "返答",
+    "ja_reading": "へんとう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "reply",
+     "answer"
+    ],
+    "vi": "trả lời"
+   },
+   "output": {
+    "id": "jm-1512290-0-reply",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'trả lời' is a verb ('to reply'), not a noun ('a reply') like the English and Japanese terms; the correct noun is 'câu trả lời'."
+   }
+  },
+  {
+   "key": "3b8b95a88daa6d4c8e582b80f6f9aa16648362c9b31aa9352f9ed170137ef912",
+   "input": {
+    "id": "jm-1512360-0-flight",
+    "en": "flight",
+    "en_pos": "noun",
+    "en_sense": "flight (e.g. airline flight); trip (e.g. train trip); sailing (e.g. ferry voyage); service",
+    "ja": "便",
+    "ja_reading": "びん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "flight (e.g. airline flight)",
+     "trip (e.g. train trip)",
+     "sailing (e.g. ferry voyage)",
+     "service"
+    ],
+    "vi": "chuyến bay"
+   },
+   "output": {
+    "id": "jm-1512360-0-flight",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'chuyến bay' only means 'flight', while the English and Japanese terms also cover other scheduled transport like trains or ferries."
+   }
+  },
+  {
+   "key": "7c205fab6ede717b9cb66102575d5ae59cfa26b9c490278a5a44c5938137e104",
+   "input": {
+    "id": "jm-1512640-0-stationery",
+    "en": "stationery",
+    "en_pos": "noun",
+    "en_sense": "writing paper; stationery; notepaper",
+    "ja": "便箋",
+    "ja_reading": "びんせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "writing paper",
+     "stationery",
+     "notepaper"
+    ],
+    "vi": "giấy viết thư"
+   },
+   "output": {
+    "id": "jm-1512640-0-stationery",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly and specifically denote 'writing paper' or 'letter paper'."
+   }
+  },
+  {
+   "key": "aba6f8f937faeb35ec3be405e61f9d1d8610b5568ba765439e65ec9e68745811",
+   "input": {
+    "id": "jm-1512830-0-defense",
+    "en": "defense",
+    "en_pos": "noun",
+    "en_sense": "defense; defence; pleading; advocacy",
+    "ja": "弁護",
+    "ja_reading": "べんご",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "defense",
+     "defence",
+     "pleading",
+     "advocacy"
+    ],
+    "vi": "biện hộ"
+   },
+   "output": {
+    "id": "jm-1512830-0-defense",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and specific legal term for 'defense' or 'advocacy'."
+   }
+  },
+  {
+   "key": "25698ab80eb67755a59b1d640033985c7637eb77cb637bc3fdb68af6d7c23332",
+   "input": {
+    "id": "jm-1512980-0-compensation",
+    "en": "compensation",
+    "en_pos": "noun",
+    "en_sense": "compensation; indemnification; reparation; restitution; recompense",
+    "ja": "弁償",
+    "ja_reading": "べんしょう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "compensation",
+     "indemnification",
+     "reparation",
+     "restitution",
+     "recompense"
+    ],
+    "vi": "bồi thường"
+   },
+   "output": {
+    "id": "jm-1512980-0-compensation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'compensation' for loss or damage."
+   }
+  },
+  {
+   "key": "71691fc92ff2f8cc6cb8e17d95f299b6468101c15fa1f534c8d0c8889d4df87a",
+   "input": {
+    "id": "jm-1513065-0-bento",
+    "en": "bento",
+    "en_pos": "noun",
+    "en_sense": "bento; Japanese box lunch",
+    "ja": "お弁当",
+    "ja_reading": "おべんとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bento",
+     "Japanese box lunch"
+    ],
+    "vi": "cơm hộp"
+   },
+   "output": {
+    "id": "jm-1513065-0-bento",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'cơm hộp' is the perfect functional and conceptual equivalent in Vietnamese for the Japanese 'bento' (box lunch)."
+   }
+  },
+  {
+   "key": "5bc27069a9d33b32abc9c9cef6a44956ccc7ee84a335b833cb7d75a4b1c66ba6",
+   "input": {
+    "id": "jm-1513410-0-hygiene",
+    "en": "hygiene",
+    "en_pos": "noun",
+    "en_sense": "preservation of health; hygiene; sanitation",
+    "ja": "保健",
+    "ja_reading": "ほけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "preservation of health",
+     "hygiene",
+     "sanitation"
+    ],
+    "vi": "vệ sinh"
+   },
+   "output": {
+    "id": "jm-1513410-0-hygiene",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '保健' (health preservation) is broader than English 'hygiene' and Vietnamese 'vệ sinh', which focus more on cleanliness; '衛生' (eisei) would be a better Japanese equivalent."
+   }
+  },
+  {
+   "key": "828a0451bae59da1a1e0696ef23d9b8b8dcc1c2b32bc7a0f61e6c9cf56069d65",
+   "input": {
+    "id": "jm-1514260-0-prisoner",
+    "en": "prisoner",
+    "en_pos": "noun",
+    "en_sense": "prisoner (of war); POW; captive",
+    "ja": "捕虜",
+    "ja_reading": "ほりょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "prisoner (of war)",
+     "POW",
+     "captive"
+    ],
+    "vi": "tù binh"
+   },
+   "output": {
+    "id": "jm-1514260-0-prisoner",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard equivalents for 'prisoner of war'."
+   }
+  },
+  {
+   "key": "b546d225189ef2aeb63367a3a1e4fa61cb0e1de73f9d6608b41413f3a0a6b6fd",
+   "input": {
+    "id": "jm-1514460-0-supplement",
+    "en": "supplement",
+    "en_pos": "verb",
+    "en_sense": "to supplement; to make up for; to compensate for; to cover (a shortage, loss, etc.); to fill (e.g. a vacancy)",
+    "ja": "補う",
+    "ja_reading": "おぎなう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to supplement",
+     "to make up for",
+     "to compensate for",
+     "to cover (a shortage, loss, etc.)",
+     "to fill (e.g. a vacancy)"
+    ],
+    "vi": "bổ sung"
+   },
+   "output": {
+    "id": "jm-1514460-0-supplement",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are perfect equivalents for 'to supplement' or 'to make up for a deficiency'."
+   }
+  }
+ ]
+}

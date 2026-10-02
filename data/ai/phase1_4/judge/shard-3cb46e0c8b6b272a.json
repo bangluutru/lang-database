@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:22:28Z",
+ "items": [
+  {
+   "key": "ed17c09015066ab47fe6082cfddbff5217d67cb19a49bbd2cf05500f440f14b3",
+   "input": {
+    "id": "jm-1006780-1-there",
+    "en": "there",
+    "en_pos": "pronoun",
+    "en_sense": "there",
+    "ja": "そちら",
+    "ja_reading": "そちら",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "there"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1006780-1-there",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "そちら is a polite and specific way to say \"there\" (e.g., near the listener), making it narrower than the general English word and creating a register mismatch."
+   }
+  },
+  {
+   "key": "cfbfe36ca185456ddc1329f6271f07b06ba1b4631c7f98b4004e16dcbc19b468",
+   "input": {
+    "id": "jm-1007010-0-or",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "or; or else",
+    "ja": "それとも",
+    "ja_reading": "それとも",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or",
+     "or else"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007010-0-or",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "それとも is only used for \"or\" between questions or clauses in a question, making it a narrow and potentially misleading equivalent for the general English \"or\"."
+   }
+  },
+  {
+   "key": "1041bb8f83d4ab43b637733ec20f9675e542922754d4a25b96f33ac1d312db04",
+   "input": {
+    "id": "jm-1007040-0-besides",
+    "en": "besides",
+    "en_pos": "conjunction",
+    "en_sense": "besides; in addition; also; moreover",
+    "ja": "それに",
+    "ja_reading": "それに",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "besides",
+     "in addition",
+     "also",
+     "moreover"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007040-0-besides",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "それに is an excellent and direct translation for \"besides\" or \"in addition\" when adding information."
+   }
+  },
+  {
+   "key": "934d051213d26ec61f60b81b51bb651a1306181d1d5f25c6d22c8ce8f0728cd2",
+   "input": {
+    "id": "jm-1007170-0-rough",
+    "en": "rough",
+    "en_pos": "adjective",
+    "en_sense": "rough; careless; slovenly; slipshod; rude; impolite",
+    "ja": "ぞんざい",
+    "ja_reading": "ぞんざい",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "rough",
+     "careless",
+     "slovenly",
+     "slipshod",
+     "rude",
+     "impolite"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007170-0-rough",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word ぞんざい is a perfect match for this specific sense of \"rough\" meaning careless, rude, or impolite."
+   }
+  },
+  {
+   "key": "61a9e37bcfee55d084e353add2ac12e4083dfeeee0a10ea0352cd842ccf3f133",
+   "input": {
+    "id": "jm-1007230-0-only",
+    "en": "only",
+    "en_pos": "adjective",
+    "en_sense": "only; merely; but; no more than",
+    "ja": "たった",
+    "ja_reading": "たった",
+    "ja_pos": "adj-f,adv",
+    "ja_glosses": [
+     "only",
+     "merely",
+     "but",
+     "no more than"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007230-0-only",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "POS_MISMATCH"
+    ],
+    "note": "たった is a good translation for \"only\" but specifically when emphasizing a small quantity, making it narrower than the general English word; the English POS is also questionable for this sense."
+   }
+  },
+  {
+   "key": "475feb8d2078599bbaf28857e0371d2fb3b70720a074ebcdb426b7abbf7face5",
+   "input": {
+    "id": "jm-1007240-0-amply",
+    "en": "amply",
+    "en_pos": "adverb",
+    "en_sense": "plentifully; amply; abundantly; copiously; generously; fully",
+    "ja": "たっぷり",
+    "ja_reading": "たっぷり",
+    "ja_pos": "adv,adv-to,adj-na,suf",
+    "ja_glosses": [
+     "plentifully",
+     "amply",
+     "abundantly",
+     "copiously",
+     "generously",
+     "fully"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007240-0-amply",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "たっぷり is an excellent and common equivalent for \"amply\" or \"plenty of\"."
+   }
+  },
+  {
+   "key": "07ec2ce0360cdbefe387b3d9e528daa079f4f5aba60e008a67162e1c4bb5dee7",
+   "input": {
+    "id": "jm-1007370-0-but",
+    "en": "but",
+    "en_pos": "conjunction",
+    "en_sense": "but; however; although",
+    "ja": "だけど",
+    "ja_reading": "だけど",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "but",
+     "however",
+     "although"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007370-0-but",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "だけど is a common but colloquial equivalent for \"but\"; more formal situations require words like しかし."
+   }
+  },
+  {
+   "key": "ddf3ae8cf7b3a7c46611778a07ccd35ae5ec1f30b1f524813c37c4028b2b3aec",
+   "input": {
+    "id": "jm-1007430-0-loose",
+    "en": "loose",
+    "en_pos": "adjective",
+    "en_sense": "loose (of clothing); baggy",
+    "ja": "だぶだぶ",
+    "ja_reading": "だぶだぶ",
+    "ja_pos": "adj-na,adj-no,adv,adv-to,vs",
+    "ja_glosses": [
+     "loose (of clothing)",
+     "baggy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007430-0-loose",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "だぶだぶ is a perfect and specific equivalent for \"loose\" or \"baggy\" when describing clothing."
+   }
+  },
+  {
+   "key": "de007050454b24a7e86ed3ced710c4f98885c35152b7ecbbe6c96f2046791ae9",
+   "input": {
+    "id": "jm-1007560-0-at_all",
+    "en": "at all",
+    "en_pos": "adverb",
+    "en_sense": "(not) at all; (not) a bit; (not) in the least; (not) in the slightest",
+    "ja": "ちっとも",
+    "ja_reading": "ちっとも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) at all",
+     "(not) a bit",
+     "(not) in the least",
+     "(not) in the slightest"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007560-0-at_all",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ちっとも is a great equivalent for \"(not) at all\", always used with a negative verb."
+   }
+  },
+  {
+   "key": "1718e624ec4363f84709402e521b8499da72da264975aa44667ca8d49c995531",
+   "input": {
+    "id": "jm-1007720-0-diligently",
+    "en": "diligently",
+    "en_pos": "adverb",
+    "en_sense": "diligently; seriously; earnestly; reliably; steadily; legitimately",
+    "ja": "ちゃんと",
+    "ja_reading": "ちゃんと",
+    "ja_pos": "adv,vs",
+    "ja_glosses": [
+     "diligently",
+     "seriously",
+     "earnestly",
+     "reliably",
+     "steadily",
+     "legitimately"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1007720-0-diligently",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "ちゃんと means \"properly\" or \"correctly\", which is a broader and different concept from \"diligently\", making this a poor primary translation."
+   }
+  },
+  {
+   "key": "8ffd7d4c9bc988f3513064fbfd510c7616f2ea3d3e7f6f1302ab5f53333f7e17",
+   "input": {
+    "id": "jm-1008050-0-while",
+    "en": "while",
+    "en_pos": "adverb",
+    "en_sense": "while (one is at it); when; on the occasion of; at the same time (as); on one's way (to); by the way",
+    "ja": "ついでに",
+    "ja_reading": "ついでに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "while (one is at it)",
+     "when",
+     "on the occasion of",
+     "at the same time (as)",
+     "on one's way (to)",
+     "by the way"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008050-0-while",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ついでに is a perfect match for the specific sense of doing something \"while one is at it\" or \"on the way\"."
+   }
+  },
+  {
+   "key": "7afe2de752770472c0d01c653afbc52a32b354a33ae31e42ebd9ac000fe8013e",
+   "input": {
+    "id": "jm-1008450-0-then",
+    "en": "then",
+    "en_pos": "conjunction",
+    "en_sense": "then; well; so; well then",
+    "ja": "では",
+    "ja_reading": "では",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "then",
+     "well",
+     "so",
+     "well then"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1008450-0-then",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "では is a standard and excellent equivalent for \"then\" or \"well then\" as a discourse marker to begin or transition."
+   }
+  }
+ ]
+}

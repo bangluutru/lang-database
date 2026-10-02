@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:26:47Z",
+ "items": [
+  {
+   "key": "ab45bf739e7830ce432e72a96488a88e393bc38dc824bf57875b292d5c4e36eb",
+   "input": {
+    "id": "wk-10268-s3",
+    "en": "dispute",
+    "en_pos": "verb",
+    "en_sense": "To strive or contend about; to contest.",
+    "ja": "争う",
+    "ja_reading": "あらそう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to quarrel",
+     "to argue",
+     "to dispute",
+     "to be at variance",
+     "to oppose"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10268-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`争う` is a good equivalent for the sense of \"to contest\" or \"dispute\"."
+   }
+  },
+  {
+   "key": "5d1b714905aaeaef4332152a165f3584f5610958648fe2fdafb84772d50f17da",
+   "input": {
+    "id": "wk-1027-e:55dcc9",
+    "en": "this",
+    "en_pos": "determiner",
+    "en_sense": "known (thing) just mentioned",
+    "ja": "これ",
+    "ja_reading": "これ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "this",
+     "this one"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1027-e:55dcc9",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word `これ` is a pronoun (\"this one\"), not a determiner (\"this\") like the English entry. The correct translation for the determiner is `この`."
+   }
+  },
+  {
+   "key": "d704406d06ccaf4e36f73c67417772d24c26fe08e9648589fa6aa9a590c64350",
+   "input": {
+    "id": "wk-10283-s0",
+    "en": "dominant",
+    "en_pos": "adjective",
+    "en_sense": "Ruling; governing; prevailing",
+    "ja": "支配的",
+    "ja_reading": "しはいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "dominant",
+     "ruling"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10283-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`支配的` is an excellent and direct translation for `dominant` in the sense of \"ruling\" or \"governing\"."
+   }
+  },
+  {
+   "key": "34d68d2e53ab9e22420b9916cdce807769127a2d3465141da5f58b204e8b3756",
+   "input": {
+    "id": "wk-10288-s0",
+    "en": "drift",
+    "en_pos": "verb",
+    "en_sense": "To move slowly, especially pushed by currents of water, air, etc.",
+    "ja": "漂流する",
+    "ja_reading": "ひょうりゅうする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "drifting",
+     "drift",
+     "being adrift"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10288-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "`漂流する` is a good translation for \"to drift\" but is most commonly used for drifting on water, making it slightly narrower than the English sense which also includes air."
+   }
+  },
+  {
+   "key": "907ee4d28196ee1d4e0ba2d9785e108a59b1d09177e4bef514de0c05591fd980",
+   "input": {
+    "id": "wk-10291-s0",
+    "en": "drowsy",
+    "en_pos": "adjective",
+    "en_sense": "Inclined to drowse; heavy with sleepiness",
+    "ja": "眠い",
+    "ja_reading": "ねむい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "sleepy",
+     "drowsy",
+     "somnolent"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10291-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`眠い` is the perfect and most common equivalent for \"drowsy\" or \"sleepy\"."
+   }
+  },
+  {
+   "key": "39ce91876945eccad12e4996754e0dd15d5c9ea29b5a3e0600764c105fcda841",
+   "input": {
+    "id": "wk-10293-s5",
+    "en": "earnest",
+    "en_pos": "adjective",
+    "en_sense": "Serious; weighty; of a serious, weighty, or important nature; important.",
+    "ja": "真面目",
+    "ja_reading": "まじめ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "serious",
+     "earnest",
+     "sober",
+     "grave"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10293-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`真面目` is a very good translation for `earnest` when describing a person's character or a serious attitude."
+   }
+  },
+  {
+   "key": "8802e98adfda3e3301c38ca4a9c7ed7ead4737860a98fca8c290c873febdf0b8",
+   "input": {
+    "id": "wk-1031-s20",
+    "en": "fall",
+    "en_pos": "verb",
+    "en_sense": "To happen; to come to pass; to chance or light (upon).",
+    "ja": "倒れる",
+    "ja_reading": "たおれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to fall (over, down)",
+     "to collapse",
+     "to take a fall",
+     "to topple"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1031-s20",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese `倒れる` means to physically fall over, which is a different sense of the English verb \"fall\" than the one provided (\"to happen\")."
+   }
+  },
+  {
+   "key": "1e3d865bc8ae213c7d207650db2d74310a736accce62810bd5feab3145616232",
+   "input": {
+    "id": "wk-10315-s0",
+    "en": "equally",
+    "en_pos": "adverb",
+    "en_sense": "In an equal manner; in equal shares or proportion; with equal and impartial justice; evenly",
+    "ja": "等しく",
+    "ja_reading": "ひとしく",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "equally",
+     "evenly",
+     "similarly",
+     "alike"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10315-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`等しく` is a direct and accurate translation of `equally`."
+   }
+  },
+  {
+   "key": "a61bcf39015b1cb221418509f3b0fb4f3a19fd553c01f44fcd88685ce9094155",
+   "input": {
+    "id": "wk-10339-e:917df2",
+    "en": "expectation",
+    "en_pos": "noun",
+    "en_sense": "that which is expected or looked for",
+    "ja": "希望",
+    "ja_reading": "きぼう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(bright) prospects",
+     "expectation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10339-e:917df2",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "`希望` means \"hope\" and has a strong positive connotation, whereas `expectation` is neutral. A better translation would be `期待`."
+   }
+  },
+  {
+   "key": "50cbf61b147726bd6e29d98a8f3171abf65be3095e57295dcaac7ef1234ed046",
+   "input": {
+    "id": "wk-10345-s13",
+    "en": "extension",
+    "en_pos": "noun",
+    "en_sense": "A numerical code used to indicate a specific telephone in a telecommunication network.",
+    "ja": "内線",
+    "ja_reading": "ないせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "phone extension",
+     "indoor wiring",
+     "inner line"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10345-s13",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`内線` is the exact and standard Japanese term for a telephone extension."
+   }
+  },
+  {
+   "key": "50b43c08b303185550848e8fc0926ee8fa2412f51db148ed7959bcdceac77cee",
+   "input": {
+    "id": "wk-10348-s1",
+    "en": "extra",
+    "en_pos": "noun",
+    "en_sense": "An extra edition of a newspaper, which is printed outside of the normal printing cycle, for example to report an important late-breaking event.",
+    "ja": "号外",
+    "ja_reading": "ごうがい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "newspaper extra"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10348-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`号外` is the precise and standard term for a newspaper extra."
+   }
+  },
+  {
+   "key": "611004449b6808b94f26ae40c3b5ce93dd9f1ab8e1e6cd37dd7e232f219fe937",
+   "input": {
+    "id": "wk-10349-s2",
+    "en": "extract",
+    "en_pos": "noun",
+    "en_sense": "A decoction, solution, or infusion made by drawing out from any substance that which gives it its essential and characteristic virtue",
+    "ja": "エキス",
+    "ja_reading": "エキス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "extract (of plants, meat, etc.)",
+     "essence",
+     "concentrate",
+     "concentrated stock"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10349-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The loanword `エキス` is the standard and correct Japanese term for this sense of \"extract\"."
+   }
+  }
+ ]
+}

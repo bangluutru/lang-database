@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:53Z",
+ "items": [
+  {
+   "key": "f8edb8f910dd6fc85d585bdbfea9fde40188d9bc4acfe32c5a792215adf11c5f",
+   "input": {
+    "id": "wk-7041-e:85c2c0",
+    "en": "fall in love",
+    "en_pos": "verb",
+    "en_sense": "to come to have feelings of love",
+    "ja": "惚れる",
+    "ja_reading": "ほれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to fall in love (with)",
+     "to fall for",
+     "to become enamored (with)",
+     "to be taken (with)"
+    ],
+    "vi": "đổ"
+   },
+   "output": {
+    "id": "wk-7041-e:85c2c0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'đổ' is a very colloquial/slangy term for 'fall in love', creating a register mismatch with the neutral English and Japanese terms."
+   }
+  },
+  {
+   "key": "17d38d5d27479f255de8a557bd25523140f5492113eda6c0be9099fb24e0afa2",
+   "input": {
+    "id": "wk-7044-s0",
+    "en": "package",
+    "en_pos": "noun",
+    "en_sense": "Something which is packed, a parcel, a box, an envelope.",
+    "ja": "包み",
+    "ja_reading": "つつみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bundle",
+     "package",
+     "parcel"
+    ],
+    "vi": "gói"
+   },
+   "output": {
+    "id": "wk-7044-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, natural equivalents for a wrapped package or bundle."
+   }
+  },
+  {
+   "key": "4bd07db515aa2a4a0f773d5245115a18d5a7dae984d9a9576acb10c3fc9553ee",
+   "input": {
+    "id": "wk-7050-e:0361c8",
+    "en": "arrive",
+    "en_pos": "verb",
+    "en_sense": "to reach",
+    "ja": "着く",
+    "ja_reading": "つく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to arrive at",
+     "to reach"
+    ],
+    "vi": "đến"
+   },
+   "output": {
+    "id": "wk-7050-e:0361c8",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match across all three languages for the concept of arriving at a destination."
+   }
+  },
+  {
+   "key": "1b9a390f6e84530e3349426c3d1fbb62380dad1c9c79e404039efc5db546135b",
+   "input": {
+    "id": "wk-7067-s0",
+    "en": "defect",
+    "en_pos": "noun",
+    "en_sense": "A fault or malfunction.",
+    "ja": "欠陥",
+    "ja_reading": "けっかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "defect",
+     "fault",
+     "flaw",
+     "deformity",
+     "deficiency",
+     "shortage"
+    ],
+    "vi": "lỗi"
+   },
+   "output": {
+    "id": "wk-7067-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'lỗi' is broader, also meaning 'error' or 'mistake', and doesn't cover all senses of 'defect' (e.g., character or birth defects)."
+   }
+  },
+  {
+   "key": "54243a61881d9e1a842d4744ddac4d766160e0c8f4f98c34c37d5a015303d0a1",
+   "input": {
+    "id": "wk-7069-s0",
+    "en": "coat of arms",
+    "en_pos": "noun",
+    "en_sense": "Hereditary designs and symbols depicted on an escutcheon, sometimes accompanied by other elements of a heraldic achievement, such as a helm, crest, crest coronet, torse, mantling and supporters; described by a blazon.",
+    "ja": "紋章",
+    "ja_reading": "もんしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "crest",
+     "coat of arms"
+    ],
+    "vi": "huy hiệu"
+   },
+   "output": {
+    "id": "wk-7069-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'huy hiệu' means 'badge' or 'insignia', not 'coat of arms'."
+   }
+  },
+  {
+   "key": "125e98ec823cac56693ffe6213bfc62304b79fe3decafad84892e5c59b284e42",
+   "input": {
+    "id": "wk-7072-s0",
+    "en": "foreigner",
+    "en_pos": "noun",
+    "en_sense": "A person from a foreign country.",
+    "ja": "外国人",
+    "ja_reading": "がいこくじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "foreigner",
+     "foreign citizen",
+     "foreign national",
+     "alien",
+     "non-Japanese"
+    ],
+    "vi": "người nước ngoài"
+   },
+   "output": {
+    "id": "wk-7072-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, standard, and neutral equivalents across all three languages."
+   }
+  },
+  {
+   "key": "b736a7d4e3d8ce1a9b9c57bfefcf79891ec199ae456bb75e076178023a60eb0f",
+   "input": {
+    "id": "wk-7074-s1",
+    "en": "puzzle",
+    "en_pos": "noun",
+    "en_sense": "A thing such as a complicated matter or a problem which is difficult to make sense of or understand; also, a person who is difficult to make sense of or understand; an enigma.",
+    "ja": "謎",
+    "ja_reading": "なぞ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "riddle",
+     "puzzle",
+     "enigma",
+     "mystery"
+    ],
+    "vi": "sự bối rối"
+   },
+   "output": {
+    "id": "wk-7074-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự bối rối' means 'confusion' or 'bewilderment' (the feeling), not the 'puzzle' or 'enigma' (the thing causing the feeling)."
+   }
+  },
+  {
+   "key": "74c79191d0f3b5041583d5ec2804fca2c80bf2869f122b4e35a1f595a5b63938",
+   "input": {
+    "id": "wk-7080-s1",
+    "en": "junction",
+    "en_pos": "noun",
+    "en_sense": "A place where two things meet, especially where two roads meet.",
+    "ja": "ジャンクション",
+    "ja_reading": "ジャンクション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "junction",
+     "system interchange (between highways)"
+    ],
+    "vi": "giao điểm"
+   },
+   "output": {
+    "id": "wk-7080-s1",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese 'ジャンクション' is a narrow loanword for highway interchanges, while Vietnamese 'giao điểm' is a geometric term ('point of intersection') not used for road junctions."
+   }
+  },
+  {
+   "key": "48a2c617ec0ed38d060b6a62687e35c0363f2ae548f04681afcf31565b2cb7ed",
+   "input": {
+    "id": "wk-7081-s0",
+    "en": "psychology",
+    "en_pos": "noun",
+    "en_sense": "The study of the human mind.",
+    "ja": "心理学",
+    "ja_reading": "しんりがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "psychology"
+    ],
+    "vi": "tâm lý học"
+   },
+   "output": {
+    "id": "wk-7081-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match of the standard academic term across all three languages."
+   }
+  },
+  {
+   "key": "2c9b2db4ded434bf4b63af7b9887983698805acee7bb96a9d85d03caeb34ac59",
+   "input": {
+    "id": "wk-7088-s0",
+    "en": "sock",
+    "en_pos": "noun",
+    "en_sense": "A knitted or woven covering for the foot.",
+    "ja": "靴下",
+    "ja_reading": "くつした",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "socks",
+     "sock",
+     "stockings",
+     "stocking"
+    ],
+    "vi": "tất"
+   },
+   "output": {
+    "id": "wk-7088-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'sock'. 'tất' is the Northern Vietnamese word; 'vớ' is the Southern equivalent."
+   }
+  },
+  {
+   "key": "a80406aa9599507f27406f2cd6fc8b77dfa4cb0e1b881827440b01170ba8cebe",
+   "input": {
+    "id": "wk-709-e:cf4fb5",
+    "en": "radar",
+    "en_pos": "noun",
+    "en_sense": "method of detecting a distant object by analysing radio waves which are sent towards the object and which reflect off its surfaces; field of study of this method",
+    "ja": "レーダー",
+    "ja_reading": "レーダー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "radar"
+    ],
+    "vi": "ra đa"
+   },
+   "output": {
+    "id": "wk-709-e:cf4fb5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY"
+    ],
+    "note": "All terms are the standard loanword for 'radar' in each language."
+   }
+  },
+  {
+   "key": "f26f4d78719de196086bb5b51af889d132e441c2013bfb791acbe7e0b493d96d",
+   "input": {
+    "id": "wk-7090-s0",
+    "en": "spoon",
+    "en_pos": "noun",
+    "en_sense": "An implement for eating or serving; a scooped utensil whose long handle is straight, in contrast to a ladle.",
+    "ja": "スプーン",
+    "ja_reading": "スプーン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spoon"
+    ],
+    "vi": "thìa"
+   },
+   "output": {
+    "id": "wk-7090-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'spoon'. 'thìa' is the Northern Vietnamese word; 'muỗng' is the Southern equivalent."
+   }
+  }
+ ]
+}

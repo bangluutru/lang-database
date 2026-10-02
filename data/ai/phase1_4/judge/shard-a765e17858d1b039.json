@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:35:08Z",
+ "items": [
+  {
+   "key": "c2862d325ac7a32a931fc07be32a81d1cc201a86e59bd1ca3b473091b231862f",
+   "input": {
+    "id": "jm-1330410-0-establishment",
+    "en": "establishment",
+    "en_pos": "noun",
+    "en_sense": "establishment; founding; setting (a record)",
+    "ja": "樹立",
+    "ja_reading": "じゅりつ",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "establishment",
+     "founding",
+     "setting (a record)"
+    ],
+    "vi": "thiết lập"
+   },
+   "output": {
+    "id": "jm-1330410-0-establishment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'thiết lập' is a verb ('to establish'), while the English 'establishment' is a noun; the correct noun form would be 'sự thiết lập'."
+   }
+  },
+  {
+   "key": "768af23d62e6c260256155a3e798df7cc1aaeaebdf896dffddc51da34584f161",
+   "input": {
+    "id": "jm-1330880-0-accommodation",
+    "en": "accommodation",
+    "en_pos": "noun",
+    "en_sense": "accommodation; taking in; receiving; housing; seating; admission (of patients, students, etc.)",
+    "ja": "収容",
+    "ja_reading": "しゅうよう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "accommodation",
+     "taking in",
+     "receiving",
+     "housing",
+     "seating",
+     "admission (of patients, students, etc.)"
+    ],
+    "vi": "tiếp nhận"
+   },
+   "output": {
+    "id": "jm-1330880-0-accommodation",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'tiếp nhận' (to receive/admit) is too narrow, not covering 'housing' or 'seating capacity', and is a verb, not a noun."
+   }
+  },
+  {
+   "key": "7cf7b92260d2c329a7a5f956058fee7537cbd8a1c5b5e70df009e555de4e35e4",
+   "input": {
+    "id": "jm-1331030-0-surroundings",
+    "en": "surroundings",
+    "en_pos": "noun",
+    "en_sense": "surroundings; environs",
+    "ja": "周囲",
+    "ja_reading": "しゅうい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "surroundings",
+     "environs"
+    ],
+    "vi": "xung quanh"
+   },
+   "output": {
+    "id": "jm-1331030-0-surroundings",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry with natural and direct equivalents in all three languages."
+   }
+  },
+  {
+   "key": "f917fd24ab66e4e640a2ad92e721c8c8dfa71ed4c90cb1b5b891abce8a86664a",
+   "input": {
+    "id": "jm-1331530-0-assume",
+    "en": "assume",
+    "en_pos": "verb",
+    "en_sense": "to take (seat, position, course, office, etc.); to assume; to be hired; to be employed",
+    "ja": "就く",
+    "ja_reading": "つく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to take (seat, position, course, office, etc.)",
+     "to assume",
+     "to be hired",
+     "to be employed"
+    ],
+    "vi": "đảm nhiệm"
+   },
+   "output": {
+    "id": "jm-1331530-0-assume",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The entry correctly identifies a specific sense of 'assume' and provides excellent, natural equivalents."
+   }
+  },
+  {
+   "key": "c12f725f09d6b8a58d305d9d228f82478006e24b32afec24ffd3af5b4c5fe724",
+   "input": {
+    "id": "jm-1331590-1-employment",
+    "en": "employment",
+    "en_pos": "noun",
+    "en_sense": "employment; work",
+    "ja": "就業",
+    "ja_reading": "しゅうぎょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "employment",
+     "work"
+    ],
+    "vi": "việc làm"
+   },
+   "output": {
+    "id": "jm-1331590-1-employment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '就業' is significantly more formal and technical than the general English 'employment' and Vietnamese 'việc làm'."
+   }
+  },
+  {
+   "key": "8a24f4fb711d4d44b67812bad413f7dd00e698e29b6bb63e0a3f089e88c05cbe",
+   "input": {
+    "id": "jm-1332170-0-repair",
+    "en": "repair",
+    "en_pos": "noun",
+    "en_sense": "repair; mending",
+    "ja": "修繕",
+    "ja_reading": "しゅうぜん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "repair",
+     "mending"
+    ],
+    "vi": "sửa chữa"
+   },
+   "output": {
+    "id": "jm-1332170-0-repair",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'sửa chữa' is a verb ('to repair'), not a noun ('repair'); the correct noun form is 'sự sửa chữa'."
+   }
+  },
+  {
+   "key": "75b91cb0ff7af761fd5ed27561123a1e74dd3ddf469d8ddcf86ca4df5599a663",
+   "input": {
+    "id": "jm-1332450-0-completion",
+    "en": "completion",
+    "en_pos": "noun",
+    "en_sense": "completion (of a course)",
+    "ja": "修了",
+    "ja_reading": "しゅうりょう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "completion (of a course)"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1332450-0-completion",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'hoàn thành' is a general verb 'to complete' and is too broad for the specific sense 'completion of a course', which the Japanese '修了' captures perfectly."
+   }
+  },
+  {
+   "key": "4389cc5633eb401778663a9cf9972da599db26fa79d97f0aac32dfb93c82f226",
+   "input": {
+    "id": "jm-1333040-0-end",
+    "en": "end",
+    "en_pos": "noun",
+    "en_sense": "end; close; conclusion; termination",
+    "ja": "終了",
+    "ja_reading": "しゅうりょう",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "end",
+     "close",
+     "conclusion",
+     "termination"
+    ],
+    "vi": "kết thúc"
+   },
+   "output": {
+    "id": "jm-1333040-0-end",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'kết thúc' is primarily a verb ('to end'), though it is often used as a noun ('the end'); this creates a minor POS mismatch with the English noun."
+   }
+  },
+  {
+   "key": "93fc5e0df63900c632816a452cf50c32447ad9c8bf3c87751e80ba5d18fda4d6",
+   "input": {
+    "id": "jm-1322470-0-slope",
+    "en": "slope",
+    "en_pos": "noun",
+    "en_sense": "slope; slanting surface; bevel",
+    "ja": "斜面",
+    "ja_reading": "しゃめん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "slope",
+     "slanting surface",
+     "bevel"
+    ],
+    "vi": "độ dốc"
+   },
+   "output": {
+    "id": "jm-1322470-0-slope",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'độ dốc' means 'gradient' or 'steepness', not the physical 'slope' or 'slanting surface' itself."
+   }
+  },
+  {
+   "key": "16441d7ae6dc80da3b2bc063fbbcb4727d8803409871d980ba5cc7e8ed1b779d",
+   "input": {
+    "id": "jm-1323010-0-apologize",
+    "en": "apologize",
+    "en_pos": "verb",
+    "en_sense": "to apologize (apologise)",
+    "ja": "謝る",
+    "ja_reading": "あやまる",
+    "ja_pos": "v5r,vt,vi",
+    "ja_glosses": [
+     "to apologize (apologise)"
+    ],
+    "vi": "xin lỗi"
+   },
+   "output": {
+    "id": "jm-1323010-0-apologize",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry with natural and direct equivalents in all three languages."
+   }
+  },
+  {
+   "key": "06fb6d8f3ab739b553dbbe9c904ce4df3e40b5e400f1e43b4067072c187fb369",
+   "input": {
+    "id": "jm-1323280-0-wheel",
+    "en": "wheel",
+    "en_pos": "noun",
+    "en_sense": "(vehicle) wheel",
+    "ja": "車輪",
+    "ja_reading": "しゃりん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(vehicle) wheel"
+    ],
+    "vi": "bánh xe"
+   },
+   "output": {
+    "id": "jm-1323280-0-wheel",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry with natural and direct equivalents in all three languages."
+   }
+  },
+  {
+   "key": "0e12df9962d98adcc08943f75f6d2cb027f8f69b499cd9c8bc103e882663adb1",
+   "input": {
+    "id": "jm-1323540-0-debt",
+    "en": "debt",
+    "en_pos": "noun",
+    "en_sense": "borrowing; debt; loan",
+    "ja": "借り",
+    "ja_reading": "かり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "borrowing",
+     "debt",
+     "loan"
+    ],
+    "vi": "nợ"
+   },
+   "output": {
+    "id": "jm-1323540-0-debt",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good entry with natural equivalents, although the Japanese '借金' (shakkin) is more common for specifically monetary debt."
+   }
+  }
+ ]
+}

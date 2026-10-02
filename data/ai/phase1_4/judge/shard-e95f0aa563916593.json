@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:38Z",
+ "items": [
+  {
+   "key": "d6f74de2adb15af91a2d996bcef59f1ba04b576ad8f43cc1376c464d0cc35055",
+   "input": {
+    "id": "wk-27258-s0",
+    "en": "go bankrupt",
+    "en_pos": "verb",
+    "en_sense": "To become bankrupt; to go into liquidation.",
+    "ja": "潰れる",
+    "ja_reading": "つぶれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to go bankrupt",
+     "to go under",
+     "to fail",
+     "to collapse"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27258-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "潰れる is a perfect and natural equivalent for a company going bankrupt."
+   }
+  },
+  {
+   "key": "404f58d3ee970cb7a181fe9ec9159fb913bda937aebe0f8b527e8acea77ad686",
+   "input": {
+    "id": "wk-2726-s1",
+    "en": "agreement",
+    "en_pos": "noun",
+    "en_sense": "A state whereby several parties share a view or opinion; the state of not contradicting one another.",
+    "ja": "協定",
+    "ja_reading": "きょうてい",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "arrangement",
+     "pact",
+     "agreement"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2726-s1",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "協定 refers to a formal pact or arrangement, which is narrower and more formal than the general sense of 'agreement' as sharing an opinion; 合意 would be a better fit."
+   }
+  },
+  {
+   "key": "56d9dec7c30a3f6da010545770ef4d4e20d21f5dd41ad58c27366aea74c67c7d",
+   "input": {
+    "id": "wk-2727-s3",
+    "en": "cover",
+    "en_pos": "noun",
+    "en_sense": "The top sheet of a bed.",
+    "ja": "カバー",
+    "ja_reading": "カバー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cover",
+     "covering",
+     "dust jacket",
+     "wrapper"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2727-s3",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA"
+    ],
+    "note": "カバー is too general; for the top sheet of a bed, one would specify ベッドカバー (bed cover) or 布団カバー (duvet cover)."
+   }
+  },
+  {
+   "key": "aa9771a81d1b5824581c076f5de998779c983b9e81e0573bde3866cc9993b630",
+   "input": {
+    "id": "wk-2729-e:445a7e",
+    "en": "collar",
+    "en_pos": "noun",
+    "en_sense": "device for restraining animal",
+    "ja": "首輪",
+    "ja_reading": "くびわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(animal) collar"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2729-e:445a7e",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "首輪 is the exact and natural Japanese equivalent for an animal's collar."
+   }
+  },
+  {
+   "key": "6fe5e0e2ec3a204ff50434adeb8f067e638f06fb9ecb4140e0466ab74184082b",
+   "input": {
+    "id": "wk-27301-e:c615cc",
+    "en": "opponent",
+    "en_pos": "noun",
+    "en_sense": "one who opposes another",
+    "ja": "相手",
+    "ja_reading": "あいて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "opponent (sports, etc.)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27301-e:c615cc",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "相手 is too broad as it can mean 'partner' or 'the other party' in non-oppositional contexts, unlike 'opponent'."
+   }
+  },
+  {
+   "key": "242e872b29eb9990cea64e5cb6739679cc3ca9d21f6e0c0e900fd8a97d84afe3",
+   "input": {
+    "id": "wk-27311-s0",
+    "en": "mochi",
+    "en_pos": "noun",
+    "en_sense": "A small Japanese rice cake made from glutinous rice.",
+    "ja": "餅",
+    "ja_reading": "もち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mochi",
+     "small rice cake made from glutinous rice"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27311-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English word 'mochi' is a direct loanword from the Japanese 餅, and they refer to the exact same thing."
+   }
+  },
+  {
+   "key": "26e77bc23eaec9218f719ccc6cba18ea39eae74864803efd1455609520db0e4a",
+   "input": {
+    "id": "wk-2733-s8",
+    "en": "iron",
+    "en_pos": "noun",
+    "en_sense": "A golf club used for middle-distance shots.",
+    "ja": "アイアン",
+    "ja_reading": "アイアン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "iron"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2733-s8",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "アイアン is the standard Japanese term for an iron golf club, a direct loanword from English."
+   }
+  },
+  {
+   "key": "ccf8f0692934a85fa67bf008d9bd93b1e560d1d4cfdc5ca40ee36a57557e4276",
+   "input": {
+    "id": "wk-27343-s5",
+    "en": "spray",
+    "en_pos": "noun",
+    "en_sense": "A side channel or branch of the runner of a flask, made to distribute the metal to all parts of the mold.",
+    "ja": "小枝",
+    "ja_reading": "こえだ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "twig",
+     "spray"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27343-s5",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "小枝 means 'twig' and has no connection to the specified technical sense of 'spray' in metallurgy."
+   }
+  },
+  {
+   "key": "d4729e6ac234ea2114e0f25ffaf0ae55aef458784adb3546333f686e7eef1570",
+   "input": {
+    "id": "wk-27353-s0",
+    "en": "fortuity",
+    "en_pos": "noun",
+    "en_sense": "The state of being fortuitous.",
+    "ja": "偶然",
+    "ja_reading": "ぐうぜん",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "coincidence",
+     "chance",
+     "accident",
+     "fortuity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27353-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "偶然 is a very good translation for 'fortuity', though 'fortuity' is more formal/literary in English than 偶然 is in Japanese."
+   }
+  },
+  {
+   "key": "1eb4ccf457258021c39ae2de6b3aec16cbc476ee71f77eb551c9f24c140161f4",
+   "input": {
+    "id": "wk-2736-s12",
+    "en": "connection",
+    "en_pos": "noun",
+    "en_sense": "An acquaintance who is useful in a particular scenario, especially in a corrupt or criminal way.",
+    "ja": "コネ",
+    "ja_reading": "コネ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "connection",
+     "pull"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2736-s12",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "コネ is the perfect Japanese equivalent for this specific sense of 'connection' referring to personal influence or 'pull'."
+   }
+  },
+  {
+   "key": "cc01d4f5693c62f32a5be20b01235b9ee0481a533e16405eedaa25cf7455409e",
+   "input": {
+    "id": "wk-2736-s6",
+    "en": "connection",
+    "en_pos": "noun",
+    "en_sense": "An established communications or transportation link.",
+    "ja": "コネクション",
+    "ja_reading": "コネクション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "connection"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2736-s6",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "While コネクション can be understood, more specific words like 接続 (for networks) or 乗り継ぎ (for transport) are far more natural and common."
+   }
+  },
+  {
+   "key": "dc0be7a261b074081cd663d4e2cb044274e8187674d51482d7e585c7f62818f5",
+   "input": {
+    "id": "wk-2736-s9",
+    "en": "connection",
+    "en_pos": "noun",
+    "en_sense": "A feeling of mutual understanding and ease of communication between two or more people.",
+    "ja": "縁故",
+    "ja_reading": "えんこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "relation",
+     "connection",
+     "affinity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2736-s9",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "縁故 refers to a connection by relation (family, background), often for nepotism, not the emotional or psychological connection described."
+   }
+  }
+ ]
+}

@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:46:53Z",
+ "items": [
+  {
+   "key": "b59a5fbd599b8285f493453460db7373b03d1307cbbefdaea8958f56e2ea3494",
+   "input": {
+    "id": "jm-1587610-0-unwilling",
+    "en": "unwilling",
+    "en_pos": "adjective",
+    "en_sense": "disliking; not wanting; unwilling (to do); reluctant",
+    "ja": "嫌",
+    "ja_reading": "いや",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "disliking",
+     "not wanting",
+     "unwilling (to do)",
+     "reluctant"
+    ],
+    "vi": "không muốn"
+   },
+   "output": {
+    "id": "jm-1587610-0-unwilling",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and direct equivalents for being unwilling to do something."
+   }
+  },
+  {
+   "key": "304b43b64fe2ed93348fc4b94c1d7b6db1a182dc63b64a65b7bd6547b95fb02b",
+   "input": {
+    "id": "jm-1587690-0-will",
+    "en": "will",
+    "en_pos": "noun",
+    "en_sense": "will; desire; eagerness; interest; drive; motivation",
+    "ja": "意欲",
+    "ja_reading": "いよく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "will",
+     "desire",
+     "eagerness",
+     "interest",
+     "drive",
+     "motivation"
+    ],
+    "vi": "ý chí"
+   },
+   "output": {
+    "id": "jm-1587690-0-will",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'ý chí' specifically means 'willpower' or 'determination' and is narrower than the English 'will' (in the sense of motivation/desire) and the Japanese '意欲'."
+   }
+  },
+  {
+   "key": "de76f5870ed134cf8e91dbcd698c867ad3e979df3b5e2a4a00f3294dd51c3384",
+   "input": {
+    "id": "jm-1587770-0-power",
+    "en": "power",
+    "en_pos": "noun",
+    "en_sense": "power; might; authority; influence",
+    "ja": "威力",
+    "ja_reading": "いりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "power",
+     "might",
+     "authority",
+     "influence"
+    ],
+    "vi": "quyền lực"
+   },
+   "output": {
+    "id": "jm-1587770-0-power",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '威力' (might, forceful impact) and Vietnamese 'quyền lực' (authority, political power) denote different aspects of 'power' and are not interchangeable."
+   }
+  },
+  {
+   "key": "00c5dfcac6539f3cb868547b7e50635c2609ed89f05bacd1c4a67ff34e256d14",
+   "input": {
+    "id": "jm-1587850-0-various",
+    "en": "various",
+    "en_pos": "adjective",
+    "en_sense": "various; a variety of; all sorts of; many (different)",
+    "ja": "いろいろ",
+    "ja_reading": "いろいろ",
+    "ja_pos": "adj-na,adj-no",
+    "ja_glosses": [
+     "various",
+     "a variety of",
+     "all sorts of",
+     "many (different)"
+    ],
+    "vi": "khác nhau"
+   },
+   "output": {
+    "id": "jm-1587850-0-various",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are common, natural, and equivalent ways to express the concept of 'various'."
+   }
+  },
+  {
+   "key": "0b24f0b6828eda54fcdeef321c60a1937bca3fbb0c82060e3699cb32aa1c92a5",
+   "input": {
+    "id": "jm-1588530-0-sale",
+    "en": "sale",
+    "en_pos": "noun",
+    "en_sense": "(bargain) sale",
+    "ja": "売り出し",
+    "ja_reading": "うりだし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(bargain) sale"
+    ],
+    "vi": "giảm giá"
+   },
+   "output": {
+    "id": "jm-1588530-0-sale",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '売り出し' can also mean a product launch, not just a bargain sale, making it broader than the English sense and the Vietnamese 'giảm giá'."
+   }
+  },
+  {
+   "key": "3e6dee969f7c5f192adbae8bfbef38a7617b0bf2eff0370f15dd78aa2db386ef",
+   "input": {
+    "id": "jm-1588550-0-counter",
+    "en": "counter",
+    "en_pos": "noun",
+    "en_sense": "selling area; counter; section; department; sales floor",
+    "ja": "売り場",
+    "ja_reading": "うりば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "selling area",
+     "counter",
+     "section",
+     "department",
+     "sales floor"
+    ],
+    "vi": "quầy hàng"
+   },
+   "output": {
+    "id": "jm-1588550-0-counter",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'quầy hàng' refers specifically to a physical counter or stall, which is narrower than the English sense and the Japanese '売り場' (sales floor, department)."
+   }
+  },
+  {
+   "key": "1b5f2b7c086a5e41300b51003ec2ea51881eed28704a04b8f80645483dd9e6ac",
+   "input": {
+    "id": "jm-1588590-0-demand",
+    "en": "demand",
+    "en_pos": "noun",
+    "en_sense": "sales; demand",
+    "ja": "売れ行き",
+    "ja_reading": "うれゆき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sales",
+     "demand"
+    ],
+    "vi": "nhu cầu"
+   },
+   "output": {
+    "id": "jm-1588590-0-demand",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'nhu cầu' means 'need' or 'economic demand', whereas English 'demand' (in this sense) and Japanese '売れ行き' refer to sales performance."
+   }
+  },
+  {
+   "key": "b45557dff10af7601463444dae404133e4324f1be28b401a1e405c386229a302",
+   "input": {
+    "id": "jm-1588620-0-transport",
+    "en": "transport",
+    "en_pos": "noun",
+    "en_sense": "transport; freight; shipping; moving (goods)",
+    "ja": "運送",
+    "ja_reading": "うんそう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "transport",
+     "freight",
+     "shipping",
+     "moving (goods)"
+    ],
+    "vi": "vận chuyển"
+   },
+   "output": {
+    "id": "jm-1588620-0-transport",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for the transport of goods."
+   }
+  },
+  {
+   "key": "ed61a37faa0fbd9611031cfc2ff2e5778d84d1af2b284c7e70940efccc25d53b",
+   "input": {
+    "id": "jm-1589030-0-present",
+    "en": "present",
+    "en_pos": "noun",
+    "en_sense": "present; gift",
+    "ja": "贈り物",
+    "ja_reading": "おくりもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "present",
+     "gift"
+    ],
+    "vi": "quà tặng"
+   },
+   "output": {
+    "id": "jm-1589030-0-present",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for 'gift' or 'present'."
+   }
+  },
+  {
+   "key": "385581b4dde162501e9f1d488badb459c8281408792a2fdaba671b89874a72be",
+   "input": {
+    "id": "jm-1589090-0-put",
+    "en": "put",
+    "en_pos": "verb",
+    "en_sense": "to put (into); to put away (in); to put back (in); to keep (in); to store (in); to restore (to its place)",
+    "ja": "納める",
+    "ja_reading": "おさめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to put (into)",
+     "to put away (in)",
+     "to put back (in)",
+     "to keep (in)",
+     "to store (in)",
+     "to restore (to its place)"
+    ],
+    "vi": "cất"
+   },
+   "output": {
+    "id": "jm-1589090-0-put",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent equivalents for the action of putting something away for storage."
+   }
+  },
+  {
+   "key": "b61ec953fa3cb97b8b762d678f7f97eab1073d5aa0ec4e844a9f47474f6f5f38",
+   "input": {
+    "id": "jm-1589620-0-mild",
+    "en": "mild",
+    "en_pos": "adjective",
+    "en_sense": "mild (climate); temperate; clement; pleasant; agreeable",
+    "ja": "温和",
+    "ja_reading": "おんわ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "mild (climate)",
+     "temperate",
+     "clement",
+     "pleasant",
+     "agreeable"
+    ],
+    "vi": "ôn hòa"
+   },
+   "output": {
+    "id": "jm-1589620-0-mild",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms, including the direct Sino-Japanese/Sino-Vietnamese cognates, are perfect equivalents for 'mild' in the context of climate."
+   }
+  },
+  {
+   "key": "49dc7c6fba314ac11e3aeace999b62beef219e185ee7545aa940795e907f4956",
+   "input": {
+    "id": "jm-1589840-0-charge",
+    "en": "charge",
+    "en_pos": "noun",
+    "en_sense": "charge; duty; person in charge; official; clerk",
+    "ja": "係り",
+    "ja_reading": "かかり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "charge",
+     "duty",
+     "person in charge",
+     "official",
+     "clerk"
+    ],
+    "vi": "phụ trách"
+   },
+   "output": {
+    "id": "jm-1589840-0-charge",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'phụ trách' is a verb ('to be in charge of'), not a noun like the English 'charge' or Japanese '係り'."
+   }
+  }
+ ]
+}

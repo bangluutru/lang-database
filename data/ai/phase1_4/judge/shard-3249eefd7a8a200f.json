@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:14Z",
+ "items": [
+  {
+   "key": "151d5161dfca1b6d23aebf40396e353f686933182ac316253ac098934db0e160",
+   "input": {
+    "id": "wk-1579-s0",
+    "en": "priest",
+    "en_pos": "noun",
+    "en_sense": "A religious clergyman (clergywoman, clergyperson) who is trained to perform services or sacrifices at a church or temple.",
+    "ja": "司祭",
+    "ja_reading": "しさい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "priest",
+     "minister",
+     "pastor"
+    ],
+    "vi": "linh mục"
+   },
+   "output": {
+    "id": "wk-1579-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '司祭' (Christian priest) and Vietnamese 'linh mục' (Catholic priest) are much narrower than the general English definition which includes priests at temples."
+   }
+  },
+  {
+   "key": "24e6f3cd6a3d363836c52d22995c4d70d9474061bced0eba3f62d5ca6ee84219",
+   "input": {
+    "id": "wk-15793-s0",
+    "en": "bestseller",
+    "en_pos": "noun",
+    "en_sense": "A book or other product that has sold in large numbers.",
+    "ja": "ベストセラー",
+    "ja_reading": "ベストセラー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bestseller"
+    ],
+    "vi": "hàng bán chạy nhất"
+   },
+   "output": {
+    "id": "wk-15793-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are standard and accurate equivalents for a best-selling product."
+   }
+  },
+  {
+   "key": "65c850a0e9b33ef714b5cdd9265f447191896e5886390d8913f216e43421bb16",
+   "input": {
+    "id": "wk-158-s0",
+    "en": "calendar",
+    "en_pos": "noun",
+    "en_sense": "Any system by which time is divided into days, weeks, months, and years.",
+    "ja": "暦",
+    "ja_reading": "こよみ",
+    "ja_pos": "n,suf",
+    "ja_glosses": [
+     "calendar",
+     "almanac"
+    ],
+    "vi": "lịch"
+   },
+   "output": {
+    "id": "wk-158-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote the concept of a calendar as a system of timekeeping."
+   }
+  },
+  {
+   "key": "ab95c909046b0d175e1cf3ec561051f2c2d0363adffea4f80cda4bf06ae0b385",
+   "input": {
+    "id": "wk-158-s1",
+    "en": "calendar",
+    "en_pos": "noun",
+    "en_sense": "A means to determine the date consisting of a document containing dates and other temporal information.",
+    "ja": "カレンダー",
+    "ja_reading": "カレンダー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "calendar"
+    ],
+    "vi": "lịch"
+   },
+   "output": {
+    "id": "wk-158-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a physical calendar object."
+   }
+  },
+  {
+   "key": "db7a4b6680e1e91778e006fa35aba17e3e28cfc3aee89debd084b76936c966a3",
+   "input": {
+    "id": "wk-1581-s5",
+    "en": "mustard",
+    "en_pos": "noun",
+    "en_sense": "The tomalley of a crab, which resembles the condiment.",
+    "ja": "からし",
+    "ja_reading": "からし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mustard"
+    ],
+    "vi": "mù tạc"
+   },
+   "output": {
+    "id": "wk-1581-s5",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese words mean the condiment 'mustard', not the specified English sense of 'crab tomalley'."
+   }
+  },
+  {
+   "key": "c4375a97267ee7212e131d7b68adbc8b6ce61a378a30d0a9f6106cfecf0e7aac",
+   "input": {
+    "id": "wk-1582-s0",
+    "en": "strawberry",
+    "en_pos": "noun",
+    "en_sense": "The sweet, usually red, edible accessory fruit of certain plants of the genus Fragaria.",
+    "ja": "いちご",
+    "ja_reading": "いちご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "strawberry (esp. the garden strawberry, Fragaria x ananassa)"
+    ],
+    "vi": "dâu tây"
+   },
+   "output": {
+    "id": "wk-1582-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfectly corresponding terms for strawberry in all three languages."
+   }
+  },
+  {
+   "key": "02445228ab035e9dec5fd23a0b21c9c183873a12c020f3e79a3231a1384c4f0f",
+   "input": {
+    "id": "wk-1584-s0",
+    "en": "scarlet",
+    "en_pos": "noun",
+    "en_sense": "A brilliant red colour sometimes tinged with orange.",
+    "ja": "緋色",
+    "ja_reading": "ひいろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "scarlet",
+     "cardinal red"
+    ],
+    "vi": "đỏ"
+   },
+   "output": {
+    "id": "wk-1584-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese word 'đỏ' means 'red' in general and is too broad for the specific shade of 'scarlet'."
+   }
+  },
+  {
+   "key": "da7021d0ba10efad939a25ae3bbf96d459f729b9575c2dfe0e200f76d45517e7",
+   "input": {
+    "id": "wk-1588-s0",
+    "en": "lemon",
+    "en_pos": "noun",
+    "en_sense": "A yellowish citrus fruit.",
+    "ja": "レモン",
+    "ja_reading": "レモン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lemon"
+    ],
+    "vi": "chanh"
+   },
+   "output": {
+    "id": "wk-1588-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chanh' typically refers to a lime (green), not a lemon (yellow); the correct term would be 'chanh vàng'."
+   }
+  },
+  {
+   "key": "39b444e8085176c79dc593398355dc2bcde0f52228d527899f866726b44af016",
+   "input": {
+    "id": "wk-15889-e:5cf1da",
+    "en": "ignite",
+    "en_pos": "verb",
+    "en_sense": "to set fire to, to light",
+    "ja": "火を点ける",
+    "ja_reading": "ひをつける",
+    "ja_pos": "exp,v1",
+    "ja_glosses": [
+     "to ignite",
+     "to set fire to"
+    ],
+    "vi": "đốt"
+   },
+   "output": {
+    "id": "wk-15889-e:5cf1da",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are common and accurate equivalents for 'to set fire to'."
+   }
+  },
+  {
+   "key": "0b1fd76cd866eb89b8703294f25e03c6dffcfa4d8d0c33c716b937bdb96f0fa7",
+   "input": {
+    "id": "wk-159-s0",
+    "en": "millennium",
+    "en_pos": "noun",
+    "en_sense": "A period of time consisting of one thousand years.",
+    "ja": "ミレニアム",
+    "ja_reading": "ミレニアム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "millennium"
+    ],
+    "vi": "thiên niên kỷ"
+   },
+   "output": {
+    "id": "wk-159-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and correct equivalents for millennium."
+   }
+  },
+  {
+   "key": "519a61d4faa392be8d8f9052508cd1882a9ddd685d689edc677d55f75c1ad38a",
+   "input": {
+    "id": "wk-15906-s0",
+    "en": "deputy",
+    "en_pos": "noun",
+    "en_sense": "One appointed as the substitute of others, and empowered to act for them, in their name or their behalf; a substitute in office.",
+    "ja": "代理",
+    "ja_reading": "だいり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "proxy",
+     "agent",
+     "representative",
+     "deputy",
+     "substitute",
+     "surrogate"
+    ],
+    "vi": "phó"
+   },
+   "output": {
+    "id": "wk-15906-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'phó' means a permanent deputy rank (like 'vice-'), which is narrower than the English sense of a substitute and the Japanese '代理' (proxy)."
+   }
+  },
+  {
+   "key": "bb9e3943e0651d1b16ad74debcd8644607e03aa9179d8e8a6e20a1dda3087c84",
+   "input": {
+    "id": "wk-15932-e:9ac60a",
+    "en": "portrait",
+    "en_pos": "noun",
+    "en_sense": "painting of a person",
+    "ja": "肖像",
+    "ja_reading": "しょうぞう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "portrait",
+     "likeness",
+     "picture"
+    ],
+    "vi": "chân dung"
+   },
+   "output": {
+    "id": "wk-15932-e:9ac60a",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese and Vietnamese terms mean 'portrait' in general (any medium), which is broader than the specified English sense 'painting of a person'."
+   }
+  }
+ ]
+}

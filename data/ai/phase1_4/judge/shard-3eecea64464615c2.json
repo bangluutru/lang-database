@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:37:36Z",
+ "items": [
+  {
+   "key": "ac423a0beff2e74cf065863339cc774766bc8954d78507e085a59d865b8705e1",
+   "input": {
+    "id": "jm-1382700-0-coal",
+    "en": "coal",
+    "en_pos": "noun",
+    "en_sense": "coal",
+    "ja": "石炭",
+    "ja_reading": "せきたん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "coal"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1382700-0-coal",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "石炭 is the standard and direct translation for coal."
+   }
+  },
+  {
+   "key": "76faf6bd85a1007c56a91cc1b79b7ee6c887668fdc3a9058e9bd682d0bdb7bcb",
+   "input": {
+    "id": "jm-1382980-0-intention",
+    "en": "intention",
+    "en_pos": "noun",
+    "en_sense": "intention; plan; purpose; expectation",
+    "ja": "つもり",
+    "ja_reading": "つもり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intention",
+     "plan",
+     "purpose",
+     "expectation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1382980-0-intention",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "つもり is a very common and natural word for expressing intention, often used in a grammatical pattern."
+   }
+  },
+  {
+   "key": "4ee2180a6efe954146e477557bc647f3a67183947ab8291db50012142a722771",
+   "input": {
+    "id": "jm-1382990-0-pile_up",
+    "en": "pile up",
+    "en_pos": "verb",
+    "en_sense": "to pile up; to accumulate",
+    "ja": "積もる",
+    "ja_reading": "つもる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to pile up",
+     "to accumulate"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1382990-0-pile_up",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "積もる is the standard intransitive verb for 'to pile up' or 'to accumulate'."
+   }
+  },
+  {
+   "key": "38127345aa02a7be819e408331348ec34f686b25205cddd0289b279489ec172c",
+   "input": {
+    "id": "jm-1383440-0-red",
+    "en": "red",
+    "en_pos": "noun",
+    "en_sense": "(being in) the red; deficit",
+    "ja": "赤字",
+    "ja_reading": "あかじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(being in) the red",
+     "deficit"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1383440-0-red",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "赤字 is the direct and idiomatic equivalent of '(in) the red' or 'deficit', sharing the same concept of red ink for losses."
+   }
+  },
+  {
+   "key": "7b7f0a90c085e4eb5a7c793ff2d9756565a44d4ca0a22a8703c0b56788458e94",
+   "input": {
+    "id": "jm-1383750-1-off",
+    "en": "off",
+    "en_pos": "interjection",
+    "en_sense": "OFF (on switch)",
+    "ja": "切",
+    "ja_reading": "せつ",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "OFF (on switch)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1383750-1-off",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The kanji 切 is correct for 'off' on a switch, but the POS 'interjection' and reading 'せつ' are highly questionable for this specific usage; 'きり' is the more common reading."
+   }
+  },
+  {
+   "key": "18e9e2e2182e0812730e48d0028252d6eecf3aaec272a908735dc62d66f1286e",
+   "input": {
+    "id": "jm-1383770-0-painful",
+    "en": "painful",
+    "en_pos": "adjective",
+    "en_sense": "painful; heartrending; trying",
+    "ja": "切ない",
+    "ja_reading": "せつない",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "painful",
+     "heartrending",
+     "trying"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1383770-0-painful",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "切ない correctly translates the sense of emotional pain or heartrending feelings, a nuanced but important concept."
+   }
+  },
+  {
+   "key": "8b89e18226b5fb424d69340a9e292d9f409417122a94cb84d029cc343bcbe080",
+   "input": {
+    "id": "jm-1383800-0-end",
+    "en": "end",
+    "en_pos": "noun",
+    "en_sense": "end; finish; place to stop",
+    "ja": "きり",
+    "ja_reading": "きり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "finish",
+     "place to stop"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1383800-0-end",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "きり is a valid translation for 'end' or 'limit', though other words like 終わり might be more common in a general context."
+   }
+  },
+  {
+   "key": "6e11610819f08140add11e4c6b7d6997aad2f25a59c4b355f4778eac6f7d0def",
+   "input": {
+    "id": "jm-1384860-0-break",
+    "en": "break",
+    "en_pos": "verb",
+    "en_sense": "to break; to snap; to be cut; to split; to crack",
+    "ja": "切れる",
+    "ja_reading": "きれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to break",
+     "to snap",
+     "to be cut",
+     "to split",
+     "to crack"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1384860-0-break",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "切れる is the standard intransitive verb for things like strings or ties breaking or snapping."
+   }
+  },
+  {
+   "key": "4da7ee4464a4591216824e8637c6520c670ebb5c7f7f62d2c45041609aece37a",
+   "input": {
+    "id": "jm-1384980-0-operation",
+    "en": "operation",
+    "en_pos": "noun",
+    "en_sense": "incision; operation; section",
+    "ja": "切開",
+    "ja_reading": "せっかい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "incision",
+     "operation",
+     "section"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1384980-0-operation",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "切開 means 'incision', the act of cutting, not the entire 'operation'. The correct general term for a surgical operation is 手術 (shujutsu)."
+   }
+  },
+  {
+   "key": "ed3c53e76877b598a225921b452a8badb36bbcca8d541291bdd3babea2bb1645",
+   "input": {
+    "id": "jm-1385070-0-stamp",
+    "en": "stamp",
+    "en_pos": "noun",
+    "en_sense": "stamp (postage)",
+    "ja": "切手",
+    "ja_reading": "きって",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stamp (postage)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1385070-0-stamp",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "切手 is the specific and correct word for a postage stamp, perfectly matching the specified English sense."
+   }
+  },
+  {
+   "key": "7862c60c44515062dd20061438e8627e3a49d32998f9309cd59a24ecf7c3c528",
+   "input": {
+    "id": "jm-1385900-1-return",
+    "en": "return",
+    "en_pos": "verb",
+    "en_sense": "to turn back; to double back; to return",
+    "ja": "折り返す",
+    "ja_reading": "おりかえす",
+    "ja_pos": "v5s,vi",
+    "ja_glosses": [
+     "to turn back",
+     "to double back",
+     "to return"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1385900-1-return",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "折り返す is an excellent equivalent for the specific sense of 'turning back' or 'doubling back' on a path or course of action."
+   }
+  },
+  {
+   "key": "0e38ed1b868f7a3d11d09aede5cb7665b0f00e0d5b28004f0e3650cbd0c66c42",
+   "input": {
+    "id": "jm-1385950-0-negotiation",
+    "en": "negotiation",
+    "en_pos": "noun",
+    "en_sense": "negotiation",
+    "ja": "折衝",
+    "ja_reading": "せっしょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "negotiation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1385950-0-negotiation",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "折衝 is a formal word for tough negotiations or bargaining; the more general and common word for 'negotiation' is 交渉 (koushou)."
+   }
+  }
+ ]
+}

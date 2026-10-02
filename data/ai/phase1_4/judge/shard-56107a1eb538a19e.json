@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:11:52Z",
+ "items": [
+  {
+   "key": "99cad15734bc1d998a3733d2b7eadfaf29bffb165f89f1816aabfb28b014e03f",
+   "input": {
+    "id": "wk-5711-s1",
+    "en": "cafeteria",
+    "en_pos": "noun",
+    "en_sense": "A dining area in an institution where meals may be purchased (as above), provided, or brought in from elsewhere.",
+    "ja": "カフェテリア",
+    "ja_reading": "カフェテリア",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cafeteria"
+    ],
+    "vi": "nhà ăn"
+   },
+   "output": {
+    "id": "wk-5711-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for a cafeteria in an institutional setting."
+   }
+  },
+  {
+   "key": "38b9a4bb2d0f597264eadaf050ddcc2e7a9bb35515d1d2a68aa3365516dec6d6",
+   "input": {
+    "id": "wk-5717-s0",
+    "en": "gale",
+    "en_pos": "noun",
+    "en_sense": "A very strong wind, more than a breeze, less than a storm; number 7 through to 9 winds on the 12-step Beaufort scale.",
+    "ja": "強風",
+    "ja_reading": "きょうふう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "strong wind",
+     "high wind",
+     "moderate gale"
+    ],
+    "vi": "bão tố"
+   },
+   "output": {
+    "id": "wk-5717-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "Vietnamese 'bão tố' means storm or tempest, which is significantly stronger than the English 'gale'."
+   }
+  },
+  {
+   "key": "b99197520570c167b07eb89cea4562d52a985430446bee9cb772460dd985edf9",
+   "input": {
+    "id": "wk-572-s0",
+    "en": "standard",
+    "en_pos": "noun",
+    "en_sense": "A level of quality or attainment.",
+    "ja": "標準",
+    "ja_reading": "ひょうじゅん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "standard",
+     "criterion",
+     "norm",
+     "model",
+     "mark"
+    ],
+    "vi": "tiêu chuẩn"
+   },
+   "output": {
+    "id": "wk-572-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, with the Japanese and Vietnamese being direct cognates."
+   }
+  },
+  {
+   "key": "e614cdc4b1b0fa6343baf7d9ff3d101ee2a7dc8c93b445ecbd0fac0628ae9762",
+   "input": {
+    "id": "wk-5720-e:0ad21f",
+    "en": "just",
+    "en_pos": "adverb",
+    "en_sense": "only, simply, merely",
+    "ja": "ただ",
+    "ja_reading": "ただ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "only",
+     "merely",
+     "just",
+     "simply"
+    ],
+    "vi": "chỉ"
+   },
+   "output": {
+    "id": "wk-5720-e:0ad21f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the sense of 'only, merely'."
+   }
+  },
+  {
+   "key": "eb9fc0150148d4f592a41f85749becac6beb7a9ef2f68b35bb20a01f8d728efe",
+   "input": {
+    "id": "wk-5720-s2",
+    "en": "just",
+    "en_pos": "adverb",
+    "en_sense": "Used to reduce the force of an imperative; simply.",
+    "ja": "ちょっと",
+    "ja_reading": "ちょっと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "just a minute",
+     "for a moment",
+     "briefly"
+    ],
+    "vi": "chỉ việc"
+   },
+   "output": {
+    "id": "wk-5720-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'chỉ việc' means 'one only has to do X' (implying simplicity), it does not function as a softener for imperatives like English 'just' or Japanese 'chotto'."
+   }
+  },
+  {
+   "key": "2ecdc6a92d0f05d0034d604f8aa31476d1d877537fcc9afc5e8bd7646a1d9233",
+   "input": {
+    "id": "wk-5720-s6",
+    "en": "just",
+    "en_pos": "adverb",
+    "en_sense": "Moments ago, only very recently.",
+    "ja": "ところ",
+    "ja_reading": "ところ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "was just doing",
+     "was in the process of doing",
+     "have just done",
+     "just finished doing"
+    ],
+    "vi": "vừa"
+   },
+   "output": {
+    "id": "wk-5720-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Japanese equivalent is a noun 'ところ' used in a grammatical pattern (V-ta + tokoro), which is a POS mismatch with the English adverb 'just'."
+   }
+  },
+  {
+   "key": "24610534b401f283ed417db9edf586cefea6af9e85362a491c53b3eb2a401acf",
+   "input": {
+    "id": "wk-5723-s4",
+    "en": "top",
+    "en_pos": "noun",
+    "en_sense": "A garment worn to cover the torso.",
+    "ja": "上着",
+    "ja_reading": "うわぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "top",
+     "upper-body garment"
+    ],
+    "vi": "áo"
+   },
+   "output": {
+    "id": "wk-5723-s4",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '上着' (uwagi) typically refers to outerwear like a jacket or coat, making it narrower than the general English 'top' or Vietnamese 'áo'."
+   }
+  },
+  {
+   "key": "1f3332037764ab308f10804946f3eddae524ff3221e2af3dce5b10677be8aba3",
+   "input": {
+    "id": "wk-5728-s2",
+    "en": "herb",
+    "en_pos": "noun",
+    "en_sense": "Any green, leafy plant, or parts thereof, used to flavour or season food.",
+    "ja": "ハーブ",
+    "ja_reading": "ハーブ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "herb"
+    ],
+    "vi": "cỏ"
+   },
+   "output": {
+    "id": "wk-5728-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND"
+    ],
+    "note": "Vietnamese 'cỏ' means 'grass', not culinary 'herb'. The correct term would be 'rau thơm'."
+   }
+  },
+  {
+   "key": "e3865197ce02bf676ed653e3328b020dfb36080c01efa2ad73080e80455c6432",
+   "input": {
+    "id": "wk-5735-s0",
+    "en": "suitcase",
+    "en_pos": "noun",
+    "en_sense": "A large (usually rectangular) piece of luggage used for carrying clothes, and sometimes suits, when travelling.",
+    "ja": "スーツケース",
+    "ja_reading": "スーツケース",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "suitcase"
+    ],
+    "vi": "va li"
+   },
+   "output": {
+    "id": "wk-5735-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for suitcase in their respective languages."
+   }
+  },
+  {
+   "key": "21ee6b632d6b6c2b3cb15c28bdcedc0144c29d37d46812c100349c53134acb40",
+   "input": {
+    "id": "wk-5739-e:b48598",
+    "en": "ton",
+    "en_pos": "noun",
+    "en_sense": "various units of mass notionally equivalent to a tun",
+    "ja": "トン",
+    "ja_reading": "トン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ton (esp. a metric ton, i.e. 1000 kg)",
+     "tonne"
+    ],
+    "vi": "tấn"
+   },
+   "output": {
+    "id": "wk-5739-e:b48598",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents, usually referring to a metric ton (1000 kg)."
+   }
+  },
+  {
+   "key": "0ef1a06aa34165a14f643f5993e9c6eb674000c9aba4d660425ffe13171c56ec",
+   "input": {
+    "id": "wk-574-e:b414e7",
+    "en": "turkey",
+    "en_pos": "noun",
+    "en_sense": "bird in the genus Meleagris",
+    "ja": "七面鳥",
+    "ja_reading": "しちめんちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "turkey (Meleagris gallopavo)"
+    ],
+    "vi": "gà tây"
+   },
+   "output": {
+    "id": "wk-574-e:b414e7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the turkey bird."
+   }
+  },
+  {
+   "key": "809e7a1e0c6b04035568935dd884268dbb00a53a7ea19004169dc05fc9587a7e",
+   "input": {
+    "id": "wk-5746-e:3b47ce",
+    "en": "anecdote",
+    "en_pos": "noun",
+    "en_sense": "short account of an incident",
+    "ja": "逸話",
+    "ja_reading": "いつわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "anecdote",
+     "story",
+     "episode"
+    ],
+    "vi": "giai thoại"
+   },
+   "output": {
+    "id": "wk-5746-e:3b47ce",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for a short, interesting story or anecdote."
+   }
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:31:50Z",
+ "items": [
+  {
+   "key": "6db95f39a48983aa58b9b10728cb43533b857504d454394f705128390ea16f05",
+   "input": {
+    "id": "wk-15-s1",
+    "en": "nonsense",
+    "en_pos": "noun",
+    "en_sense": "An untrue statement.",
+    "ja": "でたらめ",
+    "ja_reading": "でたらめ",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "nonsense",
+     "irresponsible remark",
+     "codswallop",
+     "hogwash",
+     "rubbish"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "でたらめ is an excellent equivalent for nonsense in the sense of a baseless or untrue statement."
+   }
+  },
+  {
+   "key": "0e848ae65bcaa498b5e2eee2de956e1ec7d160062eeed8c81d9994f293328484",
+   "input": {
+    "id": "wk-15032-s4",
+    "en": "desolate",
+    "en_pos": "adjective",
+    "en_sense": "Sad, forlorn and hopeless.",
+    "ja": "寂しい",
+    "ja_reading": "さびしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "desolate",
+     "deserted",
+     "lonely (e.g. place)",
+     "isolated",
+     "solitary"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15032-s4",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "寂しい is much broader, often meaning simple loneliness, whereas this sense of desolate implies a much deeper, hopeless sadness."
+   }
+  },
+  {
+   "key": "ade9f7f029be10f1a1a5835154e95e457d51b2ecf801b1a0b2a0273a24cbc04f",
+   "input": {
+    "id": "wk-15059-s0",
+    "en": "audio",
+    "en_pos": "noun",
+    "en_sense": "Sound, or a sound signal.",
+    "ja": "オーディオ",
+    "ja_reading": "オーディオ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "audio"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15059-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese loanword オーディオ typically refers to audio equipment, not the audio signal itself, for which 音声 (onsei) is the correct term."
+   }
+  },
+  {
+   "key": "3615f9a7e78909bc13186870e81831503081a1c6a284289e5588b65383a460bf",
+   "input": {
+    "id": "wk-15080-s0",
+    "en": "glance",
+    "en_pos": "noun",
+    "en_sense": "A brief or cursory look.",
+    "ja": "一目",
+    "ja_reading": "ひとめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "glance",
+     "look",
+     "glimpse"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15080-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "一目 (hitome), literally 'one look', is a perfect and common equivalent for glance."
+   }
+  },
+  {
+   "key": "78860649a2c9b0c4086d126acae03dfe90ec5a70d0d59c46f77e9761ff5608d8",
+   "input": {
+    "id": "wk-15113-s0",
+    "en": "nook",
+    "en_pos": "noun",
+    "en_sense": "A small corner formed by two walls; an alcove.",
+    "ja": "隅",
+    "ja_reading": "すみ",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "corner",
+     "nook",
+     "recess"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15113-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "隅 is the standard Japanese word for a corner or nook and is a good equivalent."
+   }
+  },
+  {
+   "key": "c6c9a7927bb2b1efa15f886b2326f8882297d42446f05e190fa2185f2e6eed16",
+   "input": {
+    "id": "wk-15139-s1",
+    "en": "recall",
+    "en_pos": "verb",
+    "en_sense": "To call back, bring back, or summon (someone) to a specific place, station, etc.",
+    "ja": "呼び返す",
+    "ja_reading": "よびかえす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to call back",
+     "to recall"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15139-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "呼び返す is a literal and accurate translation of this sense of recall (to summon someone back)."
+   }
+  },
+  {
+   "key": "68e1b2b8081a2ec3588e25163df0a82c46315e57d7f98cb93517f90a920574fe",
+   "input": {
+    "id": "wk-15139-s4",
+    "en": "recall",
+    "en_pos": "verb",
+    "en_sense": "To call back (a situation, event, etc.) to one's mind; to remember; to recollect.",
+    "ja": "思い出す",
+    "ja_reading": "おもいだす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to recall",
+     "to remember",
+     "to recollect"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15139-s4",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "思い出す is the perfect and most common equivalent for recalling a memory."
+   }
+  },
+  {
+   "key": "5244a2df58efde931e71aca919916be4bdffbd83e95ef451fc42598d58b68bd6",
+   "input": {
+    "id": "wk-15152-s0",
+    "en": "wording",
+    "en_pos": "noun",
+    "en_sense": "A choice of words and the style in which they are used in a given context.",
+    "ja": "言葉遣い",
+    "ja_reading": "ことばづかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "speech",
+     "expression",
+     "wording",
+     "language"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15152-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "言葉遣い is an excellent equivalent for 'wording', capturing both the choice of words and the style of use."
+   }
+  },
+  {
+   "key": "09a02f71a53d1419f528062230382d27995935bdb6867f3b1b707cbaadfe8370",
+   "input": {
+    "id": "wk-15199-s0",
+    "en": "holy writ",
+    "en_pos": "noun",
+    "en_sense": "The Bible.",
+    "ja": "聖書",
+    "ja_reading": "せいしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Bible",
+     "the Scriptures",
+     "Holy Writ"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15199-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "聖書 is the standard Japanese word for the Bible. While 'holy writ' is more formal in English, 聖書 is the correct and natural translation."
+   }
+  },
+  {
+   "key": "f7f83f589808e06f974e88f3fb3bc30994ee139aec10b29ddc72506f2e3e5d55",
+   "input": {
+    "id": "wk-15202-s1",
+    "en": "framework",
+    "en_pos": "noun",
+    "en_sense": "The arrangement of support beams that represent a building's general shape and size.",
+    "ja": "骨組み",
+    "ja_reading": "ほねぐみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "framework",
+     "frame",
+     "structure"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15202-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "骨組み is a literal and accurate translation for the physical framework of a structure."
+   }
+  },
+  {
+   "key": "377698dda07d4b3316f0606a048c427c9c1a8fbac0f59616cb8fe724341ed48f",
+   "input": {
+    "id": "wk-15203-s1",
+    "en": "dramatic",
+    "en_pos": "adjective",
+    "en_sense": "Striking in appearance or effect.",
+    "ja": "劇的",
+    "ja_reading": "げきてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "dramatic",
+     "exciting",
+     "touching"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15203-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "劇的 is the direct and standard equivalent for 'dramatic' in the sense of being striking or having a powerful effect."
+   }
+  },
+  {
+   "key": "3f586bd481a70cabf30f327592625b8e1ba693781ee2f3d115658d28090f65d0",
+   "input": {
+    "id": "wk-15204-s0",
+    "en": "compromise",
+    "en_pos": "noun",
+    "en_sense": "The settlement of differences by arbitration or by consent reached by mutual concessions.",
+    "ja": "歩み寄り",
+    "ja_reading": "あゆみより",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "compromise",
+     "concession"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-15204-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "歩み寄り effectively conveys the meaning of compromise as a process of mutual concession."
+   }
+  }
+ ]
+}

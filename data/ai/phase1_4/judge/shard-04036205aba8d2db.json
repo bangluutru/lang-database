@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:49:47Z",
+ "items": [
+  {
+   "key": "6796f209f6ba8b75ea2817314b339f7d74e50243fcd349318d6ec96b4c1fa646",
+   "input": {
+    "id": "wk-5259-s0",
+    "en": "erase",
+    "en_pos": "verb",
+    "en_sense": "To remove (markings or information).",
+    "ja": "消す",
+    "ja_reading": "けす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to erase",
+     "to rub out",
+     "to rub off",
+     "to cross out",
+     "to delete"
+    ],
+    "vi": "xóa"
+   },
+   "output": {
+    "id": "wk-5259-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are perfect equivalents for this sense."
+   }
+  },
+  {
+   "key": "5cad4c94a819120099c356858791f4c987c70197fb936cb02dc1f26ebd95272b",
+   "input": {
+    "id": "wk-5264-s1",
+    "en": "fair",
+    "en_pos": "noun",
+    "en_sense": "An event for public entertainment and trade, a market.",
+    "ja": "フェア",
+    "ja_reading": "フェア",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fair (event)"
+    ],
+    "vi": "hội chợ"
+   },
+   "output": {
+    "id": "wk-5264-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for a fair or trade show."
+   }
+  },
+  {
+   "key": "87e7445634be47b3387aac6e51a76d715c8f5baf7d8032a64d66fac527535f60",
+   "input": {
+    "id": "wk-5265-s1",
+    "en": "fare",
+    "en_pos": "noun",
+    "en_sense": "Money paid for a transport ticket.",
+    "ja": "運賃",
+    "ja_reading": "うんちん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(passenger) fare"
+    ],
+    "vi": "tiền xe"
+   },
+   "output": {
+    "id": "wk-5265-s1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'tiền xe' is too specific, usually referring to bus or car fare, whereas English 'fare' and Japanese '運賃' are more general."
+   }
+  },
+  {
+   "key": "3778170e49b5fe09611ca61970bd056f6c8b11863cc4de22cda0b9d0433e5e43",
+   "input": {
+    "id": "wk-5268-s1",
+    "en": "fountain",
+    "en_pos": "noun",
+    "en_sense": "An artificial, usually ornamental, water feature (usually in a garden or public place) consisting of one or more streams of water originating from a statue or other structure.",
+    "ja": "噴水",
+    "ja_reading": "ふんすい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "water fountain"
+    ],
+    "vi": "suối nước"
+   },
+   "output": {
+    "id": "wk-5268-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'suối nước' means 'stream of water' and is not the correct term for an artificial fountain, which is 'đài phun nước'."
+   }
+  },
+  {
+   "key": "622e31e680741c46d2e6cbd97372c1f083f9600f3bc52145cc10cbbd423ff99c",
+   "input": {
+    "id": "wk-5269-s1",
+    "en": "festival",
+    "en_pos": "noun",
+    "en_sense": "An event or series of special events centred on the celebration or promotion of some theme or aspect of the community, often held at regular intervals.",
+    "ja": "祭り",
+    "ja_reading": "まつり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "festival",
+     "feast",
+     "matsuri"
+    ],
+    "vi": "lễ hội"
+   },
+   "output": {
+    "id": "wk-5269-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'festival' in their respective languages."
+   }
+  },
+  {
+   "key": "42f4e79518ebcadd26df3cebf050781e7140b050116c2f583806aa6c6dcc0dec",
+   "input": {
+    "id": "wk-5270-s0",
+    "en": "wheat",
+    "en_pos": "noun",
+    "en_sense": "Any of the several cereal grains, of the genus Triticum, that yields flour as used in bakery.",
+    "ja": "小麦",
+    "ja_reading": "こむぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "wheat"
+    ],
+    "vi": "lúa mì"
+   },
+   "output": {
+    "id": "wk-5270-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one-to-one correspondence for the concept of 'wheat'."
+   }
+  },
+  {
+   "key": "8053426df270627f793873ea037b44ad99ad6c51f1ebdee0e291b872b7eb5fcf",
+   "input": {
+    "id": "wk-5272-s0",
+    "en": "beret",
+    "en_pos": "noun",
+    "en_sense": "A type of round, brimless cap with a soft top and a headband to secure it to the head; usually culturally associated with France.",
+    "ja": "ベレー",
+    "ja_reading": "ベレー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beret"
+    ],
+    "vi": "mũ nồi"
+   },
+   "output": {
+    "id": "wk-5272-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural words for 'beret'."
+   }
+  },
+  {
+   "key": "04ca87dfef684e1c36dc1925150c8cc0bb2d051a84b5fbd437b520097fb4cc49",
+   "input": {
+    "id": "wk-5275-s0",
+    "en": "template",
+    "en_pos": "noun",
+    "en_sense": "A physical object whose shape is used as a guide to make other objects.",
+    "ja": "テンプレート",
+    "ja_reading": "テンプレート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "template"
+    ],
+    "vi": "khuôn mẫu"
+   },
+   "output": {
+    "id": "wk-5275-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese uses a loanword and the Vietnamese uses a native compound, but all three are the standard modern terms for 'template' in both its physical and abstract senses."
+   }
+  },
+  {
+   "key": "f12e3133caa0a261203a9b8ae9622b1e75fb110a488aea689eb8edf9e3935376",
+   "input": {
+    "id": "wk-5277-e:c826be",
+    "en": "type",
+    "en_pos": "noun",
+    "en_sense": "computing theory: tag indicating data type",
+    "ja": "型",
+    "ja_reading": "かた",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "type",
+     "style",
+     "model",
+     "pattern"
+    ],
+    "vi": "kiểu"
+   },
+   "output": {
+    "id": "wk-5277-e:c826be",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard technical terms for 'data type' in computing."
+   }
+  },
+  {
+   "key": "7a3aca84ca880cad2dd67247b332994a37c4ba5883025542e7da776183978bb7",
+   "input": {
+    "id": "wk-5278-s1",
+    "en": "type",
+    "en_pos": "verb",
+    "en_sense": "To enter text or commands into a computer using a keyboard.",
+    "ja": "打つ",
+    "ja_reading": "うつ",
+    "ja_pos": "v5t,vt",
+    "ja_glosses": [
+     "to type",
+     "to send",
+     "to transmit"
+    ],
+    "vi": "gõ"
+   },
+   "output": {
+    "id": "wk-5278-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard and idiomatic choices for the action of typing."
+   }
+  },
+  {
+   "key": "0a87a10236374cd134a807655c0428531dfa0b07b6c2dd435afeca15feaca3f7",
+   "input": {
+    "id": "wk-5279-s9",
+    "en": "sort",
+    "en_pos": "noun",
+    "en_sense": "A type.",
+    "ja": "類い",
+    "ja_reading": "たぐい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kind",
+     "sort",
+     "type"
+    ],
+    "vi": "loại"
+   },
+   "output": {
+    "id": "wk-5279-s9",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are good equivalents for 'sort' or 'type'."
+   }
+  },
+  {
+   "key": "372a08b25ec1cfd767edaeea3bbda68f66cb1d700190c933157ab926b6558a39",
+   "input": {
+    "id": "wk-528-s0",
+    "en": "consent",
+    "en_pos": "verb",
+    "en_sense": "To express willingness, to give permission.",
+    "ja": "承諾する",
+    "ja_reading": "しょうだくする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "consent",
+     "approval",
+     "acceptance",
+     "agreement",
+     "compliance"
+    ],
+    "vi": "đồng ý"
+   },
+   "output": {
+    "id": "wk-528-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'đồng ý' (to agree) is much broader than English 'consent' and Japanese '承諾する', which specifically imply giving permission or formal approval."
+   }
+  }
+ ]
+}

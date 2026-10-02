@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:34:12Z",
+ "items": [
+  {
+   "key": "b25e46a66cc75122f568d51ed5da9f7e448701bad0b0e51d6b8a42e5a75902d4",
+   "input": {
+    "id": "jm-1310060-0-order",
+    "en": "order",
+    "en_pos": "noun",
+    "en_sense": "order; directive; instructions; command",
+    "ja": "指令",
+    "ja_reading": "しれい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "order",
+     "directive",
+     "instructions",
+     "command"
+    ],
+    "vi": "chỉ thị"
+   },
+   "output": {
+    "id": "jm-1310060-0-order",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms refer to a formal order or directive from an authority."
+   }
+  },
+  {
+   "key": "7f48a886d1112eb173998b8ce941758fdd1e92d0c96ce2a1ff69710fff25184e",
+   "input": {
+    "id": "jm-1310300-0-pay",
+    "en": "pay",
+    "en_pos": "verb",
+    "en_sense": "to pay",
+    "ja": "支払う",
+    "ja_reading": "しはらう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to pay"
+    ],
+    "vi": "trả"
+   },
+   "output": {
+    "id": "jm-1310300-0-pay",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, common verbs for paying money."
+   }
+  },
+  {
+   "key": "e82591016d2c6f0586ec638a1321e3ad7893a92ee2e063452fa3ab581da9e0ac",
+   "input": {
+    "id": "jm-1310600-0-stop",
+    "en": "stop",
+    "en_pos": "verb",
+    "en_sense": "to stop (doing); to cease; to desist; to drop; to lay off; to give up",
+    "ja": "よす",
+    "ja_reading": "よす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to stop (doing)",
+     "to cease",
+     "to desist",
+     "to drop",
+     "to lay off",
+     "to give up"
+    ],
+    "vi": "thôi"
+   },
+   "output": {
+    "id": "jm-1310600-0-stop",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are common ways to express ceasing an action, often used colloquially or in commands."
+   }
+  },
+  {
+   "key": "bddedcc44545b4a95d471d6c874023a0599b071a17eee462daf1d3dd2952ed04",
+   "input": {
+    "id": "jm-1310950-0-death",
+    "en": "death",
+    "en_pos": "noun",
+    "en_sense": "death; dying; mortality",
+    "ja": "死亡",
+    "ja_reading": "しぼう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "death",
+     "dying",
+     "mortality"
+    ],
+    "vi": "tử vong"
+   },
+   "output": {
+    "id": "jm-1310950-0-death",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese and Vietnamese terms are formal/technical equivalents of 'death', whereas the English word is register-neutral."
+   }
+  },
+  {
+   "key": "0660b879f2171465f64d9e7c01244277194355fd76550ebb1b4d346dca1ed6b9",
+   "input": {
+    "id": "jm-1311060-0-name",
+    "en": "name",
+    "en_pos": "noun",
+    "en_sense": "(full) name; identity",
+    "ja": "氏名",
+    "ja_reading": "しめい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(full) name",
+     "identity"
+    ],
+    "vi": "họ tên"
+   },
+   "output": {
+    "id": "jm-1311060-0-name",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote 'full name' as used on official forms and documents."
+   }
+  },
+  {
+   "key": "72a02dd9a162bce6fa31350e38aade8c378ea3f26f095db62399c6cf3ab64cc0",
+   "input": {
+    "id": "jm-1311420-0-private",
+    "en": "private",
+    "en_pos": "noun",
+    "en_sense": "private (establishment)",
+    "ja": "私立",
+    "ja_reading": "しりつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "private (establishment)"
+    ],
+    "vi": "tư thục"
+   },
+   "output": {
+    "id": "jm-1311420-0-private",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The English noun 'private' means a soldier; the intended meaning 'private establishment' corresponds to the adjective 'private', creating a POS mismatch."
+   }
+  },
+  {
+   "key": "369fe2853266f64e342fc8cfb31a27c7d85454e97e6c63abb5d8655e41dfd3a8",
+   "input": {
+    "id": "jm-1311750-0-fat",
+    "en": "fat",
+    "en_pos": "noun",
+    "en_sense": "fat; tallow; lard; grease",
+    "ja": "脂",
+    "ja_reading": "あぶら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fat",
+     "tallow",
+     "lard",
+     "grease"
+    ],
+    "vi": "mỡ"
+   },
+   "output": {
+    "id": "jm-1311750-0-fat",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms specifically refer to animal fat/lard/grease, and are the standard words for it."
+   }
+  },
+  {
+   "key": "657df8cc464d5d84f32b19f488cb5edf8f6cee7196be23dec21aed8d9264862d",
+   "input": {
+    "id": "jm-1311900-0-urgent",
+    "en": "urgent",
+    "en_pos": "adjective",
+    "en_sense": "urgent; pressing; immediate; prompt; express",
+    "ja": "至急",
+    "ja_reading": "しきゅう",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "urgent",
+     "pressing",
+     "immediate",
+     "prompt",
+     "express"
+    ],
+    "vi": "khẩn cấp"
+   },
+   "output": {
+    "id": "jm-1311900-0-urgent",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard ways to express urgency in neutral-to-formal contexts."
+   }
+  },
+  {
+   "key": "0ae2dcd7944ead40d4c96bf2d476009eb51de7f36f3c0125d50ef6eee4f7aeb9",
+   "input": {
+    "id": "jm-1313350-0-gear",
+    "en": "gear",
+    "en_pos": "noun",
+    "en_sense": "gear; cogwheel",
+    "ja": "歯車",
+    "ja_reading": "はぐるま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gear",
+     "cogwheel"
+    ],
+    "vi": "bánh răng"
+   },
+   "output": {
+    "id": "jm-1313350-0-gear",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and literal translations for a mechanical gear/cogwheel."
+   }
+  },
+  {
+   "key": "c48801229065a5c245e464667a612857eb9630f690bc8a3684be06b4ebeb580f",
+   "input": {
+    "id": "jm-1314400-0-office",
+    "en": "office",
+    "en_pos": "noun",
+    "en_sense": "office",
+    "ja": "事務所",
+    "ja_reading": "じむしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "office"
+    ],
+    "vi": "văn phòng"
+   },
+   "output": {
+    "id": "jm-1314400-0-office",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for an office as a physical place of work."
+   }
+  },
+  {
+   "key": "86140e6d582226bc121d330d1e4c16d5e807b1c5a5e5a916e60b5387872b1797",
+   "input": {
+    "id": "jm-1314600-0-resemble",
+    "en": "resemble",
+    "en_pos": "verb",
+    "en_sense": "to resemble; to look like; to be like; to be alike; to be similar; to take after",
+    "ja": "似る",
+    "ja_reading": "にる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to resemble",
+     "to look like",
+     "to be like",
+     "to be alike",
+     "to be similar",
+     "to take after"
+    ],
+    "vi": "giống"
+   },
+   "output": {
+    "id": "jm-1314600-0-resemble",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, common words for expressing resemblance."
+   }
+  },
+  {
+   "key": "4cd15bb0f88247e627ad8a66bb97726fb16afd74e045f5b81f9458771fca267d",
+   "input": {
+    "id": "jm-1315130-0-character",
+    "en": "character",
+    "en_pos": "noun",
+    "en_sense": "character (esp. kanji); letter; written text",
+    "ja": "字",
+    "ja_reading": "じ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "character (esp. kanji)",
+     "letter",
+     "written text"
+    ],
+    "vi": "chữ"
+   },
+   "output": {
+    "id": "jm-1315130-0-character",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms, including the cognates '字' and 'chữ', are the standard words for a written character or letter."
+   }
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:43:50Z",
+ "items": [
+  {
+   "key": "24afc018acc335cd8ce6a0fc7d2fe9ca3b6a1d0ef57a9b41fb2a6a303bb9f89b",
+   "input": {
+    "id": "wk-31733-s0",
+    "en": "cutting board",
+    "en_pos": "noun",
+    "en_sense": "A sturdy board, used for cutting and preparing food.",
+    "ja": "まな板",
+    "ja_reading": "まないた",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chopping board",
+     "cutting board"
+    ],
+    "vi": "thớt"
+   },
+   "output": {
+    "id": "wk-31733-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for 'cutting board'."
+   }
+  },
+  {
+   "key": "770da6934972b289edb50ae658d3113b2cbcc3a65e8e92670dcd6e3598eaa6aa",
+   "input": {
+    "id": "wk-3175-s0",
+    "en": "screwdriver",
+    "en_pos": "noun",
+    "en_sense": "A hand tool or power tool which engages with the head of a screw and allows torque to be applied to turn the screw, thus driving it in or loosening it.",
+    "ja": "ドライバー",
+    "ja_reading": "ドライバー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "screwdriver"
+    ],
+    "vi": "chìa vít"
+   },
+   "output": {
+    "id": "wk-3175-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All terms are correct and natural equivalents for 'screwdriver', with 'tua vít' also being a common alternative in Vietnamese."
+   }
+  },
+  {
+   "key": "6f5c2a48090d71717aff72fd901c1db1f64c6a7733d0a83f69c4788853400bb9",
+   "input": {
+    "id": "wk-3176-e:6c63f8",
+    "en": "nut",
+    "en_pos": "noun",
+    "en_sense": "hard-shelled fruit",
+    "ja": "堅果",
+    "ja_reading": "けんか",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "nut"
+    ],
+    "vi": "đậu"
+   },
+   "output": {
+    "id": "wk-3176-e:6c63f8",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "The Vietnamese word 'đậu' means 'bean', not 'nut'; the correct term would be 'quả hạch' or 'hạt'."
+   }
+  },
+  {
+   "key": "3e92eff113cc7af0773760e1d2f589ca4c3763141afa91a56cc75f86e49570bb",
+   "input": {
+    "id": "wk-3178-s1",
+    "en": "drill",
+    "en_pos": "noun",
+    "en_sense": "The portion of a drilling tool that drives the bit.",
+    "ja": "ドリル",
+    "ja_reading": "ドリル",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "drill (practice)"
+    ],
+    "vi": "máy khoan"
+   },
+   "output": {
+    "id": "wk-3178-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese gloss 'drill (practice)' is for a different sense of 'drill'; however, the Japanese word ドリル itself is correct for the tool sense."
+   }
+  },
+  {
+   "key": "73bbab5b6fed4d2056852e73f9236ce5174552c01c7794601421dfee0fe01017",
+   "input": {
+    "id": "wk-318-s0",
+    "en": "beer",
+    "en_pos": "noun",
+    "en_sense": "An alcoholic drink fermented from starch material, commonly barley malt; often with hops or some other substance (like gruit) to impart a bitter flavor.",
+    "ja": "麦酒",
+    "ja_reading": "ばくしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beer"
+    ],
+    "vi": "rượu"
+   },
+   "output": {
+    "id": "wk-318-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Vietnamese 'rượu' means 'liquor' or 'alcohol' in general, not 'beer' (which is 'bia'). The Japanese '麦酒' is also a less common, more formal word for 'beer' than 'ビール'."
+   }
+  },
+  {
+   "key": "f19f75b9dcd4786622b00694b5518a267c06029dd98717f58c07a6ce59916a8d",
+   "input": {
+    "id": "wk-31803-s0",
+    "en": "cram school",
+    "en_pos": "noun",
+    "en_sense": "A specialized school that trains students to meet particular goals, most commonly to pass the entrance examinations of high schools or universities.",
+    "ja": "塾",
+    "ja_reading": "じゅく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cram school",
+     "private tutoring school",
+     "juku"
+    ],
+    "vi": "lò luyện thi"
+   },
+   "output": {
+    "id": "wk-31803-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect idiomatic equivalents for the concept of a cram school."
+   }
+  },
+  {
+   "key": "4a6a458d4c4c8b867f8cbd92fc72e80a106c26659a8c8086a43ff5e3e7efc495",
+   "input": {
+    "id": "wk-31818-s0",
+    "en": "also known as",
+    "en_pos": "preposition",
+    "en_sense": "Used to introduce an alternative name.",
+    "ja": "こと",
+    "ja_reading": "こと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "alias",
+     "also known as",
+     "otherwise known as",
+     "or"
+    ],
+    "vi": "còn gọi là"
+   },
+   "output": {
+    "id": "wk-31818-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "There is a part-of-speech mismatch (EN: preposition, JA: noun), and the Japanese 'こと' is a somewhat specific choice for this meaning; '別名' might be a better general equivalent."
+   }
+  },
+  {
+   "key": "6b4ff6875adc74f37a34657981134c8565d4195086813993bf904038004f11d9",
+   "input": {
+    "id": "wk-3183-s0",
+    "en": "cylinder",
+    "en_pos": "noun",
+    "en_sense": "A surface created by projecting a closed two-dimensional curve along an axis intersecting the plane of the curve.",
+    "ja": "シリンダー",
+    "ja_reading": "シリンダー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cylinder"
+    ],
+    "vi": "hình trụ tròn"
+   },
+   "output": {
+    "id": "wk-3183-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'hình trụ tròn' specifically means 'circular cylinder', which is narrower than the general mathematical definition of 'cylinder' (which could have a non-circular base)."
+   }
+  },
+  {
+   "key": "d5614853936a9c23da877df24debb4e7ac1c68acfc1703b2536e35bc574bedbe",
+   "input": {
+    "id": "wk-3184-e:5b276e",
+    "en": "valve",
+    "en_pos": "noun",
+    "en_sense": "device that controls the flow of a gas or fluid",
+    "ja": "バルブ",
+    "ja_reading": "バルブ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "valve"
+    ],
+    "vi": "van"
+   },
+   "output": {
+    "id": "wk-3184-e:5b276e",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for 'valve'."
+   }
+  },
+  {
+   "key": "bbde1d6a17c520dc0da7bf56704dc54c784a1bb0f0a71103202b9bc234175f5c",
+   "input": {
+    "id": "wk-31913-s0",
+    "en": "anatman",
+    "en_pos": "noun",
+    "en_sense": "The doctrine that there is no transcendental ego or soul and the perceived true self is an illusion. It corresponds to the Hinayana or Theravada Buddhist doctrine of anatta.",
+    "ja": "無我",
+    "ja_reading": "むが",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "anatta",
+     "anatman",
+     "doctrine that states that humans do not possess souls"
+    ],
+    "vi": "vô ngã"
+   },
+   "output": {
+    "id": "wk-31913-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard philosophical/religious terms for the Buddhist concept of anatman/anatta."
+   }
+  },
+  {
+   "key": "8c04222ef81d7edc3c469b362370b5146b858737f905fc06d927502b501ac9a6",
+   "input": {
+    "id": "wk-31942-s0",
+    "en": "napa cabbage",
+    "en_pos": "noun",
+    "en_sense": "A species of Chinese cabbage, Brassica rapa subsp. pekinensis, commonly used as an ingredient in East-Asian cuisines.",
+    "ja": "白菜",
+    "ja_reading": "はくさい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "napa cabbage (Brassica rapa subsp. pekinensis)",
+     "nappa cabbage",
+     "Chinese cabbage"
+    ],
+    "vi": "cải thảo"
+   },
+   "output": {
+    "id": "wk-31942-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for napa cabbage."
+   }
+  },
+  {
+   "key": "433c50023b362141a2890a071a74ba2c786ff4502d446655a8da463f91d75162",
+   "input": {
+    "id": "wk-3196-s0",
+    "en": "calf",
+    "en_pos": "noun",
+    "en_sense": "A young cow or bull of any bovid, such as domestic cattle or buffalo.",
+    "ja": "子牛",
+    "ja_reading": "こうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "calf"
+    ],
+    "vi": "bê"
+   },
+   "output": {
+    "id": "wk-3196-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a young cow or bull."
+   }
+  }
+ ]
+}

@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:59:24Z",
+ "items": [
+  {
+   "key": "02de6a93b6194401680a4faa6cbfd5e89fcebf455be769bd971e7c98151810fc",
+   "input": {
+    "id": "wk-7867-s0",
+    "en": "option",
+    "en_pos": "noun",
+    "en_sense": "One of a set of choices that can be made.",
+    "ja": "オプション",
+    "ja_reading": "オプション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "option",
+     "choice"
+    ],
+    "vi": "lựa chọn"
+   },
+   "output": {
+    "id": "wk-7867-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese is a loanword and the Vietnamese is a standard term, both matching the English sense well."
+   }
+  },
+  {
+   "key": "646e0ff85037f5f5d7e7881b993bead83e7f11ad1691d569ec120c19ec2d1e92",
+   "input": {
+    "id": "wk-7871-s1",
+    "en": "pardon",
+    "en_pos": "noun",
+    "en_sense": "An order that releases a convicted criminal without further punishment, prevents future punishment, or (in some jurisdictions) removes an offence from a person's criminal record, as if it had never been committed.",
+    "ja": "恩赦",
+    "ja_reading": "おんしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "amnesty",
+     "pardon"
+    ],
+    "vi": "xá tội"
+   },
+   "output": {
+    "id": "wk-7871-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct legal/formal words for a pardon."
+   }
+  },
+  {
+   "key": "a8678b860a5cfaad2c33fd86c470e8a90be22325150cb3a08dbe4a14452b2a77",
+   "input": {
+    "id": "wk-7880-s0",
+    "en": "portion",
+    "en_pos": "noun",
+    "en_sense": "An allocated amount.",
+    "ja": "部分",
+    "ja_reading": "ぶぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "portion",
+     "section",
+     "part"
+    ],
+    "vi": "phần"
+   },
+   "output": {
+    "id": "wk-7880-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese 部分 means 'part' or 'section' and doesn't fully capture the 'allocated amount' sense of 'portion', unlike the Vietnamese 'phần'."
+   }
+  },
+  {
+   "key": "c6420a394d7b75e3d7a5568c999c9a97b70f6ba01cf16c5ef93e723be7f619fb",
+   "input": {
+    "id": "wk-789-e:bcce38",
+    "en": "green",
+    "en_pos": "adjective",
+    "en_sense": "having green as its colour",
+    "ja": "青い",
+    "ja_reading": "あおい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "green"
+    ],
+    "vi": "xanh"
+   },
+   "output": {
+    "id": "wk-789-e:bcce38",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "UNNATURAL_JA"
+    ],
+    "note": "Japanese '青い' (aoi) primarily means 'blue', not 'green'; the correct general term is '緑' (midori)."
+   }
+  },
+  {
+   "key": "cb06cd9e75ed5edb441f0a8790bfc4a15563101ddc91911837fdb234db59656d",
+   "input": {
+    "id": "wk-7896-s2",
+    "en": "situation",
+    "en_pos": "noun",
+    "en_sense": "The place in which something is situated; a location.",
+    "ja": "位置",
+    "ja_reading": "いち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "position",
+     "standing",
+     "status",
+     "situation"
+    ],
+    "vi": "vị trí"
+   },
+   "output": {
+    "id": "wk-7896-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly match the specific sense of a physical location or position."
+   }
+  },
+  {
+   "key": "af97c468132a802afd88efc0dab55366e5b708bfa77cbcf8f27bb46a8c99613f",
+   "input": {
+    "id": "wk-7899-s0",
+    "en": "auction",
+    "en_pos": "noun",
+    "en_sense": "A public event where goods or property are sold to the highest bidder.",
+    "ja": "オークション",
+    "ja_reading": "オークション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "auction"
+    ],
+    "vi": "đấu giá"
+   },
+   "output": {
+    "id": "wk-7899-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese is a standard loanword and the Vietnamese is the standard native term; both are perfect equivalents."
+   }
+  },
+  {
+   "key": "cc7896a2e0cd30e6b58ae90b26db230227f3d3d3429147eae59b00b1bdc8321d",
+   "input": {
+    "id": "wk-79-e:36dcef",
+    "en": "fa",
+    "en_pos": "noun",
+    "en_sense": "fourth note of a major scale",
+    "ja": "ファ",
+    "ja_reading": "ファ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fa (4th note of a major scale in movable-do solfège)",
+     "fah"
+    ],
+    "vi": "pha"
+   },
+   "output": {
+    "id": "wk-79-e:36dcef",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard representations of the solfège note 'fa' in their respective languages."
+   }
+  },
+  {
+   "key": "bd7c532618ba48d32a794f701ec24bf52b4ce581d6fb39097d19c848e3385dea",
+   "input": {
+    "id": "wk-7924-s0",
+    "en": "inn",
+    "en_pos": "noun",
+    "en_sense": "Any establishment where travellers can procure lodging, food, and drink.",
+    "ja": "宿屋",
+    "ja_reading": "やどや",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inn"
+    ],
+    "vi": "khách sạn"
+   },
+   "output": {
+    "id": "wk-7924-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'khách sạn' means 'hotel' and is a poor match for the more traditional/rustic sense of 'inn' and Japanese '宿屋'."
+   }
+  },
+  {
+   "key": "8492d9d830e7418fe58260fae0e77a8de99d547b116a556297c8397bde22b122",
+   "input": {
+    "id": "wk-7931-s0",
+    "en": "greenhouse",
+    "en_pos": "noun",
+    "en_sense": "A building used to grow plants, particularly one with large glass windows or plastic sheeting to trap heat from sunlight even in intemperate seasons or climates.",
+    "ja": "温室",
+    "ja_reading": "おんしつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "greenhouse",
+     "hothouse",
+     "conservatory",
+     "glasshouse"
+    ],
+    "vi": "nhà kính"
+   },
+   "output": {
+    "id": "wk-7931-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'greenhouse'."
+   }
+  },
+  {
+   "key": "b4c9faa2ccc67638f45305dece4c48f4494a3ec6f91c802e7fb70b0ecb1eaa65",
+   "input": {
+    "id": "wk-7937-s0",
+    "en": "kumquat",
+    "en_pos": "noun",
+    "en_sense": "A small, orange citrus-like fruit which is native to Asia (Citrus japonica, syn. Fortunella japonica).",
+    "ja": "金柑",
+    "ja_reading": "きんかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kumquat",
+     "cumquat"
+    ],
+    "vi": "tắc"
+   },
+   "output": {
+    "id": "wk-7937-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard names for the kumquat fruit, with the Vietnamese 'tắc' being a common regional variant."
+   }
+  },
+  {
+   "key": "1bff3f2c2d7478122d1f1040c8a5bdff589db152341dbd07ee4fe28b4d37513e",
+   "input": {
+    "id": "wk-794-s2",
+    "en": "pink",
+    "en_pos": "noun",
+    "en_sense": "Pale red.",
+    "ja": "桃色",
+    "ja_reading": "ももいろ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "pink (colour, color)",
+     "peach"
+    ],
+    "vi": "hồng"
+   },
+   "output": {
+    "id": "wk-794-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard ways to refer to the color pink, with Japanese '桃色' being a native equivalent to the more common loanword 'ピンク'."
+   }
+  },
+  {
+   "key": "9889e539009021761e4a0712f665043e424699ab61496dcd4ad60f445734897d",
+   "input": {
+    "id": "wk-7944-e:aed789",
+    "en": "block",
+    "en_pos": "verb",
+    "en_sense": "to prevent passing",
+    "ja": "遮る",
+    "ja_reading": "さえぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to interrupt",
+     "to obstruct (a view, someone's way, etc.)",
+     "to block (light, wind, etc.)",
+     "to intercept",
+     "to cut off"
+    ],
+    "vi": "chặn"
+   },
+   "output": {
+    "id": "wk-7944-e:aed789",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent, common equivalents for the sense of obstructing or preventing passage."
+   }
+  }
+ ]
+}

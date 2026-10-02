@@ -1,0 +1,384 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:08:18Z",
+ "items": [
+  {
+   "key": "f1215094465e24aabfb8f510041fa41599f4cc4977970617793770f957fb92c0",
+   "input": {
+    "id": "wk-2994-e:e90a7d",
+    "en": "live",
+    "en_pos": "verb",
+    "en_sense": "have permanent residence",
+    "ja": "住む",
+    "ja_reading": "すむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to live (of humans)",
+     "to reside",
+     "to inhabit",
+     "to dwell",
+     "to abide"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2994-e:e90a7d",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A core and perfect translation equivalent for having one's permanent residence somewhere."
+   }
+  },
+  {
+   "key": "68afe688231f6df9e43e3138ee64cfefa1b0628834557597371d9c3ef6ea806f",
+   "input": {
+    "id": "wk-8643-s0",
+    "en": "load",
+    "en_pos": "noun",
+    "en_sense": "A burden; a weight to be carried.",
+    "ja": "荷",
+    "ja_reading": "に",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "load",
+     "baggage",
+     "cargo",
+     "freight",
+     "goods"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-8643-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A standard and common equivalent for the physical sense of load, such as cargo or baggage."
+   }
+  },
+  {
+   "key": "86716ea12e4d1d8f9b5a910ee751befe3752f54acd2c151e14b76f6c4e8087d8",
+   "input": {
+    "id": "wk-3311-s1",
+    "en": "loan",
+    "en_pos": "noun",
+    "en_sense": "A sum of money or other property that a natural or legal person borrows from another with the condition that it be returned or repaid over time or at a later date (sometimes with interest).",
+    "ja": "貸付け",
+    "ja_reading": "かしつけ",
+    "ja_pos": "n,vs",
+    "ja_glosses": [
+     "loan"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-3311-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "貸付け is a precise and standard term for a loan, especially in financial or legal contexts, though the loanword ローン is also very common."
+   }
+  },
+  {
+   "key": "bf70dc563159eea680cbaf748222a2c96a03920696a81d0e9adbd62fa613217e",
+   "input": {
+    "id": "wk-19565-e:26381e",
+    "en": "lobby",
+    "en_pos": "noun",
+    "en_sense": "entryway or waiting area; vestibule",
+    "ja": "ロビー",
+    "ja_reading": "ロビー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lobby",
+     "lounge"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-19565-e:26381e",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A direct and universally understood loanword is the correct and standard equivalent."
+   }
+  },
+  {
+   "key": "51fae1d769550a5394e6d5b587bff76c30418a2fd9012bdcaec5e513aa6afc15",
+   "input": {
+    "id": "wk-5136-s0",
+    "en": "lock",
+    "en_pos": "noun",
+    "en_sense": "Something used for fastening, which can only be opened with a key or combination.",
+    "ja": "錠",
+    "ja_reading": "じょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lock",
+     "padlock"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-5136-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "錠 is the correct technical term for the lock mechanism, but the word for key, 鍵 (kagi), is often used colloquially to refer to the lock as well, making 錠 less common in everyday speech."
+   }
+  },
+  {
+   "key": "fe5d27f33e0dec72c5a5a1f7722750a86bb1d42cc426efab849f1d8e3c69127c",
+   "input": {
+    "id": "wk-21191-s0",
+    "en": "logistics",
+    "en_pos": "noun",
+    "en_sense": "The process of planning, implementing, and controlling the efficient, effective flow and storage of goods, services and related information from their point of origin to point of consumption for the purpose of satisfying customer requirements.",
+    "ja": "物流",
+    "ja_reading": "ぶつりゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "physical distribution",
+     "distribution of goods",
+     "logistics"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-21191-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "物流 is the standard Japanese term for commercial logistics but is narrower than the English word, focusing specifically on the physical distribution of goods (物)."
+   }
+  },
+  {
+   "key": "e8bf3076496fee244b006e08c07afa37a5effb0d6df533bc15cd9bac188743f4",
+   "input": {
+    "id": "wk-16094-s0",
+    "en": "loop",
+    "en_pos": "noun",
+    "en_sense": "A length of thread, line or rope that is doubled over to make an opening.",
+    "ja": "ループ",
+    "ja_reading": "ループ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "loop",
+     "band",
+     "ring"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-16094-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The loanword ループ is the standard and most common equivalent for loop."
+   }
+  },
+  {
+   "key": "1d4d45a4c72bbc2ea03103f5b9df5d0f29ed13091e6e7b2ec51c150a7761c99f",
+   "input": {
+    "id": "wk-22518-s0",
+    "en": "lotus",
+    "en_pos": "noun",
+    "en_sense": "Any member of the genus Nelumbo of aquatic plants in the family Nelumbonaceae.",
+    "ja": "ロータス",
+    "ja_reading": "ロータス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lotus"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-22518-s0",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The standard Japanese word for the lotus plant is 蓮 (hasu); ロータス is a loanword used in specific, often commercial or stylized, contexts and is not the natural general equivalent."
+   }
+  },
+  {
+   "key": "ed16ee8cbb9f9d483dc0d834eaeae39375fe054944abd37206e216913fde2eab",
+   "input": {
+    "id": "wk-7306-s1",
+    "en": "lover",
+    "en_pos": "noun",
+    "en_sense": "A sexual partner, especially one with whom someone is having an affair.",
+    "ja": "愛人",
+    "ja_reading": "あいじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lover",
+     "mistress"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-7306-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "愛人 is a perfect match for the specific sense of a lover in an extramarital affair, but it does not cover other senses of the English word 'lover'."
+   }
+  },
+  {
+   "key": "80929584c7c969a5bbb49f135adeac48a21d9333c46be2bf8d2bc821738f1ba1",
+   "input": {
+    "id": "wk-10600-s0",
+    "en": "luckily",
+    "en_pos": "adverb",
+    "en_sense": "In a lucky manner; by good fortune; fortunately.",
+    "ja": "運良く",
+    "ja_reading": "うんよく",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "luckily"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-10600-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and direct translation."
+   }
+  },
+  {
+   "key": "314271f9af2756db8f8137d350e82f4426fc31aa358c4c642c4971d80da842f0",
+   "input": {
+    "id": "wk-1323-s0",
+    "en": "lukewarm",
+    "en_pos": "adjective",
+    "en_sense": "Between warm and cool.",
+    "ja": "ぬるい",
+    "ja_reading": "ぬるい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "lukewarm",
+     "tepid"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-1323-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A standard and direct equivalent for temperature, often with a slightly negative connotation of being insufficiently hot or cold."
+   }
+  },
+  {
+   "key": "d5e55d18f56210e8f5b254b8a32e3f97d08e5c61da44a2953a99e29dd502d4f7",
+   "input": {
+    "id": "wk-17987-s0",
+    "en": "lump",
+    "en_pos": "noun",
+    "en_sense": "Something that protrudes, sticks out, or sticks together; a cluster or blob; a mound or mass of no particular shape.",
+    "ja": "塊",
+    "ja_reading": "かたまり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lump",
+     "mass",
+     "bundle",
+     "clump",
+     "clod",
+     "cluster"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-17987-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and common equivalent for a lump or mass."
+   }
+  }
+ ]
+}

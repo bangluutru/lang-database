@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:08:39Z",
+ "items": [
+  {
+   "key": "67d863fc4280df861d751256ba436f7d855a860c60ce98398f674532e9616453",
+   "input": {
+    "id": "wk-13220-s0",
+    "en": "symbiosis",
+    "en_pos": "noun",
+    "en_sense": "A relationship of mutual benefit, especially among different species.",
+    "ja": "共生",
+    "ja_reading": "きょうせい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "symbiosis"
+    ],
+    "vi": "cộng sinh"
+   },
+   "output": {
+    "id": "wk-13220-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognate equivalents for 'symbiosis'."
+   }
+  },
+  {
+   "key": "1a62ee31db6e40ea758da8620d2c46c7bbbf95818b23fa34ef0a53853ca3b03c",
+   "input": {
+    "id": "wk-13225-s0",
+    "en": "gymnastics",
+    "en_pos": "noun",
+    "en_sense": "A sport involving the performance of sequences of movements requiring physical strength, flexibility, and kinesthetic awareness.",
+    "ja": "体操",
+    "ja_reading": "たいそう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "gymnastics",
+     "physical exercises"
+    ],
+    "vi": "thể dục"
+   },
+   "output": {
+    "id": "wk-13225-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both Japanese '体操' and Vietnamese 'thể dục' are broader, also meaning 'physical exercise' or 'physical education' in general, not just the competitive sport of gymnastics."
+   }
+  },
+  {
+   "key": "cd62fc5a28407f0030b58e81a3156d9ce3430ff20dc24718ce6dcab214672274",
+   "input": {
+    "id": "wk-13394-s0",
+    "en": "boycott",
+    "en_pos": "noun",
+    "en_sense": "The act of boycotting.",
+    "ja": "ボイコット",
+    "ja_reading": "ボイコット",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "boycott"
+    ],
+    "vi": "sự tẩy chay"
+   },
+   "output": {
+    "id": "wk-13394-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the act of boycotting."
+   }
+  },
+  {
+   "key": "6b3a31fa05d3ddb1a35553ae8999dc3d898caf60600cd62efc7ce92f20d5273c",
+   "input": {
+    "id": "wk-13397-e:f17dc1",
+    "en": "torture",
+    "en_pos": "noun",
+    "en_sense": "intentional causing of somebody's experiencing agony",
+    "ja": "拷問",
+    "ja_reading": "ごうもん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "torture"
+    ],
+    "vi": "nhục hình"
+   },
+   "output": {
+    "id": "wk-13397-e:f17dc1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'nhục hình' is a formal/legalistic term for 'humiliating physical punishment' and is not the best general equivalent for 'torture'; 'tra tấn' is more common and accurate."
+   }
+  },
+  {
+   "key": "90922114ce128c832e6a1a7d917a33dfb99a728d4c76264e77109d05cad3b03d",
+   "input": {
+    "id": "wk-13615-s0",
+    "en": "secession",
+    "en_pos": "noun",
+    "en_sense": "The act of seceding.",
+    "ja": "脱退",
+    "ja_reading": "だったい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "withdrawal (e.g. from an organization)",
+     "secession",
+     "leaving",
+     "pulling out"
+    ],
+    "vi": "sự ra khỏi"
+   },
+   "output": {
+    "id": "wk-13615-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự ra khỏi' is a literal and incorrect translation; the correct term is 'sự ly khai'. The Japanese '脱退' is also too broad, meaning withdrawal from any group."
+   }
+  },
+  {
+   "key": "109a9634570c57843c4a435c157c0788bdbb0097e06f664526c3cdeae78bde68",
+   "input": {
+    "id": "wk-13659-s0",
+    "en": "salvation",
+    "en_pos": "noun",
+    "en_sense": "The process of being saved, the state of having been saved (from hell).",
+    "ja": "救済",
+    "ja_reading": "きゅうさい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "(religious) salvation",
+     "(Christian) grace"
+    ],
+    "vi": "sự cứu rỗi"
+   },
+   "output": {
+    "id": "wk-13659-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and appropriate for '(religious) salvation'."
+   }
+  },
+  {
+   "key": "ac73d48e054ea0dcb6b11a67b4b9c43172464c46baf844406a1316fd4713e545",
+   "input": {
+    "id": "wk-13710-s3",
+    "en": "interview",
+    "en_pos": "noun",
+    "en_sense": "A formal meeting, in person, for the assessment of a candidate or applicant.",
+    "ja": "面接",
+    "ja_reading": "めんせつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "interview (e.g. for a job)"
+    ],
+    "vi": "sự gặp gỡ"
+   },
+   "output": {
+    "id": "wk-13710-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'sự gặp gỡ' means 'a meeting' in general and is incorrect; the proper term for an assessment interview is '(sự) phỏng vấn'."
+   }
+  },
+  {
+   "key": "13d556d12fbdd4414f051687e29a1edfbce368e1e5170a87e60c283718337c0d",
+   "input": {
+    "id": "wk-13892-s0",
+    "en": "ceasefire",
+    "en_pos": "noun",
+    "en_sense": "In warfare, an agreed end to hostilities for a specific purpose. (Typically only temporary).",
+    "ja": "停戦",
+    "ja_reading": "ていせん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "armistice",
+     "ceasefire"
+    ],
+    "vi": "đình chiến"
+   },
+   "output": {
+    "id": "wk-13892-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect cognate equivalents for 'ceasefire'."
+   }
+  },
+  {
+   "key": "07c34197bd7c2682b4e4fb558f255d8b83b98a36f3469ba18b85c61715eef78d",
+   "input": {
+    "id": "wk-13953-s2",
+    "en": "programming",
+    "en_pos": "noun",
+    "en_sense": "The act of writing a computer program.",
+    "ja": "プログラミング",
+    "ja_reading": "プログラミング",
+    "ja_pos": "n,vs,vi,vt",
+    "ja_glosses": [
+     "programming",
+     "programing"
+    ],
+    "vi": "lập trình"
+   },
+   "output": {
+    "id": "wk-13953-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, correct words for computer programming."
+   }
+  },
+  {
+   "key": "b3f7378e4019788b756cb731a003e142788ada403dfaded1caad74832415a73f",
+   "input": {
+    "id": "wk-13960-s0",
+    "en": "brainwashing",
+    "en_pos": "noun",
+    "en_sense": "A form of indoctrination that forces people to abandon their beliefs in favour of another set of beliefs by conditioning through various forms of pressure or torture.",
+    "ja": "洗脳",
+    "ja_reading": "せんのう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "brainwashing"
+    ],
+    "vi": "tẩy não"
+   },
+   "output": {
+    "id": "wk-13960-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, with the Japanese and Vietnamese being calques of the English word."
+   }
+  },
+  {
+   "key": "8523d1ad384c427a455363f4c96a974a011b08d9a327deb223a16e4e7659509f",
+   "input": {
+    "id": "wk-13968-s0",
+    "en": "requirement",
+    "en_pos": "noun",
+    "en_sense": "A necessity or prerequisite; something required or obligatory. Its adpositions are generally of in relation to who or what has given it, on in relation to whom or what it is given to, and for in relation to what is required.",
+    "ja": "要求",
+    "ja_reading": "ようきゅう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "demand",
+     "firm request",
+     "requisition",
+     "requirement",
+     "desire"
+    ],
+    "vi": "yêu cầu"
+   },
+   "output": {
+    "id": "wk-13968-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both '要求' and 'yêu cầu' are closer to 'demand' or 'request' than the broader sense of 'requirement' which includes 'prerequisite' or 'necessity'."
+   }
+  },
+  {
+   "key": "0e5e64f1fdd6ccb3f3869a667605092322e8080e931b4b6084f5d3d50195e074",
+   "input": {
+    "id": "wk-140-s1",
+    "en": "abortion",
+    "en_pos": "noun",
+    "en_sense": "An induced abortion.",
+    "ja": "中絶",
+    "ja_reading": "ちゅうぜつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "abortion"
+    ],
+    "vi": "sự phá thai"
+   },
+   "output": {
+    "id": "wk-140-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct equivalents for '(induced) abortion'."
+   }
+  }
+ ]
+}

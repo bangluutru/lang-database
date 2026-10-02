@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:44:03Z",
+ "items": [
+  {
+   "key": "bfe3d51fd97083bfeb26fbd6791dceb4fb53e655b4bcdf931e1a24d32006dd76",
+   "input": {
+    "id": "jm-1532220-0-pass",
+    "en": "pass",
+    "en_pos": "verb",
+    "en_sense": "to pass (the night); to spend",
+    "ja": "明かす",
+    "ja_reading": "あかす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to pass (the night)",
+     "to spend"
+    ],
+    "vi": "trải qua"
+   },
+   "output": {
+    "id": "jm-1532220-0-pass",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and equivalent for the sense of spending a period of time, especially a night."
+   }
+  },
+  {
+   "key": "922b88dc25fde1099d02c226afab399a302959a8fde28649c9e8e8b147b2025f",
+   "input": {
+    "id": "jm-1532810-0-each",
+    "en": "each",
+    "en_pos": "adverb",
+    "en_sense": "each; individual",
+    "ja": "めいめい",
+    "ja_reading": "めいめい",
+    "ja_pos": "adv,adj-no,n",
+    "ja_glosses": [
+     "each",
+     "individual"
+    ],
+    "vi": "mỗi"
+   },
+   "output": {
+    "id": "jm-1532810-0-each",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese word 'mỗi' is a determiner, not an adverb like the English 'each' in this sense."
+   }
+  },
+  {
+   "key": "f51fc3f47a707c60fff23790f3304577c91e90c30522a1c019126031397de077",
+   "input": {
+    "id": "jm-1533200-0-exemption",
+    "en": "exemption",
+    "en_pos": "noun",
+    "en_sense": "exemption; exoneration; discharge",
+    "ja": "免除",
+    "ja_reading": "めんじょ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "exemption",
+     "exoneration",
+     "discharge"
+    ],
+    "vi": "miễn trừ"
+   },
+   "output": {
+    "id": "jm-1533200-0-exemption",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, formal equivalents for 'exemption'."
+   }
+  },
+  {
+   "key": "63059ce93c3de9ca8fd57aa809dda8a8cf36d5e9bfa6354f0400b0fb533165ad",
+   "input": {
+    "id": "jm-1533330-0-cotton",
+    "en": "cotton",
+    "en_pos": "noun",
+    "en_sense": "cotton",
+    "ja": "綿",
+    "ja_reading": "めん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cotton"
+    ],
+    "vi": "bông"
+   },
+   "output": {
+    "id": "jm-1533330-0-cotton",
+    "en_ja": "WRONG",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'めん' is a bound morpheme, not the common standalone word for cotton ('わた'); the Vietnamese 'bông' means raw cotton fiber, not cotton in general."
+   }
+  },
+  {
+   "key": "ba75d5f2c0a49601baa28b638705cea6cc5582648a74a44fa9335ebbf5aebf67",
+   "input": {
+    "id": "jm-1533550-0-trouble",
+    "en": "trouble",
+    "en_pos": "noun",
+    "en_sense": "trouble; bother",
+    "ja": "面倒",
+    "ja_reading": "めんどう",
+    "ja_pos": "n,adj-na",
+    "ja_glosses": [
+     "trouble",
+     "bother"
+    ],
+    "vi": "rắc rối"
+   },
+   "output": {
+    "id": "jm-1533550-0-trouble",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are common and natural equivalents for 'trouble' or 'bother'."
+   }
+  },
+  {
+   "key": "e9c8bd698d69c7e7e2571fee8cea534765de6e044a501c0e5ababe717f0aa107",
+   "input": {
+    "id": "jm-1533590-0-face",
+    "en": "face",
+    "en_pos": "noun",
+    "en_sense": "face; honour; honor; reputation; prestige; dignity",
+    "ja": "面目",
+    "ja_reading": "めんぼく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "face",
+     "honour",
+     "honor",
+     "reputation",
+     "prestige",
+     "dignity"
+    ],
+    "vi": "danh dự"
+   },
+   "output": {
+    "id": "jm-1533590-0-face",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the concept of 'face' as in honor or reputation."
+   }
+  },
+  {
+   "key": "c2adc6f4fb3bb4272431268eebd16d91409b6bb499ddbe739998b04e68103c8f",
+   "input": {
+    "id": "jm-1534500-0-profit",
+    "en": "profit",
+    "en_pos": "verb",
+    "en_sense": "to profit; to get; to earn; to gain",
+    "ja": "儲ける",
+    "ja_reading": "もうける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to profit",
+     "to get",
+     "to earn",
+     "to gain"
+    ],
+    "vi": "kiếm lời"
+   },
+   "output": {
+    "id": "jm-1534500-0-profit",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are standard and natural ways to say 'to make a profit'."
+   }
+  },
+  {
+   "key": "96a9dcde5c421abfd26931515f2d512ca78b8d71ac9c790a3b45093522e1c7a5",
+   "input": {
+    "id": "jm-1534870-0-cotton",
+    "en": "cotton",
+    "en_pos": "noun",
+    "en_sense": "cotton (material)",
+    "ja": "木綿",
+    "ja_reading": "もめん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cotton (material)"
+    ],
+    "vi": "bông"
+   },
+   "output": {
+    "id": "jm-1534870-0-cotton",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'bông' means raw cotton fiber, not cotton material/fabric, which is what the English and Japanese words refer to."
+   }
+  },
+  {
+   "key": "22606be93bfbe028d7dfae1e3f73669262c9a43f97e349dafd236d968ebf567e",
+   "input": {
+    "id": "jm-1534880-0-thursday",
+    "en": "thursday",
+    "en_pos": "noun",
+    "en_sense": "Thursday",
+    "ja": "木曜",
+    "ja_reading": "もくよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Thursday"
+    ],
+    "vi": "thứ năm"
+   },
+   "output": {
+    "id": "jm-1534880-0-thursday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'木曜' is a common, slightly informal abbreviation for 'Thursday' and is a good equivalent."
+   }
+  },
+  {
+   "key": "a644aeaa4ad4da72333f6fba02a4900a628209a79fd28a7f1f15ee047c361a0a",
+   "input": {
+    "id": "jm-1534890-0-thursday",
+    "en": "thursday",
+    "en_pos": "noun",
+    "en_sense": "Thursday",
+    "ja": "木曜日",
+    "ja_reading": "もくようび",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "Thursday"
+    ],
+    "vi": "thứ năm"
+   },
+   "output": {
+    "id": "jm-1534890-0-thursday",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'Thursday'."
+   }
+  },
+  {
+   "key": "57153e11b4d8c5dee98c395a9a275cc38426c0609d86a9485c26288a5f6b6743",
+   "input": {
+    "id": "jm-1535670-0-look",
+    "en": "look",
+    "en_pos": "noun",
+    "en_sense": "look (in someone's eyes); expression (of the eyes); eyes",
+    "ja": "目付き",
+    "ja_reading": "めつき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "look (in someone's eyes)",
+     "expression (of the eyes)",
+     "eyes"
+    ],
+    "vi": "ánh mắt"
+   },
+   "output": {
+    "id": "jm-1535670-0-look",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect and natural equivalents for the expression in someone's eyes."
+   }
+  },
+  {
+   "key": "8e1b33721680de07a1f90b855fb72b287e5297ea082566ca6296c248de53d01b",
+   "input": {
+    "id": "jm-1535930-0-question",
+    "en": "question",
+    "en_pos": "noun",
+    "en_sense": "question; query",
+    "ja": "問い",
+    "ja_reading": "とい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "question",
+     "query"
+    ],
+    "vi": "câu hỏi"
+   },
+   "output": {
+    "id": "jm-1535930-0-question",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '問い' is correct but more formal/literary and less common in daily use than '質問', which is a better primary equivalent for 'question'."
+   }
+  }
+ ]
+}

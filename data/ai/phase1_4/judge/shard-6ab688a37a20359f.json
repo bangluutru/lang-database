@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:33:55Z",
+ "items": [
+  {
+   "key": "fc828d21dd5daae995cd2f88a447ec85abff8ebc2cf8491c078a8bb39be58136",
+   "input": {
+    "id": "jm-1303820-1-home",
+    "en": "home",
+    "en_pos": "noun",
+    "en_sense": "home (of a plant or animal); habitat; locality",
+    "ja": "産地",
+    "ja_reading": "さんち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "home (of a plant or animal)",
+     "habitat",
+     "locality"
+    ],
+    "vi": "môi trường sống"
+   },
+   "output": {
+    "id": "jm-1303820-1-home",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Japanese '産地' means 'producing area' and is narrower than 'habitat', while Vietnamese 'môi trường sống' means 'habitat'; the three terms are not equivalent."
+   }
+  },
+  {
+   "key": "4de8addd91260b1f2a883d077239fd33f5ca8810c71300b03fd67e0b2430c7f3",
+   "input": {
+    "id": "jm-1304240-0-praise",
+    "en": "praise",
+    "en_pos": "noun",
+    "en_sense": "praise; glorification; extolment",
+    "ja": "賛美",
+    "ja_reading": "さんび",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "praise",
+     "glorification",
+     "extolment"
+    ],
+    "vi": "ca ngợi"
+   },
+   "output": {
+    "id": "jm-1304240-0-praise",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'ca ngợi' is a verb, while the English and Japanese entries are nouns."
+   }
+  },
+  {
+   "key": "005e13d6db13136e8a921291e6f44def358695411bdb6c73ebe9269b1aa07f4a",
+   "input": {
+    "id": "jm-1304400-0-slice",
+    "en": "slice",
+    "en_pos": "verb",
+    "en_sense": "to kill (a human) using a blade (sword, machete, knife, etc.); to slice (off); to lop (off); to cut (off)",
+    "ja": "斬る",
+    "ja_reading": "きる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to kill (a human) using a blade (sword, machete, knife, etc.)",
+     "to slice (off)",
+     "to lop (off)",
+     "to cut (off)"
+    ],
+    "vi": "chém"
+   },
+   "output": {
+    "id": "jm-1304400-0-slice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the specific sense of killing someone with a blade."
+   }
+  },
+  {
+   "key": "c60cdabbf4bce4b59835dfd13660dacd14856ff6797cd42ddc2eea7117fc5d34",
+   "input": {
+    "id": "jm-1304590-0-balance",
+    "en": "balance",
+    "en_pos": "noun",
+    "en_sense": "(bank) balance; remainder",
+    "ja": "残高",
+    "ja_reading": "ざんだか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(bank) balance",
+     "remainder"
+    ],
+    "vi": "số dư"
+   },
+   "output": {
+    "id": "jm-1304590-0-balance",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard financial term for '(bank) balance'."
+   }
+  },
+  {
+   "key": "0233c3163e5daa901e769a759abfb3c5a75bfaacae705abf05103f9e419ecba6",
+   "input": {
+    "id": "jm-1304680-0-regrettable",
+    "en": "regrettable",
+    "en_pos": "adjective",
+    "en_sense": "regrettable; unfortunate; disappointing; vexing",
+    "ja": "残念",
+    "ja_reading": "ざんねん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "regrettable",
+     "unfortunate",
+     "disappointing",
+     "vexing"
+    ],
+    "vi": "đáng tiếc"
+   },
+   "output": {
+    "id": "jm-1304680-0-regrettable",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, common equivalents for 'regrettable' or 'unfortunate'."
+   }
+  },
+  {
+   "key": "ef576ed9b083a1cc29b41e242f839727825852485c82abe1cb0341cf392048f0",
+   "input": {
+    "id": "jm-1304760-0-serve",
+    "en": "serve",
+    "en_pos": "verb",
+    "en_sense": "to serve; to work for; to attend",
+    "ja": "仕える",
+    "ja_reading": "つかえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to serve",
+     "to work for",
+     "to attend"
+    ],
+    "vi": "phục vụ"
+   },
+   "output": {
+    "id": "jm-1304760-0-serve",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'phục vụ' is a general term for 'to serve', making it broader than the specific sense of serving a superior implied by English 'serve' and Japanese '仕える'."
+   }
+  },
+  {
+   "key": "4f15d90c05bea5546e3a2148fd87dae3fa7a9afffed84f337c3f754d364a0b5f",
+   "input": {
+    "id": "jm-1304940-3-prepare",
+    "en": "prepare",
+    "en_pos": "verb",
+    "en_sense": "to prepare (esp. ingredients for brewing)",
+    "ja": "仕込む",
+    "ja_reading": "しこむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to prepare (esp. ingredients for brewing)"
+    ],
+    "vi": "chuẩn bị"
+   },
+   "output": {
+    "id": "jm-1304940-3-prepare",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'chuẩn bị' is the general word for 'prepare' and completely misses the specific sense of preparing ingredients for brewing, which is central to the English and Japanese terms."
+   }
+  },
+  {
+   "key": "c7c9cef5eacc2928b0551d68e3def5298db2e168711717519d2db2789df25421",
+   "input": {
+    "id": "jm-1305120-0-finish",
+    "en": "finish",
+    "en_pos": "noun",
+    "en_sense": "finish; end; completion; result",
+    "ja": "仕上がり",
+    "ja_reading": "しあがり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "finish",
+     "end",
+     "completion",
+     "result"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1305120-0-finish",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese entry 'hoàn thành' is a verb ('to complete'), while the English and Japanese entries are nouns ('finish', 'completion')."
+   }
+  },
+  {
+   "key": "89117f8f9e3830d73023b270aa8e381fa1276e3c362caaf1802abab13da72f77",
+   "input": {
+    "id": "jm-1305140-0-complete",
+    "en": "complete",
+    "en_pos": "verb",
+    "en_sense": "to finish up; to complete; to finish off; to get through; to polish off",
+    "ja": "仕上げる",
+    "ja_reading": "しあげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to finish up",
+     "to complete",
+     "to finish off",
+     "to get through",
+     "to polish off"
+    ],
+    "vi": "hoàn thành"
+   },
+   "output": {
+    "id": "jm-1305140-0-complete",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent equivalents for 'to complete' or 'to finish up'."
+   }
+  },
+  {
+   "key": "07472d983ef833c1393240079348af9c3bea114e349a1f1d175ac18a8cdd5326",
+   "input": {
+    "id": "jm-1305180-0-partition",
+    "en": "partition",
+    "en_pos": "verb",
+    "en_sense": "to partition; to divide; to mark off",
+    "ja": "仕切る",
+    "ja_reading": "しきる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to partition",
+     "to divide",
+     "to mark off"
+    ],
+    "vi": "chia cắt"
+   },
+   "output": {
+    "id": "jm-1305180-0-partition",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "The Vietnamese 'chia cắt' is a good equivalent, though it can sometimes carry a stronger connotation of separation than the English or Japanese terms."
+   }
+  },
+  {
+   "key": "6c6a8370168f84fe2977e57c480cb9f4f8cefcdefe53b8506b4d0d874ef38703",
+   "input": {
+    "id": "jm-1305310-0-purchase",
+    "en": "purchase",
+    "en_pos": "verb",
+    "en_sense": "to buy (stock, materials, etc.); to purchase; to lay in; to stock; to procure",
+    "ja": "仕入れる",
+    "ja_reading": "しいれる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to buy (stock, materials, etc.)",
+     "to purchase",
+     "to lay in",
+     "to stock",
+     "to procure"
+    ],
+    "vi": "mua vào"
+   },
+   "output": {
+    "id": "jm-1305310-0-purchase",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the specific business sense of purchasing stock or materials."
+   }
+  },
+  {
+   "key": "a6a6e10a08bb18e229bafa1e7adecdaa8470c0d3f24f8f72dc0398faa3667dc3",
+   "input": {
+    "id": "jm-1305560-0-tailor",
+    "en": "tailor",
+    "en_pos": "verb",
+    "en_sense": "to tailor; to make (clothing)",
+    "ja": "仕立てる",
+    "ja_reading": "したてる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to tailor",
+     "to make (clothing)"
+    ],
+    "vi": "may đo"
+   },
+   "output": {
+    "id": "jm-1305560-0-tailor",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise equivalents for 'to tailor' (make clothes to measure)."
+   }
+  }
+ ]
+}

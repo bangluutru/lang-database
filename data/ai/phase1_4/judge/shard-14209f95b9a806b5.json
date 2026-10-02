@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:45:36Z",
+ "items": [
+  {
+   "key": "bbd9534848eecf3a6ffa51d25a4caf79eabd31345402b89fc2748778dc60b0fc",
+   "input": {
+    "id": "jm-1580760-0-notice",
+    "en": "notice",
+    "en_pos": "noun",
+    "en_sense": "(public) notice; attention; public eye; public gaze",
+    "ja": "人目",
+    "ja_reading": "ひとめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(public) notice",
+     "attention",
+     "public eye",
+     "public gaze"
+    ],
+    "vi": "sự chú ý"
+   },
+   "output": {
+    "id": "jm-1580760-0-notice",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sự chú ý' means 'attention' in general, whereas the English and Japanese terms specifically refer to public notice or the public eye."
+   }
+  },
+  {
+   "key": "4dd3c52db8433d5a95e3ee88b491ea695833d0f94fab9e95ddae48972d44ad32",
+   "input": {
+    "id": "jm-1581090-0-classify",
+    "en": "classify",
+    "en_pos": "verb",
+    "en_sense": "to classify; to sort out; to sift through",
+    "ja": "選り分ける",
+    "ja_reading": "よりわける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to classify",
+     "to sort out",
+     "to sift through"
+    ],
+    "vi": "phân loại"
+   },
+   "output": {
+    "id": "jm-1581090-0-classify",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard equivalents for classifying or sorting things."
+   }
+  },
+  {
+   "key": "a07b69bdd6179173ada2f06cc3cc37240ea295b31b9821a34c8ae9052a5e2e1d",
+   "input": {
+    "id": "jm-1581170-0-quality",
+    "en": "quality",
+    "en_pos": "noun",
+    "en_sense": "right or wrong; good or bad; quality; suitability",
+    "ja": "善し悪し",
+    "ja_reading": "よしあし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "right or wrong",
+     "good or bad",
+     "quality",
+     "suitability"
+    ],
+    "vi": "chất lượng"
+   },
+   "output": {
+    "id": "jm-1581170-0-quality",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chất lượng' translates a different sense of 'quality' (level of excellence) and does not match the intended sense of 'right or wrong; good or bad'."
+   }
+  },
+  {
+   "key": "479f71b6f664921601aca5e1da31f8ee5ce3dab375ac8126b48c8ba05671caa5",
+   "input": {
+    "id": "jm-1582090-0-universe",
+    "en": "universe",
+    "en_pos": "noun",
+    "en_sense": "heaven and earth; the universe; the world; nature",
+    "ja": "天地",
+    "ja_reading": "てんち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "heaven and earth",
+     "the universe",
+     "the world",
+     "nature"
+    ],
+    "vi": "vũ trụ"
+   },
+   "output": {
+    "id": "jm-1582090-0-universe",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'vũ trụ' is the scientific term for the cosmos, which is narrower than the broader, more philosophical sense of 'heaven and earth' conveyed by the English and Japanese terms."
+   }
+  },
+  {
+   "key": "c36fa13a474817bc18bb3e2c550c97536a504b46d4f24766aabdddcccdaf53c9",
+   "input": {
+    "id": "jm-1582120-0-store",
+    "en": "store",
+    "en_pos": "noun",
+    "en_sense": "store; shop; establishment; restaurant",
+    "ja": "店",
+    "ja_reading": "みせ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "store",
+     "shop",
+     "establishment",
+     "restaurant"
+    ],
+    "vi": "cửa hàng"
+   },
+   "output": {
+    "id": "jm-1582120-0-store",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'cửa hàng' is narrower than the English and Japanese terms, as it primarily refers to retail shops and is not the most common word for a restaurant."
+   }
+  },
+  {
+   "key": "001a5b7c020fc54095a8b98bd4fe50935878d9b700c620782b07d86b61232fe3",
+   "input": {
+    "id": "jm-1582130-0-fall_down",
+    "en": "fall down",
+    "en_pos": "verb",
+    "en_sense": "to fall down; to fall over",
+    "ja": "転ぶ",
+    "ja_reading": "ころぶ",
+    "ja_pos": "v5b,vi",
+    "ja_glosses": [
+     "to fall down",
+     "to fall over"
+    ],
+    "vi": "ngã"
+   },
+   "output": {
+    "id": "jm-1582130-0-fall_down",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for the action of falling down."
+   }
+  },
+  {
+   "key": "e980d0000fa8357851fd2224cf375c185afe2637a0307b653cd5b4eb6e5469d8",
+   "input": {
+    "id": "jm-1582710-0-japan",
+    "en": "japan",
+    "en_pos": "noun",
+    "en_sense": "Japan",
+    "ja": "日本",
+    "ja_reading": "にほん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Japan"
+    ],
+    "vi": "nhật bản"
+   },
+   "output": {
+    "id": "jm-1582710-0-japan",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a straightforward and correct translation of a proper noun."
+   }
+  },
+  {
+   "key": "cea7d94f33623ccf682ac18a5fa3e4cc06205fe1c04a86a273a193a290b73254",
+   "input": {
+    "id": "jm-1583095-0-eight",
+    "en": "eight",
+    "en_pos": "numeral",
+    "en_sense": "eight",
+    "ja": "八つ",
+    "ja_reading": "やっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "eight"
+    ],
+    "vi": "tám"
+   },
+   "output": {
+    "id": "jm-1583095-0-eight",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard ways to express the number eight."
+   }
+  },
+  {
+   "key": "957f395aff85fab34a76adf4feb4e8d9fc338da00b419f1a9acae4aa9dfd11a3",
+   "input": {
+    "id": "jm-1583470-0-article",
+    "en": "article",
+    "en_pos": "noun",
+    "en_sense": "article; item; thing; goods; stock",
+    "ja": "品",
+    "ja_reading": "しな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "article",
+     "item",
+     "thing",
+     "goods",
+     "stock"
+    ],
+    "vi": "mặt hàng"
+   },
+   "output": {
+    "id": "jm-1583470-0-article",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for an article of commerce or an item of goods."
+   }
+  },
+  {
+   "key": "cffa3ead5044681037140b1a6d0b277a6fa62a3ce772cc64e747e955324b71a0",
+   "input": {
+    "id": "jm-1583720-0-cold",
+    "en": "cold",
+    "en_pos": "noun",
+    "en_sense": "(common) cold; influenza; flu; ague; inflammatory respiratory system illness (in general)",
+    "ja": "風邪",
+    "ja_reading": "かぜ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(common) cold",
+     "influenza",
+     "flu",
+     "ague",
+     "inflammatory respiratory system illness (in general)"
+    ],
+    "vi": "cảm cúm"
+   },
+   "output": {
+    "id": "jm-1583720-0-cold",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, general terms for a common cold or flu-like illness."
+   }
+  },
+  {
+   "key": "b13cc18b14072711e8edf742ee3e34670dd2b5dcf36eefe1d65e434d806d73a0",
+   "input": {
+    "id": "jm-1561920-0-sum",
+    "en": "sum",
+    "en_pos": "noun",
+    "en_sense": "sum",
+    "ja": "和",
+    "ja_reading": "わ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sum"
+    ],
+    "vi": "tổng"
+   },
+   "output": {
+    "id": "jm-1561920-0-sum",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard mathematical terms for 'sum'."
+   }
+  },
+  {
+   "key": "0a1f2695da40d8f9040df48853de8990da1ea9b5a198bca2184a89a2fcc2f378",
+   "input": {
+    "id": "jm-1562300-0-address",
+    "en": "address",
+    "en_pos": "verb",
+    "en_sense": "to address (someone); to accost a person; to talk (to someone)",
+    "ja": "話し掛ける",
+    "ja_reading": "はなしかける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to address (someone)",
+     "to accost a person",
+     "to talk (to someone)"
+    ],
+    "vi": "nói chuyện"
+   },
+   "output": {
+    "id": "jm-1562300-0-address",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'nói chuyện' means 'to talk/converse', while the English and Japanese terms refer to the specific act of initiating a conversation."
+   }
+  }
+ ]
+}

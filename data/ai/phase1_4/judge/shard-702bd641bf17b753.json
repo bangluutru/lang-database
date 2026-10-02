@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:29:32Z",
+ "items": [
+  {
+   "key": "fc568ed427223ca2f8c5d033a9cf0d769a4670135b291c9ac6eb877a5a5226e8",
+   "input": {
+    "id": "wk-12693-s0",
+    "en": "tourist",
+    "en_pos": "noun",
+    "en_sense": "Someone who travels for pleasure rather than for business; a leisure visitor.",
+    "ja": "観光客",
+    "ja_reading": "かんこうきゃく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tourist"
+    ],
+    "vi": "khách du lịch"
+   },
+   "output": {
+    "id": "wk-12693-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'tourist'."
+   }
+  },
+  {
+   "key": "16626f833b6f6972b27de42f1a3218952990d1b12690eb8f8fe10afbb08c77d1",
+   "input": {
+    "id": "wk-12708-s0",
+    "en": "versus",
+    "en_pos": "preposition",
+    "en_sense": "Against; in opposition to.",
+    "ja": "対",
+    "ja_reading": "たい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "versus",
+     "against",
+     "vs.",
+     "v."
+    ],
+    "vi": "kiện"
+   },
+   "output": {
+    "id": "wk-12708-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'kiện' means 'to sue' and is not a translation of 'versus'."
+   }
+  },
+  {
+   "key": "dfe847c588dccd3f9fb33a8badde361d99e4608fa48da28816af9228701d3dbf",
+   "input": {
+    "id": "wk-1271-s2",
+    "en": "what",
+    "en_pos": "pronoun",
+    "en_sense": "Anything that; all that; whatever.",
+    "ja": "何",
+    "ja_reading": "なに",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "what"
+    ],
+    "vi": "gì"
+   },
+   "output": {
+    "id": "wk-1271-s2",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese words are the interrogative 'what?', not the relative pronoun 'what' (meaning 'anything that')."
+   }
+  },
+  {
+   "key": "043a5eb2db3b28cd5b8f123cd5b487b6873bbf11a024ffe77b99d1513b26a901",
+   "input": {
+    "id": "wk-12716-s0",
+    "en": "painting",
+    "en_pos": "noun",
+    "en_sense": "An illustration or artwork done with the use of paint.",
+    "ja": "絵画",
+    "ja_reading": "かいが",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "painting",
+     "picture"
+    ],
+    "vi": "hội hoạ"
+   },
+   "output": {
+    "id": "wk-12716-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'hội hoạ' means the art of painting, not an individual painting (which is 'bức tranh')."
+   }
+  },
+  {
+   "key": "b8eb4e6521dd9281decc4b2a885632554801f75dd7bd3241cb79e357f3be03b1",
+   "input": {
+    "id": "wk-12722-s0",
+    "en": "horizon",
+    "en_pos": "noun",
+    "en_sense": "The visible horizontal line (in all directions) where the sky appears to meet the earth in the distance.",
+    "ja": "地平線",
+    "ja_reading": "ちへいせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "horizon (related to land)"
+    ],
+    "vi": "chân trời"
+   },
+   "output": {
+    "id": "wk-12722-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese '地平線' specifically means the horizon over land, whereas English 'horizon' and Vietnamese 'chân trời' can be over land or sea."
+   }
+  },
+  {
+   "key": "182f38ab34cdc8189af873ee25ab19eaacbebed3841876861874ae153b8117cb",
+   "input": {
+    "id": "wk-1274-s0",
+    "en": "left",
+    "en_pos": "adjective",
+    "en_sense": "Designating the side of the body toward the west when one is facing north; the side of the body on which the heart is located in most humans; the opposite of right. This arrow points to the reader's left: ←",
+    "ja": "左",
+    "ja_reading": "ひだり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "left",
+     "left-hand side"
+    ],
+    "vi": "trái"
+   },
+   "output": {
+    "id": "wk-1274-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'left'."
+   }
+  },
+  {
+   "key": "2c0a4241ce1b2a0c2e0eac422bed9fb8782fab3e604e5d6cf5c123f5171d97f6",
+   "input": {
+    "id": "wk-12742-s0",
+    "en": "editorial",
+    "en_pos": "noun",
+    "en_sense": "An article in a publication giving the opinion of its editors on a given topic or current event.",
+    "ja": "社説",
+    "ja_reading": "しゃせつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "editorial",
+     "leading article",
+     "leader"
+    ],
+    "vi": "bài xã luận"
+   },
+   "output": {
+    "id": "wk-12742-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'editorial'."
+   }
+  },
+  {
+   "key": "84bad00a2270d190ef5f6237819621ddf1d1c44fb4e8cf0852b828a62c14d740",
+   "input": {
+    "id": "wk-12744-s0",
+    "en": "artisan",
+    "en_pos": "noun",
+    "en_sense": "A skilled manual worker who uses tools and machinery in a particular craft.",
+    "ja": "工匠",
+    "ja_reading": "こうしょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "artisan",
+     "mechanic"
+    ],
+    "vi": "nghệ nhân"
+   },
+   "output": {
+    "id": "wk-12744-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '工匠' is somewhat archaic ('職人' is more common), and the Vietnamese 'nghệ nhân' is too narrow, implying a master of a traditional art rather than any skilled craftsperson."
+   }
+  },
+  {
+   "key": "becf515e30569d6af9580fbbd6742c055e75158176dabc46649633e72a7d448c",
+   "input": {
+    "id": "wk-12745-s0",
+    "en": "geographic",
+    "en_pos": "adjective",
+    "en_sense": "Pertaining to geography (or to geographics).",
+    "ja": "地理的",
+    "ja_reading": "ちりてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "geographical",
+     "geographic"
+    ],
+    "vi": "địa lý"
+   },
+   "output": {
+    "id": "wk-12745-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms are perfect equivalents, with the Vietnamese noun 'địa lý' functioning naturally as an adjective in context."
+   }
+  },
+  {
+   "key": "6cdd4ceeefe1de514602a0850cf83ab3287d7b8f9e3f237f5b8c499460b010ae",
+   "input": {
+    "id": "wk-12746-s0",
+    "en": "soot",
+    "en_pos": "noun",
+    "en_sense": "Fine black or dull brown particles of amorphous carbon and tar, produced by the incomplete combustion of coal, oil etc.",
+    "ja": "すす",
+    "ja_reading": "すす",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "soot"
+    ],
+    "vi": "lọ"
+   },
+   "output": {
+    "id": "wk-12746-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "MEDIUM",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'lọ' is a correct but ambiguous term for soot (it more commonly means 'jar'); 'bồ hóng' or 'lọ nồi' are better, more common choices."
+   }
+  },
+  {
+   "key": "b24e8cdd225c98583e70b685a629a60d4690261832035c49bde7cf84d061b79a",
+   "input": {
+    "id": "wk-12752-s2",
+    "en": "stall",
+    "en_pos": "noun",
+    "en_sense": "A bench or table on which small articles of merchandise are exposed for sale.",
+    "ja": "屋台店",
+    "ja_reading": "やたいみせ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stall",
+     "stand"
+    ],
+    "vi": "gian hàng"
+   },
+   "output": {
+    "id": "wk-12752-s2",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All terms refer to a market stall or stand; while 'gian hàng' can imply a slightly more structured space than just a table, it's a very common and acceptable equivalent."
+   }
+  },
+  {
+   "key": "2aca49a00dfe7de204028cbd918536ada3d029ab138568e60dbe6aad8ab9ea20",
+   "input": {
+    "id": "wk-12752-s3",
+    "en": "stall",
+    "en_pos": "noun",
+    "en_sense": "A small open-fronted shop, for example in a market, food court, etc.",
+    "ja": "売店",
+    "ja_reading": "ばいてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stand",
+     "stall",
+     "booth",
+     "kiosk",
+     "store"
+    ],
+    "vi": "gian hàng"
+   },
+   "output": {
+    "id": "wk-12752-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent and natural equivalents for a small stall or booth in a market or food court."
+   }
+  }
+ ]
+}

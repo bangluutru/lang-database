@@ -1,0 +1,397 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:54:36Z",
+ "items": [
+  {
+   "key": "e459451e45ca213c6b0e11b59383994f31602adec9cda31fd691be0586465e23",
+   "input": {
+    "id": "jm-2613280-0-rather",
+    "en": "rather",
+    "en_pos": "adverb",
+    "en_sense": "rather; sooner; preferably; might as well; just",
+    "ja": "いっそ",
+    "ja_reading": "いっそ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "rather",
+     "sooner",
+     "preferably",
+     "might as well",
+     "just"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2613280-0-rather",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese adverb いっそ is an excellent equivalent for this specific sense of 'rather', expressing a preference for a more drastic alternative."
+   }
+  },
+  {
+   "key": "0575eedcd909e2d2600260706b42fceb8c094fff05402a1b8fdc57cdc26c71c9",
+   "input": {
+    "id": "jm-2643970-0-after_all",
+    "en": "after all",
+    "en_pos": "conjunction",
+    "en_sense": "after all; because",
+    "ja": "だって",
+    "ja_reading": "だって",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "after all",
+     "because"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2643970-0-after_all",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "While the core meaning is similar, 'だって' is much more informal and conversational than 'after all', which can be used in a wider range of registers."
+   }
+  },
+  {
+   "key": "58a5700494435347fd15dbe84900b83b002485d4daf91236041821509c9aba9b",
+   "input": {
+    "id": "jm-2648780-0-elegance",
+    "en": "elegance",
+    "en_pos": "noun",
+    "en_sense": "elegance; grace; refinement; class; dignity",
+    "ja": "品",
+    "ja_reading": "ひん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "elegance",
+     "grace",
+     "refinement",
+     "class",
+     "dignity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2648780-0-elegance",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese noun '品' (hin) is a perfect equivalent for 'elegance' in the sense of grace, refinement, and class."
+   }
+  },
+  {
+   "key": "0e2ef0e43c044ee7abb8b661f744a13553de92a6156dfb1ddca4d47119ff85dc",
+   "input": {
+    "id": "jm-2649690-1-appear",
+    "en": "appear",
+    "en_pos": "verb",
+    "en_sense": "to appear (in print); to be mentioned; to be recorded; to be reported; to be given",
+    "ja": "載る",
+    "ja_reading": "のる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to appear (in print)",
+     "to be mentioned",
+     "to be recorded",
+     "to be reported",
+     "to be given"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2649690-1-appear",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese verb '載る' (noru) is the precise equivalent for 'appear' in the context of being published or featured in media."
+   }
+  },
+  {
+   "key": "f64f6c03b585a794aff75b0c610f745dd20fcf392c35348a240bdf82f7c14baa",
+   "input": {
+    "id": "jm-2742080-0-hit",
+    "en": "hit",
+    "en_pos": "verb",
+    "en_sense": "to hit (e.g. one's head); to strike; to knock; to run (into); to crash (into)",
+    "ja": "ぶつける",
+    "ja_reading": "ぶつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to hit (e.g. one's head)",
+     "to strike",
+     "to knock",
+     "to run (into)",
+     "to crash (into)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2742080-0-hit",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese verb 'ぶつける' is transitive and means 'to make something hit something', covering only the transitive sense of the English verb 'hit'."
+   }
+  },
+  {
+   "key": "d472538bd16751c1e430ae747ceb2dd847cbd07399c238ab5f7a906bb5a3fb2d",
+   "input": {
+    "id": "jm-2759530-0-some",
+    "en": "some",
+    "en_pos": "noun",
+    "en_sense": "some",
+    "ja": "ン",
+    "ja_reading": "ン",
+    "ja_pos": "n-pref",
+    "ja_glosses": [
+     "some"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2759530-0-some",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The katakana character 'ン' is not a word for 'some'; this entry is incorrect and misleading."
+   }
+  },
+  {
+   "key": "e02af72a35b24a3776dfc5ab4d0cda13bd8bccce48c0574d0c5750c815749141",
+   "input": {
+    "id": "jm-2796520-0-beer",
+    "en": "beer",
+    "en_pos": "noun",
+    "en_sense": "beer",
+    "ja": "ビール",
+    "ja_reading": "ビール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "beer"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2796520-0-beer",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese word 'ビール' is the standard loanword for 'beer' and is a perfect equivalent."
+   }
+  },
+  {
+   "key": "35e7ab600477a93a0f447e2bdaa22aaed3567897b464671823fca5183b38a9fd",
+   "input": {
+    "id": "jm-2800530-0-rotation",
+    "en": "rotation",
+    "en_pos": "noun",
+    "en_sense": "rotation",
+    "ja": "回り",
+    "ja_reading": "まわり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rotation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2800530-0-rotation",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "While '回り' can mean rotation, it more broadly means 'around-ness' or 'surroundings'; '回転' (kaiten) is a more precise equivalent for 'rotation'."
+   }
+  },
+  {
+   "key": "18658fed98f2671e7f0af43b47090d6b27e700c76fbc9cd93fa6876c3ba6e15c",
+   "input": {
+    "id": "jm-2826190-0-each",
+    "en": "each",
+    "en_pos": "noun",
+    "en_sense": "each",
+    "ja": "各",
+    "ja_reading": "おのおの",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "each"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2826190-0-each",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 'おのおの' is a valid but somewhat formal equivalent for 'each'; the more common and neutral term is 'それぞれ' (sorezore)."
+   }
+  },
+  {
+   "key": "2325399b32b8b840e2b508b37c5835261d22b8956e56f466e47c5c9f63afbc3e",
+   "input": {
+    "id": "jm-2827352-0-bear",
+    "en": "bear",
+    "en_pos": "verb",
+    "en_sense": "to bear; to stand; to endure; to put up with",
+    "ja": "こらえる",
+    "ja_reading": "こらえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to bear",
+     "to stand",
+     "to endure",
+     "to put up with"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2827352-0-bear",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese verb 'こらえる' is a good equivalent for 'to bear' or 'to endure', often with a nuance of suppressing a reaction like tears or laughter."
+   }
+  },
+  {
+   "key": "9df144fc9c449c23fb1c7b44d59805ca14d221eb1757d85116bb2ca31e6421c0",
+   "input": {
+    "id": "jm-2827858-0-pan",
+    "en": "pan",
+    "en_pos": "noun",
+    "en_sense": "Pan (god)",
+    "ja": "パン",
+    "ja_reading": "パン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Pan (god)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2827858-0-pan",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY"
+    ],
+    "note": "The Japanese 'パン' is the standard transliteration of the proper noun 'Pan' (the god), though it is a homophone of the common word for 'bread'."
+   }
+  },
+  {
+   "key": "d14336b074b7e513a02de838a918a2d86ce1baa6433b5144c3208b5602cb851d",
+   "input": {
+    "id": "jm-2845606-0-how",
+    "en": "how",
+    "en_pos": "adverb",
+    "en_sense": "how; in what way; how about",
+    "ja": "いかが",
+    "ja_reading": "いかが",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "how",
+     "in what way",
+     "how about"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-2845606-0-how",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 'いかが' is a polite/formal equivalent of 'how', while the more general and neutral equivalent is 'どう' (dō)."
+   }
+  }
+ ]
+}

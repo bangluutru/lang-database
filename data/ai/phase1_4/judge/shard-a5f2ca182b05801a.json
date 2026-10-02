@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:45:14Z",
+ "items": [
+  {
+   "key": "56a1dbba9c30451f52408dd3ef8e4656ab2ff338dd47126d8134d5a6702d9944",
+   "input": {
+    "id": "jm-1558400-0-fall_behind",
+    "en": "fall behind",
+    "en_pos": "verb",
+    "en_sense": "to be inferior to; to be less good at; to fall behind",
+    "ja": "劣る",
+    "ja_reading": "おとる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to be inferior to",
+     "to be less good at",
+     "to fall behind"
+    ],
+    "vi": "kém hơn"
+   },
+   "output": {
+    "id": "jm-1558400-0-fall_behind",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three expressions are excellent equivalents for being inferior or less good than something else."
+   }
+  },
+  {
+   "key": "5c282defa532903eb7114c8a69fa390b7c1713f1980ff51d253f0a01b90c168b",
+   "input": {
+    "id": "jm-1558610-0-split",
+    "en": "split",
+    "en_pos": "verb",
+    "en_sense": "to split; to tear; to burst; to be separated; to be divided",
+    "ja": "裂ける",
+    "ja_reading": "さける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to split",
+     "to tear",
+     "to burst",
+     "to be separated",
+     "to be divided"
+    ],
+    "vi": "nứt"
+   },
+   "output": {
+    "id": "jm-1558610-0-split",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'nứt' primarily means 'to crack' (for hard surfaces) and is narrower than English 'split' or Japanese '裂ける', which can also mean 'to tear' (like fabric)."
+   }
+  },
+  {
+   "key": "2daf4aece59881617c3c03013e30a7d56eab8546cf19fa5f2ea7aa270ca725a5",
+   "input": {
+    "id": "jm-1558670-0-love",
+    "en": "love",
+    "en_pos": "noun",
+    "en_sense": "(romantic) love",
+    "ja": "恋",
+    "ja_reading": "こい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(romantic) love"
+    ],
+    "vi": "tình yêu"
+   },
+   "output": {
+    "id": "jm-1558670-0-love",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Japanese '恋' (koi) specifically means romantic love/passion, matching the English sense. Vietnamese 'tình yêu' is a broader term for 'love' but is the standard and correct word for romantic love in this context."
+   }
+  },
+  {
+   "key": "82ff2289d2c578701faafb0226f560ef4473bdb9ccab49c09b3c52ba832fdce6",
+   "input": {
+    "id": "jm-1558800-0-love",
+    "en": "love",
+    "en_pos": "noun",
+    "en_sense": "love; romance; tender passion; emotion; affections",
+    "ja": "恋愛",
+    "ja_reading": "れんあい",
+    "ja_pos": "n,vs,vi,adj-no",
+    "ja_glosses": [
+     "love",
+     "romance",
+     "tender passion",
+     "emotion",
+     "affections"
+    ],
+    "vi": "tình yêu"
+   },
+   "output": {
+    "id": "jm-1558800-0-love",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the concept of romantic love or a love affair."
+   }
+  },
+  {
+   "key": "05168c63b2894d0961b39f2e7cdf30da34e25ee552b5bb22813598c2718ac99c",
+   "input": {
+    "id": "jm-1559240-0-extend",
+    "en": "extend",
+    "en_pos": "verb",
+    "en_sense": "to extend; to stretch out; to stand in a row",
+    "ja": "連なる",
+    "ja_reading": "つらなる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to extend",
+     "to stretch out",
+     "to stand in a row"
+    ],
+    "vi": "kéo dài"
+   },
+   "output": {
+    "id": "jm-1559240-0-extend",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '連なる' implies a series of things in a row (e.g. mountains), while Vietnamese 'kéo dài' means to extend or be prolonged (in time or continuous space), which is a different core meaning."
+   }
+  },
+  {
+   "key": "0f5ed994100fde7b1199482bc216f44ef5ed28e89d8cc2f37bc374379378943d",
+   "input": {
+    "id": "jm-1559260-0-companion",
+    "en": "companion",
+    "en_pos": "noun",
+    "en_sense": "companion; company",
+    "ja": "連れ",
+    "ja_reading": "つれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "companion",
+     "company"
+    ],
+    "vi": "người bạn đồng hành"
+   },
+   "output": {
+    "id": "jm-1559260-0-companion",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Vietnamese 'người bạn đồng hành' is a good translation but is a longer phrase and slightly more formal than the very common Japanese '連れ'."
+   }
+  },
+  {
+   "key": "cdc2de58ef7bac734d6cf32f69af8ee0f8b49f9ab0d8f80565ec70bca17555c2",
+   "input": {
+    "id": "jm-1559700-0-company",
+    "en": "company",
+    "en_pos": "noun",
+    "en_sense": "company; lot; people; bunch; gang; pack",
+    "ja": "連中",
+    "ja_reading": "れんちゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "company",
+     "lot",
+     "people",
+     "bunch",
+     "gang",
+     "pack"
+    ],
+    "vi": "nhóm"
+   },
+   "output": {
+    "id": "jm-1559700-0-company",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "Vietnamese 'nhóm' (group) is neutral and misses the informal, often pejorative, connotation of Japanese '連中' and this sense of English 'company' (e.g., 'that bunch', 'gang')."
+   }
+  },
+  {
+   "key": "9e1415c8c1179ad695e12dcf1284e4561a04a8696b02b6b7fd2158b21c1afe95",
+   "input": {
+    "id": "jm-1560670-0-corridor",
+    "en": "corridor",
+    "en_pos": "noun",
+    "en_sense": "corridor; hallway; passageway",
+    "ja": "廊下",
+    "ja_reading": "ろうか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "corridor",
+     "hallway",
+     "passageway"
+    ],
+    "vi": "hành lang"
+   },
+   "output": {
+    "id": "jm-1560670-0-corridor",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents for 'corridor' or 'hallway'."
+   }
+  },
+  {
+   "key": "9e856b255883f638856dcdde0daa7e00abaf141e846f5c7c49288132dfaaf97d",
+   "input": {
+    "id": "jm-1560800-0-waste",
+    "en": "waste",
+    "en_pos": "noun",
+    "en_sense": "waste; extravagance",
+    "ja": "浪費",
+    "ja_reading": "ろうひ",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "waste",
+     "extravagance"
+    ],
+    "vi": "lãng phí"
+   },
+   "output": {
+    "id": "jm-1560800-0-waste",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "An excellent entry; the Japanese and Vietnamese terms are cognates and perfect equivalents for this sense of 'waste'."
+   }
+  },
+  {
+   "key": "12a25529c8f77e1a06775cb003fa0303071de85b89fdd0310c856e66493edff4",
+   "input": {
+    "id": "jm-1560840-0-leak",
+    "en": "leak",
+    "en_pos": "verb",
+    "en_sense": "to leak; to run out",
+    "ja": "漏る",
+    "ja_reading": "もる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to leak",
+     "to run out"
+    ],
+    "vi": "rò rỉ"
+   },
+   "output": {
+    "id": "jm-1560840-0-leak",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect set of equivalents for 'to leak' (of liquid, gas, or information)."
+   }
+  },
+  {
+   "key": "a0091a8c60a8e718635442d94fb25b5200a764dc732b5cdc1a5c119ca15b17d9",
+   "input": {
+    "id": "jm-1561010-0-age",
+    "en": "age",
+    "en_pos": "verb",
+    "en_sense": "to age; to grow old (esp. in appearance); to show marks of age",
+    "ja": "老ける",
+    "ja_reading": "ふける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to age",
+     "to grow old (esp. in appearance)",
+     "to show marks of age"
+    ],
+    "vi": "già đi"
+   },
+   "output": {
+    "id": "jm-1561010-0-age",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect set of equivalents for the process of aging or looking older."
+   }
+  },
+  {
+   "key": "d36ef1478e3f526a7b9e91e3e043ff5281aa70e0771b1e079e635928748c4416",
+   "input": {
+    "id": "jm-1561090-0-senior_citizen",
+    "en": "senior citizen",
+    "en_pos": "noun",
+    "en_sense": "old person; senior citizen; the aged; the elderly",
+    "ja": "老人",
+    "ja_reading": "ろうじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "old person",
+     "senior citizen",
+     "the aged",
+     "the elderly"
+    ],
+    "vi": "người cao tuổi"
+   },
+   "output": {
+    "id": "jm-1561090-0-senior_citizen",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'người cao tuổi' is the standard polite Vietnamese term, equivalent to 'senior citizen'. '老人' is a standard Japanese term, though sometimes seen as more direct than other euphemisms. The set is a good match."
+   }
+  }
+ ]
+}

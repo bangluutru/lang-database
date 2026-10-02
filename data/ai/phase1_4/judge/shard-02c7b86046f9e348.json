@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:29:43Z",
+ "items": [
+  {
+   "key": "020be3c33bcd56b7f06e5701d21f269235e2b88e35a3154bb3c86a9b038054b6",
+   "input": {
+    "id": "jm-1202460-2-develop",
+    "en": "develop",
+    "en_pos": "verb",
+    "en_sense": "to develop (of a town, civilization, etc.); to become civilized; to modernize; to grow; to advance (of knowledge, ideas, etc.)",
+    "ja": "開ける",
+    "ja_reading": "ひらける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to develop (of a town, civilization, etc.)",
+     "to become civilized",
+     "to modernize",
+     "to grow",
+     "to advance (of knowledge, ideas, etc.)"
+    ],
+    "vi": "phát triển"
+   },
+   "output": {
+    "id": "jm-1202460-2-develop",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the development of a town, civilization, or idea."
+   }
+  },
+  {
+   "key": "3ce8e518d9a38ab7b5b1f387ef984d2b2358a3e7f2e3c7ca2d1c03edf19c4b52",
+   "input": {
+    "id": "jm-1203080-0-class",
+    "en": "class",
+    "en_pos": "noun",
+    "en_sense": "class; level; stratum; layer; hierarchy",
+    "ja": "階層",
+    "ja_reading": "かいそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "class",
+     "level",
+     "stratum",
+     "layer",
+     "hierarchy"
+    ],
+    "vi": "tầng lớp"
+   },
+   "output": {
+    "id": "jm-1203080-0-class",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for the concept of social or hierarchical class/stratum."
+   }
+  },
+  {
+   "key": "61c311e8b3befe1b8b5c99e37e9db9332084f90fb9f3dd11d55265294f059716",
+   "input": {
+    "id": "jm-1203800-0-outing",
+    "en": "outing",
+    "en_pos": "noun",
+    "en_sense": "going out; outing; leaving (one's home, office, etc.)",
+    "ja": "外出",
+    "ja_reading": "がいしゅつ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "going out",
+     "outing",
+     "leaving (one's home, office, etc.)"
+    ],
+    "vi": "ra ngoài"
+   },
+   "output": {
+    "id": "jm-1203800-0-outing",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'ra ngoài' is a verb phrase ('to go out') and not a suitable noun equivalent for 'outing'."
+   }
+  },
+  {
+   "key": "11af1310f5f085dd0b4d7631c34e7065a81d38049ecf92908c45bb3ae4183eec",
+   "input": {
+    "id": "jm-1204070-0-outside",
+    "en": "outside",
+    "en_pos": "noun",
+    "en_sense": "outside (e.g. of a building); exterior",
+    "ja": "外部",
+    "ja_reading": "がいぶ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "outside (e.g. of a building)",
+     "exterior"
+    ],
+    "vi": "bên ngoài"
+   },
+   "output": {
+    "id": "jm-1204070-0-outside",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for 'the outside' or 'exterior'."
+   }
+  },
+  {
+   "key": "ea4d701352c86e797ce41a3ebfa1e7c419583126451e8bff0e2b2fbaa88d74bf",
+   "input": {
+    "id": "jm-1204240-0-foreign",
+    "en": "foreign",
+    "en_pos": "adjective",
+    "en_sense": "foreign; imported",
+    "ja": "外来",
+    "ja_reading": "がいらい",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "foreign",
+     "imported"
+    ],
+    "vi": "nước ngoài"
+   },
+   "output": {
+    "id": "jm-1204240-0-foreign",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'nước ngoài' is a noun meaning 'foreign country', not an adjective like 'foreign'."
+   }
+  },
+  {
+   "key": "964d049f12995098372763ba8f1935e104d0f9a14aaca92abce35d5b34d4ad48",
+   "input": {
+    "id": "jm-1204330-0-injury",
+    "en": "injury",
+    "en_pos": "noun",
+    "en_sense": "injury; harm; evil influence; damage",
+    "ja": "害",
+    "ja_reading": "がい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "injury",
+     "harm",
+     "evil influence",
+     "damage"
+    ],
+    "vi": "tổn hại"
+   },
+   "output": {
+    "id": "jm-1204330-0-injury",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a good set of equivalents for the abstract sense of 'harm' or 'damage'."
+   }
+  },
+  {
+   "key": "08f76708b309d1b4c9953fcbfce29a7c4ed8a29b6bb1554d9717eda652b68845",
+   "input": {
+    "id": "jm-1204520-0-introduction",
+    "en": "introduction",
+    "en_pos": "noun",
+    "en_sense": "introduction; outline; general remarks",
+    "ja": "概論",
+    "ja_reading": "がいろん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "introduction",
+     "outline",
+     "general remarks"
+    ],
+    "vi": "giới thiệu"
+   },
+   "output": {
+    "id": "jm-1204520-0-introduction",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'giới thiệu' is too general; the English and Japanese refer specifically to an academic introduction or outline, for which 'dẫn nhập' or 'khái luận' would be better."
+   }
+  },
+  {
+   "key": "19c7ffb14f7adb6e06fa668c118cc14ae7a8a19643819d24e5faee8d9dc3d318",
+   "input": {
+    "id": "jm-1204640-0-street",
+    "en": "street",
+    "en_pos": "noun",
+    "en_sense": "(on the) street",
+    "ja": "街頭",
+    "ja_reading": "がいとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(on the) street"
+    ],
+    "vi": "đường phố"
+   },
+   "output": {
+    "id": "jm-1204640-0-street",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly convey the sense of being 'on the street' as a public space for activities."
+   }
+  },
+  {
+   "key": "21a85a9e9cd9dfbff707205da45d1b48818ae5f40ed37264c430b8f96ef74eba",
+   "input": {
+    "id": "jm-1205010-0-each",
+    "en": "each",
+    "en_pos": "noun",
+    "en_sense": "each (person); everyone; individual; respective",
+    "ja": "各自",
+    "ja_reading": "かくじ",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "each (person)",
+     "everyone",
+     "individual",
+     "respective"
+    ],
+    "vi": "mỗi"
+   },
+   "output": {
+    "id": "jm-1205010-0-each",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'mỗi' is a determiner ('each', 'every') and cannot function as a standalone noun/pronoun like the English 'each' or the Japanese '各自'."
+   }
+  },
+  {
+   "key": "06386765e8cbf6ad81a4c3e4407b9b9e12da4350cfd04a54b0360968c22dc07e",
+   "input": {
+    "id": "jm-1205340-0-gap",
+    "en": "gap",
+    "en_pos": "noun",
+    "en_sense": "qualitative difference; disparity; gap",
+    "ja": "格差",
+    "ja_reading": "かくさ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "qualitative difference",
+     "disparity",
+     "gap"
+    ],
+    "vi": "khoảng cách"
+   },
+   "output": {
+    "id": "jm-1205340-0-gap",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent set of equivalents for the concept of a metaphorical gap or disparity."
+   }
+  },
+  {
+   "key": "f58e2a7c0b7fe334722c71b5139c0317876fb76b4153049ad46d81942aa9a37d",
+   "input": {
+    "id": "jm-1205490-0-particular",
+    "en": "particular",
+    "en_pos": "adjective",
+    "en_sense": "particular; special; exceptional; especial",
+    "ja": "格別",
+    "ja_reading": "かくべつ",
+    "ja_pos": "adj-no,adj-na,n",
+    "ja_glosses": [
+     "particular",
+     "special",
+     "exceptional",
+     "especial"
+    ],
+    "vi": "đặc biệt"
+   },
+   "output": {
+    "id": "jm-1205490-0-particular",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'particular' in the sense of 'special' or 'exceptional'."
+   }
+  },
+  {
+   "key": "eef526076012523d1b4ea93ced47259cc4c90a59829fcf6803b3ca11b1bf1470",
+   "input": {
+    "id": "jm-1205920-0-guarantee",
+    "en": "guarantee",
+    "en_pos": "noun",
+    "en_sense": "securing; obtaining; ensuring; guarantee; maintaining",
+    "ja": "確保",
+    "ja_reading": "かくほ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "securing",
+     "obtaining",
+     "ensuring",
+     "guarantee",
+     "maintaining"
+    ],
+    "vi": "đảm bảo"
+   },
+   "output": {
+    "id": "jm-1205920-0-guarantee",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent set of equivalents for the concept of 'ensuring' or 'securing' something."
+   }
+  }
+ ]
+}

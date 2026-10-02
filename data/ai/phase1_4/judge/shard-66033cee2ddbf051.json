@@ -1,0 +1,387 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:52:28Z",
+ "items": [
+  {
+   "key": "68180f966007196eecc0bec963635502f948aecef45cb0275be6ba891c70fb34",
+   "input": {
+    "id": "jm-1607050-0-we",
+    "en": "we",
+    "en_pos": "pronoun",
+    "en_sense": "we",
+    "ja": "我々",
+    "ja_reading": "われわれ",
+    "ja_pos": "pn",
+    "ja_glosses": [
+     "we"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1607050-0-we",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "我々 is a formal or masculine \"we\", while the English \"we\" is neutral; 私たち (watashitachi) is a more general and neutral equivalent."
+   }
+  },
+  {
+   "key": "8779bee8cbcce17960288ded0f4e8e3d80bb3492c0ee586955e40bae79dca7ce",
+   "input": {
+    "id": "jm-1608720-0-chase",
+    "en": "chase",
+    "en_pos": "verb",
+    "en_sense": "to chase; to run after; to pursue",
+    "ja": "追い掛ける",
+    "ja_reading": "おいかける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to chase",
+     "to run after",
+     "to pursue"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1608720-0-chase",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent and common equivalent for \"to chase\"."
+   }
+  },
+  {
+   "key": "98311f8146e83e02a788de14d485b5a82460032add915c78c33be789bec5c4ed",
+   "input": {
+    "id": "jm-1609010-0-space",
+    "en": "space",
+    "en_pos": "noun",
+    "en_sense": "space; room; gap; emptiness",
+    "ja": "明き",
+    "ja_reading": "あき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "space",
+     "room",
+     "gap",
+     "emptiness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609010-0-space",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The meaning is correct, but the kanji 明き is a rare or non-standard spelling for this sense; 空き is the standard form."
+   }
+  },
+  {
+   "key": "1ad4f7053e4ab17697eac11ea785a80bfbc739df509110b672a207a94fdd7195",
+   "input": {
+    "id": "jm-1609210-0-all_at_once",
+    "en": "all at once",
+    "en_pos": "adverb",
+    "en_sense": "all at once",
+    "ja": "一度に",
+    "ja_reading": "いちどに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "all at once"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609210-0-all_at_once",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a perfect translation for the sense \"at the same time\", which is the primary meaning of 一度に."
+   }
+  },
+  {
+   "key": "3f35f5ac645e78a505bbc264dd2baff9fec9aaabb37178c8facf93d3ca0da825",
+   "input": {
+    "id": "jm-1609350-0-birth",
+    "en": "birth",
+    "en_pos": "noun",
+    "en_sense": "birth; birthplace",
+    "ja": "生まれ",
+    "ja_reading": "うまれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "birth",
+     "birthplace"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609350-0-birth",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Japanese word 生まれ correctly corresponds to the combined sense of \"birth\" (as in origin/lineage) and \"birthplace\"."
+   }
+  },
+  {
+   "key": "369d4aeeaf0c9e14f00b4c63906ff778bbc91aa8d0b42c823888286da0b3d042",
+   "input": {
+    "id": "jm-1609390-0-west",
+    "en": "west",
+    "en_pos": "noun",
+    "en_sense": "Europe and the United States; Europe and America; the West",
+    "ja": "欧米",
+    "ja_reading": "おうべい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Europe and the United States",
+     "Europe and America",
+     "the West"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609390-0-west",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect translation for the specific geopolitical sense of \"the West\"."
+   }
+  },
+  {
+   "key": "69ea7db95c81958511188633cb2c870e0e621583a6be0bd2804b86f04df09cc6",
+   "input": {
+    "id": "jm-1609580-0-date",
+    "en": "date",
+    "en_pos": "noun",
+    "en_sense": "month and day (of the year); (the) date",
+    "ja": "月日",
+    "ja_reading": "がっぴ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "month and day (of the year)",
+     "(the) date"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609580-0-date",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "月日 (gappi) is a correct but less common word for \"date\" than 日付 (hizuke); it can also mean \"passage of time\"."
+   }
+  },
+  {
+   "key": "cf058e3e88a6d3d830948c6eb589965ddb6de3ea1a99206d8477830a09935535",
+   "input": {
+    "id": "jm-1609650-0-feel",
+    "en": "feel",
+    "en_pos": "verb",
+    "en_sense": "to feel; to sense; to experience",
+    "ja": "感ずる",
+    "ja_reading": "かんずる",
+    "ja_pos": "vz,vt,vi",
+    "ja_glosses": [
+     "to feel",
+     "to sense",
+     "to experience"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609650-0-feel",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "感ずる (kanzuru) is an archaic/literary variant of the modern standard verb 感じる (kanjiru), which should be used instead."
+   }
+  },
+  {
+   "key": "cff8bdf7c22b7352f4988c06768c073e1dad2ab53c651d56dac99d9bc236b511",
+   "input": {
+    "id": "jm-1609660-0-rule",
+    "en": "rule",
+    "en_pos": "noun",
+    "en_sense": "rule; regulation",
+    "ja": "決まり",
+    "ja_reading": "きまり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "rule",
+     "regulation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609660-0-rule",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "決まり is a natural and common equivalent for \"rule\" or \"regulation\"."
+   }
+  },
+  {
+   "key": "aa68cd60d153ef98e8139068ffbe8f72a30af5edcf4f6f60acb190464ac28d43",
+   "input": {
+    "id": "jm-1609740-0-economic",
+    "en": "economic",
+    "en_pos": "adjective",
+    "en_sense": "economic; financial",
+    "ja": "経済的",
+    "ja_reading": "けいざいてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "economic",
+     "financial"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1609740-0-economic",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "経済的 is the standard and correct equivalent for \"economic\" and \"financial\"."
+   }
+  },
+  {
+   "key": "fa9863bb98f9d1ca731aaef7d73b1fff1a012bf6c943d50b9b7db8628768bf01",
+   "input": {
+    "id": "jm-1610160-4-confront",
+    "en": "confront",
+    "en_pos": "noun",
+    "en_sense": "to confront; to oppose; to compete with",
+    "ja": "対する",
+    "ja_reading": "たいする",
+    "ja_pos": "vs-s",
+    "ja_glosses": [
+     "to confront",
+     "to oppose",
+     "to compete with"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610160-4-confront",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_BROAD"
+    ],
+    "note": "The English POS is wrong (noun for a verb sense), and the Japanese verb 対する is much broader than \"confront\", often meaning \"regarding\" or \"towards\"."
+   }
+  },
+  {
+   "key": "a06cbb67cbe713c94f55595757b1b612926e5c9b33c2966bc8eb01c32fa95100",
+   "input": {
+    "id": "jm-1610270-0-request",
+    "en": "request",
+    "en_pos": "noun",
+    "en_sense": "request; favor; favour",
+    "ja": "頼み",
+    "ja_reading": "たのみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "request",
+     "favor",
+     "favour"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1610270-0-request",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "頼み is a natural and common word for \"request\" or \"favor\"."
+   }
+  }
+ ]
+}

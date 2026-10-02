@@ -54,10 +54,13 @@ def load_jsonl(path: Path) -> List[Dict[str, Any]]:
 
 # Test 1: Baseline concept count must remain exactly 2,106
 def test_1_baseline_concept_count_remains_2106():
+    """Phase 1.4 update: the 2,106 sealed baseline concepts must all remain (corpus may only grow)."""
+    from tests._baseline import baseline_concept_ids
     concepts = load_jsonl(CANONICAL_DIR / "concepts.jsonl")
-    assert len(concepts) == 2106, f"Expected 2106 concepts, got {len(concepts)}"
     concept_ids = [c["concept_id"] for c in concepts]
-    assert len(set(concept_ids)) == 2106, "Duplicate concept_ids found"
+    assert len(set(concept_ids)) == len(concept_ids), "Duplicate concept_ids found"
+    assert len(baseline_concept_ids()) == 2106
+    assert baseline_concept_ids() <= set(concept_ids)
 
 
 # Test 2: Professional corpus (800 records) is completely frozen
@@ -173,6 +176,8 @@ def test_9_partial_concepts_preserved():
     assert len(partial_senses) > 0, "Expected some partial concepts to remain unresolved/partial"
     # Ensure gloss_vi is not a dummy string like "[TBD]" or English copy
     for s in senses:
+        if s["concept_id"].startswith("concept-lex-"):
+            continue  # Phase 1.4 records are checked in tests/test_phase1_4.py (EN==VI is legitimate e.g. letter names)
         if s.get("gloss_vi") is not None:
             assert s["gloss_vi"] != "[TBD]"
             assert s["gloss_vi"] != ""
@@ -202,7 +207,7 @@ def test_10_review_queue_structure():
 def test_11_synonymous_vi_expressions():
     expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
     concepts = load_jsonl(CANONICAL_DIR / "concepts.jsonl")
-    assert len(concepts) == 2106
+    assert len(concepts) >= 2106
 
     cids_with_synonyms = set()
     for e in expressions:
@@ -218,9 +223,11 @@ def test_11_synonymous_vi_expressions():
 # Test 12: Multiple VI expressions per concept are supported
 def test_12_multiple_vi_expressions_supported():
     expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
+    from tests._baseline import baseline_concept_ids
+    _b = baseline_concept_ids()
     cid_vi_exprs = {}
     for e in expressions:
-        if e.get("language") == "vi":
+        if e.get("language") == "vi" and e["concept_id"] in _b:
             cid_vi_exprs.setdefault(e["concept_id"], []).append(e)
 
     # Prove support for multiple VI expressions: any count > 1
@@ -287,9 +294,13 @@ def test_15_oki_export_semantics():
     with open(deck_path, "r", encoding="utf-8") as f:
         cards = json.load(f)
 
-    assert len(cards) == 2106
+    assert len(cards) == len(load_jsonl(CANONICAL_DIR / "concepts.jsonl"))
+    from tests._baseline import baseline_concept_ids
+    _b = baseline_concept_ids()
     tier_counts = {}
     for card in cards:
+        if card["id"] not in _b:
+            continue  # tier distribution below is a property of the sealed baseline
         assert "translation_status" in card
         assert card["translation_status"] in {"complete", "partial"}
         assert "validation_status" in card
@@ -433,8 +444,10 @@ def test_20_mandatory_audit_reports_exist_and_valid():
 # Test 21: Validate reported synonym count programmatically
 def test_21_programmatic_synonym_count_validation():
     """Verify programmatic synonym metrics match closure report exactly."""
+    from tests._baseline import baseline_concept_ids
+    _b = baseline_concept_ids()
     expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
-    vi_exprs = [e for e in expressions if e.get("language") == "vi"]
+    vi_exprs = [e for e in expressions if e.get("language") == "vi" and e["concept_id"] in _b]
 
     cid_groups = {}
     for e in vi_exprs:
@@ -508,20 +521,14 @@ def test_24_closure_report_relative_links_resolve():
     assert checked_links >= 8, f"Expected at least 8 relative report links, verified {checked_links}"
 
 
-# Test 25 (Portability Test D): Canonical freeze verification
+# Test 25 (Portability Test D): Canonical freeze verification (Phase 1.4: append-only prefix check)
 def test_25_canonical_freeze_checksums():
-    """Verify that canonical files match the exact pre-housekeeping SHA-256 checksums."""
-    expected_checksums = {
-        CANONICAL_DIR / "concepts.jsonl": "ad9f0c6ccd104c2f5cc1fe4c305933450189a7b5e4839fd4b5e46647636431e5",
-        CANONICAL_DIR / "senses.jsonl": "8c2295a928518231f815c3a1cbcdf5a9a03f57f2f38fd606b4b92560bb8dde11",
-        CANONICAL_DIR / "expressions.jsonl": "8e5ea20225746a82edbc640697de9702c84eea523c4b5064582b052c30011618",
-    }
-
-    for path, expected_hash in expected_checksums.items():
-        assert path.exists(), f"Canonical file {path} missing"
-        actual_hash = hashlib.sha256(path.read_bytes()).hexdigest()
-        assert actual_hash == expected_hash, (
-            f"CANONICAL FREEZE BREACH: {path.name} hash {actual_hash} != expected {expected_hash}"
+    """The sealed Phase 1.3D bytes of each canonical file must be an exact prefix of the current file."""
+    from tests._baseline import manifest
+    for fname, info in manifest()["append_only"].items():
+        data = (CANONICAL_DIR / fname).read_bytes()[: info["bytes"]]
+        assert hashlib.sha256(data).hexdigest() == info["sha256"], (
+            f"CANONICAL FREEZE BREACH: sealed prefix of {fname} modified"
         )
 
     # Verify counts and tier distributions from closure manifest

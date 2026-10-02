@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:38:59Z",
+ "items": [
+  {
+   "key": "f477b8b8c8a2c0c48c379a1bcff4a5cd609da723f146daffdc086dfd6fc6e543",
+   "input": {
+    "id": "jm-1410430-0-carry",
+    "en": "carry",
+    "en_pos": "verb",
+    "en_sense": "to wear (a sword, decoration, etc.); to carry; to bear",
+    "ja": "帯びる",
+    "ja_reading": "おびる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to wear (a sword, decoration, etc.)",
+     "to carry",
+     "to bear"
+    ],
+    "vi": "mang"
+   },
+   "output": {
+    "id": "jm-1410430-0-carry",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'mang' is a very general verb for 'carry/bring/wear' and is much broader than the specific sense of wearing a sword or bearing a quality implied by the English sense and the Japanese '帯びる'."
+   }
+  },
+  {
+   "key": "937794d96beffefe06ec2f9624516df837a4c0754a78212458185e3fe8fd5246",
+   "input": {
+    "id": "jm-1410610-0-treatment",
+    "en": "treatment",
+    "en_pos": "noun",
+    "en_sense": "treatment; reception; service",
+    "ja": "待遇",
+    "ja_reading": "たいぐう",
+    "ja_pos": "n,vs,n-suf,vt",
+    "ja_glosses": [
+     "treatment",
+     "reception",
+     "service"
+    ],
+    "vi": "đãi ngộ"
+   },
+   "output": {
+    "id": "jm-1410610-0-treatment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents, especially in the context of employment benefits, reception, and conditions."
+   }
+  },
+  {
+   "key": "94e8ecebeeb4fc5388981e4240db496bacb297fd96703ac5cd6bde233555adf0",
+   "input": {
+    "id": "jm-1410660-0-slack",
+    "en": "slack",
+    "en_pos": "verb",
+    "en_sense": "to be lazy; to be idle; to slack",
+    "ja": "怠ける",
+    "ja_reading": "なまける",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to be lazy",
+     "to be idle",
+     "to slack"
+    ],
+    "vi": "lười biếng"
+   },
+   "output": {
+    "id": "jm-1410660-0-slack",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'lười biếng' is an adjective ('lazy'), not a verb ('to slack') like the English and Japanese entries. The correct verb form would be 'làm biếng'."
+   }
+  },
+  {
+   "key": "d10aaffe5114b2f0e6825f46f9cde0941eda4aaeab430f1e68279ed55156c6eb",
+   "input": {
+    "id": "jm-1410710-0-neglect",
+    "en": "neglect",
+    "en_pos": "verb",
+    "en_sense": "to neglect; to be negligent in; to be neglectful of; to fail to do; to leave undone; to avoid (doing)",
+    "ja": "怠る",
+    "ja_reading": "おこたる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to neglect",
+     "to be negligent in",
+     "to be neglectful of",
+     "to fail to do",
+     "to leave undone",
+     "to avoid (doing)"
+    ],
+    "vi": "bỏ bê"
+   },
+   "output": {
+    "id": "jm-1410710-0-neglect",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are natural and standard equivalents for the act of neglecting a duty or task."
+   }
+  },
+  {
+   "key": "e1328b266469e2de6ee2b8df4ed3893b024ae508161002b7915832ebf7db9b33",
+   "input": {
+    "id": "jm-1410770-0-attitude",
+    "en": "attitude",
+    "en_pos": "noun",
+    "en_sense": "attitude; posture; preparedness; readiness",
+    "ja": "態勢",
+    "ja_reading": "たいせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attitude",
+     "posture",
+     "preparedness",
+     "readiness"
+    ],
+    "vi": "thái độ"
+   },
+   "output": {
+    "id": "jm-1410770-0-attitude",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'thái độ' means attitude as in mental disposition, not the specified sense of 'posture/preparedness' which matches the Japanese '態勢'."
+   }
+  },
+  {
+   "key": "558c7d043fd14da75b956768c023ff72e8453668ff9ca09843bf94f5288a6c9b",
+   "input": {
+    "id": "jm-1411110-0-loan",
+    "en": "loan",
+    "en_pos": "noun",
+    "en_sense": "loan; lending; hire; rental; lease",
+    "ja": "貸し",
+    "ja_reading": "かし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "loan",
+     "lending",
+     "hire",
+     "rental",
+     "lease"
+    ],
+    "vi": "khoản vay"
+   },
+   "output": {
+    "id": "jm-1411110-0-loan",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'khoản vay' specifically means 'a monetary loan (amount borrowed)', which is much narrower than the English sense and the Japanese '貸し' which also cover lending, rental, and lease."
+   }
+  },
+  {
+   "key": "151d1c8c50ce485172706ff90e803db2ebcfc109f3e504b1e3805c0d8eaf5a85",
+   "input": {
+    "id": "jm-1412360-0-substitution",
+    "en": "substitution",
+    "en_pos": "noun",
+    "en_sense": "substitution",
+    "ja": "代用",
+    "ja_reading": "だいよう",
+    "ja_pos": "n,vs,vt,adj-no",
+    "ja_glosses": [
+     "substitution"
+    ],
+    "vi": "thay thế"
+   },
+   "output": {
+    "id": "jm-1412360-0-substitution",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'thay thế' is a verb meaning 'to substitute', not a noun like English 'substitution' and Japanese '代用'. The correct noun form would be 'sự thay thế'."
+   }
+  },
+  {
+   "key": "26c60a61ca177d74b14317fb71c2bf02738977f12f25485429f76c3fdce35c7c",
+   "input": {
+    "id": "jm-1412560-0-stand",
+    "en": "stand",
+    "en_pos": "noun",
+    "en_sense": "stand; rest; base; pedestal; platform; table",
+    "ja": "台",
+    "ja_reading": "だい",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "stand",
+     "rest",
+     "base",
+     "pedestal",
+     "platform",
+     "table"
+    ],
+    "vi": "bệ"
+   },
+   "output": {
+    "id": "jm-1412560-0-stand",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for a stand, base, or pedestal."
+   }
+  },
+  {
+   "key": "68225fa62964313fa134baace07d791f07c9abd66cf8e94edc84a887c1f27f0a",
+   "input": {
+    "id": "jm-1419370-0-play",
+    "en": "play",
+    "en_pos": "verb",
+    "en_sense": "to play (a stringed or keyboard instrument)",
+    "ja": "弾く",
+    "ja_reading": "ひく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to play (a stringed or keyboard instrument)"
+    ],
+    "vi": "chơi"
+   },
+   "output": {
+    "id": "jm-1419370-0-play",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'chơi' is the general verb 'to play' and is used for all instruments, games, and sports, making it much broader than the specific English sense and the Japanese '弾く'."
+   }
+  },
+  {
+   "key": "5e4e4936527589f76402826f9ff84b0c4e895fb63c5ef6ac7e6955db33f5158b",
+   "input": {
+    "id": "jm-1419400-0-spring",
+    "en": "spring",
+    "en_pos": "verb",
+    "en_sense": "to spring; to bound; to bounce",
+    "ja": "弾む",
+    "ja_reading": "はずむ",
+    "ja_pos": "v5m,vi",
+    "ja_glosses": [
+     "to spring",
+     "to bound",
+     "to bounce"
+    ],
+    "vi": "nhảy"
+   },
+   "output": {
+    "id": "jm-1419400-0-spring",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'nhảy' means 'to jump', which is different from the sense of 'spring, bound, bounce' in English and '弾む' (to bounce, rebound) in Japanese."
+   }
+  },
+  {
+   "key": "b0c4603d0c233d875cb21f6dd222f9bd682b2098d0f8583499ac351d4e96774b",
+   "input": {
+    "id": "jm-1419530-0-elasticity",
+    "en": "elasticity",
+    "en_pos": "noun",
+    "en_sense": "elasticity; flexibility",
+    "ja": "弾力",
+    "ja_reading": "だんりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "elasticity",
+     "flexibility"
+    ],
+    "vi": "độ đàn hồi"
+   },
+   "output": {
+    "id": "jm-1419530-0-elasticity",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'elasticity' in their respective languages."
+   }
+  },
+  {
+   "key": "ba1d8e9383b0efeed6690aa0311160f0c70407d75393ccb187d2e5ce26d4be08",
+   "input": {
+    "id": "jm-1419810-0-section",
+    "en": "section",
+    "en_pos": "noun",
+    "en_sense": "section; cross section; profile",
+    "ja": "断面",
+    "ja_reading": "だんめん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "section",
+     "cross section",
+     "profile"
+    ],
+    "vi": "mặt cắt"
+   },
+   "output": {
+    "id": "jm-1419810-0-section",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard equivalents for 'cross-section'."
+   }
+  }
+ ]
+}

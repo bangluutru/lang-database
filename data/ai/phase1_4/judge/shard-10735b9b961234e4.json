@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:32:14Z",
+ "items": [
+  {
+   "key": "5aa82b53c651c15fc3a8afa235a4af0af7f55ad75aa8bb371b6f7277114834e3",
+   "input": {
+    "id": "jm-1297650-0-composition",
+    "en": "composition",
+    "en_pos": "noun",
+    "en_sense": "composition (of music); setting; writing music",
+    "ja": "作曲",
+    "ja_reading": "さっきょく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "composition (of music)",
+     "setting",
+     "writing music"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1297650-0-composition",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the musical sense of 'composition'."
+   }
+  },
+  {
+   "key": "b24e7246da2c6f545d9f0e280586eadfb5213a4edfbffc1e44931ae31eab6911",
+   "input": {
+    "id": "jm-1297960-0-composition",
+    "en": "composition",
+    "en_pos": "noun",
+    "en_sense": "writing (an essay, prose, etc.); composition",
+    "ja": "作文",
+    "ja_reading": "さくぶん",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "writing (an essay, prose, etc.)",
+     "composition"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1297960-0-composition",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the literary/scholastic sense of 'composition'."
+   }
+  },
+  {
+   "key": "998b05d12a3fb88b9bf85355d779b1bec80f7c2ed729e9219b9428abe5c5a81b",
+   "input": {
+    "id": "jm-1297980-0-manners",
+    "en": "manners",
+    "en_pos": "noun",
+    "en_sense": "manners; etiquette; propriety",
+    "ja": "作法",
+    "ja_reading": "さほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "manners",
+     "etiquette",
+     "propriety"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1297980-0-manners",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good and standard translation for 'manners' or 'etiquette'."
+   }
+  },
+  {
+   "key": "ab40948c01bf5d98dd6161b47f8ef6db1e30bf8d809b38b7507259dff5da9b08",
+   "input": {
+    "id": "jm-1298260-0-plan",
+    "en": "plan",
+    "en_pos": "noun",
+    "en_sense": "plan; policy; means; measure; stratagem; scheme",
+    "ja": "策",
+    "ja_reading": "さく",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "plan",
+     "policy",
+     "means",
+     "measure",
+     "stratagem",
+     "scheme"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1298260-0-plan",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "While 策 is a correct translation, it's more formal and has a stronger nuance of 'stratagem' than the general English word 'plan', for which 計画 is a more common equivalent."
+   }
+  },
+  {
+   "key": "78abaf0c63f780c2993f7331eabd0e4956c2b83dd9a131dd5b4d14ebaa1f1d6f",
+   "input": {
+    "id": "jm-1298420-0-mistake",
+    "en": "mistake",
+    "en_pos": "noun",
+    "en_sense": "mistake; error; discrepancy",
+    "ja": "錯誤",
+    "ja_reading": "さくご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mistake",
+     "error",
+     "discrepancy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1298420-0-mistake",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "錯誤 is a very formal and technical term for 'error', unlike the common English word 'mistake'; 間違い or ミス are the usual equivalents."
+   }
+  },
+  {
+   "key": "26a82fdd55e18b6c0c5aac6991679b1adba9605fbb8787f636cd4311c58c1f9d",
+   "input": {
+    "id": "jm-1298670-0-print",
+    "en": "print",
+    "en_pos": "verb",
+    "en_sense": "to print",
+    "ja": "刷る",
+    "ja_reading": "する",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to print"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1298670-0-print",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the verb 'to print'."
+   }
+  },
+  {
+   "key": "bc932bccde13d2a9855c1f68edd94779bd6772617fbeba36c81f1a3de949cae1",
+   "input": {
+    "id": "jm-1299240-0-rough",
+    "en": "rough",
+    "en_pos": "adjective",
+    "en_sense": "rough; crude; sloppy; messy",
+    "ja": "雑",
+    "ja_reading": "ざつ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "rough",
+     "crude",
+     "sloppy",
+     "messy"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1299240-0-rough",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of 'rough' meaning sloppy or crude, not in texture."
+   }
+  },
+  {
+   "key": "bcab404ad2090d3176b75ceb865f2821b92fd57470b585c42272362f993394ba",
+   "input": {
+    "id": "jm-1299685-0-plate",
+    "en": "plate",
+    "en_pos": "noun",
+    "en_sense": "plate; dish",
+    "ja": "お皿",
+    "ja_reading": "おさら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plate",
+     "dish"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1299685-0-plate",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect and common equivalent for 'plate' or 'dish'."
+   }
+  },
+  {
+   "key": "e16b4a6784e8333b9151617cd735b606b5d37ed2cb0dac437a555e8edd46ee59",
+   "input": {
+    "id": "jm-1299740-0-three",
+    "en": "three",
+    "en_pos": "numeral",
+    "en_sense": "three",
+    "ja": "三つ",
+    "ja_reading": "みっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "three"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1299740-0-three",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A correct and fundamental equivalent for counting three items."
+   }
+  },
+  {
+   "key": "75b833dbea291394c08234685001784f2571e676e6e77d3f46ac33283cbf8c3b",
+   "input": {
+    "id": "jm-1303490-1-scatter",
+    "en": "scatter",
+    "en_pos": "verb",
+    "en_sense": "to scatter; to be dispersed",
+    "ja": "散る",
+    "ja_reading": "ちる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to scatter",
+     "to be dispersed"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1303490-1-scatter",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese verb 散る is intransitive ('to be scattered'), while the English verb 'scatter' can also be transitive ('to scatter something'), which would be 散らす (chirasu)."
+   }
+  },
+  {
+   "key": "87476a4ccef2fa4561d5843ae171b7952664103f4abe00d7272c80a8efdc3eab",
+   "input": {
+    "id": "jm-1303810-0-production",
+    "en": "production",
+    "en_pos": "noun",
+    "en_sense": "production; output; turning out; extraction (e.g. of minerals)",
+    "ja": "産出",
+    "ja_reading": "さんしゅつ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "production",
+     "output",
+     "turning out",
+     "extraction (e.g. of minerals)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1303810-0-production",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect match for the sense of 'production' related to natural resources, output, or extraction."
+   }
+  },
+  {
+   "key": "009a7433fbb385fa83eca6404115386719f8eecb1dbb52fc50e670486e98bbef",
+   "input": {
+    "id": "jm-1303820-1-home",
+    "en": "home",
+    "en_pos": "noun",
+    "en_sense": "home (of a plant or animal); habitat; locality",
+    "ja": "産地",
+    "ja_reading": "さんち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "home (of a plant or animal)",
+     "habitat",
+     "locality"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1303820-1-home",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A good match for 'home' in the sense of a place of origin for products, plants, or animals, though 'habitat' is more precisely 生息地."
+   }
+  }
+ ]
+}

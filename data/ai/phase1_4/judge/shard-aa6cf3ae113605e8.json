@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:50:25Z",
+ "items": [
+  {
+   "key": "99aada8c86ba1acea65a83280e6c39226c46ebadeb16163db870307fc942fa88",
+   "input": {
+    "id": "wk-5483-s2",
+    "en": "explore",
+    "en_pos": "verb",
+    "en_sense": "To travel somewhere in search of discovery.",
+    "ja": "探る",
+    "ja_reading": "さぐる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to explore (parts unknown)",
+     "to enjoy (natural beauty)"
+    ],
+    "vi": "khám phá"
+   },
+   "output": {
+    "id": "wk-5483-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three words align well for the sense of exploring a place for discovery, although the Japanese 探る has other meanings not covered by the others."
+   }
+  },
+  {
+   "key": "3cae8db0e18f267fed045e2672c4cddc50f304019661381afaa861517581ba2a",
+   "input": {
+    "id": "wk-5493-s0",
+    "en": "canyon",
+    "en_pos": "noun",
+    "en_sense": "A valley, especially a long, narrow, steep valley, cut in rock by a river.",
+    "ja": "峡谷",
+    "ja_reading": "きょうこく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gorge",
+     "ravine",
+     "canyon",
+     "glen"
+    ],
+    "vi": "vực"
+   },
+   "output": {
+    "id": "wk-5493-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'vực' is too broad, meaning 'abyss' or 'chasm'; a more precise term for 'canyon' is 'hẻm núi'."
+   }
+  },
+  {
+   "key": "ae249e45cbda663ec6c452a766ee07d04b935c0c449dbfd1b1389fd59debcb7d",
+   "input": {
+    "id": "wk-5496-s0",
+    "en": "ghost",
+    "en_pos": "noun",
+    "en_sense": "A disembodied soul; a soul or spirit of a deceased person; a spirit appearing after death.",
+    "ja": "幽霊",
+    "ja_reading": "ゆうれい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ghost",
+     "specter",
+     "spectre",
+     "apparition",
+     "phantom"
+    ],
+    "vi": "ma"
+   },
+   "output": {
+    "id": "wk-5496-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence across all three languages for the most common sense of 'ghost'."
+   }
+  },
+  {
+   "key": "efac6798b9ec9efc20c6f3c3e4e5bc95205b5f23694ac4081962fc192ec11a7b",
+   "input": {
+    "id": "wk-55-s0",
+    "en": "swap",
+    "en_pos": "verb",
+    "en_sense": "To exchange or give (something) in an non-normal exchange (for something else).",
+    "ja": "取り替える",
+    "ja_reading": "とりかえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to exchange",
+     "to swap",
+     "to barter",
+     "to trade"
+    ],
+    "vi": "giao hoán"
+   },
+   "output": {
+    "id": "wk-55-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'giao hoán' is a technical term (e.g., 'commutative' in mathematics) and is incorrect for the everyday sense of 'swap'; the correct term is 'trao đổi'."
+   }
+  },
+  {
+   "key": "3ba58281bfa9f661f20434037bfed1b5d6abf8fccc81e900d3ce2c885763478a",
+   "input": {
+    "id": "wk-550-s0",
+    "en": "comma",
+    "en_pos": "noun",
+    "en_sense": "The punctuation mark ⟨,⟩ used to indicate a set of parts of a sentence or between elements of a list.",
+    "ja": "コンマ",
+    "ja_reading": "コンマ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "comma"
+    ],
+    "vi": "phẩy"
+   },
+   "output": {
+    "id": "wk-550-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the punctuation mark 'comma'."
+   }
+  },
+  {
+   "key": "c73f41d2b2ebabebe58c1c0c4ea8850107fa87f3dfcecdf41e05510f3ce964c0",
+   "input": {
+    "id": "wk-5511-s1",
+    "en": "informatics",
+    "en_pos": "noun",
+    "en_sense": "A branch of information science and of computer science that focuses on the study of information processing, particularly with respect to systems integration and human interactions with machine and data.",
+    "ja": "情報学",
+    "ja_reading": "じょうほうがく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "informatics",
+     "information science"
+    ],
+    "vi": "tin học"
+   },
+   "output": {
+    "id": "wk-5511-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence for the academic term 'informatics' across all three languages."
+   }
+  },
+  {
+   "key": "a231c70061fea36fb467b85ef412cc16705ad8c9db2234563761a10d8a0d8833",
+   "input": {
+    "id": "wk-5515-e:466394",
+    "en": "horsepower",
+    "en_pos": "noun",
+    "en_sense": "non-metric",
+    "ja": "馬力",
+    "ja_reading": "ばりき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "horsepower",
+     "hp"
+    ],
+    "vi": "mã lực"
+   },
+   "output": {
+    "id": "wk-5515-e:466394",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, cognate translations for 'horsepower'."
+   }
+  },
+  {
+   "key": "15790029abd2c560f25dd94bc3638016317a27aedae77432ab7f19a93508d301",
+   "input": {
+    "id": "wk-5526-e:0abca7",
+    "en": "bury",
+    "en_pos": "verb",
+    "en_sense": "to inter a corpse in a grave or tomb",
+    "ja": "葬る",
+    "ja_reading": "ほうむる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to bury",
+     "to inter",
+     "to entomb"
+    ],
+    "vi": "chôn"
+   },
+   "output": {
+    "id": "wk-5526-e:0abca7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three words are good equivalents for the act of interring a corpse, although the Japanese 葬る is more specific to this act than the general sense of burying."
+   }
+  },
+  {
+   "key": "bcb6c7c8c1068c8f3dfa536dfefc1018455c3ddc8dbc0d913704ba1075e7a7de",
+   "input": {
+    "id": "wk-553-s0",
+    "en": "full stop",
+    "en_pos": "noun",
+    "en_sense": "The punctuation mark ⟨.⟩ (indicating the end of a sentence or marking an abbreviation).",
+    "ja": "終止符",
+    "ja_reading": "しゅうしふ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "full stop",
+     "period"
+    ],
+    "vi": "dấu chấm"
+   },
+   "output": {
+    "id": "wk-553-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect equivalence across all three languages for the punctuation mark 'full stop'."
+   }
+  },
+  {
+   "key": "ca1fe4b102bdbb1bcf8ab681ee0c4d9585ab2e934b50bdb58271b53d1ffa1882",
+   "input": {
+    "id": "wk-5532-s0",
+    "en": "pirate",
+    "en_pos": "noun",
+    "en_sense": "A criminal who plunders at sea; commonly attacking merchant vessels, though often pillaging port towns.",
+    "ja": "海賊",
+    "ja_reading": "かいぞく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pirate"
+    ],
+    "vi": "cướp biển"
+   },
+   "output": {
+    "id": "wk-5532-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect, literal, and cognate equivalence across all three languages."
+   }
+  },
+  {
+   "key": "7a53fa5d0cf031b84e28f14f455454b589455b8c7ea5c40b25bc62dc954944b6",
+   "input": {
+    "id": "wk-5533-s0",
+    "en": "mourn",
+    "en_pos": "verb",
+    "en_sense": "To express sadness or sorrow for; to grieve over (especially a death).",
+    "ja": "悼む",
+    "ja_reading": "いたむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to grieve over",
+     "to mourn",
+     "to lament"
+    ],
+    "vi": "xót xa"
+   },
+   "output": {
+    "id": "wk-5533-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'xót xa' describes the feeling of sorrow or pity, not the act of mourning, and it's not a transitive verb like 'mourn'."
+   }
+  },
+  {
+   "key": "4182036fd36f6dc246d9156a601fab845c299e3c7bdce1aa76beb95061a1c09c",
+   "input": {
+    "id": "wk-5535-s12",
+    "en": "great",
+    "en_pos": "adjective",
+    "en_sense": "Doing or exemplifying (a characteristic or pursuit) on a large scale; active or enthusiastic.",
+    "ja": "大きい",
+    "ja_reading": "おおきい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "big",
+     "large",
+     "great"
+    ],
+    "vi": "đại"
+   },
+   "output": {
+    "id": "wk-5535-s12",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "POS_MISMATCH",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "Both the Japanese '大きい' (large) and Vietnamese 'đại' (great-, prefix) are incorrect for this specific sense of 'great' meaning 'avid' or 'enthusiastic'."
+   }
+  }
+ ]
+}

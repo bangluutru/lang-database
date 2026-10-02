@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:27:06Z",
+ "items": [
+  {
+   "key": "2f0cfee8b61e3fd26bbff6b86d5248db4a6bba177bf55eb3b4f0b08c759a0b3b",
+   "input": {
+    "id": "jm-1075060-0-centimeter",
+    "en": "centimeter",
+    "en_pos": "noun",
+    "en_sense": "centimeter; centimetre",
+    "ja": "センチ",
+    "ja_reading": "センチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "centimeter",
+     "centimetre"
+    ],
+    "vi": "xen-ti-mét"
+   },
+   "output": {
+    "id": "jm-1075060-0-centimeter",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'centimeter' in their respective languages."
+   }
+  },
+  {
+   "key": "2bbc46596b7ca7139aa5c570dc88785643e8c759f92bf90a97f00abf02f7bd93",
+   "input": {
+    "id": "jm-1075160-0-seminar",
+    "en": "seminar",
+    "en_pos": "noun",
+    "en_sense": "seminar",
+    "ja": "ゼミ",
+    "ja_reading": "ゼミ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "seminar"
+    ],
+    "vi": "hội thảo"
+   },
+   "output": {
+    "id": "jm-1075160-0-seminar",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'ゼミ' specifically refers to a university seminar class, which is narrower than the English 'seminar' or Vietnamese 'hội thảo'."
+   }
+  },
+  {
+   "key": "ff8ed020e01ab13b6245108c60d6dbe15a02793feab3e03c683545a397fb1050",
+   "input": {
+    "id": "jm-1075900-0-title",
+    "en": "title",
+    "en_pos": "noun",
+    "en_sense": "title",
+    "ja": "タイトル",
+    "ja_reading": "タイトル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "title"
+    ],
+    "vi": "tiêu đề"
+   },
+   "output": {
+    "id": "jm-1075900-0-title",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for the title of a work."
+   }
+  },
+  {
+   "key": "1af9fda0dfea14ba0f474219d87b59cb53a1594c2642efcc08e7cdc656bae347",
+   "input": {
+    "id": "jm-1076090-0-timely",
+    "en": "timely",
+    "en_pos": "adjective",
+    "en_sense": "timely; well-timed",
+    "ja": "タイムリー",
+    "ja_reading": "タイムリー",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "timely",
+     "well-timed"
+    ],
+    "vi": "kịp thời"
+   },
+   "output": {
+    "id": "jm-1076090-0-timely",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for 'timely'."
+   }
+  },
+  {
+   "key": "b078c57aa052fda374ef6e856a3fa7685df1533efb32ce2a706eb372c8681b82",
+   "input": {
+    "id": "jm-1077110-0-double",
+    "en": "double",
+    "en_pos": "noun",
+    "en_sense": "double",
+    "ja": "ダブル",
+    "ja_reading": "ダブル",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "double"
+    ],
+    "vi": "đôi"
+   },
+   "output": {
+    "id": "jm-1077110-0-double",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The English noun 'double' is too polysemous and underspecified, and the Vietnamese 'đôi' primarily means 'pair', not 'double' in a general sense."
+   }
+  },
+  {
+   "key": "c90f1f9a4cab099634e8cec5c3194d0b58bf284742b90506c58697a4275db3fc",
+   "input": {
+    "id": "jm-1010770-0-closely",
+    "en": "closely",
+    "en_pos": "adverb",
+    "en_sense": "closely (packed, lined up, etc.); tightly; densely",
+    "ja": "びっしり",
+    "ja_reading": "びっしり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "closely (packed, lined up, etc.)",
+     "tightly",
+     "densely"
+    ],
+    "vi": "chặt"
+   },
+   "output": {
+    "id": "jm-1010770-0-closely",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the sense of being tightly or densely packed."
+   }
+  },
+  {
+   "key": "4cdf3579f37583618ae09fc422291f04f91c59e1fb88ded5a4056027dbb04bb1",
+   "input": {
+    "id": "jm-1011180-0-hit",
+    "en": "hit",
+    "en_pos": "verb",
+    "en_sense": "to bump into; to run into; to collide with; to hit; to strike",
+    "ja": "ぶつかる",
+    "ja_reading": "ぶつかる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to bump into",
+     "to run into",
+     "to collide with",
+     "to hit",
+     "to strike"
+    ],
+    "vi": "đâm"
+   },
+   "output": {
+    "id": "jm-1011180-0-hit",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well on the sense of collision or bumping into something."
+   }
+  },
+  {
+   "key": "f504b809b162654e4e9b36aedbf9bc4feb2215706fb51d7eb22fa2c21c1069eb",
+   "input": {
+    "id": "jm-1011250-0-hang",
+    "en": "hang",
+    "en_pos": "verb",
+    "en_sense": "to hang; to suspend; to dangle; to swing; to carry",
+    "ja": "ぶら下げる",
+    "ja_reading": "ぶらさげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to hang",
+     "to suspend",
+     "to dangle",
+     "to swing",
+     "to carry"
+    ],
+    "vi": "treo"
+   },
+   "output": {
+    "id": "jm-1011250-0-hang",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard and natural choices for the action of hanging or suspending an object."
+   }
+  },
+  {
+   "key": "f3d645c2b11d850c5396758a525264fec03db5be291a2076d0f17de15adae975",
+   "input": {
+    "id": "jm-1012050-0-just",
+    "en": "just",
+    "en_pos": "adverb",
+    "en_sense": "just (e.g. \"just wait here\"); come now; now, now",
+    "ja": "まあ",
+    "ja_reading": "まあ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "just (e.g. \"just wait here\")",
+     "come now",
+     "now, now"
+    ],
+    "vi": "cứ"
+   },
+   "output": {
+    "id": "jm-1012050-0-just",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is an excellent alignment of pragmatic particles/adverbs that encourage or gently command an action."
+   }
+  },
+  {
+   "key": "9482eae3355ac37901f44c30eb4654807cffa4905f1bbfe11f77e187988ade10",
+   "input": {
+    "id": "jm-1012490-0-struggle",
+    "en": "struggle",
+    "en_pos": "verb",
+    "en_sense": "to struggle; to writhe; to wriggle; to squirm",
+    "ja": "もがく",
+    "ja_reading": "もがく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to struggle",
+     "to writhe",
+     "to wriggle",
+     "to squirm"
+    ],
+    "vi": "vùng vẫy"
+   },
+   "output": {
+    "id": "jm-1012490-0-struggle",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly capture the specific physical sense of struggling, writhing, or flailing."
+   }
+  },
+  {
+   "key": "17981126227127d8fc212e1f09c9ae3b41e10e195067804cae7a0c1b928409ed",
+   "input": {
+    "id": "jm-1012500-0-if",
+    "en": "if",
+    "en_pos": "adverb",
+    "en_sense": "if; in case; supposing",
+    "ja": "もし",
+    "ja_reading": "もし",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "if",
+     "in case",
+     "supposing"
+    ],
+    "vi": "nếu"
+   },
+   "output": {
+    "id": "jm-1012500-0-if",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the most fundamental and direct equivalents for the conditional 'if'."
+   }
+  },
+  {
+   "key": "a73ffa84f72d8115f64e77296bd25822a17601aaea50cc5f152298acb88d6ecd",
+   "input": {
+    "id": "jm-1012530-0-perhaps",
+    "en": "perhaps",
+    "en_pos": "adverb",
+    "en_sense": "perhaps; possibly; maybe; by some chance",
+    "ja": "もしかすると",
+    "ja_reading": "もしかすると",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "perhaps",
+     "possibly",
+     "maybe",
+     "by some chance"
+    ],
+    "vi": "có lẽ"
+   },
+   "output": {
+    "id": "jm-1012530-0-perhaps",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural, and direct equivalents for 'perhaps' or 'maybe'."
+   }
+  }
+ ]
+}

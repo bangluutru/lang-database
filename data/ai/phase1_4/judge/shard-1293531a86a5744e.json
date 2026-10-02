@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:14:57Z",
+ "items": [
+  {
+   "key": "19d60d65b0052b5ce207973ec6609516630faf5fc514506db1afba5cfb948ccf",
+   "input": {
+    "id": "wk-7272-s0",
+    "en": "binoculars",
+    "en_pos": "noun",
+    "en_sense": "A hand-held device consisting of a series of lenses and prisms, used to magnify objects so that they can be better seen from a distance, and looked at through both eyes.",
+    "ja": "双眼鏡",
+    "ja_reading": "そうがんきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "binoculars",
+     "field glasses"
+    ],
+    "vi": "ống nhòm"
+   },
+   "output": {
+    "id": "wk-7272-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for binoculars."
+   }
+  },
+  {
+   "key": "986fc572cf9aab0a3cfa46ad4cb40e938953da47dc5c43a9e8df4c99fc77fdc2",
+   "input": {
+    "id": "wk-7274-s0",
+    "en": "deva",
+    "en_pos": "noun",
+    "en_sense": "A god in Vedic mythology, Hinduism and Buddhism.",
+    "ja": "天",
+    "ja_reading": "てん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "deva (divine being of Buddhism)"
+    ],
+    "vi": "thiên"
+   },
+   "output": {
+    "id": "wk-7274-s0",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'thiên' is not used as a standalone noun for 'deva'; the Japanese '天' is correct but primarily for the Buddhist context, making it narrower than the EN sense."
+   }
+  },
+  {
+   "key": "82faa9c6ba1d72d66dbd45825b265b90f10d661e5cba0697dfae85aabae567fd",
+   "input": {
+    "id": "wk-7276-e:d1ff35",
+    "en": "turnip",
+    "en_pos": "noun",
+    "en_sense": "white root of Brassica rapa",
+    "ja": "かぶ",
+    "ja_reading": "かぶ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "turnip (Brassica rapa)"
+    ],
+    "vi": "củ cải"
+   },
+   "output": {
+    "id": "wk-7276-e:d1ff35",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'củ cải' most commonly refers to daikon radish, not turnip, making it a false friend."
+   }
+  },
+  {
+   "key": "07585aa488bfeedd0ed1a21e4a9f6be3cbb7a320d5bb877920f778d8effd72bc",
+   "input": {
+    "id": "wk-7285-s2",
+    "en": "corn",
+    "en_pos": "noun",
+    "en_sense": "A single seed of a food crop, especially a cereal grass crop.",
+    "ja": "穀物",
+    "ja_reading": "こくもつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "grain",
+     "cereal",
+     "corn"
+    ],
+    "vi": "ngô"
+   },
+   "output": {
+    "id": "wk-7285-s2",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "NARROW",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '穀物' is too broad (grain/cereal), and the Vietnamese 'ngô' translates a different sense of 'corn' (maize), not the given sense of a single grain."
+   }
+  },
+  {
+   "key": "aff219a2fab19dbee843a4d90672cd1e749f08319985ffccc8832d4cfd022dc3",
+   "input": {
+    "id": "wk-7298-s3",
+    "en": "colony",
+    "en_pos": "noun",
+    "en_sense": "A group of organisms of same or different species living together in close association.",
+    "ja": "コロニー",
+    "ja_reading": "コロニー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "colony"
+    ],
+    "vi": "tập đoàn"
+   },
+   "output": {
+    "id": "wk-7298-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tập đoàn' means 'business conglomerate' or 'corporation', not a biological colony."
+   }
+  },
+  {
+   "key": "ca2de12adb38ea61806880ba3a093747701edf75a11dec8294fb9e183b27d034",
+   "input": {
+    "id": "wk-7299-s0",
+    "en": "tornado",
+    "en_pos": "noun",
+    "en_sense": "A violent wind in the form of a mobile, rapidly rotating, funnel cloud that has contacted the ground.",
+    "ja": "竜巻",
+    "ja_reading": "たつまき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tornado",
+     "whirlwind",
+     "waterspout",
+     "twister"
+    ],
+    "vi": "vòi rồng"
+   },
+   "output": {
+    "id": "wk-7299-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural, and direct equivalents for 'tornado'."
+   }
+  },
+  {
+   "key": "465337237579e78c13ca60631250c1042c3c9ad64d56594de2da4026b28d49dc",
+   "input": {
+    "id": "wk-730-e:7a0bee",
+    "en": "o'clock",
+    "en_pos": "adverb",
+    "en_sense": "indication of time (the translations below are of \"one o’clock\")",
+    "ja": "一時",
+    "ja_reading": "いちじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "one o'clock"
+    ],
+    "vi": "một giờ"
+   },
+   "output": {
+    "id": "wk-730-e:7a0bee",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The entry correctly translates 'one o'clock', but this leads to a part-of-speech mismatch as 'o'clock' is an adverb while the translations are nouns/noun phrases."
+   }
+  },
+  {
+   "key": "dc3dc912097e27c30bc19da4cbbdb0f94395287c3d43c88743312a7e4dd5f5a8",
+   "input": {
+    "id": "wk-7300-s8",
+    "en": "complement",
+    "en_pos": "noun",
+    "en_sense": "Given two sets, the set containing one set's elements that are not members of the other set (whether a relative complement or an absolute complement).",
+    "ja": "補集合",
+    "ja_reading": "ほしゅうごう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complementary set",
+     "complement"
+    ],
+    "vi": "phần bù tương đối"
+   },
+   "output": {
+    "id": "wk-7300-s8",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'phần bù tương đối' only means 'relative complement', while the English sense includes both relative and absolute complements."
+   }
+  },
+  {
+   "key": "278b1fe402f9cf9c40cd0b2e1c4f241833614f9e7600dc795d7ca5fc924f16d4",
+   "input": {
+    "id": "wk-7302-s20",
+    "en": "cap",
+    "en_pos": "noun",
+    "en_sense": "A large size of writing paper.",
+    "ja": "ぼうし",
+    "ja_reading": "ぼうし",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "cap (move)"
+    ],
+    "vi": "mũ lưỡi trai"
+   },
+   "output": {
+    "id": "wk-7302-s20",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "NARROW",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "Both the Japanese and Vietnamese translations are for the 'headwear' sense of 'cap', not the specified, archaic 'writing paper' sense."
+   }
+  },
+  {
+   "key": "3a6a5626a2d17e9c409023e43f925429ca1400ab876f24980a25b66b876a9b0d",
+   "input": {
+    "id": "wk-7306-s1",
+    "en": "lover",
+    "en_pos": "noun",
+    "en_sense": "A sexual partner, especially one with whom someone is having an affair.",
+    "ja": "愛人",
+    "ja_reading": "あいじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lover",
+     "mistress"
+    ],
+    "vi": "người tình bạn tình"
+   },
+   "output": {
+    "id": "wk-7306-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'người tình bạn tình' is an unnatural concatenation of two terms; 'người tình' alone would be a good equivalent."
+   }
+  },
+  {
+   "key": "6440bb8a38f9209c2aca006e2f412224e030feb5c702a93072b95819363e08e0",
+   "input": {
+    "id": "wk-731-e:c98129",
+    "en": "create",
+    "en_pos": "verb",
+    "en_sense": "to put into existence",
+    "ja": "生み出す",
+    "ja_reading": "うみだす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to create",
+     "to bring forth",
+     "to produce"
+    ],
+    "vi": "tạo"
+   },
+   "output": {
+    "id": "wk-731-e:c98129",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural, and direct equivalents for 'create'."
+   }
+  },
+  {
+   "key": "ec546d200a0954bfe8fdaf33e8dba4cc7270d3460a51782067975ae9dd803ed5",
+   "input": {
+    "id": "wk-7321-e:cb9db8",
+    "en": "pasta",
+    "en_pos": "noun",
+    "en_sense": "dough",
+    "ja": "パスタ",
+    "ja_reading": "パスタ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pasta"
+    ],
+    "vi": "mì ống"
+   },
+   "output": {
+    "id": "wk-7321-e:cb9db8",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "NARROW",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "TOO_NARROW"
+    ],
+    "note": "Both translations refer to pasta as the finished noodle or dish, not the raw 'dough' as specified in the English sense; the Vietnamese is also too narrow."
+   }
+  }
+ ]
+}

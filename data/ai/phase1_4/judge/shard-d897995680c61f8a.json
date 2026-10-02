@@ -1,0 +1,377 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:32Z",
+ "items": [
+  {
+   "key": "68808421ee26cfda7b1b7f51f65a6aa370eaf02c714a8da73464ce658a6b4f4a",
+   "input": {
+    "id": "wk-16257-s0",
+    "en": "midwife",
+    "en_pos": "noun",
+    "en_sense": "A person, usually a woman, who is trained to assist women in childbirth, but who is not a physician.",
+    "ja": "助産婦",
+    "ja_reading": "じょさんぷ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "midwife"
+    ],
+    "vi": "bà mụ"
+   },
+   "output": {
+    "id": "wk-16257-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Japanese term 助産婦 is dated (the modern term is 助産師), and the Vietnamese term bà mụ refers to a traditional, not a modern trained, midwife."
+   }
+  },
+  {
+   "key": "52fcf9690c3fd4cb5ebf5582e9b556c3852e7a46482dc0fe53f9ff6196d6b363",
+   "input": {
+    "id": "wk-16260-s0",
+    "en": "advisor",
+    "en_pos": "noun",
+    "en_sense": "One who offers advice.",
+    "ja": "顧問",
+    "ja_reading": "こもん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "adviser",
+     "advisor",
+     "consultant",
+     "counselor"
+    ],
+    "vi": "cố vấn"
+   },
+   "output": {
+    "id": "wk-16260-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a formal advisor or consultant, though the Japanese and Vietnamese are narrower than the very broad English definition."
+   }
+  },
+  {
+   "key": "b3cf0e5aa6648e03fca8f16364f1b522f661edddfac605c48a6a8c51ba38b844",
+   "input": {
+    "id": "wk-16263-s0",
+    "en": "budget",
+    "en_pos": "noun",
+    "en_sense": "The amount of money or resources earmarked for a particular institution, activity or timeframe.",
+    "ja": "バジェット",
+    "ja_reading": "バジェット",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "budget"
+    ],
+    "vi": "ngân sách"
+   },
+   "output": {
+    "id": "wk-16263-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese バジェット is a direct loanword; the more common and natural Japanese word is 予算 (yosan)."
+   }
+  },
+  {
+   "key": "2e61fde78bb7751c29734e7281edd0bd277ba8645e98ff540042dbb45c4466d9",
+   "input": {
+    "id": "wk-16266-s1",
+    "en": "complaint",
+    "en_pos": "noun",
+    "en_sense": "A grievance, problem, difficulty, or concern.",
+    "ja": "文句",
+    "ja_reading": "もんく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "complaint",
+     "grumbling",
+     "objection"
+    ],
+    "vi": "phàn nàn"
+   },
+   "output": {
+    "id": "wk-16266-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'phàn nàn' is a verb ('to complain'), not a noun ('a complaint'), creating a part-of-speech mismatch."
+   }
+  },
+  {
+   "key": "bdf4bae17fd6cbe6771b36acc1283cf8c78fd6ee7f8cae8812aea1f2401fbc2b",
+   "input": {
+    "id": "wk-16268-s1",
+    "en": "spectator",
+    "en_pos": "noun",
+    "en_sense": "One who observes, sees, or views something; an observer.",
+    "ja": "観客",
+    "ja_reading": "かんきゃく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spectator",
+     "audience"
+    ],
+    "vi": "khán giả"
+   },
+   "output": {
+    "id": "wk-16268-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for a spectator or audience member at an event, which is the primary meaning of 'spectator'."
+   }
+  },
+  {
+   "key": "f4bd05557859e3034eb934ee04a50e96dcdc7ab4cf1443c2cbd8cf7db5aff8fe",
+   "input": {
+    "id": "wk-16275-s0",
+    "en": "electrode",
+    "en_pos": "noun",
+    "en_sense": "The terminal through which electric current passes between metallic and nonmetallic parts of an electric circuit.",
+    "ja": "電極",
+    "ja_reading": "でんきょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "electrode"
+    ],
+    "vi": "điện cực"
+   },
+   "output": {
+    "id": "wk-16275-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, perfectly equivalent technical terms for 'electrode'."
+   }
+  },
+  {
+   "key": "d52a1a98c257fcaa0a68f36c2d300194b4a7c265db864c1adb4864454bf5d1ae",
+   "input": {
+    "id": "wk-1628-e:c06b0c",
+    "en": "carnation",
+    "en_pos": "noun",
+    "en_sense": "flower",
+    "ja": "カーネーション",
+    "ja_reading": "カーネーション",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "carnation (Dianthus caryophyllus)"
+    ],
+    "vi": "cẩm chướng"
+   },
+   "output": {
+    "id": "wk-1628-e:c06b0c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard names for the carnation flower; the English sense provided ('flower') is too general but the lemmas match perfectly."
+   }
+  },
+  {
+   "key": "61d78544d5173e87da44b26086d8c4aa0b4b727ca186bbbc0d109c6a5f491d16",
+   "input": {
+    "id": "wk-16285-s0",
+    "en": "listener",
+    "en_pos": "noun",
+    "en_sense": "Someone who listens, especially to a speech or a broadcast.",
+    "ja": "リスナー",
+    "ja_reading": "リスナー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "listener (of radio, streaming audio content, etc.)",
+     "audience"
+    ],
+    "vi": "thính giả"
+   },
+   "output": {
+    "id": "wk-16285-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and equivalent for a listener of a broadcast or speech, matching the specified English sense."
+   }
+  },
+  {
+   "key": "9ffdbd89f61c423bacbd2ee5acb91138c2e18d076a1551cb82ce1a781a84139f",
+   "input": {
+    "id": "wk-16295-s0",
+    "en": "rib",
+    "en_pos": "noun",
+    "en_sense": "Any of a series of long curved bones occurring in 12 pairs in humans and other animals and extending from the spine to or toward the sternum.",
+    "ja": "肋骨",
+    "ja_reading": "あばらぼね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rib"
+    ],
+    "vi": "sườn"
+   },
+   "output": {
+    "id": "wk-16295-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for the anatomical rib."
+   }
+  },
+  {
+   "key": "0daafbeed78de35279549d06af6c6a19f987bd284a2ea38fb1ebe3d83ac46208",
+   "input": {
+    "id": "wk-16296-s0",
+    "en": "nosebleed",
+    "en_pos": "noun",
+    "en_sense": "Haemorrhage from the nose (usually, blood flow exiting the nostrils that originates from the nasal cavity).",
+    "ja": "鼻血",
+    "ja_reading": "はなぢ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nosebleed"
+    ],
+    "vi": "máu cam"
+   },
+   "output": {
+    "id": "wk-16296-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'nosebleed'."
+   }
+  },
+  {
+   "key": "fa7cb3eec7f7ef0571655f2e71d40cd9e743b69f2089b0c9c9c1e29ac1eec684",
+   "input": {
+    "id": "wk-16301-s0",
+    "en": "frying pan",
+    "en_pos": "noun",
+    "en_sense": "A long-handled, shallow pan used for frying food.",
+    "ja": "フライパン",
+    "ja_reading": "フライパン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fry pan",
+     "frying pan"
+    ],
+    "vi": "xanh"
+   },
+   "output": {
+    "id": "wk-16301-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'xanh' means 'blue/green' and is completely incorrect; the correct word is 'chảo'."
+   }
+  },
+  {
+   "key": "fd698a3fac55a1b9ae1e97903a8a62eda2e3b3b4df380a41fb0cae94dd45a416",
+   "input": {
+    "id": "wk-16303-s0",
+    "en": "referendum",
+    "en_pos": "noun",
+    "en_sense": "A direct popular vote on a proposed law or constitutional amendment.",
+    "ja": "国民投票",
+    "ja_reading": "こくみんとうひょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "national referendum"
+    ],
+    "vi": "trưng cầu dân ý"
+   },
+   "output": {
+    "id": "wk-16303-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct political terms for 'referendum'."
+   }
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:47:11Z",
+ "items": [
+  {
+   "key": "9fd5c24b4f22f156e628c9f150b5a036fd2982a711784707a951d22827fc2959",
+   "input": {
+    "id": "jm-1584900-0-finance",
+    "en": "finance",
+    "en_pos": "noun",
+    "en_sense": "lending (money, commodities, etc.); finance; loan",
+    "ja": "融通",
+    "ja_reading": "ゆうずう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "lending (money, commodities, etc.)",
+     "finance",
+     "loan"
+    ],
+    "vi": "tài chính"
+   },
+   "output": {
+    "id": "jm-1584900-0-finance",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tài chính' means 'finance' as a general field, not the specific sense of 'lending' or 'a loan' which is what English 'finance' and Japanese '融通' mean here."
+   }
+  },
+  {
+   "key": "044b062e24a89577e897142ef84db45ec2ce2c31b9cce7d6244f0f00da5eed4f",
+   "input": {
+    "id": "jm-1584910-0-dinner",
+    "en": "dinner",
+    "en_pos": "noun",
+    "en_sense": "evening meal; dinner; supper",
+    "ja": "夕飯",
+    "ja_reading": "ゆうはん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "evening meal",
+     "dinner",
+     "supper"
+    ],
+    "vi": "bữa tối"
+   },
+   "output": {
+    "id": "jm-1584910-0-dinner",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, natural equivalents for 'evening meal'."
+   }
+  },
+  {
+   "key": "104f7900cc9da6c270dfac0e6991ed5071e57f8106045797ded9b36fbb198250",
+   "input": {
+    "id": "jm-1585315-0-six",
+    "en": "six",
+    "en_pos": "numeral",
+    "en_sense": "six",
+    "ja": "六つ",
+    "ja_reading": "むっつ",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "six"
+    ],
+    "vi": "sáu"
+   },
+   "output": {
+    "id": "jm-1585315-0-six",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "A perfect correspondence for the number six, using the native Japanese counter."
+   }
+  },
+  {
+   "key": "abf0d4a495d5be2220e364a49e93c88fe813a0c17847eefae40422512513874c",
+   "input": {
+    "id": "jm-1585460-0-well",
+    "en": "well",
+    "en_pos": "conjunction",
+    "en_sense": "well; now; then",
+    "ja": "さて",
+    "ja_reading": "さて",
+    "ja_pos": "conj,int",
+    "ja_glosses": [
+     "well",
+     "now",
+     "then"
+    ],
+    "vi": "vậy"
+   },
+   "output": {
+    "id": "jm-1585460-0-well",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "POS_MISMATCH"
+    ],
+    "note": "The Vietnamese 'vậy' is not an equivalent for the English conjunction/interjection 'well' used to introduce a new topic; a better translation would be 'thế thì' or 'à'."
+   }
+  },
+  {
+   "key": "5c58ac2581044e16b1c6399f050d9e06160292fc2969082de5499dacd97c1b95",
+   "input": {
+    "id": "jm-1585820-0-close",
+    "en": "close",
+    "en_pos": "verb",
+    "en_sense": "to close (one's eyes); to shut",
+    "ja": "つぶる",
+    "ja_reading": "つぶる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to close (one's eyes)",
+     "to shut"
+    ],
+    "vi": "nhắm"
+   },
+   "output": {
+    "id": "jm-1585820-0-close",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the specific, natural choices for the action of closing one's eyes."
+   }
+  },
+  {
+   "key": "9bca5acf972910e45cb62d5a39daa520cc256c23162c67850486752f31fddd4c",
+   "input": {
+    "id": "jm-1586330-0-breakfast",
+    "en": "breakfast",
+    "en_pos": "noun",
+    "en_sense": "breakfast",
+    "ja": "朝ごはん",
+    "ja_reading": "あさごはん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "breakfast"
+    ],
+    "vi": "bữa sáng"
+   },
+   "output": {
+    "id": "jm-1586330-0-breakfast",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'breakfast'."
+   }
+  },
+  {
+   "key": "31d64205d9883eb139af3fa4a50e1541d1ea0d6df7ecb44c194f095d12d849d7",
+   "input": {
+    "id": "jm-1586520-0-name",
+    "en": "name",
+    "en_pos": "noun",
+    "en_sense": "name and address (on an envelope, etc.); (addressee's) name; addressee",
+    "ja": "宛名",
+    "ja_reading": "あてな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "name and address (on an envelope, etc.)",
+     "(addressee's) name",
+     "addressee"
+    ],
+    "vi": "tên người nhận"
+   },
+   "output": {
+    "id": "jm-1586520-0-name",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions accurately and naturally refer to the name of an addressee on mail."
+   }
+  },
+  {
+   "key": "8c87bfa50bf3f15f4eb09a19bc15077cbfb0c64fd29c2c4269cdcb382e456a8c",
+   "input": {
+    "id": "jm-1586530-0-apply",
+    "en": "apply",
+    "en_pos": "verb",
+    "en_sense": "to apply; to adapt",
+    "ja": "当てはめる",
+    "ja_reading": "あてはめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to apply",
+     "to adapt"
+    ],
+    "vi": "áp dụng"
+   },
+   "output": {
+    "id": "jm-1586530-0-apply",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard, natural equivalents for applying a rule or method."
+   }
+  },
+  {
+   "key": "2c835bfb57d0724ef8285e4d553b3587e208d4e4edb570d044987cab7866e3d6",
+   "input": {
+    "id": "jm-1586730-1-flaw",
+    "en": "flaw",
+    "en_pos": "noun",
+    "en_sense": "flaw (esp. of a person); fault; defect",
+    "ja": "あら",
+    "ja_reading": "あら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "flaw (esp. of a person)",
+     "fault",
+     "defect"
+    ],
+    "vi": "khuyết điểm"
+   },
+   "output": {
+    "id": "jm-1586730-1-flaw",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for a personal flaw or defect."
+   }
+  },
+  {
+   "key": "114d9c45d98a655b7faf3668b34a05868b96c0540a06457fad28f0a76af26e57",
+   "input": {
+    "id": "jm-1586850-0-or",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "or; either ... or",
+    "ja": "あるいは",
+    "ja_reading": "あるいは",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or",
+     "either ... or"
+    ],
+    "vi": "hoặc"
+   },
+   "output": {
+    "id": "jm-1586850-0-or",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard conjunctions for 'or', with 'aruiwa' being slightly more formal but still a very common choice."
+   }
+  },
+  {
+   "key": "a924f2ef4f30a87acda61bc98690f3e1c43d59fd0847877ecbd967417eb4d9a0",
+   "input": {
+    "id": "jm-1587190-0-arrange",
+    "en": "arrange",
+    "en_pos": "verb",
+    "en_sense": "to arrange (flowers); to plant",
+    "ja": "活ける",
+    "ja_reading": "いける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to arrange (flowers)",
+     "to plant"
+    ],
+    "vi": "cắm"
+   },
+   "output": {
+    "id": "jm-1587190-0-arrange",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'cắm' is a general verb for 'to stick in', broader than Japanese '活ける' (specific to flower arranging), but 'cắm hoa' is the standard phrase for 'to arrange flowers'."
+   }
+  },
+  {
+   "key": "81c9a14a463df4cf016a54b8fef98f7d152ec85ceab018863344e2cd1e167353",
+   "input": {
+    "id": "jm-1587200-0-intention",
+    "en": "intention",
+    "en_pos": "noun",
+    "en_sense": "intention; inclination; mind; idea; wish; view",
+    "ja": "意向",
+    "ja_reading": "いこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intention",
+     "inclination",
+     "mind",
+     "idea",
+     "wish",
+     "view"
+    ],
+    "vi": "ý định"
+   },
+   "output": {
+    "id": "jm-1587200-0-intention",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, standard equivalents for 'intention'."
+   }
+  }
+ ]
+}

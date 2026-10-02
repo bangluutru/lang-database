@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:30:36Z",
+ "items": [
+  {
+   "key": "df83bd070ffbf8deb30b67ada6b17279e6c201cb680e57c504ddf1aa0aca19c1",
+   "input": {
+    "id": "jm-1216410-0-whole",
+    "en": "whole",
+    "en_pos": "adverb",
+    "en_sense": "in its entirety; whole; wholly",
+    "ja": "まるごと",
+    "ja_reading": "まるごと",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "in its entirety",
+     "whole",
+     "wholly"
+    ],
+    "vi": "toàn bộ"
+   },
+   "output": {
+    "id": "jm-1216410-0-whole",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'toàn bộ' is an adjective/determiner meaning 'entire, all of', not an adverb like English 'whole' or Japanese 'まるごと'."
+   }
+  },
+  {
+   "key": "94fe436108d43c24dc52052bb1036a42fcc290328c5c87a21ce43e33c074f528",
+   "input": {
+    "id": "jm-1216890-0-include",
+    "en": "include",
+    "en_pos": "verb",
+    "en_sense": "to include (in a group or scope)",
+    "ja": "含める",
+    "ja_reading": "ふくめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to include (in a group or scope)"
+    ],
+    "vi": "bao gồm"
+   },
+   "output": {
+    "id": "jm-1216890-0-include",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'to include'."
+   }
+  },
+  {
+   "key": "a153de00f09b61abb52505cbcf1fcab0d1e2721ac1f1daaaf59b4feacc832f44",
+   "input": {
+    "id": "jm-1217690-0-solid",
+    "en": "solid",
+    "en_pos": "adjective",
+    "en_sense": "solid; firm; stout; burly; strong; sturdy",
+    "ja": "頑丈",
+    "ja_reading": "がんじょう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "solid",
+     "firm",
+     "stout",
+     "burly",
+     "strong",
+     "sturdy"
+    ],
+    "vi": "vững chắc"
+   },
+   "output": {
+    "id": "jm-1217690-0-solid",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'vững chắc' matches the 'sturdy, firm' sense for objects but not the 'burly, stout' sense for people, making it narrower than the English and Japanese terms."
+   }
+  },
+  {
+   "key": "4b8cb35bb3f2b318aa35a9765cb1e48ff81a8e045ab695c99e15148b2abb1d1f",
+   "input": {
+    "id": "jm-1217950-0-desire",
+    "en": "desire",
+    "en_pos": "verb",
+    "en_sense": "to desire; to wish; to hope",
+    "ja": "願う",
+    "ja_reading": "ねがう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to desire",
+     "to wish",
+     "to hope"
+    ],
+    "vi": "mong muốn"
+   },
+   "output": {
+    "id": "jm-1217950-0-desire",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three verbs align well in the sense of wishing or hoping for something."
+   }
+  },
+  {
+   "key": "680c15e08c777fc7fded86ece24e00b0aa8e00b196b355a9d08f0b03a5810b18",
+   "input": {
+    "id": "jm-1218050-0-application",
+    "en": "application",
+    "en_pos": "noun",
+    "en_sense": "(written) application; written request; petition",
+    "ja": "願書",
+    "ja_reading": "がんしょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(written) application",
+     "written request",
+     "petition"
+    ],
+    "vi": "đơn xin"
+   },
+   "output": {
+    "id": "jm-1218050-0-application",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise words for a written application."
+   }
+  },
+  {
+   "key": "4cde98dd201823584c4b1d6e8a7ff38d888bcc86d4f8765b9f42aea456763d8b",
+   "input": {
+    "id": "jm-1218410-0-fear",
+    "en": "fear",
+    "en_pos": "verb",
+    "en_sense": "to fear; to doubt; to have misgivings about; to worry about; to be anxious about; to be apprehensive about",
+    "ja": "危ぶむ",
+    "ja_reading": "あやぶむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to fear",
+     "to doubt",
+     "to have misgivings about",
+     "to worry about",
+     "to be anxious about",
+     "to be apprehensive about"
+    ],
+    "vi": "lo sợ"
+   },
+   "output": {
+    "id": "jm-1218410-0-fear",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well on the sense of being anxious or worried about a potential negative outcome."
+   }
+  },
+  {
+   "key": "e2e22cc5ff341bdef53fdee2b0ef0ce00365709ead53f31d05f76df0c9832644",
+   "input": {
+    "id": "jm-1218440-0-injury",
+    "en": "injury",
+    "en_pos": "noun",
+    "en_sense": "injury; harm; danger",
+    "ja": "危害",
+    "ja_reading": "きがい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "injury",
+     "harm",
+     "danger"
+    ],
+    "vi": "tổn hại"
+   },
+   "output": {
+    "id": "jm-1218440-0-injury",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'tổn hại' means 'harm' or 'damage' but lacks the nuance of 'danger' present in both the English sense and Japanese '危害'."
+   }
+  },
+  {
+   "key": "8f954da8c605256e42889b8e27b882938145abfec9f05d63fbbce2cb90b82062",
+   "input": {
+    "id": "jm-1218960-0-skillful",
+    "en": "skillful",
+    "en_pos": "adjective",
+    "en_sense": "skillful; skilful; adroit; dexterous; dextrous; deft",
+    "ja": "器用",
+    "ja_reading": "きよう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "skillful",
+     "skilful",
+     "adroit",
+     "dexterous",
+     "dextrous",
+     "deft"
+    ],
+    "vi": "khéo léo"
+   },
+   "output": {
+    "id": "jm-1218960-0-skillful",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for 'skillful' and 'dexterous'."
+   }
+  },
+  {
+   "key": "20cc19721db428a996463df4cf879e66a367446ef3cab412b021e55b978e07ac",
+   "input": {
+    "id": "jm-1219170-0-base",
+    "en": "base",
+    "en_pos": "noun",
+    "en_sense": "base; basis; foundation; footing; infrastructure",
+    "ja": "基盤",
+    "ja_reading": "きばん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "base",
+     "basis",
+     "foundation",
+     "footing",
+     "infrastructure"
+    ],
+    "vi": "nền tảng"
+   },
+   "output": {
+    "id": "jm-1219170-0-base",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are perfect equivalents for the concept of a base or foundation."
+   }
+  },
+  {
+   "key": "b48e3df75b1fa1e633fd9780654bdf2974c896c136376788c968dbee75e473a9",
+   "input": {
+    "id": "jm-1219560-1-collect",
+    "en": "collect",
+    "en_pos": "verb",
+    "en_sense": "to bring near; to bring together; to collect; to gather",
+    "ja": "寄せる",
+    "ja_reading": "よせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to bring near",
+     "to bring together",
+     "to collect",
+     "to gather"
+    ],
+    "vi": "thu thập"
+   },
+   "output": {
+    "id": "jm-1219560-1-collect",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'thu thập' (to gather, accumulate) does not match the primary sense of Japanese '寄せる' (to bring near, move closer), making this a poor equivalence set."
+   }
+  },
+  {
+   "key": "92e9a0267127e39936b05fe4a9739f7de3dff6496f44cc6003060c863d3b4072",
+   "input": {
+    "id": "jm-1219680-0-approach",
+    "en": "approach",
+    "en_pos": "verb",
+    "en_sense": "to approach; to draw near; to come near; to be close to",
+    "ja": "寄る",
+    "ja_reading": "よる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to approach",
+     "to draw near",
+     "to come near",
+     "to be close to"
+    ],
+    "vi": "tiếp cận"
+   },
+   "output": {
+    "id": "jm-1219680-0-approach",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three verbs are good equivalents for the core meaning of 'to approach' or 'draw near'."
+   }
+  },
+  {
+   "key": "5836222f97df483899aeec3fa665caa307649e188ed73f4991a0d6ba76c775a4",
+   "input": {
+    "id": "jm-1219810-0-contribution",
+    "en": "contribution",
+    "en_pos": "noun",
+    "en_sense": "contribution; service",
+    "ja": "寄与",
+    "ja_reading": "きよ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "contribution",
+     "service"
+    ],
+    "vi": "đóng góp"
+   },
+   "output": {
+    "id": "jm-1219810-0-contribution",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for 'contribution' in the sense of service to a cause."
+   }
+  }
+ ]
+}

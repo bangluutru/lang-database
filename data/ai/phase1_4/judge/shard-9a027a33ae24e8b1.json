@@ -1,0 +1,405 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:32:12Z",
+ "items": [
+  {
+   "key": "dfd4ff6301915c72821ba3e94b55bacc30a2fa44f39f486422b2e90e54db4fd7",
+   "input": {
+    "id": "jm-1259930-0-estimate",
+    "en": "estimate",
+    "en_pos": "noun",
+    "en_sense": "estimate; guess; conjecture; aim",
+    "ja": "見当",
+    "ja_reading": "けんとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "estimate",
+     "guess",
+     "conjecture",
+     "aim"
+    ],
+    "vi": "ước tính"
+   },
+   "output": {
+    "id": "jm-1259930-0-estimate",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and align well in meaning for 'estimate' or 'guess'."
+   }
+  },
+  {
+   "key": "b868e67c83cf322a834ee90f4267cfec3fc75b6d3ed7d9f5ca83c0d3c9f5e582",
+   "input": {
+    "id": "jm-1259990-1-attack",
+    "en": "attack",
+    "en_pos": "verb",
+    "en_sense": "to attack; to hit; to strike; to deal (a punch)",
+    "ja": "見舞う",
+    "ja_reading": "みまう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to attack",
+     "to hit",
+     "to strike",
+     "to deal (a punch)"
+    ],
+    "vi": "tấn công"
+   },
+   "output": {
+    "id": "jm-1259990-1-attack",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Japanese word 見舞う primarily means 'to visit a sick person'; its secondary sense of 'to strike' is more specific than the general English 'attack' and is a poor choice for a learner's dictionary."
+   }
+  },
+  {
+   "key": "1ca4392fccea660cfafe7722cd483fa42a54d592ae99af269774e17790f950f3",
+   "input": {
+    "id": "jm-1260020-0-distinguish",
+    "en": "distinguish",
+    "en_pos": "verb",
+    "en_sense": "to distinguish; to recognize; to recognise; to tell apart; to differentiate",
+    "ja": "見分ける",
+    "ja_reading": "みわける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to distinguish",
+     "to recognize",
+     "to recognise",
+     "to tell apart",
+     "to differentiate"
+    ],
+    "vi": "phân biệt"
+   },
+   "output": {
+    "id": "jm-1260020-0-distinguish",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'to distinguish' or 'to tell apart'."
+   }
+  },
+  {
+   "key": "1105a76bd693ea320bb00304c49f859e0f1e4997d08fa7daf3682d36d8b445b4",
+   "input": {
+    "id": "jm-1260190-0-modest",
+    "en": "modest",
+    "en_pos": "adjective",
+    "en_sense": "modest; humble",
+    "ja": "謙虚",
+    "ja_reading": "けんきょ",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "modest",
+     "humble"
+    ],
+    "vi": "khiêm tốn"
+   },
+   "output": {
+    "id": "jm-1260190-0-modest",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The three terms are perfect equivalents and are the standard words for 'modest'."
+   }
+  },
+  {
+   "key": "0fabe33f2c99f6d970392ee7a33f475ec49b03e4b9f457aa414619aad28cb1bd",
+   "input": {
+    "id": "jm-1260330-0-eaves",
+    "en": "eaves",
+    "en_pos": "noun",
+    "en_sense": "eaves",
+    "ja": "軒",
+    "ja_reading": "のき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "eaves"
+    ],
+    "vi": "mái hiên"
+   },
+   "output": {
+    "id": "jm-1260330-0-eaves",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "While Japanese '軒' is a perfect match for 'eaves', Vietnamese 'mái hiên' usually implies a larger structure like a porch roof or awning."
+   }
+  },
+  {
+   "key": "ae6d38ce103f83c9abc6c3873659141bad750679e63779d7f824b946d7a4ecfe",
+   "input": {
+    "id": "jm-1261080-0-originally",
+    "en": "originally",
+    "en_pos": "adverb",
+    "en_sense": "originally; essentially; naturally; by nature; really; actually",
+    "ja": "元来",
+    "ja_reading": "がんらい",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "originally",
+     "essentially",
+     "naturally",
+     "by nature",
+     "really",
+     "actually"
+    ],
+    "vi": "ban đầu"
+   },
+   "output": {
+    "id": "jm-1261080-0-originally",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Vietnamese 'ban đầu' only means 'originally' (at the beginning) and misses the 'essentially/by nature' sense shared by English 'originally' and Japanese '元来'."
+   }
+  },
+  {
+   "key": "7939a3606838175b5e9d8c17fe8c6b1342f74ae69f6c6a45881532422395b7ed",
+   "input": {
+    "id": "jm-1261140-0-field",
+    "en": "field",
+    "en_pos": "noun",
+    "en_sense": "field; plain; prairie; tundra; moor; wilderness",
+    "ja": "原",
+    "ja_reading": "はら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "field",
+     "plain",
+     "prairie",
+     "tundra",
+     "moor",
+     "wilderness"
+    ],
+    "vi": "cánh đồng"
+   },
+   "output": {
+    "id": "jm-1261140-0-field",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "Vietnamese 'cánh đồng' means a cultivated field (like a rice paddy), which is contrary to the uncultivated 'plain' or 'wilderness' sense of English 'field' and Japanese '原'."
+   }
+  },
+  {
+   "key": "4a6e1cc7626521e706cf01e7233a2367088b62f936ec6bcf0b601e7c871f144f",
+   "input": {
+    "id": "jm-1262150-0-original",
+    "en": "original",
+    "en_pos": "noun",
+    "en_sense": "original (text)",
+    "ja": "原典",
+    "ja_reading": "げんてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "original (text)"
+    ],
+    "vi": "nguyên bản"
+   },
+   "output": {
+    "id": "jm-1262150-0-original",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent and standard equivalents for an 'original text' or 'source text'."
+   }
+  },
+  {
+   "key": "8316bdc41864afce03681c6dbb8ef0df070fffae8819f50aa593380c4a7abbbc",
+   "input": {
+    "id": "jm-1262830-0-strict",
+    "en": "strict",
+    "en_pos": "adjective",
+    "en_sense": "strict; close; precise; scrupulous",
+    "ja": "厳密",
+    "ja_reading": "げんみつ",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "strict",
+     "close",
+     "precise",
+     "scrupulous"
+    ],
+    "vi": "nghiêm ngặt"
+   },
+   "output": {
+    "id": "jm-1262830-0-strict",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align perfectly for the sense of 'strict' meaning rigorous or precise."
+   }
+  },
+  {
+   "key": "bc20e4a09e7ce97cf67255ddca283495d605aac627008e8d8cd67cea515ab0ee",
+   "input": {
+    "id": "jm-1263120-0-decrease",
+    "en": "decrease",
+    "en_pos": "verb",
+    "en_sense": "to decrease (in size or number); to diminish; to abate",
+    "ja": "減る",
+    "ja_reading": "へる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to decrease (in size or number)",
+     "to diminish",
+     "to abate"
+    ],
+    "vi": "giảm"
+   },
+   "output": {
+    "id": "jm-1263120-0-decrease",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the most common and direct equivalents for 'to decrease'."
+   }
+  },
+  {
+   "key": "b9ab47fbeca19099b672674dc6c6fbd550844aafd1ac99250747de1262d29222",
+   "input": {
+    "id": "jm-1263430-0-expert",
+    "en": "expert",
+    "en_pos": "noun",
+    "en_sense": "expert; professional; master; connoisseur",
+    "ja": "玄人",
+    "ja_reading": "くろうと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "expert",
+     "professional",
+     "master",
+     "connoisseur"
+    ],
+    "vi": "chuyên gia"
+   },
+   "output": {
+    "id": "jm-1263430-0-expert",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and common words for 'expert' or 'professional'."
+   }
+  },
+  {
+   "key": "05a431ce770565a5118f47492866fc4b4fc46b63072910993d8e6c6be6fd7552",
+   "input": {
+    "id": "jm-1263500-0-actually",
+    "en": "actually",
+    "en_pos": "adverb",
+    "en_sense": "actually; really",
+    "ja": "現に",
+    "ja_reading": "げんに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "actually",
+     "really"
+    ],
+    "vi": "thực sự"
+   },
+   "output": {
+    "id": "jm-1263500-0-actually",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA",
+     "REGISTER_CLASH"
+    ],
+    "note": "Japanese '現に' is a narrow translation of 'actually', used mainly to present concrete evidence, and misses the broader, more common uses of the English word."
+   }
+  }
+ ]
+}

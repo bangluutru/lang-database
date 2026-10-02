@@ -1,0 +1,393 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:18:17Z",
+ "items": [
+  {
+   "key": "fc81a2d57e25242b6d0036e192be409a9ec3769b05045fc9da99902a5e42b0f5",
+   "input": {
+    "id": "wk-10962-s0",
+    "en": "untie",
+    "en_pos": "verb",
+    "en_sense": "To loosen, as something interlaced or knotted; to disengage the parts of.",
+    "ja": "ほどく",
+    "ja_reading": "ほどく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to undo",
+     "to untie",
+     "to unfasten",
+     "to unlace",
+     "to unravel",
+     "to loosen"
+    ],
+    "vi": "cởi"
+   },
+   "output": {
+    "id": "wk-10962-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'cởi' primarily means 'to take off clothes' and is broader than the specific sense of 'untie', for which 'tháo' or 'gỡ' are often more precise."
+   }
+  },
+  {
+   "key": "17223cb6f66f20b3f479b298d83bd86b7cfb2e345d027408622c95d5ab889799",
+   "input": {
+    "id": "wk-24258-s0",
+    "en": "in particular",
+    "en_pos": "expression",
+    "en_sense": "Especially, individually or specifically.",
+    "ja": "特に",
+    "ja_reading": "とくに",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "particularly",
+     "especially",
+     "in particular",
+     "expressly"
+    ],
+    "vi": "nói riêng"
+   },
+   "output": {
+    "id": "wk-24258-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are excellent, natural, and common equivalents for this sense."
+   }
+  },
+  {
+   "key": "6ab818a57cddfed7c37030305a3b09a1b02256d934ca6187142f74b884a998ea",
+   "input": {
+    "id": "wk-2143-s0",
+    "en": "entertainment",
+    "en_pos": "noun",
+    "en_sense": "An activity designed to give pleasure, enjoyment, diversion, amusement, or relaxation to an audience, no matter whether the audience participates passively as in watching opera or a movie, or actively as in games.",
+    "ja": "エンターテインメント",
+    "ja_reading": "エンターテインメント",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "entertainment"
+    ],
+    "vi": "giải trí"
+   },
+   "output": {
+    "id": "wk-2143-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for the concept of entertainment."
+   }
+  },
+  {
+   "key": "88ab23945b6753c8dad8f5a0c464fd96d6b5a61905f27985acd6bab1a082e3e9",
+   "input": {
+    "id": "wk-4367-e:b76a7c",
+    "en": "arrow",
+    "en_pos": "noun",
+    "en_sense": "symbol",
+    "ja": "矢印",
+    "ja_reading": "やじるし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "arrow (symbol)"
+    ],
+    "vi": "mũi tên"
+   },
+   "output": {
+    "id": "wk-4367-e:b76a7c",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While Vietnamese 'mũi tên' can also mean the projectile, it is the standard and natural word for the arrow symbol, making this a good entry."
+   }
+  },
+  {
+   "key": "2727e1fbd7e45e9abc742b3373e85e47a631f9b3141c3d87c7a655e5a90dbe53",
+   "input": {
+    "id": "wk-26251-s0",
+    "en": "a few",
+    "en_pos": "pronoun",
+    "en_sense": "A small number of things.",
+    "ja": "少数",
+    "ja_reading": "しょうすう",
+    "ja_pos": "n,adv,adj-no",
+    "ja_glosses": [
+     "small number",
+     "few",
+     "minority"
+    ],
+    "vi": "một vài"
+   },
+   "output": {
+    "id": "wk-26251-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '少数' is a formal noun meaning 'small number' or 'minority' and is not a functional equivalent for the common quantifier 'a few'; 'いくつか' would be a better choice."
+   }
+  },
+  {
+   "key": "5f50738b67b9a0389e186470480fef6d526ca585509c874b2c441219dbd5721f",
+   "input": {
+    "id": "wk-2250-e:dae659",
+    "en": "wool",
+    "en_pos": "noun",
+    "en_sense": "cloth or yarn",
+    "ja": "羊毛",
+    "ja_reading": "ようもう",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "wool"
+    ],
+    "vi": "len"
+   },
+   "output": {
+    "id": "wk-2250-e:dae659",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Japanese '羊毛' refers to raw sheep's wool, not the finished cloth or yarn as specified in the English sense and as covered by Vietnamese 'len'."
+   }
+  },
+  {
+   "key": "0572039f44b0a32e1ec4c11e8771691dc8bb6dfe87c815d9680a1a3b7862eb72",
+   "input": {
+    "id": "wk-12181-s0",
+    "en": "molecule",
+    "en_pos": "noun",
+    "en_sense": "The smallest particle of a specific element or compound that retains the chemical properties of that element or compound; two or more atoms held together by chemical bonds.",
+    "ja": "分子",
+    "ja_reading": "ぶんし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "molecule"
+    ],
+    "vi": "phân tử"
+   },
+   "output": {
+    "id": "wk-12181-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard scientific equivalents for 'molecule'."
+   }
+  },
+  {
+   "key": "38f4e283df03ba4a0456fc31d1b168eee1c54d8dd9a9d3c98beea79b361ff2ee",
+   "input": {
+    "id": "wk-2055-e:e1cd01",
+    "en": "bend",
+    "en_pos": "verb",
+    "en_sense": "to cause to shape into a curve",
+    "ja": "曲げる",
+    "ja_reading": "まげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to bend",
+     "to crook",
+     "to bow",
+     "to curve",
+     "to curl"
+    ],
+    "vi": "uốn cong"
+   },
+   "output": {
+    "id": "wk-2055-e:e1cd01",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent, natural equivalents for the action of bending something into a curve."
+   }
+  },
+  {
+   "key": "872adc39401b7cb556e3b116cfa8373da67f22ab10b3a0c4cf0f87993680728f",
+   "input": {
+    "id": "wk-3071-s1",
+    "en": "deity",
+    "en_pos": "noun",
+    "en_sense": "A supernatural divine being; a god or goddess.",
+    "ja": "神",
+    "ja_reading": "かみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "god",
+     "deity",
+     "divinity",
+     "spirit",
+     "kami"
+    ],
+    "vi": "thần"
+   },
+   "output": {
+    "id": "wk-3071-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'deity' in their respective languages."
+   }
+  },
+  {
+   "key": "ab723fe50f2cc9fe7816933848c1a7b565cd527f340d04d569118504bd8a6465",
+   "input": {
+    "id": "wk-2950-s0",
+    "en": "solid",
+    "en_pos": "noun",
+    "en_sense": "A substance in the fundamental state of matter that retains its size and shape without need of a container (as opposed to a liquid or gas).",
+    "ja": "固体",
+    "ja_reading": "こたい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "solid (body)",
+     "solid matter",
+     "solid-state"
+    ],
+    "vi": "chất rắn"
+   },
+   "output": {
+    "id": "wk-2950-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct and standard scientific equivalents for 'solid' as a state of matter."
+   }
+  },
+  {
+   "key": "595fafdac980695f4eb9fd3cb10aa8ef878c03fc603caa9e1ef05cab474576a8",
+   "input": {
+    "id": "wk-11620-s2",
+    "en": "replace",
+    "en_pos": "verb",
+    "en_sense": "To supply or substitute an equivalent with.",
+    "ja": "取り換える",
+    "ja_reading": "とりかえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to replace",
+     "to substitute"
+    ],
+    "vi": "thay thế"
+   },
+   "output": {
+    "id": "wk-11620-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are standard and natural equivalents for the concept of replacing or substituting something."
+   }
+  },
+  {
+   "key": "0b3979d1cc5e5e159f36c9fb50f62ea7a1ae74cabd8dd7b5faf018720d069f62",
+   "input": {
+    "id": "wk-18807-s0",
+    "en": "embarrassed",
+    "en_pos": "adjective",
+    "en_sense": "Having a feeling of shameful discomfort.",
+    "ja": "恥ずかしい",
+    "ja_reading": "はずかしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "embarrassing",
+     "embarrassed",
+     "ashamed",
+     "humiliated",
+     "shy"
+    ],
+    "vi": "xấu hổ"
+   },
+   "output": {
+    "id": "wk-18807-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural way to express the feeling of being embarrassed or ashamed."
+   }
+  }
+ ]
+}

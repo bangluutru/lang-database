@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:32:42Z",
+ "items": [
+  {
+   "key": "0b02da6a120f9a6894a731c0061e6cd29f4e6b78ce840d337edd865e019be9a5",
+   "input": {
+    "id": "jm-1263760-1-site",
+    "en": "site",
+    "en_pos": "noun",
+    "en_sense": "(on) site; (on) the ground; (in) the field; job site",
+    "ja": "現場",
+    "ja_reading": "げんば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(on) site",
+     "(on) the ground",
+     "(in) the field",
+     "job site"
+    ],
+    "vi": "hiện trường"
+   },
+   "output": {
+    "id": "jm-1263760-1-site",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'hiện trường' primarily means 'scene of a crime/accident' and is narrower than the general 'job site' sense of English 'site' and Japanese '現場'."
+   }
+  },
+  {
+   "key": "d14534eab7bae020b7580c08c28a1c6387fa88d9962df371bd11547500807e5c",
+   "input": {
+    "id": "jm-1263800-0-development",
+    "en": "development",
+    "en_pos": "noun",
+    "en_sense": "development (of film); photographic processing",
+    "ja": "現像",
+    "ja_reading": "げんぞう",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "development (of film)",
+     "photographic processing"
+    ],
+    "vi": "tráng phim"
+   },
+   "output": {
+    "id": "jm-1263800-0-development",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for developing photographic film."
+   }
+  },
+  {
+   "key": "4738b2cfd1c68f4d19de39cc4682b1d3dd0e49a8f4849a3c3cc5468fd7c5f4c9",
+   "input": {
+    "id": "jm-1263860-0-spot",
+    "en": "spot",
+    "en_pos": "noun",
+    "en_sense": "actual place; actual location; the spot; the scene; the field; (on) site",
+    "ja": "現地",
+    "ja_reading": "げんち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "actual place",
+     "actual location",
+     "the spot",
+     "the scene",
+     "the field",
+     "(on) site"
+    ],
+    "vi": "hiện trường"
+   },
+   "output": {
+    "id": "jm-1263860-0-spot",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'hiện trường' is too specific (crime/accident scene) for the general sense of 'spot', 'actual location', or '現地'."
+   }
+  },
+  {
+   "key": "746983202cdd9fa1a2f766b6a6c5ad78f863ae314675b406a691e38cc64ee3a2",
+   "input": {
+    "id": "jm-1264100-0-declare",
+    "en": "declare",
+    "en_pos": "verb",
+    "en_sense": "to declare; to assert; to state definitively",
+    "ja": "言い切る",
+    "ja_reading": "いいきる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to declare",
+     "to assert",
+     "to state definitively"
+    ],
+    "vi": "tuyên bố"
+   },
+   "output": {
+    "id": "jm-1264100-0-declare",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH"
+    ],
+    "note": "Japanese '言い切る' emphasizes personal conviction in stating something, while Vietnamese 'tuyên bố' implies a formal, public announcement."
+   }
+  },
+  {
+   "key": "40a25cef89492c489cb14cf1fb2229cdd9ab04d813a518a2cfb93a27100b1b83",
+   "input": {
+    "id": "jm-1264230-0-tell",
+    "en": "tell",
+    "en_pos": "verb",
+    "en_sense": "to tell (to do); to order; to direct; to instruct",
+    "ja": "言い付ける",
+    "ja_reading": "いいつける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to tell (to do)",
+     "to order",
+     "to direct",
+     "to instruct"
+    ],
+    "vi": "ra lệnh"
+   },
+   "output": {
+    "id": "jm-1264230-0-tell",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "REGISTER_CLASH",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'ra lệnh' means 'to issue a command' and is much stronger and more formal than the general sense of 'tell (to do)' or '言い付ける'."
+   }
+  },
+  {
+   "key": "c015dbcb6a6d7d4e5bce15cc803ac9ec876450ae316211b51d60dfe605d610f4",
+   "input": {
+    "id": "jm-1264580-0-speech",
+    "en": "speech",
+    "en_pos": "noun",
+    "en_sense": "(one's) speech; expression of views; discussion",
+    "ja": "言論",
+    "ja_reading": "げんろん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(one's) speech",
+     "expression of views",
+     "discussion"
+    ],
+    "vi": "ngôn luận"
+   },
+   "output": {
+    "id": "jm-1264580-0-speech",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the concept of public speech, discourse, or expression of views."
+   }
+  },
+  {
+   "key": "ed22abd760f2f759ae0fb7466302adad95f9f13f97cf74b7823dcee8f32cd9e6",
+   "input": {
+    "id": "jm-1264690-0-limit",
+    "en": "limit",
+    "en_pos": "noun",
+    "en_sense": "limit; bounds",
+    "ja": "限度",
+    "ja_reading": "げんど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "limit",
+     "bounds"
+    ],
+    "vi": "giới hạn"
+   },
+   "output": {
+    "id": "jm-1264690-0-limit",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'limit' or 'bounds'."
+   }
+  },
+  {
+   "key": "72502977e2ea0354da52193b6ffcf1fb620a988be09a39714dafba97822e47a7",
+   "input": {
+    "id": "jm-1264980-0-individual",
+    "en": "individual",
+    "en_pos": "noun",
+    "en_sense": "individual; specimen",
+    "ja": "個体",
+    "ja_reading": "こたい",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "individual",
+     "specimen"
+    ],
+    "vi": "cá thể"
+   },
+   "output": {
+    "id": "jm-1264980-0-individual",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents in a biological or scientific context, meaning an individual organism or specimen."
+   }
+  },
+  {
+   "key": "1043933b87143f3c6ac89aa4eccb4ce707d6bd7bdbd6c6d800e435bc4c2130c3",
+   "input": {
+    "id": "jm-1266330-0-stop",
+    "en": "stop",
+    "en_pos": "verb",
+    "en_sense": "to (call and) stop; to call (someone) to stop; to hail (e.g. a taxi)",
+    "ja": "呼び止める",
+    "ja_reading": "よびとめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to (call and) stop",
+     "to call (someone) to stop",
+     "to hail (e.g. a taxi)"
+    ],
+    "vi": "chặn"
+   },
+   "output": {
+    "id": "jm-1266330-0-stop",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'chặn' means 'to block' or 'intercept physically', not 'to call to a stop' or 'to hail'."
+   }
+  },
+  {
+   "key": "74db5e9da02b11462acc189bbe23ded90a6242c2cfbcbe01735d36aafe0f5e31",
+   "input": {
+    "id": "jm-1266730-0-characteristic",
+    "en": "characteristic",
+    "en_pos": "adjective",
+    "en_sense": "characteristic (of); peculiar (to); inherent (in); endemic; unique (to); native (to)",
+    "ja": "固有",
+    "ja_reading": "こゆう",
+    "ja_pos": "adj-no,adj-na",
+    "ja_glosses": [
+     "characteristic (of)",
+     "peculiar (to)",
+     "inherent (in)",
+     "endemic",
+     "unique (to)",
+     "native (to)"
+    ],
+    "vi": "đặc trưng"
+   },
+   "output": {
+    "id": "jm-1266730-0-characteristic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'characteristic' or 'peculiar to'."
+   }
+  },
+  {
+   "key": "23aa2c6c7c79ce4d79dd155399f5aa5824730321cecaa7fe528dd556abb6db88",
+   "input": {
+    "id": "jm-1267870-2-consider",
+    "en": "consider",
+    "en_pos": "verb",
+    "en_sense": "to consider; to concern oneself about; to take notice of; to pay attention to; to take into consideration",
+    "ja": "顧みる",
+    "ja_reading": "かえりみる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to consider",
+     "to concern oneself about",
+     "to take notice of",
+     "to pay attention to",
+     "to take into consideration"
+    ],
+    "vi": "quan tâm"
+   },
+   "output": {
+    "id": "jm-1267870-2-consider",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well on the meaning of 'to concern oneself with', although the Japanese '顧みる' also has a sense of 'looking back' not present in the others."
+   }
+  },
+  {
+   "key": "2fc396496b737381f229dbe847d47f387ae3b15d400cdb1bdcd561dff5e60e08",
+   "input": {
+    "id": "jm-1268170-0-may",
+    "en": "may",
+    "en_pos": "noun",
+    "en_sense": "May",
+    "ja": "５月",
+    "ja_reading": "ごがつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "May"
+    ],
+    "vi": "tháng năm"
+   },
+   "output": {
+    "id": "jm-1268170-0-may",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard terms for the month of May."
+   }
+  }
+ ]
+}

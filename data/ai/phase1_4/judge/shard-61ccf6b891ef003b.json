@@ -1,0 +1,382 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:42:45Z",
+ "items": [
+  {
+   "key": "7a798507230f56803402f443b94cb988c1094357793afdb50c757e7fc1abbaff",
+   "input": {
+    "id": "wk-2964-s0",
+    "en": "knife",
+    "en_pos": "noun",
+    "en_sense": "A utensil or a tool designed for cutting, consisting of a flat piece of hard material, usually steel or other metal (the blade), usually sharpened on one edge, attached to a handle. The blade may be pointed for piercing.",
+    "ja": "ナイフ",
+    "ja_reading": "ナイフ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "knife"
+    ],
+    "vi": "dao"
+   },
+   "output": {
+    "id": "wk-2964-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'knife' and are excellent equivalents."
+   }
+  },
+  {
+   "key": "eec437bdcf140371c9384ea0d5ffafc7ed485ae9deea02d5f1533c0e9d154daa",
+   "input": {
+    "id": "wk-2965-e:bf9302",
+    "en": "metal",
+    "en_pos": "noun",
+    "en_sense": "atomic element or material made of such atoms",
+    "ja": "金",
+    "ja_reading": "かね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "metal"
+    ],
+    "vi": "kim loại"
+   },
+   "output": {
+    "id": "wk-2965-e:bf9302",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word 金 (kane) is correct but can be ambiguous with 'money'; 金属 (kinzoku) is a more common and clearer equivalent for 'metal'."
+   }
+  },
+  {
+   "key": "486db9031719d0e06c2687f7f4eef3d8055f5c313993041268142e290f8b49f3",
+   "input": {
+    "id": "wk-2967-s0",
+    "en": "salt",
+    "en_pos": "noun",
+    "en_sense": "A common substance, chemically consisting mainly of sodium chloride (NaCl), used extensively as a food ingredient, seasoning, condiment, and preservative.",
+    "ja": "塩",
+    "ja_reading": "しお",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "salt",
+     "common salt",
+     "table salt",
+     "sodium chloride"
+    ],
+    "vi": "muối"
+   },
+   "output": {
+    "id": "wk-2967-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for table salt and are perfect equivalents."
+   }
+  },
+  {
+   "key": "28fef35005f22368d75c13ddb38576720b77c898965748215ef799d271942c58",
+   "input": {
+    "id": "wk-2969-e:1f75f6",
+    "en": "sugar",
+    "en_pos": "noun",
+    "en_sense": "generic term for sucrose, glucose, fructose, etc",
+    "ja": "糖",
+    "ja_reading": "とう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sugar"
+    ],
+    "vi": "đường"
+   },
+   "output": {
+    "id": "wk-2969-e:1f75f6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 糖 (tou) matches the generic/chemical sense of sugar, but the common word for table sugar is 砂糖 (satou), which might be what a learner expects."
+   }
+  },
+  {
+   "key": "9ed93f1da11c92b501364e8e9d265877c74512abd833f067b1f4e2120ae1f360",
+   "input": {
+    "id": "wk-2970-s0",
+    "en": "tail",
+    "en_pos": "noun",
+    "en_sense": "The caudal appendage of an animal that is attached to their posterior and near the anus or cloaca.",
+    "ja": "尻尾",
+    "ja_reading": "しっぽ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tail (of an animal)"
+    ],
+    "vi": "đuôi"
+   },
+   "output": {
+    "id": "wk-2970-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for an animal's tail and are perfect equivalents."
+   }
+  },
+  {
+   "key": "667e9717af4754c052440e9fa5d9f5f19cb9194f0270c22b9999f8158116490d",
+   "input": {
+    "id": "wk-2971-e:99593f",
+    "en": "tail",
+    "en_pos": "verb",
+    "en_sense": "to tail",
+    "ja": "尾行する",
+    "ja_reading": "びこうする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "shadow",
+     "tail",
+     "following"
+    ],
+    "vi": "theo đuôi"
+   },
+   "output": {
+    "id": "wk-2971-e:99593f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and idiomatic way to express 'to tail' someone."
+   }
+  },
+  {
+   "key": "49a5cf0aa6e1a718dbbe1a514233187b1876d3c30b603f27cc6d41d486f53477",
+   "input": {
+    "id": "wk-2972-e:7cf019",
+    "en": "whip",
+    "en_pos": "noun",
+    "en_sense": "rod or rope",
+    "ja": "ムチ",
+    "ja_reading": "ムチ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "whip",
+     "lash",
+     "scourge"
+    ],
+    "vi": "roi"
+   },
+   "output": {
+    "id": "wk-2972-e:7cf019",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'whip' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "df4e5f43f972a1f52c0b2735ad8f2929f1c920a8a3a774cc0451e682a0e0b9bc",
+   "input": {
+    "id": "wk-29729-s0",
+    "en": "baby bottle",
+    "en_pos": "noun",
+    "en_sense": "A bottle equipped with a teat, used for bottlefeeding infants.",
+    "ja": "哺乳瓶",
+    "ja_reading": "ほにゅうびん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "baby bottle",
+     "nursing bottle",
+     "feeding bottle"
+    ],
+    "vi": "chai"
+   },
+   "output": {
+    "id": "wk-29729-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'chai' just means 'bottle' and is too broad; the correct term is 'bình sữa'."
+   }
+  },
+  {
+   "key": "449fdd771970859cc5d82419629c467247008e2556ccbededf23e6d28bb52695",
+   "input": {
+    "id": "wk-29735-s0",
+    "en": "lick",
+    "en_pos": "verb",
+    "en_sense": "To stroke with the tongue.",
+    "ja": "舐める",
+    "ja_reading": "なめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to lick",
+     "to lap",
+     "to suck"
+    ],
+    "vi": "liếm"
+   },
+   "output": {
+    "id": "wk-29735-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard words for 'to lick' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "a53a29f7f57c9f004deca09d40af615404396967476fc652bdb3b303662efd97",
+   "input": {
+    "id": "wk-2974-e:d485a1",
+    "en": "blade",
+    "en_pos": "noun",
+    "en_sense": "typically sharp-edged working end of a knife or other cutting tool",
+    "ja": "ブレード",
+    "ja_reading": "ブレード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "blade"
+    ],
+    "vi": "lưỡi"
+   },
+   "output": {
+    "id": "wk-2974-e:d485a1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese loanword ブレード (bureedo) is correct, but the native word 刃 (ha) is also a common and important equivalent for 'blade'."
+   }
+  },
+  {
+   "key": "c6ec855cfe8d41f87cb93eb5545c057933586f9f3cedfdda2ace2a6c67dd2979",
+   "input": {
+    "id": "wk-2975-s0",
+    "en": "sword",
+    "en_pos": "noun",
+    "en_sense": "A long bladed weapon with a grip and typically a pommel and crossguard (together forming a hilt), which is designed to cut, stab, slash and/or hack.",
+    "ja": "刀",
+    "ja_reading": "かたな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sword (esp. Japanese single-edged)",
+     "katana"
+    ],
+    "vi": "kiếm"
+   },
+   "output": {
+    "id": "wk-2975-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 刀 (katana) refers to a specific type of Japanese sword, while the English 'sword' and Vietnamese 'kiếm' are general terms. The correct general Japanese word is 剣 (ken)."
+   }
+  },
+  {
+   "key": "87b0c32ff9acfad8d640291a4c5b8539af4f3353b8307d023a7b53447435ed7f",
+   "input": {
+    "id": "wk-2979-e:436aa3",
+    "en": "heavy",
+    "en_pos": "adjective",
+    "en_sense": "having great weight",
+    "ja": "重い",
+    "ja_reading": "おもい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "heavy",
+     "weighty"
+    ],
+    "vi": "nặng"
+   },
+   "output": {
+    "id": "wk-2979-e:436aa3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for 'heavy' (in weight) and are perfect equivalents."
+   }
+  }
+ ]
+}

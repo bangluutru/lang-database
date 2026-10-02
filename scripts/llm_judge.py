@@ -31,6 +31,9 @@ from typing import Dict, Any, Optional, List, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from scripts.external_api_guard import require_external_api_permission
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROMPTS_DIR = BASE_DIR / "prompts"
 CACHE_DIR = BASE_DIR / "data" / "llm_validation_cache"
@@ -159,6 +162,7 @@ class TrueLinguisticJudge:
         self.token_manager = TokenManager.get_instance()
 
     def _call_gemini(self, prompt: str, max_retries: int = 4) -> str:
+        require_external_api_permission("Vertex AI call (llm_judge)")
         """Invokes Vertex AI or Gemini REST endpoint with retry and backoff."""
         delay = 1.0
         for attempt in range(max_retries):

@@ -1,0 +1,385 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:02:48Z",
+ "items": [
+  {
+   "key": "e3f5c78f1d116e24f75a3f274fd476eb5cab5dc8d0c3026114d00c9981ab451b",
+   "input": {
+    "id": "wk-8779-s0",
+    "en": "bakery",
+    "en_pos": "noun",
+    "en_sense": "A place in which bread (and often other baked goods such as cakes) is baked and/or sold.",
+    "ja": "ベーカリー",
+    "ja_reading": "ベーカリー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bakery",
+     "pastry shop"
+    ],
+    "vi": "lò bánh mì"
+   },
+   "output": {
+    "id": "wk-8779-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'lò bánh mì' means 'bread oven' and is narrower than 'bakery', which can also be just a shop selling various baked goods; 'tiệm bánh' is a better general equivalent."
+   }
+  },
+  {
+   "key": "47435c3402e4892be7dd51d84ca7c23cb6a0710d6e0774d276b7f3c8eaeee7ba",
+   "input": {
+    "id": "wk-8782-s0",
+    "en": "birthmark",
+    "en_pos": "noun",
+    "en_sense": "A mark on the skin formed before birth.",
+    "ja": "母斑",
+    "ja_reading": "ぼはん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nevus",
+     "naevus",
+     "birthmark"
+    ],
+    "vi": "bớt"
+   },
+   "output": {
+    "id": "wk-8782-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '母斑' is a correct but somewhat technical/formal term for birthmark, while the English and Vietnamese terms are more common in everyday language."
+   }
+  },
+  {
+   "key": "31050432f4a4da7edb186caf731156aa726e12357b25b7c4bd2b25a42470bf78",
+   "input": {
+    "id": "wk-879-s0",
+    "en": "dollar",
+    "en_pos": "noun",
+    "en_sense": "Official designation for currency in some parts of the world, including Canada, the United States, Australia, New Zealand, Singapore, Hong Kong, and elsewhere. Its symbol is $.",
+    "ja": "ドル",
+    "ja_reading": "ドル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dollar"
+    ],
+    "vi": "đồng"
+   },
+   "output": {
+    "id": "wk-879-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG"
+    ],
+    "note": "The Vietnamese 'đồng' is the name of Vietnam's currency, not a translation for 'dollar'; the correct term is 'đô la'."
+   }
+  },
+  {
+   "key": "9c396d348380ac4d8f3336a5c84b46d13d42afab34959dc8b17992071eb52f26",
+   "input": {
+    "id": "wk-88-s0",
+    "en": "abandon",
+    "en_pos": "verb",
+    "en_sense": "To give up or relinquish control of, to surrender or to give oneself over, or to yield to one's emotions.",
+    "ja": "諦める",
+    "ja_reading": "あきらめる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to give up",
+     "to abandon (hope, plans)",
+     "to resign oneself (to)"
+    ],
+    "vi": "bỏ"
+   },
+   "output": {
+    "id": "wk-88-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align well on the sense of giving up or relinquishing something abstract like a plan or hope."
+   }
+  },
+  {
+   "key": "4f4d704c8b4f07e88aed6fe23df9b3ff40d103e7e4871b1e81a7f43d3f77d71e",
+   "input": {
+    "id": "wk-88-s2",
+    "en": "abandon",
+    "en_pos": "verb",
+    "en_sense": "To leave behind; to desert, as in a ship, a position, or a person, typically in response to overwhelming odds or impending dangers; to forsake, in spite of a duty or responsibility.",
+    "ja": "見捨てる",
+    "ja_reading": "みすてる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to abandon",
+     "to fail",
+     "to desert",
+     "to forsake"
+    ],
+    "vi": "từ bỏ"
+   },
+   "output": {
+    "id": "wk-88-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly convey the specific sense of deserting or forsaking a person or responsibility."
+   }
+  },
+  {
+   "key": "e7ba5a79ab4d4af6321a0afc5a390a6b7cc8c7f039bbf6e184b53b550cdd1087",
+   "input": {
+    "id": "wk-8803-s0",
+    "en": "grateful",
+    "en_pos": "adjective",
+    "en_sense": "Of a person or their actions, feelings, etc.: expressing gratitude or appreciation; appreciative, thankful.",
+    "ja": "ありがたい",
+    "ja_reading": "ありがたい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "grateful",
+     "thankful",
+     "welcome",
+     "appreciated",
+     "evoking gratitude"
+    ],
+    "vi": "biết ơn"
+   },
+   "output": {
+    "id": "wk-8803-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent entry with natural and accurate equivalents in all three languages."
+   }
+  },
+  {
+   "key": "a944f804b4887c2a44106c661c03ed3520913aac3c54b0e295ba6ec10b681bae",
+   "input": {
+    "id": "wk-8806-s0",
+    "en": "gist",
+    "en_pos": "noun",
+    "en_sense": "The main idea or substance, or the most essential part, of a longer or more complicated matter; the crux, the heart, the pith.",
+    "ja": "要点",
+    "ja_reading": "ようてん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gist",
+     "main point"
+    ],
+    "vi": "mấu chốt"
+   },
+   "output": {
+    "id": "wk-8806-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for the main or crucial point of a matter."
+   }
+  },
+  {
+   "key": "c4ac305002cd1a4bf23a821762246055b249d05746306c4a32168bd421026ba3",
+   "input": {
+    "id": "wk-8816-s0",
+    "en": "plot",
+    "en_pos": "noun",
+    "en_sense": "The course of a story, comprising a series of incidents which are gradually unfolded, sometimes by unexpected means.",
+    "ja": "筋",
+    "ja_reading": "すじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "plot",
+     "storyline"
+    ],
+    "vi": "cốt truyện"
+   },
+   "output": {
+    "id": "wk-8816-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect entry with standard and accurate equivalents in all three languages."
+   }
+  },
+  {
+   "key": "93eef900b57472e783f78cd16c551abafb32703324b68b27c714fcaffaedc7b1",
+   "input": {
+    "id": "wk-8818-s0",
+    "en": "barley",
+    "en_pos": "noun",
+    "en_sense": "A cereal of the species Hordeum vulgare or its grains, often used as food or to make beer and other malted drinks.",
+    "ja": "大麦",
+    "ja_reading": "おおむぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "barley (Hordeum vulgare)"
+    ],
+    "vi": "lúa mạch"
+   },
+   "output": {
+    "id": "wk-8818-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, correct words for barley."
+   }
+  },
+  {
+   "key": "723be04b22e1787a4f91fba082fe3d1936224063c16a18a4c82a65f31e42f2a0",
+   "input": {
+    "id": "wk-8819-s0",
+    "en": "millet",
+    "en_pos": "noun",
+    "en_sense": "Any of a group of various types of grass or its grains used as food, widely cultivated in the developing world.",
+    "ja": "きび",
+    "ja_reading": "きび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(common) millet (Panicum miliaceum)",
+     "proso millet"
+    ],
+    "vi": "kê"
+   },
+   "output": {
+    "id": "wk-8819-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'きび' refers specifically to proso millet, while English 'millet' and Vietnamese 'kê' are general terms for the grain group."
+   }
+  },
+  {
+   "key": "430af6d9eebe3139786ac675d394a2d2ede370fd94632e131523235ac9ef50b8",
+   "input": {
+    "id": "wk-8825-s0",
+    "en": "hatred",
+    "en_pos": "noun",
+    "en_sense": "A strong aversion; an intense dislike.",
+    "ja": "憎しみ",
+    "ja_reading": "にくしみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hatred"
+    ],
+    "vi": "sự ghét"
+   },
+   "output": {
+    "id": "wk-8825-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'sự ghét' is an awkward, literal nominalization; more natural terms for 'hatred' are 'sự căm ghét' or 'lòng căm thù'."
+   }
+  },
+  {
+   "key": "5dff020359f9bbf9d5300a1ca1131671afe1cda30134eaf0cfd81cdb40fc7ea3",
+   "input": {
+    "id": "wk-8826-s0",
+    "en": "virgin",
+    "en_pos": "noun",
+    "en_sense": "A person who has never had sexual intercourse, or (uncommonly) an animal that has never mated.",
+    "ja": "処女",
+    "ja_reading": "しょじょ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "virgin (usu. female)",
+     "maiden"
+    ],
+    "vi": "trinh nữ"
+   },
+   "output": {
+    "id": "wk-8826-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Both Japanese '処女' and Vietnamese 'trinh nữ' specifically mean 'female virgin', which is narrower than the gender-neutral English 'virgin'."
+   }
+  }
+ ]
+}

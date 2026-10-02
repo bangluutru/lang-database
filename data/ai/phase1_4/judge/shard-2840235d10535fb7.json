@@ -1,0 +1,379 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:36:24Z",
+ "items": [
+  {
+   "key": "8ae9b98c7eae54de405ed61cde3e79bce5775b1090181bab7ddc93c747be44b6",
+   "input": {
+    "id": "wk-18988-s0",
+    "en": "bodyguard",
+    "en_pos": "noun",
+    "en_sense": "A person or group of persons, often armed, responsible for protecting someone.",
+    "ja": "用心棒",
+    "ja_reading": "ようじんぼう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bodyguard",
+     "bouncer",
+     "(security) guard"
+    ],
+    "vi": "vệ sĩ"
+   },
+   "output": {
+    "id": "wk-18988-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 用心棒 has strong connotations of a hired thug or bouncer, which does not match the more neutral English 'bodyguard' or Vietnamese 'vệ sĩ'."
+   }
+  },
+  {
+   "key": "f8a454e76600135417347d188d5778934d742de78aefa11a31dee8a8de9c8889",
+   "input": {
+    "id": "wk-1899-s0",
+    "en": "rain",
+    "en_pos": "verb",
+    "en_sense": "To have rain fall from the sky.",
+    "ja": "雨が降る",
+    "ja_reading": "あめがふる",
+    "ja_pos": "exp,v5r",
+    "ja_glosses": [
+     "to rain"
+    ],
+    "vi": "mưa"
+   },
+   "output": {
+    "id": "wk-1899-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are perfect, natural equivalents for 'to rain'."
+   }
+  },
+  {
+   "key": "cfd01dc90f9999a24a5d4daf039d638f4d78c0bd66f8051e458a707284a62b6f",
+   "input": {
+    "id": "wk-190-s0",
+    "en": "abstruse",
+    "en_pos": "adjective",
+    "en_sense": "Difficult to comprehend or understand; obscure.",
+    "ja": "難解",
+    "ja_reading": "なんかい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "difficult to understand",
+     "unintelligible",
+     "abstruse"
+    ],
+    "vi": "huyền diệu"
+   },
+   "output": {
+    "id": "wk-190-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'huyền diệu' means 'magical' or 'wondrous', not 'abstruse' (difficult to understand)."
+   }
+  },
+  {
+   "key": "1eddca647e2c8af03ca116b5d4c2a5c0b6730b8c8012332fba68dbd25017be79",
+   "input": {
+    "id": "wk-19001-s0",
+    "en": "specification",
+    "en_pos": "noun",
+    "en_sense": "An explicit set of requirements to be satisfied by a material, product, or service.",
+    "ja": "仕様",
+    "ja_reading": "しよう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(technical) specification"
+    ],
+    "vi": "quy cách"
+   },
+   "output": {
+    "id": "wk-19001-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for technical specifications."
+   }
+  },
+  {
+   "key": "06b610ce6272580f8da57a8423073362287d92a427439f0189abcc47e06f1f1b",
+   "input": {
+    "id": "wk-19008-s0",
+    "en": "ginseng",
+    "en_pos": "noun",
+    "en_sense": "Any plant of two species of the genus Panax (Panax ginseng and Panax quinquefolius), having forked roots supposed to have medicinal and aphrodisiac properties.",
+    "ja": "朝鮮人参",
+    "ja_reading": "ちょうせんにんじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "Asian ginseng (Panax ginseng)"
+    ],
+    "vi": "sâm"
+   },
+   "output": {
+    "id": "wk-19008-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese term 朝鮮人参 specifically means Korean/Asian ginseng (Panax ginseng), which is narrower than the English 'ginseng' that also includes American ginseng."
+   }
+  },
+  {
+   "key": "056b619257fcadb0932cff5840967baff608d9376c59bf8151295e60b44ccbb0",
+   "input": {
+    "id": "wk-19032-s0",
+    "en": "militia",
+    "en_pos": "noun",
+    "en_sense": "An army of trained civilians, which may be an official reserve army, called upon in time of need, the entire able-bodied population of a state which may also be called upon, or a private force not under government control.",
+    "ja": "民兵",
+    "ja_reading": "みんぺい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "militia",
+     "militiaman"
+    ],
+    "vi": "dân quân"
+   },
+   "output": {
+    "id": "wk-19032-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect and standard equivalents."
+   }
+  },
+  {
+   "key": "ba94318e42a9ab4f97b1c08c583d3a340e5c85237fece4f2965bbe0a2c82f301",
+   "input": {
+    "id": "wk-19034-s0",
+    "en": "moonlight",
+    "en_pos": "noun",
+    "en_sense": "The light reflected from the Moon, which seems to emanate from it.",
+    "ja": "月光",
+    "ja_reading": "げっこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "moonlight",
+     "moonbeam"
+    ],
+    "vi": "ánh trăng"
+   },
+   "output": {
+    "id": "wk-19034-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and standard equivalents for 'moonlight'."
+   }
+  },
+  {
+   "key": "9419ff18859a4fe9dc115a91e0fa10e6e412e429ede22a6b3d38602a0aff0c32",
+   "input": {
+    "id": "wk-1904-e:00f16f",
+    "en": "republic",
+    "en_pos": "noun",
+    "en_sense": "a type of state",
+    "ja": "共和国",
+    "ja_reading": "きょうわこく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "republic",
+     "commonwealth"
+    ],
+    "vi": "cộng hòa"
+   },
+   "output": {
+    "id": "wk-1904-e:00f16f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard political terms for 'republic' and are direct equivalents."
+   }
+  },
+  {
+   "key": "f41337044a58e731a60ccbf945467cceddad6f27b362c873fd87d02e9ac0c53a",
+   "input": {
+    "id": "wk-19066-s0",
+    "en": "elapse",
+    "en_pos": "verb",
+    "en_sense": "To pass or move by.",
+    "ja": "過ぎる",
+    "ja_reading": "すぎる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to pass (of time)",
+     "to elapse"
+    ],
+    "vi": "trôi qua"
+   },
+   "output": {
+    "id": "wk-19066-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '過ぎる' is broader than 'elapse', as it can mean 'to pass' in a spatial sense or 'to exceed', while 'elapse' is specific to time."
+   }
+  },
+  {
+   "key": "a8cdbd09498df044424d83c4945c109c49cb978ccb867395a46f76fef81bc30c",
+   "input": {
+    "id": "wk-19068-s1",
+    "en": "firewall",
+    "en_pos": "noun",
+    "en_sense": "The software that monitors traffic in and out of a private network or a personal computer and allows or blocks such traffic depending on its perceived threat.",
+    "ja": "ファイアウォール",
+    "ja_reading": "ファイアウォール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "firewall"
+    ],
+    "vi": "tường lửa"
+   },
+   "output": {
+    "id": "wk-19068-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard computing term for 'firewall', with Japanese using a loanword and Vietnamese using a calque."
+   }
+  },
+  {
+   "key": "bbdcfd6ab627b7023a7f587623c9de2dbf26cefe027a508d86a6b8ae8bf98622",
+   "input": {
+    "id": "wk-1908-s0",
+    "en": "hungry",
+    "en_pos": "adjective",
+    "en_sense": "Affected by hunger; having the physical need for food.",
+    "ja": "ひだるい",
+    "ja_reading": "ひだるい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "hungry"
+    ],
+    "vi": "đói"
+   },
+   "output": {
+    "id": "wk-1908-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word 'ひだるい' is an archaic and dialectal term for 'hungry'; the standard expression is 'お腹が空いた'."
+   }
+  },
+  {
+   "key": "5d214167a8dc08a7f637a20f75e9df23d69cbbadf0c9c0a6a585871080f9caef",
+   "input": {
+    "id": "wk-1910-s0",
+    "en": "weather",
+    "en_pos": "noun",
+    "en_sense": "The short-term state of the atmosphere at a specific time and place, including the temperature, relative humidity, cloud cover, precipitation, wind, etc.",
+    "ja": "天気",
+    "ja_reading": "てんき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "weather"
+    ],
+    "vi": "thời tiết"
+   },
+   "output": {
+    "id": "wk-1910-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While '天気' (tenki) can also specifically mean 'good weather', it is the most common and natural everyday equivalent for the general sense of 'weather'."
+   }
+  }
+ ]
+}

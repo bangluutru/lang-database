@@ -1,0 +1,395 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:08:56Z",
+ "items": [
+  {
+   "key": "d735f002e68fe475092f2ceb265fff753b97a9f5e8a1c09797d2b33a199beba7",
+   "input": {
+    "id": "wk-17354-s1",
+    "en": "conception",
+    "en_pos": "noun",
+    "en_sense": "The state of being conceived; the beginning.",
+    "ja": "受胎",
+    "ja_reading": "じゅたい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "conception",
+     "fertilization",
+     "fertilisation"
+    ],
+    "vi": "quan niệm"
+   },
+   "output": {
+    "id": "wk-17354-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'quan niệm' means 'concept' or 'idea', not biological conception. The correct term is 'sự thụ thai'."
+   }
+  },
+  {
+   "key": "6e6dce8d28413ecc1072368fa275a95582458ad19977766483691f44a14e2a16",
+   "input": {
+    "id": "wk-17517-s0",
+    "en": "turmoil",
+    "en_pos": "noun",
+    "en_sense": "A state of great disorder or uncertainty.",
+    "ja": "騒動",
+    "ja_reading": "そうどう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "riot",
+     "rebellion",
+     "turmoil",
+     "strife"
+    ],
+    "vi": "sự náo động"
+   },
+   "output": {
+    "id": "wk-17517-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms align well on the sense of social disorder or commotion."
+   }
+  },
+  {
+   "key": "4cd8ead8a6f0f69e554622ef424308cb4eb8e4f9adb7085272b42414cb0dc531",
+   "input": {
+    "id": "wk-1753-s0",
+    "en": "piece",
+    "en_pos": "noun",
+    "en_sense": "A part of a larger whole, usually in such a form that it is able to be separated from other parts.",
+    "ja": "一片",
+    "ja_reading": "いっぺん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "a piece",
+     "a scrap",
+     "a fragment",
+     "a bit"
+    ],
+    "vi": "mảnh"
+   },
+   "output": {
+    "id": "wk-1753-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "Both '一片' and 'mảnh' are narrower than the general English 'piece', typically meaning 'fragment' or 'scrap'."
+   }
+  },
+  {
+   "key": "e11c5ed84594a973dc295feac522ac93f752f36d6f93d0545310a09145ca34f6",
+   "input": {
+    "id": "wk-1753-s2",
+    "en": "piece",
+    "en_pos": "noun",
+    "en_sense": "One of the figures used in playing chess, specifically a higher-value figure as distinguished from a pawn; (by extension) those with which draughts, backgammon, and other similar board games are played.",
+    "ja": "駒",
+    "ja_reading": "こま",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "piece (in shogi, chess, etc.)"
+    ],
+    "vi": "con"
+   },
+   "output": {
+    "id": "wk-1753-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a game piece in their respective languages."
+   }
+  },
+  {
+   "key": "2a6fa7e34671bfd7861f6e14f7ab727e27344fa61b854b9bb48a6b54a13fb782",
+   "input": {
+    "id": "wk-17536-s0",
+    "en": "thicket",
+    "en_pos": "noun",
+    "en_sense": "A dense, but generally small, growth of shrubs, bushes or small trees; a copse.",
+    "ja": "茂み",
+    "ja_reading": "しげみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "thicket",
+     "bush",
+     "coppice",
+     "brushwood"
+    ],
+    "vi": "bụi"
+   },
+   "output": {
+    "id": "wk-17536-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'bụi' can mean a single bush, while 'thicket' and '茂み' imply a dense growth; 'bụi rậm' would be a more precise equivalent."
+   }
+  },
+  {
+   "key": "5a5ef3c8696652f5d019b86e0d3af91c1b27f9c336bdacc4eef3f563f5927218",
+   "input": {
+    "id": "wk-1754-s0",
+    "en": "from",
+    "en_pos": "preposition",
+    "en_sense": "Used to indicate source or provenance.",
+    "ja": "から",
+    "ja_reading": "から",
+    "ja_pos": "prt",
+    "ja_glosses": [
+     "from",
+     "since",
+     "at"
+    ],
+    "vi": "từ"
+   },
+   "output": {
+    "id": "wk-1754-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the primary and most natural words for indicating source or origin."
+   }
+  },
+  {
+   "key": "ea02880562918be49387cc49ae5a41ac1c945d28bcf2a635bf683ad9ed612dd6",
+   "input": {
+    "id": "wk-17570-s0",
+    "en": "the other day",
+    "en_pos": "adverb",
+    "en_sense": "Recently; lately; a few days ago.",
+    "ja": "先日",
+    "ja_reading": "せんじつ",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "the other day",
+     "a few days ago"
+    ],
+    "vi": "hôm nọ"
+   },
+   "output": {
+    "id": "wk-17570-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are standard expressions for 'a few days ago', with '先日' being slightly more formal than the others."
+   }
+  },
+  {
+   "key": "41599f74f8f7eed1dd4fdecee4f3fe16747c00da5d510804045155d8a57a15e8",
+   "input": {
+    "id": "wk-17581-s0",
+    "en": "cocoon",
+    "en_pos": "noun",
+    "en_sense": "The silky case spun by the larvae of some insects in which they metamorphose, protecting the pupa within.",
+    "ja": "繭",
+    "ja_reading": "まゆ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cocoon"
+    ],
+    "vi": "kén"
+   },
+   "output": {
+    "id": "wk-17581-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for the biological sense of cocoon."
+   }
+  },
+  {
+   "key": "bb8d900c03b5f91431897ad34939b99fcfd8e98b3463cb547860ae30e6003d58",
+   "input": {
+    "id": "wk-17582-e:3b136a",
+    "en": "staple",
+    "en_pos": "noun",
+    "en_sense": "wire fastener used to secure stacks of paper",
+    "ja": "ステープル",
+    "ja_reading": "ステープル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "staple",
+     "stapler clip"
+    ],
+    "vi": "ghim"
+   },
+   "output": {
+    "id": "wk-17582-e:3b136a",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'ghim' is a general term for pin/fastener and is broader than the specific English 'staple'; 'ghim bấm' is more precise."
+   }
+  },
+  {
+   "key": "ca1dfad551477b9728de294b1d2bb76a0b2ecb2f5eefd442cb3c605f1830a59d",
+   "input": {
+    "id": "wk-17616-s0",
+    "en": "detective",
+    "en_pos": "noun",
+    "en_sense": "A police officer tasked with collecting evidence and information in order to solve a crime; an investigator.",
+    "ja": "探偵",
+    "ja_reading": "たんてい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "detective",
+     "investigator",
+     "sleuth"
+    ],
+    "vi": "thám tử"
+   },
+   "output": {
+    "id": "wk-17616-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both '探偵' and 'thám tử' mean 'private detective', not a police officer detective as specified in the English sense (which is '刑事' in Japanese and 'cảnh sát điều tra' in Vietnamese)."
+   }
+  },
+  {
+   "key": "9f5aa1befd180d7938d2e7963ee0397adfff6a84c5101cef6acfb4290d4136a4",
+   "input": {
+    "id": "wk-17630-s0",
+    "en": "cosmetics",
+    "en_pos": "noun",
+    "en_sense": "The study of such products.",
+    "ja": "化粧品",
+    "ja_reading": "けしょうひん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cosmetics",
+     "beauty products",
+     "toiletries",
+     "makeup"
+    ],
+    "vi": "mỹ phẩm"
+   },
+   "output": {
+    "id": "wk-17630-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The English sense is 'the study of cosmetics', whereas '化粧品' and 'mỹ phẩm' refer to the cosmetic products themselves."
+   }
+  },
+  {
+   "key": "470e1cfdc162bff5b48439de8f76e852b9a5886e2dca65d13a1724806c2a382d",
+   "input": {
+    "id": "wk-1768-s0",
+    "en": "chromosome",
+    "en_pos": "noun",
+    "en_sense": "A linear arrangement of condensed DNA and associated proteins (such as chaperone proteins) which contains the genetic material (genome) of an organism.",
+    "ja": "染色体",
+    "ja_reading": "せんしょくたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chromosome"
+    ],
+    "vi": "chất sinh sắt"
+   },
+   "output": {
+    "id": "wk-1768-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'chất sinh sắt' is incorrect and nonsensical; the standard term for chromosome is 'nhiễm sắc thể'."
+   }
+  }
+ ]
+}

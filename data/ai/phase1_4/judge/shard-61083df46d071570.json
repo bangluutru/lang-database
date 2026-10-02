@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:40:39Z",
+ "items": [
+  {
+   "key": "e2ead179b638d70359ea3dc1b319138a83e374df74a00a771b6c17172e9e4a5a",
+   "input": {
+    "id": "wk-27733-s0",
+    "en": "bevy",
+    "en_pos": "noun",
+    "en_sense": "A group of animals, especially quail, roe deer or other game.",
+    "ja": "群れ",
+    "ja_reading": "むれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "group",
+     "crowd",
+     "flock",
+     "herd",
+     "bevy",
+     "school"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27733-s0",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "群れ is a general term for a group of animals (flock, herd, school), while 'bevy' is a specific collective noun for certain animals like quail or roe deer, so the Japanese is too broad."
+   }
+  },
+  {
+   "key": "ed1835fbeb00002951f329a40a70b3194e8d9b09f822d13c6886260f203f7530",
+   "input": {
+    "id": "wk-2785-s2",
+    "en": "dry",
+    "en_pos": "verb",
+    "en_sense": "To exhaust; to cause to run dry.",
+    "ja": "乾く",
+    "ja_reading": "かわく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to get dry"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2785-s2",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "乾く is an intransitive verb meaning 'to become physically dry', whereas the English sense 'to exhaust; to cause to run dry' is transitive or figurative. The correct Japanese would be something like 枯渇する (kokatsu suru)."
+   }
+  },
+  {
+   "key": "15c8c8d6e2a812116b92a7d8112c2485356216135ca582552b2ff5d9c6f1600e",
+   "input": {
+    "id": "wk-2787-s0",
+    "en": "doubt",
+    "en_pos": "noun",
+    "en_sense": "Disbelief or uncertainty (about something); (countable) a particular instance of such disbelief or uncertainty.",
+    "ja": "疑い",
+    "ja_reading": "うたがい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "doubt",
+     "question",
+     "uncertainty",
+     "skepticism",
+     "scepticism",
+     "suspicion"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2787-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "疑い is a standard and direct equivalent for 'doubt' in the sense of uncertainty or disbelief."
+   }
+  },
+  {
+   "key": "969eaed5c6d471207251c826660a49178532fb44578e4e681b4867d60073e185",
+   "input": {
+    "id": "wk-2788-s3",
+    "en": "different",
+    "en_pos": "adjective",
+    "en_sense": "Unlike most others; unusual.",
+    "ja": "変わった",
+    "ja_reading": "かわった",
+    "ja_pos": "adj-f",
+    "ja_glosses": [
+     "unusual",
+     "abnormal",
+     "strange",
+     "odd",
+     "peculiar",
+     "weird"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2788-s3",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "変わった is a perfect and idiomatic translation for the specific sense of 'different' meaning 'unusual' or 'peculiar'."
+   }
+  },
+  {
+   "key": "9be2f2a4cb0d138e44df357911e9044ee9f8553a066ee25517438bdd393ccdaf",
+   "input": {
+    "id": "wk-27900-s0",
+    "en": "fluorescent lamp",
+    "en_pos": "noun",
+    "en_sense": "A gas-discharge lamp that uses fluorescence to produce visible light, especially one consisting of a tube filled with mercury vapour which emits ultraviolet radiation when an electric current is passed through it, causing fluorescence when the radiation hits a phosphor coating on the interior of the",
+    "ja": "蛍光灯",
+    "ja_reading": "けいこうとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fluorescent lamp",
+     "fluorescent light"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27900-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "蛍光灯 is the standard, technical term for 'fluorescent lamp'."
+   }
+  },
+  {
+   "key": "f38bb6e27c628fb5d0eb166123dd94efe0560bde5e545d8fb47d833786e395d5",
+   "input": {
+    "id": "wk-2795-s1",
+    "en": "depth",
+    "en_pos": "noun",
+    "en_sense": "the distance between the front and the back, as the depth of a drawer or closet",
+    "ja": "奥行き",
+    "ja_reading": "おくゆき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "depth",
+     "length"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2795-s1",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "奥行き is the precise Japanese word for the front-to-back dimension of an object or space, perfectly matching the specified sense of 'depth'."
+   }
+  },
+  {
+   "key": "0c1dd1210da82ba79682e58c775f4014c553208e4e994bc364e03a2339f9b39a",
+   "input": {
+    "id": "wk-2797-s5",
+    "en": "end",
+    "en_pos": "noun",
+    "en_sense": "Result.",
+    "ja": "結末",
+    "ja_reading": "けつまつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "end",
+     "conclusion"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2797-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "結末 correctly captures the sense of 'end' as a final result, conclusion, or outcome, especially of a story or event."
+   }
+  },
+  {
+   "key": "5e0797ed3a846bee9d1b9c7b04e8fd5c4f6765b89563cdcb4521dcf25ecf8e4d",
+   "input": {
+    "id": "wk-27972-s0",
+    "en": "indirectness",
+    "en_pos": "noun",
+    "en_sense": "The condition of being indirect.",
+    "ja": "間接",
+    "ja_reading": "かんせつ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "indirection",
+     "indirectness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27972-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "間接 is the standard Japanese word for 'indirectness', the direct counterpart to 直接 (directness)."
+   }
+  },
+  {
+   "key": "6f4a664c655c1885cfdc25e200721d7b1485e4f1c20a6d2c65e6a5dc3aedff0e",
+   "input": {
+    "id": "wk-27974-s0",
+    "en": "inevitability",
+    "en_pos": "noun",
+    "en_sense": "The condition of being inevitable.",
+    "ja": "必然",
+    "ja_reading": "ひつぜん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "inevitability",
+     "necessity"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-27974-s0",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "必然 is the standard and precise translation for 'inevitability'."
+   }
+  },
+  {
+   "key": "f56be3a578361b2341f26e1c792a6311b525513213adf36d8a1d39cfa7c1c30d",
+   "input": {
+    "id": "wk-2801-s7",
+    "en": "flat",
+    "en_pos": "adjective",
+    "en_sense": "Without variations in pitch.",
+    "ja": "平板",
+    "ja_reading": "へいばん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "monotonous",
+     "dull",
+     "flat",
+     "boring"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2801-s7",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "平板 is the ideal word to describe something, especially speech, that is 'flat' in the sense of being monotonous and lacking pitch variation."
+   }
+  },
+  {
+   "key": "018720e358a0a67e1f6880ae838854cfaafd4284a3b927ce00842aa58f81da86",
+   "input": {
+    "id": "wk-2802-s5",
+    "en": "flat",
+    "en_pos": "noun",
+    "en_sense": "A note played one chromatic semitone lower than a natural, denoted by the symbol ♭ placed after the letter representing the note (e.g., B♭) or in front of the note symbol (e.g. ♭♪).",
+    "ja": "変",
+    "ja_reading": "へん",
+    "ja_pos": "n-pref",
+    "ja_glosses": [
+     "flat"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2802-s5",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "変 is the standard Japanese musical term for 'flat' (♭), used as a prefix to a note name."
+   }
+  },
+  {
+   "key": "a07f42832e1084520650b7653ec1e1b3b556fed0c5dc2af9dfe9086e6d02f73a",
+   "input": {
+    "id": "wk-2809-s2",
+    "en": "crisis",
+    "en_pos": "noun",
+    "en_sense": "A sudden change in the course of a disease, usually at which point the patient is expected to either recover or die.",
+    "ja": "分利",
+    "ja_reading": "ぶんり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "crisis (in an illness)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "wk-2809-s2",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE",
+     "UNNATURAL_JA"
+    ],
+    "note": "While 分利 technically means a medical crisis, it is an archaic and extremely rare word. Modern Japanese would use 峠 (tōge) or the loanword クライシス (kuraishisu)."
+   }
+  }
+ ]
+}

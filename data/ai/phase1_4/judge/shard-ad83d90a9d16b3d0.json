@@ -1,0 +1,398 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:13:53Z",
+ "items": [
+  {
+   "key": "0ec7fda4886155c304da065f21479c39c1f61c0689296769f4921bb3ab8c83b2",
+   "input": {
+    "id": "wk-6561-s0",
+    "en": "yang",
+    "en_pos": "noun",
+    "en_sense": "A principle in Chinese and related East Asian philosophies associated with bright, hot, masculine, etc. elements of the natural world.",
+    "ja": "陽",
+    "ja_reading": "よう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "yang (in Chinese divination)"
+    ],
+    "vi": "dương"
+   },
+   "output": {
+    "id": "wk-6561-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are direct cognates from Chinese 陽 and refer to the exact same philosophical concept."
+   }
+  },
+  {
+   "key": "1b10a772716c5fb5200574e88f950336a1748b9e462dea09ef2bc7ae6dc94e9d",
+   "input": {
+    "id": "wk-6563-s0",
+    "en": "attic",
+    "en_pos": "noun",
+    "en_sense": "The space, often unfinished and with sloped walls, directly below the roof in the uppermost part of a house or other building, generally used for storage or habitation.",
+    "ja": "屋根裏",
+    "ja_reading": "やねうら",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "attic",
+     "loft"
+    ],
+    "vi": "gác"
+   },
+   "output": {
+    "id": "wk-6563-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'gác' is broader than 'attic', often referring to a mezzanine or any upper level, while '屋根裏' specifically means the space under the roof."
+   }
+  },
+  {
+   "key": "ade504f60c4cf6ec4b2746ffff7d422d4f79bfc66026814aeaf0107b3bf1c6a5",
+   "input": {
+    "id": "wk-6568-s0",
+    "en": "ugly",
+    "en_pos": "adjective",
+    "en_sense": "Displeasing to the eye; aesthetically unpleasing.",
+    "ja": "醜い",
+    "ja_reading": "みにくい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "ugly",
+     "unattractive",
+     "bad-looking"
+    ],
+    "vi": "xấu"
+   },
+   "output": {
+    "id": "wk-6568-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the most common and direct equivalents for 'ugly' in the aesthetic sense."
+   }
+  },
+  {
+   "key": "c9d6485aa5fabafdc6af0503f5f77c3d35eb6a7220bcc3b19b95793c7502e1f3",
+   "input": {
+    "id": "wk-657-s0",
+    "en": "poison",
+    "en_pos": "noun",
+    "en_sense": "A substance that is harmful or lethal to a living organism when ingested.",
+    "ja": "毒",
+    "ja_reading": "どく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "poison",
+     "toxicant",
+     "venom"
+    ],
+    "vi": "độc"
+   },
+   "output": {
+    "id": "wk-657-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both '毒' and 'độc' are the general words for poison/toxin, and are broader than the English sense which is strictly limited to ingested substances."
+   }
+  },
+  {
+   "key": "73d0fc01fabd4c96de2b7c61a3d80592879da0673993fe1f656011edd5a61cb9",
+   "input": {
+    "id": "wk-6570-s0",
+    "en": "pity",
+    "en_pos": "verb",
+    "en_sense": "To feel pity for (someone or something).",
+    "ja": "同情する",
+    "ja_reading": "どうじょうする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "sympathy",
+     "compassion",
+     "pity"
+    ],
+    "vi": "tội"
+   },
+   "output": {
+    "id": "wk-6570-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tội' is not a verb meaning 'to pity'; it's an adjective or interjection expressing pity, and as a noun it means 'sin' or 'crime'."
+   }
+  },
+  {
+   "key": "18920587b9f9def91b5973320c659cf8844284292913773fabe9043ac4bdc891",
+   "input": {
+    "id": "wk-6573-s0",
+    "en": "ankle",
+    "en_pos": "noun",
+    "en_sense": "The skeletal joint which connects the foot with the leg; the uppermost portion of the foot and lowermost portion of the leg, which contain this skeletal joint.",
+    "ja": "足首",
+    "ja_reading": "あしくび",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ankle"
+    ],
+    "vi": "mắt cá"
+   },
+   "output": {
+    "id": "wk-6573-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'mắt cá' specifically means 'ankle bone' (malleolus), not the entire ankle joint, which is 'cổ chân'."
+   }
+  },
+  {
+   "key": "2b03a3408e1aec1eb9b6d9275bf0e55a45706e2197ab6ce79910f27cf5fe918f",
+   "input": {
+    "id": "wk-6575-s0",
+    "en": "anger",
+    "en_pos": "verb",
+    "en_sense": "To cause such a feeling of antagonism in.",
+    "ja": "怒らせる",
+    "ja_reading": "おこらせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to make (someone) angry",
+     "to anger",
+     "to offend",
+     "to rile up",
+     "to provoke (to anger)"
+    ],
+    "vi": "làm ai tức giận"
+   },
+   "output": {
+    "id": "wk-6575-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three entries correctly denote the causative action of making someone angry, with the Vietnamese being a common phrase rather than a single verb."
+   }
+  },
+  {
+   "key": "6cc5d89ed93946202aa38e64a947b0259e7851db392ded8d0fcdb53b5e0fdfdd",
+   "input": {
+    "id": "wk-6583-e:6ef9ae",
+    "en": "yard",
+    "en_pos": "noun",
+    "en_sense": "land around a house",
+    "ja": "庭",
+    "ja_reading": "にわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "garden",
+     "yard",
+     "courtyard"
+    ],
+    "vi": "sân"
+   },
+   "output": {
+    "id": "wk-6583-e:6ef9ae",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "Vietnamese 'sân' means a paved yard or courtyard, not the grassy lawn or garden area typically associated with the English 'yard' (which is 'vườn')."
+   }
+  },
+  {
+   "key": "cb537b1722964b45ac42cbf5c69e22d75c1cd5b0ab8421b24d2ea6f8629402df",
+   "input": {
+    "id": "wk-6583-s2",
+    "en": "yard",
+    "en_pos": "noun",
+    "en_sense": "An enclosed outdoors area designated for a specific purpose, e.g. on farms, railways etc.",
+    "ja": "置き場",
+    "ja_reading": "おきば",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "place to put something",
+     "storage space",
+     "storehouse",
+     "depository",
+     "repository",
+     "shed"
+    ],
+    "vi": "sân"
+   },
+   "output": {
+    "id": "wk-6583-s2",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese '置き場' is too specific, meaning 'storage place', while the English 'yard' and Vietnamese 'sân' in this context refer to any designated open area."
+   }
+  },
+  {
+   "key": "8d69fe551e9300c89e38790f176c6f20ba9031db7d261f9e942747c3e12059d2",
+   "input": {
+    "id": "wk-6584-e:26728f",
+    "en": "yard",
+    "en_pos": "noun",
+    "en_sense": "three feet",
+    "ja": "ヤード",
+    "ja_reading": "ヤード",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "yard (unit of distance)"
+    ],
+    "vi": "thước anh"
+   },
+   "output": {
+    "id": "wk-6584-e:26728f",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard way to refer to the unit of measurement 'yard' in their respective languages."
+   }
+  },
+  {
+   "key": "fcc2b13aee15537b7b8993c559f90bbb8e11b61c3b28662b66b29acb2459e6c4",
+   "input": {
+    "id": "wk-6585-s0",
+    "en": "infant",
+    "en_pos": "noun",
+    "en_sense": "A very young human being, from birth to somewhere between six months and two years of age after birth, needing almost constant care and attention.",
+    "ja": "乳児",
+    "ja_reading": "にゅうじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "infant (below 1 year old)",
+     "suckling baby"
+    ],
+    "vi": "trẻ sơ sinh"
+   },
+   "output": {
+    "id": "wk-6585-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both the Japanese '乳児' (infant under 1 year) and Vietnamese 'trẻ sơ sinh' (newborn) are significantly narrower in age range than the English 'infant' (up to 2 years)."
+   }
+  },
+  {
+   "key": "9b259c63dabf780a457ec159638f6acde76501cb291d7a48e85958128683815f",
+   "input": {
+    "id": "wk-6587-s0",
+    "en": "teenager",
+    "en_pos": "noun",
+    "en_sense": "A person between thirteen and nineteen years old (inclusive).",
+    "ja": "ティーンエージャー",
+    "ja_reading": "ティーンエージャー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "teenager"
+    ],
+    "vi": "thiếu niên"
+   },
+   "output": {
+    "id": "wk-6587-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thiếu niên' is a less precise term for 'youth' or 'early adolescent' and does not map exactly to the 13-19 age range of 'teenager'."
+   }
+  }
+ ]
+}

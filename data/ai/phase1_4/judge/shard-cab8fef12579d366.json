@@ -1,0 +1,381 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:02:53Z",
+ "items": [
+  {
+   "key": "ff5729d2648805e0e140f01b16bed10f1e474cbe49cbb60bf3201f87b89ca504",
+   "input": {
+    "id": "wk-8829-s0",
+    "en": "scarf",
+    "en_pos": "noun",
+    "en_sense": "A long, often knitted, garment worn around the neck.",
+    "ja": "襟巻き",
+    "ja_reading": "えりまき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "scarf (esp. one worn for warmth)",
+     "muffler"
+    ],
+    "vi": "khăn quàng"
+   },
+   "output": {
+    "id": "wk-8829-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and accurate equivalents for a scarf worn around the neck for warmth."
+   }
+  },
+  {
+   "key": "ad66b99272275b08a29551ed44c40a7488cf427e03aa32c849a633fb324223e5",
+   "input": {
+    "id": "wk-884-s1",
+    "en": "midnight",
+    "en_pos": "noun",
+    "en_sense": "Twelve o'clock at night exactly.",
+    "ja": "正子",
+    "ja_reading": "しょうし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "midnight"
+    ],
+    "vi": "đêm"
+   },
+   "output": {
+    "id": "wk-884-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'đêm' means 'night', not 'midnight', and the Japanese '正子' is a correct but rare/formal term for exactly midnight."
+   }
+  },
+  {
+   "key": "893f8831ae30c5bc8e7e24f3deeb9bfd89d4f0fd53b65ad8a02ea750844f6115",
+   "input": {
+    "id": "wk-8846-s1",
+    "en": "mulberry",
+    "en_pos": "noun",
+    "en_sense": "The fruit of this tree.",
+    "ja": "桑",
+    "ja_reading": "くわ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mulberry (tree)"
+    ],
+    "vi": "dâu"
+   },
+   "output": {
+    "id": "wk-8846-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word '桑' (kuwa) refers to the mulberry tree, not the fruit as specified in the English sense."
+   }
+  },
+  {
+   "key": "04efceb04ebfc9fda3c480eebdc73d4309b5faae1b02a9235bcf8ee815814681",
+   "input": {
+    "id": "wk-8849-s5",
+    "en": "fabric",
+    "en_pos": "noun",
+    "en_sense": "A material made of fibers; especially, a woven one.",
+    "ja": "織物",
+    "ja_reading": "おりもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "textile",
+     "fabric"
+    ],
+    "vi": "vải"
+   },
+   "output": {
+    "id": "wk-8849-s5",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural equivalents for fabric, especially woven fabric."
+   }
+  },
+  {
+   "key": "0ede6d86b87fcbe94f7ec2e5efbb2abec08c2f7530e759608fdc6b505c22610e",
+   "input": {
+    "id": "wk-885-e:178a29",
+    "en": "mouse",
+    "en_pos": "noun",
+    "en_sense": "computing: input device",
+    "ja": "マウス",
+    "ja_reading": "マウス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mouse (esp. a laboratory mouse)"
+    ],
+    "vi": "chuột"
+   },
+   "output": {
+    "id": "wk-885-e:178a29",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese headword 'マウス' is correct for 'computer mouse', but its provided English gloss refers to the animal and must be corrected."
+   }
+  },
+  {
+   "key": "3d77e737731ffb2e3f1bb13bae5ba44e109363bd2798d1443badae2b6e91dd1a",
+   "input": {
+    "id": "wk-885-s1",
+    "en": "mouse",
+    "en_pos": "noun",
+    "en_sense": "Such a rodent that is of the genus Mus.",
+    "ja": "ネズミ",
+    "ja_reading": "ネズミ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mouse",
+     "rat"
+    ],
+    "vi": "chuột"
+   },
+   "output": {
+    "id": "wk-885-s1",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both 'ネズミ' and 'chuột' are broader terms covering both mice and rats, but they are the standard and most natural translations for 'mouse' in general use."
+   }
+  },
+  {
+   "key": "9dd3dc3caade46dda387a541705011a63b3ed75767eb9379e4256d7df81db053",
+   "input": {
+    "id": "wk-8856-e:920952",
+    "en": "watermelon",
+    "en_pos": "noun",
+    "en_sense": "fruit",
+    "ja": "すいか",
+    "ja_reading": "すいか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "watermelon (Citrullus lanatus)"
+    ],
+    "vi": "dưa hấu"
+   },
+   "output": {
+    "id": "wk-8856-e:920952",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect correspondence between all three standard terms for watermelon."
+   }
+  },
+  {
+   "key": "7e80366a9e0f384673c29dbbb04b7fe278b55e042ac1391ced534c4b08d2f27a",
+   "input": {
+    "id": "wk-8857-s1",
+    "en": "jar",
+    "en_pos": "noun",
+    "en_sense": "A small, approximately cylindrical container, normally made of clay or glass, for holding fruit, preserves, etc., or for ornamental purposes.",
+    "ja": "ジャー",
+    "ja_reading": "ジャー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "jar"
+    ],
+    "vi": "hủ"
+   },
+   "output": {
+    "id": "wk-8857-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese 'ジャー' is a direct loanword and less natural than '瓶' (bin) for a general-purpose jar."
+   }
+  },
+  {
+   "key": "51f857f6efb6fb10b92f697d4372d1fbaa9e27e03627ddda8bd9d6a013fc1d73",
+   "input": {
+    "id": "wk-8858-s0",
+    "en": "purse",
+    "en_pos": "noun",
+    "en_sense": "A small bag for carrying money.",
+    "ja": "パース",
+    "ja_reading": "パース",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "purse",
+     "change purse",
+     "wallet"
+    ],
+    "vi": "ví"
+   },
+   "output": {
+    "id": "wk-8858-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese word 'パース' is not the correct or natural term for a purse; '財布' (saifu) is the standard equivalent."
+   }
+  },
+  {
+   "key": "2cf8e01dbaf4766df18da0a5c3f89c93a5b53a1e18318bcb5d6cea36bd03c44c",
+   "input": {
+    "id": "wk-8862-s0",
+    "en": "terrorist",
+    "en_pos": "noun",
+    "en_sense": "A person, group, or organization that uses violent action, or the threat of violent action, to further political goals.",
+    "ja": "テロリスト",
+    "ja_reading": "テロリスト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "terrorist"
+    ],
+    "vi": "người khủng bố"
+   },
+   "output": {
+    "id": "wk-8862-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural, and direct equivalents for 'terrorist'."
+   }
+  },
+  {
+   "key": "fe57e798be8ea155acf412966027093d82954ea6dae9185dff2d901ee31f8b77",
+   "input": {
+    "id": "wk-8864-s0",
+    "en": "parcel",
+    "en_pos": "noun",
+    "en_sense": "A package wrapped, as for shipment or transport.",
+    "ja": "小包",
+    "ja_reading": "こづつみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "parcel",
+     "package"
+    ],
+    "vi": "gói"
+   },
+   "output": {
+    "id": "wk-8864-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good, standard equivalents for a parcel or package."
+   }
+  },
+  {
+   "key": "6f8e76dbe82038d3166202256e137b4d9372a18782b82020e5339fc0a97f584c",
+   "input": {
+    "id": "wk-8865-s0",
+    "en": "bud",
+    "en_pos": "noun",
+    "en_sense": "A newly sprouted leaf or blossom that has not yet unfolded.",
+    "ja": "蕾",
+    "ja_reading": "つぼみ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(flower) bud"
+    ],
+    "vi": "chồi"
+   },
+   "output": {
+    "id": "wk-8865-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word '蕾' (tsubomi) is too narrow as it only refers to a flower bud, whereas the English 'bud' can also be a leaf bud."
+   }
+  }
+ ]
+}

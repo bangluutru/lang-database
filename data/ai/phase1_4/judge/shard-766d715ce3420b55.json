@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:29:40Z",
+ "items": [
+  {
+   "key": "ec458fbb8f77d696cbe7b659807f619d81d35e2c107bfa4f77bdf995c771fdb8",
+   "input": {
+    "id": "jm-1258330-0-canine",
+    "en": "canine",
+    "en_pos": "noun",
+    "en_sense": "dog (Canis (lupus) familiaris); canine",
+    "ja": "犬",
+    "ja_reading": "いぬ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dog (Canis (lupus) familiaris)",
+     "canine"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1258330-0-canine",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The English 'canine' (noun) is a formal/scientific term, while the Japanese '犬' (inu) is the common, everyday word for 'dog'."
+   }
+  },
+  {
+   "key": "658b81b04178ebd80be722e4a3a1f23b6f8a709c0d8b5d963e53512c35b339a1",
+   "input": {
+    "id": "jm-1258500-0-menu",
+    "en": "menu",
+    "en_pos": "noun",
+    "en_sense": "menu; bill of fare",
+    "ja": "献立",
+    "ja_reading": "こんだて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "menu",
+     "bill of fare"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1258500-0-menu",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "While '献立' (kondate) means menu, the loanword 'メニュー' (menyuu) is far more common for a restaurant menu, which a learner is more likely to need."
+   }
+  },
+  {
+   "key": "c5938c2f3c30065ea5db542d5e3b8e4d3ce44d7512897a27f859987fda8c4cd1",
+   "input": {
+    "id": "jm-1259240-1-show",
+    "en": "show",
+    "en_pos": "noun",
+    "en_sense": "show; exhibition; spectacle; freakshow; side show",
+    "ja": "見せ物",
+    "ja_reading": "みせもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "show",
+     "exhibition",
+     "spectacle",
+     "freakshow",
+     "side show"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259240-1-show",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for the specific sense of 'show' as a spectacle, exhibition, or sideshow."
+   }
+  },
+  {
+   "key": "d308633bcf0b8c2c65cfaf878022a7b54d35f549014029a087453e69eefbeb99",
+   "input": {
+    "id": "jm-1259370-0-overlook",
+    "en": "overlook",
+    "en_pos": "verb",
+    "en_sense": "to overlook; to command a view of; to look down on",
+    "ja": "見下ろす",
+    "ja_reading": "みおろす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to overlook",
+     "to command a view of",
+     "to look down on"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259370-0-overlook",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the physical sense of 'overlook' meaning to command a view from above."
+   }
+  },
+  {
+   "key": "35b1681624c2ce58cc720d9449d2fb87ea7a904209d87a386d8a1adb0d3d8534",
+   "input": {
+    "id": "jm-1259390-0-opinion",
+    "en": "opinion",
+    "en_pos": "noun",
+    "en_sense": "opinion; point of view",
+    "ja": "見解",
+    "ja_reading": "けんかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "opinion",
+     "point of view"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259390-0-opinion",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "'見解' (kenkai) is a formal word for an official opinion or viewpoint; the common, general word for 'opinion' is '意見' (iken)."
+   }
+  },
+  {
+   "key": "28ae3454c9b9cffe6e1df8adda0431422d9a80e43bdc1e883bd94c8235b1c14a",
+   "input": {
+    "id": "jm-1259440-0-inspection",
+    "en": "inspection",
+    "en_pos": "noun",
+    "en_sense": "inspection; study by observation; field trip; tour; review",
+    "ja": "見学",
+    "ja_reading": "けんがく",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "inspection",
+     "study by observation",
+     "field trip",
+     "tour",
+     "review"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259440-0-inspection",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent match for the sense of 'inspection' as a study tour, observation, or field trip ('kengaku')."
+   }
+  },
+  {
+   "key": "5641c093a8df03fb2b89f6e514c10954329267ca773f4abcf67f045d3aa871e6",
+   "input": {
+    "id": "jm-1259570-1-postpone",
+    "en": "postpone",
+    "en_pos": "verb",
+    "en_sense": "to postpone; to put off; to withhold; to abandon",
+    "ja": "見合わせる",
+    "ja_reading": "みあわせる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to postpone",
+     "to put off",
+     "to withhold",
+     "to abandon"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259570-1-postpone",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good match for 'postpone', especially with the nuance of 'waiting to see' before proceeding."
+   }
+  },
+  {
+   "key": "45a28f829204ebbd3415ff977ca013d8c5db30f71e5b868d45b52ef710897419",
+   "input": {
+    "id": "jm-1259770-0-view",
+    "en": "view",
+    "en_pos": "noun",
+    "en_sense": "(scenic) view; prospect; outlook",
+    "ja": "見晴らし",
+    "ja_reading": "みはらし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(scenic) view",
+     "prospect",
+     "outlook"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259770-0-view",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the sense of a broad, scenic view or prospect."
+   }
+  },
+  {
+   "key": "1a34904a927ac3f7b58777ede607c7a4c88c4dd7a87b912cdb2f0bff64bfc67d",
+   "input": {
+    "id": "jm-1259790-0-estimate",
+    "en": "estimate",
+    "en_pos": "verb",
+    "en_sense": "to estimate",
+    "ja": "見積もる",
+    "ja_reading": "みつもる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to estimate"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259790-0-estimate",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "'見積もる' (mitsumoru) is the standard and natural verb for 'to estimate', especially for costs, time, or quantity."
+   }
+  },
+  {
+   "key": "5abba8eba6c278976cef59c0744d87cafc9a81257f329169bcf2570dddad0ce9",
+   "input": {
+    "id": "jm-1259820-1-postponement",
+    "en": "postponement",
+    "en_pos": "noun",
+    "en_sense": "deferment; postponement; shelving",
+    "ja": "見送り",
+    "ja_reading": "みおくり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "deferment",
+     "postponement",
+     "shelving"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259820-1-postponement",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "'見送り' (miokuri) can mean postponement, but its primary meaning is 'seeing someone off'; '延期' (enki) is the more common and direct word."
+   }
+  },
+  {
+   "key": "c42196adbf75cf97b60bf1201474e4e576b6adde9a9c80a16d830d8808827af1",
+   "input": {
+    "id": "jm-1259900-1-review",
+    "en": "review",
+    "en_pos": "verb",
+    "en_sense": "to re-examine (policy, estimate, plan, etc.); to review",
+    "ja": "見直す",
+    "ja_reading": "みなおす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to re-examine (policy, estimate, plan, etc.)",
+     "to review"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259900-1-review",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect match for the sense of 'review' as in re-examining a plan, policy, or estimate."
+   }
+  },
+  {
+   "key": "d19c57001024f6fbfb59b414f40cb78ea467d34202393db9380b50e7611001e1",
+   "input": {
+    "id": "jm-1259930-0-estimate",
+    "en": "estimate",
+    "en_pos": "noun",
+    "en_sense": "estimate; guess; conjecture; aim",
+    "ja": "見当",
+    "ja_reading": "けんとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "estimate",
+     "guess",
+     "conjecture",
+     "aim"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1259930-0-estimate",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good match for 'estimate' in the sense of a guess, approximation, or general idea ('kentou')."
+   }
+  }
+ ]
+}

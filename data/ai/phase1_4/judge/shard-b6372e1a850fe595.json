@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:12Z",
+ "items": [
+  {
+   "key": "a91bbba2574b96bf677556a147edafb886ad9c92362e31fdd2d03a6732426211",
+   "input": {
+    "id": "wk-6659-e:735396",
+    "en": "step",
+    "en_pos": "verb",
+    "en_sense": "intransitive: to move the foot in walking",
+    "ja": "踏む",
+    "ja_reading": "ふむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to step on",
+     "to tread on",
+     "to trample on"
+    ],
+    "vi": "bước"
+   },
+   "output": {
+    "id": "wk-6659-e:735396",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word 踏む (fumu) is a transitive verb meaning 'to step on', while the English sense is intransitive 'to step'."
+   }
+  },
+  {
+   "key": "a1e8443597de54b89db4d301a643d18eb6a259659c4c53db4ff9d22a01521bcb",
+   "input": {
+    "id": "wk-666-s0",
+    "en": "index",
+    "en_pos": "noun",
+    "en_sense": "An alphabetical listing of items and their location.",
+    "ja": "索引",
+    "ja_reading": "さくいん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "index (in a book)"
+    ],
+    "vi": "chỉ số"
+   },
+   "output": {
+    "id": "wk-666-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'chỉ số' means a numerical index or indicator, not an alphabetical index in a book."
+   }
+  },
+  {
+   "key": "61f6897903a57fe937ddbaaac2124f3a8f54c3ca7b259859f56499760087b95c",
+   "input": {
+    "id": "wk-6661-s0",
+    "en": "large",
+    "en_pos": "adjective",
+    "en_sense": "Of considerable or relatively great size or extent.",
+    "ja": "大きい",
+    "ja_reading": "おおきい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "big",
+     "large",
+     "great"
+    ],
+    "vi": "rộng"
+   },
+   "output": {
+    "id": "wk-6661-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese word 'rộng' means 'wide' or 'spacious' and is too narrow for the general sense of 'large', for which 'to' or 'lớn' would be better."
+   }
+  },
+  {
+   "key": "92bb6976aed31d4967c4ae5680f9a11e69113665556461cf6df6516779e8a4e8",
+   "input": {
+    "id": "wk-6662-s0",
+    "en": "ski",
+    "en_pos": "noun",
+    "en_sense": "One of a pair of long flat runners designed for gliding over snow or water.",
+    "ja": "スキー",
+    "ja_reading": "スキー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ski",
+     "skis"
+    ],
+    "vi": "xki"
+   },
+   "output": {
+    "id": "wk-6662-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY"
+    ],
+    "note": "The Vietnamese 'xki' is a non-standard and unnatural transliteration; the correct term is 'ván trượt tuyết'."
+   }
+  },
+  {
+   "key": "a494ff6415a3441bc9bd8447e7ceec1a33521e578b4cd2e18c669bf238de51d8",
+   "input": {
+    "id": "wk-6664-s0",
+    "en": "carrot",
+    "en_pos": "noun",
+    "en_sense": "A vegetable with a nutritious, juicy, sweet root that is often orange in colour, Daucus carota, family Apiaceae, especially the subspecies sativus.",
+    "ja": "にんじん",
+    "ja_reading": "にんじん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "carrot (Daucus carota)"
+    ],
+    "vi": "cà rốt"
+   },
+   "output": {
+    "id": "wk-6664-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'carrot' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "37e438408d7b89c5dbd59c6a7c3a4f9a97198b044fc58e793eefb2e791f1fc2d",
+   "input": {
+    "id": "wk-6667-s2",
+    "en": "move",
+    "en_pos": "verb",
+    "en_sense": "To change residence, for example from one house, town, or state, to another; to go and live at another place; similarly to change the location of another establishment such as a business. See also move out and move in.",
+    "ja": "移る",
+    "ja_reading": "うつる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to move (to another place or state)",
+     "to change (e.g. of state, affiliation, scenery, etc.)",
+     "to be transferred"
+    ],
+    "vi": "chuyển"
+   },
+   "output": {
+    "id": "wk-6667-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "While more specific compounds exist (e.g., 引っ越す, chuyển nhà), the provided verbs are the correct core verbs for 'move/transfer' and are suitable for this sense."
+   }
+  },
+  {
+   "key": "bf4b2f7976a7fd183892deeb55a6256d42df1988d04a14952c9f3a560393c984",
+   "input": {
+    "id": "wk-6669-s0",
+    "en": "dune",
+    "en_pos": "noun",
+    "en_sense": "A ridge or hill of sand piled up by currents of wind or water.",
+    "ja": "砂丘",
+    "ja_reading": "さきゅう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sand dune",
+     "sand hill"
+    ],
+    "vi": "cồn cát"
+   },
+   "output": {
+    "id": "wk-6669-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for 'sand dune' and are perfect equivalents."
+   }
+  },
+  {
+   "key": "93bf968dfdbd5a85b9d1b15e3ac23faca3391a1dba68570ac773ff22e5454160",
+   "input": {
+    "id": "wk-6671-s0",
+    "en": "graphic",
+    "en_pos": "adjective",
+    "en_sense": "Drawn, pictorial.",
+    "ja": "写実的",
+    "ja_reading": "しゃじつてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "realistic",
+     "graphic",
+     "true to life"
+    ],
+    "vi": "đồ hoạ"
+   },
+   "output": {
+    "id": "wk-6671-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word means 'realistic' and the Vietnamese word is a noun for 'graphics'; neither matches the English sense 'drawn, pictorial'."
+   }
+  },
+  {
+   "key": "ea8531e30d95827687f99262e8d0e3a019b75585060262a6d5cf716c7507f83d",
+   "input": {
+    "id": "wk-6671-s1",
+    "en": "graphic",
+    "en_pos": "adjective",
+    "en_sense": "Explicit, vivid, descriptive, often in relation to depictions of sex or violence.",
+    "ja": "生々しい",
+    "ja_reading": "なまなましい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "vivid (memory, description, etc.)",
+     "fresh",
+     "graphic",
+     "raw",
+     "true-to-life",
+     "first-hand (experience)"
+    ],
+    "vi": "sinh động"
+   },
+   "output": {
+    "id": "wk-6671-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'sinh động' means 'vivid' in a neutral or positive way, lacking the 'explicit, raw, often unpleasant' connotation of this sense of 'graphic'."
+   }
+  },
+  {
+   "key": "636b2fae8c4a703d38f340c57204c79b1fad57f5fd3d0acef5de325f99b4190f",
+   "input": {
+    "id": "wk-6673-s1",
+    "en": "ceiling",
+    "en_pos": "noun",
+    "en_sense": "The upper limit of an object or action.",
+    "ja": "天井",
+    "ja_reading": "てんじょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "ceiling"
+    ],
+    "vi": "trần"
+   },
+   "output": {
+    "id": "wk-6673-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words work for both the literal sense of a room's ceiling and the metaphorical sense of an upper limit."
+   }
+  },
+  {
+   "key": "f490c5f93e7cfb676f203dc99b91f15f3e48cf4768912dd0ed1b2ab3d494589c",
+   "input": {
+    "id": "wk-6675-e:033409",
+    "en": "gland",
+    "en_pos": "noun",
+    "en_sense": "organ that synthesizes and secretes substance",
+    "ja": "腺",
+    "ja_reading": "せん",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "gland"
+    ],
+    "vi": "tuyến"
+   },
+   "output": {
+    "id": "wk-6675-e:033409",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct, standard anatomical terms for 'gland'."
+   }
+  },
+  {
+   "key": "bfa21c45470e774a21e18ac76f50c0a241045cdefa573fc5a8f34a47519e78d0",
+   "input": {
+    "id": "wk-6676-s0",
+    "en": "oven",
+    "en_pos": "noun",
+    "en_sense": "A chamber used for baking or heating.",
+    "ja": "オーブン",
+    "ja_reading": "オーブン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "oven"
+    ],
+    "vi": "lò"
+   },
+   "output": {
+    "id": "wk-6676-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese word 'lò' is too broad, meaning any kind of oven, kiln, or furnace; the specific term for a baking oven is 'lò nướng'."
+   }
+  }
+ ]
+}

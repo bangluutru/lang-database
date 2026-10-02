@@ -1,0 +1,394 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:22:30Z",
+ "items": [
+  {
+   "key": "d4fbb89469979d807c314b9bcc661084bd2220979d7935d7e67e630f46d0d7c5",
+   "input": {
+    "id": "wk-7482-s0",
+    "en": "converse",
+    "en_pos": "verb",
+    "en_sense": "To talk; to engage in conversation.",
+    "ja": "話す",
+    "ja_reading": "はなす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to talk",
+     "to speak",
+     "to converse",
+     "to chat"
+    ],
+    "vi": "đối thoại"
+   },
+   "output": {
+    "id": "wk-7482-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese 話す is too broad for 'converse'; 会話する would be a better fit. Vietnamese đối thoại is a good, if slightly formal, match."
+   }
+  },
+  {
+   "key": "e11be68b1c29604f88ff0cecf3df29a2449df80d58fed70215b8478f32a60f76",
+   "input": {
+    "id": "wk-10726-s1",
+    "en": "release",
+    "en_pos": "verb",
+    "en_sense": "To make available to the public.",
+    "ja": "リリースする",
+    "ja_reading": "リリースする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "release (of a film, product, etc.)",
+     "publication"
+    ],
+    "vi": "phát hành"
+   },
+   "output": {
+    "id": "wk-10726-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for releasing a product to the public."
+   }
+  },
+  {
+   "key": "508d969f3a8b6f041d52d74a5090f6e3147e8803d10b29aaf16b782f42c1a18f",
+   "input": {
+    "id": "wk-2997-s0",
+    "en": "fear",
+    "en_pos": "noun",
+    "en_sense": "A strong, unpleasant emotion or feeling caused by actual or perceived danger or threat.",
+    "ja": "恐れ",
+    "ja_reading": "おそれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fear",
+     "horror",
+     "anxiety",
+     "concern",
+     "uneasiness",
+     "reverence"
+    ],
+    "vi": "sự khiếp đảm"
+   },
+   "output": {
+    "id": "wk-2997-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'sự khiếp đảm' means 'terror' or 'horror', which is much stronger and more specific than the general English word 'fear'."
+   }
+  },
+  {
+   "key": "ec6d4a0c261b201193f5add8b9c1a41b8342ce5418bb267aead23f8384f12b16",
+   "input": {
+    "id": "wk-7053-s0",
+    "en": "depart",
+    "en_pos": "verb",
+    "en_sense": "To leave.",
+    "ja": "立ち去る",
+    "ja_reading": "たちさる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to leave",
+     "to depart",
+     "to take one's leave"
+    ],
+    "vi": "đi"
+   },
+   "output": {
+    "id": "wk-7053-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'đi' (to go) is too broad for 'depart'; 'rời đi' or 'khởi hành' would be more accurate depending on context."
+   }
+  },
+  {
+   "key": "806fd5602ed855e76b29334a5a996f44d5e48a1a147231905f4d946ab8186c6c",
+   "input": {
+    "id": "wk-9461-s0",
+    "en": "darn",
+    "en_pos": "verb",
+    "en_sense": "To repair by stitching with thread or yarn, particularly by using a needle to construct a weave across a damaged area of fabric.",
+    "ja": "繕う",
+    "ja_reading": "つくろう",
+    "ja_pos": "v5u,vt",
+    "ja_glosses": [
+     "to mend",
+     "to patch up",
+     "to repair",
+     "to fix",
+     "to darn"
+    ],
+    "vi": "mạng"
+   },
+   "output": {
+    "id": "wk-9461-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents, with Vietnamese 'mạng' being a very specific and accurate translation for 'darn'."
+   }
+  },
+  {
+   "key": "c94d060c63c68d16afdc9865d73610f60e179a1987950f27be1dd5a9ddffdef9",
+   "input": {
+    "id": "wk-2105-s0",
+    "en": "dream",
+    "en_pos": "verb",
+    "en_sense": "To see imaginary events in one's mind while sleeping.",
+    "ja": "夢見る",
+    "ja_reading": "ゆめみる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to dream (of)"
+    ],
+    "vi": "mơ"
+   },
+   "output": {
+    "id": "wk-2105-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence across all three languages for this sense."
+   }
+  },
+  {
+   "key": "ebd3b3fe6882601074af6fb886bd5bf4066fac5bdafc0543844cda031787d9fa",
+   "input": {
+    "id": "wk-9162-s2",
+    "en": "stress",
+    "en_pos": "noun",
+    "en_sense": "The internal distribution of force across a small boundary per unit area of that boundary (pressure) within a body. It causes strain or deformation and is typically symbolised by σ or τ.",
+    "ja": "応力",
+    "ja_reading": "おうりょく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "stress"
+    ],
+    "vi": "áp lực"
+   },
+   "output": {
+    "id": "wk-9162-s2",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Vietnamese 'áp lực' means 'pressure', not the specific physics/engineering concept of 'stress' (which is 'ứng suất')."
+   }
+  },
+  {
+   "key": "a54e5b14aa49a28e4d5ac0abd9e2dc68d808d609c7d1b9cd2174b8dce7bd0f4d",
+   "input": {
+    "id": "wk-12916-s8",
+    "en": "crawl",
+    "en_pos": "verb",
+    "en_sense": "To move over (an area) on hands and knees, or by dragging the body along.",
+    "ja": "這う",
+    "ja_reading": "はう",
+    "ja_pos": "v5u,vi",
+    "ja_glosses": [
+     "to crawl",
+     "to creep",
+     "to go on all fours"
+    ],
+    "vi": "bò"
+   },
+   "output": {
+    "id": "wk-12916-s8",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence across all three languages for this common verb of motion."
+   }
+  },
+  {
+   "key": "b78005397142be1679135ab0b06c39f00d7dbcd138c7685f081b626582f95ba4",
+   "input": {
+    "id": "wk-12122-s1",
+    "en": "bond",
+    "en_pos": "noun",
+    "en_sense": "A documentary obligation to pay a sum or to perform a contract; a debenture.",
+    "ja": "債券",
+    "ja_reading": "さいけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "bond",
+     "debenture"
+    ],
+    "vi": "trái phiếu"
+   },
+   "output": {
+    "id": "wk-12122-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard financial terms for a bond."
+   }
+  },
+  {
+   "key": "9713952c312a4b9927b35e86ec680f6e50a6830de63aa6f34db6228c58f95a3a",
+   "input": {
+    "id": "wk-12342-s1",
+    "en": "especially",
+    "en_pos": "adverb",
+    "en_sense": "Particularly; to a greater extent than is normal.",
+    "ja": "とりわけ",
+    "ja_reading": "とりわけ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "especially",
+     "particularly",
+     "above all"
+    ],
+    "vi": "nhất là"
+   },
+   "output": {
+    "id": "wk-12342-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are common and accurate equivalents for 'especially'."
+   }
+  },
+  {
+   "key": "9adf2d1df410ca97427c97a43cd34294dc5a45bb0f9c4aade5a98dfdea9fe24b",
+   "input": {
+    "id": "wk-12634-s1",
+    "en": "interesting",
+    "en_pos": "adjective",
+    "en_sense": "Arousing or holding the attention or interest of someone.",
+    "ja": "面白い",
+    "ja_reading": "おもしろい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "interesting",
+     "fascinating",
+     "intriguing",
+     "enthralling"
+    ],
+    "vi": "hay"
+   },
+   "output": {
+    "id": "wk-12634-s1",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Both Japanese '面白い' (can also mean 'fun') and Vietnamese 'hay' (can also mean 'good') are broader than 'interesting'; more precise equivalents exist."
+   }
+  },
+  {
+   "key": "f707050ee74c6aa5fc47d4737ba1d65f864c0b7584dc522ac258337f6c7cf9e6",
+   "input": {
+    "id": "wk-367-s6",
+    "en": "port",
+    "en_pos": "noun",
+    "en_sense": "A logical or physical construct in and from which data are transferred. Computer port on Wikipedia.Wikipedia",
+    "ja": "ポート",
+    "ja_reading": "ポート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "port",
+     "harbor"
+    ],
+    "vi": "cổng"
+   },
+   "output": {
+    "id": "wk-367-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard words for a computer port."
+   }
+  }
+ ]
+}

@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:56:02Z",
+ "items": [
+  {
+   "key": "41a2c99dbdc7f932e0e27b376b3019aaa70a102b7694cd116e4824061c2b5f2e",
+   "input": {
+    "id": "wk-6776-s1",
+    "en": "hotel",
+    "en_pos": "noun",
+    "en_sense": "An establishment that provides accommodation and other services for paying guests; normally larger than a guesthouse, and often one of a chain.",
+    "ja": "ホテル",
+    "ja_reading": "ホテル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hotel"
+    ],
+    "vi": "khách sạn"
+   },
+   "output": {
+    "id": "wk-6776-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for 'hotel'."
+   }
+  },
+  {
+   "key": "c84fc5b7c40364d1174fa0947754a0358e91e22a8cf93354b0fab7b761ee5052",
+   "input": {
+    "id": "wk-6777-s0",
+    "en": "hostel",
+    "en_pos": "noun",
+    "en_sense": "An overnight lodging place for travelers, with dormitory accommodation and shared facilities, especially a youth hostel.",
+    "ja": "寮",
+    "ja_reading": "りょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hostel",
+     "dormitory"
+    ],
+    "vi": "nhà nghỉ"
+   },
+   "output": {
+    "id": "wk-6777-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word '寮' is too broad (dormitory), and the Vietnamese 'nhà nghỉ' is incorrect, meaning guesthouse/motel, not hostel."
+   }
+  },
+  {
+   "key": "21c69390cefb67b74689b28686d097d3214aa951996d4e9d38753a6b64ba9155",
+   "input": {
+    "id": "wk-6791-s1",
+    "en": "captain",
+    "en_pos": "noun",
+    "en_sense": "The person lawfully in command of a ship or other vessel.",
+    "ja": "機長",
+    "ja_reading": "きちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "captain (of an aircraft)"
+    ],
+    "vi": "thuyền trưởng"
+   },
+   "output": {
+    "id": "wk-6791-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese word '機長' specifically means an aircraft captain, not a ship captain as defined in the English sense."
+   }
+  },
+  {
+   "key": "8bcba547cc667acbb9f4b7bdcdf0c3646c2ece2ed87ac6f6d11d6718a88f47de",
+   "input": {
+    "id": "wk-6791-s6",
+    "en": "captain",
+    "en_pos": "noun",
+    "en_sense": "One of the athletes on a sports team who is designated to make decisions, and is allowed to speak for his team with a referee or official.",
+    "ja": "キャプテン",
+    "ja_reading": "キャプテン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "captain"
+    ],
+    "vi": "đội trưởng"
+   },
+   "output": {
+    "id": "wk-6791-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for a sports team captain."
+   }
+  },
+  {
+   "key": "e9cd21025eea5b99adf7c62087b284b1e3887dfeb5bdfafdb3e145edd1342d77",
+   "input": {
+    "id": "wk-6795-s0",
+    "en": "appear",
+    "en_pos": "verb",
+    "en_sense": "To come or be in sight; to be in view; to become visible.",
+    "ja": "現れる",
+    "ja_reading": "あらわれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to appear",
+     "to come in sight",
+     "to become visible",
+     "to come out",
+     "to embody",
+     "to materialize"
+    ],
+    "vi": "xuất hiện"
+   },
+   "output": {
+    "id": "wk-6795-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard, natural, and direct equivalents for 'to appear'."
+   }
+  },
+  {
+   "key": "8abf5d4698893339337ade6ab5be4787a3645b0a42238869d4eb70cca3575b21",
+   "input": {
+    "id": "wk-6796-s0",
+    "en": "reduce",
+    "en_pos": "verb",
+    "en_sense": "To bring down the size, quantity, quality, value or intensity of something; to diminish, to lower.",
+    "ja": "下げる",
+    "ja_reading": "さげる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to lower",
+     "to reduce",
+     "to bring down"
+    ],
+    "vi": "giảm"
+   },
+   "output": {
+    "id": "wk-6796-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are common and standard equivalents for 'reduce' or 'lower'."
+   }
+  },
+  {
+   "key": "3fc238d62cc3398771799916a4cd0608e5f3115d117f15d2ab1aa81814544e1e",
+   "input": {
+    "id": "wk-6797-s2",
+    "en": "appearance",
+    "en_pos": "noun",
+    "en_sense": "The way something looks; personal presence",
+    "ja": "様子",
+    "ja_reading": "ようす",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "appearance",
+     "look(s)",
+     "air",
+     "manner",
+     "behaviour",
+     "demeanor"
+    ],
+    "vi": "bề ngoài"
+   },
+   "output": {
+    "id": "wk-6797-s2",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word '様子' is too broad, referring to the general state or condition rather than specifically physical appearance, for which '外見' would be better."
+   }
+  },
+  {
+   "key": "ab1122d7a1054c6878d838b46c4120659680daf30b46c20265b0c8b568eeeb0c",
+   "input": {
+    "id": "wk-6798-s1",
+    "en": "appetite",
+    "en_pos": "noun",
+    "en_sense": "Any strong desire; an eagerness or longing.",
+    "ja": "食欲",
+    "ja_reading": "しょくよく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "appetite (for food)"
+    ],
+    "vi": "sự ngon miệng"
+   },
+   "output": {
+    "id": "wk-6798-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese words refer specifically to appetite for food, while the English sense provided is the general one of 'any strong desire'."
+   }
+  },
+  {
+   "key": "fbb930504a093fadcc05c6bc714c4366347419fab278317fc69a28d337fc2059",
+   "input": {
+    "id": "wk-6807-s0",
+    "en": "chew",
+    "en_pos": "verb",
+    "en_sense": "To crush with the teeth by repeated closing and opening of the jaws; done to food to soften it and break it down by the action of saliva before it is swallowed.",
+    "ja": "噛む",
+    "ja_reading": "かむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to chew",
+     "to gnaw",
+     "to masticate"
+    ],
+    "vi": "nhá"
+   },
+   "output": {
+    "id": "wk-6807-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese word 'nhá' is informal/dialectal and less common than the standard 'nhai', which would be a better equivalent for 'chew'."
+   }
+  },
+  {
+   "key": "65a3348752520fc11dd0ca363dad41763b3e9f4734daef30e690ab4d2190ff1e",
+   "input": {
+    "id": "wk-6808-s0",
+    "en": "chewing gum",
+    "en_pos": "noun",
+    "en_sense": "A flavoured preparation of chicle or synthetic rubber, made for chewing, commonly used for freshening breath, stress relief, and cognitive focus.",
+    "ja": "ガム",
+    "ja_reading": "ガム",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chewing gum"
+    ],
+    "vi": "kẹo cao su"
+   },
+   "output": {
+    "id": "wk-6808-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for 'chewing gum'."
+   }
+  },
+  {
+   "key": "4263b1c9b3365edda113ca1f433a02e9b6205cb671aeea956ac275a91ff8b406",
+   "input": {
+    "id": "wk-6811-s0",
+    "en": "microwave oven",
+    "en_pos": "noun",
+    "en_sense": "An oven that uses microwave-frequency energy to heat food or other items placed within it.",
+    "ja": "レンジ",
+    "ja_reading": "レンジ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "microwave oven"
+    ],
+    "vi": "lò vi sóng"
+   },
+   "output": {
+    "id": "wk-6811-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common ways to refer to a microwave oven."
+   }
+  },
+  {
+   "key": "71b46774a1850fc5d34433a68ee1df687cd251da13828719530ee8616915cd34",
+   "input": {
+    "id": "wk-6812-s0",
+    "en": "microwave",
+    "en_pos": "noun",
+    "en_sense": "An electromagnetic wave with wavelength between that of infrared light and radio waves.",
+    "ja": "マイクロ波",
+    "ja_reading": "マイクロは",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "microwave"
+    ],
+    "vi": "vi sóng"
+   },
+   "output": {
+    "id": "wk-6812-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, direct equivalents for the scientific concept of a microwave."
+   }
+  }
+ ]
+}

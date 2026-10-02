@@ -1,0 +1,389 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:43:31Z",
+ "items": [
+  {
+   "key": "b3ce3b176e079753eea1d8ebb24c333a5134f3da63846ae0a1af4f3822c10344",
+   "input": {
+    "id": "wk-3115-s0",
+    "en": "head of state",
+    "en_pos": "noun",
+    "en_sense": "The chief public representative of a nation having duties, privileges and responsibilities varying greatly depending on the constitutional rules; a monarch in a monarchy, and often styled president in a republic, but variations such as collegiality exist.",
+    "ja": "元首",
+    "ja_reading": "げんしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sovereign",
+     "ruler",
+     "head of state"
+    ],
+    "vi": "quốc trưởng"
+   },
+   "output": {
+    "id": "wk-3115-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'quốc trưởng' is not the general term for 'head of state'; it has specific historical connotations (e.g., Hitler's title), while the correct neutral term is 'nguyên thủ quốc gia'."
+   }
+  },
+  {
+   "key": "ea7b931cb408deb5af6885a3fedfb799f2782ca2797fa1ec259326001c1bf91e",
+   "input": {
+    "id": "wk-3116-s0",
+    "en": "analog",
+    "en_pos": "adjective",
+    "en_sense": "In which the value of a data item (such as time) is represented by a continuous(ly) variable physical quantity that can be measured (such as the shadow of a sundial).",
+    "ja": "アナログ",
+    "ja_reading": "アナログ",
+    "ja_pos": "adj-na,adj-no,n",
+    "ja_glosses": [
+     "analog",
+     "analogue"
+    ],
+    "vi": "tương tự"
+   },
+   "output": {
+    "id": "wk-3116-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "UNNATURAL_VI",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'tương tự' means 'similar' or 'analogous', not 'analog' in the technical sense (opposite of digital), which is a common false friend."
+   }
+  },
+  {
+   "key": "0d6a6866782da5e7d72b3a09dd37665ad21a2653ca437d756c7a190419e57242",
+   "input": {
+    "id": "wk-3118-s2",
+    "en": "tissue",
+    "en_pos": "noun",
+    "en_sense": "A sheet of absorbent paper, especially one that is made to be used as tissue paper, toilet paper or a handkerchief.",
+    "ja": "ティッシュ",
+    "ja_reading": "ティッシュ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tissue",
+     "facial tissue"
+    ],
+    "vi": "khăn giấy"
+   },
+   "output": {
+    "id": "wk-3118-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for facial tissue in their respective languages."
+   }
+  },
+  {
+   "key": "f1021803ac742af2f8d2da1ffc14d43009180bf9935660c090ecb6aae881590d",
+   "input": {
+    "id": "wk-3119-s2",
+    "en": "people",
+    "en_pos": "noun",
+    "en_sense": "A group of persons regarded as being servants, followers, companions or subjects of a ruler or leader.",
+    "ja": "人々",
+    "ja_reading": "ひとびと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "people",
+     "men and women"
+    ],
+    "vi": "dân"
+   },
+   "output": {
+    "id": "wk-3119-s2",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '人々' means 'people' in a general sense and misses the specific English sense of 'subjects of a ruler', for which the Vietnamese 'dân' is a better match."
+   }
+  },
+  {
+   "key": "55595d72b808d1a18d00b259070d3ceddea6369f1f9fbba6e9a083639ce487a5",
+   "input": {
+    "id": "wk-3120-s1",
+    "en": "dictatorship",
+    "en_pos": "noun",
+    "en_sense": "A government which exercises autocratic rule.",
+    "ja": "独裁政治",
+    "ja_reading": "どくさいせいじ",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "dictatorship",
+     "despotic government"
+    ],
+    "vi": "chế độ độc tài"
+   },
+   "output": {
+    "id": "wk-3120-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise equivalents for 'dictatorship' as a form of government."
+   }
+  },
+  {
+   "key": "725e919b75458d0e28e5258dac63aa8e4da24312a9a361816bc8c0c21fad0488",
+   "input": {
+    "id": "wk-3125-s0",
+    "en": "vote",
+    "en_pos": "verb",
+    "en_sense": "To cast a vote; to assert a formalized choice in an election.",
+    "ja": "投票する",
+    "ja_reading": "とうひょうする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "voting",
+     "ballot",
+     "poll",
+     "vote"
+    ],
+    "vi": "bỏ phiếu"
+   },
+   "output": {
+    "id": "wk-3125-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural ways to express the act of voting."
+   }
+  },
+  {
+   "key": "46a5acc6b5626c1be86791322c3e8750ff8f410cc0d4f2534a45f165be510116",
+   "input": {
+    "id": "wk-3127-s0",
+    "en": "communist",
+    "en_pos": "noun",
+    "en_sense": "An advocate of a society based on the common ownership of property; a proponent of communism.",
+    "ja": "共産主義者",
+    "ja_reading": "きょうさんしゅぎしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "communist"
+    ],
+    "vi": "người cộng sản"
+   },
+   "output": {
+    "id": "wk-3127-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise equivalents for a person who is a communist."
+   }
+  },
+  {
+   "key": "8dd9568a9aac0f3d250e72aa12e510c032b6ae02e4b8c5ff20feb4293aa22b07",
+   "input": {
+    "id": "wk-3128-e:4fb507",
+    "en": "communism",
+    "en_pos": "noun",
+    "en_sense": "ideology/philosophy",
+    "ja": "共産主義",
+    "ja_reading": "きょうさんしゅぎ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "communism"
+    ],
+    "vi": "chủ nghĩa cộng sản"
+   },
+   "output": {
+    "id": "wk-3128-e:4fb507",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and precise equivalents for the ideology of communism."
+   }
+  },
+  {
+   "key": "80f5c3de7cb94d8d380f35f8d225a2cd7edfa4f831d52a086317359171d08408",
+   "input": {
+    "id": "wk-3133-s0",
+    "en": "katana",
+    "en_pos": "noun",
+    "en_sense": "A type of Japanese longsword, having a single edge and slight curvature, historically used by samurai and ninja.",
+    "ja": "刀",
+    "ja_reading": "かたな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sword (esp. Japanese single-edged)",
+     "katana"
+    ],
+    "vi": "katana"
+   },
+   "output": {
+    "id": "wk-3133-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The entry correctly identifies the Japanese origin '刀' (katana) and its loanword form in both English and Vietnamese."
+   }
+  },
+  {
+   "key": "cd0033791f159ce3b44ffd1cae16073164dcd9af121385273b7f870bb17927c6",
+   "input": {
+    "id": "wk-31339-s0",
+    "en": "mung bean",
+    "en_pos": "noun",
+    "en_sense": "Seed of Vigna radiata, native to South Asia.",
+    "ja": "緑豆",
+    "ja_reading": "りょくとう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mung bean (Vigna radiata)",
+     "green gram"
+    ],
+    "vi": "đậu xanh"
+   },
+   "output": {
+    "id": "wk-31339-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural names for the mung bean in their respective languages."
+   }
+  },
+  {
+   "key": "eb6afa78ae5af811e944b3a79e957c7a004ded407f0e9765448668f9a706c916",
+   "input": {
+    "id": "wk-3139-s0",
+    "en": "hilt",
+    "en_pos": "noun",
+    "en_sense": "The handle of a sword, consisting of grip, guard, and pommel, designed to facilitate use of the blade and afford protection to the hand.",
+    "ja": "柄",
+    "ja_reading": "つか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "hilt (of a sword)",
+     "haft (of a dagger)",
+     "handle",
+     "handgrip"
+    ],
+    "vi": "cán"
+   },
+   "output": {
+    "id": "wk-3139-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'cán' is a general term for 'handle', broader than the English 'hilt' which is specific to weapons like swords."
+   }
+  },
+  {
+   "key": "ac26985dff514c59197a4a7b7588b8171558a3c3cbceb68d4193cca9047533ca",
+   "input": {
+    "id": "wk-3140-s0",
+    "en": "handle",
+    "en_pos": "noun",
+    "en_sense": "The part of an object which is (designed to be) held in the hand when used or moved.",
+    "ja": "取っ手",
+    "ja_reading": "とって",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "handle",
+     "grip",
+     "knob"
+    ],
+    "vi": "cán"
+   },
+   "output": {
+    "id": "wk-3140-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'cán' only means a specific type of handle (for tools like knives or brooms) and is not a general equivalent for 'handle', unlike the Japanese '取っ手'. A better general term in Vietnamese would be 'tay cầm'."
+   }
+  }
+ ]
+}

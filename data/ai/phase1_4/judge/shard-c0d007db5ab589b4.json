@@ -1,0 +1,390 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:50:49Z",
+ "items": [
+  {
+   "key": "3c827457e62b3a181317f94dbc23f358147e3a07cd2f799e0eaf99c12367bc57",
+   "input": {
+    "id": "jm-1590480-0-shape",
+    "en": "shape",
+    "en_pos": "noun",
+    "en_sense": "shape; form; figure; posture; pose",
+    "ja": "格好",
+    "ja_reading": "かっこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shape",
+     "form",
+     "figure",
+     "posture",
+     "pose"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590480-0-shape",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The Japanese 格好 is a perfect equivalent for the given sense of English shape, covering appearance, form, and posture."
+   }
+  },
+  {
+   "key": "9bc53153983cdfd617adc46ac1c1dd7d3cc1e8dcba960388c69028da3c24efee",
+   "input": {
+    "id": "jm-1590740-0-poor",
+    "en": "poor",
+    "en_pos": "adjective",
+    "en_sense": "poor; pitiable; pathetic; pitiful",
+    "ja": "かわいそう",
+    "ja_reading": "かわいそう",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "poor",
+     "pitiable",
+     "pathetic",
+     "pitiful"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590740-0-poor",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`かわいそう` is the exact equivalent for the sense of \"poor\" meaning pitiable, not the sense of being impoverished."
+   }
+  },
+  {
+   "key": "ef266b2d094564141027774f87cb4f4e2994d45a7b079d223ec84ad51bb98a0a",
+   "input": {
+    "id": "jm-1590750-1-cross",
+    "en": "cross",
+    "en_pos": "verb",
+    "en_sense": "to intersect; to cross; to interlace",
+    "ja": "交わす",
+    "ja_reading": "かわす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to intersect",
+     "to cross",
+     "to interlace"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590750-1-cross",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "`交わす` primarily means \"to exchange\" and only covers the sense of \"cross\" or \"interlace\" when there is a reciprocal action, making it narrower than the general English sense which includes geometric intersection."
+   }
+  },
+  {
+   "key": "4a74d6db4df6b92146bac3b5a46268e9631fb4bbdef985815fc51f90e7738288",
+   "input": {
+    "id": "jm-1590770-0-substitute",
+    "en": "substitute",
+    "en_pos": "noun",
+    "en_sense": "substitute; replacement; substituting; replacing",
+    "ja": "代わり",
+    "ja_reading": "かわり",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "substitute",
+     "replacement",
+     "substituting",
+     "replacing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590770-0-substitute",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`代わり` is the standard and direct equivalent for \"substitute\" or \"replacement\"."
+   }
+  },
+  {
+   "key": "9140255c74a61b2c48b92d9f25dc6261cdf6965ad19716fd589da96539555e0f",
+   "input": {
+    "id": "jm-1590820-0-succeed",
+    "en": "succeed",
+    "en_pos": "verb",
+    "en_sense": "to succeed; to relieve; to replace",
+    "ja": "代わる",
+    "ja_reading": "かわる",
+    "ja_pos": "v5r,vi",
+    "ja_glosses": [
+     "to succeed",
+     "to relieve",
+     "to replace"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590820-0-succeed",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`代わる` is a perfect match for the specific sense of \"succeed\" meaning to take the place of someone, not the sense of achieving success."
+   }
+  },
+  {
+   "key": "180cbce76b7d1801a66719d4fcf23ed424a65e264ea3fbe2e430f690dec9959a",
+   "input": {
+    "id": "jm-1590870-0-essential",
+    "en": "essential",
+    "en_pos": "adjective",
+    "en_sense": "essential; important; crucial; vital; main",
+    "ja": "肝心",
+    "ja_reading": "かんじん",
+    "ja_pos": "adj-na,adj-no,n",
+    "ja_glosses": [
+     "essential",
+     "important",
+     "crucial",
+     "vital",
+     "main"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1590870-0-essential",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`肝心` is an excellent equivalent for \"essential\" or \"crucial\", emphasizing the core or most important part of something."
+   }
+  },
+  {
+   "key": "f48aca7c5bbdc1920e450275a563029c9f7eebd9680f3d108a5416c6d6f0b2e3",
+   "input": {
+    "id": "jm-1591070-0-effect",
+    "en": "effect",
+    "en_pos": "noun",
+    "en_sense": "effect; virtue; efficacy; impression",
+    "ja": "効き目",
+    "ja_reading": "ききめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "effect",
+     "virtue",
+     "efficacy",
+     "impression"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591070-0-effect",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`効き目` is a perfect match for the \"efficacy\" or \"effect\" of something like medicine, fitting the core of the provided sense definition."
+   }
+  },
+  {
+   "key": "c350f3bc7c230f2bbbba7ccc6d55b83a1671f07c60127881b48cae87405c2ef8",
+   "input": {
+    "id": "jm-1591100-1-work",
+    "en": "work",
+    "en_pos": "verb",
+    "en_sense": "to work; to function well",
+    "ja": "効く",
+    "ja_reading": "きく",
+    "ja_pos": "v5k,vi",
+    "ja_glosses": [
+     "to work",
+     "to function well"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591100-1-work",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`効く` is the exact equivalent for the verb \"work\" in the sense of being effective or functioning correctly."
+   }
+  },
+  {
+   "key": "4df3b1468edb7709359aa0457f104879ca9889877502f8953c13800be99b20a4",
+   "input": {
+    "id": "jm-1591150-1-sound",
+    "en": "sound",
+    "en_pos": "verb",
+    "en_sense": "to sound (like); to come across (as)",
+    "ja": "聞こえる",
+    "ja_reading": "きこえる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to sound (like)",
+     "to come across (as)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591150-1-sound",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`聞こえる` is the standard and idiomatic way to express \"to sound (like)\" or \"to come across (as)\" in Japanese."
+   }
+  },
+  {
+   "key": "708b86beb597162c3eb97affdb8170615267adb0d8948086b2ce707d3d7d6048",
+   "input": {
+    "id": "jm-1591430-0-feeling",
+    "en": "feeling",
+    "en_pos": "noun",
+    "en_sense": "feeling; sensation; mood; state of mind",
+    "ja": "気持ち",
+    "ja_reading": "きもち",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "feeling",
+     "sensation",
+     "mood",
+     "state of mind"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591430-0-feeling",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`気持ち` is a fundamental and accurate equivalent for \"feeling\" in its various senses of sensation, emotion, and mood."
+   }
+  },
+  {
+   "key": "10eb4ba9c698b72b5952da010fa0eb21ff294eb520fa42cd729512f7944fba5a",
+   "input": {
+    "id": "jm-1591660-0-cooperation",
+    "en": "cooperation",
+    "en_pos": "noun",
+    "en_sense": "cooperation; collaboration; association; partnership; (acting in) unison",
+    "ja": "共同",
+    "ja_reading": "きょうどう",
+    "ja_pos": "n,n-pref,vs,vi,adj-no",
+    "ja_glosses": [
+     "cooperation",
+     "collaboration",
+     "association",
+     "partnership",
+     "(acting in) unison"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591660-0-cooperation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`共同` is a very good match for \"cooperation\", especially emphasizing the joint or shared nature of an activity."
+   }
+  },
+  {
+   "key": "098d526e3496d8b9465862a75f64844149ca4c133f6ac67f14006a0b3f507f6f",
+   "input": {
+    "id": "jm-1591930-0-gap",
+    "en": "gap",
+    "en_pos": "noun",
+    "en_sense": "gap; break; rift",
+    "ja": "切れ目",
+    "ja_reading": "きれめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "gap",
+     "break",
+     "rift"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1591930-0-gap",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "`切れ目` is a natural and common word for a physical gap, break, or pause, matching the English sense well."
+   }
+  }
+ ]
+}

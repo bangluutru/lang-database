@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:03Z",
+ "items": [
+  {
+   "key": "66e541c123f007947fdc8e6044786abe0f95fd6e27b8bb8c7562bf960e2a3b4b",
+   "input": {
+    "id": "concept-core-previously",
+    "en": "previously",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'previously': before, previously",
+    "ja": "以前",
+    "ja_reading": "いぜん",
+    "ja_pos": "verb",
+    "ja_glosses": [],
+    "vi": "trước đây"
+   },
+   "output": {
+    "id": "concept-core-previously",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English and Japanese POS are incorrectly listed as 'verb'; 'previously' is an adverb, and 以前 is a noun that functions adverbially."
+   }
+  },
+  {
+   "key": "09218e725d676e9e9a7e4874d65b9fa02d7c1346916142c19c06f502adbdc04e",
+   "input": {
+    "id": "concept-core-yesterday",
+    "en": "yesterday",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'yesterday': last (year), yesterday",
+    "ja": "昨",
+    "ja_reading": "さく",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "last (year)",
+     "yesterday"
+    ],
+    "vi": "hôm qua"
+   },
+   "output": {
+    "id": "concept-core-yesterday",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese word 昨 (saku) is a prefix meaning 'last' and is not used as a standalone word for 'yesterday'; the correct word is 昨日 (kinou)."
+   }
+  },
+  {
+   "key": "407c564e1d4ec10cbb5ded418d8ec5591eaf620457de8617f17009e8f3595d29",
+   "input": {
+    "id": "concept-core-content",
+    "en": "content",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'content': substance, essence, entity",
+    "ja": "内容",
+    "ja_reading": "ないよう",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "nội dung"
+   },
+   "output": {
+    "id": "concept-core-content",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence between all three languages for the sense of 'content' or 'substance'."
+   }
+  },
+  {
+   "key": "4975dd3fbf17a6941efc24d91700c01fd6a68b545751f3d75624d949a2025e49",
+   "input": {
+    "id": "concept-core-end",
+    "en": "end",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'end': conclusion, end",
+    "ja": "終わり",
+    "ja_reading": "おわり",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "kết thúc"
+   },
+   "output": {
+    "id": "concept-core-end",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for the concept of 'end' or 'conclusion'."
+   }
+  },
+  {
+   "key": "059202a168db68c0750ce3bbcd2d2b88daa61f6660947a01d04ccc4184361955",
+   "input": {
+    "id": "concept-core-evidence",
+    "en": "evidence",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'evidence': evidence, proof",
+    "ja": "証拠",
+    "ja_reading": "しょうこ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "evidence",
+     "proof"
+    ],
+    "vi": "chứng cớ"
+   },
+   "output": {
+    "id": "concept-core-evidence",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect alignment across all three languages using the corresponding Sino-Japanese and Sino-Vietnamese terms."
+   }
+  },
+  {
+   "key": "7dcc779023c9783ac51a8a791d5a2b8e1422c7d7215289e7e806fb7e1c1ad784",
+   "input": {
+    "id": "concept-core-today",
+    "en": "today",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'today': present age, present day, today",
+    "ja": "現代",
+    "ja_reading": "げんだい",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "present age",
+     "present day",
+     "today"
+    ],
+    "vi": "hôm nay"
+   },
+   "output": {
+    "id": "concept-core-today",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "WRONG",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Japanese word 現代 (gendai) means 'modern era', not the specific day 'today' (今日 kyou), which is what the Vietnamese hôm nay means."
+   }
+  },
+  {
+   "key": "430902598f7bfd61b75426db56e408fead583a94af505f4870e013b95479e411",
+   "input": {
+    "id": "concept-core-wake",
+    "en": "wake",
+    "en_pos": "verb",
+    "en_sense": "Core learning sense for 'wake': to wake, to wake up",
+    "ja": "覚める",
+    "ja_reading": "さめる",
+    "ja_pos": "verb",
+    "ja_glosses": [
+     "to wake",
+     "to wake up"
+    ],
+    "vi": "dậy"
+   },
+   "output": {
+    "id": "concept-core-wake",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Good correspondence for the intransitive sense of 'to wake up', although the Vietnamese 'dậy' can also imply getting out of bed."
+   }
+  },
+  {
+   "key": "3b0b3d0df54b07a49334155d7884c3899dfd921aa27925bb97fdd486adcfcf30",
+   "input": {
+    "id": "concept-core-career",
+    "en": "career",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'career': occupation, profession, job",
+    "ja": "職業",
+    "ja_reading": "しょくぎょう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "occupation",
+     "profession",
+     "job",
+     "vocation",
+     "career",
+     "trade"
+    ],
+    "vi": "chức nghiệp"
+   },
+   "output": {
+    "id": "concept-core-career",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "ARCHAIC_OR_RARE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'chức nghiệp' is an archaic and unused Sino-Vietnamese term; the correct word is 'nghề nghiệp' (occupation) or 'sự nghiệp' (career)."
+   }
+  },
+  {
+   "key": "687dc058b7f0e850a4e13da1d3b15ce194d1296e74779a00dae31086c0a8d94f",
+   "input": {
+    "id": "concept-core-unclear",
+    "en": "unclear",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'unclear': unclear, obscure, indistinct",
+    "ja": "不明",
+    "ja_reading": "ふめい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "unclear",
+     "obscure",
+     "indistinct",
+     "uncertain",
+     "ambiguous"
+    ],
+    "vi": "bất minh"
+   },
+   "output": {
+    "id": "concept-core-unclear",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bất minh' is a false friend; it means 'shady' or 'illicit', not 'unclear' in a general sense."
+   }
+  },
+  {
+   "key": "d908cd821c87935460929dfa06f6016bd57ae4d3b5bb21e2ae5bcdc70c8456f1",
+   "input": {
+    "id": "concept-core-bar",
+    "en": "bar",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'bar': bar, measure",
+    "ja": "バー",
+    "ja_reading": "バー",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "quán bar"
+   },
+   "output": {
+    "id": "concept-core-bar",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese terms correctly translate 'bar' as a drinking establishment, but the English sense provided ('bar, measure') is confusing and seems to conflate different meanings."
+   }
+  },
+  {
+   "key": "df734484a5c7211b7b2ca6ec9e364f065c902b02d6c5096814211dd46538a1ed",
+   "input": {
+    "id": "concept-core-scheme",
+    "en": "scheme",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'scheme': plot, intrigue, scheme",
+    "ja": "陰謀",
+    "ja_reading": "いんぼう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "plot",
+     "intrigue",
+     "scheme"
+    ],
+    "vi": "âm mưu"
+   },
+   "output": {
+    "id": "concept-core-scheme",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Excellent correspondence for the negative sense of 'scheme' as a plot or conspiracy."
+   }
+  },
+  {
+   "key": "2a505ac81ce8d273b95be6b7732845e78f65d8653c73ed94c44730cf6887988b",
+   "input": {
+    "id": "concept-core-image",
+    "en": "image",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'image': shape, figure, image",
+    "ja": "画像",
+    "ja_reading": "がぞう",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "hình ảnh"
+   },
+   "output": {
+    "id": "concept-core-image",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 画像 (gazou) is specific to pictorial/digital images, making it narrower than the general English 'image' and Vietnamese 'hình ảnh'."
+   }
+  }
+ ]
+}

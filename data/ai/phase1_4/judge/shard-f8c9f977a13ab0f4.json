@@ -1,0 +1,406 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:52:49Z",
+ "items": [
+  {
+   "key": "de8e99ba5d23c19a640c0dd6f0f07ba0d429303c8cf78b25a3f506fe751392fd",
+   "input": {
+    "id": "jm-1614440-1-expect",
+    "en": "expect",
+    "en_pos": "verb",
+    "en_sense": "to expect; to hope for; to look forward to; to foresee; to anticipate",
+    "ja": "期す",
+    "ja_reading": "きす",
+    "ja_pos": "v5s,vs-c,vi",
+    "ja_glosses": [
+     "to expect",
+     "to hope for",
+     "to look forward to",
+     "to foresee",
+     "to anticipate"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1614440-1-expect",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "REGISTER_CLASH",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "期す is a rather formal and literary word; 期待する (kitai suru) is a more common and neutral equivalent for 'expect' that a learner should know first."
+   }
+  },
+  {
+   "key": "31dcac22401200873f709c8a33378e074d9ed359c797422e383e50cdc904a3dc",
+   "input": {
+    "id": "jm-1620640-0-previous",
+    "en": "previous",
+    "en_pos": "noun",
+    "en_sense": "previous; former",
+    "ja": "従前",
+    "ja_reading": "じゅうぜん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "previous",
+     "former"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1620640-0-previous",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "REGISTER_CLASH",
+     "UNNATURAL_JA"
+    ],
+    "note": "The English word 'previous' is an adjective, but it is incorrectly tagged as a noun. Furthermore, 従前 is a very formal term not suitable for general learners."
+   }
+  },
+  {
+   "key": "d0c0bc41fb9aa75cf26fa2fa0797b7bb86db5c82e4907a61e2a1883199ed08e1",
+   "input": {
+    "id": "jm-1631750-0-feel",
+    "en": "feel",
+    "en_pos": "verb",
+    "en_sense": "to show signs of being; to feel; to think",
+    "ja": "がる",
+    "ja_reading": "がる",
+    "ja_pos": "suf,v5r",
+    "ja_glosses": [
+     "to show signs of being",
+     "to feel",
+     "to think"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1631750-0-feel",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "がる is a verbal suffix used to describe the outward appearance of someone else's feelings, not a standalone verb. It is not a translation of 'feel'."
+   }
+  },
+  {
+   "key": "2d62145fabb172db9abe38c352d7bb9ca841d8a1b3c405e4be218f7094460464",
+   "input": {
+    "id": "jm-1632320-0-broadly",
+    "en": "broadly",
+    "en_pos": "adverb",
+    "en_sense": "sweetly (smiling); broadly (grinning)",
+    "ja": "にっこり",
+    "ja_reading": "にっこり",
+    "ja_pos": "adv,adv-to,vs",
+    "ja_glosses": [
+     "sweetly (smiling)",
+     "broadly (grinning)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1632320-0-broadly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "にっこり is a natural and common onomatopoeic word for smiling happily, matching the specific English sense provided."
+   }
+  },
+  {
+   "key": "6dfbd84202f25fecc0aceaa3f70680e04024d653cb44157528e8734e44cd2596",
+   "input": {
+    "id": "jm-1632430-1-unexpectedly",
+    "en": "unexpectedly",
+    "en_pos": "adverb",
+    "en_sense": "unexpectedly (meeting someone)",
+    "ja": "ばったり",
+    "ja_reading": "ばったり",
+    "ja_pos": "adv,adv-to",
+    "ja_glosses": [
+     "unexpectedly (meeting someone)"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1632430-1-unexpectedly",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "ばったり is a very common and natural adverb for unexpectedly meeting someone, often used in the phrase ばったり会う."
+   }
+  },
+  {
+   "key": "00ab28eb2666eed56c2782db58a592eac125631df9d0c4018db0dcf8f02aee3d",
+   "input": {
+    "id": "jm-1632880-0-across",
+    "en": "across",
+    "en_pos": "noun",
+    "en_sense": "across; over; beyond; through; crossing",
+    "ja": "越し",
+    "ja_reading": "ごし",
+    "ja_pos": "n-suf",
+    "ja_glosses": [
+     "across",
+     "over",
+     "beyond",
+     "through",
+     "crossing"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1632880-0-across",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English word 'across' is a preposition or adverb, not a noun. The Japanese -越し is a suffix. This is a fundamental POS mismatch."
+   }
+  },
+  {
+   "key": "8d8c66da1fb6b323528d828570fe730e8d3e03c73b3b15a8d12aec847b3bb00c",
+   "input": {
+    "id": "jm-1633260-0-quantity",
+    "en": "quantity",
+    "en_pos": "noun",
+    "en_sense": "quantity; amount; volume; number; amount of money",
+    "ja": "高",
+    "ja_reading": "たか",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "quantity",
+     "amount",
+     "volume",
+     "number",
+     "amount of money"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1633260-0-quantity",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_JA"
+    ],
+    "note": "高 is often used as a suffix and can have a specific nuance of 'total amount' or 'sum', making 量 (ryō) a more general and common equivalent for 'quantity'."
+   }
+  },
+  {
+   "key": "7947ffbc71782b1e7ddce284ce1a63f60d0eabc1c89534a085ed5e6d0a5696ee",
+   "input": {
+    "id": "jm-1643510-0-old_age",
+    "en": "old age",
+    "en_pos": "adjective",
+    "en_sense": "old age; ageing; aging",
+    "ja": "老い",
+    "ja_reading": "おい",
+    "ja_pos": "adj-no,n",
+    "ja_glosses": [
+     "old age",
+     "ageing",
+     "aging"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1643510-0-old_age",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English entry 'old age' is a noun phrase, but it is incorrectly tagged as an adjective."
+   }
+  },
+  {
+   "key": "911b6c197efa19cc13420d6f21a8605fcbb8a8f95d43409f1a0bff3144a0c7f9",
+   "input": {
+    "id": "jm-1643640-0-imagine",
+    "en": "imagine",
+    "en_pos": "verb",
+    "en_sense": "to imagine; to picture; to figure; to see",
+    "ja": "思い描く",
+    "ja_reading": "おもいえがく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to imagine",
+     "to picture",
+     "to figure",
+     "to see"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1643640-0-imagine",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "思い描く is an excellent and natural translation for 'to imagine' or 'to picture in one's mind'."
+   }
+  },
+  {
+   "key": "d933fcc930226c904d4596bf8d4598af8fb09826d632542374a1d93b614f2e34",
+   "input": {
+    "id": "jm-1654560-0-achieve",
+    "en": "achieve",
+    "en_pos": "verb",
+    "en_sense": "to achieve; to win; to gain; to attain",
+    "ja": "勝ち得る",
+    "ja_reading": "かちえる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to achieve",
+     "to win",
+     "to gain",
+     "to attain"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1654560-0-achieve",
+    "en_ja": "NARROW",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "勝ち得る specifically means 'to win' or 'gain through struggle', making it narrower than the general verb 'achieve'. 達成する (tassei suru) is a better general equivalent."
+   }
+  },
+  {
+   "key": "a62b77cbe1eb126180b7df4723e6e27f5c0ea6da113aa850f5cac03e75b3ccf0",
+   "input": {
+    "id": "jm-1658330-0-contribute",
+    "en": "contribute",
+    "en_pos": "noun",
+    "en_sense": "to contribute; to play a part in; to have a hand in; to be conducive to; to be instrumental in",
+    "ja": "資する",
+    "ja_reading": "しする",
+    "ja_pos": "vs-s,vi",
+    "ja_glosses": [
+     "to contribute",
+     "to play a part in",
+     "to have a hand in",
+     "to be conducive to",
+     "to be instrumental in"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1658330-0-contribute",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH"
+    ],
+    "note": "The English entry 'contribute' is a verb, but it is incorrectly tagged as a noun."
+   }
+  },
+  {
+   "key": "4f9119232995c6f4f9982a75a305ce6db999265dedfe9659ec70762ee161ade9",
+   "input": {
+    "id": "jm-1660100-0-lunch",
+    "en": "lunch",
+    "en_pos": "noun",
+    "en_sense": "lunch",
+    "ja": "お昼",
+    "ja_reading": "おひる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lunch"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1660100-0-lunch",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "お昼 is a very common and natural equivalent for 'lunch' in everyday Japanese."
+   }
+  }
+ ]
+}

@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:02:46Z",
+ "items": [
+  {
+   "key": "4053c8f24c415b59c2eb9ec86120d1f512d4ccdf01abae782f730037b7e4dde9",
+   "input": {
+    "id": "wk-8699-e:8fc1d2",
+    "en": "neighborhood",
+    "en_pos": "noun",
+    "en_sense": "topology: set containing an open set which contains some specified point",
+    "ja": "近傍",
+    "ja_reading": "きんぼう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "neighborhood",
+     "neighbourhood",
+     "vicinity",
+     "surrounding area"
+    ],
+    "vi": "lân cận"
+   },
+   "output": {
+    "id": "wk-8699-e:8fc1d2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard mathematical equivalents for a topological neighborhood."
+   }
+  },
+  {
+   "key": "302680914e430fd1ac7de331fb0c4ec3efff06993f7c4669ca160fe3e1596545",
+   "input": {
+    "id": "wk-8707-s0",
+    "en": "dose",
+    "en_pos": "noun",
+    "en_sense": "A measured portion of medicine taken at any one time.",
+    "ja": "用量",
+    "ja_reading": "ようりょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dose"
+    ],
+    "vi": "liều"
+   },
+   "output": {
+    "id": "wk-8707-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural equivalents for a medical dose."
+   }
+  },
+  {
+   "key": "30bb3093150ba9122b5277b9c48523e480c258c26ae7fb2c3147bebe89825667",
+   "input": {
+    "id": "wk-871-s0",
+    "en": "kindle",
+    "en_pos": "verb",
+    "en_sense": "To start (a fire) or light (a torch, a match, coals, etc.).",
+    "ja": "点じる",
+    "ja_reading": "てんじる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to drop",
+     "to light",
+     "to kindle",
+     "to make tea"
+    ],
+    "vi": "nhóm"
+   },
+   "output": {
+    "id": "wk-871-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese word 点じる is a valid but literary and less common equivalent for 'kindle'; a more natural choice would be 火をつける."
+   }
+  },
+  {
+   "key": "6d5444f9522213b337db908a0c41cc6fd2004fa8418b6482d8edba6db0a32092",
+   "input": {
+    "id": "wk-8713-s0",
+    "en": "ten thousand",
+    "en_pos": "numeral",
+    "en_sense": "The cardinal number 10,000.",
+    "ja": "一万",
+    "ja_reading": "いちまん",
+    "ja_pos": "num",
+    "ja_glosses": [
+     "10,000",
+     "ten thousand",
+     "10^4"
+    ],
+    "vi": "vạn"
+   },
+   "output": {
+    "id": "wk-8713-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'vạn' is correct but 'mười nghìn' is the more common and neutral term for ten thousand in modern usage."
+   }
+  },
+  {
+   "key": "bd2eda405c15a4d1f99242735eafb735aca2816bb0308815e8e39e7665ccd3f0",
+   "input": {
+    "id": "wk-8717-s0",
+    "en": "intellect",
+    "en_pos": "noun",
+    "en_sense": "The faculty of thinking, judging, abstract reasoning, and conceptual understanding; the cognitive faculty.",
+    "ja": "知能",
+    "ja_reading": "ちのう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "intelligence",
+     "intellect",
+     "brains"
+    ],
+    "vi": "trí tuệ"
+   },
+   "output": {
+    "id": "wk-8717-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese word 知能 means 'intelligence', not 'intellect'; the correct word for intellect is 知性 (chisei)."
+   }
+  },
+  {
+   "key": "9a6ac75abccb6157a0ea837b7ca88e119db136c00405e9a9bf7677c8d72b6bbb",
+   "input": {
+    "id": "wk-8719-e:fcea74",
+    "en": "heal",
+    "en_pos": "verb",
+    "en_sense": "make better",
+    "ja": "癒す",
+    "ja_reading": "いやす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to heal",
+     "to cure",
+     "to satisfy (e.g. hunger, thirst)",
+     "to alleviate (e.g. sorrow, fatigue)"
+    ],
+    "vi": "thương"
+   },
+   "output": {
+    "id": "wk-8719-e:fcea74",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese word 'thương' means 'to love' or 'to pity', not 'to heal'; this is a completely incorrect translation."
+   }
+  },
+  {
+   "key": "ca5054bc39da6611edd32997f3b4d571a7f46a19eccc56723ac64e347ac6e609",
+   "input": {
+    "id": "wk-873-s6",
+    "en": "king",
+    "en_pos": "noun",
+    "en_sense": "The principal chess piece, that players seek to threaten with unavoidable capture to result in a victory by checkmate. It is often the tallest piece, with a symbolic crown with a cross at the top.",
+    "ja": "キング",
+    "ja_reading": "キング",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "king (chess piece)"
+    ],
+    "vi": "vua"
+   },
+   "output": {
+    "id": "wk-873-s6",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and natural names for the king chess piece."
+   }
+  },
+  {
+   "key": "8d0fd5364f53bccfa06122d234bb0604fb11948ce218c06f705b3966318434e6",
+   "input": {
+    "id": "wk-8732-e:843588",
+    "en": "sign",
+    "en_pos": "noun",
+    "en_sense": "a fact that shows that something exists or may happen",
+    "ja": "標識",
+    "ja_reading": "ひょうしき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sign",
+     "mark",
+     "marker",
+     "beacon"
+    ],
+    "vi": "dấu"
+   },
+   "output": {
+    "id": "wk-8732-e:843588",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Japanese 標識 refers to a physical sign/marker, not an abstract indication, and the Vietnamese 'dấu' is too broad; 'dấu hiệu' would be correct."
+   }
+  },
+  {
+   "key": "1a7bc1bd64bb73f29b3b3bac63d8334bd8059bed24d04874a69dc8fd909f7afa",
+   "input": {
+    "id": "wk-8732-s5",
+    "en": "sign",
+    "en_pos": "noun",
+    "en_sense": "A clearly visible object, generally flat, bearing a short message in words or pictures.",
+    "ja": "看板",
+    "ja_reading": "かんばん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "signboard",
+     "sign",
+     "billboard",
+     "hoarding",
+     "doorplate"
+    ],
+    "vi": "bảng chỉ dẫn"
+   },
+   "output": {
+    "id": "wk-8732-s5",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'bảng chỉ dẫn' is too specific, meaning 'guide/directional sign', while the English and Japanese terms are more general."
+   }
+  },
+  {
+   "key": "91b6b5a38e7b38084480aca1e79f385dd8da25880f141988f6c7ff49a0d8f878",
+   "input": {
+    "id": "wk-8733-e:6bb5b2",
+    "en": "sign",
+    "en_pos": "verb",
+    "en_sense": "to make (a document) official by writing one's signature",
+    "ja": "サインする",
+    "ja_reading": "サインする",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "sign",
+     "signal",
+     "indication"
+    ],
+    "vi": "ký tên"
+   },
+   "output": {
+    "id": "wk-8733-e:6bb5b2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are the standard and natural way to express signing a document."
+   }
+  },
+  {
+   "key": "ada0f8e3c4c754043d1cf77d87c966730a27c9f59dc3dc61cc9091a47d9ebb65",
+   "input": {
+    "id": "wk-8734-s0",
+    "en": "silk",
+    "en_pos": "noun",
+    "en_sense": "A fine fiber excreted by the silkworm or other arthropod (such as a spider).",
+    "ja": "絹",
+    "ja_reading": "きぬ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "silk"
+    ],
+    "vi": "tơ"
+   },
+   "output": {
+    "id": "wk-8734-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms correctly denote silk fiber."
+   }
+  },
+  {
+   "key": "971ccbc69c21150310391cb1a1c1881af3d8086cb052190e4eae103af263709d",
+   "input": {
+    "id": "wk-874-s0",
+    "en": "queen",
+    "en_pos": "noun",
+    "en_sense": "The wife, consort, or widow of a king.",
+    "ja": "王妃",
+    "ja_reading": "おうひ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "queen (consort)",
+     "empress (consort)"
+    ],
+    "vi": "hoàng hậu"
+   },
+   "output": {
+    "id": "wk-874-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'hoàng hậu' means 'empress consort', a specific rank, while the English and Japanese terms refer to a 'queen consort' (king's wife)."
+   }
+  }
+ ]
+}

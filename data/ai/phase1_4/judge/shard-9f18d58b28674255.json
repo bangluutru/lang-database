@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:47:15Z",
+ "items": [
+  {
+   "key": "d604db0598a5e5a0ec1aaa6e658c13a7b9abb243ae71e50b959a25a4b77b80e5",
+   "input": {
+    "id": "wk-4651-e:a1338b",
+    "en": "user",
+    "en_pos": "noun",
+    "en_sense": "person who uses a computer",
+    "ja": "利用者",
+    "ja_reading": "りようしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "user",
+     "end-user",
+     "consumer",
+     "patron",
+     "customer",
+     "client"
+    ],
+    "vi": "thành viên"
+   },
+   "output": {
+    "id": "wk-4651-e:a1338b",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thành viên' means 'member', not 'user'; the correct term is 'người dùng'. The Japanese '利用者' is also broader than just a computer user."
+   }
+  },
+  {
+   "key": "d3f5ce190206e69dee0dea232d431ed16fc438dc89be6c8e5a8b59c9a90a9bff",
+   "input": {
+    "id": "wk-4653-s0",
+    "en": "share",
+    "en_pos": "noun",
+    "en_sense": "A portion of something, especially a portion given or allotted to someone.",
+    "ja": "持分",
+    "ja_reading": "もちぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "share (of expenses)",
+     "equity (in company)",
+     "holdings",
+     "interest (in company)"
+    ],
+    "vi": "phần"
+   },
+   "output": {
+    "id": "wk-4653-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '持分' (mochibun) is too specific, referring to a legal or financial stake/equity, while the English sense is a general portion."
+   }
+  },
+  {
+   "key": "407f6fd77f0bad66dea9512bb3a927b688c4d6563e71686016a87344747cc4a9",
+   "input": {
+    "id": "wk-4653-s1",
+    "en": "share",
+    "en_pos": "noun",
+    "en_sense": "A financial instrument that shows that one owns a part of a company that provides the benefit of limited liability.",
+    "ja": "株式",
+    "ja_reading": "かぶしき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "share (in a company)",
+     "stock"
+    ],
+    "vi": "cổ phần"
+   },
+   "output": {
+    "id": "wk-4653-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are precise and standard equivalents for a share of stock in a company."
+   }
+  },
+  {
+   "key": "c3854efc17224e9a628b090798a095a80bd004d4971ec609fd56878417d12180",
+   "input": {
+    "id": "wk-4654-s2",
+    "en": "share",
+    "en_pos": "verb",
+    "en_sense": "To divide and distribute.",
+    "ja": "分ける",
+    "ja_reading": "わける",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to share",
+     "to distribute",
+     "to deal out",
+     "to dish out"
+    ],
+    "vi": "phân phối"
+   },
+   "output": {
+    "id": "wk-4654-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The terms align well on the sense of 'divide and distribute', although 'phân phối' can sometimes be more formal."
+   }
+  },
+  {
+   "key": "b6ede71f61d45077ed23f05d4186075ee5e2062e8bc69c3f0b98a8f50e1fc434",
+   "input": {
+    "id": "wk-4661-s0",
+    "en": "zoo",
+    "en_pos": "noun",
+    "en_sense": "A park where live animals are exhibited.",
+    "ja": "動物園",
+    "ja_reading": "どうぶつえん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "zoo",
+     "zoological gardens"
+    ],
+    "vi": "thảo cầm viên"
+   },
+   "output": {
+    "id": "wk-4661-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "PROPER_NOUN_OR_TRANSLITERATION_ONLY",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'thảo cầm viên' is the proper name of a specific zoo in Ho Chi Minh City, not the general term for 'zoo', which is 'sở thú'."
+   }
+  },
+  {
+   "key": "220a2a2e03a8222d03cc12b514dd1054d49f001a1d7143544462531c38f6db97",
+   "input": {
+    "id": "wk-4668-e:a60bf6",
+    "en": "temple",
+    "en_pos": "noun",
+    "en_sense": "place of worship — see also place of worship",
+    "ja": "神殿",
+    "ja_reading": "しんでん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "temple",
+     "shrine",
+     "sanctuary"
+    ],
+    "vi": "chùa"
+   },
+   "output": {
+    "id": "wk-4668-e:a60bf6",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The English sense 'place of worship' is very broad, while Japanese '神殿' (Shinto/Greco-Roman temple) and Vietnamese 'chùa' (Buddhist temple) are specific and mutually exclusive."
+   }
+  },
+  {
+   "key": "7791937a040809d67a6d15d3e096cc41307c305125a3317cf992cc800876155a",
+   "input": {
+    "id": "wk-467-s1",
+    "en": "fruit",
+    "en_pos": "noun",
+    "en_sense": "The seed-bearing part of a plant; often edible, colourful, fragrant, and sweet or sour; produced from a floral ovary after fertilization.",
+    "ja": "果物",
+    "ja_reading": "くだもの",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fruit"
+    ],
+    "vi": "trái cây"
+   },
+   "output": {
+    "id": "wk-467-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard culinary words for fruit, which aligns with the common usage implied by the English definition."
+   }
+  },
+  {
+   "key": "8d74532b68d8c9c6e574c86b2b7a7215b3a1ce4ca482cf5f4059bd3055b14e8b",
+   "input": {
+    "id": "wk-4673-s0",
+    "en": "cross",
+    "en_pos": "noun",
+    "en_sense": "A geometrical figure consisting of two straight lines or bars intersecting each other such that at least one of them is bisected by the other.",
+    "ja": "十字",
+    "ja_reading": "じゅうじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cross",
+     "cross shape"
+    ],
+    "vi": "chữ thập"
+   },
+   "output": {
+    "id": "wk-4673-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly match the meaning of a geometric cross shape, with both Japanese and Vietnamese terms deriving from the shape of the character '十'."
+   }
+  },
+  {
+   "key": "87bdb653b7a9f03660eb7f18450c1228e5fc4a991e0e1db35eb314d7937c30bf",
+   "input": {
+    "id": "wk-4673-s2",
+    "en": "cross",
+    "en_pos": "noun",
+    "en_sense": "A wooden post with a perpendicular beam attached and used (especially in the Roman Empire) to execute criminals (by crucifixion).",
+    "ja": "十字架",
+    "ja_reading": "じゅうじか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cross (for crucifixion)",
+     "the Cross (of Christ)"
+    ],
+    "vi": "thánh giá"
+   },
+   "output": {
+    "id": "wk-4673-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the precise and standard equivalents for the cross as an instrument of crucifixion and a Christian symbol."
+   }
+  },
+  {
+   "key": "142f35f02f42f1aaa8724292c084afaf17974c12b34be87903f333da3e3acf57",
+   "input": {
+    "id": "wk-4677-s0",
+    "en": "nice",
+    "en_pos": "adjective",
+    "en_sense": "Pleasant, satisfactory, complimentary.",
+    "ja": "素敵",
+    "ja_reading": "すてき",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "lovely",
+     "wonderful",
+     "charming",
+     "enchanting",
+     "nice",
+     "great"
+    ],
+    "vi": "tốt"
+   },
+   "output": {
+    "id": "wk-4677-s0",
+    "en_ja": "WRONG",
+    "en_vi": "BROAD",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "Japanese '素敵' is much stronger than 'nice' (closer to 'wonderful'), while Vietnamese 'tốt' ('good') is too generic and often lacks the correct nuance."
+   }
+  },
+  {
+   "key": "5767ac9e54b239ce85ab6bef722e089691b4d934b902919300617b1fde0e5b8a",
+   "input": {
+    "id": "wk-4679-s0",
+    "en": "flood",
+    "en_pos": "noun",
+    "en_sense": "An overflow of a large amount of water (usually disastrous) from a lake or other body of water due to excessive rainfall or other input of water.",
+    "ja": "洪水",
+    "ja_reading": "こうずい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "flood",
+     "flooding"
+    ],
+    "vi": "lũ"
+   },
+   "output": {
+    "id": "wk-4679-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and accurate equivalents for a large-scale flood, especially from a river."
+   }
+  },
+  {
+   "key": "b6cf4a35eb26ff182ccebc0f39adcb4bf83e6e9c582d91e2c1f42329d6f0b633",
+   "input": {
+    "id": "wk-468-s0",
+    "en": "mammal",
+    "en_pos": "noun",
+    "en_sense": "A vertebrate animal of the class Mammalia, characterized by being warm-blooded, having fur or hair and producing milk with which to feed their young.",
+    "ja": "哺乳類",
+    "ja_reading": "ほにゅうるい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mammal",
+     "mammalian"
+    ],
+    "vi": "thú"
+   },
+   "output": {
+    "id": "wk-468-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct biological equivalents for the class Mammalia."
+   }
+  }
+ ]
+}

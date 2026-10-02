@@ -1,0 +1,379 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:33:22Z",
+ "items": [
+  {
+   "key": "daa60896e19612a59df2195738ba3287dc62ba3d627c9dd1e4e1b849b11f4006",
+   "input": {
+    "id": "concept-core-output",
+    "en": "output",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'output': production, output, turning out",
+    "ja": "出力",
+    "ja_reading": "しゅつりょく",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "đầu ra"
+   },
+   "output": {
+    "id": "concept-core-output",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'output' in the sense of production or a system's result."
+   }
+  },
+  {
+   "key": "a6a44bd2e4a1da540b374b1b332febf03b45001fcf0664a4a61038caac6d4921",
+   "input": {
+    "id": "concept-core-quarter",
+    "en": "quarter",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'quarter': area, zone, district",
+    "ja": "区域",
+    "ja_reading": "くいき",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "area",
+     "zone",
+     "district",
+     "quarter",
+     "section",
+     "limits"
+    ],
+    "vi": "khu vực"
+   },
+   "output": {
+    "id": "concept-core-quarter",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Both Japanese and Vietnamese terms are too broad, meaning 'area' or 'zone' in general, lacking the specific nuance of 'quarter' as a distinct district of a city."
+   }
+  },
+  {
+   "key": "0aad445c4fb7a622930ea99745502c9445cbb28adfffbdbbd0274d75d902c36f",
+   "input": {
+    "id": "concept-core-phenomenon",
+    "en": "phenomenon",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'phenomenon': phenomenon",
+    "ja": "現象",
+    "ja_reading": "げんしょう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "phenomenon"
+    ],
+    "vi": "hiện tượng"
+   },
+   "output": {
+    "id": "concept-core-phenomenon",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence across all three languages, with the Japanese and Vietnamese terms being cognates."
+   }
+  },
+  {
+   "key": "3b7d9058eb181f71b4cdebd16c63e5df5b11d6ba0af0afcef2cd69de9c288df0",
+   "input": {
+    "id": "concept-core-green",
+    "en": "green",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'green': immature, green",
+    "ja": "若い",
+    "ja_reading": "わかい",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "immature",
+     "green"
+    ],
+    "vi": "xanh"
+   },
+   "output": {
+    "id": "concept-core-green",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese word '若い' (young) does not match the English sense 'green' (inexperienced), which is not necessarily tied to age."
+   }
+  },
+  {
+   "key": "ee6b3c05ab7c838ee4af56504710fb5b6069d6c880bb0318b07b122b52b6111a",
+   "input": {
+    "id": "concept-core-shape",
+    "en": "shape",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'shape': shape, figure, image",
+    "ja": "形",
+    "ja_reading": "かたち",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "hình dạng"
+   },
+   "output": {
+    "id": "concept-core-shape",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, primary words for 'shape' in their respective languages."
+   }
+  },
+  {
+   "key": "1d072e8777575b0d01a9f22dd6fa11b38e7ccd6040b724554e52f74e13cb5a1b",
+   "input": {
+    "id": "concept-core-law",
+    "en": "law",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'law': law, legislation, act",
+    "ja": "法律",
+    "ja_reading": "ほうりつ",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "law",
+     "legislation",
+     "act"
+    ],
+    "vi": "pháp luật"
+   },
+   "output": {
+    "id": "concept-core-law",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for 'law' as a legal concept or body of legislation."
+   }
+  },
+  {
+   "key": "bde741d2fd517ec9cf2a6615d7f474ba257188d3ec721ba0523690d8d4feba62",
+   "input": {
+    "id": "concept-core-universe",
+    "en": "universe",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'universe': universe, cosmos, space",
+    "ja": "宇宙",
+    "ja_reading": "うちゅう",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "universe",
+     "cosmos",
+     "space"
+    ],
+    "vi": "vũ trụ"
+   },
+   "output": {
+    "id": "concept-core-universe",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence across all three languages, with the Japanese and Vietnamese terms being cognates."
+   }
+  },
+  {
+   "key": "6b3016fdc12dc950e326cecfda7ec0d3210ed2524bf28e4251252db15c503e3c",
+   "input": {
+    "id": "concept-core-association",
+    "en": "association",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'association': association, socializing, socialising",
+    "ja": "交際",
+    "ja_reading": "こうさい",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "giao du"
+   },
+   "output": {
+    "id": "concept-core-association",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "WRONG"
+    ],
+    "note": "The Japanese word '交際' primarily means 'dating' or 'romantic relationship' and is a false friend for the general sense of 'association' or 'socializing'."
+   }
+  },
+  {
+   "key": "52fb2d1117f7a280b4efe78436c33a4c73e4074702c73086473c87049f79ee81",
+   "input": {
+    "id": "concept-core-continuous",
+    "en": "continuous",
+    "en_pos": "adjective",
+    "en_sense": "Core learning sense for 'continuous': continuous",
+    "ja": "連続",
+    "ja_reading": "れんぞく",
+    "ja_pos": "adjective",
+    "ja_glosses": [
+     "continuous"
+    ],
+    "vi": "liên tục"
+   },
+   "output": {
+    "id": "concept-core-continuous",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'continuous', with the Japanese term being a noun often used adjectivally."
+   }
+  },
+  {
+   "key": "831ab1ed2027a3c132f1f0f6ae853641766d6569e7b5d68e583af5ef45a42606",
+   "input": {
+    "id": "concept-core-say",
+    "en": "say",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'say': say, well, um",
+    "ja": "あの",
+    "ja_reading": "あの",
+    "ja_pos": "noun",
+    "ja_glosses": [
+     "say",
+     "well",
+     "um",
+     "er"
+    ],
+    "vi": "nói"
+   },
+   "output": {
+    "id": "concept-core-say",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The entry is fundamentally flawed; 'say' as an interjection is matched with the wrong POS and the completely incorrect Vietnamese verb 'nói' (to speak)."
+   }
+  },
+  {
+   "key": "dae45bbbcd1f685ccd2d8504d741c6e8ebd6ca20734dedc10244abde04f095e7",
+   "input": {
+    "id": "concept-core-energy",
+    "en": "energy",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'energy': influence, power, might",
+    "ja": "エネルギー",
+    "ja_reading": "エネルギー",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "năng lượng"
+   },
+   "output": {
+    "id": "concept-core-energy",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese and Vietnamese terms only translate the scientific or vitality sense of 'energy', not the specified sense of 'influence, power, might'."
+   }
+  },
+  {
+   "key": "50561b7ae799c35a8d988b253a55f34611ec9db95238a6b863632147c9ada363",
+   "input": {
+    "id": "concept-core-experiment",
+    "en": "experiment",
+    "en_pos": "noun",
+    "en_sense": "Core learning sense for 'experiment': trial, experiment, test",
+    "ja": "実験",
+    "ja_reading": "じっけん",
+    "ja_pos": "noun",
+    "ja_glosses": [],
+    "vi": "thực nghiệm"
+   },
+   "output": {
+    "id": "concept-core-experiment",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "Perfect one-to-one correspondence for 'scientific experiment' across all three languages."
+   }
+  }
+ ]
+}

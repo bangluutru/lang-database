@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:03:22Z",
+ "items": [
+  {
+   "key": "b2ed62741402a643b1d58ee08fa9ad2b5ffdd696f76acd8d3928a37459b0c893",
+   "input": {
+    "id": "wk-9011-s0",
+    "en": "wrap",
+    "en_pos": "verb",
+    "en_sense": "To enclose (an object) completely in any flexible, thin material such as fabric or paper.",
+    "ja": "包む",
+    "ja_reading": "つつむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to wrap up",
+     "to pack",
+     "to bundle",
+     "to do up"
+    ],
+    "vi": "bao"
+   },
+   "output": {
+    "id": "wk-9011-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'bao' is too broad; 'gói' or 'bọc' would be more precise equivalents for wrapping an object."
+   }
+  },
+  {
+   "key": "0cdd7670abafbb106b8df0caab7173b482b22c7e1f59dd499d7607b2caac3d6a",
+   "input": {
+    "id": "wk-9013-s2",
+    "en": "joint",
+    "en_pos": "noun",
+    "en_sense": "Any part of an animalian body where two bones or exoskeleton segments are abutted, in most cases allowing that part of the body to be bent or straightened.",
+    "ja": "関節",
+    "ja_reading": "かんせつ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "joint"
+    ],
+    "vi": "khớp"
+   },
+   "output": {
+    "id": "wk-9013-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for an anatomical joint."
+   }
+  },
+  {
+   "key": "4b76aa2ee343f31baa2720115faa17b59f1d36c6e01cd89960c8d0b207d78055",
+   "input": {
+    "id": "wk-9028-s0",
+    "en": "throat",
+    "en_pos": "noun",
+    "en_sense": "The front part of the neck.",
+    "ja": "喉",
+    "ja_reading": "のど",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "throat"
+    ],
+    "vi": "họng"
+   },
+   "output": {
+    "id": "wk-9028-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English definition is slightly imprecise, but the three words are standard equivalents for 'throat'."
+   }
+  },
+  {
+   "key": "fda8a2a89ad08dc3b951f8508e45c2345621c6abd4baaef63cfb8515a22e0aa2",
+   "input": {
+    "id": "wk-9030-s0",
+    "en": "rickshaw",
+    "en_pos": "noun",
+    "en_sense": "A two-wheeled carriage pulled along by a person.",
+    "ja": "人力車",
+    "ja_reading": "じんりきしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rickshaw",
+     "jinrikisha"
+    ],
+    "vi": "xe kéo"
+   },
+   "output": {
+    "id": "wk-9030-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents."
+   }
+  },
+  {
+   "key": "883b1e66457d5f7c8f08950a2fc1218edf8c597c982485ea000fb61a85cee6a3",
+   "input": {
+    "id": "wk-9035-e:77cadf",
+    "en": "kamikaze",
+    "en_pos": "noun",
+    "en_sense": "suicidal attack",
+    "ja": "神風",
+    "ja_reading": "かみかぜ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "kamikaze"
+    ],
+    "vi": "thần phong"
+   },
+   "output": {
+    "id": "wk-9035-e:77cadf",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese '神風' and Vietnamese 'thần phong' refer specifically to the historical Japanese concept, not the general English sense of any 'suicidal attack'."
+   }
+  },
+  {
+   "key": "1a9037b1d04ad72bce5c67ee8b53ce438909f9c5d1f8fa5481e1b48b491175e3",
+   "input": {
+    "id": "wk-904-s0",
+    "en": "symptom",
+    "en_pos": "noun",
+    "en_sense": "A perceived change in some function, sensation or appearance of a person that indicates a disease or disorder, such as fever, headache or rash; strictly, a symptom is felt or experienced by the patient, while a sign can be detected by an observer.",
+    "ja": "症候",
+    "ja_reading": "しょうこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "symptom"
+    ],
+    "vi": "triệu chứng"
+   },
+   "output": {
+    "id": "wk-904-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_JA"
+    ],
+    "note": "The Japanese '症候' is correct but formal/technical; '症状' is the more common and natural word for a learner."
+   }
+  },
+  {
+   "key": "e880b2cd7357fca49161c578cfe931ae796316c88c80aae8cd3e832b9511e7f7",
+   "input": {
+    "id": "wk-904-s1",
+    "en": "symptom",
+    "en_pos": "noun",
+    "en_sense": "A signal; anything that indicates, or is characteristic of, the presence of something else, especially of something undesirable.",
+    "ja": "兆候",
+    "ja_reading": "ちょうこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sign",
+     "indication",
+     "omen",
+     "symptom"
+    ],
+    "vi": "triệu chứng"
+   },
+   "output": {
+    "id": "wk-904-s1",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'triệu chứng' is incorrect for this figurative sense of 'symptom'; it is used for medical symptoms only."
+   }
+  },
+  {
+   "key": "ebbeb598c71dbab895259048b8ed902dcb0614d799d774dad9a88ee9650e98e9",
+   "input": {
+    "id": "wk-9047-s0",
+    "en": "industrious",
+    "en_pos": "adjective",
+    "en_sense": "Hard-working and persistent.",
+    "ja": "勤勉",
+    "ja_reading": "きんべん",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "diligent",
+     "hard-working",
+     "industrious"
+    ],
+    "vi": "chăm chỉ"
+   },
+   "output": {
+    "id": "wk-9047-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents."
+   }
+  },
+  {
+   "key": "df09746314da55d66ebbcadd242b242be566386559d5de32d1a1de475fef1d2e",
+   "input": {
+    "id": "wk-9056-s0",
+    "en": "such",
+    "en_pos": "determiner",
+    "en_sense": "Like this, that, these, those; used to make a comparison with something implied by context.",
+    "ja": "そんな",
+    "ja_reading": "そんな",
+    "ja_pos": "adj-pn",
+    "ja_glosses": [
+     "such",
+     "that sort of",
+     "that kind of",
+     "like that"
+    ],
+    "vi": "như thế"
+   },
+   "output": {
+    "id": "wk-9056-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and common equivalents for this sense."
+   }
+  },
+  {
+   "key": "7250686c5f1dfb40d150519ce4241f70eff29930289423156b4c15a0285dc3f6",
+   "input": {
+    "id": "wk-906-s0",
+    "en": "pit",
+    "en_pos": "noun",
+    "en_sense": "A hole in the ground.",
+    "ja": "穴",
+    "ja_reading": "あな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pit",
+     "hollow",
+     "cavity",
+     "hole (e.g. in the ground)"
+    ],
+    "vi": "hố"
+   },
+   "output": {
+    "id": "wk-906-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '穴' (ana) means 'hole' in general and is broader than the English 'pit' or Vietnamese 'hố', which specifically refer to a hole in the ground."
+   }
+  },
+  {
+   "key": "da5c7ed5d7e29c326791ef60340a76bd7a379e7a369955b2c17b4f7d55769c54",
+   "input": {
+    "id": "wk-9060-s0",
+    "en": "shield",
+    "en_pos": "noun",
+    "en_sense": "A broad piece of defensive armor, held in hand, formerly in general use in war, for the protection of the body.",
+    "ja": "盾",
+    "ja_reading": "たて",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "shield",
+     "buckler",
+     "escutcheon"
+    ],
+    "vi": "khiên"
+   },
+   "output": {
+    "id": "wk-9060-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for a shield."
+   }
+  },
+  {
+   "key": "1e6cf2b1d782fad180937df1eedd17f07806bbff7b84c2937867eb184bc9e9b0",
+   "input": {
+    "id": "wk-9062-s0",
+    "en": "target",
+    "en_pos": "noun",
+    "en_sense": "A butt or mark to shoot at, as for practice, or to test the accuracy of a firearm, or the force of a projectile.",
+    "ja": "標的",
+    "ja_reading": "ひょうてき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "target"
+    ],
+    "vi": "bia"
+   },
+   "output": {
+    "id": "wk-9062-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent, standard equivalents for a literal or figurative target."
+   }
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:21:14Z",
+ "items": [
+  {
+   "key": "c235b67a5b01b05ec0aee35a0c71ccc25d3b76680180edc003b50bc8a6967172",
+   "input": {
+    "id": "wk-29107-s0",
+    "en": "new year",
+    "en_pos": "noun",
+    "en_sense": "The next year; the year following the current year, especially the early part of it.",
+    "ja": "新年",
+    "ja_reading": "しんねん",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "New Year"
+    ],
+    "vi": "năm mới"
+   },
+   "output": {
+    "id": "wk-29107-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect, standard equivalents for 'new year'."
+   }
+  },
+  {
+   "key": "a520057d73beee9643855ace03cf11cbdbd78e7cd4adba6bc3089ebe2368b210",
+   "input": {
+    "id": "wk-29403-s0",
+    "en": "business trip",
+    "en_pos": "noun",
+    "en_sense": "Travel for business purposes, often paid for at least partially by the employer.",
+    "ja": "出張",
+    "ja_reading": "しゅっちょう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "business trip",
+     "official trip"
+    ],
+    "vi": "đi công tác"
+   },
+   "output": {
+    "id": "wk-29403-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese entry 'đi công tác' is a verb phrase meaning 'to go on a business trip', not a noun for 'business trip' (which would be 'chuyến công tác')."
+   }
+  },
+  {
+   "key": "f6726817892394f4ab99017d8cef30ac5c4a799dc86330a26e90051e1c39b67e",
+   "input": {
+    "id": "wk-3111-s0",
+    "en": "digestion",
+    "en_pos": "noun",
+    "en_sense": "The process, in the gastrointestinal tract, by which food is converted into substances that can be used by the body.",
+    "ja": "消化",
+    "ja_reading": "しょうか",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "digestion (of food)"
+    ],
+    "vi": "hệ tiêu hóa"
+   },
+   "output": {
+    "id": "wk-3111-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Vietnamese 'hệ tiêu hóa' means 'digestive system', not 'digestion' (the process), which should be 'sự tiêu hóa'."
+   }
+  },
+  {
+   "key": "d4de4aa43a5fa789d1e7521a9aaa330861a2711e81266f11f97eb2d1e18a7802",
+   "input": {
+    "id": "wk-3120-s1",
+    "en": "dictatorship",
+    "en_pos": "noun",
+    "en_sense": "A government which exercises autocratic rule.",
+    "ja": "独裁",
+    "ja_reading": "どくさい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "dictatorship",
+     "despotism",
+     "autocracy"
+    ],
+    "vi": "chế độ độc tài"
+   },
+   "output": {
+    "id": "wk-3120-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and accurate equivalents for a dictatorial government."
+   }
+  },
+  {
+   "key": "2056d64394c3262c4e5f5529f038fed84deeec75f852dc58409c243a4024eb12",
+   "input": {
+    "id": "wk-3376-s3",
+    "en": "note",
+    "en_pos": "noun",
+    "en_sense": "A brief piece of writing intended to assist the memory; a memorandum; a minute.",
+    "ja": "メモ",
+    "ja_reading": "メモ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "note",
+     "memo",
+     "memorandum"
+    ],
+    "vi": "bút ký"
+   },
+   "output": {
+    "id": "wk-3376-s3",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'bút ký' means 'memoir' or 'literary sketch', not a simple 'note' or 'memo' for remembering things (which is 'ghi chú')."
+   }
+  },
+  {
+   "key": "1d0c1d96a0d00801d43132a88a5f11019a02ec0ebe4cab3d79544c57fa36f692",
+   "input": {
+    "id": "wk-34050-s0",
+    "en": "pramana",
+    "en_pos": "noun",
+    "en_sense": "means of knowledge",
+    "ja": "量",
+    "ja_reading": "りょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pramana (means by which one gains accurate and valid knowledge; in Indian philosophy)"
+    ],
+    "vi": "lượng"
+   },
+   "output": {
+    "id": "wk-34050-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "This is a correct set of equivalents for the specialized philosophical term 'pramana', though it is very rare in general language."
+   }
+  },
+  {
+   "key": "a1949e59a64ba033315c1b27837469a21db2475b674e8c35d82febd31c5fe531",
+   "input": {
+    "id": "wk-3483-s0",
+    "en": "solidarity",
+    "en_pos": "noun",
+    "en_sense": "A bond of unity or agreement between individuals, united around a common goal or against a common enemy, such as the unifying principle that defines the labor movement; mutual support within a group.",
+    "ja": "連帯",
+    "ja_reading": "れんたい",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "solidarity"
+    ],
+    "vi": "sự liên đới"
+   },
+   "output": {
+    "id": "wk-3483-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "UNNATURAL_VI",
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'sự liên đới' is a valid but very formal and somewhat legalistic translation; 'tình đoàn kết' is the more common and natural equivalent for 'solidarity'."
+   }
+  },
+  {
+   "key": "899e35f81062cbce5dd4f9e587ff80f72cfc69adf62fb239d1adb007ef5d20b3",
+   "input": {
+    "id": "wk-3749-s0",
+    "en": "subtraction",
+    "en_pos": "noun",
+    "en_sense": "The process of subtracting a number from another.",
+    "ja": "引き算",
+    "ja_reading": "ひきざん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "subtraction"
+    ],
+    "vi": "phép trừ"
+   },
+   "output": {
+    "id": "wk-3749-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the arithmetic operation of subtraction."
+   }
+  },
+  {
+   "key": "e614bc68c79f9434f3ce3ca4dbcfab1e4ba0cad61a06b4413571522bb73f2335",
+   "input": {
+    "id": "wk-3750-s2",
+    "en": "division",
+    "en_pos": "noun",
+    "en_sense": "The process of dividing a number by another.",
+    "ja": "割り算",
+    "ja_reading": "わりざん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "division"
+    ],
+    "vi": "phép chia"
+   },
+   "output": {
+    "id": "wk-3750-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for the arithmetic operation of division."
+   }
+  },
+  {
+   "key": "acf2909f24b53d95c3446ce14888495ba345742f0223144850fe8976b4505966",
+   "input": {
+    "id": "wk-3879-e:e60494",
+    "en": "flight",
+    "en_pos": "noun",
+    "en_sense": "act of flying",
+    "ja": "飛行",
+    "ja_reading": "ひこう",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "flight",
+     "flying",
+     "aviation"
+    ],
+    "vi": "chuyến bay"
+   },
+   "output": {
+    "id": "wk-3879-e:e60494",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'chuyến bay' means a scheduled flight journey, not the general 'act of flying' specified in the English sense, which is correctly translated by the Japanese '飛行'."
+   }
+  },
+  {
+   "key": "61b875d06b36af43bda866bbd6b57be103e6920ecbed309bfcf8776e7f74f245",
+   "input": {
+    "id": "wk-4224-s0",
+    "en": "monopoly",
+    "en_pos": "noun",
+    "en_sense": "A situation, by legal privilege or other agreement, in which solely one party (company, cartel etc.) exclusively provides a particular product or service, dominating that market and generally exerting powerful control over it.",
+    "ja": "独占",
+    "ja_reading": "どくせん",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "monopoly",
+     "monopolization",
+     "exclusivity"
+    ],
+    "vi": "sự độc quyền"
+   },
+   "output": {
+    "id": "wk-4224-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and accurate equivalents for the economic concept of a monopoly."
+   }
+  },
+  {
+   "key": "1ea9ff94bd69005fbc03eec3a957885619f8d70a31280f125880c10ae8b3e6a5",
+   "input": {
+    "id": "wk-4476-s0",
+    "en": "needle",
+    "en_pos": "noun",
+    "en_sense": "A long, thin, sharp implement usually for piercing as in sewing, embroidery, acupuncture, tattooing, body piercing, medical injections, sutures, etc; or a blunt but otherwise similar implement used for forming loops or knots in crafts such as darning, knitting, tatting, etc.",
+    "ja": "針",
+    "ja_reading": "はり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "needle",
+     "pin"
+    ],
+    "vi": "kim"
+   },
+   "output": {
+    "id": "wk-4476-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, general words for 'needle' and cover the same wide range of applications."
+   }
+  }
+ ]
+}

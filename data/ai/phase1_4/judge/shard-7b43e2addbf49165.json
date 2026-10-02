@@ -1,0 +1,383 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:32:37Z",
+ "items": [
+  {
+   "key": "c26afdf919dd42e349f425f031eab8217160e55f8fa2db40ecea9f20ecb565bb",
+   "input": {
+    "id": "wk-1557-s2",
+    "en": "amber",
+    "en_pos": "noun",
+    "en_sense": "A hard, generally yellow to brown translucent or transparent fossil resin from extinct coniferous trees of the pine genus, used for jewellery, decoration and later dissolved as a binder in varnishes. One variety, blue amber, appears blue rather than yellow under direct sunlight.",
+    "ja": "琥珀",
+    "ja_reading": "こはく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "amber"
+    ],
+    "vi": "hổ phách"
+   },
+   "output": {
+    "id": "wk-1557-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the fossil resin 'amber'."
+   }
+  },
+  {
+   "key": "5ffc210f9a66f326456141882b90c89d564372704b72c489f0afe50cd2d4382e",
+   "input": {
+    "id": "wk-15571-s0",
+    "en": "unfortunately",
+    "en_pos": "adverb",
+    "en_sense": "Happening through bad luck, or because of some unfortunate event.",
+    "ja": "あいにく",
+    "ja_reading": "あいにく",
+    "ja_pos": "adj-na,adv,n,adj-no",
+    "ja_glosses": [
+     "unfortunately",
+     "sorry, but ..."
+    ],
+    "vi": "tiếc rằng"
+   },
+   "output": {
+    "id": "wk-15571-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and common ways to express 'unfortunately'."
+   }
+  },
+  {
+   "key": "afba4650998db359842cefc6be7c8750229abf7570a761707446032f53bd97b9",
+   "input": {
+    "id": "wk-15588-s0",
+    "en": "prejudice",
+    "en_pos": "noun",
+    "en_sense": "An adverse judgment or opinion formed beforehand or without knowledge of the facts.",
+    "ja": "偏見",
+    "ja_reading": "へんけん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "prejudice",
+     "bias",
+     "distorted view"
+    ],
+    "vi": "định kiến"
+   },
+   "output": {
+    "id": "wk-15588-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and accurate equivalents for 'prejudice' in its negative sense."
+   }
+  },
+  {
+   "key": "2799f93719ea7b159e57c29ad5fb7506297a6d28eda5f3ddc3dee28656e50010",
+   "input": {
+    "id": "wk-15588-s1",
+    "en": "prejudice",
+    "en_pos": "noun",
+    "en_sense": "A preconception, any preconceived opinion or feeling, whether positive or negative.",
+    "ja": "先入観",
+    "ja_reading": "せんにゅうかん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "preconception",
+     "preconceived notion",
+     "prejudice"
+    ],
+    "vi": "định kiến"
+   },
+   "output": {
+    "id": "wk-15588-s1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'định kiến' strongly implies a negative judgment and is a poor match for the neutral English sense and the Japanese '先入観' (preconception)."
+   }
+  },
+  {
+   "key": "4de48704d61aee60784401f9c912822393fc9803441e499c586e53ef04658c20",
+   "input": {
+    "id": "wk-15621-s0",
+    "en": "rebellion",
+    "en_pos": "noun",
+    "en_sense": "Armed resistance to an established government or ruler.",
+    "ja": "暴動",
+    "ja_reading": "ぼうどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "insurrection",
+     "riot",
+     "uprising",
+     "rebellion",
+     "revolt"
+    ],
+    "vi": "nổi dậy"
+   },
+   "output": {
+    "id": "wk-15621-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'nổi dậy' is a verb ('to rebel'), not a noun ('rebellion'), and the Japanese '暴動' is closer to 'riot' than a full-scale 'rebellion'."
+   }
+  },
+  {
+   "key": "a7d15d7df56613703c7e0ef61df0aa689e92d58345152e6735619643dc0db62a",
+   "input": {
+    "id": "wk-15628-s0",
+    "en": "garage",
+    "en_pos": "noun",
+    "en_sense": "A building (or section of a building) used to store a car or cars, tools and other miscellaneous items.",
+    "ja": "車庫",
+    "ja_reading": "しゃこ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "garage",
+     "carport",
+     "depot (for trains, buses, etc.)",
+     "shed",
+     "carbarn"
+    ],
+    "vi": "nhà xe"
+   },
+   "output": {
+    "id": "wk-15628-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and correct words for a garage where vehicles are stored."
+   }
+  },
+  {
+   "key": "a6c8dd0ccebac2d05b55c77b9059f11b684f3adae6e14e32864f8015c83c1751",
+   "input": {
+    "id": "wk-15646-s0",
+    "en": "perspiration",
+    "en_pos": "noun",
+    "en_sense": "The action or process of perspiring.",
+    "ja": "汗",
+    "ja_reading": "あせ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sweat",
+     "perspiration"
+    ],
+    "vi": "đổ mồ hôi"
+   },
+   "output": {
+    "id": "wk-15646-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'đổ mồ hôi' is a verb phrase ('to sweat') and does not match the English and Japanese nouns ('perspiration'/'sweat')."
+   }
+  },
+  {
+   "key": "08cd56301f90daab36714d218b881f16786690d68b74c4e1ce01bc405f862d12",
+   "input": {
+    "id": "wk-1568-s0",
+    "en": "calculator",
+    "en_pos": "noun",
+    "en_sense": "A mechanical or electronic device that performs mathematical calculations; (now usually) an electronic one specifically.",
+    "ja": "電卓",
+    "ja_reading": "でんたく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "calculator (electronic)",
+     "pocket calculator"
+    ],
+    "vi": "máy tính cầm tay"
+   },
+   "output": {
+    "id": "wk-1568-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and specific words for a modern electronic calculator."
+   }
+  },
+  {
+   "key": "70853edd15ed294fd13caca296ef2df77f6cea63fcf6cb39ec24ecf43bb3285e",
+   "input": {
+    "id": "wk-15686-s0",
+    "en": "numerator",
+    "en_pos": "noun",
+    "en_sense": "The number or expression written above the line in a fraction (such as 1 in ½).",
+    "ja": "分子",
+    "ja_reading": "ぶんし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "numerator"
+    ],
+    "vi": "tử"
+   },
+   "output": {
+    "id": "wk-15686-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard mathematical terms for 'numerator'."
+   }
+  },
+  {
+   "key": "83fa992946312f038bdce4643ddc2332fb539a47bad16b53cb510a6a25fa3cbf",
+   "input": {
+    "id": "wk-15687-s0",
+    "en": "denominator",
+    "en_pos": "noun",
+    "en_sense": "The number or expression written below the line in a fraction (such as 2 in ½).",
+    "ja": "分母",
+    "ja_reading": "ぶんぼ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "denominator"
+    ],
+    "vi": "mẫu"
+   },
+   "output": {
+    "id": "wk-15687-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the correct and standard mathematical terms for 'denominator'."
+   }
+  },
+  {
+   "key": "f78ac46d69cf88f427b22916e6d1dab9548efc3e74c17408b39fbda9e1685a7a",
+   "input": {
+    "id": "wk-15688-s0",
+    "en": "sunshine",
+    "en_pos": "noun",
+    "en_sense": "The direct rays, light or warmth of the sun.",
+    "ja": "日光",
+    "ja_reading": "にっこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sunlight",
+     "sunshine",
+     "sunbeams"
+    ],
+    "vi": "nắng"
+   },
+   "output": {
+    "id": "wk-15688-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the common, natural words for 'sunshine'."
+   }
+  },
+  {
+   "key": "35881c380138822e6c6d8010261661725b34b60ebd9de985ff0f1ba2f560700f",
+   "input": {
+    "id": "wk-1569-s7",
+    "en": "boss",
+    "en_pos": "noun",
+    "en_sense": "An enemy, often at the end of a level, that is particularly challenging and must be beaten in order to progress.",
+    "ja": "ボス",
+    "ja_reading": "ボス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "boss (difficult enemy, usu. at the end of a section or level)"
+    ],
+    "vi": "trùm"
+   },
+   "output": {
+    "id": "wk-1569-s7",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard slang in their respective languages for a video game 'boss'."
+   }
+  }
+ ]
+}

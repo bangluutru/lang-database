@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:28:22Z",
+ "items": [
+  {
+   "key": "9625c3ef8d33b3bd37bd86d758c417430238ba3be370a6c438fe2175aee475fc",
+   "input": {
+    "id": "jm-1137820-0-rice",
+    "en": "rice",
+    "en_pos": "noun",
+    "en_sense": "rice (esp. when served on a plate)",
+    "ja": "ライス",
+    "ja_reading": "ライス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rice (esp. when served on a plate)"
+    ],
+    "vi": "cơm"
+   },
+   "output": {
+    "id": "jm-1137820-0-rice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'cơm' is broader than the Japanese 'ライス', as it covers both Western-style and Asian-style cooked rice."
+   }
+  },
+  {
+   "key": "c1fbf95232fd0021d5517f90e1b1e939cf93c01eca058c14f00daa606affaa4e",
+   "input": {
+    "id": "jm-1139720-0-label",
+    "en": "label",
+    "en_pos": "noun",
+    "en_sense": "label",
+    "ja": "ラベル",
+    "ja_reading": "ラベル",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "label"
+    ],
+    "vi": "nhãn"
+   },
+   "output": {
+    "id": "jm-1139720-0-label",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'label'."
+   }
+  },
+  {
+   "key": "1257fa2dc70cff156ca563045cd787faf74810e091319db1b1081796efa5826f",
+   "input": {
+    "id": "jm-1139750-0-lab",
+    "en": "lab",
+    "en_pos": "noun",
+    "en_sense": "lab",
+    "ja": "ラボ",
+    "ja_reading": "ラボ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lab"
+    ],
+    "vi": "phòng thí nghiệm"
+   },
+   "output": {
+    "id": "jm-1139750-0-lab",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Vietnamese 'phòng thí nghiệm' is more formal than the English 'lab' and Japanese 'ラボ', being equivalent to 'laboratory'."
+   }
+  },
+  {
+   "key": "57579ec838429ed49dae1b3091113602340e5e01f0bb7fe09fdf57259288809b",
+   "input": {
+    "id": "jm-1142550-1-lift",
+    "en": "lift",
+    "en_pos": "noun",
+    "en_sense": "(goods) lift",
+    "ja": "リフト",
+    "ja_reading": "リフト",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(goods) lift"
+    ],
+    "vi": "thang máy"
+   },
+   "output": {
+    "id": "jm-1142550-1-lift",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'thang máy' means a general (passenger) lift, not specifically a goods lift as intended by the English sense."
+   }
+  },
+  {
+   "key": "56c75584f4db232523d70921e2ce14d95869c45e715fcfd02feedd8a65214a3f",
+   "input": {
+    "id": "jm-1143920-0-rule",
+    "en": "rule",
+    "en_pos": "noun",
+    "en_sense": "rule",
+    "ja": "ルール",
+    "ja_reading": "ルール",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "rule"
+    ],
+    "vi": "quy tắc"
+   },
+   "output": {
+    "id": "jm-1143920-0-rule",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'rule'."
+   }
+  },
+  {
+   "key": "3bd67993bd31f655ef3ec28405892d65e4240e0091ed8c24f90524feae9c4648",
+   "input": {
+    "id": "jm-1145510-0-lesson",
+    "en": "lesson",
+    "en_pos": "noun",
+    "en_sense": "lesson",
+    "ja": "レッスン",
+    "ja_reading": "レッスン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lesson"
+    ],
+    "vi": "bài học"
+   },
+   "output": {
+    "id": "jm-1145510-0-lesson",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese 'レッスン' is narrower than English 'lesson', typically referring to private or practical skill lessons, not general school classes."
+   }
+  },
+  {
+   "key": "773a8d6e57c5367bfdab53e1817e23199d39e1c286a917737bb5f7dd36127e91",
+   "input": {
+    "id": "jm-1148010-0-romantic",
+    "en": "romantic",
+    "en_pos": "adjective",
+    "en_sense": "romantic",
+    "ja": "ロマンチック",
+    "ja_reading": "ロマンチック",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "romantic"
+    ],
+    "vi": "lãng mạn"
+   },
+   "output": {
+    "id": "jm-1148010-0-romantic",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'romantic'."
+   }
+  },
+  {
+   "key": "835b56b597624b8e1e4caa0d4d816ffafd01f0334225e3a08a450ecbf10f0225",
+   "input": {
+    "id": "jm-1149830-0-us",
+    "en": "us",
+    "en_pos": "noun",
+    "en_sense": "(United States of) America; United States; US; USA",
+    "ja": "アメリカ",
+    "ja_reading": "アメリカ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(United States of) America",
+     "United States",
+     "US",
+     "USA"
+    ],
+    "vi": "mỹ"
+   },
+   "output": {
+    "id": "jm-1149830-0-us",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "The English lemma 'us' is a typo for 'US'; otherwise, all three terms are the standard names for the United States."
+   }
+  },
+  {
+   "key": "7a42db4c80a2f5a9f8de953e680d8429df9e0855dd1e3b24ec88667ce53b625c",
+   "input": {
+    "id": "jm-1150110-0-pity",
+    "en": "pity",
+    "en_pos": "noun",
+    "en_sense": "pity; sorrow; grief; misery; compassion; pathos",
+    "ja": "哀れ",
+    "ja_reading": "あわれ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pity",
+     "sorrow",
+     "grief",
+     "misery",
+     "compassion",
+     "pathos"
+    ],
+    "vi": "thương hại"
+   },
+   "output": {
+    "id": "jm-1150110-0-pity",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "MULTIPLE_SENSES_COLLAPSED"
+    ],
+    "note": "The Vietnamese 'thương hại' only means 'pity' and does not cover the broad range of meanings like sorrow, grief, or pathos listed for the English and Japanese terms."
+   }
+  },
+  {
+   "key": "65289ba955f4b785ec1ce9df080d68e9ea0647dcacf366c9d4814382ec3f4884",
+   "input": {
+    "id": "jm-1152720-0-clasp",
+    "en": "clasp",
+    "en_pos": "verb",
+    "en_sense": "to clasp; to grasp; to grip; to clutch",
+    "ja": "握る",
+    "ja_reading": "にぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to clasp",
+     "to grasp",
+     "to grip",
+     "to clutch"
+    ],
+    "vi": "nắm"
+   },
+   "output": {
+    "id": "jm-1152720-0-clasp",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are excellent equivalents for the action of grasping or gripping with the hand."
+   }
+  },
+  {
+   "key": "71c7725bd1525e51b025f4b34c88a3b08dbff27b5b96588c6a04cd0f747d0fd6",
+   "input": {
+    "id": "jm-1153430-0-treatment",
+    "en": "treatment",
+    "en_pos": "noun",
+    "en_sense": "treatment; service; dealing (with); handling; management",
+    "ja": "扱い",
+    "ja_reading": "あつかい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "treatment",
+     "service",
+     "dealing (with)",
+     "handling",
+     "management"
+    ],
+    "vi": "đối xử"
+   },
+   "output": {
+    "id": "jm-1153430-0-treatment",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đối xử' is a verb meaning 'to treat (a person)', not a noun, and doesn't cover the sense of handling objects or management."
+   }
+  },
+  {
+   "key": "dda6331ad012a70998937c218f47fbdcc5a3a4e412d22a904a82b02d08d131e9",
+   "input": {
+    "id": "jm-1153520-0-candy",
+    "en": "candy",
+    "en_pos": "noun",
+    "en_sense": "(hard) candy; toffee",
+    "ja": "飴",
+    "ja_reading": "あめ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(hard) candy",
+     "toffee"
+    ],
+    "vi": "kẹo"
+   },
+   "output": {
+    "id": "jm-1153520-0-candy",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'kẹo' is a general term for 'candy' or 'sweets', making it broader than the specific 'hard candy' sense of English and Japanese '飴'."
+   }
+  }
+ ]
+}

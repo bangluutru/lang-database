@@ -1,0 +1,396 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:47:11Z",
+ "items": [
+  {
+   "key": "1e2e4ca46be4723fba88a6de9f133722e7621f5e36481229b531c953a6332b57",
+   "input": {
+    "id": "wk-4680-s0",
+    "en": "flood",
+    "en_pos": "verb",
+    "en_sense": "To overflow, as by water from excessive rainfall.",
+    "ja": "氾濫する",
+    "ja_reading": "はんらんする",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "overflowing",
+     "flood",
+     "inundation",
+     "deluge"
+    ],
+    "vi": "tràn ngập"
+   },
+   "output": {
+    "id": "wk-4680-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and natural equivalents for a river or body of water overflowing."
+   }
+  },
+  {
+   "key": "34d7a1e2c5195884b07c52731de68e2d509cec3b09aa8b0923547ef5bd982192",
+   "input": {
+    "id": "wk-4682-s0",
+    "en": "import",
+    "en_pos": "verb",
+    "en_sense": "To bring (something) in from a foreign country, especially for sale or trade.",
+    "ja": "輸入する",
+    "ja_reading": "ゆにゅうする",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "import",
+     "importation",
+     "introduction"
+    ],
+    "vi": "nhập khẩu"
+   },
+   "output": {
+    "id": "wk-4682-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, formal words for 'to import' and are direct equivalents."
+   }
+  },
+  {
+   "key": "e3ba9c22436eccd6ae53780caf23cc9bfbbb14bd14c0563e60c9672d36812c29",
+   "input": {
+    "id": "wk-4690-s5",
+    "en": "nuclear",
+    "en_pos": "adjective",
+    "en_sense": "Pertaining to the nucleus of a cell.",
+    "ja": "核",
+    "ja_reading": "かく",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "nuclear weapons"
+    ],
+    "vi": "hạt"
+   },
+   "output": {
+    "id": "wk-4690-s5",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "POS_MISMATCH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Japanese gloss points to the 'nuclear weapons' sense, not the biological one, and the Vietnamese word 'hạt' (seed/particle) is incorrect for this context."
+   }
+  },
+  {
+   "key": "1a59d78ef3d27cf6e8725221c359c49f9eb2779ac659294335d7d6ce941b7143",
+   "input": {
+    "id": "wk-471-s5",
+    "en": "husband",
+    "en_pos": "noun",
+    "en_sense": "The male of a pair of animals.",
+    "ja": "夫",
+    "ja_reading": "おっと",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "husband"
+    ],
+    "vi": "chồng"
+   },
+   "output": {
+    "id": "wk-471-s5",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "The Japanese and Vietnamese words mean human husband, not the male of an animal pair, which is the specified English sense."
+   }
+  },
+  {
+   "key": "c63c45f2135e352ed1a864521a95e7c2bf4f21e51ed36cd6dd3e189f6273c999",
+   "input": {
+    "id": "wk-4713-e:3090da",
+    "en": "loud",
+    "en_pos": "adjective",
+    "en_sense": "of a sound",
+    "ja": "騒々しい",
+    "ja_reading": "そうぞうしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "noisy",
+     "loud",
+     "boisterous",
+     "clamorous",
+     "raucous"
+    ],
+    "vi": "to"
+   },
+   "output": {
+    "id": "wk-4713-e:3090da",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '騒々しい' implies a noisy, clamorous, and often unpleasant loudness, which is narrower than the general English sense of 'loud'."
+   }
+  },
+  {
+   "key": "03494bb14133cac67aeb5d16347863bba82f9169ce70cc9ca8d76b57c07e3ea5",
+   "input": {
+    "id": "wk-4713-s1",
+    "en": "loud",
+    "en_pos": "adjective",
+    "en_sense": "Noisy.",
+    "ja": "うるさい",
+    "ja_reading": "うるさい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "noisy",
+     "loud"
+    ],
+    "vi": "ầm ĩ"
+   },
+   "output": {
+    "id": "wk-4713-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms perfectly match the sense of being loud in a noisy and often annoying manner."
+   }
+  },
+  {
+   "key": "73828042788a472d69140989b5aba6ae6f2c7744bd591874c53974b568f9b1f6",
+   "input": {
+    "id": "wk-472-s0",
+    "en": "religion",
+    "en_pos": "noun",
+    "en_sense": "Belief in a spiritual or metaphysical reality (often including at least one deity), accompanied by practices or rituals pertaining to the belief.",
+    "ja": "宗教",
+    "ja_reading": "しゅうきょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "religion",
+     "religious affiliation",
+     "belief",
+     "faith",
+     "creed"
+    ],
+    "vi": "đạo"
+   },
+   "output": {
+    "id": "wk-472-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'đạo' can mean 'religion', but also 'way/path', making it broader than the English and Japanese. 'Tôn giáo' is the more precise Vietnamese equivalent."
+   }
+  },
+  {
+   "key": "acc46bd8f36c91f0d4eea8a3d19c9e712ef43f1b1ac57dd477526998f5ebc35b",
+   "input": {
+    "id": "wk-4727-s0",
+    "en": "trout",
+    "en_pos": "noun",
+    "en_sense": "Any of several species of fish in Salmonidae, closely related to salmon, and distinguished by spawning more than once.",
+    "ja": "ます",
+    "ja_reading": "ます",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "trout",
+     "sea trout"
+    ],
+    "vi": "cá hồi"
+   },
+   "output": {
+    "id": "wk-4727-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'cá hồi' means salmon, not trout. While related fish, they are not equivalents."
+   }
+  },
+  {
+   "key": "d61e66f8aa208312dca3638af16ad512eb98d9f9b9fda8ee562ba55857f4f0ac",
+   "input": {
+    "id": "wk-4737-s0",
+    "en": "alchemist",
+    "en_pos": "noun",
+    "en_sense": "One who practices alchemy.",
+    "ja": "錬金術師",
+    "ja_reading": "れんきんじゅつし",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "alchemist"
+    ],
+    "vi": "nhà giả kim"
+   },
+   "output": {
+    "id": "wk-4737-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct translations for 'alchemist'."
+   }
+  },
+  {
+   "key": "c5c9f56c8c2c3ddb18fcc886000314f9bf006d263bda9e4f09d3d5bcedabd0a6",
+   "input": {
+    "id": "wk-474-s1",
+    "en": "big",
+    "en_pos": "adjective",
+    "en_sense": "Fat.",
+    "ja": "大きい",
+    "ja_reading": "おおきい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "big",
+     "large",
+     "great"
+    ],
+    "vi": "lớn"
+   },
+   "output": {
+    "id": "wk-474-s1",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "OK",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Japanese and Vietnamese words mean 'big' or 'large' in size, not 'fat' as specified by the English sense. The correct words would be '太い' (ja) and 'mập'/'béo' (vi)."
+   }
+  },
+  {
+   "key": "318041e8af02d4835dacdb5e88e0f81a6eb8edb49a089a08102eb9c7e3be71cd",
+   "input": {
+    "id": "wk-4741-s1",
+    "en": "believe",
+    "en_pos": "verb",
+    "en_sense": "To accept that someone is telling the truth.",
+    "ja": "信じる",
+    "ja_reading": "しんじる",
+    "ja_pos": "v1,vt",
+    "ja_glosses": [
+     "to believe",
+     "to believe in",
+     "to place trust in",
+     "to confide in",
+     "to have faith in"
+    ],
+    "vi": "tin"
+   },
+   "output": {
+    "id": "wk-4741-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for believing someone or something."
+   }
+  },
+  {
+   "key": "5773e5f8b96165fa2334a13876bbb2254ba81e21a232c0acf1039f89da8544ae",
+   "input": {
+    "id": "wk-4742-e:54f24b",
+    "en": "popcorn",
+    "en_pos": "noun",
+    "en_sense": "a snack food made from corn kernels popped by dry heating",
+    "ja": "ポップコーン",
+    "ja_reading": "ポップコーン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "popcorn"
+    ],
+    "vi": "bắp rang"
+   },
+   "output": {
+    "id": "wk-4742-e:54f24b",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural words for popcorn in each language."
+   }
+  }
+ ]
+}

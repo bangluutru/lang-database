@@ -1,0 +1,403 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:37:36Z",
+ "items": [
+  {
+   "key": "05bef3af7d53d3561a395d2107c168d262b0d139744e63b00876d578c7ea309e",
+   "input": {
+    "id": "wk-20305-s0",
+    "en": "immigrant",
+    "en_pos": "noun",
+    "en_sense": "A non-native person who comes to a country from another country to permanently settle there.",
+    "ja": "移民",
+    "ja_reading": "いみん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "immigrant",
+     "emigrant"
+    ],
+    "vi": "nhập cư"
+   },
+   "output": {
+    "id": "wk-20305-s0",
+    "en_ja": "BROAD",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "TOO_BROAD",
+     "UNNATURAL_VI",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'nhập cư' is a verb ('to immigrate'), not the noun for the person ('người nhập cư'); Japanese '移民' is broad, covering both 'immigrant' and 'emigrant'."
+   }
+  },
+  {
+   "key": "c2c80fa99508df00891227de5f8cfdd78d862845ea312a5008c58041d0e727db",
+   "input": {
+    "id": "wk-20320-s0",
+    "en": "emigrant",
+    "en_pos": "noun",
+    "en_sense": "Someone who leaves a country to settle in a new country.",
+    "ja": "移民",
+    "ja_reading": "いみん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "immigrant",
+     "emigrant"
+    ],
+    "vi": "người di cư"
+   },
+   "output": {
+    "id": "wk-20320-s0",
+    "en_ja": "BROAD",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese '移民' is broad (immigrant/emigrant), and Vietnamese 'người di cư' is also broad (migrant), failing to capture the specific sense of 'emigrant' (one who leaves)."
+   }
+  },
+  {
+   "key": "36e4184c8c59046e15dc65fdcd1a946de0d508ad00f105c89f859dce9ca8cfdd",
+   "input": {
+    "id": "wk-2033-s0",
+    "en": "lead",
+    "en_pos": "noun",
+    "en_sense": "A heavy, pliable, inelastic metal element, having a bright, bluish color, but easily tarnished; both malleable and ductile, though with little tenacity. It is easily fusible, forms alloys with other metals, and is an ingredient of solder and type metal. Atomic number 82.",
+    "ja": "鉛",
+    "ja_reading": "なまり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "lead (Pb)"
+    ],
+    "vi": "chì"
+   },
+   "output": {
+    "id": "wk-2033-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, unambiguous names for the chemical element lead (Pb)."
+   }
+  },
+  {
+   "key": "249202c6c6f6a21a8411ae03d65b331c27dfa64829272022e20e3c43bc9e5f3d",
+   "input": {
+    "id": "wk-2034-s0",
+    "en": "lead",
+    "en_pos": "verb",
+    "en_sense": "To guide or conduct with the hand, or by means of some physical contact connection.",
+    "ja": "導く",
+    "ja_reading": "みちびく",
+    "ja_pos": "v5k,vt",
+    "ja_glosses": [
+     "to guide",
+     "to lead",
+     "to show the way",
+     "to conduct"
+    ],
+    "vi": "dẫn"
+   },
+   "output": {
+    "id": "wk-2034-s0",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Japanese '導く' is broader than the specific English sense of leading by physical contact, also covering abstract guidance."
+   }
+  },
+  {
+   "key": "d39c195e2c6abc6672c0662edfd5bb42f3905661c219d5d2cc2c21a26374bbf8",
+   "input": {
+    "id": "wk-20342-s0",
+    "en": "by no means",
+    "en_pos": "expression",
+    "en_sense": "Certainly not; definitely not; not at all.",
+    "ja": "なかなか",
+    "ja_reading": "なかなか",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "by no means",
+     "not readily"
+    ],
+    "vi": "ai đời"
+   },
+   "output": {
+    "id": "wk-20342-s0",
+    "en_ja": "WRONG",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "Both the Japanese and Vietnamese expressions are incorrect translations for 'by no means'; 'なかなか' (+ negative) means 'not easily' and 'ai đời' is a colloquial expression of disapproval."
+   }
+  },
+  {
+   "key": "6e53be4169fb195f761f3da2258ffefa19dbba5f26fa8b6061a123eaf1ae0635",
+   "input": {
+    "id": "wk-20368-s0",
+    "en": "table of contents",
+    "en_pos": "noun",
+    "en_sense": "A list of titles of the parts of a book or document, organized in the order in which the parts appear.",
+    "ja": "目次",
+    "ja_reading": "もくじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "table of contents",
+     "contents"
+    ],
+    "vi": "mục lục"
+   },
+   "output": {
+    "id": "wk-20368-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'table of contents'."
+   }
+  },
+  {
+   "key": "f13047108bcd26f23db307feb885449de9dd733d0616e4b397b9ef359fd1c494",
+   "input": {
+    "id": "wk-20384-s0",
+    "en": "suffering",
+    "en_pos": "noun",
+    "en_sense": "The condition of someone who suffers; a state of pain or distress.",
+    "ja": "苦痛",
+    "ja_reading": "くつう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "pain",
+     "agony",
+     "suffering",
+     "distress",
+     "torment"
+    ],
+    "vi": "khổ"
+   },
+   "output": {
+    "id": "wk-20384-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "MEDIUM",
+    "issues": [],
+    "note": "The terms are good equivalents, though Vietnamese 'khổ' can be slightly broader than Japanese '苦痛', encompassing general misery and hardship."
+   }
+  },
+  {
+   "key": "edb5786dfca67a7d0a4ef0dfb48ccf8d782fbbda5c63e55ca5972ccb677c8ddc",
+   "input": {
+    "id": "wk-20397-s0",
+    "en": "pleased",
+    "en_pos": "adjective",
+    "en_sense": "Happy, content.",
+    "ja": "嬉しい",
+    "ja_reading": "うれしい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "happy",
+     "glad",
+     "pleased",
+     "delighted",
+     "overjoyed"
+    ],
+    "vi": "hân hạnh"
+   },
+   "output": {
+    "id": "wk-20397-s0",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "REGISTER_CLASH",
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'hân hạnh' is a formal term meaning 'honored' or 'pleased' only in specific contexts like greetings, not a general equivalent for 'pleased' (happy, content)."
+   }
+  },
+  {
+   "key": "afea094dde61474976748df841c9ec0ad46e9e8da6af63e839d9e401dba066d6",
+   "input": {
+    "id": "wk-20409-s0",
+    "en": "napkin",
+    "en_pos": "noun",
+    "en_sense": "A serviette; a (usually rectangular) piece of cloth or paper used at the table for wiping the mouth and hands for cleanliness while eating.",
+    "ja": "ナプキン",
+    "ja_reading": "ナプキン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(table) napkin",
+     "serviette"
+    ],
+    "vi": "khăn ăn"
+   },
+   "output": {
+    "id": "wk-20409-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard and direct equivalents for 'table napkin'."
+   }
+  },
+  {
+   "key": "2c533522926d5fbdc94a27ea0bdfff5ae2a4df5fd01e06bc86ac412ee1b2ec20",
+   "input": {
+    "id": "wk-2041-s2",
+    "en": "cork",
+    "en_pos": "noun",
+    "en_sense": "A bottle stopper made from this or any other material.",
+    "ja": "コルク栓",
+    "ja_reading": "コルクせん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cork stopper",
+     "(bottle) cork"
+    ],
+    "vi": "nút"
+   },
+   "output": {
+    "id": "wk-2041-s2",
+    "en_ja": "NARROW",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW",
+     "TOO_BROAD"
+    ],
+    "note": "The senses do not align: English is 'bottle stopper (any material)', Japanese 'コルク栓' is specifically a 'cork stopper', and Vietnamese 'nút' is a general 'stopper' or 'button'."
+   }
+  },
+  {
+   "key": "c3823a493adbb75c96da1727e934c9fca599c1e89a2f3956d59ac67b941a57db",
+   "input": {
+    "id": "wk-20416-s0",
+    "en": "hindrance",
+    "en_pos": "noun",
+    "en_sense": "Something which hinders: something that holds back or causes problems with something else.",
+    "ja": "支障",
+    "ja_reading": "ししょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "obstacle",
+     "hindrance",
+     "impediment",
+     "difficulty"
+    ],
+    "vi": "cản trở"
+   },
+   "output": {
+    "id": "wk-20416-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'cản trở' is a verb meaning 'to hinder', not the noun 'hindrance' (which would be 'sự cản trở' or 'trở ngại')."
+   }
+  },
+  {
+   "key": "1ffb9a7f408bdc251e5ab1adfc47ecd5d31a62f5eff49e9c0876014d3ea49e64",
+   "input": {
+    "id": "wk-20422-s0",
+    "en": "poplar",
+    "en_pos": "noun",
+    "en_sense": "Any of various deciduous trees of the genus Populus.",
+    "ja": "ポプラ",
+    "ja_reading": "ポプラ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "poplar (esp. Lombardy poplar, Populus nigra var. italica)"
+    ],
+    "vi": "dương"
+   },
+   "output": {
+    "id": "wk-20422-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard equivalents for the poplar tree."
+   }
+  }
+ ]
+}

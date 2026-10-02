@@ -1,0 +1,401 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:31:36Z",
+ "items": [
+  {
+   "key": "86499d741a97121150586f4ccfa0f0611bb9bdc81b505a8ecdb26212a8f01625",
+   "input": {
+    "id": "jm-1246000-0-hunger",
+    "en": "hunger",
+    "en_pos": "noun",
+    "en_sense": "empty stomach; hunger",
+    "ja": "空腹",
+    "ja_reading": "くうふく",
+    "ja_pos": "n,adj-na,adj-no",
+    "ja_glosses": [
+     "empty stomach",
+     "hunger"
+    ],
+    "vi": "đói"
+   },
+   "output": {
+    "id": "jm-1246000-0-hunger",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'đói' is an adjective ('hungry'), not a noun ('hunger'). The correct noun form would be 'sự đói' or 'cơn đói'."
+   }
+  },
+  {
+   "key": "fbc59de2b439cae5813cd5ca407d45d25801c95cdd68611ea7a3acd0548ac668",
+   "input": {
+    "id": "jm-1247660-0-army",
+    "en": "army",
+    "en_pos": "noun",
+    "en_sense": "army; armed forces; troops",
+    "ja": "軍",
+    "ja_reading": "ぐん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "army",
+     "armed forces",
+     "troops"
+    ],
+    "vi": "quân đội"
+   },
+   "output": {
+    "id": "jm-1247660-0-army",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, natural equivalents for 'army' or 'military'."
+   }
+  },
+  {
+   "key": "2acf2ef7f96ef910f9a9b5caaa472fedd12c01046ede82cb9be37d2b4b183779",
+   "input": {
+    "id": "jm-1249500-0-slope",
+    "en": "slope",
+    "en_pos": "noun",
+    "en_sense": "inclination; slant; slope; bevel; list; dip",
+    "ja": "傾斜",
+    "ja_reading": "けいしゃ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "inclination",
+     "slant",
+     "slope",
+     "bevel",
+     "list",
+     "dip"
+    ],
+    "vi": "độ dốc"
+   },
+   "output": {
+    "id": "jm-1249500-0-slope",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'độ dốc' specifically means 'gradient' or 'steepness' (the measure of a slope), not the slope itself, which would be 'cái dốc'."
+   }
+  },
+  {
+   "key": "a506a7119f82e145515edb82a491a38e7bcebe0781c34711a46ae28cca18a496",
+   "input": {
+    "id": "jm-1249660-0-detective",
+    "en": "detective",
+    "en_pos": "noun",
+    "en_sense": "(police) detective",
+    "ja": "刑事",
+    "ja_reading": "けいじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(police) detective"
+    ],
+    "vi": "thám tử"
+   },
+   "output": {
+    "id": "jm-1249660-0-detective",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The Vietnamese 'thám tử' means 'private detective', not a 'police detective' as specified by the English sense and the Japanese '刑事'."
+   }
+  },
+  {
+   "key": "2a06e59b58a1b35c9b8f9c4d4f45e653546cbbcda4f4ef0318a7d81c5e35b6d3",
+   "input": {
+    "id": "jm-1250350-0-condition",
+    "en": "condition",
+    "en_pos": "noun",
+    "en_sense": "condition; situation; prospects",
+    "ja": "形勢",
+    "ja_reading": "けいせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "condition",
+     "situation",
+     "prospects"
+    ],
+    "vi": "tình hình"
+   },
+   "output": {
+    "id": "jm-1250350-0-condition",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'situation' or 'the state of affairs', especially in a developing context."
+   }
+  },
+  {
+   "key": "7eb843e65a0dabe4260eb3f49ca4fdae3bcdc3b53fadf8be7c325563c3bde7ba",
+   "input": {
+    "id": "jm-1250390-0-form",
+    "en": "form",
+    "en_pos": "noun",
+    "en_sense": "form; shape; figure",
+    "ja": "形態",
+    "ja_reading": "けいたい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "form",
+     "shape",
+     "figure"
+    ],
+    "vi": "hình thái"
+   },
+   "output": {
+    "id": "jm-1250390-0-form",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for 'form' or 'morphology', typically in a formal or scientific context."
+   }
+  },
+  {
+   "key": "37b50cd6030b1b5e20628982a5058821a4eb97c9f349be46df4f7877ad891d2c",
+   "input": {
+    "id": "jm-1250480-0-bless",
+    "en": "bless",
+    "en_pos": "verb",
+    "en_sense": "to bless; to show mercy to",
+    "ja": "恵む",
+    "ja_reading": "めぐむ",
+    "ja_pos": "v5m,vt",
+    "ja_glosses": [
+     "to bless",
+     "to show mercy to"
+    ],
+    "vi": "ban phước"
+   },
+   "output": {
+    "id": "jm-1250480-0-bless",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'ban phước' is strictly religious ('divine blessing'), while the Japanese '恵む' can also mean non-religious charity ('to give alms'), making it broader."
+   }
+  },
+  {
+   "key": "c6fed63aac1186d6a973b80caa7fdb4c4a091dbf7b9b0f177662e13562bb93fd",
+   "input": {
+    "id": "jm-1250610-0-publication",
+    "en": "publication",
+    "en_pos": "noun",
+    "en_sense": "publication (e.g. of an article in a newspaper); carrying (e.g. a story); running (e.g. a serial); insertion (e.g. of an advertisement); printing; posting (e.g. on the web)",
+    "ja": "掲載",
+    "ja_reading": "けいさい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "publication (e.g. of an article in a newspaper)",
+     "carrying (e.g. a story)",
+     "running (e.g. a serial)",
+     "insertion (e.g. of an advertisement)",
+     "printing",
+     "posting (e.g. on the web)"
+    ],
+    "vi": "đăng tải"
+   },
+   "output": {
+    "id": "jm-1250610-0-publication",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'đăng tải' is a verb ('to publish'), not a noun ('publication')."
+   }
+  },
+  {
+   "key": "0da51acec79bebaf2f0c1fe3a9b85c8cfaf86382d34b72c6449a338329f89a5d",
+   "input": {
+    "id": "jm-1250620-0-notice",
+    "en": "notice",
+    "en_pos": "noun",
+    "en_sense": "notice; bulletin; post; posting; placard",
+    "ja": "掲示",
+    "ja_reading": "けいじ",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "notice",
+     "bulletin",
+     "post",
+     "posting",
+     "placard"
+    ],
+    "vi": "thông báo"
+   },
+   "output": {
+    "id": "jm-1250620-0-notice",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for a written notice or bulletin."
+   }
+  },
+  {
+   "key": "17d3b009afc289c868af607eafa0e9ca7b8fe623b026e30267c2ba34c8399c1b",
+   "input": {
+    "id": "jm-1250720-0-respect",
+    "en": "respect",
+    "en_pos": "noun",
+    "en_sense": "respect; honour; honor",
+    "ja": "敬意",
+    "ja_reading": "けいい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "respect",
+     "honour",
+     "honor"
+    ],
+    "vi": "kính trọng"
+   },
+   "output": {
+    "id": "jm-1250720-0-respect",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'kính trọng' is a verb ('to respect'), not a noun ('respect'). The noun would be 'sự kính trọng'."
+   }
+  },
+  {
+   "key": "4ff7721fbbb0daf9f8bf97695ebdc691cc61d313fb4ad4d1259ce9b52d722cf5",
+   "input": {
+    "id": "jm-1251100-0-pass",
+    "en": "pass",
+    "en_pos": "verb",
+    "en_sense": "to pass (of time); to elapse",
+    "ja": "経つ",
+    "ja_reading": "たつ",
+    "ja_pos": "v5t,vi",
+    "ja_glosses": [
+     "to pass (of time)",
+     "to elapse"
+    ],
+    "vi": "trôi qua"
+   },
+   "output": {
+    "id": "jm-1251100-0-pass",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three verbs are the standard, idiomatic way to express the passage of time."
+   }
+  },
+  {
+   "key": "6c70b0aecc727503d420b80c64e624b59ca059d5d1945c04394253032d3b2db4",
+   "input": {
+    "id": "jm-1251110-0-pass",
+    "en": "pass",
+    "en_pos": "verb",
+    "en_sense": "to pass; to elapse; to go by",
+    "ja": "経る",
+    "ja_reading": "へる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to pass",
+     "to elapse",
+     "to go by"
+    ],
+    "vi": "trôi qua"
+   },
+   "output": {
+    "id": "jm-1251110-0-pass",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "This is a valid alternative to the previous entry (pass/経つ/trôi qua); all three terms are natural equivalents for time passing."
+   }
+  }
+ ]
+}

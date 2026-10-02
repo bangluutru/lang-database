@@ -1,0 +1,391 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:38:44Z",
+ "items": [
+  {
+   "key": "79e056dcc89bb27c7d6cd3d11fe43a81a741b9e531c74ba6c414b35317064fc4",
+   "input": {
+    "id": "wk-21681-s0",
+    "en": "discus",
+    "en_pos": "noun",
+    "en_sense": "A round plate-like object that is thrown for sport.",
+    "ja": "円盤",
+    "ja_reading": "えんばん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "disk",
+     "discus",
+     "platter"
+    ],
+    "vi": "dĩa"
+   },
+   "output": {
+    "id": "wk-21681-s0",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "The Vietnamese 'dĩa' (or more correctly 'đĩa') is too broad, meaning 'plate' or 'disc' in general, not specifically the athletic equipment."
+   }
+  },
+  {
+   "key": "499e8f6319b41cac7df11a3a65a7bd2520682b312114922fc3e0b6a8f1510b7d",
+   "input": {
+    "id": "wk-2169-s0",
+    "en": "have",
+    "en_pos": "verb",
+    "en_sense": "To possess, own.",
+    "ja": "ある",
+    "ja_reading": "ある",
+    "ja_pos": "v5r-i,vi",
+    "ja_glosses": [
+     "to have"
+    ],
+    "vi": "có"
+   },
+   "output": {
+    "id": "wk-2169-s0",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_JA",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA"
+    ],
+    "note": "Japanese 'ある' means 'to exist' (for inanimate objects), not 'to possess, own'; the correct verb would be '持つ' (motsu)."
+   }
+  },
+  {
+   "key": "be2c1ce74a681344e417efd21534ab86592bf105d0d4000fa8af45c651978460",
+   "input": {
+    "id": "wk-21695-s0",
+    "en": "footpath",
+    "en_pos": "noun",
+    "en_sense": "Any set path or trail to be used by people walking.",
+    "ja": "歩道",
+    "ja_reading": "ほどう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "footpath",
+     "walkway",
+     "sidewalk",
+     "pavement"
+    ],
+    "vi": "đường mòn"
+   },
+   "output": {
+    "id": "wk-21695-s0",
+    "en_ja": "NARROW",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "The Japanese '歩道' refers to a paved sidewalk, while the Vietnamese 'đường mòn' refers to an unpaved trail; they are not equivalents and cover different, non-overlapping parts of the English sense."
+   }
+  },
+  {
+   "key": "5ed02907eecca5b384868c2ef2af9a6646cc18ea205597dfa629ea87ca793e76",
+   "input": {
+    "id": "wk-217-e:fe2f95",
+    "en": "spring",
+    "en_pos": "noun",
+    "en_sense": "season between winter and summer in temperate climates",
+    "ja": "春",
+    "ja_reading": "はる",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "spring",
+     "springtime"
+    ],
+    "vi": "xuân"
+   },
+   "output": {
+    "id": "wk-217-e:fe2f95",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the season 'spring', though the Vietnamese 'xuân' is slightly more literary than the common term 'mùa xuân'."
+   }
+  },
+  {
+   "key": "d7d7c1bec7756533905b14cd3e1685d34acf9b5861070519689c575d453ff831",
+   "input": {
+    "id": "wk-217-s10",
+    "en": "spring",
+    "en_pos": "noun",
+    "en_sense": "An elastic mechanical part or device in any shape (e.g., flat, curved, coiled), made of flexible material (usually spring steel) that exerts force and attempts to spring back when bent, compressed, or stretched.",
+    "ja": "ばね",
+    "ja_reading": "ばね",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spring (device)"
+    ],
+    "vi": "lò xo"
+   },
+   "output": {
+    "id": "wk-217-s10",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, unambiguous words for a mechanical spring."
+   }
+  },
+  {
+   "key": "6cc7a8d89ab77748e3782938e9d7a2ac28893228b1cfe19a24f2444ae4bdb1ea",
+   "input": {
+    "id": "wk-21706-s0",
+    "en": "horseman",
+    "en_pos": "noun",
+    "en_sense": "A man who rides a horse.",
+    "ja": "騎手",
+    "ja_reading": "きしゅ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "horseman",
+     "rider",
+     "jockey"
+    ],
+    "vi": "kị sĩ"
+   },
+   "output": {
+    "id": "wk-21706-s0",
+    "en_ja": "NARROW",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "UNNATURAL_VI",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND",
+     "REGISTER_CLASH",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'kị sĩ' means 'knight' or 'cavalier', not a general horseman, and Japanese '騎手' usually means 'jockey'."
+   }
+  },
+  {
+   "key": "e316fb91e500bf801d6061487f63f0212c3e7dbe58ebba3f557fd2ede334cfbb",
+   "input": {
+    "id": "wk-2171-s0",
+    "en": "hide",
+    "en_pos": "verb",
+    "en_sense": "To put (something) in a place where it will be out of sight or harder to discover.",
+    "ja": "隠す",
+    "ja_reading": "かくす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to hide",
+     "to conceal"
+    ],
+    "vi": "giấu"
+   },
+   "output": {
+    "id": "wk-2171-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard transitive verbs for 'to hide something'."
+   }
+  },
+  {
+   "key": "fcad29f4ba2c09e0af41e4de8fcbd4a1b7e107631a4480dd23dd6a24e200d792",
+   "input": {
+    "id": "wk-2171-s1",
+    "en": "hide",
+    "en_pos": "verb",
+    "en_sense": "To put oneself in a place where one will be out of sight or harder to find.",
+    "ja": "隠れる",
+    "ja_reading": "かくれる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to hide",
+     "to conceal oneself",
+     "to take cover"
+    ],
+    "vi": "trốn"
+   },
+   "output": {
+    "id": "wk-2171-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard intransitive verbs for 'to hide oneself'."
+   }
+  },
+  {
+   "key": "f5117c0ce4b03eaf9ef3c78c5c18fa843dece8343a39ae57f9aa6e27931b6f0b",
+   "input": {
+    "id": "wk-2172-s0",
+    "en": "hide",
+    "en_pos": "noun",
+    "en_sense": "The skin of an animal.",
+    "ja": "皮革",
+    "ja_reading": "ひかく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "leather",
+     "hide"
+    ],
+    "vi": "da"
+   },
+   "output": {
+    "id": "wk-2172-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese '皮革' is a somewhat formal/technical term for 'leather and hides', while English 'hide' and Vietnamese 'da' are more common and general."
+   }
+  },
+  {
+   "key": "18d99b7892c0095358a255fafb0c13b6c5995aa6d71f952a0ea12298c60bfd84",
+   "input": {
+    "id": "wk-21721-s0",
+    "en": "congratulations",
+    "en_pos": "interjection",
+    "en_sense": "Expressing praise and approval, expressing approbation.",
+    "ja": "おめでとうございます",
+    "ja_reading": "おめでとうございます",
+    "ja_pos": "exp",
+    "ja_glosses": [
+     "congratulations"
+    ],
+    "vi": "chúc mừng"
+   },
+   "output": {
+    "id": "wk-21721-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard, natural expressions for 'congratulations'."
+   }
+  },
+  {
+   "key": "2db2138b65d3a32b584c031f50430c8d05ffc82e06b669a9ab63cff77d8cd7d7",
+   "input": {
+    "id": "wk-2173-e:3b2c6e",
+    "en": "hit",
+    "en_pos": "verb",
+    "en_sense": "to administer a blow — see also strike",
+    "ja": "打つ",
+    "ja_reading": "うつ",
+    "ja_pos": "v5t,vt",
+    "ja_glosses": [
+     "to hit",
+     "to strike",
+     "to knock",
+     "to beat",
+     "to punch",
+     "to slap"
+    ],
+    "vi": "đánh"
+   },
+   "output": {
+    "id": "wk-2173-e:3b2c6e",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common verbs for 'to hit' or 'to strike'."
+   }
+  },
+  {
+   "key": "646fab053bffed83ee0bf6bf82eb2ca6a03b115667bd229590843a973d7d24db",
+   "input": {
+    "id": "wk-21735-s0",
+    "en": "be able to",
+    "en_pos": "verb",
+    "en_sense": "Can, to have the ability to.",
+    "ja": "できる",
+    "ja_reading": "できる",
+    "ja_pos": "v1,vi",
+    "ja_glosses": [
+     "to be able to do",
+     "to be possible",
+     "to be permitted (to do)"
+    ],
+    "vi": "có thể"
+   },
+   "output": {
+    "id": "wk-21735-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard expressions for indicating ability or possibility."
+   }
+  }
+ ]
+}

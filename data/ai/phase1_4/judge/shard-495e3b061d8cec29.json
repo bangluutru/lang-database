@@ -1,0 +1,400 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T01:36:57Z",
+ "items": [
+  {
+   "key": "8957cd80f34bc3f80e99b5aa91451d62765c1f2984b93b0b6e6e6c46cab9f871",
+   "input": {
+    "id": "jm-1374510-0-correction",
+    "en": "correction",
+    "en_pos": "noun",
+    "en_sense": "correction; revision; redressing; rectifying",
+    "ja": "是正",
+    "ja_reading": "ぜせい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "correction",
+     "revision",
+     "redressing",
+     "rectifying"
+    ],
+    "vi": "chỉnh sửa"
+   },
+   "output": {
+    "id": "jm-1374510-0-correction",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'chỉnh sửa' is a verb, while the English and Japanese are nouns; the correct noun form would be 'sự chỉnh sửa'."
+   }
+  },
+  {
+   "key": "87c6b9ce6a09b0d0fbbba91726b426cd6d85e481fe331d0b86006bc667d58226",
+   "input": {
+    "id": "jm-1374800-0-punishment",
+    "en": "punishment",
+    "en_pos": "noun",
+    "en_sense": "sanctions; punishment",
+    "ja": "制裁",
+    "ja_reading": "せいさい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "sanctions",
+     "punishment"
+    ],
+    "vi": "trừng phạt"
+   },
+   "output": {
+    "id": "jm-1374800-0-punishment",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'trừng phạt' is a verb, while the English and Japanese are nouns; the correct noun form is 'sự trừng phạt'."
+   }
+  },
+  {
+   "key": "bb0c602bc8500f845d262237314e3b2255072cc7b9a79a97ec9568d2aea1b99b",
+   "input": {
+    "id": "jm-1374870-0-establishment",
+    "en": "establishment",
+    "en_pos": "noun",
+    "en_sense": "enactment; establishment; creation",
+    "ja": "制定",
+    "ja_reading": "せいてい",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "enactment",
+     "establishment",
+     "creation"
+    ],
+    "vi": "thành lập"
+   },
+   "output": {
+    "id": "jm-1374870-0-establishment",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thành lập' is a verb for founding organizations, while the Japanese '制定' is for enacting laws; both are narrower than the English sense and mismatch each other, and the Vietnamese entry has the wrong part of speech."
+   }
+  },
+  {
+   "key": "2879dd2bd5d4c8ec2626f8254952541d884203f80f699e27d55734219fb3b153",
+   "input": {
+    "id": "jm-1374970-0-limitation",
+    "en": "limitation",
+    "en_pos": "noun",
+    "en_sense": "limitation; restriction; condition; constraints",
+    "ja": "制約",
+    "ja_reading": "せいやく",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "limitation",
+     "restriction",
+     "condition",
+     "constraints"
+    ],
+    "vi": "hạn chế"
+   },
+   "output": {
+    "id": "jm-1374970-0-limitation",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for this sense."
+   }
+  },
+  {
+   "key": "9a9e825dff103556b7c1adc8e5bf744ea961a788b99448052a8acfd557a961ba",
+   "input": {
+    "id": "jm-1375040-0-force",
+    "en": "force",
+    "en_pos": "noun",
+    "en_sense": "force; vigor; vigour; energy; spirit; life",
+    "ja": "勢い",
+    "ja_reading": "いきおい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "force",
+     "vigor",
+     "vigour",
+     "energy",
+     "spirit",
+     "life"
+    ],
+    "vi": "sức mạnh"
+   },
+   "output": {
+    "id": "jm-1375040-0-force",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "The Vietnamese 'sức mạnh' (strength, power) is too broad and misses the specific nuance of momentum and vigor conveyed by the English 'force' (in this sense) and the Japanese '勢い'."
+   }
+  },
+  {
+   "key": "a137a1e09a142889ddddcfa7ea439f9361b246f470266876a9d77989af06ac89",
+   "input": {
+    "id": "jm-1375210-0-name",
+    "en": "name",
+    "en_pos": "noun",
+    "en_sense": "(full) name; family name and given name",
+    "ja": "姓名",
+    "ja_reading": "せいめい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(full) name",
+     "family name and given name"
+    ],
+    "vi": "họ tên"
+   },
+   "output": {
+    "id": "jm-1375210-0-name",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'full name'."
+   }
+  },
+  {
+   "key": "32a7a7a10e7b8aa7776327c619152bed227f0869809621fcfd6559213a366ce8",
+   "input": {
+    "id": "jm-1375820-0-i_see",
+    "en": "i see",
+    "en_pos": "interjection",
+    "en_sense": "I see; that's right; indeed",
+    "ja": "なるほど",
+    "ja_reading": "なるほど",
+    "ja_pos": "int,adv",
+    "ja_glosses": [
+     "I see",
+     "that's right",
+     "indeed"
+    ],
+    "vi": "thì ra"
+   },
+   "output": {
+    "id": "jm-1375820-0-i_see",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Vietnamese 'thì ra' is too specific, only covering the 'sudden realization' aspect of 'I see' / 'なるほど', and not the sense of simple acknowledgement or agreement."
+   }
+  },
+  {
+   "key": "bda3ed4c567a83244bbcc2a7e909140536abcedf6bca13fd512d3f98746e164b",
+   "input": {
+    "id": "jm-1375830-0-majority",
+    "en": "majority",
+    "en_pos": "noun",
+    "en_sense": "adult age; majority",
+    "ja": "成年",
+    "ja_reading": "せいねん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "adult age",
+     "majority"
+    ],
+    "vi": "tuổi trưởng thành"
+   },
+   "output": {
+    "id": "jm-1375830-0-majority",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for the legal sense of 'age of majority'."
+   }
+  },
+  {
+   "key": "54c37133016b70ac520e46c79450258a4790b15aabdd7935f10965726878463d",
+   "input": {
+    "id": "jm-1363540-0-by_no_means",
+    "en": "by no means",
+    "en_pos": "interjection",
+    "en_sense": "by no means; never!; well, I never!; you don't say!; no way!",
+    "ja": "まさか",
+    "ja_reading": "まさか",
+    "ja_pos": "int",
+    "ja_glosses": [
+     "by no means",
+     "never!",
+     "well, I never!",
+     "you don't say!",
+     "no way!"
+    ],
+    "vi": "không đời nào"
+   },
+   "output": {
+    "id": "jm-1363540-0-by_no_means",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three expressions are natural and common equivalents for expressing strong disbelief or denial."
+   }
+  },
+  {
+   "key": "ef60ccb73143605584edcc6e70ac22d603ee6f43773d088af025da353e909c50",
+   "input": {
+    "id": "jm-1363650-0-serious",
+    "en": "serious",
+    "en_pos": "adjective",
+    "en_sense": "serious; earnest",
+    "ja": "真剣",
+    "ja_reading": "しんけん",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "serious",
+     "earnest"
+    ],
+    "vi": "nghiêm túc"
+   },
+   "output": {
+    "id": "jm-1363650-0-serious",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent equivalents for 'serious' in the sense of being earnest."
+   }
+  },
+  {
+   "key": "5a5a787dbf4145fe6f3262d1cfc09a2ca71c69a509d20a5d69724503e1f7fa56",
+   "input": {
+    "id": "jm-1363740-0-mimicry",
+    "en": "mimicry",
+    "en_pos": "noun",
+    "en_sense": "imitating; copying; mimicry",
+    "ja": "真似",
+    "ja_reading": "まね",
+    "ja_pos": "n,vs,vt,vi",
+    "ja_glosses": [
+     "imitating",
+     "copying",
+     "mimicry"
+    ],
+    "vi": "bắt chước"
+   },
+   "output": {
+    "id": "jm-1363740-0-mimicry",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": false,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "POS_MISMATCH",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese entry 'bắt chước' is a verb, while the English and Japanese are nouns; the correct noun form is 'sự bắt chước'."
+   }
+  },
+  {
+   "key": "8008eee2adf3f7f35191a18e6ff2414c29a4b1e58c3173aec4fcfcc5f817e440",
+   "input": {
+    "id": "jm-1364110-0-truth",
+    "en": "truth",
+    "en_pos": "noun",
+    "en_sense": "truth; real situation",
+    "ja": "真相",
+    "ja_reading": "しんそう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "truth",
+     "real situation"
+    ],
+    "vi": "sự thật"
+   },
+   "output": {
+    "id": "jm-1364110-0-truth",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are good equivalents for the truth or real facts of a situation."
+   }
+  }
+ ]
+}

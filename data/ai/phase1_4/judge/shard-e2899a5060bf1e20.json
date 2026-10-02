@@ -1,0 +1,379 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:12:39Z",
+ "items": [
+  {
+   "key": "31eaa2b6bf3b4b24a4be49fe35c35c58e3afc165845ad61ca1f7e6375ea49159",
+   "input": {
+    "id": "wk-5823-e:d73f37",
+    "en": "exotic",
+    "en_pos": "adjective",
+    "en_sense": "foreign, with the connotation of excitingly foreign",
+    "ja": "エキゾチック",
+    "ja_reading": "エキゾチック",
+    "ja_pos": "adj-na",
+    "ja_glosses": [
+     "exotic"
+    ],
+    "vi": "kì lạ"
+   },
+   "output": {
+    "id": "wk-5823-e:d73f37",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'kì lạ' means 'strange' or 'weird', lacking the 'excitingly foreign' connotation of English 'exotic'."
+   }
+  },
+  {
+   "key": "6af31b72d00415de7fa27b0cb0f350f77d052ee207b3674f97af2cb0fe5d513a",
+   "input": {
+    "id": "wk-5826-s0",
+    "en": "syphilis",
+    "en_pos": "noun",
+    "en_sense": "A disease spread via sexual activity, caused by the bacterium Treponema pallidum.",
+    "ja": "梅毒",
+    "ja_reading": "ばいどく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "syphilis"
+    ],
+    "vi": "giang mai"
+   },
+   "output": {
+    "id": "wk-5826-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard medical equivalents for syphilis."
+   }
+  },
+  {
+   "key": "08161b7e470b4204820f30619b3283aecc5885971a55385b53cb314076cc1c92",
+   "input": {
+    "id": "wk-5835-s1",
+    "en": "sheet",
+    "en_pos": "noun",
+    "en_sense": "A piece of paper, usually rectangular, that has been prepared for writing, artwork, drafting, wrapping, manufacture of packaging (boxes, envelopes, etc.), and for other uses. The word does not include scraps and irregular small pieces destined to be recycled, used for stuffing or cushioning or paper",
+    "ja": "シート",
+    "ja_reading": "シート",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "sheet"
+    ],
+    "vi": "tờ"
+   },
+   "output": {
+    "id": "wk-5835-s1",
+    "en_ja": "BROAD",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Japanese 'シート' is broader, referring to sheets of various materials, not just paper as specified in the English sense."
+   }
+  },
+  {
+   "key": "b8a8347dd804b1d432dbfdf66d0ec9ce519a9276b875aa37710b8833e248a48c",
+   "input": {
+    "id": "wk-5847-e:c9f0dd",
+    "en": "dragon",
+    "en_pos": "noun",
+    "en_sense": "mythical creature",
+    "ja": "ドラゴン",
+    "ja_reading": "ドラゴン",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "dragon (as depicted in Western myths)"
+    ],
+    "vi": "rồng"
+   },
+   "output": {
+    "id": "wk-5847-e:c9f0dd",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Japanese 'ドラゴン' correctly specifies the Western-style dragon, while Vietnamese 'rồng' refers to the culturally distinct East Asian dragon."
+   }
+  },
+  {
+   "key": "536256803260e3a687ffa5ee18af2c98cc7879860b5295a81e9d6826d8fe8dea",
+   "input": {
+    "id": "wk-5853-s1",
+    "en": "speaker",
+    "en_pos": "noun",
+    "en_sense": "Loudspeaker.",
+    "ja": "スピーカー",
+    "ja_reading": "スピーカー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "speaker"
+    ],
+    "vi": "loa"
+   },
+   "output": {
+    "id": "wk-5853-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a loudspeaker."
+   }
+  },
+  {
+   "key": "234d4c5f1c9a0988628b3784a971107d9b02d51aa9dc406b9679c7e87ea1db54",
+   "input": {
+    "id": "wk-5853-s3",
+    "en": "speaker",
+    "en_pos": "noun",
+    "en_sense": "The chair or presiding officer of certain legislative bodies, such as the U.K. House of Commons or the U.S. House of Representatives.",
+    "ja": "議長",
+    "ja_reading": "ぎちょう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "chair",
+     "chairman",
+     "chairperson",
+     "speaker (of an assembly)",
+     "president (of a council, senate, etc.)"
+    ],
+    "vi": "nghị trưởng"
+   },
+   "output": {
+    "id": "wk-5853-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the correct formal titles for the presiding officer of a legislative body."
+   }
+  },
+  {
+   "key": "75f4c58b4b2b31edbac1543496da68d5c5526e0da21b6d53fc5ef26ed406e12b",
+   "input": {
+    "id": "wk-5853-s4",
+    "en": "speaker",
+    "en_pos": "noun",
+    "en_sense": "One who makes a speech to an audience.",
+    "ja": "話者",
+    "ja_reading": "わしゃ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "speaker",
+     "narrator"
+    ],
+    "vi": "nhà hùng biện"
+   },
+   "output": {
+    "id": "wk-5853-s4",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "Vietnamese 'nhà hùng biện' means 'orator', which is a skilled speaker, while the English sense is more neutral."
+   }
+  },
+  {
+   "key": "0e97c92a0b2553d266fa3afbfeef4360da526c23dab105bd5de7b4439205c067",
+   "input": {
+    "id": "wk-5862-e:32aca3",
+    "en": "frog",
+    "en_pos": "noun",
+    "en_sense": "amphibian",
+    "ja": "かえる",
+    "ja_reading": "かえる",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "frog"
+    ],
+    "vi": "ếch"
+   },
+   "output": {
+    "id": "wk-5862-e:32aca3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard general terms for 'frog'."
+   }
+  },
+  {
+   "key": "461bc6d1e8d9860a6ac810da8a5c7cc070c7110393cc1973319b6508f8c4635d",
+   "input": {
+    "id": "wk-5865-s0",
+    "en": "puppy",
+    "en_pos": "noun",
+    "en_sense": "A young dog, especially before sexual maturity (12–18 months).",
+    "ja": "子犬",
+    "ja_reading": "こいぬ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "puppy"
+    ],
+    "vi": "cún"
+   },
+   "output": {
+    "id": "wk-5865-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are natural and share a similar affectionate connotation for a young dog."
+   }
+  },
+  {
+   "key": "221ee491fa373c4c30df9954af11e85666cf68e5fbb14fea6713111f0573403f",
+   "input": {
+    "id": "wk-587-s0",
+    "en": "computer",
+    "en_pos": "noun",
+    "en_sense": "A programmable electronic device that performs mathematical calculations and logical operations, especially one that can process, store and retrieve large amounts of data very quickly; now especially, a small one for personal or home use employed for manipulating text or graphics, accessing the Inte",
+    "ja": "コンピュータ",
+    "ja_reading": "コンピュータ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "computer"
+    ],
+    "vi": "máy tính"
+   },
+   "output": {
+    "id": "wk-587-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a computer."
+   }
+  },
+  {
+   "key": "976e93d2b08a8606738e1d37c3dd538a16b959c55d9d9ad722e9921049b55862",
+   "input": {
+    "id": "wk-5875-e:a5eb51",
+    "en": "tube",
+    "en_pos": "noun",
+    "en_sense": "a pipe",
+    "ja": "チューブ",
+    "ja_reading": "チューブ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tube"
+    ],
+    "vi": "ống"
+   },
+   "output": {
+    "id": "wk-5875-e:a5eb51",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "BROAD",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "FALSE_FRIEND"
+    ],
+    "note": "Japanese 'チューブ' usually means a flexible tube, not a rigid pipe as the English sense implies."
+   }
+  },
+  {
+   "key": "2ca9586b77efaf6d651a59e8d7a453094226f04895538f6724df07b48af854c8",
+   "input": {
+    "id": "wk-5972-s1",
+    "en": "clue",
+    "en_pos": "noun",
+    "en_sense": "Information which may lead one to a certain point or conclusion.",
+    "ja": "手掛かり",
+    "ja_reading": "てがかり",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "clue",
+     "lead",
+     "key",
+     "trail",
+     "scent",
+     "track"
+    ],
+    "vi": "manh mối"
+   },
+   "output": {
+    "id": "wk-5972-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are excellent and standard equivalents for 'clue' in the sense of a lead in an investigation."
+   }
+  }
+ ]
+}

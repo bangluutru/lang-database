@@ -1,0 +1,392 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:35:07Z",
+ "items": [
+  {
+   "key": "a50735d0344dfcef4ccc118bd75c54a659803e11c81f2922512b10c2685f88ee",
+   "input": {
+    "id": "jm-1346230-1-match",
+    "en": "match",
+    "en_pos": "noun",
+    "en_sense": "match; contest; game; bout; showdown",
+    "ja": "勝負",
+    "ja_reading": "しょうぶ",
+    "ja_pos": "n,vs,vi",
+    "ja_glosses": [
+     "match",
+     "contest",
+     "game",
+     "bout",
+     "showdown"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1346230-1-match",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "勝負 correctly translates the sense of a decisive contest or showdown, though 試合 (shiai) is more common for a general 'game' or 'match'."
+   }
+  },
+  {
+   "key": "7876b474b3289984f2d9fc4f9df428be35b6f082e90bcb8eb9c812c310917178",
+   "input": {
+    "id": "jm-1346450-0-call",
+    "en": "call",
+    "en_pos": "verb",
+    "en_sense": "to call; to summon; to send for; to invite",
+    "ja": "召す",
+    "ja_reading": "めす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to call",
+     "to summon",
+     "to send for",
+     "to invite"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1346450-0-call",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MAJOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "召す is a highly honorific verb (sonkeigo) and not a general equivalent for the neutral English verb 'call'; the standard translation is 呼ぶ (yobu)."
+   }
+  },
+  {
+   "key": "1ec00a9d647fb5cd4ce3151d74623cae4154bb791bf9650fd2570dde8af9ed0b",
+   "input": {
+    "id": "jm-1347600-0-evening",
+    "en": "evening",
+    "en_pos": "noun",
+    "en_sense": "evening; early night hours",
+    "ja": "宵",
+    "ja_reading": "よい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "evening",
+     "early night hours"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1347600-0-evening",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "宵 is a good translation for 'evening' with the specific nuance of 'early night hours', though it can have a slightly literary feel compared to the more common 晩 (ban)."
+   }
+  },
+  {
+   "key": "e5d42fa3c2289302f3897e9c8d4a1d82e55cc41b5e3b6fcf8ace9025108cd0c8",
+   "input": {
+    "id": "jm-1347710-0-future",
+    "en": "future",
+    "en_pos": "noun",
+    "en_sense": "future; (future) prospects",
+    "ja": "将来",
+    "ja_reading": "しょうらい",
+    "ja_pos": "n,adv",
+    "ja_glosses": [
+     "future",
+     "(future) prospects"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1347710-0-future",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "将来 is the perfect equivalent for 'future' in the sense of personal or organizational prospects, as distinct from 未来 (mirai) which is more about time in general."
+   }
+  },
+  {
+   "key": "23de742958c3423d5434e0c694477a3e86c16e6d33783c393db093160147f4c9",
+   "input": {
+    "id": "jm-1347870-0-primary_school",
+    "en": "primary school",
+    "en_pos": "noun",
+    "en_sense": "primary school; elementary school; grade school",
+    "ja": "小学校",
+    "ja_reading": "しょうがっこう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "primary school",
+     "elementary school",
+     "grade school"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1347870-0-primary_school",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "小学校 is the standard and direct translation for 'primary school' in Japan."
+   }
+  },
+  {
+   "key": "de700253af604c38ce248ad30f79468b8c11e3cefb8f5624994dd1a038bdc309",
+   "input": {
+    "id": "jm-1348900-0-at_all",
+    "en": "at all",
+    "en_pos": "adverb",
+    "en_sense": "(not) at all; (not) a bit; (not) in the least; (not) in the slightest",
+    "ja": "少しも",
+    "ja_reading": "すこしも",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "(not) at all",
+     "(not) a bit",
+     "(not) in the least",
+     "(not) in the slightest"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1348900-0-at_all",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "少しも is a standard equivalent for '(not) at all', correctly used with negative predicates."
+   }
+  },
+  {
+   "key": "7e00dd203d223d432198df67844eabd0d2f346dd6de1f11b86db74e21bf153a6",
+   "input": {
+    "id": "jm-1349300-0-still",
+    "en": "still",
+    "en_pos": "adverb",
+    "en_sense": "still; yet",
+    "ja": "なお",
+    "ja_reading": "なお",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "still",
+     "yet"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1349300-0-still",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_JA",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "The most common and direct translation for 'still' (continuing state) is まだ. なお has other primary meanings like 'furthermore' or 'even more' and is not a good general equivalent."
+   }
+  },
+  {
+   "key": "c1982b12f2c3371a46598c1710fa4882a2f43c75efc09e9a223e784d345c94b3",
+   "input": {
+    "id": "jm-1349310-0-besides",
+    "en": "besides",
+    "en_pos": "adverb",
+    "en_sense": "besides; furthermore; on top of that",
+    "ja": "なおかつ",
+    "ja_reading": "なおかつ",
+    "ja_pos": "adv",
+    "ja_glosses": [
+     "besides",
+     "furthermore",
+     "on top of that"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1349310-0-besides",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "なおかつ is a good translation for 'besides' or 'furthermore' when adding another piece of information."
+   }
+  },
+  {
+   "key": "4dd30bd2b4e7e07143eb88fcebaf8e1281d0e1d998a5597da7c6c6f6b53696bc",
+   "input": {
+    "id": "jm-1349480-0-knowledge",
+    "en": "knowledge",
+    "en_pos": "noun",
+    "en_sense": "knowledge; awareness",
+    "ja": "承知",
+    "ja_reading": "しょうち",
+    "ja_pos": "n,vs,vt",
+    "ja_glosses": [
+     "knowledge",
+     "awareness"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1349480-0-knowledge",
+    "en_ja": "WRONG",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "WRONG",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "FALSE_FRIEND",
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE"
+    ],
+    "note": "承知 means 'acknowledgement', 'consent', or 'being aware of a fact', not 'knowledge' in the general sense, which is 知識 (chishiki)."
+   }
+  },
+  {
+   "key": "d0af59a2fb5d642375593409299099c32e2801073020a3e651b0d4503b5483c0",
+   "input": {
+    "id": "jm-1349570-0-invitation",
+    "en": "invitation",
+    "en_pos": "noun",
+    "en_sense": "invitation",
+    "ja": "招き",
+    "ja_reading": "まねき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "invitation"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1349570-0-invitation",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "招き is a good and natural translation for 'invitation', alongside the more formal 招待 (shoutai)."
+   }
+  },
+  {
+   "key": "6519b8dc3f95fcf23868153ef12526acd4715a2dfad4b052492a49b8475c235a",
+   "input": {
+    "id": "jm-1350250-0-news",
+    "en": "news",
+    "en_pos": "noun",
+    "en_sense": "news (from someone); letter; contact",
+    "ja": "消息",
+    "ja_reading": "しょうそく",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "news (from someone)",
+     "letter",
+     "contact"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1350250-0-news",
+    "en_ja": "OK",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "消息 is the perfect translation for the specific sense of 'news from someone' regarding their whereabouts or well-being."
+   }
+  },
+  {
+   "key": "f2f068a840dd0238980c6cbc0586a87d9a2ef0bfd60168bf90ab90fa09b589ea",
+   "input": {
+    "id": "jm-1350340-1-fire_department",
+    "en": "fire department",
+    "en_pos": "noun",
+    "en_sense": "fire department; fire brigade; firefighter",
+    "ja": "消防",
+    "ja_reading": "しょうぼう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "fire department",
+     "fire brigade",
+     "firefighter"
+    ],
+    "vi": null
+   },
+   "output": {
+    "id": "jm-1350340-1-fire_department",
+    "en_ja": "BROAD",
+    "en_vi": "NA",
+    "ja_vi": "NA",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD",
+     "SENSE_DIVERGENCE"
+    ],
+    "note": "消防 refers to the general concept of 'firefighting' or 'fire service', not specifically the 'fire department' (organization) or a 'firefighter' (person)."
+   }
+  }
+ ]
+}

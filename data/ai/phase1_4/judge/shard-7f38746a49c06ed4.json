@@ -1,0 +1,386 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-02T00:03:32Z",
+ "items": [
+  {
+   "key": "a872ddf669f53cb230b729b42f2ef9da80d6480a5c72e1ec7440b2a62c0e048e",
+   "input": {
+    "id": "wk-9169-s0",
+    "en": "humanity",
+    "en_pos": "noun",
+    "en_sense": "Humankind; human beings as a group.",
+    "ja": "人類",
+    "ja_reading": "じんるい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mankind",
+     "humanity"
+    ],
+    "vi": "loài người"
+   },
+   "output": {
+    "id": "wk-9169-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are perfect equivalents for 'humankind'."
+   }
+  },
+  {
+   "key": "b850617f483f87fcf93684574bb123d6bf3fbeb2d3b30f5dcf827462df0f9dd7",
+   "input": {
+    "id": "wk-9172-s0",
+    "en": "spark",
+    "en_pos": "noun",
+    "en_sense": "A small particle of glowing matter, either molten or on fire, resulting from an electrical surge or excessive heat created by friction.",
+    "ja": "火花",
+    "ja_reading": "ひばな",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "spark"
+    ],
+    "vi": "tia lửa"
+   },
+   "output": {
+    "id": "wk-9172-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for a physical spark."
+   }
+  },
+  {
+   "key": "36431e1f0b193920bb9016c35dd2fc1bec0602811baa9dd5b33d0655d7195978",
+   "input": {
+    "id": "wk-9174-s0",
+    "en": "preface",
+    "en_pos": "noun",
+    "en_sense": "A beginning or introductory portion that comes before the main text of a document or book, typically serving to contextualize or explain the writing of the book and sometimes to acknowledge others' contributions; especially, such a discussion written by the work's own author.",
+    "ja": "序文",
+    "ja_reading": "じょぶん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "preface",
+     "foreword",
+     "introduction"
+    ],
+    "vi": "lời tựa"
+   },
+   "output": {
+    "id": "wk-9174-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard equivalents for a book's preface."
+   }
+  },
+  {
+   "key": "bfaa2fb231618f373f9ddfbde2b13995bbe613d8ba81530fcaf2d0b54359e3af",
+   "input": {
+    "id": "wk-9179-s0",
+    "en": "statue",
+    "en_pos": "noun",
+    "en_sense": "A three-dimensional work of art, usually representing a person or animal, usually created by sculpting, carving, molding, or casting.",
+    "ja": "彫像",
+    "ja_reading": "ちょうぞう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "(carved) statue",
+     "sculpture"
+    ],
+    "vi": "tượng"
+   },
+   "output": {
+    "id": "wk-9179-s0",
+    "en_ja": "NARROW",
+    "en_vi": "OK",
+    "ja_vi": "NARROW",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW"
+    ],
+    "note": "The Japanese word 彫像 specifically means a carved/sculpted statue, while the English 'statue' can also be molded or cast."
+   }
+  },
+  {
+   "key": "94b51a2d6d5497645ee5fdc032796cd40a0b046d839a26691e9afdd4882a22a8",
+   "input": {
+    "id": "wk-9196-s0",
+    "en": "omit",
+    "en_pos": "verb",
+    "en_sense": "To leave out or exclude.",
+    "ja": "抜かす",
+    "ja_reading": "ぬかす",
+    "ja_pos": "v5s,vt",
+    "ja_glosses": [
+     "to omit",
+     "to leave out",
+     "to skip"
+    ],
+    "vi": "lược"
+   },
+   "output": {
+    "id": "wk-9196-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "REGISTER_CLASH"
+    ],
+    "note": "The Japanese word 抜かす is more informal than the English 'omit'; 省略する would be a better register match."
+   }
+  },
+  {
+   "key": "0a3ef8cf59807c86e5b0a32117d7a96162c24576697ffcd1020f194dc58e3218",
+   "input": {
+    "id": "wk-9198-s3",
+    "en": "justice",
+    "en_pos": "noun",
+    "en_sense": "The civil power dealing with law.",
+    "ja": "司法",
+    "ja_reading": "しほう",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "administration of justice",
+     "judicature"
+    ],
+    "vi": "tư pháp"
+   },
+   "output": {
+    "id": "wk-9198-s3",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are precise equivalents for the concept of the judiciary or the administration of justice."
+   }
+  },
+  {
+   "key": "00543507900447a13edb585d7cfcc55112cbedeab6e28ab5bf34598d847a84a7",
+   "input": {
+    "id": "wk-9212-s0",
+    "en": "storey",
+    "en_pos": "noun",
+    "en_sense": "A floor or level of a building or ship.",
+    "ja": "階",
+    "ja_reading": "かい",
+    "ja_pos": "n,n-suf",
+    "ja_glosses": [
+     "storey",
+     "story",
+     "floor"
+    ],
+    "vi": "tầng"
+   },
+   "output": {
+    "id": "wk-9212-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common words for a floor or storey of a building."
+   }
+  },
+  {
+   "key": "cf1f70e39cfeac199341671980008ce016992940bbb41f8b2d8982e8e8e39ad4",
+   "input": {
+    "id": "wk-9213-s0",
+    "en": "smelly",
+    "en_pos": "adjective",
+    "en_sense": "Having a bad smell.",
+    "ja": "臭い",
+    "ja_reading": "くさい",
+    "ja_pos": "adj-i",
+    "ja_glosses": [
+     "stinking",
+     "smelly"
+    ],
+    "vi": "hôi"
+   },
+   "output": {
+    "id": "wk-9213-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are the standard, common adjectives for 'smelly'."
+   }
+  },
+  {
+   "key": "ae4fa07990407deedf7bfbeb6fb0888f6221ecdee95c700633ff913086d91baa",
+   "input": {
+    "id": "wk-9217-s1",
+    "en": "confine",
+    "en_pos": "verb",
+    "en_sense": "To restrict (someone or something) to a particular scope or area; to keep in or within certain bounds.",
+    "ja": "限る",
+    "ja_reading": "かぎる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to restrict",
+     "to limit",
+     "to confine"
+    ],
+    "vi": "nhốt"
+   },
+   "output": {
+    "id": "wk-9217-s1",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "SENSE_DIVERGENCE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'nhốt' only means to physically lock up or cage a living being, which is much narrower than the English 'confine' or Japanese '限る'."
+   }
+  },
+  {
+   "key": "0b6924802dfbc950e4664a4a2977cb2cbab8731d0d5a0a93c3c2587bc6987dae",
+   "input": {
+    "id": "wk-9233-s0",
+    "en": "ebb and flow",
+    "en_pos": "noun",
+    "en_sense": "The flowing out and in of the tide.",
+    "ja": "干満",
+    "ja_reading": "かんまん",
+    "ja_pos": "n,adj-no",
+    "ja_glosses": [
+     "ebb and flow"
+    ],
+    "vi": "thăng trầm"
+   },
+   "output": {
+    "id": "wk-9233-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese 'thăng trầm' means 'ups and downs' (a figurative sense of 'ebb and flow'), not the literal movement of the tide as defined."
+   }
+  },
+  {
+   "key": "c2a89b723045617bfed3306ce65201975fad0ab3ae18e97085dc2805d117c0b9",
+   "input": {
+    "id": "wk-9238-s0",
+    "en": "glockenspiel",
+    "en_pos": "noun",
+    "en_sense": "A musical instrument of the percussion idiophone family of instruments. Like the xylophone, it has tuned bars arranged like the keys on a piano. It is smaller in size and higher in pitch than the xylophone, and the bars are made of metal instead of wood.",
+    "ja": "鉄琴",
+    "ja_reading": "てっきん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "metallophone",
+     "carillon",
+     "glockenspiel"
+    ],
+    "vi": "chuông"
+   },
+   "output": {
+    "id": "wk-9238-s0",
+    "en_ja": "OK",
+    "en_vi": "WRONG",
+    "ja_vi": "WRONG",
+    "naturalness": "WRONG",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "WRONG",
+     "UNNATURAL_VI"
+    ],
+    "note": "The Vietnamese word 'chuông' means 'bell', not 'glockenspiel'; this is an incorrect translation."
+   }
+  },
+  {
+   "key": "037968d7c45c6f9218b3ab29fd34ba054efe994bbced3c393337f95f2d608c81",
+   "input": {
+    "id": "wk-924-s1",
+    "en": "or",
+    "en_pos": "conjunction",
+    "en_sense": "An operator denoting the disjunction of two propositions or truth values. There are two forms: the inclusive or and the exclusive or.",
+    "ja": "または",
+    "ja_reading": "または",
+    "ja_pos": "conj",
+    "ja_glosses": [
+     "or",
+     "either ... or ..."
+    ],
+    "vi": "hay"
+   },
+   "output": {
+    "id": "wk-924-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three terms are standard and direct equivalents for the conjunction 'or'."
+   }
+  }
+ ]
+}

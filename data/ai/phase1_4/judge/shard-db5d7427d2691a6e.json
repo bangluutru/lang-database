@@ -1,0 +1,388 @@
+{
+ "role": "judge",
+ "model": "gemini-2.5-pro",
+ "prompt_version": "p14_judge_v1",
+ "created_at": "2026-10-01T23:27:20Z",
+ "items": [
+  {
+   "key": "fa072fcb5545cac32a8fe4a5a8fba11a033cac6a25898d0edbb23b0e553623f5",
+   "input": {
+    "id": "wk-11270-s1",
+    "en": "old man",
+    "en_pos": "noun",
+    "en_sense": "One's father.",
+    "ja": "おやじ",
+    "ja_reading": "おやじ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "middle-aged (or older) man",
+     "old man",
+     "geezer"
+    ],
+    "vi": "ông già"
+   },
+   "output": {
+    "id": "wk-11270-s1",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are common, informal terms for 'one's father' and match in register."
+   }
+  },
+  {
+   "key": "a413d7ea228844a5ebe4f2bea6979ba7d5d937d1f31ddec7f1d8e16a12e1e4b2",
+   "input": {
+    "id": "wk-11286-s0",
+    "en": "mammoth",
+    "en_pos": "noun",
+    "en_sense": "Any species of the extinct genus Mammuthus, of large, usually hairy, elephant-like mammals with long curved tusks and an inclined back, which became extinct with the last retreat of ice age glaciers during the late Pleistocene period, and are known from fossils, frozen carcasses, and Paleolithic cav",
+    "ja": "マンモス",
+    "ja_reading": "マンモス",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "mammoth (esp. the woolly mammoth, Mammuthus primigenius)"
+    ],
+    "vi": "ma mút"
+   },
+   "output": {
+    "id": "wk-11286-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard terms for the extinct animal, with Japanese and Vietnamese using loanwords."
+   }
+  },
+  {
+   "key": "c01510f21767b33b2fab13d594c1f31fc6ba7c3ff7cd2721913011ace2f85949",
+   "input": {
+    "id": "wk-11293-e:b2eacb",
+    "en": "cookie",
+    "en_pos": "noun",
+    "en_sense": "small, flat baked good — see also biscuit",
+    "ja": "クッキー",
+    "ja_reading": "クッキー",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "cookie",
+     "biscuit"
+    ],
+    "vi": "bánh quy"
+   },
+   "output": {
+    "id": "wk-11293-e:b2eacb",
+    "en_ja": "OK",
+    "en_vi": "BROAD",
+    "ja_vi": "BROAD",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REVIEW",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_BROAD"
+    ],
+    "note": "Vietnamese 'bánh quy' is a broader term derived from French 'biscuit' and covers both cookies and biscuits, making it a broader match for the specific American English sense of 'cookie'."
+   }
+  },
+  {
+   "key": "e372a641e1fb6b35ff23cee75712aebb0d4013bfa77c1c638e485cd3570f0b5b",
+   "input": {
+    "id": "wk-11307-s1",
+    "en": "generous",
+    "en_pos": "adjective",
+    "en_sense": "Willing to give and share unsparingly; showing a readiness to give more (especially money) than is expected or needed.",
+    "ja": "寛大",
+    "ja_reading": "かんだい",
+    "ja_pos": "adj-na,n",
+    "ja_glosses": [
+     "tolerant",
+     "generous",
+     "lenient",
+     "broad-minded",
+     "magnanimous"
+    ],
+    "vi": "hào phóng"
+   },
+   "output": {
+    "id": "wk-11307-s1",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MINOR_MISMATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA"
+    ],
+    "note": "Japanese '寛大' (kandai) means generous in spirit (tolerant, magnanimous), not materially generous, which is the specified English sense."
+   }
+  },
+  {
+   "key": "a1dcb90c151a200bfbd5c84ced7ad87c06ea961eceaf065671123dadd7878806",
+   "input": {
+    "id": "wk-11312-s0",
+    "en": "pinch",
+    "en_pos": "verb",
+    "en_sense": "To squeeze a small amount of a person's skin and flesh, making it hurt.",
+    "ja": "つねる",
+    "ja_reading": "つねる",
+    "ja_pos": "v5r,vt",
+    "ja_glosses": [
+     "to pinch",
+     "to nip"
+    ],
+    "vi": "béo"
+   },
+   "output": {
+    "id": "wk-11312-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three words are the standard, direct equivalents for the action of pinching skin."
+   }
+  },
+  {
+   "key": "4043fc395fa3153c7b33a18be10852e4cfa2a904e059f18c5a0c389d67219ccc",
+   "input": {
+    "id": "wk-11321-e:fcd585",
+    "en": "tip",
+    "en_pos": "noun",
+    "en_sense": "extreme end of something",
+    "ja": "先",
+    "ja_reading": "さき",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "point",
+     "tip",
+     "end",
+     "nozzle"
+    ],
+    "vi": "chóp"
+   },
+   "output": {
+    "id": "wk-11321-e:fcd585",
+    "en_ja": "OK",
+    "en_vi": "NARROW",
+    "ja_vi": "NARROW",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "TOO_NARROW",
+     "UNNATURAL_VI"
+    ],
+    "note": "Vietnamese 'chóp' specifically means 'peak' or 'summit' and is not a good general equivalent for 'tip'; 'đầu' or 'mũi' would be better."
+   }
+  },
+  {
+   "key": "0ebaf6b0a28e7c26f8fd1247362ab0bce0142def4ee145254dac8f6a92432bbc",
+   "input": {
+    "id": "wk-11322-s0",
+    "en": "tip",
+    "en_pos": "noun",
+    "en_sense": "A gratuity; a small amount of money left for a bartender, waiter, taxi driver or other service worker as a token of appreciation, often calculated as a percentage of the bill.",
+    "ja": "チップ",
+    "ja_reading": "チップ",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "tip",
+     "gratuity"
+    ],
+    "vi": "bo"
+   },
+   "output": {
+    "id": "wk-11322-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard terms for a gratuity, with Japanese using a loanword from English and Vietnamese from French."
+   }
+  },
+  {
+   "key": "30008666b91ab08d5f01d3993c11270d4cdbd508a1dcc56e304d5206303dc78c",
+   "input": {
+    "id": "wk-11325-s0",
+    "en": "nova",
+    "en_pos": "noun",
+    "en_sense": "Any sudden brightening of a previously inconspicuous star.",
+    "ja": "新星",
+    "ja_reading": "しんせい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "nova"
+    ],
+    "vi": "tân tinh"
+   },
+   "output": {
+    "id": "wk-11325-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard astronomical terms, with the Japanese and Vietnamese words being direct cognates."
+   }
+  },
+  {
+   "key": "4d67bec1fd9327b74051cded3a1b6feafeb0a6e83228845627ef91fb3797825d",
+   "input": {
+    "id": "wk-1133-s0",
+    "en": "subject",
+    "en_pos": "noun",
+    "en_sense": "The noun, pronoun or noun phrase about whom the statement is made. In active clauses with verbs denoting an action, the subject is the actor. In clauses in the passive voice the subject is the target of the action.",
+    "ja": "主語",
+    "ja_reading": "しゅご",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "subject"
+    ],
+    "vi": "chủ ngữ"
+   },
+   "output": {
+    "id": "wk-1133-s0",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard grammatical terms for 'subject', with the Japanese and Vietnamese words being direct cognates."
+   }
+  },
+  {
+   "key": "187d5af8b4ccd8e226ba364201763cde475bd53c2b8d0d2663697b06fe7e61ca",
+   "input": {
+    "id": "wk-1133-s2",
+    "en": "subject",
+    "en_pos": "noun",
+    "en_sense": "The main topic of a paper, work of art, discussion, field of study, etc.",
+    "ja": "主題",
+    "ja_reading": "しゅだい",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "subject",
+     "theme",
+     "motif"
+    ],
+    "vi": "chủ đề"
+   },
+   "output": {
+    "id": "wk-1133-s2",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "NATURAL",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [],
+    "note": "All three are the standard terms for 'subject' in the sense of a theme or topic, with the Japanese and Vietnamese words being direct cognates."
+   }
+  },
+  {
+   "key": "db7fa7785a70695de5a569e33423e3a761e63b537e6a278fd6dfe58b9c75cb43",
+   "input": {
+    "id": "wk-1133-s3",
+    "en": "subject",
+    "en_pos": "noun",
+    "en_sense": "A particular area of study.",
+    "ja": "学科",
+    "ja_reading": "がっか",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "subject (of study)",
+     "course of study"
+    ],
+    "vi": "môn học"
+   },
+   "output": {
+    "id": "wk-1133-s3",
+    "en_ja": "WRONG",
+    "en_vi": "OK",
+    "ja_vi": "WRONG",
+    "naturalness": "AWKWARD",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "REJECT",
+    "confidence": "HIGH",
+    "issues": [
+     "SENSE_DIVERGENCE",
+     "NOT_A_TRANSLATION_OF_THIS_SENSE",
+     "UNNATURAL_JA"
+    ],
+    "note": "Japanese '学科' (gakka) refers to a department or course of study (a major), not an individual school subject like math or history; the correct term is '科目' (kamoku)."
+   }
+  },
+  {
+   "key": "8e3c0780452e588c10583fbca323feff3060b3afcf046aea6e666f09ebb20d00",
+   "input": {
+    "id": "wk-1133-s4",
+    "en": "subject",
+    "en_pos": "noun",
+    "en_sense": "A citizen in a monarchy.",
+    "ja": "臣民",
+    "ja_reading": "しんみん",
+    "ja_pos": "n",
+    "ja_glosses": [
+     "subject",
+     "national",
+     "citizen"
+    ],
+    "vi": "thần dân"
+   },
+   "output": {
+    "id": "wk-1133-s4",
+    "en_ja": "OK",
+    "en_vi": "OK",
+    "ja_vi": "OK",
+    "naturalness": "ACCEPTABLE",
+    "register": "MATCH",
+    "pos_ok": true,
+    "verdict": "ACCEPT",
+    "confidence": "HIGH",
+    "issues": [
+     "ARCHAIC_OR_RARE"
+    ],
+    "note": "All three terms correctly denote a subject of a monarchy; the Japanese '臣民' is somewhat archaic but accurate for this specific sense."
+   }
+  }
+ ]
+}
