@@ -201,6 +201,35 @@ from scripts.phase1_4.common import is_core_sense  # noqa: E402
 
 
 
+def concept_id_of(c: Dict[str, Any]) -> str:
+    en, ja = c["en"], c["ja"]
+    return f"concept-lex-{slug(en['lemma'])}-{en['pos'][:3]}-{sha8('%s|%s|%s:%s' % (en['lemma'], en['pos'], ja['ent_seq'], ja['sense_idx']), 6)}"
+
+
+def load_t4(HO: Path) -> Dict[str, Dict[str, Any]]:
+    """concept_id -> accepted Vietnamese proposal from the T4 hand-off (Luna), after Claude's per-item overrides.
+    Provenance stays AI_GENERATED either way; the proposer is recorded (gpt-6-luna, or claude when overridden)."""
+    out: Dict[str, Dict[str, Any]] = {}
+    dec_dir, pk_dir = HO / 'decisions', HO / 'packets'
+    ov = json.loads((HO / 'claude_overrides_T4.json').read_text())['overrides'] if (HO / 'claude_overrides_T4.json').exists() else {}
+    for p in sorted(dec_dir.glob('T4_*.jsonl')) if dec_dir.exists() else []:
+        items = {json.loads(l)['id']: json.loads(l) for l in (pk_dir / p.name).read_text(encoding='utf-8').splitlines() if l.strip()}
+        for l in p.read_text(encoding='utf-8').splitlines():
+            if not l.strip():
+                continue
+            d = json.loads(l)
+            vi, proposer, was = d.get('vi_lemma'), 'gpt-6-luna', None
+            if d['id'] in ov:
+                o = ov[d['id']]
+                was, vi, proposer = d.get('vi_lemma'), o['vi'], 'claude-sonnet-5-5'
+            if not vi:
+                continue
+            out[d['id']] = {'vi_lemma': vi, 'proposer': proposer, 'luna_proposal': was if proposer != 'gpt-6-luna' else d.get('vi_lemma'),
+                            'confidence': d.get('confidence'), 'packet': p.name,
+                            'input_hash': hashlib.sha256(json.dumps(items[d['id']], ensure_ascii=False, sort_keys=True).encode()).hexdigest()}
+    return out
+
+
 def build(write: bool = True) -> Dict[str, Any]:
     base = verify_and_base()
     corr = json.loads((P14_DIR / 'baseline_corrections_append.json').read_text()) if (P14_DIR / 'baseline_corrections_append.json').exists() else {'expressions': [], 'classifications': []}
@@ -208,6 +237,9 @@ def build(write: bool = True) -> Dict[str, Any]:
     results = json.loads((P14_DIR / "judge_results.json").read_text())
     ai_vi = json.loads((P14_DIR / "ai_vi.json").read_text()) if (P14_DIR / "ai_vi.json").exists() else {}
     ev = Ev()
+    HO = P14_DIR / 'handoff'
+    acc = frozenset(json.loads((HO / 'claude_review_T3.json').read_text())['accepted']) if (HO / 'claude_review_T3.json').exists() else frozenset()
+    t4 = load_t4(HO)
     excl = frozenset(json.loads((P14_DIR / 'manual_exclusions.json').read_text())) if (P14_DIR / 'manual_exclusions.json').exists() else frozenset()
     en_lists = L.load_en_lists()
     vn = L.load_vn_freq()
@@ -221,7 +253,7 @@ def build(write: bool = True) -> Dict[str, Any]:
         c = pool[cid]
         if c["match"]["decision"] not in ("NEW_CONCEPT", "EXISTING_CONCEPT_NEW_SENSE"):
             continue
-        kind, info = route(c, results, ai_vi, excl)
+        kind, info = route(c, results, ai_vi, excl, acc)
         routed[cid] = (kind, info)
         queues[kind].append(cid)
 
@@ -235,6 +267,9 @@ def build(write: bool = True) -> Dict[str, Any]:
         c = pool[cid]
         kind, info = routed[cid]
         vi = c["vi"]["lemma"] if kind == "ACCEPT_TRI_SOURCE" else (ai_vi[cid]["vi_lemma"] if kind == "ACCEPT_TRI_AI" else None)
+        if vi is None and kind == "ACCEPT_PARTIAL_ENJA":              # VI that will be attached from the T4 hand-off
+            t4x = t4.get(concept_id_of(c))
+            vi = t4x["vi_lemma"] if t4x else None
         k1 = (c["en"]["lemma"], c["en"]["pos"], c["ja"]["ent_seq"], c["ja"]["sense_idx"])
         k3 = (c["ja"]["lemma"], vi) if vi else None
         k4 = (c["en"]["lemma"], c["en"]["pos"], c["ja"]["lemma"])
@@ -265,13 +300,15 @@ def build(write: bool = True) -> Dict[str, Any]:
         enl = en_lists.get(en["lemma"].lower(), {}) if core else {}
         sig = sig if core else {}
         doms, primary = domains_for(dict(c, signals=sig), enl)
-        has_vi = kind in ("ACCEPT_TRI_SOURCE", "ACCEPT_TRI_AI")
-        vi_lemma = c["vi"]["lemma"] if kind == "ACCEPT_TRI_SOURCE" else (ai_vi[cid]["vi_lemma"] if kind == "ACCEPT_TRI_AI" else None)
-        tier = "Tier B" if kind == "ACCEPT_TRI_SOURCE" else "Tier C" if kind == "ACCEPT_TRI_AI" else "Tier D"
+        t4p = t4.get(concept_id) if kind == "ACCEPT_PARTIAL_ENJA" else None      # Phase 1.4.2: VI proposed in the T4 hand-off
+        has_vi = kind in ("ACCEPT_TRI_SOURCE", "ACCEPT_TRI_AI") or bool(t4p)
+        vi_lemma = (c["vi"]["lemma"] if kind == "ACCEPT_TRI_SOURCE" else (ai_vi[cid]["vi_lemma"] if kind == "ACCEPT_TRI_AI" else (t4p["vi_lemma"] if t4p else None)))
+        tier = "Tier B" if kind == "ACCEPT_TRI_SOURCE" else "Tier C" if (kind == "ACCEPT_TRI_AI" or t4p) else "Tier D"
         jr = info.get("judge_tri") if kind == "ACCEPT_TRI_SOURCE" else info.get("judge_tri_ai") if kind == "ACCEPT_TRI_AI" else (info.get("judge_enja_recheck") or info.get("judge_enja"))
         jkey = {"ACCEPT_TRI_SOURCE": "tri", "ACCEPT_TRI_AI": "tri_ai"}.get(kind, "recheck" if "judge_enja_recheck" in info else "enja")
         meta = {"phase": "1.4", "cand_id": cid, "origin_pipeline": ("jmdict_anchored_gap_fill" if en.get("anchor") == "jmdict" else "wiktionary_sense_block+jmdict_corroboration"),
-                "translation_status": "complete" if has_vi else "partial", "validation_status": "validated",
+                "translation_status": "complete" if has_vi else "partial",
+                "validation_status": "needs_review" if t4p else "validated",
                 "quality_tier": tier, "learning_value": c["value"], "match_decision": c["match"]["decision"],
                 "anchor": en.get("anchor", "wiktionary"),
                 "list_projection": "core_sense" if core else "not_projected(non-core sense of a lemma-level list entry)",
@@ -280,6 +317,11 @@ def build(write: bool = True) -> Dict[str, Any]:
                           "alignment": {"en_ja": jr.get("en_ja"), "en_vi": jr.get("en_vi"), "ja_vi": jr.get("ja_vi")},
                           "naturalness": jr.get("naturalness"), "verdict": jr.get("verdict"), "confidence": jr.get("confidence")},
                 "ja_corroboration": {"jmdict_gloss_score": ja["gloss_score"], "ent_seq": ja["ent_seq"], "sense_idx": ja["sense_idx"]}}
+        if info.get("independent_review"):
+            meta["independent_review"] = info["independent_review"]
+        if t4p:
+            meta["vi_proposal"] = {"proposer": t4p["proposer"], "luna_proposal": t4p["luna_proposal"], "packet": t4p["packet"],
+                                   "review": "Claude reviewed all flagged proposals + 10% sample of each packet; not independently judged"}
         if c["match"]["decision"] == "EXISTING_CONCEPT_NEW_SENSE":
             meta["polysemy_of"] = c["match"]["existing_concept_id"]
         if not has_vi:
@@ -331,6 +373,9 @@ def build(write: bool = True) -> Dict[str, Any]:
         vi_rank = None
         if has_vi:
             judged_by = {"status": "AI_JUDGE_VALIDATED", "judge_model": judge_model, "prompt_version": J.PROMPT_VERSION}
+            if info.get("independent_review"):
+                judged_by = {"status": "INDEPENDENT_AGENT_REVIEW", "reviewers": info["independent_review"]["reviewers"],
+                             "basis": info["independent_review"]["basis"], "earlier_model_judge": "REVIEW (not auto-accepted)"}
             if kind == "ACCEPT_TRI_SOURCE":
                 fr = vn.get(vi_lemma)
                 vi_rank = fr["rank"] if fr else None
@@ -341,6 +386,16 @@ def build(write: bool = True) -> Dict[str, Any]:
                            "corpus_attestation": {"vn_freq_rank": vi_rank, "vn_freq_pos": fr["pos"] if fr else []},
                            "translation_semantics_validated": judged_by}
                 prov, lic = "SOURCE_DERIVED", "CC-BY-SA-4.0"
+            elif t4p:
+                fr = vn.get(vi_lemma)
+                vi_rank = fr["rank"] if fr else None
+                vi_ev = [Ev.ai(t4p["proposer"], "handoff_T4_v1", f"concept:{concept_id}, sense:{sense_id}", "vi_candidate", vi_lemma,
+                               t4p["input_hash"], "2026-10-03T00:00:00Z")]
+                vi_meta = {"lexeme_source": {"status": "AI_GENERATED", "source": t4p["proposer"]},
+                           "corpus_attestation": {"vn_freq_rank": vi_rank, "vn_freq_pos": fr["pos"] if fr else []},
+                           "translation_semantics_validated": {"status": "AGENT_PROPOSED_PARTIALLY_REVIEWED", "proposer": t4p["proposer"],
+                                                               "reviewer": "claude-sonnet-5-5", "luna_proposal": t4p["luna_proposal"]}}
+                prov, lic = "AI_GENERATED", "CC-BY-4.0"
             else:
                 g = ai_vi[cid]
                 fr = vn.get(vi_lemma)

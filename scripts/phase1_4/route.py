@@ -22,12 +22,19 @@ MIN_PARTIAL_VALUE = 30    # EN-JA-only partials - higher bar (no VI to add utili
 MIN_AI_VI_VALUE = 30      # AI-generated VI is only attempted for strong curriculum items
 
 
-def route(cand: Dict[str, Any], results: Dict[str, Any], ai_vi: Dict[str, Any], manual_exclusions=frozenset()) -> Tuple[str, Dict[str, Any]]:
+def route(cand: Dict[str, Any], results: Dict[str, Any], ai_vi: Dict[str, Any], manual_exclusions=frozenset(), manual_accept=frozenset()) -> Tuple[str, Dict[str, Any]]:
     if cand["cand_id"] in manual_exclusions:      # human/agent review overrides any automatic acceptance
         return "REVIEW", {"cand_id": cand["cand_id"], "manual_review": "excluded by manual review"}
     cid = cand["cand_id"]
     value = cand["value"]["total"]
     info: Dict[str, Any] = {"cand_id": cid, "value": value}
+    if cid in manual_accept:           # Phase 1.4.2: independent model (Luna) ACCEPT + Claude confirmation (see claude_review_T3.json)
+        info["independent_review"] = {"reviewers": ["gpt-6-luna", "claude"], "basis": "T3_handoff_review"}
+        if cand.get("vi"):
+            info["judge_tri"] = results.get("tri", {}).get(cid) or {}
+            return "ACCEPT_TRI_SOURCE", info
+        info["judge_enja"] = results.get("enja", {}).get(cid) or {}
+        return "ACCEPT_PARTIAL_ENJA", info
     tri = results.get("tri", {}).get(cid)
     enja = results.get("enja", {}).get(cid)
     recheck = results.get("recheck", {}).get(cid)

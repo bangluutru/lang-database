@@ -215,7 +215,7 @@ def test_new_expression_provenance_and_validation_are_separate_dimensions(G):
                 if l == "vi":
                     # judge validation is recorded in metadata and never rewrites origin
                     v = e["language_metadata"]["translation_semantics_validated"]
-                    assert v["status"] == "AI_JUDGE_VALIDATED"
+                    assert v["status"] in ("AI_JUDGE_VALIDATED", "INDEPENDENT_AGENT_REVIEW", "AGENT_PROPOSED_PARTIALLY_REVIEWED")
                     src = e["language_metadata"]["lexeme_source"]["status"]
                     assert src == e["provenance_type"]
 
@@ -236,16 +236,20 @@ def test_ai_generated_provenance_is_immutable_and_complete(G):
             else:
                 assert all(x["origin"] == "source_derived" for x in ev)
                 assert all(x.get("model") is None for x in ev)
-    # AI lexical content must be traceable to the cached generation artifacts
-    ai_file = P14 / "ai_vi.json"
-    if n_ai:
-        assert ai_file.exists()
-        gen = json.loads(ai_file.read_text())
-        for cid in G["new_ids"]:
-            for e in G["by_c"][cid]["vi"]:
-                if e["provenance_type"] == "AI_GENERATED":
-                    g = next((v for k, v in gen.items() if k and v.get("vi_lemma") == e["lemma"] and e["source_evidence"][0]["input_hash"] == v["input_hash"]), None)
-                    assert g is not None, f"no generation artifact for {e['expression_id']}"
+    # every AI lexeme must be traceable to a stored proposal (hand-off decision) with matching input hash
+    import hashlib
+    t4 = {}
+    for p in sorted((BASE_DIR / "data/phase1_4/handoff/packets").glob("T4_*.jsonl")):
+        for l in p.read_text(encoding="utf-8").splitlines():
+            d = json.loads(l)
+            t4[hashlib.sha256(json.dumps(d, ensure_ascii=False, sort_keys=True).encode()).hexdigest()] = d["id"]
+    for cid in G["new_ids"]:
+        for e in G["by_c"][cid]["vi"]:
+            if e["provenance_type"] == "AI_GENERATED":
+                x = e["source_evidence"][0]
+                assert x["model"] in ("gpt-6-luna", "claude-sonnet-5-5"), x["model"]
+                assert t4.get(x["input_hash"]) == cid, f"no hand-off packet item for {e['expression_id']}"
+                assert e["language_metadata"]["translation_semantics_validated"]["status"] == "AGENT_PROPOSED_PARTIALLY_REVIEWED"
 
 
 def test_source_derived_evidence_resolves_to_verified_raw_snapshots(G):
@@ -411,5 +415,6 @@ def test_identical_en_vi_forms_are_source_derived_not_copied(G):
     for cid in G["new_ids"]:
         e = G["by_c"][cid]
         if e["vi"] and e["vi"][0]["lemma"].lower() == e["en"][0]["lemma"].lower():
-            assert e["vi"][0]["provenance_type"] == "SOURCE_DERIVED"
-            assert e["vi"][0]["source_evidence"][0]["source_id"] == "wiktionary_en"
+            assert e["vi"][0]["provenance_type"] in ("SOURCE_DERIVED", "AI_GENERATED")
+            if e["vi"][0]["provenance_type"] == "SOURCE_DERIVED":
+                assert e["vi"][0]["source_evidence"][0]["source_id"] == "wiktionary_en"

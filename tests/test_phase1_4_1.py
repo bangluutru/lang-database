@@ -159,8 +159,12 @@ def test_unfixable_defects_are_flagged_not_guessed(S):
 
 def test_corrected_concepts_are_not_production_ready_in_oki_export():
     deck = {c["id"]: c for c in json.loads((BASE / "data/exports/oki_language/deck_data.json").read_text())}
+    vo = json.loads((BASE / "data/phase1_4/validation_overrides.json").read_text())
     for c in baseline_rows("concepts"):
         corr = (c.get("metadata") or {}).get("correction")
         if corr and corr["validation_status"] == "needs_review":
-            assert deck[c["concept_id"]]["validation_status"] == "needs_review"
-            assert deck[c["concept_id"]]["production_ready"] is False
+            if c["concept_id"] in vo:       # independently validated by GPT 6 Luna (T1 ACCEPT/HIGH), recorded outside the sealed record
+                assert deck[c["concept_id"]]["validation_status"] == "validated"
+            else:
+                assert deck[c["concept_id"]]["validation_status"] == "needs_review"
+                assert deck[c["concept_id"]]["production_ready"] is False

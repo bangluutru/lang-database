@@ -7,7 +7,30 @@ from scripts.phase1_4.common import REPORTS_DIR, BASELINE_SHA
 
 def J(n): return json.loads((REPORTS_DIR / n).read_text())
 
+def handoff_stats():
+    import glob
+    from collections import Counter
+    HO = REPORTS_DIR.parent.parent / "data/phase1_4/handoff"
+    def dec(t):
+        out = []
+        for p in sorted(glob.glob(str(HO / f"decisions/{t}_*.jsonl"))):
+            out += [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
+        return out
+    t1, t2, t3, t4 = dec("T1"), dec("T2"), dec("T3"), dec("T4")
+    ov = json.loads((HO / "claude_overrides_T4.json").read_text())["overrides"]
+    acc = json.loads((HO / "claude_review_T3.json").read_text())["accepted"]
+    vo = json.loads((HO.parent / "validation_overrides.json").read_text())
+    cons = [json.loads(l) for l in open(REPORTS_DIR.parent.parent / "data/canonical/concepts.jsonl", encoding="utf-8")]
+    exs = [json.loads(l) for l in open(REPORTS_DIR.parent.parent / "data/canonical/expressions.jsonl", encoding="utf-8")]
+    return {"T1": dict(Counter(d["verdict"] for d in t1)), "T2": dict(Counter(d["verdict"] for d in t2)), "T3": dict(Counter(d["verdict"] for d in t3)),
+            "T4_items": len(t4), "T4_null": sum(1 for d in t4 if d.get("vi_lemma") is None), "claude_T4_overrides": len(ov),
+            "T3_claude_confirmed": len(acc), "T3_promoted_in_corpus": sum(1 for c in cons if (c.get("metadata") or {}).get("independent_review")),
+            "T1_validated_by_independent_review": len(vo),
+            "T4_vi_in_corpus": sum(1 for e in exs if e["language"] == "vi" and e["provenance_type"] == "AI_GENERATED" and e["source_evidence"][0].get("model") in ("gpt-6-luna", "claude-sonnet-5-5"))}
+
+
 def main():
+    hs = handoff_stats()
     m, rm, ba = J("final_metrics.json"), J("baseline_remediation_metrics.json"), J("baseline_defect_audit.json")["summary"]
     c, cl, f, vd = m["corpus"], m["by_classification"], m["pipeline_funnel"], m["validation_distribution"]
     led = rm["ledger_stats"]
@@ -38,8 +61,8 @@ License audit:               PASS
 Phase 1.3D frozen baseline:  PASS-WITH-DOCUMENTED-CORRECTIONS (sealed bytes exactly reconstructible by reverting the ledger)
 Golden Pilot:                PASS
 Professional 800:            PASS (untouched)
-Tests:                       see reports/phase1_4/test_results.json
-Final commit:                see `git tag phase1.4.1-closure` (reported in chat)
+Tests:                       see reports/phase1_4/test_results.json (all passing at closure)
+Final commit:                see `git tag phase1.4.2-closure` (reported in chat)
 ```
 
 ## 1. Phase 1.4 (expansion)
@@ -51,10 +74,19 @@ Final commit:                see `git tag phase1.4.1-closure` (reported in chat)
 Full detail: `reports/phase1_4/baseline_remediation_report.md`. {rm['ledger_entries']:,} field-level ledger entries; {led.get('fix_ja',0)} Japanese forms and
 {led.get('fix_vi',0)} Vietnamese forms replaced, {led.get('fix_pos',0)} POS fixes, {led.get('flagged',0)} unfixable concepts flagged. Corrected concepts are `needs_review` (no independent validation).
 
+## 2b. Phase 1.4.2 (independent hand-off to GPT 6 Luna, reviewed and committed by Claude)
+50 work packages (T1 303 corrected baseline concepts, T2 9 flagged, T3 first ~300 review-queue candidates, T4 1,315 Vietnamese proposals) were done by Luna through a
+file mailbox (`handoff/PROTOCOL.md`); Luna had no git, every packet was validated, sampled and committed by Claude (`data/phase1_4/handoff/review_log.jsonl`).
+* **T1** verdicts {hs['T1']}: {hs['T1_validated_by_independent_review']} corrected baseline concepts are now **validated by an independent model** (Luna ACCEPT/HIGH and unchanged since); Luna also exposed two of my own
+  omissions (stale sense definitions; `import`/`girl` left inconsistent) which were fixed. 18 of Luna's revisions + 3 T2 answers were applied after Claude's review (`part6.tsv`).
+* **T3** verdicts {hs['T3']}: Claude confirmed {hs['T3_claude_confirmed']} Luna-ACCEPTs; {hs['T3_promoted_in_corpus']} are in the corpus (status validated, basis `INDEPENDENT_AGENT_REVIEW`).
+* **T4**: {hs['T4_items']} Vietnamese proposals ({hs['T4_null']} correctly left empty); Claude overrode/excluded {hs['claude_T4_overrides']} ({hs['claude_T4_overrides']/hs['T4_items']:.1%}) after reviewing every flagged item and ~10% of each packet.
+  {hs['T4_vi_in_corpus']} Vietnamese expressions entered the corpus as `AI_GENERATED`, tier C, **`needs_review`** (proposer and Claude's review recorded; not independently judged).
+
 ## 3. Known limitations
 * Below 10k; {c['partial_new']:,} new concepts are partial; ~14,500 lower-priority candidates unjudged.
 * Domain packs IT / healthcare / travel are thin; no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
-* No external API was used after the owner's prohibition: the remediation is agent-reviewed, not model-judged; independent validation of corrections is outstanding.
+* No external API was used after the owner's prohibition. T1-validated concepts are independently reviewed by Luna; the T4 Vietnamese proposals and all other corrected concepts are only partially reviewed (`needs_review`).
 * The 150-concept sealed-baseline judge audit (49% strict accept) was **not re-run** after remediation (no API); deterministic indicators are compared instead.
 """
     (REPORTS_DIR / "final_closure_report.md").write_text(final, encoding="utf-8")

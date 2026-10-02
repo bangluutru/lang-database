@@ -99,3 +99,9 @@ def is_core_sense(en: Dict[str, Any], ja: Dict[str, Any]) -> bool:
         return ja["gloss_score"] >= 3
     m = re.fullmatch(r"s(\d+)", en.get("wikt_sense") or "")
     return bool(m) and int(m.group(1)) <= 1
+
+
+def validation_overrides():
+    """Independent-review promotions (Luna T1 ACCEPT/HIGH) layered on top of the sealed correction records."""
+    p = P14_DIR / "validation_overrides.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}

@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
-from scripts.phase1_4.common import BASE_DIR, CANONICAL_DIR, read_jsonl, write_json
+from scripts.phase1_4.common import BASE_DIR, CANONICAL_DIR, read_jsonl, write_json, validation_overrides
 
 OKI_DIR = BASE_DIR / "data" / "exports" / "oki_language"
 VIEW_DIR = BASE_DIR / "data" / "exports" / "views_v1_4"
@@ -44,6 +44,7 @@ def build_cards() -> List[Dict[str, Any]]:
             cls[c["target_id"]].append(c)
     base = {c["id"]: c for c in json.loads(BASE_DECK.read_text())}
 
+    vo = validation_overrides()
     cards = []
     for cid, c in concepts.items():
         cl_list = []
@@ -61,8 +62,11 @@ def build_cards() -> List[Dict[str, Any]]:
             continue
         md = dict(c["metadata"])
         if corr:           # Phase 1.4.1 corrected baseline concept: rebuilt from canonical, validation recorded in metadata
-            md["validation_status"] = corr["validation_status"]
-            md["quality_tier"] = "Tier D" if corr["validation_status"] != "validated" else base[cid]["provenance_quality"]
+            val = vo.get(cid, {}).get("status", corr["validation_status"])
+            md["validation_status"] = val
+            vp = (exprs[cid].get("vi") or [None])[0]
+            tier_by_prov = {"OFFICIAL_CURATED": "Tier A", "BENCHMARK_CURATED": "Tier A", "CURATED": "Tier A", "SOURCE_DERIVED": "Tier B", "AI_GENERATED": "Tier C"}
+            md["quality_tier"] = "Tier D" if (val != "validated" or not vp) else tier_by_prov.get(vp["provenance_type"], "Tier D")
         en = (exprs[cid].get("en") or [None])[0]
         ja = (exprs[cid].get("ja") or [None])[0]
         vi = (exprs[cid].get("vi") or [None])[0]

@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
-from scripts.phase1_4.common import BASE_DIR, CANONICAL_DIR, P14_DIR, REPORTS_DIR, BASELINE_SHA, read_jsonl, write_json
+from scripts.phase1_4.common import BASE_DIR, CANONICAL_DIR, P14_DIR, REPORTS_DIR, BASELINE_SHA, read_jsonl, write_json, validation_overrides
 from scripts.phase1_4 import judge as J
 
 BASE_DECK = BASE_DIR / "data/releases/phase1_3d-sealed/oki_deck_data.baseline.json"
@@ -143,7 +143,7 @@ def main():
         if cid in newids:
             val[(c["metadata"]["validation_status"], status(cid))] += 1
         elif (c.get("metadata") or {}).get("correction"):
-            val[(c["metadata"]["correction"]["validation_status"], status(cid))] += 1
+            val[(validation_overrides().get(cid, {}).get("status", c["metadata"]["correction"]["validation_status"]), status(cid))] += 1
         else:
             card = base_deck[cid]
             val[(card["validation_status"], card["translation_status"])] += 1
