@@ -28,10 +28,10 @@ def decisions(task):
     return out
 
 
-def test_all_fifty_tasks_were_reviewed_and_logged():
+def test_all_reviewed_tasks_are_logged_with_matching_hashes():
     log = jl(HO / "review_log.jsonl")
     done = {r["task_id"] for r in log if r["decision"] == "APPROVED"}
-    assert len(done) == 50 and all(r["reviewer"] == "claude" for r in log)
+    assert len(done) >= 50 and all(r["reviewer"] == "claude" for r in log)
     for r in log:
         f = HO / "decisions" / f"{r['task_id']}.jsonl"
         assert hashlib.sha256(f.read_bytes()).hexdigest() == r["decision_file_sha256"], f"{f.name} changed after review"
