@@ -151,10 +151,13 @@ class TestBlocker2TriLanguageCompletenessAndProvenance:
                 concept_to_langs.setdefault(e["concept_id"], set()).add(e["language"])
 
         # Phase 1.4: assert on the sealed baseline subset (post-1.3D truth), not on pre-1.3D counts.
-        from tests._baseline import baseline_concept_ids
+        from tests._baseline import baseline_concept_ids, baseline_rows
         base = baseline_concept_ids()
-        complete_tri = sum(1 for cid in base if concept_to_langs.get(cid, set()) >= {"en", "ja", "vi"})
-        partial_en_ja = sum(1 for cid in base if concept_to_langs.get(cid) == {"en", "ja"})
+        sealed_langs = {}
+        for e in baseline_rows("expressions"):      # sealed-prefix rows only (Phase 1.4.1 may append VI to some baseline concepts)
+            sealed_langs.setdefault(e["concept_id"], set()).add(e["language"])
+        complete_tri = sum(1 for cid in base if sealed_langs.get(cid, set()) >= {"en", "ja", "vi"})
+        partial_en_ja = sum(1 for cid in base if sealed_langs.get(cid) == {"en", "ja"})
 
         assert len(base) == 2106
         assert complete_tri == 1717          # Phase 1.3D closure

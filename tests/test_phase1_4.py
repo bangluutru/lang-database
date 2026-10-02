@@ -60,11 +60,17 @@ def _group(senses):
 
 
 # ------------------------------------------------------------------ frozen baseline
-def test_sealed_baseline_prefix_is_byte_identical():
-    for fname, info in manifest()["append_only"].items():
+def test_sealed_baseline_prefix_is_byte_identical_modulo_ledger():
+    """Phase 1.4.1: corrected prefix is pinned, and reverting the ledger reproduces the sealed Phase 1.3D SHA-256 exactly."""
+    from tests._baseline import reverted_prefix_bytes
+    m = manifest()
+    for fname, info in m["append_only"].items():
         data = (CANONICAL_DIR / fname).read_bytes()
-        assert len(data) >= info["bytes"]
-        assert hashlib.sha256(data[: info["bytes"]]).hexdigest() == info["sha256"], fname
+        cp = m["corrected_prefix"][fname]
+        assert hashlib.sha256(data[: cp["bytes"]]).hexdigest() == cp["sha256"], f"{fname}: corrected prefix changed"
+        name = fname.replace(".jsonl", "")
+        if name != "examples":
+            assert hashlib.sha256(reverted_prefix_bytes(name)).hexdigest() == info["sha256"], f"{fname}: ledger does not reproduce the sealed bytes"
 
 
 def test_frozen_files_golden_pilot_and_production_unchanged():
@@ -90,7 +96,10 @@ def test_canonical_ids_of_baseline_immutable(G):
 def test_baseline_oki_cards_preserved():
     deck = {c["id"]: c for c in json.loads((BASE_DIR / "data/exports/oki_language/deck_data.json").read_text())}
     sealed = json.loads((BASE_DIR / "data/releases/phase1_3d-sealed/oki_deck_data.baseline.json").read_text())
+    corrected = {x["concept_id"] for x in load("concepts") if (x.get("metadata") or {}).get("correction")}
     for c in sealed:
+        if c["id"] in corrected:
+            continue   # rebuilt from corrected canonical (Phase 1.4.1)
         d = deck[c["id"]]
         for k in c:
             if k in ("classifications", "tags"):

@@ -182,11 +182,13 @@ def jlpt_class(target: str, sig: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 # ------------------------------------------------------------------ main build
 def verify_and_base() -> Dict[str, bytes]:
+    """Return the protected prefix of every canonical file. If Phase 1.4.1 corrections were applied, the protected prefix is
+    the CORRECTED one (its hash is pinned in the manifest; reverting the ledger reproduces the sealed 1.3D bytes)."""
     man = json.loads(MANIFEST.read_text())
     base = {}
     for name in FILES + ["examples"]:
         f = f"{name}.jsonl"
-        info = man["append_only"][f]
+        info = man.get("corrected_prefix", {}).get(f) or man["append_only"][f]
         cur = (CANONICAL_DIR / f).read_bytes()
         pref = cur[:info["bytes"]]
         if hashlib.sha256(pref).hexdigest() != info["sha256"]:
@@ -201,6 +203,7 @@ from scripts.phase1_4.common import is_core_sense  # noqa: E402
 
 def build(write: bool = True) -> Dict[str, Any]:
     base = verify_and_base()
+    corr = json.loads((P14_DIR / 'baseline_corrections_append.json').read_text()) if (P14_DIR / 'baseline_corrections_append.json').exists() else {'expressions': [], 'classifications': []}
     pool = {c["cand_id"]: c for c in read_jsonl(P14_DIR / "scored_pool.jsonl")}
     results = json.loads((P14_DIR / "judge_results.json").read_text())
     ai_vi = json.loads((P14_DIR / "ai_vi.json").read_text()) if (P14_DIR / "ai_vi.json").exists() else {}
@@ -364,6 +367,8 @@ def build(write: bool = True) -> Dict[str, Any]:
     # ---- additive classification backfill for existing concepts (views only; no record is modified)
     backfill = backfill_existing(en_lists, vn)
     classes += backfill
+    classes += corr['classifications']
+    exprs += corr['expressions']
 
     # ---- dedupe classification ids (stable)
     seen = set()
@@ -382,6 +387,7 @@ def build(write: bool = True) -> Dict[str, Any]:
     concepts.sort(key=lambda r: r["concept_id"])
     senses.sort(key=lambda r: r["sense_id"])
     exprs.sort(key=lambda r: r["expression_id"])
+    assert len({e["expression_id"] for e in exprs}) == len(exprs)
     out_bytes = {"concepts": base["concepts"] + ser(concepts), "senses": base["senses"] + ser(senses),
                  "expressions": base["expressions"] + ser(exprs), "classifications": base["classifications"] + ser(classes)}
     summary = {"new_concepts": len(concepts), "new_senses": len(senses), "new_expressions": len(exprs),
@@ -413,7 +419,7 @@ def backfill_existing(en_lists, vn) -> List[Dict[str, Any]]:
     for e in exprs:
         by_c[e["concept_id"]][e["language"]].append(e)
     existing = read_jsonl(CANONICAL_DIR / "classifications.jsonl")[:man["append_only"]["classifications.jsonl"]["lines"]]
-    have = {(c.get("target_id"), c.get("system")) for c in existing if "system" in c}
+    have = {(c.get("target_id"), c.get("system")) for c in existing if "system" in c and c.get("status") != "retracted"}
     out = []
     for cid in sorted(by_c):
         if cid.startswith("concept-pro-"):

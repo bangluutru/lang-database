@@ -26,3 +26,27 @@ def baseline_rows(name):
 
 def baseline_concept_ids():
     return {c["concept_id"] for c in baseline_rows("concepts")}
+
+
+ABSENT_KEY = "__absent__"
+
+
+def ledger():
+    return json.loads((BASE_DIR / "reports" / "phase1_4" / "baseline_corrections_ledger.json").read_text(encoding="utf-8"))["entries"]
+
+
+def reverted_prefix_bytes(name):
+    """Current baseline prefix of canonical/<name>.jsonl with the Phase 1.4.1 ledger reverted (old values restored).
+    Must equal the sealed Phase 1.3D bytes."""
+    info = manifest()["append_only"][f"{name}.jsonl"]
+    keyf = {"concepts": "concept_id", "senses": "sense_id", "expressions": "expression_id", "classifications": "classification_id"}.get(name)
+    rows = baseline_rows(name)
+    if keyf:
+        by = {r[keyf]: r for r in rows}
+        for e in reversed([x for x in ledger() if x["file"] == name]):
+            r = by[e["id"]]
+            if isinstance(e["old"], dict) and e["old"].get(ABSENT_KEY):
+                r.pop(e["field"], None)
+            else:
+                r[e["field"]] = e["old"]
+    return "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows).encode("utf-8")

@@ -78,7 +78,7 @@ def learning_value(sig: Dict[str, Any]) -> Dict[str, Any]:
 
 class ExistingIndex:
     def __init__(self):
-        self.exprs = baseline_expressions()
+        self.exprs = [e for e in baseline_expressions() if e.get('status') != 'retracted']
         self.by_en: Dict[str, List[str]] = defaultdict(list)
         self.by_ja: Dict[str, List[str]] = defaultdict(list)
         self.concept_ja_seq: Dict[str, Tuple[int, int]] = {}

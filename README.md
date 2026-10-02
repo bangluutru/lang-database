@@ -1,6 +1,6 @@
 # English–Japanese–Vietnamese Learning Lexical Graph (Phase 1.4)
 
-> **Phase 1.4 status:** 6,935 canonical concepts (4,231 tri-language complete, 2,704 partial). See `reports/phase1_4/final_closure_report.md`. The metrics tables below describe the Phase 1.3C/1.3D baseline. **AI agents: read `CLAUDE.md` first — external/paid API calls are forbidden.**
+> **Phase 1.4 / 1.4.1 status:** 6,760 canonical concepts (4,149 tri-language complete, 2,611 partial); 296 Phase 1.3D concepts corrected or flagged (needs_review). See `reports/phase1_4/final_closure_report.md` and `baseline_remediation_report.md`. The metrics tables below describe the Phase 1.3C/1.3D baseline. **AI agents: read `CLAUDE.md` first — external/paid API calls are forbidden.**
 
 > **Curated, open, machine-readable English–Japanese–Vietnamese Learning Lexical Graph built on a canonical `Concept` → `Sense` → `Expression` tri-language architecture.**
 

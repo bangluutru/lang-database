@@ -1,5 +1,17 @@
 # Changelog
 
+## [Phase 1.4.1] - 2026-10-02 — Remediation of demonstrable Phase 1.3D defects
+### Fixed (all in `reports/phase1_4/baseline_corrections_ledger.json`, reversible to the sealed bytes)
+- Full manual review of 1,306 baseline core/poly concepts; 233 Japanese forms replaced (JMdict-verified), 56 Vietnamese forms replaced and 4 added
+  (agent-authored => `AI_GENERATED`, `AGENT_REVIEWED_NOT_INDEPENDENT`), 133 POS fixes, 9 unfixable concepts flagged, 339 derived classifications retracted.
+- Examples: husband お父さん→夫, today 現代→今日, eat 遣る→食べる, world 園→世界, dog スベタ→犬, act 法律→演じる, cat reading ねこま→ねこ.
+- Corrected concepts are `needs_review`; match-before-create now indexes the corrected baseline (175 duplicate candidates absorbed).
+### Added
+- `scripts/phase1_4/baseline_fixes.py`, `apply_baseline_corrections.py`, `data/phase1_4/baseline_fixes/*.tsv`, `tests/test_phase1_4_1.py`.
+### Not done
+- No independent re-validation (external API prohibited); judge audit not re-run.
+
+
 ## [Phase 1.4] - 2026-10-02 — Curated corpus expansion (2,106 → 6,935 concepts)
 
 ### Added

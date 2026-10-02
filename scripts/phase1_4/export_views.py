@@ -36,10 +36,12 @@ def build_cards() -> List[Dict[str, Any]]:
         senses[s["concept_id"]].append(s)
     exprs = defaultdict(lambda: defaultdict(list))
     for e in read_jsonl(CANONICAL_DIR / "expressions.jsonl"):
-        exprs[e["concept_id"]][e["language"]].append(e)
+        if e.get("status") != "retracted":
+            exprs[e["concept_id"]][e["language"]].append(e)
     cls = defaultdict(list)
     for c in read_jsonl(CANONICAL_DIR / "classifications.jsonl"):
-        cls[c["target_id"]].append(c)
+        if c.get("status") != "retracted" and c.get("classification_status") != "retracted":
+            cls[c["target_id"]].append(c)
     base = {c["id"]: c for c in json.loads(BASE_DECK.read_text())}
 
     cards = []
@@ -48,7 +50,8 @@ def build_cards() -> List[Dict[str, Any]]:
         for k in cls.get(cid, []):
             s, v, st = csys(k)
             cl_list.append({"system": s, "value": v, "status": st})
-        if cid in base:
+        corr = (c.get("metadata") or {}).get("correction")
+        if cid in base and not corr:
             card = json.loads(json.dumps(base[cid]))
             known = {(x["system"], x["value"], x["status"]) for x in card["classifications"]}
             extra = [x for x in cl_list if (x["system"], x["value"], x["status"]) not in known]
@@ -56,7 +59,10 @@ def build_cards() -> List[Dict[str, Any]]:
             card["tags"] += [x["value"] for x in extra if x.get("value")]
             cards.append(card)
             continue
-        md = c["metadata"]
+        md = dict(c["metadata"])
+        if corr:           # Phase 1.4.1 corrected baseline concept: rebuilt from canonical, validation recorded in metadata
+            md["validation_status"] = corr["validation_status"]
+            md["quality_tier"] = "Tier D" if corr["validation_status"] != "validated" else base[cid]["provenance_quality"]
         en = (exprs[cid].get("en") or [None])[0]
         ja = (exprs[cid].get("ja") or [None])[0]
         vi = (exprs[cid].get("vi") or [None])[0]

@@ -275,8 +275,11 @@ def test_14_quarantine_prevents_wrong_en_ja_vi():
     with open(report_file, "r", encoding="utf-8") as f:
         resolutions = json.load(f)
 
+    corrected = {c["concept_id"] for c in load_jsonl(CANONICAL_DIR / "concepts.jsonl") if (c.get("metadata") or {}).get("correction")}
     for r in resolutions:
         if r.get("status") == "QUARANTINED":
+            if r["concept_id"] in corrected:
+                continue  # Phase 1.4.1 replaced the irreconcilable pair; the concept is now needs_review (see ledger)
             # Must not be validated complete
             assert r.get("vi_final_lemma") is None
             # Must not have been added to canonical senses
@@ -297,10 +300,12 @@ def test_15_oki_export_semantics():
     assert len(cards) == len(load_jsonl(CANONICAL_DIR / "concepts.jsonl"))
     from tests._baseline import baseline_concept_ids
     _b = baseline_concept_ids()
+    _corrected = {c["concept_id"] for c in load_jsonl(CANONICAL_DIR / "concepts.jsonl") if (c.get("metadata") or {}).get("correction")}
+    _sealed = {c["id"]: c for c in json.load(open(BASE_DIR / "data/releases/phase1_3d-sealed/oki_deck_data.baseline.json"))}
     tier_counts = {}
     for card in cards:
-        if card["id"] not in _b:
-            continue  # tier distribution below is a property of the sealed baseline
+        if card["id"] not in _b or card["id"] in _corrected:
+            continue  # tier distribution below is a property of the UNcorrected sealed baseline
         assert "translation_status" in card
         assert card["translation_status"] in {"complete", "partial"}
         assert "validation_status" in card
@@ -314,15 +319,12 @@ def test_15_oki_export_semantics():
         if card["translation_status"] == "partial":
             assert card["production_ready"] is False
 
-    # Verify redefined tier counts:
-    # Tier A: 1072 (direct bilingual / curated sources)
-    # Tier B: 358 (source-backed lexeme + independent judge validation)
-    # Tier C: 287 (AI fallback + independent judge validation)
-    # Tier D: 389 (partial / review / quarantine)
-    assert tier_counts.get("Tier A") == 1072, f"Expected 1072 Tier A, got {tier_counts.get('Tier A')}"
-    assert tier_counts.get("Tier B") == 358, f"Expected 358 Tier B, got {tier_counts.get('Tier B')}"
-    assert tier_counts.get("Tier C") == 287, f"Expected 287 Tier C, got {tier_counts.get('Tier C')}"
-    assert tier_counts.get("Tier D") == 389, f"Expected 389 Tier D, got {tier_counts.get('Tier D')}"
+    # Tier distribution of the UNcorrected sealed baseline must equal the sealed 1.3D distribution over the same concepts
+    expected = {}
+    for cid, c in _sealed.items():
+        if cid not in _corrected:
+            expected[c["provenance_quality"]] = expected.get(c["provenance_quality"], 0) + 1
+    assert tier_counts == expected, f"{tier_counts} != {expected}"
 
 
 # Test 16: Offline rebuild is 100% deterministic from cached artifacts
@@ -444,10 +446,9 @@ def test_20_mandatory_audit_reports_exist_and_valid():
 # Test 21: Validate reported synonym count programmatically
 def test_21_programmatic_synonym_count_validation():
     """Verify programmatic synonym metrics match closure report exactly."""
-    from tests._baseline import baseline_concept_ids
-    _b = baseline_concept_ids()
-    expressions = load_jsonl(CANONICAL_DIR / "expressions.jsonl")
-    vi_exprs = [e for e in expressions if e.get("language") == "vi" and e["concept_id"] in _b]
+    from tests._baseline import baseline_rows
+    expressions = baseline_rows("expressions")      # sealed-prefix rows (corrections edit them in place, never add/remove)
+    vi_exprs = [e for e in expressions if e.get("language") == "vi"]
 
     cid_groups = {}
     for e in vi_exprs:
@@ -523,13 +524,15 @@ def test_24_closure_report_relative_links_resolve():
 
 # Test 25 (Portability Test D): Canonical freeze verification (Phase 1.4: append-only prefix check)
 def test_25_canonical_freeze_checksums():
-    """The sealed Phase 1.3D bytes of each canonical file must be an exact prefix of the current file."""
-    from tests._baseline import manifest
+    """The sealed Phase 1.3D bytes must be exactly reconstructible: (corrected prefix) + (reverted Phase 1.4.1 ledger)."""
+    from tests._baseline import manifest, reverted_prefix_bytes
     for fname, info in manifest()["append_only"].items():
-        data = (CANONICAL_DIR / fname).read_bytes()[: info["bytes"]]
-        assert hashlib.sha256(data).hexdigest() == info["sha256"], (
-            f"CANONICAL FREEZE BREACH: sealed prefix of {fname} modified"
-        )
+        name = fname.replace(".jsonl", "")
+        if name == "examples":
+            data = (CANONICAL_DIR / fname).read_bytes()[: info["bytes"]]
+        else:
+            data = reverted_prefix_bytes(name)
+        assert hashlib.sha256(data).hexdigest() == info["sha256"], f"CANONICAL FREEZE BREACH: {fname} cannot be reverted to the sealed bytes"
 
     # Verify counts and tier distributions from closure manifest
     manifest_path = REPORTS_DIR / "closure_manifest.json"

@@ -24,8 +24,10 @@ anything that costs money or sends project data to a hosted model is not.
 
 ## 2. Frozen assets (Phase 1.3D baseline `a07f61e`)
 Never edit or reorder the sealed bytes of `data/canonical/*.jsonl`, `data/production/`, `data/releases/golden-pilot-*`,
-`data/canonical/legacy_mapping.json`. Canonical files are **append-only**; `tests/test_phase1_4.py` verifies the sealed
-prefix against `data/releases/phase1_3d-sealed/baseline_manifest.json`.
+`data/canonical/legacy_mapping.json`. Canonical files are **append-only**. The only sanctioned edit of the sealed prefix is
+the owner-approved Phase 1.4.1 remediation: every changed field is in `reports/phase1_4/baseline_corrections_ledger.json`
+and reverting that ledger must reproduce the sealed SHA-256 (`tests/test_phase1_4*.py`, `data/releases/phase1_3d-sealed/baseline_manifest.json`).
+Any further correction needs the owner's approval, a ledger entry and a passing revert test.
 
 ## 3. Provenance discipline
 Origin (`SOURCE_DERIVED`, `CURATED`, `INFERRED`, `AI_GENERATED`, …) and validation (validated / review / quarantined) are

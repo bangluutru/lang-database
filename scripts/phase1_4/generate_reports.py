@@ -35,7 +35,8 @@ def main():
     newids = {c["concept_id"] for c in new}
     by = defaultdict(lambda: defaultdict(list))
     for e in exprs:
-        by[e["concept_id"]][e["language"]].append(e)
+        if e.get("status") != "retracted":
+            by[e["concept_id"]][e["language"]].append(e)
 
     def status(cid):
         langs = {l for l, v in by[cid].items() if v}
@@ -60,6 +61,8 @@ def main():
     # ---- classification views (distinct concepts per classification)
     cl_concepts = defaultdict(set)
     for k in classes:
+        if k.get("status") == "retracted":
+            continue
         s = k.get("system") or k.get("classification_system")
         v = k.get("value") if "value" in k else k.get("classification_value")
         cl_concepts[(s, v)].add(k["target_id"])
@@ -139,6 +142,8 @@ def main():
         cid = c["concept_id"]
         if cid in newids:
             val[(c["metadata"]["validation_status"], status(cid))] += 1
+        elif (c.get("metadata") or {}).get("correction"):
+            val[(c["metadata"]["correction"]["validation_status"], status(cid))] += 1
         else:
             card = base_deck[cid]
             val[(card["validation_status"], card["translation_status"])] += 1
