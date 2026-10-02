@@ -151,12 +151,25 @@ def cmd_review(a):
     if not a.approve and not a.rework:
         rnd = random.Random(tid)
         must = [r for r in rows if r.get("verdict") in ("REVISE", "REJECT") or t["kind"] == "T2"]
+        if t["kind"] == "T4":             # auto-flag suspicious VI proposals so the reviewer reads only what matters
+            sys.path.insert(0, str(REPO))
+            from scripts.phase1_4 import lexicons as _L
+            vn = _L.load_vn_freq()
+            def suspicious(r):
+                v = r.get("vi_lemma")
+                p_ = packet[r["id"]]
+                return (v is None or r["confidence"] != "HIGH" or v not in vn or len(v.split()) > 3 or v == (p_.get("rejected_vi_before") or "")
+                        or v.lower() == p_["en"].lower())
+            must = [r for r in rows if suspicious(r)]
         rest = [r for r in rows if r not in must]
-        frac = 0.2 if t["kind"] == "T4" else 0.15
+        frac = 0.1 if t["kind"] == "T4" else 0.15
         sample = must + rnd.sample(rest, min(len(rest), max(3, int(len(rest) * frac)))) if rest else must
         md = [f"# Review sample {tid} (validator ok={ok}, complete={complete}, dist={dict(dist)})\n"]
         for r in sample:
             p = packet[r["id"]]
+            if t["kind"] == "T4":
+                md.append(f"- **{p['en']}** ({p.get('pos')}) | JA {p.get('ja')} | def: {p.get('en_sense_definition','')[:70]}\n    Luna VI: {r.get('vi_lemma')} {r.get('synonyms')} {r['confidence']} | {r['note'][:110]}")
+                continue
             md.append(f"- **{p['en']}** ({p.get('pos')}) | JA {p.get('ja')}({p.get('ja_reading')}) | VI {p.get('vi')} | def: {p.get('en_sense_definition','')[:80]}\n"
                       f"    Luna: {json.dumps({k: v for k, v in r.items() if k not in ('task','id','reviewer')}, ensure_ascii=False)}")
         path = HO / "work" / f"review_{tid}.md"
