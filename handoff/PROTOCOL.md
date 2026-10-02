@@ -29,3 +29,11 @@ They change code; Claude assigns them explicitly in a task note after T1/T2 are 
 ## Invariants
 * Atomic writes (tmp+rename); `state.json` guarded by a file lock; runtime state is git-ignored; only decisions + `review_log.jsonl` are committed.
 * Each decision file is committed only after validator OK + complete + Claude's review. Rework history is in `state.json` events.
+
+
+## Token-saving mode (default from Phase 1.4.2 wave 2)
+* **Pipelined:** Luna gets the next task as soon as she submits; she never waits for review.
+* **Batch wake-up:** `watch-claude --batch 5` wakes Claude only when 5 submissions are waiting (or Luna has run out of work).
+* **Exception-only review:** `review-batch` writes ONE file (`handoff/work/review_batch.md`) with only the items that can affect the corpus or look suspicious
+  (T3: Luna ACCEPTs; T4: low-confidence / unattested / copied forms + an 8% calibration sample; T1/T2: revisions). `approve-batch` validates, commits each task and chains on.
+* Claude's own decisions (`claude_accept.py`, `claude_override.py`) auto-commit their files, keeping the write-zone guard strict.

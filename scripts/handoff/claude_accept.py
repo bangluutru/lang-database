@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Claude-only helper: record which of Luna's T3 ACCEPT decisions Claude confirms for promotion.
 usage: claude_accept.py T3_001 sit hot because ...   (English headwords of Luna-ACCEPTed items in that packet)"""
-import json, sys
+import json, subprocess, sys
 from pathlib import Path
 R = Path(__file__).resolve().parent.parent.parent
 packet, words = sys.argv[1], sys.argv[2:]
@@ -19,3 +19,5 @@ for w in words:
 o["accepted"].sort()
 p.write_text(json.dumps(o, ensure_ascii=False, indent=1), encoding="utf-8")
 print(len(o["accepted"]), "accepted total")
+subprocess.run(["git", "add", str(p.relative_to(R))], cwd=R, check=True)
+subprocess.run(["git", "commit", "-q", "-m", f"docs(handoff): Claude T3 promotions ({packet})\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>"], cwd=R, check=True)

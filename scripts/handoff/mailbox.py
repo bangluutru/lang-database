@@ -94,7 +94,8 @@ def assign(s, tid):
 
 def advance(s):
     """Assign the next QUEUED task if nothing is active."""
-    if any(t["state"] in ("ASSIGNED", "IN_PROGRESS", "SUBMITTED", "APPROVED", "REWORK") for t in s["tasks"].values()):
+    # pipelined: Luna keeps working while earlier submissions wait for Claude's batch review
+    if any(t["state"] in ("ASSIGNED", "IN_PROGRESS") for t in s["tasks"].values()):
         return None
     for tid in s["order"]:
         if s["tasks"][tid]["state"] == "QUEUED":
@@ -212,6 +213,68 @@ def cmd_review(a):
     return 0
 
 
+def _exceptions(t, rows, packet):
+    """Exception-only view: items that can change the corpus or look suspicious. REVISE/REJECT carry no corpus effect
+    (they are only recorded) and are not printed except for T1/T2 where a revision may be applied."""
+    out = []
+    if t["kind"] == "T3":
+        out = [r for r in rows if r.get("verdict") == "ACCEPT"]
+    elif t["kind"] == "T4":
+        sys.path.insert(0, str(REPO))
+        from scripts.phase1_4 import lexicons as _L
+        vn = _L.load_vn_freq()
+        for r in rows:
+            v, p_ = r.get("vi_lemma"), packet[r["id"]]
+            if v and (r["confidence"] == "LOW" or len(v.split()) > 3 or v.lower() == p_["en"].lower() or
+                      (v not in vn and r["confidence"] != "HIGH")):
+                out.append(r)
+        rnd = random.Random(t["packet"])
+        rest = [r for r in rows if r not in out and r.get("vi_lemma")]
+        out += rnd.sample(rest, min(len(rest), max(2, int(len(rest) * 0.08))))      # 8% calibration sample
+    else:
+        out = [r for r in rows if r.get("verdict") in ("REVISE", "REJECT") or t["kind"] == "T2"]
+    return out
+
+
+def cmd_review_batch(a):
+    s = json.loads(STATE.read_text())
+    lines, ok_all = [], True
+    for tid in s["order"]:
+        t = s["tasks"][tid]
+        if t["state"] != "SUBMITTED":
+            continue
+        out = DECISIONS / t["packet"]
+        ok, log = run_validator(out)
+        rows = [json.loads(l) for l in out.read_text(encoding="utf-8").splitlines() if l.strip()]
+        packet = {json.loads(l)["id"]: json.loads(l) for l in (PACKETS / t["packet"]).read_text(encoding="utf-8").splitlines() if l.strip()}
+        complete = len(rows) == len(packet) and {r["id"] for r in rows} == set(packet)
+        ok_all &= ok and complete
+        lines.append(f"## {tid} validator={ok} complete={complete}")
+        for r in _exceptions(t, rows, packet):
+            p_ = packet[r["id"]]
+            if t["kind"] == "T4":
+                lines.append(f"- {p_['en']}|{p_['ja']}|{(p_.get('en_sense_definition') or '')[:38]}|VI {r.get('vi_lemma')} {r['confidence'][0]}")
+            else:
+                lines.append(f"- {p_['en']}|{p_['ja']}|vi:{p_.get('vi')}|{(p_.get('en_sense_definition') or '')[:38]}|{r.get('verdict','')[:3]} {r.get('revision') or ''}")
+    path = HO / "work" / "review_batch.md"
+    atomic_write(path, "\n".join(lines))
+    print(f"{sum(1 for l in lines if l.startswith('##'))} tasks; all-valid={ok_all}; exceptions file: {path.relative_to(REPO)} ({len(lines)} lines)")
+    return 0 if ok_all else 1
+
+
+def cmd_approve_batch(a):
+    rw = dict(kv.split("=", 1) for kv in a.rework)
+    s = json.loads(STATE.read_text())
+    for tid in s["order"]:
+        if s["tasks"][tid]["state"] != "SUBMITTED":
+            continue
+        ns = argparse.Namespace(task_id=tid, approve=tid not in rw, rework=rw.get(tid), commit=tid not in rw)
+        rc = cmd_review(ns)
+        if rc:
+            print(f"{tid}: not approved (rc={rc})")
+    return 0
+
+
 def cmd_guard(a):
     """Fail if the working tree contains changes outside what Luna is allowed to write (git is only used read-only here)."""
     r = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=REPO, capture_output=True, text=True)
@@ -229,7 +292,24 @@ def cmd_guard(a):
     return 1 if bad else 0
 
 
+def cmd_watch_claude_batch(a):
+    """Wake Claude only when >= K submissions are waiting, or when Luna has no more work and something is waiting."""
+    last = -1
+    while True:
+        s = json.loads(STATE.read_text()) if STATE.exists() else {"tasks": {}}
+        sub = [t for t, v in s["tasks"].items() if v["state"] == "SUBMITTED"]
+        busy = any(v["state"] in ("ASSIGNED", "IN_PROGRESS") for v in s["tasks"].values())
+        if sub and (len(sub) >= a.batch or not busy) and len(sub) != last:
+            last = len(sub)
+            print(f"LUNA-BATCH-READY {len(sub)} submitted: {','.join(sorted(sub))}", flush=True)
+        if not sub:
+            last = -1
+        time.sleep(a.interval)
+
+
 def cmd_watch_claude(a):
+    if getattr(a, "batch", 0):
+        return cmd_watch_claude_batch(a)
     """Block; print one line per new Luna receipt (use under Monitor so Claude is woken automatically)."""
     seen = set(p.name for p in MAIL_CLAUDE.glob("DONE-*.json"))
     MAIL_CLAUDE.mkdir(parents=True, exist_ok=True)
@@ -279,7 +359,8 @@ def cmd_luna_done(a):
     with State() as s:
         s["tasks"][tid]["state"] = "SUBMITTED"
         ev(s, "luna", f"submitted {tid}")
-    print(f"submitted {tid}; wait for REVIEW or run: python scripts/handoff/mailbox.py luna-next --wait")
+        nxt = advance(s)
+    print(f"submitted {tid}; next task: {nxt or 'none yet'} - run: python scripts/handoff/mailbox.py luna-next --wait")
     return 0
 
 
@@ -289,11 +370,13 @@ def main():
     sp.add_parser("plan"); sp.add_parser("status")
     r = sp.add_parser("review"); r.add_argument("task_id"); r.add_argument("--approve", action="store_true"); r.add_argument("--rework"); r.add_argument("--commit", action="store_true")
     g = sp.add_parser("guard"); g.add_argument("--quiet", action="store_true")
-    w = sp.add_parser("watch-claude"); w.add_argument("--interval", type=int, default=10)
+    w = sp.add_parser("watch-claude"); w.add_argument("--interval", type=int, default=10); w.add_argument("--batch", type=int, default=0)
+    sp.add_parser("review-batch")
+    ab = sp.add_parser("approve-batch"); ab.add_argument("--rework", nargs="*", default=[], help="TASK=feedback pairs sent back instead of approved")
     n = sp.add_parser("luna-next"); n.add_argument("--wait", action="store_true"); n.add_argument("--interval", type=int, default=10)
     d = sp.add_parser("luna-done"); d.add_argument("task_id")
     a = ap.parse_args()
-    return {"plan": cmd_plan, "status": cmd_status, "review": cmd_review, "guard": cmd_guard, "watch-claude": cmd_watch_claude,
+    return {"plan": cmd_plan, "status": cmd_status, "review": cmd_review, "guard": cmd_guard, "watch-claude": cmd_watch_claude, "review-batch": cmd_review_batch, "approve-batch": cmd_approve_batch,
             "luna-next": cmd_luna_next, "luna-done": cmd_luna_done}[a.cmd](a) or 0
 
 

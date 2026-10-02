@@ -64,14 +64,14 @@ def test_full_cycle_with_autochain_rework_and_guard(repo):
     assert mb(repo, "review", "T1_001", "--approve", "--commit").returncode == 1
     (repo / "scripts/phase1_4/handoff/evil.py").unlink()
     r = mb(repo, "review", "T1_001", "--approve", "--commit")
-    assert r.returncode == 0 and "next: T1_002" in r.stdout, r.stdout + r.stderr
+    assert r.returncode == 0, r.stdout + r.stderr
     log = subprocess.run(["git", "log", "--oneline"], cwd=repo, capture_output=True, text=True).stdout
     assert "Luna decisions T1_001" in log
-    # chain continues to the end
+    # pipelining: T1_002 was assigned as soon as T1_001 was submitted, so Luna was never blocked by review
     assert json.loads(mb(repo, "luna-next").stdout)["task_id"] == "T1_002"
     write_out(repo, "T1_002", ["c-c"])
-    assert mb(repo, "luna-done", "T1_002").returncode == 0
-    assert "next: T2_001" in mb(repo, "review", "T1_002", "--approve", "--commit").stdout
+    assert "next task: T2_001" in mb(repo, "luna-done", "T1_002").stdout
+    assert mb(repo, "review", "T1_002", "--approve", "--commit").returncode == 0
 
 
 def test_escalates_after_three_rework_attempts(repo):
@@ -83,3 +83,17 @@ def test_escalates_after_three_rework_attempts(repo):
         mb(repo, "review", "T1_001", "--rework", "still wrong")
     st = json.loads((repo / "handoff/state.json").read_text())
     assert st["tasks"]["T1_001"]["state"] == "ESCALATED"
+
+
+def test_batch_review_and_approve(repo):
+    mb(repo, "plan")
+    for tid, ids in (("T1_001", ["c-a", "c-b"]), ("T1_002", ["c-c"])):
+        assert json.loads(mb(repo, "luna-next").stdout)["task_id"] == tid
+        write_out(repo, tid, ids)
+        assert mb(repo, "luna-done", tid).returncode == 0
+    r = mb(repo, "review-batch")
+    assert r.returncode == 0 and "2 tasks" in r.stdout and "all-valid=True" in r.stdout
+    assert (repo / "handoff/work/review_batch.md").exists()
+    r = mb(repo, "approve-batch")
+    st = json.loads((repo / "handoff/state.json").read_text())["tasks"]
+    assert st["T1_001"]["state"] == "COMMITTED" and st["T1_002"]["state"] == "COMMITTED", r.stdout + r.stderr
