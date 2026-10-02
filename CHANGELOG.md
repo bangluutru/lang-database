@@ -4,7 +4,7 @@
 - Local file mailbox (`handoff/PROTOCOL.md`, `scripts/handoff/mailbox.py`): Luna works without git; Claude reviews, validates, commits; tasks auto-chain; guard enforces write zones.
 - 50 work packages done and committed: T1 independent validation of corrected baseline concepts (280 now `validated`), T2 flagged concepts, T3 review-queue promotions (Claude-confirmed ones added), T4 Vietnamese proposals (AI_GENERATED, needs_review; 58 overridden by Claude).
 - Luna's review found stale `definition_en` on corrected concepts and two inconsistent items; fixed (ledger extended, still reversible to sealed 1.3D bytes).
-- Corpus: 6,826 concepts. External API still prohibited.
+- Corpus: 6,797 concepts (5,464 tri-language complete, 1,333 partial). External API still prohibited.
 
 ## [Phase 1.4.1] - 2026-10-02 — Remediation of demonstrable Phase 1.3D defects
 ### Fixed (all in `reports/phase1_4/baseline_corrections_ledger.json`, reversible to the sealed bytes)
