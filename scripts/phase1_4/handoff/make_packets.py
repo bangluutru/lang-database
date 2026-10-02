@@ -22,17 +22,32 @@ OUT = BASE_DIR / "data/phase1_4/handoff/packets"
 N = 40
 
 
-def write_packets(name, items):
+def existing_ids(name):
+    ids = set()
+    for p in OUT.glob(f"{name}_*.jsonl"):
+        ids |= {json.loads(l)["id"] for l in p.read_text(encoding="utf-8").splitlines() if l.strip()}
+    return ids
+
+
+def write_packets(name, items, extend=False):
+    """extend=True: NEVER touch existing packets (their decisions are committed); append new numbered files for unseen ids only."""
     OUT.mkdir(parents=True, exist_ok=True)
-    for old in OUT.glob(f"{name}_*.jsonl"):
-        old.unlink()
+    start = 0
+    if extend:
+        have = existing_ids(name)
+        items = [x for x in items if x["id"] not in have]
+        nums = [int(p.stem.split("_")[1]) for p in OUT.glob(f"{name}_*.jsonl")]
+        start = max(nums, default=0)
+    else:
+        for old in OUT.glob(f"{name}_*.jsonl"):
+            old.unlink()
     for i in range(0, len(items), N):
-        p = OUT / f"{name}_{i // N + 1:03d}.jsonl"
+        p = OUT / f"{name}_{start + i // N + 1:03d}.jsonl"
         p.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in items[i:i + N]), encoding="utf-8")
     return (len(items) + N - 1) // N
 
 
-def main():
+def main(extend=None):
     concepts = {c["concept_id"]: c for c in read_jsonl(CANONICAL_DIR / "concepts.jsonl")}
     ex = defaultdict(lambda: defaultdict(list))
     for e in read_jsonl(CANONICAL_DIR / "expressions.jsonl"):
@@ -45,6 +60,7 @@ def main():
         if e["file"] == "expressions" and e["field"] == "lemma":
             hist[e["concept_id"]][e["id"].split("-")[1]] = e["old"]      # language -> previous lemma
     summary = {}
+    ext = set(extend or [])
 
     def card(cid):
         e = ex[cid]
@@ -63,8 +79,9 @@ def main():
         item = card(cid)
         item["changed"] = {"kinds": corr["kinds"], "previous_lemmas": hist.get(cid, {}), "agent_note": corr["reason"]}
         (t2 if "flagged_unfixable" in corr["kinds"] else t1).append(item)
-    summary["T1"] = (len(t1), write_packets("T1", t1))
-    summary["T2"] = (len(t2), write_packets("T2", t2))
+    if not ext:
+        summary["T1"] = (len(t1), write_packets("T1", t1))
+        summary["T2"] = (len(t2), write_packets("T2", t2))
 
     pool = {c["cand_id"]: c for c in read_jsonl(P14_DIR / "scored_pool.jsonl")}
     t3 = []
@@ -78,20 +95,27 @@ def main():
                    "vi": (c["vi"] or {}).get("lemma"), "learning_value": c["value"]["total"],
                    "earlier_model_judge": {k: j.get(k) for k in ("en_ja", "en_vi", "ja_vi", "verdict", "note")}})
     t3.sort(key=lambda x: (-x["learning_value"], x["id"]))
-    summary["T3"] = (len(t3), write_packets("T3", t3))
+    if not ext or "T3" in ext:
+        summary["T3"] = (len(t3), write_packets("T3", t3, extend="T3" in ext))
 
     t4 = []
     for cid, c in sorted(concepts.items()):
         md = c.get("metadata") or {}
-        if cid.startswith("concept-lex-") and md.get("translation_status") == "partial" and md.get("learning_value", {}).get("total", 0) >= 45:
+        floor = 30 if "T4" in ext else 45          # extension wave reaches value 30-44 as well (never below the partial bar)
+        if cid.startswith("concept-lex-") and md.get("translation_status") == "partial" and md.get("learning_value", {}).get("total", 0) >= floor:
             item = card(cid)
             item.update(learning_value=md["learning_value"]["total"], rejected_vi_before=(md.get("rejected_vi_candidate") or {}).get("lemma"))
             t4.append(item)
     t4.sort(key=lambda x: (-x["learning_value"], x["id"]))
-    summary["T4"] = (len(t4), write_packets("T4", t4))
-    (OUT.parent / "packet_index.json").write_text(json.dumps(summary, indent=1))
+    if not ext or "T4" in ext:
+        summary["T4"] = (len(t4), write_packets("T4", t4, extend="T4" in ext))
+    if not ext:
+        (OUT.parent / "packet_index.json").write_text(json.dumps(summary, indent=1))
     print(json.dumps(summary))
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--extend", nargs="*", choices=["T3", "T4"], help="append packets for unseen ids only; existing packets are never modified")
+    main(ap.parse_args().extend)
