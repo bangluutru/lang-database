@@ -36,3 +36,6 @@ relabel it as source-derived, and never upgrade origin because a review approved
 
 ## 4. Semantic quality over counts
 Do not force tri-language completeness or reach a size target by lowering quality. Partial concepts are legitimate.
+
+## 5. Delegation
+Work packages for another agent (GPT 6 Luna) are defined in `docs/handoff/LUNA_HANDOFF.md`; its decisions are validated by `scripts/phase1_4/handoff/validate_decisions.py` and reviewed by Claude/the owner before any integration.
