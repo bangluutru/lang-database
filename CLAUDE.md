@@ -39,3 +39,5 @@ Do not force tri-language completeness or reach a size target by lowering qualit
 
 ## 5. Delegation
 Work packages for another agent (GPT 6 Luna) are defined in `docs/handoff/LUNA_HANDOFF.md`; its decisions are validated by `scripts/phase1_4/handoff/validate_decisions.py` and reviewed by Claude/the owner before any integration.
+
+**Worker agents (Luna) never commit.** Only Claude reviews and commits; the loop is defined in `handoff/PROTOCOL.md` and enforced by `python scripts/handoff/mailbox.py guard`.

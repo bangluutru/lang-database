@@ -83,10 +83,12 @@ Implement, with tests, **without touching sealed data**:
 * **I3 — T4 ingestion.** Add AI-VI from T4 decisions (provenance `AI_GENERATED`, evidence model `gpt-6-luna`, `input_hash` of the packet item, validation `AGENT_REVIEWED_NOT_INDEPENDENT`, concept stays `needs_review` until Claude/owner reviews).
 * Never skip tests; never weaken `tests/`. Run `python -m pytest -q` before reporting (expected: all pass).
 
-## 7. Deliverables & hygiene
-1. `data/phase1_4/handoff/decisions/*.jsonl` (validated by the gate).
-2. `data/phase1_4/handoff/REPORT_LUNA.md`: per task — counts of ACCEPT/REVISE/REJECT, the 10 items you were least sure about, patterns of systematic error you noticed (e.g. “all `-ly` adverbs…”), anything in this file you disagree with.
-3. Commit message: `feat(handoff): Luna decisions T1..` ; do not push to `main` — create branch `luna/phase1.4.2` and push that.
+## 7. Deliverables & hygiene (local mailbox workflow — see `handoff/PROTOCOL.md`)
+You have **no git**. Claude reviews and commits. You communicate only through the mailbox commands:
+`luna-next --wait` (get work) → write `data/phase1_4/handoff/decisions/<packet>.jsonl` → `luna-done <task_id>` (format gate + notify Claude) → repeat.
+1. Decisions: one line per packet item, same order, validated by `luna-done`.
+2. When the queue is empty (or you notice a systematic problem), write `data/phase1_4/handoff/REPORT_LUNA.md` (counts per verdict, 10 least-sure items, systematic error patterns, disagreements with this document) and tell Claude via `handoff/mailbox/to_claude/QUESTION-<n>.md`.
+3. Never run `git`, never write outside: `data/phase1_4/handoff/decisions/`, `handoff/mailbox/to_claude/`, `handoff/work/`. `python scripts/handoff/mailbox.py guard` lets anyone verify this.
 
 ## 8. What Claude will check (so you can self-check first)
 * 100 % of your `REVISE`, `REJECT` and every T2 item; a stratified 15 % sample of `ACCEPT` (focus: Vietnamese naturalness and POS).
