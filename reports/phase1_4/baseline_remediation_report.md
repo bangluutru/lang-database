@@ -21,7 +21,7 @@ Phase 1.4 re-judged 150 sealed core concepts: only **49%** strict accept; ~17% o
 | Concepts flagged unfixable (needs_review) | 9 |
 | Vietnamese synonyms retracted (they described the replaced form) | 11 |
 | Derived classifications retracted (JLPT/Jōyō/VI-core of replaced forms) | 339 |
-| Field-level ledger entries | 3,387 |
+| Field-level ledger entries | 3,611 |
 
 Examples: `husband` お父さん→夫, `today` 現代→今日, `eat` 遣る→食べる, `world` 園→世界, `blue` ピンク→青い, `boy` もう→少年, `child` 砂利→子供,
 `dog` スベタ(slur)→犬, `act` 法律→演じる, `well/say` あの→よく/言う, `water` 水分→水, `cat` reading ねこま→ねこ, `front` ぜん→まえ.

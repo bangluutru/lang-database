@@ -130,6 +130,11 @@ def main():
                              ("license", "CC-BY-SA-3.0")):
                 ed.set("expressions", ja_e["expression_id"], fld, val, why, cid)
             ed.set("senses", sense["sense_id"], "gloss_ja", new_ja["lemma"], why, cid)
+            # the sense DEFINITION must follow the corrected Japanese sense, else the record contradicts itself
+            # (found in Luna's T1 review: 'air' still defined as "tune, melody" after JA became 空気)
+            if (sense.get("definition_en") or "").startswith("Core learning sense for"):
+                ed.set("senses", sense["sense_id"], "definition_en",
+                       f"Core learning sense for '{p['en']}': {', '.join(new_ja['jm_glosses'][:4])}", why, cid)
             if (sense.get("definition_ja") or "").startswith("基本語彙"):
                 ed.set("senses", sense["sense_id"], "definition_ja", f"基本語彙: {new_ja['lemma']} ({new_ja['reading']})", why, cid)
         if p["new_vi"]:

@@ -34,7 +34,7 @@ Final commit:                see `git tag phase1.4.1-closure` (reported in chat)
 * Learning views: `data/exports/views_v1_4/`; Oki deck regenerated.
 
 ## 2. Phase 1.4.1 (baseline remediation) — summary
-Full detail: `reports/phase1_4/baseline_remediation_report.md`. 3,387 field-level ledger entries; 233 Japanese forms and
+Full detail: `reports/phase1_4/baseline_remediation_report.md`. 3,611 field-level ledger entries; 233 Japanese forms and
 56 Vietnamese forms replaced, 133 POS fixes, 9 unfixable concepts flagged. Corrected concepts are `needs_review` (no independent validation).
 
 ## 3. Known limitations
