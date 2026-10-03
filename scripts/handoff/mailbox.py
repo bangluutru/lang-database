@@ -85,7 +85,7 @@ def assign(s, tid):
     t["attempt"] = t.get("attempt", 0) + 1
     t["assigned_at"] = now()
     msg = {"task_id": tid, "kind": t["kind"], "attempt": t["attempt"], "packet": f"data/phase1_4/handoff/packets/{t['packet']}",
-           "output": f"data/phase1_4/handoff/decisions/{t['packet']}", "instructions": f"docs/handoff/LUNA_HANDOFF.md (section {t['kind']})",
+           "output": f"data/phase1_4/handoff/decisions/{t['packet']}", "instructions": (f"docs/handoff/GEMINI_HANDOFF.md ({'Part H' if t['kind'] == 'G3' else 'Part G'}; ignore LUNA_HANDOFF.md)" if t["kind"].startswith("G") else f"docs/handoff/LUNA_HANDOFF.md (section {t['kind']})"),
            "items": t["items"], "rework_feedback": t.get("feedback"), "created_at": now(),
            "when_done": f"python scripts/handoff/mailbox.py luna-done {tid}"}
     atomic_write(task_file(tid), json.dumps(msg, ensure_ascii=False, indent=1))
