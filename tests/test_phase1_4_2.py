@@ -75,7 +75,9 @@ def test_t3_promotions_require_luna_accept_and_claude_confirmation(C):
     assert 30 <= len(promoted) <= len(acc)
     for c in promoted:
         assert c["metadata"]["cand_id"] in acc
-        assert c["metadata"]["validation_status"] == "validated"
+        # T4 later adds AI_GENERATED Vietnamese to some promoted concepts; those go back to needs_review by design
+        want = "needs_review" if "vi_proposal" in c["metadata"] else "validated"
+        assert c["metadata"]["validation_status"] == want
         assert c["metadata"]["independent_review"]["reviewers"] == ["gpt-6-luna", "claude"]
 
 

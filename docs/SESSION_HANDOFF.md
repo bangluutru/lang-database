@@ -9,11 +9,12 @@ Repo: `lang-database` (EN–JA–VI learning lexical graph). Owner writes Vietna
 4. Worker agent **GPT 6 Luna never commits**. Only Claude reviews + commits. Luna works through the file mailbox (`handoff/PROTOCOL.md`).
 5. Owner wants **token economy**: use the batch/exception-only review mode (below), terse replies.
 
-## Where things stand (git `main`, tags phase1.4-closure, phase1.4.1-closure, phase1.4.2-closure)
+## Where things stand (git `main`, tags phase1.4-closure, phase1.4.1-closure, phase1.4.2-closure, phase1.4.3-closure)
 * Corpus ≈ 6.8k concepts (see `reports/phase1_4/final_metrics.json`, `final_closure_report.md`, `baseline_remediation_report.md`). Tests: ~479 passing (`.venv/bin/python -m pytest -q`).
 * Phase 1.4 (expansion), 1.4.1 (baseline defect remediation), 1.4.2 (Luna hand-off: T1/T2/T4 all done; T3 first 9 packets done) are committed and pushed.
-* **In progress: T3 wave 2** — review-queue candidates T3_009…T3_029 (T3_001–009 committed). Queue state lives in `handoff/state.json` (local, git-ignored);
-  inspect with `python scripts/handoff/mailbox.py status`.
+* Phase 1.4.3 (2026-10-03): T3 wave 2 (T3_010–029) and T4 extension (T4_034–058) are done, reviewed, integrated via `rebuild_all.sh`. Handoff queue is empty (96 tasks COMMITTED).
+  New work needs new packets (`make_packets.py --extend ...`; COMMIT the generated packets before `approve-batch`, otherwise guard fails).
+  Note: `approve-batch` only handles SUBMITTED tasks; use `mailbox.py review T4_0NN --approve --commit` for ones stuck in APPROVED.
 
 ## How to resume the loop (token-saving mode)
 ```bash
