@@ -47,7 +47,7 @@ def write_packets(name, items, extend=False):
     return (len(items) + N - 1) // N
 
 
-def main(extend=None):
+def main(extend=None, floor=None, limit=None):
     concepts = {c["concept_id"]: c for c in read_jsonl(CANONICAL_DIR / "concepts.jsonl")}
     ex = defaultdict(lambda: defaultdict(list))
     for e in read_jsonl(CANONICAL_DIR / "expressions.jsonl"):
@@ -101,12 +101,15 @@ def main(extend=None):
     t4 = []
     for cid, c in sorted(concepts.items()):
         md = c.get("metadata") or {}
-        floor = 30 if "T4" in ext else 45          # extension wave reaches value 30-44 as well (never below the partial bar)
-        if cid.startswith("concept-lex-") and md.get("translation_status") == "partial" and md.get("learning_value", {}).get("total", 0) >= floor:
+        floor_ = floor if floor is not None else (30 if "T4" in ext else 45)   # extension wave reaches value 30-44 as well (never below the partial bar)
+        if cid.startswith("concept-lex-") and md.get("translation_status") == "partial" and md.get("learning_value", {}).get("total", 0) >= floor_:
             item = card(cid)
             item.update(learning_value=md["learning_value"]["total"], rejected_vi_before=(md.get("rejected_vi_candidate") or {}).get("lemma"))
             t4.append(item)
     t4.sort(key=lambda x: (-x["learning_value"], x["id"]))
+    if limit and "T4" in ext:
+        have4 = existing_ids("T4")
+        t4 = [x for x in t4 if x["id"] not in have4][:limit]       # trial packet (e.g. Gemini pilot): only the first N unseen items
     if not ext or "T4" in ext:
         summary["T4"] = (len(t4), write_packets("T4", t4, extend="T4" in ext))
     if not ext:
@@ -118,4 +121,7 @@ if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--extend", nargs="*", choices=["T3", "T4"], help="append packets for unseen ids only; existing packets are never modified")
-    main(ap.parse_args().extend)
+    ap.add_argument("--floor", type=int, help="T4 learning-value floor (default 30 on extension)")
+    ap.add_argument("--limit", type=int, help="T4 extension: cap the number of new items (trial packet)")
+    a = ap.parse_args()
+    main(a.extend, a.floor, a.limit)
