@@ -117,11 +117,35 @@ def main(extend=None, floor=None, limit=None):
     print(json.dumps(summary))
 
 
+def make_g3_tail(floor=45, limit=120):
+    """Gemini G3 packets: NEVER-judged NEW_CONCEPT core-sense candidates (value >= floor), highest value first; appends G3_NNN packets only."""
+    pool = read_jsonl(P14_DIR / "scored_pool.jsonl")
+    jr = json.loads((P14_DIR / "judge_results.json").read_text(encoding="utf-8"))
+    judged = set(jr["enja"]) | set(jr["tri"]) | set(jr["recheck"])
+    seen = existing_ids("T3") | existing_ids("G3")
+    rej = {r["cand_id"] for r in read_jsonl(P14_DIR / "rejected.jsonl")}
+    items = []
+    for c in pool:
+        i = c["cand_id"]
+        if i in judged or i in seen or i in rej or c["match"]["decision"] != "NEW_CONCEPT" or not c["value"].get("core_sense") or c["value"]["total"] < floor:
+            continue
+        items.append({"id": i, "en": c["en"]["lemma"], "pos": c["en"]["pos"], "en_sense_definition": c["en"]["wikt_gloss"][:300],
+                      "ja": c["ja"]["lemma"], "ja_reading": c["ja"]["reading"], "ja_jmdict_glosses": c["ja"]["jm_glosses"][:6],
+                      "vi": (c["vi"] or {}).get("lemma"), "learning_value": c["value"]["total"]})
+    items.sort(key=lambda x: (-x["learning_value"], x["id"]))
+    items = items[:limit]
+    print(json.dumps({"G3_tail": write_packets("G3", items, extend=True), "items": len(items)}))
+
+
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--extend", nargs="*", choices=["T3", "T4"], help="append packets for unseen ids only; existing packets are never modified")
     ap.add_argument("--floor", type=int, help="T4 learning-value floor (default 30 on extension)")
     ap.add_argument("--limit", type=int, help="T4 extension: cap the number of new items (trial packet)")
+    ap.add_argument("--g3-tail", type=int, metavar="N", help="append G3 packets with the N highest-value never-judged candidates (floor via --floor, default 45)")
     a = ap.parse_args()
-    main(a.extend, a.floor, a.limit)
+    if a.g3_tail:
+        make_g3_tail(a.floor or 45, a.g3_tail)
+    else:
+        main(a.extend, a.floor, a.limit)
