@@ -236,9 +236,116 @@
   },
   "A1_003-32": {
    "verdict": "PASS"
+  },
+  "A1_004-01": {
+   "verdict": "PASS"
+  },
+  "A1_004-02": {
+   "verdict": "PASS"
+  },
+  "A1_004-03": {
+   "verdict": "PASS"
+  },
+  "A1_004-04": {
+   "verdict": "PASS"
+  },
+  "A1_004-05": {
+   "verdict": "PASS"
+  },
+  "A1_004-06": {
+   "verdict": "PASS"
+  },
+  "A1_004-07": {
+   "verdict": "PASS"
+  },
+  "A1_004-08": {
+   "verdict": "PASS",
+   "claude_note": "Claude: webcam is a loanword in Vietnamese; accepted as flagged."
+  },
+  "A1_004-09": {
+   "verdict": "PASS"
+  },
+  "A1_004-10": {
+   "verdict": "PASS"
+  },
+  "A1_004-11": {
+   "verdict": "PASS"
+  },
+  "A1_004-12": {
+   "verdict": "PASS"
+  },
+  "A1_004-13": {
+   "verdict": "PASS"
+  },
+  "A1_004-14": {
+   "verdict": "PASS"
+  },
+  "A1_004-15": {
+   "verdict": "PASS"
+  },
+  "A1_004-16": {
+   "verdict": "PASS",
+   "claude_note": "Claude: 切開 names the procedure while 'vết rạch' names the resulting cut; acceptable (MEDIUM), 'đường rạch'/'rạch' also fit."
+  },
+  "A1_004-17": {
+   "verdict": "PASS"
+  },
+  "A1_004-18": {
+   "verdict": "PASS"
+  },
+  "A1_004-19": {
+   "verdict": "PASS"
+  },
+  "A1_004-20": {
+   "verdict": "PASS"
+  },
+  "A1_004-21": {
+   "verdict": "REWORK",
+   "slot": "A1_006-01",
+   "reason": "Scope mismatch inside the entry: your sense_definition covers hotel AND flight check-in, but vi 'nhận phòng' is hotel-only (airport check-in is 'làm thủ tục'). Decide the sense: either restrict the English definition (and examples) to hotel check-in, or find a VI that covers the sense you define. Re-run the whole procedure, make all three examples agree."
+  },
+  "A1_004-22": {
+   "verdict": "PASS"
+  },
+  "A1_004-23": {
+   "verdict": "PASS",
+   "claude_note": "Claude: 'bãi đón taxi'/'điểm đỗ taxi' are equally common; acceptable."
+  },
+  "A1_004-24": {
+   "verdict": "PASS"
+  },
+  "A1_004-25": {
+   "verdict": "PASS"
+  },
+  "A1_004-26": {
+   "verdict": "REWORK",
+   "slot": "A1_006-02",
+   "reason": "Spelling: modern standard Vietnamese writes 'công ty du lịch' (with y); 'công ti' is an old/variant spelling copied from a Wiktionary line. Verify with lookup and correct the lemma and the example; check whether other Vietnamese terms in your entry use non-standard spelling. Your HIGH needs this fixed."
+  },
+  "A1_004-27": {
+   "verdict": "PASS"
+  },
+  "A1_004-28": {
+   "verdict": "REWORK",
+   "slot": "A1_006-03",
+   "reason": "VI 'kiểm tra chất lượng' is narrower (inspection) than 品質管理 / quality control (control/management of quality). Check 'kiểm soát chất lượng' and 'quản lý chất lượng' with lookup/Wikt, choose the term whose scope equals the sense (justify), fix the examples."
+  },
+  "A1_004-29": {
+   "verdict": "PASS"
+  },
+  "A1_004-30": {
+   "verdict": "PASS"
+  },
+  "A1_004-31": {
+   "verdict": "PASS"
+  },
+  "A1_004-32": {
+   "verdict": "PASS",
+   "claude_note": "Claude: example_vi has a tautology ('một tấm thép tấm'); concept fine."
   }
  },
  "A1_002_reviewed_at": "2026-10-04T07:15:21+0900",
  "summary": "A1_001: 25 PASS as authored + 5 reworked; A1_002 (the 5 reworks): 5/5 PASS. Final accepted set = 25 (A1_001) + 5 (A1_002) = 30 concepts. Not yet integrated into the corpus.",
- "A1_003_reviewed_at": "2026-10-04T08:26:47+0900"
+ "A1_003_reviewed_at": "2026-10-04T08:26:47+0900",
+ "A1_004_reviewed_at": "2026-10-04T08:55:17+0900"
 }
