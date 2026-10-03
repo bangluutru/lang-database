@@ -87,7 +87,72 @@ def t3_main(tid):
     return 1 if block else 0
 
 
+def a1_main(tid):
+    """A1 (authoring) mode: objective gates + required work files + confidence audit table."""
+    from scripts.handoff import validate_authored as VA
+    slots = [json.loads(l) for l in (REPO / f"data/phase1_4/handoff/packets/{tid}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+    out = REPO / f"data/phase1_4/handoff/decisions/{tid}.jsonl"
+    if not out.exists():
+        print(f"missing {out.relative_to(REPO)}"); return 1
+    rows = [json.loads(l) for l in out.read_text(encoding="utf-8").splitlines() if l.strip()]
+    res, fblock = VA.analyse(rows, slots)
+    block = list(fblock)
+    warn, lines = [], []
+    by = {r["id"]: r for r in rows}
+    for x in res:
+        for b in x["block"]:
+            block.append(f"{x['id']}: {b}")
+        for w in x["warn"]:
+            warn.append(f"{x['id']}: {w}")
+        r = by.get(x["id"], {})
+        if x.get("skip"):
+            lines.append(f"| {x['id']} | SKIP | - | - | - | {r.get('reason', '')[:50]} |")
+        else:
+            e = x["evidence"]
+            lines.append(f"| {x['id']} | {r.get('en', {}).get('lemma')} / {r.get('ja', {}).get('lemma')} / {r.get('vi', {}).get('lemma')} | {r.get('confidence')} | {x['ceiling']} | pri={e.get('ja_pri')} field={e.get('ja_field_match')} vnrank={e.get('vi_vn_freq_rank')} wiktvi={e.get('vi_in_wikt')} | {'BLOCK' if x['block'] else 'ok'} |")
+    done = [r for r in rows if not r.get("skip")]
+    high = sum(r.get("confidence") == "HIGH" for r in done)
+    if done and len(done) >= 10 and high / len(done) > 0.6:
+        warn.append(f"HIGH share {high}/{len(done)} > 60%: Gemini's confidence tends to run above reality. Re-run the falsification for every HIGH.")
+    skips = len(rows) - len(done)
+    if skips > len(rows) * 0.4:
+        warn.append(f"{skips} skipped slots (> 40%): explain in the report")
+    wdir = REPO / "handoff/work"
+    ws = wdir / f"worksheet_{tid}.md"
+    if not ws.exists():
+        block.append(f"missing handoff/work/worksheet_{tid}.md")
+    else:
+        t = ws.read_text(encoding="utf-8")
+        miss = [s_["id"] for s_ in slots if s_["id"] not in t]
+        if miss:
+            block.append(f"worksheet has no block for {len(miss)} slot(s), e.g. {miss[0]}")
+    rep = wdir / f"report_{tid}.md"
+    need = ["## Mechanical results", "## Confidence audit", "## Least sure", "## Skipped slots", "## Declaration"]
+    if not rep.exists():
+        block.append(f"missing handoff/work/report_{tid}.md (review report, see Part I6)")
+    else:
+        rt = rep.read_text(encoding="utf-8")
+        for h in need:
+            if h not in rt:
+                block.append(f"report lacks heading '{h}'")
+        if "I have not run git and have not modified any file outside my write zones." not in rt:
+            block.append("report lacks the exact Declaration sentence")
+        miss = [r["id"] for r in done if r["id"] not in rt.split("## Confidence audit")[-1]] if "## Confidence audit" in rt else []
+        if miss:
+            block.append(f"Confidence audit section does not mention {len(miss)} entries, e.g. {miss[0]}")
+    if not (wdir / f"self_review_{tid}.md").exists():
+        block.append(f"missing handoff/work/self_review_{tid}.md")
+    md = [f"# Selfcheck {tid} (A1 authoring): {len(rows)} rows, {len(block)} blocking, {len(warn)} warnings", "",
+          "| slot | en / ja / vi | claimed | ceiling | objective evidence | gate |", "|---|---|---|---|---|---|", *lines, "",
+          "## Blocking", *([f"- {b}" for b in block] or ["- none"]), "", "## Warnings", *([f"- {w}" for w in warn] or ["- none"])]
+    (wdir / f"selfcheck_{tid}.md").write_text("\n".join(md), encoding="utf-8")
+    print("\n".join(md))
+    return 1 if block else 0
+
+
 def main(tid):
+    if tid.startswith("A1"):
+        return a1_main(tid)
     if tid.startswith("G3"):
         return t3_main(tid)
     packet = {json.loads(l)["id"]: json.loads(l) for l in (REPO / f"data/phase1_4/handoff/packets/{tid}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}

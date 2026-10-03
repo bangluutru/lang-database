@@ -90,6 +90,10 @@ def check(d, valid_ids, errs, where):
 
 
 def main(paths):
+    if paths and Path(paths[0]).name.startswith("A1_"):         # Gemini authoring tasks have their own mechanical gate
+        sys.path.insert(0, str(BASE))
+        from scripts.handoff import validate_authored
+        return validate_authored.main(paths[0])
     valid = {t: packet_ids(t) for t in ("T1", "T2", "T3", "T4")}
     errs, seen = [], set()
     n = 0

@@ -163,3 +163,95 @@ Contains: the sense; the JMdict evidence (ent_seq + matching gloss or the misc t
 
 ### H6. Selfcheck for G3 and what Claude grades
 `python scripts/handoff/gemini_selfcheck.py G3_NNN` (same command) enforces: reviewer id, worksheet block per item, notes ≥ 60 chars and unique, ACCEPT notes contain `falsified`, REVISE revisions verified in JMdict, warning when ACCEPT rate > 50 % (over-lenient) or < 5 % (over-strict). Claude grades every ACCEPT (precision matters most: a wrongly promoted concept pollutes the corpus), every REVISE verification, and a sample of REJECTs for recall. Outcome gates: ≥ 85 % of your ACCEPTs must be confirmed by Claude; any ACCEPT of a clearly wrong/rare/offensive pair is a serious error and triggers rework of the packet.
+
+---
+## PART I — Task kind `A1`: authoring NEW concepts for the thin domain packs
+Everything in Part A (hard rules) applies. This part adds stricter rules because authoring is riskier than reviewing: **you are creating data that did not exist**, and past results show you work fast but (1) drop required information, (2) are more confident than the evidence allows. The process below is designed to stop both. Quality and verifiability beat quantity: a `skip` with a precise reason is a good answer.
+
+### I0. Project direction (why this data exists)
+`lang-database` is a curated, open, traceable **English–Japanese–Vietnamese learning lexical graph** (Concept → Sense → Expression) for learners of Japanese/English/Vietnamese and spaced-repetition apps. Known gap: the **IT, healthcare and travel packs are thin** (IT 44, healthcare 98, travel 20 concepts). Goal of A1: add *learner-core, everyday-professional* terms that a learner in these domains genuinely needs — **not** exotic jargon, brand names, abbreviations nobody says, or obsolete words. Each concept = ONE sense with EN, JA and VI expressions that really correspond.
+Provenance rule of the project: whatever you write is `AI_GENERATED` (definition, Vietnamese, examples). Japanese and the EN–JA pairing must be **verifiable in JMdict**; Vietnamese must be natural modern Vietnamese.
+
+### I1. Absolute prohibitions specific to A1 (breaking one voids the batch)
+1. **No git of any kind, no commit, no push, no PR.** Your files stay uncommitted in the working tree. Claude alone decides what passes, and only after Claude's review passes does Claude commit and push. Do not ask or hint that something should be committed.
+2. Do not edit `scripts/`, `tests/`, `docs/`, `data/canonical/`, packets, or the slots file; do not change validators/selfcheck to make them pass.
+3. No external/paid API or model call. No network. No new downloads.
+4. Do not copy definitions from Wiktionary/JMdict/any dictionary: the `sense_definition` and the three examples must be written by you, in your own words (the validator rejects verbatim Wiktionary glosses; Claude checks for close paraphrase).
+5. Do not invent evidence: every `ent_seq`, `sense_idx`, rank and "in Wiktionary" claim must come from a command you ran in this session (I3). The validator recomputes them; a mismatch is a fabrication and voids the batch.
+6. Do not output proper nouns, brand/product names, company names, people, place names, slang, vulgar, archaic, or pure-abbreviation entries (e.g. no `ASCII`, `iPhone`, `カタル`).
+7. Do not open other decision files or any answer key; do not work outside the assigned slots.
+
+### I2. Locked scope: slots
+`data/phase1_4/handoff/packets/A1_NNN.jsonl` = one line per **slot**: `id, domain, subdomain, allowed_pos, topic_hint`. You must produce exactly **one output line per slot, same order**. Either a full entry, or a `skip`. You may not add entries beyond the slots, change domain/subdomain, or use a POS not in `allowed_pos`.
+
+### I3. Grounded sourcing (do this for every slot)
+1. Browse candidates with the grounded menu (JMdict, commonness-sorted, only terms not yet in the corpus):
+   ```bash
+   python scripts/handoff/domain_menu.py --domain it --grep server --limit 30      # it | healthcare | manufacturing (travel has no JMdict field tag)
+   ```
+   For `travel` (and to widen others) use `python scripts/phase1_4/handoff/lookup.py en <english word>` (JMdict reverse lookup) and `... wikt <english word>` (Wiktionary senses and VI translations).
+   The menu is a source of candidates, **not an approval**: many menu rows are rare, too technical, or not learner-core — judge them (I4 step 2).
+2. Confirm the Japanese with `lookup.py ja <lemma>` and copy the exact `ent_seq` and `sense` index printed. The JMdict sense you cite MUST have a gloss that equals your English lemma (the validator checks).
+3. Check Vietnamese: `lookup.py vi "<term>"` (frequency rank) and `lookup.py wikt <english>` (does Wiktionary list your Vietnamese among its VI translations?). Quote the rank only if the command printed it.
+4. Check duplication yourself before writing: `grep -c` is not needed — the validator blocks an existing EN–JA pair and warns on an existing EN or JA lemma; if it warns, you must explain in `falsification.why_distinct` (a genuinely different sense) or drop the entry.
+
+### I4. Per-slot procedure (all steps, every slot; log each step in the worksheet)
+1. **Understand the slot**: domain, subdomain, `topic_hint`, allowed POS.
+2. **Pick 3 candidates** (menu or lookup). For each write: why it is learner-core (would a learner in this domain meet it in the first months?), its JMdict commonness (pri), and any `misc` tag. Discard rare/archaic/slang/brand/abbreviation/too-narrow ones. Prefer plain high-frequency words over specialist ones.
+3. **Choose one** and state why it beats the other two.
+4. **Define the sense** in one English sentence (25–220 chars) that pins down THIS sense (not the whole word family) in your own words.
+5. **Fix the three expressions**: EN lemma (lower case, base form; acronyms only if the acronym is the normal word), JA lemma + reading exactly as JMdict, VI lemma (natural modern Vietnamese, correct diacritics, 1–4 words; no English copy unless it is really the standard word → `loanword:true` + justification in note).
+6. **Test the pair (mandatory falsification, three-way):**
+   * EN↔JA: JMdict gloss equals the lemma (copy the gloss), sense not broader/narrower.
+   * EN↔VI and JA↔VI: write `back_translation` (your Vietnamese → English; must equal the EN lemma, not something broader/different) and check the Vietnamese is not a word for a *different* sense.
+   * Write three **natural example sentences**, one per language, each containing the lemma (inflected forms are allowed for verbs/adjectives), and check the three sentences say the same thing.
+   * Name the **closest existing corpus concept** (`concept-…` id found with `grep '"<en>"' data/canonical/concepts.jsonl | head`, or `"none"`) and why yours is distinct (`why_distinct`).
+7. **Set confidence** using the objective ceiling (I5) — never above it.
+8. **Write the note** (≥ 60 chars, specific): sense, JMdict evidence (ent_seq/sense/pri), VI evidence, the rejected alternative, and any doubt.
+
+### I5. Confidence: objective ceiling + honesty
+The validator computes the highest confidence the facts allow and **blocks anything above it**:
+* `HIGH` requires ALL of: JMdict gloss equals the EN lemma; JA is common (JMdict priority tag > 0 **or** the sense carries a field tag of the domain, e.g. `comp`/`med`); VI attested (appears in vn_freq **or** in Wiktionary's Vietnamese translations of the English word).
+* `MEDIUM` = gloss equal but JA commonness or VI attestation is missing.
+* `LOW` = gloss not exactly equal.
+Even when the ceiling allows HIGH you should lower the confidence if any doubt remains. **Your habit is to rate HIGH too often.** Expect at most ~50 % HIGH. The report (I6) must include an audit of every entry's claimed vs ceiling confidence and, for every HIGH, one sentence naming the evidence that would convince a skeptical reviewer.
+
+### I6. Required files (all in `handoff/work/`), written progressively
+1. `worksheet_<TASK_ID>.md` — one block per slot (same ids), with every step of I4 (candidates, tests, back-translation, closest concept, decision). Append after each sub-batch, not at the end.
+2. `self_review_<TASK_ID>.md` — second-pass log: each entry you changed/dropped and why.
+3. `report_<TASK_ID>.md` — **the review report you send to Claude**, with EXACTLY these headings:
+   * `## Mechanical results` — paste the validator and selfcheck summary lines (counts, blocks=0).
+   * `## Confidence audit` — a table with one row per non-skipped entry id: claimed, ceiling, evidence, and for HIGH the convincing-evidence sentence; and a statement of your HIGH share.
+   * `## Least sure` — the 5 entries you trust least and why (include at least one HIGH if you have HIGH entries).
+   * `## Skipped slots` — each skipped id with what you searched and why nothing qualified.
+   * `## Declaration` — the exact sentence: `I have not run git and have not modified any file outside my write zones.`
+   Do not submit until all five headings exist; the selfcheck enforces this.
+
+### I7. Entry format (one JSON object per line; example for a real item)
+```json
+{"task":"A1","id":"A1_001-01","reviewer":"gemini-3.8","domain":"it","subdomain":"software_dev",
+ "en":{"lemma":"cache","pos":"noun","sense_definition":"A fast temporary storage that keeps copies of data for quicker repeated access."},
+ "ja":{"lemma":"キャッシュ","reading":"キャッシュ"},
+ "vi":{"lemma":"bộ nhớ đệm","claimed_vn_freq_rank":null,"claimed_in_wikt":true,"loanword":false},
+ "evidence":{"jmdict_ent_seq":1041420,"jmdict_sense_idx":0},
+ "falsification":{"example_en":"The browser keeps the page in its cache.","example_ja":"ブラウザはページをキャッシュに保存する。","example_vi":"Trình duyệt lưu trang vào bộ nhớ đệm.",
+                  "back_translation":"cache","closest_existing_concept":"none","why_distinct":"No cache concept exists in the corpus."},
+ "confidence":"MEDIUM","note":"Sense: temporary fast data store. JMdict 1041420 s0 gloss 'cache', pri 3, field comp. VI 'bộ nhớ đệm' standard; rejected 'bộ nhớ tạm' as vaguer. Doubt: rank not in vn_freq."}
+```
+Skip line: `{"task":"A1","id":"A1_001-07","reviewer":"gemini-3.8","skip":true,"reason":"<what you searched with which commands and why every candidate failed (>= 40 chars)>"}`.
+Field rules: `claimed_vn_freq_rank` and `claimed_in_wikt` are what you believe lookup printed (use `null` if you did not check); they are verified. `loanword:true` only when the Vietnamese is the English/Japanese word itself.
+
+### I8. Order of work (do not reorder)
+1. Read `CLAUDE.md`, this document (all Parts), run `luna-next` (no `--wait`), read the whole slots file.
+2. Work in **sub-batches of 5 slots**: for each slot do I4 and append its worksheet block; then append the 5 JSON lines to `decisions/<TASK_ID>.jsonl`; then run the validator on the file-so-far if you wish (it will complain about missing slots only) and **cold re-read the 5 entries**, fixing doubts, before the next sub-batch.
+3. After all slots: **second pass** over the whole file — re-verify every ent_seq/sense by running `lookup.py ja` again for every HIGH entry (do not trust memory), re-check each example sentence contains the lemma and means the same in all three languages, re-check duplicates, and lower any confidence you cannot defend. Write `self_review`.
+4. Machine gates until clean:
+   ```bash
+   python scripts/phase1_4/handoff/validate_decisions.py data/phase1_4/handoff/decisions/<TASK_ID>.jsonl
+   python scripts/handoff/gemini_selfcheck.py <TASK_ID>
+   ```
+5. Write `report_<TASK_ID>.md` (I6) and re-run selfcheck (it now checks the report).
+6. Submit: `python scripts/handoff/mailbox.py luna-done <TASK_ID>`, then **STOP** and tell the owner "<TASK_ID> submitted for Claude's review". Do NOT commit, push, or start another task.
+
+### I9. What happens next (so you know the stakes)
+Claude reviews **every** entry (sense, JA/VI naturalness, learner-core value, duplication, example quality) and re-audits your confidence against the evidence. Outcomes per entry: **PASS** (will be integrated), **FIX** (Claude edits or asks you to revise), **FAIL** (dropped). Per batch: all PASS → Claude commits and pushes; any FAIL/FIX → the batch is returned (`REWORK`) with specific feedback, max 3 attempts. **Nothing is committed or pushed before Claude's review passes.** Grading emphasises: wrong-but-HIGH (worst), fabricated evidence (voids batch), missing/omitted fields or skipped steps, duplicates, non-learner-core picks, near-copy of dictionary text.

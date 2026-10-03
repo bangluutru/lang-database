@@ -39,7 +39,8 @@ REVIEW_LOG = REPO / "data/phase1_4/handoff/review_log.jsonl"
 VALIDATOR = REPO / "scripts/phase1_4/handoff/validate_decisions.py"
 LUNA_ALLOWED = ("data/phase1_4/handoff/decisions/", "handoff/mailbox/to_claude/", "handoff/work/")
 MAX_ATTEMPTS = 3
-DEFAULT_ORDER = [("T1", None), ("T2", None), ("T3", None), ("T4", None), ("G4", None), ("G3", None)]   # G4 = calibration re-check packets (never ingested into the corpus)    # extension waves: T3 packets are queued before T4 ones
+GEMINI_PART = {"G3": "Part H", "A1": "Part I"}
+DEFAULT_ORDER = [("T1", None), ("T2", None), ("T3", None), ("T4", None), ("G4", None), ("G3", None), ("A1", None)]   # G4 = calibration re-check packets (never ingested into the corpus)    # extension waves: T3 packets are queued before T4 ones
 
 
 def now():
@@ -85,7 +86,7 @@ def assign(s, tid):
     t["attempt"] = t.get("attempt", 0) + 1
     t["assigned_at"] = now()
     msg = {"task_id": tid, "kind": t["kind"], "attempt": t["attempt"], "packet": f"data/phase1_4/handoff/packets/{t['packet']}",
-           "output": f"data/phase1_4/handoff/decisions/{t['packet']}", "instructions": (f"docs/handoff/GEMINI_HANDOFF.md ({'Part H' if t['kind'] == 'G3' else 'Part G'}; ignore LUNA_HANDOFF.md)" if t["kind"].startswith("G") else f"docs/handoff/LUNA_HANDOFF.md (section {t['kind']})"),
+           "output": f"data/phase1_4/handoff/decisions/{t['packet']}", "instructions": (f"docs/handoff/GEMINI_HANDOFF.md ({GEMINI_PART.get(t['kind'], 'Part G')}; ignore LUNA_HANDOFF.md)" if (t["kind"].startswith("G") or t["kind"] in GEMINI_PART) else f"docs/handoff/LUNA_HANDOFF.md (section {t['kind']})"),
            "items": t["items"], "rework_feedback": t.get("feedback"), "created_at": now(),
            "when_done": f"python scripts/handoff/mailbox.py luna-done {tid}"}
     atomic_write(task_file(tid), json.dumps(msg, ensure_ascii=False, indent=1))
