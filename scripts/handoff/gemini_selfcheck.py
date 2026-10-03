@@ -63,6 +63,10 @@ def main(tid):
             f.append("BLOCK note shorter than 40 chars (needs sense + evidence + rejected alternative)")
         if r["confidence"] != "HIGH" and not any(w in r["note"].lower() for w in ("doubt", "unsure", "uncertain", "but", "however", "although", "not in vn_freq", "no single")):
             f.append("MEDIUM/LOW without a stated doubt in note")
+        if r["confidence"] == "HIGH" and "back-translation" not in r["note"].lower():
+            f.append("BLOCK HIGH note lacks 'back-translation = ...' (rule B2 step 5g)")
+        if v and v == (p.get("rejected_vi_before") or "") and r["confidence"] != "LOW":
+            f.append("BLOCK rejected_vi_before reused")
         if r["confidence"] == "HIGH" and v and v in vn and f"rank {vn[v]['rank']}" not in r["note"] and str(vn[v]["rank"]) not in r["note"]:
             f.append("HIGH and in vn_freq but note does not quote the rank")
         if f:

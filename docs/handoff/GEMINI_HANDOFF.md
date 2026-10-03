@@ -56,6 +56,7 @@ The sense is fixed by **both** `en_sense_definition` and `ja` (+ its JMdict glos
    d. *Register/region*: neutral, standard, modern. Reject southern-only/dialect (`mền`→`chăn`, `má`→`mẹ`), slang, pejorative, archaic, overly literary (Hán–Việt only if it is the normal modern word for this sense; check false friends).
    e. *Naturalness*: a Vietnamese teacher would teach it; lexicalised word, not an explanation (`đi du lịch`, not `di chuyển`; no `việc đọc lại`).
    f. *Match with JA nuance*: if `ja` is a strong/weak/colloquial version of the sense, the Vietnamese should not be clearly stronger/weaker (e.g. `厚かましい` = brazen/pushy → `trơ tráo`, not `tự phụ` = conceited).
+   g. *Reverse + substitution test (required for every HIGH)*: (i) back-translate your Vietnamese word to English — does it give exactly the English lemma, or something broader/narrower/different (`gây ra`=cause, not exert influence; `nơi sinh`=birthplace only)? (ii) write one short Vietnamese sentence using the word in THIS sense and check it sounds natural; (iii) ask "is there a plainer, more common word everyone uses?" (`bơ` for butter, not the invented `bơ sữa`). Record (i)–(iii) in the worksheet. If any answer is "no/unsure", it is not HIGH.
 6. **Decide.** Choose the candidate passing a–f. If two pass, the more common → `vi_lemma`, the other → `synonyms` (only if truly equal). If none passes → `vi_lemma:null`.
 7. **Set confidence** (B4) and write the note (B5).
 
@@ -70,14 +71,18 @@ The sense is fixed by **both** `en_sense_definition` and `ja` (+ its JMdict glos
 * choosing the word first, justifying it afterwards. Do steps 3–5 BEFORE choosing.
 
 ### B4. Confidence — strict definitions
-* `HIGH`: all of (i) you ran the lookups and a-f all pass with no doubt, (ii) the word is either in vn_freq (rank quoted) or demonstrably the normal everyday word (say why), (iii) no plausible competing word of different scope. If any doubt → not HIGH.
+* `HIGH` (strictest; in the last calibration 3 of 20 HIGH answers were wrong — all were plausible-looking words that were too narrow, a different verb, or an invented compound): all of (i) you ran the lookups and a-f all pass with no doubt, (ii) the word is either in vn_freq (rank quoted) or demonstrably the normal everyday word (say why), (iii) no plausible competing word of different scope. If any doubt → not HIGH.
 * `MEDIUM`: good answer but with one real doubt (compound not in vn_freq and attested only by reasoning; slight scope/nuance gap; two good options). State the doubt in the note.
 * `LOW`: best guess, or JA/EN overlap is thin. State what is missing.
 * `null` is never HIGH. Expect roughly 40–70 % HIGH on easy packets and fewer on hard ones; a packet that is 100 % HIGH is suspicious and will be re-examined.
 * Calibration test before you finalise: "if a Vietnamese linguist read this line, would I bet money it is right?" If not, lower it.
 
+* **Concerning `rejected_vi_before`:** you may not output it as `vi_lemma`. If you genuinely believe it is the correct standard word, choose your best OTHER candidate, set confidence ≤ MEDIUM, and write in the note `QUERY: rejected_vi_before "<word>" may be correct because ...`. Do not invent an unnatural compound just to avoid the rejected word (e.g. `bơ sữa`); `null` or a plain, honest alternative is better.
+* **Do not change an answer only to silence a selfcheck warning.** Change it only if the word is really worse than the alternative; otherwise keep it and explain in the note.
+* A word marked `loanword` is allowed (see B1); the selfcheck does not forbid it.
+
 ### B5. Note (mandatory content, ≥ 40 characters, specific to THIS item)
-Must contain: (1) the sense in a few words, (2) the evidence (`vn_freq rank N` — quote exactly what lookup printed — or `not in vn_freq (checked)` plus why still natural), (3) the main alternative you rejected and why (or "no better alternative"). For MEDIUM/LOW also the doubt. Notes shared verbatim between two items are not allowed (even same-`ja` items like `year` pairs need their own wording).
+Must contain: (0) for HIGH: the words `back-translation` result in a few words (e.g. "back-translation = butter"); (1) the sense in a few words, (2) the evidence (`vn_freq rank N` — quote exactly what lookup printed — or `not in vn_freq (checked)` plus why still natural), (3) the main alternative you rejected and why (or "no better alternative"). For MEDIUM/LOW also the doubt. Notes shared verbatim between two items are not allowed (even same-`ja` items like `year` pairs need their own wording).
 
 ---
 ## PART C — Required work files (all inside `handoff/work/`)
