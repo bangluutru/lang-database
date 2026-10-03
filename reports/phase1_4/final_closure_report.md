@@ -1,24 +1,24 @@
 # Phase 1.4 (+1.4.1 remediation) Final Closure Report
 
-**Headline:** corpus grew from 2,106 to **7,032** concepts — below the ~10,000 target, deliberately. Reaching 10,000 needed
+**Headline:** corpus grew from 2,106 to **7,045** concepts — below the ~10,000 target, deliberately. Reaching 10,000 needed
 AI-generated Vietnamese at scale or a lower semantic gate; external AI was stopped by the owner and the gate was not lowered.
 Phase 1.4.1 then **corrected demonstrable Phase 1.3D defects** (see `baseline_remediation_report.md`).
 
 ```text
 Baseline:                    a07f61e1f9d55da7ef5d06e6a8bd54f904fbd75c
 Corpus before:               2,106 concepts
-Corpus after:                7,032 concepts
-Tri-language complete:       6,611  (baseline 1,721 + new 4,890)
-Partial:                     421  (baseline 385 + new 36 judge-validated EN–JA, VI absent)
-New concepts:                4,926   (175 candidates were absorbed by corrected baseline concepts instead of duplicating them)
+Corpus after:                7,045 concepts
+Tri-language complete:       6,619  (baseline 1,721 + new 4,898)
+Partial:                     426  (baseline 385 + new 41 judge-validated EN–JA, VI absent)
+New concepts:                4,939   (175 candidates were absorbed by corrected baseline concepts instead of duplicating them)
 
-JLPT N5/N4/N3/N2/N1:         430 / 359 / 1173 / 678 / 1086
-CEFR A1/A2/B1/B2/C1/C2:      772 / 658 / 1095 / 1359 / 116 / 0  (C2: no open basis, none inferred)
-Vietnamese Core 500/1000/2000/5000 (cumulative): 549 / 1061 / 1782 / 3000
+JLPT N5/N4/N3/N2/N1:         431 / 359 / 1175 / 681 / 1091
+CEFR A1/A2/B1/B2/C1/C2:      772 / 658 / 1097 / 1361 / 117 / 0  (C2: no open basis, none inferred)
+Vietnamese Core 500/1000/2000/5000 (cumulative): 549 / 1061 / 1783 / 3004
 
-Vietnamese provenance (per concept):  {"AI_GENERATED": 2547, "BENCHMARK_CURATED": 21, "CURATED": 223, "NO_VI": 421, "OFFICIAL_CURATED": 800, "SOURCE_DERIVED": 3020}
+Vietnamese provenance (per concept):  {"AI_GENERATED": 2547, "BENCHMARK_CURATED": 21, "CURATED": 223, "NO_VI": 426, "OFFICIAL_CURATED": 800, "SOURCE_DERIVED": 3028}
   (1.4 added 0 AI-generated VI; 1.4.1 added 60 agent-authored corrections, labelled AI_GENERATED)
-Validation:                  {"needs_review/complete": 2228, "needs_review/partial": 274, "quarantined/partial": 2, "validated/complete": 4383, "validated/partial": 145}
+Validation:                  {"needs_review/complete": 2228, "needs_review/partial": 274, "quarantined/partial": 2, "validated/complete": 4391, "validated/partial": 150}
 Sources acquired:            wiktionary_en 2026-09-28 (CC-BY-SA-4.0). Reused: jmdict, kanjidic2, joyo, unihan, ngsl, ngsl_spoken, nawl, bsl, tsl, vn_freq, jlpt_consensus. Rejected: wordfreq (licence).
 License audit:               PASS
 Phase 1.3D frozen baseline:  PASS-WITH-DOCUMENTED-CORRECTIONS (sealed bytes exactly reconstructible by reverting the ledger)
@@ -42,12 +42,12 @@ Full detail: `reports/phase1_4/baseline_remediation_report.md`. 3,611 field-leve
 file mailbox (`handoff/PROTOCOL.md`); Luna had no git, every packet was validated, sampled and committed by Claude (`data/phase1_4/handoff/review_log.jsonl`).
 * **T1** verdicts {'ACCEPT': 280, 'REVISE': 23}: 280 corrected baseline concepts are now **validated by an independent model** (Luna ACCEPT/HIGH and unchanged since); Luna also exposed two of my own
   omissions (stale sense definitions; `import`/`girl` left inconsistent) which were fixed. 18 of Luna's revisions + 3 T2 answers were applied after Claude's review (`part6.tsv`).
-* **T3** verdicts {'REVISE': 578, 'ACCEPT': 468, 'REJECT': 81}: Claude confirmed 332 Luna-ACCEPTs; 345 are in the corpus (status validated, basis `INDEPENDENT_AGENT_REVIEW`).
+* **T3** verdicts {'REVISE': 578, 'ACCEPT': 468, 'REJECT': 81}: Claude confirmed 332 Luna-ACCEPTs; 358 are in the corpus (status validated, basis `INDEPENDENT_AGENT_REVIEW`).
 * **T4**: 2308 Vietnamese proposals (15 correctly left empty); Claude overrode/excluded 128 (5.5%) after reviewing every flagged item and ~10% of each packet.
   2247 Vietnamese expressions entered the corpus as `AI_GENERATED`, tier C, **`needs_review`** (proposer and Claude's review recorded; not independently judged).
 
 ## 3. Known limitations
-* Below 10k; 36 new concepts are partial; ~14,500 lower-priority candidates unjudged.
+* Below 10k; 41 new concepts are partial; ~14,500 lower-priority candidates unjudged.
 * Domain packs IT / healthcare / travel are thin; no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
 * No external API was used after the owner's prohibition. T1-validated concepts are independently reviewed by Luna; the T4 Vietnamese proposals and all other corrected concepts are only partially reviewed (`needs_review`).
 * The 150-concept sealed-baseline judge audit (49% strict accept) was **not re-run** after remediation (no API); deterministic indicators are compared instead.
