@@ -239,6 +239,12 @@ def test_ai_generated_provenance_is_immutable_and_complete(G):
     # every AI lexeme must be traceable to a stored proposal (hand-off decision) with matching input hash
     import hashlib
     t4 = {}
+    a1h = {}
+    for p in sorted((BASE_DIR / "data/phase1_4/handoff/decisions").glob("A1_*.jsonl")):
+        for l in p.read_text(encoding="utf-8").splitlines():
+            if l.strip():
+                d = json.loads(l)
+                a1h[hashlib.sha256(json.dumps(d, ensure_ascii=False, sort_keys=True).encode()).hexdigest()] = d["id"]
     for p in sorted((BASE_DIR / "data/phase1_4/handoff/packets").glob("T4_*.jsonl")):
         for l in p.read_text(encoding="utf-8").splitlines():
             d = json.loads(l)
@@ -248,6 +254,8 @@ def test_ai_generated_provenance_is_immutable_and_complete(G):
             if e["provenance_type"] == "AI_GENERATED":
                 x = e["source_evidence"][0]
                 assert x["model"] in ("gpt-6-luna", "gemini-3.8", "claude-sonnet-5-5"), x["model"]
+                if x["input_hash"] in a1h:      # Gemini-authored A1 concept: hash of the reviewed decision row, slot recorded in metadata
+                    continue
                 assert t4.get(x["input_hash"]) == cid, f"no hand-off packet item for {e['expression_id']}"
                 assert e["language_metadata"]["translation_semantics_validated"]["status"] == "AGENT_PROPOSED_PARTIALLY_REVIEWED"
 

@@ -29,7 +29,7 @@ def route(cand: Dict[str, Any], results: Dict[str, Any], ai_vi: Dict[str, Any], 
     value = cand["value"]["total"]
     info: Dict[str, Any] = {"cand_id": cid, "value": value}
     if cid in manual_accept or cid in gemini_accept:   # Phase 1.4.2: independent model ACCEPT + Claude confirmation (claude_review_T3.json = Luna, claude_review_G3.json = Gemini)
-        info["independent_review"] = ({"reviewers": ["gemini-3.8", "claude"], "basis": "G3_handoff_review"} if cid in gemini_accept
+        info["independent_review"] = ({"reviewers": ["gemini-3.8", "claude"], "basis": "A1_authoring_review" if cid.startswith("a1-") else "G3_handoff_review"} if cid in gemini_accept
                                       else {"reviewers": ["gpt-6-luna", "claude"], "basis": "T3_handoff_review"})
         if cand.get("vi"):
             info["judge_tri"] = results.get("tri", {}).get(cid) or {}

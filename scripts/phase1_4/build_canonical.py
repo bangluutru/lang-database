@@ -24,6 +24,7 @@ from scripts.phase1_4.common import (BASE_DIR, CANONICAL_DIR, P14_DIR, PHASE_TS,
 from scripts.phase1_4 import lexicons as L
 from scripts.phase1_4 import judge as J
 from scripts.phase1_4.route import route
+from scripts.phase1_4 import authored as AUTH
 from scripts.phase1_4.ai import BatchAI, item_key
 from scripts.phase1_4 import gen_vi
 
@@ -240,8 +241,19 @@ def build(write: bool = True) -> Dict[str, Any]:
     ev = Ev()
     HO = P14_DIR / 'handoff'
     acc = frozenset(json.loads((HO / 'claude_review_T3.json').read_text())['accepted']) if (HO / 'claude_review_T3.json').exists() else frozenset()
-    acc_g = frozenset(json.loads((HO / 'claude_review_G3.json').read_text())['accepted']) if (HO / 'claude_review_G3.json').exists() else frozenset()
+    acc_g0 = frozenset(json.loads((HO / 'claude_review_G3.json').read_text())['accepted']) if (HO / 'claude_review_G3.json').exists() else frozenset()
     t4 = load_t4(HO)
+    # Gemini-authored A1 concepts (Claude-reviewed PASS): inject as JMdict-anchored candidates + VI proposals
+    en_exist = {}
+    for _c in read_jsonl(CANONICAL_DIR / "expressions.jsonl"):
+        if _c["language"] == "en" and _c.get("status") != "retracted":
+            en_exist.setdefault(_c["lemma"].lower(), _c["concept_id"])
+    a_pool, a_vi = AUTH.load_authored(en_exist)
+    pool.update(a_pool)
+    for _cid, _v in a_vi.items():
+        t4[concept_id_of(a_pool[_cid])] = {"vi_lemma": _v["vi_lemma"], "proposer": "gemini-3.8", "luna_proposal": _v["vi_lemma"], "worker": "gemini-3.8",
+                                           "confidence": _v["confidence"], "packet": _v["packet"], "input_hash": _v["input_hash"]}
+    acc_g = acc_g0 | frozenset(a_pool)
     excl = frozenset(json.loads((P14_DIR / 'manual_exclusions.json').read_text())) if (P14_DIR / 'manual_exclusions.json').exists() else frozenset()
     en_lists = L.load_en_lists()
     vn = L.load_vn_freq()
@@ -302,6 +314,8 @@ def build(write: bool = True) -> Dict[str, Any]:
         enl = en_lists.get(en["lemma"].lower(), {}) if core else {}
         sig = sig if core else {}
         doms, primary = domains_for(dict(c, signals=sig), enl)
+        if c.get("authored"):                                       # the authoring slot fixes the domain
+            doms, primary = ["general", c["authored"]["domain"]], c["authored"]["domain"]
         t4p = t4.get(concept_id) if kind == "ACCEPT_PARTIAL_ENJA" else None      # Phase 1.4.2: VI proposed in the T4 hand-off
         has_vi = kind in ("ACCEPT_TRI_SOURCE", "ACCEPT_TRI_AI") or bool(t4p)
         vi_lemma = (c["vi"]["lemma"] if kind == "ACCEPT_TRI_SOURCE" else (ai_vi[cid]["vi_lemma"] if kind == "ACCEPT_TRI_AI" else (t4p["vi_lemma"] if t4p else None)))
@@ -315,15 +329,18 @@ def build(write: bool = True) -> Dict[str, Any]:
                 "anchor": en.get("anchor", "wiktionary"),
                 "list_projection": "core_sense" if core else "not_projected(non-core sense of a lemma-level list entry)",
                 "wikt_locator": (f"line:{en['wikt_line']}, sense:{en['wikt_sense']}" if en.get("wikt_line") else None),
-                "judge": {"model": judge_model, "prompt_version": J.PROMPT_VERSION, "result_set": jkey,
+                "judge": None if c.get("authored") else {"model": judge_model, "prompt_version": J.PROMPT_VERSION, "result_set": jkey,
                           "alignment": {"en_ja": jr.get("en_ja"), "en_vi": jr.get("en_vi"), "ja_vi": jr.get("ja_vi")},
                           "naturalness": jr.get("naturalness"), "verdict": jr.get("verdict"), "confidence": jr.get("confidence")},
                 "ja_corroboration": {"jmdict_gloss_score": ja["gloss_score"], "ent_seq": ja["ent_seq"], "sense_idx": ja["sense_idx"]}}
         if info.get("independent_review"):
             meta["independent_review"] = info["independent_review"]
+        if c.get("authored"):
+            meta["authored"] = c["authored"]
+            meta["origin_pipeline"] = "a1_authoring(jmdict_anchored)"
         if t4p:
             meta["vi_proposal"] = {"proposer": t4p["proposer"], "luna_proposal": t4p["luna_proposal"], "packet": t4p["packet"],
-                                   "review": "Claude reviewed all flagged proposals + 10% sample of each packet; not independently judged"}
+                                   "review": ("Claude read every authored entry; not independently judged" if c.get("authored") else "Claude reviewed all flagged proposals + 10% sample of each packet; not independently judged")}
         if c["match"]["decision"] == "EXISTING_CONCEPT_NEW_SENSE":
             meta["polysemy_of"] = c["match"]["existing_concept_id"]
         if not has_vi:

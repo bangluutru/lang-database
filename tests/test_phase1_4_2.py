@@ -78,7 +78,7 @@ def test_t3_promotions_require_luna_accept_and_claude_confirmation(C):
     acc_g = set(json.loads((HO / "claude_review_G3.json").read_text())["accepted"])
     assert all(g3[i]["verdict"] == "ACCEPT" and g3[i]["confidence"] == "HIGH" and g3[i]["reviewer"] == "gemini-3.8" for i in acc_g)
     assert not (acc_g & acc)
-    promoted = [c for c in con.values() if (c.get("metadata") or {}).get("independent_review")]
+    promoted = [c for c in con.values() if (c.get("metadata") or {}).get("independent_review") and not (c.get("metadata") or {}).get("authored")]
     assert 30 <= len(promoted) <= len(acc) + len(acc_g)
     for c in promoted:
         assert c["metadata"]["cand_id"] in (acc | acc_g)
