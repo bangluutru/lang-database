@@ -20,14 +20,17 @@ def _passed_rows():
     rp = HO / "claude_review_A1.json"
     if not rp.exists():
         return []
-    ok = {i for i, v in json.loads(rp.read_text(encoding="utf-8"))["entries"].items() if v["verdict"] == "PASS"}
+    ent = json.loads(rp.read_text(encoding="utf-8"))["entries"]
+    ok = {i for i, v in ent.items() if v["verdict"] == "PASS"}
     rows = []
     for p in sorted((HO / "decisions").glob("A1_*.jsonl")):
         for l in p.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 d = json.loads(l)
                 if d["id"] in ok and not d.get("skip"):
-                    rows.append((d, p.name, hashlib.sha256(json.dumps(d, ensure_ascii=False, sort_keys=True).encode()).hexdigest()))
+                    ih = hashlib.sha256(json.dumps(d, ensure_ascii=False, sort_keys=True).encode()).hexdigest()   # hash of the RAW decision row
+                    d["_claude_note"] = ent[d["id"]].get("claude_note")
+                    rows.append((d, p.name, ih))
     return rows
 
 
@@ -52,7 +55,7 @@ def load_authored(existing_en_concepts: Dict[str, str]) -> Tuple[Dict[str, Dict[
                 "task": d["id"].split("-")[0], "slot": d["id"], "worker": d["reviewer"], "domain": d["domain"], "subdomain": d["subdomain"],
                 "definition_en_source": "AI_GENERATED", "examples": {k: d["falsification"][k] for k in ("example_en", "example_ja", "example_vi")},
                 "back_translation": d["falsification"]["back_translation"], "worker_confidence": d["confidence"],
-                "worker_note": d["note"], "review": "Claude read every entry; PASS (see claude_review_A1.json)"},
+                "worker_note": d["note"], "review": "Claude read every entry; PASS (see claude_review_A1.json)", "claude_note": d.get("_claude_note")},
             "en": {"lemma": en["lemma"], "pos": en["pos"], "ipa": None, "anchor": "jmdict", "wikt_line": None, "wikt_sense": None,
                    "wikt_gloss": en["sense_definition"], "wikt_parents": [], "wikt_tags": [], "wikt_topics": [], "seed": "a1_authoring"},
             "ja": {"lemma": ja["lemma"], "reading": ja["reading"], "wikt_surface": ja["lemma"], "form_note": "orthography:authored_from_jmdict",

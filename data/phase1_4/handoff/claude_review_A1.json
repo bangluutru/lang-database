@@ -132,8 +132,113 @@
   "A1_002-05": {
    "verdict": "PASS",
    "note": "reworked entry accepted; supersedes the REWORK source slot"
+  },
+  "A1_003-01": {
+   "verdict": "PASS"
+  },
+  "A1_003-02": {
+   "verdict": "PASS"
+  },
+  "A1_003-03": {
+   "verdict": "PASS"
+  },
+  "A1_003-04": {
+   "verdict": "REWORK",
+   "slot": "A1_005-01",
+   "reason": "Concept right, but en.lemma 'ip address' and vi.lemma 'địa chỉ ip' must be written with the acronym capitalised: 'IP address' / 'địa chỉ IP' (the validator wrongly forced lower case; it now allows ALL-CAPS acronym tokens). Keep the JA form from JMdict, re-verify and redo the full procedure, examples included."
+  },
+  "A1_003-05": {
+   "verdict": "PASS"
+  },
+  "A1_003-06": {
+   "verdict": "PASS"
+  },
+  "A1_003-07": {
+   "verdict": "PASS"
+  },
+  "A1_003-08": {
+   "verdict": "PASS"
+  },
+  "A1_003-09": {
+   "verdict": "PASS"
+  },
+  "A1_003-10": {
+   "verdict": "PASS"
+  },
+  "A1_003-11": {
+   "verdict": "PASS"
+  },
+  "A1_003-12": {
+   "verdict": "PASS"
+  },
+  "A1_003-13": {
+   "verdict": "PASS",
+   "claude_note": "Claude: 'tăng huyết áp' is the standard medical term, 'huyết áp cao' the colloquial one; acceptable, example_vi slightly clumsy."
+  },
+  "A1_003-14": {
+   "verdict": "PASS"
+  },
+  "A1_003-15": {
+   "verdict": "PASS"
+  },
+  "A1_003-16": {
+   "verdict": "PASS"
+  },
+  "A1_003-17": {
+   "verdict": "PASS"
+  },
+  "A1_003-18": {
+   "verdict": "PASS"
+  },
+  "A1_003-19": {
+   "verdict": "PASS",
+   "claude_note": "Claude: example_ja has a redundant phrase (乗り継ぎのトランジット); concept fine."
+  },
+  "A1_003-20": {
+   "verdict": "PASS"
+  },
+  "A1_003-21": {
+   "verdict": "PASS",
+   "claude_note": "Claude: scope asymmetry (JA アメニティ in hotels = supplied toiletries, VI 'tiện nghi' = facilities in general); effective confidence MEDIUM, not HIGH."
+  },
+  "A1_003-22": {
+   "verdict": "PASS"
+  },
+  "A1_003-23": {
+   "verdict": "PASS",
+   "claude_note": "Claude: 'bến xe buýt' also reads as bus station; 'điểm dừng xe buýt'/'trạm xe buýt' are the more exact bus-stop terms; acceptable for learners."
+  },
+  "A1_003-24": {
+   "verdict": "PASS"
+  },
+  "A1_003-25": {
+   "verdict": "REWORK",
+   "slot": "A1_005-02",
+   "reason": "Pair mismatch: 記念 means commemoration (abstract), not a souvenir object; your VI 'đồ lưu niệm' is a concrete object. Your HIGH was too high. Find the Japanese word that really means a souvenir/memento item (check lookup.py en souvenir, e.g. お土産 / 記念品 style entries), verify the ent_seq and gloss, and redo all steps. EN lemma stays 'souvenir'."
+  },
+  "A1_003-26": {
+   "verdict": "PASS"
+  },
+  "A1_003-27": {
+   "verdict": "PASS"
+  },
+  "A1_003-28": {
+   "verdict": "PASS"
+  },
+  "A1_003-29": {
+   "verdict": "PASS"
+  },
+  "A1_003-30": {
+   "verdict": "PASS"
+  },
+  "A1_003-31": {
+   "verdict": "PASS"
+  },
+  "A1_003-32": {
+   "verdict": "PASS"
   }
  },
  "A1_002_reviewed_at": "2026-10-04T07:15:21+0900",
- "summary": "A1_001: 25 PASS as authored + 5 reworked; A1_002 (the 5 reworks): 5/5 PASS. Final accepted set = 25 (A1_001) + 5 (A1_002) = 30 concepts. Not yet integrated into the corpus."
+ "summary": "A1_001: 25 PASS as authored + 5 reworked; A1_002 (the 5 reworks): 5/5 PASS. Final accepted set = 25 (A1_001) + 5 (A1_002) = 30 concepts. Not yet integrated into the corpus.",
+ "A1_003_reviewed_at": "2026-10-04T08:26:47+0900"
 }

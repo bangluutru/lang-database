@@ -74,8 +74,9 @@ def analyse(rows, slots):
         if en.get("pos") not in POSES or en.get("pos") not in slot["allowed_pos"]:
             blk.append(f"en.pos must be one of {slot['allowed_pos']}")
         el = str(en.get("lemma", "")).strip()
-        if not re.fullmatch(r"[a-z][a-z \-']{1,40}", el) or el != el.lower() and not el.isupper():
-            blk.append("en.lemma: lower-case English (acronyms allowed upper-case), 1-4 words")
+        el_chk = " ".join(t.lower() if re.fullmatch(r"[A-Z]{2,6}", t) else t for t in el.split())      # ALL-CAPS acronym tokens (IP, CPU, ECG) are allowed
+        if not re.fullmatch(r"[a-z][a-z \-']{1,40}", el_chk) or len(el.split()) > 4:
+            blk.append("en.lemma: lower-case English words (ALL-CAPS acronym tokens such as IP allowed), 1-4 words")
         d = str(en.get("sense_definition", ""))
         if not 25 <= len(d) <= 220:
             blk.append("en.sense_definition must be 25-220 chars, in your own words")
@@ -108,13 +109,14 @@ def analyse(rows, slots):
                 wrn.append("JA entry has no JMdict priority tag and no domain field tag: unusual/rare? justify in note")
         # --- Vietnamese
         vl = str(vi.get("lemma", "")).strip()
-        if not vl or not VI_RE.match(vl) or len(vl.split()) > 4:
+        vl_chk = " ".join(t.lower() if re.fullmatch(r"[A-Z]{2,6}", t) else t for t in vl.split())
+        if not vl or not VI_RE.match(vl_chk) or len(vl.split()) > 4:
             blk.append("vi.lemma: lower-case Vietnamese, correct diacritics, 1-4 words, no punctuation")
-        if vl == el and not vi.get("loanword"):
+        if vl.lower() == el.lower() and not vi.get("loanword"):
             blk.append("vi.lemma equals the English word: set vi.loanword=true and justify, or find the Vietnamese term")
-        fr = vn().get(vl)
+        fr = vn().get(vl_chk)
         ev["vi_vn_freq_rank"] = fr["rank"] if fr else None
-        ev["vi_in_wikt"] = vl in wikt_vi().get(el.lower(), set())
+        ev["vi_in_wikt"] = vl_chk in wikt_vi().get(el.lower(), set())
         if vi.get("claimed_vn_freq_rank") not in (None, ev["vi_vn_freq_rank"]):
             blk.append(f"vi.claimed_vn_freq_rank {vi.get('claimed_vn_freq_rank')} != actual {ev['vi_vn_freq_rank']} (fabricated or wrong)")
         if vi.get("claimed_in_wikt") not in (None, ev["vi_in_wikt"]):

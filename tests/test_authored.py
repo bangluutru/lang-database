@@ -31,7 +31,7 @@ def test_only_claude_passed_entries_are_in_the_corpus(corpus):
     con, _ = corpus
     in_corpus = {c["metadata"]["authored"]["slot"] for c in con.values() if (c.get("metadata") or {}).get("authored")}
     assert in_corpus == passed_slots()          # not one more, not one less (REWORK sources are excluded)
-    assert len(in_corpus) == 30
+    assert len(in_corpus) == len(passed_slots())
 
 
 def test_authored_provenance_and_status(corpus):
@@ -45,7 +45,7 @@ def test_authored_provenance_and_status(corpus):
         assert m["independent_review"] == {"reviewers": ["gemini-3.8", "claude"], "basis": "A1_authoring_review"}
         assert a["definition_en_source"] == "AI_GENERATED" and a["worker"] == "gemini-3.8"
         assert m["judge"] is None                                  # no automatic judge was involved
-        assert c["primary_domain"] == a["domain"] and a["domain"] in ("it", "healthcare", "travel")
+        assert c["primary_domain"] == a["domain"] and a["domain"] in ("it", "healthcare", "travel", "manufacturing")
         e = ex[c["concept_id"]]
         assert e["en"][0]["provenance_type"] == "SOURCE_DERIVED" and e["ja"][0]["provenance_type"] == "SOURCE_DERIVED"   # JMdict-anchored pair
         vi = e["vi"][0]
