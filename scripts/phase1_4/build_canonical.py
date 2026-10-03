@@ -240,6 +240,7 @@ def build(write: bool = True) -> Dict[str, Any]:
     ev = Ev()
     HO = P14_DIR / 'handoff'
     acc = frozenset(json.loads((HO / 'claude_review_T3.json').read_text())['accepted']) if (HO / 'claude_review_T3.json').exists() else frozenset()
+    acc_g = frozenset(json.loads((HO / 'claude_review_G3.json').read_text())['accepted']) if (HO / 'claude_review_G3.json').exists() else frozenset()
     t4 = load_t4(HO)
     excl = frozenset(json.loads((P14_DIR / 'manual_exclusions.json').read_text())) if (P14_DIR / 'manual_exclusions.json').exists() else frozenset()
     en_lists = L.load_en_lists()
@@ -254,7 +255,7 @@ def build(write: bool = True) -> Dict[str, Any]:
         c = pool[cid]
         if c["match"]["decision"] not in ("NEW_CONCEPT", "EXISTING_CONCEPT_NEW_SENSE"):
             continue
-        kind, info = route(c, results, ai_vi, excl, acc)
+        kind, info = route(c, results, ai_vi, excl, acc, acc_g)
         routed[cid] = (kind, info)
         queues[kind].append(cid)
 

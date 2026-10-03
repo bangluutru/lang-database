@@ -71,14 +71,21 @@ def test_t3_promotions_require_luna_accept_and_claude_confirmation(C):
     acc = set(json.loads((HO / "claude_review_T3.json").read_text())["accepted"])
     t3 = decisions("T3")
     assert all(t3[i][0]["verdict"] == "ACCEPT" for i in acc)
+    g3 = {}
+    for p in sorted(glob.glob(str(HO / "decisions/G3_*.jsonl"))):
+        for l in Path(p).read_text(encoding="utf-8").splitlines():
+            d = json.loads(l); g3[d["id"]] = d
+    acc_g = set(json.loads((HO / "claude_review_G3.json").read_text())["accepted"])
+    assert all(g3[i]["verdict"] == "ACCEPT" and g3[i]["confidence"] == "HIGH" and g3[i]["reviewer"] == "gemini-3.8" for i in acc_g)
+    assert not (acc_g & acc)
     promoted = [c for c in con.values() if (c.get("metadata") or {}).get("independent_review")]
-    assert 30 <= len(promoted) <= len(acc)
+    assert 30 <= len(promoted) <= len(acc) + len(acc_g)
     for c in promoted:
-        assert c["metadata"]["cand_id"] in acc
+        assert c["metadata"]["cand_id"] in (acc | acc_g)
         # T4 later adds AI_GENERATED Vietnamese to some promoted concepts; those go back to needs_review by design
         want = "needs_review" if "vi_proposal" in c["metadata"] else "validated"
         assert c["metadata"]["validation_status"] == want
-        assert c["metadata"]["independent_review"]["reviewers"] == ["gpt-6-luna", "claude"]
+        assert c["metadata"]["independent_review"]["reviewers"] in (["gpt-6-luna", "claude"], ["gemini-3.8", "claude"])
 
 
 def test_t4_vietnamese_is_ai_generated_needs_review_and_overrides_applied(C):
