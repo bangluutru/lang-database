@@ -35,8 +35,8 @@ def main(tid):
         if r.get("reviewer") != "gemini-3.8":
             block.append(f"{p['en']}: reviewer must be exactly 'gemini-3.8'")
         if v:
-            if v.lower() == p["en"].lower():
-                f.append("BLOCK copies the English word")
+            if v.lower() == p["en"].lower() and "loanword" not in r["note"].lower():
+                f.append("BLOCK copies the English word (allowed only if note says 'loanword' and why)")
             if v == (p.get("rejected_vi_before") or ""):
                 f.append("BLOCK equals rejected_vi_before")
             if v not in vn:
@@ -56,9 +56,35 @@ def main(tid):
         else:
             if r["confidence"] == "HIGH":
                 f.append("BLOCK null vi_lemma cannot be HIGH")
+        syn = r.get("synonyms") or []
+        if syn and v and syn[0] == v:
+            f.append("BLOCK synonym equals vi_lemma")
+        if len(r["note"].strip()) < 40:
+            f.append("BLOCK note shorter than 40 chars (needs sense + evidence + rejected alternative)")
+        if r["confidence"] != "HIGH" and not any(w in r["note"].lower() for w in ("doubt", "unsure", "uncertain", "but", "however", "although", "not in vn_freq", "no single")):
+            f.append("MEDIUM/LOW without a stated doubt in note")
+        if r["confidence"] == "HIGH" and v and v in vn and f"rank {vn[v]['rank']}" not in r["note"] and str(vn[v]["rank"]) not in r["note"]:
+            f.append("HIGH and in vn_freq but note does not quote the rank")
         if f:
             (block if any(x.startswith("BLOCK") for x in f) else warn).append(f"{p['en']} -> {v}: " + "; ".join(f))
         lines.append(f"| {p['en']} | {p['pos']} | {p['ja']} | {v} | {r['confidence']} | {', '.join(f) or 'ok'} |")
+    from collections import Counter
+    dup = [n for n, c in Counter(r["note"].strip() for r in rows).items() if c > 1]
+    for n in dup:
+        block.append(f"identical note used for several items: {n[:70]}")
+    high = sum(r["confidence"] == "HIGH" for r in rows)
+    if rows and high == len(rows) and len(rows) >= 10:
+        warn.append("100% HIGH: re-examine your calibration (expected 40-70% on easy packets)")
+    ws = REPO / "handoff/work" / f"worksheet_{tid}.md"
+    if not ws.exists():
+        block.append(f"missing {ws.relative_to(REPO)} (Part C)")
+    else:
+        wt = ws.read_text(encoding="utf-8")
+        miss = [p_["id"] for p_ in packet.values() if p_["id"] not in wt]
+        if miss:
+            block.append(f"worksheet has no block for {len(miss)} item(s), e.g. {miss[0]}")
+    if not (REPO / "handoff/work" / f"self_review_{tid}.md").exists():
+        block.append(f"missing handoff/work/self_review_{tid}.md (Part C)")
     md = [f"# Selfcheck {tid}: {len(rows)} rows, {len(block)} blocking, {len(warn)} warnings", "",
           "| en | pos | ja | vi | conf | flags |", "|---|---|---|---|---|---|", *lines, "",
           "## Blocking", *([f"- {b}" for b in block] or ["- none"]), "", "## Warnings", *([f"- {w}" for w in warn] or ["- none"])]
