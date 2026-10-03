@@ -67,6 +67,10 @@ def analyse(rows, slots):
             out.append({"id": r["id"], "block": [f"missing key {k}"], "warn": [], "evidence": {}, "ceiling": None}); continue
         if r.get("domain") != slot["domain"] or r.get("subdomain") != slot["subdomain"]:
             blk.append("domain/subdomain must equal the slot's")
+        if slot.get("fixed_en") and en.get("lemma") != slot["fixed_en"]:
+            blk.append(f"this rework slot fixes en.lemma to '{slot['fixed_en']}'")
+        if slot.get("fixed_ja") and ja.get("lemma") != slot["fixed_ja"]:
+            blk.append(f"this rework slot fixes ja.lemma to '{slot['fixed_ja']}'")
         if en.get("pos") not in POSES or en.get("pos") not in slot["allowed_pos"]:
             blk.append(f"en.pos must be one of {slot['allowed_pos']}")
         el = str(en.get("lemma", "")).strip()

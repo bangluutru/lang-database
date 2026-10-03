@@ -1,0 +1,107 @@
+{
+ "note": "Claude's per-entry review of Gemini 3.8 authoring pilot A1_001 (all 30 read individually). PASS = acceptable as authored; REWORK = resubmitted as A1_002 with feedback. Nothing here is integrated into the corpus yet.",
+ "reviewed_at": "2026-10-04T06:26:55+0900",
+ "reviewer": "claude-sonnet-5-5",
+ "entries": {
+  "A1_001-01": {
+   "verdict": "PASS"
+  },
+  "A1_001-02": {
+   "verdict": "PASS"
+  },
+  "A1_001-03": {
+   "verdict": "PASS"
+  },
+  "A1_001-04": {
+   "verdict": "PASS"
+  },
+  "A1_001-05": {
+   "verdict": "PASS"
+  },
+  "A1_001-06": {
+   "verdict": "PASS"
+  },
+  "A1_001-07": {
+   "verdict": "PASS"
+  },
+  "A1_001-08": {
+   "verdict": "PASS"
+  },
+  "A1_001-09": {
+   "verdict": "PASS"
+  },
+  "A1_001-10": {
+   "verdict": "PASS"
+  },
+  "A1_001-11": {
+   "verdict": "PASS"
+  },
+  "A1_001-12": {
+   "verdict": "PASS"
+  },
+  "A1_001-13": {
+   "verdict": "PASS"
+  },
+  "A1_001-15": {
+   "verdict": "PASS"
+  },
+  "A1_001-18": {
+   "verdict": "PASS"
+  },
+  "A1_001-19": {
+   "verdict": "PASS"
+  },
+  "A1_001-21": {
+   "verdict": "PASS"
+  },
+  "A1_001-22": {
+   "verdict": "PASS"
+  },
+  "A1_001-23": {
+   "verdict": "PASS"
+  },
+  "A1_001-24": {
+   "verdict": "PASS"
+  },
+  "A1_001-25": {
+   "verdict": "PASS"
+  },
+  "A1_001-26": {
+   "verdict": "PASS"
+  },
+  "A1_001-27": {
+   "verdict": "PASS"
+  },
+  "A1_001-28": {
+   "verdict": "PASS"
+  },
+  "A1_001-29": {
+   "verdict": "PASS"
+  },
+  "A1_001-14": {
+   "verdict": "REWORK",
+   "slot": "A1_002-01",
+   "reason": "Concept (allergy / アレルギー / dị ứng) is fine. DEFECT: example_vi 'ống tiêm tự động biểu bì' is a wrong medical term ('biểu bì' = epidermis). Use a correct rendering of an epinephrine/adrenaline auto-injector, and avoid the regional word for peanut if a neutral one exists; the three example sentences must still say the same thing. Re-verify everything."
+  },
+  "A1_001-16": {
+   "verdict": "REWORK",
+   "slot": "A1_002-02",
+   "reason": "Concept is fine but example_vi 'khoa nội khoa' is redundant/awkward. The slot is about hospital departments: decide with evidence whether the better VI for 内科 is the department name 'khoa nội' or the specialty 'nội khoa', justify, fix the example, and re-check whether HIGH is truly defensible (your note called 'khoa nội' conversational: is that true?)."
+  },
+  "A1_001-17": {
+   "verdict": "REWORK",
+   "slot": "A1_002-03",
+   "reason": "Concept is fine but example_vi 'tại khoa nhi khoa' is awkward. Choose consistently between the specialty 'nhi khoa' and the department 'khoa nhi' for 小児科 (justify with lookup evidence), make the example natural, re-check confidence."
+  },
+  "A1_001-20": {
+   "verdict": "REWORK",
+   "slot": "A1_002-04",
+   "reason": "VI 'gây mê' means general anaesthesia (put to sleep) while 麻酔/anesthesia also covers local anaesthesia (gây tê); Wiktionary's sense is 'preventing sensation'. Your HIGH was too high. Choose the Vietnamese term whose SCOPE equals the English/Japanese sense, or keep 'gây mê' but say so, lower the confidence and make the examples match that scope."
+  },
+  "A1_001-30": {
+   "verdict": "REWORK",
+   "slot": "A1_002-05",
+   "reason": "VI 'vé vào cửa' is an admission TICKET, but 入場料 / admission fee is the FEE; example_vi 'phải trả vé vào cửa' is ungrammatical. Choose a VI that means the fee (verify naturalness with lookup/Wikt), fix all three examples so they say the same thing."
+  }
+ }
+}
