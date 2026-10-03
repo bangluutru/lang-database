@@ -99,7 +99,7 @@ def test_t4_vietnamese_is_ai_generated_needs_review_and_overrides_applied(C):
         n += 1
         assert vi["lemma"] == want
         assert vi["provenance_type"] == "AI_GENERATED"
-        assert vi["source_evidence"][0]["model"] == ("claude-sonnet-5-5" if cid in ov else "gpt-6-luna")
+        assert vi["source_evidence"][0]["model"] == ("claude-sonnet-5-5" if cid in ov else d.get("reviewer", "gpt-6-luna"))
         assert con[cid]["metadata"]["validation_status"] == "needs_review"
         assert con[cid]["metadata"]["quality_tier"] == "Tier C"
     assert n > 1000

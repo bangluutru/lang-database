@@ -218,13 +218,14 @@ def load_t4(HO: Path) -> Dict[str, Dict[str, Any]]:
             if not l.strip():
                 continue
             d = json.loads(l)
-            vi, proposer, was = d.get('vi_lemma'), 'gpt-6-luna', None
+            orig = d.get('reviewer') or 'gpt-6-luna'          # worker agent that wrote the decision (gpt-6-luna | gemini-3.8)
+            vi, proposer, was = d.get('vi_lemma'), orig, None
             if d['id'] in ov:
                 o = ov[d['id']]
                 was, vi, proposer = d.get('vi_lemma'), o['vi'], 'claude-sonnet-5-5'
             if not vi:
                 continue
-            out[d['id']] = {'vi_lemma': vi, 'proposer': proposer, 'luna_proposal': was if proposer != 'gpt-6-luna' else d.get('vi_lemma'),
+            out[d['id']] = {'vi_lemma': vi, 'proposer': proposer, 'luna_proposal': was if proposer != orig else d.get('vi_lemma'), 'worker': orig,
                             'confidence': d.get('confidence'), 'packet': p.name,
                             'input_hash': hashlib.sha256(json.dumps(items[d['id']], ensure_ascii=False, sort_keys=True).encode()).hexdigest()}
     return out
@@ -394,7 +395,7 @@ def build(write: bool = True) -> Dict[str, Any]:
                 vi_meta = {"lexeme_source": {"status": "AI_GENERATED", "source": t4p["proposer"]},
                            "corpus_attestation": {"vn_freq_rank": vi_rank, "vn_freq_pos": fr["pos"] if fr else []},
                            "translation_semantics_validated": {"status": "AGENT_PROPOSED_PARTIALLY_REVIEWED", "proposer": t4p["proposer"],
-                                                               "reviewer": "claude-sonnet-5-5", "luna_proposal": t4p["luna_proposal"]}}
+                                                               "reviewer": "claude-sonnet-5-5", "luna_proposal": t4p["luna_proposal"], "worker_agent": t4p["worker"]}}
                 prov, lic = "AI_GENERATED", "CC-BY-4.0"
             else:
                 g = ai_vi[cid]

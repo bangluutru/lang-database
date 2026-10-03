@@ -247,7 +247,7 @@ def test_ai_generated_provenance_is_immutable_and_complete(G):
         for e in G["by_c"][cid]["vi"]:
             if e["provenance_type"] == "AI_GENERATED":
                 x = e["source_evidence"][0]
-                assert x["model"] in ("gpt-6-luna", "claude-sonnet-5-5"), x["model"]
+                assert x["model"] in ("gpt-6-luna", "gemini-3.8", "claude-sonnet-5-5"), x["model"]
                 assert t4.get(x["input_hash"]) == cid, f"no hand-off packet item for {e['expression_id']}"
                 assert e["language_metadata"]["translation_semantics_validated"]["status"] == "AGENT_PROPOSED_PARTIALLY_REVIEWED"
 
