@@ -39,7 +39,7 @@ REVIEW_LOG = REPO / "data/phase1_4/handoff/review_log.jsonl"
 VALIDATOR = REPO / "scripts/phase1_4/handoff/validate_decisions.py"
 LUNA_ALLOWED = ("data/phase1_4/handoff/decisions/", "handoff/mailbox/to_claude/", "handoff/work/")
 MAX_ATTEMPTS = 3
-DEFAULT_ORDER = [("T1", None), ("T2", None), ("T3", None), ("T4", None)]    # extension waves: T3 packets are queued before T4 ones
+DEFAULT_ORDER = [("T1", None), ("T2", None), ("T3", None), ("T4", None), ("G4", None)]   # G4 = calibration re-check packets (never ingested into the corpus)    # extension waves: T3 packets are queued before T4 ones
 
 
 def now():

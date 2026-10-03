@@ -117,3 +117,7 @@ Write `handoff/mailbox/to_claude/QUESTION-g<n>.md` (what, which item ids, what y
 3. Evidence honesty: every quoted rank is re-checked; a fabricated number voids the batch.
 4. Process: worksheet exists and matches decisions; second-pass changes were logged; no note is copy-pasted; no rule in Part A broken. A single A1–A5 violation voids the batch.
 5. Outcome: ≥ 90 % of items acceptable and no unsafe HIGH → next packet is allowed; otherwise Claude returns specific rework instructions (max 3 attempts).
+
+---
+## PART G — Task kind `G4` (calibration packet)
+A `G4_NNN` packet has exactly the same format and rules as a T4 packet (Parts A–F). Treat every item as brand new: decide it only from the packet and your own lookups. The output file is `data/phase1_4/handoff/decisions/G4_NNN.jsonl` (lines still use `"task":"T4"`), and the worksheet/self-review/selfcheck use the task id `G4_NNN`. Rule A4 applies with full force: other `decisions/*.jsonl` files (including all `T4_*`) may contain answers for these very items and you must not open them.
