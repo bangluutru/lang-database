@@ -258,3 +258,11 @@ Claude reviews **every** entry (sense, JA/VI naturalness, learner-core value, du
 
 ### I10. Rework slots (`A1_NNN` built from a previous review)
 Some slots carry `fixed_en`, `fixed_ja`, `review_feedback` and `previous_attempt`. Rules: keep the same EN lemma and JA lemma (`fixed_*`, the validator enforces it); read `review_feedback` fully and treat each criticism as a hypothesis you must **verify with commands**, not as an order — if you disagree, say so with evidence in the note; fix the problem the reviewer named, and then re-run the complete I4 procedure (all steps, all three example sentences) because a fix often breaks something else. Do not simply copy `previous_attempt`. Confidence must reflect the reviewer's finding (if the previous HIGH was challenged, you need new evidence for HIGH).
+
+### I11. Lessons from the first authoring pilot (A1_001/A1_002) — apply them before you submit
+1. **VI scope must equal the EN/JA sense.** Pilot failures: `gây mê` (= general anaesthesia) for `麻酔` (anaesthesia in general); `vé vào cửa` (a ticket) for `入場料` (a fee). Test: does the Vietnamese word cover MORE or LESS than the English sense? If yes, pick another word or lower the confidence and say so.
+2. **Department vs specialty.** For hospital slots choose the term learners meet on signs/forms (`khoa nội`, `khoa nhi`) and justify your choice with lookups; avoid tautologies (`khoa nội khoa`).
+3. **Example sentences are data, not decoration.** They must be natural, medically/technically correct in all three languages and say the same thing. Never translate a specialist term by guessing (`biểu bì` = epidermis, not `epinephrine`). Avoid regional words when a neutral one exists (`lạc` vs southern `đậu phộng`).
+4. **Polysemy.** If the EN lemma already exists in the corpus with another sense (`branch` = tree limb, `icon` = religious painting), name that concept in `closest_existing_concept` and explain the difference.
+5. **Confidence.** In the pilot 1 of 11 HIGH claims was too high. Ceiling-allowed does not mean deserved: lower the confidence when scope is even slightly asymmetric.
+6. **Manufacturing has few JMdict field tags** (engr/elec/mech): for most slots use `lookup.py en <word>` and `wikt <word>` to find grounded candidates, and expect more MEDIUM answers and honest `skip`s.

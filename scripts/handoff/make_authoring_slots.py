@@ -22,9 +22,29 @@ PLAN = {   # domain -> [(subdomain, pos list, how many slots, topic hint)]
 }
 
 
+PLAN2 = {   # waves 2+: different subdomains / topics from the pilot, plus manufacturing
+    "it": [("software_dev", ["noun", "verb"], 3, "testing, deployment, code review, libraries (NOT terms already authored: branch, source code, debugger)"),
+           ("networking", ["noun"], 2, "wifi, firewall, IP address, connection problems"),
+           ("security", ["noun"], 1, "passwords, permissions, backups of accounts"),
+           ("data_and_database", ["noun"], 1, "tables, records, spreadsheets, export"),
+           ("hardware_and_devices", ["noun"], 3, "servers, storage, peripherals, printers")],
+    "healthcare": [("symptoms_and_conditions", ["noun"], 3, "pain, infection, inflammation, chronic illness"),
+                   ("hospital_and_departments", ["noun"], 2, "reception, outpatient, ward, emergency room"),
+                   ("treatment_and_medication", ["noun", "verb"], 2, "dosage, side effect, injection, surgery steps"),
+                   ("body_and_examination", ["noun"], 1, "organs, X-ray, blood pressure, temperature")],
+    "travel": [("airport_and_flight", ["noun"], 2, "passport control, delay, transit, seat types"),
+               ("hotel_and_stay", ["noun"], 2, "reservation, deposit, amenities, room service"),
+               ("transport_and_directions", ["noun", "verb"], 2, "bus, taxi, timetable, transfer, platform"),
+               ("sightseeing_and_money", ["noun"], 2, "souvenir, guided tour, currency exchange, receipt")],
+    "manufacturing": [("production_and_quality", ["noun"], 3, "assembly line, inspection, defect, tolerance"),
+                      ("machines_and_tools", ["noun"], 2, "lathe, drill, welding, conveyor"),
+                      ("materials_and_safety", ["noun"], 1, "steel, lubricant, protective gear, hazard")],
+}
+
+
 def main(n):
     slots = []
-    for dom, subs in PLAN.items():
+    for dom, subs in (PLAN if n == 1 else PLAN2).items():
         for sub, pos, cnt, hint in subs:
             for _ in range(cnt):
                 slots.append({"domain": dom, "subdomain": sub, "allowed_pos": pos, "topic_hint": hint})

@@ -9,7 +9,7 @@ sys.path.insert(0, str(REPO))
 from scripts.phase1_4 import lexicons as L                      # noqa: E402
 from scripts.phase1_4.build_candidates import gloss_norm        # noqa: E402
 
-DOMAIN_FIELDS = {"it": ["comp", "internet"], "healthcare": ["med", "anat", "psy"], "travel": [], "manufacturing": ["engr", "tradem", "mech", "elec", "print"]}
+DOMAIN_FIELDS = {"it": ["comp", "internet"], "healthcare": ["med", "anat", "psy"], "travel": [], "manufacturing": ["engr", "mech", "elec"]}
 BLOCK_MISC = {"arch", "obs", "rare", "vulg", "sl", "derog", "col", "joc", "dated", "hist"}
 POS_MAP = {"noun": lambda t: t.startswith("n") or t.startswith("vs") or t in ("ctr",),
            "verb": lambda t: t.startswith("v"), "adjective": lambda t: t.startswith("adj"), "adverb": lambda t: t.startswith("adv"),
