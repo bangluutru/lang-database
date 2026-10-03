@@ -25,7 +25,7 @@ REVIEWER = re.compile(r"^[a-z0-9 ._()-]{3,60}$")
 
 def packet_ids(task):
     ids = set()
-    for p in sorted(PACKETS.glob(f"{task}_*.jsonl")):
+    for p in sorted(list(PACKETS.glob(f"{task}_*.jsonl")) + list(PACKETS.glob(f"G{task[1:]}_*.jsonl"))):   # G3_/G4_ = Gemini packets
         for l in p.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 ids.add(json.loads(l)["id"])

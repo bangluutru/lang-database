@@ -126,3 +126,40 @@ Write `handoff/mailbox/to_claude/QUESTION-g<n>.md` (what, which item ids, what y
 ---
 ## PART G — Task kind `G4` (calibration packet)
 A `G4_NNN` packet has exactly the same format and rules as a T4 packet (Parts A–F). Treat every item as brand new: decide it only from the packet and your own lookups. The output file is `data/phase1_4/handoff/decisions/G4_NNN.jsonl` (lines still use `"task":"T4"`), and the worksheet/self-review/selfcheck use the task id `G4_NNN`. Rule A4 applies with full force: other `decisions/*.jsonl` files (including all `T4_*`) may contain answers for these very items and you must not open them.
+
+---
+## PART H — Task kind `G3` (T3-style promotion review)
+Applies to packets `G3_NNN`. Parts A, C, D, E, F and G's rules about independence apply unchanged (worksheet, sub-batches of 10, second pass, validator + selfcheck, `luna-done`, stop). Output file: `data/phase1_4/handoff/decisions/G3_NNN.jsonl`; each line has `"task":"T3"`. The task id for worksheet/selfcheck is `G3_NNN`.
+
+### H1. What the job is
+Each item is a **candidate concept** (English sense + Japanese + sometimes Vietnamese) that is NOT in the corpus yet. You decide whether it is good enough to be **promoted** into a learner-oriented corpus. Promotion is expensive to undo, so the default is NO. Fields: `id, en, pos, en_sense_definition, ja, ja_reading, ja_jmdict_glosses, vi (or null), learning_value`.
+
+### H2. Output line
+```json
+{"task":"T3","id":"<packet id>","reviewer":"gemini-3.8","verdict":"ACCEPT","en_ja":"OK","en_vi":"NA","ja_vi":"NA","naturalness":"NATURAL","confidence":"HIGH","revision":null,"note":"..."}
+```
+* `en_ja`, `en_vi`, `ja_vi` ∈ `OK | BROAD | NARROW | WRONG | NA` (`NA` for a pair with no Vietnamese). `naturalness` ∈ `NATURAL | ACCEPTABLE | AWKWARD | WRONG`. `confidence` ∈ `HIGH | MEDIUM | LOW`.
+* `ACCEPT` — promote as is. Allowed ONLY if every pair is OK/NA, naturalness NATURAL/ACCEPTABLE and confidence HIGH (the validator enforces this). Expect a **minority** of items (≈ 15–40 %) to be ACCEPT.
+* `REVISE` — a small change would make it good: `"revision":{"ja":"…","vi":"…","pos":"…"}` (any subset). Revised `ja` MUST be verified (H4). Revisions are recorded, not applied automatically.
+* `REJECT` — wrong, too narrow/broad, rare/archaic/regional/offensive, or no good fix. `revision` must be `null`.
+* When unsure between ACCEPT and anything else, **do not ACCEPT**.
+
+### H3. Per-item procedure (all steps, every item, recorded in the worksheet)
+1. **Define the sense** from `en_sense_definition` in ≤12 words (the English side is a specific sense, e.g. `party` = banquet, not political party). Note the POS.
+2. **Check the Japanese** with `python scripts/phase1_4/handoff/lookup.py ja <ja>`: find the JMdict sense that matches; note the ent_seq, the POS tags and `misc` marks (arch, rare, vulg, col, sl, hon, hum, obs…). Reverse-check with `lookup.py en <english lemma>`: is `ja` among the usual Japanese words for this lemma, or is there a clearly more common word?
+3. **Pair test EN↔JA:** same sense? Is `ja` broader (covers more senses/people/things), narrower, or a different sense? Is it the everyday word a learner should be taught, or rare/formal/honorific/slang? Is it a loanword-only or a single-kanji/bound form that is not used alone? Is POS compatible (する-noun for a verb is ok)?
+4. **If `vi` is present:** test EN↔VI and JA↔VI the same way (sense, scope, POS, register, regional/pejorative, over-literal). Check `lookup.py vi "<vi>"`. A bad VI with a good EN–JA pair → `REVISE` (propose better VI) not ACCEPT.
+5. **Learner-core test** (promotion criteria used by the reviewers of this project): accept only items that are *core, neutral, sense-specific, natural*. Reject when the sense is rare, archaic, regional/dialectal, technical-obscure, a proper noun/brand, a fish/animal-specific or other very narrow sense of a common word, a word that needs a long explanation, or when the Japanese is a different concept (e.g. `school` = fish school vs 学校; `duty` ≠ 義理; `kid` = nhóc vs 子; `immigration` ≠ 移民 (emigrant/immigrant person vs act)).
+6. **Falsify yourself (required before any ACCEPT):** (a) write one sentence in English using the lemma in exactly this sense and its natural Japanese translation using `ja`; if the translation needs a different Japanese word, it is not ACCEPT. (b) Name the single best competing Japanese word for this English sense (from `lookup.py en`) and say why `ja` is at least as good. (c) If `vi` present, back-translate it to English: must give this lemma/sense.
+7. **Decide, set confidence, write the note.**
+
+### H4. Evidence rules
+* Every `REVISE` with a new `ja` must cite the ent_seq and show it glosses the English lemma; `gemini_selfcheck.py` verifies mechanically that the revised `ja` exists in JMdict with a sense glossed by the lemma and **blocks** otherwise. Never invent a Japanese word.
+* Quote only what a lookup printed (ent_seq, ranks). Fabricated evidence voids the batch (rule A7).
+* A pair is `OK` only if you checked it; mark `BROAD/NARROW` honestly — a mere "broader but close" is **not** OK for ACCEPT.
+
+### H5. Note (≥ 60 chars, specific)
+Contains: the sense; the JMdict evidence (ent_seq + matching gloss or the misc tag you saw); the competing word you compared against and the verdict; for ACCEPT the words `falsified: ...` summarising step 6; for REVISE what exactly changes; for REJECT the decisive reason. No boilerplate shared between items.
+
+### H6. Selfcheck for G3 and what Claude grades
+`python scripts/handoff/gemini_selfcheck.py G3_NNN` (same command) enforces: reviewer id, worksheet block per item, notes ≥ 60 chars and unique, ACCEPT notes contain `falsified`, REVISE revisions verified in JMdict, warning when ACCEPT rate > 50 % (over-lenient) or < 5 % (over-strict). Claude grades every ACCEPT (precision matters most: a wrongly promoted concept pollutes the corpus), every REVISE verification, and a sample of REJECTs for recall. Outcome gates: ≥ 85 % of your ACCEPTs must be confirmed by Claude; any ACCEPT of a clearly wrong/rare/offensive pair is a serious error and triggers rework of the packet.

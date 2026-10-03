@@ -17,7 +17,79 @@ REGIONAL = {"mền", "má", "ba", "tía", "heo", "bự", "nhóc", "thiệt", "h�
 PEJORATIVE = {"thằng", "con mụ", "đồ", "lũ"}
 
 
+def t3_main(tid):
+    """G3 (T3-style promotion review) mode."""
+    import re
+    from scripts.phase1_4.build_candidates import gloss_norm
+    packet = {json.loads(l)["id"]: json.loads(l) for l in (REPO / f"data/phase1_4/handoff/packets/{tid}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
+    out = REPO / f"data/phase1_4/handoff/decisions/{tid}.jsonl"
+    if not out.exists():
+        print(f"missing {out.relative_to(REPO)}"); return 1
+    rows = [json.loads(l) for l in out.read_text(encoding="utf-8").splitlines() if l.strip()]
+    vn = L.load_vn_freq()
+    jm = None
+    block, warn, lines = [], [], []
+    if [r["id"] for r in rows] != list(packet):
+        block.append("ids/order differ from the packet")
+    for r in rows:
+        p = packet.get(r["id"])
+        if not p:
+            block.append(f"unknown id {r['id']}"); continue
+        f, n = [], r["note"].strip()
+        if r.get("reviewer") != "gemini-3.8":
+            f.append("BLOCK reviewer must be exactly 'gemini-3.8'")
+        if len(n) < 60:
+            f.append("BLOCK note shorter than 60 chars")
+        if r["verdict"] == "ACCEPT" and "falsified" not in n.lower():
+            f.append("BLOCK ACCEPT note lacks 'falsified: ...' (rule H3 step 6)")
+        rev = r.get("revision") or {}
+        if r["verdict"] == "REVISE":
+            if "ja" in rev:
+                if jm is None:
+                    jm = L.load_jmdict()
+                want = gloss_norm(p["en"])
+                ok = any(rev["ja"] in [k["text"] for k in e["kanji"]] + [x["text"] for x in e["readings"]] and any(want in [gloss_norm(g) for g in sn["glosses"]] for sn in e["senses"]) for e in jm.values())
+                if not ok:
+                    f.append(f"BLOCK revised ja '{rev['ja']}' not found in JMdict with a sense glossed '{p['en']}'")
+                if not re.search(r"\d{6,8}", n):
+                    f.append("BLOCK REVISE of ja must cite the ent_seq in note")
+            if "vi" in rev and rev["vi"] not in vn:
+                f.append("revised vi not in vn_freq (justify in note)")
+        if p.get("vi") and r["verdict"] == "ACCEPT" and p["vi"] not in vn:
+            f.append("ACCEPT with vi not in vn_freq: justify")
+        if r["verdict"] == "ACCEPT" and r["confidence"] != "HIGH":
+            f.append("BLOCK ACCEPT requires HIGH")
+        if f:
+            (block if any(x.startswith("BLOCK") for x in f) else warn).append(f"{p['en']}: " + "; ".join(f))
+        lines.append(f"| {p['en']} | {p['ja']} | {p.get('vi')} | {r['verdict']} | {r['confidence']} | {', '.join(f) or 'ok'} |")
+    from collections import Counter
+    for dn, c in Counter(r["note"].strip() for r in rows).items():
+        if c > 1:
+            block.append(f"identical note used for several items: {dn[:70]}")
+    acc = sum(r["verdict"] == "ACCEPT" for r in rows)
+    if rows and acc / len(rows) > 0.5:
+        warn.append(f"ACCEPT rate {acc}/{len(rows)} > 50%: over-lenient? re-run the falsify step on every ACCEPT")
+    if rows and len(rows) >= 20 and acc / len(rows) < 0.05:
+        warn.append("ACCEPT rate < 5%: over-strict?")
+    for fn, label in ((f"worksheet_{tid}.md", "worksheet"), (f"self_review_{tid}.md", "self-review")):
+        fp = REPO / "handoff/work" / fn
+        if not fp.exists():
+            block.append(f"missing handoff/work/{fn}")
+        elif label == "worksheet":
+            miss = [i for i in packet if i not in fp.read_text(encoding="utf-8")]
+            if miss:
+                block.append(f"worksheet has no block for {len(miss)} item(s), e.g. {miss[0]}")
+    md = [f"# Selfcheck {tid} (T3 mode): {len(rows)} rows, {len(block)} blocking, {len(warn)} warnings", "", "| en | ja | vi | verdict | conf | flags |", "|---|---|---|---|---|---|", *lines, "",
+          "## Blocking", *([f"- {b}" for b in block] or ["- none"]), "", "## Warnings", *([f"- {w}" for w in warn] or ["- none"])]
+    path = REPO / "handoff/work" / f"selfcheck_{tid}.md"
+    path.write_text("\n".join(md), encoding="utf-8")
+    print("\n".join(md))
+    return 1 if block else 0
+
+
 def main(tid):
+    if tid.startswith("G3"):
+        return t3_main(tid)
     packet = {json.loads(l)["id"]: json.loads(l) for l in (REPO / f"data/phase1_4/handoff/packets/{tid}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()}
     out = REPO / f"data/phase1_4/handoff/decisions/{tid}.jsonl"
     if not out.exists():
