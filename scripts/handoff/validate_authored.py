@@ -98,6 +98,8 @@ def analyse(rows, slots):
             if sn is None:
                 blk.append("evidence.jmdict_sense_idx not found in that entry"); sn = {"glosses": [], "pos_tags": [], "misc": [], "field": []}
             ge = any(gloss_norm(el) == gloss_norm(g) for g in sn["glosses"])
+            if ge and all(gloss_norm(el) != gloss_norm(g) for g in sn["glosses"][:2]):
+                wrn.append("the matching JMdict gloss is not among the first two glosses of that sense: the Japanese word may be broader/narrower or a looser equivalent; justify the scope in note")
             if not ge:
                 blk.append(f"no gloss of ent_seq {e['seq']} sense {idx} equals '{el}' (glosses: {sn['glosses'][:5]})")
             if not any(POS_MAP[en["pos"]](t) for t in sn["pos_tags"]) if en.get("pos") in POS_MAP else True:

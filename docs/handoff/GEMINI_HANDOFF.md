@@ -266,3 +266,11 @@ Some slots carry `fixed_en`, `fixed_ja`, `review_feedback` and `previous_attempt
 4. **Polysemy.** If the EN lemma already exists in the corpus with another sense (`branch` = tree limb, `icon` = religious painting), name that concept in `closest_existing_concept` and explain the difference.
 5. **Confidence.** In the pilot 1 of 11 HIGH claims was too high. Ceiling-allowed does not mean deserved: lower the confidence when scope is even slightly asymmetric.
 6. **Manufacturing has few JMdict field tags** (engr/elec/mech): for most slots use `lookup.py en <word>` and `wikt <word>` to find grounded candidates, and expect more MEDIUM answers and honest `skip`s.
+
+### I12. Additional lessons from waves 1–2 (94 entries reviewed; 12 needed rework) — check each before submitting
+1. **A matching JMdict gloss is necessary, not sufficient.** `記念` glosses 'souvenir' but means commemoration; `痙攣` glosses 'cramp' but means convulsion/spasm. The selfcheck now warns when your matching gloss is not among the first two glosses of that sense: when it appears, compare the Japanese word's typical meaning with your English sense (use the JMdict glosses list as a scope check) and write the scope check in the note.
+2. **Abstract vs concrete.** If the Japanese is an action/abstract noun and the Vietnamese/English is a concrete object (or the reverse), the pair is wrong. Say in the note which one each side is.
+3. **Orthography of Vietnamese.** Use modern standard spelling (`công ty`, not `công ti`), correct diacritics, ALL-CAPS acronyms (`IP`, `SSD`) where Vietnamese writes them so. Do not copy a Vietnamese string from a Wiktionary line without checking it is current usage.
+4. **Definition scope = VI scope = JA scope.** If the definition says "hotel or flight" the Vietnamese must cover both; otherwise narrow the definition and the examples.
+5. **Example sentences**: no tautologies (`tấm thép tấm`), no stacked synonyms, natural in all three languages; they are reviewed like the lemma.
+6. **Calibration**: 9–14 % of your HIGH claims were wrong or too high. When unsure, MEDIUM. A MEDIUM that is right is better than a HIGH that must be reworked.

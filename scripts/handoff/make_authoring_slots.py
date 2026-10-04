@@ -42,9 +42,30 @@ PLAN2 = {   # waves 2+: different subdomains / topics from the pilot, plus manuf
 }
 
 
+PLAN3 = {   # wave 3 (A1_007): new topics; terms already authored in waves 1-2 are blocked by the validator anyway
+    "it": [("software_dev", ["noun", "verb"], 3, "API, framework, commit, merge, build, release"),
+           ("web_and_apps", ["noun"], 3, "login, notification, bookmark, download, search engine"),
+           ("security", ["noun", "verb"], 2, "phishing, virus, firewall, authentication"),
+           ("data_and_database", ["noun"], 1, "server logs, file formats, compression"),
+           ("hardware_and_devices", ["noun"], 1, "battery, display, keyboard, memory")],
+    "healthcare": [("symptoms_and_conditions", ["noun"], 3, "fever, cough, diarrhea, infection, diabetes, injury"),
+                   ("hospital_and_departments", ["noun"], 2, "surgery department, emergency room, outpatient reception, pharmacy"),
+                   ("treatment_and_medication", ["noun", "verb"], 2, "vaccination, infusion, tablet, dosage, discharge"),
+                   ("body_and_examination", ["noun"], 1, "X-ray, ultrasound, blood pressure, pulse")],
+    "travel": [("airport_and_flight", ["noun"], 2, "baggage claim, customs, passport control, delayed flight"),
+               ("hotel_and_stay", ["noun"], 2, "reservation, deposit, twin room, breakfast, key card"),
+               ("transport_and_directions", ["noun", "verb"], 2, "timetable, transfer, fare, one-way ticket, platform number"),
+               ("sightseeing_and_money", ["noun"], 2, "exchange rate, tax refund, guidebook, observation deck")],
+    "manufacturing": [("production_and_quality", ["noun"], 2, "inspection, yield, lot, work in progress, defect rate"),
+                      ("machines_and_tools", ["noun"], 2, "press machine, grinder, sensor, motor, robot arm"),
+                      ("materials_and_safety", ["noun"], 2, "aluminum, resin, safety helmet, hazard sign, fire extinguisher")],
+}
+
+
 def main(n):
     slots = []
-    for dom, subs in (PLAN if n == 1 else PLAN2).items():
+    plan = PLAN if n == 1 else PLAN2 if n in (3, 4) else PLAN3
+    for dom, subs in plan.items():
         for sub, pos, cnt, hint in subs:
             for _ in range(cnt):
                 slots.append({"domain": dom, "subdomain": sub, "allowed_pos": pos, "topic_hint": hint})
