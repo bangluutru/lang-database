@@ -22,11 +22,23 @@ def handoff_stats():
     vo = json.loads((HO.parent / "validation_overrides.json").read_text())
     cons = [json.loads(l) for l in open(REPORTS_DIR.parent.parent / "data/canonical/concepts.jsonl", encoding="utf-8")]
     exs = [json.loads(l) for l in open(REPORTS_DIR.parent.parent / "data/canonical/expressions.jsonl", encoding="utf-8")]
-    return {"T1": dict(Counter(d["verdict"] for d in t1)), "T2": dict(Counter(d["verdict"] for d in t2)), "T3": dict(Counter(d["verdict"] for d in t3)),
+    from collections import defaultdict
+    gem_g3 = [c for c in cons if (c.get("metadata") or {}).get("independent_review", {}).get("reviewers", [None])[0] == "gemini-3.8" and not (c.get("metadata") or {}).get("authored")]
+    a1 = [c for c in cons if (c.get("metadata") or {}).get("authored")]
+    a1_dom = dict(Counter(c["primary_domain"] for c in a1))
+    rl = [json.loads(l) for l in open(HO / "review_log.jsonl", encoding="utf-8") if l.strip()]
+    def gem(prefix):
+        return [r for r in rl if r["task_id"].startswith(prefix)]
+    a1_log = gem("A1_")
+    a1_slots = sum(1 for p in sorted(glob.glob(str(HO / "packets/A1_*.jsonl"))) for l in open(p, encoding="utf-8") if l.strip())
+    g_stats = {"G3_promoted": len(gem_g3), "A1_concepts": len(a1), "A1_by_domain": a1_dom, "A1_slots_assigned_incl_rework": a1_slots,
+               "G_tasks_reviewed": len([r for r in rl if r["task_id"][:2] in ("G3", "G4", "A1") or r["task_id"] == "T4_059"]),
+               "T4_059_in_corpus": sum(1 for e in exs if e["language"] == "vi" and e["provenance_type"] == "AI_GENERATED" and e["source_evidence"][0].get("model") == "gemini-3.8" and e["concept_id"] not in {c["concept_id"] for c in a1})}
+    return {"GEMINI": g_stats, "T1": dict(Counter(d["verdict"] for d in t1)), "T2": dict(Counter(d["verdict"] for d in t2)), "T3": dict(Counter(d["verdict"] for d in t3)),
             "T4_items": len(t4), "T4_null": sum(1 for d in t4 if d.get("vi_lemma") is None), "claude_T4_overrides": len(ov),
             "T3_claude_confirmed": len(acc), "T3_promoted_in_corpus": sum(1 for c in cons if (c.get("metadata") or {}).get("independent_review")),
             "T1_validated_by_independent_review": len(vo),
-            "T4_vi_in_corpus": sum(1 for e in exs if e["language"] == "vi" and e["provenance_type"] == "AI_GENERATED" and e["source_evidence"][0].get("model") in ("gpt-6-luna", "claude-sonnet-5-5"))}
+            "T4_vi_in_corpus": sum(1 for e in exs if e["language"] == "vi" and e["provenance_type"] == "AI_GENERATED" and e["source_evidence"][0].get("model") in ("gpt-6-luna", "claude-sonnet-5-5", "gemini-3.8"))}
 
 
 def main():
@@ -62,7 +74,7 @@ Phase 1.3D frozen baseline:  PASS-WITH-DOCUMENTED-CORRECTIONS (sealed bytes exac
 Golden Pilot:                PASS
 Professional 800:            PASS (untouched)
 Tests:                       see reports/phase1_4/test_results.json (all passing at closure)
-Final commit:                see `git tag phase1.4.2-closure` (reported in chat)
+Final commit:                see `git tag phase1.4.4-closure` (reported in chat)
 ```
 
 ## 1. Phase 1.4 (expansion)
@@ -83,9 +95,20 @@ file mailbox (`handoff/PROTOCOL.md`); Luna had no git, every packet was validate
 * **T4**: {hs['T4_items']} Vietnamese proposals ({hs['T4_null']} correctly left empty); Claude overrode/excluded {hs['claude_T4_overrides']} ({hs['claude_T4_overrides']/hs['T4_items']:.1%}) after reviewing every flagged item and ~10% of each packet.
   {hs['T4_vi_in_corpus']} Vietnamese expressions entered the corpus as `AI_GENERATED`, tier C, **`needs_review`** (proposer and Claude's review recorded; not independently judged).
 
+## 2c. Phase 1.4.4 (pilot: Gemini 3.8 in Antigravity as a second worker, reviewed and committed by Claude)
+Gemini 3.8 worked through the same file mailbox under stricter written rules (`docs/handoff/GEMINI_HANDOFF.md`, Parts A-I; mechanical gates in
+`scripts/handoff/gemini_selfcheck.py` and `validate_authored.py`). It never had git; nothing was committed or pushed before Claude's review passed.
+* **Calibration packets** (T4 re-check G4_001/002, T3-style G3_001): Gemini blocked all 10 known-bad promotions in G3_001; after rule changes, G4_002 had no wrong HIGH answers.
+* **T4 pilot**: {hs['GEMINI']['T4_059_in_corpus']} Vietnamese proposals (T4_059) integrated, 4 corrected by Claude.
+* **G3 promotion review** (91 never-judged candidates, value >= 30): {hs['GEMINI']['G3_promoted']} Gemini ACCEPT(HIGH) entries confirmed by Claude and promoted (`claude_review_G3.json`, basis `G3_handoff_review`).
+* **A1 authoring of NEW concepts** for thin packs: {hs['GEMINI']['A1_concepts']} concepts {json.dumps(hs['GEMINI']['A1_by_domain'])} (JMdict-anchored EN-JA pair, AI_GENERATED definition/Vietnamese/examples, `needs_review`, Tier C),
+  from {hs['GEMINI']['A1_slots_assigned_incl_rework']} slots including rework slots; every entry read individually by Claude, PASS or reworked to PASS (`claude_review_A1.json`).
+* Main lessons: ceiling-by-evidence blocks over-confidence only partly (about 9-14% of HIGH claims were still wrong or too high); typical defects were Vietnamese scope narrower/broader than the sense,
+  abstract-vs-concrete pairs (記念 vs souvenir), spelling (`công ti`), acronym case, and clumsy example sentences. All were caught in review and recorded in Part I11.
+
 ## 3. Known limitations
 * Below 10k; {c['partial_new']:,} new concepts are partial; ~14,500 lower-priority candidates unjudged.
-* Domain packs IT / healthcare / travel are thin; no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
+* Domain packs IT / healthcare / travel / manufacturing are still small (A1 added 94 Gemini-authored concepts); no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
 * No external API was used after the owner's prohibition. T1-validated concepts are independently reviewed by Luna; the T4 Vietnamese proposals and all other corrected concepts are only partially reviewed (`needs_review`).
 * The 150-concept sealed-baseline judge audit (49% strict accept) was **not re-run** after remediation (no API); deterministic indicators are compared instead.
 """

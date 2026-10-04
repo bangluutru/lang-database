@@ -25,7 +25,7 @@ Phase 1.3D frozen baseline:  PASS-WITH-DOCUMENTED-CORRECTIONS (sealed bytes exac
 Golden Pilot:                PASS
 Professional 800:            PASS (untouched)
 Tests:                       see reports/phase1_4/test_results.json (all passing at closure)
-Final commit:                see `git tag phase1.4.2-closure` (reported in chat)
+Final commit:                see `git tag phase1.4.4-closure` (reported in chat)
 ```
 
 ## 1. Phase 1.4 (expansion)
@@ -44,10 +44,21 @@ file mailbox (`handoff/PROTOCOL.md`); Luna had no git, every packet was validate
   omissions (stale sense definitions; `import`/`girl` left inconsistent) which were fixed. 18 of Luna's revisions + 3 T2 answers were applied after Claude's review (`part6.tsv`).
 * **T3** verdicts {'REVISE': 578, 'ACCEPT': 468, 'REJECT': 81}: Claude confirmed 332 Luna-ACCEPTs; 452 are in the corpus (status validated, basis `INDEPENDENT_AGENT_REVIEW`).
 * **T4**: 2308 Vietnamese proposals (15 correctly left empty); Claude overrode/excluded 128 (5.5%) after reviewing every flagged item and ~10% of each packet.
-  2247 Vietnamese expressions entered the corpus as `AI_GENERATED`, tier C, **`needs_review`** (proposer and Claude's review recorded; not independently judged).
+  2365 Vietnamese expressions entered the corpus as `AI_GENERATED`, tier C, **`needs_review`** (proposer and Claude's review recorded; not independently judged).
+
+## 2c. Phase 1.4.4 (pilot: Gemini 3.8 in Antigravity as a second worker, reviewed and committed by Claude)
+Gemini 3.8 worked through the same file mailbox under stricter written rules (`docs/handoff/GEMINI_HANDOFF.md`, Parts A-I; mechanical gates in
+`scripts/handoff/gemini_selfcheck.py` and `validate_authored.py`). It never had git; nothing was committed or pushed before Claude's review passed.
+* **Calibration packets** (T4 re-check G4_001/002, T3-style G3_001): Gemini blocked all 10 known-bad promotions in G3_001; after rule changes, G4_002 had no wrong HIGH answers.
+* **T4 pilot**: 24 Vietnamese proposals (T4_059) integrated, 4 corrected by Claude.
+* **G3 promotion review** (91 never-judged candidates, value >= 30): 37 Gemini ACCEPT(HIGH) entries confirmed by Claude and promoted (`claude_review_G3.json`, basis `G3_handoff_review`).
+* **A1 authoring of NEW concepts** for thin packs: 94 concepts {"it": 32, "travel": 24, "healthcare": 26, "manufacturing": 12} (JMdict-anchored EN-JA pair, AI_GENERATED definition/Vietnamese/examples, `needs_review`, Tier C),
+  from 104 slots including rework slots; every entry read individually by Claude, PASS or reworked to PASS (`claude_review_A1.json`).
+* Main lessons: ceiling-by-evidence blocks over-confidence only partly (about 9-14% of HIGH claims were still wrong or too high); typical defects were Vietnamese scope narrower/broader than the sense,
+  abstract-vs-concrete pairs (記念 vs souvenir), spelling (`công ti`), acronym case, and clumsy example sentences. All were caught in review and recorded in Part I11.
 
 ## 3. Known limitations
 * Below 10k; 41 new concepts are partial; ~14,500 lower-priority candidates unjudged.
-* Domain packs IT / healthcare / travel are thin; no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
+* Domain packs IT / healthcare / travel / manufacturing are still small (A1 added 94 Gemini-authored concepts); no spoken-Vietnamese view; CEFR/EIKEN/TOEIC/IELTS/TOEFL are inferred.
 * No external API was used after the owner's prohibition. T1-validated concepts are independently reviewed by Luna; the T4 Vietnamese proposals and all other corrected concepts are only partially reviewed (`needs_review`).
 * The 150-concept sealed-baseline judge audit (49% strict accept) was **not re-run** after remediation (no API); deterministic indicators are compared instead.
